@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-nov-guts-2019-p30",
+  "title": "2019 HMMT November Guts Problem 30",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.discrete-mathematics",
+      "label": "Discrete Mathematics",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.integers",
+      "label": "Integers",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.number-theory",
+      "label": "Number Theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2019,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 57.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A function \\(f: \\mathbb{Z} \\rightarrow \\mathbb{Z}\\) satisfies: \\(f(0)=0\\) and\n\n\\[\\left|f\\left((n+1) 2^{k}\\right)-f\\left(n 2^{k}\\right)\\right| \\leq 1\\]\n\nfor all integers \\(k \\geq 0\\) and \\(n\\). What is the maximum possible value of \\(f(2019)\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2019-p30.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 4\nConsider a graph on \\(\\mathbb{Z}\\) with an edge between \\((n+1) 2^{k}\\) and \\(n 2^{k}\\) for all integers \\(k \\geq 0\\) and \\(n\\). Each vertex \\(m\\) is given the value \\(f(m)\\). The inequality \\(\\left|f\\left((n+1) 2^{k}\\right)-f\\left(n 2^{k}\\right)\\right| \\leq 1\\) means that any two adjacent vertices of this graph must have values which differ by at most 1 . Then it follows that for all \\(m\\),\n\n\\[f(m) \\leq \\text { number of edges in shortest path from } 0 \\text { to } m\\]\n\nbecause if we follow a path from 0 to \\(m\\), along each edge the value increases by at most 1 . Conversely, if we define \\(f(m)\\) to be the number of edges in the shortest path between 0 and \\(m\\), then this is a valid function because for any two adjacent vertices, the lengths of their respective shortest paths to 0 differ by at most 1 . Hence it suffices to compute the distance from 0 to 2019 in the graph.\nThere exists a path with 4 edges, given by\n\n\\[0 \\rightarrow 2048 \\rightarrow 2016 \\rightarrow 2018 \\rightarrow 2019\\]\n\nSuppose there existed a path with three edges. In each step, the number changes by a power of 2 , so we have \\(2019= \\pm 2^{k_{1}} \\pm 2^{k_{2}} \\pm 2^{k_{3}}\\) for some nonnegative integers \\(k_{1}, k_{2}, k_{3}\\) and choice of signs. Since 2019 is odd, we must have \\(2^{0}\\) somewhere. Then we have \\(\\pm 2^{k_{1}} \\pm 2^{k_{2}} \\in\\{2018,2020\\}\\). Without loss of\ngenerality assume that \\(k_{1} \\geq k_{2}\\). Then we can write this as \\(\\pm 2^{k_{2}}\\left(2^{k_{1} k_{2}} \\pm 1\\right) \\in\\{2018,2020\\}\\). It is easy to check that \\(k_{1}=k_{2}\\) is impossible, so the factorization \\(2^{k_{2}}\\left(2^{k_{1} k_{2}} \\pm 1\\right)\\) is a product of a power of two and an odd number. Now compute \\(2018=2 \\times 1009\\) and \\(2020=4 \\times 505\\). Neither of the odd parts are of the form \\(2^{k_{1}-k_{2}} \\pm 1\\), so there is no path of three steps.\nWe conclude that the maximum value of \\(f(2019)\\) is 4 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

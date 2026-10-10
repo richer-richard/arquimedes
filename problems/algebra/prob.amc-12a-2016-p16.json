@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12a-2016-p16",
+  "title": "2016 AMC 12A Problem 16",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.substitution",
+      "label": "Substitution",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2016,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 33.0,
+    "source": 1860,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The graphs of \\(y=\\log_3 x,\\) \\(y=\\log_x 3,\\) \\(y=\\log_{\\frac{1}{3}} x,\\) and \\(y=\\log_x\\dfrac{1}{3}\\) are plotted on the same set of axes. How many points in the plane with positive \\(x\\)-coordinates lie on two or more of the graphs?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(6\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2016-p16.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(u=\\log_3 x.\\) Then \\(\\log_x 3=\\dfrac1u,\\) \\(\\log_{\\frac{1}{3}}x=-u,\\) and \\(\\log_x\\dfrac13=-\\dfrac1u.\\) Two graphs meet where two of \\(u,\\dfrac1u,-u,-\\dfrac1u\\) are equal for some valid \\(x\\gt 0.\\)\n\nSetting \\(u=\\dfrac1u\\) gives \\(u=\\pm1,\\) so \\(x=3\\) or \\(x=\\dfrac13;\\) setting \\(-u=-\\dfrac1u\\) gives the same values. Setting \\(u=-u\\) gives \\(u=0,\\) i.e. \\(x=1,\\) where \\(\\log_3 x\\) and \\(\\log_{\\frac{1}{3}}x\\) are both \\(0.\\) The remaining pairings have no real solution.\n\nThe distinct intersection points are \\((1,0),\\) \\((3,1),\\) \\(\\left(\\dfrac13,-1\\right),\\) \\((3,-1),\\) and \\(\\left(\\dfrac13,1\\right),\\) so there are \\(5.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Let \\(u=\\log_3 x\\) and rewrite all four as \\(u,\\ \\dfrac1u,\\ -u,\\ -\\dfrac1u\\)",
+        "Find every \\(x\\) where two of these four expressions are equal"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "id": "prob.aime-ii-2008-p11",
+  "title": "2008 AIME II Problem 11",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-bisector",
+      "label": "Angle bisector",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangent-circles",
+      "label": "Tangent circles",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2008,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 61.6,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "In triangle \\(ABC,\\) \\(AB = AC = 100,\\) and \\(BC = 56.\\) Circle \\(P\\) has radius \\(16\\) and is tangent to \\(\\overline{AC}\\) and \\(\\overline{BC}.\\) Circle \\(Q\\) is externally tangent to circle \\(P\\) and is tangent to \\(\\overline{AB}\\) and \\(\\overline{BC}.\\) No point of circle \\(Q\\) lies outside of \\(\\triangle ABC.\\) The radius of circle \\(Q\\) can be expressed in the form \\(m - n\\sqrt{k},\\) where \\(m,\\) \\(n,\\) and \\(k\\) are positive integers and \\(k\\) is the product of distinct primes. Find \\(m + nk.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "254",
+    "value": "254"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2008-p11.live",
+      "kind": "proof-sketch",
+      "text": "Place \\(B = (0, 0)\\) and \\(C = (56, 0);\\) the altitude from \\(A\\) has length \\(\\sqrt{100^2 - 28^2} = 96,\\) so \\(A = (28, 96).\\) Then \\(\\sin B = \\frac{24}{25},\\) \\(\\cos B = \\frac{7}{25},\\) and \\[ \\begin{aligned} \\tan\\frac{B}{2} &= \\frac{\\sin B}{1 + \\cos B} \\\\ &= \\frac{3}{4} = \\tan\\frac{C}{2}. \\end{aligned} \\] A circle of radius \\(r\\) tangent to \\(\\overline{BC}\\) and to a slanted side has its center on the bisector from that base vertex, at height \\(r\\) and horizontal distance \\(\\frac{r}{\\tan(\\frac{C}{2})} = \\frac{4r}{3}\\) from the vertex. Thus \\(P = \\left(56 - \\frac{64}{3},\\, 16\\right)\\) and \\(Q = \\left(\\frac{4q}{3},\\, q\\right),\\) where \\(q\\) is the radius of circle \\(Q.\\)\n\nExternal tangency means \\(PQ = q + 16:\\) \\[ \\begin{aligned} &\\left(\\frac{104 - 4q}{3}\\right)^2 + (16 - q)^2 \\\\ &= (16 + q)^2. \\end{aligned} \\] Since \\((16 + q)^2 - (16 - q)^2 = 64q,\\) this becomes \\((104 - 4q)^2 = 576q,\\) i.e. \\((26 - q)^2 = 36q,\\) which simplifies to \\(q^2 - 88q + 676 = 0,\\) so \\(q = 44 \\pm 6\\sqrt{35}.\\)\n\nThe root \\(44 + 6\\sqrt{35} \\approx 79.5\\) would make circle \\(Q\\) extend outside the triangle, so \\(q = 44 - 6\\sqrt{35}.\\) Here \\(m = 44,\\) \\(n = 6,\\) and \\(k = 35 = 5 \\cdot 7,\\) giving \\(m + nk = 44 + 210 = 254.\\)",
+      "hints": [
+        "Place \\(B = (0,0),\\) \\(C = (56,0),\\) \\(A = (28,96);\\) both centers lie on angle bisectors, and \\(\\tan\\frac{B}{2} = \\tan\\frac{C}{2} = \\frac{3}{4}\\)",
+        "The centers are \\(\\left(56 - \\frac{64}{3},\\, 16\\right)\\) and \\(\\left(\\frac{4q}{3},\\, q\\right);\\) set the distance between them equal to \\(q + 16\\)"
+      ],
+      "images": [
+        "c4629326fe9f7fc4ea4a99dcd81f5ce20870b755034a86adb8c6f6492cafe24c"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "c4629326fe9f7fc4ea4a99dcd81f5ce20870b755034a86adb8c6f6492cafe24c"
+    ]
+  }
+}

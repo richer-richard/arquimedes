@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2008-p1",
+  "title": "2008 USAMO Problem 1",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2008,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 83.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Prove that for each positive integer \\(n\\), there are pairwise relatively prime integers \\(k_0, k_1 \\dotsc, k_n\\), all strictly greater than 1, such that \\(k_0 k_1 \\dotsm k_n -1\\) is the product of two consecutive integers.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2008-p1.imported",
+      "kind": "proof-sketch",
+      "text": "We will prove the problem for each nonnegative integer $n$. We wish to show that\n\\[k_0 k_1 \\dotsc k_n = a^2+a+1,\\]\nfor some integer $a$. We induct on $n$. For our base case, $n=0$, we may let $a$ be positive integer.\nFor the inductive step, suppose that $k_0, \\dotsc, k_{n-1}$ are pairwise relatively prime integers such that\n\\[k_0 \\dotsm k_{n-1} = a^2+a+1,\\]\nfor some integer $a$. Let $k_n = a^2 + 3a+3$. Evidently, $k_n >1$. Also,\n\\[\\gcd(a^2+a+1, k_n) = \\gcd\\bigl(a^2+a+1, k_n - (a^2+a+1) \\bigr) = \\gcd\\bigl(a^2 + a+1, 2(a+1) \\bigr) .\\]\nSince $a^2+a+1 = a(a+1)+1$ is odd and relatively prime to $a+1$, it follows that $a^2+a+1$ and $k_n$ are relatively prime, so $k_n$ is relatively prime to each of $k_0, \\dotsc, k_{n-1}$. Finally,\n\\begin{align*} k_0 k_1 \\dotsm k_n &= (a^2+a+1)(a^2+3a+3)\\\\ &= \\bigl[ (a+1)^2-a \\bigr] \\cdot \\bigl[ (a+1)^2 + a+2 \\bigr] \\\\ &= (a+1)^4 + 2(a+1)^2 - a^2-2a \\\\ &= (a+1)^4 + (a+1)^2 + 1 . \\end{align*}\nThis completes the induction.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

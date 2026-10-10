@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-2020-p23",
+  "title": "2020 AMC 8 Problem 23",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2020,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 15.2,
+    "source": 1370,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Five different awards are to be given to three students. Each student will receive at least one award. In how many different ways can the awards be distributed?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(120\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(150\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(180\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(210\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(240\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "150"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2020-p23.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(3^5=243\\) ways to give each of the \\(5\\) distinct awards to one of the \\(3\\) students.\n\nSubtract the distributions in which at least one student receives no award. If a particular student receives none, the awards go to the other two students in \\(2^5\\) ways. This gives \\(3\\cdot2^5\\) counts, but the \\(3\\) cases in which one student receives all awards have each been subtracted twice.\n\nBy inclusion-exclusion, the desired number is \\(3^5-3\\cdot2^5+3=150.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Start with \\(3^5\\) unrestricted distributions",
+        "Use inclusion-exclusion for students receiving no awards"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

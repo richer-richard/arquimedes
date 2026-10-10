@@ -1,0 +1,64 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2017-p8",
+  "title": "2017 HMMT February Combinatorics Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2017,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 82.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Kelvin and 15 other frogs are in a meeting, for a total of 16 frogs. During the meeting, each pair of distinct frogs becomes friends with probability \\(\\frac{1}{2}\\). Kelvin thinks the situation after the meeting is cool if for each of the 16 frogs, the number of friends they made during the meeting is a multiple of 4 . Say that the probability of the situation being cool can be expressed in the form \\(\\frac{a}{b}\\), where \\(a\\) and \\(b\\) are relatively prime. Find \\(a\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2017-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "Consider the multivariate polynomial\n\n\\[\\prod_{1 \\leq i<j \\leq 16}\\left(1+x_{i} x_{j}\\right)\\]\n\nWe're going to filter this by summing over all \\(4^{16} 16\\)-tuples \\(\\left(x_{1}, x_{2}, \\ldots, x_{16}\\right)\\) such that \\(x_{j}= \\pm 1, \\pm i\\). Most of these evaluate to 0 because \\(i^{2}=(-i)^{2}=-1\\), and \\(1 \\cdot-1=-1\\). If you do this filtering, you get the following 4 cases:\n\nCase 1: Neither of \\(i\\) or \\(-i\\) appears. Then the only cases we get are when all the \\(x_{j}\\) are 1 , or they're all -1 . Total is \\(2^{121}\\). \\(\\left(120=\\binom{16}{2}.\\right)\\)\n\nCase 2: \\(i\\) appears, but \\(-i\\) does not. Then all the remaining \\(x_{j}\\) must be all 1 or all -1 . This contributes a sum of \\((1+i)^{15} \\cdot 2^{105}+(1-i)^{15} \\cdot 2^{105}=2^{113}\\). \\(i\\) can be at any position, so we get \\(16 \\cdot 2^{113}\\).\n\nCase 3: \\(-i\\) appears, but \\(i\\) does not. Same contribution as above. \\(16 \\cdot 2^{113}\\).\n\nCase 4: Both \\(i\\) and \\(-i\\) appear. Then all the rest of the \\(x_{j}\\) must be all 1 or all -1 . This contributes a sum of \\(2 \\cdot(1+i(-i)) \\cdot(1+i)^{14} \\cdot(1-i)^{14} \\cdot 2^{91}=2^{107} \\cdot i\\) and \\(-i\\) can appear in \\(16 \\cdot 15\\) places, so we get \\(240 \\cdot 2^{107}\\).\n\nSo the final answer is this divided a factor for our filter. \\(\\left(4^{16}=2^{32}\\right.\\).) So our final answer is \\(\\frac{2^{89}+16 \\cdot 2^{82}+240 \\cdot 2^{75}}{2^{120}}=\\) \\(\\frac{1167}{2^{41}}\\).\nTherefore, the answer is 1167 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-fall-2021-p19",
+  "title": "2021 Fall AMC 12B Problem 19",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.counting-intersections",
+      "label": "Counting intersections",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.regular-polygon",
+      "label": "Regular polygon",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2021,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 35.5,
+    "source": 2320,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Regular polygons with \\(5,\\) \\(6,\\) \\(7,\\) and \\(8\\) sides are inscribed in the same circle. No two of the polygons share a vertex, and no three of their sides intersect at a common point. At how many points inside the circle do two of their sides intersect?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(52\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(56\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(60\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(64\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(68\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "68"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-fall-2021-p19.live",
+      "kind": "proof-sketch",
+      "text": "For two convex polygons inscribed in the same circle with no shared vertices, each side of the smaller polygon crosses the larger polygon’s boundary exactly twice, so they meet at \\(2\\min(m, n)\\) points.\n\nSumming over all pairs: \\((5,6), (5,7), (5,8)\\) give \\(10\\) each; \\((6,7), (6,8)\\) give \\(12\\) each; \\((7,8)\\) gives \\(14.\\)\n\nThe total is \\(3 \\cdot 10 + 2 \\cdot 12 + 14 = 68.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "Consider each pair of polygons separately",
+        "Two inscribed polygons with \\(m\\) and \\(n\\) sides in general position cross at \\(2\\min(m, n)\\) points"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

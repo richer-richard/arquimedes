@@ -1,0 +1,68 @@
+{
+  "id": "prob.aime-1995-p1",
+  "title": "1995 AIME Problem 1",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area",
+      "label": "Area",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1995,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 33.6,
+    "source": 1900,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Square \\(S_1\\) is \\(1\\times1.\\) For \\(i\\geq1,\\) the lengths of the sides of square \\(S_{i+1}\\) are half the lengths of the sides of square \\(S_i,\\) two adjacent sides of square \\(S_i\\) are perpendicular bisectors of two adjacent sides of square \\(S_{i+1},\\) and the other two sides of square \\(S_{i+1}\\) are the perpendicular bisectors of two adjacent sides of square \\(S_{i+2}.\\) The total area enclosed by at least one of \\(S_1,\\) \\(S_2,\\) \\(S_3,\\) \\(S_4,\\) \\(S_5\\) can be written in the form \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m-n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "255",
+    "value": "255"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1995-p1.live",
+      "kind": "proof-sketch",
+      "text": "The sum of the five square areas is \\[\\begin{aligned}1+\\frac14+\\frac1{16}&+\\frac1{64}+\\frac1{256}\\\\&=\\frac{1364}{1024}.\\end{aligned}\\] The perpendicular-bisector placement makes the overlap of each adjacent pair one fourth of the smaller square. These four overlaps are disjoint and have total area \\[\\begin{aligned}\\frac1{16}+\\frac1{64}&+\\frac1{256}+\\frac1{1024}\\\\&=\\frac{85}{1024}.\\end{aligned}\\] Thus the union has area \\(\\frac{1364-85}{1024}=\\frac{1279}{1024},\\) and \\(m-n=1279-1024=255.\\)",
+      "hints": [
+        "Each square has one fourth the area of the preceding square",
+        "Adjacent squares overlap in one fourth of the smaller square, and nonadjacent interiors do not overlap"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "c7d68b752e5fbcebc9b8a665be099393495e848c3c5f2fb7616abd54bff4d6cf"
+    ],
+    "solutions": []
+  }
+}

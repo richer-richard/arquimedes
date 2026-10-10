@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-ii-2015-p11",
+  "title": "2015 AIME II Problem 11",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circumcircle-circumcenter-and-circumradius",
+      "label": "Circumcircle, circumcenter, and circumradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2015,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 59.5,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 13,
+  "statement": "The circumcircle of acute \\(\\triangle ABC\\) has center \\(O.\\) The line passing through point \\(O\\) perpendicular to \\(\\overline{OB}\\) intersects lines \\(AB\\) and \\(BC\\) at \\(P\\) and \\(Q,\\) respectively. Also \\(AB = 5,\\) \\(BC = 4,\\) \\(BQ = 4.5,\\) and \\(BP = \\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "23",
+    "value": "23"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2015-p11.live",
+      "kind": "proof-sketch",
+      "text": "The central angle over \\(\\overline{BC}\\) is \\(\\angle BOC = 2\\angle A,\\) and \\(OB = OC\\) makes triangle \\(OBC\\) isosceles, so \\(\\angle OBC = 90^\\circ - \\angle A.\\) In triangle \\(OBQ\\) the angle at \\(O\\) is \\(90^\\circ,\\) hence \\[ \\begin{aligned} &\\angle BQP = 90^\\circ - \\angle OBQ \\\\ &= 90^\\circ - (90^\\circ - \\angle A) \\\\ &= \\angle A. \\end{aligned} \\]\n\nTriangles \\(BQP\\) and \\(BAC\\) share the angle at \\(B\\) and have \\(\\angle BQP = \\angle BAC,\\) so they are similar, giving \\(\\frac{BP}{BC} = \\frac{BQ}{BA}.\\) Therefore \\[ \\begin{aligned} &BP = \\frac{BQ \\cdot BC}{BA} \\\\ &= \\frac{4.5 \\cdot 4}{5} = \\frac{18}{5}, \\end{aligned} \\] and \\(m + n = 18 + 5 = 23.\\)",
+      "hints": [
+        "In right triangle \\(OBQ,\\) \\(\\angle OQB = 90^\\circ - \\angle OBC,\\) and isosceles triangle \\(OBC\\) gives \\(\\angle OBC = 90^\\circ - \\angle A\\)",
+        "So \\(\\angle BQP = \\angle BAC,\\) making \\(\\triangle BQP \\sim \\triangle BAC\\) with \\(\\frac{BP}{BC} = \\frac{BQ}{BA}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "id": "prob.hmmt-feb-guts-2013-p31",
+  "title": "2013 HMMT February Guts Problem 31",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.probability",
+      "label": "Probability",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2013,
+    "number": 31
+  },
+  "difficulty": {
+    "course": 92.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A B C D\\) be a quadrilateral inscribed in a unit circle with center \\(O\\). Suppose that \\(\\angle A O B=\\) \\(\\angle C O D=135^{\\circ}, B C=1\\). Let \\(B^{\\prime}\\) and \\(C^{\\prime}\\) be the reflections of \\(A\\) across \\(B O\\) and \\(C O\\) respectively. Let \\(H_{1}\\) and \\(H_{2}\\) be the orthocenters of \\(A B^{\\prime} C^{\\prime}\\) and \\(B C D\\), respectively. If \\(M\\) is the midpoint of \\(O H_{1}\\), and \\(O^{\\prime}\\) is the reflection of \\(O\\) about the midpoint of \\(M H_{2}\\), compute \\(O O^{\\prime}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2013-p31.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{1}{4}(8-\\sqrt{6}-3 \\sqrt{2})\\) Put the diagram on the complex plane with \\(O\\) at the origin and \\(A\\) at\n\n- 1. Let \\(B\\) have coordinate \\(b\\) and \\(C\\) have coordinate \\(c\\). We obtain easily that \\(B^{\\prime}\\) is \\(b^{2}, C^{\\prime}\\) is \\(c^{2}\\), and \\(D\\) is \\(b c\\). Therefore, \\(H_{1}\\) is \\(1+b^{2}+c^{2}\\) and \\(H_{2}\\) is \\(b+c+b c\\) (we have used the fact that for triangles on the unit circle, their orthocenter is the sum of the vertices). Finally, we have that \\(M\\) is \\(\\frac{1}{2}\\left(1+b^{2}+c^{2}\\right)\\), so the reflection of \\(O\\) about the midpoint of \\(M H_{2}\\) is \\(\\frac{1}{2}\\left(1+b^{2}+c^{2}+2 b+2 c+2 b c\\right)=\\frac{1}{2}(b+c+1)^{2}\\), so we just seek \\(\\frac{1}{2}|b+c+1|^{2}\\). But we know that \\(b=\\operatorname{cis} 135^{\\circ}\\) and \\(c=\\operatorname{cis} 195^{\\circ}\\), so we obtain that this value is \\(\\frac{1}{4}(8-\\sqrt{6}-3 \\sqrt{2})\\).\n- 2. [20] For an even integer positive integer \\(n\\) Kevin has a tape of length \\(4 n\\) with marks at \\(-2 n,-2 n+\\) \\(1, \\ldots, 2 n-1,2 n\\). He then randomly picks \\(n\\) points in the set \\(-n,-n+1,-n+2, \\ldots, n-1, n\\), and places a stone on each of these points. We call a stone 'stuck' if it is on \\(2 n\\) or \\(-2 n\\), or either all the points to the right, or all the points to the left, all contain stones. Then, every minute, Kevin shifts the unstuck stones in the following manner:\n\n- He picks an unstuck stone uniformly at random and then flips a fair coin.\n- If the coin came up heads, he then moves that stone and every stone in the largest contiguous set containing that stone one point to the left. If the coin came up tails, he moves every stone in that set one point right instead.\n- He repeats until all the stones are stuck.\n\nLet \\(p_{k}\\) be the probability that at the end of the process there are exactly \\(k\\) stones in the right half. Evaluate\n\n\\[\\frac{p_{n-1}-p_{n-2}+p_{n-3}-\\ldots+p_{3}-p_{2}+p_{1}}{p_{n-1}+p_{n-2}+p_{n-3}+\\ldots+p_{3}+p_{2}+p_{1}}\\]\n\nin terms of \\(n\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

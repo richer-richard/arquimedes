@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1986-p14",
+  "title": "1986 AIME Problem 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.rectangular-prism",
+      "label": "Rectangular prism",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vector",
+      "label": "Vector",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1986,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 63.3,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "The shortest distances between an interior diagonal of a rectangular parallelepiped \\(P\\) and the edges it does not meet are \\(2\\sqrt5,\\) \\(\\frac{30}{\\sqrt{13}},\\) and \\(\\frac{15}{\\sqrt{10}}.\\) Determine the volume of \\(P.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "750",
+    "value": "750"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1986-p14.live",
+      "kind": "proof-sketch",
+      "text": "Let the side lengths be \\(a,\\) \\(b,\\) and \\(c.\\) For example, the distance from the space diagonal with direction \\((a,b,c)\\) to a nonintersecting edge parallel to the \\(a\\)-direction is \\[ \\frac{bc}{\\sqrt{b^2+c^2}}. \\] The other two distances are obtained cyclically. We may assign the three given distances to these three directions in the listed order, since permuting them only permutes the side lengths.\n\nPut \\(X=\\frac{1}{a^2},\\) \\(Y=\\frac{1}{b^2},\\) and \\(Z=\\frac{1}{c^2}.\\) Taking reciprocal squares gives \\[ \\begin{aligned} Y+Z&=\\frac1{20},\\\\ X+Z&=\\frac{13}{900},\\\\ X+Y&=\\frac2{45}. \\end{aligned} \\] Solving, \\[ \\begin{aligned} X&=\\frac1{225},\\\\ Y&=\\frac1{25},\\\\ Z&=\\frac1{100}. \\end{aligned} \\] Hence the side lengths are \\(15,\\) \\(5,\\) \\(10,\\) and the volume is \\(15\\cdot5\\cdot10=750.\\)",
+      "hints": [
+        "Let the side lengths be \\(a,\\) \\(b,\\) and \\(c\\) and use a vector formula for the distance between skew lines",
+        "Taking reciprocals of the squared distances makes the equations linear in \\(\\frac{1}{a^2},\\) \\(\\frac{1}{b^2},\\) and \\(\\frac{1}{c^2}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

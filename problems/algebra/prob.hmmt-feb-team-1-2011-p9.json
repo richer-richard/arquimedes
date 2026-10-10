@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-team-1-2011-p9",
+  "title": "2011 HMMT February Team Round 1 Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 83.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "We would now like to examine the behavior of \\(p_{m}(k)\\) as \\(m\\) becomes arbitrarily large; specifically, we would like to discern whether \\(\\lim _{m \\rightarrow \\infty} p_{m}(0)\\) exists and, if it does, to determine its value. Let \\(\\lim _{m \\rightarrow \\infty} p_{m}(k)=A_{k}\\).\n(a) [5] Prove that \\(\\frac{2}{3} p_{m}(k) \\geq p_{m}(k+2)\\) for all \\(m\\) and \\(k\\).\n(b) [10] Prove that \\(A_{0}\\) exists and that \\(A_{0}>0\\). Feel free to assume the result of analysis that a non-increasing sequence of real numbers that is bounded below by a constant converges to a limit that is greater than or equal to \\(c\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1-2011-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "(a) We proceed by induction.\n\nBase Case: When \\(n=1\\), we get \\(\\frac{2}{3} p_{1}(0)=\\frac{2}{3} \\cdot \\frac{3}{4}=\\frac{1}{2}>\\frac{1}{4}=p_{1}(2)\\). And since \\(p_{1}(2 k)=0\\) for \\(k \\geq 2\\), we get \\(\\frac{2}{3} p_{1}(k) \\geq p_{1}(k+2)\\) for all \\(k\\).\nInduction Step: Assume that \\(\\frac{2}{3} p_{i}(k) \\geq p_{i}(k+2)\\) for all \\(i \\leq n\\). This clearly implies \\(\\frac{2}{3} p_{n+1}(k) \\geq\\) \\(p_{n+1}(k+2)\\) for all \\(k \\geq 4\\) by the formula (c) from the previous problem.\nNow, for \\(k=2\\),\n\n\\[\\begin{aligned}\n\\frac{2}{3} p_{n+1}(2) & =\\frac{2}{3}\\left(\\frac{1}{4} p_{n}(0)+\\frac{3}{8} p_{n}(2)+\\frac{3}{8} p_{n}(4)+\\frac{1}{8} p_{n}(6)\\right) \\\\\n& \\geq \\frac{1}{12} p_{n}(0)+p_{n+1}(4) \\\\\n& \\geq p_{n+1}(4)\n\\end{aligned}\\]\n\nby the formula (b) from the previous problem and our induction hypothesis. For \\(k=0\\), we write out formula (a) from the previous problem.\n\n\\[\\begin{aligned}\n\\frac{2}{3} p_{n+1}(0) & =\\frac{2}{3}\\left(\\frac{3}{4} p_{n}(0)+\\frac{1}{2} p_{n}(2)+\\frac{1}{8} p_{n}(4)\\right) \\\\\n& \\geq \\frac{1}{4} p_{n}(0)+\\frac{3}{8} p_{n}(2)+\\frac{1}{2} p_{n}(4)+\\frac{1}{8} p_{n}(6)\n\\end{aligned}\\]\n\nby our induction hypothesis. But \\(p_{n+1}(2)=\\frac{1}{4} p_{n}(0)+\\frac{3}{8} p_{n}(2)+\\frac{3}{8} p_{n}(4)+\\frac{1}{8} p_{n}(6)\\), which is clearly less than the last line above. Thus \\(\\frac{2}{3} p_{n+1}(0) \\geq p_{n+1}(2)\\). This completes the induction step.\nRemark: This is nowhere near the strongest bound. We intentionally asked for a bound strong enough to be helpful in part b, but not strong enough to help with other problems. The strongest bound is \\(p_{n}(0) \\geq \\frac{2+\\sqrt{5}}{2} p_{n}(2)\\) and \\(p_{n}(2 k) \\geq(2+\\sqrt{5}) p_{n}(2 k+2)\\) for \\(k \\geq 1\\). This is intuitive because \\(A_{0}=\\frac{2+\\sqrt{5}}{2} A_{2}\\) and for \\(k \\geq 1, A_{2 k}=(2+\\sqrt{5}) A_{2 k+2}\\).\n(b) For any \\(n\\) and \\(k, p_{n}(2 k) \\leq\\left(\\frac{2}{3}\\right)^{k} p_{n}(0)\\). Now\n\n\\[1=\\sum_{k=0}^{\\infty} p_{n}(2 k) \\leq p_{n}(0) \\sum_{k=0}^{\\infty}\\left(\\frac{2}{3}\\right)^{k}=3 p_{n}(0)\\]\n\nSo \\(p_{n}(0) \\geq \\frac{1}{3}\\) for all \\(n\\). This means \\(p_{n}(0)\\) is a non-increasing sequence that is bounded below by \\(\\frac{1}{3}\\). So \\(A_{0}\\) exists and \\(A_{0} \\geq \\frac{1}{3}>0\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

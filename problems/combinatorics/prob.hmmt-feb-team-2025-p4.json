@@ -1,0 +1,68 @@
+{
+  "id": "prob.hmmt-feb-team-2025-p4",
+  "title": "2025 HMMT February Team Problem 4",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.coloring-schemes-extremal-arguments",
+      "label": "Coloring schemes, extremal arguments",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.games-and-greedy-algorithms",
+      "label": "Games and greedy algorithms",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.invariants-and-monovariants",
+      "label": "Invariants and monovariants",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2025,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 81.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Jerry places at most one rook in each cell of a \\(2025 \\times 2025\\) grid of cells. A rook attacks another rook if the two rooks are in the same row or column and there are no other rooks between them.\n\nDetermine, with proof, the maximum number of rooks Jerry can place on the grid such that no rook attacks 4 other rooks.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "8096",
+    "value": "8096"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2025-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "The answer is \\(2024 \\times 4 = 8096\\) . More generally, for an \\(n \\times n\\) grid, the answer is \\(4n - 4\\) . Call a rook that attacks at most 3 other rooks good.\n\nWe use the following observation in both parts of the solution: a rook on the border of the grid must be good.\n\nLower Bound: Place rooks on all \\(4n - 4\\) border cells of the grid. By the above observation, every rook is good.\n\nUpper Bound: Consider any valid placement of rooks, and assume there exists a rook that is not on the border. We can move this rook to the border via a usual rook move, since this rook is good and thus the path to one of the four border cells in its row or column must be empty.\n\nAfter this move, we claim the placement of rooks is still valid. Indeed:\n\n- the moved rook is now on the border, so by the observation above, it must be good;\n\n- any rook that used to attack this rook cannot attack more rooks after the move, so such rooks must still be good;\n\n- any rook attacked in the final position must be either:\n\n- opposite the direction moved, in which case it attacked the moved rook both before and after the move (so is still good), or\n- perpendicular to the direction moved, in which case it is a border rook and must always be good.\n\nBy repeating the above process, we can always move from any good position to one where all rooks are on the border. This implies that the number of rooks in any good position is at most \\(4n - 4\\) . When \\(n = 2024\\) , the answer is \\(4n - 4 = \\left\\lfloor 8096 \\right\\rfloor\\) .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

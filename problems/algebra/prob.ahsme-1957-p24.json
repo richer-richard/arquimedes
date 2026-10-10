@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1957-p24",
+  "title": "1957 AHSME Problem 24",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.difference-of-squares",
+      "label": "Difference of squares",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1957,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 25.7,
+    "source": 1590,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "If the square of a number of two digits is decreased by the square of the number formed by reversing the digits, then the result is not always divisible by:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "B",
+      "text": "the product of the digits"
+    },
+    {
+      "label": "C",
+      "text": "the sum of the digits"
+    },
+    {
+      "label": "D",
+      "text": "the difference of the digits"
+    },
+    {
+      "label": "E",
+      "text": "\\(11\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1957-p24.live",
+      "kind": "proof-sketch",
+      "text": "If the digits are \\(a,b,\\) then \\[ \\begin{aligned} &(10a+b)^2-(10b+a)^2\\\\ &\\quad=[9(a-b)][11(a+b)]\\\\ &\\quad=99(a-b)(a+b). \\end{aligned} \\] This is always divisible by \\(9,\\) \\(11,\\) the digit sum, and the digit difference. It need not be divisible by the digit product; for example, \\(21^2-12^2=297\\) is not divisible by \\(2.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Represent the number as \\(10a+b\\) and its reversal as \\(10b+a\\)",
+        "Factor the difference of their squares completely"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

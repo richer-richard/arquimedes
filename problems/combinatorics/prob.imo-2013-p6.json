@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2013-p6",
+  "title": "2013 IMO Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2013,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 115.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n \\ge 3\\) be an integer, and consider a circle with \\(n + 1\\) equally spaced points marked on it.\nConsider all labellings of these points with the numbers\n\\(0, 1, \\dots , n\\) such that each label is used exactly once;\ntwo such labellings are considered to be the same if\none can be obtained from the other by a rotation of the circle.\nA labelling is called beautiful if, for any four labels \\(a < b < c < d\\) with \\(a + d = b + c\\),\nthe chord joining the points labelled \\(a\\) and \\(d\\)\ndoes not intersect the chord joining the points labelled \\(b\\) and \\(c\\).\nLet \\(M\\) be the number of beautiful labellings,\nand let \\(N\\) be the number of ordered pairs \\((x, y)\\) of positive integers\nsuch that \\(x + y \\le n\\) and \\(\\gcd(x, y) = 1\\).\nProve that \\(M = N + 1\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2013-p6.evanchen",
+      "kind": "proof-sketch",
+      "text": "First, here are half of the beautiful labellings up to reflection for \\(n = 6\\),\njust for concreteness.\n\n[Diagram omitted from this imported TeX transcription.]\n\nAbbreviate ``beautiful labelling of points around a circle'' to ring.\nMoreover, throughout the solution we will allow degenerate\nchords that join a point to itself;\nthis has no effect on the problem statement.\n\nThe idea is to proceed by induction in the following way.\nA ring of \\([0,n]\\) is called linear\nif it is an arithmetic progression modulo \\(n+1\\).\nFor example, the first two rings in the diagram\nand the last one are linear for \\(n = 6\\),\nwhile the other three are not.\n\nOf course we can move from any ring on \\([0,n]\\)\nto a ring on \\([0,n-1]\\) by deleting \\(n\\).\nWe are going to prove that:\n\n• Each linear ring on \\([0,n-1]\\) yields exactly two\n rings of \\([0,n]\\), and\n\n• Each nonlinear ring on \\([0,n-1]\\) yields exactly one\n rings of \\([0,n]\\).\n\nIn light of the fact there are obviously \\(\\varphi(n)\\) linear rings on \\([0,n]\\),\nthe conclusion will follow by induction.\n\nWe say a set of chords (possibly degenerate) is pseudo-parallel\nif for any three of them, one of them separates the two.\n(Pictorially, one can perturb the endpoints along the circle\nin order to make them parallel in Euclidean sense.)\nThe main structure lemma is going to be:\n\nLemma.\n In any ring, the chords of sum \\(k\\)\n (even including degenerate ones) are pseudo-parallel.\n\nProof.\n By induction on \\(n\\).\n By shifting, we may assume that one of the chords is \\(\\{0,k\\}\\)\n and discard all numbers exceeding \\(k\\); that is, assume \\(n = k\\).\n Suppose the other two chords are \\(\\{a, n-a\\}\\) and \\(\\{b, n-b\\}\\).\n\n[Diagram omitted from this imported TeX transcription.]\n\n We consider the chord \\(\\{u,v\\}\\) directly above \\(\\{0,n\\}\\), drawn in blue.\n There are now three cases.\n\n• If \\(u+v = n\\), then delete \\(0\\) and \\(n\\)\n and decrease everything by \\(1\\).\n Then the chords \\(\\{a-1, n-a-1\\}\\), \\(\\{b-1, n-b-1\\}\\), \\(\\{u-1, v-1\\}\\)\n contradict the induction hypothesis.\n\n• If \\(u+v < n\\), then search for the chord\n \\(\\{u+v, n-(u+v)\\}\\).\n It lies on the other side of \\(\\{0, n\\}\\)\n in light of chord \\(\\{0,u+v\\}\\).\n Now again delete \\(0\\) and \\(n\\) and decrease everything by \\(1\\).\n Then the chords \\(\\{a-1, n-a-1\\}\\), \\(\\{b-1, n-b-1\\}\\), \\(\\{u+v-1, n-(u+v)-1\\}\\)\n contradict the induction hypothesis.\n\n• If \\(u+v > n\\), apply the map \\(t \\mapsto n-t\\) to the entire ring.\n This gives the previous case as now \\((n-u)+(n-v) < n\\).\n \\qedhere\n\nNext, we give another characterization of linear rings.\n\nLemma.\n A ring on \\([0,n-1]\\) is linear if and only if the point \\(0\\)\n does not lie between two chords of sum \\(n\\).\n\nProof.\n It's obviously true for linear rings.\n Conversely, assume the property holds for some ring.\n Note that the chords with sum \\(n-1\\) are pseudo-parallel and encompass every point,\n so they are actually parallel.\n Similarly, the chords of sum \\(n\\) are actually parallel\n and encompass every point other than \\(0\\).\n So the map\n \\[ t \\mapsto n-t \\mapsto (n-1)-(n-t) = t-1 \\pmod n \\]\n is rotation as desired.\n\nLemma.\n Every nonlinear ring on \\([0,n-1]\\) induces exactly one ring on \\([0,n]\\).\n\nProof.\n Because the chords of sum \\(n\\) are pseudo-parallel,\n there is at most one possibility for the location \\(n\\).\n\n Conversely, we claim that this works.\n The chords of sum \\(n\\) (and less than \\(n\\)) are OK by construction, so\n assume for contradiction that there exists \\(a,b,c \\in \\{1,\\dots,n-1\\}\\)\n such that \\(a + b = n + c\\).\n Then, we can ``reflect'' them using the (pseudo-parallel)\n chords of length \\(n\\) to find that \\((n-a) + (n-b) = 0 + (n-c)\\),\n and the chords joining \\(0\\) to \\(n-c\\) and \\(n-a\\) to \\(n-b\\) intersect,\n by definition.\n\n[Diagram omitted from this imported TeX transcription.]\n\n This is a contradiction that the original numbers on \\([0,n-1]\\) form a ring.\n\nLemma.\n Every linear ring on \\([0,n-1]\\) induces\n exactly two rings on \\([0,n]\\).\n\nProof.\n Because the chords of sum \\(n\\) are pseudo-parallel,\n the point \\(n\\) must lie either directly to the left or right of \\(0\\).\n For the same reason as in the previous proof, both of them work.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

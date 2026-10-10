@@ -1,0 +1,94 @@
+{
+  "id": "prob.ahsme-1967-p36",
+  "title": "1967 AHSME Problem 36",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1967,
+    "number": 36
+  },
+  "difficulty": {
+    "course": 45.9,
+    "source": 2380,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Given a geometric progression of five terms, each a positive integer less than \\(100.\\) The sum of the five terms is \\(211.\\) If \\(S\\) is the sum of those terms in the progression which are squares of integers, then \\(S\\) is:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(91\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(133\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(195\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(211\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "133"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1967-p36.live",
+      "kind": "proof-sketch",
+      "text": "Let the common ratio be \\(\\frac{c}{d}\\) in lowest terms and the middle term be \\(a.\\) Since all five terms are integers, \\(a\\) is divisible by \\(c^2d^2,\\) so write \\(a=kc^2d^2.\\) The sum \\(211\\) is then divisible by \\(k.\\) Thus \\(k\\) is \\(1\\) or \\(211.\\) But the middle term \\(a\\) is less than \\(100,\\) so \\(k=1.\\)\n\nThus \\[ \\begin{aligned} d^4+d^3c+d^2c^2&\\\\ \\quad+dc^3+c^4&=211. \\end{aligned} \\] The bound gives \\(c,d\\lt4.\\) If either is \\(1,\\) the possible sums are \\(5,\\) \\(31,\\) or \\(121,\\) not \\(211.\\) Coprimality therefore leaves \\(c\\) and \\(d\\) equal to \\(2\\) and \\(3\\) in either order. The progression is \\(16,\\) \\(24,\\) \\(36,\\) \\(54,\\) \\(81.\\) Its square terms sum to \\(16+36+81=133.\\)\n\nTherefore, the correct answer is C.",
+      "hints": [
+        "Write the rational common ratio in lowest terms as \\(\\frac{c}{d}\\)",
+        "Integrality forces the middle term to be a multiple of \\(c^2d^2\\); use that \\(211\\) is prime"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

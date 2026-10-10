@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2005-p21",
+  "title": "2005 AMC 12A Problem 21",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2005,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 40.1,
+    "source": 2440,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "How many ordered triples of integers \\((a, b, c),\\) with \\(a \\ge 2,\\) \\(b \\ge 1,\\) and \\(c \\ge 0,\\) satisfy both \\(\\log_a b = c^{2005}\\) and \\(a + b + c = 2005?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2005-p21.live",
+      "kind": "proof-sketch",
+      "text": "The condition \\(\\log_a b = c^{2005}\\) means \\(b = a^{\\left(c^{2005}\\right)}.\\)\n\nIf \\(c \\ge 2,\\) then \\(b = a^{\\left(c^{2005}\\right)} \\ge 2^{\\left(2^{2005}\\right)},\\) which vastly exceeds \\(2005,\\) so \\(a + b + c = 2005\\) is impossible.\n\nFor \\(c = 0:\\) \\(b = a^0 = 1,\\) so \\(a + 1 + 0 = 2005\\) gives \\((a, b, c) = (2004, 1, 0).\\) For \\(c = 1:\\) \\(b = a^1 = a,\\) so \\(2a + 1 = 2005\\) gives \\((a, b, c) = (1002, 1002, 1).\\)\n\nThere are \\(2\\) such triples.\n\nThus, the correct answer is C.",
+      "hints": [
+        "Rewrite the first condition as \\(b = a^{\\left(c^{2005}\\right)}\\)",
+        "If \\(c \\ge 2,\\) then \\(b\\) is astronomically larger than \\(2005;\\) only \\(c = 0\\) and \\(c = 1\\) can work"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2009-p19",
+  "title": "2009 AMC 12B Problem 19",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.difference-of-squares",
+      "label": "Difference of squares",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.prime",
+      "label": "Prime",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2009,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 34.2,
+    "source": 2000,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "For each positive integer \\(n,\\) let \\(f(n) = n^4 - 360n^2 + 400.\\) What is the sum of all values of \\(f(n)\\) that are prime numbers?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(794\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(796\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(798\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(800\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(802\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "802"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2009-p19.live",
+      "kind": "proof-sketch",
+      "text": "Write \\[ \\begin{aligned} f(n) &= n^4 + 40n^2 + 400 - 400n^2 \\\\ &= (n^2 + 20)^2 - (20n)^2 \\\\ &= (n^2 + 20n + 20) \\\\ &\\quad {}\\cdot (n^2 - 20n + 20). \\end{aligned} \\]\n\nFor \\(f(n)\\) to be prime the smaller factor must be \\(1\\): solving \\(n^2 - 20n + 20 = 1\\) gives \\((n - 1)(n - 19) = 0,\\) so \\(n = 1\\) or \\(n = 19.\\)\n\nThen \\(f(1) = 41\\) and \\(f(19) = 761\\) are both prime, summing to \\(802.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "Rewrite as a difference of squares: \\(n^4 - 360n^2 + 400\\) \\(= (n^2 + 20)^2 - (20n)^2\\)",
+        "Factor it; for the product to be prime, the smaller factor must equal \\(1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

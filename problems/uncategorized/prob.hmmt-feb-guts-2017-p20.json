@@ -1,0 +1,37 @@
+{
+  "id": "prob.hmmt-feb-guts-2017-p20",
+  "title": "2017 HMMT February Guts Problem 20",
+  "category": "uncategorized",
+  "subjects": [],
+  "concepts": [],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2017,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 70.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For positive integers \\(a\\) and \\(N\\), let \\(r(a, N) \\in\\{0,1, \\ldots, N-1\\}\\) denote the remainder of \\(a\\) when divided by \\(N\\). Determine the number of positive integers \\(n \\leq 1000000\\) for which\n\n\\[r(n, 1000)>r(n, 1001)\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2017-p20.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 499500\nNote that \\(0 \\leq r(n, 1000) \\leq 999\\) and \\(0 \\leq r(n, 1001) \\leq 1000\\). Consider the \\(\\binom{1000}{2}=499500\\) ways to choose pairs \\((i, j)\\) such that \\(i>j\\).By the Chinese Remainder Theorem, there is exactly one \\(n\\) such that \\(1 \\leq n \\leq 1000 \\cdot 1001\\) such that \\(n \\equiv i(\\bmod 1000)\\) and \\(n \\equiv j(\\bmod 1001)\\). Finally, it is easy to check that none of the \\(n\\) in the range 1000001 to 1001000 satisfy the condition, so the answer is exactly 499500 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

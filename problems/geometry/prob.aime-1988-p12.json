@@ -1,0 +1,68 @@
+{
+  "id": "prob.aime-1988-p12",
+  "title": "1988 AIME 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "geo.mass-points",
+      "label": "Mass points",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.ratio-and-proportion",
+      "label": "Ratio and proportion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.symmetry-algebra",
+      "label": "Symmetry (algebra)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1988,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 45.9,
+    "source": 2380,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "Let \\(P\\) be an interior point of triangle \\(ABC\\) and extend lines from the vertices through \\(P\\) to the opposite sides. Let \\(a,\\) \\(b,\\) \\(c,\\) and \\(d\\) denote the lengths of the segments indicated in the figure. Find the product \\(abc\\) if \\(a+b+c=43\\) and \\(d=3.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "441",
+    "value": "441"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1988-p12.live",
+      "kind": "proof-sketch",
+      "text": "Along the cevian from \\(A,\\) the barycentric coordinate at \\(A\\) is \\(\\frac{d}{a+d},\\) and similarly at the other vertices. Since the three coordinates sum to \\(1\\) and \\(d=3,\\) \\[\\frac3{a+3}+\\frac3{b+3}+\\frac3{c+3}=1.\\] Put \\(s_1=a+b+c=43,\\) \\(s_2=ab+bc+ca,\\) and \\(s_3=abc.\\) Clearing denominators gives \\[\\begin{aligned}3(s_2+6s_1+27)&=s_3+3s_2\\\\&\\quad+9s_1+27.\\end{aligned}\\] Therefore \\(s_3=9s_1+54,\\) so \\(s_3=9(43)+54=441.\\)",
+      "hints": [
+        "Express the three barycentric coordinates of \\(P\\) using the ratios \\(a:d,\\) \\(b:d,\\) \\(c:d\\)",
+        "Use \\(\\frac3{a+3}+\\frac3{b+3}+\\frac3{c+3}=1\\) and expand symmetrically"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "064fbc1ce5d5854a3ad90efd5de61c2a9a6782431e8c1662de2ee7c7c2797333"
+    ],
+    "solutions": []
+  }
+}

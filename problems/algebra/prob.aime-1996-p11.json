@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-1996-p11",
+  "title": "1996 AIME Problem 11",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1996,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 43.1,
+    "source": 2270,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Let \\(P\\) be the product of the roots of \\[z^6+z^4+z^3+z^2+1=0\\] that have positive imaginary part, and suppose that \\(P=r(\\cos\\theta^\\circ+i\\sin\\theta^\\circ),\\) where \\(r>0\\) and \\(0\\leq\\theta<360.\\) Find \\(\\theta.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "276",
+    "value": "276"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1996-p11.live",
+      "kind": "proof-sketch",
+      "text": "No root is zero. Dividing by \\(z^3\\) and setting \\(w=z+z^{-1}\\) gives \\[\\begin{aligned}w^3-2w+1&=0,\\\\{}(w-1)(w^2+w-1)&=0.\\end{aligned}\\] Its three roots are \\[\\begin{aligned}1&=2\\cos60^\\circ,\\\\\\frac{\\sqrt5-1}{2}&=2\\cos72^\\circ,\\\\-\\frac{1+\\sqrt5}{2}&=2\\cos144^\\circ.\\end{aligned}\\] For each value \\(w=2\\cos\\phi,\\) the corresponding roots of the original equation are \\(e^{i\\phi}\\) and \\(e^{-i\\phi}.\\) Thus the roots with positive imaginary part have arguments \\(60^\\circ,\\) \\(72^\\circ,\\) and \\(144^\\circ.\\) Their product has argument \\(60+72+144=276^\\circ,\\) so \\(\\theta=276.\\)",
+      "hints": [
+        "Divide by \\(z^3\\) and set \\(w=z+z^{-1}\\)",
+        "Factor the resulting cubic in \\(w\\) and identify each value as \\(2\\cos\\phi\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

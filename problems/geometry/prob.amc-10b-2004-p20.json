@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-10b-2004-p20",
+  "title": "2004 AMC 10B Problem 20",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "geo.parallel-lines",
+      "label": "Parallel lines",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.ratio-and-proportion",
+      "label": "Ratio and proportion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2004,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 34.4,
+    "source": 1840,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "In \\(\\triangle ABC\\) points \\(D\\) and \\(E\\) lie on \\(\\overline{BC}\\) and \\(\\overline{AC},\\) respectively. If \\(\\overline{AD}\\) and \\(\\overline{BE}\\) intersect at \\(T\\) so that \\(\\frac{AT}{DT} = 3\\) and \\(\\frac{BT}{ET} = 4,\\) what is \\(\\frac{CD}{BD}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{8}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{2}{9}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{3}{10}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{4}{11}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{5}{12}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "4/11"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2004-p20.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(F\\) be on \\(\\overline{AC}\\) with \\(DF \\parallel BE,\\) and write \\(ET = x,\\) \\(BT = 4x.\\)\n\nFrom \\(\\triangle ATE \\sim \\triangle ADF,\\) \\(\\dfrac{DF}{x} = \\dfrac{AD}{AT} = \\dfrac{4}{3},\\) so \\(DF = \\dfrac{4x}{3}.\\)\n\nFrom \\(\\triangle BEC \\sim \\triangle DFC,\\) \\(\\dfrac{CD}{BC} = \\dfrac{DF}{BE} = \\dfrac{\\frac{4x}{3}}{5x} = \\dfrac{4}{15}.\\)\n\nTherefore \\[ \\begin{aligned} \\dfrac{CD}{BD} &= \\dfrac{\\frac{CD}{BC}}{1 - \\frac{CD}{BC}} \\\\ &= \\dfrac{\\frac{4}{15}}{\\frac{11}{15}} = \\dfrac{4}{11}. \\end{aligned} \\]\n\nThus, the correct answer is D.",
+      "hints": [
+        "Draw the line through \\(D\\) parallel to \\(\\overline{BE}\\) meeting \\(\\overline{AC}\\) at a point \\(F\\)",
+        "Two pairs of similar triangles give \\(\\frac{CD}{BC},\\) which converts to \\(\\frac{CD}{BD}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "233ba499fed447f4bc5148bf39f91f8522dc48cb4e14e81f5bea853a5ed2048f"
+    ],
+    "solutions": []
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2015-p15",
+  "title": "2015 AMC 12A Problem 15",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.decimal",
+      "label": "Decimal",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2015,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 30.9,
+    "source": 1800,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "What is the minimum number of digits to the right of the decimal point needed to express the fraction \\[\\dfrac{123456789}{2^{26}\\cdot 5^4}\\] as a decimal?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(22\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(26\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(30\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(104\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "26"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2015-p15.live",
+      "kind": "proof-sketch",
+      "text": "The numerator and denominator share no common factors. To write the fraction as a decimal, rewrite it with a power of \\(10\\) in the denominator; the smallest that works is \\(10^{26}:\\) \\[\\dfrac{123456789}{2^{26}\\cdot 5^4} = \\dfrac{123456789\\cdot 5^{22}}{10^{26}}.\\]\n\nSince the numerator \\(123456789\\cdot 5^{22}\\) is not divisible by \\(10,\\) the decimal has exactly \\(26\\) places after the point.\n\nThus, the correct answer is C.",
+      "hints": [
+        "The numerator shares no factor of \\(2\\) or \\(5\\) with the denominator",
+        "Multiply the top and bottom to turn the denominator into a power of \\(10\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

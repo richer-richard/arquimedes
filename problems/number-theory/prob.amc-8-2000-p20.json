@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-8-2000-p20",
+  "title": "2000 AMC 8 Problem 20",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.money",
+      "label": "Money",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2000,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 17.2,
+    "source": 1560,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "You have nine coins: a collection of pennies, nickels, dimes, and quarters having a total value of \\(\\$1.02,\\) with at least one coin of each type. How many dimes must you have?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "1"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2000-p20.live",
+      "kind": "proof-sketch",
+      "text": "The number of pennies must have the same remainder as \\(102\\) modulo \\(5,\\) so there are either \\(2\\) or \\(7\\) pennies. Seven pennies would leave only two coins for nickels, dimes, and quarters, impossible because at least one of each type is needed.\n\nSo there are \\(2\\) pennies. The remaining \\(7\\) coins are worth \\(100\\) cents. If \\(n,\\) \\(d,\\) and \\(q\\) are the numbers of nickels, dimes, and quarters, then \\(n+d+q=7\\) and \\(5n+10d+25q=100.\\)\n\nDividing the value equation by \\(5\\) and subtracting the coin-count equation gives \\(d+4q=13.\\) The only positive solution is \\(q=3,\\) \\(d=1,\\) and \\(n=3.\\)\n\nThus there must be \\(1\\) dime.\n\nThus, A is the correct answer.",
+      "hints": [
+        "Use cents modulo \\(5\\) to find the number of pennies",
+        "After the pennies, solve for nickels, dimes, and quarters"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

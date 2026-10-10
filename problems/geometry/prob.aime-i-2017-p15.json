@@ -1,0 +1,74 @@
+{
+  "id": "prob.aime-i-2017-p15",
+  "title": "2017 AIME I Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2017,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 68.1,
+    "source": 3370,
+    "mohs": null
+  },
+  "estimatedMinutes": 25,
+  "statement": "The area of the smallest equilateral triangle with one vertex on each of the sides of the right triangle with side lengths \\(2\\sqrt{3},\\) \\(5,\\) and \\(\\sqrt{37},\\) as shown, is \\(\\frac{m\\sqrt{p}}{n},\\) where \\(m,\\) \\(n,\\) and \\(p\\) are positive integers, \\(m\\) and \\(n\\) are relatively prime, and \\(p\\) is not divisible by the square of any prime. Find \\(m + n + p.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "145",
+    "value": "145"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2017-p15.live",
+      "kind": "proof-sketch",
+      "text": "Place the right angle at the origin with vertices \\((0, 0),\\) \\((5, 0),\\) and \\((0, 2\\sqrt{3}),\\) so the hypotenuse lies on the line \\(2\\sqrt{3}\\,x + 5y = 10\\sqrt{3}.\\) Let the equilateral triangle’s side between the two legs have endpoints \\((s\\cos\\theta, 0)\\) and \\((0, s\\sin\\theta),\\) where \\(s\\) is the side length. Its midpoint is \\(\\frac{s}{2}(\\cos\\theta, \\sin\\theta),\\) and moving a distance \\(\\frac{\\sqrt{3}}{2}s\\) perpendicular to the side places the third vertex at \\(\\frac{s}{2}\\) \\(\\cdot\\small\\left(\\cos\\theta + \\sqrt{3}\\sin\\theta,\\ \\sin\\theta + \\sqrt{3}\\cos\\theta\\right).\\)\n\nSubstituting this vertex into the hypotenuse equation and simplifying gives \\[s = \\frac{20\\sqrt{3}}{7\\sqrt{3}\\cos\\theta + 11\\sin\\theta}.\\] The denominator is at most \\(\\sqrt{(7\\sqrt{3})^2 + 11^2}\\) \\(= \\sqrt{268} = 2\\sqrt{67},\\) attained for an admissible \\(\\theta,\\) so the minimum side length satisfies \\(s^2 = \\frac{(10\\sqrt{3})^2}{67} = \\frac{300}{67}.\\)\n\nThe minimum area is \\(\\frac{\\sqrt{3}}{4} \\cdot \\frac{300}{67} = \\frac{75\\sqrt{3}}{67},\\) so \\(m + n + p = 75 + 67 + 3 = 145.\\)",
+      "hints": [
+        "Put the legs on the axes and let the side between the legs run from \\((s\\cos\\theta, 0)\\) to \\((0, s\\sin\\theta)\\)",
+        "Requiring the third vertex to lie on the hypotenuse gives \\(s\\,(7\\sqrt{3}\\cos\\theta + 11\\sin\\theta) = 20\\sqrt{3};\\) maximize the left combination using \\(\\sqrt{a^2 + b^2}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "22f2b87e0a120c5271577e114a380354fb572ca041fb98699d99fbe5e8bef239"
+    ],
+    "solutions": []
+  }
+}

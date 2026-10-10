@@ -1,0 +1,48 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2016-p6",
+  "title": "2016 HMMT February Combinatorics Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2016,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 79.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Define the sequence \\(a_{1}, a_{2} \\ldots\\) as follows: \\(a_{1}=1\\) and for every \\(n \\geq 2\\),\n\n\\[a_{n}= \\begin{cases}n-2 & \\text { if } a_{n-1}=0 \\\\ a_{n-1}-1 & \\text { if } a_{n-1} \\neq 0\\end{cases}\\]\n\nA non-negative integer \\(d\\) is said to be jet-lagged if there are non-negative integers \\(r, s\\) and a positive integer \\(n\\) such that \\(d=r+s\\) and that \\(a_{n+r}=a_{n}+s\\). How many integers in \\(\\{1,2, \\ldots, 2016\\}\\) are jet-lagged?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2016-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(N=n+r\\), and \\(M=n\\). Then \\(r=N-M\\), and \\(s=a_{N}-a_{M}\\), and \\(d=r+s=\\left(a_{N}+N\\right)-\\left(a_{M}+M\\right)\\). So we are trying to find the number of possible values of \\(\\left(a_{N}+N\\right)-\\left(a_{M}+M\\right)\\), subject to \\(N \\geq M\\) and \\(a_{N} \\geq a_{M}\\).\nDivide the \\(a_{i}\\) into the following \"blocks\":\n\n- \\(a_{1}=1, a_{2}=0\\),\n- \\(a_{3}=1, a_{4}=0\\),\n- \\(a_{5}=3, a_{6}=2, a_{7}=1, a_{8}=0\\),\n- \\(a_{9}=7, a_{10}=6, \\ldots, a_{16}=0\\),\nand so on. The \\(k^{t h}\\) block contains \\(a_{i}\\) for \\(2^{k-1}<i \\leq 2^{k}\\). It's easy to see by induction that \\(a_{2^{k}}=0\\) and thus \\(a_{2^{k}+1}=2^{k}-1\\) for all \\(k \\geq 1\\). Within each block, the value \\(a_{n}+n\\) is constant, and for the \\(k\\) th block \\((k \\geq 1)\\) it equals \\(2^{k}\\). Therefore, \\(d=\\left(a_{N}+N\\right)-\\left(a_{M}+M\\right)\\) is the difference of two powers of 2 , say \\(2^{n}-2^{m}\\). For any \\(n \\geq 1\\), it is clear there exists an \\(N\\) such that \\(a_{N}+N=2^{n}\\) (consider the \\(n^{t h}\\)\nblock). We can guarantee \\(a_{N} \\geq a_{M}\\) by setting \\(M=2^{m}\\). Therefore, we are searching for the number of integers between 1 and 2016 that can be written as \\(2^{n}-2^{m}\\) with \\(n \\geq m \\geq 1\\). The pairs ( \\(n, m\\) ) with \\(n>m \\geq 1\\) and \\(n \\leq 10\\) all satisfy \\(1 \\leq 2^{n}-2^{m} \\leq 2016\\) ( 45 possibilities). In the case that \\(n=11\\), we have that \\(2^{n}-2^{m} \\leq 2016\\) so \\(2^{m} \\geq 32\\), so \\(m \\geq 5\\) ( 6 possibilities). There are therefore \\(45+6=51\\) jetlagged numbers between 1 and 2016.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

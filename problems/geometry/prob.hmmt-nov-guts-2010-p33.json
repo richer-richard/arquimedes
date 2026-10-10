@@ -1,0 +1,75 @@
+{
+  "id": "prob.hmmt-nov-guts-2010-p33",
+  "title": "2010 HMMT November Guts Problem 33",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2010,
+    "number": 33
+  },
+  "difficulty": {
+    "course": 66.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Convex quadrilateral \\(B C D E\\) lies in the plane. Lines \\(E B\\) and \\(D C\\) intersect at \\(A\\), with \\(A B=2\\), \\(A C=5, A D=200, A E=500\\), and \\(\\cos \\angle B A C=\\frac{7}{9}\\). What is the largest number of nonoverlapping circles that can lie in quadrilateral \\(B C D E\\) such that all of them are tangent to both lines \\(B E\\) and \\(C D\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2010-p33.hmmt",
+      "kind": "proof-sketch",
+      "text": "5 Let \\(\\theta=\\angle B A C\\), and \\(\\cos \\theta=\\frac{7}{9}\\) implies \\(\\cos \\frac{\\theta}{2}=\\sqrt{\\frac{1+\\frac{7}{9}}{2}}=\\frac{2 \\sqrt{2}}{3} ; \\sin \\frac{\\theta}{2}=\\frac{1}{3} ; B C=\\) \\(\\sqrt{4+25-2(2)(5) \\frac{7}{9}}=\\frac{11}{3}\\). Let \\(O_{1}\\) be the excircle of \\(\\triangle A B C\\) tangent to lines \\(A B\\) and \\(A C\\), and let \\(r_{1}\\) be its radius; let \\(O_{1}\\) be tangent to line \\(A B\\) at point \\(P_{1}\\). Then \\(A P_{1}=\\frac{A B+B C+C A}{2}\\) and \\(\\frac{r_{1}}{A P_{1}}=\\tan \\frac{\\theta}{2}=\\) \\(\\frac{1}{2 \\sqrt{2}} \\Longrightarrow r_{1}=\\frac{16}{3 \\cdot 2 \\sqrt{2}}\\). Let \\(O_{n}\\) be a circle tangent to \\(O_{n-1}\\) and the lines \\(A B\\) and \\(A C\\), and let \\(r_{n}\\) be its radius; let \\(O_{n}\\) be tangent to line \\(A B\\) at point \\(P_{n}\\). Then \\(\\frac{O_{n} P_{n}}{A O_{n}}=\\sin \\frac{\\theta}{2}=\\frac{1}{3}\\); since \\(\\triangle A P_{n} O_{n} \\sim\\) \\(\\triangle A P_{n-1} O_{n-1}\\) and \\(O_{n} O_{n-1}=r_{n}+r_{n-1}\\), we have \\(\\frac{1}{3}=\\frac{O_{n} P_{n}}{A O_{n}}=\\frac{r_{n}}{A O_{n-1}+O_{n-1} O_{n}}=\\frac{r_{n}}{3 r_{n-1}+r_{n}+r_{n-1}} \\Longrightarrow\\) \\(r_{n}=2 r_{n-1}=2^{n-1} \\frac{16}{3 \\cdot 2 \\sqrt{2}}\\). We want the highest \\(n\\) such that \\(O_{n}\\) is contained inside \\(\\triangle A D E\\). Let the incircle of \\(\\triangle A D E\\) be tangent to \\(A D\\) at \\(X\\); then the inradius of \\(\\triangle A D E\\) is \\(\\frac{A X}{\\tan \\frac{\\theta}{2}}=\\frac{\\frac{500+200-\\frac{1100}{2}}{2 \\sqrt{2}}}{2}=\\frac{500}{3 \\cdot 2 \\sqrt{2}}\\). We want the highest \\(n\\) such that \\(r_{n} \\leq \\frac{500}{3 \\cdot 2 \\sqrt{2}}\\); thus \\(2^{n-1} \\cdot 16 \\leq 500 \\Longrightarrow n=5\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

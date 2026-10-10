@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2002-p4",
+  "title": "2002 USAMO Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2002,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 83.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\mathbb{R}\\) be the set of real numbers. Determine all functions \\(f : \\mathbb{R} \\rightarrow \\mathbb{R}\\) such that\n\n\\[\nf(x^2 - y^2) = xf(x) - yf(y)\n\\]\n\nfor all pairs of real numbers \\(x\\) and \\(y\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2002-p4.imported",
+      "kind": "proof-sketch",
+      "text": "We first prove that $f$ is odd.\nNote that $f(0) = f(x^2 - x^2) = xf(x) - xf(x) = 0$, and for nonzero $y$, $xf(x) + yf(-y) = f(x^2 - y^2) = xf(x) - yf(y)$, or $yf(-y) = -yf(y)$, which implies $f(-y) = -f(y)$. Therefore $f$ is odd. Henceforth, we shall assume that all variables are non-negative.\nIf we let $y = 0$, then we obtain $f(x^2) = xf(x)$. Therefore the problem's condition becomes\n$f(x^2 - y^2) + f(y^2) = f(x^2)$.\nBut for any $a,b$, we may set $x = \\sqrt{a}$, $y = \\sqrt{b}$ to obtain\n$f(a-b) + f(b) = f(a)$.\n(It is well known that the only continuous solutions to this functional equation are of the form $f(x) = kx$, but there do exist other solutions to this which are not solutions to the equation of this problem.)\nWe may let $a = 2t$, $b = t$ to obtain $2f(t) = f(2t)$.\nLetting $x = t+1$ and $y = t$ in the original condition yields\n$\\begin{matrix}f(2t+1) &=& (t+1)f(t+1) - tf(t) \\qquad \\\\ &=& (t+1)[f(t) + f(1) ] - tf(t) \\\\ &=& f(t) + (t+1)f(1) \\qquad \\qquad \\end{matrix}$\nBut we know $f(2t + 1) = f(2t) + f(1) = 2f(t) + f(1)$, so we have $2f(t) + f(1) = f(t) + tf(1) + f(1)$, or\n$f(t) = tf(1)$.\nHence all solutions to our equation are of the form $f(x) = kx$. It is easy to see that real value of $k$ will suffice.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

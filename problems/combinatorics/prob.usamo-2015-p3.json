@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2015-p3",
+  "title": "2015 USAMO Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2015,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 99.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(S = \\{1, 2, ..., n\\}\\), where \\(n \\ge 1\\). Each of the \\(2^n\\) subsets of \\(S\\) is to be colored red or blue. (The subset itself is assigned a color and not its individual elements.) For any set \\(T \\subseteq S\\), we then write \\(f(T)\\) for the number of subsets of T that are blue.\n\nDetermine the number of colorings that satisfy the following condition: for any subsets \\(T_1\\) and \\(T_2\\) of \\(S\\),\n\n\\[\nf(T_1)f(T_2) = f(T_1 \\cup T_2)f(T_1 \\cap T_2).\n\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2015-p3.imported",
+      "kind": "proof-sketch",
+      "text": "Define function: $C(T)=1$ if the set T is colored blue, and $C(T)=0$ if $T$ is colored red.\nDefine the $\\text{Core} =\\text{intersection of all } T \\text{ where } C(T)=1$.\nThe empty set is denoted as $\\varnothing$, $\\cap$ denotes intersection, and $\\cup$ denotes union. Let $S_n=\\{n\\}$ are one-element subsets.\nLet $m_{c_k}=\\dbinom{m}{k} = \\frac{m!}{k!(m-k)!}$ denote m choose k.\n(Case I) $f(\\varnothing)=1$. Then for distinct m and k, $f(S_m \\cup S_k)=f(S_m)f(S_k)$, meaning only if $S_m$ and $S_k$ are both blue is their union blue. Namely $C(S_m \\cup S_k)=C(S_m)C(S_k).$\nSimilarly, for distinct $m,n,k$, $f(S_m \\cup S_k \\cup Sn)=f(S_m \\cup S_k)f(S_n)$, $C(S_m \\cup S_k \\cup S_n)=C(S_m)C(S_k)C(S_n)$. This procedure of determination continues to $S$. Therefore, if $T=\\{a_1,a_2, \\cdots a_k\\}$, then $C(T)=C(S_{a_1})C(S_{a_2}) \\cdots C(S_{a_k})$. All colorings thus determined by the free colors chosen for subsets of one single elements satisfy the condition. There are $2^n$ colorings in this case.\n(Case II.) $f(\\varnothing)=0$.\n(Case II.1) $\\text{Core}=\\varnothing$. Then either (II.1.1) there exist two nonintersecting subsets A and B, $C(A)=C(B)=1$, but f$(A)f(B)=0$, a contradiction, or (II.1.2) all subsets has $C(T)=0$, which is easily confirmed to satisfy the condition $f(T_1)f(T_2)=f(T_1 \\cap T_2)f(T_1 \\cup T_2)$. There is one coloring in this case.\n(Case II.2) Core = a subset of 1 element. WLOG, $C(S_1)=1$. Then $f(S_1)=1$, and subsets containing element 1 may be colored blue. $f(S_1 \\cup S_m)f(S_1\\cup S_n)=f(S_1 \\cup S_m \\cup S_n)$, namely $C(S_1 \\cup S_m \\cup S_n)=C(S_m \\cup S_1)C(S_n \\cup S_1)$. Now S_1 functions as the $\\varnothing$ in case I, with $n-1$ elements to combine into a base of $n-1$ two-element sets, and all the other subsets are determined. There are $2^{n-1}$ colorings for each choice of core. However, there are nC1 = n such cores. Hence altogether there are $n2^{n-1}$ colorings in this case.\n(Case II.3) Core = a subset of 2 elements. WLOG, let $C(S_1 \\cup S_2)=1$. Only subsets containing the core may be colored blue. With the same reasoning as in the preceding case, there are $(nC2)2^{n-2}$ colorings.\n$\\dots$\n(Case II.n+1) Core = S. Then $C(S)=1$, with all other subsets $C(T)=0$, there is $1=\\dbinom{n}{n}2^0$\nCombining all the cases, we have $1+\\left[2^n+\\dbinom{n}{1}2^{n-1}+\\dbinom{n}{2}2^{n-2}+ \\cdots + \\dbinom{n}{n}2^0\\right]=\\boxed{1+3^n}$ colorings. sponsored by ALLEN",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

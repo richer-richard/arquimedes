@@ -1,0 +1,48 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2017-p8",
+  "title": "2017 HMMT February Algebra and Number Theory Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.algebra-and-number-theory",
+      "label": "Algebra and Number Theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2017,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Consider all ordered pairs of integers \\((a, b)\\) such that \\(1 \\leq a \\leq b \\leq 100\\) and\n\n\\[\\frac{(a+b)(a+b+1)}{a b}\\]\n\nis an integer.\nAmong these pairs, find the one with largest value of \\(b\\). If multiple pairs have this maximal value of \\(b\\), choose the one with largest \\(a\\). For example choose \\((3,85)\\) over \\((2,85)\\) over \\((4,84)\\). Note that your answer should be an ordered pair.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2017-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\((35,90)\\)\nFirstly note that \\(\\frac{(a+b)(a+b+1)}{a b}=2+\\frac{a^{2}+b^{2}+a+b}{a b}\\). Let \\(c\\) be this fraction so that \\((a+b)(a+b+1)=a b(c+2)\\) for some integers \\(a, b, c\\). Suppose \\((a, b)\\) with \\(a \\geq b\\) is a solution for some \\(c\\). Consider the quadratic\n\n\\[x^{2}-(b c-1) x+b^{2}+b=0\\]\n\nIt has one root \\(a\\), and the other root is therefore \\(b c-a-1\\). Furthermore the other root can also be expressed as \\(\\frac{b^{2}+b}{a} \\leq \\frac{b^{2}+b}{b+1}=b\\), so that \\(0<b c-a-1 \\leq b\\). In particular, \\((b, b c-a-1)\\) is a solution as well.\nThus all solutions \\((a, b)\\) reduce to a solution where \\(a=b\\), at which point \\(c=2+\\frac{2}{a}\\). Since \\(a, c\\) are positive integers we thus have \\(a=1,2\\), and so \\(c=3,4\\).\nThrough this jumping process, we iteratively find the solutions for \\(c=3\\) :\n\n\\[(2,2) \\rightarrow(2,3) \\rightarrow(3,6) \\rightarrow(6,14) \\rightarrow(14,35) \\rightarrow(35,90)\\]\n\nand \\(c=4\\) :\n\n\\[(1,2) \\rightarrow(2,6) \\rightarrow(6,21) \\rightarrow(21,77)\\]\n\nso that the desired pair is \\((35,90)\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

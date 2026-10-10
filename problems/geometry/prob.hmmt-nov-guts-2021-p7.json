@@ -1,0 +1,75 @@
+{
+  "id": "prob.hmmt-nov-guts-2021-p7",
+  "title": "2021 HMMT November Guts Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cartesian-coordinates",
+      "label": "Cartesian coordinates",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.distance-chasing",
+      "label": "Distance chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.optimization-in-geometry",
+      "label": "Optimization in geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-inequalities",
+      "label": "Triangle inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2021,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 42.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Two unit squares \\(S_{1}\\) and \\(S_{2}\\) have horizontal and vertical sides. Let \\(x\\) be the minimum distance between a point in \\(S_{1}\\) and a point in \\(S_{2}\\), and let \\(y\\) be the maximum distance between a point in \\(S_{1}\\) and a point in \\(S_{2}\\). Given that \\(x=5\\), the difference between the maximum and minimum possible values for \\(y\\) can be written as \\(a+b \\sqrt{c}\\), where \\(a, b\\), and \\(c\\) are integers and \\(c\\) is positive and square-free. Find \\(100 a+10 b+c\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "472",
+    "value": "472"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2021-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "Consider what must happen in order for the minimum distance to be exactly 5 . Let one square, say \\(S_{1}\\) have vertices of \\((0,0),(0,1),(1,0)\\), and \\((1,1)\\). Further, assume WLOG that the center of \\(S_{2}\\) is above the line \\(y=\\frac{1}{2}\\) and to the right of the line \\(x=\\frac{1}{2}\\), determined by the center of \\(S_{1}\\). There are three cases to consider:\n\n- the right side of \\(S_{1}\\) and the left side of \\(S_{2}\\) are 5 units apart, and the bottom left vertex of \\(S_{2}\\) lies under the line \\(y=1\\);\n- the top side of \\(S_{1}\\) and the bottom side of \\(S_{2}\\) are 5 units apart, and the bottom left vertex of \\(S_{2}\\) lies to the left of the line \\(x=1\\);\n- the bottom left coordinate of \\(S_{2}\\) is \\((a, b)\\) with \\(a, b \\geq 1\\), and \\(5=\\sqrt{(a-1)^{2}+(b-1)^{2}}\\).\n\nWe see that the first two cases are symmetric, so consider the case where the left edge of \\(S_{2}\\) lies on the line \\(x=6\\). When this is true, the maximum distance will be achieved between \\((0,0)\\) and the upper right vertex of \\(S_{2}\\). The upper right vertex can achieve the points \\((7, c)\\) where \\(1 \\leq c \\leq 2\\), and so \\(y \\in[\\sqrt{50}, \\sqrt{53}]\\).\nThe other case we have to consider is when the bottom left vertex of \\(S_{2},(a, b)\\), is above \\(y=1\\) and to the right of \\(x=1\\), in which case the maximum distance is achieved from \\((0,0)\\) and the upper right vertex of \\(S_{2}\\). This distance is \\(\\sqrt{(a+1)^{2}+(b+1)^{2}}\\), which, by the triangle inequality, is at most \\(\\sqrt{(a-1)^{2}+(b-1)^{2}}+\\sqrt{2^{2}+2^{2}}=5+2 \\sqrt{2}\\). Since equality holds when \\(a=b=5 / \\sqrt{2}+1\\), the largest possible maximum here is \\(5+2 \\sqrt{2}\\), and the difference between the largest and smallest possible values of \\(y\\) is \\(5+2 \\sqrt{2}-\\sqrt{50}=5-3 \\sqrt{2}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "prob.amc-10b-2021-p24",
+  "title": "2021 AMC 10B Problem 24",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinatorial-game",
+      "label": "Combinatorial game",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2021,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 46.2,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Arjun and Beth play a game in which they take turns removing one brick or two adjacent bricks from one “wall” among a set of several walls of bricks, with gaps possibly creating new walls. The walls are one brick tall. For example, a set of walls of sizes \\(4\\) and \\(2\\) can be changed into any of the following by one move: \\((3,2),\\) \\((2,1,2),\\) \\((4),\\) \\((4,1),\\) \\((2,2),\\) or \\((1,1,2).\\)\n\nArjun plays first, and the player who removes the last brick wins. For which starting configuration is there a strategy that guarantees a win for Beth?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( (6,1,1) \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( (6,2,1) \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( (6,2,2) \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( (6,3,1) \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( (6,3,2) \\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2021-p24.live",
+      "kind": "proof-sketch",
+      "text": "For a single wall of length \\(n,\\) compute its Sprague-Grundy value from the possible moves. For the wall lengths needed here, the values are\n\n\\[ \\begin{aligned} &g(1)=1,\\quad g(2)=2, \\\\ &g(3)=3,\\quad g(4)=1, \\\\ &g(5)=4,\\quad g(6)=3. \\end{aligned} \\]\n\nFor several walls, the position is losing for the player to move exactly when the xor of the wall values is \\(0.\\) Evaluating the choices gives\n\n\\[(6,1,1): 3\\oplus1\\oplus1=3,\\]\n\n\\[(6,2,1): 3\\oplus2\\oplus1=0,\\]\n\n\\[(6,2,2): 3\\oplus2\\oplus2=3,\\]\n\n\\[(6,3,1): 3\\oplus3\\oplus1=1,\\]\n\n\\[(6,3,2): 3\\oplus3\\oplus2=2.\\]\n\nOnly \\((6,2,1)\\) is losing for the player to move, so Beth has a guaranteed win exactly for that starting configuration.\n\nThus, the answer is B .",
+      "hints": [
+        "Compute the game value for a single wall of each relevant size",
+        "A position is losing for the player to move exactly when the xor of the wall values is \\(0\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "3a9dd01fbae11a24a498b1ad8ee9c9e710e8ab46949f8db8463b33e451658344"
+    ],
+    "solutions": []
+  }
+}

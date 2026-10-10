@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12b-2011-p18",
+  "title": "2011 AMC 12B Problem 18",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cube-geometry",
+      "label": "Cube geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pyramid",
+      "label": "Pyramid",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2011,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 33.1,
+    "source": 2030,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A pyramid has a square base with sides of length \\(1\\) and has lateral faces that are equilateral triangles. A cube is placed within the pyramid so that one face is on the base of the pyramid and its opposite face has all its edges on the lateral faces of the pyramid. What is the volume of this cube?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(5\\sqrt{2}-7\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(7-4\\sqrt{3}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{2\\sqrt{2}}{27}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{\\sqrt{2}}{9}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{\\sqrt{3}}{9}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2011-p18.live",
+      "kind": "proof-sketch",
+      "text": "Let the apex be \\(A\\) and the base be square \\(BCDE.\\) Then \\(AB=AD=1\\) and \\(BD=\\sqrt2,\\) so \\(\\triangle BAD\\) is an isosceles right triangle.\n\nLet the cube have edge length \\(x.\\) Its intersection with the plane of \\(\\triangle BAD\\) is a rectangle of height \\(x\\) and width \\(\\sqrt2\\,x,\\) whose top corners lie on \\(AB\\) and \\(AD.\\) Because the legs \\(AB\\) and \\(AD\\) meet the base at \\(45^\\circ,\\) each portion of \\(BD\\) outside the rectangle has length \\(x,\\) so \\[ \\sqrt2=BD=\\sqrt2\\,x+2x, \\] which reduces to \\(x=\\dfrac{\\sqrt2}{2+\\sqrt2}=\\sqrt2-1.\\)\n\nThe volume is \\[ (\\sqrt2-1)^3=5\\sqrt2-7. \\]\n\nThus, the correct answer is A.",
+      "hints": [
+        "Slice the pyramid through the plane containing a diagonal of the base and the apex",
+        "That cross-section is an isosceles right triangle with hypotenuse \\(\\sqrt2;\\) the cube meets it in a rectangle of height \\(x\\) and width \\(\\sqrt2\\,x\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

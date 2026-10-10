@@ -1,0 +1,89 @@
+{
+  "id": "prob.amc-10a-2021-p12",
+  "title": "2021 AMC 10A Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cone",
+      "label": "Cone",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.volume",
+      "label": "Volume",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2021,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 27.5,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Two right circular cones with vertices facing down as shown in the figure below contain the same amount of liquid. The radii of the tops of the liquid surfaces are \\(3\\) cm and \\(6\\) cm. Into each cone is dropped a spherical marble of radius \\(1\\) cm, which sinks to the bottom and is completely submerged without spilling any liquid. What is the ratio of the rise of the liquid level in the narrow cone to the rise of the liquid level in the wide cone?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1:1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(47:43\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2:1\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(40:13\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4:1\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "4:1"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2021-p12.live",
+      "kind": "proof-sketch",
+      "text": "Let the initial liquid heights in the narrow and wide cones be \\(h_1\\) and \\(h_2.\\) Since the liquid volumes are equal,\n\n\\[\\frac13\\pi(3)^2h_1=\\frac13\\pi(6)^2h_2,\\]\n\nso \\(h_1=4h_2.\\)\n\nAfter the identical marbles are dropped in, each cone must contain the same final volume below the liquid surface: the original liquid volume plus the volume of one marble. If the new liquid-surface radii are \\(3x\\) and \\(6y,\\) similarity gives new heights \\(h_1x\\) and \\(h_2y.\\) Thus\n\n\\[\\frac13\\pi(3x)^2h_1x=\\frac13\\pi(6y)^2h_2y.\\]\n\nUsing \\(h_1=4h_2,\\) this simplifies to \\(x^3=y^3,\\) so \\(x=y.\\) The rise ratio is therefore\n\n\\[ \\begin{aligned} h_1(x-1):h_2(y-1) &= h_1:h_2 \\\\ &= 4:1. \\end{aligned} \\]\n\nThus, E is the correct answer.",
+      "hints": [
+        "Equal liquid volumes relate the two initial liquid heights",
+        "The marble adds the same displaced volume in each cone, so the final cone-below-surface volumes are still equal"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "ee988c74afd5a6732d8e1814bdb5ae9258c857d4ed1613f12c9ffbf97ea90d88"
+    ],
+    "solutions": []
+  }
+}

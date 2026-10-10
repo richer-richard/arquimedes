@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12a-2025-p7",
+  "title": "2025 AMC 12A Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2025,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 20.3,
+    "source": 1380,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In a certain alien world, the maximum running speed \\(v\\) of an organism is dependent on its number of toes \\(n\\) and number of eyes \\(m.\\) The relationship can be expressed as \\(v = k n^a m^b\\) centimeters per hour, where \\(k,\\) \\(a,\\) and \\(b\\) are integer constants. In a population where all organisms have \\(5\\) toes, \\(\\log v = 4 + 2\\log m;\\) and in a population where all organisms have \\(25\\) eyes, \\(\\log v = 4 + 4\\log n,\\) where the logarithms are base \\(10.\\) What is \\(k + a + b?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(22\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(23\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(24\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "22"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2025-p7.live",
+      "kind": "proof-sketch",
+      "text": "Taking logarithms, \\(\\log v = \\log k + a\\log n + b\\log m.\\)\n\nWith \\(n = 5,\\) this reads \\(\\log v = (\\log k + a\\log 5)\\) \\(+ b\\log m,\\) matching \\(4 + 2\\log m,\\) so \\(b = 2\\) and \\(\\log k + a\\log 5 = 4.\\)\n\nWith \\(m = 25,\\) it reads \\(\\log v = (\\log k + b\\log 25)\\) \\(+ a\\log n,\\) matching \\(4 + 4\\log n,\\) so \\(a = 4\\) and \\(\\log k + 2\\log 25 = 4.\\)\n\nThen \\(\\log k = 4 - \\log 625\\) \\(= \\log\\dfrac{10000}{625}\\) \\(= \\log 16,\\) so \\(k = 16.\\) Hence \\(k + a + b = 16 + 4 + 2 = 22.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Take logs: \\(\\log v = \\log k + a\\log n + b\\log m\\)",
+        "Setting \\(n = 5\\) gives \\(b = 2\\) and \\(\\log k + a\\log 5 = 4\\); setting \\(m = 25\\) gives \\(a = 4\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

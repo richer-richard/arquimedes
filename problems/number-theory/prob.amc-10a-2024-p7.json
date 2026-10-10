@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2024-p7",
+  "title": "2024 AMC 10A Problem 7",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.factor",
+      "label": "Factor",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2024,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 15.7,
+    "source": 1200,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The product of three integers is \\(60.\\) What is the least possible positive sum of the three integers?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(13\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "3"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2024-p7.live",
+      "kind": "proof-sketch",
+      "text": "A positive product comes from three positive integers or one positive and two negative integers. Three positive integers have sum at least \\(3.\\) In the second case write the numbers as \\(-x,-y,z,\\) where \\(x,y,z\\) are positive and \\(xyz=60.\\) A positive sum requires \\(z \\gt x+y \\ge 2\\sqrt{xy},\\) so \\(\\frac{60}{xy} \\gt 2\\sqrt{xy}\\) and hence \\(xy \\lt 10.\\) The possible products \\(xy\\) that divide \\(60\\) are \\(1,2,3,4,5,6.\\) Checking their factor pairs, the smallest positive value of \\(\\frac{60}{xy}-x-y\\) is \\(10-1-6=3.\\) Thus \\((-1)(-6)(10)=60,\\) and no positive sum below \\(3\\) is possible. Therefore, the answer is B.",
+      "hints": [
+        "A positive product uses either three positive factors or one positive and two negative factors",
+        "Two negative factors let the positive factor be large; minimize the positive factor minus the sum of the two magnitudes"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

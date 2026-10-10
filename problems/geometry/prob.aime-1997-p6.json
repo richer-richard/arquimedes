@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1997-p6",
+  "title": "1997 AIME Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-sum",
+      "label": "Angle sum",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.regular-polygon",
+      "label": "Regular polygon",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1997,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 43.9,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Point \\(B\\) is in the exterior of the regular \\(n\\)-sided polygon \\(A_1A_2\\cdots A_n,\\) and \\(A_1A_2B\\) is an equilateral triangle. What is the largest value of \\(n\\) for which \\(A_n,\\) \\(A_1,\\) and \\(B\\) are consecutive vertices of a regular polygon?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "42",
+    "value": "42"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1997-p6.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(B\\) is outside the \\(n\\)-gon, the angles at \\(A_1\\) — the interior angle \\(\\angle A_nA_1A_2 = \\frac{(n-2)180^\\circ}{n},\\) the equilateral angle \\(\\angle A_2A_1B = 60^\\circ,\\) and \\(\\angle BA_1A_n\\) — fill a full revolution, so \\[ \\begin{aligned} \\angle BA_1A_n &= 300^\\circ - \\frac{(n-2)180^\\circ}{n} \\\\ &= 120^\\circ + \\frac{360^\\circ}{n}. \\end{aligned} \\] Also \\(A_nA_1 = A_1B,\\) since both equal the side of the \\(n\\)-gon.\n\nFor \\(A_n,\\) \\(A_1,\\) \\(B\\) to be consecutive vertices of a regular \\(m\\)-gon, this angle must be the \\(m\\)-gon’s interior angle: \\(120^\\circ + \\frac{360^\\circ}{n} = 180^\\circ - \\frac{360^\\circ}{m},\\) which simplifies to \\(\\frac{1}{m} = \\frac{1}{6} - \\frac{1}{n},\\) so \\(m = \\frac{6n}{n - 6} = 6 + \\frac{36}{n - 6}.\\)\n\nThus \\(n - 6\\) must divide \\(36,\\) and the largest choice is \\(n - 6 = 36,\\) i.e. \\(n = 42\\) (with \\(m = 7\\)).",
+      "hints": [
+        "The \\(n\\)-gon’s interior angle, the \\(60^\\circ\\) angle, and \\(\\angle BA_1A_n\\) together fill \\(360^\\circ\\) at \\(A_1\\)",
+        "Setting \\(\\angle BA_1A_n\\) equal to the interior angle of a regular \\(m\\)-gon gives \\(\\frac{1}{m} = \\frac{1}{6} - \\frac{1}{n},\\) so \\(n - 6\\) must divide \\(36\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

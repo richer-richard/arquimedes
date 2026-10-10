@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12a-fall-2021-p4",
+  "title": "2021 Fall AMC 12A Problem 4",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime",
+      "label": "Prime",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2021,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 15.7,
+    "source": 1200,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The six-digit number \\(\\underline{2}\\,\\underline{0}\\,\\underline{2}\\,\\underline{1}\\,\\underline{0}\\,\\underline{A}\\) is prime for only one digit \\(A.\\) What is \\(A?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(9\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "9"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-fall-2021-p4.live",
+      "kind": "proof-sketch",
+      "text": "The number is \\(202100 + A.\\) Any even \\(A\\) makes it even, and \\(A = 5\\) makes it divisible by \\(5,\\) so \\(A\\) must be odd and not \\(5.\\)\n\nFor \\(A = 1\\) the digit sum is \\(6\\) (divisible by \\(3\\)); for \\(A = 7\\) the digit sum is \\(12\\) (divisible by \\(3\\)); and \\(202103 = 11 \\cdot 18373.\\) Only \\(202109\\) survives all tests, and it is prime.\n\nThus, the correct answer is E.",
+      "hints": [
+        "The number is \\(202100 + A;\\) even \\(A\\) makes it even, and \\(A = 5\\) makes it a multiple of \\(5\\)",
+        "For \\(A = 1\\) and \\(A = 7\\) the digit sum is a multiple of \\(3,\\) and \\(202103 = 11 \\cdot 18373\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

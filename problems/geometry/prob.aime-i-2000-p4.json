@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-i-2000-p4",
+  "title": "2000 AIME I Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.rectangle",
+      "label": "Rectangle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.square-geometry",
+      "label": "Square (geometry)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2000,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 46.4,
+    "source": 2400,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "The diagram shows a rectangle that has been dissected into nine non-overlapping squares. Given that the width and the height of the rectangle are relatively prime positive integers, find the perimeter of the rectangle.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "260",
+    "value": "260"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2000-p4.live",
+      "kind": "proof-sketch",
+      "text": "Let the tiniest square (in the middle) have side \\(x\\) and the small square just below and to its right have side \\(y.\\) Chasing edge lengths through the figure, the remaining squares have sides \\(x + y,\\) then \\((x + y) + x = 2x + y,\\) then \\((x + y) + (2x + y) = 3x + 2y,\\) then \\((2x + y) + (3x + 2y) = 5x + 3y\\) (the top-left square). The tall square on the right spans the previous three along its left edge minus overlaps, giving side \\(4x + 4y;\\) the bottom-right square has side \\((4x + 4y) + y = 4x + 5y;\\) and the bottom-left square has side \\(x\\) \\(+ (2x + y)\\) \\(+ (5x + 3y)\\) \\(= 8x + 4y.\\)\n\nMeasuring the rectangle’s height along its left and right sides, \\[ \\begin{aligned} &(8x + 4y) + (5x + 3y) \\\\ &= (4x + 5y) \\\\ &\\quad {}+ (4x + 4y), \\end{aligned} \\] which simplifies to \\(5x = 2y.\\) Taking the smallest positive integers, \\(x = 2\\) and \\(y = 5,\\) the nine squares have sides \\(2, 5, 7, 9, 16, 25, 28, 33, 36,\\) and the rectangle is \\((36 + 33) \\times (36 + 25) = 69 \\times 61.\\) These dimensions are relatively prime (any common scaling would break that), and the areas check: \\(69 \\cdot 61 = 4209\\) equals the sum of the nine squares’ areas.\n\nThe perimeter is \\(2(69 + 61) = 260.\\)",
+      "hints": [
+        "Let the two smallest squares have sides \\(x\\) and \\(y,\\) and express every other square’s side in terms of them",
+        "Equate the two expressions for the rectangle’s height (left side versus right side) to get \\(5x = 2y\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "438d071547d271610b783bd587db8e539467b2eb847b1dac982f072fb7685863"
+    ],
+    "solutions": []
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-ii-2016-p3",
+  "title": "2016 AIME II Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.substitution",
+      "label": "Substitution",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2016,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 50.2,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Let \\(x,\\) \\(y,\\) and \\(z\\) be real numbers satisfying the system \\[\\log_2(xyz - 3 + \\log_5 x) = 5\\] \\[\\log_3(xyz - 3 + \\log_5 y) = 4\\] \\[\\log_4(xyz - 3 + \\log_5 z) = 4.\\] Find the value of \\(|\\log_5 x| + |\\log_5 y| + |\\log_5 z|.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "265",
+    "value": "265"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2016-p3.live",
+      "kind": "proof-sketch",
+      "text": "Exponentiating each equation gives \\(xyz - 3 + \\log_5 x = 2^5\\) and similarly for the others, so \\[xyz + \\log_5 x = 35,\\] \\[xyz + \\log_5 y = 84,\\] \\[xyz + \\log_5 z = 259.\\] Write \\(x = 5^a,\\) \\(y = 5^b,\\) \\(z = 5^c,\\) so that \\(xyz = 5^{a+b+c}.\\)\n\nAdding the three equations gives \\(3 \\cdot 5^s + s = 378,\\) where \\(s = a + b + c.\\) The left side is strictly increasing in \\(s,\\) and \\(s = 3\\) works since \\(375 + 3 = 378,\\) so \\(s = 3\\) and \\(5^s = 125.\\)\n\nThen \\(a = 35 - 125 = -90,\\) \\(b = 84 - 125 = -41,\\) and \\(c = 259 - 125 = 134,\\) so \\(|a| + |b| + |c|\\) \\(= 90 + 41 + 134\\) \\(= 265.\\)",
+      "hints": [
+        "Undo each outer logarithm: the equations become \\(xyz + \\log_5 x = 35,\\) \\(xyz + \\log_5 y = 84,\\) \\(xyz + \\log_5 z = 259\\)",
+        "Set \\(x = 5^a,\\) etc., and add all three equations: \\(3 \\cdot 5^{a+b+c} + (a + b + c) = 378\\) has exactly one solution"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

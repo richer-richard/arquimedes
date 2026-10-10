@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2020-p23",
+  "title": "2020 HMMT February Guts Problem 23",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2020,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 77.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A function \\(f: A \\rightarrow A\\) is called idempotent if \\(f(f(x))=f(x)\\) for all \\(x \\in A\\). Let \\(I_{n}\\) be the number of idempotent functions from \\(\\{1,2, \\ldots, n\\}\\) to itself. Compute\n\n\\[\\sum_{n=1}^{\\infty} \\frac{I_{n}}{n!}\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "e^{e}-1",
+    "value": "e^{e}-1"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2020-p23.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(A_{k, n}\\) denote the number of idempotent functions on a set of size \\(n\\) with \\(k\\) fixed points. We have the formula\n\n\\[A_{k, n}=\\binom{n}{k} k^{n-k}\\]\n\nfor \\(1 \\leq k \\leq n\\) because there are \\(\\binom{n}{k}\\) ways to choose the fixed points and all \\(n-k\\) remaining elements must map to fixed points, which can happen in \\(k^{n-k}\\) ways. Hence\n\n\\[\\begin{aligned}\n\\sum_{n=1}^{\\infty} \\frac{I_{n}}{n!} & =\\sum_{n=1}^{\\infty} \\sum_{k=1}^{n} \\frac{A_{k, n}}{n!} \\\\\n& =\\sum_{n=1}^{\\infty} \\sum_{k=1}^{n} \\frac{k^{n-k}}{k!(n-k)!} \\\\\n& =\\sum_{k=1}^{\\infty} \\frac{1}{k!} \\sum_{n=k}^{\\infty} \\frac{k^{n-k}}{(n-k)!} \\\\\n& =\\sum_{k=1}^{\\infty} \\frac{1}{k!} \\sum_{n=0}^{\\infty} \\frac{k^{n}}{n!} \\\\\n& =\\sum_{k=1}^{\\infty} \\frac{1}{k!} e^{k} \\\\\n& =e^{e}-1 .\n\\end{aligned}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

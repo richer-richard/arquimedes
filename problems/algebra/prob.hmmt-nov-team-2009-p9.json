@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-team-2009-p9",
+  "title": "2009 HMMT November Team Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.probability",
+      "label": "Probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.systems-of-equations",
+      "label": "Systems of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2009,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 53.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Suppose that in every room, Mario randomly picks a door to walk through. What is the expected number of doors (not including Mario's initial entrance to the first room) through which Mario will pass before he reaches Bowser's level?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2009-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "20 Let \\(E_{i}\\) be the expected number of doors through which Mario will pass in the future if he is currently in room \\(i\\) for \\(i=1,2,3\\) (we will set \\(E_{3}=0\\) ). We claim that \\(E_{i}=1+\\frac{3}{4} E_{1}+\\frac{1}{4} E_{i+1}\\). Indeed, the 1 at the beginning comes from the fact that we need to pass through a door to leave the room, the \\(\\frac{3}{4} E_{1}\\) comes from the fact that there is a \\(\\frac{3}{4}\\) chance of ending up in room 1 , and the \\(\\frac{1}{4} E_{i+1}\\) corresponds to the fact that there is a \\(\\frac{1}{4}\\) chance of ending up in \\(E_{i+1}\\). Using this, we get \\(E_{1}=1+\\frac{3}{4} E_{1}+\\frac{1}{4} E_{2}\\), or \\(E_{1}=4+E_{2}\\). We also get \\(E_{2}=1+\\frac{3}{4} E_{1}\\). Solving this system of equations yields \\(E_{1}=20\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-nov-guts-2010-p12",
+  "title": "2010 HMMT November Guts Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2010,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 56.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "An ant starts at the origin of a coordinate plane. Each minute, it either walks one unit to the right or one unit up, but it will never move in the same direction more than twice in the row. In how many different ways can it get to the point \\((5,5)\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2010-p12.hmmt",
+      "kind": "proof-sketch",
+      "text": "84 We can change the ant's sequence of moves to a sequence \\(a_{1}, a_{2}, \\ldots, a_{10}\\), with \\(a_{i}=0\\) if the \\(i\\)-th step is up, and \\(a_{i}=1\\) if the \\(i\\)-th step is right. We define a subsequence of moves \\(a_{i}, a_{i+1}, \\ldots, a_{j}\\), ( \\(i \\leq j\\) ) as an up run if all terms of the subsequence are equal to 0 , and \\(a_{i-1}\\) and \\(a_{j+1}\\) either do not exist or are not equal to 0 , and define a right run similarly. In a sequence of moves, up runs and right runs alternate, so the number of up rights can differ from the number of right runs by at most one.\nNow let \\(f(n)\\) denote the number of sequences \\(a_{1}, a_{2}, \\ldots, a_{n}\\) where \\(a_{i} \\in\\{1,2\\}\\) for \\(1 \\leq i \\leq n\\), and \\(a_{1}+a_{2}+\\cdots+a_{n}=5\\). (In essence, we are splitting the possible 5 up moves into up runs, and we are doing the same with the right moves). We can easily compute that \\(f(3)=3, f(4)=4, f(5)=1\\), and \\(f(n)=0\\) otherwise.\nFor each possible pair of numbers of up runs and right runs, we have two choices of which type of run is first. Our answer is then \\(2\\left(f(3)^{2}+f(3) f(4)+f(4)^{2}+f(4) f(5)+f(5)^{2}\\right)=2(9+12+16+4+1)=84\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

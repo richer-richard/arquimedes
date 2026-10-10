@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-fall-2021-p12",
+  "title": "2021 Fall AMC 10B Problem 12",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.algebraic-manipulation",
+      "label": "Algebraic manipulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2021,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 20.0,
+    "source": 1370,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Which of the following conditions is sufficient to guarantee that integers \\(x,\\) \\(y,\\) and \\(z\\) satisfy the equation \\[x(x-y)+y(y-z)+z(z-x) \\]\\[= 1?\\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( x > y\\) and \\(y=z\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( x=y-1\\) and \\(y=z-1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( x=z+1\\) and \\(y=x+1\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( x=z\\) and \\(y-1=x\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( x+y+z=1 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-fall-2021-p12.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(E=x(x-y)+y(y-z)\\) \\(+z(z-x).\\) Expanding gives \\[ \\begin{aligned} 2E={}&(x-y)^2+(y-z)^2\\\\ &+(z-x)^2. \\end{aligned} \\]\n\nFor the value to be \\(1,\\) the three nonnegative square terms must sum to \\(2.\\) Since \\(x,y,z\\) are integers, this means the squared differences are \\(1,1,0.\\)\n\nThus two of the variables must be equal, and the third must differ from them by \\(1.\\) The condition \\(x=z\\) and \\(y-1=x\\) guarantees exactly that.\n\nThus, the answer is D .",
+      "hints": [
+        "Rewrite the expression using squared differences",
+        "The three squared differences must sum to \\(2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

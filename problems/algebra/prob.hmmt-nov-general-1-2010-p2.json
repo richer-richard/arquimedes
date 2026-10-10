@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-general-1-2010-p2",
+  "title": "2010 HMMT November General Round 1 Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2010,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many sequences \\(a_{1}, a_{2}, \\ldots, a_{8}\\) of zeroes and ones have \\(a_{1} a_{2}+a_{2} a_{3}+\\cdots+a_{7} a_{8}=5\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-1-2010-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "9 First, note that we have seven terms in the left hand side, and each term can be either 0 or 1 , so we must have five terms equal to 1 and two terms equal to 0 . Thus, for \\(n \\in\\{1,2, \\ldots, 8\\}\\), at least one of the \\(a_{n}\\) must be equal to 0 . If we can find \\(i, j \\in\\{2,3, \\ldots, 7\\}\\) such that \\(a_{i}=a_{j}=0\\) and \\(i<j\\), then the terms \\(a_{i-1} a_{i}, a_{i} a_{i+1}\\), and \\(a_{j} a_{j+1}\\) will all be equal to 0 . We did not count any term twice because \\(i-1<i<j\\), so we would have three terms equal to 0 , which cannot happen because we can have only two. Thus, we can find at most one \\(n \\in\\{2,3, \\ldots, 7\\}\\) such that \\(a_{n}=0\\). We will do casework on which \\(n\\) in this range have \\(a_{n}=0\\).\nIf \\(n \\in\\{3,4,5,6\\}\\), then we know that the terms \\(a_{n-1} a_{n}=a_{n} a_{n+1}=0\\), so all other terms must be 1 , so \\(a_{1} a_{2}=a_{2} a_{3}=\\ldots=a_{n-2} a_{n-1}=1\\) and \\(a_{n+1} a_{n+2}=\\ldots=a_{7} a_{8}=1\\). Because every \\(a_{i}\\) appears in one of these equations for \\(i \\neq n\\), then we must have \\(a_{i}=1\\) for all \\(i \\neq n\\), so we have 1 possibility for each choice of \\(n\\) and thus 4 possibilities total for this case.\nIf \\(n=2\\), then again we have \\(a_{1} a_{2}=a_{2} a_{3}=0\\), so we must have \\(a_{3} a_{4}=a_{4} a_{5}=\\ldots=a_{7} a_{8}=1\\), so \\(a_{3}=a_{4}=\\ldots=a_{8}=1\\). However, this time \\(a_{1}\\) is not fixed, and we see that regardless of our choice of \\(a_{1}\\) the sum will still be equal to 5 . Thus, since there are 2 choices for \\(a_{1}\\), then there are 2 possibilities total for this case. The case where \\(n=7\\) is analogous, with \\(a_{8}\\) having 2 possibilities, so we have another 2 possibilities.\nFinally, if \\(a_{n}=1\\) for \\(n \\in\\{2,3, \\ldots, 7\\}\\), then we will have \\(a_{2} a_{3}=a_{3} a_{4}=\\ldots=a_{6} a_{7}=1\\). We already have five terms equal to 1 , so the remaining two terms \\(a_{1} a_{2}\\) and \\(a_{7} a_{8}\\) must be 0 . Since \\(a_{2}=1\\), then we must have \\(a_{1}=0\\), and since \\(a_{7}=1\\) then \\(a_{8}=0\\). Thus, there is only 1 possibility for this case.\nSumming, we have \\(4+2+2+1=9\\) total sequences.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-8-2020-p18",
+  "title": "2020 AMC 8 Problem 18",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle",
+      "label": "Circle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.rectangle",
+      "label": "Rectangle",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2020,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 15.6,
+    "source": 1330,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Rectangle \\(ABCD\\) is inscribed in a semicircle with diameter \\(\\overline{FE},\\) as shown in the figure. Let \\(DA=16,\\) and let \\(FD=AE=9.\\) What is the area of \\(ABCD?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(240\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(248\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(256\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(264\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(272\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "240"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2020-p18.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(FE\\) is the diameter of the semicircle, we know the length of the diameter is \\(34,\\) and so the radius is \\(17.\\) Let \\(O\\) be the center of the diameter.\n\nThe length from \\(OF\\) therefore is \\(17.\\)\n\nSince \\(D\\) is on \\(OF,\\) we know \\[\\begin{align*} OD + FD &= OF\\\\ OD + 9 &= 17 \\\\ OD &= 8. \\end{align*}\\]\n\nAlso, since we have a semicircle, we know \\(OC = 17.\\)\n\nFinally, since \\(ABCD\\) is a rectangle, we know \\(\\angle ODC\\) is a right angle. This means we can find \\(DC\\) by the Pythagorean Theorem. We know \\[\\begin{align*} OD^2+DC^2&=OC^2 \\\\ 8^2+DC^2 &= 17^2 \\\\ DC &= 15. \\end{align*}\\]\n\nThus, the area of the rectangle is \\(DC\\cdot DA = 15\\cdot 16=240.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "The diameter is \\(9+16+9\\)",
+        "Use the radius and half the rectangle base in a right triangle"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "4b1d710687b6529cecd00bea2011b3b13d9e9acb0fe37ef67256a22d1eae04a6"
+    ],
+    "solutions": []
+  }
+}

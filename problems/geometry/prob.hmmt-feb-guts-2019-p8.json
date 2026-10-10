@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-guts-2019-p8",
+  "title": "2019 HMMT February Guts Problem 8",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.constructions-and-loci",
+      "label": "Constructions and loci",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.games-and-greedy-algorithms",
+      "label": "Games and greedy algorithms",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.optimization-in-geometry",
+      "label": "Optimization in geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2019,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 71.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A regular hexagon \\(P R O F I T\\) has area 1. Every minute, greedy George places the largest possible equilateral triangle that does not overlap with other already-placed triangles in the hexagon, with ties broken arbitrarily. How many triangles would George need to cover at least \\(90 \\%\\) of the hexagon's area?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2019-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 46\nIt's not difficult to see that the first triangle must connect three non-adjacent vertices (e.g. POI), which covers area \\(\\frac{1}{2}\\), and leaves three 30-30-120 triangles of area \\(\\frac{1}{6}\\) each. Then, the next three triangles cover \\(\\frac{1}{3}\\) of the respective small triangle they are in, and leave six 30-30-120 triangles of area \\(\\frac{1}{18}\\) each.\n\nThis process continues, doubling the number of 30-30-120 triangles each round and the area of each triangle is divided by 3 each round. After \\(1+3+6+12+24=46\\) triangles, the remaining area is \\(\\frac{3 \\cdot 2^{4}}{6 \\cdot 3^{4}}=\\frac{48}{486}=\\frac{8}{81}<0.1\\), and the last triangle removed triangle has area \\(\\frac{1}{486}\\), so this is the minimum number necessary.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

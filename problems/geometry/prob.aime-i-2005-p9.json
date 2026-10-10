@@ -1,0 +1,73 @@
+{
+  "id": "prob.aime-i-2005-p9",
+  "title": "2005 AIME I Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cube-geometry",
+      "label": "Cube geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.independent-events",
+      "label": "Independent events",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2005,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 59.8,
+    "source": 2920,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Twenty-seven unit cubes are each painted orange on a set of four faces so that the two unpainted faces share an edge. The \\(27\\) cubes are then randomly arranged to form a \\(3 \\times 3 \\times 3\\) cube. Given that the probability that the entire surface of the larger cube is orange is \\(\\frac{p^a}{q^b r^c},\\) where \\(p,\\) \\(q,\\) and \\(r\\) are distinct primes and \\(a,\\) \\(b,\\) and \\(c\\) are positive integers, find \\(a + b + c + p + q + r.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "74",
+    "value": "74"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2005-p9.live",
+      "kind": "proof-sketch",
+      "text": "Each unit cube has one “bad edge”: the edge shared by its two unpainted faces. The larger cube’s surface is entirely orange exactly when every unit cube’s bad edge touches no visible face. A uniformly random orientation places the bad edge uniformly among the cube’s \\(12\\) edge positions, so for each unit cube we count the edge positions both of whose faces are hidden.\n\nA corner cube shows \\(3\\) faces meeting at a vertex; the safe edges are those of the \\(3\\) hidden faces meeting at the opposite vertex, so the probability is \\(\\frac{3}{12} = \\frac{1}{4}.\\) An edge cube shows \\(2\\) adjacent faces, which touch \\(4 + 4 - 1 = 7\\) edges, leaving \\(5\\) safe: probability \\(\\frac{5}{12}.\\) A face-center cube shows \\(1\\) face touching \\(4\\) edges, leaving \\(8\\) safe: probability \\(\\frac{8}{12} = \\frac{2}{3}.\\) The center cube is always fine.\n\nWith \\(8\\) corner, \\(12\\) edge, and \\(6\\) face-center cubes, the probability is \\[ \\begin{aligned} &\\left(\\frac{1}{4}\\right)^{8}\\left(\\frac{5}{12}\\right)^{12}\\left(\\frac{2}{3}\\right)^{6} \\\\ &= \\frac{5^{12}}{2^{34} \\cdot 3^{18}}, \\end{aligned} \\] so \\[ \\begin{aligned} &a + b + c + p + q + r \\\\ &\\quad {}= 12 + 34 + 18 \\\\ &\\qquad {}+ 5 + 2 + 3 \\\\ &\\quad {}= 74. \\end{aligned} \\]",
+      "hints": [
+        "Each small cube’s two unpainted faces share one edge of that cube; the surface is all orange exactly when every such edge is buried",
+        "A random orientation puts that edge uniformly among the \\(12\\) edge positions. A corner cube hides \\(3\\) of them, an edge cube \\(5,\\) a face cube \\(8.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

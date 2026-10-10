@@ -1,0 +1,83 @@
+{
+  "id": "prob.hmmt-nov-theme-2021-p5",
+  "title": "2021 HMMT November Theme Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.pigeonhole-principle",
+      "label": "Pigeonhole principle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2021,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 49.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n\\) be the answer to this problem. The polynomial \\(x^{n}+a x^{2}+b x+c\\) has real coefficients and exactly \\(k\\) real roots. Find the sum of the possible values of \\(k\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "10",
+    "value": "10"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2021-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "Note that the roots to the above polynomial must satisfy \\(x^{n}=-a x^{2}-b x-c\\). Therefore, it suffices to consider how many times a parabola can intersect the graph \\(x^{n}\\). For \\(n \\leq 2\\), a parabola can intersect \\(x^{n} 0,1\\), or 2 times, so the sum of the possible values of \\(k\\) is 3 . Therefore, we know we must have \\(n>2\\). If \\(n\\) is odd, then a parabola can intersect \\(x^{n} 0,1,2\\), or 3 times, so the sum of the possible values of \\(k\\) is 6 , which isn't odd. Thus, we must have \\(n\\) is even and \\(n>2\\). In this case a parabola can intersect \\(x^{n} 0,1,2,3\\), or 4 times, so the sum of the possible values of \\(k\\) in this case is 10 . Thus, we must have \\(n=10\\).\n\nHere is a more rigorous justification of the above reasoning for \\(n>2\\) : consider \\(f(x)=x^{n}+a x^{2}+b x+c\\). Note that \\(f^{\\prime \\prime \\prime}(x)=n(n-1)(n-2) x^{n-3}\\), which has at most one real root. However, it is known that if a differentiable function \\(f(x)\\) has \\(k\\) real roots, \\(f^{\\prime}(x)\\) must have at least \\(k-1\\) real roots, with at least one in between any pair of real roots of \\(f(x)\\) (Proof sketch: apply Rolle's theorem many times.). Therefore, if \\(f(x)\\) has at least five real roots, applying the above result three times yields that \\(f^{\\prime \\prime \\prime}(x)\\) has at least two real roots, a contradiction. Moreover, if \\(f(x)\\) has four real roots and \\(n\\) is odd, then since nonreal roots come in pairs we know that at least one of these real roots \\(c\\) has multiplicity at least 2. Therefore, \\(f^{\\prime}(x)\\) has three real roots in between the roots of \\(f(x)\\), plus one real root at \\(c\\). Thus \\(f^{\\prime}(x)\\) has at least four real roots, implying that \\(f^{\\prime \\prime \\prime}(x)\\) has at least two real roots, again a contradiction.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-general-2-2005-p5",
+  "title": "2005 HMMT February General Round 2 Problem 5",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.games-and-strategy",
+      "label": "Games and strategy",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2005,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "You and I play the following game on an \\(8 \\times 8\\) square grid of boxes: Initially, every box is empty. On your turn, you choose an empty box and draw an \\(X\\) in it; if any of the four adjacent boxes are empty, you mark them with an \\(X\\) as well. (Two boxes are adjacent if they share an edge.) We alternate turns, with you moving first, and whoever draws the last \\(X\\) wins. How many choices do you have for a first move that will enable you to guarantee a win no matter how I play?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-general-2-2005-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "0\nI can follow a symmetry strategy: whenever you play in the box \\(S\\), I play in the image of \\(S\\) under the \\(180^{\\circ}\\) rotation about the center of the board. This ensures that the board will always be centrally symmetric at the beginning of your turn. Thus, if you play in an empty box \\(S\\), its symmetric image \\(S^{\\prime}\\) is also empty at the beginning of your turn, and it remains so after your turn, since the even size of the board ensures that \\(S\\) can be neither equal to nor adjacent to \\(S^{\\prime}\\). In particular, I always have a move available. Since the first person without an available move loses, you are guaranteed to lose. So the answer is that you have 0 choices for a first move that will guarantee your win.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

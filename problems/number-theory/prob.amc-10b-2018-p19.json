@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-10b-2018-p19",
+  "title": "2018 AMC 10B Problem 19",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2018,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 30.9,
+    "source": 1990,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Joey and Chloe and their daughter Zoe all have the same birthday. Joey is \\(1\\) year older than Chloe, and Zoe is exactly \\(1\\) year old today. Today is the first of the \\(9\\) birthdays on which Chloe’s age will be an integral multiple of Zoe’s age. What will be the sum of the two digits of Joey’s age the next time his age is a multiple of Zoe’s age?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(11\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "11"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2018-p19.live",
+      "kind": "proof-sketch",
+      "text": "Let Chloe be \\(n\\) today; Zoe is \\(1.\\) In \\(t\\) years their age ratio is \\[\\dfrac{n+t}{1+t}=1+\\dfrac{n-1}{1+t},\\] which is an integer exactly when \\(1+t\\) divides \\(n-1.\\) Thus \\(n-1\\) has exactly \\(9\\) positive divisors.\n\nA number with \\(9\\) divisors has the form \\(p^8\\) or \\(p^2q^2.\\) The only two-digit possibility is \\(2^2\\cdot3^2=36,\\) so Chloe is \\(37\\) and Joey is \\(38.\\)\n\nJoey’s age \\(38+t\\) is a multiple of Zoe’s age \\(1+t\\) exactly when \\(1+t\\) divides \\(37.\\) The next time is \\(t=36,\\) when Joey is \\(74.\\) Its digit sum is \\(7+4=11.\\) Thus, E is the correct answer.",
+      "hints": [
+        "Let Chloe be \\(n\\) today. In \\(t\\) years her age is a multiple of Zoe’s iff \\(1 + t\\) divides \\(n - 1\\)",
+        "Exactly \\(9\\) such birthdays means \\(n - 1\\) has \\(9\\) divisors; find the two-digit value, then repeat the divisor idea for Joey"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

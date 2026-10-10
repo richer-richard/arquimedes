@@ -1,0 +1,78 @@
+{
+  "id": "prob.ahsme-1976-p12",
+  "title": "1976 AHSME Problem 12",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-counting",
+      "label": "Basic counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.pigeonhole-principle",
+      "label": "Pigeonhole principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1976,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 20.3,
+    "source": 1380,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "A supermarket has \\(128\\) crates of apples. Each crate contains at least \\(120\\) apples and at most \\(144\\) apples. What is the largest integer \\(n\\) such that there must be at least \\(n\\) crates containing the same number of apples?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(25\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1976-p12.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(144-120+1=25\\) possible apple counts. Since \\(128>25\\cdot5,\\) some count occurs at least \\(6\\) times. This is sharp: distribute \\(128\\) crates so that three counts occur \\(6\\) times and the other twenty-two occur \\(5\\) times. Thus the largest guaranteed \\(n\\) is \\(6.\\)\n\nTherefore, the correct answer is C.",
+      "hints": [
+        "Count the possible apple totals from \\(120\\) through \\(144\\), inclusive",
+        "If every total occurred at most five times, there would be at most \\(25\\cdot5\\) crates"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

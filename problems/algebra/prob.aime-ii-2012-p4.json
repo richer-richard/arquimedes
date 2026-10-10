@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2012-p4",
+  "title": "2012 AIME II Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.distance-rate-and-time",
+      "label": "Distance rate and time",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2012,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 52.1,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Ana, Bob, and Cao bike at constant rates of \\(8.6\\) meters per second, \\(6.2\\) meters per second, and \\(5\\) meters per second, respectively. They all begin biking at the same time from the northeast corner of a rectangular field whose longer side runs due west. Ana starts biking along the edge of the field, initially heading west, Bob starts biking along the edge of the field, initially heading south, and Cao bikes in a straight line across the field to a point \\(D\\) on the south edge of the field. Cao arrives at point \\(D\\) at the same time that Ana and Bob arrive at \\(D\\) for the first time. The ratio of the field’s length to the field’s width to the distance from point \\(D\\) to the southeast corner of the field can be represented as \\(p : q : r,\\) where \\(p,\\) \\(q,\\) and \\(r\\) are positive integers with \\(p\\) and \\(q\\) relatively prime. Find \\(p + q + r.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "61",
+    "value": "61"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2012-p4.live",
+      "kind": "proof-sketch",
+      "text": "Let the field have length \\(L\\) (west) and width \\(W\\) (south) with \\(L \\gt W,\\) and let \\(x\\) be the distance from \\(D\\) to the southeast corner. Ana rides around the perimeter a distance \\(2L + W - x,\\) Bob rides \\(W + x,\\) and Cao rides \\(\\sqrt{W^2 + x^2},\\) all in the same time: \\[ \\begin{aligned} \\frac{2L + W - x}{8.6} &= \\frac{W + x}{6.2} \\\\ &= \\frac{\\sqrt{W^2 + x^2}}{5}. \\end{aligned} \\]\n\nThe first equality gives \\(L = \\frac{6W + 37x}{31}.\\) Squaring the second, \\(25(W + x)^2 = 38.44\\,(W^2 + x^2),\\) which simplifies to \\(168W^2 - 625Wx + 168x^2 = 0,\\) factoring as \\((24W - 7x)(7W - 24x) = 0.\\)\n\nThe root \\(x = \\frac{7W}{24}\\) gives \\(L = \\frac{13W}{24} \\lt W,\\) which is impossible, so \\(x = \\frac{24W}{7}\\) and then \\(L = \\frac{30W}{7}.\\) The ratio is \\(L : W : x = 30 : 7 : 24,\\) and \\(p + q + r = 30 + 7 + 24 = 61.\\)",
+      "hints": [
+        "Let the field be \\(L\\) by \\(W\\) and let \\(x\\) be the distance from \\(D\\) to the southeast corner; set the three riders’ travel times equal",
+        "Equating Bob’s and Cao’s times gives \\(168W^2 - 625Wx + 168x^2 = 0,\\) which factors into two linear factors"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

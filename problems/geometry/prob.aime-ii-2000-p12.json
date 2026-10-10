@@ -1,0 +1,72 @@
+{
+  "id": "prob.aime-ii-2000-p12",
+  "title": "2000 AIME II Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circumcircle-circumcenter-and-circumradius",
+      "label": "Circumcircle, circumcenter, and circumradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.herons-formula",
+      "label": "Heron’s Formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.sphere",
+      "label": "Sphere",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2000,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 50.5,
+    "source": 2560,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "The points \\(A,\\) \\(B,\\) and \\(C\\) lie on the surface of a sphere with center \\(O\\) and radius \\(20.\\) It is given that \\(AB = 13,\\) \\(BC = 14,\\) \\(CA = 15,\\) and that the distance from \\(O\\) to triangle \\(ABC\\) is \\(\\frac{m\\sqrt{n}}{k},\\) where \\(m,\\) \\(n,\\) and \\(k\\) are positive integers, \\(m\\) and \\(k\\) are relatively prime, and \\(n\\) is not divisible by the square of any prime. Find \\(m + n + k.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "118",
+    "value": "118"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2000-p12.live",
+      "kind": "proof-sketch",
+      "text": "The foot of the perpendicular from \\(O\\) to the plane of \\(ABC\\) is equidistant from \\(A,\\) \\(B,\\) and \\(C\\) (the slant segments to the vertices all have length \\(20\\)), so it is the circumcenter of triangle \\(ABC.\\) Since \\(15^2\\lt13^2+14^2,\\) the triangle is acute and its circumcenter lies inside it, so this perpendicular length is also the distance from \\(O\\) to the triangle itself.\n\nBy Heron’s formula with \\(s = 21,\\) the area is \\(K = \\sqrt{21 \\cdot 8 \\cdot 7 \\cdot 6} = 84,\\) so the circumradius is \\(R = \\frac{abc}{4K} = \\frac{13 \\cdot 14 \\cdot 15}{336} = \\frac{65}{8}.\\) The distance from \\(O\\) to the plane is \\[ \\begin{aligned} &\\small \\sqrt{20^2 - \\left(\\tfrac{65}{8}\\right)^2} \\\\ &= \\sqrt{\\frac{25600 - 4225}{64}} \\\\ &= \\frac{\\sqrt{21375}}{8} \\\\ &= \\frac{15\\sqrt{95}}{8}. \\end{aligned} \\]\n\nHere \\(\\gcd(15, 8) = 1\\) and \\(95 = 5 \\cdot 19\\) is squarefree, so \\(m + n + k = 15 + 95 + 8 = 118.\\)",
+      "hints": [
+        "The foot of the perpendicular from \\(O\\) to the plane of \\(ABC\\) is equidistant from all three vertices, so it is the circumcenter",
+        "The \\(13\\)-\\(14\\)-\\(15\\) triangle has area \\(84,\\) so its circumradius is \\(\\frac{abc}{4K};\\) finish with the Pythagorean theorem using radius \\(20\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

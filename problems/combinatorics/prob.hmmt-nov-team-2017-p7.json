@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-team-2017-p7",
+  "title": "2017 HMMT November Team Problem 7",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2017,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 59.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "There are 12 students in a classroom; 6 of them are Democrats and 6 of them are Republicans. Every hour the students are randomly separated into four groups of three for political debates. If a group contains students from both parties, the minority in the group will change his/her political alignment to that of the majority at the end of the debate. What is the expected amount of time needed for all 12 students to have the same political alignment, in hours?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2017-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\frac{341}{54}\\)\nWhen the party distribution is \\(6-6\\), the situation can change (to \\(3-9\\) ) only when a group of three contains three people from the same party, and the remaining three are distributed evenly across the other three groups (to be converted).\nTo compute the probability, we assume that the groups and the members of the group are ordered (so there are 12 ! ways of grouping). There are 2 ways to choose the party, 4 ways to choose the group, \\(6 \\cdot 5 \\cdot 4\\) ways to choose the three members of the group, \\(9 \\cdot 6 \\cdot 3\\) ways to place the other three members of the party, and 6 ! ways to fill in the members of the other party. The probability is then\n\n\\[\\frac{2 \\cdot 4 \\cdot 6 \\cdot 5 \\cdot 4 \\cdot 9 \\cdot 6 \\cdot 3 \\cdot 6!}{12!}=\\frac{2 \\cdot 4 \\cdot 6 \\cdot 5 \\cdot 4 \\cdot 9 \\cdot 6 \\cdot 3}{12 \\cdot 11 \\cdot 10 \\cdot 9 \\cdot 8 \\cdot 7}=\\frac{18}{77}\\]\n\nThis means that the shift in distribution will happen in \\(\\frac{77}{18}\\) hours on average.\n\nWhen the distribution is \\(3-9\\), the situation can change (to \\(0-12\\) ) only when the three members of the minority party are all in different groups. Using the similar method as above, there are \\(12 \\cdot 9 \\cdot 6\\) ways to place the three members and 9 ! ways to place the rest, so the probability is\n\n\\[\\frac{12 \\cdot 9 \\cdot 6 \\cdot 9!}{12!}=\\frac{12 \\cdot 9 \\cdot 6}{12 \\cdot 11 \\cdot 10}=\\frac{27}{55}\\]\n\nThis means that the shift in distribution will happen in \\(\\frac{55}{27}\\) hours on average.\nBy linearity of expectation, we can add up the two results and get that the expected value is \\(\\frac{77}{18}+\\frac{55}{27}=\\) \\(\\frac{341}{55}\\) hours.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

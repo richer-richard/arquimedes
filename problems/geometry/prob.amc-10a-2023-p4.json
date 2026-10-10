@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2023-p4",
+  "title": "2023 AMC 10A Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-inequality",
+      "label": "Triangle inequality",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2023,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 13.9,
+    "source": 1130,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "A quadrilateral has all integer side lengths, a perimeter of \\(26,\\) and one side of length \\(4.\\) What is the greatest possible length of one side of this quadrilateral?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(13\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "12"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2023-p4.live",
+      "kind": "proof-sketch",
+      "text": "In any quadrilateral each side is shorter than the sum of the other three. Call the longest side \\(s.\\) The rest sum to \\(26 - s,\\) so \\(s \\lt 26 - s,\\) which gives \\(s \\lt 13\\) and hence \\(s \\le 12.\\) Can we hit \\(12?\\) The sides \\(4, 12, 9, 1\\) work, since \\(12 \\lt 4 + 9 + 1.\\) So the greatest length is \\(12.\\) Therefore, the answer is D.",
+      "hints": [
+        "In any quadrilateral, each side is less than the sum of the other three",
+        "If the longest side is \\(s,\\) the other three sum to \\(26 - s,\\) so \\(s \\lt 26 - s\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

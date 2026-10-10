@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-10b-2025-p14",
+  "title": "2025 AMC 10B Problem 14",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.conditional-probability",
+      "label": "Conditional probability",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2025,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 23.4,
+    "source": 1500,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Nine athletes, no two of whom are the same height, try out for the basketball team. One at a time, they draw a wristband at random, without replacement, from a bag containing \\(3\\) blue bands, \\(3\\) red bands, and \\(3\\) green bands. They are divided into a blue group, a red group, and a green group. The tallest member of each group is named the group captain. What is the probability that the group captains are the three tallest athletes?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{2}{9}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{2}{7}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{9}{28}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{1}{3}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{3}{8}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "9/28"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2025-p14.live",
+      "kind": "proof-sketch",
+      "text": "The captains are the three tallest exactly when those three land in three different groups, since each is then the tallest of its own group. Drop them into the \\(9\\) slots one at a time (\\(3\\) per group). The second tallest misses the first’s group with probability \\(\\tfrac{6}{8},\\) and the third misses both with probability \\(\\tfrac{3}{7}.\\) So the probability is \\(\\tfrac{6}{8} \\cdot \\tfrac{3}{7} = \\tfrac{9}{28}.\\) Therefore, the answer is C.",
+      "hints": [
+        "The captains are the three tallest exactly when the three tallest end up in three different groups",
+        "Assign the top three to slots one at a time: the probabilities that each new one lands in a fresh group are \\(\\tfrac{6}{8}\\) then \\(\\tfrac{3}{7}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

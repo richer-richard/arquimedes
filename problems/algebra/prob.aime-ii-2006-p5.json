@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-ii-2006-p5",
+  "title": "2006 AIME II Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.dice-probability",
+      "label": "Dice (probability)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.difference-of-squares",
+      "label": "Difference of squares",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2006,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 45.1,
+    "source": 2350,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "When rolling a certain unfair six-sided die with faces numbered \\(1,\\) \\(2,\\) \\(3,\\) \\(4,\\) \\(5,\\) and \\(6,\\) the probability of obtaining face \\(F\\) is greater than \\(\\frac{1}{6},\\) the probability of obtaining the face opposite face \\(F\\) is less than \\(\\frac{1}{6},\\) the probability of obtaining each of the other faces is \\(\\frac{1}{6},\\) and the sum of the numbers on each pair of opposite faces is \\(7.\\) When two such dice are rolled, the probability of obtaining a sum of \\(7\\) is \\(\\frac{47}{288}.\\) Given that the probability of obtaining face \\(F\\) is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers, find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "29",
+    "value": "29"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2006-p5.live",
+      "kind": "proof-sketch",
+      "text": "Let the probability of face \\(F\\) be \\(\\frac{1}{6} + x,\\) so the face opposite \\(F\\) has probability \\(\\frac{1}{6} - x\\) (the six probabilities must sum to \\(1\\)). Since opposite faces sum to \\(7,\\) a total of \\(7\\) occurs exactly when the two dice show a pair of opposite faces. Of the six ordered pairs that sum to \\(7,\\) four use only ordinary faces, and two pair \\(F\\) with its opposite. Thus \\[ \\begin{aligned} \\frac{47}{288} &= 4\\left(\\frac{1}{6}\\right)^2 \\\\ &\\quad {}+ 2\\left(\\frac{1}{6} + x\\right)\\left(\\frac{1}{6} - x\\right) \\\\ &= \\frac{1}{6} - 2x^2. \\end{aligned} \\]\n\nSince \\(\\frac{1}{6} = \\frac{48}{288},\\) this gives \\(2x^2 = \\frac{1}{288},\\) so \\(x = \\frac{1}{24}.\\) The probability of face \\(F\\) is \\(\\frac{1}{6} + \\frac{1}{24} = \\frac{5}{24},\\) and \\(m + n = 5 + 24 = 29.\\)",
+      "hints": [
+        "Write the probability of face \\(F\\) as \\(\\frac{1}{6} + x,\\) so the opposite face has probability \\(\\frac{1}{6} - x.\\)",
+        "A sum of \\(7\\) always comes from a pair of opposite faces: \\(4\\left(\\frac{1}{6}\\right)^2\\) \\(+ 2\\left(\\frac{1}{6} + x\\right)\\left(\\frac{1}{6} - x\\right)\\) \\(= \\frac{47}{288}.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

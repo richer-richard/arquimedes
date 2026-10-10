@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2016-p24",
+  "title": "2016 AMC 10A 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.chord",
+      "label": "Chord",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.cyclic-quadrilateral",
+      "label": "Cyclic quadrilateral",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2016,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 35.9,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A quadrilateral is inscribed in a circle of radius \\(200\\sqrt{2}.\\) Three of the sides of this quadrilateral have length \\(200.\\) What is the length of the fourth side?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(200\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(200\\sqrt{2}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(200\\sqrt{3}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(300\\sqrt{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(500\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "500"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2016-p24.live",
+      "kind": "proof-sketch",
+      "text": "Label the quadrilateral \\(ABCD\\), with \\(AB=BC=CD=200\\). Let each of these equal chords subtend central angle \\(2\\theta\\). The chord formula gives \\[200=2(200\\sqrt2)\\sin\\theta,\\] so \\(\\sin\\theta=\\frac{1}{2\\sqrt2}\\). In particular, \\(\\theta<30^\\circ\\), so the smaller central angle subtended by \\(AD\\) is \\(6\\theta<180^\\circ\\).\n\nTherefore another use of the chord formula gives \\[AD=2(200\\sqrt2)\\sin(3\\theta).\\] Using \\(\\sin(3\\theta)=3\\sin\\theta-4\\sin^3\\theta\\), we obtain \\[ \\begin{aligned} \\sin(3\\theta) &=\\frac{3}{2\\sqrt2}-\\frac{1}{4\\sqrt2} \\\\ &=\\frac{5}{4\\sqrt2}. \\end{aligned} \\]\n\nHence \\[AD=400\\sqrt2\\cdot\\frac{5}{4\\sqrt2}=500.\\]\n\nThus, the correct answer is E.",
+      "hints": [
+        "Equal chords give equal central angles",
+        "If a \\(200\\)-unit chord subtends angle \\(2\\theta\\), use the chord formula and \\(\\sin(3\\theta)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

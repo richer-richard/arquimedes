@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2010-p14",
+  "title": "2010 HMMT February Guts Problem 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2010,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 83.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In how many ways can you fill a \\(3 \\times 3\\) table with the numbers 1 through 9 (each used once) such that all pairs of adjacent numbers (sharing one side) are relatively prime?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2010-p14.hmmt",
+      "kind": "proof-sketch",
+      "text": "2016 The numbers can be separated into four sets. Numbers in the set \\(A=\\{1,5,7\\}\\) can be placed next to anything. The next two sets are \\(B=\\{2,4,8\\}\\) and \\(C=\\{3,9\\}\\). The number 6 , which forms the final set \\(D\\), can only be placed next to elements of \\(A\\). The elements of each group can be interchanged without violating the condition, so without loss of generality, we can pretend we have three 1 's, three 2's, two 3 's, and one 6 , as long as we multiply our answer by \\(3!3!2\\) ! at the end. The available arrangements are, grouped by the position of the 6 , are:\nWhen 6 is in contact with three numbers:\n\n| 1 | 2 | 3 |\n| :--- | :--- | :--- |\n| 6 | 1 | 2 |\n| 1 | 2 | 3 |\n\nWhen 6 is in contact with two numbers:\n\n| 6 | 1 | 2 |  |  |  |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 1 | 2 | 3 | 6 1 2 <br> 1 1 3 <br> 2 3 1 | 2 | 3 |\n\nThe next two can be flipped diagonally to create different arrangements:\n\n| 6 | 1 | 2 |  |  |  |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 1 | 2 | 3 | 6 1 | 2 |  |\n| 1 | 2 | 3 |  |  |  |\n| 1 | 3 | 2 | 3 | 1 | 2 |\n\nThose seven arrangements can be rotated 90, 180, and 270 degrees about the center to generate a total of 28 arrangements. \\(28 \\cdot 3!3!2!=2016\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

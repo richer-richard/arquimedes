@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2025-p8",
+  "title": "2025 AMC 12A Problem 8",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-bisector-theorem",
+      "label": "Angle bisector theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.inscribed-angle",
+      "label": "Inscribed angle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2025,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 21.8,
+    "source": 1440,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Pentagon \\(ABCDE\\) is inscribed in a circle, and \\(\\angle BEC = \\angle CED = 30^\\circ.\\) Let \\(AC\\) and \\(BD\\) intersect at point \\(F,\\) and suppose that \\(AB = 9\\) and \\(AD = 24.\\) What is \\(BF?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{57}{11}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{59}{11}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{60}{11}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{61}{11}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{63}{11}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "63/11"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2025-p8.live",
+      "kind": "proof-sketch",
+      "text": "The inscribed angle \\(\\angle BEC = 30^\\circ\\) subtends arc \\(BC = 60^\\circ,\\) so \\(\\angle BAC,\\) which also subtends arc \\(BC,\\) equals \\(30^\\circ.\\) Likewise \\(\\angle CAD = 30^\\circ.\\)\n\nThus \\(AC\\) bisects \\(\\angle BAD = 60^\\circ.\\) In \\(\\triangle ABD,\\) \\[ \\begin{aligned} BD^2 &= 9^2 + 24^2 \\\\ &\\quad {}- 2(9)(24)\\cos 60^\\circ \\\\ &= 657 - 216 = 441, \\end{aligned} \\] so \\(BD = 21.\\)\n\nSince \\(AF\\) (along \\(AC\\)) bisects \\(\\angle BAD,\\) the Angle Bisector Theorem gives \\(\\dfrac{BF}{FD} = \\dfrac{AB}{AD} = \\dfrac{9}{24} = \\dfrac{3}{8}.\\) Hence \\(BF = \\dfrac{3}{11}\\cdot 21 = \\dfrac{63}{11}.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "\\(\\angle BAC\\) and \\(\\angle CAD\\) both subtend \\(30^\\circ\\) arcs, so \\(AC\\) bisects \\(\\angle BAD\\)",
+        "Find \\(BD\\) with the Law of Cosines in \\(\\triangle ABD,\\) then use the Angle Bisector Theorem"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

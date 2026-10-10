@@ -1,0 +1,77 @@
+{
+  "id": "prob.hmmt-feb-guts-2013-p24",
+  "title": "2013 HMMT February Guts Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2013,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 76.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Given a point \\(p\\) and a line segment \\(l\\), let \\(d(p, l)\\) be the distance between them. Let \\(A, B\\), and \\(C\\) be points in the plane such that \\(A B=6, B C=8, A C=10\\). What is the area of the region in the \\((x, y)\\)-plane formed by the ordered pairs \\((x, y)\\) such that there exists a point \\(P\\) inside triangle \\(A B C\\) with \\(d(P, A B)+x=d(P, B C)+y=d(P, A C)\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2013-p24.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\quad \\frac{288}{5}\\). Place \\(A B C\\) in the coordinate plane so that \\(A=(0,6), B=(0,0), C=(8,0)\\). Consider a point \\(P=(a, b)\\) inside triangle \\(A B C\\). Clearly, \\(d(P, A B)=a, d(P, B C)=b\\). Now, we see\nthat the area of triangle \\(A B C\\) is \\(\\frac{6.8}{2}=24\\), but may also be computed by summing the areas of triangles \\(P A B, P B C, P C A\\). The area of triangle \\(P A B\\) is \\(\\frac{6 \\cdot a}{2}=3 a\\), and similarly the area of triangle \\(P B C\\) is \\(4 b\\). Thus, it follows easily that \\(d(P, C A)=\\frac{24-3 a-4 b}{5}\\). Now, we have\n\n\\[(x, y)=\\left(\\frac{24}{5}-\\frac{8}{5} a-\\frac{4}{b} b, \\frac{24}{5}-\\frac{3}{5} a-\\frac{9}{5} b\\right)\\]\n\nThe desired region is the set of \\((x, y)\\) obtained by those \\((a, b)\\) subject to the constraints \\(a \\geq 0, b \\geq\\) \\(0,6 a+8 b \\leq 48\\).\nConsequently, our region is the triangle whose vertices are obtained by evaluating \\((x, y)\\) at the vertices \\((a, b)\\) of the triangle. To see this, let \\(f(a, b)\\) output the corresponding \\((x, y)\\) according to the above. Then, we can write every point \\(P\\) in \\(A B C\\) as \\(P=m(0,0)+n(0,6)+p(8,0)\\) for some \\(m+n+p=1\\). Then, \\(f(P)=m f(0,0)+n f(0,6)+p f(8,0)=m\\left(\\frac{24}{5}, \\frac{24}{5}\\right)+n(-8,0)+p(0,-6)\\), so \\(f(P)\\) ranges over the triangle with those three vertices.\nTherefore, we need the area of the triangle with vertices \\(\\left(\\frac{24}{5}, \\frac{24}{5}\\right),(0,-6),(-8,0)\\), which is easily computed (for example, using determinants) to be \\(\\frac{288}{5}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

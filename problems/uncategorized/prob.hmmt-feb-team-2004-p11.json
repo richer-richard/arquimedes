@@ -1,0 +1,37 @@
+{
+  "id": "prob.hmmt-feb-team-2004-p11",
+  "title": "2004 HMMT February Team Problem 11",
+  "category": "uncategorized",
+  "subjects": [],
+  "concepts": [],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2004,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 81.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Prove that there exists an element \\(a \\in T\\) such that the equation \\(a \\star b=a\\) holds for all \\(b \\in T\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2004-p11.hmmt",
+      "kind": "proof-sketch",
+      "text": "Choose \\(a\\) whose image contains as few elements as possible - we know we can do this, since \\(T\\), being a subset of \\(S\\), is finite. We claim that this \\(a\\) works. Indeed, suppose \\(c\\) is in the image of \\(a\\). Then, for any \\(d\\) in the image of \\(c, a \\star(c \\star d)=\\) \\((a \\star c) \\star d=c \\star d=d\\), so \\(d\\) is also in the image of \\(a\\). So the image of \\(c\\) is contained in the image of \\(a\\). But \\(a\\) was chosen to have image as small as possible, so the two images must coincide. In particular, \\(a \\star a=a\\) is in the image of \\(c\\). So\n\n\\[a=c \\star a=a \\star c=c .\\]\n\nThis argument shows that \\(a\\) is the only element of the image of \\(a\\), which gives what we wanted.\n\nAlternative Solution: This can also be solved without using Problem 10: The product of any two elements of \\(T\\) is also in \\(T\\), since commutativity and associativity give \\((b \\star b) \\star(c \\star c)=(b \\star c) \\star(b \\star c)\\) for \\(b, c \\in S\\). Then let \\(a_{1}, a_{2}, \\ldots, a_{n}\\) be all the elements of \\(T\\), and put \\(a=a_{1} \\star a_{2} \\star \\cdots \\star a_{n}\\); this value does not depend on the ordering of the elements. If \\(b \\in T\\), then \\(a=c \\star b\\), where \\(c\\) is the \\(\\star\\)-product of all elements of \\(T\\) different from \\(b\\), and consequently \\(a \\star b=(c \\star b) \\star b=c \\star(b \\star b)=c \\star b=a\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

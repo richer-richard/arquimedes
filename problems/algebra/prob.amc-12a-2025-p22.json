@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2025-p22",
+  "title": "2025 AMC 12A Problem 22",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-probability",
+      "label": "Geometric probability",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2025,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 43.1,
+    "source": 2270,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Three real numbers are chosen independently and uniformly at random between \\(0\\) and \\(1.\\) What is the probability that the greatest of these three numbers is greater than \\(2\\) times each of the other two numbers? (In other words, if the chosen numbers are \\(a \\ge b \\ge c,\\) then \\(a \\gt 2b.\\))",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{12}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1}{9}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{8}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{1}{6}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{1}{4}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "1/4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2025-p22.live",
+      "kind": "proof-sketch",
+      "text": "Order the values as \\(x_1 \\gt x_2 \\gt x_3\\); the joint density of the order statistics is \\(6\\) on this region. The event is \\(x_1 \\gt 2x_2.\\)\n\nIntegrating \\(x_3\\) from \\(0\\) to \\(x_2\\) contributes a factor of \\(x_2.\\) Then \\[ \\begin{aligned} P &= 6\\int_0^{\\frac{1}{2}} x_2\\int_{2x_2}^{1} dx_1\\, dx_2 \\\\ &= 6\\int_0^{\\frac{1}{2}} x_2(1 - 2x_2)\\, dx_2. \\end{aligned} \\]\n\nThis equals \\(6\\left(\\dfrac{1}{8} - \\dfrac{1}{12}\\right) = 6 \\cdot \\dfrac{1}{24} = \\dfrac{1}{4}.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "With order statistics \\(x_1 \\ge x_2 \\ge x_3,\\) the joint density is \\(6\\) on the region \\(x_1 \\gt x_2 \\gt x_3\\)",
+        "Integrate over \\(x_3 \\in (0, x_2),\\) \\(x_1 \\in (2x_2, 1),\\) and \\(x_2 \\in (0, \\tfrac{1}{2})\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

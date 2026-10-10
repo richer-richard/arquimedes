@@ -1,0 +1,73 @@
+{
+  "id": "prob.aime-ii-2010-p9",
+  "title": "2010 AIME II Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.regular-polygon",
+      "label": "Regular polygon",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2010,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 47.2,
+    "source": 2430,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "Let \\(ABCDEF\\) be a regular hexagon. Let \\(G,\\) \\(H,\\) \\(I,\\) \\(J,\\) \\(K,\\) and \\(L\\) be the midpoints of sides \\(AB,\\) \\(BC,\\) \\(CD,\\) \\(DE,\\) \\(EF,\\) and \\(AF,\\) respectively. The segments \\(AH,\\) \\(BI,\\) \\(CJ,\\) \\(DK,\\) \\(EL,\\) and \\(FG\\) bound a smaller regular hexagon. Let the ratio of the area of the smaller hexagon to the area of \\(ABCDEF\\) be expressed as a fraction \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "11",
+    "value": "11"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2010-p9.live",
+      "kind": "proof-sketch",
+      "text": "Center the hexagon at the origin with circumradius \\(1:\\) \\(A = (1, 0),\\) \\(B = \\left(\\frac{1}{2}, \\frac{\\sqrt{3}}{2}\\right),\\) \\(C = \\left(-\\frac{1}{2}, \\frac{\\sqrt{3}}{2}\\right),\\) and \\(F = \\left(\\frac{1}{2}, -\\frac{\\sqrt{3}}{2}\\right).\\) Then \\(H = \\left(0, \\frac{\\sqrt{3}}{2}\\right)\\) and \\(G = \\left(\\frac{3}{4}, \\frac{\\sqrt{3}}{4}\\right).\\) Rotation by \\(60^\\circ\\) permutes the six segments, so the smaller hexagon is regular and concentric, and the area ratio is the square of the ratio of distances from the center to a vertex.\n\nOne vertex is the intersection of \\(AH\\) and \\(FG.\\) Line \\(AH\\) is \\(x + \\frac{2}{\\sqrt{3}}\\,y = 1,\\) and line \\(FG\\) is \\(y = 3\\sqrt{3}\\,x - 2\\sqrt{3}.\\) Substituting gives \\(x + 6x - 4 = 1,\\) so \\(x = \\frac{5}{7}\\) and \\(y = \\frac{\\sqrt{3}}{7}.\\)\n\nThat vertex has squared distance \\(\\frac{25}{49} + \\frac{3}{49} = \\frac{4}{7}\\) from the center, while \\(A\\) is at distance \\(1.\\) The ratio of areas is \\(\\frac{4}{7},\\) and \\(m + n = 4 + 7 = 11.\\)",
+      "hints": [
+        "Place the center at the origin; by symmetry the smaller hexagon is regular and concentric, so it suffices to find the distance from the center to one of its vertices",
+        "One vertex of the small hexagon is the intersection of lines \\(AH\\) and \\(FG;\\) with circumradius \\(1\\) it is \\(\\left(\\frac{5}{7}, \\frac{\\sqrt{3}}{7}\\right)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

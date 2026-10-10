@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2014-p25",
+  "title": "2014 AMC 12B Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.sum-of-factors",
+      "label": "Sum of factors",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2014,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 42.9,
+    "source": 2890,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "What is the sum of all positive real solutions \\(x\\) to the equation \\[ \\begin{gathered} \\small 2\\cos(2x)\\left(\\cos(2x) - \\cos\\left(\\dfrac{2014\\pi^2}{x}\\right)\\right) \\\\ = \\cos(4x) - 1? \\end{gathered} \\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\pi\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(810\\pi\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1008\\pi\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(1080\\pi\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(1800\\pi\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2014-p25.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(x = \\tfrac{\\pi y}{2}.\\) Dividing by \\(2\\) and using \\(\\tfrac12(1 - \\cos(2\\pi y)) = \\sin^2(\\pi y),\\) the equation simplifies to \\[ \\cos(\\pi y)\\cos\\left(\\dfrac{4028\\pi}{y}\\right) = 1. \\]\n\nBoth cosines must equal \\(1\\) or both equal \\(-1,\\) so \\(y\\) and \\(\\tfrac{4028}{y}\\) are integers of the same parity. Since \\(4028 = 2^2 \\cdot 19 \\cdot 53\\) is even, both must be even, so \\(y = 2a\\) with \\(a\\) a positive odd divisor of \\(2014 = 2 \\cdot 19 \\cdot 53,\\) giving \\(a \\in \\{1, 19, 53, 19 \\cdot 53\\}.\\)\n\nEach such \\(a\\) gives \\(x = \\tfrac{\\pi y}{2} = \\pi a,\\) so the sum of solutions is \\[ \\begin{gathered} \\pi(1 + 19 + 53 + 19\\cdot53) \\\\ = \\pi(19+1)(53+1) \\\\ = 1080\\pi. \\end{gathered} \\]\n\nThus, the correct answer is D.",
+      "hints": [
+        "Substitute \\(x = \\tfrac{\\pi y}{2}\\) and use \\(\\tfrac12(1 - \\cos(2\\pi y)) = \\sin^2(\\pi y)\\)",
+        "The equation reduces to \\(\\cos(\\pi y)\\cos\\left(\\tfrac{4028\\pi}{y}\\right) = 1,\\) forcing \\(y\\) and \\(\\tfrac{4028}{y}\\) to be integers of the same parity"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

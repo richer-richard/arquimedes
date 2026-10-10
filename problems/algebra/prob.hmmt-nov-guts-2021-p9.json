@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-nov-guts-2021-p9",
+  "title": "2021 HMMT November Guts Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.integers",
+      "label": "Integers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.linear-and-quadratic-inequalities",
+      "label": "Linear and quadratic inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2021,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 42.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n\\) be an integer and\n\n\\[m=(n-1001)(n-2001)(n-2002)(n-3001)(n-3002)(n-3003) .\\]\n\nGiven that \\(m\\) is positive, find the minimum number of digits of \\(m\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "11",
+    "value": "11"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2021-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "One can show that if \\(m>0\\), then we must either have \\(n>3003\\) or \\(n<1001\\). If \\(n<1001\\), each term other than \\(n-1001\\) has absolute value at least 1000 , so \\(m>1000^{5}\\), meaning that \\(m\\) has at least 16 digits. However, if \\(n>3003\\), it is clear that the minimal \\(m\\) is achieved at \\(n=3004\\), which makes\n\n\\[m=2002 \\cdot 1002 \\cdot 1001 \\cdot 3 \\cdot 2 \\cdot 1=12 \\cdot 1001 \\cdot 1001 \\cdot 1002\\]\n\nwhich is about \\(12 \\cdot 10^{9}\\) and thus has 11 digits.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

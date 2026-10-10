@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2011-p25",
+  "title": "2011 AMC 12A Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circumcircle-circumcenter-and-circumradius",
+      "label": "Circumcircle, circumcenter, and circumradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2011,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 44.7,
+    "source": 2840,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Triangle \\(ABC\\) has \\(\\angle BAC = 60^\\circ,\\) \\(\\angle CBA \\le 90^\\circ,\\) \\(BC = 1,\\) and \\(AC \\ge AB.\\) Let \\(H,\\) \\(I,\\) and \\(O\\) be the orthocenter, incenter, and circumcenter of \\(\\triangle ABC,\\) respectively. Assume that the area of the pentagon \\(BCOIH\\) is the maximum possible. What is \\(\\angle CBA?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(60^\\circ\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(72^\\circ\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(75^\\circ\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(80^\\circ\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(90^\\circ\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "80"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2011-p25.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(B=\\angle CBA\\) and \\(C=\\angle BCA=120^\\circ-B.\\) Since \\(AC\\ge AB,\\) we have \\(B\\ge C,\\) so \\(60^\\circ\\le B\\le90^\\circ.\\) The standard angle formulas give \\[ \\begin{aligned} \\angle BOC&=2\\angle A=120^\\circ, \\\\ \\angle BHC&=180^\\circ-\\angle A=120^\\circ, \\\\ \\angle BIC&=90^\\circ+\\dfrac{\\angle A}{2}=120^\\circ. \\end{aligned} \\] Hence \\(B,C,O,I,H\\) lie on one circle.\n\nAlso \\(BC=1\\) and \\(A=60^\\circ\\) fix the circumradius \\(OB=OC=\\frac{1}{\\sqrt3},\\) so \\(\\triangle BCO\\) and the circle through \\(B,C,O\\) are fixed. Angle chasing at \\(C\\) gives \\[ \\begin{aligned} \\angle OCI&=30^\\circ-\\dfrac C2, \\\\ \\angle ICH&=30^\\circ-\\dfrac C2. \\end{aligned} \\] Thus the corresponding chords satisfy \\(OI=IH.\\)\n\nThe pentagon’s area is the fixed area \\([BCO]\\) plus \\([BOIH].\\) For two points dividing a fixed arc \\(OB,\\) an inscribed quadrilateral has greatest area when its three consecutive subarcs are equal (equivalently, maximize the sum of their sines). Hence at the maximum \\(OI=IH=HB.\\)\n\nIn \\(\\triangle BOC,\\) \\(\\angle OCB=30^\\circ.\\) Equal chords make \\(\\angle OCI=\\angle ICH,\\) \\(\\angle ICH=\\angle HCB,\\) and each of these angles is \\(10^\\circ.\\) Therefore \\(30^\\circ-\\tfrac C2=10^\\circ,\\) so \\(C=40^\\circ\\) and \\(B=80^\\circ.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Because \\(\\angle BAC = 60^\\circ,\\) the points \\(B, C, O, I, H\\) all lie on one circle",
+        "On that circle, maximize the quadrilateral \\(BOIH\\) by making the three consecutive subarcs from \\(O\\) to \\(B\\) equal"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

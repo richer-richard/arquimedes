@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2025-p15",
+  "title": "2025 AMC 12A Problem 15",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.extremal-argument",
+      "label": "Extremal argument",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.subsets",
+      "label": "Subsets",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2025,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 31.0,
+    "source": 1800,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A set of numbers is called sum-free if whenever \\(x\\) and \\(y\\) are (not necessarily distinct) elements of the set, \\(x + y\\) is not an element of the set. For example, \\(\\{1, 4, 6\\}\\) and the empty set are sum-free, but \\(\\{2, 4, 5\\}\\) is not. What is the greatest possible number of elements in a sum-free subset of \\(\\{1, 2, 3, \\ldots, 20\\}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(12\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "10"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2025-p15.live",
+      "kind": "proof-sketch",
+      "text": "The set \\(\\{11, 12, \\ldots, 20\\}\\) has \\(10\\) elements and is sum-free, since any two elements sum to at least \\(22 \\gt 20.\\)\n\nFor the upper bound, let \\(a_1 \\lt a_2 \\lt \\cdots \\lt a_k\\) be a sum-free subset. Each difference \\(a_k - a_i\\) for \\(i \\lt k\\) cannot lie in \\(S,\\) because \\((a_k - a_i) + a_i = a_k \\in S\\) would violate sum-freeness.\n\nThese \\(k - 1\\) differences are distinct, lie in \\(\\{1, \\ldots, 19\\},\\) and are disjoint from the \\(k\\) elements of \\(S.\\) So \\(k + (k - 1) \\le 20,\\) giving \\(k \\le 10.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "The set \\(\\{11, 12, \\ldots, 20\\}\\) is sum-free",
+        "If \\(a_1 \\lt \\cdots \\lt a_k\\) are in \\(S,\\) the differences \\(a_k - a_i\\) are not in \\(S,\\) forcing \\(2k - 1 \\le 20\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

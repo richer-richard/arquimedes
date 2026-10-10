@@ -1,0 +1,70 @@
+{
+  "id": "prob.hmmt-invitational-2013-p3",
+  "title": "2013 HMMT Invitational Problem 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2013,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Triangle \\(A B C\\) is inscribed in a circle \\(\\omega\\) such that \\(\\angle A=60^{\\circ}\\) and \\(\\angle B=75^{\\circ}\\). Let the bisector of angle \\(A\\) meet \\(B C\\) and \\(\\omega\\) at \\(E\\) and \\(D\\), respectively. Let the reflections of \\(A\\) across \\(D\\) and \\(C\\) be \\(D^{\\prime}\\) and \\(C^{\\prime}\\), respectively. If the tangent to \\(\\omega\\) at \\(A\\) meets line \\(B C\\) at \\(P\\), and the circumcircle of \\(A P D^{\\prime}\\) meets line \\(A C\\) at \\(F \\neq A\\), prove that the circumcircle of \\(C^{\\prime} F E\\) is tangent to \\(B C\\) at \\(E\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2013-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "N/A We will show that \\(C E^{2}=(C F)\\left(C C^{\\prime}\\right)\\). By a simple computation using the given angles, one may find that this is equivalent to \\(C F=A C-A B\\), or \\(A F=2 A C-A B\\).\nWe compute \\(A F\\) by trigonometry. Assume for simplicity that \\(A C=\\frac{1}{2}\\), so \\(A D^{\\prime}=2 A D=2 A C=1\\) because \\(\\triangle A C D\\) is isosceles by angle chasing. We first compute \\(P D^{\\prime}\\) by the law of cosines on triangle \\(A P D^{\\prime}\\), which yields \\(P D^{\\prime 2}=A P^{2}+A D^{\\prime 2}-2(A P)\\left(A D^{\\prime}\\right) \\cos 75=A P^{2}+1-2 A P \\cos 75\\). We may easily compute \\(A P\\) by the law of sines in triangle \\(B A P\\) to be \\(\\frac{1}{\\sqrt{2}}\\). Thus, \\(P D^{\\prime 2}=\\frac{1}{2}+1-\\sqrt{2} \\frac{\\sqrt{6}-\\sqrt{2}}{4}=\\frac{4-\\sqrt{3}}{2}\\). By the law of sines within the circumcircle of \\(A P D^{\\prime} F\\), we have \\(\\frac{F D^{\\prime}}{\\sin 30}=\\frac{P D^{\\prime}}{\\sin 75}\\). From this, we find that \\(F D^{\\prime}=\\frac{P D^{\\prime} \\sin 30}{\\sin 75}=\\frac{4-\\sqrt{3}}{\\sqrt{2}+\\sqrt{6}}\\). Thus, we have by the law of cosines on triangle \\(D^{\\prime} A F\\) that \\(A F^{2}+\\) \\(A D^{\\prime 2}-2(A F)\\left(A D^{\\prime}\\right) \\cos 30=A F^{2}+1-\\sqrt{3} A F=F D^{\\prime 2}=\\frac{4-\\sqrt{3}}{4+2 \\sqrt{3}}\\). Finally, solving for \\(A F\\) yields \\(A F=\\frac{\\sqrt{3} \\pm(2 \\sqrt{3}-3)}{2}\\) from which we indeed get \\(A F=\\frac{3-\\sqrt{3}}{2}\\) which equals \\(2 A C-A B\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

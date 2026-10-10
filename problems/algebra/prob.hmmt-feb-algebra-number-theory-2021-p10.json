@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2021-p10",
+  "title": "2021 HMMT February Algebra and Number Theory Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.diophantine-equations",
+      "label": "Diophantine equations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2021,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(S\\) be a set of positive integers satisfying the following two conditions:\n\n- For each positive integer \\(n\\), at least one of \\(n, 2 n, \\ldots, 100 n\\) is in \\(S\\).\n- If \\(a_{1}, a_{2}, b_{1}, b_{2}\\) are positive integers such that \\(\\operatorname{gcd}\\left(a_{1} a_{2}, b_{1} b_{2}\\right)=1\\) and \\(a_{1} b_{1}, a_{2} b_{2} \\in S\\), then \\(a_{2} b_{1}, a_{1} b_{2} \\in S\\).\n\nSuppose that \\(S\\) has natural density \\(r\\). Compute the minimum possible value of \\(\\left\\lfloor 10^{5} r\\right\\rfloor\\).\nNote: \\(S\\) has natural density \\(r\\) if \\(\\frac{1}{n}|S \\cap\\{1, \\ldots, n\\}|\\) approaches \\(r\\) as \\(n\\) approaches \\(\\infty\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "396",
+    "value": "396"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2021-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "The optimal value of \\(r\\) is \\(\\frac{1}{252}\\). This is attained by letting \\(S\\) be the set of integers \\(n\\) for which \\(\\nu_{2}(n) \\equiv 4 \\bmod 5\\) and \\(\\nu_{3}(n) \\equiv 1 \\bmod 2\\).\nLet \\(S\\) be a set of positive integers satisfying the two conditions. For each prime \\(p\\), let \\(A_{p}=\\left\\{\\nu_{p}(n)\\right.\\) : \\(n \\in S\\}\\). We claim that in fact \\(S\\) is precisely the set of positive integers \\(n\\) for which \\(\\nu_{p}(n) \\in A_{p}\\) for each prime \\(p\\).\nLet \\(p\\) be prime and suppose that \\(a_{1} p^{e_{1}}, a_{2} p^{e_{2}} \\in S\\), with \\(p \\nmid a_{1}, a_{2}\\). Then, setting \\(b_{1}=p^{e_{1}}\\) and \\(b_{2}=p^{e_{2}}\\) in the second condition gives that \\(a_{1} p^{e_{2}} \\in S\\) as well. So, if we have an integer \\(n\\) for which \\(\\nu_{p}(n) \\in A_{p}\\) for each prime \\(p\\), we can start with any element \\(n^{\\prime}\\) of \\(S\\) and apply this step for each prime divisor of \\(n\\) and \\(n^{\\prime}\\) to obtain \\(n \\in S\\).\nNow we deal with the first condition. Let \\(n\\) be any positive integer. We will compute the least positive integer \\(m\\) such that \\(m n \\in S\\). By the above result, we can work with each prime separately. For a given prime \\(p\\), let \\(e_{p}\\) be the least element of \\(A_{p}\\) with \\(e_{p} \\geq \\nu_{p}(n)\\). Then we must have \\(\\nu_{p}(m) \\geq e_{p}-\\nu_{p}(n)\\), and equality for all primes \\(p\\) is sufficient. So, if the elements of \\(A_{p}\\) are \\(c_{p, 1}<c_{p, 2}<c_{p, 3}<c_{p, 4}<\\ldots\\), then\n\n\\[c_{p}=\\max \\left(c_{p, 1}, c_{p, 2}-c_{p, 1}-1, c_{p, 3}-c_{p, 2}-1, c_{p, 4}-c_{p, 3}-1, \\ldots\\right)\\]\n\nis the worst case value for \\(\\nu_{p}(m)\\).\nWe conclude two things from this. First, we must have \\(\\prod_{p} p^{c_{p}} \\leq 100\\) by condition 1 , and in fact this is sufficient. Second, since we only care about \\(c_{p}\\) and would like to minimize \\(r\\), the optimal choice for \\(A_{p}\\) is an arithmetic progression with first term \\(c_{p}\\) and common difference \\(c_{p}+1\\). So we assume that each \\(A_{p}\\) is of this form.\nLet \\(t=\\prod_{p} p^{c_{p}}\\). We now compute \\(r\\). Note that \\(S\\) is the set of integers \\(n\\) such that for each prime \\(p\\),\n\n\\[n \\equiv a p^{k\\left(c_{p}+1\\right)-1} \\bmod p^{k\\left(c_{p}+1\\right)}\\]\n\nfor some positive integers \\(a, k\\) with \\(a<p\\). This means that each prime \\(p\\) contributes a factor of\n\n\\[\\frac{p-1}{p^{c_{p}+1}}+\\frac{p-1}{p^{2 c_{p}+2}}+\\frac{p-1}{p^{3 c_{p}+3}}+\\cdots=\\frac{p-1}{p^{c_{p}+1}-1}=\\frac{1}{1+p+\\cdots+p^{c_{p}}}\\]\n\nto the density of \\(S\\). Multiplying over all primes \\(p\\) gives \\(r=\\frac{1}{\\sigma(t)}\\), where \\(\\sigma(t)\\) is the sum of divisors of \\(t\\). So, it suffices to maximize \\(\\sigma(t)\\) for \\(t \\leq 100\\). By inspection, \\(t=96\\) is optimal, giving \\(r=\\frac{1}{252}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

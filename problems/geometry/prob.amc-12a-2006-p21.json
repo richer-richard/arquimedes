@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2006-p21",
+  "title": "2006 AMC 12A Problem 21",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle-area",
+      "label": "Circle area",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.completing-the-square",
+      "label": "Completing the square",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2006,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 38.2,
+    "source": 2180,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let\n\n\\[ \\tiny S_1 = \\{(x, y) \\mid \\log_{10}(1 + x^2 + y^2) \\le 1 + \\log_{10}(x + y)\\} \\]\n\nand\n\n\\[ \\tiny S_2 = \\{(x, y) \\mid \\log_{10}(2 + x^2 + y^2) \\le 2 + \\log_{10}(x + y)\\}. \\]\n\nWhat is the ratio of the area of \\(S_2\\) to the area of \\(S_1?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(98\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(99\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(100\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(101\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(102\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "102"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2006-p21.live",
+      "kind": "proof-sketch",
+      "text": "For \\(j = 1, 2,\\) the condition becomes \\(j + x^2 + y^2 \\le 10^j(x + y),\\) i.e. \\[ \\begin{gathered} \\left(x - \\frac{10^j}{2}\\right)^2 \\\\ {}+ \\left(y - \\frac{10^j}{2}\\right)^2 \\\\ \\le \\frac{10^{2j}}{2} - j. \\end{gathered} \\]\n\nThese are disks with squared radii \\(\\tfrac{100}{2} - 1 = 49\\) for \\(S_1\\) and \\(\\tfrac{10000}{2} - 2 = 4998\\) for \\(S_2.\\)\n\nThe logarithms require \\(x+y>0.\\) For each disk, the squared distance from its center to the line \\(x+y=0\\) is \\(\\tfrac{10^{2j}}{2},\\) which is \\(j\\) more than the squared radius. Hence both disks lie entirely in \\(x+y>0,\\) so no points were added when the inequalities were rewritten. The area ratio is \\(\\dfrac{4998}{49} = 102.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "For \\(j = 1, 2,\\) rewrite the condition as \\(j + x^2 + y^2 \\le 10^j(x + y)\\)",
+        "Complete the square to get disks, then compare their squared radii"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

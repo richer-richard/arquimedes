@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2015-p7",
+  "title": "2015 HMMT February Combinatorics Problem 7",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.algebraic-properties-of-binomial-coefficients",
+      "label": "Algebraic properties of binomial coefficients",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2015,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 84.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "2015 people sit down at a restaurant. Each person orders a soup with probability \\(\\frac{1}{2}\\). Independently, each person orders a salad with probability \\(\\frac{1}{2}\\). What is the probability that the number of people who ordered a soup is exactly one more than the number of people who ordered a salad?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2015-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "To count the number of possibilities, we can directly evaluate the sum \\(\\sum_{i=0}^{2014}\\binom{2015}{i}\\binom{2015}{i+1}\\). One way is to note \\(\\binom{2015}{i+1}=\\binom{2015}{2014-i}\\), and finish with Vandermonde's identity: \\(\\sum_{i=0}^{2014}\\binom{2015}{i}\\binom{2015}{2014-i}=\\) \\(\\binom{2015+2015}{2014}=\\binom{4030}{2014}\\) (which also equals \\(\\left.\\binom{4030}{2016}\\right)\\).\n(We could have also used \\(\\binom{2015}{i}=\\binom{2015}{2015-i}\\) to get \\(\\sum_{i=0}^{2014}\\binom{2015}{2015-i}\\binom{2015}{i+1}=\\binom{2015+2015}{2016}\\) directly, which is closer in the spirit of the previous solution.)\nSolution 3 (sketch). It's also possible to get a handle on \\(\\sum_{i=0}^{2014}\\binom{2015}{i}\\binom{2015}{i+1}\\) by squaring Pascal's identity \\(\\binom{2015}{i}+\\binom{2015}{i+1}=\\binom{2016}{i+1}\\) and summing over \\(0 \\leq i \\leq 2014\\). This gives an answer of \\(\\frac{\\binom{40162}{2016}-2\\binom{4030}{2015}}{2^{4031}}\\), which can be simplified by noting \\(\\binom{4032}{2016}=\\frac{4032}{2016}\\binom{4031}{2015}\\), and then applying Pascal's identity.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

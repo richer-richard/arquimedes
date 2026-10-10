@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-guts-2010-p19",
+  "title": "2010 HMMT February Guts Problem 19",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.solid-geometry",
+      "label": "Solid geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2010,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 81.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A 5-dimensional ant starts at one vertex of a 5 -dimensional hypercube of side length 1 . A move is when the ant travels from one vertex to another vertex at a distance of \\(\\sqrt{2}\\) away. How many ways can the ant make 5 moves and end up on the same vertex it started at?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2010-p19.hmmt",
+      "kind": "proof-sketch",
+      "text": "6240 We let the cube lie in \\(\\mathbb{R}^{5}\\) with each corner with coordinates 1 or 0 . Assume the ant starts at \\((0,0,0,0,0)\\). Every move the ant adds or subtracts 1 to two of the places. Note that this means the ant can only land on a vertex with the sum of its coordinates an even number. Every move the ant has \\(\\binom{5}{2}=10\\) choices.\nFrom any vertex there are 10 two-move sequences that put the ant at the same vertex it started at.\nThere are 6 two-move sequences to move from one vertex to a different, chosen vertex. If your chosen vertex differs from your current vertex by 2 of the 5 coordinates, your first move corrects for one of these two. There are 2 ways to choose which coordinate to correct for on the first move, and there are 3 ways to choose the second coordinate you change, yielding 6 sequences. If your chosen vertex differs from your current vertex by 4 of the 5 coordinates, each move corrects for two of these four. This yields \\(\\binom{4}{2}=6\\) sequences.\nFinally, there are 60 three-move sequences that put the ant at the same vertex it started at. There are 10 ways to choose the first move, and there are 6 ways to make two moves to return to your original position.\nThe motion of the ant can be split into two cases.\nCase 1: After the 3rd move the ant is on the vertex it started at. There are \\((60)(10)=600\\) different possible paths.\nCase 2: After the third move the ant is on a vertex different from the one it started on. There are \\(\\left(10^{3}-60\\right)(6)=(940)(6)=5640\\) different possible paths.\nSo there are 6240 total possible paths.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

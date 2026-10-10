@@ -1,0 +1,81 @@
+{
+  "id": "prob.amc-12b-2021-p15",
+  "title": "2021 AMC 12B Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.shoelace-formula",
+      "label": "Shoelace formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2021,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 32.0,
+    "source": 1890,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "The figure is constructed from \\(11\\) line segments, each of which has length \\(2.\\) The area of pentagon \\(ABCDE\\) can be written as \\(\\sqrt m+\\sqrt n,\\) where \\(m\\) and \\(n\\) are positive integers. What is \\(m+n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(22\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(23\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(24\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "23"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2021-p15.live",
+      "kind": "proof-sketch",
+      "text": "The right interior point is distance \\(2\\) from \\(A,\\) \\(B,\\) and \\(C,\\) so these three points lie on a circle of radius \\(2.\\) Chords \\(AB\\) and \\(BC\\) also have length \\(2,\\) so each subtends \\(60^\\circ\\) at the center. Thus \\(AC=2\\sqrt3.\\) Similarly, the other half is its mirror image.\n\nPut \\(C=(-1,0),\\) \\(D=(1,0),\\) and \\(A=(0,\\sqrt{11});\\) then \\(AC=AD=2\\sqrt3.\\) The other intersection of the radius-\\(2\\) circles centered at \\(A\\) and \\(C\\) is \\[ B=\\left(-\\tfrac12-\\tfrac{\\sqrt{11}}{2\\sqrt3}, \\tfrac{\\sqrt{11}}2+\\tfrac{1}{2\\sqrt3}\\right), \\] and \\(E\\) is its reflection across the \\(y\\)-axis.\n\nApplying the shoelace formula to \\(A,B,C,D,E\\) gives \\([ABCDE]=\\sqrt{11}+2\\sqrt3,\\) which equals \\(\\sqrt{11}+\\sqrt{12}.\\)\n\nSo \\(m+n=11+12=23.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Each interior point is distance \\(2\\) from three consecutive outer vertices, so it is their circumcenter",
+        "Since chords \\(AB\\) and \\(BC\\) have length equal to the radius \\(2,\\) \\(AC=2\\sqrt3;\\) then use symmetric coordinates"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "bb50b2f16376d522aa96ee62439ec8e373b2056f1874a49cc171244256357e5f"
+    ],
+    "solutions": []
+  }
+}

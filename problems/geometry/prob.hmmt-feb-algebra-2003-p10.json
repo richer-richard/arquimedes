@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-algebra-2003-p10",
+  "title": "2003 HMMT February Algebra Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2003,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 93.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Suppose \\(P(x)\\) is a polynomial such that \\(P(1)=1\\) and\n\n\\[\\frac{P(2 x)}{P(x+1)}=8-\\frac{56}{x+7}\\]\n\nfor all real \\(x\\) for which both sides are defined. Find \\(P(-1)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-2003-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\quad-5 / 21\\)\nCross-multiplying gives \\((x+7) P(2 x)=8 x P(x+1)\\). If \\(P\\) has degree \\(n\\) and leading coefficient \\(c\\), then the leading coefficients of the two sides are \\(2^{n} c\\) and \\(8 c\\), so \\(n=3\\). Now \\(x=0\\) is a root of the right-hand side, so it's a root of the left-hand side, so that \\(P(x)=x Q(x)\\) for some polynomial \\(Q \\Rightarrow 2 x(x+7) Q(2 x)=8 x(x+1) Q(x+1)\\) or \\((x+7) Q(2 x)=4(x+1) Q(x+1)\\). Similarly, we see that \\(x=-1\\) is a root of the left-hand side, giving \\(Q(x)=(x+2) R(x)\\) for some polynomial \\(R \\Rightarrow 2(x+1)(x+7) R(2 x)=\\) \\(4(x+1)(x+3) R(x+1)\\), or \\((x+7) R(2 x)=2(x+3) R(x+1)\\). Now \\(x=-3\\) is a root of the left-hand side, so \\(R(x)=(x+6) S(x)\\) for some polynomial \\(S\\).\nAt this point, \\(P(x)=x(x+2)(x+6) S(x)\\), but \\(P\\) has degree 3 , so \\(S\\) must be a constant. Since \\(P(1)=1\\), we get \\(S=1 / 21\\), and then \\(P(-1)=(-1)(1)(5) / 21=-5 / 21\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

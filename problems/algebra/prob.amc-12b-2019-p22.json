@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2019-p22",
+  "title": "2019 AMC 12B Problem 22",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.telescoping",
+      "label": "Telescoping",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2019,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 44.6,
+    "source": 2330,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Define a sequence recursively by \\(x_0=5\\) and\n\n\\[ x_{n+1}=\\dfrac{x_n^2+5x_n+4}{x_n+6} \\]\n\nfor all nonnegative integers \\(n.\\) Let \\(m\\) be the least positive integer such that\n\n\\[ x_m\\le4+\\dfrac{1}{2^{20}}. \\]\n\nIn which of the following intervals does \\(m\\) lie?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\([9,26]\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\([27,80]\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\([81,242]\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\([243,728]\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\([729,\\infty)\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2019-p22.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(a_n=x_n-4.\\) A short computation gives \\[ \\begin{gathered} a_{n+1}=x_{n+1}-4 \\\\ =\\dfrac{(x_n+5)(x_n-4)}{x_n+6} \\\\ =a_n\\cdot\\dfrac{x_n+5}{x_n+6}. \\end{gathered} \\]\n\nStarting from \\(a_0=1,\\) the terms stay positive and decrease. Because \\(x_n\\) decreases from \\(5\\) toward \\(4,\\) each ratio \\(\\dfrac{x_n+5}{x_n+6}\\) lies strictly between \\(\\dfrac{9}{10}\\) and \\(\\dfrac{10}{11}.\\)\n\nHence \\(a_m\\) is squeezed between \\(\\left(\\dfrac{9}{10}\\right)^m\\) and \\(\\left(\\dfrac{10}{11}\\right)^m.\\) Solving \\(a_m\\le2^{-20}\\) puts \\(m\\) between about \\(132\\) and \\(146,\\) which lies in \\([81,242].\\)\n\nThus, C is the correct answer.",
+      "hints": [
+        "Let \\(a_n=x_n-4;\\) then \\(a_{n+1}=a_n\\cdot\\dfrac{x_n+5}{x_n+6}\\)",
+        "Since \\(x_n\\) decreases toward \\(4,\\) the ratio stays between \\(\\dfrac{9}{10}\\) and \\(\\dfrac{10}{11}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2016-p15",
+  "title": "2016 AMC 12A 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.shoelace-formula",
+      "label": "Shoelace formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.tangent-circles",
+      "label": "Tangent circles",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2016,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 31.0,
+    "source": 1800,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Circles with centers \\(P,\\) \\(Q,\\) and \\(R,\\) having radii \\(1,\\) \\(2,\\) and \\(3,\\) respectively, lie on the same side of line \\(l\\) and are tangent to \\(l\\) at \\(P',\\) \\(Q',\\) and \\(R',\\) respectively, with \\(Q'\\) between \\(P'\\) and \\(R'.\\) The circle with center \\(Q\\) is externally tangent to each of the other two circles. What is the area of \\(\\triangle PQR?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\sqrt{\\dfrac{2}{3}}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\sqrt{6}-\\sqrt{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\sqrt{\\dfrac{3}{2}}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2016-p15.live",
+      "kind": "proof-sketch",
+      "text": "The centers lie at heights \\(1,\\) \\(2,\\) and \\(3\\) above line \\(l.\\) Since circle \\(Q\\) is externally tangent to circle \\(P,\\) we have \\(PQ=3,\\) so the horizontal distance is \\(P'Q'=\\sqrt{3^2-1^2}=\\sqrt{8}.\\) Since circle \\(Q\\) is tangent to circle \\(R,\\) we have \\(QR=5,\\) so \\(Q'R'=\\sqrt{5^2-1^2}=\\sqrt{24}.\\)\n\nPlace \\(P=(0,1),\\) \\(Q=(\\sqrt8,2),\\) and \\(R=(\\sqrt8+\\sqrt{24},3).\\) By the shoelace formula, the area is \\[ \\begin{gathered} \\small \\dfrac12\\left|\\sqrt8(3-1)+(\\sqrt8+\\sqrt{24})(1-2)\\right|\\\\ =\\dfrac12\\left(\\sqrt{24}-\\sqrt8\\right)\\\\ =\\sqrt6-\\sqrt2. \\end{gathered} \\]\n\nThus, the correct answer is D.",
+      "hints": [
+        "The horizontal distance between two tangent points is \\(\\sqrt{(r_1+r_2)^2-(r_2-r_1)^2}\\)",
+        "Place \\(P,Q,R\\) at heights \\(1,2,3\\) and use the shoelace formula"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

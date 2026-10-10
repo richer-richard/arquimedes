@@ -1,0 +1,80 @@
+{
+  "id": "prob.ahsme-1952-p49",
+  "title": "1952 AHSME Problem 49",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1952,
+    "number": 49
+  },
+  "difficulty": {
+    "course": 45.9,
+    "source": 2380,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "In the figure, \\(CD,\\) \\(AE,\\) and \\(BF\\) are one-third of their respective sides. It follows that \\(AN_2:N_2N_1:N_1D=3:3:1,\\) and similarly for lines \\(BE\\) and \\(CF.\\) Then the area of triangle \\(N_1N_2N_3\\) is:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac1{10}\\triangle ABC\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac19\\triangle ABC\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac17\\triangle ABC\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac16\\triangle ABC\\)"
+    },
+    {
+      "label": "E",
+      "text": "None of these"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "1/7"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1952-p49.live",
+      "kind": "proof-sketch",
+      "text": "Use \\(A=(0,1),\\) \\(B=(0,0),\\) \\(C=(1,0).\\) Then \\[ \\begin{aligned} D&=\\left(\\frac23,0\\right),\\\\ E&=\\left(\\frac13,\\frac23\\right),\\\\ F&=\\left(0,\\frac13\\right). \\end{aligned} \\] Intersecting \\(AD,BE,CF\\) in pairs gives \\[ \\begin{aligned} N_1&=\\left(\\frac47,\\frac17\\right),\\\\ N_2&=\\left(\\frac27,\\frac47\\right),\\\\ N_3&=\\left(\\frac17,\\frac27\\right). \\end{aligned} \\] The determinant area formula gives \\[ \\begin{aligned} [N_1N_2N_3]&=\\frac1{14},\\\\ [ABC]&=\\frac12. \\end{aligned} \\] Hence \\(\\frac{[N_1N_2N_3]}{[ABC]}=\\frac{1}{7}.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Area ratios are affine-invariant, so choose convenient coordinates for triangle \\(ABC\\)",
+        "Locate \\(D,E,F\\) by the one-third conditions, intersect the three cevians, and compare the two areas with determinants"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "e324d317d3c984a68fdd9d0cd3e30e378f4cc9e0cd6f3eb2f99dfa5543d1e36c"
+    ],
+    "solutions": []
+  }
+}

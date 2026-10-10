@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2003-p5",
+  "title": "2003 HMMT February Combinatorics Problem 5",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.coloring",
+      "label": "Coloring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2003,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 76.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "We wish to color the integers \\(1,2,3, \\ldots, 10\\) in red, green, and blue, so that no two numbers \\(a\\) and \\(b\\), with \\(a-b\\) odd, have the same color. (We do not require that all three colors be used.) In how many ways can this be done?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2003-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "186\n\nThe condition is equivalent to never having an odd number and an even number in the same color. We can choose one of the three colors for the odd numbers and distribute the other two colors freely among the 5 even numbers; this can be done in \\(3 \\cdot 2^{5}=96\\) ways. We can also choose one color for the even numbers and distribute the other two colors among the 5 odd numbers, again in 96 ways. This gives a total of 192 possibilities. However, we have double-counted the \\(3 \\cdot 2=6\\) cases where all odd numbers are the same color and all even numbers are the same color, so there are actually \\(192-6=186\\) possible colorings.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

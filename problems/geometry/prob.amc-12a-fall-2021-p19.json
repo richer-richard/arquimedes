@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-fall-2021-p19",
+  "title": "2021 Fall AMC 12A Problem 19",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2021,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 32.0,
+    "source": 2040,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(x\\) be the least real number greater than \\(1\\) such that \\(\\sin(x) = \\sin(x^2),\\) where the arguments are in degrees. What is \\(x\\) rounded up to the closest integer?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(14\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(19\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(20\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "13"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-fall-2021-p19.live",
+      "kind": "proof-sketch",
+      "text": "Equal sines require \\(x^2 = x + 360k\\) or \\(x^2 = 180 - x + 360k\\) for some integer \\(k.\\)\n\nThe family \\(x^2 = x + 360k\\) first exceeds \\(1\\) at \\(k = 1,\\) giving \\(x \\approx 19.5.\\) The family \\(x^2 = 180 - x + 360k\\) with \\(k = 0\\) gives \\(x^2 + x - 180 = 0,\\) so \\(x = \\dfrac{-1 + \\sqrt{721}}{2} \\approx 12.93,\\) which is smaller.\n\nRounded up, \\(x = 13.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "\\(\\sin x = \\sin x^2\\) requires \\(x^2 = x + 360k\\) or \\(x^2 = 180 - x + 360k\\) for an integer \\(k\\)",
+        "The smallest \\(x \\gt 1\\) comes from \\(x^2 = 180 - x\\) (with \\(k = 0\\))"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

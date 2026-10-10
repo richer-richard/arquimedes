@@ -1,0 +1,48 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2017-p2",
+  "title": "2017 HMMT February Algebra and Number Theory Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.diophantine-equations",
+      "label": "Diophantine equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2017,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find the value of\n\n\\[\\sum_{1 \\leq a<b<c} \\frac{1}{2^{a} 3^{b} 5^{c}}\\]\n\n(i.e. the sum of \\(\\frac{1}{2^{a} 3^{b} 5^{c}}\\) over all triples of positive integers ( \\(a, b, c\\) ) satisfying \\(a<b<c\\) )",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2017-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(1 / 1624\\)\nLet \\(x=b-a\\) and \\(y=c-b\\) so that \\(b=a+x\\) and \\(c=a+x+y\\). Then\n\n\\[2^{a} 3^{b} 5^{c}=2^{a} 3^{a+x} 5^{a+x+y}=30^{a} 15^{x} 5^{y}\\]\n\nand \\(a, x, y\\) are any positive integers. Thus\n\n\\[\\begin{aligned}\n\\sum_{1 \\leq a \\leq b<c} \\frac{1}{2^{a} 3^{b} 5^{c}} & =\\sum_{1 \\leq a, x, y} \\frac{1}{30^{a} 15^{x} 5^{y}} \\\\\n& =\\sum_{1 \\leq a} \\frac{1}{30^{a}} \\sum_{1 \\leq x} \\frac{1}{15^{x}} \\sum_{1 \\leq y} \\frac{1}{5^{y}} \\\\\n& =\\frac{1}{29} \\cdot \\frac{1}{14} \\cdot \\frac{1}{4} \\\\\n& =\\frac{1}{1624}\n\\end{aligned}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

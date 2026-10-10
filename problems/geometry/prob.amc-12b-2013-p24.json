@@ -1,0 +1,93 @@
+{
+  "id": "prob.amc-12b-2013-p24",
+  "title": "2013 AMC 12B Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-bisector",
+      "label": "Angle bisector",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2013,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 41.2,
+    "source": 2600,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Let \\(ABC\\) be a triangle where \\(M\\) is the midpoint of \\(AC,\\) and \\(CN\\) is the angle bisector of \\(\\angle ACB\\) with \\(N\\) on \\(AB.\\) Let \\(X\\) be the intersection of the median \\(BM\\) and the bisector \\(CN.\\) In addition \\(\\triangle BXN\\) is equilateral and \\(AC = 2.\\) What is \\(BN^2?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{10 - 6\\sqrt2}{7}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{2}{9}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{5\\sqrt2 - 3\\sqrt3}{8}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{\\sqrt2}{6}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{3\\sqrt3 - 4}{5}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2013-p24.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(\\alpha = \\angle ACN = \\angle NCB\\) and \\(x = BN.\\) Since \\(\\triangle BXN\\) is equilateral, \\(\\angle BXC = \\angle CNA = 120^\\circ,\\) which gives \\(\\triangle ABC \\sim \\triangle BMC\\) and \\(\\triangle ANC \\sim \\triangle BXC.\\) From the first, with \\(MC = \\tfrac12 AC = 1,\\) we get \\(\\dfrac{BC}{2} = \\dfrac{MC}{BC},\\) so \\(BC = \\sqrt2.\\) From the second, \\(CX = (\\sqrt2 + 1)x.\\) The Law of Cosines in \\(\\triangle BCX\\) with \\(\\angle BXC = 120^\\circ\\) gives \\(2 = x^2\\) \\(+ (\\sqrt2 + 1)^2 x^2\\) \\(+ (\\sqrt2 + 1)x^2\\) \\(= (5 + 3\\sqrt2)x^2.\\) Hence \\(BN^2 = x^2\\) \\(= \\dfrac{2}{5 + 3\\sqrt2}\\) \\(= \\dfrac{10 - 6\\sqrt2}{7}.\\) Thus, the correct answer is A.",
+      "hints": [
+        "Let \\(\\alpha = \\angle ACN\\) and \\(x = BN;\\) the equilateral triangle gives \\(\\angle BXC = \\angle CNA = 120^\\circ\\)",
+        "Similar triangles yield \\(BC = \\sqrt2\\) and \\(CX = (\\sqrt2 + 1)x;\\) then apply the Law of Cosines in \\(\\triangle BCX\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

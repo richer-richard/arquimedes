@@ -1,0 +1,76 @@
+{
+  "id": "prob.hmmt-feb-geometry-2023-p7",
+  "title": "2023 HMMT February Geometry Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cyclic-quadrilaterals",
+      "label": "Cyclic quadrilaterals",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.homothety",
+      "label": "Homothety",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.tangents",
+      "label": "Tangents",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-trigonometry",
+      "label": "Triangle trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2023,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 85.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Quadrilateral \\(A B C D\\) is inscribed in circle \\(\\Gamma\\). Segments \\(A C\\) and \\(B D\\) intersect at \\(E\\). Circle \\(\\gamma\\) passes through \\(E\\) and is tangent to \\(\\Gamma\\) at \\(A\\). Suppose that the circumcircle of triangle \\(B C E\\) is tangent to \\(\\gamma\\) at \\(E\\) and is tangent to line \\(C D\\) at \\(C\\). Suppose that \\(\\Gamma\\) has radius 3 and \\(\\gamma\\) has radius 2. Compute \\(B D\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{9 \\sqrt{21}}{7}",
+    "value": "\\frac{9 \\sqrt{21}}{7}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2023-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "The key observation is that \\(\\triangle A C D\\) is equilateral. This is proven in two steps.\n\n- From tangency at \\(C\\), we have\n\n\\[\\angle D C A=\\angle D C E=\\angle E B C=\\angle D B C=\\angle D A C\\]\n\nimplying that \\(C A=C D\\).\n\n- Consider the common tangent of \\(\\gamma\\) and \\(\\Gamma\\) at \\(A\\). By homothety at \\(E\\), this line is parallel to the tangent of \\(\\odot(E B C)\\) at \\(C\\), which is line \\(C D\\). This implies that \\(A C=A D\\).\n\nOnce we have this, compute\n\n\\[\\begin{aligned}\n& A C=2 R_{\\Gamma} \\cdot \\sin 60^{\\circ}=3 \\sqrt{3} \\\\\n& A E=2 R_{\\gamma} \\cdot \\sin 60^{\\circ}=2 \\sqrt{3}\n\\end{aligned}\\]\n\nThere are now many ways to finish. One way is to use Stewart's theorem on \\(\\triangle A D C\\) to get \\(E D=\\sqrt{21}\\), then use Power of Point to get \\(E B=\\frac{A E \\cdot E C}{E D}=\\frac{2 \\sqrt{21}}{7}\\). The final answer is \\(B D=B E+E D=\\frac{9 \\sqrt{21}}{7}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

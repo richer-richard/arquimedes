@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1991-p14",
+  "title": "1991 AIME 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.chord",
+      "label": "Chord",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1991,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 54.4,
+    "source": 2710,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "A hexagon is inscribed in a circle. Five of the sides have length \\(81\\) and the sixth, denoted by \\(\\overline{AB},\\) has length \\(31.\\) Find the sum of the lengths of the three diagonals that can be drawn from \\(A.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "384",
+    "value": "384"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1991-p14.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(2u\\) be the central angle subtended by each \\(81\\)-side, and put \\(t=2\\cos u.\\) The remaining arc has half-angle \\(\\pi-5u,\\) so the chord ratio gives \\[\\begin{aligned}\\frac{31}{81}&=\\frac{\\sin5u}{\\sin u}\\\\&=t^4-3t^2+1.\\end{aligned}\\] This yields \\(t^2=\\frac{25}{9}\\) or \\(\\frac{2}{9}.\\) Because \\(5u<\\pi,\\) we have \\(t>2\\cos36^\\circ,\\) so \\(t=\\frac{5}{3}.\\)\n\nThe three diagonals from \\(A\\) subtend the same minor angles as \\(2u,\\) \\(3u,\\) and \\(4u.\\) Relative to an \\(81\\)-side, their length ratios are \\[\\begin{aligned}\\frac{\\sin2u}{\\sin u}&=t,\\\\\\frac{\\sin3u}{\\sin u}&=t^2-1,\\\\\\frac{\\sin4u}{\\sin u}&=t^3-2t.\\end{aligned}\\] Their sum is therefore \\[\\begin{aligned}81(t^3+t^2-t-1)&=81\\left(\\frac{128}{27}\\right)\\\\&=384.\\end{aligned}\\]",
+      "hints": [
+        "Let \\(2u\\) be the central angle subtended by each side of length \\(81\\), and set \\(t=2\\cos u\\)",
+        "Express \\(\\frac{\\sin(5u)}{\\sin u}\\) and the three diagonal ratios in terms of \\(t\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

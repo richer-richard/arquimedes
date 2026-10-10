@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2016-p14",
+  "title": "2016 AMC 12A Problem 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cube-geometry",
+      "label": "Cube geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2016,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 29.3,
+    "source": 1730,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Each vertex of a cube is to be labeled with an integer from \\(1\\) through \\(8,\\) with each integer being used once, in such a way that the sum of the four numbers on the vertices of a face is the same for each face. Arrangements that can be obtained from each other through rotations of the cube are considered to be the same. How many different arrangements are possible?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(24\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2016-p14.live",
+      "kind": "proof-sketch",
+      "text": "Each vertex belongs to \\(3\\) faces, so \\(6S=3(1+2+\\cdots+8)=108,\\) giving each face-sum \\(S=18.\\)\n\nThe four-element subsets containing \\(1\\) with sum \\(18\\) are \\(\\{1,2,7,8\\},\\) \\(\\{1,3,6,8\\},\\) \\(\\{1,4,5,8\\},\\) and \\(\\{1,4,6,7\\}.\\) Only one omits \\(8,\\) so at least two of the three distinct faces through \\(1\\) contain \\(8.\\) Two vertices of a cube lie on two common faces exactly when they are adjacent; hence \\(1\\) and \\(8\\) are adjacent.\n\nRotate the cube so that \\(1\\) is at the lower-left-front vertex and \\(8\\) at the lower-right-front vertex. The unique face through \\(1\\) that does not contain \\(8\\) must use \\(4,6,7,\\) and these can be placed in \\(3!=6\\) orders. Each order forces \\(5,3,2\\) at the three opposite vertices, and the remaining face sums are then \\(18.\\) Hence there are \\(6\\) arrangements.\n\nThus, the correct answer is C.",
+      "hints": [
+        "Each vertex lies on \\(3\\) faces, so the six face-sums total \\(3(1+2+\\cdots+8)\\)",
+        "The face-sum is \\(18;\\) show \\(1\\) and \\(8\\) must be on adjacent vertices"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

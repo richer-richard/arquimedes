@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2003-p7",
+  "title": "2003 AIME II Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circumcircle-circumcenter-and-circumradius",
+      "label": "Circumcircle, circumcenter, and circumradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.law-of-sines",
+      "label": "Law of sines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.rhombus",
+      "label": "Rhombus",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2003,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 50.5,
+    "source": 2560,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "Find the area of rhombus \\(ABCD\\) given that the radii of the circles circumscribed around triangles \\(ABD\\) and \\(ACD\\) are \\(12.5\\) and \\(25,\\) respectively.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "400",
+    "value": "400"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2003-p7.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(s\\) be the side length and \\(\\alpha = \\angle BAC\\) (the diagonal \\(AC\\) bisects angle \\(A\\)). The diagonals then have lengths \\(AC = 2s\\cos\\alpha\\) and \\(BD = 2s\\sin\\alpha.\\) In triangle \\(ABD,\\) side \\(BD\\) subtends the angle \\(\\angle BAD = 2\\alpha,\\) so the extended law of sines gives \\[ \\begin{aligned} 12.5 = R_1 &= \\frac{BD}{2\\sin 2\\alpha} \\\\ &= \\frac{2s\\sin\\alpha}{4\\sin\\alpha\\cos\\alpha} \\\\ &= \\frac{s}{2\\cos\\alpha}. \\end{aligned} \\] In triangle \\(ACD,\\) side \\(AC\\) subtends \\(\\angle ADC = 180^\\circ - 2\\alpha,\\) so similarly \\(25 = R_2 = \\frac{s}{2\\sin\\alpha}.\\)\n\nDividing, \\(\\tan\\alpha = \\frac{R_1}{R_2} = \\frac{1}{2},\\) so \\(\\sin\\alpha = \\frac{1}{\\sqrt{5}}\\) and \\(\\cos\\alpha = \\frac{2}{\\sqrt{5}}.\\) Then \\(s = 2R_2\\sin\\alpha = \\frac{50}{\\sqrt{5}} = 10\\sqrt{5}.\\)\n\nThe area is half the product of the diagonals: \\[ \\begin{aligned} &\\frac{1}{2} \\cdot 2s\\cos\\alpha \\cdot 2s\\sin\\alpha \\\\ &= 2s^2\\sin\\alpha\\cos\\alpha \\\\ &= 2 \\cdot 500 \\cdot \\frac{2}{5} = 400. \\end{aligned} \\]",
+      "hints": [
+        "Let \\(s\\) be the side and \\(\\alpha = \\angle BAC.\\) The diagonals have lengths \\(2s\\cos\\alpha\\) and \\(2s\\sin\\alpha\\)",
+        "The extended law of sines in triangles \\(ABD\\) and \\(ACD\\) gives \\(R_1 = \\frac{s}{2\\cos\\alpha}\\) and \\(R_2 = \\frac{s}{2\\sin\\alpha},\\) so \\(\\tan\\alpha = \\frac{R_1}{R_2}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2002-p22",
+  "title": "2002 AMC 10A Problem 22",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.pattern-recognition",
+      "label": "Pattern recognition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2002,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 30.8,
+    "source": 1790,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A set of tiles numbered \\(1\\) through \\(100\\) is modified repeatedly by the following operation: remove all tiles numbered with a perfect square, and renumber the remaining tiles consecutively starting with \\(1.\\) How many times must the operation be performed to reduce the number of tiles in the set to one?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(19\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(20\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "18"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2002-p22.live",
+      "kind": "proof-sketch",
+      "text": "Starting from \\(n^2\\) tiles, one operation removes the \\(n\\) perfect squares, leaving \\(n^2-n.\\) The next operation removes \\(n-1\\) perfect squares, leaving \\(n^2-n-(n-1)=(n-1)^2.\\)\n\nSo every two operations reduce \\(n^2\\) to \\((n-1)^2.\\) Going from \\(10^2=100\\) down to \\(1^2=1\\) takes \\(2(10-1)=18\\) operations.\n\nThus, the correct answer is C.",
+      "hints": [
+        "Removing the perfect squares from \\(n^2\\) tiles leaves \\(n^2-n\\) tiles",
+        "Two operations take \\(n^2\\) tiles down to \\((n-1)^2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

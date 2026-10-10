@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2019-p9",
+  "title": "2019 HMMT February Combinatorics Problem 9",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2019,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 84.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many ways can one fill a \\(3 \\times 3\\) square grid with nonnegative integers such that no nonzero integer appears more than once in the same row or column and the sum of the numbers in every row and column equals 7 ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2019-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 216\nIn what ways could we potentially fill a single row? The only possibilities are if it contains the numbers \\((0,0,7)\\) or \\((0,1,6)\\) or \\((0,2,5)\\) or \\((0,3,4)\\) or \\((1,2,4)\\). Notice that if we write these numbers in binary, in any choices for how to fill the row, there will be exactly one number with a 1 in its rightmost digit, exactly one number with a 1 in the second digit from the right, and exactly exactly one number with a 1 in the third digit from the right. Thus, consider the following operation: start with every unit square filled with the number 0 . Add 1 to three unit squares, no two in the same row or column. Then add 2 to three unit squares, no two in the same row or column. Finally, add 4 to three unit squares, no two in the same row or column. There are clearly \\(6^{3}=216\\) ways to perform this operation and every such operation results in a unique, suitably filled-in 3 by 3 square. Hence the answer is 216 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

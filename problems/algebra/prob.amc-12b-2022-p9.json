@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2022-p9",
+  "title": "2022 AMC 12B Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.exponent",
+      "label": "Exponent",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2022,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 24.1,
+    "source": 1530,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The sequence \\(a_0,\\) \\(a_1,\\) \\(a_2,\\) \\(\\cdots\\) is a strictly increasing arithmetic sequence of positive integers such that \\[2^{a_7} = 2^{27} \\cdot a_7.\\] What is the minimum possible value of \\(a_2?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(22\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "12"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2022-p9.live",
+      "kind": "proof-sketch",
+      "text": "Dividing by \\(2^{27},\\) we need \\(2^{a_7 - 27} = a_7.\\) Thus \\(a_7=2^j\\) and \\(2^j-j=27,\\) where \\(j=a_7-27\\ge0.\\) The left side is strictly increasing for \\(j\\ge1,\\) and \\(j=5\\) works, so uniquely \\(a_7=32.\\)\n\nWith common difference \\(d \\ge 1,\\) we have \\(a_7 = a_0 + 7d = 32\\) and \\(a_2 = a_0 + 2d = 32 - 5d.\\) To minimize \\(a_2\\) we maximize \\(d;\\) since \\(a_0 = 32 - 7d \\ge 1,\\) the largest choice is \\(d = 4\\) (giving \\(a_0 = 4\\)).\n\nThen \\(a_2 = 32 - 20 = 12.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Divide both sides by \\(2^{27}\\) to get \\(2^{a_7 - 27} = a_7\\)",
+        "After finding \\(a_7,\\) write \\(a_2 = a_7 - 5d\\) and make the common difference \\(d\\) as large as possible"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

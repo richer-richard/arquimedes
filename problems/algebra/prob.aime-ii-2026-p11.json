@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2026-p11",
+  "title": "2026 AIME2 11",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.algebraic-manipulation",
+      "label": "Algebraic manipulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2026,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 63.3,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Find the greatest integer \\(n\\) such that the cubic polynomial \\[x^3 - \\frac{n}{6}x^2 + (n - 11)x - 400\\] has roots \\(\\alpha^2,\\) \\(\\beta^2,\\) and \\(\\gamma^2,\\) where \\(\\alpha,\\) \\(\\beta,\\) and \\(\\gamma\\) are complex numbers, and there are exactly seven different possible values for \\(\\alpha + \\beta + \\gamma.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "132",
+    "value": "132"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2026-p11.live",
+      "kind": "proof-sketch",
+      "text": "The roots of the cubic are \\(\\alpha^2, \\beta^2, \\gamma^2.\\) Fix square roots \\(s_1, s_2, s_3\\) of them; then \\(\\alpha + \\beta + \\gamma\\) ranges over the eight expressions \\(\\pm s_1 \\pm s_2 \\pm s_3,\\) which come in four pairs \\(\\pm v.\\) Generically all eight are distinct. The product of the three chosen square roots is nonzero because the cubic’s constant term is \\(-400,\\) so every \\(s_i\\) is nonzero. A coincidence \\(v(\\varepsilon) = v(\\varepsilon')\\) between choices that are not opposite must differ in two signs and forces \\(s_i = \\pm s_j\\) for some \\(i \\ne j,\\) which collapses the eight values to at most six. So exactly seven values occur precisely when one choice satisfies \\(\\pm s_1 \\pm s_2 \\pm s_3 = 0\\) — its opposite is then the same value \\(0\\) — and no further degeneracies occur.\n\nThat condition is the vanishing of \\[ \\begin{aligned} &(s_1 + s_2 + s_3)(-s_1 + s_2 + s_3) \\\\ &\\quad {}\\cdot (s_1 - s_2 + s_3)(s_1 + s_2 - s_3) \\\\ &= 2\\sum_{i \\lt j} r_i r_j - \\sum_i r_i^2 \\\\ &= 4e_2 - e_1^2, \\end{aligned} \\] where \\(r_i = s_i^2\\) are the roots and \\(e_1, e_2\\) their elementary symmetric functions. By Vieta’s formulas \\(e_1 = \\frac{n}{6}\\) and \\(e_2 = n - 11,\\) so \\(\\frac{n^2}{36} = 4(n - 11),\\) i.e. \\(n^2 - 144n + 1584 = 0,\\) with roots \\(n = 12\\) and \\(n = 132.\\)\n\nFor \\(n = 132\\) the cubic factors as \\[(x - 16)(x^2 - 6x + 25),\\] with distinct roots \\(16,\\) \\(3 + 4i,\\) and \\(3 - 4i.\\) Choose their square roots as \\(4,\\) \\(2 + i,\\) and \\(2 - i;\\) then \\(4 - (2+i) - (2-i) = 0.\\) The eight sign choices give \\(0\\) twice and the six distinct nonzero values \\(\\pm 8,\\) \\(\\pm(4+2i),\\) \\(\\pm(4-2i),\\) so exactly seven sums occur. The greatest such integer is \\(132.\\)",
+      "hints": [
+        "Fix square roots \\(s_1, s_2, s_3\\) of the three roots; the possible sums are \\(\\pm s_1 \\pm s_2 \\pm s_3,\\) eight expressions that pair off as \\(\\pm v.\\)",
+        "Exactly seven values occur when one combination is \\(0;\\) the product of the four expressions \\(s_1 \\pm s_2 \\pm s_3\\) equals \\(4e_2 - e_1^2\\) in the roots’ symmetric functions."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

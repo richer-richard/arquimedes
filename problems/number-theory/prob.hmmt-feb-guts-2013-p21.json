@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2013-p21",
+  "title": "2013 HMMT February Guts Problem 21",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.number-theory",
+      "label": "Number Theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2013,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 75.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find the number of positive integers \\(j \\leq 3^{2013}\\) such that\n\n\\[j=\\sum_{k=0}^{m}\\left((-1)^{k} \\cdot 3^{a_{k}}\\right)\\]\n\nfor some strictly increasing sequence of nonnegative integers \\(\\left\\{a_{k}\\right\\}\\). For example, we may write \\(3=3^{1}\\) and \\(55=3^{0}-3^{3}+3^{4}\\), but 4 cannot be written in this form.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2013-p21.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(2^{2013}\\) Clearly \\(m\\) must be even, or the sum would be negative. Furthermore, if \\(a_{m} \\leq 2013\\), the sum cannot exceed \\(3^{2013}\\) since \\(j=3^{a_{m}}+\\sum_{k=0}^{m-1}\\left((-1)^{k} \\cdot 3^{a_{k}}\\right) \\leq 3^{a_{m}}\\). Likewise, if \\(a_{m}>2013\\), then the sum necessarily exceeds \\(3^{2013}\\), which is not hard to see by applying the Triangle Inequality and summing a geometric series. Hence, the elements of \\(\\left\\{a_{k}\\right\\}\\) can be any subset of \\(\\{0,1, \\ldots, 2013\\}\\) with an odd number of elements. Since the number of even-sized subsets is equal to the number of odd-sized elements, there are \\(\\frac{2^{2014}}{2}=2^{2013}\\) such subsets.\nNow, it suffices to show that given such an \\(\\left\\{a_{k}\\right\\}\\), the value of \\(j\\) can only be obtained in this way. Suppose for the the sake of contradiction that there exist two such sequences \\(\\left\\{a_{k}\\right\\}_{0 \\leq k \\leq m_{a}}\\) and \\(\\left\\{b_{k}\\right\\}_{0 \\leq k \\leq m_{b}}\\) which produce the same value of \\(j\\) for \\(j\\) positive or negative, where we choose \\(\\left\\{a_{k}\\right\\},\\left\\{b_{k}\\right\\}\\) such that \\(\\min \\left(m_{a}, m_{b}\\right)\\) is as small as possible. Then, we note that since \\(3^{a_{0}}+3^{a_{1}}+\\ldots+3^{\\left(a_{\\left.m_{a}-1\\right)}\\right.} \\leq 3^{0}+3^{1}+\\) \\(\\ldots+3^{\\left(a_{m_{a}-1}\\right)}<2\\left(3^{\\left(a_{m_{a}}-1\\right)}\\right)\\), we have that \\(\\sum_{k=0}^{m_{a}}\\left((-1)^{k} \\cdot 3^{a_{k}}\\right)>3^{\\left(a_{\\left.m_{a}-1\\right)}\\right)}\\). Similarly, we get that \\(3^{\\left(a_{m_{b}}-1\\right)} \\geq \\sum_{k=0}^{m_{b}}\\left((-1)^{k} \\cdot 3^{a_{k}}\\right)>3^{\\left(m_{b}-1\\right)}\\); for the two to be equal, we must have \\(m_{a}=m_{b}\\). However, this means that the sequences obtained by removing \\(a_{m_{a}}\\) and \\(a_{m_{b}}\\) from \\(\\left\\{a_{k}\\right\\}\\left\\{b_{k}\\right\\}\\) have smaller maximum value but still produce the same alternating sum, contradicting our original assumption.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

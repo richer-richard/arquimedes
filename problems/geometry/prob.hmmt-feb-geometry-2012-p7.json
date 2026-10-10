@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-geometry-2012-p7",
+  "title": "2012 HMMT February Geometry Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2012,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 85.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(S\\) be the set of the points \\(\\left(x_{1}, x_{2}, \\ldots, x_{2012}\\right)\\) in 2012-dimensional space such that \\(\\left|x_{1}\\right|+\\left|x_{2}\\right|+\\cdots+\\) \\(\\left|x_{2012}\\right| \\leq 1\\). Let \\(T\\) be the set of points in 2012-dimensional space such that \\(\\max _{i=1}^{2012}\\left|x_{i}\\right|=2\\). Let \\(p\\) be a randomly chosen point on \\(T\\). What is the probability that the closest point in \\(S\\) to \\(p\\) is a vertex of \\(S\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2012-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{1}{2^{2011}}\\) Note that \\(T\\) is a hypercube in 2012-dimensional space, containing the rotated hyperoctahedron \\(S\\). Let \\(v\\) be a particular vertex of \\(S\\), and we will consider the set of points \\(x\\) on \\(T\\) such that \\(v\\) is the closest point to \\(x\\) in \\(S\\). Let \\(w\\) be another point of \\(S\\) and let \\(\\ell\\) be the line between \\(v\\) and \\(w\\). Then in order for \\(v\\) to be the closest point to \\(x\\) in \\(S\\), it must also be so on the region of \\(\\ell\\) contained in \\(S\\). This condition is then equivalent to the projection of \\(x\\) lying past \\(v\\) on the line \\(\\ell\\), or alternatively that \\(v\\) lies in the opposite halfspace of \\(w\\) defined by the hyperplane perpendicular to \\(\\ell\\) and passing through \\(v\\). This can be written algebraically as \\((x-v) \\cdot(w-v) \\leq 0\\). Therefore, \\(v\\) is the closest point to \\(x\\) if and only if \\((x-v) \\cdot(w-v) \\leq 0\\) for all \\(w\\) in \\(S\\).\nNote that these conditions do not depend on where \\(w\\) is on the line, so for each line intersecting \\(S\\) nontrivially, let us choose \\(w\\) such that \\(w\\) lies on the hyperplane \\(H\\) containing all the vertices of \\(S\\) except for \\(v\\) and \\(-v\\). We can further see that the conditions are linear in \\(w\\), so them holding for all \\(w\\)\nin \\(H\\) is equivalent to them holding on the vertices of the region \\(S \\cap H\\), which are simply the vertices of \\(S\\) except for \\(v\\) and \\(-v\\). Let us now compute what these conditions look like.\nWithout loss of generality, let \\(v=(1,0, \\ldots, 0)\\) and \\(w=(0,1,0, \\ldots, 0)\\). Then the equation is of the form \\((x-v) \\cdot(-1,1,0, \\ldots, 0) \\leq 0\\), which we can rewrite as \\(\\left(x_{1}-1, x_{2}, x_{3}, \\ldots, x_{2} 012\\right) \\cdot(-1,1,0, \\ldots, 0)=\\) \\(1-x_{1}+x_{2} \\leq 0\\). For the other choices of \\(w\\), we get the similar conditions that \\(1-x_{1}+x_{i} \\leq 0\\) and also \\(1-x_{1}-x_{i} \\leq 0\\) for each \\(i \\in\\{2, \\ldots, 2012\\}\\). Note that if any \\(x_{i} \\in\\{2,-2\\}\\) for \\(i \\neq 1\\), then one of these conditions trivially fails, as it would require \\(3-x_{1} \\leq 0\\). Therefore, the only face of \\(T\\) where \\(x\\) can lie is the face defined by \\(x_{1}=2\\), which gives us the conditions that \\(-1+x_{i} \\leq 0\\) and \\(-1-x_{i} \\leq 0\\), so \\(x_{i} \\in[-1,1]\\) for all \\(i \\in\\{2, \\ldots, 2012\\}\\). This defines a 2011-dimensional hypercube of side length 2 on the face of \\(T\\) defined by \\(x_{1}=2\\), and we obtain similar regions on each of the other faces corresponding to the other vertices of \\(S\\). Therefore, the volume of the set of \\(x\\) for which \\(x\\) is closest to a vertex is \\(2 \\cdot 2012 \\cdot 2^{2011}\\) and the volume of all the choices of \\(x\\) is \\(2 \\cdot 2012 \\cdot 4^{2011}\\), so the desired probability is \\(\\frac{1}{2^{2011}}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

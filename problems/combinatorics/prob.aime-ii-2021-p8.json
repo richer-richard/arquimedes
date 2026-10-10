@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-ii-2021-p8",
+  "title": "2021 AIME II Problem 8",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.random-walk",
+      "label": "Random walk",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.recursive-counting",
+      "label": "Recursive counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2021,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 57.7,
+    "source": 2840,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "An ant makes a sequence of moves on a cube where a move consists of walking from one vertex to an adjacent vertex along an edge of the cube. Initially the ant is at a vertex of the bottom face of the cube and chooses one of the three adjacent vertices to move to as its first move. For all moves after the first move, the ant does not return to its previous vertex, but chooses to move to one of the other two adjacent vertices. All choices are selected at random so that each of the possible moves is equally likely. The probability that after exactly \\(8\\) moves that ant is at a vertex of the top face on the cube is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "49",
+    "value": "49"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2021-p8.live",
+      "kind": "proof-sketch",
+      "text": "All \\(3 \\cdot 2^7 = 384\\) allowed move sequences are equally likely, so we count those ending on the top face. Classify the ant after each move by its face (bottom or top) and by whether its last move was vertical: after a vertical move the two allowed continuations are the two horizontal edges at the new vertex, while after a horizontal move one continuation is horizontal and one is vertical.\n\nLet \\((B_h, B_v, T_h, T_v)\\) count sequences ending on the bottom or top with last move horizontal or vertical. Each sequence splits into two, following \\[ \\begin{aligned} B_h' &= B_h + 2B_v, \\\\ T_v' &= B_h, \\\\ T_h' &= T_h + 2T_v, \\\\ B_v' &= T_h. \\end{aligned} \\] After move \\(1\\) the counts are \\((2, 0, 0, 1),\\) and iterating gives \\((2, 0, 2, 2),\\) \\((2, 2, 6, 2),\\) \\((6, 6, 10, 2),\\) \\((18, 10, 14, 6),\\) \\((38, 14, 26, 18),\\) \\((66, 26, 62, 38),\\) and after the eighth move \\(T_h = 62 + 76 = 138\\) and \\(T_v = 66.\\)\n\nSo \\(138 + 66 = 204\\) of the \\(384\\) sequences end on the top face, giving probability \\(\\frac{204}{384} = \\frac{17}{32}\\) and \\(m + n = 17 + 32 = 49.\\)",
+      "hints": [
+        "Track two things: whether the ant is on the bottom or top face, and whether its last move was vertical or horizontal",
+        "After a vertical move both continuations are horizontal; after a horizontal move one continuation is horizontal and one is vertical. Iterate eight steps."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

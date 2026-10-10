@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2025-p34",
+  "title": "2025 HMMT February Guts Problem 34",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2025,
+    "number": 34
+  },
+  "difficulty": {
+    "course": 85.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "On the perimeter of a unit circle, 12 points are chosen uniformly and independently at random. Estimate the expected value of the area of the convex 12-gon formed by these points.\n\nSubmit a positive number \\(E\\) written in decimal. If the correct answer is \\(A\\) , you will receive round \\(\\left(20e^{-15|E - A|}\\right)\\) points.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2025-p34.hmmt",
+      "kind": "proof-sketch",
+      "text": "We compute the exact answer as given above. Let \\(n = 12\\) . and \\(\\theta_{1},\\theta_{2},\\ldots \\theta_{n}\\) be uniformly randomly generated such that \\(\\theta_{1} + \\cdot \\cdot \\cdot +\\theta_{n} = 2\\pi\\) . We are trying to estimate\n\n\\[\\mathbb{E}\\left[\\frac{1}{2}\\sum_{i = 1}^{n}\\sin (\\theta_{i})\\right] = \\frac{1}{2}\\sum_{i = 1}^{n}\\mathbb{E}[\\sin (\\theta_{i})].\\]\n\nWe do this by computing the marginal distribution of \\(\\theta_{i}\\) , which is proportional to the area of the \\(n - 2\\) dimensional cross section\n\n\\[\\sum_{j\\neq i}\\theta_{j} = 2\\pi -\\theta_{i}.\\]\n\nThe volume of this cross section is proportional to \\((2\\pi - \\theta_{i})^{n - 2}\\) . Thus, the marginal probability distribution of \\(\\theta_{i}\\) can be written as\n\n\\[p(\\theta_{i}) = C(2\\pi -\\theta_{i})^{n - 2}\\]\n\nfor some constant \\(C\\) . We can solve for \\(C\\) because we know \\(\\int_{0}^{2\\pi}p(\\theta_{i})d\\theta_{i} = 1\\) . The result is that\n\n\\[p(\\theta_{i}) = \\frac{n - 1}{2\\pi}\\left(1 - \\frac{\\theta_{i}}{2\\pi}\\right)^{n - 2}.\\]\n\nThus, the quantity that we seek to estimate is\n\n\\[\\mathbb{E}\\left[\\frac{1}{2}\\sum_{i = 1}^{n}\\sin \\theta_{i}\\right] = \\frac{n}{2}\\mathbb{E}[\\sin \\theta_{i}]\\] \\[\\qquad = n\\int_{0}^{2\\pi}p(\\theta_{i})\\sin \\theta_{i}d\\theta_{i}\\] \\[\\qquad = \\frac{n(n - 1)}{4\\pi}\\int_{0}^{2\\pi}\\left(1 - \\frac{\\theta}{2\\pi}\\right)^{n - 2}\\sin \\theta d\\theta\\] \\[\\qquad = \\frac{33}{\\pi}\\int_{0}^{2\\pi}\\left(1 - \\frac{\\theta}{2\\pi}\\right)^{10}\\sin \\theta d\\theta .\\]\n\nWe can integrate this using tabular integration by parts.\n\n<table><tr><td>Differentiate</td><td>Integrate</td><td>Sign</td></tr><tr><td>(1-θ/2π)10</td><td>sinθ</td><td></td></tr><tr><td>-5/π(1-θ/2π)9</td><td>cosθ</td><td>+</td></tr><tr><td>45/2π(1-θ/2π)8</td><td>-sinθ</td><td>-</td></tr><tr><td>-90/π(1-θ/2π)7</td><td>-cosθ</td><td>+</td></tr><tr><td>315/π(1-θ/2π)6</td><td>sinθ</td><td>-</td></tr><tr><td>-945/π(1-θ/2π)5</td><td>cosθ</td><td>+</td></tr><tr><td>4725/2π(1-θ/2π)4</td><td>-sinθ</td><td>-</td></tr><tr><td>4725/π(1-θ/2π)3</td><td>-cosθ</td><td>+</td></tr><tr><td>14175/2π(1-θ/2π)2</td><td>sinθ</td><td>-</td></tr><tr><td>14175/2π(1-θ/2π)1</td><td>cosθ</td><td>+</td></tr><tr><td>14175/4π10</td><td>-sinθ</td><td>-</td></tr><tr><td></td><td>cosθ</td><td>+</td></tr></table>\n\nTo compute the product, note that any term of the form \\(C\\left(1 - \\frac{\\theta}{2\\pi}\\right)^{n}\\) sin \\(\\theta\\) vanishes when taking definite\n\nintegral from 0 to \\(2\\pi\\) . Therefore, the desired value is\n\n\\[\\frac{33}{\\pi}\\left((1 - \\frac{\\theta}{2\\pi})^{10} - \\frac{45}{2\\pi^{2}}\\left(1 - \\frac{\\theta}{2\\pi}\\right)^{8} + \\frac{315}{\\pi^{4}}\\left(1 - \\frac{\\theta}{2\\pi}\\right)^{6} - \\frac{4725}{2\\pi^{6}}\\left(1 - \\frac{\\theta}{2\\pi}\\right)^{4}\\right.\\] \\[\\qquad \\qquad \\qquad \\qquad \\qquad \\qquad \\qquad \\qquad \\qquad \\qquad \\qquad\\] \\[\\qquad \\qquad \\qquad \\qquad \\qquad \\qquad \\qquad \\qquad \\qquad \\left. + \\frac{14175}{2\\pi^{8}}\\left(1 - \\frac{\\theta}{2\\pi}\\right)^{2} + \\frac{14175}{4\\pi^{10}}\\right)\\cos \\theta \\bigg|_{0}^{2\\pi}\\] \\[\\qquad = \\frac{33}{\\pi}\\left(1 - \\frac{45}{2\\pi^{2}} +\\frac{315}{\\pi^{4}} -\\frac{4725}{2\\pi^{6}} +\\frac{14175}{2\\pi^{8}}\\right)\\] \\[\\qquad = \\left[\\frac{33}{\\pi} -\\frac{1485}{2\\pi^{3}} +\\frac{10395}{\\pi^{5}} -\\frac{155925}{\\pi^{7}} +\\frac{467775}{2\\pi^{9}}\\right]\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

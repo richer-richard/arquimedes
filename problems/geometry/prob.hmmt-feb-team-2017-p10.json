@@ -1,0 +1,75 @@
+{
+  "id": "prob.hmmt-feb-team-2017-p10",
+  "title": "2017 HMMT February Team Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity-and-scaling",
+      "label": "Similarity and scaling",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2017,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 91.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(L B C\\) be a fixed triangle with \\(L B=L C\\), and let \\(A\\) be a variable point on arc \\(L B\\) of its circumcircle. Let \\(I\\) be the incenter of \\(\\triangle A B C\\) and \\(\\overline{A K}\\) the altitude from \\(A\\). The circumcircle of \\(\\triangle I K L\\) intersects lines \\(K A\\) and \\(B C\\) again at \\(U \\neq K\\) and \\(V \\neq K\\). Finally, let \\(T\\) be the projection of \\(I\\) onto line \\(U V\\). Prove that the line through \\(T\\) and the midpoint of \\(\\overline{I K}\\) passes through a fixed point as \\(A\\) varies.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2017-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "## Answer:\n\nLet \\(M\\) be the midpoint of arc \\(B C\\) not containing \\(L\\) and let \\(D\\) be the point where the incircle of triangle \\(A B C\\) touches \\(B C\\). Also let \\(N\\) be the projection from \\(I\\) to \\(A K\\). We claim that \\(M\\) is the desired fixed point.\nBy Simson's Theorem on triangle \\(K U V\\) and point \\(I\\) we have that points \\(T, D, N\\) are collinear and since quadrilateral \\(N K D I\\) is a rectangle we have that line \\(D N\\) passes through the midpoint of \\(I K\\). Thus it suffices to show that \\(M\\) lies on line \\(D N\\).\n\nNow, let \\(I_{a}, I_{b}, I_{c}\\) be the \\(A, B, C\\)-excenters of triangle \\(A B C\\) respectively. Then \\(I\\) is the orthocenter of triangle \\(I_{a} I_{b} I_{c}\\) and \\(A B C\\) is the Cevian triangle of \\(I\\) with respect to triangle \\(I_{a} I_{b} I_{c}\\). It's also well-known that \\(M\\) is the midpoint of \\(I I_{a}\\).\nLet \\(D^{\\prime}\\) be the reflection of \\(I\\) over \\(B C\\) and let \\(N^{\\prime}\\) be the reflection of \\(I\\) over \\(A K\\). Clearly \\(K\\) is the midpoint of \\(D^{\\prime} N^{\\prime}\\). If we could prove that \\(I_{a}, D^{\\prime}, K, N^{\\prime}\\) were collinear then by taking a homothety centered at \\(I\\) with ratio \\(\\frac{1}{2}\\) we would have that points \\(M, D, N\\) were collinear as desired. Thus it suffices to show that points \\(I_{a}, D^{\\prime}, K\\) are collinear.\nLet lines \\(B C\\) and \\(I_{b} I_{c}\\) intersect at \\(R\\) and let lines \\(A I\\) and \\(B C\\) intersect at \\(S\\). Then it's well-known that ( \\(I_{b}, I_{c} ; A, R\\) ) is harmonic and projecting from \\(C\\) we have that \\(\\left(I_{a}, I ; S, A\\right)\\) is harmonic. But \\(K S \\perp K A\\) which means that \\(K S\\) bisects angle \\(\\angle I K I_{a}\\). But it's clear by the definition of \\(D^{\\prime}\\) that \\(K S\\) bisects angle \\(\\angle I K D^{\\prime}\\) which implies that points \\(I_{a}, K, D^{\\prime}\\) are collinear as desired. This completes the proof.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

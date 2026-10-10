@@ -1,0 +1,81 @@
+{
+  "id": "prob.amc-10b-2017-p16",
+  "title": "2017 AMC 10B Problem 16",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2017,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 24.0,
+    "source": 1480,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many of the base-ten numerals for the positive integers less than or equal to \\(2017\\) contain the digit \\(0?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(469 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(471 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(475 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(478 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(481 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "469"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2017-p16.live",
+      "kind": "proof-sketch",
+      "text": "For numbers less than \\(100,\\) we only have a \\(0\\) if it is a multiple of \\(10,\\) of which there are \\(9.\\)\n\nFor numbers between \\(100\\) and \\(999\\) inclusive, we will use complementary counting. There are \\(900\\) total numbers in this range. Also, there are \\(9\\cdot 9\\cdot 9=729\\) numbers in this range with no \\(0\\) since there are \\(9\\) ways to choose each digit to not be \\(0.\\) Thus, the total in this range is \\(171.\\)\n\nFor numbers between \\(1000\\) and \\(1999\\) inclusive, we will use complementary counting again. There are \\(1000\\) total numbers in this range. Also, there are \\(1\\cdot 9\\cdot 9\\cdot 9=729\\) numbers in this range with no \\(0\\) since there are \\(9\\) ways to choose each of the last \\(3\\) digits to not be \\(0\\) and the first digit must be \\(1.\\) Thus, the total in this range is \\(271.\\)\n\nThere are \\(18\\) numbers between \\(2000\\) and \\(2017\\) inclusive, each with a \\(0\\) in the second digit from the left.\n\nThis makes the total \\[9+171+271+18=469.\\]\n\nThus, the correct answer is A .",
+      "hints": [
+        "Count the complement: numbers with no digit \\(0\\)",
+        "Split by one-, two-, three-, and four-digit numbers up to \\(2017\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

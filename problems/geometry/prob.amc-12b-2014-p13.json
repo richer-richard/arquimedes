@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2014-p13",
+  "title": "2014 AMC 12B Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-inequality",
+      "label": "Triangle inequality",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2014,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 30.2,
+    "source": 1870,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Real numbers \\(a\\) and \\(b\\) are chosen with \\(1 \\lt a \\lt b\\) such that no triangle with positive area has side lengths \\(1,\\) \\(a,\\) and \\(b\\) or \\(\\tfrac1b,\\) \\(\\tfrac1a,\\) and \\(1.\\) What is the smallest possible value of \\(b?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{3+\\sqrt{3}}{2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{5}{2}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{3+\\sqrt{5}}{2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{3+\\sqrt{6}}{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(3\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2014-p13.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(b\\) is the largest of \\(1, a, b,\\) no such triangle exists exactly when \\(b \\ge a+1.\\) Since \\(1\\) is the largest of \\(\\tfrac1b, \\tfrac1a, 1,\\) no such triangle exists exactly when \\(1 \\ge \\tfrac1a + \\tfrac1b,\\) that is \\(a \\le \\tfrac{b}{b-1}.\\)\n\nBoth conditions hold with \\(b\\) smallest when \\(a+1 = b\\) and \\(a = \\tfrac{b}{b-1}\\) meet, giving \\(b - 1 = \\tfrac{b}{b-1},\\) or \\(b^2 - 3b + 1 = 0.\\)\n\nThe root larger than \\(1\\) is \\(b = \\dfrac{3+\\sqrt5}{2}.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "With \\(1 \\lt a \\lt b,\\) no triangle \\(1, a, b\\) means \\(b \\ge a+1\\)",
+        "No triangle \\(\\tfrac1b, \\tfrac1a, 1\\) means \\(1 \\ge \\tfrac1a + \\tfrac1b,\\) i.e. \\(a \\le \\tfrac{b}{b-1}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

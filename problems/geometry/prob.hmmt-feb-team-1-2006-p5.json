@@ -1,0 +1,56 @@
+{
+  "id": "prob.hmmt-feb-team-1-2006-p5",
+  "title": "2006 HMMT February Team Round 1 Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2006,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 83.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "With the same lawn and the same allowable mobot orientations as in the previous problem, let us call a formation \"happy\" if it is invariant under \\(120^{\\circ}\\) rotations. (A rotation applies both to the positions of the mobots and to their orientations.) An example of a happy formation for \\(n=2\\) might be\n\nFind the number of happy formations for a given \\(n\\).\n\n[Diagram omitted from this imported transcription; consult the HMMT archive while reviewing the problem.]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1-2006-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "If \\(n \\equiv 1(\\bmod 3)\\), then there is a clump of grass at the center of the lawn; otherwise there are 3 blades of grass equally closest to the center. In the former case, whatever mobot mows this center blade of grass cannot possibly have a counterpart under a \\(120^{\\circ}\\) rotation: if this mobot starts in the center, it must be oriented a certain way, and whatever way that is, cannot remain invariant under such a rotation; but if the mobot does not start in the center, then it will collide in the center with its counterparts under the \\(120^{\\circ}\\) rotations.\nIn the case that \\(n \\not \\equiv 1(\\bmod 3)\\), by considering how the three central blades of grass can be mowed, we easily see that there are two possibilities, both of which involve starting one mobot at each of these three positions. Both possibilities distinctly have the effect of cutting up the rest of the lawn (i.e., the part of the lawn not mowed by any of these three mobots) into three congruent pieces. The point is that these pieces are equivalent to trapezoids as in problem 3, both in their shape, and in the allowed directions of mobot motion. Luckily, we know how to count the ways to configure each such trapezoid. Call the trapezoid defined in problem 3 an \" \\((m, n)\\)-trapezoid.\"\nIf \\(n \\equiv 0(\\bmod 3)\\), then these pieces are either all \\(\\left(\\frac{2 n}{3}, \\frac{n-3}{3}\\right)\\)-trapezoids or all \\(\\left(\\frac{2 n-3}{3}, \\frac{n}{3}\\right)\\) trapezoids, depending on how the central mobots are configured. In this case, the answer is\n\n\\[\\left(\\binom{n-1}{\\frac{2 n}{3}}-\\binom{n-1}{\\frac{2 n+6}{3}}\\right)^{3}+\\left(\\binom{n-1}{\\frac{2 n-3}{3}}-\\binom{n-1}{\\frac{2 n+3}{3}}\\right)^{3} .\\]\n\nIf, on the other hand, \\(n \\equiv 2(\\bmod 3)\\), then these pieces are either all \\(\\left(\\frac{2 n-1}{3}, \\frac{n-2}{3}\\right)\\) trapezoids or all \\(\\left(\\frac{2 n-4}{3}, \\frac{n+1}{3}\\right)\\)-trapezoids, again depending on how the central mobots are configured. In this case, the answer is\n\n\\[\\left(\\binom{n-1}{\\frac{2 n-1}{3}}-\\binom{n-1}{\\frac{2 n+1}{3}}\\right)^{3}+\\left(\\binom{n-1}{\\frac{2 n-4}{3}}-\\binom{n-1}{\\frac{2 n-2}{3}}\\right)^{3} .\\]\n\n## Polygons [110]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

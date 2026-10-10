@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-i-2010-p9",
+  "title": "2010 AIME I Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.substitution",
+      "label": "Substitution",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2010,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 55.1,
+    "source": 2740,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Let \\((a, b, c)\\) be a real solution of the system of equations \\[ \\begin{aligned} x^3 - xyz &= 2, \\\\ y^3 - xyz &= 6, \\\\ z^3 - xyz &= 20. \\end{aligned} \\] The greatest possible value of \\(a^3 + b^3 + c^3\\) can be written in the form \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "158",
+    "value": "158"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2010-p9.live",
+      "kind": "proof-sketch",
+      "text": "Adding \\(xyz\\) to each equation gives \\(x^3 = 2 + xyz,\\) \\(y^3 = 6 + xyz,\\) and \\(z^3 = 20 + xyz.\\) Let \\(P = xyz.\\) Multiplying the three equations yields \\[ \\begin{aligned} P^3 &= (2 + P)(6 + P)(20 + P) \\\\ &= P^3 + 28P^2 + 172P + 240, \\end{aligned} \\] so \\(28P^2 + 172P + 240 = 0,\\) i.e. \\(7P^2 + 43P + 60 = 0,\\) whose roots are \\(P = -\\frac{15}{7}\\) and \\(P = -4.\\) Each root is achievable: the cube roots of \\(2 + P,\\) \\(6 + P,\\) \\(20 + P\\) then really do have product \\(P.\\)\n\nAdding the original equations, \\(x^3 + y^3 + z^3 = 28 + 3P,\\) which is maximized by the larger root \\(P = -\\frac{15}{7}:\\) \\[a^3 + b^3 + c^3 = 28 - \\frac{45}{7} = \\frac{151}{7}.\\] Thus \\(m + n = 151 + 7 = 158.\\)",
+      "hints": [
+        "Add \\(xyz\\) to each equation and set \\(P = xyz,\\) so \\(x^3 = 2 + P,\\) \\(y^3 = 6 + P,\\) \\(z^3 = 20 + P\\)",
+        "Multiplying the three gives \\(P^3 = (2+P)(6+P)(20+P),\\) which is really a quadratic in \\(P;\\) note \\(x^3 + y^3 + z^3 = 28 + 3P\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2023-p1",
+  "title": "2023 HMMT February Algebra and Number Theory Problem 1",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2023,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Suppose \\(P(x)\\) is a cubic polynomial with integer coefficients such that \\(P(\\sqrt{5})=5\\) and \\(P(\\sqrt[3]{5})=5 \\sqrt[3]{5}\\). Compute \\(P(5)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "-95",
+    "value": "-95"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2023-p1.hmmt",
+      "kind": "proof-sketch",
+      "text": "Write \\(P(x)=a x^{3}+b x^{2}+c x+d\\), where \\(a, b, c, d\\) are integers. Then we have that\n\n\\[\\begin{aligned}\nP(\\sqrt{5})-5 & =(5 a+c) \\sqrt{5}+(5 b+d-5)=0 \\\\\nP(\\sqrt[3]{5})-5 \\sqrt[3]{5} & =(5 a+d)+(c-5) \\sqrt[3]{5}+b \\sqrt[3]{25}=0\n\\end{aligned}\\]\n\nRecall that \\(\\sqrt{5}\\) is irrational. In particular, since \\((5 a+c) \\sqrt{5}+(5 b+d-5)=0\\), we must have \\(5 a+c=0\\) and \\(5 b+d-5=0\\). Similarly, from the condition on \\(\\sqrt[3]{5}\\), we must have \\(5 a+d=c-5=b=0\\).\nThis is enough to imply \\((a, b, c, d)=(-1,0,5,5)\\), so \\(P(x)=-x^{3}+5 x+5\\). Hence, our final answer is \\(P(5)=-125+25+5=-95\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

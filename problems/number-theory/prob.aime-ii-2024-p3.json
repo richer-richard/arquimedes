@@ -1,0 +1,69 @@
+{
+  "id": "prob.aime-ii-2024-p3",
+  "title": "2024 AIME II Problem 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.place-value",
+      "label": "Place value",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.stars-and-bars",
+      "label": "Stars and bars",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2024,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 43.9,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Find the number of ways to place a digit in each cell of a \\(2 \\times 3\\) grid so that the sum of the two numbers formed by reading left to right is \\(999,\\) and the sum of the three numbers formed by reading top to bottom is \\(99.\\) The grid below is an example of such an arrangement because \\(8 + 991 = 999\\) and \\(9 + 9 + 81 = 99.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "45",
+    "value": "45"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2024-p3.live",
+      "kind": "proof-sketch",
+      "text": "Let the top row hold digits \\(a, b, c\\) and the bottom row \\(d, e, f.\\) In the sum of the two row numbers, the units digits satisfy \\(c + f \\equiv 9 \\pmod{10},\\) and since \\(c + f \\le 18\\) in fact \\(c + f = 9\\) with no carry. Repeating the argument in the tens and hundreds places gives \\(b + e = 9\\) and \\(a + d = 9.\\)\n\nThe three column numbers add to \\(10(a + b + c) + (d + e + f)\\) \\(= 99.\\) Writing \\(S = a + b + c,\\) the bottom digits sum to \\(27 - S,\\) so \\(10S + 27 - S = 99\\) and \\(S = 8.\\)\n\nConversely, any digits with \\(a + b + c = 8\\) determine the bottom row by \\(d = 9 - a,\\) \\(e = 9 - b,\\) \\(f = 9 - c,\\) and both conditions hold. The number of solutions of \\(a + b + c = 8\\) in nonnegative digits is \\(\\binom{10}{2} = 45.\\)",
+      "hints": [
+        "In the row sum \\(999,\\) each column’s two digits must add to exactly \\(9,\\) with no carrying anywhere",
+        "If the top row’s digits sum to \\(S,\\) the bottom row’s digits sum to \\(27 - S;\\) the column condition \\(10S + (27 - S) = 99\\) pins down \\(S\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "a4e8a00f6570effd61c0962b6dd699202257e15cc60aa3a2686d961f46c35610"
+    ],
+    "solutions": []
+  }
+}

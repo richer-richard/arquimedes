@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2021-p23",
+  "title": "2021 AMC 10A Problem 23",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.random-walk",
+      "label": "Random walk",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2021,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 29.8,
+    "source": 1720,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Frieda the frog begins a sequence of hops on a \\(3 \\times 3\\) grid of squares, moving one square on each hop and choosing at random the direction of each hop—up, down, left, or right. She does not hop diagonally. When the direction of a hop would take Frieda off the grid, she “wraps around” and jumps to the opposite edge. For example if Frieda begins in the center square and makes two hops “up”, the first hop would place her in the top row middle square, and the second hop would cause Frieda to jump to the opposite edge, landing in the bottom row middle square.\n\nSuppose Frieda starts from the center square, makes at most four hops at random, and stops hopping if she lands on a corner square. What is the probability that she reaches a corner square on one of the four hops?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{9}{16}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{5}{8}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{3}{4}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{25}{32}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{13}{16}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "25/32"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2021-p23.live",
+      "kind": "proof-sketch",
+      "text": "Classify a square as \\(M\\) for the center, \\(E\\) for a non-corner edge square, and \\(C\\) for a corner. Frieda starts at \\(M,\\) and the first hop always takes her to an \\(E.\\)\n\nFrom an edge square, the probabilities of moving to \\(C,E,M\\) are \\(\\frac12,\\frac14,\\frac14,\\) respectively. From \\(M,\\) the next hop always goes to an \\(E.\\)\n\nNow count the possible first-hit patterns within four hops:\n\n\\[EC:\\quad 1\\cdot\\frac12=\\frac12,\\]\n\n\\[EEC:\\quad 1\\cdot\\frac14\\cdot\\frac12=\\frac18,\\]\n\n\\[EEEC:\\quad 1\\cdot\\frac14\\cdot\\frac14\\cdot\\frac12=\\frac1{32},\\]\n\n\\[EMEC:\\quad 1\\cdot\\frac14\\cdot1\\cdot\\frac12=\\frac18.\\]\n\nAdding gives\n\n\\[\\frac12+\\frac18+\\frac1{32}+\\frac18=\\frac{25}{32}.\\]\n\nThus, D is the correct answer.",
+      "hints": [
+        "Classify positions as center, edge, or corner",
+        "Count the ways to first hit a corner by hop \\(2,\\) \\(3,\\) or \\(4\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

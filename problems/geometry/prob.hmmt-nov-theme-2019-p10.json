@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-theme-2019-p10",
+  "title": "2019 HMMT November Theme Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-shapes",
+      "label": "3D Shapes",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.other-3d-problems",
+      "label": "Other 3D problems",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2019,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 61.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For dessert, Melinda eats a spherical scoop of ice cream with diameter 2 inches. She prefers to eat her ice cream in cube-like shapes, however. She has a special machine which, given a sphere placed in space, cuts it through the planes \\(x=n, y=n\\), and \\(z=n\\) for every integer \\(n\\) (not necessarily positive). Melinda centers the scoop of ice cream uniformly at random inside the cube \\(0 \\leq x, y, z \\leq 1\\), and then cuts it into pieces using her machine. What is the expected number of pieces she cuts the ice cream into?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2019-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(7+\\frac{13 \\pi}{3}\\)\nNote that if we consider the division of \\(\\mathbb{R}^{3}\\) into unit cubes by the given planes, we only need to compute the sum of the probabilities that the ice cream scoop intersects each cube. There are three types of cubes that can be intersected:\n\n- The cube \\(0 \\leq x, y, z \\leq 1\\) in which the center lies, as well as the 6 face-adjacent cubes are always intersected, for a total of 7 .\n- The cubes edge-adjacent to the center cube are intersected if the center of the ice cream lies within 1 unit of the connecting edge, which happens with probability \\(\\frac{\\pi}{4}\\). There are 12 such cubes, for a total of \\(3 \\pi\\).\n- The cubes corner-adjacent to the center cube are intersected if the center of the ice cream lies within 1 unit of the connecting corner, which happens with probability \\(\\frac{\\pi}{6}\\). There are 8 such cubes, for a total of \\(\\frac{4 \\pi}{3}\\).\nAdding these all up gives our answer of \\(7+\\frac{13 \\pi}{3}\\).\nAn alternate solution is possible:\nWe compute the number of regions into which a convex region \\(S\\) in \\(\\mathbb{R}^{3}\\) is divided by planes: Let \\(a\\) be the number of planes intersecting \\(S\\). Let \\(b\\) be the number of lines (intersections of two planes) passing through \\(S\\). Let \\(c\\) be the number of points (intersections of three planes) lying inside \\(S\\). Then \\(S\\) is divided into \\(a+b+c+1\\) regions. Then the computation for the problem is fairly straight forward. Note that the only planes, lines, and points that can intersect the ice cream scoop \\(I\\) are the faces, edges, and vertices of the cube \\(0 \\leq x, y, z \\leq 1\\). The computation is essentially the same as in the first solution. The scoop intersects each of the 6 faces with probability 1 , each of the 12 edges with probability \\(\\frac{\\pi}{4}\\), and each of the 8 vertices with probability \\(\\frac{\\pi}{6}\\), for a total expected number of regions \\(1+6+3 \\pi+\\frac{4 \\pi}{3}=7+\\frac{13 \\pi}{3}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

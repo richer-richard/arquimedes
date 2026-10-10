@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12a-2014-p18",
+  "title": "2014 AMC 12A Problem 18",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequality",
+      "label": "Inequality",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2014,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 33.7,
+    "source": 1910,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The domain of the function \\[\\tiny f(x)=\\log_{\\frac{1}{2}}\\!\\left(\\log_4\\!\\left(\\log_{\\frac{1}{4}}\\!\\left(\\log_{16}\\!\\left(\\log_{\\frac{1}{16}}x\\right)\\right)\\right)\\right)\\] is an interval of length \\(\\dfrac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. What is \\(m+n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(19\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(31\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(271\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(319\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(511\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "271"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2014-p18.live",
+      "kind": "proof-sketch",
+      "text": "Working from the outside, \\(f\\) is defined exactly when \\(\\log_4\\!\\left(\\log_{\\frac{1}{4}}\\!\\left(\\log_{16}\\!\\left(\\log_{\\frac{1}{16}}x\\right)\\right)\\right)\\) \\(\\gt0,\\) which is equivalent to \\(\\log_{\\frac{1}{4}}\\!\\left(\\log_{16}\\!\\left(\\log_{\\frac{1}{16}}x\\right)\\right)\\gt1.\\)\n\nSince the base \\(\\tfrac14\\lt1,\\) this means \\(0\\lt\\log_{16}\\!\\left(\\log_{\\frac{1}{16}}x\\right)\\lt\\tfrac14,\\) hence \\(1\\lt\\log_{\\frac{1}{16}}x\\lt16^{\\frac{1}{4}}=2.\\)\n\nAs \\(\\tfrac{1}{16}\\lt1,\\) this reverses to \\(\\left(\\tfrac{1}{16}\\right)^2\\lt x\\lt\\left(\\tfrac{1}{16}\\right)^1,\\) i.e. \\(\\tfrac{1}{256}\\lt x\\lt\\tfrac{1}{16}.\\) The length is \\(\\tfrac{1}{16}-\\tfrac{1}{256}=\\tfrac{15}{256},\\) so \\(m+n=15+256=271.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Peel the logarithms from the outside in, requiring each argument to be positive",
+        "Remember that bases below \\(1\\) reverse inequalities; translate each successive positivity condition before moving to the next inner logarithm"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

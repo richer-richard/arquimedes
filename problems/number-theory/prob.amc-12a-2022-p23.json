@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12a-2022-p23",
+  "title": "2022 AMC 12A Problem 23",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.least-common-multiple",
+      "label": "Least common multiple",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2022,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 49.5,
+    "source": 2520,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Let \\(h_n\\) and \\(k_n\\) be the unique relatively prime positive integers such that\n\n\\[\\frac11+\\frac12+\\frac13+\\cdots+\\frac1n=\\frac{h_n}{k_n}.\\]\n\nLet \\(L_n\\) denote the least common multiple of the numbers \\(1,\\) \\(2,\\) \\(3,\\) \\(\\ldots,\\) \\(n.\\) For how many integers \\(n\\) with \\(1\\le n\\le22\\) is \\(k_n\\lt L_n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(10\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "8"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2022-p23.live",
+      "kind": "proof-sketch",
+      "text": "\\(L_n\\) is always divisible by \\(k_n,\\) so \\(k_n\\lt L_n\\) exactly when some prime \\(p\\) divides both \\(L_n\\) and the numerator \\(N=\\sum_{k=1}^n \\tfrac{L_n}{k}\\) (i.e. a prime cancels).\n\nFor a prime \\(p\\) with maximal power \\(p^a\\le n,\\) only the terms with \\(v_p(k)=a\\) keep \\(p\\) out of \\(\\frac{L_n}{k};\\) all others are divisible by \\(p.\\) So \\(p\\) cancels iff \\(\\sum_{v_p(k)=a}\\tfrac{L_n}{k}\\equiv0\\pmod p.\\)\n\nApplying this test recursively with \\(H_n=H_{n-1}+\\frac{1}{n}\\) gives \\(k_n=L_n\\) for \\(1\\le n\\le5,\\) \\(k_n=\\frac{L_n}{3}\\) for \\(6\\le n\\le8,\\) and \\(k_n=L_n\\) again for \\(9\\le n\\le17.\\) Finally, the ratios \\(\\frac{L_n}{k_n}\\) for \\(n=18,19,20,21,22\\) are \\(3,3,15,45,45,\\) respectively. Thus cancellation occurs precisely for \\(n=6,7,8,18,19,20,21,22,\\) which is \\(8\\) values.\n\nThus, the correct answer is D.",
+      "hints": [
+        "Writing \\(H_n\\) over \\(L_n,\\) the reduced denominator is smaller exactly when a prime cancels from the numerator \\(\\sum_k \\frac{L_n}{k}\\)",
+        "For a prime power \\(p^a\\) with \\(p^a\\le n\\lt p^{a+1},\\) check whether \\(p\\) divides \\(\\sum_{v_p(k)=a} \\frac{L_n}{k}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

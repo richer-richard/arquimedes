@@ -1,0 +1,89 @@
+{
+  "id": "prob.amc-10b-2006-p24",
+  "title": "2006 AMC 10B Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.right-triangle",
+      "label": "Right triangle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.tangent-circles",
+      "label": "Tangent circles",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2006,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 30.0,
+    "source": 2010,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Circles with centers at \\(O\\) and \\(P\\) have radii \\(2\\) and \\(4,\\) respectively, and are externally tangent. Points \\(A\\) and \\(B\\) on the circle with center \\(O\\) and points \\(C\\) and \\(D\\) on the circle with center \\(P\\) are such that \\(\\overline{AD}\\) and \\(\\overline{BC}\\) are common external tangents to the circles. What is the area of the concave hexagon \\(AOBCPD?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(18\\sqrt{3}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(24\\sqrt{2}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(36\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(24\\sqrt{3}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(32\\sqrt{2}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2006-p24.live",
+      "kind": "proof-sketch",
+      "text": "The hexagon is symmetric about \\(\\overline{OP},\\) so its area is twice that of trapezoid \\(AOPD.\\)\n\nDraw \\(OF\\parallel AD\\) with \\(F\\) on \\(\\overline{PD}.\\) Then \\(AOFD\\) is a rectangle, so \\(DF=OA=2\\) and \\(FP=PD-DF=4-2=2.\\)\n\nSince the circles are externally tangent, \\(OP=2+4=6,\\) so in right triangle \\(OFP,\\) \\(OF=\\sqrt{36-4}=4\\sqrt2.\\)\n\nTrapezoid \\(AOPD\\) has parallel sides \\(OA=2\\) and \\(PD=4\\) with height \\(OF=4\\sqrt2,\\) giving area \\(\\tfrac12(2+4)(4\\sqrt2)=12\\sqrt2.\\) The hexagon area is \\(2\\cdot12\\sqrt2=24\\sqrt2.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Draw \\(OF\\parallel AD\\) meeting \\(PD\\) at \\(F\\) to form a rectangle and a right triangle",
+        "Then \\(DF=2,\\) \\(FP=2,\\) and \\(OF=\\sqrt{OP^2-FP^2}\\) with \\(OP=6\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "9dc4116d8005be2ad29952f57aa6358425eebcdb14154cb30fc4411824e7bb58"
+    ],
+    "solutions": []
+  }
+}

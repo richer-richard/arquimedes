@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-theme-2023-p3",
+  "title": "2023 HMMT November Theme Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2023,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 40.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "There are 17 people at a party, and each has a reputation that is either \\(1,2,3,4\\), or 5 . Some of them split into pairs under the condition that within each pair, the two people's reputations differ by at most 1. Compute the largest value of \\(k\\) such that no matter what the reputations of these people are, they are able to form \\(k\\) pairs.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "7",
+    "value": "7"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2023-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "First, note that \\(k=8\\) fails when there are \\(15,0,1,0,1\\) people of reputation \\(1,2,3,4\\), 5 , respectively. This is because the two people with reputation 3 and 5 cannot pair with anyone, and there can only be at maximum \\(\\left\\lfloor\\frac{15}{2}\\right\\rfloor=7\\) pairs of people with reputation 1 .\nNow, we show that \\(k=7\\) works. Suppose that we keep pairing people until we cannot make a pair anymore. Consider that moment. If there are two people with the same reputation, then these two people can pair up. Thus, there is at most one person for each reputation. Furthermore, if there are at least 4 people, then there must exist two people of consecutive reputations, so they can pair up. Thus, there are at most 3 people left, so we have formed at least \\(\\frac{17-3}{2}=7\\) pairs.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

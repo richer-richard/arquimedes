@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tst-2016-p6",
+  "title": "USA TST 2016 Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TST",
+    "year": 2016,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 111.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(ABC\\) be an acute scalene triangle\nand let \\(P\\) be a point in its interior.\nLet \\(A_1\\), \\(B_1\\), \\(C_1\\) be projections of \\(P\\) onto\ntriangle sides \\(BC\\), \\(CA\\), \\(AB\\), respectively.\nFind the locus of points \\(P\\) such that\n\\(AA_1\\), \\(BB_1\\), \\(CC_1\\) are concurrent\nand \\(\\angle PAB + \\angle PBC + \\angle PCA = 90^\\circ\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tst-2016-p6.evanchen",
+      "kind": "proof-sketch",
+      "text": "In complex numbers with \\(ABC\\) the unit circle,\nit is equivalent to solving the following two cubic equations\nin \\(p\\) and \\(q = \\overline p\\):\n\\[\\begin{aligned}\n (p-a)(p-b)(p-c) &= (abc)^2 (q -1/a)(q - 1/b)(q - 1/c) \\\\\n 0 &= \\prod_{\\text{cyc}} (p+c-b-bcq) + \\prod_{\\text{cyc}} (p+b-c-bcq).\n\\end{aligned}\\]\nViewing this as two cubic curves in \\((p,q) \\in \\mathbb{C}^2\\),\nby B\\'ezout's Theorem it follows there are at most nine solutions\n(unless both curves are not irreducible,\nbut it's easy to check the first one cannot be factored).\nMoreover it is easy to name nine solutions (for \\(ABC\\) scalene):\nthe three vertices, the three excenters, and \\(I\\), \\(O\\), \\(H\\).\nHence the answer is just those three triangle centers \\(I\\), \\(O\\) and \\(H\\).\n\nRemark.\n On the other hand it is not easy to solve the cubics by hand;\n I tried for an hour without success.\n So I think this solution is only feasible\n with knowledge of algebraic geometry.\n\nRemark.\n These two cubics have names:\n\n• The locus of \\(\\angle PAB + \\angle PBC + \\angle PCA = 90^\\circ\\)\n is the McCay cubic,\n which is the locus of points \\(P\\)\n for which \\(P\\), \\(P^\\ast\\), \\(O\\) are collinear.\n\n• The locus of the pedal condition\n is the Darboux cubic,\n which is the locus of points \\(P\\)\n for which \\(P\\), \\(P^\\ast\\), \\(L\\) are collinear,\n \\(L\\) denoting the de Longchamps point.\n\n Assuming \\(P \\neq P^\\ast\\),\n this implies \\(P\\) and \\(P^\\ast\\)\n both lie on the Euler line of \\(\\triangle ABC\\),\n which is possible only if \\(P=O\\) or \\(P=H\\).\n\n Some other synthetic solutions are posted at\n .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

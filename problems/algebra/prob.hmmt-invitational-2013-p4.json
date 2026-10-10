@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-invitational-2013-p4",
+  "title": "2013 HMMT Invitational Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2013,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A subset \\(U \\subset \\mathbb{R}\\) is open if for any \\(x \\in U\\), there exist real numbers \\(a, b\\) such that \\(x \\in(a, b) \\subset U\\). Suppose \\(S \\subset \\mathbb{R}\\) has the property that any open set intersecting \\((0,1)\\) also intersects \\(S\\). Let \\(T\\) be a countable collection of open sets containing \\(S\\). Prove that the intersection of all of the sets of \\(T\\) is not a countable subset of \\(\\mathbb{R}\\).\n(A set \\(\\Gamma\\) is countable if there exists a bijective function \\(f: \\Gamma \\rightarrow \\mathbb{Z}\\).)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2013-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "N/A If \\(S\\) is uncountable then we're done, so assume \\(S\\) is countable. We may also assume that the supersets are a chain \\(V_{1} \\supset V_{2} \\supset V_{3} \\supset \\cdots\\) by taking intersections.\n\nWe will use the following fact from point set topology:\nIf \\(K_{1} \\supset K_{2} \\supset \\cdots\\) is a sequence of nonempty compact sets, then their intersection is nonempty.\nNow, we construct an uncountable family of such sequences \\(K_{1} \\supset K_{2} \\supset \\cdots\\) such that \\(K_{i}\\) is a nontrivial (i.e. \\([a, b]\\) with \\(b>a\\) ) closed interval contained in \\(V_{i}\\), and any two such sequences have disjoint intersection. The construction proceeds as follows. At each step, we choose out of countably many options one closed interval \\(K_{i+1} \\subset K_{i}\\).\nTo choose \\(K_{1}\\), we claim that there exist countably many disjoint closed intervals in \\(V_{1}\\). To do this, choose an open interval in \\(V_{1}\\) of length at most \\(1 / 2\\), and take some closed interval inside it. In the remainder of \\((0,1)\\), which has measure at least \\(1 / 2\\) and where \\(V_{1}\\) is still dense, choose another open interval of length at most \\(1 / 4\\), and a closed interval inside it. This process can be repeated indefinitely to find a countably infinite family of nontrivial disjoint closed intervals in \\(V_{1}\\). Choose one of them to be \\(K_{1}\\).\nNow, inductively apply this construction on \\(K_{i}\\) to find countably many choices for \\(K_{i+1}\\), all disjoint. As a result, we get a total of \\(\\mathbb{N}^{\\mathbb{N}}\\), i.e. uncountably many, choices of sequences \\(K_{i}\\) satisfying the given properties. Any pair of sequences eventually have disjoint \\(K_{i}\\) after some point, so no two intersections will intersect. Thus we can choose a point out of the intersection of each \\(K_{i}\\) sequence to find uncountably many points in the intersection of all the \\(V_{i}\\), as desired.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

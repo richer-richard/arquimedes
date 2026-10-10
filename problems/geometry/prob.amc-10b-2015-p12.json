@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2015-p12",
+  "title": "2015 AMC 10B Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle",
+      "label": "Circle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequality",
+      "label": "Inequality",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2015,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 16.9,
+    "source": 1020,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "For how many integers \\(x\\) is the point \\((x, -x)\\) inside or on the circle of radius \\(10\\) centered at \\((5, 5)?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 11 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 12 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 13 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 14 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 15 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "11"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2015-p12.live",
+      "kind": "proof-sketch",
+      "text": "The squared distance from \\((x,-x)\\) to \\((5,5)\\) is \\[ \\begin{aligned} &(x-5)^2+(-x-5)^2 \\\\ &= 2x^2+50. \\end{aligned} \\]\n\nBeing inside or on the circle means \\(2x^2+50\\le100\\), so \\(x^2\\le25\\). Thus \\(-5\\le x\\le5\\), giving \\(11\\) integer values.\n\nThus, the correct answer is A.",
+      "hints": [
+        "Substitute \\((x,-x)\\) into the distance formula from \\((5,5)\\)",
+        "Solve \\(2x^2+50\\le100\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

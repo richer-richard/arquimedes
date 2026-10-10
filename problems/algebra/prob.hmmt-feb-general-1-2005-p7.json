@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-general-1-2005-p7",
+  "title": "2005 HMMT February General Round 1 Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2005,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "If \\(a, b, c>0\\), what is the smallest possible value of \\(\\left\\lfloor\\frac{a+b}{c}\\right\\rfloor+\\left\\lfloor\\frac{b+c}{a}\\right\\rfloor+\\left\\lfloor\\frac{c+a}{b}\\right\\rfloor\\) ? (Note that \\(\\lfloor x\\rfloor\\) denotes the greatest integer less than or equal to \\(x\\).)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-general-1-2005-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "4\nSince \\(\\lfloor x\\rfloor>x-1\\) for all \\(x\\), we have that\n\n\\[\\begin{aligned}\n\\left\\lfloor\\frac{a+b}{c}\\right\\rfloor+\\left\\lfloor\\frac{b+c}{a}\\right\\rfloor+\\left\\lfloor\\frac{c+a}{b}\\right\\rfloor & >\\frac{a+b}{c}+\\frac{b+c}{a}+\\frac{c+a}{b}-3 \\\\\n& =\\left(\\frac{a}{b}+\\frac{b}{a}\\right)+\\left(\\frac{b}{c}+\\frac{c}{b}\\right)+\\left(\\frac{c}{a}+\\frac{a}{c}\\right)-3\n\\end{aligned}\\]\n\nBut by the AM-GM inequality, each of the first three terms in the last line is at least 2. Therefore, the lefthand side is greater than \\(2+2+2-3=3\\). Since it is an integer, the smallest value it can be is therefore 4 . This is in fact attainable by letting \\((a, b, c)=(6,8,9)\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

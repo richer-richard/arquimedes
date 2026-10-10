@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2017-p3",
+  "title": "2017 IMO Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2017,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 111.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A hunter and an invisible rabbit play a game in the plane.\nThe rabbit and hunter start at points \\(A_0 = B_0\\).\nIn the \\(n\\)th round of the game (\\(n \\ge 1\\)), three things occur in order:\n\n• The rabbit moves invisibly from \\(A_{n-1}\\) to a point \\(A_n\\)\n such that \\(A_{n-1} A_n = 1\\).\n\n• The hunter has a tracking device (e.g.\\ dog)\n which reports an approximate location \\(P_n\\) of the rabbit,\n such that \\(P_n A_n \\le 1\\).\n\n• The hunter moves visibly from \\(B_{n-1}\\) to a point \\(B_n\\)\n such that \\(B_{n-1} B_n = 1\\).\n\nLet \\(N = 10^9\\). Can the hunter guarantee that \\(A_N B_N < 100\\)?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2017-p3.evanchen",
+      "kind": "proof-sketch",
+      "text": "No, the hunter cannot.\nWe will show how to increase the distance in the following way:\n\nClaim.\n Suppose the rabbit is at a distance \\(d \\ge 1\\) from the hunter\n at some point in time.\n Then it can increase its distance to at least\n \\(\\sqrt{d^2+\\frac{1}{2}}\\) in \\(4d\\) steps\n regardless of what the hunter already knows about the rabbit.\n\nProof.\n Consider a positive integer \\(n > d\\), to be chosen later.\n Let the hunter start at \\(B\\) and the rabbit at \\(A\\), as shown.\n Let \\(\\ell\\) denote line \\(AB\\).\n\n Now, we may assume the rabbit reveals its location \\(A\\),\n so that all previous information becomes irrelevant.\n\n The rabbit chooses two points \\(X\\) and \\(Y\\) symmetric about \\(\\ell\\)\n such that \\(XY = 2\\) and \\(AX = AY = n\\), as shown.\n The rabbit can then hop to either \\(X\\) or \\(Y\\),\n pinging the point \\(P_n\\) on the \\(\\ell\\) each time.\n This takes \\(n\\) hops.\n\n[Diagram omitted from this imported TeX transcription.]\n\n Now among all points \\(H\\) the hunter can go to,\n \\(\\min \\max \\{HX, HY\\}\\) is clearly minimized with \\(H \\in \\ell\\) by symmetry.\n So the hunter moves to a point \\(H\\) such that \\(BH = n\\) as well.\n In that case the new distance is \\(HX = HY\\).\n\n We now compute\n \\[\\begin{aligned}\n HX^2 &= 1 + HM^2 = 1 + \\left( \\sqrt{AX^2-1}-AH \\right)^2 \\\\\n &= 1 + \\left( \\sqrt{n^2-1}-(n-d) \\right)^2 \\\\\n &\\ge 1 + \\left( \\left( n-\\frac1n \\right) - (n-d) \\right)^2 \\\\\n &= 1 + (d-1/n)^2\n \\end{aligned}\\]\n which exceeds \\(d^2 + \\frac{1}{2}\\) whenever \\(n \\ge 4d\\).\n\nIn particular we can always take \\(n = 400\\) even very crudely;\napplying the lemma \\(2 \\cdot 100^2\\) times,\nthis gives a bound of \\(400 \\cdot 2 \\cdot 100^2 < 10^9\\), as desired.\n\nRemark.\n The step of revealing the location of the rabbit seems\n critical because as far as I am aware it is basically\n impossible to keep track of ping locations in the problem.\n\nRemark.\n Reasons to believe the answer is ``no'':\n the \\(10^9\\) constant,\n and also that ``follow the last ping'' is losing for the hunter.\n\nRemark.\n I think there are roughly two ways you can approach the problem\n once you recognize the answer.\n\n• Try and control the location of the pings\n\n• Abandon the notion of controlling possible locations,\n and try to increase the distance by a little bit,\n say from \\(d\\) to \\(\\sqrt{d^2+\\varepsilon}\\).\n This involves revealing the location of the rabbit\n before each iteration of several jumps.\n\n I think it's clear that the difficulty of\n my approach is realizing that (ii) is possible;\n once you do, the two-point approach is more or less the only one possible.\n\n My opinion is that (ii) is not that magical;\n as I said it was the first idea I had.\n But I am biased, because when I test-solved the problem\n at the IMO it was called ``C5'' and not ``IMO3'';\n this effectively told me it was unlikely that the official solution\n was along the lines of (i),\n because otherwise it would have been placed much later in the shortlist.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

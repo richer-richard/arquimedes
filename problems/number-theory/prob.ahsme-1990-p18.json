@@ -1,0 +1,71 @@
+{
+  "id": "prob.ahsme-1990-p18",
+  "title": "1990 AHSME Problem 18",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1990,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 37.7,
+    "source": 2060,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "First \\(a\\) is chosen at random from the set \\(\\{1,2,3,\\ldots,99,100\\},\\) and then \\(b\\) is chosen at random from the same set. The probability that the integer \\(3^a+7^b\\) has units digit \\(8\\) is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\frac1{16}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\frac18\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\frac3{16}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\frac15\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\frac14\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "3/16"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1990-p18.live",
+      "kind": "proof-sketch",
+      "text": "The units digits of \\(3^a\\) for \\(a\\equiv1,2,3,0\\pmod4\\) are \\(3,9,7,1,\\) while those of \\(7^b\\) are \\(7,9,3,1.\\) A sum ending in \\(8\\) occurs for the residue pairs \\[ \\begin{aligned} (a,b)\\equiv{}&(2,2),(3,0),\\\\ &(0,1)\\pmod4. \\end{aligned} \\] Each residue occurs \\(25\\) times among \\(1,\\ldots,100,\\) so the probability is \\(\\frac{3}{16}.\\)\n\nThus the correct answer is C.",
+      "hints": [
+        "The units digits of both powers repeat with period \\(4\\)",
+        "List the residue pairs \\((a\\bmod4,b\\bmod4)\\) that produce a units digit of \\(8\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

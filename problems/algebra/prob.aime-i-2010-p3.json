@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-i-2010-p3",
+  "title": "2010 AIME I Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.exponent",
+      "label": "Exponent",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.substitution",
+      "label": "Substitution",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2010,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 42.1,
+    "source": 2230,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Suppose that \\(y = \\frac{3}{4}x\\) and \\(x^y = y^x.\\) The quantity \\(x + y\\) can be expressed as a rational number \\(\\frac{r}{s},\\) where \\(r\\) and \\(s\\) are relatively prime positive integers. Find \\(r + s.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "529",
+    "value": "529"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2010-p3.live",
+      "kind": "proof-sketch",
+      "text": "Substituting \\(y = \\frac{3}{4}x\\) into \\(x^y = y^x\\) gives \\[x^{\\frac{3}{4}x} = \\left(\\tfrac{3}{4}x\\right)^{x}.\\] Taking \\(x\\)th roots (the quantities here are positive), \\(x^{\\frac{3}{4}} = \\frac{3}{4}x,\\) so dividing by \\(x\\) yields \\(x^{-\\frac{1}{4}} = \\frac{3}{4},\\) that is, \\(x = \\left(\\frac{4}{3}\\right)^4 = \\frac{256}{81}.\\)\n\nThen \\(y = \\frac{3}{4} \\cdot \\frac{256}{81} = \\frac{64}{27},\\) and \\[x + y = \\frac{256}{81} + \\frac{192}{81} = \\frac{448}{81}.\\] Since \\(\\gcd(448, 81) = 1,\\) the answer is \\(448 + 81 = 529.\\)",
+      "hints": [
+        "Substitute \\(y = \\frac{3}{4}x\\) into \\(x^y = y^x\\) and take \\(x\\)th roots of both sides",
+        "The equation becomes \\(x^{\\frac{3}{4}} = \\frac{3}{4}x,\\) so \\(x^{-\\frac{1}{4}} = \\frac{3}{4},\\) which gives \\(x = \\left(\\frac{4}{3}\\right)^4\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

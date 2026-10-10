@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1990-p5",
+  "title": "1990 AIME Problem 5",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1990,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 38.7,
+    "source": 2100,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Let \\(n\\) be the smallest positive integer that is a multiple of \\(75\\) and has exactly \\(75\\) positive integral divisors, including \\(1\\) and itself. Find \\(\\frac{n}{75}.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "432",
+    "value": "432"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1990-p5.live",
+      "kind": "proof-sketch",
+      "text": "The multiplicative partitions of \\(75\\) give exponent patterns \\((74),\\) \\((24,2),\\) \\((14,4),\\) and \\((4,4,2).\\) A number divisible by \\(75=3\\cdot5^2\\) needs both primes \\(3\\) and \\(5,\\) so the one-prime pattern is impossible. The smallest candidates from the two-prime patterns are \\(3^{24}5^2\\) and \\(3^{14}5^4,\\) respectively. The smallest three-prime candidate is \\[n=2^4\\cdot3^4\\cdot5^2.\\] It has \\((4+1)(4+1)(2+1)=75\\) divisors, and each two-prime candidate is larger because \\[ \\frac{3^{24}5^2}{n}=\\frac{3^{20}}{16}\\gt1 \\] and \\[ \\frac{3^{14}5^4}{n}=\\frac{3^{10}5^2}{16}\\gt1. \\] Therefore \\[\\frac n{75}=\\frac{2^4\\cdot3^4\\cdot5^2}{3\\cdot5^2}=2^4\\cdot3^3=432.\\]",
+      "hints": [
+        "Factor \\(75\\) into possible products of numbers one greater than prime exponents",
+        "The exponent pattern \\((4,4,2)\\) can include the required factors \\(3\\) and \\(5^2\\) while assigning the largest exponents to the smallest primes"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2006-p20",
+  "title": "2006 AMC 12B Problem 20",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-probability",
+      "label": "Geometric probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2006,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 36.3,
+    "source": 2090,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(x\\) be chosen at random from the interval \\((0, 1).\\) What is the probability that \\[\\lfloor \\log_{10} 4x \\rfloor - \\lfloor \\log_{10} x \\rfloor = 0?\\] Here \\(\\lfloor x \\rfloor\\) denotes the greatest integer that is less than or equal to \\(x.\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{8}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{3}{20}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{6}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{1}{5}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{1}{4}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "1/6"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2006-p20.live",
+      "kind": "proof-sketch",
+      "text": "The equation says \\(\\lfloor \\log_{10} x \\rfloor = \\lfloor \\log_{10} 4x \\rfloor,\\) i.e. \\(x\\) and \\(4x\\) lie in the same interval \\([10^n, 10^{n+1}).\\)\n\nThis holds exactly when \\(10^n \\le x\\) and \\(4x \\lt 10^{n+1},\\) that is \\(10^n \\le x \\lt \\dfrac{10^{n+1}}{4}.\\)\n\nWithin \\([10^n, 10^{n+1}),\\) the favorable fraction is \\[ \\begin{aligned} &\\frac{\\frac{10^{n+1}}{4} - 10^n}{10^{n+1} - 10^n} \\\\ &= \\frac{\\frac{10}{4} - 1}{10 - 1} = \\frac{1}{6}. \\end{aligned} \\]\n\nSince this fraction is the same on every such interval, the overall probability is \\(\\dfrac{1}{6}.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "The condition says \\(x\\) and \\(4x\\) have the same power-of-ten magnitude",
+        "On each interval \\([10^n, 10^{n+1}),\\) the condition holds for \\(x \\lt \\dfrac{10^{n+1}}{4}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

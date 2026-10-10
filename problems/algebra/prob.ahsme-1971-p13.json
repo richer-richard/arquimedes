@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1971-p13",
+  "title": "1971 AHSME Problem 13",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.binomial-theorem",
+      "label": "Binomial theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.decimal",
+      "label": "Decimal",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.estimation",
+      "label": "Estimation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1971,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 33.6,
+    "source": 1900,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "If \\((1.0025)^{10}\\) is evaluated correct to \\(5\\) decimal places, then the digit in the fifth decimal place is:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(8\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "8"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1971-p13.live",
+      "kind": "proof-sketch",
+      "text": "The binomial expansion gives \\[ \\begin{gathered} (1+0.0025)^{10}\\\\ =1+10(0.0025)\\\\ \\quad+45(0.0025)^2\\\\ \\quad+120(0.0025)^3+\\cdots\\\\ =1.025283125\\ldots \\end{gathered} \\] which rounds to \\(1.02528.\\) The fifth decimal digit is \\(8.\\)\n\nTherefore, the correct answer is E.",
+      "hints": [
+        "Write \\(1.0025=1+0.0025\\)",
+        "In the binomial expansion, retain terms large enough to affect the fifth decimal place"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

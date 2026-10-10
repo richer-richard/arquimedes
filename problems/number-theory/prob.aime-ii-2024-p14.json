@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2024-p14",
+  "title": "2024 AIME II Problem 14",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.chinese-remainder-theorem",
+      "label": "Chinese Remainder Theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2024,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": 3270,
+    "mohs": null
+  },
+  "estimatedMinutes": 22,
+  "statement": "Let \\(b \\ge 2\\) be an integer. Call a positive integer \\(n\\) \\(b\\)-eautiful if it has exactly two digits when expressed in base \\(b\\) and these two digits sum to \\(\\sqrt{n}.\\) For example, \\(81\\) is \\(13\\)-eautiful because \\(81 = \\underline{6}\\,\\underline{3}_{13}\\) and \\(6 + 3 = \\sqrt{81}.\\) Find the least integer \\(b \\ge 2\\) for which there are more than ten \\(b\\)-eautiful integers.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "211",
+    "value": "211"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2024-p14.live",
+      "kind": "proof-sketch",
+      "text": "A two-digit number in base \\(b\\) is \\(n = xb + y\\) with \\(1 \\le x \\le b-1\\) and \\(0 \\le y \\le b-1,\\) and the condition says \\(n = s^2\\) where \\(s = x + y.\\) Then \\(s^2 = xb + y = x(b-1) + s,\\) so \\[s(s - 1) = x(b - 1).\\] Note \\(s \\le \\sqrt{b^2 - 1} \\lt b.\\) Conversely, for any \\(s\\) with \\(2 \\le s \\le b - 1\\) and \\(s(s-1)\\) divisible by \\((b-1),\\) setting \\(x = \\frac{s(s-1)}{b-1}\\) and \\(y = s - x = \\frac{s(b-s)}{b-1}\\) gives \\(1 \\le x \\le b-1\\) and \\(0 \\le y \\le b-1,\\) hence exactly one \\(b\\)-eautiful integer \\(n = s^2.\\) So the count equals the number of \\(s \\in \\{2, \\ldots, b-1\\}\\) with \\(s(s-1) \\equiv 0 \\pmod{b-1}.\\)\n\nLet \\(m = b - 1.\\) Since \\(s\\) and \\(s - 1\\) are coprime, each prime power dividing \\(m\\) must divide \\(s\\) or \\(s - 1,\\) so by the Chinese remainder theorem there are \\(2^{\\omega(m)}\\) solutions modulo \\(m,\\) where \\(\\omega(m)\\) is the number of distinct prime factors of \\(m.\\) Among the representatives \\(1, 2, \\ldots, m,\\) only \\(s = 1\\) falls outside our range (and \\(s = m\\) qualifies), so the count is \\(2^{\\omega(m)} - 1.\\)\n\nWe need \\(2^{\\omega(m)} - 1 \\gt 10,\\) i.e. \\(\\omega(m) \\ge 4.\\) The smallest positive integer with four distinct prime factors is \\(2 \\cdot 3 \\cdot 5 \\cdot 7 = 210,\\) so the least base is \\(b = 211\\) (which has \\(2^4 - 1 = 15\\) \\(b\\)-eautiful integers).",
+      "hints": [
+        "Write \\(n = xb + y\\) with digit sum \\(s = x + y = \\sqrt{n}:\\) then \\(s^2 - s = x(b - 1),\\) so \\(b - 1\\) must divide \\(s(s-1)\\)",
+        "Each \\(s \\le b-1\\) for which \\(s(s-1)\\) is divisible by \\((b-1)\\) gives one \\(n;\\) mod \\(b-1\\) there are \\(2^{\\omega}\\) such residues, where \\(\\omega\\) counts the distinct primes of \\(b-1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

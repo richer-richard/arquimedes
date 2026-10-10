@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2013-p14",
+  "title": "2013 AIME II Problem 14",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2013,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": 3270,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "For positive integers \\(n\\) and \\(k,\\) let \\(f(n, k)\\) be the remainder when \\(n\\) is divided by \\(k,\\) and for \\(n \\gt 1\\) let \\[F(n) = \\max_{1 \\le k \\le \\frac{n}{2}} f(n, k).\\] Find the remainder when \\(\\sum_{n = 20}^{100} F(n)\\) is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "512",
+    "value": "512"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2013-p14.live",
+      "kind": "proof-sketch",
+      "text": "For \\(k \\le \\frac{n}{2}\\) the quotient \\(\\lfloor \\frac{n}{k} \\rfloor\\) is at least \\(2,\\) so the remainder satisfies \\(f(n, k) \\le n - 2k\\) as well as \\(f(n, k) \\le k - 1.\\) Write \\(n = 3m + r\\) with \\(r \\in \\{0, 1, 2\\}.\\) Dividing by \\(k = m + 1\\) gives quotient \\(2\\) and remainder \\(m + r - 2,\\) so \\(F(n) \\ge m + r - 2.\\) Conversely, for \\(k \\ge m + 1,\\) \\(f(n, k) \\le n - 2k \\le m + r - 2,\\) and for smaller \\(k\\) the bound \\(f(n, k) \\le k - 1\\) finishes the job: when \\(r = 2\\) it gives at most \\(m\\) for \\(k \\le m + 1;\\) when \\(r = 1\\) it gives at most \\(m - 1\\) for \\(k \\le m;\\) and when \\(r = 0\\) it gives at most \\(m - 2\\) for \\(k \\le m - 1,\\) while \\(k = m\\) divides \\(3m\\) exactly, leaving remainder \\(0.\\) Hence \\[ \\begin{aligned} F(3m) &= m - 2, \\\\ F(3m + 1) &= m - 1, \\\\ F(3m + 2) &= m. \\end{aligned} \\]\n\nGrouping \\(n = 20, \\ldots, 100\\) as triples \\(3m - 1,\\) \\(3m,\\) \\(3m + 1\\) for \\(m = 7, \\ldots, 33\\) (note \\(F(3m - 1) = F(3(m-1) + 2)\\) \\(= m - 1\\)), each triple contributes \\((m - 1) + (m - 2) + (m - 1)\\) \\(= 3m - 4,\\) so \\[ \\begin{aligned} \\tiny \\sum_{n=20}^{100} F(n) &= \\sum_{m=7}^{33} (3m - 4) \\\\ &= 3 \\cdot \\frac{(7 + 33) \\cdot 27}{2} - 4 \\cdot 27 \\\\ &= 1620 - 108 = 1512. \\end{aligned} \\]\n\nThe requested remainder is \\(512.\\)",
+      "hints": [
+        "For \\(k \\le \\frac{n}{2}\\) the quotient is at least \\(2,\\) so the remainder is at most \\(\\min(k - 1,\\ n - 2k);\\) try \\(k\\) near \\(\\frac{n}{3}\\)",
+        "Show \\(F(3m) = m - 2,\\) \\(F(3m+1) = m - 1,\\) and \\(F(3m+2) = m,\\) each achieved at \\(k = m + 1,\\) then sum over the range"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

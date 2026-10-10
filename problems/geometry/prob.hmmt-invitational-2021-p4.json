@@ -1,0 +1,84 @@
+{
+  "id": "prob.hmmt-invitational-2021-p4",
+  "title": "2021 HMMT Invitational Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity-and-scaling",
+      "label": "Similarity and scaling",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.solid-geometry",
+      "label": "Solid geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2021,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A_{1} A_{2} A_{3} A_{4}, B_{1} B_{2} B_{3} B_{4}\\), and \\(C_{1} C_{2} C_{3} C_{4}\\) be three regular tetrahedra in 3-dimensional space, no two of which are congruent. Suppose that, for each \\(i \\in\\{1,2,3,4\\}, C_{i}\\) is the midpoint of the line segment \\(A_{i} B_{i}\\). Determine whether the four lines \\(A_{1} B_{1}, A_{2} B_{2}, A_{3} B_{3}\\), and \\(A_{4} B_{4}\\) must concur.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "yes",
+    "value": "Yes"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2021-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "We will prove that the three tetrahedra are homothetic, which will prove the desired concurrency. Now translate so that all the tetrahedra are centered at the origin. This preserves midpoints and homothetic-ness, so it suffices to solve the problem in this case.\nLet \\(M\\) be the matrix that takes \\(A_{i}\\) to \\(B_{i}\\). Since the two tetrahedra are regular, we find that \\(M\\) is conformal and thus must be \\(r T\\) for some \\(T \\in \\mathrm{SO}(3)\\) and \\(r \\in \\mathbb{R}\\). Similarly, \\(\\frac{1}{2}(I+M)\\) must be \\(s^{\\prime} U\\) for some \\(U \\in \\mathrm{SO}(3)\\). Making the substitution \\(s=2 s^{\\prime}\\), we must solve \\(I+r T=s U\\).\nThe remainder of the solution is a straightforward computation by eigenvalues. We know that the eigenvalues of \\(r T\\) must have magnitude \\(|r|\\). Also, the eigenvalues of \\(I+r T\\), which are just one plus the eigenvalues of \\(r T\\), must have magnitude \\(|s|\\). Thus, the eigenvalues \\(z\\) of \\(M\\) must satisfy a system of the form \\(|z|=|r|\\) and \\(|1+z|=|s|\\).\n\nIf the tetrahedra are not homothetic, then \\(M\\) cannot be a multiple of the identity, meaning that \\(M\\) must have more than one distinct eigenvalue (everything in \\(\\mathrm{SO}(3)\\) is normal and thus unitarily diagonalizable). However, by, say, geometry, that system can only have two solutions only if they are nonreal and conjugates of each other. But every \\(3 \\times 3\\) matrix has a real eigenvalue, contradiction.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

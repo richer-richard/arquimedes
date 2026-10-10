@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2013-p18",
+  "title": "2013 AMC 12A Problem 18",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.sphere",
+      "label": "Sphere",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2013,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 35.7,
+    "source": 2100,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Six spheres of radius \\(1\\) are positioned so that their centers are at the vertices of a regular hexagon of side length \\(2.\\) The six spheres are internally tangent to a larger sphere whose center is the center of the hexagon. An eighth sphere is externally tangent to the six smaller spheres and internally tangent to the larger sphere. What is the radius of this eighth sphere?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\sqrt{2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{3}{2}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{5}{3}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\sqrt{3}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "3/2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2013-p18.live",
+      "kind": "proof-sketch",
+      "text": "Each small center is \\(2\\) from the center \\(O,\\) and the small spheres have radius \\(1,\\) so the large sphere has radius \\(3.\\) Let the eighth sphere have radius \\(r\\) and center \\(G\\) at distance \\(x\\) from \\(O;\\) then \\(x + r = 3.\\)\n\nSince \\(G\\) is equidistant from two opposite hexagon vertices, \\(GO\\) is perpendicular to the line to a vertex, and the Pythagorean Theorem gives \\[ \\begin{gathered} (r + 1)^2 = 2^2 + x^2 \\\\ = 4 + (3 - r)^2. \\end{gathered} \\]\n\nThis simplifies to \\(2r + 1 = 13 - 6r,\\) so \\(r = \\tfrac32.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "The large sphere has radius \\(3;\\) let the eighth sphere have radius \\(r\\) and center at distance \\(x\\) from the center, with \\(x + r = 3\\)",
+        "A center of a small sphere, the center \\(O,\\) and the eighth center form a right triangle: \\((r + 1)^2 = 2^2 + x^2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

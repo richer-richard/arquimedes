@@ -1,0 +1,76 @@
+{
+  "id": "prob.hmmt-feb-team-2001-p10",
+  "title": "2001 HMMT February Team Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2001,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 91.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Define a monic irreducible polynomial with integral coefficients to be a polynomial with leading coefficient 1 that cannot be factored, and the prime factorization of a polynomial with leading coefficient 1 as the factorization into monic irreducible polynomials. How many not necessarily distinct monic irreducible polynomials are there in the prime factorization of \\(\\left(x^{8}+x^{4}+1\\right)\\left(x^{8}+x+1\\right)\\) (for instance, \\((x+1)^{2}\\) has two prime factors)?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2001-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(x^{8}+x^{4}+1=\\left(x^{8}+2 x^{4}+1\\right)-x^{4}=\\left(x^{4}+1\\right)^{2}-\\left(x^{2}\\right)^{2}=\\left(x^{4}-x^{2}+1\\right)\\left(x^{4}+x^{2}+1\\right)=\\) \\(\\left(x^{4}-x^{2}+1\\right)\\left(x^{2}+x+1\\right)\\left(x^{2}-x+1\\right)\\), and \\(x^{8}+x+1=\\left(x^{2}+x+1\\right)\\left(x^{6}-x^{5}+x^{3}-x^{2}+1\\right)\\). If an integer polynomial \\(f(x)=a_{n} x^{n}+\\cdots+a_{0}(\\bmod p)\\), where \\(p\\) does not divide \\(a_{n}\\), has no zeros, then \\(f\\)\nhas no rational roots. Taking \\(p=2\\), we find \\(x^{6}-x^{5}+x^{3}-x^{2}+1\\) is irreducible. The prime factorization of our polynomial is thus \\(\\left(x^{4}-x^{2}+1\\right)\\left(x^{2}-x+1\\right)\\left(x^{2}+x+1\\right)^{2}\\left(x^{6}-x^{5}+x^{3}-x^{2}+1\\right)\\), so the answer is 5 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

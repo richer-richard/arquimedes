@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12a-2023-p25",
+  "title": "2023 AMC 12A Problem 25",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.binomial-theorem",
+      "label": "Binomial theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.de-moivres-theorem",
+      "label": "De Moivre’s Theorem",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2023,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 52.8,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "There is a unique sequence of integers \\(a_1,\\) \\(a_2,\\) \\(\\cdots a_{2023}\\) such that \\[ \\begin{gathered} \\tan 2023x\\\\ {}=\\tiny\\dfrac{a_1\\tan x+a_3\\tan^3 x+a_5\\tan^5 x+\\cdots+a_{2023}\\tan^{2023}x}{1+a_2\\tan^2 x+a_4\\tan^4 x\\cdots+a_{2022}\\tan^{2022}x} \\end{gathered} \\] whenever \\(\\tan 2023x\\) is defined. What is \\(a_{2023}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(-2023\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(-2022\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(-1\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2023\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "-1"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2023-p25.live",
+      "kind": "proof-sketch",
+      "text": "By De Moivre, \\((\\cos x+i\\sin x)^{2023}\\) \\(=\\cos 2023x+i\\sin 2023x.\\) Expanding the left side and taking the ratio of imaginary to real parts gives \\(\\tan 2023x\\) as the stated rational function of \\(\\tan x\\) after dividing numerator and denominator by \\(\\cos^{2023}x.\\)\n\nThe coefficient \\(a_{2023}\\) is the coefficient of \\(\\tan^{2023}x\\) in the numerator, which comes from the \\(k=2023\\) term: \\[ \\begin{gathered} a_{2023}=(-1)^{\\frac{2023-1}{2}}\\binom{2023}{2023}\\\\ {}=(-1)^{1011}\\\\ {}=-1. \\end{gathered} \\]\n\nThus, the correct answer is C.",
+      "hints": [
+        "Expand \\((\\cos x+i\\sin x)^{2023}\\) and use \\(\\tan 2023x=\\dfrac{\\operatorname{Im}}{\\operatorname{Re}}\\)",
+        "Dividing by \\(\\cos^{2023}x,\\) the top coefficient of \\(\\tan^{2023}x\\) is \\((-1)^{\\frac{2023-1}{2}}\\binom{2023}{2023}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

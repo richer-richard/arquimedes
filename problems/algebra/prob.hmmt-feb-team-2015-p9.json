@@ -1,0 +1,76 @@
+{
+  "id": "prob.hmmt-feb-team-2015-p9",
+  "title": "2015 HMMT February Team Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.algebraic-numbers",
+      "label": "Algebraic numbers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.fermat-euler-wilson-theorems",
+      "label": "Fermat / Euler / Wilson theorems",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomials-mod-p",
+      "label": "Polynomials mod p",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.symmetric-functions",
+      "label": "Symmetric functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2015,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 85.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(z=e^{\\frac{2 \\pi i}{101}}\\) and let \\(\\omega=e^{\\frac{2 \\pi i}{10}}\\). Prove that\n\n\\[\\prod_{a=0}^{9} \\prod_{b=0}^{100} \\prod_{c=0}^{100}\\left(\\omega^{a}+z^{b}+z^{c}\\right)\\]\n\nis an integer and find (with proof) its remainder upon division by 101.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2015-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "13 Solution 1. Let \\(p=101\\) and \\(r=10\\). Note that \\(p \\nmid r\\).\nIn the sequel, we will repeatedly use the polynomial identities \\(\\prod_{k(\\bmod p)}\\left(x-z^{k}\\right)=x^{p}-1\\), and \\(\\prod_{j(\\bmod r)}\\left(x-\\omega^{j}\\right)=x^{r}-1\\).\nThe product is an integer by standard symmetric sum theory (concrete precursor to Galois theory, though one doesn't need the full language). More precisely, it expands into an integer-coefficient polynomial symmetric in the \\(\\omega^{j}\\) (for the \\(r\\) residues \\(j(\\bmod r)\\) ), and also symmetric in the \\(z^{k}\\) (for the \\(p\\) residues \\(k(\\bmod p))\\). So by the fundamental theorem of symmetric sums, it can be written as an integer-coefficient polynomial in the symmetric sums of the \\(\\omega^{j}\\) together with the symmetric sums of the \\(z^{k}\\). But these symmetric sums are integers themselves, so the original expression is indeed an integer. To actually compute the remainder modulo \\(p\\), note \\(\\sqrt{6}\\) by the Frobenius endomorphism \\((u+v)^{p} \\equiv u^{p}+v^{p}\\) \\((\\bmod p)\\) that\n\n\\[\\begin{aligned}\n\\prod_{a, b, c}\\left(\\omega^{a}+z^{b}+z^{c}\\right) & =\\prod_{a, b}(-1)^{p}\\left(\\left(-\\omega^{a}-z^{b}\\right)^{p}-1\\right) \\\\\n& \\equiv \\prod_{a, b}\\left(\\omega^{p a}+z^{p b}-(-1)^{p}\\right)=\\prod_{a, b}\\left(\\omega^{p a}+2\\right) \\quad(\\bmod p)\n\\end{aligned}\\]\n\nwhere we use \\(p \\equiv 1(\\bmod 2)\\) in the last step. This simplifies further to\n\n\\[\\begin{aligned}\n\\prod_{a}(-1)^{p}\\left(-2-\\omega^{p a}\\right)^{p} & =\\prod_{a}(-1)^{p}\\left(-2-\\omega^{a}\\right)^{p} \\\\\n& =(-1)^{p r}\\left[(-2)^{r}-1\\right]^{p} \\equiv(-1)^{p r}\\left[(-2)^{r}-1\\right] \\quad(\\bmod p)\n\\end{aligned}\\]\n\nwhere we've used the fact that \\(\\{p a(\\bmod r)\\}=\\{a(\\bmod r)\\}(\\) since \\(p\\) is invertible \\(\\bmod r)\\), as well as Fermat's little theorem on \\((-2)^{r}-1\\).\nFinally, we plug in the specific numbers:\n\n\\[(-1)^{101 \\cdot 10}\\left[(-2)^{10}-1\\right]=1023 \\equiv 13 \\quad(\\bmod 101)\\]\n\n[^2]Remark. By repeatedly getting rid of \" \\(z\\) \" terms and applying the Frobenius map, one can show that \\(\\prod\\left(\\omega^{a}+z^{b_{1}}+\\cdots+z^{b_{m}}\\right)\\) is an integer congruent to something like \\(m^{r}+1\\) modulo \\(p\\) (as long as \\(p\\) is odd, etc.).\nSolution 2 (sketch). Here we sketch a better solution found by several teams, but missed by the author (primarily due to blindness from having first found the first solution). The proof of the first part (that the product is an integer) is the same, so we only sketch different proofs of the second part (computation of the remainder \\(\\bmod p\\) ).\nFor example, we can use the algebraic integer formulation from the previous solution. Indeed, note that \\(D:=\\prod_{a, b, c}\\left(\\omega^{a}+z^{b}+z^{c}\\right)-\\prod_{a, b, c}\\left(\\omega^{a}+1^{b}+1^{c}\\right)\\) is an algebraic integer divisible by \\(z-1\\). But \\(D\\) is also a difference of integers, hence an integer itself. The only way \\(\\frac{D}{z-1}\\) can be an algebraic integer is if \\(p \\mid D\\) (Why?), so it simply remains to compute the remainder when the integer \\(\\prod_{a, b, c}\\left(\\omega^{a}+1^{b}+1^{c}\\right)\\) is divided by \\(p\\), which is quite easy.\nAlternatively (as some contestants/teams found), we can get rid of \\(\\omega\\) first (rather than \\(z\\) as in the previous solution), so (up to sign) we want to evaluate \\(\\prod_{b, c}\\left(1+\\left(z^{b}+z^{c}\\right)^{r}\\right)(\\bmod p)\\). But we have a polynomial identity \\(\\prod_{b, c}\\left(1+\\left(T^{b}+T^{c}\\right)^{r}\\right) \\in \\Phi_{p}(T) \\cdot \\mathbb{Z}[x]+M\\) for some constant integer \\(M\\), where \\(\\Phi_{p}(T)=T^{p-1}+\\cdots+T+1\\) denotes the \\(p\\) th cyclotomic polynomial. But note that \\(\\Phi_{p}(z)=0\\) is congruent to \\(\\Phi_{p}(1)=p\\) modulo \\(p\\), so\n\n\\[\\prod_{b, c}\\left(1+\\left(z^{b}+z^{c}\\right)^{r}\\right)-\\prod_{b, c}\\left(1+\\left(1^{b}+1^{c}\\right)^{r}\\right)\\]\n\nis an integer divisible by \\(p\\). The rest is easy.\nRemark. Without using the Frobenius map, this second solution gives another proof that \\(\\prod\\left(\\omega^{a}+\\right.\\) \\(z^{b_{1}}+\\cdots+z^{b_{m}}\\) ) is an integer congruent to something like \\(m^{r}+1\\) modulo \\(p\\) (as long as \\(p\\) is odd, etc.). Can you reconcile this difference (e.g. is the use of Frobenius in the first solution equivalent to a step of the second solution)?\nRemark. The central idea behind the second solution is that if \\(f(z)\\) is an integer for some polynomial \\(f \\in \\mathbb{Z}[x]\\), then it's congruent to (the integer) \\(f(1)\\) modulo \\(p\\). Can you generalize this, say when \\(z\\) is not necessarily a root of unity?",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

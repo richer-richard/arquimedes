@@ -1,0 +1,92 @@
+{
+  "id": "prob.hmmt-feb-team-2019-p9",
+  "title": "2019 HMMT February Team Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2019,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 89.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(p>2\\) be a prime number. \\(\\mathbb{F}_{p}[x]\\) is defined as the set of all polynomials in \\(x\\) with coefficients in \\(\\mathbb{F}_{p}\\) (the integers modulo \\(p\\) with usual addition and subtraction), so that two polynomials are equal if and only if the coefficients of \\(x^{k}\\) are equal in \\(\\mathbb{F}_{p}\\) for each nonnegative integer \\(k\\). For example, \\((x+2)(2 x+3)=2 x^{2}+2 x+1\\) in \\(\\mathbb{F}_{5}[x]\\) because the corresponding coefficients are equal modulo 5 .\nLet \\(f, g \\in \\mathbb{F}_{p}[x]\\). The pair \\((f, g)\\) is called compositional if\n\n\\[f(g(x)) \\equiv x^{p^{2}}-x\\]\n\nin \\(\\mathbb{F}_{p}[x]\\). Find, with proof, the number of compositional pairs (in terms of \\(p\\) ).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "4 p(p-1)",
+    "value": "4 p(p-1)"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2019-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "First, notice that \\((\\operatorname{deg} f)(\\operatorname{deg} g)=p^{2}\\) and both polynomials are clearly nonconstant. Therefore there are three possibilities for the ordered pair ( \\(\\operatorname{deg} f, \\operatorname{deg} g\\) ), which are \\(\\left(1, p^{2}\\right),\\left(p^{2}, 1\\right)\\), and ( \\(p, p\\) ).\n\nIn the subsequent parts of the solution, equalities are modulo \\(p\\). If \\(f(x)=a x+b, a \\neq 0\\) is linear, then it is invertible so then \\(g\\) is uniquely determined as \\(g(x)=f^{-1}(f(g(x)))=\\frac{x^{p^{2}}-x-b}{a}\\). Similarly, if \\(g(x)=c x+d, c \\neq 0(\\bmod p)\\) is linear then \\(f\\) is uniquely determined as \\(f(x)=f\\left(g\\left(g^{-1}(x)\\right)\\right)=\\) \\(\\left(\\frac{x-d}{c}\\right)^{p^{2}}-\\left(\\frac{x-d}{c}\\right)\\). In each case there are \\(p(p-1)\\) compositional pairs.\nThe last case is \\(\\operatorname{deg} f=\\operatorname{deg} g=p\\). We take the derivative of both sides (we use the formal derivative \\(D_{x} f(x)=\\sum_{n \\geq 1} n f_{n} x^{n-1}\\), which satisfies the usual chain and product rules but can be used on arbitrary polynomials, including those in \\(\\left.\\mathbb{F}_{p}[x]\\right)\\).\nThus\n\n\\[f^{\\prime}(g(x)) g^{\\prime}(x)=p^{2} x^{p^{2}-1}-1=-1,\\]\n\nusing that \\(p=0\\) in \\(\\mathbb{F}_{p}\\). Now \\(g^{\\prime}(x)\\) and \\(f^{\\prime}(g(x))\\) must both be constant polynomials. Since \\(g\\) is nonconstant, this means that \\(f^{\\prime}(x)\\) is also a constant polynomial. We must be careful here, as unlike in \\(\\mathbb{R}\\), nonlinear polynomials can have constant derivatives. From the formula of derivative, we see that \\(h^{\\prime}(x)=0\\) as a polynomial exactly when \\(h(x)\\) is a linear combination of \\(1, x^{p}, x^{2 p}, \\ldots\\) (remember that \\(p=0\\) ). Thus \\(f^{\\prime}, g^{\\prime}\\) both being constant and \\(f, g\\) being of degree \\(p\\) tells us\n\n\\[f(x)=a x^{p}+b x+c, g(x)=d x^{p}+e x+f\\]\n\nwhere \\(a, b, c, d, e, f\\) are some elements of \\(\\mathbb{F}_{p}\\). Now we must have\n\n\\[a\\left(d x^{p}+e x+f\\right)^{p}+b\\left(d x^{p}+e x+f\\right)+c=x^{p^{2}}-x\\]\n\nover \\(\\mathbb{F}_{p}[x]\\). We use the fact that \\((x+y)^{p}=x^{p}+y^{p}\\) as polynomials in \\(\\mathbb{F}_{p}\\), since the binomial coefficients \\(\\binom{p}{j} \\equiv 0(\\bmod p)\\) for \\(1 \\leq j \\leq p-1\\). This implies \\((x+y+z)^{p}=x^{p}+y^{p}+z^{p}\\). Therefore we can expand the previous equation as\n\n\\[a\\left(d^{p} x^{p^{2}}+e^{p} x^{p}+f^{p}\\right)+b\\left(d x^{p}+e x+f\\right)+c=x^{p^{2}}-x .\\]\n\nEquating coefficients, we see that\n\n\\[\\begin{aligned}\na d^{p} & =1, \\\\\na e^{p}+b d & =0, \\\\\nb e & =-1, \\\\\na f^{p}+b f+c & =0 .\n\\end{aligned}\\]\n\nThe first and third equations imply that \\(a, d, b, e\\) are nonzero \\((\\bmod p)\\) and \\(a=d^{-p}, b=-e^{-1}\\). Then \\(a e^{p}+b d=0\\) gives\n\n\\[d^{-p} e^{p}-e^{-1} d=0\\]\n\nor \\(e^{p+1}=d^{p+1}\\). Recalling that \\(e^{p-1}=d^{p-1}=1\\) in \\((\\bmod p)\\), this tells us \\(d^{2}=e^{2}\\) so \\(d= \\pm e\\). Furthermore, any choice of such \\((d, e)\\) give unique \\((a, b)\\) which satisfy the first three equations. Finally, once we have determined \\(a, b, d, e\\), any choice of \\(f\\) gives a unique valid choice of \\(c\\).\nThus we have \\(p-1\\) choices for \\(d\\), two choices for \\(e\\) after choosing \\(d\\) (n.b. for \\(p=2\\) there is only one choice for \\(e\\), so the assumption \\(p>2\\) is used here), and then \\(p\\) choices for \\(f\\), for a total of \\(2 p(p-1)\\) compositional pairs in this case.\nFinally, adding the number of compositional pairs from all three cases, we obtain \\(4 p(p-1)\\) compositional pairs in total.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

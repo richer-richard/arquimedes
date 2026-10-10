@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-i-2026-p1",
+  "title": "2026 AIME1 1",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.distance-rate-and-time",
+      "label": "Distance rate and time",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2026,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 32.1,
+    "source": 1840,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Patrick started walking at a constant speed along a straight road from his school to the park. One hour after Patrick left, Tanya started running at a constant speed of \\(2\\) miles per hour faster than Patrick walked, following the same straight road from the school to the park. One hour after Tanya left, José started bicycling at a constant speed of \\(7\\) miles per hour faster than Tanya ran, following the same straight road from the school to the park. All three people arrived at the park at the same time. The distance from the school to the park is \\(\\frac{m}{n}\\) miles, where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "277",
+    "value": "277"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2026-p1.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(v\\) be Patrick’s speed in miles per hour and \\(T\\) his travel time in hours. Then Tanya travels for \\(T - 1\\) hours at speed \\(v + 2,\\) and José travels for \\(T - 2\\) hours at speed \\(v + 9\\) (which is \\(7\\) more than Tanya’s speed). Since all three cover the same distance, \\[ \\begin{aligned} vT &= (v+2)(T-1) \\\\ &= (v+9)(T-2). \\end{aligned} \\]\n\nExpanding the first equality gives \\(0 = 2T - v - 2,\\) so \\(v = 2T - 2.\\) Expanding the second gives \\(0 = 9T - 2v - 18,\\) so \\(2v = 9T - 18.\\) Substituting, \\(4T - 4 = 9T - 18,\\) hence \\(T = \\frac{14}{5}\\) and \\(v = \\frac{18}{5}.\\)\n\nThe distance is \\(vT = \\frac{18}{5} \\cdot \\frac{14}{5} = \\frac{252}{25},\\) which is in lowest terms, so \\(m + n = 252 + 25 = 277.\\)",
+      "hints": [
+        "Let Patrick’s speed be \\(v\\) and his travel time \\(T\\) hours; all three cover the same distance",
+        "In \\(vT = (v+2)(T-1)\\) and \\(vT = (v+9)(T-2),\\) the \\(vT\\) terms cancel, leaving two linear equations in \\(v\\) and \\(T\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12-2001-p25",
+  "title": "2001 AMC 12 Problem 25",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12",
+    "year": 2001,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 46.2,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Consider sequences of positive real numbers of the form \\(x,\\) \\(2000,\\) \\(y,\\) \\(\\ldots,\\) in which every term after the first is \\(1\\) less than the product of its two immediate neighbors. For how many different values of \\(x\\) does the term \\(2001\\) appear somewhere in the sequence?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "more than \\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12-2001-p25.live",
+      "kind": "proof-sketch",
+      "text": "If \\(a, b, c\\) are consecutive terms then \\(b = ac - 1,\\) so \\(c = \\dfrac{1 + b}{a}.\\) Applying this repeatedly, the first five terms are \\[ a,\\ b,\\ \\dfrac{1 + b}{a},\\ \\dfrac{1 + a + b}{ab},\\ \\dfrac{1 + a}{b}, \\] after which \\(a\\) and \\(b\\) recur, so the sequence is periodic with period \\(5.\\)\n\nHere \\(b = 2000\\) is the second term. Setting each of the other four displayed terms equal to \\(2001\\) gives, respectively, \\[ \\begin{gathered} a=2001,\\quad a=1,\\\\ a=\\frac{2001}{4001999},\\quad a=4001999. \\end{gathered} \\] These four values are positive and distinct. The second term itself is \\(2000,\\) and periodicity shows there are no other positions to consider.\n\nSo there are \\(4\\) values of \\(x.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "The condition \\(b = ac - 1\\) rearranges to \\(c = \\dfrac{1 + b}{a},\\) letting you march forward",
+        "Doing this repeatedly shows the sequence is periodic with period \\(5,\\) so \\(2001\\) can only be one of five terms"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

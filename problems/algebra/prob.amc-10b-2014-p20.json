@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2014-p20",
+  "title": "2014 AMC 10B Problem 20",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequality",
+      "label": "Inequality",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2014,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 20.6,
+    "source": 1280,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "For how many integers \\(x\\) is the number \\(x^4-51x^2+50\\) negative?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 8 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 10 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 12 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 14 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 16 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "12"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2014-p20.live",
+      "kind": "proof-sketch",
+      "text": "First, note that \\[x^4-51x^2+50 \\]\\[= (x^2-50)(x^2-1).\\]\n\nThe product is negative exactly when its two factors have opposite signs. Since \\(x^2-50<x^2-1\\), this requires \\(x^2-50<0<x^2-1\\). Thus \\(1<x^2<50\\), or \\(2\\le |x|\\le7\\). There are \\(6\\) positive and \\(6\\) negative integer solutions, for a total of \\(12\\).\n\nThus, the correct answer is C .",
+      "hints": [
+        "Factor the expression as a product in \\(x^2\\)",
+        "Find where the two factors have opposite signs"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

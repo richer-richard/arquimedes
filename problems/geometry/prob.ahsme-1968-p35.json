@@ -1,0 +1,95 @@
+{
+  "id": "prob.ahsme-1968-p35",
+  "title": "1968 AHSME Problem 35",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.chord",
+      "label": "Chord",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.circle",
+      "label": "Circle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1968,
+    "number": 35
+  },
+  "difficulty": {
+    "course": 52.8,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "In this diagram the center of the circle is \\(O,\\) the radius is \\(a\\) inches, chord \\(EF\\) is parallel to chord \\(CD,\\) \\(O,\\) \\(G,\\) \\(H,\\) \\(J\\) are collinear, and \\(G\\) is the midpoint of \\(CD.\\) Let \\(K\\) (square inches) represent the area of trapezoid \\(CDFE\\) and let \\(R\\) (square inches) represent the area of rectangle \\(ELMF.\\) Then, as \\(CD\\) and \\(EF\\) are translated upward so that \\(OG\\) increases toward the value \\(a,\\) while \\(JH\\) always equals \\(HG,\\) the ratio \\(K:R\\) becomes arbitrarily close to:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\sqrt2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac1{\\sqrt2}+\\dfrac12\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac1{\\sqrt2}+1\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1968-p35.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(JH=HG=x.\\) Then \\(OG=a-2x\\) and \\(OH=a-x.\\) The half-chords are \\[ \\begin{aligned} GD&=2\\sqrt{x(a-x)},\\\\ HF&=\\sqrt{x(2a-x)}. \\end{aligned} \\] Since both figures have height \\(x,\\) \\[ \\begin{aligned} \\frac KR&=\\frac{x(GD+HF)}{2x(HF)}\\\\ &=\\frac12+\\frac{GD}{2HF}. \\end{aligned} \\] As \\(x\\) approaches \\(0,\\) the latter fraction approaches \\[ \\frac{2\\sqrt{ax}}{2\\sqrt{2ax}}=\\frac1{\\sqrt2}. \\] Thus \\(K:R\\) approaches \\(\\frac{1}{\\sqrt2}+\\frac{1}{2}.\\)\n\nTherefore, the correct answer is D.",
+      "hints": [
+        "Let \\(JH=HG=x,\\) so \\(OG=a-2x\\) and \\(OH=a-x\\)",
+        "Express the two half-chords with the Pythagorean theorem, then let \\(x\\) approach \\(0\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "bb897489fca1eaf6fa40b8e16fe6f390b24677cb5cf52b9d7f2d7961c3288f5d"
+    ],
+    "solutions": []
+  }
+}

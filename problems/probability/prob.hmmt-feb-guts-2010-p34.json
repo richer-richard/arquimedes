@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2010-p34",
+  "title": "2010 HMMT February Guts Problem 34",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.probability",
+      "label": "Probability",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2010,
+    "number": 34
+  },
+  "difficulty": {
+    "course": 85.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "3000 people each go into one of three rooms randomly. What is the most likely value for the maximum number of people in any of the rooms? Your score for this problem will be 0 if you write down a number less than or equal to 1000 . Otherwise, it will be \\(25-27 \\frac{|A-C|}{\\min (A, C)-1000}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2010-p34.hmmt",
+      "kind": "proof-sketch",
+      "text": "1019 To get a rough approximation, we can use the fact that a sum of identical random variables converges to a Gaussian distribution \\({ }^{6}\\) in this case with a mean of 1000 and a variance of \\(3000 \\cdot \\frac{2}{9}=667\\). Since \\(\\sqrt{667} \\approx 26,1026\\) is a good guess, as Gaussians tend to differ from their mean by approximately their variance.\nThe actual answer was computed with the following python program:\n\n```\nfacts = [0]*3001\nfacts[0]=1\nfor a in range(1,3001):\n    facts[a]=a*facts[a-1]\ndef binom(n,k):\n    return facts[n]/(facts[k]*facts[n-k])\n```\n\n[^3]```\nmaxes = [0]*3001\nM = 1075\nfor a in range(0,3001):\n    for b in range(0,3001-a):\n        c = 3000-a-b\n        m = max (a,max (b,c))\n        if m < M:\n            maxes[m] += facts[3000]/(facts[a]*facts[b]*facts[c])\n            print [a,b]\nbest = 1000\nfor a in range(1000,1050):\n    print maxes[a],a\n    if maxes[best] <= maxes[a]:\n        best = a\nprint maxes[best]\nprint best\n```\n\nWe can use arguments involving the Chernoff bound \\({ }^{7}\\) to show that the answer is necessarily less than 1075. Alternately, if we wanted to be really careful, we could just set \\(M=3001\\), but then we'd have to wait a while for the script to finish.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "prob.hmmt-feb-guts-2022-p24",
+  "title": "2022 HMMT February Guts Problem 24",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.probability",
+      "label": "Probability",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2022,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 79.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(S_{0}\\) be a unit square in the Cartesian plane with horizontal and vertical sides. For any \\(n>0\\), the shape \\(S_{n}\\) is formed by adjoining 9 copies of \\(S_{n-1}\\) in a \\(3 \\times 3\\) grid, and then removing the center copy. For example, \\(S_{3}\\) is shown below:\n\nLet \\(a_{n}\\) be the expected value of \\(\\left|x-x^{\\prime}\\right|+\\left|y-y^{\\prime}\\right|\\), where \\((x, y)\\) and \\(\\left(x^{\\prime}, y^{\\prime}\\right)\\) are two points chosen randomly within \\(S_{n}\\). There exist relatively prime positive integers \\(a\\) and \\(b\\) such that\n\n\\[\\lim _{n \\rightarrow \\infty} \\frac{a_{n}}{3^{n}}=\\frac{a}{b} .\\]\n\nCompute \\(100 a+b\\).\n\n[Diagram omitted from this imported transcription; consult the HMMT archive while reviewing the problem.]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "1217",
+    "value": "1217"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2022-p24.hmmt",
+      "kind": "proof-sketch",
+      "text": "By symmetry, we only need to consider the \\(x\\)-distance, then we can multiply our answer by 2. Let this quantity be \\(g(n)=a_{n} / 2\\).\n\nDivide the \\(n\\)th iteration fractal into three meta-columns of equal width. Then the probability that a random point is in the first, second, and third meta-columns is \\(\\frac{3}{8}, \\frac{2}{8}\\), and \\(\\frac{3}{8}\\), respectively. If the two points end up in neighboring meta columns, the expected value of their \\(x\\)-distance is simply the width of a meta-column, which is \\(3^{n-1}\\). If they end up in opposite meta-columns (the left and right ones), it is twice this amount, which is \\(2 \\cdot 3^{n-1}\\). Finally, if the two points lie in the same meta-column, which happens with probability \\(\\left(\\frac{3}{8}\\right)^{2}+\\left(\\frac{2}{8}\\right)^{2}+\\left(\\frac{3}{8}\\right)^{2}=\\frac{11}{32}\\), the expected \\(x\\)-distance is just \\(g(n-1)\\). Thus, we have\n\n\\[g(n)=3^{n-1}\\left(2 \\cdot \\frac{3}{8} \\cdot \\frac{2}{8}+2 \\cdot \\frac{2}{8} \\cdot \\frac{3}{8}\\right)+\\left(2 \\cdot 3^{n-1}\\right)\\left(2 \\cdot \\frac{3}{8} \\cdot \\frac{3}{8}\\right)+\\frac{11}{32} g(n-1)=\\frac{15}{16} \\cdot 3^{n-1}+\\frac{11}{32} g(n-1)\\]\n\nAs \\(n\\) grows, say this is asymptotic to \\(g(n)=3^{n} C\\). For some constant \\(C\\). Then we can write \\(3^{n} C=\\frac{15}{16} \\cdot 3^{n-1}+\\frac{11}{32} \\cdot 3^{n-1} C \\Longrightarrow C=\\frac{6}{17}\\). Our final answer is twice this, which is \\(\\frac{12}{17}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

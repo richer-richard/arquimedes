@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12a-2009-p21",
+  "title": "2009 AMC 12A 21",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2009,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 36.5,
+    "source": 2170,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(p(x) = x^3 + ax^2 + bx + c,\\) where \\(a,\\) \\(b,\\) and \\(c\\) are complex numbers. Suppose that \\[ \\begin{gathered} p(2009 + 9002\\pi i) \\\\ = p(2009) \\\\ = p(9002) = 0. \\end{gathered} \\] What is the number of nonreal zeros of \\(x^{12} + ax^8 + bx^4 + c?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(12\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "8"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2009-p21.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(x^{12} + ax^8 + bx^4 + c = p(x^4),\\) a value is a zero exactly when \\(x^4\\) equals one of the roots of \\(p,\\) namely \\(2009 + 9002\\pi i,\\) \\(2009,\\) or \\(9002.\\)\n\nThe equation \\(x^4 = 2009 + 9002\\pi i\\) has four distinct nonreal roots. Each of \\(x^4 = 2009\\) and \\(x^4 = 9002\\) has two real roots and two nonreal roots.\n\nSo the nonreal zeros number \\(4 + 2 + 2 = 8.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Notice that \\(x^{12} + ax^8 + bx^4 + c = p(x^4)\\)",
+        "So the zeros satisfy \\(x^4 = 2009 + 9002\\pi i,\\) \\(x^4 = 2009,\\) or \\(x^4 = 9002;\\) count the nonreal fourth roots"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

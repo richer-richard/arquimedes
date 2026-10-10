@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-8-1988-p9",
+  "title": "1988 AMC 8 Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.distance-formula",
+      "label": "Distance formula",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.isosceles-triangle",
+      "label": "Isosceles triangle",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1988,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 9.5,
+    "source": 960,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "An isosceles triangle is a triangle with two sides of equal length. How many of the five triangles on the square grid below are isosceles?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1988-p9.live",
+      "kind": "proof-sketch",
+      "text": "Read each triangle’s side lengths from the grid. A horizontal or vertical side is counted directly, and a slanted side spanning \\(a\\) units across and \\(b\\) units up has length \\(\\sqrt{a^2 + b^2}.\\)\n\nTop-left triangle: its two slanted sides each span \\(1\\) across and \\(2\\) up, so each has length \\(\\sqrt{5},\\) with a base of length \\(2.\\) Two equal sides, so it is isosceles.\n\nTop-middle triangle: it has a vertical side of length \\(2\\) and a horizontal side of length \\(2\\) (its third side is the slant \\(2\\sqrt{2}\\)). Two equal sides, so it is isosceles.\n\nTop-right triangle: its sides are \\(2,\\) \\(\\sqrt{5},\\) and \\(\\sqrt{13},\\) which are all different, so it is not isosceles.\n\nBottom-left (wide, flat) triangle: its two slanted sides each span \\(3\\) across and \\(1\\) up, so each has length \\(\\sqrt{10}.\\) Two equal sides, so it is isosceles.\n\nBottom-right triangle: two of its sides each span \\(2\\) and \\(1\\) (giving length \\(\\sqrt{5}\\)), while the third is \\(\\sqrt{10}.\\) Two equal sides, so it is isosceles.\n\nFour of the five triangles are isosceles.\n\nThus, the correct answer is D .",
+      "hints": [
+        "Find each triangle’s side lengths from the grid: a slanted side spanning \\(a\\) across and \\(b\\) up has length \\(\\sqrt{a^2 + b^2}.\\) A triangle is isosceles when two of its sides are equal.",
+        "Work out all three side lengths for each of the five triangles and look for a matching pair; only one triangle ends up with three different side lengths."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "846938761b5af09477fd9bfc16977aa6180f9f31596056e7099fa55c01c8b38b"
+    ],
+    "solutions": []
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "prob.aime-ii-2016-p12",
+  "title": "2016 AIME II Problem 12",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.recursive-counting",
+      "label": "Recursive counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2016,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 53.8,
+    "source": 2400,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "The figure below shows a ring made of six small sections which you are to paint on a wall. You have four paint colors available and will paint each of the six sections a solid color. Find the number of ways you can choose to paint the sections if no two adjacent sections can be painted with the same color.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "732",
+    "value": "732"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2016-p12.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(P_n\\) be the number of valid paintings of a ring of \\(n\\) sections. Cutting a ring open between two adjacent sections shows that ring paintings correspond exactly to rows of \\(n\\) sections with adjacent colors different and the two end colors different. A row of \\(n\\) sections with adjacent colors different can be painted in \\(4 \\cdot 3^{n-1}\\) ways, and the rows whose end colors match correspond, by merging the two end sections into one, to ring paintings of \\(n - 1\\) sections. Hence \\[P_n + P_{n-1} = 4 \\cdot 3^{n-1}.\\]\n\nThree mutually adjacent sections give \\(P_3 = 4 \\cdot 3 \\cdot 2 = 24,\\) so \\(P_4 = 108 - 24 = 84,\\) then \\(P_5 = 324 - 84 = 240,\\) and finally \\(P_6 = 972 - 240 = 732.\\)",
+      "hints": [
+        "A row of \\(n\\) sections with adjacent colors different can be painted in \\(4 \\cdot 3^{n-1}\\) ways; split these by whether the two end colors match",
+        "If \\(P_n\\) counts ring colorings, then \\(P_n + P_{n-1} = 4 \\cdot 3^{n-1},\\) starting from \\(P_3 = 24\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "36e46b2e9309b9d9b6d774043b03b036833adfc02a688df7a3374b3ad5713456"
+    ],
+    "solutions": []
+  }
+}

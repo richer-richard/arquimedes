@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-general-2016-p6",
+  "title": "2016 HMMT November General Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.algebraic-properties-of-binomial-coefficients",
+      "label": "Algebraic properties of binomial coefficients",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2016,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 51.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The numbers \\(1,2 \\cdots 11\\) are arranged in a line from left to right in a random order. It is observed that the middle number is larger than exactly one number to its left. Find the probability that it is larger than exactly one number to its right.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2016-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\frac{10}{33}\\)\nSuppose the middle number is \\(k\\). Then there are \\(k-1\\) ways to pick the number smaller than \\(k\\) to its left and \\(\\binom{11-k}{4}\\) ways to pick the 4 numbers larger than \\(k\\) to its right. Hence there is a total of \\(\\sum_{k=2}^{7}(k-1) \\cdot\\binom{11-k}{4}\\) ways for there to be exactly one number smaller than \\(k\\) to its left. We calculate this total:\n\n\\[\\begin{aligned}\n\\sum_{k=2}^{7}(k-1) \\cdot\\binom{11-k}{4} & =\\sum_{j=4}^{9} \\sum_{i=4}^{j}\\binom{i}{4} \\\\\n& =\\sum_{j=4}^{9}\\binom{j+1}{5} \\\\\n& =\\binom{11}{6}\n\\end{aligned}\\]\n\nThe only way \\(k\\) can be larger than exactly one number to its right is if \\(k=3\\). Then the probability of this happening is \\(\\frac{2 \\cdot\\binom{8}{4}}{\\binom{11}{6}}=\\frac{10}{33}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

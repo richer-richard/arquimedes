@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-guts-2018-p19",
+  "title": "2018 HMMT November Guts Problem 19",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2018,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 46.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A\\) be the number of unordered pairs of ordered pairs of integers between 1 and 6 inclusive, and let \\(B\\) be the number of ordered pairs of unordered pairs of integers between 1 and 6 inclusive. (Repetitions are allowed in both ordered and unordered pairs.) Find \\(A-B\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2018-p19.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 225\nThere are \\(6 \\cdot 6\\) ordered pairs of integers between 1 and 6 inclusive and 21 unordered pairs of integers \\(\\left(\\binom{6}{2}=15\\right.\\) different pairs and 6 doubles). Then, \\(A=\\binom{36}{2}+36=666\\) and \\(B=21 \\cdot 21=441\\). Therefore \\(A-B=225\\).\nFor general \\(n\\), there are \\(n^{2}\\) ordered pairs of integers and \\(\\frac{n(n+1)}{2}\\) unordered pairs of integers. Then \\(A=\\frac{n^{2}\\left(n^{2}+1\\right)}{2}\\) and \\(B=\\frac{n^{2}(n+1)^{2}}{4}\\) so\n\n\\[A-B=\\frac{n^{2}\\left(2\\left(n^{2}+1\\right)-(n+1)^{2}\\right)}{4}=\\left(\\frac{n(n-1)}{2}\\right)^{2}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

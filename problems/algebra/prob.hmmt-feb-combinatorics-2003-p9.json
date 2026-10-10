@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2003-p9",
+  "title": "2003 HMMT February Combinatorics Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2003,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 86.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "At a certain college, there are 10 clubs and some number of students. For any two different students, there is some club such that exactly one of the two belongs to that club. For any three different students, there is some club such that either exactly one or all three belong to that club. What is the largest possible number of students?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2003-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "513\nLet \\(C\\) be the set of clubs; each student then corresponds to a subset of \\(C\\) (the clubs to which that student belongs). The two-student condition implies that these subsets must be all distinct. Now (assuming there is more than one student) some student belongs to a nonempty set \\(S\\) of clubs. For every subset \\(T \\subseteq C\\), let \\(f(T)\\) be the subset of \\(C\\) consisting of those clubs that are in exactly one of \\(S\\) and \\(T\\) (so that \\(f(T)=\\) \\((S \\cup T)-(S \\cap T)\\) ). It is straightforward to check that \\(f(f(T))=T\\) and \\(f(T) \\neq T\\), so that the collection of all \\(2^{10}\\) subsets of \\(C\\) is partitioned into pairs \\(\\{T, f(T)\\}\\). Moreover,\nas long as \\(S\\) is distinct from \\(T\\) and \\(f(T)\\), every club is in either none or exactly two of the sets \\(S, T\\), and \\(f(T)\\), so we cannot have a student corresponding to \\(T\\) and another corresponding to \\(f(T)\\). This puts an upper bound of 513 possible students (one for \\(S\\), one for \\(\\emptyset=f(S)\\), and one for each of the 511 other pairs). On the other hand, if we take some club \\(c\\), we can have one student belonging to no clubs and 512 other students all belonging to \\(c\\) and to the 512 possible subsets of the other 9 clubs, respectively. It is readily checked that this arrangement meets the conditions - for the three-student condition, either all three students are in \\(c\\), or one is the student who belongs to no clubs and we reduce to the two-student condition - so 513 is achievable.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

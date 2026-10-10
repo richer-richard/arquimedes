@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2021-p3",
+  "title": "2021 HMMT February Algebra and Number Theory Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.chinese-remainder-theorem",
+      "label": "Chinese remainder theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial-operations",
+      "label": "Polynomial operations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2021,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Among all polynomials \\(P(x)\\) with integer coefficients for which \\(P(-10)=145\\) and \\(P(9)=164\\), compute the smallest possible value of \\(|P(0)|\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "25",
+    "value": "25"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2021-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "Since \\(a-b \\mid P(a)-P(b)\\) for any integer polynomial \\(P\\) and integers \\(a\\) and \\(b\\), we require that \\(10 \\mid P(0)-P(-10)\\) and \\(9 \\mid P(0)-P(9)\\). So, we are looking for an integer \\(a\\) near 0 for which\n\n\\[a \\equiv 5 \\bmod 10, a \\equiv 2 \\bmod 9\\]\n\nThe smallest such positive integer is 65 , and the smallest such negative integer is -25 . This is achievable, for example, if \\(P(x)=2 x^{2}+3 x-25\\), so our answer is 25 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

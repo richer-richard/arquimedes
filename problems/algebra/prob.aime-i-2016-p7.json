@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2016-p7",
+  "title": "2016 AIME I Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.simons-favorite-factoring-trick",
+      "label": "Simon’s Favorite Factoring Trick",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2016,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 60.6,
+    "source": 2920,
+    "mohs": null
+  },
+  "estimatedMinutes": 12,
+  "statement": "For integers \\(a\\) and \\(b\\) consider the complex number \\[\\frac{\\sqrt{ab + 2016}}{ab + 100} - \\left(\\frac{\\sqrt{|a + b|}}{ab + 100}\\right)i.\\] Find the number of ordered pairs of integers \\((a, b)\\) such that this complex number is a real number.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "103",
+    "value": "103"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2016-p7.live",
+      "kind": "proof-sketch",
+      "text": "If \\(ab + 2016 \\ge 0,\\) the first term is real, so the number is real exactly when \\(\\sqrt{|a + b|} = 0,\\) that is \\(b = -a.\\) Then \\(ab + 2016 = 2016 - a^2 \\ge 0\\) forces \\(|a| \\le 44,\\) and the denominator \\(ab + 100 = 100 - a^2\\) rules out \\(a = \\pm 10.\\) That gives \\(89 - 2 = 87\\) pairs.\n\nIf \\(ab + 2016 \\lt 0,\\) then \\(\\sqrt{ab + 2016} = i\\sqrt{-ab - 2016},\\) so the whole number is \\(\\frac{\\sqrt{-ab - 2016} - \\sqrt{|a + b|}}{ab + 100}\\,i,\\) which is real exactly when \\(-ab - 2016 = |a + b|.\\) Note \\(a + b = 0\\) is impossible here since \\(a^2 = 2016\\) has no integer solution. For \\(a + b \\gt 0\\) the equation becomes \\(ab + a + b + 2016 = 0,\\) that is \\((a + 1)(b + 1) = -2015,\\) and for \\(a + b \\lt 0\\) it becomes \\((a - 1)(b - 1) = -2015.\\)\n\nSince \\(2015 = 5 \\cdot 13 \\cdot 31\\) has \\(8\\) positive divisors, \\((a+1)(b+1) = -2015\\) has \\(16\\) ordered integer solutions, and \\(a + b \\gt 0\\) holds exactly when the positive factor is the larger in absolute value: \\(8\\) solutions. Symmetrically the other case gives \\(8\\) more. In all of these \\(ab + 100 = -1916 - |a + b| \\ne 0.\\) The total is \\(87 + 8 + 8 = 103.\\)",
+      "hints": [
+        "If \\(ab + 2016 \\ge 0,\\) the number is real exactly when \\(b = -a;\\) watch the range of \\(a\\) and the denominator",
+        "If \\(ab + 2016 \\lt 0,\\) both terms are imaginary and must cancel: \\(-ab - 2016 = |a + b|.\\) Factor as \\((a \\pm 1)(b \\pm 1) = -2015.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

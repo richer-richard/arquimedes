@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-1996-p16",
+  "title": "1996 AMC 8 Problem 16",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.pairing-and-grouping",
+      "label": "Pairing and grouping",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1996,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 12.1,
+    "source": 1060,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "What is the value of the following expression?\n\n\\[ \\begin{aligned} &1 - 2 - 3 + 4 + 5 - 6 - 7 \\\\ &\\quad {}+ 8 + 9 - 10 - 11 + 12 \\\\ &\\quad {}+ 13 - \\cdots + 1992 \\\\ &\\quad {}+ 1993 - 1994 \\\\ &\\quad {}- 1995 + 1996 \\end{aligned} \\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(-998\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(-1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(998\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "0"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1996-p16.live",
+      "kind": "proof-sketch",
+      "text": "Grouping in blocks of four gives \\(1 - 2 - 3 + 4 = 0,\\) \\(5 - 6 - 7 + 8 = 0,\\) and so on.\n\nThere are \\(\\frac{1996}{4} = 499\\) such blocks, each equal to \\(0,\\) so the total is \\(0.\\)\n\nThus, the correct answer is C .",
+      "hints": [
+        "Group the terms in blocks of four starting from the first: \\((1 - 2 - 3 + 4),\\) \\((5 - 6 - 7 + 8),\\) and so on",
+        "Each block of four sums to \\(0;\\) check that the \\(1996\\) terms divide evenly into such blocks"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2017-p1",
+  "title": "2017 AMC 10B Problem 1",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.work-backwards",
+      "label": "Work backwards",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2017,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 10.8,
+    "source": 960,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Mary thought of a positive two-digit number. She multiplied it by \\(3\\) and added \\(11.\\) Then she switched the digits of the result, obtaining a number between \\(71\\) and \\(75,\\) inclusive. What was Mary’s number?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(11 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(12 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(13 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(14 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(15 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "12"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2017-p1.live",
+      "kind": "proof-sketch",
+      "text": "Work backward from the possible results. Reversing \\(71,72,73,74,75\\) gives \\(17,27,37,47,57,\\) respectively. Subtracting \\(11\\) gives \\(6,16,26,36,46.\\) Only \\(6\\) and \\(36\\) are divisible by \\(3,\\) and only \\(36\\div3=12\\) is a two-digit number.\n\nThus, the correct answer is B .",
+      "hints": [
+        "Work backward from the possible reversed results",
+        "After reversing and subtracting \\(11\\), check divisibility by \\(3\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

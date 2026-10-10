@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2024-p2",
+  "title": "2024 IMO Problem 2",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2024,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 97.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For which pairs of positive integers \\((a,b)\\) is the sequence\n\\[ \\gcd(a^n+b, b^n+a) \\qquad n = 1, 2, \\dotsc \\]\neventually constant?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2024-p2.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is \\((a,b)=(1,1)\\) only, which obviously works since the sequence is always \\(2\\).\n\nConversely, assume the sequence\n\\[ x_n \\coloneq \\gcd(a^n+b, b^n+a) \\] is eventually constant.\nThe main crux of the other direction is to consider\n\\[ M \\coloneq ab+1. \\]\n\nRemark.\n [Motivation]\n The reason to consider the number is the same technique used in IMO 2005/4,\n namely the idea to consider ``\\(n = -1\\)''.\n The point is that the two rational numbers\n \\[ \\frac 1a + b = \\frac{ab+1}{a}, \\qquad \\frac 1b + a = \\frac{ab+1}{b} \\]\n have a large common factor: we could write ``\\(x_{-1} = ab + 1\\)'', loosely speaking.\n\n Now, the sequence is really only defined for \\(n \\ge 1\\),\n so one should instead take \\(n \\equiv -1 \\pmod{\\varphi(M)}\\)\n --- and this is exactly what we do.\n\nObviously \\(\\gcd(a,M) = \\gcd(b,M) = 1\\).\nLet \\(n\\) be a sufficiently large multiple of \\(\\varphi(M)\\)\nso that \\[ x_{n-1} = x_n = x_{n+1} = \\dotsb. \\]\nWe consider the first three terms;\nthe first one is the ``key'' one that gets the bulk of the work,\nand the rest is bookkeeping and extraction.\n\n• Consider \\(x_{n-1}\\).\n Note that\n \\[ a (a^{n-1} + b) = a^n + ab \\equiv 1 + (-1) \\equiv 0 \\pmod M \\]\n and similarly \\(b (b^n + a) \\equiv 0 \\pmod M\\).\n Hence \\(M \\mid x_{n-1}\\).\n\n• Consider \\(x_n\\), which is now known to be divisible by \\(M\\). Note that\n \\[\\begin{aligned}\n 0 &\\equiv a^n + b \\equiv 1 + b \\pmod M \\\\\n 0 &\\equiv b^n + a \\equiv 1 + a \\pmod M.\n \\end{aligned}\\]\n So \\(a \\equiv b \\equiv -1 \\pmod M\\).\n\n• Consider \\(x_{n+1}\\), which is now known to be divisible by \\(M\\). Note that\n \\[ 0 \\equiv a^{n+1} + b \\equiv b^{n+1} + a \\equiv a + b \\pmod M. \\]\n We knew \\(a \\equiv b \\equiv -1 \\pmod M\\),\n hence this means \\(0 \\equiv 2 \\pmod M\\), so \\(M = 2\\).\n\nFrom \\(M = 2\\) we then conclude \\(a = b = 1\\), as desired.\n\nRemark.\n [No alternate solutions known]\n At the time nobody seems to know any solution not depending critically\n on \\(M = ab+1\\) (or prime numbers dividing \\(M\\), etc.).\n They vary in execution once some term of the form \\(x_{k\\varphi(n)-1}\\) is taken,\n but avoiding the key idea altogether does not currently seem possible.\n\n A good example to consider for ruling out candidate ideas is \\((a,b) = (18,9)\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

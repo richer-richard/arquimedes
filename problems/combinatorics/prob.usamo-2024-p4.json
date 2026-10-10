@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2024-p4",
+  "title": "2024 USAMO Problem 4",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2024,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 84.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(m\\) and \\(n\\) be positive integers. A circular necklace contains \\(m n\\) beads, each either red or blue. It turned out that no matter how the necklace was cut into \\(m\\) blocks of \\(n\\) consecutive beads, each block had a distinct number of red beads. Determine, with proof, all possible values of the ordered pair \\((m, n)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2024-p4.imported",
+      "kind": "proof-sketch",
+      "text": "We need to determine all possible positive integer pairs \\((m, n)\\) such that there exists a circular necklace of \\(mn\\) beads, each colored red or blue, satisfying the following condition:\n\nNo matter how the necklace is cut into \\(m\\) blocks of \\(n\\) consecutive beads, each block has a distinct number of red beads.\n\nNecessary Condition:\n\n1. Maximum Possible Distinct Counts: In a block of \\(n\\) beads, the number of red beads can range from \\(0\\) to \\(n\\). Therefore, there are \\(n + 1\\) possible distinct counts of red beads in a block. Since we have \\(m\\) blocks, the maximum number of distinct counts must be at least \\(m\\). Thus, we must have:\n\n\\[\nm \\leq n + 1\n\\]\n\nSufficient Construction:\n\nWe will show that for all positive integers \\(m\\) and \\(n\\) satisfying \\(m \\leq n + 1\\), such a necklace exists.\n\n1. Construct Blocks: Create \\(m\\) blocks, each containing \\(n\\) beads. Assign to each block a unique number of red beads, ranging from \\(0\\) to \\(m - 1\\).\n\n2. Design the Necklace: Arrange these \\(m\\) blocks in a fixed order to form the necklace. Since the necklace is circular, cutting it at different points results in cyclic permutations of the blocks.\n\n3. Verification: In any cut, the sequence of blocks (and thus the counts of red beads) is a cyclic shift of the original sequence. Therefore, in each partition, the blocks will have distinct numbers of red beads.\n\nExample:\n\nLet's construct a necklace for \\(m = 3\\) and \\(n = 2\\):\n\nBlocks: Block 1: \\(0\\) red beads (BB) Block 2: \\(1\\) red bead (RB) Block 3: \\(2\\) red beads (RR)\n\nNecklace Arrangement: Place the blocks in order: BB-RB-RR.\n\nVerification: Any cut of the necklace into \\(3\\) blocks of \\(2\\) beads will have blocks with red bead counts of \\(0\\), \\(1\\), and \\(2\\).\n\nConclusion:\n\nAll ordered pairs \\((m, n)\\) where \\(m \\leq n + 1\\) satisfy the condition. Therefore, the possible values of \\((m, n)\\) are all positive integers such that \\(m \\leq n + 1\\).\n\nFinal Answer:\n\nExactly all positive integers \\(m\\) and \\(n\\) with \\(m \\leq n + 1\\); these are all possible ordered pairs \\((m, n)\\).\n\n~Athmyx",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

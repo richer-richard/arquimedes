@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2025-p11",
+  "title": "2025 AMC 10A Problem 11",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2025,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 23.4,
+    "source": 1500,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The sequence \\(1,\\) \\(x,\\) \\(y,\\) \\(z\\) is arithmetic. The sequence \\(1,\\) \\(p,\\) \\(q,\\) \\(z\\) is geometric. Both sequences are strictly increasing and contain only integers, and \\(z\\) is as small as possible. What is the value of \\(x + y + z + p + q?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(66\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(91\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(103\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(132\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(149\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "149"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2025-p11.live",
+      "kind": "proof-sketch",
+      "text": "From the arithmetic sequence, \\(z = 1 + 3d,\\) so \\(z \\equiv 1 \\pmod 3.\\) From the geometric one, \\(z = p^3\\) for some integer ratio \\(p \\ge 2.\\) We want the smallest such \\(z,\\) so test \\(p = 2, 3, 4.\\) Only \\(p = 4\\) works, since \\(p^3 = 64 \\equiv 1 \\pmod 3.\\) That forces \\(d = 21,\\) and the sequences are \\(1, 22, 43, 64\\) and \\(1, 4, 16, 64.\\) So \\(x + y + z + p + q\\) \\(= 22 + 43 + 64 + 4 + 16\\) \\(= 149.\\) Thus, E is the correct answer.",
+      "hints": [
+        "Write \\(z = 1 + 3d\\) from the arithmetic sequence and \\(z = p^3\\) from the geometric one",
+        "Since \\(z \\equiv 1 \\pmod 3,\\) test increasing integer ratios \\(p\\) until \\(p^3 \\equiv 1 \\pmod 3\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

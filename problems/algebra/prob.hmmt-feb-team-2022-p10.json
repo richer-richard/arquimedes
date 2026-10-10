@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-team-2022-p10",
+  "title": "2022 HMMT February Team Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.cauchy-schwarz",
+      "label": "Cauchy-Schwarz",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.invariants-and-monovariants",
+      "label": "Invariants and monovariants",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vectors",
+      "label": "Vectors",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2022,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 90.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "On a board the following six vectors are written:\n\n\\[(1,0,0), \\quad(-1,0,0), \\quad(0,1,0), \\quad(0,-1,0), \\quad(0,0,1), \\quad(0,0,-1)\\]\n\nGiven two vectors \\(v\\) and \\(w\\) on the board, a move consists of erasing \\(v\\) and \\(w\\) and replacing them with \\(\\frac{1}{\\sqrt{2}}(v+w)\\) and \\(\\frac{1}{\\sqrt{2}}(v-w)\\). After some number of moves, the sum of the six vectors on the board is \\(u\\). Find, with proof, the maximum possible length of \\(u\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "2 \\sqrt{3}",
+    "value": "2 \\sqrt{3}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2022-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "For a construction, note that one can change\n\n\\[(1,0,0),(-1,0,0) \\rightarrow(\\sqrt{2}, 0,0),(0,0,0) \\rightarrow(1,0,0),(1,0,0)\\]\n\nand similarly for \\((0,1,0),(0,-1,0)\\) and \\((0,0,1),(0,0,-1)\\). Then \\(u=(2,2,2)\\).\nFor the bound, argue as follows: let the vectors be \\(v_{1}, \\ldots, v_{6}, n=(x, y, z)\\) be any unit vector, and \\(S=\\sum_{i}\\left(n \\cdot v_{i}\\right)^{2}\\), where the sum is over all vectors on the board. We claim that \\(S\\) is invariant. Indeed, we have\n\n\\[\\begin{aligned}\n\\left(n \\cdot \\frac{1}{\\sqrt{2}}(v+w)\\right)^{2}+\\left(n \\cdot \\frac{1}{\\sqrt{2}}(v-w)\\right)^{2} & =\\left(\\frac{n \\cdot v+n \\cdot w}{\\sqrt{2}}\\right)^{2}+\\left(\\frac{n \\cdot v-n \\cdot w}{\\sqrt{2}}\\right)^{2} \\\\\n& =\\frac{2(n \\cdot v)^{2}+2(n \\cdot w)^{2}}{2} \\\\\n& =(n \\cdot v)^{2}+(n \\cdot w)^{2}\n\\end{aligned}\\]\n\nAlso, at the beginning we have \\(S=2 x^{2}+2 y^{2}+2 z^{2}=2\\). Therefore we must always have \\(S=2\\). Thus, by the Cauchy-Schwarz inequality we have\n\n\\[n \\cdot u=\\sum n \\cdot v_{i} \\leq \\sqrt{\\sum_{i}\\left(n \\cdot v_{i}\\right)^{2}} \\sqrt{6}=\\sqrt{12}=2 \\sqrt{3}\\]\n\nBut since \\(n\\) is arbitrary, this implies that \\(|u| \\leq 2 \\sqrt{3}\\); otherwise we could pick \\(n=u /|u|\\) and reach a contradiction.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

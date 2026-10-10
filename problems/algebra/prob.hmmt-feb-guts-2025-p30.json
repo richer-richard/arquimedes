@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2025-p30",
+  "title": "2025 HMMT February Guts Problem 30",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.intermediate-algebra",
+      "label": "Intermediate Algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2025,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 84.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a\\) , \\(b\\) , and \\(c\\) be real numbers satisfying the system of equations\n\n\\[a\\sqrt{1 + b^{2}} +b\\sqrt{1 + a^{2}} = \\frac{3}{4},\\] \\[b\\sqrt{1 + c^{2}} +c\\sqrt{1 + b^{2}} = \\frac{5}{12},\\mathrm{and}\\] \\[c\\sqrt{1 + a^{2}} +a\\sqrt{1 + c^{2}} = \\frac{21}{20}.\\]\n\nCompute \\(a\\) .",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{7}{2\\sqrt{30}}",
+    "value": "\\frac{7}{2\\sqrt{30}}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2025-p30.hmmt",
+      "kind": "proof-sketch",
+      "text": "Recall that the functions \\(\\sinh (x) = \\frac{e^{x} - e^{- x}}{2}\\) and \\(\\cosh (x) = \\frac{e^{- x} + e^{- x}}{2}\\) satisfy the relation\n\n\\[\\sinh (x + y) = \\sinh (x)\\cosh (y) + \\cosh (x)\\sinh (y) = \\sinh (x)\\sqrt{1 + \\sinh (y)^{2}} +\\sinh (y)\\sqrt{1 + \\sinh (x)^{2}}.\\]\n\nSince \\(\\sinh\\) is surjective, we can perform the substitution \\(a = \\sinh (x)\\) , \\(b = \\sinh (y)\\) , and \\(c = \\sinh (z)\\) , which turns the equations into\n\n\\[\\sinh (x + y) = \\frac{2 - \\frac{1}{2}}{2},\\] \\[\\sinh (y + z) = \\frac{\\frac{3}{2} - \\frac{2}{3}}{2},\\] \\[\\sinh (z + x) = \\frac{\\frac{5}{2} - \\frac{2}{5}}{2}.\\]\n\nThus, \\(x + y = \\log (2)\\) , \\(y + z = \\log (3 / 2)\\) , and \\(z + x = \\log (5 / 2)\\) . Solving these equations gives \\(x = \\log (\\sqrt{10 / 3})\\) , so \\(a = \\frac{1}{2}\\left(\\sqrt{\\frac{10}{3}} - \\sqrt{\\frac{3}{10}}\\right) = \\left[\\frac{7}{2\\sqrt{30}}\\right]\\)",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

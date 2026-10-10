@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1988-p4",
+  "title": "1988 AIME Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.absolute-value",
+      "label": "Absolute value",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.extremal-argument",
+      "label": "Extremal argument",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequality",
+      "label": "Inequality",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1988,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 34.1,
+    "source": 1920,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Suppose that \\(|x_i|\\lt1\\) for \\(i=1,\\) \\(2,\\) \\(\\ldots,\\) \\(n.\\) Suppose further that\n\n\\[\\begin{aligned}&|x_1|+|x_2|+\\cdots+|x_n|\\\\&=19+\\bigl|x_1+x_2\\\\&\\qquad+\\cdots+x_n\\bigr|.\\end{aligned}\\]\n\nWhat is the smallest possible value of \\(n?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "20",
+    "value": "20"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1988-p4.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(P\\) be the sum of the positive \\(x_i\\) and \\(N\\) the sum of the absolute values of the negative \\(x_i.\\) Then \\[\\begin{aligned}P+N-|P-N|&=2\\min(P,N)\\\\&=19,\\end{aligned}\\] so both \\(P\\) and \\(N\\) are at least \\(9.5.\\) Because every \\(|x_i|\\lt1,\\) each sign requires at least \\(10\\) terms, giving \\(n\\geq20.\\) Equality is attainable with ten terms equal to \\(0.95\\) and ten equal to \\(-0.95,\\) so the minimum is \\(20.\\)",
+      "hints": [
+        "Let \\(P\\) be the sum of the positive terms and \\(N\\) the sum of the absolute values of the negative terms",
+        "The left side minus the final absolute value equals \\(2\\min(P,N)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

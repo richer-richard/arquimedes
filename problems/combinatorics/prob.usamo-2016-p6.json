@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2016-p6",
+  "title": "2016 USAMO Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2016,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 91.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Integers \\(n\\) and \\(k\\) are given, with \\(n\\ge k\\ge 2.\\) You play the following game against an evil wizard.\n\nThe wizard has \\(2n\\) cards; for each \\(i = 1, ..., n,\\) there are two cards labeled \\(i.\\) Initially, the wizard places all cards face down in a row, in unknown order.\n\nYou may repeatedly make moves of the following form: you point to any \\(k\\) of the cards. The wizard then turns those cards face up. If any two of the cards match, the game is over and you win. Otherwise, you must look away, while the wizard arbitrarily permutes the \\(k\\) chosen cards and turns them back face-down. Then, it is your turn again.\n\nWe say this game is \\(\\textit{winnable}\\) if there exist some positive integer \\(m\\) and some strategy that is guaranteed to win in at most \\(m\\) moves, no matter how the wizard responds.\n\nFor which values of \\(n\\) and \\(k\\) is the game winnable?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2016-p6.imported",
+      "kind": "proof-sketch",
+      "text": "We claim that the game is winnable if and only if $n>k$. Suppose after the first step, the cards $1$ to $n$ are shuffled around. Notice that we have $n$ cards that we don't know the position of (which are all cards from $1$ to $n$). Now, suppose we pick $p$ known cards. Note that the $p$ cards are all different(since the known cards are the cards from $1$ to $n$), and there is still a possibility that the other cards from the unknown cards complement and cause $1$ to $n$. Therefore, we are in the same state as before, and the game is unwinnable.\nNow, suppose $n>k$. Denote the ith card counting from the left. We pick cards $1$ to $k$, keeping track of the set of values of the cards. Then, we pick cards $2$ to $k+1$, adding the value of the $k+1$th card into the set of value of cards. We keep doing this, until we pick cards $2n-k$ to $2n-1$, at which point we know the exact number on the $2n$th card. Now, we go back to $1$ through $k$, and repeat this process, until we reveal the $2n-1$th card(unless we win during the process). This process terminates only when there are less or equal to $k$ cards that we don't know the exact numbers on or if we somehow win, clearly, as otherwise we're still revealing new information by picking cards from $1$ through $k$. Note that we now know the exact values on $2n-k$ of the cards. By the Pigeonhole Principle, since $k<n$, $2$ of them are the same, and we pick those $2$ cards and $k-2$ other random cards and we win.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "prob.ahsme-1974-p25",
+  "title": "1974 AHSME Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.parallelogram",
+      "label": "Parallelogram",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1974,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 38.7,
+    "source": 2100,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "In parallelogram \\(ABCD\\) of the accompanying diagram, line \\(DP\\) is drawn bisecting \\(BC\\) at \\(N\\) and meeting \\(AB\\) (extended) at \\(P.\\) From vertex \\(C,\\) line \\(CQ\\) is drawn bisecting side \\(AD\\) at \\(M\\) and meeting \\(AB\\) (extended) at \\(Q.\\) Lines \\(DP\\) and \\(CQ\\) meet at \\(O.\\) If the area of parallelogram \\(ABCD\\) is \\(k,\\) then the area of triangle \\(QPO\\) is equal to",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(k\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\frac{6k}{5}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\frac{9k}{8}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\frac{5k}{4}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2k\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1974-p25.live",
+      "kind": "proof-sketch",
+      "text": "Choose coordinates \\(A=(0,0),\\) \\(B=(1,0),\\) \\(D=(u,v),\\) and \\(C=(u+1,v),\\) so \\(k=v.\\) The midpoints are \\[ \\begin{aligned} M&=(\\frac{u}{2},\\frac{v}{2}),\\\\ N&=(1+\\frac{u}{2},\\frac{v}{2}). \\end{aligned} \\] Extending \\(CM\\) and \\(DN\\) to \\(y=0\\) gives \\(Q=(-1,0)\\) and \\(P=(2,0).\\)\n\nParameterizing \\(DP\\) and \\(CQ\\) shows their intersection is \\(O=(\\frac{3u}{4}+\\frac{1}{2},\\frac{3v}{4}).\\) Thus \\(QP=3\\) and the height from \\(O\\) is \\(\\frac{3v}{4},\\) so \\[ \\begin{aligned} [QPO]&=\\frac12(3)\\left(\\frac{3v}{4}\\right)\\\\ &=\\frac{9v}{8}=\\frac{9k}{8}. \\end{aligned} \\]\n\nTherefore, the correct answer is C.",
+      "hints": [
+        "Use \\(A=(0,0),\\) \\(B=(1,0),\\) \\(D=(u,v),\\) and \\(C=(u+1,v)\\)",
+        "The midpoint lines meet the baseline at \\(Q=(-1,0)\\) and \\(P=(2,0)\\); then find \\(O\\)’s height"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "0c8559fdf3e8cc09b81a531ea25a2462060900dfbf1b8fbb4b14f70e76e5aa87"
+    ],
+    "solutions": []
+  }
+}

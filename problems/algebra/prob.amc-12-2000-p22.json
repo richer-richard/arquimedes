@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12-2000-p22",
+  "title": "2000 AMC 12 22",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12",
+    "year": 2000,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 36.9,
+    "source": 2030,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The graph below shows a portion of the curve defined by the quartic polynomial \\[P(x) = x^4 + ax^3 + bx^2 + cx + d.\\] Which of the following is the smallest?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(P(-1)\\)"
+    },
+    {
+      "label": "B",
+      "text": "The product of the zeros of \\(P\\)"
+    },
+    {
+      "label": "C",
+      "text": "The product of the non-real zeros of \\(P\\)"
+    },
+    {
+      "label": "D",
+      "text": "The sum of the coefficients of \\(P\\)"
+    },
+    {
+      "label": "E",
+      "text": "The sum of the real zeros of \\(P\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12-2000-p22.live",
+      "kind": "proof-sketch",
+      "text": "The graph crosses the \\(x\\)-axis exactly twice, both times at positive values, so \\(P\\) has two real zeros and two non-real (complex conjugate) zeros.\n\nReading off the graph: the sum of the coefficients is \\(P(1) \\gt 3;\\) \\(P(-1) \\gt 4;\\) the sum of the real zeros is greater than \\(4.5;\\) and the product of all zeros is \\(d,\\) the \\(y\\)-intercept, which is less than \\(6.\\)\n\nLet \\(R\\) be the product of the real zeros, so \\(R \\gt 4.5.\\) The product of the non-real zeros is \\(\\dfrac dR,\\) which is less than \\(\\dfrac{6}{4.5} \\lt 2.\\)\n\nThis is smaller than every other listed quantity.\n\nThus, the correct answer is C.",
+      "hints": [
+        "The graph shows exactly two real zeros, both positive, so \\(P\\) has two non-real (conjugate) zeros",
+        "The product of all zeros equals \\(d,\\) the \\(y\\)-intercept; divide it by the product of the real zeros"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "55d95d28ae20462b9fd1fdd04e4c10db5789bc09895f14f8a7416866efb8a776"
+    ],
+    "solutions": []
+  }
+}

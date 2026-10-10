@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2012-p11",
+  "title": "2012 AMC 12A Problem 11",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.independent-events",
+      "label": "Independent events",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiset-permutations",
+      "label": "Multiset permutations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2012,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 27.6,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Alex, Mel, and Chelsea play a game that has \\(6\\) rounds. In each round there is a single winner, and the outcomes of the rounds are independent. For each round the probability that Alex wins is \\(\\dfrac12,\\) and Mel is twice as likely to win as Chelsea. What is the probability that Alex wins three rounds, Mel wins two rounds, and Chelsea wins one round?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{5}{72}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{5}{36}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{6}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{1}{3}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(1\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "5/36"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2012-p11.live",
+      "kind": "proof-sketch",
+      "text": "Since Alex wins with probability \\(\\tfrac12,\\) the others share the remaining \\(\\tfrac12.\\) With Mel twice as likely as Chelsea, \\(P(\\text{Mel}) = \\tfrac13\\) and \\(P(\\text{Chelsea}) = \\tfrac16.\\)\n\nThe number of orderings of the wins \\(AAAMMC\\) is \\(\\dfrac{6!}{3!\\,2!\\,1!} = 60.\\) The probability is \\[ \\begin{aligned} 60 \\cdot \\left(\\tfrac12\\right)^3 \\left(\\tfrac13\\right)^2 \\left(\\tfrac16\\right) &= \\frac{60}{432} \\\\ &= \\frac{5}{36}. \\end{aligned} \\]\n\nThus, the correct answer is B.",
+      "hints": [
+        "First find each player’s per-round win probability",
+        "Since \\(P(\\text{Mel}) + P(\\text{Chelsea}) = \\dfrac12\\) and \\(P(\\text{Mel}) = 2P(\\text{Chelsea}),\\) multiply by the number \\(\\dfrac{6!}{3!\\,2!\\,1!}\\) of arrangements"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

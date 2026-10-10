@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2014-p5",
+  "title": "2014 IMO Problem 5",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2014,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 102.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For every positive integer \\(n\\),\nthe Bank of Cape Town issues coins of denomination \\(\\frac 1n\\).\nGiven a finite collection of such coins (of not necessarily different denominations)\nwith total value at most \\(99 + \\frac12\\), prove that it is possible to split\nthis collection into \\(100\\) or fewer groups, such that each group has total value at most \\(1\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2014-p5.evanchen",
+      "kind": "proof-sketch",
+      "text": "We'll prove the result\nfor at most \\(k - \\frac{k}{2k+1}\\) with \\(k\\) groups.\nFirst, perform the following optimizations.\n\n• If any coin of size \\(\\frac{1}{2m}\\) appears twice,\n then replace it with a single coin of size \\(\\frac{1}{m}\\).\n\n• If any coin of size \\(\\frac{1}{2m+1}\\) appears \\(2m+1\\) times,\n group it into a single group and induct downwards.\n\nApply this operation repeatedly until it cannot be done anymore.\n\nNow construct boxes \\(B_0\\), \\(B_1\\), \\dots, \\(B_{k-1}\\).\nIn box \\(B_0\\) put any coins of size \\(\\tfrac 12\\) (clearly there is at most one).\nMore generally for \\(m \\ge 0\\), \\(B_m\\), put coins of size\n\\(\\frac{1}{2m+1}\\) and \\(\\frac{1}{2m+2}\\)\n(there at most \\(2m\\) of the former and at most one of the latter).\nNote that\n\\[ \\text{total weight in \\(B_m\\)} \\le 2m \\cdot \\frac{1}{2m+1} + \\frac{1}{2m+2} < 1. \\]\nFinally, place the remaining ``light'' coins of size at most \\(\\frac{1}{2k+1}\\) in a pile.\n\nRemark.\n One way to explain where this boxing comes from is to imagine\n what happens after applying the operation repeatedly until it can't be done any more.\n We expect the most troublesome situation would be if the leftover coins are\n as large as possible, which looks like\n \\[ \\frac{1}{2}, \\qquad \\frac13 \\times 2, \\qquad \\frac14, \\qquad \\frac15 \\times 4,\n \\qquad \\frac16, \\qquad \\frac17 \\times 6, \\qquad \\frac 18, \\qquad \\dots \\]\n Seeing this the boxing \\(B_i\\) is quite reasonable because it groups these\n into groups of almost \\(1\\) without too much effort:\n \\[\\begin{aligned}\n B_0 &\\longrightarrow \\frac{1}{2} \\\\\n B_1 &\\longrightarrow \\frac13 \\cdot 2 + \\frac 14 = \\frac{11}{12} \\\\\n B_2 &\\longrightarrow \\frac15 \\cdot 4 + \\frac 16 = \\frac{29}{30} \\\\\n B_3 &\\longrightarrow \\frac17 \\cdot 6 + \\frac 18 = \\frac{55}{56} \\\\\n &\\vdots\\longrightarrow\n \\end{aligned}\\]\n\nThen just toss coins from the pile into the boxes arbitrarily,\nother than the proviso that no box should have its weight exceed \\(1\\).\nWe claim this uses up all coins in the pile.\nAssume not, and that some coin remains in the pile\nwhen all the boxes are saturated.\nThen all the boxes must have at least \\(1 -\\frac{1}{2k+1}\\),\nmeaning the total amount in the boxes is strictly greater than\n\\[ k \\left( 1 - \\frac{1}{2k+1} \\right) > k - \\tfrac 12 \\]\nwhich is a contradiction.\n\nRemark.\n This gets a stronger bound \\(k - \\frac{k}{2k+1}\\) than the requested \\(k-\\tfrac 12\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

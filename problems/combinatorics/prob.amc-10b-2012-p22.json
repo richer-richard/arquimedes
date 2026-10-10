@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2012-p22",
+  "title": "2012 AMC 10B Problem 22",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.recursive-counting",
+      "label": "Recursive counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.work-backwards",
+      "label": "Work backwards",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2012,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 31.5,
+    "source": 2060,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\((a_1,a_2,\\ldots,a_{10})\\) be a list of the first \\(10\\) positive integers such that for each \\(2\\le i\\le10\\) either \\(a_i + 1\\) or \\(a_i-1\\) or both appear somewhere before \\(a_i\\) in the list. How many such lists are there?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( \\ 120 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 512 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( \\ 1024 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(181{,}440\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(362{,}880\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "512"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2012-p22.live",
+      "kind": "proof-sketch",
+      "text": "Every prefix \\(a_1,a_2,\\ldots,a_i\\) must form an interval of consecutive integers: each new term is required to be one more or one less than a term already present. In particular, the full set is the interval \\([1,10].\\)\n\nRead the list backward. At each step, the term removed must be either the smallest or the largest integer in the current interval; removing an interior term would leave that term with no adjacent predecessor in the forward list. Conversely, every sequence of endpoint removals produces a valid list. There are two choices for each of \\(a_{10},a_9,\\ldots,a_2,\\) after which \\(a_1\\) is forced. Hence there are \\(2^9=512\\) lists.\n\nThus, the correct answer is B .",
+      "hints": [
+        "At each reverse step, remove either the smallest or largest remaining number",
+        "There are \\(2\\) choices until the final number is forced"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

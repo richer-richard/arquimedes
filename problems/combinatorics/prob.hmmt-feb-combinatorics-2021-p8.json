@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2021-p8",
+  "title": "2021 HMMT February Combinatorics Problem 8",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.coloring-schemes-extremal-arguments",
+      "label": "Coloring schemes, extremal arguments",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.enumeration-with-symmetry",
+      "label": "Enumeration with symmetry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2021,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 84.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the number of ways to fill each cell in a \\(8 \\times 8\\) square grid with one of the letters \\(H, M\\), or \\(T\\) such that every \\(2 \\times 2\\) square in the grid contains the letters \\(H, M, M, T\\) in some order.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "1076",
+    "value": "1076"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2021-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "We solve the problem for general \\(n \\times n\\) boards where \\(n\\) even. Let the cell in the \\(i\\)-th row and \\(j\\)-th column be \\(a_{i, j}\\).\nClaim: In any valid configuration, either the rows (or columns) alternate between ( \\(\\cdots, H, M, H, M, \\cdots\\) ) and \\((\\cdots, T, M, T, M, \\cdots)\\) or \\((\\cdots, M, M, M, M, \\cdots)\\) and \\((\\cdots, H, T, H, T, \\cdots)\\).\nProof: First note that all configurations which follow the above criteria are valid.\nIf the rows alternate as above we are done. Else there exists one of the below configurations in one of the rows, from which we can deduce the rest of the 3 columns as follows:\n\n| \\(\\left(a_{i, j-1}, a_{i, j}, a_{i, j+1}\\right)\\) | \\(\\left(a_{i+1, j-1}, a_{i+1, j}, a_{i+1, j+1}\\right)\\) | \\(\\left(a_{i+2, j-1}, a_{i+2, j}, a_{i+2, j+1}\\right)\\) |\n| :---: | :---: | :---: |\n| \\((H, M, T)\\) | \\((T, M, H)\\) | \\((H, M, T)\\) |\n| \\((T, M, H)\\) | \\((H, M, T)\\) | \\((T, M, H)\\) |\n| \\((H, T, M)\\) | \\((M, M, H)\\) | \\((H, T, M)\\) |\n| \\((M, T, H)\\) | \\((H, M, M)\\) | \\((M, T, H)\\) |\n| \\((T, H, M)\\) | \\((M, M, T)\\) | \\((T, H, M)\\) |\n| \\((M, H, T)\\) | \\((T, M, M)\\) | \\((M, H, T)\\) |\n| \\((T, M, M)\\) | \\((M, H, T)\\) | \\((T, M, M)\\) |\n| \\((M, M, T)\\) | \\((T, H, M)\\) | \\((M, M, T)\\) |\n| \\((H, M, M)\\) | \\((M, T, H)\\) | \\((H, M, M)\\) |\n| \\((M, M, H)\\) | \\((H, T, M)\\) | \\((M, M, H)\\) |\n\nIt can be noted that the configurations alternate as we move down/up the columns, implying that the 3 columns consist of alternating letters (or \\((M, M, \\cdots)\\) ). We can now check that all columns obey the above form, and in particular, must alternate as stated in the claim.\nIt now suffices to count the number of cases. When the rows alternate between \\((\\cdots, H, M, H, M, \\cdots)\\) and \\((\\cdots, T, M, T, M, \\cdots)\\), there are 2 ways to choose which one occupies the odd-numbered rows, and \\(2^{n}\\) ways to alternate between the 2 letters in each row. When the rows alternate between \\((\\cdots, H, T, H, T, \\cdots)\\) and \\((\\cdots, M, M, M, M, \\cdots)\\), there are 2 ways to choose which occupies the oddnumbered rows, and \\(2^{\\frac{n}{2}}\\) ways to alternate between the 2 letters in the rows. The number of cases for columns is the same.\nFinally, if both the rows and columns alternate as above, it suffices to fix the first 2 rows (then the rest of the board is uniquely determined by extending the columns). There are \\(2 \\times 2^{2}=8\\) ways to do this if the rows are \\((\\cdots, H, M, H, M, \\cdots)\\) and \\((\\cdots, T, M, T, M, \\cdots)\\), and \\(2 \\times 2=4\\) ways to do this if the rows are \\((\\cdots, M, M, M, M, \\cdots)\\) and \\((\\cdots, H, T, H, T, \\cdots)\\).\nHence the total number of configurations is \\(2\\left(2^{n+1}+2^{\\frac{n}{2}+1}\\right)-12=2^{n+2}+2^{\\frac{n}{2}+2}-12\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

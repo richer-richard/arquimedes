@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2001-p3",
+  "title": "2001 USAMO Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2001,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 103.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a, b, c \\geq 0\\) and satisfy\n\n\\[\na^2 + b^2 + c^2 + abc = 4.\n\\]\n\nShow that\n\n\\[\n0 \\le ab + bc + ca - abc \\leq 2.\n\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2001-p3.imported",
+      "kind": "proof-sketch",
+      "text": "First we prove the lower bound.\nNote that we cannot have $a, b, c$ all greater than 1.\nTherefore, suppose $a \\le 1$.\nThen\n\\[ab + bc + ca - abc = a(b + c) + bc(1-a) \\ge 0.\\]\nNote that, by the Pigeonhole Principle, at least two of $a,b,c$ are either both greater than or less than $1$. Without loss of generality, let them be $b$ and $c$. Therefore, $(b-1)(c-1)\\ge 0$. From the given equation, we can express $a$ in terms of $b$ and $c$ as\n\\[a=\\frac{\\sqrt{(4-b^2)(4-c^2)}-bc}{2}\\]\nThus,\n\\[ab + bc + ca - abc = -a (b-1)(c-1)+a+bc \\le a+bc = \\frac{\\sqrt{(4-b^2)(4-c^2)} + bc}{2}\\]\nFrom the Cauchy-Schwarz Inequality,\n\\[\\frac{\\sqrt{(4-b^2)(4-c^2)} + bc}{2} \\le \\frac{\\sqrt{(4-b^2+b^2)(4-c^2+c^2)} }{2} = 2.\\]\nThis completes the proof.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

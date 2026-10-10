@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-feb-guts-2018-p17",
+  "title": "2018 HMMT February Guts Problem 17",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.tangents",
+      "label": "Tangents",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vectors",
+      "label": "Vectors",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2018,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 73.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the value of\n\n\\[\\frac{\\cos 30.5^{\\circ}+\\cos 31.5^{\\circ}+\\ldots+\\cos 44.5^{\\circ}}{\\sin 30.5^{\\circ}+\\sin 31.5^{\\circ}+\\ldots+\\sin 44.5^{\\circ}}\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2018-p17.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\((\\sqrt{2}-1)(\\sqrt{3}+\\sqrt{2})=2-\\sqrt{2}-\\sqrt{3}+\\sqrt{6}\\)\nConsider a 360 -sided regular polygon with side length 1 , rotated so that its sides are at half-degree inclinations (that is, its sides all have inclinations of \\(0.5^{\\circ}, 1.5^{\\circ}, 2.5^{\\circ}\\), and so on. Go to the bottom point on this polygon and then move clockwise, numbering the sides \\(1,2,3, \\ldots, 360\\) as you go. Then, take the section of 15 sides from side 31 to side 45 . These sides have inclinations of \\(30.5^{\\circ}, 31.5^{\\circ}, 32.5^{\\circ}\\), and so on, up to \\(44.5^{\\circ}\\). Therefore, over this section, the horizontal and vertical displacements are, respectively:\n\n\\[\\begin{aligned}\n& H=\\cos 30.5^{\\circ}+\\cos 31.5^{\\circ}+\\ldots+\\cos 44.5^{\\circ} \\\\\n& V=\\sin 30.5^{\\circ}+\\sin 31.5^{\\circ}+\\ldots+\\sin 44.5^{\\circ}\n\\end{aligned}\\]\n\nHowever, we can also see that, letting \\(R\\) be the circumradius of this polygon:\n\n\\[\\begin{gathered}\nH=R\\left(\\sin 45^{\\circ}-\\sin 30^{\\circ}\\right) \\\\\nV=R\\left[\\left(1-\\cos 45^{\\circ}\\right)-\\left(1-\\cos 30^{\\circ}\\right)\\right]\n\\end{gathered}\\]\n\nFrom these, we can easily compute that our desired answer is \\(\\frac{H}{V}=(\\sqrt{2}-1)(\\sqrt{3}+\\sqrt{2})=2-\\sqrt{2}-\\sqrt{3}+\\sqrt{6}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

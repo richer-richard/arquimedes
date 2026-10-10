@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12a-2017-p19",
+  "title": "2017 AMC 12A Problem 19",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.right-triangle",
+      "label": "Right triangle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2017,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 34.1,
+    "source": 2040,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A square with side length \\(x\\) is inscribed in a right triangle with sides of length \\(3,\\) \\(4,\\) and \\(5\\) so that one vertex of the square coincides with the right-angle vertex of the triangle. A square with side length \\(y\\) is inscribed in another right triangle with sides of length \\(3,\\) \\(4,\\) and \\(5\\) so that one side of the square lies on the hypotenuse of the triangle. What is \\(\\dfrac{x}{y}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{12}{13}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{35}{37}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{37}{35}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{13}{12}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "37/35"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2017-p19.live",
+      "kind": "proof-sketch",
+      "text": "For the first square, the two smaller triangles it cuts off are similar to the whole triangle, giving \\(\\dfrac{x}{3-x}=\\dfrac{4-x}{x},\\) so \\(x=\\dfrac{12}{7}.\\) (Equivalently, a square in the right angle has side \\(\\dfrac{3\\cdot4}{3+4}.\\))\n\nFor the second square, take the hypotenuse of length \\(5\\) as base; the altitude to it is \\(h=\\dfrac{3\\cdot4}{5}=\\dfrac{12}{5}.\\) A square with a side on a base \\(b\\) and height \\(h\\) has side \\(\\dfrac{bh}{b+h},\\) so \\[ y=\\dfrac{5\\cdot\\tfrac{12}{5}}{5+\\tfrac{12}{5}}=\\dfrac{12}{\\tfrac{37}{5}}=\\dfrac{60}{37}. \\]\n\nTherefore \\(\\dfrac{x}{y}=\\dfrac{12}{7}\\cdot\\dfrac{37}{60}=\\dfrac{37}{35}.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "A square with its corner at the right angle has side \\(x=\\dfrac{3\\cdot4}{3+4}\\)",
+        "A square with a side on a base of length \\(b\\) and height \\(h\\) to that base has side \\(\\dfrac{bh}{b+h};\\) use the hypotenuse as the base"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

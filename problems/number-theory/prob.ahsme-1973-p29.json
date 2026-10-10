@@ -1,0 +1,88 @@
+{
+  "id": "prob.ahsme-1973-p29",
+  "title": "1973 AHSME Problem 29",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.counting-intersections",
+      "label": "Counting intersections",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.relative-speed",
+      "label": "Relative speed",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1973,
+    "number": 29
+  },
+  "difficulty": {
+    "course": 31.8,
+    "source": 1830,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Two boys start moving from the same point \\(A\\) on a circular track but in opposite directions. Their speeds are \\(5\\) ft. per sec. and \\(9\\) ft. per sec. If they start at the same time and finish when they first meet at the point \\(A\\) again, then the number of times they meet, excluding the start and finish, is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(25\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(44\\)"
+    },
+    {
+      "label": "D",
+      "text": "infinity"
+    },
+    {
+      "label": "E",
+      "text": "none of these"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "13"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1973-p29.live",
+      "kind": "proof-sketch",
+      "text": "Let the track length be \\(L.\\) Since \\(\\gcd(5,9)=1,\\) the first positive time when both boys are back at \\(A\\) is \\(t=L\\): they have completed \\(5\\) and \\(9\\) laps. Their relative speed is \\(5+9=14,\\) so before time \\(L\\) they meet at \\[ t=\\frac{kL}{14}, \\qquad k=1,2,\\ldots,13. \\] Thus there are \\(13\\) meetings excluding the start and finish.\n\nTherefore, the correct answer is A.",
+      "hints": [
+        "Because \\(5\\) and \\(9\\) are relatively prime, determine when both boys first complete whole numbers of laps",
+        "Before that finish time, meetings occur whenever their combined distance is another whole lap"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1988-p9",
+  "title": "1988 AIME Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.units-digit",
+      "label": "Units digit",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1988,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 33.1,
+    "source": 1880,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Find the smallest positive integer whose cube ends in \\(888.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "192",
+    "value": "192"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1988-p9.live",
+      "kind": "proof-sketch",
+      "text": "Write the number as \\(10a+2.\\) Expanding the required congruence modulo \\(125\\) and dividing by \\(5\\) gives \\[20a^2-a-1\\equiv0\\pmod{25}.\\] Reducing first modulo \\(5\\) gives \\(a\\equiv4\\pmod5;\\) substituting \\(a=4+5b\\) then gives \\(b\\equiv3\\pmod5.\\) Thus \\(a\\equiv19\\pmod{25},\\) and the smallest candidate is \\(10(19)+2=192.\\) It is even, so its cube is also \\(0\\pmod8,\\) and indeed \\(192^3=7{,}077{,}888.\\)",
+      "hints": [
+        "The units digit forces the number to have the form \\(10a+2\\)",
+        "Reduce \\((10a+2)^3\\equiv888\\pmod{1000}\\) first modulo \\(125\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

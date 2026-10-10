@@ -1,0 +1,48 @@
+{
+  "id": "prob.hmmt-feb-calculus-2008-p7",
+  "title": "2008 HMMT February Calculus Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2008,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 94.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find \\(p\\) so that \\(\\lim _{x \\rightarrow \\infty} x^{p}(\\sqrt[3]{x+1}+\\sqrt[3]{x-1}-2 \\sqrt[3]{x})\\) is some non-zero real number.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-calculus-2008-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\sqrt{\\frac{5}{3}}\\) Make the substitution \\(t=\\frac{1}{x}\\). Then the limit equals to\n\n\\[\\lim _{t \\rightarrow 0} t^{-p}\\left(\\sqrt[3]{\\frac{1}{t}+1}+\\sqrt[3]{\\frac{1}{t}-1}-2 \\sqrt[3]{\\frac{1}{t}}\\right)=\\lim _{t \\rightarrow 0} t^{-p-\\frac{1}{3}}(\\sqrt[3]{1+t}+\\sqrt[3]{1-t}-2)\\]\n\nWe need the degree of the first nonzero term in the MacLaurin expansion of \\(\\sqrt[3]{1+t}+\\sqrt[3]{1-t}-2\\). We have\n\n\\[\\sqrt[3]{1+t}=1+\\frac{1}{3} t-\\frac{1}{9} t^{2}+o\\left(t^{2}\\right), \\quad \\sqrt[3]{1-t}=1-\\frac{1}{3} t-\\frac{1}{9} t^{2}+o\\left(t^{2}\\right)\\]\n\nIt follows that \\(\\sqrt[3]{1+t}+\\sqrt[3]{1-t}-2=-\\frac{2}{9} t^{2}+o\\left(t^{2}\\right)\\). By consider the degree of the leading term, it follows that \\(-p-\\frac{1}{3}=-2\\). So \\(p=\\frac{5}{3}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

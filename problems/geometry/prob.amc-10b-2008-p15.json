@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-10b-2008-p15",
+  "title": "2008 AMC 10B Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-triple",
+      "label": "Pythagorean Triple",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2008,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 22.2,
+    "source": 1310,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many right triangles have integer leg lengths \\(a\\) and \\(b\\) and a hypotenuse of length \\(b+1,\\) where \\(b\\lt 100?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(10\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2008-p15.live",
+      "kind": "proof-sketch",
+      "text": "From \\(a^2+b^2=(b+1)^2\\) we get \\(a^2=2b+1,\\) so \\(a\\) is odd and \\(a^2\\) is an odd perfect square.\n\nSince \\(b\\lt 100,\\) we need \\(a^2=2b+1\\lt 201,\\) and \\(a^2\\ge 9\\) for \\(b\\ge 4.\\) The odd squares \\(9,25,49,81,121,169\\) give \\(a=3,5,7,9,11,13,\\) which is \\(6\\) triangles.\n\nThus, the correct answer is A.",
+      "hints": [
+        "Set \\(a^2+b^2=(b+1)^2\\) and simplify",
+        "This gives \\(a^2=2b+1,\\) so \\(a^2\\) is an odd perfect square with \\(a^2\\lt 201\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

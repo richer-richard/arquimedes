@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-guts-2013-p8",
+  "title": "2013 HMMT February Guts Problem 8",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.counting-methods",
+      "label": "Counting Methods",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.math-word-problems",
+      "label": "Math Word Problems",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2013,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 73.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In a game, there are three indistinguishable boxes; one box contains two red balls, one contains two blue balls, and the last contains one ball of each color. To play, Raj first predicts whether he will draw two balls of the same color or two of different colors. Then, he picks a box, draws a ball at random, looks at the color, and replaces the ball in the same box. Finally, he repeats this; however, the boxes are not shuffled between draws, so he can determine whether he wants to draw again from the same box. Raj wins if he predicts correctly; if he plays optimally, what is the probability that he will win?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2013-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "| \\(\\frac{5}{6}\\) | Call the box with two red balls box 1, the box with one of each color box 2 , and the |\n| :---: | :---: | box with two blue balls box 3. Without loss of generality, assume that the first ball that Bob draws is red. If Bob picked box 1 , then he would have picked a red ball with probability 1 , and if Bob picked box 2 , then he would have picked a red ball with probability \\(\\frac{1}{2}\\). Therefore, the probability that he picked box 1 is \\(\\frac{1}{1+\\frac{1}{2}}=\\frac{2}{3}\\), and the probability that he picked box 2 is \\(\\frac{1}{3}\\). We will now consider both possible predictions and find which one gives a better probability of winning, assuming optimal play.\n\nIf Bob predicts that he will draw two balls of the same color, then there are two possible plays: he draws from the same box, or he draws from a different box. If he draws from the same box, then in the \\(\\frac{2}{3}\\) chance that he originally picked box 1 , he will always win, and in the \\(\\frac{1}{3}\\) chance that he picked box 2 , he will win with probability \\(\\frac{1}{2}\\), for a total probability of \\(\\frac{2}{3}+\\frac{1}{3} \\cdot \\frac{1}{2}=\\frac{5}{6}\\). If he draws from a different box, then if he originally picked box 1 , he will win with probability \\(\\frac{1}{4}\\) and if he originally picked box 2 , he will win with probability \\(\\frac{1}{2}\\), for a total probability of \\(\\frac{2}{3} \\cdot \\frac{1}{4}+\\frac{1}{3} \\cdot \\frac{1}{2}=\\frac{1}{3}\\).\n\nIf Bob predicts that he will draw two balls of different colors, then we can consider the same two possible plays. Using similar calculations, if he draws from the same box, then he will win with probability \\(\\frac{1}{6}\\), and if he draws from a different box, then he will win with probability \\(\\frac{2}{3}\\). Looking at all cases, Bob's best play is to predict that he will draw two balls of the same color and then draw the second ball from the same box, with a winning probability of \\(\\frac{5}{6}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

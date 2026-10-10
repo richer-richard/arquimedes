@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2025-p6",
+  "title": "2025 AMC 10B Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area",
+      "label": "Area",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2025,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 21.0,
+    "source": 1410,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The line \\(y = \\tfrac{1}{3}x + 1\\) divides the square region defined by \\(0 \\le x \\le 2\\) and \\(0 \\le y \\le 2\\) into an upper region and a lower region. The line \\(x = a\\) divides the lower region into two regions of equal area. Then \\(a\\) can be written as \\(\\sqrt{s} - t,\\) where \\(s\\) and \\(t\\) are positive integers. What is \\(s + t?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(19\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(22\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "20"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2025-p6.live",
+      "kind": "proof-sketch",
+      "text": "The lower region has area \\(\\int_0^2\\left(\\tfrac{x}{3} + 1\\right)dx = \\tfrac{2}{3} + 2 = \\tfrac{8}{3}.\\) The slice with \\(0 \\le x \\le a\\) is a trapezoid of area \\(a + \\tfrac{a^2}{6}.\\) We want that to be half the total, namely \\(\\tfrac{4}{3},\\) so \\(a^2 + 6a - 8 = 0\\) and \\(a = -3 + \\sqrt{17}.\\) Then \\(s = 17,\\) \\(t = 3,\\) and \\(s + t = 20.\\) Therefore, the answer is C.",
+      "hints": [
+        "The lower region left of \\(x = a\\) is a trapezoid with vertical sides \\(1\\) and \\(\\tfrac{a}{3} + 1\\) and width \\(a\\)",
+        "The total lower area is \\(\\tfrac{8}{3},\\) so set \\(a + \\tfrac{a^2}{6}\\) equal to half of it, \\(\\tfrac{4}{3},\\) and solve the quadratic"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2011-p19",
+  "title": "2011 AMC 10A Problem 19",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.difference-of-squares",
+      "label": "Difference of squares",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.percentage",
+      "label": "Percentage",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2011,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 29.8,
+    "source": 1750,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In \\(1991\\) the population of a town was a perfect square. Ten years later, after an increase of \\(150\\) people, the population was \\(9\\) more than a perfect square. Now, in \\(2011,\\) with an increase of another \\(150\\) people, the population is once again a perfect square. Which of the following is closest to the percent growth of the town’s population during this twenty-year period?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(42\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(47\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(52\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(57\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(62\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2011-p19.live",
+      "kind": "proof-sketch",
+      "text": "Let the population in \\(1991\\) be \\(p^2.\\) Then let the population in \\(2001\\) be \\(q^2 + 9.\\)\n\nUsing these values, we have \\[ p^2 + 150 = q^2 + 9 \\] \\[ q^2 - p^2 = 141. \\]\n\nFactoring, we get \\[ (q - p)(q + p) = 141. \\]\n\nAs \\(p\\) and \\(q\\) are integers, we have that the only possible values for \\(q - p\\) and \\(q + p\\) are \\((1, 141)\\) and \\((3, 47).\\)\n\nTrying the first pair, we have \\[q-p=1\\] and \\[q+p=141,\\] which adding together and dividing gives us \\(q = 71\\) and \\(p = 70.\\)\n\nWe have that \\(p^2 + 300\\) is not a square number, which means that this pair is the wrong one.\n\nTrying the other pair and using the same strategy gives us \\(q = 25\\) and \\(p = 22.\\)\n\nNow, \\(p^2 + 300 = 784,\\) which is a perfect square. The percent increase in population is then \\[ \\dfrac{300}{22^2} \\cdot 100 \\% \\approx 62 \\%. \\]\n\nThus, E is the correct answer.",
+      "hints": [
+        "Let the \\(1991\\) population be \\(p^2\\)",
+        "Use \\((q-p)(q+p)=141\\) and test the factor pairs"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

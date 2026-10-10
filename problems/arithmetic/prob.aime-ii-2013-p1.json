@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-ii-2013-p1",
+  "title": "2013 AIME II Problem 1",
+  "category": "arithmetic",
+  "subjects": [
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "arith.clock",
+      "label": "Clock",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "arith.ratio-and-proportion",
+      "label": "Ratio and proportion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "arith.unit-conversion",
+      "label": "Unit conversion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2013,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 42.2,
+    "source": 1820,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Suppose that the measurement of time during the day is converted to the metric system so that each day has \\(10\\) metric hours, and each metric hour has \\(100\\) metric minutes. Digital clocks would then be produced that would read \\(9{:}99\\) just before midnight, \\(0{:}00\\) at midnight, \\(1{:}25\\) at the former \\(3{:}00\\) AM, and \\(7{:}50\\) at the former \\(6{:}00\\) PM. After the conversion, a person who wanted to wake up at the equivalent of the former \\(6{:}36\\) AM would set his new digital alarm clock for \\(A{:}BC,\\) where \\(A,\\) \\(B,\\) and \\(C\\) are digits. Find \\(100A + 10B + C.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "275",
+    "value": "275"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2013-p1.live",
+      "kind": "proof-sketch",
+      "text": "An ordinary day has \\(60 \\cdot 24 = 1440\\) minutes, and \\(6{:}36\\) AM comes \\(6 \\cdot 60 + 36 = 396\\) minutes after midnight. A metric day has \\(10 \\cdot 100 = 1000\\) metric minutes, so the equivalent metric time is \\[\\frac{396}{1440} \\cdot 1000 = 275\\] metric minutes after midnight, which the new clock displays as \\(2{:}75.\\)\n\nTherefore \\(100A + 10B + C = 275.\\)",
+      "hints": [
+        "Both clocks measure the same fraction of a full day, and a metric day has \\(1000\\) metric minutes",
+        "The former \\(6{:}36\\) AM comes \\(396\\) of the \\(1440\\) ordinary minutes into the day; the alarm setting is that same fraction of \\(1000\\) metric minutes"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2020-p7",
+  "title": "2020 AIME II Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cone",
+      "label": "Cone",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.sphere",
+      "label": "Sphere",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2020,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 50.5,
+    "source": 2560,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Two congruent right circular cones each with base radius \\(3\\) and height \\(8\\) have axes of symmetry that intersect at right angles at a point in the interior of the cones a distance \\(3\\) from the base of each cone. A sphere with radius \\(r\\) lies within both cones. The maximum possible value of \\(r^2\\) is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "298",
+    "value": "298"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2020-p7.live",
+      "kind": "proof-sketch",
+      "text": "Put the origin at the point where the axes cross, and measure signed coordinates \\(u_1, u_2\\) along the two axes. Along its axis, each cone has its apex at distance \\(8 - 3 = 5\\) from the origin and its base plane at distance \\(3\\) on the other side. Slicing a cone by any plane through its axis gives a triangle whose slant side, in coordinates \\((u, w)\\) with \\(w \\ge 0\\) the distance from the axis, is the line through \\((5, 0)\\) and \\((-3, 3),\\) namely \\(3u + 8w = 15.\\)\n\nA sphere of radius \\(r\\) centered at a point with axial coordinate \\(u\\) and distance \\(\\rho\\) from the axis fits inside that cone only if its cross-section fits inside the triangle, so \\(r \\le \\frac{15 - 3u - 8\\rho}{\\sqrt{73}}.\\) Since the two axes are perpendicular, the distance from the center to axis \\(1\\) is at least \\(|u_2|,\\) and vice versa. Adding the two constraints, \\[ \\begin{aligned} 2\\sqrt{73}\\,r &\\le 30 - 3(u_1 + u_2) \\\\ &\\quad {}- 8(|u_1| + |u_2|) \\\\ &\\le 30, \\end{aligned} \\] because \\(3(u_1 + u_2) \\ge -3(|u_1| + |u_2|)\\) \\(\\ge -8(|u_1| + |u_2|).\\) Hence \\(r \\le \\frac{15}{\\sqrt{73}}.\\)\n\nThe sphere of radius \\(\\frac{15}{\\sqrt{73}}\\) centered at the origin achieves this: its distance to each slant surface is \\(\\frac{|3 \\cdot 0 + 8 \\cdot 0 - 15|}{\\sqrt{3^2 + 8^2}} = \\frac{15}{\\sqrt{73}},\\) and its distance \\(3\\) to each base plane is larger. So the maximum of \\(r^2\\) is \\(\\frac{225}{73},\\) and \\(m + n = 225 + 73 = 298.\\)",
+      "hints": [
+        "In the plane of the two axes, each cone’s cross-section is a triangle with apex \\(5\\) beyond the intersection point and base half-width \\(3\\) at distance \\(3\\) on the other side",
+        "Center the sphere at the intersection point; its radius is the distance from that point to the slant line through \\((5, 0)\\) and \\((-3, 3)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2002-p2",
+  "title": "2002 USAMO Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2002,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 81.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(ABC\\) be a triangle such that\n\n\\[\n\\left( \\cot \\frac{A}{2} \\right)^2 + \\left( 2 \\cot \\frac{B}{2} \\right)^2 + \\left( 3 \\cot \\frac{C}{2} \\right)^2 = \\left( \\frac{6s}{7r} \\right)^2,\n\\]\n\nwhere \\(s\\) and \\(r\\) denote its semiperimeter and inradius, respectively. Prove that triangle \\(ABC\\) is similar to a triangle \\(T\\) whose side lengths are all positive integers with no common divisor and determine those integers.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2002-p2.imported",
+      "kind": "proof-sketch",
+      "text": "Let $a,b,c$ denote $BC, CA, AB$, respectively. Since the line from a triangle's incenter to one of its vertices bisects the angle at the triangle's vertex, the condition of the problem is equivalent to the\n$\\left( \\frac{s-a}{r} \\right)^2 + 4\\left( \\frac{s-b}{r} \\right)^2 + 9\\left( \\frac{s-c}{r} \\right)^2 = \\left( \\frac{6s}{7r} \\right)^2$,\nor\n$\\frac{(s-a)^2}{36} + \\frac{(s-b)^2}{9} + \\frac{(s-c)^2}{4} = \\frac{s^2}{36 + 9 + 4}$.\nBut by the Cauchy-Schwarz Inequality, we know\n$\\begin{matrix} (36 + 9 + 4) \\left[ \\frac{(s-a)^2}{36} + \\frac{(s-b)^2}{9} + \\frac{(s-c)^2}{4} \\right] & \\ge &\\left[ (s-a) + (s-b) + (s-c) \\right]^2\\\\ & = & s^2 \\\\ \\qquad\\qquad \\quad \\quad \\frac{(s-a)^2}{36} + \\frac{(s-b)^2}{9} + \\frac{(s-c)^2}{4} & \\ge &\\frac{s^2}{36 + 9 + 4} \\; , \\end{matrix}$\nwith equality only when $\\frac{(s-a)^2}{36}, \\frac{(s-b)^2}{9}, \\frac{(s-c)^2}{4}$ are directly proportional to 36, 9, 4, respectively. Therefore (clearing denominators and taking square roots) our problem requires that $(s-a), (s-b), (s-c)$ be directly proportional to 36, 9, 4, and since $a = (s-b) + (s-c)$ etc., this is equivalent to the condition that $a,b,c$ be in proportion with 13, 40, 45, Q.E.D.\nSidenote: A 13, 40, 45 obtuse triangle has an integer area of 252 and an inradius of $\\frac{36}{7}$.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

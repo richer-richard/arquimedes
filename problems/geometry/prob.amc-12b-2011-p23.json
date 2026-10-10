@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12b-2011-p23",
+  "title": "2011 AMC 12B Problem 23",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.lattice-point",
+      "label": "Lattice point",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2011,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 37.0,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "A bug travels in the coordinate plane, moving only along the lines that are parallel to the \\(x\\)-axis or \\(y\\)-axis. Let \\(A=(-3, 2)\\) and \\(B=(3, -2).\\) Consider all possible paths of the bug from \\(A\\) to \\(B\\) of length at most \\(20.\\) How many points with integer coordinates lie on at least one of these paths?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(161\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(185\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(195\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(227\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(255\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "195"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2011-p23.live",
+      "kind": "proof-sketch",
+      "text": "A lattice point \\(X=(x,y)\\) lies on some path exactly when \\[ \\begin{aligned} d&=|x-3|+|x+3| \\\\ &\\quad {}+|y-2|+|y+2|\\le20. \\end{aligned} \\] This expression is unchanged when \\(x\\to-x\\) or \\(y\\to-y,\\) so we count points with \\(x\\ge0,\\) \\(y\\ge0,\\) multiply by \\(4,\\) and correct for the axes.\n\nIf \\(0\\le x\\le3\\) and \\(0\\le y\\le2,\\) all \\(4\\cdot3=12\\) points work. If \\(0\\le x\\le3\\) and \\(y\\ge3,\\) then \\(y\\le7,\\) giving \\(4\\cdot5=20\\) points. If \\(x\\ge4\\) and \\(0\\le y\\le2,\\) then \\(x\\le8,\\) giving \\(5\\cdot3=15\\) points. Finally, for \\(x\\ge4\\) and \\(y\\ge3,\\) the condition is \\(x+y\\le10,\\) giving \\(4+3+2+1=10\\) points. Thus there are \\(57\\) in the first quadrant, including \\(15\\) on the nonnegative axes. By symmetry the total is \\[ 4\\cdot57-2\\cdot15-3=195. \\]\n\nThus, the correct answer is C.",
+      "hints": [
+        "A point \\(X\\) lies on such a path iff its taxicab distances satisfy \\(d(A,X)+d(X,B)\\le20\\)",
+        "This is \\(|x-3|+|x+3|\\) \\(+|y-2|+|y+2|\\le20;\\) count by symmetry across the axes"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

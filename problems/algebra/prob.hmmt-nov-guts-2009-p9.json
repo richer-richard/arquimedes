@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-guts-2009-p9",
+  "title": "2009 HMMT November Guts Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2009,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 48.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Daniel wrote all the positive integers from 1 to \\(n\\) inclusive on a piece of paper. After careful observation, he realized that the sum of all the digits that he wrote was exactly 10,000 . Find \\(n\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2009-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "799 Let \\(S(n)\\) denote the sum of the digits of \\(n\\), and let \\(f(x)=\\sum_{n=0}^{x} S(n)\\). (We may add \\(n=0\\) because \\(S(0)=0\\).) Observe that:\n\n\\[f(99)=\\sum_{a=0}^{9}\\left(\\sum_{b=0}^{9}(a+b)\\right)=10 \\sum_{b=0}^{9} b+10 \\sum_{a=0}^{9} a=900\\]\n\nIf \\(a\\) is an integer between 1 and 9 inclusive, then:\n\n\\[\\sum_{n=100 a}^{100 a+99} S(n)=\\sum_{n=100 a}^{100 a+99}(a+S(n-100 a))=100 a+f(99)=100 a+900\\]\n\nSumming, we get:\n\n\\[f(100 a+99)=\\sum_{n=0}^{a}(100 a+900)=900(a+1)+50 a(a+1)\\]\n\nThis formula can be used to find benchmarks. However, it turns out that this formula alone will suffice, as things turn out rather nicely:\n\n\\[\\begin{aligned}\n900(a+1)+50 a(a+1) & =10000 \\\\\n50 a^{2}+950 a+900 & =10000 \\\\\n50 a^{2}+950 a-9100 & =0 \\\\\n50(a+26)(a-7) & =0 \\\\\na & =7\n\\end{aligned}\\]\n\nTherefore \\(f(799)=10000\\), and our answer is 799 .\n\n## \\(2^{\\text {nd }}\\) ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 7 NOVEMBER 2009 - GUTS ROUND",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

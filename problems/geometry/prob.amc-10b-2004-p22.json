@@ -1,0 +1,92 @@
+{
+  "id": "prob.amc-10b-2004-p22",
+  "title": "2004 AMC 10B Problem 22",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circumcircle-circumcenter-and-circumradius",
+      "label": "Circumcircle, circumcenter, and circumradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.incircle-incenter-and-inradius",
+      "label": "Incircle, incenter, and inradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.right-triangle",
+      "label": "Right triangle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2004,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 34.0,
+    "source": 1770,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A triangle with sides of \\(5,\\) \\(12,\\) and \\(13\\) has both an inscribed and a circumscribed circle. What is the distance between the centers of those circles?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{3\\sqrt{5}}{2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{7}{2}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\sqrt{15}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{\\sqrt{65}}{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{9}{2}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2004-p22.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(5^2 + 12^2 = 13^2,\\) the triangle is right. Place it at \\((0, 0),\\) \\((5, 0),\\) \\((0, 12).\\) The circumcenter is the midpoint of the hypotenuse, \\(\\left(\\tfrac52, 6\\right).\\)\n\nThe inradius satisfies \\((12 - r) + (5 - r) = 13,\\) so \\(r = 2\\) and the incenter is \\((2, 2).\\)\n\nThe distance is \\[ \\begin{gathered} \\sqrt{\\left(\\tfrac52 - 2\\right)^2 + (6 - 2)^2} \\\\ = \\sqrt{\\tfrac14 + 16} \\\\ = \\dfrac{\\sqrt{65}}{2}. \\end{gathered} \\]\n\nThus, the correct answer is D.",
+      "hints": [
+        "Place the right triangle with vertices \\((0, 0),\\) \\((5, 0),\\) and \\((0, 12)\\)",
+        "The circumcenter is the midpoint of the hypotenuse; a right triangle’s inradius is \\(r = \\tfrac{a + b - c}{2}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

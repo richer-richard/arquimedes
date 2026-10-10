@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-guts-2008-p22",
+  "title": "2008 HMMT February Guts Problem 22",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2008,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 79.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For a positive integer \\(n\\), let \\(\\theta(n)\\) denote the number of integers \\(0 \\leq x<2010\\) such that \\(x^{2}-n\\) is divisible by 2010. Determine the remainder when \\(\\sum_{n=0}^{2009} n \\cdot \\theta(n)\\) is divided by 2010.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2008-p22.hmmt",
+      "kind": "proof-sketch",
+      "text": "335 Let us consider the sum \\(\\sum_{n=0}^{2009} n \\cdot \\theta(n)(\\bmod 2010)\\) in a another way. Consider the sum \\(0^{2}+1^{2}+2^{2}+\\cdots+2007^{2}(\\bmod 2010)\\). For each \\(0 \\leq n<2010\\), in the latter sum, the term \\(n\\) appears \\(\\theta(n)\\) times, so the sum is congruent to \\(\\sum_{n=0}^{2009} n \\cdot \\theta(n)\\). In other words,\n\n\\[\\sum_{n=0}^{2009} n \\cdot \\theta(n)=\\sum_{n=0}^{2009} n^{2}=\\frac{(2009)(2009+1)(2 \\cdot 2009+1)}{6} \\equiv(-1) \\cdot \\frac{2010}{6} \\cdot(-1)=335 \\quad(\\bmod 2010)\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

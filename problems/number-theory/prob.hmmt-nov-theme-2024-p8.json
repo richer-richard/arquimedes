@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-theme-2024-p8",
+  "title": "2024 HMMT November Theme Problem 8",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.greatest-common-divisors-gcd",
+      "label": "Greatest common divisors (gcd)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.number-of-divisors",
+      "label": "Τ (number of divisors)",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2024,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 49.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For all positive integers \\(r\\) and \\(s\\), let \\(\\operatorname{Top}(r, s)\\) denote the top number (i.e., numerator) when \\(\\frac{r}{s}\\) is written in simplified form. For instance, \\(\\operatorname{Top}(20,24)=5\\). Compute the number of ordered pairs of positive integers \\((a, z)\\) such that \\(200 \\leq a \\leq 300\\) and \\(\\operatorname{Top}(a, z)=\\operatorname{Top}(z, a-1)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "38",
+    "value": "38"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2024-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "In general, \\(\\operatorname{Top}(r, s)=\\frac{r}{\\operatorname{gcd}(r, s)}\\). We characterize all possible \\((a, z)\\) as follows.\nClaim 1. For any positive integers \\(a\\) and \\(z\\), we have \\(\\operatorname{Top}(a, z)=\\operatorname{Top}(z, a-1)\\) if and only if there exists positive integers \\(d\\) and \\(e\\) such that \\(e \\mid d^{2}-1, a=d^{2}\\), and \\(z=d e\\).\n\nProof. \\((\\Leftarrow)\\) From \\(e \\mid d^{2}-1\\), we deduce that \\(\\operatorname{gcd}(d, e)=1\\). Thus, \\(\\operatorname{Top}(a, z)=\\frac{d^{2}}{\\operatorname{gcd}\\left(d^{2}, d e\\right)}=\\frac{d^{2}}{d}=d\\). We also have \\(\\operatorname{gcd}(z, a-1)=\\operatorname{gcd}\\left(d e, d^{2}-1\\right)=e, \\operatorname{so} \\operatorname{Top}(z, a-1)=\\frac{d e}{e}=d\\) as well.\n\\((\\Rightarrow)\\) Let \\(d=\\operatorname{gcd}(a, z)\\) and \\(e=\\operatorname{gcd}(z, a-1)\\). We have that \\(\\operatorname{gcd}(d, e)=1\\) because it divides both \\(a\\) and \\(a-1\\). The equation implies that \\(\\frac{a}{d}=\\frac{z}{e}\\), or \\(\\frac{a}{z}=\\frac{d}{e}\\). The left side has simplified form \\(\\frac{a / d}{z / d}\\), and the right side is already simplified. Thus, \\(a=d^{2}\\) and \\(z=d e\\). Finally, \\(e=\\operatorname{gcd}(z, a-1) \\mid a-1=d^{2}-1\\).\n\nThe condition that \\(200 \\leq a \\leq 300\\) implies \\(d \\in\\{15,16,17\\}\\). Once we select \\(d\\), each divisor \\(e\\) of \\(d^{2}-1\\) yields a solution. Thus, the answer is\n\n\\[\\begin{aligned}\n\\tau\\left(15^{2}-1\\right)+\\tau\\left(16^{2}-1\\right)+\\tau\\left(17^{2}-1\\right) & =\\tau(14 \\cdot 16)+\\tau(15 \\cdot 17)+\\tau(16 \\cdot 18) \\\\\n& =12+8+18=38\n\\end{aligned}\\]\n\nwhere \\(\\tau(n)\\) is the number of divisors of \\(n\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

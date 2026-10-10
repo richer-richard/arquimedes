@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-algebra-2010-p9",
+  "title": "2010 HMMT February Algebra Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2010,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 81.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(f(x)=c x(x-1)\\), where \\(c\\) is a positive real number. We use \\(f^{n}(x)\\) to denote the polynomial obtained by composing \\(f\\) with itself \\(n\\) times. For every positive integer \\(n\\), all the roots of \\(f^{n}(x)\\) are real. What is the smallest possible value of \\(c\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-2010-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "2 We first prove that all roots of \\(f^{n}(x)\\) are greater than or equal to \\(-\\frac{c}{4}\\) and less than or equal to \\(1+\\frac{c}{4}\\). Suppose that \\(r\\) is a root of \\(f^{n}(x)\\). If \\(r=-\\frac{c}{4}, f^{-1}(r)=\\left\\{\\frac{1}{2}\\right\\}\\) and \\(-\\frac{c}{4}<\\frac{1}{2}<1+\\frac{c}{4}\\) since \\(c\\) is positive. Suppose \\(r \\neq-\\frac{c}{4}\\); by the quadratic formula, there exist two complex numbers \\(r_{1}, r_{2}\\) such that \\(r_{1}+r_{2}=1\\) and \\(f\\left(r_{1}\\right)=f\\left(r_{2}\\right)=r\\). Thus all the roots of \\(f^{n}(x)\\) (except \\(\\frac{1}{2}\\) ) come in pairs that sum to 1 . No root \\(r\\) of \\(f^{n}(x)\\) can be less than \\(-\\frac{c}{4}\\), otherwise \\(f^{n+1}(x)\\) has an imaginary root, \\(f^{-1}(r)\\). Also, no root \\(r\\) of \\(f^{n}(x)\\) can be greater than \\(1+\\frac{c}{4}\\), otherwise its \"conjugate\" root will be less than \\(-\\frac{c}{4}\\).\nDefine \\(g(x)=\\frac{1}{2}\\left(1+\\sqrt{1+\\frac{4 x}{c}}\\right)\\), the larger inverse of \\(f(x)\\). Note that \\(g^{n}(x)\\) is the largest element of \\(f^{-n}(x)\\) (which is a set). \\(g^{n}(0)\\) should be less than or equal to \\(1+\\frac{c}{4}\\) for all \\(n\\). Let \\(x_{0}\\) be the nonzero real number such that \\(g\\left(x_{0}\\right)=x_{0}\\); then \\(c x_{0}\\left(x_{0}-1\\right)=x_{0} \\Longrightarrow x_{o}=1+\\frac{1}{c}\\). \\(x_{0}<g(x)<x\\) if \\(x>x_{0}\\) and \\(x<g(x)<x_{0}\\) if \\(x<x_{0}\\); it can be proved that \\(g^{n}\\) converges to \\(x_{0}\\). Hence we have the requirement that \\(x_{0}=1+\\frac{1}{c} \\leq 1+\\frac{c}{4} \\Longrightarrow c \\geq 2\\).\nWe verify that \\(c=2\\) is possible. All the roots of \\(f^{-} n(x)\\) will be real if \\(g(0) \\leq 1+\\frac{c}{4}=\\frac{3}{2}\\). We know that \\(0<\\frac{3}{2} \\Longrightarrow g(0)<\\frac{3}{2}\\), so \\(g^{2}(0)<\\frac{3}{2}\\) and \\(g^{n}(0)<g^{n+1}(0)<\\frac{3}{2}\\) for all \\(n\\). Therefore all the roots of \\(f^{n}(x)\\) are real.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

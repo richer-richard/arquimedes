@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-guts-2010-p20",
+  "title": "2010 HMMT November Guts Problem 20",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2010,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 56.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Given a permutation \\(\\pi\\) of the set \\(\\{1,2, \\ldots, 10\\}\\), define a rotated cycle as a set of three integers \\(i, j, k\\) such that \\(i<j<k\\) and \\(\\pi(j)<\\pi(k)<\\pi(i)\\). What is the total number of rotated cycles over all permutations \\(\\pi\\) of the set \\(\\{1,2, \\ldots, 10\\}\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2010-p20.hmmt",
+      "kind": "proof-sketch",
+      "text": "72576000 Let us consider a triple \\((i, j, k)\\) with \\(i<j<k\\) and determine how many permutations rotate it. There are \\(\\binom{10}{3}\\) choices for the values of \\(\\pi(i), \\pi(j), \\pi(k)\\) and the choice of this set of three determines the values of \\(\\pi(i), \\pi(j), \\pi(k)\\). The other 7 values then have 7 ! ways to be arranged (any permutation of them will work), so exactly \\(\\binom{10}{3} 7\\) ! permutations rotate \\((i, j, k)\\). Therefore, as there are \\(\\binom{10}{3}\\) such triples, the total number of rotated triples is \\(\\binom{10}{3}^{2} \\cdot 7!=72576000\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

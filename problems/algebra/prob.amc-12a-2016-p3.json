@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12a-2016-p3",
+  "title": "2016 AMC 12A Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.custom-operation",
+      "label": "Custom operation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2016,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 15.7,
+    "source": 1200,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The remainder function can be defined for all real numbers \\(x\\) and \\(y\\) with \\(y\\neq 0\\) by \\[ \\text{rem}(x,y)=x-y\\left\\lfloor \\dfrac{x}{y}\\right\\rfloor, \\] where \\(\\left\\lfloor \\dfrac{x}{y}\\right\\rfloor\\) denotes the greatest integer less than or equal to \\(\\dfrac{x}{y}.\\) What is the value of \\(\\text{rem}\\left(\\dfrac{3}{8},-\\dfrac{2}{5}\\right)?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(-\\dfrac{3}{8}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(-\\dfrac{1}{40}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{3}{8}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{31}{40}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "-1/40"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2016-p3.live",
+      "kind": "proof-sketch",
+      "text": "First, \\[ \\begin{gathered} \\dfrac{x}{y}=\\dfrac{\\frac{3}{8}}{-\\frac{2}{5}}\\\\ =\\dfrac{3}{8}\\cdot\\left(-\\dfrac{5}{2}\\right)\\\\ =-\\dfrac{15}{16}, \\end{gathered} \\] and \\(\\left\\lfloor -\\dfrac{15}{16}\\right\\rfloor=-1.\\)\n\nTherefore \\[ \\begin{gathered} \\text{rem}\\left(\\dfrac{3}{8},-\\dfrac{2}{5}\\right)\\\\ =\\dfrac{3}{8}-\\left(-\\dfrac{2}{5}\\right)(-1)\\\\ =\\dfrac{3}{8}-\\dfrac{2}{5}\\\\ =\\dfrac{15-16}{40}\\\\ =-\\dfrac{1}{40}. \\end{gathered} \\]\n\nThus, the correct answer is B.",
+      "hints": [
+        "Compute \\(\\dfrac{x}{y}=\\dfrac{\\frac{3}{8}}{-\\frac{2}{5}}\\) first",
+        "\\(\\left\\lfloor -\\dfrac{15}{16}\\right\\rfloor=-1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

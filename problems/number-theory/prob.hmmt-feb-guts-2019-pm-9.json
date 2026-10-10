@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2019-pm-9",
+  "title": "2019 HMMT February Guts Problem M_{9}",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2019,
+    "number": "M_{9}"
+  },
+  "difficulty": {
+    "course": 75.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A\\) and \\(B\\) be the unit digits of \\(\\left\\lceil 7 M_{6}\\right\\rceil\\) and \\(\\left\\lfloor 6 M_{7}\\right\\rfloor\\) respectively. When all the positive integers not containing digit \\(A\\) or \\(B\\) are written in increasing order, what is the \\(2019^{\\text {th }}\\) number in the list?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2019-pm-9.hmmt",
+      "kind": "proof-sketch",
+      "text": "3743\n\\(A=9, B=0\\). First, there are 8 numbers with 1 digit, 64 with two digits, and 512 with three digits. This leaves \\(2019-512-64-8=1435\\) of four-digit numbers we have to go through, starting with 1111 . Since we don't have two digits 0 and 9 , we are basically counting in base 8 , where the digits 01234567 in base 8 are actually 12345678 , and \\(1111_{10}=0000_{8}\\). Converting 1435 to base 8 , we get \\(2633_{8}\\), and mapping this back, we get 3744 . However, we must remember that 1111 is \\(0_{8}\\) under our mapping, so the \\(1435^{\\text {th }}\\) four-digit number is actually 3743 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

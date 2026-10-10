@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1995-p2",
+  "title": "1995 AIME Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1995,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 30.5,
+    "source": 1780,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Find the last three digits of the product of the positive roots of \\[\\sqrt{1995}\\,x^{\\log_{1995}x}=x^2.\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "25",
+    "value": "25"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1995-p2.live",
+      "kind": "proof-sketch",
+      "text": "Put \\(y=\\log_{1995}x,\\) so \\(x=1995^y.\\) The equation becomes \\[1995^{\\frac{1}{2}+y^2}=1995^{2y},\\] and hence \\((y-1)^2=\\frac{1}{2}.\\) The two values of \\(y\\) have sum \\(2,\\) so the product of the corresponding positive roots is \\(1995^2.\\) Since \\(1995\\equiv-5\\pmod {1000},\\) its last three digits are \\(025.\\) The requested AIME answer is \\(25.\\)",
+      "hints": [
+        "Set \\(y=\\log_{1995}x,\\) so \\(x=1995^y\\)",
+        "Compare exponents of \\(1995\\), then use the sum of the two values of \\(y\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

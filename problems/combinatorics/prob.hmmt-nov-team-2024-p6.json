@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-team-2024-p6",
+  "title": "2024 HMMT November Team Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.invariants-and-monovariants",
+      "label": "Invariants and monovariants",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2024,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 54.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "There are 5 people who start with \\(1,2,3,4\\), and 5 cookies, respectively. Every minute, two different people are chosen uniformly at random. If they have \\(a\\) and \\(b\\) cookies and \\(a \\neq b\\), the person with more cookies eats \\(|a-b|\\) of their own cookies. If \\(a=b\\), the minute still passes with nothing happening.\n\nCompute the expected number of minutes until all 5 people have an equal number of cookies.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "25 / 3",
+    "value": "25 / 3"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2024-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "Each person's cookie count can never increase or go below 1, so in order for everyone to have the same number of cookies, everyone must have exactly 1 cookie. The only time the number of people with exactly 1 cookie increases is when one person with exactly 1 cookie and one person with more than 1 cookie are selected.\nSuppose there are currently \\(k\\) people with exactly 1 cookie. Then there are \\(k(5-k)\\) ways for the above to happen. There are 10 possible pairs of people that could be selected, so the expected number of minutes before the number of people with exactly 1 cookie increases to \\(k+1\\) is \\(\\frac{10}{k(5-k)}\\). Initially, there is one person with exactly one cookie, and the process ends when all five people do; by linearity of expectation, the total expected time is the sum of the expected times to get from \\(k\\) to \\(k+1\\) for \\(k=1\\), 2,3 , and 4:\n\n\\[\\frac{10}{4}+\\frac{10}{6}+\\frac{10}{6}+\\frac{10}{4}=\\frac{25}{3}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

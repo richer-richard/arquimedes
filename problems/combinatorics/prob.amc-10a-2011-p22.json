@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2011-p22",
+  "title": "2011 AMC 10A Problem 22",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.permutations",
+      "label": "Permutations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2011,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 30.1,
+    "source": 1840,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Each vertex of convex pentagon \\(ABCDE\\) is to be assigned a color. There are \\(6\\) colors to choose from, and the ends of each diagonal must have different colors. How many different colorings are possible?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2520\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2880\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3120\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3250\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(3750\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "3120"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2011-p22.live",
+      "kind": "proof-sketch",
+      "text": "Note that there are only \\(3\\) cases: all the vertices are different, there is one pair of adjacent vertices with the same colors, or there are \\(2\\) pairs (each pair has a different color).\n\nCase \\(1:\\) all vertices have different colors\n\nThis case just gives us \\(6! = 720\\) different colorings.\n\nCase \\(2:\\) one pair of adjacent vertices has the same color\n\nThere are \\[ \\dfrac{6!}{2} = 360 \\] ways to choose the colors for this case. There are then \\(5\\) options for the pair of vertices.\n\nThis gives us a total of \\[ 360 \\cdot 5 = 1800 \\] colorings for this case.\n\nCase \\(3:\\) two pairs of adjacent vertices have the same color\n\nThere are \\(5\\) choices for the vertex that is not in a pair. There are then \\[ 6 \\cdot 5 \\cdot 4 = 120 \\] choices for the colors. There are then a total of \\[ 120 \\cdot 5 = 600 \\] colorings for this case.\n\nThere are a total of \\[ 720 + 1800 + 600 = 3120 \\] colorings for all the cases.\n\nThus, C is the correct answer.",
+      "hints": [
+        "Case on whether \\(5\\), \\(4\\), or \\(3\\) colors are used",
+        "Repeated colors can occur only on adjacent vertices"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

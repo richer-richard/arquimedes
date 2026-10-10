@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-guts-2019-ph-4",
+  "title": "2019 HMMT February Guts Problem H_{4}",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.floors-and-ceilings",
+      "label": "Floors and ceilings",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2019,
+    "number": "H_{4}"
+  },
+  "difficulty": {
+    "course": 75.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A=\\left\\lceil 1 / H_{3}\\right\\rceil, B=\\left\\lceil H_{5} / 2\\right\\rceil\\). How many ways are there to partition the set \\(\\{1,2, \\ldots, A+B\\}\\) into two sets \\(U\\) and \\(V\\) with size \\(A\\) and \\(B\\) respectively such that the probability that a number chosen from \\(U\\) uniformly at random is greater than a number chosen from \\(V\\) uniformly at random is exactly \\(\\frac{1}{2}\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2019-ph-4.hmmt",
+      "kind": "proof-sketch",
+      "text": "24\n\\(A=4, B=7\\). There are 28 total ways of choosing an element from \\(U\\) and \\(V\\), so there must be 14 ways where \\(U\\) 's is larger. If we relabel the elements to be \\(0,1, \\cdots, 10\\), then element \\(i\\) is greater than exactly \\(i\\) elements in the set. However, we overcount other elements in \\(U\\), so the four elements in \\(U=\\{a, b, c, d\\}\\) must satisfy\n\n\\[(a-0)+(b-1)+(c-2)+(d-3)=14 \\Rightarrow a+b+c+d=20\\]\n\nTo remove the uniqueness condition, we subtract 1 from \\(b, 2\\) from \\(c\\), and 3 from \\(d\\), so we wish to find solutions \\(a \\leq b \\leq c \\leq d \\leq 7\\) to \\(a+b+c+d=14\\). From here, we do casework. If \\(a=0, b=0,1,2,3,4\\) give \\(1,1,2,2,3\\) solutions, respectively. If \\(a=1, b=1,2,3,4\\) give \\(2,2,3,1\\) solutions, respectively. If \\(a=2, b=2,3,4\\) give \\(3,2,1\\) solutions, respectively. If \\(a=3\\), the only solution is \\(3,3,4,4\\). Thus, the answer is \\((1+1+2+2+3)+(2+2+3+1)+(3+2+1)+1=24\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

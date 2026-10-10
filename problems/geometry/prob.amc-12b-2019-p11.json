@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2019-p11",
+  "title": "2019 AMC 12B Problem 11",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.counting-pairs",
+      "label": "Counting pairs",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cube-geometry",
+      "label": "Cube geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2019,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 27.9,
+    "source": 1640,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many unordered pairs of edges of a given cube determine a plane?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(28\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(36\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(42\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(66\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "42"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2019-p11.live",
+      "kind": "proof-sketch",
+      "text": "Two edges determine a plane exactly when they are coplanar, that is, parallel or intersecting.\n\nThe \\(12\\) edges split into \\(3\\) directions of \\(4\\) parallel edges, giving \\(3\\binom{4}{2}=18\\) parallel pairs. Edges sharing a vertex give \\(8\\binom{3}{2}=24\\) intersecting pairs.\n\nThe total is \\(18+24=42.\\)\n\nThus, D is the correct answer.",
+      "hints": [
+        "Two edges determine a plane unless they are skew",
+        "Count the pairs that are parallel and the pairs that share a vertex"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

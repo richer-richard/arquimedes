@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2021-p3",
+  "title": "2021 IMO Problem 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2021,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 115.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(D\\) be an interior point of the acute triangle \\(ABC\\)\nwith \\(AB > AC\\) so that \\(\\angle DAB = \\angle CAD\\).\nThe point \\(E\\) on the segment \\(AC\\) satisfies \\(\\angle ADE =\\angle BCD\\),\nthe point \\(F\\) on the segment \\(AB\\) satisfies \\(\\angle FDA =\\angle DBC\\),\nand the point \\(X\\) on the line \\(AC\\) satisfies \\(CX = BX\\).\nLet \\(O_1\\) and \\(O_2\\) be the circumcenters of the triangles\n\\(ADC\\) and \\(EXD\\), respectively.\nProve that the lines \\(BC\\), \\(EF\\), and \\(O_1O_2\\) are concurrent.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2021-p3.evanchen",
+      "kind": "proof-sketch",
+      "text": "This solution was contributed by Abdullahil Kafi.\n\nClaim.\n Quadrilateral \\(BCEF\\) is cyclic.\n\nProof.\n Let \\(D'\\) be the isogonal conjugate of the point \\(D\\). The\n angle condition implies quadrilateral \\(CEDD'\\) and \\(BFDD'\\)\n are cyclic. By power of point we have \\[ AE\\cdot AC=AD\\cdot AD'=AF\\cdot AB \\]\n So \\(BCEF\\) is cyclic.\n\nClaim.\n Line \\(ZD\\) is tangent to the circles \\((BCD)\\) and \\((DEF)\\)\n where \\(Z=EF\\cap BC\\).\n\nProof.\n Let \\(\\angle CAD=\\angle BAD=\\alpha\\), \\(\\angle BCD=\\beta\\),\n \\(\\angle DBC=\\gamma\\), \\(\\angle ACD=\\phi\\),\n \\(\\angle ABD=\\epsilon\\).\n From \\(\\triangle ABC\\) we have\n \\(2\\alpha+\\beta+\\gamma+\\phi+\\epsilon=180^\\circ\\).\n Let \\(\\ell\\) be a line tangent to \\((BCD)\\) and \\(K\\) be a\n point on it in the same side of \\(AD\\) as \\(C\\) and\n \\(L=AD\\cap BC\\). From our labeling we have,\n \\[\\begin{aligned}\n \\angle AFE &= \\beta + \\phi \\qquad \\angle BFD =\n \\alpha + \\gamma \\qquad \\angle DFE = \\alpha + \\phi\n \\qquad \\angle CDL = \\alpha + \\phi\n \\end{aligned}\\]\n Now \\(\\angle CDJ = 180^\\circ - \\gamma - \\beta - (\\alpha + \\phi) = \\alpha + \\epsilon\\).\n So \\(\\angle DFE = \\angle EDK = \\alpha + \\epsilon\\), which\n means \\(\\ell\\) is also tangent to \\((DEF)\\). Now by the\n radical center theorem we have \\(\\ell\\) passes through\n \\(Z\\).\n\nLet \\(M\\) be the Miquel point of the cyclic quadrilateral\n\\(BCEF\\). From the Miquel configuration we have \\(A\\), \\(M\\), \\(Z\\)\nare collinear and \\((AFEM)\\), \\((ZCEM)\\) are cyclic.\n\nClaim.\n Points \\(B\\), \\(X\\), \\(M\\), \\(E\\) are cyclic.\n\nProof.\n Notice that \\(\\angle EMB = 180^\\circ - \\angle AMB -\\angle EMZ\\)\n \\(=\\) \\(180^\\circ - 2\\angle ACB = \\angle EXB\\).\n\nLet \\(N\\) be the other intersection of circles \\((ACD)\\) and\n\\((DEX)\\) and let \\(R\\) be the intersection of \\(AC\\) and \\(BM\\).\n\n[Diagram omitted from this imported TeX transcription.]\n\nClaim.\n Points \\(B\\), \\(D\\), \\(M\\), \\(N\\) are cyclic.\n\nProof.\n By power of point we have\n \\[\n \\operatorname{Pow}(R, (ACD)) = RC \\cdot RA = RM \\cdot RB\n = RE \\cdot RX = \\operatorname{Pow}(R, (DEX)).\n \\]\n Hence \\(R\\) lies on the radical axis of \\((ACD)\\) and\n \\((DEX)\\), so \\(N\\), \\(R\\), \\(D\\) are collinear. Also\n \\[ RN \\cdot RD = RA \\cdot RC = RM \\cdot RB \\] So \\(BDMN\\)\n is cyclic.\n\nNotice that \\((ACD)\\), \\((BDMN)\\), \\((DEX)\\) are coaxial so their\ncenters are collinear. Now we just need to prove the\ncenters of \\((ACD)\\), \\((BDMN)\\) and \\(Z\\) are collinear. To\nprove this, take a circle \\(\\omega\\) with radius \\(ZD\\)\ncentered at \\(Z\\). Notice that by power of point\n\\[ ZC \\cdot ZB = ZD^2 = ZE \\cdot ZF = ZM \\cdot ZA \\]\nwhich means inversion circle \\(\\omega\\) swaps \\((ACD)\\) and \\((BDMN)\\).\nSo the centers of \\((ACD)\\) and \\((BDMN)\\) must\nhave to be collinear with the center of inversion circle, as desired.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

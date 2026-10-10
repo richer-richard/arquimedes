@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10-2000-p11",
+  "title": "2000 AMC10 11",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.parity",
+      "label": "Parity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.prime",
+      "label": "Prime",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10",
+    "year": 2000,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 20.0,
+    "source": 1370,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Two different prime numbers between \\(4\\) and \\(18\\) are chosen. When their sum is subtracted from their product, which of the following numbers could be obtained?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(60\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(119\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(180\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(231\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "119"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10-2000-p11.live",
+      "kind": "proof-sketch",
+      "text": "The primes between \\(4\\) and \\(18\\) are \\(5,\\) \\(7,\\) \\(11,\\) \\(13,\\) and \\(17.\\) The product of two of them is odd and the sum is even, so \\(xy - (x + y)\\) is odd.\n\nSince \\(xy - (x + y)\\) \\(= (x - 1)(y - 1) - 1\\) increases as either prime increases, the result ranges from \\(5 \\cdot 7 - 12 = 23\\) up to \\(13 \\cdot 17 - 30 = 191.\\)\n\nThe only odd option in \\([23, 191]\\) is \\(119 = 11 \\cdot 13 - (11 + 13).\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "The primes between \\(4\\) and \\(18\\) are \\(5,\\) \\(7,\\) \\(11,\\) \\(13,\\) \\(17,\\) all odd",
+        "Note that \\(xy - (x + y)\\) \\(= (x - 1)(y - 1) - 1,\\) which is odd and increases with \\(x\\) and \\(y\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

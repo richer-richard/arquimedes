@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-8-1988-p21",
+  "title": "1988 AMC 8 Problem 21",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.mean",
+      "label": "Mean",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "prob.median-data",
+      "label": "Median (data)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1988,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 17.2,
+    "source": 1260,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A fifth number, \\(n,\\) is added to the set of numbers \\(\\{3, 6, 9, 10\\}\\) to make the mean of the set of five numbers equal to its median. The number of possible values for \\(n\\) is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "more than \\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "3"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1988-p21.live",
+      "kind": "proof-sketch",
+      "text": "The five numbers have sum \\(28 + n\\) and mean \\(\\dfrac{28 + n}{5}.\\) The median is the middle value when sorted, which is \\(6,\\) \\(n,\\) or \\(9\\) depending on the size of \\(n.\\)\n\nIf the median is \\(6\\): \\(\\dfrac{28 + n}{5} = 6\\) gives \\(n = 2,\\) which is indeed less than \\(6.\\) If the median is \\(n\\): \\(\\dfrac{28 + n}{5} = n\\) gives \\(n = 7,\\) which is between \\(6\\) and \\(9.\\) If the median is \\(9\\): \\(\\dfrac{28 + n}{5} = 9\\) gives \\(n = 17,\\) which is indeed greater than \\(9.\\)\n\nEach case yields a valid value, so \\(n\\) can be \\(2,\\) \\(7,\\) or \\(17\\) — three possible values.\n\nThus, the correct answer is C .",
+      "hints": [
+        "The mean of the five numbers is \\(\\dfrac{28 + n}{5};\\) the median depends on where \\(n\\) lands in the sorted order",
+        "Split into cases: the median is \\(6,\\) is \\(n\\) itself, or is \\(9,\\) and solve the equation mean \\(=\\) median in each"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

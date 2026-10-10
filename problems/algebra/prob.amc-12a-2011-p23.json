@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2011-p23",
+  "title": "2011 AMC 12A Problem 23",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.matrix",
+      "label": "Matrix",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2011,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 41.1,
+    "source": 2560,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(f(z) = \\dfrac{z + a}{z + b}\\) and \\(g(z) = f(f(z)),\\) where \\(a\\) and \\(b\\) are complex numbers. Suppose that \\(|a| = 1\\) and \\(g(g(z)) = z\\) for all \\(z\\) for which \\(g(g(z))\\) is defined. What is the difference between the largest and smallest possible values of \\(|b|?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\sqrt{2} - 1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\sqrt{3} - 1\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2011-p23.live",
+      "kind": "proof-sketch",
+      "text": "Direct composition gives \\[ g(z)=\\dfrac{Az+B}{Cz+D}, \\] where \\(A=1+a,\\) \\(B=a(1+b),\\) \\(C=1+b,\\) and \\(D=a+b^2.\\)\n\nThe matrix \\(\\begin{pmatrix}A&B\\\\C&D\\end{pmatrix}\\) represents \\(g.\\) For \\(g\\circ g\\) to be the identity, its square must be scalar. Comparing the off-diagonal entries and the two diagonal entries gives two possibilities: either \\(B=C=0\\) and \\(A=D,\\) or \\(A+D=0.\\) The first gives \\(b=-1\\) (with \\(a\\ne-1\\)); the second gives \\[ b^2=-(1+2a). \\]\n\nIn the second case, \\(|b|^2=|1+2a|.\\) As \\(a\\) runs around the unit circle, \\(|1+2a|\\) ranges from \\(1\\) to \\(3,\\) so \\(1\\le|b|\\le\\sqrt3.\\) Both endpoints occur: take \\((a,b)=(-1,1)\\) and \\((a,b)=(1,i\\sqrt3).\\) The separate case \\(b=-1\\) also has \\(|b|=1.\\) Therefore the requested difference is \\(\\sqrt3-1.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Represent \\(f\\) by the matrix \\(\\begin{pmatrix} 1 & a \\\\ 1 & b \\end{pmatrix};\\) then \\(g(g(z)) = z\\) means \\(f^4\\) is the identity",
+        "The order-\\(4\\) case forces \\((\\operatorname{tr})^2 = 2\\det,\\) which gives \\(b^2 = -(1 + 2a)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

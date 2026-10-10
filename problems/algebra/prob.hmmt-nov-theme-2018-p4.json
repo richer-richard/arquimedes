@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-theme-2018-p4",
+  "title": "2018 HMMT November Theme Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.diophantine-equations-techniques",
+      "label": "Diophantine Equations techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.linear-and-quadratic-inequalities",
+      "label": "Linear and quadratic inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2018,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 43.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "I have two cents and Bill has \\(n\\) cents. Bill wants to buy some pencils, which come in two different packages. One package of pencils costs 6 cents for 7 pencils, and the other package of pencils costs a dime for a dozen pencils (i.e. 10 cents for 12 pencils). Bill notes that he can spend all \\(n\\) of his cents on some combination of pencil packages to get \\(P\\) pencils. However, if I give my two cents to Bill, he then notes that he can instead spend all \\(n+2\\) of his cents on some combination of pencil packages to get fewer than \\(P\\) pencils. What is the smallest value of \\(n\\) for which this is possible?\nNote: Both times Bill must spend all of his cents on pencil packages, i.e. have zero cents after either purchase.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2018-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 100\nSuppose that Bill buys \\(a\\) packages of 7 and \\(b\\) packages of 12 in the first scenario and \\(c\\) packages of 7 and \\(d\\) packages of 12 in the second scenario. Then we have the following system:\n\n\\[\\begin{aligned}\n& 6 a+10 b=n \\\\\n& 6 c+10 d=n+2 \\\\\n& 7 a+12 b>7 c+12 d .\n\\end{aligned}\\]\n\nSince the packages of 12 give more pencils per cent, we must have \\(b>d\\). Subtract the first two equations and divide by 2 to get\n\n\\[3(c-a)-5(b-d)=1\\]\n\nNote that the last inequality is \\(12(b-d)>7(c-a)\\). The minimal solutions to the equation with \\(b-d>0\\) are\n\n\\[(c-a, b-d)=(2,1),(7,4),(12,7),(17,10)\\]\n\n\\((17,10)\\) is the first pair for which \\(12(b-d)>7(c-a)\\). Hence \\(b \\geq 10\\) so \\(n \\geq 100\\). We can easily verify that \\((a, b, c, d, n)=(0,10,17,0,100)\\) satisfies the system of equations.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

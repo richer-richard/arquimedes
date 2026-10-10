@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2016-p13",
+  "title": "2016 AMC 10A Problem 13",
+  "category": "logic-foundations",
+  "subjects": [
+    "logic-foundations",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "logic.invariant",
+      "label": "Invariant",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "logic.logical-deduction",
+      "label": "Logical deduction",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2016,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 21.5,
+    "source": 1420,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Five friends sat in a movie theater in a row containing \\(5\\) seats, numbered \\(1\\) to \\(5\\) from left to right. (The directions “left” and “right” are from the point of view of the people as they sit in the seats.)\n\nDuring the movie Ada went to the lobby to get some popcorn. When she returned, she found that Bea had moved two seats to the right, Ceci had moved one seat to the left, and Dee and Edie had switched seats, leaving an end seat for Ada. In which seat had Ada been sitting before she got up?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2016-p13.live",
+      "kind": "proof-sketch",
+      "text": "The sum of the occupied seat numbers is \\(1+2+3+4+5=15\\) both before and after the moves. Dee and Edie merely switch seats, so their combined displacement is \\(0.\\) Bea’s displacement is \\(+2,\\) and Ceci’s is \\(-1.\\) Therefore Ada’s displacement must be \\(-1\\) so that the total displacement is \\(0.\\)\n\nAda returns to an end seat. Since she moves one seat left, she must move from seat \\(2\\) to seat \\(1.\\)\n\nThus, the correct answer is B .",
+      "hints": [
+        "Track net displacement of the occupied seats",
+        "Bea moves two right and Ceci moves one left"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

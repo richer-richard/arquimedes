@@ -1,0 +1,76 @@
+{
+  "id": "prob.hmmt-feb-algebra-2003-p3",
+  "title": "2003 HMMT February Algebra Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2003,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 74.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find the smallest \\(n\\) such that \\(n\\) ! ends in 290 zeroes.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-2003-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "1170\nEach 0 represents a factor of \\(10=2 \\cdot 5\\). Thus, we wish to find the smallest factorial that contains at least 290 2's and 290 5's in its prime factorization. Let this number be \\(n\\) !, so the factorization of \\(n\\) ! contains 2 to the power \\(p\\) and 5 to the power \\(q\\), where\n\n\\[p=\\left\\lfloor\\frac{n}{2}\\right\\rfloor+\\left\\lfloor\\frac{n}{2^{2}}\\right\\rfloor+\\left\\lfloor\\frac{n}{2^{3}}\\right\\rfloor+\\cdots \\text { and } q=\\left\\lfloor\\frac{n}{5}\\right\\rfloor+\\left\\lfloor\\frac{n}{5^{2}}\\right\\rfloor+\\left\\lfloor\\frac{n}{5^{3}}\\right\\rfloor+\\cdots\\]\n\n(this takes into account one factor for each single multiple of 2 or 5 that is \\(\\leq n\\), an additional factor for each multiple of \\(2^{2}\\) or \\(5^{2}\\), and so on). Naturally, \\(p \\geq q\\) because 2 is smaller than 5 . Thus, we want to bring \\(q\\) as low to 290 as possible. If \\(q=\\left\\lfloor\\frac{n}{5}\\right\\rfloor+\\left\\lfloor\\frac{n}{5^{2}}\\right\\rfloor+\\left\\lfloor\\frac{n}{5^{3}}\\right\\rfloor+\\cdots\\), we form a rough geometric sequence (by taking away the floor function) whose sum is represented by \\(290 \\approx \\frac{n / 5}{1-1 / 5}\\). Hence we estimate \\(n=1160\\), and this gives us \\(q=288\\). Adding 10 to the value of \\(n\\) gives the necessary two additional factors of 5 , and so the answer is 1170 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

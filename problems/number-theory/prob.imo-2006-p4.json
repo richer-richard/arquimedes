@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2006-p4",
+  "title": "2006 IMO Problem 4",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2006,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 84.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Determine all pairs \\((x,y)\\) of integers such that\n\\[ 1 + 2^x + 2^{2x+1} = y^2. \\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2006-p4.evanchen",
+      "kind": "proof-sketch",
+      "text": "Answers: \\((0, \\pm 2)\\), \\((4, \\pm 23)\\), which work.\n\nAssume \\(x \\ge 4\\).\n\\[ 2^x \\left( 1 + 2^{x+1} \\right)\n = 2^x + 2^{2x+1} = y^2 - 1 = (y-1)(y+1). \\]\nSo either:\n\n• \\(y = 2^{x-1} m + 1\\) for some odd \\(m\\), so\n \\[ 1 + 2^{x+1} = m\\left( 2^{x-2}m+1 \\right)\n \\implies 2^x = \\frac{4(1-m)}{m^2-8}. \\]\n\n• \\(y = 2^{x-1} m - 1\\) for some odd \\(m\\), so\n \\[ 1 + 2^{x+1} = m\\left( 2^{x-2}m-1 \\right)\n \\implies 2^x = \\frac{4(1+m)}{m^2-8}. \\]\n\nIn particular we need \\(4|1 \\pm m| \\ge 2^4 |m^2-8|\\),\nwhich is enough to imply \\(m < 5\\).\nFrom here easily recover \\(x = 4\\), \\(m = 3\\) as the last solution\n(in the second case).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

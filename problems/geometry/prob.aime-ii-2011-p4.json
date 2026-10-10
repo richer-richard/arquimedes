@@ -1,0 +1,59 @@
+{
+  "id": "prob.aime-ii-2011-p4",
+  "title": "2011 AIME2 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-bisector-theorem",
+      "label": "Angle bisector theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.mass-points",
+      "label": "Mass points",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2011,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 43.1,
+    "source": 2270,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "In triangle \\(ABC,\\) \\(AB = \\frac{20}{11} AC.\\) The angle bisector of angle \\(A\\) intersects \\(\\overline{BC}\\) at point \\(D,\\) and point \\(M\\) is the midpoint of \\(\\overline{AD}.\\) Let \\(P\\) be the point of intersection of \\(\\overline{AC}\\) and line \\(BM.\\) The ratio of \\(CP\\) to \\(PA\\) can be expressed in the form \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "51",
+    "value": "51"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2011-p4.live",
+      "kind": "proof-sketch",
+      "text": "By the angle bisector theorem, \\(\\frac{BD}{DC} = \\frac{AB}{AC} = \\frac{20}{11}.\\) Use mass points: place mass \\(11\\) at \\(B\\) and mass \\(20\\) at \\(C,\\) so that \\(D,\\) which divides \\(\\overline{BC}\\) with \\(BD : DC = 20 : 11,\\) is their balance point and carries mass \\(31.\\) Placing mass \\(31\\) at \\(A\\) makes the balance point of \\(A\\) and \\(D\\) exactly the midpoint \\(M\\) of \\(\\overline{AD}.\\)\n\nThe center of mass of the whole system therefore lies on line \\(BM,\\) and it also lies on the segment from \\(B\\) to the balance point of \\(A\\) and \\(C.\\) That balance point is precisely where line \\(BM\\) crosses \\(\\overline{AC},\\) namely \\(P,\\) and it satisfies \\(31 \\cdot PA = 20 \\cdot CP.\\)\n\nHence \\(\\frac{CP}{PA} = \\frac{31}{20},\\) which is in lowest terms, and \\(m + n = 31 + 20 = 51.\\)",
+      "hints": [
+        "The angle bisector theorem gives \\(\\frac{BD}{DC} = \\frac{AB}{AC} = \\frac{20}{11}\\)",
+        "Mass points: masses \\(11\\) at \\(B\\) and \\(20\\) at \\(C\\) make \\(D\\) carry \\(31;\\) placing \\(31\\) at \\(A\\) balances the midpoint \\(M\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "prob.hmmt-feb-team-2003-p10",
+  "title": "2003 HMMT February Team Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2003,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 91.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Show that every consistent 2-configuration of order 4 on a finite set \\(A\\) has a subset that is a consistent 2-configuration of order 2.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2003-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "First, assume the 2-configuration has just one cell. We claim there exists a sequence \\(a_{0}, a_{1}, \\ldots, a_{n}\\) of elements of \\(A\\) (not necessarily all distinct) such that the list\n\n\\[\\left\\{a_{0}, a_{1}\\right\\},\\left\\{a_{1}, a_{2}\\right\\}, \\ldots,\\left\\{a_{n-1}, a_{n}\\right\\},\\left\\{a_{n}, a_{0}\\right\\}\\]\n\ncontains each element of the 2-configuration exactly once. To see this, consider the longest sequence such that \\(\\left\\{a_{0}, a_{1}\\right\\}, \\ldots,\\left\\{a_{n-1}, a_{n}\\right\\},\\left\\{a_{n}, a_{0}\\right\\}\\) are all distinct elements of the 2 -configuration. (We may take \\(n=0\\) if necessary. Note that the finiteness condition ensures such a maximal sequence exists.) Each element of \\(A\\) occurs an even number of times among these pairs (since each occurrence in the sequence contributes to two pairs). If every element occurs 4 times or 0 times, then the elements occurring in the sequence form a cell, since they cannot occur in any other pairs in the 2-configuration. Hence, they are all of \\(A\\), and our sequence uses all the pairs in the 2-configuration, so the claim follows. Otherwise, there is some element \\(a_{i}\\) occurring exactly twice. Choose \\(b_{1}\\) so that \\(\\left\\{a_{i}, b_{1}\\right\\}\\) is one of the two pairs in the 2 -configuration not used by our sequence. Then choose \\(b_{2}\\) so that \\(\\left\\{b_{1}, b_{2}\\right\\}\\) be another pair not used thus far. Continue in this manner, choosing new elements \\(b_{k}\\) with \\(\\left\\{b_{k}, b_{k+1}\\right\\}\\) a pair not already used, until we reach a point where finding another unused pair is impossible. Now, our pairs so far are\n\n\\[\\begin{gathered}\n\\left\\{a_{0}, a_{1}\\right\\}, \\ldots,\\left\\{a_{n-1}, a_{n}\\right\\},\\left\\{a_{n}, a_{0}\\right\\}, \\\\\n\\left\\{a_{i}, b_{1}\\right\\},\\left\\{b_{1}, b_{2}\\right\\}, \\ldots,\\left\\{b_{k-1}, b_{k}\\right\\} .\n\\end{gathered}\\]\n\nEvery element is used in an even number of these pairs, except possibly \\(a_{i}\\), which is used in three pairs, and \\(b_{k}\\), which is used in an odd number of pairs (so one or three) unless \\(a_{i}=b_{k}\\), in which case this element occurs four times. But since it is impossible to continue the sequence, \\(b_{k}\\) must indeed have been used four times, so \\(b_{k}=a_{i}\\).\n\nBut now we can construct the following sequence of distinct elements of the 2-configuration:\n\n\\[\\begin{gathered}\n\\left\\{a_{0}, a_{1}\\right\\}, \\ldots,\\left\\{a_{i-1}, a_{i}\\right\\},\\left\\{a_{i}, b_{1}\\right\\},\\left\\{b_{1}, b_{2}\\right\\}, \\ldots,\\left\\{b_{k-1}, a_{i}\\right\\}, \\\\\n\\left\\{a_{i}, a_{i+1}\\right\\}, \\ldots,\\left\\{a_{n-1}, a_{n}\\right\\},\\left\\{a_{n}, a_{0}\\right\\} .\n\\end{gathered}\\]\n\nThis contradicts the maximality of our original sequence. This contradiction means that our original sequence must have used all the pairs in the 2-configuration, after all.\nSo we can express the 2-configuration via such a sequence of pairs, where each pair's second element equals the first element of the next pair. If \\(A\\) has \\(n\\) elements, then (since each element appears in four pairs) we have \\(2 n\\) pairs. So we can choose the 1st, 3rd, 5th, \\(\\ldots,(2 n-1)\\) th pairs, and then each element of \\(A\\) belongs to just two of these pairs, because each occurrence of the element as an \\(a_{i}\\) contributes to two consecutive pairs from our original sequence (or the first and last such pairs). Thus, we have our consistent 2-configuration of order 2, as desired.\nFinally, if \\(A\\) consists of more than one cell, then the pairs within any given cell form a consistent 2-configuration of order 4 on that cell. So we simply apply the above procedure to obtain a consistent 2 -configuration of order 2 on each cell, and then combining these gives a consistent 2 -configuration of order 2 on \\(A\\), as desired.\n\nComments: A note for those who might have found these problems rather foreign - the objects described here are actually of considerable importance; they constitute the elements of graph theory, one of the major research areas of modern mathematics. What we have called a \"2-configuration\" is generally called a graph, and what we have called a \" \\(k\\)-configuration\" \\((k>2)\\) is generally called a hypergraph. The graph in problem 3b is the Petersen graph, a ubiquitous counterexample in graph theory. A consistent 2-configuration of order \\(n\\) is an \\(n\\)-regular graph; a cell is a component; a barren 2-configuration is a forest (and a forest with one component is a tree); and an \\(m\\)-separable configuration is \\(m\\)-colorable (and the minimum \\(m\\) for which a graph is \\(m\\)-colorable is its chromatic number).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

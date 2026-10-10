@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12-2000-p12",
+  "title": "2000 AMC 12 Problem 12",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.am-gm-inequality",
+      "label": "AM-GM Inequality",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12",
+    "year": 2000,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 27.2,
+    "source": 1650,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(A,\\) \\(M,\\) and \\(C\\) be nonnegative integers such that \\(A + M + C = 12.\\) What is the maximum value of \\[ \\begin{aligned} &A \\cdot M \\cdot C + A \\cdot M \\\\ &\\quad {}+ M \\cdot C + C \\cdot A? \\end{aligned} \\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(62\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(72\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(92\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(102\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(112\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "112"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12-2000-p12.live",
+      "kind": "proof-sketch",
+      "text": "Observe that \\[ \\begin{aligned} &AMC + AM + MC + CA \\\\ &\\quad = (A + 1)(M + 1)(C + 1) \\\\ &\\quad {}- (A + M + C) - 1. \\end{aligned} \\]\n\nSince \\(A + M + C = 12,\\) this equals \\((A + 1)(M + 1)(C + 1) - 13.\\) The three factors sum to \\(15,\\) so their product is maximized when each equals \\(5,\\) giving \\(5^3 = 125.\\)\n\nThe maximum value is \\(125 - 13 = 112.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "\\(AMC + AM + MC + CA\\) \\(= (A + 1)(M + 1)(C + 1)\\) \\(- (A + M + C) - 1\\)",
+        "The three factors \\(A+1, M+1, C+1\\) sum to \\(15,\\) so their product is largest when they are equal"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

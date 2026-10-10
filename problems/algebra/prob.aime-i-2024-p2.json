@@ -1,0 +1,57 @@
+{
+  "id": "prob.aime-i-2024-p2",
+  "title": "2024 AIME I Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.algebraic-manipulation",
+      "label": "Algebraic manipulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2024,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 38.0,
+    "source": 2070,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "There exist real numbers \\(x\\) and \\(y,\\) both greater than \\(1,\\) such that \\(\\log_x\\left(y^x\\right) = \\log_y\\left(x^{4y}\\right) = 10.\\) Find \\(xy.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "25",
+    "value": "25"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2024-p2.live",
+      "kind": "proof-sketch",
+      "text": "Pulling the exponents out of the logarithms, the conditions become \\[ x \\log_x y = 10 \\] and \\[ 4y \\log_y x = 10. \\] Multiplying these equations and using \\(\\log_x y \\cdot \\log_y x = 1\\) gives \\(4xy = 100,\\) so \\(xy = 25.\\)\n\nSuch \\(x\\) and \\(y\\) do exist. Set \\(y = \\frac{25}{x}.\\) The continuous function \\(x\\log_x(\\frac{25}{x})\\) tends to infinity as \\(x \\to 1^+,\\) while at \\(x = 2\\) it is less than \\(10.\\) Hence it equals \\(10\\) for some \\(1 \\lt x \\lt 2,\\) where \\(y \\gt 1.\\)",
+      "hints": [
+        "Bring the exponents down: \\(x \\log_x y = 10\\) and \\(4y \\log_y x = 10\\)",
+        "Multiply the two equations: since \\(\\log_x y \\cdot \\log_y x = 1,\\) the logarithms disappear"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "prob.ahsme-1961-p40",
+  "title": "1961 AHSME Problem 40",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cauchy-schwarz-inequality",
+      "label": "Cauchy-Schwarz Inequality",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.distance-formula",
+      "label": "Distance formula",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1961,
+    "number": 40
+  },
+  "difficulty": {
+    "course": 18.2,
+    "source": 1300,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Find the minimum value of \\(\\sqrt{x^2+y^2}\\) if \\(5x+12y=60.\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{60}{13}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{13}{5}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{13}{12}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(0\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "60/13"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1961-p40.live",
+      "kind": "proof-sketch",
+      "text": "By Cauchy-Schwarz, \\[ \\begin{aligned} 60&=5x+12y\\\\ &\\le\\sqrt{5^2+12^2}\\\\ &\\qquad\\cdot\\sqrt{x^2+y^2}\\\\ &=13\\sqrt{x^2+y^2}. \\end{aligned} \\] Thus the distance is at least \\(\\frac{60}{13}.\\) Equality occurs when \\((x,y)\\) is proportional to \\((5,12),\\) so the minimum is \\(\\frac{60}{13}.\\)\n\nTherefore, the correct answer is A.",
+      "hints": [
+        "Interpret \\(\\sqrt{x^2+y^2}\\) as distance from the origin",
+        "Apply Cauchy-Schwarz to \\(5x+12y\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

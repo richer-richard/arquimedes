@@ -1,0 +1,61 @@
+{
+  "id": "prob.usamo-2011-p6",
+  "title": "2011 USAMO Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2011,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 87.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A\\) be a set with \\(|A| = 225\\), meaning that \\(A\\) has 225 elements. Suppose further that there are eleven subsets \\(A_1\\), \\(\\dots\\), \\(A_{11}\\) of \\(A\\) such that \\(|A_i | = 45\\) for \\(1 \\le i \\le 11\\) and \\(|A_i \\cap A_j| = 9\\) for \\(1 \\le i < j \\le 11\\). Prove that \\(|A_1 \\cup A_2 \\cup \\dots \\cup A_{11}| \\ge 165\\), and give an example for which equality holds.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2011-p6.imported",
+      "kind": "proof-sketch",
+      "text": "We will count the number of ordered triples, $(A_i,A_j,x)$, where $1\\le i,j\\le11$ and $x\\in A_i \\cap A_j$. We know this is equal to $990=11\\cdot10\\cdot9$­. We can also find that this is $\\sum_{k=1}^{225}b_k^2-b_k$, where $b_k$ is the number of the $11$ subsets the $k^{\\text{th}}$ element of $A$ is in. Since $\\sum_{k=1}^{225}b_k=45\\cdot11=495$, we know $\\sum_{k=1}^{225}b_k^2=990+495=1485$. Let $n=|A_1 \\cup A_2 \\cup \\dots \\cup A_{11}|$. $n$ is equal to the number of $b_k>0$, where $1\\le k\\le225$. By the QM-AM inequality, we know $\\frac{\\sum_{k=1}^{225}b_k^2}n\\ge\\Bigg(\\frac{\\sum_{k=1}^{225}b_k}n\\Bigg)^2\\implies\\frac{1485}n\\ge\\Big(\\frac{495}n\\Big)^2\\implies n\\ge165$ and that equality occurs when $b_1=b_2=b_3=\\cdots=b_{165}=3,b_{166}=b_{167}=\\cdots=b_{225}=0$.\n$\\square$",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-guts-2018-p28",
+  "title": "2018 HMMT November Guts Problem 28",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2018,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 60.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "What is the 3 -digit number formed by the \\(9998^{\\text {th }}\\) through \\(10000^{\\text {th }}\\) digits after the decimal point in the decimal expansion of \\(\\frac{1}{998}\\) ?\nNote: Make sure your answer has exactly three digits, so please include any leading zeroes if necessary.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2018-p28.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 042\nNote that \\(\\frac{1}{998}+\\frac{1}{2}=\\frac{250}{499}\\) repeats every 498 digits because 499 is prime, so \\(\\frac{1}{998}\\) does as well (after the first 498 block). Now we need to find \\(38^{\\text {th }}\\) to \\(40^{\\text {th }}\\) digits. We expand this as a geometric series\n\n\\[\\frac{1}{998}=\\frac{\\frac{1}{1000}}{1-\\frac{2}{1000}}=.001+.001 \\times .002+.001 \\times .002^{2}+\\cdots\\]\n\nThe contribution to the \\(36^{\\text {th }}\\) through \\(39^{\\text {th }}\\) digits is 4096 , the \\(39^{\\text {th }}\\) through \\(42^{\\text {nd }}\\) digits is 8192 , and \\(41^{\\text {st }}\\) through \\(45^{\\text {th }}\\) digits is 16384 . We add these together:\n\nThe remaining terms decrease too fast to have effect on the digits we are looking at, so the \\(38^{\\text {th }}\\) to \\(40^{\\text {th }}\\) digits are 042.\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

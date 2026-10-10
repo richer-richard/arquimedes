@@ -1,0 +1,81 @@
+{
+  "id": "prob.amc-12a-2019-p6",
+  "title": "2019 AMC 12A Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.transformation",
+      "label": "Transformation",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2019,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 18.5,
+    "source": 1310,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The figure below shows line \\(\\ell\\) with a regular, infinite, recurring pattern of squares and line segments.\n\nHow many of the following four kinds of rigid motion transformations of the plane in which this figure is drawn, other than the identity transformation, will transform this figure into itself?\n\n• some rotation around a point of line \\(\\ell\\)\n\n• some translation in the direction parallel to line \\(\\ell\\)\n\n• the reflection across line \\(\\ell\\)\n\n• some reflection across a line perpendicular to line \\(\\ell\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2019-p6.live",
+      "kind": "proof-sketch",
+      "text": "A translation by one full period maps the figure to itself, so translation works.\n\nA \\(180^\\circ\\) rotation about a suitable point on \\(\\ell\\) sends each square above the line to the square below it, with the diagonal segments matching, so this rotation works.\n\nReflection across \\(\\ell\\) sends the top-right diagonals to top-right diagonals below the line, but the actual below-line diagonals point to the bottom-left, so it fails. A reflection across a perpendicular line fails for the same reason. Only \\(2\\) of the four transformations work.\n\nThus, the correct answer is C.",
+      "hints": [
+        "A translation by one period clearly works",
+        "Test a \\(180^\\circ\\) rotation about a point on \\(\\ell,\\) and check that neither reflection maps the diagonal segments correctly"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "bcba9ff398316438b74a1510080173a4916154b5a888c3bc99b0e30cc0dc2b4d"
+    ],
+    "solutions": []
+  }
+}

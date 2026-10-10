@@ -1,0 +1,71 @@
+{
+  "id": "prob.ahsme-1992-p23",
+  "title": "1992 AHSME Problem 23",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1992,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 40.5,
+    "source": 2170,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "What is the size of the largest subset \\(S\\) of \\(\\{1,2,3,\\ldots,50\\}\\) such that no pair of distinct elements of \\(S\\) has a sum divisible by \\(7?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(14\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(22\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(23\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "23"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1992-p23.live",
+      "kind": "proof-sketch",
+      "text": "The residue classes \\(1,2,\\ldots,6,0\\) contain \\(8,7,7,7,7,7,7\\) numbers, respectively. We may take numbers from at most one class in each complementary pair \\((1,6),(2,5),(3,4),\\) and at most one multiple of \\(7.\\) Thus \\[ \\begin{aligned} |S|&\\le\\max(8,7)+\\max(7,7)\\\\ &\\qquad+\\max(7,7)+1=23. \\end{aligned} \\] Taking every number whose residue modulo \\(7\\) is \\(1,\\) \\(2,\\) or \\(3,\\) together with one multiple of \\(7,\\) attains \\(23.\\)\n\nThus the correct answer is E.",
+      "hints": [
+        "Group the integers by their residues modulo \\(7\\)",
+        "Pair residue classes \\(1\\) with \\(6,\\) \\(2\\) with \\(5,\\) and \\(3\\) with \\(4\\); treat residue \\(0\\) separately"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

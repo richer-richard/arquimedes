@@ -1,0 +1,74 @@
+{
+  "id": "prob.aime-ii-2000-p2",
+  "title": "2000 AIME II Problem 2",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.difference-of-squares",
+      "label": "Difference of squares",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.lattice-point",
+      "label": "Lattice point",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.parity",
+      "label": "Parity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2000,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 39.0,
+    "source": 2110,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "A point whose coordinates are both integers is called a lattice point. How many lattice points lie on the hyperbola \\(x^2 - y^2 = 2000^2?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "98",
+    "value": "98"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2000-p2.live",
+      "kind": "proof-sketch",
+      "text": "Factor \\((x - y)(x + y) = 2000^2\\) \\(= 2^8 \\cdot 5^6.\\) The factors \\(x - y\\) and \\(x + y\\) have the same parity, and their product is even, so both must be even. Writing \\(x - y = 2a\\) and \\(x + y = 2b\\) gives \\(ab = 2^6 \\cdot 5^6 = 10^6.\\)\n\nEach ordered pair of positive integers \\((a, b)\\) with \\(ab = 10^6\\) yields exactly one solution \\(x = a + b,\\) \\(y = b - a\\) with \\(x \\gt 0,\\) and \\(10^6\\) has \\(7 \\cdot 7 = 49\\) divisors, hence \\(49\\) such pairs. Replacing \\((a, b)\\) by \\((-a, -b)\\) gives the \\(49\\) solutions with \\(x \\lt 0,\\) and \\(x = 0\\) is impossible since \\(-y^2 \\lt 2000^2.\\)\n\nIn total there are \\(49 + 49 = 98\\) lattice points.",
+      "hints": [
+        "Factor \\(x^2 - y^2 = (x - y)(x + y)\\) and note the two factors have the same parity",
+        "Write \\(x - y = 2a\\) and \\(x + y = 2b\\) with \\(ab = 10^6;\\) count ordered pairs, and remember negative values of \\(x\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

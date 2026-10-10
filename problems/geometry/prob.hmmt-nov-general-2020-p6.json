@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-general-2020-p6",
+  "title": "2020 HMMT November General Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.solid-geometry",
+      "label": "Solid geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2020,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 50.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A sphere is centered at a point with integer coordinates and passes through the three points \\((2,0,0)\\), \\((0,4,0),(0,0,6)\\), but not the origin \\((0,0,0)\\). If \\(r\\) is the smallest possible radius of the sphere, compute \\(r^{2}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "51",
+    "value": "51"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2020-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\((x, y, z)\\) be the center of the sphere. By the given condition, we have\n\n\\[(x-2)^{2}+y^{2}+z^{2}=x^{2}+(y-4)^{2}+z^{2}=x^{2}+y^{2}+(z-6)^{2} .\\]\n\nSubtracting \\(x^{2}+y^{2}+z^{2}\\) yields\n\n\\[x^{2}-(x-2)^{2}=y^{2}-(y-4)^{2}=z^{2}-(z-6)^{2},\\]\n\nor\n\n\\[4(x-1)=8(y-2)=12(z-3)\\]\n\nTherefore \\((x-1, y-2, z-3)\\) must be \\((6 t, 3 t, 2 t)\\) for some integer \\(t\\). Checking small values of \\(t\\) yields that the possibilities for \\((x, y, z)\\) closest to \\((2,0,0)\\) are \\((-5,-1,1),(1,2,3)\\), and \\((7,5,5)\\). The second yields a sphere that passes through the origin and is thus forbidden. The other two yield \\(r^{2}=51\\) and \\(r^{2}=75\\), so 51 is the answer.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

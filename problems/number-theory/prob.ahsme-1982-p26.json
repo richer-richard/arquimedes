@@ -1,0 +1,93 @@
+{
+  "id": "prob.ahsme-1982-p26",
+  "title": "1982 AHSME Problem 26",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.quadratic-residue",
+      "label": "Quadratic residue",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1982,
+    "number": 26
+  },
+  "difficulty": {
+    "course": 32.6,
+    "source": 1860,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "If the base \\(8\\) representation of a perfect square is \\(ab3c,\\) where \\(a\\ne0,\\) then \\(c\\) is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "not uniquely determined"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1982-p26.live",
+      "kind": "proof-sketch",
+      "text": "The last two octal digits \\(3c_8\\) represent \\(24+c\\pmod{64}.\\) Squares modulo \\(64\\) in the range \\(24,\\ldots,31\\) include only \\(25.\\) Thus \\(24+c=25,\\) so \\(c=1.\\)\n\nTherefore, the correct answer is B.",
+      "hints": [
+        "Only the last two base-\\(8\\) digits matter modulo \\(64\\)",
+        "List the quadratic residues modulo \\(64\\) that lie between \\(30_8\\) and \\(37_8\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "id": "prob.hmmt-feb-calculus-2010-p7",
+  "title": "2010 HMMT February Calculus Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2010,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 94.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a_{1}, a_{2}\\), and \\(a_{3}\\) be nonzero complex numbers with non-negative real and imaginary parts. Find the minimum possible value of\n\n\\[\\frac{\\left|a_{1}+a_{2}+a_{3}\\right|}{\\sqrt[3]{\\left|a_{1} a_{2} a_{3}\\right|}}\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-calculus-2010-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\sqrt{3} \\sqrt[3]{2}\\) Write \\(a_{1}\\) in its polar form \\(r e^{i \\theta}\\) where \\(0 \\leq \\theta \\leq \\frac{\\pi}{2}\\). Suppose \\(a_{2}, a_{3}\\) and \\(r\\) are fixed so that the denominator is constant. Write \\(a_{2}+a_{3}\\) as \\(s e^{i \\phi}\\). Since \\(a_{2}\\) and \\(a_{3}\\) have non-negative real and imaginary parts, the angle \\(\\phi\\) lies between 0 and \\(\\frac{\\pi}{2}\\). Consider the function\n\n\\[f(\\theta)=\\left|a_{1}+a_{2}+a_{3}\\right|^{2}=\\left|r e^{i \\theta}+s e^{i \\phi}\\right|^{2}=r^{2}+2 r s \\cos (\\theta-\\phi)+s^{2}\\]\n\nIts second derivative is \\(\\left.f^{\\prime \\prime}(\\theta)=-2 \\operatorname{rs}(\\cos (\\theta-\\phi))\\right)\\). Since \\(-\\frac{\\pi}{2} \\leq(\\theta-\\phi) \\leq \\frac{\\pi}{2}\\), we know that \\(f^{\\prime \\prime}(\\theta)<0\\) and \\(f\\) is concave. Therefore, to minimize \\(f\\), the angle \\(\\theta\\) must be either 0 or \\(\\frac{\\pi}{2}\\). Similarly, each of \\(a_{1}, a_{2}\\) and \\(a_{3}\\) must be either purely real or purely imaginary to minimize \\(f\\) and the original fraction.\nBy the AM-GM inequality, if \\(a_{1}, a_{2}\\) and \\(a_{3}\\) are all real or all imaginary, then the minimum value of the fraction is 3 . Now suppose only two of the \\(a_{i}\\) 's, say, \\(a_{1}\\) and \\(a_{2}\\) are real. Since the fraction is homogenous, we may fix \\(a_{1}+a_{2}\\) - let the sum be 2 . The term \\(a_{1} a_{2}\\) in the denominator acheives its maximum only when \\(a_{1}\\) and \\(a_{2}\\) are equal, i.e. when \\(a_{1}=a_{2}=1\\). Then, if \\(a_{3}=k i\\) for some real number \\(k\\), then the expression equals\n\n\\[\\frac{\\sqrt{k^{2}+4}}{\\sqrt[3]{k}}\\]\n\nSquaring and taking the derivative, we find that the minimum value of the fraction is \\(\\sqrt{3} \\sqrt[3]{2}\\), attained when \\(k=\\sqrt{2}\\). With similar reasoning, the case where only one of the \\(a_{i}\\) 's is real yields the same minimum value.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

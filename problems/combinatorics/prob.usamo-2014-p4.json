@@ -1,0 +1,68 @@
+{
+  "id": "prob.usamo-2014-p4",
+  "title": "2014 USAMO Problem 4",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.coloring-schemes-extremal-arguments",
+      "label": "Coloring schemes, extremal arguments",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.games-and-greedy-algorithms",
+      "label": "Games and greedy algorithms",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.invariants-and-monovariants",
+      "label": "Invariants and monovariants",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2014,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 87.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(k\\) be a positive integer. Two players \\(A\\) and \\(B\\) play a game on an infinite grid of regular hexagons. Initially all the grid cells are empty. Then the players alternately take turns with \\(A\\) moving first. In his move, \\(A\\) may choose two adjacent hexagons in the grid which are empty and place a counter in both of them. In his move, \\(B\\) may choose any counter on the board and remove it. If at any time there are \\(k\\) consecutive grid cells in a line all of which contain a counter, \\(A\\) wins. Find the minimum value of \\(k\\) for which \\(A\\) cannot win in a finite number of moves, or prove that no such minimum value exists.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2014-p4.imported",
+      "kind": "proof-sketch",
+      "text": "We claim that the minimum $k$ such that A cannot create a $k$ in a row is $\\boxed{6}$.\nIt is easy to verify that player A can create a 5 in a row.\nLet A place two counters anywhere, and B take off one of them. Then, A should create a \"triangle of hexagons\" by placing two adjacent counters also next to the unremoved one, so that no matter what B does there will be a line of two counters on adjacent hexagons.\n<i>Note: A diagram and more conciseness is required in the following solution. Better maneuvers are always appreciated.</i>\nThen, it is advisable for A to make a 4-in-a-row by placing 2 counters at the end of the line. B to prevent a 5-in-a-row must counter by removing a middle counter (a counter not on the edge of the 4-in-a-row). Player A then could reinstate the threat by placing a counter there and one adjacent to that hexagon (but not adjacent to the other middle counter). It is not in B's best interest to then remove the other middle counter, for then A can \"add\" a counter to both hexagons (adjacent to the removed counter) on the same side of the originally placed hexagon while preserving the threat. Now, we have two different threats B cannot both counter. Thus, assume B does not remove the other middle counter. Eventually, by \"adding\" counters and preserving the threat player A can create a web of hexagons surrounding the chosen middle counter. As we have proven, it will be disastrous for B to then remove the other middle counter; thus, B has to remove the chosen middle counter.\nNow, player A can administer the decisive winning maneuver as follows. Let X be two adjacent counters of the web, one of which is adjacent to the initial edge counter. Let Y be the other two counters that satisfy the condition. The line X should not have more than two counters on it. Player A should place his two counters on the first two hexagons not adjacent to any counter in X (or the web), so that B is forced to remove the outermost counter A played. Then, A should place two counters adjacent to his remaining counter in a direction parallel to line Y. B has to expunge the outermost one; otherwise A can place two counters to complete a 5-in-a-row. Let A place two more counters in the same direction; then, B has to remove the middle counter played. Now, turn in a direction parallel to line X; let A place a counter on the first two spaces adjacent to counters already placed. B will remove the second counter played. A's knockout blow occurs when he reinstates the lost counter and a counter adjacent to that counter and the remaining one he played last turn, and it is easy to verify he is guaranteed a 5-in-a-row. Therefore, A can (after an elongated siege) obtain a 5-in-a-row.\nTo prove that 6-in-a-row is impossible, tile the hexagon board in an A-B-C-A-B-C-A-B-C format. Define an \"A tile\" to be a tile engraved with the letter A. To prevent player A from obtaining a 6 in a row, all player B has to do is to remove counters placed on A tiles by player A. Because no two A tiles are adjacent, player A can play at most one counter on an A tile at a time; thus, there can at most be one counter on A tiles any time of the game. Clearly, then, a 6 in a row, which requires A-B-C-A-B-C (or two counters on A tiles), is impossible, completing the proof.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

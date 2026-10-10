@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1967-p34",
+  "title": "1967 AHSME Problem 34",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-decomposition",
+      "label": "Area decomposition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.ratio-and-proportion",
+      "label": "Ratio and proportion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1967,
+    "number": 34
+  },
+  "difficulty": {
+    "course": 28.7,
+    "source": 1710,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Points \\(D,\\) \\(E,\\) \\(F\\) are taken respectively on sides \\(AB,\\) \\(BC,\\) and \\(CA\\) of triangle \\(ABC\\) so that \\(AD:DB=1:n,\\) \\(BE:CE=1:n,\\) and \\(CF:FA=1:n.\\) The ratio of the area of triangle \\(DEF\\) to that of triangle \\(ABC\\) is:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{n^2-n+1}{(n+1)^2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac1{(n+1)^2}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{2n^3}{(n+1)^2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{n^3}{(n+1)^2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{n(n-1)}{n+1}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1967-p34.live",
+      "kind": "proof-sketch",
+      "text": "At each vertex, the two adjacent side fractions used by the corner triangle are \\(\\frac{1}{n+1}\\) and \\(\\frac{n}{n+1}.\\) Thus each corner triangle has area \\(\\frac{n}{(n+1)^2}\\) times \\([ABC].\\) Therefore \\[ \\begin{aligned} \\frac{[DEF]}{[ABC]} &=1-\\frac{3n}{(n+1)^2}\\\\ &=\\frac{n^2-n+1}{(n+1)^2}. \\end{aligned} \\]\n\nTherefore, the correct answer is A.",
+      "hints": [
+        "Subtract the three corner triangles from triangle \\(ABC\\)",
+        "Each corner triangle has area ratio \\(\\frac{n}{(n+1)^2}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-theme-2020-p9",
+  "title": "2020 HMMT November Theme Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithms-and-exponentials",
+      "label": "Logarithms and exponentials",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2020,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 49.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "While waiting for their next class on Killian Court, Alesha and Belinda both write the same sequence \\(S\\) on a piece of paper, where \\(S\\) is a 2020-term strictly increasing geometric sequence with an integer common ratio \\(r\\). Every second, Alesha erases the two smallest terms on her paper and replaces them with their geometric mean, while Belinda erases the two largest terms in her paper and replaces them with their geometric mean. They continue this process until Alesha is left with a single value \\(A\\) and Belinda is left with a single value \\(B\\). Let \\(r_{0}\\) be the minimal value of \\(r\\) such that \\(\\frac{A}{B}\\) is an integer. If \\(d\\) is the number of positive factors of \\(r_{0}\\), what is the closest integer to \\(\\log _{2} d\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "2018",
+    "value": "2018"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2020-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "Because we only care about when the ratio of \\(A\\) to \\(B\\) is an integer, the value of the first term in \\(S\\) does not matter. Let the initial term in \\(S\\) be 1 . Then, we can write \\(S\\) as \\(1, r, r^{2}, \\ldots, r^{2019}\\). Because all terms are in terms of \\(r\\), we can write \\(A=r^{a}\\) and \\(B=r^{b}\\). We will now solve for \\(a\\) and \\(b\\).\nObserve that the geometric mean of two terms \\(r^{m}\\) and \\(r^{n}\\) is simply \\(r^{\\frac{m+n}{2}}\\), or \\(r\\) raised to the arithmetic mean of \\(m\\) and \\(n\\). Thus, to solve for \\(a\\), we can simply consider the sequence \\(0,1,2, \\ldots, 2019\\), which comes from the exponents of the terms in \\(S\\), and repeatedly replace the smallest two terms with their arithmetic mean. Likewise, to solve for \\(b\\), we can consider the same sequence \\(0,1,2, \\ldots, 2019\\) and repeatedly replace the largest two terms with their arithmetic mean.\nWe begin by computing \\(a\\). If we start with the sequence \\(0,1, \\ldots, 2019\\) and repeatedly take the arithmetic mean of the two smallest terms, the final value will be\n\n\\[a=\\frac{\\frac{\\frac{0+1}{2}+2}{2}+3}{2}+\\cdots+2019 \\sum_{k=1}^{2019} \\frac{k}{2} \\frac{2^{2020-k}}{2}\\]\n\nThen, we can compute\n\n\\[\\begin{aligned}\n2 a & =\\sum_{k=1}^{2019} \\frac{k}{2^{2019-k}} \\\\\n\\Longrightarrow a & =2 a-a=\\sum_{k=1}^{2019} \\frac{k}{2^{2019-k}}-\\sum_{k=1}^{2019} \\frac{k}{2^{2020-k}} \\\\\n& =\\sum_{k=1}^{2019} \\frac{k}{2^{2019-k}}-\\sum_{k=0}^{2018} \\frac{k+1}{2^{2019-k}} \\\\\n& =2019-\\sum_{j=1}^{2019} \\frac{1}{2^{j}} \\\\\n& =2019-\\left(1-\\frac{1}{2^{2019}}\\right)=2018+\\frac{1}{2^{2019}}\n\\end{aligned}\\]\n\nLikewise, or by symmetry, we can find \\(b=1-\\frac{1}{2^{2019}}\\).\nSince we want \\(\\frac{A}{B}=\\frac{r^{a}}{r^{b}}=r^{a-b}\\) to be a positive integer, and \\(a-b=\\left(2018+\\frac{1}{2^{2019}}\\right)-\\left(1-\\frac{1}{2^{2019}}\\right)=\\) \\(2017+\\frac{1}{2^{2018}}, r\\) must be a perfect \\(\\left(2^{2018}\\right)^{\\text {th }}\\) power. Because \\(r>1\\), the minimal possible value is \\(r=2^{2^{2018}}\\). Thus, \\(d=2^{2018}+1\\), and so \\(\\log _{2} d\\) is clearly closest to 2018 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

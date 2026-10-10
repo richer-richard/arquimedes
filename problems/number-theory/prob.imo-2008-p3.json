@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2008-p3",
+  "title": "2008 IMO Problem 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2008,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 102.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Prove that there are infinitely many positive integers \\(n\\)\nsuch that \\(n^2+1\\) has a prime factor greater than \\(2n + \\sqrt{2n}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2008-p3.evanchen",
+      "kind": "proof-sketch",
+      "text": "The idea is to pick the prime \\(p\\) first!\n\nSelect any large prime \\(p \\ge 2013\\),\nand let \\(h = \\left\\lceil \\sqrt p \\right\\rceil\\).\nWe will try to find an \\(n\\) such that\n\\[ n \\le \\frac 12 (p-h) \\quad \\text{and} \\quad p \\mid n^2+1. \\]\nThis implies \\(p \\ge 2n+\\sqrt{p}\\)\nwhich is enough to ensure \\(p \\ge 2n + \\sqrt{2n}\\).\n\nAssume \\(p \\equiv 1 \\pmod 8\\) henceforth.\nThen there exists some \\(\\frac 12 p < x < p\\)\nsuch that \\(x^2 \\equiv -1 \\pmod p\\),\nand we set \\[ x = \\frac{p+1}{2} + t. \\]\n\nClaim.\n We have \\(t \\ge \\frac{h-1}{2}\\) and hence may take \\(n = p-x\\).\n\nProof.\nAssume for contradiction this is false; then\n\\[\\begin{aligned}\n 0 &\\equiv 4(x^2+1) \\pmod{p} \\\\\n &= \\left( p+1+2t \\right)^2 + 4 \\\\\n &\\equiv (2t+1)^2 + 4 \\pmod{p} \\\\\n &< h^2+4\n\\end{aligned}\\]\nSo we have that \\((2t+1)^2+4\\) is positive and divisible by \\(p\\),\nyet at most \\(\\left\\lceil \\sqrt{p} \\right\\rceil^2 + 4 < 2p\\).\nSo it must be the case that \\((2t+1)^2+4 = p\\),\nbut this has no solutions modulo \\(8\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

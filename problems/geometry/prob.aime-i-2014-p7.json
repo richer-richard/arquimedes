@@ -1,0 +1,75 @@
+{
+  "id": "prob.aime-i-2014-p7",
+  "title": "2014 AIME I Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle",
+      "label": "Circle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangent-line",
+      "label": "Tangent line",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2014,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 56.7,
+    "source": 2560,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "Let \\(w\\) and \\(z\\) be complex numbers such that \\(|w| = 1\\) and \\(|z| = 10.\\) Let \\(\\theta = \\arg\\left(\\tfrac{w-z}{z}\\right).\\) The maximum possible value of \\(\\tan^2 \\theta\\) can be written as \\(\\frac{p}{q},\\) where \\(p\\) and \\(q\\) are relatively prime positive integers. Find \\(p + q.\\) (Note that \\(\\arg(w),\\) for \\(w \\ne 0,\\) denotes the measure of the angle that the ray from \\(0\\) to \\(w\\) makes with the positive real axis in the complex plane.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "100",
+    "value": "100"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2014-p7.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(\\frac{w-z}{z} = \\frac{w}{z} - 1,\\) and \\(\\frac{w}{z}\\) can be any complex number of modulus \\(\\frac{1}{10},\\) the point \\(\\zeta = \\frac{w-z}{z}\\) ranges over the circle of radius \\(\\frac{1}{10}\\) centered at \\(-1.\\)\n\nBecause \\(\\tan^2\\theta\\) is unchanged when \\(\\theta\\) shifts by \\(180^\\circ,\\) we want the largest angle \\(\\alpha\\) that a ray from the origin to this circle makes with the real axis. The extreme rays are tangent to the circle, where \\(\\sin \\alpha = \\frac{\\frac{1}{10}}{1} = \\frac{1}{10}.\\)\n\nThen \\[ \\begin{aligned} \\tan^2\\theta &= \\frac{\\sin^2\\alpha}{1 - \\sin^2\\alpha} = \\frac{\\frac{1}{100}}{\\frac{99}{100}} \\\\ &= \\frac{1}{99}, \\end{aligned} \\] so \\(p + q = 1 + 99 = 100.\\)",
+      "hints": [
+        "\\(\\frac{w-z}{z} = \\frac{w}{z} - 1\\) lies on the circle of radius \\(\\frac{1}{10}\\) centered at \\(-1\\)",
+        "The argument is extremal when the ray from the origin is tangent to that circle, so the sine of the angle with the real axis is \\(\\frac{1}{10}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

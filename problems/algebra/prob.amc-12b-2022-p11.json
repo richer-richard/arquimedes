@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2022-p11",
+  "title": "2022 AMC 12B Problem 11",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2022,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 25.1,
+    "source": 1570,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\[ \\begin{aligned} f(n) &= \\left(\\dfrac{-1 + i\\sqrt3}{2}\\right)^n \\\\ &\\quad {}+ \\left(\\dfrac{-1 - i\\sqrt3}{2}\\right)^n, \\end{aligned} \\] where \\(i = \\sqrt{-1}.\\) What is \\(f(2022)?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(-2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(-1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\sqrt3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2022-p11.live",
+      "kind": "proof-sketch",
+      "text": "The two bases are the primitive cube roots of unity, \\(\\omega = e^{\\frac{2\\pi i}{3}}\\) and its conjugate \\(\\omega^2 = e^{-\\frac{2\\pi i}{3}}.\\) So \\(f(n) = \\omega^n + \\omega^{-n} = 2\\cos\\dfrac{2\\pi n}{3}.\\)\n\nSince \\(2022\\) is a multiple of \\(3,\\) \\(\\omega^{2022} = 1,\\) so \\(f(2022) = 1 + 1 = 2.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "The two bases are the primitive cube roots of unity, \\(\\omega\\) and \\(\\omega^2\\)",
+        "Then \\(f(n) = \\omega^n + \\omega^{-n};\\) reduce the exponent \\(2022\\) modulo \\(3\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

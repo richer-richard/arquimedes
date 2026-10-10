@@ -1,0 +1,70 @@
+{
+  "id": "prob.hmmt-feb-team-2-2010-p3",
+  "title": "2010 HMMT February Team Round 2 Problem 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2010,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 80.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(p(x)=a_{n} x^{n}+a_{n-1} x^{n-1}+\\ldots+a_{0}\\), where each \\(a_{i}\\) is either 1 or -1 . Let \\(r\\) be a root of \\(p\\). If \\(|r|>\\frac{15}{8}\\), what is the minimum possible value of \\(n\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2-2010-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "4 We claim that \\(n=4\\) is the answer. First, we show that \\(n>3\\). Suppose that \\(n \\leq 3\\). Let \\(r\\) be the root of the polynomial with \\(|r| \\geq \\frac{15}{8}\\). Then, by the Triangle Inequality, we have:\n\n\\[\\begin{gathered}\n\\left|a_{n} r^{n}\\right|=\\left|a_{n-1} r^{n-1}+a_{n-2} r^{n-2}+\\ldots+a_{0}\\right| \\leq\\left|a_{n-1} r^{n-1}\\right|+\\left|a_{n-2} r^{n-2}\\right|+\\ldots+\\left|a_{0}\\right| \\\\\n|r|^{n} \\leq\\left|r^{n-1}\\right|+\\left|r^{n-2}\\right|+\\ldots+|1|=\\frac{|r|^{n}-1}{|r|-1} \\\\\n|r|^{n+1}-2|r|^{n}+1 \\leq 0 \\Rightarrow 1 \\leq|r|^{n}(2-|r|)\n\\end{gathered}\\]\n\nThe right-hand side is increasing in \\(n\\), for \\(|r|>1\\), so it is bounded by \\(|r|^{3}(2-|r|)\\). This expression is decreasing in \\(r\\) for \\(r \\geq \\frac{3}{2}\\). When \\(|r|=\\frac{15}{8}\\), then the right-hand side is less than 1 , which violates the inequalities. Therefore \\(n>3\\). Now, we claim that there is a 4 th degree polynomial with a root \\(r\\) with \\(|r| \\geq \\frac{15}{8}\\). Let \\(p(x)=x^{4}-x^{3}-x^{2}-x-1\\). Then \\(p\\left(\\frac{15}{8}\\right)<0\\) and \\(p(2)>2\\). By the Intermediate Value Theorem, \\(p(x)\\) has such a root \\(r\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

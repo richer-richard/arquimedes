@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-8-2023-p24",
+  "title": "2023 AMC 8 Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2023,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 34.4,
+    "source": 1930,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Isosceles triangle \\(ABC\\) has equal side lengths \\(AB\\) and \\(BC.\\) In the figures below, segments are drawn parallel to \\(\\overline{AC}\\) so that the shaded portions of \\(\\triangle ABC\\) have the same area. The heights of the two unshaded portions are \\(11\\) and \\(5\\) units, respectively. What is the height \\(h\\) of \\(\\triangle ABC?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(14.6\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(14.8\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(15.2\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(15.4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "14.6"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2023-p24.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(a\\) be the area of \\(\\triangle ABC.\\) The unshaded triangle in the left figure has height \\(11\\) and is similar to the full triangle, so its area is \\(a\\left(\\frac{11}{h}\\right)^2.\\) Therefore, the shaded area there is \\(a\\left(1-\\left(\\frac{11}{h}\\right)^2\\right).\\)\n\nIn the right figure, the shaded triangle has height \\(h-5\\) and is similar to the full triangle, so its area is \\(a\\left(\\frac{h-5}{h}\\right)^2.\\) Equating the shaded areas and canceling \\(a\\) gives \\[ 1-\\left(\\dfrac{11}{h}\\right)^2 =\\left(\\dfrac{h-5}{h}\\right)^2. \\]\n\nSimplifying yields \\[ h^2 - 121 = h^2 - 10h + 25. \\] This simplifies to \\[ 10h = 146, \\]\n\nso \\(h=14.6.\\)\n\nThus, A is the correct answer.",
+      "hints": [
+        "Equal shaded areas give an equation between the two unshaded triangle areas",
+        "Similar triangle areas scale as the square of their heights"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "2186229bd07b4ae4b4b0971ae311d3029768e0ce05f2386c400483abbf1b8694"
+    ],
+    "solutions": []
+  }
+}

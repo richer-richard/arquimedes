@@ -1,0 +1,78 @@
+{
+  "id": "prob.ahsme-1955-p45",
+  "title": "1955 AHSME Problem 45",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1955,
+    "number": 45
+  },
+  "difficulty": {
+    "course": 34.4,
+    "source": 1930,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Given a geometric sequence with the first term \\(\\ne0\\) and \\(r\\ne0\\) and an arithmetic sequence with the first term \\(=0.\\) A third sequence \\(1,\\) \\(1,\\) \\(2,\\) \\(\\ldots\\) is formed by adding corresponding terms of the two given sequences. The sum of the first ten terms of the third sequence is:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(978\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(557\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(467\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(1068\\)"
+    },
+    {
+      "label": "E",
+      "text": "not possible to determine from the information given"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "978"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1955-p45.live",
+      "kind": "proof-sketch",
+      "text": "The first three termwise sums give \\[ \\begin{aligned} a&=1,\\\\ r+d&=1,\\\\ r^2+2d&=2. \\end{aligned} \\] Substituting \\(d=1-r\\) yields \\(r(r-2)=0.\\) Since \\(r\\ne0,\\) we have \\(r=2\\) and \\(d=-1.\\) The first ten geometric terms sum to \\(2^{10}-1=1023,\\) while the first ten arithmetic terms sum to \\(0-1-\\cdots-9=-45.\\) Their combined sum is \\(1023-45=978.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "Write the two sequences as \\(a,ar,ar^2,\\ldots\\) and \\(0,d,2d,\\ldots\\)",
+        "Use the first three sums and the condition \\(r\\ne0\\) to determine \\(a,r,d\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

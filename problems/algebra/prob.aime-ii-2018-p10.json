@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2018-p10",
+  "title": "2018 AIME II Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.function",
+      "label": "Function",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2018,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 61.6,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 13,
+  "statement": "Find the number of functions \\(f(x)\\) from \\(\\{1, 2, 3, 4, 5\\}\\) to \\(\\{1, 2, 3, 4, 5\\}\\) that satisfy \\(f(f(x)) = f(f(f(x)))\\) for all \\(x\\) in \\(\\{1, 2, 3, 4, 5\\}.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "756",
+    "value": "756"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2018-p10.live",
+      "kind": "proof-sketch",
+      "text": "Applying \\(f\\) to \\(f(f(x)) = f(f(f(x)))\\) repeatedly shows the condition means that \\(f(f(x))\\) is a fixed point of \\(f\\) for every \\(x.\\) So the elements organize into levels: a nonempty set of \\(i\\) fixed points, then \\(j\\) elements whose image is a fixed point (but which are not fixed), and the remaining \\(5 - i - j\\) elements, each of which must map to one of the \\(j\\) middle elements.\n\nFor given \\(i\\) and \\(j\\) there are \\(\\binom{5}{i}\\) choices of fixed points, \\(\\binom{5-i}{j}\\) choices of the middle level, \\(i^j\\) maps from the middle level to the fixed points, and \\(j^{\\,5-i-j}\\) maps for the rest. Summing \\(\\binom{5}{i}\\binom{5-i}{j}\\, i^j \\, j^{\\,5-i-j}\\) over the valid pairs (all \\(i \\ge 1,\\) \\(j \\ge 1,\\) plus the identity case \\(i = 5\\)) gives \\[ \\begin{aligned} &20 + 120 + 60 + 5 \\\\ &\\quad {}+ 60 + 240 + 80 \\\\ &\\quad {}+ 60 + 90 + 20 + 1 = 756. \\end{aligned} \\]",
+      "hints": [
+        "The condition says every value of \\(f \\circ f\\) is a fixed point of \\(f.\\) Classify elements by how many applications of \\(f\\) they need to reach a fixed point.",
+        "With \\(i\\) fixed points and \\(j\\) further elements mapping straight to them, the remaining \\(5 - i - j\\) elements must map to those \\(j;\\) count each case with binomial coefficients"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

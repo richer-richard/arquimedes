@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-team-2-2012-p5",
+  "title": "2012 HMMT February Team Round 2 Problem 5",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2012,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 77.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Steph and Jeff each start with the number 4, and Travis is flipping a coin. Every time he flips a heads, Steph replaces her number \\(x\\) with \\(2 x-1\\), and Jeff replaces his number \\(y\\) with \\(y+8\\). Every time he flips a tails, Steph replaces her number \\(x\\) with \\(\\frac{x+1}{2}\\), and Jeff replaces his number \\(y\\) with \\(y-3\\). After some (positive) number of coin flips, Steph and Jeff miraculously end up with the same number below 2012. How many times was the coin flipped?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2-2012-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "137 Suppose that \\(a\\) heads and \\(b\\) tails are flipped. Jeff's number at the end is \\(4+8 a-3 b\\). Note that the operations which Steph applies are inverses of each other, and as a result it is not difficult to check by induction that her final number is simply \\(1+3 \\cdot 2^{a-b}\\).\nWe now have \\(3+3(a-b)+5 a=3 \\cdot 2^{a-b}\\). Letting \\(n=a-b\\), we see that \\(2^{n}-n-1\\) must be divisible by 5 , so that \\(a\\) is an integer. In particular, \\(n\\) is a positive integer. Furthermore, we have \\(1+3 \\cdot 2^{n}<2012\\), so that \\(n \\leq 9\\). We see that the only possibility is for \\(n=7=a-b\\), and thus \\(4+8 a-3 b=385\\). Solving, we get \\(a=72, b=65\\), so our answer is \\(72+65=137\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

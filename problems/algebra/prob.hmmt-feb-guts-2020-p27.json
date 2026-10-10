@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2020-p27",
+  "title": "2020 HMMT February Guts Problem 27",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2020,
+    "number": 27
+  },
+  "difficulty": {
+    "course": 80.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\left\\{a_{i}\\right\\}_{i \\geq 0}\\) be a sequence of real numbers defined by\n\n\\[a_{n+1}=a_{n}^{2}-\\frac{1}{2^{2020 \\cdot 2^{n}-1}}\\]\n\nfor \\(n \\geq 0\\). Determine the largest value for \\(a_{0}\\) such that \\(\\left\\{a_{i}\\right\\}_{i \\geq 0}\\) is bounded.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "1+\\frac{1}{2^{2020}}",
+    "value": "1+\\frac{1}{2^{2020}}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2020-p27.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(a_{0}=\\frac{1}{\\sqrt{2}^{2020}}\\left(t+\\frac{1}{t}\\right)\\), with \\(t \\geq 1\\). (If \\(a_{0}<\\frac{1}{\\sqrt{2}^{2018}}\\) then no real \\(t\\) exists, but we ignore these values because \\(a_{0}\\) is smaller.) Then, we can prove by induction that\n\n\\[a_{n}=\\frac{1}{\\sqrt{2}^{2020 \\cdot 2^{n}}}\\left(t^{2^{n}}+\\frac{1}{t^{2^{n}}}\\right) .\\]\n\nFor this to be bounded, it is easy to see that we just need\n\n\\[\\frac{t^{2^{n}}}{\\sqrt{2}^{2020 \\cdot 2^{n}}}=\\left(\\frac{t}{\\sqrt{2}^{2020}}\\right)^{2^{n}}\\]\n\nto be bounded, since the second term approaches 0 . We see that this is is equivalent to \\(t \\leq 2^{2020 / 2}\\), which means\n\n\\[a_{0} \\leq \\frac{1}{\\sqrt{2}^{2020}}\\left(\\sqrt{2}^{2020}+\\left(\\frac{1}{\\sqrt{2}}\\right)^{2020}\\right)=1+\\frac{1}{2^{2020}}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

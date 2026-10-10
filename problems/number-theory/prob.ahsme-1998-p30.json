@@ -1,0 +1,71 @@
+{
+  "id": "prob.ahsme-1998-p30",
+  "title": "1998 AHSME Problem 30",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1998,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 52.3,
+    "source": 2630,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "For each positive integer \\(n,\\) let \\[ a_n=\\frac{(n+9)!}{(n-1)!}. \\] Let \\(k\\) denote the smallest positive integer for which the rightmost nonzero digit of \\(a_k\\) is odd. The rightmost nonzero digit of \\(a_k\\) is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(9\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "9"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1998-p30.live",
+      "kind": "proof-sketch",
+      "text": "The five even terms in any ten consecutive integers contribute at least \\(2^8.\\) Thus the rightmost nonzero digit can be odd only when the block contains at least eight factors of \\(5,\\) first possible when it contains \\(5^7=78125.\\) For \\(n=5^7-9,\\) the block has \\(v_2=9\\) and \\(v_5=8,\\) so the digit remains even. For \\(n=5^7-8=78117,\\) both valuations are \\(8.\\) Cancelling \\(2^8 5^8\\) and multiplying the remaining odd unit digits gives \\[ \\begin{aligned} &7\\cdot9\\cdot1\\cdot3\\cdot9\\cdot3\\\\ &\\qquad\\cdot1\\cdot1\\cdot3 \\equiv9\\pmod{10}. \\end{aligned} \\] Hence the first odd rightmost nonzero digit is \\(9,\\) and E is correct.",
+      "hints": [
+        "Write \\(a_n=n(n+1)\\cdots(n+9)\\) and compare its powers of \\(2\\) and \\(5\\)",
+        "An odd rightmost nonzero digit first becomes possible when the ten-term block contains \\(5^7\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2021-p5",
+  "title": "2021 AMC 12A Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.linear-equation",
+      "label": "Linear equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.repeating-decimal",
+      "label": "Repeating decimal",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2021,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 20.0,
+    "source": 1370,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "When a student multiplied the number \\(66\\) by the repeating decimal \\[ 1.\\overline{ab} = 1.ababab\\ldots, \\] where \\(a\\) and \\(b\\) are digits, he did not notice the notation and just multiplied \\(66\\) by the terminating decimal \\(1.ab.\\) Later he found that his answer was \\(0.5\\) less than the correct answer.\n\nWhat is the two-digit integer \\(\\overline{ab}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(30\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(45\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(60\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(75\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "75"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2021-p5.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(n = \\overline{ab}\\) be the two-digit integer. Then \\(1.\\overline{ab} = 1 + \\dfrac{n}{99}\\) while the terminating value is \\(1.ab = 1 + \\dfrac{n}{100}.\\) The correct product minus the student’s product is \\[ \\begin{aligned} &66\\left(\\frac{n}{99} - \\frac{n}{100}\\right) \\\\ &= 66 \\cdot \\frac{n}{9900} = \\frac{n}{150}. \\end{aligned} \\]\n\nSetting \\(\\dfrac{n}{150} = 0.5\\) gives \\(n = 75.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "Write \\(n = \\overline{ab}.\\) Then \\(1.\\overline{ab} = 1 + \\dfrac{n}{99}\\) and \\(1.ab = 1 + \\dfrac{n}{100}\\)",
+        "The difference of the two products is \\(66\\left(\\dfrac{n}{99} - \\dfrac{n}{100}\\right) = 0.5\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

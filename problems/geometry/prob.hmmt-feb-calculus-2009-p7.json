@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-feb-calculus-2009-p7",
+  "title": "2009 HMMT February Calculus Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2009,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 94.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A line in the plane is called strange if it passes through \\((a, 0)\\) and \\((0,10-a)\\) for some \\(a\\) in the interval \\([0,10]\\). A point in the plane is called charming if it lies in the first quadrant and also lies below some strange line. What is the area of the set of all charming points?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-calculus-2009-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "The strange lines form an envelope (set of tangent lines) of a curve \\(f(x)\\), and we first find the equation for \\(f\\) on \\([0,10]\\). Assuming the derivative \\(f^{\\prime}\\) is continuous, the point of tangency of the line \\(\\ell\\) through \\((a, 0)\\) and \\((0, b)\\) to \\(f\\) is the limit of the intersection points of this line with the lines \\(\\ell_{\\epsilon}\\) passing through \\((a+\\epsilon, 0)\\) and \\((0, b-\\epsilon)\\) as \\(\\epsilon \\rightarrow 0\\). If these limits exist, then the derivative is indeed continuous and we can calculate the function from the points of tangency.\nThe intersection point of \\(\\ell\\) and \\(\\ell_{\\epsilon}\\) can be calculated to have \\(x\\)-coordinate \\(\\frac{a(a-\\epsilon)}{a+b}\\), so the tangent point of \\(\\ell\\) has \\(x\\)-coordinate \\(\\lim _{\\epsilon \\rightarrow 0} \\frac{a(a-\\epsilon)}{a+b}=\\frac{a^{2}}{a+b}=\\frac{a^{2}}{10}\\). Similarly, the \\(y\\)-coordinate is \\(\\frac{b^{2}}{10}=\\frac{(10-a)^{2}}{10}\\). Thus,\nsolving for the \\(y\\) coordinate in terms of the \\(x\\) coordinate for \\(a \\in[0,10]\\), we find \\(f(x)=10-2 \\sqrt{10} \\sqrt{x}+x\\), and so the area of the set of charming points is\n\n\\[\\int_{0}^{10}(10-2 \\sqrt{10} \\sqrt{x}+x) d x=50 / 3\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

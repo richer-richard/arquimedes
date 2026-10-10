@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-1995-p9",
+  "title": "1995 AIME Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.isosceles-triangle",
+      "label": "Isosceles triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1995,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 40.5,
+    "source": 2170,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Triangle \\(ABC\\) is isosceles, with \\(AB=AC\\) and altitude \\(AM=11.\\) Suppose that there is a point \\(D\\) on \\(\\overline{AM}\\) with \\(AD=10\\) and \\(\\angle BDC=3\\angle BAC.\\) Then the perimeter of \\(\\triangle ABC\\) may be written in the form \\(a+\\sqrt b,\\) where \\(a\\) and \\(b\\) are integers. Find \\(a+b.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "616",
+    "value": "616"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1995-p9.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(BM=x\\) and \\(\\alpha=\\angle BAM,\\) so \\(\\tan\\alpha=\\frac{x}{11}.\\) Because \\(DM=AM-AD=1,\\) symmetry gives \\(\\angle BDC=2\\arctan x,\\) while \\(\\angle BAC=2\\alpha.\\) Hence \\(\\arctan x=3\\alpha.\\) Put \\(t=\\tan\\alpha=\\frac{x}{11}.\\) Then \\[\\frac{3t-t^3}{1-3t^2}=11t,\\] so \\(t^2=\\frac{1}{4}\\) and \\(x=\\frac{11}{2}.\\) Thus \\(BC=11\\) and \\(AB=\\frac{11\\sqrt5}{2},\\) making the perimeter \\[11+11\\sqrt5=11+\\sqrt{605}.\\] Therefore \\(a+b=11+605=616.\\)",
+      "hints": [
+        "Let \\(BM=x\\) and let half the apex angle be \\(\\alpha\\)",
+        "Use \\(\\tan\\alpha=\\frac{x}{11},\\) \\(DM=1,\\) and the triple-angle formula for tangent"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "012dee7179c51fb789d5e2d123694a9ad03b3b8ef0e43d634c77e656356b8ef5"
+    ],
+    "solutions": []
+  }
+}

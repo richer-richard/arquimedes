@@ -1,0 +1,72 @@
+{
+  "id": "prob.aime-i-2017-p14",
+  "title": "2017 AIME I Problem 14",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.chinese-remainder-theorem",
+      "label": "Chinese Remainder Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.eulers-totient-function",
+      "label": "Euler’s Totient Function",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-exponentiation",
+      "label": "Modular exponentiation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2017,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 66.3,
+    "source": 3270,
+    "mohs": null
+  },
+  "estimatedMinutes": 20,
+  "statement": "Let \\(a \\gt 1\\) and \\(x \\gt 1\\) satisfy \\(\\small \\log_a\\!\\left(\\log_a\\!\\left(\\log_a 2\\right) + \\log_a 24 - 128\\right)\\) \\(= 128\\) and \\(\\log_a\\!\\left(\\log_a x\\right) = 256.\\) Find the remainder when \\(x\\) is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "896",
+    "value": "896"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2017-p14.live",
+      "kind": "proof-sketch",
+      "text": "Exponentiating the first equation twice: \\(\\log_a(\\log_a 2) + \\log_a 24 - 128\\) \\(= a^{128}\\) becomes \\(\\log_a(24 \\log_a 2) = 128 + a^{128},\\) so \\(24 \\log_a 2 = a^{128} \\cdot a^{a^{128}},\\) i.e. \\(2^{24} = a^{\\left(a^{128} \\cdot a^{a^{128}}\\right)}.\\) Setting \\(t = a^{a^{128}},\\) the right side is \\(t^t\\) and the left side is \\(\\left(2^3\\right)^{2^3},\\) so by the strict monotonicity of \\(t^t\\) we get \\(a^{a^{128}} = 8.\\) Writing \\(c = \\log_2 a \\gt 0,\\) this says \\(c \\cdot 2^{128c} = 3,\\) which is increasing in \\(c\\) and satisfied by \\(c = \\frac{3}{64}:\\) indeed \\(\\frac{3}{64} \\cdot 2^6 = 3.\\) So \\(a = 2^{\\frac{3}{64}}.\\)\n\nThe second equation gives \\(x = a^{a^{256}}.\\) Here \\(a^{256} = 2^{\\frac{256 \\cdot 3}{64}} = 2^{12} = 4096,\\) so \\[x = a^{4096} = 2^{\\frac{4096 \\cdot 3}{64}} = 2^{192}.\\]\n\nClearly \\(2^{192} \\equiv 0 \\pmod{8}.\\) By Euler’s theorem \\(2^{100} \\equiv 1 \\pmod{125},\\) so \\(2^{192} \\equiv 2^{-8} \\pmod{125},\\) the inverse of \\(256 \\equiv 6.\\) Since \\(6 \\cdot 21 = 126 \\equiv 1 \\pmod{125},\\) we get \\(2^{192} \\equiv 21 \\pmod{125}.\\) The unique residue mod \\(1000\\) that is \\(0\\) mod \\(8\\) and \\(21\\) mod \\(125\\) is \\(896.\\)",
+      "hints": [
+        "Exponentiate twice to turn the first equation into \\(24\\log_a 2 = a^{128} \\cdot a^{a^{128}},\\) then rewrite it as \\(t^t = \\left(2^3\\right)^{2^3}\\) for \\(t = a^{a^{128}}\\)",
+        "\\(t^t\\) is increasing, so \\(a^{a^{128}} = 8;\\) writing \\(c = \\log_2 a\\) gives \\(c \\cdot 2^{128c} = 3,\\) solved by \\(c = \\frac{3}{64}.\\) Then compute \\(x = a^{a^{256}}\\) mod \\(8\\) and mod \\(125.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

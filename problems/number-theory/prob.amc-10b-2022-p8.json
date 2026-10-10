@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2022-p8",
+  "title": "2022 AMC 10B Problem 8",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.multiple",
+      "label": "Multiple",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2022,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 20.0,
+    "source": 1370,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Consider the following \\(100\\) sets of \\(10\\) elements each: \\[\\begin{gathered} \\{1,2,3,\\ldots,10\\},\\\\ \\{11,12,13,\\ldots,20\\},\\\\ \\{21,22,23,\\ldots,30\\},\\\\ \\vdots\\\\ \\{991,992,993,\\ldots,1000\\}. \\end{gathered}\\] How many of these sets contain exactly two multiples of \\(7?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( \\ 40 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( \\ 42 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( \\ 43 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( \\ 49 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( \\ 50 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "42"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2022-p8.live",
+      "kind": "proof-sketch",
+      "text": "A block of ten consecutive integers contains exactly two multiples of \\(7\\) precisely when its first multiple of \\(7\\) is in one of the first three positions. Thus that multiple must have units digit \\(1,\\) \\(2,\\) or \\(3.\\)\n\nThe multiples of \\(7\\) with those units digits are, respectively, \\[\\begin{gathered}21+70j,\\\\42+70j,\\\\63+70j.\\end{gathered}\\] For each expression, \\(j=0,1,\\ldots,13\\) gives a value at most \\(1000,\\) so each class contributes \\(14\\) blocks. Therefore, the total is \\(3\\cdot14=42.\\)\n\nThus, the answer is B .",
+      "hints": [
+        "A block has two multiples exactly when its first multiple of \\(7\\) ends in \\(1,\\) \\(2,\\) or \\(3\\)",
+        "Track the units digits of the multiples of \\(7\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

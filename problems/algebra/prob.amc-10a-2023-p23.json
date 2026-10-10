@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2023-p23",
+  "title": "2023 AMC 10A Problem 23",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.difference-of-squares",
+      "label": "Difference of squares",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factor",
+      "label": "Factor",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2023,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 45.9,
+    "source": 2380,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Positive integer divisors \\(a\\) and \\(b\\) of \\(N\\) are called complementary if \\(ab = N.\\) Given that \\(N\\) has a pair of complementary divisors that differ by \\(20\\) and a pair of complementary divisors that differ by \\(23,\\) find the sum of the digits of \\(N.\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(19\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "15"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2023-p23.live",
+      "kind": "proof-sketch",
+      "text": "Complementary divisors differing by \\(20\\) are \\(b\\) and \\(b + 20\\) with product \\(N\\), so \\(N = b^2 + 20b\\) and \\(N + 100 = (b + 10)^2\\). A pair differing by \\(23\\) gives \\(4N + 529 = (2d + 23)^2\\). Set \\(N + 100 = k^2\\). Then \\(4k^2 + 129 = m^2\\), so \\((m - 2k)(m + 2k)\\) \\(= 129\\) \\(= 3 \\cdot 43\\). The positive factor pair \\(3,43\\) gives \\(k=10\\), hence the inadmissible value \\(N=0\\). The pair \\(1,129\\) gives \\(m = 65\\), \\(k = 32\\), hence \\(N = 32^2 - 100 = 924\\). Check it: \\(924 = 22 \\cdot 42 = 21 \\cdot 44\\), and the digit sum is \\(9 + 2 + 4 = 15\\). Thus, C is the correct answer.",
+      "hints": [
+        "Complementary divisors with product \\(N\\) differing by \\(20\\) are \\(b\\) and \\(b + 20,\\) so \\(N + 100 = (b + 10)^2\\)",
+        "Then \\(4N + 529\\) is also a perfect square; combine the two to get a difference of squares equal to \\(129\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

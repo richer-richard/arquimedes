@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1962-p31",
+  "title": "1962 AHSME Problem 31",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-sum",
+      "label": "Angle sum",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.regular-polygon",
+      "label": "Regular polygon",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1962,
+    "number": 31
+  },
+  "difficulty": {
+    "course": 28.7,
+    "source": 1710,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "The ratio of the interior angles of two regular polygons with sides of unit length is \\(3:2.\\) How many such pairs are there?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "infinitely many"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "3"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1962-p31.live",
+      "kind": "proof-sketch",
+      "text": "Let the smaller and larger polygons have \\(n\\) and \\(N\\) sides. Then \\[ \\frac{\\frac{N-2}{N}}{\\frac{n-2}{n}}=\\frac32, \\] which gives \\(N=\\frac{4n}{6-n}.\\) Positivity and \\(N\\gt n\\) require \\(n=3,\\) \\(n=4,\\) or \\(n=5.\\) These give \\(N=4,\\) \\(N=8,\\) and \\(N=20,\\) respectively. Thus there are \\(3\\) pairs.\n\nTherefore, the correct answer is C.",
+      "hints": [
+        "For an \\(n\\)-gon, an interior angle is \\(\\frac{180^\\circ(n-2)}{n}\\)",
+        "If the smaller polygon has \\(n\\) sides, solve for the larger side count and test the possible integers \\(3\\le n\\lt6\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

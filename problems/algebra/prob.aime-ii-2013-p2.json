@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2013-p2",
+  "title": "2013 AIME2 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.exponent",
+      "label": "Exponent",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2013,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 44.9,
+    "source": 2030,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Positive integers \\(a\\) and \\(b\\) satisfy the condition \\[\\log_2(\\log_{2^a}(\\log_{2^b}(2^{1000}))) = 0.\\] Find the sum of all possible values of \\(a + b.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "881",
+    "value": "881"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2013-p2.live",
+      "kind": "proof-sketch",
+      "text": "Working from the outside in, \\(\\log_2(\\cdot) = 0\\) forces \\(\\log_{2^a}(\\log_{2^b}(2^{1000})) = 1,\\) so \\(\\log_{2^b}(2^{1000}) = 2^a,\\) so \\(2^{1000} = (2^b)^{2^a} = 2^{b \\cdot 2^a}.\\) Hence \\[b \\cdot 2^a = 1000 = 2^3 \\cdot 125.\\]\n\nSince \\(a \\ge 1\\) and \\(b\\) is a positive integer, \\(2^a\\) must be one of \\(2,\\) \\(4,\\) \\(8,\\) giving \\((a, b) = (1, 500),\\) \\((2, 250),\\) and \\((3, 125).\\) The sum of all possible values of \\(a + b\\) is \\(501 + 252 + 128 = 881.\\)",
+      "hints": [
+        "Peel the logarithms from the outside in: the outer equation says the next expression equals \\(1,\\) then the next equals \\(2^a\\)",
+        "Everything reduces to \\(b \\cdot 2^a = 1000 = 2^3 \\cdot 125,\\) so \\(2^a\\) can only be \\(2,\\) \\(4,\\) or \\(8\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

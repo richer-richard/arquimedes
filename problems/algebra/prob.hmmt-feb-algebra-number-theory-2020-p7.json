@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2020-p7",
+  "title": "2020 HMMT February Algebra and Number Theory Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.fermat-euler-wilson-theorems",
+      "label": "Fermat / Euler / Wilson theorems",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2020,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find the sum of all positive integers \\(n\\) for which\n\n\\[\\frac{15 \\cdot n!^{2}+1}{2 n-3}\\]\n\nis an integer.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "90",
+    "value": "90"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2020-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "It is clear that \\(n=1\\) and \\(n=2\\) work so assume that \\(n>2\\). If \\(2 n-3\\) is composite then its smallest prime factor is at most \\(\\frac{2 n-3}{2}<n\\) so will be coprime to \\(15 \\cdot n!^{2}+1\\). Therefore assume that \\(2 n-3=p\\) is prime. We can rewrite the numerator as\n\n\\[(-1)^{n} \\cdot 15 \\cdot\\left(1 \\cdot 2 \\cdots \\frac{p+3}{2}\\right) \\cdot\\left(\\frac{p-3}{2} \\cdot \\frac{p-1}{2} \\cdots(p-1)\\right)+1 \\quad(\\bmod p)\\]\n\nBy Wilson's Theorem, \\((p-1)!\\equiv-1(\\bmod p)\\), so the expression simplifies to\n\n\\[(-1)^{n+1} \\cdot 15 \\cdot \\frac{p-3}{2} \\cdot \\frac{p-1}{2} \\cdot \\frac{p+1}{2} \\cdot \\frac{p+3}{2}+1 \\equiv(-1)^{n+1} \\cdot \\frac{135}{16}+1 \\quad(\\bmod p)\\]\n\nIf \\(p \\equiv 3(\\bmod 4)\\), then we have\n\n\\[\\frac{135+16}{16} \\equiv \\frac{151}{16} \\equiv 0 \\quad(\\bmod p)\\]\n\nIf \\(p \\equiv 1(\\bmod 4)\\), then we have\n\n\\[\\frac{135-16}{16} \\equiv \\frac{119}{16} \\equiv 0 \\quad(\\bmod p)\\]\n\nSo \\(p\\) must be a prime divisor of 151 or 119 , which means that \\(p \\in\\{7,17,151\\}\\). All of these numbers work aside from \\(7(\\) because \\(7 \\equiv 3(\\bmod 4))\\) and the corresponding values of \\(n\\) are 10 and 77 . The sum of the solutions is then \\(1+2+10+77=90\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

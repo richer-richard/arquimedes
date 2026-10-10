@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tst-2018-p1",
+  "title": "USA TST 2018 Problem 1",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TST",
+    "year": 2018,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 97.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n \\ge 2\\) be a positive integer,\nand let \\(\\sigma(n)\\) denote the sum of the positive divisors of \\(n\\).\nProve that the \\(n\\)th smallest positive integer\nrelatively prime to \\(n\\) is at least \\(\\sigma(n)\\),\nand determine for which \\(n\\) equality holds.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tst-2018-p1.evanchen",
+      "kind": "proof-sketch",
+      "text": "The equality case is \\(n = p^e\\) for\n\\(p\\) prime and a positive integer \\(e\\).\nIt is easy to check that this works.\n\nFirst solution..\nIn what follows, by \\([a,b]\\) we mean \\(\\{a,a+1,\\dots,b\\}\\).\nFirst, we make the following easy observation.\n\nClaim.\n If \\(a\\) and \\(d\\) are positive integers,\n then precisely \\(\\varphi(d)\\) elements\n of \\([a, a + d - 1]\\) are relatively prime to \\(d\\).\n\nLet \\(d_1\\), \\(d_2\\), \\dots, \\(d_k\\) denote\ndenote the divisors of \\(n\\) in some order.\nConsider the intervals\n\\[\\begin{aligned}\n I_1 &= [1, d_1], \\\\\n I_2 &= [d_1+1, d_1+d_2] \\\\\n &\\vdots \\\\\n I_k &= [d_1+\\dots+d_{k-1}+1, d_1+\\dots+d_k].\n\\end{aligned}\\]\nof length \\(d_1, \\dots, d_k\\) respectively.\nThe \\(j\\)th interval will have exactly \\(\\varphi(d_j)\\) elements\nwhich are relatively prime \\(d_j\\),\nhence at most \\(\\varphi(d_j)\\) which are relatively prime to \\(n\\).\nConsequently, in \\(I = \\bigcup_{j=1}^k I_k\\)\nthere are at most\n\\[ \\sum_{j=1}^k \\varphi(d_j) = \\sum_{d \\mid n} \\varphi(d) = n \\]\nintegers relatively prime to \\(n\\).\nOn the other hand \\(I = [1,\\sigma(n)]\\) so this implies the inequality.\n\nWe see that the equality holds for \\(n = p^e\\).\nAssume now \\(p < q\\) are distinct primes dividing \\(n\\).\nReorder the divisors \\(d_i\\) so that \\(d_1 = q\\).\nThen \\(p,q \\in I_1\\), and so \\(I_1\\) should contain\nstrictly fewer than \\(\\varphi(d_1)=q-1\\) elements\nrelatively prime to \\(n\\), hence the inequality is strict.\n\nSecond solution (Ivan Borsenco and Evan Chen)..\nLet \\(n = p_1^{e_1} \\dots p_k^{e_k}\\),\nwhere \\(p_1 < p_2 < \\dots\\).\nWe are going to assume \\(k \\ge 2\\),\nsince the \\(k=1\\) case was resolved in the very beginning,\nand prove the strict inequality.\n\nFor a general \\(N\\), the number of relatively prime integers in \\([1,N]\\) is\ngiven exactly by\n\\[ f(N) = N - \\sum_i \\left\\lfloor \\frac{N}{p_i} \\right\\rfloor\n + \\sum_{i<j} \\left\\lfloor \\frac{N}{p_i p_j} \\right\\rfloor - \\dots \\]\naccording to the inclusion-exclusion principle.\nSo, we wish to show that \\(f(\\sigma(n)) < n\\) (as \\(k \\ge 2\\)).\nDiscarding the error terms from the floors\n(noting that we get at most \\(1\\) from the negative floors)\ngives\n\\[\\begin{aligned}\n f(N) &< 2^{k-1} + N - \\sum_i \\frac{N}{p_i}\n + \\sum_{i<j} \\frac{N}{p_i p_j} - \\dots \\\\\n &= 2^{k-1} + N \\prod_i \\left( 1 - p_i^{-1} \\right) \\\\\n &= 2^{k-1} + \\prod_i \\left( 1 - p_i^{-1} \\right)\n \\left( 1 + p_i + p_i^2 + \\dots + p_i^{e_i} \\right) \\\\\n &= 2^{k-1} + \\prod_i \\left( p_i^{e_i} - p_i^{-1} \\right).\n\\end{aligned}\\]\nThe proof is now divided into two cases.\nIf \\(k=2\\) we have\n\\[\\begin{aligned}\n f(N) &< 2 + \\left( p_1^{e_1} - p_1^{-1} \\right)\\left( p_2^{e_2} -\n p_2^{-1} \\right) \\\\\n &= 2 + n - \\frac{p_2^{e_2}}{p_1} - \\frac{p_1^{e_1}}{p_2}\n + \\frac{1}{p_1p_2} \\\\\n &\\le 2 + n - \\frac{p_2}{p_1} - \\frac{p_1}{p_2}\n + \\frac{1}{p_1p_2} \\\\\n &= n + \\frac{1-(p_1-p_2)^2}{p_1p_2} \\le n.\n\\end{aligned}\\]\nOn the other hand if \\(k \\ge 3\\) we may now write\n\\[\\begin{aligned}\n f(N) &< 2^{k-1} + \\left[ \\prod_{i=2}^{k-1} \\left( p_i^{e_i} \\right)\n \\right] \\left( p_1^{e_1} - p_1^{-1} \\right) \\\\\n &= 2^{k-1} + n - \\frac{p_2^{e_2} \\dots p_k^{e_k}}{p_1} \\\\\n &\\le 2^{k-1} + n - \\frac{p_2 p_3 \\dots p_k}{p_1}.\n\\end{aligned}\\]\nIf \\(p_1 = 2\\), then one can show\nby induction that \\(p_2 p_3 \\dots p_k \\ge 2^{k+1}-1\\),\nwhich implies the result.\nIf \\(p_1 > 2\\), then one can again show by induction\n\\(p_3 \\dots p_k \\ge 2^k-1\\) (since \\(p_3 \\ge 7\\)),\nwhich also implies the result.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

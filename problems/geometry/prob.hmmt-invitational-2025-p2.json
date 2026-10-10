@@ -1,0 +1,76 @@
+{
+  "id": "prob.hmmt-invitational-2025-p2",
+  "title": "2025 HMMT Invitational Problem 2",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2025,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find all polynomials \\(P\\) with real coefficients for which there exists a polynomial \\(Q\\) with real coefficients such that for all real \\(t\\) ,\n\n\\[\\cos (P(t)) = Q(\\cos t).\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "all constant functions and p(x) = a x + b\\pi for all nonzero integers a and integers b",
+    "value": "All constant functions and P(x) = a x + b\\pi for all nonzero integers a and integers b"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2025-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "It is well- known that these polynomials work by taking \\(Q\\) to be a Chebyshev polynomial (if \\(P\\) is linear) or a constant (if \\(P\\) is constant).\n\nSuppose that \\(\\deg P \\geq 2\\) . Now consider the density of the roots of \\(\\cos (P(t))\\) , i.e.\n\n\\[\\lim_{n \\to \\infty} \\frac{\\text{number of roots in the interval} [-n, n]}{n}.\\]\n\nSince \\(\\cos (P(t)) = Q(\\cos t)\\) , the density is finite, because for each interval of length \\(2\\pi\\) , there can only be a finite number of roots (i.e. twice the degree of \\(Q\\) ). However, we claim that \\(\\cos (P(t))\\) has an infinite density of roots. In particular, consider the solutions to \\(P(x) = \\pm (2k - 1)\\pi /2\\) over positive integers \\(k\\) . Asymptotically, for large \\(k\\) , such \\(x\\) will always exist and be \\(\\Theta (k^{1 / \\deg P})\\) . As \\(k \\to \\infty\\) , such \\(x\\) become infinitely dense, contradicting the finite density of roots of \\(Q(\\cos t)\\) . Therefore, \\(\\deg P \\leq 1\\) .\n\nIf \\(\\deg P = 1\\) , let \\(P(t) = at + b\\) . Observe that \\(Q(\\cos t)\\) is periodic with period \\(2\\pi\\) , so \\(\\cos (P(t))\\) must be as well. This is only the case when \\(a\\) is an integer. Furthermore,\n\n\\[Q(\\cos t) = \\cos (at + b) = \\cos (at)\\cos (b) - \\sin (at)\\sin (b)\\]\n\nmust be an even function. Note that \\(\\cos (at)\\cos (b)\\) is even and \\(\\sin (at)\\sin (b)\\) is odd, so \\(\\sin (at)\\sin (b) = 0\\) for all \\(t\\) , and hence \\(b\\) is an integer multiple of \\(\\pi\\) .\n\nThus, the only polynomials that work are the ones claimed above.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

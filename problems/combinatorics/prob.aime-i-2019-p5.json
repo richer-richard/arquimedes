@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2019-p5",
+  "title": "2019 AIME I Problem 5",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.lattice-paths",
+      "label": "Lattice paths",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiset-permutations",
+      "label": "Multiset permutations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2019,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 53.2,
+    "source": 2600,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "A moving particle starts at the point \\((4, 4)\\) and moves until it hits one of the coordinate axes for the first time. When the particle is at the point \\((a, b),\\) it moves at random to one of the points \\((a - 1, b),\\) \\((a, b - 1),\\) or \\((a - 1, b - 1),\\) each with probability \\(\\frac{1}{3},\\) independently of its previous moves. The probability that it will hit the coordinate axes at \\((0, 0)\\) is \\(\\frac{m}{3^n},\\) where \\(m\\) and \\(n\\) are positive integers, and \\(m\\) is not divisible by \\(3.\\) Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "252",
+    "value": "252"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2019-p5.live",
+      "kind": "proof-sketch",
+      "text": "Coordinates never increase, so the first axis point reached is \\((0,0)\\) exactly when the particle reaches \\((1, 1)\\) and then takes the diagonal step. Every path from \\((4,4)\\) to \\((1,1)\\) automatically stays off the axes, since its coordinates remain at least \\(1.\\)\n\nA path from \\((4,4)\\) to \\((1,1)\\) with \\(d\\) diagonal steps also has \\(3 - d\\) left steps and \\(3 - d\\) down steps, for \\(6 - d\\) steps in all, and there are \\(\\frac{(6-d)!}{d!\\,(3-d)!\\,(3-d)!}\\) orderings: \\(20,\\) \\(30,\\) \\(12,\\) \\(1\\) for \\(d = 0,\\) \\(1,\\) \\(2,\\) \\(3.\\) Since a path with \\(6 - d\\) steps has probability \\(\\left(\\frac{1}{3}\\right)^{6-d},\\) the probability of reaching \\((1,1)\\) and then stepping to \\((0,0)\\) is \\[ \\begin{aligned} &\\frac{1}{3}\\left(\\frac{20}{3^6} + \\frac{30}{3^5} + \\frac{12}{3^4} + \\frac{1}{3^3}\\right) \\\\ &= \\frac{1}{3} \\cdot \\frac{20 + 90 + 108 + 27}{3^6} \\\\ &= \\frac{245}{3^7}. \\end{aligned} \\]\n\nSince \\(245 = 5 \\cdot 7^2\\) is not divisible by \\(3,\\) we get \\(m + n = 245 + 7 = 252.\\)",
+      "hints": [
+        "The particle can first hit the axes at \\((0, 0)\\) only by taking the diagonal step from \\((1, 1)\\)",
+        "Count paths from \\((4, 4)\\) to \\((1, 1)\\) by the number \\(d\\) of diagonal steps: each such path has \\(6 - d\\) steps and a multinomial number of orderings"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

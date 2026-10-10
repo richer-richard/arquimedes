@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-team-2003-p2",
+  "title": "2003 HMMT February Team Problem 2",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2003,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 78.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Suppose \\(A\\) is a set with \\(n\\) elements, and \\(k\\) is a divisor of \\(n\\). Find the number of consistent \\(k\\)-configurations of \\(A\\) of order 1 .",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2003-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "Given such a \\(k\\)-configuration, we can write out all the elements of one of the \\(k\\)-element subsets, then all the elements of another subset, and so forth, eventually obtaining an ordering of all \\(n\\) elements of \\(A\\). Conversely, given any ordering of the elements of \\(A\\), we can construct a consistent \\(k\\)-configuration of order 1 from it by grouping together the first \\(k\\) elements, then the next \\(k\\) elements, and so forth. In fact, each consistent \\(k\\)-configuration of order 1 corresponds to \\((n / k)!(k!)^{n / k}\\) different such orderings, since the elements of \\(A\\) within each of the \\(n / k k\\)-element subsets can be ordered in \\(k\\) ! ways, and the various subsets can also be ordered with respect to each other in \\((n / k)\\) ! different ways. Thus, since there are \\(n\\) ! orderings of the elements of \\(A\\), we get \\(\\frac{n!}{(n / k)!(k!)^{n / k}}\\) different consistent \\(k\\)-configurations of order 1 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

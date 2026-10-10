@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12a-2020-p21",
+  "title": "2020 AMC 12A 21",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.least-common-multiple",
+      "label": "Least common multiple",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2020,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 35.9,
+    "source": 2080,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "How many positive integers \\(n\\) are there such that \\(n\\) is a multiple of \\(5,\\) and the least common multiple of \\(5!\\) and \\(n\\) equals \\(5\\) times the greatest common divisor of \\(10!\\) and \\(n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(36\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(48\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(72\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "48"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2020-p21.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(n = 2^a 3^b 5^c 7^d \\cdots.\\) Since \\(5! = 2^3 \\cdot 3 \\cdot 5\\) has no other primes, \\(n\\) can only involve \\(2, 3, 5, 7.\\) Matching exponents in \\(\\operatorname{lcm}(5!, n) = 5 \\cdot \\gcd(10!, n):\\)\n\nFor \\(2:\\) \\(\\max(3, a) = \\min(8, a),\\) so \\(3 \\le a \\le 8\\) gives \\(6\\) values. For \\(3:\\) \\(\\max(1, b) = \\min(4, b),\\) so \\(1 \\le b \\le 4\\) gives \\(4\\) values.\n\nFor \\(5:\\) \\(\\max(1, c) = 1 + \\min(2, c)\\) with \\(c \\ge 1,\\) which forces \\(c = 3,\\) giving \\(1\\) value. For \\(7:\\) \\(\\max(0, d) = \\min(1, d),\\) so \\(d = 0\\) or \\(1,\\) giving \\(2\\) values.\n\nThe total is \\(6 \\cdot 4 \\cdot 1 \\cdot 2 = 48.\\)\n\nThus, D is the correct answer.",
+      "hints": [
+        "\\(5! = 2^3 \\cdot 3 \\cdot 5\\) and \\(10! = 2^8 \\cdot 3^4 \\cdot 5^2 \\cdot 7;\\) compare exponents of each prime",
+        "Multiplying the gcd by \\(5\\) raises the power of \\(5\\) by one; work out the allowed exponent of each prime in \\(n\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

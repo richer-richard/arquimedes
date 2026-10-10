@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2025-p9",
+  "title": "2025 AIME II Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.systematic-listing",
+      "label": "Systematic listing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2025,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 59.8,
+    "source": 2920,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "There are \\(n\\) values of \\(x\\) in the interval \\(0 \\lt x \\lt 2\\pi\\) where \\(f(x) = \\sin(7\\pi \\cdot \\sin(5x)) = 0.\\) For \\(t\\) of these \\(n\\) values of \\(x,\\) the graph of \\(y = f(x)\\) is tangent to the \\(x\\)-axis. Find \\(n + t.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "149",
+    "value": "149"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2025-p9.live",
+      "kind": "proof-sketch",
+      "text": "\\(f(x) = 0\\) exactly when \\(7\\pi \\sin(5x)\\) is a multiple of \\(\\pi,\\) that is, \\(\\sin(5x) = \\frac{k}{7}\\) for an integer \\(k\\) with \\(|k| \\le 7.\\) As \\(x\\) runs over \\((0, 2\\pi),\\) the quantity \\(5x\\) runs over \\((0, 10\\pi),\\) five full periods. For \\(k = 0,\\) the solutions are \\(5x = \\pi, 2\\pi, \\ldots, 9\\pi:\\) \\(9\\) values. For each of the \\(12\\) values \\(k = \\pm 1, \\ldots, \\pm 6,\\) each period contributes \\(2\\) solutions: \\(10\\) values each. For \\(k = \\pm 7,\\) we need \\(\\sin(5x) = \\pm 1,\\) which happens \\(5\\) times each. So \\(n = 9 + 120 + 10 = 139.\\)\n\nThe graph is tangent to the \\(x\\)-axis at a zero exactly when \\(f'(x)\\) \\(= 35\\pi \\cos(7\\pi \\sin(5x)) \\cos(5x)\\) \\(= 0\\) there. At any zero, \\(\\cos(7\\pi \\sin(5x)) = \\cos(k\\pi)\\) \\(= \\pm 1 \\ne 0,\\) so tangency requires \\(\\cos(5x) = 0,\\) which means \\(\\sin(5x) = \\pm 1:\\) exactly the \\(10\\) zeros with \\(k = \\pm 7\\) (there \\(\\sin(5x)\\) has an extremum, so \\(f\\) touches without crossing). Thus \\(t = 10\\) and \\(n + t = 149.\\)",
+      "hints": [
+        "\\(f(x) = 0\\) exactly when \\(\\sin(5x) = \\frac{k}{7}\\) for an integer \\(-7 \\le k \\le 7;\\) count solutions for each \\(k\\) over five periods of \\(\\sin(5x)\\)",
+        "Tangency to the \\(x\\)-axis also needs \\(f'(x) = 0,\\) which forces \\(\\cos(5x) = 0,\\) i.e. \\(\\sin(5x) = \\pm 1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

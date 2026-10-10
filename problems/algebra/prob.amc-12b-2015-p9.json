@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2015-p9",
+  "title": "2015 AMC 12B 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursive-probability",
+      "label": "Recursive probability",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2015,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 26.4,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Larry and Julius are playing a game, taking turns throwing a ball at a bottle sitting on a ledge. Larry throws first. The winner is the first person to knock the bottle off the ledge. At each turn the probability that a player knocks the bottle off the ledge is \\(\\dfrac12,\\) independently of what has happened before. What is the probability that Larry wins the game?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac12\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac35\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac23\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac34\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac45\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "2/3"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2015-p9.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(x\\) be the probability Larry wins. He wins right away with probability \\(\\dfrac12,\\) or both players miss (probability \\(\\dfrac14\\)) and the game restarts.\n\nSo \\(x = \\dfrac12 + \\dfrac14 x,\\) giving \\(\\dfrac34 x = \\dfrac12\\) and \\(x = \\dfrac23.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Larry wins immediately with probability \\(\\dfrac12\\)",
+        "If both miss (probability \\(\\dfrac14\\)), the game resets; solve \\(x = \\dfrac12 + \\dfrac14 x\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

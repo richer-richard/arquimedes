@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2010-p5",
+  "title": "2010 IMO Problem 5",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2010,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 106.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Each of the six boxes \\(B_1\\), \\(B_2\\), \\(B_3\\), \\(B_4\\), \\(B_5\\), \\(B_6\\)\ninitially contains one coin.\nThe following two types of operations are allowed:\n\n• Choose a non-empty box \\(B_j\\), \\(1\\leq j \\leq 5\\),\n remove one coin from \\(B_j\\) and add two coins to \\(B_{j+1}\\);\n\n• Choose a non-empty box \\(B_k\\), \\(1\\leq k \\leq 4\\),\n remove one coin from \\(B_k\\) and swap the contents\n (possibly empty) of the boxes \\(B_{k+1}\\) and \\(B_{k+2}\\).\n\nDetermine if there exists a finite sequence of operations of the allowed types,\nsuch that the five boxes \\(B_1\\), \\(B_2\\), \\(B_3\\), \\(B_4\\), \\(B_5\\) become empty,\nwhile box \\(B_6\\) contains exactly \\(2010^{2010^{2010}}\\) coins.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2010-p5.evanchen",
+      "kind": "proof-sketch",
+      "text": "First,\n\\[\\begin{aligned}\n (1,1,1,1,1,1) &\\to (0,3,1,0,3,1) \\to (0,0,7,0,0,7) \\\\\n &\\to (0,0,6,2,0,7) \\to (0,0,6,1,2,7) \\to (0,0,6,1,0,11) \\\\\n &\\to (0,0,6,0,11,0) \\to (0,0,5,11,0,0).\n\\end{aligned}\\]\nand henceforth we ignore boxes \\(B_1\\) and \\(B_2\\),\nlooking at just the last four boxes;\nso we write the current position as \\((5,11,0,0)\\).\n\nWe prove a lemma:\n\nClaim.\n Let \\(k \\ge 0\\) and \\(n > 0\\).\n From \\((k,n,0,0)\\) we may reach \\((k-1,2^n,0,0)\\).\n\nProof.\n Working with only the last three boxes for now,\n \\[\\begin{aligned}\n (n,0,0) &\\to (n-1, 2, 0) \\to (n-1, 0, 4) \\\\\n &\\to (n-2, 4, 0) \\to (n-2, 0, 8) \\\\\n &\\to (n-3, 8, 0) \\to (n-3, 0, 16) \\\\\n &\\to \\dots \\to (1, 2^{n-1}, 0) \\to (1, 0, 2^n) \\to (0, 2^n, 0).\n \\end{aligned}\\]\n Finally we have \\((k,n,0,0) \\to (k,0,2^n,0) \\to (k-1,2^n, 0,0)\\).\n\nNow from \\((5,11,0,0)\\) we go as follows:\n\\[\\begin{aligned} (5,11,0,0) &\\to (4, 2^{11}, 0, 0)\n \\to \\left(3, 2^{2^{11}}, 0, 0\\right)\n \\to \\left(2, 2^{2^{2^{11}}}, 0, 0\\right) \\\\\n &\\to \\left( 1, 2^{2^{2^{2^{11}}}}, 0, 0\\right)\n \\to \\left(0, 2^{2^{2^{2^{2^{11}}}}}, 0, 0\\right).\n\\end{aligned}\\]\nLet \\(A = 2^{2^{2^{2^{2^{11}}}}} > 2010^{2010^{2010}} = B\\).\nThen by using move 2 repeatedly on the fourth box\n(i.e., throwing away several coins by swapping the empty \\(B_5\\) and \\(B_6\\)),\nwe go from \\((0,A,0,0)\\) to \\((0,B/4,0,0)\\).\nFrom there we reach \\((0,0,0,B)\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

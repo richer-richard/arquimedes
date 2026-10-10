@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2016-p25",
+  "title": "2016 AMC 10A 25",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.least-common-multiple",
+      "label": "Least common multiple",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2016,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 36.9,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "How many ordered triples \\((x,y,z)\\) of positive integers satisfy \\[\\text{lcm}(x,y) = 72,\\]\\[ \\text{lcm}(x,z) = 600,\\] and \\[\\text{lcm}(y,z)=900?\\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(27\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(64\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "15"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2016-p25.live",
+      "kind": "proof-sketch",
+      "text": "Factor the given least common multiples: \\[ \\begin{gathered} 72=2^3\\cdot3^2, \\\\ \\quad 600=2^3\\cdot3\\cdot5^2, \\\\ \\quad 900=2^2\\cdot3^2\\cdot5^2. \\end{gathered} \\] Since \\(\\operatorname{lcm}(x,y)\\) has no factor of \\(5\\), neither \\(x\\) nor \\(y\\) has a factor of \\(5\\), and \\(z\\) must contain \\(5^2\\).\n\nWrite \\(x=2^a3^b\\), \\(y=2^c3^d\\), and \\(z=2^e3^f5^2\\). The power of \\(3\\) in \\(\\operatorname{lcm}(y,z)\\) forces \\(d=2\\), and the power of \\(2\\) in \\(\\operatorname{lcm}(x,z)\\) forces \\(a=3\\).\n\nThe remaining independent conditions are \\(\\max(b,f)=1\\) and \\(\\max(c,e)=2\\). These have \\(3\\) and \\(5\\) ordered choices, respectively, so there are \\(3\\cdot5=15\\) triples.\n\nThus, the correct answer is A.",
+      "hints": [
+        "Treat each prime exponent independently",
+        "The powers of \\(3\\) and \\(2\\) each leave a small max-condition count"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

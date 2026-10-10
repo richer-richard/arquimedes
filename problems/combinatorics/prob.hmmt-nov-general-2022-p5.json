@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-general-2022-p5",
+  "title": "2022 HMMT November General Problem 5",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.invariants-and-monovariants",
+      "label": "Invariants and monovariants",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2022,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 48.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "An apartment building consists of 20 rooms numbered \\(1,2, \\ldots, 20\\) arranged clockwise in a circle. To move from one room to another, one can either walk to the next room clockwise (i.e. from room \\(i\\) to room \\((i+1)(\\bmod 20))\\) or walk across the center to the opposite room (i.e. from room \\(i\\) to room \\((i+10)(\\bmod 20))\\). Find the number of ways to move from room 10 to room 20 without visiting the same room twice.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "257",
+    "value": "257"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2022-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "One way is to walk directly from room 10 to 20 . Else, divide the rooms into 10 pairs \\(A_{0}=(10,20), A_{1}=(1,11), A_{2}=(2,12), \\ldots, A_{9}=(9,19)\\). Notice that\n\n- each move is either between rooms in \\(A_{i}\\) and \\(A_{(i+1)(\\bmod 10)}\\) for some \\(i \\in\\{0,1, \\ldots, 9\\}\\), or between rooms in the same pair, meaning that our path must pass through \\(A_{0}, A_{1}, \\ldots, A_{9}\\) in that order before coming back to room 20 in \\(A_{0}\\),\n- in each of the pairs \\(A_{1}, A_{2}, \\ldots, A_{8}\\), we can choose to walk between rooms in that pair 0 or 1 times, and\n- we have to walk between rooms 9 and 19 if and only if we first reach \\(A_{9}\\) at room 9 (so the choice of walking between \\(A_{9}\\) is completely determined by previous choices).\n\nThus, the number of ways to walk from room 10 to 20 is \\(1+2^{8}=257\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

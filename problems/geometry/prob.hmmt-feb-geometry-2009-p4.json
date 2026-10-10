@@ -1,0 +1,75 @@
+{
+  "id": "prob.hmmt-feb-geometry-2009-p4",
+  "title": "2009 HMMT February Geometry Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity-and-scaling",
+      "label": "Similarity and scaling",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2009,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 77.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A kite is a quadrilateral whose diagonals are perpendicular. Let kite \\(A B C D\\) be such that \\(\\angle B=\\) \\(\\angle D=90^{\\circ}\\). Let \\(M\\) and \\(N\\) be the points of tangency of the incircle of \\(A B C D\\) to \\(A B\\) and \\(B C\\) respectively. Let \\(\\omega\\) be the circle centered at \\(C\\) and tangent to \\(A B\\) and \\(A D\\). Construct another kite \\(A B^{\\prime} C^{\\prime} D^{\\prime}\\) that is similar to \\(A B C D\\) and whose incircle is \\(\\omega\\). Let \\(N^{\\prime}\\) be the point of tangency of \\(B^{\\prime} C^{\\prime}\\) to \\(\\omega\\). If \\(M N^{\\prime} \\| A C\\), then what is the ratio of \\(A B: B C\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2009-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let's focus on the right triangle \\(A B C\\) and the semicircle inscribed in it since the situation is symmetric about \\(A C\\). First we find the radius \\(a\\) of circle \\(O\\). Let \\(A B=x\\) and \\(B C=y\\). Drawing the radii \\(O M\\) and \\(O N\\), we see that \\(A M=x-a\\) and \\(\\triangle A M O \\sim \\triangle A B C\\). In other words,\n\n\\[\\begin{aligned}\n\\frac{A M}{M O} & =\\frac{A B}{B C} \\\\\n\\frac{x-a}{a} & =\\frac{x}{y} \\\\\na & =\\frac{x y}{x+y} .\n\\end{aligned}\\]\n\nNow we notice that the situation is homothetic about \\(A\\). In particular,\n\n\\[\\triangle A M O \\sim \\triangle O N C \\sim \\triangle C N^{\\prime} C^{\\prime}\\]\n\nAlso, \\(C B\\) and \\(C N^{\\prime}\\) are both radii of circle \\(C\\). Thus, when \\(M N^{\\prime} \\| A C^{\\prime}\\), we have\n\n\\[\\begin{aligned}\nA M & =C N^{\\prime}=C B \\\\\nx-a & =y \\\\\na=\\frac{x y}{x+y} & =x-y \\\\\nx^{2}-x y-y^{2} & =0 \\\\\nx & =\\frac{y}{2} \\pm \\sqrt{\\frac{y^{2}}{4}+y^{2}} \\\\\n\\frac{A B}{B C}=\\frac{x}{y} & =\\frac{1+\\sqrt{5}}{2} .\n\\end{aligned}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

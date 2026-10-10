@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2025-p2",
+  "title": "2025 AMC 10B Problem 2",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.pattern-recognition",
+      "label": "Pattern recognition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.units-digit",
+      "label": "Units digit",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2025,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 10.3,
+    "source": 990,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Jerry wrote down the ones digit of each of the first \\(2025\\) positive squares: \\(1,\\) \\(4,\\) \\(9,\\) \\(6,\\) \\(5,\\) \\(6,\\) \\(\\ldots\\) What is the sum of all the numbers Jerry wrote down?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(9025\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(9070\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(9090\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(9115\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(9160\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "9115"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2025-p2.live",
+      "kind": "proof-sketch",
+      "text": "The ones digit of \\(n^2\\) depends only on the ones digit of \\(n,\\) so the list repeats every \\(10\\) terms: \\(1, 4, 9, 6, 5, 6, 9, 4, 1, 0.\\) One block sums to \\(45.\\) Now \\(2025 = 202 \\cdot 10 + 5,\\) so we get \\(202\\) full blocks plus the first five terms: \\(202 \\cdot 45\\) \\(+ (1 + 4 + 9 + 6 + 5)\\) \\(= 9090\\) \\(+ 25 = 9115.\\) Therefore, the answer is D.",
+      "hints": [
+        "The ones digit of \\(n^2\\) depends only on the ones digit of \\(n,\\) so the list repeats every \\(10\\) terms",
+        "One full block \\(1, 4, 9, 6, 5, 6, 9, 4, 1, 0\\) sums to \\(45;\\) there are \\(202\\) full blocks and \\(5\\) leftover terms"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

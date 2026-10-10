@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2008-p5",
+  "title": "2008 IMO Problem 5",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2008,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 88.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n\\) and \\(k\\) be positive integers with \\(k \\geq n\\) and \\(k - n\\) an even number.\nThere are \\(2n\\) lamps labelled \\(1\\), \\(2\\), \\dots, \\(2n\\) each of which can be either on or off.\nInitially all the lamps are off.\nWe consider sequences of steps: at each step one of the lamps is switched\n(from on to off or from off to on).\nLet \\(N\\) be the number of such sequences consisting of \\(k\\) steps\nand resulting in the state where lamps \\(1\\) through \\(n\\) are all on,\nand lamps \\(n + 1\\) through \\(2n\\) are all off.\nLet \\(M\\) be number of such sequences consisting of \\(k\\) steps,\nresulting in the state where lamps \\(1\\) through \\(n\\) are all on,\nand lamps \\(n + 1\\) through \\(2n\\) are all off,\nbut where none of the lamps \\(n + 1\\) through \\(2n\\) is ever switched on.\nDetermine \\(\\frac{N}{M}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2008-p5.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is \\(2^{k-n}\\).\n\nConsider the following map \\(\\Psi\\) from \\(N\\)-sequences to \\(M\\)-sequences:\n\n• change every instance of \\(n+1\\) to \\(1\\);\n\n• change every instance of \\(n+2\\) to \\(2\\);\n\n• [\\(\\vdots\\)]\n\n• change every instance of \\(2n\\) to \\(n\\).\n\n(For example, suppose \\(k=9\\), \\(n=3\\);\nthen \\(144225253 \\mapsto 111222223\\).)\n\nClearly this is map is well-defined and surjective.\nSo all that remains is:\n\nClaim.\n Every \\(M\\)-sequence has exactly \\(2^{k-n}\\) pre-images under \\(\\Psi\\).\n\nProof.\n Indeed, suppose that there are \\(c_1\\) instances of lamp \\(1\\).\n Then we want to pick an odd subset of the \\(1\\)'s to change to \\(n+1\\)'s,\n so \\(2^{c_1 - 1}\\) ways to do this.\n And so on.\n Hence the number of pre-images is\n \\[ \\prod_i 2^{c_i - 1} = 2^{k-n}. \\qedhere \\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

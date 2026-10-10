@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-8-1987-p24",
+  "title": "1987 AMC 8 Problem 24",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.linear-equation",
+      "label": "Linear equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.parity",
+      "label": "Parity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1987,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 14.4,
+    "source": 1150,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A multiple choice examination consists of \\(20\\) questions. The scoring is \\(+5\\) for each correct answer, \\(-2\\) for each incorrect answer, and \\(0\\) for each unanswered question. John’s score on the examination is \\(48.\\) What is the maximum number of questions he could have answered correctly?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(16\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "12"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1987-p24.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(c\\) be the number correct and \\(w\\) the number wrong, so \\(5c - 2w = 48.\\) Then \\(2w = 5c - 48,\\) which requires \\(c\\) to be even.\n\nTrying \\(c = 14\\) gives \\(w = 11,\\) but \\(c + w = 25 \\gt 20,\\) too many; every larger even \\(c\\) would require still more answered questions. Trying \\(c = 12\\) gives \\(w = 6\\) and \\(c + w = 18 \\le 20,\\) which works. So the maximum is \\(12.\\)\n\nThus, the correct answer is D .",
+      "hints": [
+        "If \\(c\\) answers are correct and \\(w\\) are wrong, then \\(5c - 2w = 48\\)",
+        "Try the largest possible \\(c\\): \\(5c - 48\\) must be a nonnegative even number \\(2w,\\) with \\(c + w \\le 20\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

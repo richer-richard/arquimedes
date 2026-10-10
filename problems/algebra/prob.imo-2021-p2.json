@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2021-p2",
+  "title": "2021 IMO Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2021,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 115.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Show that the inequality\n\\[\\sum_{i=1}^n \\sum_{j=1}^n \\sqrt{|x_i-x_j|}\n \\le \\sum_{i=1}^n \\sum_{j=1}^n \\sqrt{|x_i+x_j|} \\]\nholds for all real numbers \\(x_1\\), \\(x_2\\), \\dots, \\(x_n\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2021-p2.evanchen",
+      "kind": "proof-sketch",
+      "text": "The proof is by induction on \\(n \\ge 1\\) with the base cases \\(n=1\\) and\n\\(n=2\\) being easy to verify by hand.\n\nIn the general situation, consider replacing the tuple \\((x_i)_i\\)\nwith \\((x_i+t)_i\\) for some parameter \\(t \\in \\mathbb{R}\\).\nThe inequality becomes\n\\[\\sum_{i=1}^n \\sum_{j=1}^n \\sqrt{|x_i-x_j|}\n \\le \\sum_{i=1}^n \\sum_{j=1}^n \\sqrt{|x_i+x_j+2t|}. \\]\nThe left-hand side is independent of \\(t\\).\n\nClaim.\n The right-hand side, viewed as a function \\(F(t)\\) of \\(t\\),\n is minimized when \\(2t = -(x_i + x_j)\\) for some \\(i\\) and \\(j\\).\n\nProof.\n Since \\(F(t)\\) is the sum of piecewise concave functions,\n it is hence itself piecewise concave.\n Moreover \\(F\\) increases without bound if \\(|t| \\to \\infty\\).\n\n On each of the finitely many intervals on which \\(F(t)\\) is\n concave, the function is minimized at its endpoints.\n Hence the minimum value must occur at one of the endpoints.\n\nIf \\(t = -x_i\\) for some \\(i\\), this is the same as shifting all the\nvariables so that \\(x_i = 0\\).\nIn that case, we may apply induction on \\(n-1\\) variables,\ndeleting the variable \\(x_i\\).\n\nIf \\(t = -\\frac{x_i+x_j}{2}\\), then notice\n\\[ x_i + t = -(x_j + t) \\]\nso it's the same as shifting all the variables such that \\(x_i = -x_j\\).\nIn that case, we may apply induction on \\(n-2\\) variables,\nafter deleting \\(x_i\\) and \\(x_j\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

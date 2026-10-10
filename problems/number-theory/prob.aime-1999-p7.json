@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1999-p7",
+  "title": "1999 AIME Problem 7",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1999,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 52.8,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "There is a set of \\(1000\\) switches, each of which has four positions, called \\(A,\\) \\(B,\\) \\(C,\\) and \\(D.\\) When the position of any switch changes, it is only from \\(A\\) to \\(B,\\) from \\(B\\) to \\(C,\\) from \\(C\\) to \\(D,\\) or from \\(D\\) to \\(A.\\) Initially each switch is in position \\(A.\\) The switches are labeled with the \\(1000\\) different integers \\(2^x 3^y 5^z,\\) where \\(x,\\) \\(y,\\) and \\(z\\) take on the values \\(0,\\) \\(1,\\) \\(\\ldots,\\) \\(9.\\) At step \\(i\\) of a \\(1000\\)-step process, the \\(i\\)th switch is advanced one step, and so are all the other switches whose labels divide the label on the \\(i\\)th switch. After step \\(1000\\) has been completed, how many switches will be in position \\(A?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "650",
+    "value": "650"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1999-p7.live",
+      "kind": "proof-sketch",
+      "text": "The switch labeled \\(d\\) is advanced exactly once for each step \\(i\\) whose label is a multiple of \\(d.\\) The multiples of \\(2^x 3^y 5^z\\) among the labels are the \\(2^{x'} 3^{y'} 5^{z'}\\) with \\(x \\le x' \\le 9,\\) etc., so that switch advances \\((10 - x)(10 - y)(10 - z)\\) times. It returns to position \\(A\\) exactly when this count is a multiple of \\(4.\\)\n\nWrite \\(a = 10 - x,\\) \\(b = 10 - y,\\) \\(c = 10 - z,\\) each ranging over \\(1\\) through \\(10.\\) We count the triples where \\(abc\\) is not divisible by \\(4:\\) either all three are odd, or exactly one is even but not divisible by \\(4.\\) Among \\(1, \\ldots, 10\\) there are \\(5\\) odd values and \\(3\\) values (\\(2,\\) \\(6,\\) \\(10\\)) that are twice an odd number. That gives \\(5^3 = 125\\) triples of the first kind and \\(3 \\cdot 3 \\cdot 5^2 = 225\\) of the second, or \\(350\\) in all.\n\nTherefore \\(1000 - 350 = 650\\) switches end in position \\(A.\\)",
+      "hints": [
+        "The switch labeled \\(d\\) is advanced once for every label that is a multiple of \\(d;\\) count those multiples in terms of the exponents",
+        "The label \\(2^x 3^y 5^z\\) advances \\((10 - x)(10 - y)(10 - z)\\) times; count the triples for which this product is not a multiple of \\(4\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

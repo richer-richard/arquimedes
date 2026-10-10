@@ -1,0 +1,72 @@
+{
+  "id": "prob.aime-i-2019-p7",
+  "title": "2019 AIME I Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.least-common-multiple",
+      "label": "Least common multiple",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2019,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 50.6,
+    "source": 2460,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "There are positive integers \\(x\\) and \\(y\\) that satisfy the system of equations \\[\\log_{10} x + 2\\log_{10}(\\gcd(x, y)) = 60\\] \\[ \\begin{aligned} &\\log_{10} y \\\\ &\\quad {}+ 2\\log_{10}(\\operatorname{lcm}(x, y)) = 570. \\end{aligned} \\] Let \\(m\\) be the number of (not necessarily distinct) prime factors in the prime factorization of \\(x,\\) and let \\(n\\) be the number of (not necessarily distinct) prime factors in the prime factorization of \\(y.\\) Find \\(3m + 2n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "880",
+    "value": "880"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2019-p7.live",
+      "kind": "proof-sketch",
+      "text": "The equations say \\(x \\cdot \\gcd(x,y)^2 = 10^{60}\\) and \\(y \\cdot \\operatorname{lcm}(x,y)^2 = 10^{570},\\) so \\(x\\) and \\(y\\) are products of the primes \\(2\\) and \\(5\\) only. Fix one of these primes and let \\(a\\) and \\(b\\) be its exponents in \\(x\\) and \\(y.\\) Since the gcd takes the smaller exponent and the lcm the larger, \\[ \\begin{aligned} a + 2\\min(a, b) &= 60, \\\\ b + 2\\max(a, b) &= 570. \\end{aligned} \\]\n\nIf \\(a \\gt b,\\) then \\(a + 2b = 60\\) and \\(b + 2a = 570;\\) adding gives \\(a + b = 210,\\) and subtracting gives \\(a - b = 510,\\) forcing \\(b \\lt 0,\\) impossible. So \\(a \\le b,\\) and the equations become \\(3a = 60\\) and \\(3b = 570,\\) giving \\(a = 20\\) and \\(b = 190\\) for both primes.\n\nThus \\(x = 2^{20} 5^{20}\\) and \\(y = 2^{190} 5^{190},\\) so \\(m = 40,\\) \\(n = 380,\\) and \\(3m + 2n = 120 + 760 = 880.\\)",
+      "hints": [
+        "The equations say \\(x \\cdot \\gcd(x,y)^2 = 10^{60}\\) and \\(y \\cdot \\operatorname{lcm}(x,y)^2 = 10^{570},\\) so only the primes \\(2\\) and \\(5\\) can appear",
+        "For each prime, gcd takes the smaller exponent and lcm the larger; the case where \\(x\\)’s exponent exceeds \\(y\\)’s leads to a negative exponent"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

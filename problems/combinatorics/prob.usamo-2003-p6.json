@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2003-p6",
+  "title": "2003 USAMO Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2003,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 106.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "At the vertices of a regular hexagon are written six nonnegative integers whose sum is 2003. Bert is allowed to make moves of the following form: he may pick a vertex and replace the number written there by the absolute value of the difference between the numbers written at the two neighboring vertices. Prove that Bert can make a sequence of moves, after which the number 0 appears at all six vertices.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2003-p6.imported",
+      "kind": "proof-sketch",
+      "text": "Assume the original numbers are \\(a,b,c,d,e,f\\). Since \\(a+b+c+d+e+f\\) is odd, either \\(a+c+e\\) or \\(b+d+f\\) must be odd. WLOG let \\(a+c+e\\) be odd and \\(a\\ge c\\ge e \\ge 0\\).\n\n## Case 1\n\n\\(a,c,e>0\\). Define Operation A as the sequence of moves from Step 1 to Step 3, shown below:\n\n\\[\n\n\\]\n\nNotice that Operation A changes the numbers \\(a,c,e\\) to \\(c-e,c,a-c\\) and they are all nonnegative, since \\(a\\ge c\\ge e\\). Their sum changes from \\(a+c+e\\) to \\(a+c-e\\); it decreases as long as \\(e\\ne 0\\). If we repeat Operation A enough times, its sum will decrease and eventually we will arrive at a point where at least one of the numbers in the positions originally occupied by \\(a,c,e\\) has become a 0.\n\n## Case 2\n\n\\(a,c>0\\) and \\(e=0\\). Define Operation B as the sequence of moves from Step 1 to Step 3, shown below:\n\n\\[\n\n\\]\n\nwhere in Step 3, we take the nonnegative choice of \\(2c-a\\) or \\(a-2c\\). \\(a,c,0\\) is changed to either \\(c,2c-a,0\\) or \\(c,a-2c,0\\). If we have \\(c,2c-a,0\\), their sum is \\(3c-a\\) and this is less than \\(a+c+0\\) (the original sum) unless \\(a=c\\), but \\(a\\ne c\\) since the original sum \\(a+c+0\\) is odd by assumption. If we have \\(c,a-2c,0\\), their sum is \\(a-c\\), which is less than \\(a+c\\). Operation B applied repeatedly will cause either \\(a\\) or \\(c\\) to become \\(0\\).\n\n## Case 3\n\n\\(a>0\\) and \\(c=e=0\\). Define Operation C as the sequence of moves from Step 1 to Step 4, shown below:\n\n\\[\n\n\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

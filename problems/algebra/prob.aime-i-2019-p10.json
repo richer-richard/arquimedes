@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-i-2019-p10",
+  "title": "2019 AIME I Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2019,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 57.8,
+    "source": 2840,
+    "mohs": null
+  },
+  "estimatedMinutes": 12,
+  "statement": "For distinct complex numbers \\(z_1,\\) \\(z_2,\\) \\(\\ldots,\\) \\(z_{673},\\) the polynomial \\[ \\begin{gathered} (x - z_1)^3 (x - z_2)^3 \\\\ \\cdots (x - z_{673})^3 \\end{gathered} \\] can be expressed as \\(x^{2019} + 20x^{2018}\\) \\(+ 19x^{2017} + g(x),\\) where \\(g(x)\\) is a polynomial with complex coefficients and with degree at most \\(2016.\\) The value of \\[\\left| \\sum_{1 \\le j \\lt k \\le 673} z_j z_k \\right|\\] can be expressed in the form \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "352",
+    "value": "352"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2019-p10.live",
+      "kind": "proof-sketch",
+      "text": "The polynomial’s \\(2019\\) roots are the numbers \\(z_j,\\) each repeated three times. By Vieta’s formulas, the coefficient of \\(x^{2018}\\) is minus the sum of all roots: \\(3\\sum_j z_j = -20,\\) so \\(\\sum_j z_j = -\\frac{20}{3}.\\)\n\nThe coefficient of \\(x^{2017}\\) is the sum over unordered pairs of roots. A pair may use two copies from one triple (\\(\\binom{3}{2} = 3\\) pairs for each \\(j\\)) or copies from two different triples (\\(3 \\cdot 3 = 9\\) pairs for each \\(j \\lt k\\)). Writing \\(S = \\sum_{j \\lt k} z_j z_k,\\) \\[ \\begin{aligned} 19 &= 3\\sum_j z_j^2 + 9S \\\\ &= 3\\left[\\left(-\\tfrac{20}{3}\\right)^2 - 2S\\right] + 9S \\\\ &= \\frac{400}{3} + 3S, \\end{aligned} \\] so \\(3S = 19 - \\frac{400}{3} = -\\frac{343}{3}\\) and \\(S = -\\frac{343}{9}.\\)\n\nHence \\(|S| = \\frac{343}{9},\\) which is in lowest terms, and \\(m + n = 343 + 9 = 352.\\)",
+      "hints": [
+        "The \\(2019\\) roots are the \\(z_j,\\) each with multiplicity \\(3;\\) the \\(x^{2018}\\) coefficient gives \\(3\\sum z_j = -20\\)",
+        "Pairs of roots either come from the same triple or from different ones: \\(19 = 3\\sum z_j^2 + 9\\sum_{j \\lt k} z_j z_k,\\) and \\(\\sum z_j^2 = \\left(\\sum z_j\\right)^2 - 2\\sum_{j \\lt k} z_j z_k\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

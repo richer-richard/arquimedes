@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2006-p6",
+  "title": "2006 IMO Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2006,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 115.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Assign to each side \\(b\\) of a convex polygon \\(P\\)\nthe maximum area of a triangle that has \\(b\\) as a side and is contained in \\(P\\).\nShow that the sum of the areas assigned to the sides of \\(P\\) is at least twice the area of \\(P\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2006-p6.evanchen",
+      "kind": "proof-sketch",
+      "text": "We say a polygon in almost convex\nif all its angles are at most \\(180^\\circ\\).\n\nNote that given any convex or almost convex polygon,\nwe can take any side \\(b\\) and add another vertex on it, and the sum of the labels doesn't change\n(since the label of a side is the length of the side times the distance of the farthest point).\n\nLemma.\n Let \\(N\\) be an even integer.\n Then any almost convex \\(N\\)-gon with area \\(S\\)\n should have an inscribed triangle with area at least \\(2S/N\\).\n\nThe main work is the proof of the lemma.\n\nLabel the polygon \\(P_0 P_1 \\dots P_{N-1}\\).\nConsider the \\(N/2\\) major diagonals of the almost convex \\(N\\)-gon,\n\\(P_0 P_{N/2}\\), \\(P_1 P_{N/2+1}\\), et cetera.\nA butterfly refers to a self-intersecting quadrilateral\n\\(P_i P_{i+1} P_{i+1+N/2} P_{i+N/2}\\).\nAn example of a butterfly is shown below for \\(N=8\\).\n\n[Diagram omitted from this imported TeX transcription.]\n\nClaim.\n Every point \\(X\\) in the polygon is contained in the wingspan of some butterfly.\n\nProof.\n Consider a windmill-like process which\n\n• starts from some oriented red line \\(P_0 P_{N/2}\\), oriented to face \\(P_0 P_{N/2}\\)\n\n• rotates through \\(P_0 P_{N/2} \\cap P_1 P_{N/2+1}\\) to get line \\(P_1 P_{N/2+1}\\),\n\n• rotates through \\(P_1 P_{N/2+1} \\cap P_2 P_{N/2+2}\\) to get line \\(P_2 P_{N/2+2}\\),\n\n• \\dots et cetera, until returning to line \\(P_{N/2} P_0\\),\n but in the reverse orientation.\n\n At the end of the process, every point in the plane has switched sides with our moving line.\n The moment that \\(X\\) crosses the moving red line, we get it contained in a butterfly, as needed.\n\nClaim.\n If \\(ABDC = P_i P_{i+1} P_{i+1+N/2} P_{i+N/2}\\) is a butterfly,\n one of the triangles \\(ABC\\), \\(BCD\\), \\(CDA\\), \\(DAB\\)\n has area at least that of the butterfly.\n\nProof.\n Let the diagonals of the butterfly meet at \\(O\\),\n and let \\(a = AO\\), \\(b = BO\\), \\(c = CO\\), \\(d = DO\\).\n If we assume WLOG \\(d = \\min(a,b,c,d)\\)\n then it follows \\([ABC] = [AOB] + [BOC] \\ge [AOB] + [COD]\\), as needed.\n\nNow, since the \\(N/2\\) butterflies cover an area of \\(S\\),\nit follows that one of the butterflies\nhas area at least \\(S / (N/2) = 2S/N\\),\nand so that butterfly gives a triangle with area at least \\(2S/N\\),\ncompleting the proof of the lemma.\n\nMain proof..\nLet \\(a_1\\), \\dots, \\(a_n\\) be the numbers assigned to the sides.\nAssume for contradiction \\(a_1 + \\dots + a_n < 2S\\).\nWe pick even integers \\(m_1\\), \\(m_2\\), \\dots, \\(m_n\\) such that\n\\[\\begin{aligned}\n \\frac{a_1}{S} &< \\frac{2m_1}{m_1 + \\dots + m_n} \\\\\n \\frac{a_2}{S} &< \\frac{2m_2}{m_1 + \\dots + m_n} \\\\\n &\\vdots \\\\\n \\frac{a_n}{S} &< \\frac{2m_n}{m_1 + \\dots + m_n}.\n\\end{aligned}\\]\nwhich is possible by rational approximation,\nsince the right-hand sides sum to \\(2\\) and the left-hand sides sum to strictly less than \\(2\\).\n\nNow we break every side of \\(P\\) into \\(m_i\\) equal parts\nto get an almost convex \\(N\\)-gon, where \\(N = m_1 + \\dots + m_n\\).\n\nThe main lemma then gives us a triangle \\(\\Delta\\) of the almost convex \\(N\\)-gon\nwhich has area at least \\(\\frac{2S}{N}\\).\nIf \\(\\Delta\\) used the \\(i\\)th side then it then follows the label \\(a_i\\) on that side should be\nat least \\(m_i \\cdot \\frac{2S}{N}\\), contradiction.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

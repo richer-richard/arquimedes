@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2019-p23",
+  "title": "2019 AMC 10A Problem 23",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.triangular-number",
+      "label": "Triangular number",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2019,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 32.3,
+    "source": 2080,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Travis has to babysit the terrible Thompson triplets. Knowing that they love big numbers, Travis devises a counting game for them. First Tadd will say the number \\(1,\\) then Todd must say the next two numbers (\\(2\\) and \\(3\\)), then Tucker must say the next three numbers (\\(4,\\) \\(5,\\) \\(6\\)), then Tadd must say the next four numbers (\\(7,\\) \\(8,\\) \\(9,\\) \\(10\\)), and the process continues to rotate through the three children in order, each saying one more number than the previous child did, until the number \\(10{,}000\\) is reached. What is the \\(2019\\)th number said by Tadd?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(5743\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(5885\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(5979\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6001\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(6011\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "5979"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2019-p23.live",
+      "kind": "proof-sketch",
+      "text": "Tadd speaks on turns of lengths \\(1,4,7,\\ldots\\). After \\(n\\) of Tadd’s turns, he has said \\[\\sum_{i=1}^n (3i-2)=\\frac{3n^2-n}{2}\\] numbers.\n\nFor \\(n=36\\), this total is \\(1926\\), while for \\(n=37\\) it is \\(2035\\). Therefore Tadd’s \\(2019\\)th number is the \\((2019-1926)=93\\)rd number of his \\(37\\)th turn.\n\nBefore that turn, the children have completed turns of lengths \\(1\\) through \\(108\\), saying \\(1+2+\\cdots+108=5886\\) numbers. The \\(93\\)rd number of the next turn is \\(5886+93=5979\\). Thus, C is the correct answer.",
+      "hints": [
+        "Tadd’s turn lengths form the arithmetic sequence \\(1,4,7,\\ldots\\)",
+        "Find which Tadd turn contains his \\(2019\\)th number"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

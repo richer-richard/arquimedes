@@ -1,0 +1,92 @@
+{
+  "id": "prob.amc-12b-2018-p21",
+  "title": "2018 AMC 12B 21",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circumcircle-circumcenter-and-circumradius",
+      "label": "Circumcircle, circumcenter, and circumradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.incircle-incenter-and-inradius",
+      "label": "Incircle, incenter, and inradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangent-circles",
+      "label": "Tangent circles",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2018,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 39.0,
+    "source": 2360,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "In \\(\\triangle ABC\\) with side lengths \\(AB=13,\\) \\(AC=12,\\) and \\(BC=5,\\) let \\(O\\) and \\(I\\) denote the circumcenter and incenter, respectively. A circle with center \\(M\\) is tangent to the legs \\(AC\\) and \\(BC\\) and to the circumcircle of \\(\\triangle ABC.\\) What is the area of \\(\\triangle MOI?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{5}{2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{11}{4}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{13}{4}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{7}{2}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "7/2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2018-p21.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(5^2+12^2=13^2,\\) the triangle is right-angled at \\(C.\\) Set \\(C=(0,0),\\) \\(A=(12,0),\\) and \\(B=(0,5).\\) Then \\(O\\) is the midpoint of \\(\\overline{AB},\\) namely \\(O=\\left(6,\\tfrac52\\right),\\) with circumradius \\(\\tfrac{13}{2}.\\) The inradius is \\(\\tfrac{\\text{area}}{s}=\\tfrac{30}{15}=2,\\) so \\(I=(2,2).\\)\n\nBecause \\(M\\)’s circle is tangent to both legs, \\(M=(\\rho,\\rho).\\) Internal tangency to the circumcircle gives \\(MO=\\tfrac{13}{2}-\\rho.\\) Setting this equal to \\(\\sqrt{(\\rho-6)^2+\\left(\\rho-\\tfrac52\\right)^2}\\) and solving gives \\(\\rho=4,\\) so \\(M=(4,4).\\)\n\nThe shoelace formula on \\(M=(4,4),\\) \\(O=\\left(6,\\tfrac52\\right),\\) \\(I=(2,2)\\) gives area \\(\\tfrac72.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "The triangle is right-angled at \\(C;\\) put \\(C\\) at the origin with the legs on the axes",
+        "\\(O\\) is the midpoint of the hypotenuse and \\(I=(2,2);\\) the circle at \\(M=(\\rho,\\rho)\\) is tangent to the circumcircle"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-1995-p8",
+  "title": "1995 AIME Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counting-pairs",
+      "label": "Counting pairs",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1995,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 37.7,
+    "source": 2060,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "For how many ordered pairs of positive integers \\((x,y),\\) with \\(y<x\\leq100,\\) are both \\(\\frac{x}{y}\\) and \\(\\frac{x+1}{y+1}\\) integers?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "85",
+    "value": "85"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1995-p8.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(x=ay.\\) Modulo \\(y+1,\\) we have \\(y\\equiv-1,\\) so \\(x+1\\) is divisible by \\(y+1\\) exactly when \\(a\\equiv1\\pmod {y+1}.\\) Since \\(x>y,\\) write \\(a=1+t(y+1)\\) with \\(t\\geq1.\\) The bound \\(x\\leq100\\) becomes \\[t\\leq\\left\\lfloor\\frac{100-y}{y(y+1)}\\right\\rfloor.\\] Only \\(1\\leq y\\leq9\\) contribute, giving \\[\\begin{aligned}49+16+8&+4+3\\\\&+2+1+1+1\\\\&=85.\\end{aligned}\\]",
+      "hints": [
+        "Write \\(x=ay\\) and reduce \\(x+1\\) modulo \\(y+1\\)",
+        "The quotient \\(a\\) must have the form \\(1+t(y+1)\\); count the possible positive values of \\(t\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

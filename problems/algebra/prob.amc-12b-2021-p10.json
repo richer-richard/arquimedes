@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12b-2021-p10",
+  "title": "2021 AMC 12B Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.simons-favorite-factoring-trick",
+      "label": "Simon’s Favorite Factoring Trick",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2021,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 24.1,
+    "source": 1530,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Two distinct numbers are selected from the set \\(\\{1,2,3,4,\\ldots,36,37\\}\\) so that the sum of the remaining \\(35\\) numbers is the product of these two numbers. What is the difference of these two numbers?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(10\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "10"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2021-p10.live",
+      "kind": "proof-sketch",
+      "text": "The sum \\(1+2+\\cdots+37=703.\\) If the chosen numbers are \\(a\\) and \\(b,\\) then \\(703-a-b=ab.\\)\n\nSo \\(ab+a+b=703,\\) and adding \\(1\\) gives \\((a+1)(b+1)=704=2^6\\cdot 11.\\)\n\nWe need factors \\(a+1,b+1\\) between \\(2\\) and \\(38.\\) The pair \\(22\\cdot 32=704\\) works, giving \\(a=21,\\) \\(b=31.\\)\n\nTheir difference is \\(31-21=10.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "The full set sums to \\(703;\\) if the two chosen numbers are \\(a\\) and \\(b,\\) then \\(703-a-b=ab\\)",
+        "Rearrange to \\((a+1)(b+1)=704\\) and factor"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

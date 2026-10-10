@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-8-2026-p20",
+  "title": "2026 AMC 8 Problem 20",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.partitions-and-compositions",
+      "label": "Partitions and compositions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2026,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 23.6,
+    "source": 1510,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The land of Catania uses gold coins and silver coins. Gold coins are \\(1\\) mm thick and silver coins are \\(3\\) mm thick. In how many ways can Taylor make a stack of coins that is \\(8\\) mm tall using any arrangement of gold and silver coins, assuming order matters?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(16\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "13"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2026-p20.live",
+      "kind": "proof-sketch",
+      "text": "Count by the number of silver coins. With no silver coins, there is \\(1\\) stack. With one silver coin, there are \\(5\\) gold coins and \\(1\\) silver coin, so \\(6\\) arrangements. With two silver coins, there are \\(2\\) gold coins and \\(2\\) silver coins, so \\(\\binom42=6\\) arrangements. More silver coins are too thick. The total is \\(1+6+6=13\\).",
+      "hints": [
+        "Count by the number of silver coins",
+        "With \\(k\\) silver coins, arrange \\(k\\) S’s and \\(8-3k\\) G’s"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12a-2011-p21",
+  "title": "2011 AMC 12A Problem 21",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.function",
+      "label": "Function",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.radical",
+      "label": "Radical",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2011,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 39.9,
+    "source": 2270,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(f_1(x) = \\sqrt{1 - x},\\) and for integers \\(n \\ge 2,\\) let \\(f_n(x) = f_{n-1}\\!\\left(\\sqrt{n^2 - x}\\right).\\) If \\(N\\) is the largest value of \\(n\\) for which the domain of \\(f_n\\) is nonempty, the domain of \\(f_N\\) is \\(\\{c\\}.\\) What is \\(N + c?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(-226\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(-144\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(-20\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(144\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "-226"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2011-p21.live",
+      "kind": "proof-sketch",
+      "text": "Each step requires \\(\\sqrt{n^2 - x}\\) to lie in the domain of \\(f_{n-1}.\\) Tracking the domains:\n\n\\(f_1: (-\\infty, 1].\\) \\(f_2: \\sqrt{4 - x} \\in (-\\infty, 1] \\Rightarrow [3, 4].\\) \\(f_3: \\sqrt{9 - x} \\in [3, 4] \\Rightarrow [-7, 0].\\) \\(f_4: \\sqrt{16 - x} \\in [-7, 0] \\Rightarrow \\{16\\}\\) (only the value \\(0\\) is possible). \\(f_5: \\sqrt{25 - x} = 16 \\Rightarrow \\{-231\\}.\\)\n\nFor \\(f_6\\) we would need \\(\\sqrt{36 - x} = -231,\\) impossible, so the domain is empty. Hence \\(N = 5,\\) \\(c = -231,\\) and \\(N + c = -226.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "Build the domains outward: \\(f_n\\) needs \\(\\sqrt{n^2 - x}\\) to lie in the domain of \\(f_{n-1}\\)",
+        "The first three domains are \\((-\\infty,1],\\) \\([3,4],\\) and \\([-7,0];\\) continue while remembering that a square root is nonnegative"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

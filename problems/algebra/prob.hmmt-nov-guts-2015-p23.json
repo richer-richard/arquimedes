@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-guts-2015-p23",
+  "title": "2015 HMMT November Guts Problem 23",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.floors-and-ceilings",
+      "label": "Floors and ceilings",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial-operations",
+      "label": "Polynomial operations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2015,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 50.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the smallest positive integer \\(n\\) for which\n\n\\[0<\\sqrt[4]{n}-\\lfloor\\sqrt[4]{n}\\rfloor<\\frac{1}{2015}\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2015-p23.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 4097\n\nLet \\(n=a^{4}+b\\) where \\(a, b\\) are integers and \\(0<b<4 a^{3}+6 a^{2}+4 a+1\\). Then\n\n\\[\\begin{aligned}\n\\sqrt[4]{n}-\\lfloor\\sqrt[4]{n}\\rfloor & <\\frac{1}{2015} \\\\\n\\sqrt[4]{a^{4}+b}-a & <\\frac{1}{2015} \\\\\n\\sqrt[4]{a^{4}+b} & <a+\\frac{1}{2015} \\\\\na^{4}+b & <\\left(a+\\frac{1}{2015}\\right)^{4} \\\\\na^{4}+b & <a^{4}+\\frac{4 a^{3}}{2015}+\\frac{6 a^{2}}{2015^{2}}+\\frac{4 a}{2015^{3}}+\\frac{1}{2015^{4}}\n\\end{aligned}\\]\n\nTo minimize \\(n=a^{4}+b\\), we clearly should minimize \\(b\\), which occurs at \\(b=1\\). Then\n\n\\[1<\\frac{4 a^{3}}{2015}+\\frac{6 a^{2}}{2015^{2}}+\\frac{4 a}{2015^{3}}+\\frac{1}{2015^{4}}\\]\n\nIf \\(a=7\\), then \\(\\frac{6 a^{2}}{2015_{3}^{2}}, \\frac{4 a}{2015^{3}}, \\frac{1}{2015^{4}}<\\frac{1}{2015}\\), so \\(\\frac{4 a^{3}}{2015}+\\frac{6 a^{2}}{2015^{2}}+\\frac{4 a}{2015^{3}}+\\frac{1}{2015^{4}}<\\frac{4 \\cdot 7^{3}+3}{2015}<1\\), so \\(a \\geq 8\\). When \\(a=8\\), we have \\(\\frac{4 a^{3}}{2015}=\\frac{2048}{2015}>1\\), so \\(a=8\\) is the minimum.\nHence, the minimum \\(n\\) is \\(8^{4}+1=4097\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

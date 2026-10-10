@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-guts-2024-p20",
+  "title": "2024 HMMT February Guts Problem 20",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.diophantine-equations-techniques",
+      "label": "Diophantine Equations techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial-operations",
+      "label": "Polynomial operations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2024,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 70.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute \\(\\sqrt[4]{5508^{3}+5625^{3}+5742^{3}}\\), given that it is an integer.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "855",
+    "value": "855"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2024-p20.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(a=5625=75^{2}\\) and \\(b=117\\). Then we have\n\n\\[5508^{3}+5265^{3}+5742^{3}=(a-b)^{3}+a^{3}+(a+b)^{3}=3 a^{3}+6 a b^{2}=3 a\\left(a^{2}+2 b^{2}\\right)\\]\n\nWe have \\(3 a=3^{3} \\cdot 5^{4}\\), so \\(a^{2}+2 b^{2}=3^{4} \\cdot\\left(625^{2}+2 \\cdot 19^{2}\\right)\\) should be 3 times a fourth power. This means\n\n\\[625^{2}+2 \\cdot 19^{2}=3 x^{4}\\]\n\nfor some integer \\(x\\). By parity, \\(x\\) must be odd, and also \\(x^{2} \\sqrt{3} \\approx 625\\). Approximating \\(\\sqrt{3}\\) even as 2 , we get \\(x\\) should be around 19. Then \\(x=17\\) is clearly too small, and \\(x=21\\) is too big. (You can also check mod 7 for this latter one.) Thus, \\(x=19\\). The final answer is then\n\n\\[3^{2} \\cdot 5 \\cdot 19=855\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

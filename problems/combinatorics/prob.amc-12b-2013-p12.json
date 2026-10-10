@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12b-2013-p12",
+  "title": "2013 AMC 12B Problem 12",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2013,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 27.9,
+    "source": 1670,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Cities \\(A,\\) \\(B,\\) \\(C,\\) \\(D,\\) and \\(E\\) are connected by roads \\(AB,\\) \\(AD,\\) \\(AE,\\) \\(BC,\\) \\(BD,\\) \\(CD,\\) and \\(DE.\\) How many different routes are there from \\(A\\) to \\(B\\) that use each road exactly once? (Such a route will necessarily visit some cities more than once.)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(18\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "16"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2013-p12.live",
+      "kind": "proof-sketch",
+      "text": "City \\(E\\) (roads \\(AE, DE\\)) is a detour on an \\(A\\)–\\(D\\) trip, and city \\(C\\) (roads \\(BC, CD\\)) is a detour on a \\(B\\)–\\(D\\) trip. Replace them to get a graph on \\(A, B, D\\) with two \\(A\\)–\\(D\\) connections, two \\(B\\)–\\(D\\) connections, and one \\(A\\)–\\(B\\) road. The trails from \\(A\\) to \\(B\\) using each once are of \\(4\\) types: \\(ABDADB,\\) \\(ADABDB,\\) \\(ADBADB,\\) and \\(ADBDAB.\\) Each detour (through \\(E,\\) through \\(C\\)) can be taken on either passage, so each type gives \\(4\\) actual routes, for \\(4\\cdot 4 = 16\\) routes. Thus, the correct answer is D.",
+      "hints": [
+        "Cities \\(C\\) and \\(E\\) each touch only two roads, so they behave like detours on the \\(A\\)–\\(D\\) and \\(B\\)–\\(D\\) connections",
+        "Count the trails from \\(A\\) to \\(B\\) on the reduced graph, then multiply by the independent detour choices"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "7d77ff1adbbebb31d7141e12bad44ce1c25446f92677334111fdb6d29077ad24"
+    ],
+    "solutions": []
+  }
+}

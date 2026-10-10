@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2024-p22",
+  "title": "2024 AMC 10B Problem 22",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.legendres-formula",
+      "label": "Legendre’s Formula",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2024,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 39.3,
+    "source": 2120,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A group of \\(16\\) people will be partitioned into \\(4\\) indistinguishable \\(4\\)-person committees. Each committee will have one chairperson and one secretary. The number of different ways to make these assignments can be written as \\(3^r M,\\) where \\(r\\) and \\(M\\) are positive integers and \\(M\\) is not divisible by \\(3.\\) What is \\(r?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(9\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2024-p22.live",
+      "kind": "proof-sketch",
+      "text": "Split \\(16\\) people into \\(4\\) indistinguishable groups of \\(4\\) in \\(\\dfrac{16!}{(4!)^4 \\, 4!}\\) ways, then each committee picks a chairperson and a secretary in \\(4 \\cdot 3 = 12\\) ways, a factor of \\(12^4.\\) Now count factors of \\(3.\\) In \\(16!\\) there are \\(\\lfloor \\frac{16}{3} \\rfloor + \\lfloor \\frac{16}{9} \\rfloor = 6;\\) the denominator \\((4!)^4 \\, 4!\\) contributes \\(4 \\cdot 1 + 1 = 5;\\) and \\(12^4\\) contributes \\(4.\\) The exponent is \\(6 - 5 + 4 = 5,\\) so \\(r = 5.\\) Therefore, the answer is A.",
+      "hints": [
+        "The number of ways is \\(\\dfrac{16!}{(4!)^4 \\cdot 4!} \\cdot (4 \\cdot 3)^4,\\) the partition count times chair/secretary choices per committee",
+        "Count factors of \\(3\\) in each piece using Legendre’s formula on \\(16!\\) and \\(4!\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

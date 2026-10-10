@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2009-p13",
+  "title": "2009 AIME II Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.chord",
+      "label": "Chord",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2009,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 65.9,
+    "source": 3160,
+    "mohs": null
+  },
+  "estimatedMinutes": 20,
+  "statement": "Let \\(A\\) and \\(B\\) be the endpoints of a semicircular arc of radius \\(2.\\) The arc is divided into seven congruent arcs by six equally spaced points \\(C_1,\\) \\(C_2,\\) \\(\\ldots,\\) \\(C_6.\\) All chords of the form \\(\\overline{AC_i}\\) or \\(\\overline{BC_i}\\) are drawn. Let \\(n\\) be the product of the lengths of these twelve chords. Find the remainder when \\(n\\) is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "672",
+    "value": "672"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2009-p13.live",
+      "kind": "proof-sketch",
+      "text": "Put the circle in the complex plane with center \\(0,\\) \\(A = -2,\\) \\(B = 2,\\) and \\(C_i = 2\\omega^i\\) for \\(i = 1, \\ldots, 6,\\) where \\(\\omega = e^{\\frac{\\pi \\mathrm{i}}{7}}.\\) Then \\(AC_i = 2\\,|\\omega^i + 1|\\) and \\(BC_i = 2\\,|\\omega^i - 1|,\\) so \\[AC_i \\cdot BC_i = 4\\,\\bigl|\\omega^{2i} - 1\\bigr|.\\]\n\nAs \\(i\\) runs over \\(1, \\ldots, 6,\\) the numbers \\(\\omega^{2i}\\) run over all six nontrivial \\(7\\)th roots of unity. Let \\(\\zeta = \\omega^2.\\) Since \\(\\prod_{j=1}^{6} (x - \\zeta^j)\\) \\(= 1 + x + \\cdots + x^6,\\) plugging in \\(x = 1\\) gives \\(\\prod_{j=1}^{6} \\bigl|1 - \\zeta^j\\bigr| = 7.\\) Therefore \\[ \\begin{aligned} n &= \\prod_{i=1}^{6} 4\\,\\bigl|\\omega^{2i} - 1\\bigr| \\\\ &= 4^6 \\cdot 7 = 28672. \\end{aligned} \\]\n\nThe remainder when \\(n\\) is divided by \\(1000\\) is \\(672.\\)",
+      "hints": [
+        "Model the circle in the complex plane with \\(A = -2,\\) \\(B = 2,\\) and \\(C_i = 2\\omega^i\\) where \\(\\omega = e^{\\frac{\\pi \\mathrm{i}}{7}}\\)",
+        "\\(AC_i \\cdot BC_i = 4\\,|\\omega^{2i} - 1|,\\) and the \\(\\omega^{2i}\\) are exactly the nontrivial \\(7\\)th roots of unity, whose product of distances to \\(1\\) is \\(7\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

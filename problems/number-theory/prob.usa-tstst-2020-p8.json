@@ -1,0 +1,68 @@
+{
+  "id": "prob.usa-tstst-2020-p8",
+  "title": "USA TSTST 2020 Problem 8",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.sum-of-divisors",
+      "label": "σ (sum of divisors)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.number-of-divisors",
+      "label": "τ (number of divisors)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TSTST",
+    "year": 2020,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 97.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For every positive integer \\(N\\),\nlet \\(\\sigma(N)\\) denote the sum of the positive integer divisors of \\(N\\).\nFind all integers \\(m \\ge n \\ge 2\\) satisfying\n\\[ \\frac{\\sigma(m)-1}{m-1}\n = \\frac{\\sigma(n)-1}{n-1} = \\frac{\\sigma(mn)-1}{mn-1}. \\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tstst-2020-p8.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is that \\(m\\) and \\(n\\) should be powers\nof the same prime number.\nThese all work because for a prime power we have\n\\[\n \\frac{\\sigma(p^e) - 1}{p^e - 1}\n = \\frac{(1 + p + \\dots + p^e) - 1}{p^e - 1}\n = \\frac{p(1 + \\dots + p^{e-1})}{p^e - 1}\n = \\frac{p}{p-1}.\n\\]\nSo we now prove these are the only ones.\nLet \\(\\lambda\\) be the common value of the three fractions.\n\nClaim.\n Any solution \\((m,n)\\) should satisfy\n \\(d(mn) = d(m) + d(n) - 1\\).\n\nProof.\n The divisors of \\(mn\\) include the divisors of \\(m\\),\n plus \\(m\\) times the divisors of \\(n\\) (counting \\(m\\) only once).\n Let \\(\\lambda\\) be the common value; then this gives\n \\[\\begin{aligned}\n \\sigma(mn) & \\ge \\sigma(m) + m\\sigma(n) - m\\\\\n & = (\\lambda m - \\lambda + 1) + m(\\lambda n - \\lambda + 1) - m\\\\\n & = \\lambda mn - \\lambda + 1\n \\end{aligned}\\]\n and so equality holds.\n Thus these are all the divisors of \\(mn\\),\n for a count of \\(d(m) + d(n) - 1\\).\n\nClaim.\n If \\(d(mn) = d(m) + d(n) - 1\\) and \\(\\min(m, n) \\ge 2\\),\n then \\(m\\) and \\(n\\) are powers of the same prime.\n\nProof.\n Let \\(A\\) denote the set of divisors of \\(m\\) and \\(B\\) denote the set of divisors of \\(n\\).\n Then \\(|A \\cdot B| = |A| + |B| - 1\\) and \\(\\min(|A|, |B|) > 1\\),\n so \\(|A|\\) and \\(|B|\\) are geometric progressions with the same ratio.\n It follows that \\(m\\) and \\(n\\) are powers of the same prime.\n\nRemark (Nikolai Beluhov).\n Here is a completion not relying on \\(|A \\cdot B| = |A| + |B| - 1\\).\n By the above arguments, we see that every divisor of \\(mn\\) is\n either a divisor of \\(n\\), or \\(n\\) times a divisor of \\(m\\).\n\n Now suppose that some prime \\(p \\mid m\\) but \\(p \\nmid n\\).\n Then \\(p \\mid mn\\) but \\(p\\) does not appear in the above classification,\n a contradiction.\n By symmetry, it follows that \\(m\\) and \\(n\\) have the same prime divisors.\n\n Now suppose we have different primes \\(p \\mid m\\) and \\(q \\mid n\\).\n Write \\(\\nu_p(m) = \\alpha\\) and \\(\\nu_p(n) = \\beta\\).\n Then \\(p^{\\alpha+\\beta} \\mid mn\\), but it does not appear in the above characterization,\n a contradiction.\n Thus, \\(m\\) and \\(n\\) are powers of the same prime.\n\nRemark.\n [Comments on the function in the problem]\n Let \\(f(n) = \\frac{\\sigma(n)-1}{n-1}\\).\n Then \\(f\\) is not really injective even outside the above solution;\n for example, we have \\(f(6 \\cdot 11^k) = \\frac{11}{5}\\) for all \\(k\\),\n plus sporadic equivalences like \\(f(14) = f(404)\\),\n as pointed out by one reviewer during test-solving.\n This means that both relations should be used at once, not independently.\n\nRemark.\n [Authorship remarks]\n Ankan gave the following story for how he came up with the problem\n while thinking about so-called almost perfect numbers.\n\n I was in some boring talk when I recalled a conjecture\n that if \\(\\sigma(n) = 2n-1\\), then \\(n\\) is a power of \\(2\\).\n For some reason (divine intervention, maybe) I had the double idea of\n (1) seeing whether \\(m\\), \\(n\\), \\(mn\\) all almost perfect\n implies \\(m\\), \\(n\\) powers of \\(2\\),\n and (2) trying the naive divisor bound to resolve this.\n Through sheer dumb luck this happened to work out perfectly.\n I thought this was kinda cool but I felt that I hadn't really\n unlocked a lot of the potential this idea had:\n then I basically tried to find the ``general situation''\n which allows for this manipulation,\n and was amazed that it led to such a striking statement.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

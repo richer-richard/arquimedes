@@ -1,0 +1,93 @@
+{
+  "id": "prob.amc-10a-2010-p24",
+  "title": "2010 AMC 10A Problem 24",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.chinese-remainder-theorem",
+      "label": "Chinese Remainder Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.factorial",
+      "label": "Factorial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.trailing-zeros",
+      "label": "Trailing zeros",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2010,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 35.5,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "The number obtained from the last two nonzero digits of \\(90!\\) is equal to \\(n.\\) What is \\(n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(32\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(48\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(52\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(68\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "12"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2010-p24.live",
+      "kind": "proof-sketch",
+      "text": "The number of trailing zeroes in \\(90!\\) is \\(\\left\\lfloor\\dfrac{90}{5}\\right\\rfloor+\\left\\lfloor\\dfrac{90}{25}\\right\\rfloor=21.\\) Let \\(N=\\dfrac{90!}{10^{21}}.\\)\n\nThere are still more than two factors of \\(2\\) left after removing \\(10^{21},\\) so \\(N\\equiv0 \\pmod4.\\)\n\nLet \\(A\\) be the product of factors of \\(90!\\) not divisible by \\(5,\\) and let \\(B\\) be the product of the factors divisible by \\(5.\\) Grouping residues modulo \\(25\\) gives \\(A\\equiv1\\pmod{25}\\) and \\(\\dfrac{B}{5^{21}}\\equiv-1\\pmod{25}.\\)\n\nTherefore \\(\\dfrac{90!}{5^{21}}\\equiv-1\\pmod{25}.\\) Since \\(2^{21}\\equiv2\\pmod{25},\\) \\(N=\\dfrac{90!}{5^{21}\\cdot2^{21}}\\) \\(\\equiv-13\\) \\(\\equiv12\\pmod{25}.\\)\n\nThe number congruent to \\(0\\pmod4\\) and \\(12\\pmod{25}\\) is \\(12\\pmod{100},\\) so the last two nonzero digits form \\(12.\\)\n\nThus, A is the correct answer.",
+      "hints": [
+        "Remove the factors making trailing zeroes, then work modulo \\(100\\)",
+        "Use congruences modulo \\(4\\) and modulo \\(25\\) to pin down the last two digits"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

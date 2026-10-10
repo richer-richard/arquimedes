@@ -1,0 +1,94 @@
+{
+  "id": "prob.ahsme-1965-p40",
+  "title": "1965 AHSME Problem 40",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.systematic-listing",
+      "label": "Systematic listing",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1965,
+    "number": 40
+  },
+  "difficulty": {
+    "course": 54.4,
+    "source": 2710,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Let \\(n\\) be the number of integer values of \\(x\\) such that \\(P=x^4+6x^3+11x^2+3x+31\\) is the square of an integer. Then \\(n\\) is:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(0\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "1"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1965-p40.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(N=x^2+3x+1.\\) Then \\[P=N^2-3(x-10).\\] At \\(x=10,\\ P=N^2=131^2,\\) so one value works.\n\nIf \\(x\\gt10\\) and \\(P=y^2,\\) then \\(N^2-y^2=3(x-10).\\) Distinct integer squares differing from \\(N^2\\) differ by at least \\(2|N|-1,\\) which is already greater than \\(3(x-10),\\) a contradiction. If \\(x\\lt10,\\) the analogous bound \\[ \\begin{gathered} 3(10-x)=y^2-N^2\\\\ \\geq2|y|-1\\gt2|N|-1 \\end{gathered} \\] can hold only for \\(-6\\leq x\\leq2.\\) Direct substitution for these nine integers gives no square. Hence \\(x=10\\) is the unique solution and \\(n=1.\\)\n\nTherefore, the correct answer is D.",
+      "hints": [
+        "Rewrite \\(P=(x^2+3x+1)^2-3(x-10)\\)",
+        "Distinct integer squares \\(U^2\\) and \\(V^2\\) differ by at least \\(2\\max(|U|,|V|)-1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

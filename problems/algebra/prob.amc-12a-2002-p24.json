@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12a-2002-p24",
+  "title": "2002 AMC 12A Problem 24",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2002,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 40.5,
+    "source": 2170,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Find the number of ordered pairs of real numbers \\((a, b)\\) such that \\((a + bi)^{2002} = a - bi.\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1001\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1002\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2001\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2002\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2004\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "2004"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2002-p24.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(z = a + bi.\\) The equation is \\(z^{2002} = \\overline{z}.\\) Taking magnitudes, \\(|z|^{2002} = |z|,\\) so \\(|z|\\big(|z|^{2001} - 1\\big) = 0,\\) giving \\(|z| = 0\\) or \\(|z| = 1.\\)\n\nIf \\(|z| = 0,\\) then \\((a, b) = (0, 0),\\) one solution. If \\(|z| = 1,\\) then \\(\\overline{z} = \\dfrac1z,\\) so \\(z^{2002} = \\dfrac1z,\\) i.e. \\(z^{2003} = 1,\\) which has \\(2003\\) distinct roots.\n\nAltogether there are \\(1 + 2003 = 2004\\) ordered pairs.\n\nThus, the correct answer is E.",
+      "hints": [
+        "Write \\(z = a + bi,\\) so the equation is \\(z^{2002} = \\overline{z};\\) take magnitudes",
+        "\\(|z|^{2002} = |z|\\) forces \\(|z| = 0\\) or \\(|z| = 1;\\) when \\(|z| = 1,\\) \\(\\overline{z} = \\dfrac1z\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

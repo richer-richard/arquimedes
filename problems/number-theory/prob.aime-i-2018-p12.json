@@ -1,0 +1,72 @@
+{
+  "id": "prob.aime-i-2018-p12",
+  "title": "2018 AIME I Problem 12",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.subsets",
+      "label": "Subsets",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.vandermondes-convolution",
+      "label": "Vandermonde’s Convolution",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2018,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 60.5,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "For each subset \\(T\\) of \\(U = \\{1, 2, 3, \\ldots, 18\\},\\) let \\(s(T)\\) be the sum of the elements of \\(T,\\) with \\(s(\\emptyset)\\) defined to be \\(0.\\) If \\(T\\) is chosen at random among all subsets of \\(U,\\) the probability that \\(s(T)\\) is divisible by \\(3\\) is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "683",
+    "value": "683"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2018-p12.live",
+      "kind": "proof-sketch",
+      "text": "The set \\(U\\) contains six elements in each residue class modulo \\(3.\\) If \\(T\\) contains \\(a\\) elements \\(\\equiv 1\\) and \\(b\\) elements \\(\\equiv 2 \\pmod 3,\\) then \\(s(T) \\equiv a + 2b \\equiv a - b \\pmod 3,\\) so \\(s(T)\\) is divisible by \\(3\\) exactly when \\(a \\equiv b \\pmod 3;\\) the six multiples of \\(3\\) may be included freely, contributing a factor \\(2^6\\) to both the favorable and total counts.\n\nBy Vandermonde’s identity, the number of ways to choose the \\(a\\)s and \\(b\\)s with \\(a - b = 0\\) is \\(\\sum_a \\binom{6}{a}^2 = \\binom{12}{6} = 924;\\) with \\(a - b = \\pm 3\\) it is \\(2\\sum_a \\binom{6}{a}\\binom{6}{a - 3} = 2\\binom{12}{9} = 440;\\) and with \\(a - b = \\pm 6\\) it is \\(2.\\) The favorable choices number \\(924 + 440 + 2 = 1366\\) out of \\(2^{12}.\\)\n\nThe probability is \\(\\frac{1366}{4096} = \\frac{683}{2048},\\) which is in lowest terms since \\(683\\) is odd. Thus \\(m = 683.\\)",
+      "hints": [
+        "Each residue class modulo \\(3\\) contains exactly six elements of \\(U,\\) and only the numbers of chosen elements \\(\\equiv 1\\) and \\(\\equiv 2\\) matter",
+        "With \\(a\\) chosen elements \\(\\equiv 1\\) and \\(b\\) elements \\(\\equiv 2,\\) you need \\(a \\equiv b \\pmod 3;\\) evaluate \\(\\sum \\binom{6}{a}\\binom{6}{b}\\) using Vandermonde’s identity"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

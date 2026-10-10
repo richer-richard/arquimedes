@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12a-2023-p4",
+  "title": "2023 AMC 12A Problem 4",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2023,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 15.7,
+    "source": 1200,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many digits are in the base-ten representation of \\(8^5\\cdot 5^{10}\\cdot 15^5?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(14\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(18\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "18"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2023-p4.live",
+      "kind": "proof-sketch",
+      "text": "Writing everything in primes, \\[ \\begin{gathered} 8^5\\cdot 5^{10}\\cdot 15^5\\\\ {}=2^{15}\\cdot 5^{10}\\cdot 3^5\\cdot 5^5\\\\ {}=3^5\\cdot 2^{15}\\cdot 5^{15}. \\end{gathered} \\]\n\nThis equals \\(3^5\\cdot 10^{15}=243\\cdot 10^{15},\\) which is \\(243\\) followed by \\(15\\) zeros, for a total of \\(18\\) digits.\n\nThus, the correct answer is E.",
+      "hints": [
+        "Factor each base into primes: \\(8=2^3,\\) \\(15=3\\cdot 5\\)",
+        "Pair every \\(2\\) with a \\(5\\) to form a power of \\(10,\\) leaving a small factor"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

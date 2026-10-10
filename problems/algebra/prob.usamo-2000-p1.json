@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2000-p1",
+  "title": "2000 USAMO Problem 1",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2000,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 83.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Call a real-valued function \\(f\\) very convex if\n\n\\[\n\\frac {f(x) + f(y)}{2} \\ge f\\left(\\frac {x + y}{2}\\right) + |x - y|\n\\]\n\nholds for all real numbers \\(x\\) and \\(y\\). Prove that no very convex function exists.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2000-p1.imported",
+      "kind": "proof-sketch",
+      "text": "Let $y \\ge x$, and substitute $a = x, 2b = y-x$. Then a function is very convex if $\\frac{f(a) + f(a+2b)}{2} \\ge f(a + b) + 2b$, or rearranging,\n\\[\\left[\\frac{f(a+2b)-f(a+b)}{b}\\right]-\\left[\\frac{f(a+b)-f(a)}{b}\\right] \\ge 4\\]\nLet $g(a) = \\frac{f(a+b) - f(a)}{b}$, which is the slope of the secant between $(a,f(a))(a+b,f(a+b))$. Let $b$ be arbitrarily small; then it follows that $g(a+b) - g(a) > 4$, $g(a+2b) - g(a+b) > 4,\\, \\cdots, g(a+kb) - g(a+ [k-1]b) > 4$. Summing these inequalities yields $g(a+kb)-g(a) > 4k$. As $k \\rightarrow \\infty$ (but $b << \\frac{1}{k}$, so $bk < \\epsilon$ is still arbitrarily small), we have $\\lim_{k \\rightarrow \\infty} g(a+kb) - g(a) = g(a + \\epsilon) - g(a) > \\lim_{k \\rightarrow \\infty} 4k = \\infty$. This implies that in the vicinity of any $a$, the function becomes vertical, which contradicts the definition of a function. Hence no very convex function exists.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

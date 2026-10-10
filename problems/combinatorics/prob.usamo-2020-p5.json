@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2020-p5",
+  "title": "2020 USAMO Problem 5",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2020,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 102.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A finite set \\(S\\) of points in the coordinate plane is called overdetermined if \\(|S| \\ge 2\\) and there exists a nonzero polynomial \\(P(t)\\), with real coefficients and of degree at most \\(|S| - 2\\), satisfying \\(P(x) = y\\) for every point \\((x, y) \\in S\\).\n\nFor each integer \\(n \\ge 2\\), find the largest integer \\(k\\) (in terms of \\(n\\)) such that there exists a set of \\(n\\) distinct points that is not overdetermined, but has \\(k\\) overdetermined subsets.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2020-p5.imported",
+      "kind": "proof-sketch",
+      "text": "The answer is \\(2^{n-1}-n\\). To construct this, have \\(n-1\\) points on a horizontal line and \\(1\\) point not on it. Then, any subset that does not include the last point is overdetermined.\\\\\n\nFor the bound, the main idea of the problem is the following claim.\\\\\n\nClaim: If \\(S\\) and \\(T\\) are overdetermined subsets with \\(|S|=|T|=k\\) but \\(S\\) and \\(T\\) only differ by one element (one is swapped out for another), then \\(S\\cup T\\) is overdetermined.\\\\\n\nConsider the minimal polynomial of \\(S\\). It has degree at most \\(k-2\\) since \\(S\\) is overdetermined, and similarly with the minimal polynomial of \\(T\\). However, there is a unique polynomial of degree at most \\(k-2\\) passing through \\(S\\cap T\\) since it has \\(k-1\\) points. Thus, this unique polynomial also passes through \\(S\\) and \\(T\\). Thus, this polynomial passes through all points of \\(S\\cup T\\), as desired.\\\\\n\nWe now use this claim to inductively bound the number of overdetermined subsets with \\(k\\) elements. Let \\(m_k\\) denote the number of overdetermined subsets of size \\(k\\). Clearly, \\(m_n=0\\).\\\\\n\nClaim 2: We have\n\n\\[\nm_k\\leq \\frac{m_{k+1}(k+1)+{n\\choose k+1}-m_{k+1}}{n-k}.\n\\]\n\nProof: Each overdetermined subset of size \\(k+1\\) can have up to \\(k+1\\) overdetermined subsets of size \\(k\\), but by the previous claim each non-overdetermined subset of size \\(k+1\\), which there are \\({n\\choose k+1}-m_{k+1}\\) of, can have at most one. Each subset of size \\(k\\) feeds into \\(n-k\\) subsets of size \\(k+1\\). Note that this is increasing in \\(m_{k+1}\\).\\\\\n\nClaim 3: We have\n\n\\[\nm_k\\leq {n-1\\choose k}.\n\\]\n\nProof: Use induction. Note that the expression in Claim 2 is nondecreasing in \\(m_{k+1}\\), and verify that\n\n\\[\n\\frac{{n-1\\choose k+1}(k+1)+{n\\choose k+1}-{n-1\\choose k+1}}{n-k}={n-1\\choose k}.\n\\]\n\nThus, we have that the number of overdetermined subsets is at most\n\n\\[\n\\sum_{k=2}^n {n-1\\choose k}=2^{n-1}-n,\n\\]\n\nas desired.\n\nThese problems are copyrighted © by the Mathematical Association of America, as part of the American Mathematics Competitions.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

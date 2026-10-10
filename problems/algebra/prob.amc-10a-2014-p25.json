@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2014-p25",
+  "title": "2014 AMC 10A Problem 25",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.exponent",
+      "label": "Exponent",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2014,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 35.8,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The number \\(5^{867}\\) is between \\(2^{2013}\\) and \\(2^{2014}.\\) How many pairs of integers \\((m,n)\\) are there such that \\(1\\leq m\\leq 2012\\) and \\[5^n < 2^m < 2^{m+2} < 5^{n+1}?\\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(278\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(279\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(280\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(281\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(282\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "279"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2014-p25.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(2^2<5<2^3\\), each interval \\((5^n,5^{n+1})\\) contains either two or three powers of \\(2\\). The desired inequality holds exactly for intervals containing three such powers.\n\nFor \\(0\\le n<867\\), let \\(d\\) be the number of intervals with two powers of \\(2\\), and let \\(t\\) be the number with three powers of \\(2\\). Then \\(d+t=867\\).\n\nBecause \\(2^{2013}<5^{867}<2^{2014}\\), these intervals contain \\(2013\\) powers of \\(2\\) altogether, so \\(2d+3t=2013\\).\n\nSolving the system gives \\(t=279\\).\n\nThus, B is the correct answer.",
+      "hints": [
+        "Each interval between consecutive powers of \\(5\\) contains two or three powers of \\(2\\)",
+        "Use the total number of powers of \\(2\\) before \\(5^{867}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

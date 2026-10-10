@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-i-2017-p10",
+  "title": "2017 AIME I Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.inscribed-angle",
+      "label": "Inscribed angle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.perpendicular-bisector",
+      "label": "Perpendicular bisector",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2017,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 60.8,
+    "source": 2920,
+    "mohs": null
+  },
+  "estimatedMinutes": 12,
+  "statement": "Let \\(z_1 = 18 + 83\\mathrm{i},\\) \\(z_2 = 18 + 39\\mathrm{i},\\) and \\(z_3 = 78 + 99\\mathrm{i},\\) where \\(\\mathrm{i} = \\sqrt{-1}.\\) Let \\(z\\) be the unique complex number with the properties that \\(\\frac{z_3 - z_1}{z_2 - z_1} \\cdot \\frac{z - z_2}{z - z_3}\\) is a real number and the imaginary part of \\(z\\) is the greatest possible. Find the real part of \\(z.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "56",
+    "value": "56"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2017-p10.live",
+      "kind": "proof-sketch",
+      "text": "The argument of \\(\\frac{z_3 - z_1}{z_2 - z_1}\\) is the angle \\(\\angle z_2 z_1 z_3,\\) and the argument of \\(\\frac{z - z_2}{z - z_3}\\) is the angle between \\(\\overline{zz_2}\\) and \\(\\overline{zz_3}.\\) Their product is real exactly when these angles are equal or supplementary, which by the inscribed angle theorem happens exactly when \\(z_1,\\) \\(z_2,\\) \\(z_3,\\) and \\(z\\) are concyclic. So \\(z\\) lies on the circumcircle of \\(z_1,\\) \\(z_2,\\) and \\(z_3.\\)\n\nThe segment from \\(18 + 39\\mathrm{i}\\) to \\(18 + 83\\mathrm{i}\\) is vertical, so its perpendicular bisector is the horizontal line \\(y = 61.\\) The segment from \\(z_2 = 18 + 39\\mathrm{i}\\) to \\(z_3 = 78 + 99\\mathrm{i}\\) has slope \\(1\\) and midpoint \\((48, 69),\\) so its perpendicular bisector is \\(y - 69 = -(x - 48).\\) Setting \\(y = 61\\) gives \\(x = 56,\\) so the center is \\(56 + 61\\mathrm{i}.\\)\n\nThe point of the circle with maximal imaginary part is directly above the center, so the real part of \\(z\\) is \\(56.\\)",
+      "hints": [
+        "The given product is a cross-ratio; it is real exactly when \\(z\\) lies on the circle through \\(z_1,\\) \\(z_2,\\) and \\(z_3\\)",
+        "The point of a circle with greatest imaginary part sits directly above the center, so intersect two perpendicular bisectors to find the center"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2025-p19",
+  "title": "2025 AMC 12B Problem 19",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2025,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 37.2,
+    "source": 2040,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A rectangular grid of squares has \\(141\\) rows and \\(91\\) columns. Each square has room for two numbers. Horace and Vera each fill in the grid by putting the numbers from \\(1\\) through \\(141 \\times 91 = 12{,}831\\) into the squares. Horace fills the grid horizontally: he puts \\(1\\) through \\(91\\) in order from left to right into row \\(1,\\) puts \\(92\\) through \\(182\\) into row \\(2\\) in order from left to right, and continues similarly through row \\(141.\\) Vera fills the grid vertically: she puts \\(1\\) through \\(141\\) in order from top to bottom into column \\(1,\\) then \\(142\\) through \\(282\\) into column \\(2\\) in order from top to bottom, and continues similarly through column \\(91.\\) How many squares get two copies of the same number?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(19\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "11"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2025-p19.live",
+      "kind": "proof-sketch",
+      "text": "In row \\(r,\\) column \\(c,\\) Horace writes \\((r-1)\\cdot 91 + c\\) and Vera writes \\((c-1)\\cdot 141 + r.\\) Setting these equal gives \\(90r - 140c = -50,\\) i.e. \\(9r = 14c - 5.\\) This requires \\(c \\equiv 1 \\pmod 9,\\) so \\(c = 1, 10, 19, \\ldots, 91\\) — that is \\(11\\) values, and each yields a valid \\(r\\) between \\(1\\) and \\(141.\\) So \\(11\\) squares match.\n\nThus, the correct answer is C.",
+      "hints": [
+        "Write the Horace-number and the Vera-number of the square in row \\(r,\\) column \\(c\\) as formulas in \\(r\\) and \\(c\\)",
+        "Setting them equal gives \\(9r = 14c - 5;\\) find which \\(c\\) make \\(r\\) an integer in range"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

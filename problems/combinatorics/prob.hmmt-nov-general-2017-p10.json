@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-general-2017-p10",
+  "title": "2017 HMMT November General Problem 10",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.enumeration-with-symmetry",
+      "label": "Enumeration with symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2017,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 64.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Five equally skilled tennis players named Allen, Bob, Catheryn, David, and Evan play in a round robin tournament, such that each pair of people play exactly once, and there are no ties. In each of the ten games, the two players both have a \\(50 \\%\\) chance of winning, and the results of the games are independent. Compute the probability that there exist four distinct players \\(P_{1}, P_{2}, P_{3}, P_{4}\\) such that \\(P_{i}\\) beats \\(P_{i+1}\\) for \\(i=1,2,3,4\\). (We denote \\(P_{5}=P_{1}\\) ).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2017-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\frac{49}{64}\\)\nWe make the following claim: if there is a 5 -cycle (a directed cycle involving 5 players) in the tournament, then there is a 4-cycle.\nProof: Assume that \\(A\\) beats \\(B, B\\) beats \\(C, C\\) beats \\(D, D\\) beats \\(E\\) and \\(E\\) beats \\(A\\). If \\(A\\) beats \\(C\\) then \\(A, C, D, E\\) forms a 4-cycle, and similar if \\(B\\) beats \\(D, C\\) beats \\(E\\), and so on. However, if all five reversed matches occur, then \\(A, D, B, C\\) is a 4 -cycle.\nTherefore, if there are no 4 -cycles, then there can be only 3 -cycles or no cycles at all.\nCase 1: There is a 3 -cycle. Assume that \\(A\\) beats \\(B, B\\) beats \\(C\\), and \\(C\\) beats \\(A\\). (There are \\(\\binom{5}{3}=10\\) ways to choose the cycle and 2 ways to orient the cycle.) Then \\(D\\) either beats all three or is beaten by all three, because otherwise there exists two people \\(X\\) and \\(Y\\) in these three people such that \\(X\\) beats \\(Y\\), and \\(D\\) beats \\(Y\\) but is beaten by \\(X\\), and then \\(X, D, Y, Z\\) will form a 4-cycle ( \\(Z\\) is the remaining\nperson of the three). The same goes for \\(E\\). If \\(D\\) and \\(E\\) both beat all three or are beaten by all three, then there is no restriction on the match between \\(D\\) and \\(E\\). However, if \\(D\\) beats all three and \\(E\\) loses to all three, then \\(E\\) cannot beat \\(D\\) because otherwise \\(E, D, A, B\\) forms a 4 -cycle. This means that \\(A, B, C\\) is the only 3 -cycle in the tournament, and once the cycle is chosen there are \\(2 \\cdot 2+2 \\cdot 1=6\\) ways to choose the results of remaining matches, for \\(10 \\cdot 2 \\cdot 6=120\\) ways in total.\nCase 2: There are no cycles. This means that the tournament is a complete ordering (the person with a higher rank always beats the person with a lower rank). There are \\(5!=120\\) ways in this case as well. Therefore, the probability of not having a 4 -cycle is \\(\\frac{120+120}{2^{10}}=\\frac{15}{64}\\), and thus the answer is \\(1-\\frac{15}{64}=\\frac{49}{64}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

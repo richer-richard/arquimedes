@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2021-p18",
+  "title": "2021 AMC 12B Problem 18",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.completing-the-square",
+      "label": "Completing the square",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2021,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 34.6,
+    "source": 1940,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(z\\) be a complex number satisfying \\(12|z|^2\\) \\(=2|z+2|^2+|z^2+1|^2+31.\\) What is the value of \\(z+\\dfrac{6}{z}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(-2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(-1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "-2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2021-p18.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(p=|z|^2=z\\bar z\\) and \\(s=z+\\bar z.\\) Then \\(|z+2|^2=p+2s+4,\\) and \\(|z^2+1|^2\\) \\(=p^2+(z^2+\\bar z^2)+1\\) \\(=p^2+(s^2-2p)+1.\\)\n\nSubstituting, \\(12p=2(p+2s+4)\\) \\(+p^2+s^2-2p+1+31,\\) which simplifies to \\(p^2-12p+s^2+4s+40=0.\\)\n\nCompleting the square gives \\((p-6)^2+(s+2)^2=0,\\) so \\(p=6\\) and \\(s=-2.\\)\n\nThen \\(z+\\dfrac{6}{z}=z+\\dfrac{6\\bar z}{|z|^2}=z+\\bar z=-2.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "Let \\(p=|z|^2\\) and \\(s=z+\\bar z;\\) expand every modulus using \\(|w|^2=w\\bar w\\)",
+        "The equation collapses to \\((p-6)^2+(s+2)^2=0\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

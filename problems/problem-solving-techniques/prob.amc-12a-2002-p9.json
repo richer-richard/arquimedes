@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12a-2002-p9",
+  "title": "2002 AMC 12A Problem 9",
+  "category": "problem-solving-techniques",
+  "subjects": [
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "strategy.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "strategy.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2002,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 25.1,
+    "source": 1570,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Jamal wants to store \\(30\\) computer files on floppy disks, each of which has a capacity of \\(1.44\\) megabytes (mb). Three of his files require \\(0.8\\) mb of memory each, \\(12\\) more require \\(0.7\\) mb each, and the remaining \\(15\\) require \\(0.4\\) mb each. No file can be split between floppy disks. What is the minimal number of floppy disks that will hold all the files?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(14\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(16\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "13"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2002-p9.live",
+      "kind": "proof-sketch",
+      "text": "The files need \\(3(0.8)+12(0.7)\\) \\(+15(0.4) = 16.8\\) mb, so at least \\(\\dfrac{16.8}{1.44} = 11\\tfrac{2}{3}\\) disks by volume alone.\n\nA disk containing a \\(0.8\\)-mb file has room for only one more \\(0.4\\)-mb file, leaving at least \\(0.24\\) mb unused. Across the three \\(0.8\\)-mb files this wastes at least \\(3(0.24) = 0.72\\) mb, over half a disk, forcing at least \\(13\\) disks.\n\nThirteen suffice: six disks each hold two \\(0.7\\)-mb files, three disks each hold one \\(0.8\\)-mb file plus one \\(0.4\\)-mb file, and four disks each hold three \\(0.4\\)-mb files.\n\nThus, the correct answer is B.",
+      "hints": [
+        "The total memory needed is \\(3(0.8)+12(0.7)+15(0.4)\\) mb",
+        "A disk holding a \\(0.8\\) file has room for only one \\(0.4\\) file, wasting \\(0.24\\) mb; add up this waste"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

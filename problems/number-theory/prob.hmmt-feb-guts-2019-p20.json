@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2019-p20",
+  "title": "2019 HMMT February Guts Problem 20",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "nt.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2019,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 77.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "On floor 0 of a weird-looking building, you enter an elevator that only has one button. You press the button twice and end up on floor 1. Thereafter, every time you press the button, you go up by one floor with probability \\(\\frac{X}{Y}\\), where \\(X\\) is your current floor, and \\(Y\\) is the total number of times you have pressed the button thus far (not including the current one); otherwise, the elevator does nothing.\n\nBetween the third and the \\(100^{\\text {th }}\\) press inclusive, what is the expected number of pairs of consecutive presses that both take you up a floor?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2019-p20.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\frac{97}{3}\\)\nBy induction, we can determine that after \\(n\\) total button presses, your current floor is uniformly distributed from 1 to \\(n-1\\) : the base case \\(n=2\\) is trivial to check, and for the \\(n+1\\) th press, the probability that you are now on floor \\(i\\) is \\(\\frac{1}{n-1}\\left(1-\\frac{i}{n}\\right)+\\frac{1}{n-1}\\left(\\frac{i-1}{n}\\right)=\\frac{1}{n}\\) for \\(i=1,2, \\ldots, n\\), finishing the inductive step.\nHence, the probability that the \\((n+1)\\)-th and \\((n+2)\\)-th press both take you up a floor is\n\n\\[\\frac{1}{n-1} \\sum_{i=1}^{n-1} \\frac{i}{n} \\cdot \\frac{i+1}{n+1}=\\frac{\\sum_{i=1}^{n-1} i^{2}+i}{(n-1) n(n+1)}=\\frac{\\frac{(n-1) n(2 n-1)}{6}+\\frac{n(n-1)}{2}}{(n-1) n(n+1)}=\\frac{1}{3}\\]\n\nSince there are \\(100-3=97\\) possible pairs of consecutive presses, the expected value is \\(\\frac{97}{3}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

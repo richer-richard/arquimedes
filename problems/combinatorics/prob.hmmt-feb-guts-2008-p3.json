@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2008-p3",
+  "title": "2008 HMMT February Guts Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.coloring",
+      "label": "Coloring",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "comb.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2008,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 66.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many ways can you color the squares of a \\(2 \\times 2008\\) grid in 3 colors such that no two squares of the same color share an edge?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2008-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(2 \\cdot 3^{2008}\\) Denote the colors \\(A, B, C\\). The left-most column can be colored in 6 ways. For each subsequent column, if the \\(k\\) th column is colored with \\(A B\\), then the \\((k+1)\\) th column can only be colored with one of \\(B A, B C, C A\\). That is, if we have colored the first \\(k\\) columns, then there are 3 ways to color the \\((k+1)\\) th column. It follows that the number of ways of coloring the board is \\(6 \\times 3^{2007}\\).\n\n## \\(11^{\\text {th }}\\) HARVARD-MIT MATHEMATICS TOURNAMENT, 23 FEBRUARY 2008 - GUTS ROUND",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

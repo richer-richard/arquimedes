@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2010-p13",
+  "title": "2010 AIME II Problem 13",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.conditional-probability",
+      "label": "Conditional probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequality",
+      "label": "Inequality",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2010,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 63.3,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "The \\(52\\) cards in a deck are numbered \\(1,\\) \\(2,\\) \\(\\ldots,\\) \\(52.\\) Alex, Blair, Corey, and Dylan each picks a card from the deck without replacement and with each card being equally likely to be picked. The two persons with lower numbered cards form a team, and the two persons with higher numbered cards form another team. Let \\(p(a)\\) be the probability that Alex and Dylan are on the same team, given that Alex picks one of the cards \\(a\\) and \\(a + 9,\\) and Dylan picks the other of these two cards. The minimum value of \\(p(a)\\) for which \\(p(a) \\ge \\frac{1}{2}\\) can be written as \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "263",
+    "value": "263"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2010-p13.live",
+      "kind": "proof-sketch",
+      "text": "Condition on Alex and Dylan holding \\(a\\) and \\(a + 9.\\) Blair and Corey then draw \\(2\\) of the remaining \\(50\\) cards, and Alex and Dylan are teammates exactly when both of those cards are below \\(a\\) (Alex and Dylan are the high team) or both are above \\(a + 9\\) (the low team). There are \\(a - 1\\) cards below and \\(52 - (a + 9) = 43 - a\\) cards above, so \\[p(a) = \\frac{\\binom{a-1}{2} + \\binom{43-a}{2}}{\\binom{50}{2}}.\\]\n\nThe numerator is \\(\\frac{(a-1)(a-2) + (43-a)(42-a)}{2}\\) \\(= a^2 - 44a + 904,\\) so \\(p(a) \\ge \\frac{1}{2}\\) becomes \\(a^2 - 44a + 904 \\ge \\frac{25 \\cdot 49}{2},\\) that is, \\((a - 22)^2 \\ge \\frac{385}{2}.\\) Since \\(a\\) is an integer, \\(|a - 22| \\ge 14,\\) so \\(a \\le 8\\) or \\(a \\ge 36.\\)\n\nThe parabola is smallest at the admissible points closest to \\(a = 22:\\) \\(p(8) = p(36)\\) \\(= \\frac{\\binom{7}{2} + \\binom{35}{2}}{\\binom{50}{2}}\\) \\(= \\frac{616}{1225}\\) \\(= \\frac{88}{175},\\) which is indeed at least \\(\\frac{1}{2}.\\) Thus \\(m + n = 88 + 175 = 263.\\)",
+      "hints": [
+        "Given that Alex and Dylan hold \\(a\\) and \\(a + 9,\\) they are teammates exactly when Blair and Corey both draw below \\(a\\) or both draw above \\(a + 9\\)",
+        "\\(p(a) = \\frac{\\binom{a-1}{2} + \\binom{43-a}{2}}{\\binom{50}{2}} \\ge \\frac{1}{2}\\) reduces to \\((a - 22)^2 \\ge \\frac{385}{2},\\) so \\(a \\le 8\\) or \\(a \\ge 36\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

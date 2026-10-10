@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-guts-2019-p22",
+  "title": "2019 HMMT November Guts Problem 22",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2019,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 57.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(f(n)\\) be the number of distinct digits of \\(n\\) when written in base 10 . Compute the sum of \\(f(n)\\) as \\(n\\) ranges over all positive 2019-digit integers.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2019-p22.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(9\\left(10^{2019}-9^{2019}\\right)\\)\nWrite\n\n\\[f(n)=f_{0}(n)+\\cdots+f_{9}(n)\\]\n\nwhere \\(f_{d}(n)=1\\) if \\(n\\) contains the digit \\(d\\) and 0 otherwise. The sum of \\(f_{d}(n)\\) over all 2019-digit positive integers \\(n\\) is just the number of 2019-digit positive integers that contain the digit \\(d\\). For \\(1 \\leq d \\leq 9\\),\n\n\\[\\sum_{n} f_{d}(n)=9 \\cdot 10^{2018}-8 \\cdot 9^{2018}\\]\n\nAlso,\n\n\\[\\sum_{n} f_{0}(n)=9 \\cdot 10^{2018}-9^{2019}\\]\n\nSumming over all possible values of \\(d\\), we compute\n\n\\[\\sum_{n} f(n)=\\sum_{d=0}^{9} \\sum_{n} f_{d}(n)=9\\left(9 \\cdot 10^{2018}-8 \\cdot 9^{2018}\\right)+9 \\cdot 10^{2018}-9^{2019}=9\\left(10^{2019}-9^{2019}\\right)\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

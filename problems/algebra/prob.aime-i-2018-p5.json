@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2018-p5",
+  "title": "2018 AIME I Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2018,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 51.6,
+    "source": 2510,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "For each ordered pair of real numbers \\((x, y)\\) satisfying \\[ \\begin{aligned} &\\log_2(2x + y) \\\\ &= \\log_4(x^2 + xy + 7y^2), \\end{aligned} \\] there is a real number \\(K\\) such that \\[ \\begin{aligned} &\\log_3(3x + y) \\\\ &= \\log_9(3x^2 + 4xy + Ky^2). \\end{aligned} \\] Find the product of all possible values of \\(K.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "189",
+    "value": "189"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2018-p5.live",
+      "kind": "proof-sketch",
+      "text": "Because \\(\\log_4 u = \\log_2 \\sqrt{u},\\) the first equation is equivalent to \\((2x + y)^2 = x^2 + xy + 7y^2\\) together with \\(2x + y \\gt 0.\\) Expanding gives \\(3x^2 + 3xy - 6y^2 = 0,\\) which factors as \\(3(x - y)(x + 2y) = 0.\\) So \\(x = y\\) or \\(x = -2y,\\) with \\((x, y) \\ne (0, 0).\\)\n\nSimilarly the second equation says \\((3x + y)^2 = 3x^2 + 4xy + Ky^2,\\) that is \\(6x^2 + 2xy + y^2 = Ky^2.\\) If \\(x = y\\) (taking \\(x \\gt 0\\) so both logarithms are defined), then \\(K = 6 + 2 + 1 = 9.\\) If \\(x = -2y\\) (taking \\(y \\lt 0,\\) so \\(2x + y = -3y \\gt 0\\) and \\(3x + y = -5y \\gt 0\\)), then \\(24y^2 - 4y^2 + y^2 = Ky^2,\\) so \\(K = 21.\\)\n\nBoth cases occur, so the product of all possible values is \\(9 \\cdot 21 = 189.\\)",
+      "hints": [
+        "Since \\(\\log_4 u = \\log_2 \\sqrt{u},\\) the first equation says \\((2x + y)^2 = x^2 + xy + 7y^2\\)",
+        "That condition factors as \\((x - y)(x + 2y) = 0;\\) substitute each case into the squared form of the second equation to find \\(K\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

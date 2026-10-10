@@ -1,0 +1,85 @@
+{
+  "id": "prob.ahsme-1991-p17",
+  "title": "1991 AHSME Problem 17",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.palindrome",
+      "label": "Palindrome",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1991,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 33.1,
+    "source": 1880,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A positive integer \\(N\\) is a palindrome if the integer obtained by reversing the sequence of digits of \\(N\\) is equal to \\(N.\\) The year \\(1991\\) is the only year in the current century with the following two properties:\n\n(a) It is a palindrome.\n\n(b) It factors as a product of a \\(2\\)-digit prime palindrome and a \\(3\\)-digit prime palindrome.\n\nHow many years in the millennium between \\(1000\\) and \\(2000\\) (including the year \\(1991\\)) have properties (a) and (b)?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "4"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1991-p17.live",
+      "kind": "proof-sketch",
+      "text": "The palindromes in the interval are \\(1dd1,\\) where \\(d\\) is a digit. Algebraically, \\[ \\begin{aligned} 1dd1&=1001+110d\\\\ &=11(91+10d). \\end{aligned} \\] The two-digit prime palindrome must therefore be \\(11,\\) and \\(91+10d\\) must be a three-digit prime palindrome. For \\(d=0,1,\\ldots,9,\\) the prime values occur for \\(d=1,4,6,9,\\) giving \\(101,131,151,181.\\) Thus there are \\(4\\) years.\n\nThus the correct answer is D.",
+      "hints": [
+        "Every four-digit palindrome from \\(1000\\) to \\(2000\\) has the form \\(1dd1\\)",
+        "Factor \\(1dd1\\) as \\(11(91+10d)\\) and test when the three-digit factor is prime"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

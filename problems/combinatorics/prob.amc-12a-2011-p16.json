@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12a-2011-p16",
+  "title": "2011 AMC 12A Problem 16",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2011,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 31.6,
+    "source": 1820,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Each vertex of convex pentagon \\(ABCDE\\) is to be assigned a color. There are \\(6\\) colors to choose from, and the ends of each diagonal must have different colors. How many different colorings are possible?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2520\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2880\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3120\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3250\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(3750\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "3120"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2011-p16.live",
+      "kind": "proof-sketch",
+      "text": "The diagonals connect the vertices in the order \\(A - C - E - B - D - A,\\) which is a \\(5\\)-cycle. The condition is exactly that this cycle is properly colored.\n\nThe number of proper \\(k\\)-colorings of a cycle of length \\(n\\) is \\((k-1)^n + (-1)^n (k-1).\\) With \\(n = 5\\) and \\(k = 6,\\) \\[ \\begin{gathered} 5^5 + (-1)^5 \\cdot 5 \\\\ = 3125 - 5 = 3120. \\end{gathered} \\]\n\nThus, the correct answer is C.",
+      "hints": [
+        "The five diagonals \\(AC, CE, EB, BD, DA\\) form a single \\(5\\)-cycle among the vertices",
+        "The number of proper colorings of a cycle of length \\(n\\) with \\(k\\) colors is \\((k-1)^n + (-1)^n (k-1)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

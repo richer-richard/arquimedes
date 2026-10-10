@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2007-p24",
+  "title": "2007 AMC 10B Problem 24",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2007,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 30.7,
+    "source": 1980,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(n\\) denote the smallest positive integer that is divisible by both \\(4\\) and \\(9,\\) and whose base-\\(10\\) representation consists of only \\(4\\)’s and \\(9\\)’s, with at least one of each. What are the last four digits of \\(n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4444\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4494\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4944\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(9444\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(9944\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "4944"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2007-p24.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(n\\) is divisible by \\(9,\\) its digit sum is a multiple of \\(9.\\) With \\(k\\) fours and \\(m\\) nines, the digit sum is \\(4k+9m,\\) so \\(4k\\) is divisible by \\(9,\\) forcing \\(k\\) to be divisible by \\(9.\\) Thus \\(k\\ge 9,\\) and with at least one \\(9,\\) the number has at least ten digits.\n\nFor divisibility by \\(4,\\) the last two digits must form a multiple of \\(4,\\) and among \\(44,\\) \\(49,\\) \\(94,\\) and \\(99\\) only \\(44\\) works, so \\(n\\) ends in \\(44.\\)\n\nThe smallest such ten-digit number places the single \\(9\\) in the lowest available position, giving \\(4{,}444{,}444{,}944.\\) Its last four digits are \\(4944.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Divisibility by \\(9\\) constrains the digit sum; divisibility by \\(4\\) constrains the last two digits",
+        "The digit sum forces at least nine \\(4\\)’s, and the last two digits must both be \\(4\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

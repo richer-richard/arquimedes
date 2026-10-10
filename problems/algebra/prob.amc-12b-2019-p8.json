@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2019-p8",
+  "title": "2019 AMC 12B Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.pairing-and-grouping",
+      "label": "Pairing and grouping",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.symmetry-algebra",
+      "label": "Symmetry (algebra)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2019,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 25.0,
+    "source": 1560,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(f(x)=x^2(1-x)^2.\\) What is the value of the sum\n\n\\[ \\begin{gathered} f\\!\\left(\\tfrac{1}{2019}\\right)-f\\!\\left(\\tfrac{2}{2019}\\right) \\\\ {}+f\\!\\left(\\tfrac{3}{2019}\\right)-f\\!\\left(\\tfrac{4}{2019}\\right) \\\\ {}+\\cdots+f\\!\\left(\\tfrac{2017}{2019}\\right) \\\\ {}-f\\!\\left(\\tfrac{2018}{2019}\\right)? \\end{gathered} \\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1}{2019^4}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{2018^2}{2019^4}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{2020^2}{2019^4}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(1\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "0"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2019-p8.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(f(1-x)=(1-x)^2x^2=f(x),\\) we have \\(f\\!\\left(\\tfrac{k}{2019}\\right)=f\\!\\left(\\tfrac{2019-k}{2019}\\right).\\)\n\nIn the sum, the term with index \\(k\\) has sign \\((-1)^{k+1},\\) while the term with index \\(2019-k\\) equals it in value but has sign \\((-1)^{2019-k+1}=(-1)^{k},\\) the opposite.\n\nEvery term cancels with its partner, so the total is \\(0.\\)\n\nThus, A is the correct answer.",
+      "hints": [
+        "\\(f(x)=f(1-x)\\)",
+        "Pair \\(f\\!\\left(\\tfrac{k}{2019}\\right)\\) with \\(f\\!\\left(\\tfrac{2019-k}{2019}\\right),\\) and compare their signs"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

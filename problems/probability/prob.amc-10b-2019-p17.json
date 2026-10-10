@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2019-p17",
+  "title": "2019 AMC 10B Problem 17",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.complementary-probability",
+      "label": "Complementary probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.geometric-distribution",
+      "label": "Geometric distribution",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2019,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 24.1,
+    "source": 1460,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A red ball and a green ball are randomly and independently tossed into bins numbered with the positive integers so that for each ball, the probability that it is tossed into bin \\(k\\) is \\(2^{-k}\\) for \\(k = 1,\\) \\(2,\\) \\(3,\\) \\(\\ldots.\\) What is the probability that the red ball is tossed into a higher-numbered bin than the green ball?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( \\dfrac{1}{4} \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( \\dfrac{2}{7} \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( \\dfrac{1}{3} \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( \\dfrac{3}{8} \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( \\dfrac{3}{7} \\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "1/3"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2019-p17.live",
+      "kind": "proof-sketch",
+      "text": "Given that the two balls were tossed into separate bins, the probability that the ball in the higher-numbered bin is red is \\(\\frac 12.\\) Thus we must find \\[\\frac{P(\\text{Balls in different bins})}2 \\]\\[= \\frac{1-P(\\text{Balls in same bins})}2\\] by complementary counting.\n\nThe probability that both balls are in bin \\(k\\) is \\[2^{-k} \\cdot 2^{-k} = 4^{-k}. \\]\n\nThe probability that they are both in the same bin is therefore \\[\\sum_{k=1}^\\infty 4^{-k}.\\] Using the geometric sequence formula, we get this to be \\[\\frac 14 \\cdot \\dfrac{1}{1-\\frac 14} = \\frac 13.\\]\n\nTherefore, our answer is \\[\\frac{1-\\frac 13}2 = \\frac 13 .\\]\n\nThus, the answer is C .",
+      "hints": [
+        "First compute the probability that both balls land in the same bin",
+        "If they land in different bins, symmetry decides which color is higher"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

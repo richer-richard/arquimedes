@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tst-2017-p3",
+  "title": "USA TST 2017 Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TST",
+    "year": 2017,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 111.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(P, Q \\in \\mathbb{R}[x]\\) be relatively prime nonconstant polynomials.\nShow that there can be at most three real numbers \\(\\lambda\\)\nsuch that \\(P + \\lambda Q\\) is the square of a polynomial.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tst-2017-p3.evanchen",
+      "kind": "proof-sketch",
+      "text": "This is true even with \\(\\mathbb{R}\\) replaced by \\(\\mathbb{C}\\),\nand it will be necessary to work in this generality.\n\nFirst solution using transformations..\nWe will prove the claim in the following form:\n\nClaim.\nAssume \\(P, Q \\in \\mathbb{C}[x]\\) are relatively prime.\nIf \\(\\alpha P + \\beta Q\\) is a square for four different\nchoices of the ratio \\([\\alpha : \\beta]\\)\nthen \\(P\\) and \\(Q\\) must be constant.\n\nCall pairs \\((P,Q)\\) as in the claim bad;\nso we wish to show the only bad pairs are pairs of constant polynomials.\nAssume not, and take a bad pair with \\(\\deg P + \\deg Q\\) minimal.\n\nBy a suitable M\\\"obius transformation,\nwe may transform \\((P,Q)\\) so that the four ratios are \\([1:0]\\),\n\\([0:1]\\), \\([1:-1]\\) and \\([1:-k]\\),\nso we find there are polynomials \\(A\\) and \\(B\\) such that\n\\[\\begin{aligned}\n A^2 - B^2 &= C^2 \\\\\n A^2 - k B^2 &= D^2\n\\end{aligned}\\]\nwhere \\(A^2 = P+\\lambda_1 Q\\), \\(B^2 = P+\\lambda_2 Q\\), say.\nOf course \\(\\gcd(A,B) = 1\\).\n\nConsequently, we have \\(C^2 = (A+B)(A-B)\\)\nand \\(D^2 = (A+\\mu B)(A-\\mu B)\\) where \\(\\mu^2 = k\\).\nNow \\(\\gcd(A,B) = 1\\), so \\(A+B\\), \\(A-B\\), \\(A+ \\mu B\\) and \\(A - \\mu B\\)\nare squares; id est \\((A,B)\\) is bad.\nThis is a contradiction, since \\(\\deg A + \\deg B < \\deg P + \\deg Q\\).\n\nSecond solution using derivatives (by Zack Chroman)..\nWe will assume without loss of generality that \\(\\deg P \\neq \\deg Q\\);\nif not, then one can replace \\((P,Q)\\) with \\((P+cQ,Q)\\)\nfor a suitable constant \\(c\\).\n\nThen, there exist \\(\\lambda_i \\in \\mathbb{C}\\) and polynomials \\(R_i\\)\nfor \\(i=1,2,3,4\\) such that\n\\[\\begin{aligned}\n P + \\lambda_i Q &= R_i^2 \\\\\n \\implies P' + \\lambda_i Q' &= 2 R_i R_i' \\\\\n \\implies R_i &\\mid Q'(P+\\lambda_i Q) - Q(P' + \\lambda_i Q')\n = Q'P - QP'.\n\\end{aligned}\\]\nOn the other hand by Euclidean algorithm it follows that\n\\(R_i\\) are relatively prime to each other.\nTherefore\n\\[ R_1 R_2 R_3 R_4 \\mid Q' P - Q P'. \\]\nHowever, we have\n\\[\\begin{aligned}\n \\sum_1^4 \\deg R_i\n &\\ge \\frac{3\\max(\\deg P, \\deg Q) + \\min(\\deg P, \\deg Q)}{2} \\\\\n &\\ge \\deg P + \\deg Q > \\deg(Q'P - QP').\n\\end{aligned}\\]\nThis can only occur if \\(Q'P - QP' = 0\\) or \\((P/Q)' = 0\\)\nby the quotient rule!\nBut \\(P/Q\\) can't be constant, the end.\n\nRemark.\n The result is previously known; see e.g.\\\n Lemma 1.6 of\n or Exercise 6.5.L(a) of Vakil's notes.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "prob.aime-i-2009-p4",
+  "title": "2009 AIME I Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.parallelogram",
+      "label": "Parallelogram",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.vector",
+      "label": "Vector",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2009,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 46.4,
+    "source": 2400,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "In parallelogram \\(ABCD,\\) point \\(M\\) is on \\(\\overline{AB}\\) so that \\(\\frac{AM}{AB} = \\frac{17}{1000},\\) and point \\(N\\) is on \\(\\overline{AD}\\) so that \\(\\frac{AN}{AD} = \\frac{17}{2009}.\\) Let \\(P\\) be the point of intersection of \\(\\overline{AC}\\) and \\(\\overline{MN}.\\) Find \\(\\frac{AC}{AP}.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "177",
+    "value": "177"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2009-p4.live",
+      "kind": "proof-sketch",
+      "text": "Place \\(A\\) at the origin and let \\(\\mathbf{b} = \\overrightarrow{AB}\\) and \\(\\mathbf{d} = \\overrightarrow{AD},\\) so that \\(C = \\mathbf{b} + \\mathbf{d},\\) \\(M = \\frac{17}{1000}\\mathbf{b},\\) and \\(N = \\frac{17}{2009}\\mathbf{d}.\\) Since \\(P\\) lies on \\(\\overline{AC},\\) write \\(P = s\\,(\\mathbf{b} + \\mathbf{d})\\) where \\(s = \\frac{AP}{AC};\\) since \\(P\\) also lies on line \\(MN,\\) write \\(P = tM + (1 - t)N\\) for some \\(t.\\)\n\nBecause \\(\\mathbf{b}\\) and \\(\\mathbf{d}\\) are independent, the coefficients must agree: \\[s = \\frac{17t}{1000}\\] and \\[s = \\frac{17(1-t)}{2009}.\\] Thus \\(t = \\frac{1000s}{17}\\) and \\(1 - t = \\frac{2009s}{17};\\) adding gives \\(1 = \\frac{3009s}{17}.\\)\n\nTherefore \\(\\frac{AC}{AP} = \\frac{1}{s} = \\frac{3009}{17} = 177.\\)",
+      "hints": [
+        "Set \\(A\\) as the origin and express \\(M,\\) \\(N,\\) and \\(C\\) in terms of the vectors \\(\\overrightarrow{AB}\\) and \\(\\overrightarrow{AD}\\)",
+        "Points of line \\(MN\\) have the form \\(tM + (1-t)N;\\) also write \\(P = s\\,(\\overrightarrow{AB} + \\overrightarrow{AD}),\\) match coefficients, and add the two resulting equations"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

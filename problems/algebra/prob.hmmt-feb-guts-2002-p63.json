@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2002-p63",
+  "title": "2002 HMMT February Guts Problem 63",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithms-and-exponentials",
+      "label": "Logarithms and exponentials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2002,
+    "number": 63
+  },
+  "difficulty": {
+    "course": 75.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Our third and final item comes to us from Germany, I mean Geometry. It is known that a regular \\(n\\)-gon can be constructed with straightedge and compass if \\(n\\) is a prime that is 1 plus a power of 2 . It is also possible to construct a \\(2 n\\)-gon whenever an \\(n\\)-gon is constructible, or a \\(p_{1} p_{2} \\cdots p_{m}\\)-gon where the \\(p_{i}\\) 's are distinct primes of the above form. What is really interesting is that these conditions, together with the fact that we can construct a square, is that they give us all constructible regular \\(n\\)-gons. What is the largest \\(n\\) less than \\(4,300,000,000\\) such that a regular \\(n\\)-gon is constructible?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2002-p63.hmmt",
+      "kind": "proof-sketch",
+      "text": "The known primes of this form (Fermat primes) are 3, 5, 17, 257, and 65537, and the result is due to Gauss (German). If there are other such primes (unknown), then they are much bigger than \\(10^{10}\\). So for each product of these primes, we can divide \\(4.3 \\cdot 10^{9}\\) by that number and take \\(\\log _{2}\\) to find the largest power of 2 to multiply by, then compare the resulting numbers. There are 32 cases to check, or just observe that \\(2^{32}=4,294,967,296\\) is so close that there's likely a shortcut. Note that \\(2^{32}+1\\) is divisible by 641 , and hence not prime. \\(3 \\cdot 5 \\cdot 17 \\cdot 257 \\cdot 65537=2^{32}-1\\) is smaller; replacing any of the factors by the closest power of 2 only decreases the product, and there's not enough room to squeeze in an extra factor of 2 without replacing all of them, and that gives us \\(2^{32}\\), so indeed that it is the answer.\n\nHelp control the pet population. Have your pets spayed or neutered. Bye-bye.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

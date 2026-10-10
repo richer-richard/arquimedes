@@ -1,0 +1,71 @@
+{
+  "id": "prob.ahsme-1996-p26",
+  "title": "1996 AHSME Problem 26",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1996,
+    "number": 26
+  },
+  "difficulty": {
+    "course": 41.0,
+    "source": 2190,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "An urn contains marbles of four colors: red, white, blue, and green. When four marbles are drawn without replacement, the following events are equally likely:\n\n(a) the selection of four red marbles;\n\n(b) the selection of one white and three red marbles;\n\n(c) the selection of one white, one blue, and two red marbles; and\n\n(d) the selection of one marble of each color.\n\nWhat is the smallest number of marbles satisfying the given condition?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(19\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(46\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(69\\)"
+    },
+    {
+      "label": "E",
+      "text": "more than \\(69\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "21"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1996-p26.live",
+      "kind": "proof-sketch",
+      "text": "Equal probabilities have the same common denominator, so their favorable selection counts satisfy \\(\\binom r4=w\\binom r3\\) \\(=wb\\binom r2=wbgr.\\) Successive ratios give \\(w=\\frac{r-3}{4},\\) \\(b=\\frac{r-2}{3},\\) and \\(g=\\frac{r-1}{2}.\\) The least \\(r\\ge4\\) making all three positive integers is \\(r=11.\\) Then \\((w,b,g)=(2,3,5),\\) for \\(11+2+3+5=21\\) marbles. Thus the correct answer is B.",
+      "hints": [
+        "Let the four color counts be \\(r,w,b,g\\) and equate the combination counts for the four events",
+        "Successive ratios determine \\(w,b,g\\) in terms of \\(r\\); then find the smallest \\(r\\) making all three integers"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

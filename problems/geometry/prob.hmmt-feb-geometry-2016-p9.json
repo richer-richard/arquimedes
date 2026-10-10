@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-feb-geometry-2016-p9",
+  "title": "2016 HMMT February Geometry Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2016,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 94.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In cyclic quadrilateral \\(A B C D\\) with \\(A B=A D=49\\) and \\(A C=73\\), let \\(I\\) and \\(J\\) denote the incenters of triangles \\(A B D\\) and \\(C B D\\). If diagonal \\(\\overline{B D}\\) bisects \\(\\overline{I J}\\), find the length of \\(I J\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2016-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\frac{28}{5} \\sqrt{69}\\)\nLet \\(O\\) be circumcenter, \\(R\\) the circumradius and \\(r\\) the common inradius. We have \\(I O^{2}=J O^{2}=\\) \\(R(R-2 r)\\) by a result of Euler; denote \\(x\\) for the common value of \\(I O\\) and \\(J O\\). Additionally, we know \\(A J=A B=A D=49\\) (angle chase to find that \\(\\angle B J A=\\angle J B A\\) ). Since \\(A\\) is the midpoint of the arc \\(\\widehat{B D}\\) not containing \\(C\\), both \\(J\\) and \\(A\\) lie on the angle bisector of angle \\(\\angle B C D\\), so \\(C, J, A\\) are collinear. So by Power of a Point we have\n\n\\[R^{2}-x^{2}=2 R r=A J \\cdot J C=49 \\cdot 24\\]\n\nNext, observe that the angle bisector of angle \\(B A D\\) contains both \\(I\\) and \\(O\\), so \\(A, I, O\\) are collinear. Let \\(M\\) be the midpoint of \\(I J\\), lying on \\(\\overline{B D}\\). Let \\(K\\) be the intersection of \\(I O\\) and \\(B D\\). Observing that the right triangles \\(\\triangle I M O\\) and \\(\\triangle I K M\\) are similar, we find \\(I M^{2}=I K \\cdot I O=r x\\), so \\(I J^{2}=4 r x\\). Now apply Stewart's Theorem to \\(\\triangle A O J\\) to derive\n\n\\[R(x(R-x)+4 r x)=49^{2} x+x^{2}(R-x)\\]\n\nEliminating the common factor of \\(x\\) and rearranging gives\n\n\\[49^{2}-(R-x)^{2}=4 R r=48 \\cdot 49\\]\n\nso \\(R-x=7\\). Hence \\(R+x=\\frac{49 \\cdot 24}{7}=168\\), and thus \\(2 R=175,2 x=161\\). Thus \\(r=\\frac{49 \\cdot 24}{175}=\\frac{168}{25}\\).\nFinally, \\(I J=2 \\sqrt{r x}=2 \\sqrt{\\frac{84 \\cdot 161}{25}}=\\frac{28 \\sqrt{69}}{5}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

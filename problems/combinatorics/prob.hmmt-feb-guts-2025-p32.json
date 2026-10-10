@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-feb-guts-2025-p32",
+  "title": "2025 HMMT February Guts Problem 32",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.catalan-numbers-partitions",
+      "label": "Catalan numbers, partitions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2025,
+    "number": 32
+  },
+  "difficulty": {
+    "course": 92.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In the coordinate plane, a closed lattice loop of length \\(2n\\) is a sequence of lattice points \\(P_{0}, P_{1}, P_{2}, \\ldots , P_{2n}\\) such that \\(P_{0}\\) and \\(P_{2n}\\) are both the origin and \\(P_{i}P_{i + 1} = 1\\) for each \\(i\\) . A closed lattice loop of length 2026 is chosen uniformly at random from all such loops. Let \\(k\\) be the maximum integer such that the line \\(\\ell\\) with equation \\(x + y = k\\) passes through at least one point of the loop. Compute the expected number of indices \\(i\\) such that \\(0 \\leq i \\leq 2025\\) and \\(P_{i}\\) lies on \\(\\ell\\) .\n\n(A lattice point is a point with integer coordinates.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{1013}{507}",
+    "value": "\\frac{1013}{507}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2025-p32.hmmt",
+      "kind": "proof-sketch",
+      "text": "We claim that if 2026 is replaced with \\(2n\\) , the answer is \\(\\frac{2n}{n + 1}\\) .\n\nWrite the path as a sequence of \\(U\\) , \\(D\\) , \\(L\\) , and \\(R\\) moves. The possible sequences that can result are precisely those with an equal number of \\(U\\) 's and \\(D\\) 's, and an equal number of \\(R\\) 's and \\(L\\) 's. We first project this sequence onto a single dimension by converting each \\(U\\) and \\(R\\) to a 1, and each \\(D\\) and \\(L\\) to a \\(- 1\\) . The resulting sequence will have an equal number of 1's and \\(- 1\\) 's.\n\nWe claim that every such sequence of \\(n\\) 1's and \\(n - 1\\) 's corresponds to the same number of closed lattice loops. Indeed, given such a sequence, a corresponding lattice loop can be made by replacing all 1's with \\(U\\) 's and \\(R\\) 's, and all \\(- 1\\) 's with \\(D\\) 's and \\(L\\) 's, so that there are an equal number of \\(U\\) 's and \\(D\\) 's. Nothing in this replacement process is order- dependent, so the number of ways to create this loop does not depend on the initial sequence.\n\nWe can see that each of the 1's move the path towards \\(\\ell\\) and the \\(- 1\\) 's move the path away. Hence, we can think of the path as a one- dimensional walk, starting and ending in the same place, where the points on \\(\\ell\\) correspond exactly to the maxima of this one- dimensional walk.\n\nUsing Catalan numbers, the probability that any given point is at the maxima is\n\n\\[\\frac{\\frac{1}{n + 1}\\binom{2n}{n}}{\\binom{2n}{n}} = \\frac{1}{n + 1},\\]\n\nand thus by linearity, the expected number of \\(i \\in [0, 2025]\\) such that \\(P_{i}\\) is on \\(\\ell\\) is \\(\\frac{2n}{n + 1}\\) . Plugging in \\(n = 1013\\) gives a final answer of \\(\\left[\\frac{1013}{507}\\right]\\) .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

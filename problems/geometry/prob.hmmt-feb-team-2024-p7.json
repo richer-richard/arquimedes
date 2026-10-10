@@ -1,0 +1,82 @@
+{
+  "id": "prob.hmmt-feb-team-2024-p7",
+  "title": "2024 HMMT February Team Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coaxal-circles",
+      "label": "Coaxal circles",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.complex-numbers-in-geometry",
+      "label": "Complex numbers in geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inversion",
+      "label": "Inversion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.radical-axis-theorem",
+      "label": "Radical axis theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-trigonometry",
+      "label": "Triangle trigonometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2024,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 83.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A B C D E F\\) be a regular hexagon with \\(P\\) as a point in its interior. Prove that of the three values \\(\\tan \\angle A P D, \\tan \\angle B P E\\), and \\(\\tan \\angle C P F\\), two of them sum to the third one.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2024-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "Firstly, note that \\(A D, B E\\), and \\(C F\\) are diameters of the circle \\((A B C D E F)\\), so the angles \\(\\angle A P D\\), \\(\\angle B P E, \\angle C P F\\) are all obtuse. Therefore, the desired tangents are well-defined.\nWLOG let the side length of the hexagon be 1 . Let \\(O\\) be the center of the hexagon, and let \\(O P=x\\). Finally, let \\(\\angle A O P=\\theta\\).\nNow, by Law of Cosines, we have \\(A P=\\sqrt{x^{2}+1-2 x \\cos \\theta}\\) and \\(D P=\\sqrt{x^{2}+1+2 x \\cos \\theta}\\). Now, by Law of Cosines again we have\n\n\\[\\begin{gathered}\n\\cos \\angle A P D=\\frac{2\\left(x^{2}+1\\right)-4}{2 \\sqrt{\\left(x^{2}+1\\right)^{2}-4 x^{2} \\cos ^{2} \\theta}}=\\frac{x^{2}-1}{\\sqrt{\\left(1-x^{2}\\right)^{2}+4 x^{2} \\sin ^{2} \\theta}} \\\\\n\\Longrightarrow \\tan \\angle A P D=\\frac{2 x|\\sin \\theta|}{x^{2}-1} .\n\\end{gathered}\\]\n\nSimilarly, \\(\\angle(B E, O P)\\) and \\(\\angle(C F, O P)\\) are \\(\\theta+60^{\\circ}\\) and \\(\\theta+120^{\\circ}\\), respectively (here we are using directed angles). Therefore, the desired three values are\n\n\\[\\{\\tan \\angle A P D, \\tan \\angle B P E, \\tan \\angle C P F\\}=\\left\\{\\frac{2 x|\\sin \\theta|}{x^{2}-1}, \\frac{2 x\\left|\\sin \\left(\\theta+60^{\\circ}\\right)\\right|}{x^{2}-1}, \\frac{2 x\\left|\\sin \\left(\\theta+120^{\\circ}\\right)\\right|}{x^{2}-1}\\right\\} .\\]\n\nWe can scale down the tangent values by \\(\\frac{2 x}{x^{2}-1}\\) to get \\(\\left\\{|\\sin \\theta|,\\left|\\sin \\left(\\theta+60^{\\circ}\\right)\\right|,\\left|\\sin \\left(\\theta+120^{\\circ}\\right)\\right|\\right\\}\\). Now, consider an equilateral triangle with vertices at the third roots of unity rotated by \\(\\theta\\) degrees counterclockwise. The three values represent the distances from the three vertices to the real axis. Since the centroid of this triangle is the origin (lying on the real axis), two of these quantities must sum to the third, as desired.\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

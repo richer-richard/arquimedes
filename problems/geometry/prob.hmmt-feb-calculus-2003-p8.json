@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-calculus-2003-p8",
+  "title": "2003 HMMT February Calculus Problem 8",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.solid-geometry",
+      "label": "Solid geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2003,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 80.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A right circular cone with a height of 12 inches and a base radius of 3 inches is filled with water and held with its vertex pointing downward. Water flows out through a hole at the vertex at a rate in cubic inches per second numerically equal to the height of the water in the cone. (For example, when the height of the water in the cone is 4 inches, water flows out at a rate of 4 cubic inches per second.) Determine how many seconds it will take for all of the water to flow out of the cone.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-calculus-2003-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(9 \\pi / 2\\)\nWhen the water in the cone is \\(h\\) inches high, it forms a cone similar to the original, so that its base has radius \\(h / 4\\) and its volume is hence \\(\\pi h^{3} / 48\\). The given condition then states that\n\n\\[\\frac{d}{d t}\\left(\\frac{\\pi h^{3}}{48}\\right)=-h \\Rightarrow \\frac{\\pi h^{2}}{16} \\cdot \\frac{d h}{d t}=-h \\Rightarrow 2 h \\cdot \\frac{d h}{d t}=-\\frac{32}{\\pi} .\\]\n\nIntegrating with respect to \\(t\\), we get that \\(h^{2}=-32 t / \\pi+C\\); setting \\(t=0, h=12\\), we get \\(C=144\\). The cone empties when \\(h=0\\), so \\(0=-32 t / \\pi+144 \\Rightarrow t=9 \\pi / 2\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-8-2001-p25",
+  "title": "2001 AMC 8 Problem 25",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.permutations",
+      "label": "Permutations",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2001,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 28.0,
+    "source": 1680,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "There are \\(24\\) four-digit whole numbers that use each of the four digits \\(2,\\) \\(4,\\) \\(5,\\) and \\(7\\) exactly once. Only one of these four-digit numbers is a multiple of another one. Which of the following is it?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(5724\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(7245\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(7254\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(7425\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(7542\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2001-p25.live",
+      "kind": "proof-sketch",
+      "text": "A number in the \\(4000\\), \\(5000\\), or \\(7000\\) range cannot be multiplied by \\(2\\) or more and remain one of the given four-digit permutations. So the smaller number must start with \\(2\\), and the larger number must be either double or triple it.\n\nFor doubles, only answer choices ending in \\(4\\) can work. But \\(\\frac{5724}{2}=2862\\) and \\(\\frac{7254}{2}=3627\\), neither of which uses exactly the digits \\(2,4,5,7\\).\n\nFor triples, the possible answer choices are those divisible by \\(3\\): \\(7245,7425,7542\\). Dividing gives \\(2415,2475,2514\\), and only \\(2475\\) uses exactly the required digits.\n\nTherefore \\(7425=3\\cdot2475\\) is the unique listed multiple.\n\nThus, D is the correct answer.",
+      "hints": [
+        "A multiple must be twice or three times a smaller permutation",
+        "Divide each answer choice by \\(2\\) or \\(3\\) when possible"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

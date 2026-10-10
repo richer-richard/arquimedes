@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-ii-2014-p5",
+  "title": "2014 AIME II Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2014,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 56.4,
+    "source": 2560,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "Real numbers \\(r\\) and \\(s\\) are roots of \\(p(x) = x^3 + ax + b,\\) and \\(r + 4\\) and \\(s - 3\\) are roots of \\(q(x) = x^3 + ax + b + 240.\\) Find the sum of all possible values of \\(|b|.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "420",
+    "value": "420"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2014-p5.live",
+      "kind": "proof-sketch",
+      "text": "Both cubics have zero \\(x^2\\) coefficient, so their roots sum to \\(0:\\) the third root of \\(p\\) is \\(t = -r - s,\\) and the third root of \\(q\\) is \\(-(r+4) - (s-3) = t - 1.\\) The coefficient of \\(x\\) is \\(a\\) in both, so \\[ \\begin{aligned} &rs + st + tr \\\\ &= (r+4)(s-3) \\\\ &\\quad {}+ (s-3)(t-1) \\\\ &\\quad {}+ (t-1)(r+4), \\end{aligned} \\] which simplifies to \\(t = 4r - 3s + 13.\\)\n\nThe constant terms give \\(b = -rst\\) and \\(b + 240 =\\) \\(-(r+4)(s-3)(t-1),\\) so \\(240 =\\) \\(rst - (r+4)(s-3)(t-1),\\) i.e. \\(rs - 4st + 3tr - 3r\\) \\(+ 4s + 12t - 252 = 0.\\) Substituting \\(t = 4r - 3s + 13\\) reduces this to \\(12\\left[(r-s)^2 + 7(r-s) - 8\\right] = 0,\\) so \\(r - s = 1\\) or \\(r - s = -8.\\)\n\nIf \\(r - s = 1,\\) then \\(t = 4r - 3s + 13 = r + 16\\) and \\(t = -r - s = -2r + 1,\\) so \\(r = -5:\\) the roots are \\(-5,\\) \\(-6,\\) \\(11,\\) and \\(b = -rst = -330.\\) If \\(r - s = -8,\\) then \\(t = r - 11 = -2r - 8,\\) so \\(r = 1:\\) the roots are \\(1,\\) \\(9,\\) \\(-10,\\) and \\(b = 90.\\) The requested sum is \\(330 + 90 = 420.\\)",
+      "hints": [
+        "Neither cubic has an \\(x^2\\) term, so the third roots are \\(t = -r - s\\) and \\(t - 1.\\) Equate the coefficients of \\(x\\) in the two cubics.",
+        "Comparing constant terms and substituting \\(t = 4r - 3s + 13\\) yields \\((r-s)^2 + 7(r-s) - 8 = 0;\\) finish each case using \\(r + s + t = 0.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

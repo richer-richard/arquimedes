@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-guts-2009-p16",
+  "title": "2009 HMMT February Guts Problem 16",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2009,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 72.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A spider is making a web between \\(n>1\\) distinct leaves which are equally spaced around a circle. He chooses a leaf to start at, and to make the base layer he travels to each leaf one at a time, making a straight line of silk between each consecutive pair of leaves, such that no two of the lines of silk cross each other and he visits every leaf exactly once. In how many ways can the spider make the base layer of the web? Express your answer in terms of \\(n\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2009-p16.hmmt",
+      "kind": "proof-sketch",
+      "text": "There are \\(n\\) ways to choose a starting vertex, and at each vertex he has only two choices for where to go next: the nearest untouched leaf in the clockwise direction, and the nearest untouched leaf in the counterclockwise direction. For, if the spider visited a leaf which is not nearest in some direction, there are two untouched leaves which are separated by this line of silk, and so the silk would eventually cross itself. Thus, for the first \\(n-2\\) choices there are 2 possibilities, and the \\((n-1)\\) st choice is then determined.\n\nNote: This formula can also be derived recursively.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

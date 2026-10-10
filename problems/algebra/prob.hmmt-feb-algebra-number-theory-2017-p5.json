@@ -1,0 +1,48 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2017-p5",
+  "title": "2017 HMMT February Algebra and Number Theory Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2017,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Kelvin the Frog was bored in math class one day, so he wrote all ordered triples \\((a, b, c)\\) of positive integers such that \\(a b c=2310\\) on a sheet of paper. Find the sum of all the integers he wrote down. In other words, compute\n\n\\[\\sum_{\\substack{a b c=2310 \\\\ a, b, c \\in \\mathbb{N}}}(a+b+c)\\]\n\nwhere \\(\\mathbb{N}\\) denotes the positive integers.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2017-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 49140\nNote that \\(2310=2 \\cdot 3 \\cdot 5 \\cdot 7 \\cdot 11\\). The given sum clearly equals \\(3 \\sum_{a b c=2310} a\\) by symmetry. The inner sum can be rewritten as\n\n\\[\\sum_{a \\mid 2310} a \\cdot \\tau\\left(\\frac{2310}{a}\\right)\\]\n\nas for any fixed \\(a\\), there are \\(\\tau\\left(\\frac{2310}{a}\\right)\\) choices for the integers \\(b, c\\).\n\nNow consider the function \\(f(n)=\\sum_{a \\mid n} a \\cdot \\tau\\left(\\frac{n}{a}\\right)\\). Therefore, \\(f=n * \\tau\\), where \\(n\\) denotes the function \\(g(n)=n\\) and \\(*\\) denotes Dirichlet convolution. As both \\(n\\) and \\(\\tau\\) are multiplicative, \\(f\\) is also multiplicative.\n\nIt is easy to compute that \\(f(p)=p+2\\) for primes \\(p\\). Therefore, our final answer is \\(3(2+2)(3+2)(5+\\) \\(2)(7+2)(11+2)=49140\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

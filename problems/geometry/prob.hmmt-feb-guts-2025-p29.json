@@ -1,0 +1,77 @@
+{
+  "id": "prob.hmmt-feb-guts-2025-p29",
+  "title": "2025 HMMT February Guts Problem 29",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cyclic-quadrilaterals",
+      "label": "Cyclic quadrilaterals",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.distance-chasing",
+      "label": "Distance chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.homothety",
+      "label": "Homothety",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.rotation",
+      "label": "Rotation",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.spiral-similarity",
+      "label": "Spiral similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2025,
+    "number": 29
+  },
+  "difficulty": {
+    "course": 85.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Points \\(A\\) and \\(B\\) lie on circle \\(\\omega\\) with center \\(O\\) . Let \\(X\\) be a point inside \\(\\omega\\) . Suppose that \\(XO = 2\\sqrt{2}\\) , \\(XA = 1\\) , \\(XB = 3\\) , and \\(\\angle AXB = 90^{\\circ}\\) . Points \\(Y\\) and \\(Z\\) are on \\(\\omega\\) such that \\(Y \\neq A\\) and triangles \\(\\triangle AXB\\) and \\(\\triangle YXZ\\) are similar with the same orientation. Compute \\(XY\\) .",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{11}{5}",
+    "value": "\\frac{11}{5}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2025-p29.hmmt",
+      "kind": "proof-sketch",
+      "text": "Consider a rotation about \\(X\\) by \\(90^{\\circ}\\) followed by a homothety with ratio \\(\\frac{1}{3}\\) that sends \\(B\\) to \\(A\\) . This sends \\(\\omega\\) to \\(\\omega^{\\prime}\\) with radius \\(\\frac{1}{3}\\) of the radius of \\(\\omega\\) and center \\(O^{\\prime}\\) . Since \\(A\\) is the image of \\(B\\) under this rotation, we know \\(A\\) lies on both circles; the same argument shows \\(Y\\) must lie on both circles. Thus, \\(Y\\) is the reflection of \\(A\\) over \\(OO^{\\prime}\\) . In particular, this means that \\(XY = AX^{\\prime}\\) , where \\(X^{\\prime}\\) is the reflection of \\(X\\) over \\(OO^{\\prime}\\) .\n\nLet \\(M\\) be the midpoint of \\(AB\\) . Note that because \\(\\triangle OXO^{\\prime} \\sim \\triangle BXA\\) , we also have \\(\\triangle XOX^{\\prime} \\sim \\triangle XMA\\) , as they are both isosceles and \\(\\angle XOX^{\\prime} = 2\\angle XOO^{\\prime} = 2\\angle XBA = \\angle XMA\\) . This implies that \\(\\triangle XOM \\sim \\triangle XX^{\\prime}A\\) . Thus, we know that \\(AX^{\\prime} = OM \\cdot \\frac{XA}{XM} = \\frac{2}{\\sqrt{10}} OM\\) . It remains to compute \\(OM\\) ; noting that the distance between \\(O\\) and the foot from \\(X\\) to \\(AB\\) is \\(\\frac{2}{5}\\sqrt{10}\\) , and that the altitude of \\(\\triangle AXY\\) has length \\(\\frac{3}{10}\\sqrt{10}\\) , we get that the distance from \\(O\\) to \\(AB\\) is\n\n\\[\\frac{3}{10}\\sqrt{10} +\\sqrt{\\left(2\\sqrt{2}\\right)^{2} - \\left(\\frac{2}{5}\\sqrt{10}\\right)^{2}} = \\frac{11}{10}\\sqrt{10}\\]\n\nby the Pythagorean theorem, which means that \\(XY = AX^{\\prime} = \\left\\lfloor \\frac{11}{5} \\right\\rfloor\\) .\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

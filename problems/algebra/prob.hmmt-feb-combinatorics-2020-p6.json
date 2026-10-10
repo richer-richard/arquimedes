@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2020-p6",
+  "title": "2020 HMMT February Combinatorics Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.induction-smoothing",
+      "label": "Induction / smoothing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.invariants-and-monovariants",
+      "label": "Invariants and monovariants",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recurrence-relations",
+      "label": "Recurrence relations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2020,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 82.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Alice writes 1001 letters on a blackboard, each one chosen independently and uniformly at random from the set \\(S=\\{a, b, c\\}\\). A move consists of erasing two distinct letters from the board and replacing them with the third letter in \\(S\\). What is the probability that Alice can perform a sequence of moves which results in one letter remaining on the blackboard?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2020-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(n_{a}, n_{b}\\), and \\(n_{c}\\) be the number of \\(a\\) 's, \\(b\\) 's, and \\(c\\) 's on the board, respectively The key observation is that each move always changes the parity of all three of \\(n_{a}, n_{b}\\), and \\(n_{c}\\). Since the final configuration must have \\(n_{a}, n_{b}\\), and \\(n_{c}\\) equal to \\(1,0,0\\) in some order, Alice cannot leave one letter on the board if \\(n_{a}, n_{b}\\), and \\(n_{c}\\) start with the same parity (because then they will always have the same parity). Alice also cannot leave one letter on the board if all the letters are initially the same (because she will have no moves to make).\nWe claim that in all other cases, Alice can make a sequence of moves leaving one letter on the board. The proof is inductive: the base cases \\(n_{a}+n_{b}+n_{c} \\leq 2\\) are easy to verify, as the possible tuples are \\((1,0,0),(1,1,0)\\), and permutations. If \\(n_{a}+n_{b}+n_{c} \\geq 3\\), assume without loss of generality that \\(n_{a} \\geq n_{b} \\geq n_{c}\\). Then \\(n_{b} \\geq 1\\) (because otherwise all the letters are \\(a\\) ) and \\(n_{a} \\geq 2\\) (because otherwise \\(\\left(n_{a}, n_{b}, n_{c}\\right)=(1,1,1)\\), which all have the same parity). Then Alice will replace \\(a\\) and \\(b\\) by \\(c\\), reducing to a smaller case.\n\nWe begin by computing the probability that \\(n_{a}, n_{b}\\), and \\(n_{c}\\) start with the same parity. Suppose \\(m\\) letters are chosen at random in the same way (so that we are in the case \\(m=1001\\) ). Let \\(x_{m}\\) be the probability that \\(n_{a}, n_{b}\\), and \\(n_{c}\\) all have the same parity. We have the recurrence \\(x_{m+1}=\\frac{1}{3}\\left(1-x_{m}\\right)\\) because when when choosing the \\((m+1)\\) th letter, the \\(n_{i}\\) can only attain the same parity if they did not before, and the appropriate letter is drawn. Clearly \\(x_{0}=1\\), which enables us to compute \\(x_{m}=\\frac{1}{4}\\left(1+3 \\cdot(-3)^{-m}\\right)\\). Then \\(x_{1001}\\) is the probability that \\(n_{a}, n_{b}\\), and \\(n_{c}\\) have the same parity.\nThe probability that all the letters are initially the same is \\(3^{-1000}\\), as this occurs exactly when all the subsequent letters match the first. Thus our final answer is\n\n\\[1-3^{-1000}-\\frac{1}{4}\\left(1+3 \\cdot(-3)^{-1001}\\right)=\\frac{3}{4}-\\frac{1}{4 \\cdot 3^{999}}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

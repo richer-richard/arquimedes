@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12a-2021-p17",
+  "title": "2021 AMC 12A 17",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2021,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 38.2,
+    "source": 2080,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Trapezoid \\(ABCD\\) has \\(AB \\parallel CD,\\) \\(BC = CD = 43,\\) and \\(AD \\perp BD.\\) Let \\(O\\) be the intersection of the diagonals \\(AC\\) and \\(BD,\\) and let \\(P\\) be the midpoint of \\(BD.\\) Given that \\(OP = 11,\\) the length \\(AD\\) can be written in the form \\(m\\sqrt n,\\) where \\(m\\) and \\(n\\) are positive integers and \\(n\\) is not divisible by the square of any prime. What is \\(m + n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(65\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(132\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(157\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(194\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(215\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "194"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2021-p17.live",
+      "kind": "proof-sketch",
+      "text": "Place \\(D = (0,0)\\) with \\(B = (b, 0)\\) on one axis and \\(A = (0, a)\\) on the other, so that \\(AD \\perp BD.\\) Since \\(CD \\parallel AB,\\) write \\(C = t(b, -a)\\) for some \\(t.\\) Then \\(CD = t\\sqrt{a^2+b^2}\\) and \\(BC^2 = b^2(1-t)^2 + t^2a^2.\\) Setting \\(BC = CD\\) gives \\(t^2 = (1-t)^2,\\) so \\(t = \\tfrac12.\\)\n\nThus \\(C = \\left(\\tfrac{b}{2}, -\\tfrac{a}{2}\\right),\\) and \\(CD = 43\\) gives \\(a^2 + b^2 = 4\\cdot 43^2 = 7396.\\) The diagonal \\(AC\\) meets \\(BD\\) (the \\(x\\)-axis) at \\(O = \\left(\\tfrac{b}{3}, 0\\right),\\) while \\(P = \\left(\\tfrac{b}{2}, 0\\right).\\) Hence \\(OP = \\tfrac{b}{6} = 11,\\) so \\(b = 66.\\)\n\nThen \\(a^2 = 7396 - 66^2 = 3040,\\) so \\(AD = a = \\sqrt{3040} = 4\\sqrt{190}.\\) With \\(m = 4\\) and \\(n = 190,\\) we get \\(m + n = 194.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Place \\(D\\) at the origin with \\(BD\\) along one axis and \\(AD\\) along the other, since \\(AD \\perp BD\\)",
+        "Using \\(BC = CD\\) forces \\(C\\) to be the midpoint-type point with parameter \\(\\tfrac12;\\) then \\(O\\) divides \\(BD\\) so that \\(OP = \\tfrac{BD}{6}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

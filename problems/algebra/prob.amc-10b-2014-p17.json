@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2014-p17",
+  "title": "2014 AMC 10B Problem 17",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.difference-of-squares",
+      "label": "Difference of squares",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.power-of-2",
+      "label": "Power of 2",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2014,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 26.5,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "What is the greatest power of \\(2\\) that is a factor of \\(10^{1002} - 4^{501}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 2^{1002} \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 2^{1003} \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 2^{1004} \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 2^{1005} \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 2^{1006} \\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2014-p17.live",
+      "kind": "proof-sketch",
+      "text": "Factor out the obvious power of \\(2\\): \\(10^{1002}-4^{501}=2^{1002}(5^{1002}-1)\\).\n\nSince \\(5^{1002}-1=(5^{501}-1)(5^{501}+1)\\), and \\(501\\) is odd, \\(5^{501}-1\\) is divisible by \\(4\\) but not by \\(8\\), while \\(5^{501}+1\\) is divisible by \\(2\\) but not by \\(4\\).\n\nThus \\(5^{1002}-1\\) contributes exactly \\(2^3\\), so the whole expression is divisible by \\(2^{1005}\\) but not \\(2^{1006}\\).\n\nThus, the correct answer is D .",
+      "hints": [
+        "Factor out \\(2^{1002}\\)",
+        "Determine the exact power of \\(2\\) in \\(5^{1002}-1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

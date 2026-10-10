@@ -1,0 +1,60 @@
+{
+  "id": "prob.aime-i-2012-p7",
+  "title": "2012 AIME I Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2012,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 51.7,
+    "source": 2600,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "At each of the sixteen circles in the network below stands a student. A total of \\(3360\\) coins are distributed among the sixteen students. All at once, all students give away all their coins by passing an equal number of coins to each of their neighbors in the network. After the trade, all students have the same number of coins as they started with. Find the number of coins the student standing at the center circle had originally.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "280",
+    "value": "280"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2012-p7.live",
+      "kind": "proof-sketch",
+      "text": "Group the sixteen circles into rings: the center, the inner ring of five, the middle ring of five, and the outer ring of five, holding \\(p,\\) \\(q,\\) \\(r,\\) and \\(s\\) coins in total, respectively. The center has \\(5\\) neighbors (the inner ring); each inner student has \\(3\\) (the center and two middle students); each middle student has \\(4\\) (two inner and two outer); each outer student has \\(4\\) (two middle and two outer). A student with \\(k\\) neighbors sends \\(\\frac{1}{k}\\) of their coins to each neighbor.\n\nSumming the trades over each ring (for example, the outer ring receives a quarter of each middle student’s coins twice over, which totals \\(\\frac{r}{2}\\)) gives \\[ \\begin{aligned} p &= \\frac{q}{3}, \\\\ q &= p + \\frac{r}{2}, \\\\ r &= \\frac{2q}{3} + \\frac{s}{2}, \\\\ s &= \\frac{r}{2} + \\frac{s}{2}. \\end{aligned} \\]\n\nThe first equation gives \\(q = 3p,\\) the second then gives \\(r = 2(q - p) = 4p,\\) and the last gives \\(s = r = 4p.\\) The total is \\(p + 3p + 4p + 4p = 12p = 3360,\\) so the center student had \\(p = 280\\) coins.",
+      "hints": [
+        "Group the circles into rings (center, inner five, middle five, outer five) and track the total number of coins in each ring",
+        "A student with \\(k\\) neighbors sends each neighbor \\(\\frac{1}{k}\\) of their coins, so the four ring totals satisfy a small linear system"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "5433471f4c1fb4e1eb164c764d962f342cc8390b45c0dd842fc10bce88452a9a"
+    ],
+    "solutions": []
+  }
+}

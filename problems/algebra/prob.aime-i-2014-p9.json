@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-i-2014-p9",
+  "title": "2014 AIME I Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2014,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 56.0,
+    "source": 2560,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "Let \\(x_1 \\lt x_2 \\lt x_3\\) be the three real roots of the equation \\(\\sqrt{2014}\\,x^3 - 4029x^2 + 2 = 0.\\) Find \\(x_2(x_1 + x_3).\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "2",
+    "value": "2"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2014-p9.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(a = \\sqrt{2014},\\) so the equation is \\(ax^3 - (2a^2 + 1)x^2 + 2 = 0.\\) It factors as \\[\\left(ax - 1\\right)\\left(x^2 - 2ax - 2\\right) = 0,\\] as expanding confirms. So one root is \\(\\frac{1}{a},\\) and the other two are \\(a \\pm \\sqrt{a^2 + 2},\\) with product \\(-2\\) and sum \\(2a.\\)\n\nSince \\(a - \\sqrt{a^2+2} \\lt 0\\) \\(\\lt \\frac{1}{a} \\lt a + \\sqrt{a^2+2},\\) the middle root is \\(x_2 = \\frac{1}{a},\\) and \\(x_1 + x_3 = 2a.\\) Therefore \\(x_2(x_1 + x_3) = \\frac{1}{a} \\cdot 2a = 2.\\)",
+      "hints": [
+        "Since \\(4029 = 2 \\cdot 2014 + 1,\\) the cubic factors as \\(\\left(\\sqrt{2014}\\,x - 1\\right)\\) times a quadratic",
+        "The quadratic \\(x^2 - 2\\sqrt{2014}\\,x - 2\\) has one negative root and one large positive root, so the middle root is \\(\\frac{1}{\\sqrt{2014}}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

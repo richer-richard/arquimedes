@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2015-p2",
+  "title": "2015 IMO Problem 2",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2015,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 102.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find all positive integers \\(a\\), \\(b\\), \\(c\\) such that\neach of \\(ab-c\\), \\(bc-a\\), \\(ca-b\\) is a power of \\(2\\)\n(possibly including \\(2^0=1\\)).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2015-p2.evanchen",
+      "kind": "proof-sketch",
+      "text": "Here is the solution of Telv Cohl,\nwhich is the shortest solution I am aware of.\nWe will prove the only solutions are \\((2,2,2)\\), \\((2,2,3)\\),\n\\((2,6,11)\\) and \\((3,5,7)\\) and permutations.\n\nWLOG assume \\(a \\ge b \\ge c > 1\\), so \\(ab-c \\ge ca-b \\ge bc-a\\).\nWe consider the following cases:\n\n• If \\(a\\) is even, then\n \\[\\begin{aligned}\n ca-b &= \\gcd (ab-c, ca-b) \\le \\gcd (ab-c, a(ca-b)+ab-c) \\\\\n &= \\gcd\\left( ab-c, c(a^2-1) \\right).\n \\end{aligned}\\]\n As \\(a^2-1\\) is odd, we conclude \\(ca-b \\le c\\).\n This implies \\(a=b=c=2\\).\n\n• If \\(a\\), \\(b\\), \\(c\\) are all odd, then \\(a > b > c > 1\\) follows.\n Then as before\n \\[ ca-b \\le \\gcd (ab-c, c(a^2-1))\n \\le 2^{\\nu_2(a^2-1)} \\le 2a+2 \\le 3a-b \\]\n so \\(c = 3\\) and \\(a = b+2\\).\n As \\(3a-b = ca-b \\ge 2(bc-a) = 6b-2a\\) we then conclude \\(a=7\\) and \\(b=5\\).\n\n• If \\(a\\) is odd and \\(b\\), \\(c\\) are even, then \\(bc-a=1\\)\n and hence \\(bc^2 - b - c = ca - b\\).\n Then from the miraculous identity\n \\[ c^3-b-c = (1-c^2)(ab-c) + a(\\underbrace{bc^2-b-c}_{=ca-b}) + (ca-b) \\]\n so we conclude \\(\\gcd(ab-c, ca-b) = \\gcd(ab-c, c^3-b-c)\\), in other words\n \\[ bc^2-b-c = ca-b = \\gcd(ab-c, ca-b) = \\gcd(ab-c, c^3-b-c). \\]\n We thus consider two more cases:\n\n• If \\(c^3-b-c \\neq 0\\) then\n the above implies \\(|c^3-b-c| \\ge bc^2-b-c\\).\n As \\(b \\ge c > 1\\), we must actually have \\(b = c\\),\n thus \\(a = c^2-1\\).\n Finally \\(ab-c = c(c^2-2)\\) is a power of \\(2\\), hence \\(b=c=2\\), so \\(a=3\\).\n\n• In the second case, assume \\(c^3-b-c = 0\\), hence \\(c^3-c\\).\n From \\(bc-a=1\\) we obtain \\(a=c^4-c^2-1\\),\n hence\n \\[ ca-b = c^5-2c^3 = c^3(c^2-2) \\]\n is a power of \\(2\\), hence again \\(c = 2\\).\n Thus \\(a=11\\) and \\(b=6\\).\n\nThis finishes all cases, so the proof is done.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

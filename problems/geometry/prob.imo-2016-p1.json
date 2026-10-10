@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2016-p1",
+  "title": "2016 IMO Problem 1",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2016,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 88.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In convex pentagon \\(ABCDE\\) with \\(\\angle B > 90^\\circ\\),\nlet \\(F\\) be a point on \\(\\overline{AC}\\) such that \\(\\angle FBC = 90^\\circ\\).\nIt is given that \\(FA=FB\\), \\(DA=DC\\), \\(EA=ED\\),\nand rays \\(\\overline{AC}\\) and \\(\\overline{AD}\\) trisect \\(\\angle BAE\\).\nLet \\(M\\) be the midpoint of \\(\\overline{CF}\\).\nLet \\(X\\) be the point such that \\(AMXE\\) is a parallelogram.\nShow that \\(\\overline{FX}\\), \\(\\overline{EM}\\), \\(\\overline{BD}\\) are concurrent.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2016-p1.evanchen",
+      "kind": "proof-sketch",
+      "text": "Here is a ``long'' solution which I think\nshows where the ``power'' in the configuration comes from\n(it should be possible to come up with shorter solutions\nby cutting more directly to the desired conclusion).\nThroughout the proof, we let\n\\[ \\theta = \\angle FAB = \\angle FBA = \\angle DAC = \\angle DCA\n = \\angle EAD = \\angle EDA. \\]\n\nWe begin by focusing just on \\(ABCD\\) with point \\(F\\),\nignoring for now the points \\(E\\) and \\(X\\)\n(and to some extent even point \\(M\\)).\nIt turns out this is a very familiar configuration.\n\nLemma.\n [Central lemma]\n The points \\(F\\) and \\(C\\)\n are the incenter and \\(A\\)-excenter of \\(\\triangle DAB\\).\n Moreover, \\(\\triangle DAB\\) is isosceles with \\(DA = DB\\).\n\nProof.\n The proof uses three observations:\n\n• We already know that \\(\\overline{FAC}\\) is the angle bisector of \\(\\angle ABD\\).\n\n• We were given \\(\\angle FBC = 90^\\circ\\).\n\n• Next, note that \\(\\triangle AFB \\sim \\triangle ADC\\)\n (they are similar isosceles triangles).\n From this it follows that \\(AF \\cdot AC = AB \\cdot AD\\).\n\n These three facts, together with \\(F\\) lying inside \\(\\triangle ABD\\),\n are enough to imply the result.\n\n[Diagram omitted from this imported TeX transcription.]\n\nCorollary.\n The point \\(M\\) is the midpoint of arc \\(\\widehat{BD}\\) of \\((DAB)\\),\n and the center of cyclic quadrilateral \\(FDCB\\).\n\nProof.\n Fact 5.\n\nUsing these observations as the anchor\nfor everything that follows,\nwe now prove several claims about \\(X\\) and \\(E\\) in succession.\n\n[Diagram omitted from this imported TeX transcription.]\n\nClaim.\n Point \\(E\\) is the midpoint of arc \\(\\widehat{AD}\\)\n in \\((ABMD)\\), and hence lies on ray \\(BF\\).\n\nProof.\n This follows from\n \\(\\angle EDA = \\theta = \\angle EBA\\).\n\nClaim.\n Points \\(X\\) is the second intersection of ray \\(\\overline{ED}\\)\n with \\((BFDC)\\).\n\nProof.\n First, \\(\\overline{ED} \\parallel \\overline{AC}\\) already since\n \\(\\angle AED = 180^\\circ - 2\\theta\\)\n and \\(\\angle CAE = 2\\theta\\).\n\n Now since \\(DB = DA\\), we get \\(MB = MD = ED = EA\\).\n Thus, \\(MX = AE = MB\\),\n so \\(X\\) also lies on the circle \\((BFDC)\\) centered at \\(M\\).\n\nClaim.\n The quadrilateral \\(EXMF\\) is an isosceles trapezoid.\n\nProof.\n We already know \\(\\overline{EX} \\parallel \\overline{FM}\\).\n Since \\(\\angle EFA = 180^\\circ - \\angle AFB = 2\\theta = \\angle FAE\\),\n we have \\(EF = EA\\) as well (and \\(F \\neq A\\)).\n As \\(EXMA\\) was a parallelogram,\n it follows \\(EXMF\\) is an isosceles trapezoid.\n\nThe problem then follows by radical axis theorem\non the three circles \\((AEDMB)\\), \\((BFDXC)\\) and \\((EXMF)\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

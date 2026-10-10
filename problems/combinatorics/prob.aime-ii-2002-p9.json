@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-ii-2002-p9",
+  "title": "2002 AIME II Problem 9",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.subsets",
+      "label": "Subsets",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2002,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 49.0,
+    "source": 2500,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "Let \\(S\\) be the set \\(\\{1, 2, 3, \\ldots, 10\\}.\\) Let \\(n\\) be the number of sets of two non-empty disjoint subsets of \\(S.\\) (Disjoint sets are defined as sets that have no common elements.) Find the remainder obtained when \\(n\\) is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "501",
+    "value": "501"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2002-p9.live",
+      "kind": "proof-sketch",
+      "text": "Count ordered pairs \\((A, B)\\) of disjoint subsets first: each of the \\(10\\) elements goes in \\(A,\\) in \\(B,\\) or in neither, for \\(3^{10}\\) pairs. Among these, \\(2^{10}\\) have \\(A\\) empty and \\(2^{10}\\) have \\(B\\) empty, with the pair \\((\\varnothing, \\varnothing)\\) counted in both, so \\[3^{10} - 2 \\cdot 2^{10} + 1 = 57002\\] ordered pairs have both subsets non-empty.\n\nDisjoint non-empty subsets are never equal, so each set \\(\\{A, B\\}\\) is counted twice, giving \\(n = \\frac{57002}{2} = 28501.\\) The remainder mod \\(1000\\) is \\(501.\\)",
+      "hints": [
+        "Build an ordered pair \\((A, B)\\) of disjoint subsets by sending each of the \\(10\\) elements to \\(A,\\) to \\(B,\\) or to neither",
+        "Subtract the pairs where \\(A\\) or \\(B\\) is empty by inclusion-exclusion, then divide by \\(2\\) to make the pairs unordered"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

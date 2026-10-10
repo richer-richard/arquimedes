@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-invitational-2017-p4",
+  "title": "2017 HMMT Invitational Problem 4",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.pigeonhole-principle",
+      "label": "Pigeonhole principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2017,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(G\\) be a weighted bipartite graph \\(A \\cup B\\), with \\(|A|=|B|=n\\). In other words, each edge in the graph is assigned a positive integer value, called its weight. Also, define the weight of a perfect matching in \\(G\\) to be the sum of the weights of the edges in the matching.\nLet \\(G^{\\prime}\\) be the graph with vertex set \\(A \\cup B\\), and contains the edge \\(e\\) if and only if \\(e\\) is part of some minimum weight perfect matching in \\(G\\).\nShow that all perfect matchings in \\(G^{\\prime}\\) have the same weight.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2017-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(m\\) denote the minimum weight of a matching in \\(G\\). Let \\(G^{\\prime \\prime}\\) be the (multi)graph formed by taking the union of all minimum weight perfect matchings, but keeping edges multiple times. Note that \\(G^{\\prime \\prime}\\) is regular. Now, assume that some perfect matching in \\(G^{\\prime}\\) (equivalently \\(G^{\\prime \\prime}\\) ) has weight \\(M>m\\). Delete this matching from \\(G^{\\prime \\prime}\\), and call the resulting graph \\(H . H\\) is still regular, so it can be decomposed into a union of perfect matchings. Now using pigeonhole directly gives us a contradiction.\n\nTo show that all regular bipartite graphs can be decomposed into a union of perfect matchings, use Hall's marriage lemma to take out one perfect matching and use induction.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

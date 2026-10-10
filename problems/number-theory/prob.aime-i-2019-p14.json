@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-i-2019-p14",
+  "title": "2019 AIME1 14",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.modular-exponentiation",
+      "label": "Modular exponentiation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.multiplicative-order",
+      "label": "Multiplicative order",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2019,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 61.1,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 12,
+  "statement": "Find the least odd prime factor of \\(2019^8 + 1.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "97",
+    "value": "97"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2019-p14.live",
+      "kind": "proof-sketch",
+      "text": "Suppose an odd prime \\(p\\) divides \\(2019^8 + 1.\\) Then \\(2019^8 \\equiv -1 \\pmod{p},\\) so \\(2019^{16} \\equiv 1\\) while \\(2019^8 \\not\\equiv 1:\\) the multiplicative order of \\(2019\\) modulo \\(p\\) is exactly \\(16.\\) Since the order divides \\(p - 1,\\) we need \\(p \\equiv 1 \\pmod{16},\\) and the smallest such primes are \\(17\\) and \\(97.\\)\n\nModulo \\(17:\\) \\(2019 \\equiv 13,\\) and \\(13^2 = 169 \\equiv -1,\\) so \\(2019^8 \\equiv (-1)^4 = 1\\) and \\(2019^8 + 1 \\equiv 2 \\neq 0.\\) Modulo \\(97:\\) \\(2019 \\equiv -18,\\) and squaring repeatedly, \\[ \\begin{aligned} 2019^2 &\\equiv 324 \\equiv 33, \\\\ 2019^4 &\\equiv 33^2 = 1089 \\\\ &\\equiv 22, \\\\ 2019^8 &\\equiv 22^2 = 484 \\\\ &\\equiv -1 \\pmod{97}. \\end{aligned} \\]\n\nSo \\(97\\) divides \\(2019^8 + 1,\\) and it is the least odd prime factor: \\(97.\\)",
+      "hints": [
+        "If \\(p\\) divides \\(2019^8 + 1,\\) then \\(2019^8 \\equiv -1 \\pmod{p},\\) so the order of \\(2019\\) modulo \\(p\\) is exactly \\(16\\)",
+        "The order divides \\(p - 1,\\) so \\(p \\equiv 1 \\pmod{16};\\) test the smallest such primes by repeated squaring of \\(2019 \\bmod p\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

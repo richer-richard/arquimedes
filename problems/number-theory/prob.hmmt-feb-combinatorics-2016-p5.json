@@ -1,0 +1,57 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2016-p5",
+  "title": "2016 HMMT February Combinatorics Problem 5",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.probability",
+      "label": "Probability",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2016,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 79.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a, b, c, d, e, f\\) be integers selected from the set \\(\\{1,2, \\ldots, 100\\}\\), uniformly and at random with replacement. Set\n\n\\[M=a+2 b+4 c+8 d+16 e+32 f\\]\n\nWhat is the expected value of the remainder when \\(M\\) is divided by 64 ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2016-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\frac{63}{2}\\)\nConsider \\(M\\) in binary. Assume we start with \\(M=0\\), then add \\(a\\) to \\(M\\), then add \\(2 b\\) to \\(M\\), then add \\(4 c\\) to \\(M\\), and so on. After the first addition, the first bit (defined as the rightmost bit) of \\(M\\) is toggled with probability \\(\\frac{1}{2}\\). After the second addition, the second bit of \\(M\\) is toggled with probability \\(\\frac{1}{2}\\). After the third addition, the third bit is toggled with probability \\(\\frac{1}{2}\\), and so on for the remaining three additions. As such, the six bits of \\(M\\) are each toggled with probability \\(\\frac{1}{2}\\) - specifically, the \\(k^{t h}\\) bit is toggled with probability \\(\\frac{1}{2}\\) at the \\(k^{t h}\\) addition, and is never toggled afterwards. Therefore, each residue from 0 to 63 has probability \\(\\frac{1}{64}\\) of occurring, so they are all equally likely. The expected value is then just \\(\\frac{63}{2}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

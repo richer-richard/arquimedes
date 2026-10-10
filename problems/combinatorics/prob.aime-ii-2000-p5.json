@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2000-p5",
+  "title": "2000 AIME II Problem 5",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.permutations",
+      "label": "Permutations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.stars-and-bars",
+      "label": "Stars and bars",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2000,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 43.9,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Given eight distinguishable rings, let \\(n\\) be the number of possible five-ring arrangements on the four fingers (not the thumb) of one hand. The order of rings on each finger is significant, but it is not required that each finger have a ring. Find the leftmost three nonzero digits of \\(n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "376",
+    "value": "376"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2000-p5.live",
+      "kind": "proof-sketch",
+      "text": "Choose which five rings to use in \\(\\binom{8}{5} = 56\\) ways, and order them (reading down the first finger, then the second, and so on) in \\(5! = 120\\) ways. It remains to split the ordered list into four possibly empty consecutive blocks, one per finger: the number of compositions of \\(5\\) into \\(4\\) nonnegative parts, which by stars and bars is \\(\\binom{8}{3} = 56.\\)\n\nTherefore \\(n = 56 \\cdot 120 \\cdot 56 = 376320,\\) whose leftmost three nonzero digits are \\(376.\\)",
+      "hints": [
+        "Choose which \\(5\\) rings to use, put them in order, then decide how to split the ordered list among the \\(4\\) fingers",
+        "Splitting an ordered list of \\(5\\) rings into \\(4\\) possibly empty blocks is a stars-and-bars count: \\(\\binom{8}{3}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

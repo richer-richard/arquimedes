@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2000-p4",
+  "title": "2000 IMO Problem 4",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2000,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 88.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A magician has one hundred cards numbered \\(1\\) to \\(100\\).\nHe puts them into three boxes, a red one, a white one and a blue one,\nso that each box contains at least one card.\nA member of the audience draws two cards from two different boxes\nand announces the sum of numbers on those cards.\nGiven this information,\nthe magician locates the box from which no card has been drawn.\n\nHow many ways are there to put the cards\nin the three boxes so that the trick works?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2000-p4.evanchen",
+      "kind": "proof-sketch",
+      "text": "There are \\(2 \\cdot 3! = 12\\) ways, which amount to:\n\n• Partitioning the cards modulo \\(3\\), or\n\n• Placing \\(1\\) alone in a box,\n \\(100\\) alone in a second box,\n and all remaining cards in the third box.\n\nThese are easily checked to work so we prove they are the only ones.\n\nFirst solution..\nWe proceed by induction on \\(n \\ge 3\\) with the base case being immediate.\n\nFor the inductive step,\nconsider a working partition of \\(\\{1, 2, \\dots, n\\}\\).\nThen either \\(n\\) is in its own box; or\ndeleting \\(n\\) gives a working partition of \\(\\{1, 2, \\dots, n-1\\}\\).\nSimilarly, either \\(1\\) is in its own box; or\ndeleting \\(1\\) gives a working partition of \\(\\{2, 3, \\dots, n\\}\\),\nand we can reduce all numbers by \\(1\\) to get\na working partition of \\(\\{1, 2, \\dots, n-1\\}\\).\n\nTherefore, we only need to consider there cases.\n\n• If \\(1\\) and \\(n\\) are both in their own box,\n this yields one type of solution we already found.\n\n• If \\(n\\) is not in a box by itself,\n then by induction hypothesis the cards \\(1\\) through \\(n-1\\)\n are either arranged mod \\(3\\),\n or as \\(\\{1\\} \\cup \\{2,3,\\dots,n-2\\} \\cup \\{n-1\\}\\).\n\n• In the former mod \\(3\\) situation,\n since \\(n + (n-3) = (n-1) + (n-2)\\),\n so \\(n\\) must be in the same box as \\(n-3\\).\n\n• In the latter case and for \\(n > 4\\),\n since \\(n + 1 = 2 + (n-1)\\),\n \\(n\\) must be in the same box as \\(1\\).\n But now \\(n + 2 = (n-1) + 3\\) for \\(n > 4\\), contradiction.\n\n• The case where \\(1\\) is in a box by itself is analogous.\n\nThis exhausts all cases, completing the proof.\n\nSecond solution..\nLet \\(A\\), \\(B\\), \\(C\\) be the sets of cards in the three boxes.\nThen \\(A+B\\), \\(B+C\\), \\(C+A\\) should be disjoint,\nand contained in \\(\\{3, 4, \\dots, 199\\}\\).\nOn the other hand, we have the following famous fact.\n\nLemma.\n Let \\(X\\) and \\(Y\\) be finite nonempty sets of real numbers.\n We have \\(|X+Y| \\ge |X|+|Y|-1\\),\n with equality if and only if \\(X\\) and \\(Y\\) are arithmetic\n progressions with the same common difference,\n or one of \\(X\\) and \\(Y\\) is a singleton set.\n\nPutting these two together gives the estimates\n\\[ 197 \\ge |A+B| + |B+C| + |C+A|\n \\ge 2\\left( |A|+|B|+|C| \\right)-3 = 197. \\]\nSo all the inequalities must be sharp.\nConsequently we conclude that:\n\nClaim.\n Either the sets \\(A\\), \\(B\\), \\(C\\) are disjoint arithmetic progressions\n with the same common difference\n \\(d = \\min_{x \\neq y \\text{ in same set}} |x-y|\\),\n or two of the sets are two singleton.\n Moreover, \\(\\{3, 4, \\dots, 199\\}\n = (A+B) \\sqcup (B+C) \\sqcup (C+A)\\).\n\nFrom here it is not hard to deduce the layouts above are the only ones,\nbut there are some details.\nFirst, we make the preliminary observation that\n\\(3=1+2\\), \\(4=1+3\\), \\(198=98+100\\), \\(199=99+100\\)\nand these numbers can't be decomposed in other ways;\nthus from the remark about the disjoint union:\n\nClaim.\n [Convenient corollary]\n The pairs \\((1,2)\\), \\((1,3)\\), \\((98,100)\\), \\((99,100)\\)\n are all in different sets.\n\nWe now consider the four cases.\n\n• If two of the boxes are singletons,\n it follows from the corollary that we should have \\(A = \\{1\\}\\),\n \\(B = \\{100\\}\\) and \\(C = \\{2, \\dots, 99\\}\\), up to permutation.\n\n• Otherwise \\(A\\), \\(B\\), \\(C\\) are disjoint arithmetic\n progressions with the same common difference \\(d\\).\n As two of \\(\\{1,2,3,4\\}\\) are in the same box\n (by pigeonhole), we must have \\(d \\le 3\\).\n\n• If \\(d=3\\), then no two elements of different residues\n modulo \\(3\\) can be in the same box,\n so we must be in the first construction claimed earlier.\n\n• If \\(d=2\\), then the convenient corollary\n tells us we may assume WLOG that \\(1 \\in A\\) and \\(2 \\in B\\),\n hence \\(3 \\in C\\)\n (since \\(3 \\notin A\\) by convenient corollary,\n and \\(3 \\notin B\\) because common difference \\(2\\)).\n Thus we must have \\(A = \\{1\\}\\), \\(B = \\{2, 4, \\dots, 100\\}\\)\n and \\(C = \\{3, 5, \\dots 99\\}\\)\n which does not work since \\(1+4 = 2+3\\).\n Therefore there are no solutions in this case.\n\n• If \\(d=1\\), then by convenient corollary\n the numbers \\(1\\) and \\(2\\) are in different sets,\n as are \\(99\\) and \\(100\\).\n So we must have \\(A = \\{1\\}\\), \\(B = \\{2, \\dots, 99\\}\\), \\(C = \\{100\\}\\)\n which we have already seen is valid.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

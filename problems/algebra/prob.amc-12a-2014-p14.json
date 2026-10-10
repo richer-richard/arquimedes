@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2014-p14",
+  "title": "2014 AMC 12A Problem 14",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2014,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 28.8,
+    "source": 1630,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(a\\lt b\\lt c\\) be three integers such that \\(a,\\) \\(b,\\) \\(c\\) is an arithmetic progression and \\(a,\\) \\(c,\\) \\(b\\) is a geometric progression. What is the smallest possible value for \\(c?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(-2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(6\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2014-p14.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(d=b-a\\gt0,\\) so \\(b=a+d\\) and \\(c=a+2d.\\) Since \\(a,c,b\\) is geometric, \\[ \\begin{gathered} \\dfrac{c}{a}=\\dfrac{b}{c}\\\\ \\implies(a+2d)^2=a(a+d), \\end{gathered} \\] which simplifies to \\(3ad+4d^2=0,\\) so \\(3a+4d=0.\\)\n\nThen \\(a=-4k\\) and \\(d=3k\\) for a positive integer \\(k,\\) giving \\(c=a+2d=2k.\\) The smallest value is \\(c=2\\) (with \\(a=-4,\\) \\(b=-1,\\) \\(c=2\\)).\n\nThus, the correct answer is C.",
+      "hints": [
+        "Let the common difference be \\(d\\): \\(b=a+d\\) and \\(c=a+2d\\)",
+        "Since \\(a,c,b\\) is geometric, \\(c^2=ab\\); this simplifies to \\(3a+4d=0\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

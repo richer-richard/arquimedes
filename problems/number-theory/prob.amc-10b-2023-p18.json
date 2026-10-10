@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2023-p18",
+  "title": "2023 AMC 10B Problem 18",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "logic-foundations"
+  ],
+  "concepts": [
+    {
+      "id": "nt.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.logical-deduction",
+      "label": "Logical deduction",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2023,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 33.9,
+    "source": 1910,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Suppose \\(a,\\) \\(b,\\) and \\(c\\) are positive integers such that \\[\\frac{a}{14} + \\frac{b}{15} = \\frac{c}{210}.\\] Which of the following statements are necessarily true?\n\nI. If \\(\\gcd(a, 14) = 1\\) or \\(\\gcd(b, 15) = 1\\) or both, then \\(\\gcd(c, 210) = 1.\\)\n\nII. If \\(\\gcd(c, 210) = 1,\\) then \\(\\gcd(a, 14) = 1\\) or \\(\\gcd(b, 15) = 1\\) or both.\n\nIII. \\(\\gcd(c, 210) = 1\\) if and only if \\(\\gcd(a, 14) = \\gcd(b, 15) = 1.\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\mathrm{I},\\) \\(\\mathrm{II},\\) and \\(\\mathrm{III}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\mathrm{I}\\) only"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\mathrm{I}\\) and \\(\\mathrm{II}\\) only"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\mathrm{III}\\) only"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\mathrm{II}\\) and \\(\\mathrm{III}\\) only"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2023-p18.live",
+      "kind": "proof-sketch",
+      "text": "Clear denominators to get \\(c = 15a + 14b.\\) Reduce modulo the primes of \\(210 = 2 \\cdot 3 \\cdot 5 \\cdot 7:\\) \\(c \\equiv a \\pmod 2,\\) \\(c \\equiv 2b \\pmod 3,\\) \\(c \\equiv 4b \\pmod 5,\\) and \\(c \\equiv a \\pmod 7.\\) So \\(\\gcd(c, 210) = 1\\) iff \\(a\\) is divisible by neither \\(2\\) nor \\(7\\) and \\(b\\) is divisible by neither \\(3\\) nor \\(5,\\) which is exactly \\(\\gcd(a, 14) = 1\\) and \\(\\gcd(b, 15) = 1.\\) That settles III, and it makes II true since the “and” implies the “or.” Statement I fails, though: take \\(a = 1, b = 3.\\) Then \\(\\gcd(a, 14) = 1,\\) yet \\(c = 57\\) is divisible by \\(3.\\) So only II and III hold. Therefore, the answer is E.",
+      "hints": [
+        "Clear denominators to get \\(c = 15a + 14b,\\) then reduce modulo \\(2, 3, 5, 7\\)",
+        "\\(\\gcd(c, 210) = 1\\) forces conditions on \\(a\\) modulo \\(2, 7\\) and on \\(b\\) modulo \\(3, 5\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

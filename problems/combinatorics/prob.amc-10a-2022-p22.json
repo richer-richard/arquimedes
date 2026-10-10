@@ -1,0 +1,84 @@
+{
+  "id": "prob.amc-10a-2022-p22",
+  "title": "2022 AMC 10A Problem 22",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2022,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 27.5,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Suppose that \\(13\\) cards numbered \\(1,\\) \\(2,\\) \\(3,\\) \\(\\cdots,\\) \\(13\\) are arranged in a row. The task is to pick them up in numerically increasing order, working repeatedly from left to right. In the example below, cards \\(1,\\) \\(2,\\) \\(3\\) are picked up on the first pass, \\(4\\) and \\(5\\) on the second pass, \\(6\\) on the third pass, \\(7,\\) \\(8,\\) \\(9,\\) \\(10\\) on the fourth pass, and \\(11,\\) \\(12,\\) \\(13\\) on the fifth pass. For how many of the \\(13!\\) possible orderings of the cards will the \\(13\\) cards be picked up in exactly two passes?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4082\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4095\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4096\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(8178\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(8191\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "8178"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2022-p22.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(n\\) be the number of cards picked up on the first pass, where \\(1 \\leq n \\leq 12.\\)\n\nIf we choose the spaces that the \\(n\\) cards occupy, the positions of the remaining cards are determined since they must be placed in order.\n\nThere are \\(\\binom{13}{n}\\) ways to choose where the \\(n\\) cards go, but if the \\(n\\) cards are placed at the very beginning, then all the cards will be picked up on the first pass.\n\nTherefore, for a given \\(n\\) there are \\(\\binom{13}{n} - 1\\) ways to arrange the cards.\n\nSumming over \\(1\\le n\\le12,\\) we get \\[ \\begin{gathered} \\sum_{n=1}^{12}\\left(\\binom{13}{n}-1\\right) \\\\ = (2^{13}-2)-12 \\\\ = 8178. \\end{gathered} \\]\n\nThus, D is the correct answer.",
+      "hints": [
+        "The cards picked up on the first pass must occupy an increasing subsequence",
+        "Choose the positions of the first-pass cards and exclude one-pass arrangements"
+      ],
+      "images": [
+        "c2f3f495f659a201f663fc09f7c3e6f7383d8fd8e3e844a28fbe9b86fcdcf03c"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [
+      "2e1196bc53f38885b5768405ea3675495909b8a5d0e7922d15a5eeedb6046d52"
+    ],
+    "solutions": [
+      "c2f3f495f659a201f663fc09f7c3e6f7383d8fd8e3e844a28fbe9b86fcdcf03c"
+    ]
+  }
+}

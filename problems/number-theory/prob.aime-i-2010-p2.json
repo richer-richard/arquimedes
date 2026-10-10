@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-i-2010-p2",
+  "title": "2010 AIME I Problem 2",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.pattern-recognition",
+      "label": "Pattern recognition",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2010,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 34.9,
+    "source": 1950,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Find the remainder when \\[9 \\cdot 99 \\cdot 999 \\cdot \\cdots \\cdot \\underbrace{99\\ldots9}_{\\text{999 nines}}\\] is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "109",
+    "value": "109"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2010-p2.live",
+      "kind": "proof-sketch",
+      "text": "Work modulo \\(1000.\\) Every factor from the third one on ends in at least three \\(9\\)s, so each is \\(\\equiv -1 \\pmod{1000}.\\) There are \\(999\\) factors in all, hence \\(997\\) of them are \\(\\equiv -1.\\)\n\nThe product is therefore \\[ \\begin{aligned} &\\equiv 9 \\cdot 99 \\cdot (-1)^{997} \\\\ &\\equiv -891 \\equiv 109 \\pmod{1000}, \\end{aligned} \\] so the remainder is \\(109.\\)",
+      "hints": [
+        "Every factor from the third one on ends in at least three \\(9\\)s, so it is \\(\\equiv -1 \\pmod{1000}\\)",
+        "Count how many factors are \\(\\equiv -1 \\pmod{1000}\\) and check whether that count is odd or even; only \\(9 \\cdot 99\\) remains to compute"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

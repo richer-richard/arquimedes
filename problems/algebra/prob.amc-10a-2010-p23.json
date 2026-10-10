@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2010-p23",
+  "title": "2010 AMC 10A Problem 23",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequality",
+      "label": "Inequality",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.telescoping",
+      "label": "Telescoping",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2010,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 34.5,
+    "source": 2240,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Each of \\(2010\\) boxes in a line contains a single red marble, and for \\(1 \\le k \\le 2010,\\) the box in the \\(k\\)th position also contains \\(k\\) white marbles. Isabella begins at the first box and successively draws a single marble at random from each box, in order. She stops when she first draws a red marble. Let \\(P(n)\\) be the probability that Isabella stops after drawing exactly \\(n\\) marbles. What is the smallest value of \\(n\\) for which \\(P(n) \\lt \\dfrac{1}{2010}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(45\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(63\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(64\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(201\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(1005\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "45"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2010-p23.live",
+      "kind": "proof-sketch",
+      "text": "Since there are \\(k + 1\\) marbles in the \\(k\\) th box, there is a \\(\\dfrac{k}{k + 1}\\) chance Isabella draws a white marble from it.\n\nThe probability of drawing a red marble is then \\(\\dfrac{1}{k + 1}.\\) To stop after drawing the \\(n\\) th marble, the first \\(n - 1\\) marbles must have been white.\n\nThis happens with a probability of \\[ \\dfrac{1}{2} \\cdot \\dfrac{2}{3} \\cdot \\ldots \\cdot \\dfrac{n - 1}{n} \\cdot \\dfrac{1}{n + 1}. \\]\n\nNote that all the numerators cancel with the adjacent denominator, which means that this expression reduces to \\(\\dfrac{1}{n(n + 1)}.\\)\n\nWe have to find the smallest \\(n\\) such that \\[ \\dfrac{1}{n(n + 1)} \\lt \\dfrac{1}{2010} \\] \\[ n(n + 1) \\gt 2010. \\]\n\nGuessing and checking gives us that the smallest \\(n\\) that works is \\(45.\\)\n\nThus, A is the correct answer.",
+      "hints": [
+        "The first \\(n-1\\) draws must be white, then the \\(n\\)th draw red",
+        "The white probabilities telescope: \\(\\dfrac12\\cdot\\dfrac23\\cdots\\dfrac{n-1}{n}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

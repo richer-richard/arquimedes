@@ -1,0 +1,73 @@
+{
+  "id": "prob.aime-i-2005-p15",
+  "title": "2005 AIME1 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.herons-formula",
+      "label": "Heron’s Formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.incircle-incenter-and-inradius",
+      "label": "Incircle, incenter, and inradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.median-geometry",
+      "label": "Median (geometry)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.power-of-a-point",
+      "label": "Power of a point",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2005,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": 3270,
+    "mohs": null
+  },
+  "estimatedMinutes": 30,
+  "statement": "In \\(\\triangle ABC,\\) \\(AB = 20.\\) The incircle of the triangle divides the median containing \\(C\\) into three segments of equal length. Given that the area of \\(\\triangle ABC\\) is \\(m\\sqrt{n},\\) where \\(m\\) and \\(n\\) are integers and \\(n\\) is not divisible by the square of any prime, find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "38",
+    "value": "38"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2005-p15.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(M\\) be the midpoint of \\(\\overline{AB}.\\) Relabel \\(A\\) and \\(B\\) if necessary so that the incircle’s point of tangency with \\(\\overline{AB}\\) lies on \\(\\overline{AM}.\\) Let the incircle cut median \\(\\overline{CM}\\) at \\(S\\) and \\(N,\\) with \\(CS = SN = NM = \\frac{1}{3}CM,\\) and touch \\(\\overline{AB}\\) at \\(T\\) and \\(\\overline{AC}\\) at \\(R.\\) By Power of a Point, \\[ \\begin{aligned} MT^2 &= MN \\cdot MS \\\\ &= \\frac{CM}{3} \\cdot \\frac{2\\,CM}{3} \\\\ &= \\frac{2}{9}CM^2, \\\\ CR^2 &= CS \\cdot CN \\\\ &= \\frac{2}{9}CM^2, \\end{aligned} \\] so \\(MT = CR.\\) Since \\(AR = AT\\) (tangents from \\(A\\)), we get \\[ \\begin{aligned} AC &= AR + RC \\\\ &= AT + TM \\\\ &= AM = 10. \\end{aligned} \\]\n\nWrite \\(a = BC\\) and \\(s = \\frac{20 + a + 10}{2} = 15 + \\frac{a}{2}.\\) The standard tangent length gives \\(AT = s - a,\\) so \\[ \\begin{aligned} MT &= AM - AT \\\\ &= 10 - \\left(15 - \\frac{a}{2}\\right) \\\\ &= \\frac{a - 10}{2}, \\end{aligned} \\] while the median length formula gives \\(CM^2 = \\frac{2 \\cdot 10^2 + 2a^2 - 20^2}{4} = \\frac{a^2 - 100}{2}.\\) The triangle inequality gives \\(a \\gt 20 - 10 = 10,\\) so \\(a - 10\\) is nonzero. Substituting into \\(MT^2 = \\frac{2}{9}CM^2:\\) \\[ \\begin{aligned} \\frac{(a - 10)^2}{4} &= \\frac{a^2 - 100}{9} \\\\ &\\quad\\Longrightarrow\\quad 9(a - 10) \\\\ &= 4(a + 10) \\\\ &\\quad\\Longrightarrow\\quad a = 26. \\end{aligned} \\]\n\nThen the sides are \\(20,\\) \\(26,\\) \\(10\\) with \\(s = 28,\\) and Heron’s formula gives \\[ \\begin{aligned} [ABC] &= \\sqrt{28 \\cdot 8 \\cdot 2 \\cdot 18} \\\\ &= \\sqrt{8064} = 24\\sqrt{14}, \\end{aligned} \\] so \\(m + n = 24 + 14 = 38.\\)",
+      "hints": [
+        "Let \\(M\\) be the midpoint of \\(\\overline{AB}.\\) Compute the power of \\(M\\) and of \\(C\\) with respect to the incircle: both come out to \\(\\frac{2}{9}CM^2.\\)",
+        "Equal powers give equal tangent lengths from \\(M\\) and \\(C,\\) which forces \\(AC = AM = 10;\\) then combine \\(MT = \\frac{BC - 10}{2}\\) with the median length formula"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

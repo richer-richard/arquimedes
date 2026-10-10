@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-2014-p11",
+  "title": "2014 AMC 10B Problem 11",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequality",
+      "label": "Inequality",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.percentage",
+      "label": "Percentage",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2014,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 22.3,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "For the consumer, a single discount of \\(n\\%\\) is more advantageous than any of the following discounts:\n\n\\((1)\\) Two successive \\(15\\%\\) discounts.\n\n\\((2)\\) Three successive \\(10\\%\\) discounts.\n\n\\((3)\\) A \\(25\\%\\) discount followed by a \\(5\\%\\) discount.\n\nWhat is the smallest possible positive integer value of \\(n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( \\ \\ 27 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( \\ 28 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( \\ 29 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( \\ 31 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( \\ 33 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "29"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2014-p11.live",
+      "kind": "proof-sketch",
+      "text": "The three successive-discount plans leave the customer paying \\[ \\begin{aligned} 0.85^2&=0.7225,\\\\ 0.9^3&=0.729,\\\\ 0.75(0.95)&=0.7125 \\end{aligned} \\] times the listed price. Their effective discounts are therefore \\(27.75\\%\\), \\(27.1\\%\\), and \\(28.75\\%\\).\n\nA single \\(n\\%\\) discount must exceed all three, so \\(n>28.75\\). The smallest positive integer that works is \\(29\\).\n\nThus, the correct answer is C .",
+      "hints": [
+        "Convert each stacked discount into the final fraction of the price paid",
+        "The single discount must exceed the largest of the three effective discounts"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

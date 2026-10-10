@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-guts-2020-p24",
+  "title": "2020 HMMT November Guts Problem 24",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2020,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 52.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the number of positive integers less than 10 ! which can be expressed as the sum of at most 4 (not necessarily distinct) factorials.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "648",
+    "value": "648"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2020-p24.hmmt",
+      "kind": "proof-sketch",
+      "text": "Since \\(0!=1!=1\\), we ignore any possible 0 !'s in our sums.\nCall a sum of factorials reduced if for all positive integers \\(k\\), the term \\(k\\) ! appears at most \\(k\\) times. It is straightforward to show that every positive integer can be written uniquely as a reduced sum of factorials. Moreover, by repeatedly replacing \\(k+1\\) occurrences of \\(k\\) ! with \\((k+1)\\) !, every non-reduced sum of factorials is equal to a reduced sum with strictly fewer terms, implying that the aforementioned reduced sum associated to a positive integer \\(n\\) in fact uses the minimum number of factorials necessary.\nIt suffices to compute the number of nonempty reduced sums involving \\(\\{1!, 2!, \\ldots, 9!\\}\\) with at most 4 terms. By stars and bars, the total number of such sums, ignoring the reduced condition, is \\(\\binom{13}{9}=714\\).\nThe sums that are not reduced must either contain two copies of 1 !, three copies of 2 !, or four copies of 3 !. Note that at most one of these conditions is true, so we can count them separately. If \\(k\\) terms are fixed, there are \\(\\binom{13-k}{9}\\) ways to choose the rest of the terms, meaning that we must subtract \\(\\binom{11}{9}+\\binom{10}{9}+\\binom{9}{9}=66\\). Our final answer is \\(714-66=648\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

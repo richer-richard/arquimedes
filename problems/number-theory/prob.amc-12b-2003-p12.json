@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2003-p12",
+  "title": "2003 AMC 12B 12",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2003,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 24.1,
+    "source": 1530,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "What is the largest integer that is a divisor of \\[ \\begin{aligned} &(n + 1)(n + 3)(n + 5) \\\\ &\\quad {}\\cdot (n + 7)(n + 9) \\end{aligned} \\] for all positive even integers \\(n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(165\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "15"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2003-p12.live",
+      "kind": "proof-sketch",
+      "text": "For even \\(n,\\) the five factors are consecutive odd numbers. Among any five consecutive odd numbers, at least one is divisible by \\(3\\) and exactly one by \\(5,\\) so the product is always divisible by \\(15.\\)\n\nNo larger divisor always works: the products for \\(n = 10\\) and \\(n = 20\\) are \\(11 \\cdot 13 \\cdot 15 \\cdot 17 \\cdot 19\\) and \\(21 \\cdot 23 \\cdot 25 \\cdot 27 \\cdot 29,\\) whose greatest common divisor is \\(15.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "For even \\(n,\\) the factors are five consecutive odd numbers",
+        "Among any five consecutive odd numbers, one is a multiple of \\(3\\) and one is a multiple of \\(5\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

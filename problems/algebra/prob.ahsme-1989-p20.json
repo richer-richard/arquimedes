@@ -1,0 +1,87 @@
+{
+  "id": "prob.ahsme-1989-p20",
+  "title": "1989 AHSME Problem 20",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.conditional-probability",
+      "label": "Conditional probability",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-probability",
+      "label": "Geometric probability",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1989,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 40.0,
+    "source": 2150,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(x\\) be a real number selected uniformly at random between \\(100\\) and \\(200.\\) If \\(\\lfloor\\sqrt{x}\\rfloor=12,\\) find the probability that \\(\\lfloor\\sqrt{100x}\\rfloor=120.\\) (\\(\\lfloor v\\rfloor\\) means the greatest integer less than or equal to \\(v.\\))",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\frac2{25}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\frac{241}{2500}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\frac1{10}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\frac{96}{625}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(1\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "241/2500"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1989-p20.live",
+      "kind": "proof-sketch",
+      "text": "The given condition is \\(144\\le x\\lt169,\\) an interval of length \\(25.\\) The desired condition is \\[ 120^2\\le100x\\lt121^2, \\] or \\(144\\le x\\lt146.41.\\) Its length is \\(2.41=\\frac{241}{100},\\) so the conditional probability is \\[ \\frac{\\frac{241}{100}}{25}=\\frac{241}{2500}. \\]\n\nThus the correct answer is B.",
+      "hints": [
+        "Convert each floor condition into an interval for \\(x\\)",
+        "The conditional probability is the ratio of the two relevant interval lengths"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-feb-guts-2018-p23",
+  "title": "2018 HMMT February Guts Problem 23",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.optimization-in-geometry",
+      "label": "Optimization in geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.recurrence-relations",
+      "label": "Recurrence relations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vectors",
+      "label": "Vectors",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2018,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 73.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Kevin starts with the vectors \\((1,0)\\) and \\((0,1)\\) and at each time step, he replaces one of the vectors with their sum. Find the cotangent of the minimum possible angle between the vectors after 8 time steps.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2018-p23.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 987\nSay that the vectors Kevin has at some step are \\((a, b)\\) and \\((c, d)\\). Notice that regardless of which vector he replaces with \\((a+c, b+d)\\), the area of the triangle with vertices \\((0,0),(a, b)\\), and \\((c, d)\\) is preserved with the new coordinates. We can see this geometrically: the parallelogram with vertices \\((0,0),(a, b)\\), \\((c, d)\\), and \\((a+c, b+d)\\) can be cut in half by looking at the triangle formed by any 3 of the vertices, which include the original triangle, and both possible triangles that might arise in the next step.\nBecause the area is preserved, the minimum possible angle then arises when the two vectors, our sides, are as long as possible. This occurs when we alternate which vector is getting replaced for the sum. Given two vectors \\((a, b)\\) and \\((c, d)\\), with \\(\\sqrt{a^{2}+b^{2}}>\\sqrt{c^{2}+d^{2}}\\), we would rather replace \\((c, d)\\) than \\((a, b)\\), and \\((a+c, b+d)\\) has a larger norm than \\((a, b)\\). Then at the \\(n\\)th step, Kevin has the vectors \\(\\left(F_{n}, F_{n-1}\\right)\\) and \\(\\left(F_{n+1}, F_{n}\\right)\\), where \\(F_{0}=0\\) and \\(F_{1}=1\\). The tangent of the angle between them is the tangent of the difference of the angles they make with the x-axis, which is just their slope. We can then compute the cotangent as\n\n\\[\\left|\\frac{1+\\frac{F_{n-1}}{F_{n}} \\cdot \\frac{F_{n}}{F_{n+1}}}{\\frac{F_{n}}{F_{n+1}}-\\frac{F_{n-1}}{F_{n}}}\\right|=\\left|\\frac{F_{n}\\left(F_{n+1}+F_{n-1}\\right)}{F_{n}^{2}-F_{n-1} F_{n+1}}\\right| .\\]\n\nWe can show (by induction) that \\(F_{n}\\left(F_{n+1}+F_{n-1}\\right)=F_{2 n}\\) and \\(F_{n}^{2}-F_{n-1} F_{n+1}=(-1)^{n+1}\\). Thus at the 8th step, the cotangent of the angle is \\(F_{16}=987\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

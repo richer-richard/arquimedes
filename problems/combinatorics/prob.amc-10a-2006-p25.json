@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2006-p25",
+  "title": "2006 AMC 10A Problem 25",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2006,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 33.5,
+    "source": 2120,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A bug starts at one vertex of a cube and moves along the edges of the cube according to the following rule. At each vertex the bug will choose to travel along one of the three edges emanating from that vertex. Each edge has equal probability of being chosen, and all choices are independent. What is the probability that after seven moves the bug will have visited every vertex exactly once?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{2187}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1}{729}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{2}{243}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{1}{81}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{5}{243}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "2/243"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2006-p25.live",
+      "kind": "proof-sketch",
+      "text": "After \\(7\\) moves there are \\(3^7 = 2187\\) equally likely walks. A successful walk visits every vertex exactly once.\n\nLabel the cube’s vertices by binary triples, with adjacent vertices differing in one coordinate. There are \\(3\\) choices for the first move and \\(2\\) for the second move if the bug is not to return to its starting point. By symmetry, fix these first moves as \\(000\\to100\\to110.\\)\n\nThe successful continuations are exactly \\[ \\begin{aligned} 110&\\to111\\to101\\\\ &\\to001\\to011\\to010, \\end{aligned} \\] \\[ \\begin{aligned} 110&\\to010\\to011\\\\ &\\to001\\to101\\to111, \\end{aligned} \\] and \\[ \\begin{aligned} 110&\\to010\\to011\\\\ &\\to111\\to101\\to001. \\end{aligned} \\] Thus each allowed pair of first moves has \\(3\\) successful continuations, giving \\(3\\cdot2\\cdot3=18\\) successful walks.\n\nThe probability is \\(\\frac{18}{2187} = \\frac{2}{243}.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "The bug must trace a path visiting all \\(8\\) vertices, i.e. \\(7\\) moves with no repeated vertices",
+        "Count such paths from the start; there are \\(3^7\\) equally likely walks"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

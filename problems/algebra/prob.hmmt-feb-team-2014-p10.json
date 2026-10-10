@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-team-2014-p10",
+  "title": "2014 HMMT February Team Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.cauchy-schwarz",
+      "label": "Cauchy-Schwarz",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.invariants-and-monovariants",
+      "label": "Invariants and monovariants",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sums-and-products",
+      "label": "Sums and products",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2014,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 91.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Fix a positive real number \\(c>1\\) and positive integer \\(n\\). Initially, a blackboard contains the numbers \\(1, c, \\ldots, c^{n-1}\\). Every minute, Bob chooses two numbers \\(a, b\\) on the board and replaces them with \\(c a+c^{2} b\\). Prove that after \\(n-1\\) minutes, the blackboard contains a single number no less than\n\n\\[\\left(\\frac{c^{n / L}-1}{c^{1 / L}-1}\\right)^{L}\\]\n\nwhere \\(\\phi=\\frac{1+\\sqrt{5}}{2}\\) and \\(L=1+\\log _{\\phi}(c)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2014-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "N/A By a simple reverse induction, we can show that at any instant, any number on the board takes the form \\(\\sum_{\\alpha \\in A} c^{r_{\\alpha}} c^{\\alpha}\\) for a certain \\(A \\subseteq\\{0, \\ldots, n-1\\}\\) for non-negative integer weights \\(r_{\\alpha}\\) satisfying \\(\\sum_{\\alpha \\in A} \\phi^{-r_{\\alpha}}=1\\), where these subsets \\(A\\) partition \\(\\{0, \\ldots, n-1\\}\\), and after each minute the number of parts decreases by 1. (Note that \\(1=\\phi^{-1}+\\phi^{-2}\\), and when we \"merge\" two of these sets \\(A, B\\) corresponding to \\(a, b \\rightarrow c a+c^{2} b\\), we add 1 to all the weights of \\(A\\), and 2 to all the weights of \\(B)\\). Therefore, the final number takes the form \\(\\sum_{i=0}^{n-1} c^{t_{i}} c^{i}\\) for positive integer weights \\(t_{0}, \\ldots, t_{n-1}\\) satisfying \\(\\sum_{i=0}^{n-1} \\phi^{-t_{i}}=1\\).\nLet \\(M=\\log _{\\phi}(c)>0(\\) so \\(L=1+M)\\). Then \\(c=\\phi^{M}\\), so by Holder's inequality,\n\n\\[\\left(\\sum_{i=0}^{n-1} c^{t_{i}} c^{i}\\right)^{1}\\left(\\sum_{i=0}^{n-1} \\phi^{-t_{i}}\\right)^{M} \\geq\\left(\\sum_{i=0}^{n-1}\\left[c^{i}\\left(c \\phi^{-M}\\right)^{t_{i}}\\right]^{1 / L}\\right)^{L}=\\left(\\frac{c^{n / L}-1}{c^{1 / L}-1}\\right)^{L}\\]\n\nas desired.\nComment: Note that the same method applies for any choice of initial numbers \\(x_{1}, x_{2}, \\ldots, x_{n}\\) (the choice \\(c^{0}, c^{1}, \\ldots, c^{n-1}\\) simply gives a relatively clean closed form). The invariant \\(\\sum \\phi^{-t_{i}}=1\\) was inspired by the corresponding invariant \\(\\sum 2^{-t_{i}}=1\\) for ISL 2007 A5, where the relevant operation is \\(\\{a, b\\} \\mapsto\\left\\{c^{1} a+c^{1} b\\right\\}\\) (specifically, for \\(c=2\\), but this is not important) rather than \\(\\{a, b\\} \\mapsto\\left\\{c^{1} a+c^{2} b\\right\\}\\). Alternate solution: We have \\(c x^{L}+c^{2} y^{L} \\geq(x+y)^{L}\\) for any nonnegative reals \\(x, y\\), since \\(\\left(c x^{L}+\\right.\\) \\(\\left.c^{2} y^{L}\\right)\\left(c^{-1 /(L-1)}+c^{-2 /(L-1)}\\right)^{L-1} \\geq(x+y)^{L}\\) by Holder's inequality, \\(c^{1 /(L-1)}=c^{1 / \\log _{\\phi}(c)}=\\phi\\), and of course \\(\\phi^{-1}+\\phi^{-2}=1\\).\nIn particular, \\(\\left(c a+c^{2} b\\right)^{1 / L} \\geq a^{1 / L}+b^{1 / L}\\). Thus \\(\\sum_{i=0}^{n-1}\\left(c^{i}\\right)^{1 / L} \\leq N^{1 / L}\\), where \\(N\\) is the final (nonnegative) number on the board. Hence \\(N^{1 / L} \\geq \\frac{c^{n / L}-1}{c^{1 / L}-1}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

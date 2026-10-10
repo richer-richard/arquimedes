@@ -1,0 +1,71 @@
+{
+  "id": "prob.hmmt-nov-guts-2015-p30",
+  "title": "2015 HMMT November Guts Problem 30",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.constructions-and-loci",
+      "label": "Constructions and loci",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph Theory",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.rotation",
+      "label": "Rotation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangles",
+      "label": "Triangles",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2015,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 54.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find the largest integer \\(n\\) such that the following holds: there exists a set of \\(n\\) points in the plane such that, for any choice of three of them, some two are unit distance apart.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2015-p30.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 7\nWe can obtain \\(n=7\\) in the following way: Consider a rhombus \\(A B C D\\) made up of two equilateral triangles of side length 1 , where \\(\\angle D A B=60^{\\circ}\\). Rotate the rhombus clockwise about \\(A\\) to obtain a new rhombus \\(A B^{\\prime} C^{\\prime} D^{\\prime}\\) such that \\(D D^{\\prime}=1\\). Then one can verify that the seven points \\(A, B, C, D, B^{\\prime}, C^{\\prime}, D^{\\prime}\\) satisfy the problem condition.\nTo prove that \\(n=8\\) points is unobtainable, one interprets the problem in terms of graph theory. Consider a graph on 8 vertices, with an edge drawn between two vertices if and only if the vertices are at distance 1 apart. Assume for the sake of contradiction that this graph has no three points, no two of which are at distance 1 apart (in terms of graph theory, this means the graph has no independent set of size 3 ).\nFirst, note that this graph cannot contain a complete graph of size 4 (it's clear that there can't exist four points in the plane with any two having the same pairwise distance).\nI claim that every vertex has degree 4 . It is easy to see that if a vertex has degree 5 or higher, then there exists an independent set of size 3 among its neighbors, contradiction (one can see this by drawing the 5 neighbors on a circle of radius 1 centered at our initial vertex and considering their pairwise distances). Moreover, if a vertex has degree 3 or lower then there are at least four vertices that are not at distance 1 from that vertex, and since not all four of these vertices can be at distance 1 from one another, there exists an independent set of of size 3 , contradiction.\nNow, we consider the complement of our graph. Every vertex of this new graph has degree 3 and by our observations, contains no independent set of size 4. Moreover, by assumption this graph contains no triangle (a complete graph on three vertices). But we can check by hand that there are only six distinct graphs on eight vertices with each vertex having degree 3 (up to isomorphism), and five of these graphs contain a triangle, and the remaining graph contains an independent set of size 4 , contradiction!\nHence the answer is \\(n=7\\)",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2002-p18",
+  "title": "2002 AMC 10A Problem 18",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cube-geometry",
+      "label": "Cube geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2002,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 24.4,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A \\(3\\times 3\\times 3\\) cube is formed by gluing together \\(27\\) standard cubical dice. (On a standard die, the sum of the numbers on any pair of opposite faces is \\(7.\\)) The smallest possible sum of all the numbers showing on the surface of the \\(3\\times 3\\times 3\\) cube is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(60\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(72\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(84\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(90\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(96\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "90"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2002-p18.live",
+      "kind": "proof-sketch",
+      "text": "The \\(8\\) corner dice show \\(3\\) faces each, minimized at \\(1+2+3=6,\\) contributing \\(8\\cdot 6=48.\\) The \\(12\\) edge dice show \\(2\\) faces, minimized at \\(1+2=3,\\) contributing \\(12\\cdot 3=36.\\)\n\nThe \\(6\\) face-center dice show \\(1\\) face, minimized at \\(1,\\) contributing \\(6,\\) and the hidden interior die contributes \\(0.\\) The total is \\(48+36+6=90.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Classify the \\(27\\) dice as corner, edge, face-center, and interior dice",
+        "Minimize each die’s showing faces: corners show \\(1+2+3,\\) edges show \\(1+2,\\) face-centers show \\(1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

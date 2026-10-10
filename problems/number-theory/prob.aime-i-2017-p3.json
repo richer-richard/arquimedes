@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2017-p3",
+  "title": "2017 AIME1 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.pattern-recognition",
+      "label": "Pattern recognition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.triangular-number",
+      "label": "Triangular number",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.units-digit",
+      "label": "Units digit",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2017,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 49.1,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "For a positive integer \\(n,\\) let \\(d_n\\) be the units digit of \\(1 + 2 + 3 + \\cdots + n.\\) Find the remainder when \\[\\sum_{n=1}^{2017} d_n\\] is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "69",
+    "value": "69"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2017-p3.live",
+      "kind": "proof-sketch",
+      "text": "Here \\(d_n\\) is the units digit of the triangular number \\(\\frac{n(n+1)}{2}.\\) Since \\(\\frac{(n+20)(n+21)}{2}\\) \\(- \\frac{n(n+1)}{2} = 20n + 210\\) is a multiple of \\(10,\\) the sequence \\(d_n\\) is periodic with period \\(20.\\) Computing one period, \\[ \\begin{aligned} &(d_1, d_2, \\ldots, d_{20}) \\\\ &\\quad \\tiny = (1, 3, 6, 0, 5, 1, 8, 6, 5, 5, 6, 8, 1, 5, 0, 6, 3, 1, 0, 0), \\end{aligned} \\] which sums to \\(70.\\)\n\nSince \\(2017 = 100 \\cdot 20 + 17,\\) the total is \\(100 \\cdot 70\\) plus the first \\(17\\) terms of the period, which sum to \\(70 - (1 + 0 + 0) = 69.\\) The sum is \\(7069,\\) so the remainder is \\(69.\\)",
+      "hints": [
+        "\\(d_n\\) is the units digit of \\(\\frac{n(n+1)}{2};\\) look for a repeating pattern in these digits",
+        "The digits repeat with period \\(20,\\) and one full period of \\(20\\) values sums to \\(70\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

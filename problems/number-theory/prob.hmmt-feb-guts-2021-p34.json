@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-guts-2021-p34",
+  "title": "2021 HMMT February Guts Problem 34",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.number-theory",
+      "label": "Number Theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2021,
+    "number": 34
+  },
+  "difficulty": {
+    "course": 85.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(f(n)\\) be the largest prime factor of \\(n\\). Estimate\n\n\\[N=\\left\\lfloor 10^{4} \\cdot \\frac{\\sum_{n=2}^{10^{6}} f\\left(n^{2}-1\\right)}{\\sum_{n=2}^{10^{6}} f(n)}\\right\\rfloor .\\]\n\nAn estimate of \\(E\\) will receive \\(\\max \\left(0,\\left\\lfloor 20-20\\left(\\frac{|E-N|}{10^{3}}\\right)^{1 / 3}\\right\\rfloor\\right)\\) points.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "18215",
+    "value": "18215"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2021-p34.hmmt",
+      "kind": "proof-sketch",
+      "text": "We remark that\n\n\\[f\\left(n^{2}-1\\right)=\\max (f(n-1), f(n+1))\\]\n\nLet \\(X\\) be a random variable that evaluates to \\(f(n)\\) for a randomly chosen \\(2 \\leq n \\leq 10^{6}\\); we essentially want to estimate\n\n\\[\\frac{\\mathbb{E}\\left[\\max \\left(X_{1}, X_{2}\\right)\\right]}{\\mathbb{E}\\left[X_{3}\\right]}\\]\n\nwhere \\(X_{i}\\) denotes a variable with distribution identical to \\(X\\) (this is assuming that the largest prime factors of \\(n-1\\) and \\(n+1\\) are roughly independent).\nA crude estimate can be compiled by approximating that \\(f(n)\\) is roughly \\(10^{6}\\) whenever \\(n\\) is prime and 0 otherwise. Since a number in this interval should be prime with \"probability\" \\(\\frac{1}{\\ln 10^{6}}\\), we may replace each \\(X_{i}\\) with a Bernoulli random variable that is 1 with probability \\(\\frac{1}{\\ln 10^{6}} \\sim \\frac{1}{14}\\) and 0 otherwise. This gives us an estimate of\n\n\\[\\frac{1 \\cdot \\frac{2 \\cdot 14-1}{14^{2}}}{\\frac{1}{14}}=\\frac{27}{14}\\]\n\nHowever, this estimate has one notable flaw: \\(n-1\\) and \\(n+1\\) are more likely to share the same primality than arbitrarily chosen numbers, since they share the same parity. So, if we restrict our sums to only considering \\(f(n)\\) for odd numbers, we essentially replace each \\(X_{i}\\) with a Bernoulli random variable with expectation \\(1 / 7\\), giving us an estimate of \\(\\frac{13}{7}\\), good for 5 points.\nThis estimate can be substantially improved if we consider other possible factors, which increases the correlation between \\(f(n-1)\\) and \\(f(n+1)\\) and thus decreases one's estimate. The correct value of \\(N\\) is 18215 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

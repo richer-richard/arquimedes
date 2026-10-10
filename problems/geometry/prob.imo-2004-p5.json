@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2004-p5",
+  "title": "2004 IMO Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2004,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 93.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In a convex quadrilateral \\(ABCD\\),\nthe diagonal \\(BD\\) bisects neither the angle \\(ABC\\) nor the angle \\(CDA\\).\nThe point \\(P\\) lies inside \\(ABCD\\) and satisfies\n\\[\\angle PBC=\\angle DBA \\quad\\text{and}\\quad \\angle PDC=\\angle BDA. \\]\nProve that \\(ABCD\\) is a cyclic quadrilateral if and only if \\(AP=CP\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2004-p5.evanchen",
+      "kind": "proof-sketch",
+      "text": "We show two solutions.\nWe note that the first hypothesis cannot be dropped, because \\(ABCD\\) being a kite\nwith \\(BA=BC\\) and \\(DA=DC\\) with center \\(P\\) is a counterexample\n(where \\(AP=CP\\) but \\(ABCD\\) is not cyclic).\nHowever, the condition that \\(BD\\) bisects neither angle \\(\\angle B\\) nor \\(\\angle D\\)\nis equivalent to requiring that the point \\(P\\) does not lie on line \\(BD\\)\nand we assume this henceforth.\n\nBarycentric solution (from teenager Evan)..\nApply barycentric coordinates to \\(\\triangle PBD\\)\n(nondegenerate by the non-bisect condition)\nwith \\(P = (1,0,0)\\), \\(B = (0,1,0)\\) and \\(D = (0,0,1)\\).\nDefine \\(a = BD\\), \\(b = DP\\) and \\(c = PB\\).\n\nSince \\(A\\) and \\(C\\) are isogonal conjugates with respect to \\(\\triangle PBD\\),\nwe set \\[ A = (au : bv : cw) \\qquad\\text{and}\\qquad\n C = \\left( \\frac au : \\frac bv : \\frac cw \\right). \\]\nFor brevity define \\(M = au + bv + cw\\) and \\(N = avw + bwu + cuv\\).\n\nWe now compute each condition.\n\nClaim.\n Quadrilateral \\(ABCD\\) is cyclic if and only if \\(N^2 = u^2 M^2\\).\n\nProof.\n W know a circle through \\(B\\) and \\(D\\)\n is a locus of points\n with \\[ \\frac{a^2yz+b^2zx+c^2xy}{x(x+y+z)} \\]\n is equal to some constant.\n Therefore quadrilateral \\(ABCD\\) is cyclic if and only if\n \\(\\frac{abc \\cdot N}{au \\cdot M}\\)\n is equal to \\(\\frac{abc \\cdot uvw \\cdot M}{avw \\cdot N}\\)\n which rearranges to \\(N^2 = u^2M^2\\).\n\nClaim.\n We have \\(PA = PC\\) if and only if \\(N^2 = u^2 M^2\\).\n\nProof.\n We have the displacement vector\n \\(\\overrightarrow{PA}\n = \\tfrac{1}{M} \\left( bv+cw , -bv ,-cw \\right)\\).\n Therefore,\n \\[\\begin{aligned}\n M^2 \\cdot \\left\\lvert PA \\right\\rvert^2\n &= -a^2(bv)(cw) + b^2(cw)(bv+cw) + c^2(bv)(bv+cw) \\\\\n &= bc(-a^2vw + (bw+cv)(bv+cw)).\n \\end{aligned}\\]\n In a similar way\n (by replacing \\(u\\), \\(v\\), \\(w\\) with their inverses)\n we have\n \\[\\begin{aligned}\n \\left( \\frac{N}{uvw} \\right)^2 \\cdot \\left\\lvert PC \\right\\rvert^2\n &= (vw)^{-2} \\cdot bc(-a^2vw + (bv+cw)(bw+cv)) \\\\\n \\iff N^2 \\cdot \\left\\lvert PC \\right\\rvert^2\n & = u^2 bc(-a^2vw + (bw+cv)(bv+cw))\n \\end{aligned}\\]\n These are equal if and only if \\(N^2 = u^2M^2\\), as desired.\n\nAngle chasing solution (Evan Chen and Petko Lazarov)..\nThe solution consists of two parts.\nThe first part is that by angle chasing, we will prove that\n\\[ \\measuredangle PAC = \\measuredangle ACP \\iff \\measuredangle BAC + \\measuredangle CBD + \\measuredangle DCA + \\measuredangle ADB = 0.\n \\qquad (\\spadesuit). \\]\nA careless reader would be forgiven for thinking that \\((\\spadesuit)\\)\nimplies the problem or at least one direction,\nbut it turns out the situation is more subtle.\nThe second part analyzes the angle conditions more carefully\nand provides a complete proof.\n\nProof of the equivalence \\((\\spadesuit)\\) by angle chasing..\nWe start with the following unconditional claim, valid for any quadrilateral.\n\nClaim.\n [Isogonal conjugation]\n Let \\(ABCD\\) and \\(P\\) be as in the problem statement.\n Then \\(\\measuredangle APB + \\measuredangle CPD = 180^\\circ\\).\n\nProof.\n The angles in the statement imply that \\(A\\) and \\(C\\)\n are isogonal conjugates with respect to \\(\\triangle PBC\\).\n Thus, lines \\(PA\\) and \\(PC\\) are isogonal with respect to \\(\\angle BPC\\), as needed.\n\n[Diagram omitted from this imported TeX transcription.]\n\nNext we rewrite the two angles \\(\\measuredangle APB\\) and \\(\\measuredangle CPD\\) in the claim\n(colored green with three rings)\nso that their only dependence on \\(P\\)\nis through the angles \\(\\measuredangle PAC\\) and \\(\\measuredangle CAP\\) (colored red with two rings),\nas follows:\n\\[\\begin{aligned}\n -\\measuredangle APB &= \\measuredangle PBA + \\measuredangle BAP = \\measuredangle PBA + (\\measuredangle BAC - \\measuredangle PAC) \\\\\n &= \\measuredangle CBD + \\measuredangle BAC - \\measuredangle PAC \\\\\n -\\measuredangle CPD &= \\measuredangle PDC + \\measuredangle DCP = \\measuredangle PDC + (\\measuredangle DCA + \\measuredangle ACP) \\\\\n &= \\measuredangle ADB + \\measuredangle DCA + \\measuredangle ACP.\n\\end{aligned}\\]\nSince the claim says \\(\\measuredangle APB + \\measuredangle CPD = 0\\), summing\nlets us finally rewrite \\(\\measuredangle PAC - \\measuredangle APC\\) in terms of only \\(A\\), \\(B\\), \\(C\\), \\(D\\):\n\\[\\begin{aligned}\n 0 &= (\\measuredangle ACP - \\measuredangle PAC) + \\measuredangle ADB + \\measuredangle DCA + \\measuredangle CBD + \\measuredangle BAC \\\\\n \\implies \\measuredangle PAC - \\measuredangle ACP &= \\measuredangle ADB + \\measuredangle DCA + \\measuredangle CBD + \\measuredangle BAC.\n\\end{aligned}\\]\nThese four latter angles are colored blue with one ring in the figure.\nThis proves \\((\\spadesuit)\\).\n\nQuasi-harmonic quadrilaterals..\nTo interpret the condition \\((\\spadesuit)\\), we define a new term:\na quadrilateral \\(ABCD\\) is quasi-harmonic if \\(AB \\cdot CD = BC \\cdot DA\\).\n(See IMO 2018/6 for another problem involving quasi-harmonic quadrilaterals.)\nThe following two lemmas show why this condition is relevant:\n\nLemma.\n The condition\n \\[ \\measuredangle BAC + \\measuredangle CBD + \\measuredangle DCA + \\measuredangle ADB = 0 \\]\n is equivalent to \\(ABCD\\) being either cyclic or quasi-harmonic or both.\n\nProof.\n A clean approach with complex numbers\n (posted at ) goes as follows:\n define complex numbers \\(\\mu = (a-b)(c-d) \\neq 0\\) and \\(\\nu = (b-c)(d-a) \\neq 0\\).\n Then \\[ \\mu-\\nu = (a-c)(b-d) \\neq 0. \\]\n\n Now the angle condition is equivalent to\n \\[\\begin{aligned}\n \\mathbb{R} &\\ni \\frac{a-b}{d-b} \\cdot \\frac{b-c}{a-c} \\cdot \\frac{c-d}{b-d} \\cdot \\frac{d-a}{c-a} \\\\\n &= \\frac{\\mu \\nu}{(\\mu - \\nu)^2} \\\\\n &= \\frac{1}{\\frac{\\mu}{\\nu} + \\frac{\\nu}{\\mu} - 2} \\\\\n \\iff \\mathbb{R} &\\ni \\frac{\\mu}{\\nu} + \\frac{\\nu}{\\mu}.\n \\end{aligned}\\]\n In general, though \\(z+1/z\\) is real exactly when either \\(|z|=1\\) or \\(z \\in \\mathbb{R}\\).\n Note \\(\\mu/\\nu \\in \\mathbb{R}\\) is equivalent to \\(ABCD\\) cyclic\n and \\(|\\mu| = |\\nu|\\) is equivalent to \\(ABCD\\) being quasiharmonic; the proof follows.\n\n This can be also proved by inversion at \\(A\\), though we don't write the details here.\n (See also ).\n\nLemma.\n Quadrilateral \\(ABCD\\) is quasi-harmonic if and only if \\(P\\) lies on line \\(AC\\).\n\nProof.\n Let \\(X = \\overline{BD} \\cap \\overline{AC}\\).\n If the isogonal of line \\(BD\\) with respect to \\(\\angle B\\) meets line \\(AC\\) at \\(Y\\), then\n \\(\\frac{AX}{CX} \\frac{AY}{CY} = \\left( \\frac{BA}{BC} \\right)^2\\).\n Similarly if the isogonal to \\(\\angle D\\) meets line \\(AC\\) at \\(Y'\\), then\n \\(\\frac{AX}{CX} \\frac{AY'}{CY'} = \\left( \\frac{DA}{DC} \\right)^2\\).\n Hence \\(ABCD\\) is quasi-harmonic if and only if \\(Y = Y'\\) (that is, \\(Y=Y'=P\\)).\n\nWrap-up..\nWe now show that \\(PA = PC\\) if and only if \\(ABCD\\) is cyclic\nby cases on whether \\(P\\) lies on \\(\\overline{AC}\\).\n\n• If \\(ABCD\\) is not quasi-harmonic,\n then \\((\\spadesuit)\\) implies the problem statement immediately.\n Indeed, \\(\\measuredangle PAC = \\measuredangle ACP\\) if and only if \\(PA = PC\\)\n (as \\(\\triangle PAC\\) is not degenerate)\n and the second lemma turns our angle condition into \\(ABCD\\) cyclic.\n\n• Now assume \\(ABCD\\) is quasi-harmonic and \\(P\\) lies on line \\(AC\\).\n We ignore \\((\\spadesuit)\\).\n Instead, note that if \\(ABCD\\) is also cyclic then\n \\(\\overline{BD}\\) is a symmedian of \\(\\triangle ABC\\) and hence \\(P\\) is the midpoint.\n Conversely, suppose we know \\(\\overline{BD}\\) is a symmedian of \\(\\triangle ABC\\).\n Let \\(D' \\neq B\\) be the point for which \\(ABCD'\\) is cyclic and harmonic;\n then \\(B\\), \\(D\\), \\(D'\\) are collinear and \\(\\frac{BD}{CD} = \\frac{BD'}{CD'} = \\frac{BA}{CA}\\).\n So \\(D' = D\\) (the corresponding Apollonian circle only meets line \\(BD\\) twice), as needed.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

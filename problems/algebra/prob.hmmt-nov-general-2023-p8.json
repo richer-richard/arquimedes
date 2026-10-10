@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-general-2023-p8",
+  "title": "2023 HMMT November General Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sums-and-products",
+      "label": "Sums and products",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2023,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 49.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Mark writes the expression \\(\\sqrt{d}\\) for each positive divisor \\(d\\) of 8 ! on the board. Seeing that these expressions might not be worth points on HMMT, Rishabh simplifies each expression to the form \\(a \\sqrt{b}\\), where \\(a\\) and \\(b\\) are integers such that \\(b\\) is not divisible by the square of a prime number. (For example, \\(\\sqrt{20}, \\sqrt{16}\\), and \\(\\sqrt{6}\\) simplify to \\(2 \\sqrt{5}, 4 \\sqrt{1}\\), and \\(1 \\sqrt{6}\\), respectively.) Compute the sum of \\(a+b\\) across all expressions that Rishabh writes.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "3480",
+    "value": "3480"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2023-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(\\sqrt{n}\\) simplify to \\(a_{n} \\sqrt{b_{n}}\\). Notice that both \\(a_{n}\\) and \\(b_{n}\\) are multiplicative. Thus, \\(\\sum_{d \\mid n} a_{d}\\) and \\(\\sum_{d \\mid n} b_{d}\\) are multiplicative.\nWe consider the sum \\(\\sum_{d \\mid p^{k}} a_{d}\\) and \\(\\sum_{d \\mid p^{k}} b_{d}\\). Notice that for \\(d=p^{l}, a_{d}=p^{\\lfloor l / 2\\rfloor}\\) and \\(b_{d}=p^{2\\{l / 2\\}}\\), so\n\n\\[\\sum_{d \\mid p^{k}} a_{d}=2\\left(\\frac{p^{(k+1) / 2}-1}{p-1}\\right) \\quad \\text { and } \\quad \\sum_{d \\mid p^{k}} b_{d}=\\frac{(p+1)(k+1)}{2}\\]\n\nfor odd \\(k\\), while\n\n\\[\\sum_{d \\mid p^{k}} a_{d}=\\left(\\frac{p^{(k+2) / 2}+p^{k / 2}-2}{p-1}\\right) \\quad \\text { and } \\quad \\sum_{d \\mid p^{k}} b_{d}=\\frac{(p+1) k}{2}+1\\]\n\nfor even \\(k\\).\nNotice \\(8!=2^{7} \\cdot 3^{2} \\cdot 5 \\cdot 7\\), so\n\n\\[\\sum_{d \\mid 8!} a_{d}=\\left(\\frac{2(16-1)}{2-1}\\right)\\left(\\frac{9+3-2}{3-1}\\right)(1+1)(1+1)=30 \\cdot 5 \\cdot 2 \\cdot 2=600\\]\n\nand\n\n\\[\\sum_{d \\mid 8!} b_{d}=\\left(\\frac{3 \\cdot 8}{2}\\right)\\left(1+\\frac{4 \\cdot 2}{2}\\right)(1+5)(1+7)=12 \\cdot 5 \\cdot 6 \\cdot 8=2880\\]\n\nso the sum of \\(a_{d}+b_{d}\\) would be \\(600+2880=3480\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-ii-2006-p7",
+  "title": "2006 AIME II Problem 7",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2006,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 49.2,
+    "source": 2510,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Find the number of ordered pairs of positive integers \\((a, b)\\) such that \\(a + b = 1000\\) and neither \\(a\\) nor \\(b\\) has a zero digit.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "738",
+    "value": "738"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2006-p7.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(999\\) pairs in all (\\(a = 1, \\ldots, 999\\)); count the forbidden ones. If \\(a\\) has units digit \\(0,\\) so does \\(b,\\) and writing \\(a = 10r,\\) \\(b = 10s\\) gives \\(r + s = 100\\) with \\(1 \\le r \\le 99:\\) that is \\(99\\) forbidden pairs.\n\nNow suppose both units digits are nonzero. Then a number in the pair has a zero digit exactly when it is a three-digit number of the form \\(h0u\\) with \\(h, u \\in \\{1, \\ldots, 9\\}\\) (a one- or two-digit number with nonzero units digit has no zero digit). If \\(a = h0u,\\) then \\(b = 1000 - a\\) \\(= 100(9 - h) + 90\\) \\(+ (10 - u)\\) has tens digit \\(9,\\) so \\(b\\) is not also of that form. Hence the forbidden pairs here are those where exactly one of \\(a, b\\) equals \\(h0u:\\) \\(81 + 81 = 162\\) pairs.\n\nThe total number of forbidden pairs is \\(99 + 162 = 261,\\) so the answer is \\(999 - 261 = 738.\\)",
+      "hints": [
+        "Count the bad pairs instead. If \\(a\\) ends in \\(0,\\) then so does \\(b,\\) giving \\(a = 10r,\\) \\(b = 10s\\) with \\(r + s = 100.\\)",
+        "If neither number ends in \\(0,\\) a zero digit can only be a middle digit \\(h0u\\) — and then the other number’s tens digit is \\(9.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

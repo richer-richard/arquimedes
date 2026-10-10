@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2021-p2",
+  "title": "2021 USAMO Problem 2",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2021,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 93.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The Planar National Park is an undirected 3-regular planar graph (i.e. all vertices have degree 3). That is: every trail has its two endpoints at two different junctions whereas each junction is the endpoint of exactly three trails. Trails only intersect at junctions (in particular, trails only meet at endpoints). Finally, no trails begin and end at the same two junctions. (An example of one possible layout of the park is shown to the left below, in which there are six junctions and nine trails.)\n\n<image>\n\nA visitor walks through the park as follows: she begins at a vertex and starts walking along an edge. When she reaches the other endpoint, she turns left. On the next vertex, she turns right, and so on, alternating left and right turns at each vertex. She does this until she gets back to the vertex where she started. What is the largest possible number of times she could have entered any vertex during her walk, over all possible layouts of the park?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2021-p2.imported",
+      "kind": "proof-sketch",
+      "text": "§1.2 USAMO 2021/2, proposed by Zoran Sunic\n\n   Video at https://youtu.be/9WNgDETHOlI?t=1325.\n\n  Problem statement\n\n  The Planar National Park is a undirected 3-regular planar graph (i.e. all vertices\n  have degree 3). A visitor walks through the park as follows: she begins at a vertex\n  and starts walking along an edge. When she reaches the other endpoint, she turns\n  left. On the next vertex she turns right, and so on, alternating left and right turns at\n  each vertex. She does this until she gets back to the vertex where she started. What\n  is the largest possible number of times she could have entered any vertex during her\n  walk, over all possible layouts of the park?\n\nThe answer is 3.\n  We consider the trajectory of the visitor as an ordered sequence of turns. A turn is\ndefined by specifying a vertex, the incoming edge, and the outgoing edge. Hence there\nare six possible turns for each vertex.\n\n  Claim — Given one turn in the sequence, one can reconstruct the entire sequence\n  of turns.\n\nProof. This is clear from the process’s definition: given a turn t, one can compute the\nturn after it and the turn before it.\n\n   This implies already that the trajectory of the visitor, when extended to an infinite\nsequence, is totally periodic (not just eventually periodic), because there are finitely\nmany possible turns, so some turn must be repeated. So, any turn appears at most once\nin the period of the sequence, giving a naïve bound of 6 for the original problem.\n   However, the following claim improves the bound to 3.\n\n  Claim — It is impossible for both of the turns a → b → c and c → b → a to occur\n  in the same trajectory.\n\nProof. If so, then extending the path, we get a → b → c → d → e → · · · and · · · → e →\nd → c → b → a, as illustrated below in red and blue respectively.\n\n                                             5\n\nUSAMO 2021 Solution Notes                                   web.evanchen.cc, updated 4 May 2026\n\n                                       e\n\n                                                    d\n\n                                      c\n\n                                                    b\n\n                                      a\n\nHowever, we assumed for contradiction the red and blue paths were part of the same\ntrajectory, yet they clearly never meet.\n\n  It remains to give a construction showing 3 can be achieved. There are many, many\nvalid constructions. One construction due to Danielle Wang is given here, who provided\nthe following motivation: “I was lying in bed and drew the first thing I could think of”.\nThe path is CAHIF GDBAHEF GJBAC which visits A three times.\n\n                 A                         8, 15                             B\n\n                           1\n                      16                                                 7\n                                C                           D\n\n              2, 9                                              6            14\n\n                                E           F               G\n                                     11             5, 12\n                                                4\n                           10                                       13\n                 H              3           I                                J\n\n  Remark. As the above example shows it is possible to transverse an edge more than once\n  even in the same direction, as in edge AH above.\n\n                                            6\n\nUSAMO 2021 Solution Notes                                     web.evanchen.cc, updated 4 May 2026",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

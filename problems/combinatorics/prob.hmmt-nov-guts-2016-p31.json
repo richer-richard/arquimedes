@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-guts-2016-p31",
+  "title": "2016 HMMT November Guts Problem 31",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.enumeration-with-symmetry",
+      "label": "Enumeration with symmetry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2016,
+    "number": 31
+  },
+  "difficulty": {
+    "course": 60.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Define a number to be an anti-palindrome if, when written in base 3 as \\(a_{n} a_{n-1} \\ldots a_{0}\\), then \\(a_{i}+a_{n-i}=\\) 2 for any \\(0 \\leq i \\leq n\\). Find the number of anti-palindromes less than \\(3^{12}\\) such that no two consecutive digits in base 3 are equal.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2016-p31.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 126\nNote once the middle digit/pair of digits is determined, it suffices to choose the digits in the left half of the number and ensure no pair of consecutive digits are equal. For a number with an even number of digits, the middle pair is 02 or 20 while for a number with an odd number of digits, the middle digit is 1 . We can now count recursively.\n\nLet \\(a_{n}\\) be the number of ways to choose \\(n\\) digits no two of which are consecutive and equal such that the leading digit is nonzero and the ending digit is 1 . Let \\(b_{n}\\) be the number ways to do the same such that the ending digit is 0 or 2 .\nNote \\(a_{n}=b_{n-1}\\). Also \\(b_{n}=b_{n-1}+2 a_{n-1}\\).\nSolving for the terms of the sequence, they are \\(a_{1}=1, a_{2}=b_{1}=1, a_{3}=b_{2}=3, a_{4}=b_{3}=5, a_{5}=b_{4}=\\) \\(11, a_{6}=b_{5}=21, b_{6}=43\\). Therefore, there are 43 twelve-digit numbers satisfying the condition, 21 eleven-digit numbers, 21 ten-digit numbers.... and 1 one-digit number. The sum of these values gives us a final answer of 126",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

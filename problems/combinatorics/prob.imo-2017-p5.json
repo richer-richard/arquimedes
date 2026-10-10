@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2017-p5",
+  "title": "2017 IMO Problem 5",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2017,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 106.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Fix \\(N \\ge 1\\). A collection of \\(N(N+1)\\) soccer players of distinct\nheights stand in a row.\nSir Alex Song wishes to remove \\(N(N-1)\\) players from this row\nto obtain a new row of \\(2N\\) players in which the following \\(N\\)\nconditions hold: no one stands between the two tallest players,\nno one stands between the third and fourth tallest players, \\dots,\nno one stands between the two shortest players.\nProve that this is possible.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2017-p5.evanchen",
+      "kind": "proof-sketch",
+      "text": "Some opening remarks:\nlocation and height are symmetric to each other,\nif one thinks about this problem as permutation pattern avoidance.\nSo while officially there are multiple solutions,\nthey are basically isomorphic to one another,\nand I am not aware of any solution otherwise.\n\n[Diagram omitted from this imported TeX transcription.]\n\nTake a partition of \\(N\\) groups in order by height:\n\\(G_1 = \\{1,\\dots,N+1\\}\\), \\(G_2 = \\{N+2, \\dots, 2N+2\\}\\), and so on.\nWe will pick two people from each group \\(G_k\\).\n\nScan from the left until we find two people in the same group \\(G_k\\).\nDelete all people scanned and also everyone in \\(G_k\\).\nAll the groups still have at least \\(N\\) people left,\nso we can induct down with the non-deleted people;\nthe chosen pair is to the far left anyways.\n\nRemark.\n The important bit is to scan by position\n but group by height,\n and moreover not change the groups as we scan.\n Dually, one can have a solution which scans by height\n but groups by position.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

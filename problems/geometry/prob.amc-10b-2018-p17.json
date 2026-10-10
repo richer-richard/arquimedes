@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-2018-p17",
+  "title": "2018 AMC 10B Problem 17",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2018,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 28.8,
+    "source": 1890,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "In rectangle \\(PQRS,\\) \\(PQ = 8\\) and \\(QR = 6.\\) Points \\(A\\) and \\(B\\) lie on \\(PQ,\\) points \\(C\\) and \\(D\\) lie on \\(QR,\\) points \\(E\\) and \\(F\\) lie on \\(RS,\\) and points \\(G\\) and \\(H\\) lie on \\(SP\\) so that \\(AP = BQ < 4\\) and the convex octagon \\(ABCDEFGH\\) is equilateral. The length of a side of this octagon can be expressed in the form \\(k + m\\sqrt{n},\\) where \\(k,\\) \\(m,\\) and \\(n\\) are integers and \\(n\\) is not divisible by the square of any prime. What is \\(k + m + n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(92\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(106\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "7"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2018-p17.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(s\\) be the octagon’s side length and let \\(x=AP=BQ=\\frac{8-s}{2}.\\) The right triangles \\(\\triangle APH\\) and \\(\\triangle BQC\\) have the same hypotenuse \\(s\\) and a leg of length \\(x,\\) so they are congruent; write \\(PH=QC=y.\\) Because \\(CD=HG=s\\) and the vertical sides of the rectangle both have length \\(6,\\) it follows that \\(DR=GS.\\) The right triangles at \\(R\\) and \\(S\\) are then congruent, so \\(RE=SF.\\) Since \\(RS=8\\) and \\(EF=s,\\) each of these equal lengths is \\(\\frac{8-s}{2}=x.\\) Thus all four cut corners have legs \\(x\\) and \\(y.\\)\n\nThe equal octagon sides give \\[8-2x=6-2y=\\sqrt{x^2+y^2}.\\] The first equality gives \\(y=x-1.\\) Substituting and squaring gives \\(2x^2-30x+63=0,\\) so the root with \\(x<4\\) is \\(x=\\frac{15-3\\sqrt{11}}{2}.\\)\n\nThe side length is \\(8-2x=-7+3\\sqrt{11},\\) so \\(k+m+n=-7+3+11=7.\\) Thus, B is the correct answer.",
+      "hints": [
+        "The four cut corners are congruent right triangles with legs \\(x\\) (on the sides of length \\(8\\)) and \\(y\\) (on the sides of length \\(6\\))",
+        "The equal sides give \\(8 - 2x = 6 - 2y = \\sqrt{x^2 + y^2};\\) the first equality gives \\(y = x - 1,\\) then substitute and square"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

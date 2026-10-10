@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-geometry-2018-p7",
+  "title": "2018 HMMT February Geometry Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.optimization-in-geometry",
+      "label": "Optimization in geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2018,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 78.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Triangle \\(A B C\\) has sidelengths \\(A B=14, A C=13\\), and \\(B C=15\\). Point \\(D\\) is chosen in the interior of \\(\\overline{A B}\\) and point \\(E\\) is selected uniformly at random from \\(\\overline{A D}\\). Point \\(F\\) is then defined to be the intersection point of the perpendicular to \\(\\overline{A B}\\) at \\(E\\) and the union of segments \\(\\overline{A C}\\) and \\(\\overline{B C}\\). Suppose that \\(D\\) is chosen such that the expected value of the length of \\(\\overline{E F}\\) is maximized. Find \\(A D\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2018-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\sqrt{70}\\)\nLet \\(G\\) be the intersection of the altitude to \\(\\overline{A B}\\) at point \\(D\\) with \\(\\overline{A C} \\cup \\overline{B C}\\). We first note that the maximal expected value is obtained when \\(D G=\\frac{[A D G C]}{A D}\\), where \\([P]\\) denotes the area of polygon \\(P\\). Note that if \\(D G\\) were not equal to this value, we could move \\(D\\) either closer or further from \\(A\\) and increase the value of the fraction, which is the expected value of \\(E F\\). We note that this equality can only occur if \\(D\\) is on the side of the altitude to \\(\\overline{A B}\\) nearest point \\(B\\). Multiplying both sides of this equation by \\(A D\\) yields \\(A D \\cdot D G=[A D G C]\\), which can be interpreted as meaning that the area of the rectangle with base \\(\\overline{A D}\\) and height \\(\\overline{D G}\\) must have area equal to that of quadrilateral \\(A D G C\\). We can now solve this problem with algebra.\n\nLet \\(x=B D\\). We first compute the area of the rectangle with base \\(\\overline{A D}\\) and height \\(\\overline{D G}\\). We have that \\(A D=A B-B D=14-x\\). By decomposing the \\(13-14-15\\) triangle into a \\(5-12-13\\) triangle and a \\(9-12-15\\) triangle, and using a similarity argument, we find that \\(D G=\\frac{4}{3} x\\). Thus, the area of this rectangle is \\(\\frac{4}{3} x(14-x)=\\frac{56}{3} x-\\frac{4}{3} x^{2}\\).\n\nWe next compute the area of quadrilateral \\(A D G C\\). We note that \\([A D G C]=[A B C]-[B D G]\\). We have that \\([A B C]=\\frac{1}{2}(12)(14)=84\\). We have \\(B D=x\\) and \\(D G=\\frac{4}{3} x\\), so \\([B D G]=\\frac{1}{2}(x)\\left(\\frac{4}{3} x\\right)=\\frac{2}{3} x^{2}\\). Therefore, we have \\([A D G C]=[A B C]-[B D G]=84-\\frac{2}{3} x^{2}\\).\n\nEquating these two areas, we have\n\n\\[\\frac{56}{3} x-\\frac{4}{3} x^{2}=84-\\frac{2}{3} x^{2}\\]\n\nor, simplifying,\n\n\\[x^{2}-28 x+126=0\\]\n\nSolving yields \\(x=14 \\pm \\sqrt{70}\\), but \\(14+\\sqrt{70}\\) exceeds \\(A B\\), so we discard it as an extraneous root. Thus, \\(B D=14-\\sqrt{70}\\) and\n\n\\[A D=A B-B D=14-(14-\\sqrt{70})=\\sqrt{70}\\]\n\nRemark: if the altitude to point \\(C\\) meets \\(\\overline{A B}\\) at point \\(H\\), then the general answer to this problem is \\(\\sqrt{A H \\cdot A B}\\). This result can be derived by considering the effects of dilation in the \\(\\overline{A B}\\) direction and dilation in the \\(\\overline{C H}\\) direction then performing dilations such that \\(\\angle C\\) is right and carrying out the calculation described above while considering congruent triangles.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

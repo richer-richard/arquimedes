@@ -1,0 +1,68 @@
+{
+  "id": "prob.aime-ii-2007-p13",
+  "title": "2007 AIME II Problem 13",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.pascals-triangle",
+      "label": "Pascal’s Triangle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2007,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 59.8,
+    "source": 2920,
+    "mohs": null
+  },
+  "estimatedMinutes": 12,
+  "statement": "A triangular array of squares has one square in the first row, two in the second, and, in general, \\(k\\) squares in the \\(k\\)th row for \\(1 \\le k \\le 11.\\) With the exception of the bottom row, each square rests on two squares in the row immediately below, as illustrated in the figure. In each square of the eleventh row, a \\(0\\) or a \\(1\\) is placed. Numbers are then placed into the other squares, with the entry for each square being the sum of the entries in the two squares below it. For how many initial distributions of \\(0\\)’s and \\(1\\)’s in the bottom row is the number in the top square a multiple of \\(3?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "640",
+    "value": "640"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2007-p13.live",
+      "kind": "proof-sketch",
+      "text": "Label the bottom-row entries \\(x_0,\\) \\(x_1,\\) \\(\\ldots,\\) \\(x_{10}.\\) Since each square is the sum of the two below it, the contributions accumulate with Pascal’s-triangle weights: the top square equals \\(\\sum_{i=0}^{10} \\binom{10}{i} x_i.\\)\n\nModulo \\(3,\\) direct checking (or Lucas’ theorem with \\(10 = 101_3\\)) shows that for \\(2 \\le i \\le 8,\\) \\(\\binom{10}{i} \\equiv 0,\\) while \\(\\binom{10}{0} = \\binom{10}{10} = 1\\) and \\(\\binom{10}{1} = \\binom{10}{9} = 10 \\equiv 1.\\) So the top square is a multiple of \\(3\\) exactly when \\(x_0 + x_1 + x_9 + x_{10}\\) \\(\\equiv 0 \\pmod 3.\\)\n\nBecause the four entries are \\(0\\) or \\(1,\\) their sum is divisible by \\(3\\) only when it is \\(0\\) or \\(3:\\) either all four are \\(0\\) (one way) or exactly three are \\(1\\) (four ways), for \\(5\\) choices. The remaining seven entries \\(x_2,\\) \\(\\ldots,\\) \\(x_8\\) are free, so the count is \\(5 \\cdot 2^7 = 640.\\)",
+      "hints": [
+        "Each entry feeds upward like Pascal’s triangle: for bottom entries \\(x_0,\\) \\(\\ldots,\\) \\(x_{10},\\) the top square is \\(\\sum_i \\binom{10}{i} x_i\\)",
+        "Modulo \\(3,\\) except for \\(i = 0,\\) \\(1,\\) \\(9,\\) \\(10,\\) the coefficient \\(\\binom{10}{i}\\) vanishes, so only \\(x_0 + x_1 + x_9 + x_{10}\\) matters"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "194e9f69c668cf245bb5076a61e5b7d115191d5e7dad39b490264ad92d0790a1"
+    ],
+    "solutions": []
+  }
+}

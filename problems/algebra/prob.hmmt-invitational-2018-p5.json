@@ -1,0 +1,83 @@
+{
+  "id": "prob.hmmt-invitational-2018-p5",
+  "title": "2018 HMMT Invitational Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.coloring",
+      "label": "Coloring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recurrences",
+      "label": "Recurrences",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2018,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(G\\) be an undirected simple graph. Let \\(f(G)\\) be the number of ways to orient all of the edges of \\(G\\) in one of the two possible directions so that the resulting directed graph has no directed cycles. Show that \\(f(G)\\) is a multiple of 3 if and only if \\(G\\) has a cycle of odd length.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2018-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(f_{G}(q)\\) be the number of ways to color \\(G\\) with \\(q\\) colors. This is the chromatic polynomial of \\(G\\), and turns out to be polynomial in \\(q\\). Indeed, choose an edge \\(e\\) and let \\(G \\backslash e\\) be the graph \\(G\\) with \\(e\\) removed and let \\(G / e\\) be graph \\(G\\) with the vertices on either side of \\(e\\) merged together (multiple edges are removed). It is not hard to see that\n\n\\[f_{G}(q)=f_{G \\backslash e}(q)-f_{G / e}(q)\\]\n\nand that for an empty graph \\(E_{n}\\) with \\(n\\) vertices, we have \\(f_{E_{n}}(q)=q^{n}\\). Induction finishes.\nNow we can also show that the desired number of ways to direct \\(G\\) to avoid directed cycles is \\(c_{G}=\\) \\((-1)^{n} f_{G}(-1)\\) where \\(n\\) is the number of vertices of \\(G\\). The way to do it is to show that\n\n\\[c_{G}=c_{G \\backslash e}+c_{G / e}\\]\n\nand \\(c_{E_{n}}=1\\). Thus \\((-1)^{n} c_{G}\\) will satisfy the desired recurrence, after multiplying the above by \\((-1)^{n}\\), and satisfies the correct initial conditions.\nNow all we need to know is that \\(f_{G}(q)\\) has integer coefficients, so that \\((-1)^{n} c_{G} \\equiv f_{G}(-1) \\equiv f_{G}(2)\\) \\((\\bmod 3)\\), and \\(f_{G}(2)=0\\) when \\(G\\) is not bipartite and is \\(2^{c(G)}\\) where \\(c(G)\\) is the number of connected components of \\(G\\) otherwise. The result follows.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

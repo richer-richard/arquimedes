@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-team-2016-p8",
+  "title": "2016 HMMT February Team Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.single-variable",
+      "label": "Single-variable",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.trigonometric-functions",
+      "label": "Trigonometric functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2016,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 88.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute\n\n\\[\\int_{0}^{\\pi} \\frac{2 \\sin \\theta+3 \\cos \\theta-3}{13 \\cos \\theta-5} \\mathrm{~d} \\theta .\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2016-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\frac{3 \\pi}{13}-\\frac{4}{13} \\log \\frac{3}{2}\\)\nWe have\n\n\\[\\begin{aligned}\n\\int_{0}^{\\pi} \\frac{2 \\sin \\theta+3 \\cos \\theta-3}{13 \\cos \\theta-5} \\mathrm{~d} \\theta & =2 \\int_{0}^{\\pi / 2} \\frac{2 \\sin 2 x+3 \\cos 2 x-3}{13 \\cos 2 x-5} \\mathrm{~d} x \\\\\n& =2 \\int_{0}^{\\pi / 2} \\frac{4 \\sin x \\cos x-6 \\sin ^{2} x}{8 \\cos ^{2} x-18 \\sin ^{2} x} \\mathrm{~d} x \\\\\n& =2 \\int_{0}^{\\pi / 2} \\frac{\\sin x(2 \\cos x-3 \\sin x)}{(2 \\cos x+3 \\sin x)(2 \\cos x-3 \\sin x)} \\mathrm{d} x \\\\\n& =2 \\int_{0}^{\\pi / 2} \\frac{\\sin x}{2 \\cos x+3 \\sin x}\n\\end{aligned}\\]\n\nTo compute the above integral we want to write \\(\\sin x\\) as a linear combination of the denominator and its derivative:\n\n\\[\\begin{aligned}\n2 \\int_{0}^{\\pi / 2} \\frac{\\sin x}{2 \\cos x+3 \\sin x} & =2 \\int_{0}^{\\pi / 2} \\frac{-\\frac{1}{13}[-3(2 \\cos x+3 \\sin x)+2(3 \\cos x-2 \\sin x)]}{2 \\cos x+3 \\sin x} \\\\\n& =-\\frac{2}{13}\\left[\\int_{0}^{\\pi / 2}(-3)+2 \\int_{0}^{\\pi} \\frac{-2 \\sin x+3 \\cos x}{2 \\cos x+3 \\sin x}\\right] \\\\\n& =-\\frac{2}{13}\\left[-\\frac{3 \\pi}{2}+\\left.2 \\log (3 \\sin x+2 \\cos x)\\right|_{0} ^{\\pi / 2}\\right] \\\\\n& =-\\frac{2}{13}\\left[-\\frac{3 \\pi}{2}+2 \\log \\frac{3}{2}\\right] \\\\\n& =\\frac{3 \\pi}{13}-\\frac{4}{13} \\log \\frac{3}{2} .\n\\end{aligned}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

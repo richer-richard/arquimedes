@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2025-p13",
+  "title": "2025 AMC 12A Problem 13",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.extremal-argument",
+      "label": "Extremal argument",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2025,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 27.5,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(C = \\{1, 2, 3, \\ldots, 13\\}.\\) Let \\(N\\) be the greatest integer such that there exists a subset of \\(C\\) with \\(N\\) elements that does not contain five consecutive integers. Suppose \\(N\\) integers are chosen at random from \\(C\\) without replacement. What is the probability that the chosen elements do not include five consecutive integers?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{3}{130}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{3}{143}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{5}{143}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{1}{26}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{5}{78}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "1/26"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2025-p13.live",
+      "kind": "proof-sketch",
+      "text": "To avoid five consecutive integers, it suffices to remove two elements (for example \\(5\\) and \\(10\\)), and no single removal can hit both disjoint blocks \\(\\{1,\\ldots,5\\}\\) and \\(\\{9,\\ldots,13\\}.\\) Thus \\(N = 11.\\)\n\nChoosing \\(11\\) of \\(13\\) elements is the same as removing \\(2,\\) which can be done in \\(\\binom{13}{2} = 78\\) ways. The chosen set avoids five consecutive integers exactly when the two removed elements together intersect every window \\(\\{t, t+1, t+2, t+3, t+4\\}\\) for \\(t = 1, \\ldots, 9.\\)\n\nThis forces one removed element in \\(\\{1,\\ldots,5\\},\\) the other in \\(\\{9,\\ldots,13\\},\\) and the two within \\(5\\) of each other. The valid removals are \\(\\{4,9\\},\\) \\(\\{5,9\\},\\) and \\(\\{5,10\\},\\) giving \\(3\\) of them.\n\nThe probability is \\(\\dfrac{3}{78} = \\dfrac{1}{26}.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Removing two well-placed elements breaks every run of five, so \\(N = 11\\)",
+        "Choosing \\(11\\) means removing \\(2\\); count removals whose two elements hit every block of five consecutive integers"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

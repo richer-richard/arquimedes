@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-guts-2020-p21",
+  "title": "2020 HMMT February Guts Problem 21",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.diophantine-equations",
+      "label": "Diophantine equations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2020,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 79.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "We call a positive integer \\(t\\) good if there is a sequence \\(a_{0}, a_{1}, \\ldots\\) of positive integers satisfying \\(a_{0}=15, a_{1}=t\\), and\n\n\\[a_{n-1} a_{n+1}=\\left(a_{n}-1\\right)\\left(a_{n}+1\\right)\\]\n\nfor all positive integers \\(n\\). Find the sum of all good numbers.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "296",
+    "value": "296"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2020-p21.hmmt",
+      "kind": "proof-sketch",
+      "text": "By the condition of the problem statement, we have\n\n\\[a_{n}^{2}-a_{n-1} a_{n+1}=1=a_{n-1}^{2}-a_{n-2} a_{n}\\]\n\nThis is equivalent to\n\n\\[\\frac{a_{n-2}+a_{n}}{a_{n-1}}=\\frac{a_{n-1}+a_{n+1}}{a_{n}}\\]\n\nLet \\(k=\\frac{a_{0}+a_{2}}{a_{1}}\\). Then we have\n\n\\[\\frac{a_{n-1}+a_{n+1}}{a_{n}}=\\frac{a_{n-2}+a_{n}}{a_{n-1}}=\\frac{a_{n-3}+a_{n-1}}{a_{n-2}}=\\cdots=\\frac{a_{0}+a_{2}}{a_{1}}=k .\\]\n\nTherefore we have \\(a_{n+1}=k a_{n}-a_{n-1}\\) for all \\(n \\geq 1\\). We know that \\(k\\) is a positive rational number because \\(a_{0}, a_{1}\\), and \\(a_{2}\\) are all positive integers. We claim that \\(k\\) must be an integer. Suppose that \\(k=\\frac{p}{q}\\) with \\(\\operatorname{gcd}(p, q)=1\\). Since \\(k a_{n}=a_{n-1}+a_{n+1}\\) is always an integer for \\(n \\geq 1\\), we must have \\(q \\mid a_{n}\\) for all \\(n \\geq 1\\). This contradicts \\(a_{2}^{2}-a_{1} a_{3}=1\\). Conversely, if \\(k\\) is an integer, inductively all \\(a_{i}\\) are integers.\nNow we compute \\(a_{2}=\\frac{t^{2}-1}{15}\\), so \\(k=\\frac{t^{2}+224}{15 t}\\) is an integer. Therefore \\(15 k-t=\\frac{224}{t}\\) is an integer. Combining with the condition that \\(a_{2}\\) is an integer limits the possible values of \\(t\\) to \\(1,4,14,16,56\\), 224. The values \\(t<15\\) all lead to \\(a_{n}=0\\) for some \\(n\\) whereas \\(t>15\\) leads to a good sequence. The sum of the solutions is\n\n\\[16+56+224=296\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

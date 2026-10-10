@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tst-2017-p6",
+  "title": "USA TST 2017 Problem 6",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TST",
+    "year": 2017,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 106.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Prove that there are infinitely many triples \\((a,b,p)\\) of integers,\nwith \\(p\\) prime and \\(0 < a \\le b < p\\),\nfor which \\(p^5\\) divides \\((a+b)^p - a^p - b^p\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tst-2017-p6.evanchen",
+      "kind": "proof-sketch",
+      "text": "The key claim is that if \\(p \\equiv 1 \\pmod 3\\),\nthen\n\\[ p(x^2+xy+y^2)^2 \\text{ divides } (x+y)^p - x^p - y^p \\]\nas polynomials in \\(x\\) and \\(y\\).\nSince it's known that one can select \\(a\\) and \\(b\\) such that\n\\(p^2 \\mid a^2 + ab + b^2\\), the conclusion follows.\n(The theory of quadratic forms tells us we can do it with \\(p^2 = a^2+ab+b^2\\);\nThue's lemma lets us do it by solving \\(x^2+x+1 \\equiv 0 \\pmod{p^2}\\).)\n\nTo prove this, it is the same to show that\n\\[ (x^2+x+1)^2 \\text{ divides } F(x) \\coloneq (x+1)^p - x^p - 1. \\]\nsince the binomial coefficients \\(\\binom pk\\) are clearly divisible by \\(p\\).\nLet \\(\\zeta\\) be a third root of unity.\nThen \\(F(\\zeta) = (1+\\zeta)^p - \\zeta^p - 1 = -\\zeta^2 - \\zeta - 1 = 0\\).\nMoreover, \\(F'(x) = p(x+1)^{p-1} - px^{p-1}\\),\nso \\(F'(\\zeta) = p - p = 0\\).\nHence \\(\\zeta\\) is a double root of \\(F\\) as needed.\n\n(Incidentally, \\(p = 2017\\) works!)\n\nRemark.\nOne possible motivation for this solution is the case \\(p = 7\\).\nIt is nontrivial even to prove that \\(p^2\\) can divide the expression\nif we exclude the situation \\(a+b=p\\) (which provably never achieves \\(p^3\\)).\nAs \\(p = 3, 5\\) fails considering the \\(p = 7\\) polynomial gives\n\\[ (x+1)^7 - x^7 - 1 = 7x(x+1) \\left( x^4 + 2x^3 + 3x^2 + 2x + 1 \\right). \\]\nThe key is now to notice that the last factor is \\((x^2+x+1)^2\\),\nwhich suggests the entire solution.\n\nIn fact, even if \\(p \\equiv 2 \\pmod 3\\),\nthe polynomial \\(x^2+x+1\\) still divides \\((x+1)^p-x^p-1\\).\nSo even the \\(p = 5\\) case can motivate the main idea.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-i-2015-p13",
+  "title": "2015 AIME I Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.pairing-and-grouping",
+      "label": "Pairing and grouping",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2015,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 67.1,
+    "source": 3370,
+    "mohs": null
+  },
+  "estimatedMinutes": 20,
+  "statement": "With all angles measured in degrees, the product \\(\\prod_{k=1}^{45} \\csc^2(2k-1)^\\circ = m^n,\\) where \\(m\\) and \\(n\\) are integers greater than \\(1.\\) Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "91",
+    "value": "91"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2015-p13.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(P = \\sin 1^\\circ \\sin 3^\\circ \\cdots \\sin 89^\\circ\\) and \\(Q = \\sin 2^\\circ \\sin 4^\\circ \\cdots \\sin 88^\\circ,\\) so the desired product is \\(\\frac{1}{P^2}.\\) Then \\(PQ = \\prod_{k=1}^{89} \\sin k^\\circ,\\) and multiplying this by itself in reverse order, using \\(\\sin(90 - k)^\\circ = \\cos k^\\circ,\\) gives \\[P^2Q^2 = \\prod_{k=1}^{89} \\sin k^\\circ \\cos k^\\circ.\\]\n\nMultiply by \\(2^{89}\\) and use \\(2\\sin k^\\circ \\cos k^\\circ = \\sin 2k^\\circ:\\) \\[ \\begin{aligned} 2^{89} P^2 Q^2 &= \\prod_{k=1}^{89} \\sin 2k^\\circ \\\\ &= \\left(\\prod_{k=1}^{44} \\sin 2k^\\circ\\right) \\\\ &\\quad {}\\cdot \\left(\\prod_{k=46}^{89} \\sin 2k^\\circ\\right) \\\\ &= Q \\cdot Q, \\end{aligned} \\] since \\(\\sin 90^\\circ = 1\\) and \\(\\sin(180 - x)^\\circ = \\sin x^\\circ\\) turns the second half into \\(Q\\) as well.\n\nBecause \\(Q \\ne 0,\\) it follows that \\(P^2 = 2^{-89},\\) so \\(\\prod_{k=1}^{45} \\csc^2(2k-1)^\\circ = 2^{89}.\\) Since \\(89\\) is prime, the only representation \\(m^n\\) with \\(m, n \\gt 1\\) is \\(m = 2,\\) \\(n = 89,\\) and \\(m + n = 91.\\)",
+      "hints": [
+        "Let \\(P\\) and \\(Q\\) be the products of the sines of the odd and even degree angles up to \\(89^\\circ;\\) pair \\(\\sin k^\\circ\\) with \\(\\sin(90-k)^\\circ = \\cos k^\\circ\\)",
+        "Then \\(P^2Q^2 = \\prod \\sin k^\\circ \\cos k^\\circ;\\) doubling every factor turns the product into \\(Q^2\\) again, leaving only a power of \\(2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

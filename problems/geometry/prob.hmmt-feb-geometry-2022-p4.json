@@ -1,0 +1,77 @@
+{
+  "id": "prob.hmmt-feb-geometry-2022-p4",
+  "title": "2022 HMMT February Geometry Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2022,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 78.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Parallel lines \\(\\ell_{1}, \\ell_{2}, \\ell_{3}, \\ell_{4}\\) are evenly spaced in the plane, in that order. Square \\(A B C D\\) has the property that \\(A\\) lies on \\(\\ell_{1}\\) and \\(C\\) lies on \\(\\ell_{4}\\). Let \\(P\\) be a uniformly random point in the interior of \\(A B C D\\) and let \\(Q\\) be a uniformly random point on the perimeter of \\(A B C D\\). Given that the probability that \\(P\\) lies between \\(\\ell_{2}\\) and \\(\\ell_{3}\\) is \\(\\frac{53}{100}\\), the probability that \\(Q\\) lies between \\(\\ell_{2}\\) and \\(\\ell_{3}\\) can be expressed as \\(\\frac{a}{b}\\), where \\(a\\) and \\(b\\) are relatively prime positive integers. Compute \\(100 a+b\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "6100",
+    "value": "6100"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2022-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "The first thing to note is that the area of \\(A B C D\\) does not matter in this problem, so for the sake of convenience, introduce coordinates so that \\(A=(0,0), B=(1,0)\\), and \\(C=(0,1)\\).\nSuppose \\(A\\) and \\(B\\) lie on the same side of \\(\\ell_{2}\\). Then, by symmetry, \\(C\\) and \\(D\\) lie on the same side of \\(\\ell_{3}\\). Now suppose \\(B C\\) intersects \\(\\ell_{2}\\) and \\(\\ell_{3}\\) at \\(X\\) and \\(Y\\), respectively, and that \\(D A\\) intersects \\(\\ell_{2}\\) and \\(\\ell_{3}\\) at \\(U\\) and \\(V\\), respectively. Note that \\(X Y V U\\) is a parallelogram. Since \\(B C=B X+X Y+Y C=B X+2 X Y>2 X Y\\), we have that \\(X Y\\) is less than half the side length of the square, so the area of \\(X Y V U\\) is at most half of the area of square \\(A B C D\\). However, since \\(0.53>\\frac{1}{2}\\), this can't happen. Similar reasoning applies if \\(B\\) and \\(C\\) lie on the same side of \\(\\ell_{3}\\). Therefore, points \\(B\\) and \\(D\\) lie between \\(\\ell_{2}\\) and \\(\\ell_{3}\\).\nLet \\(A B\\) and \\(A D\\) intersect \\(\\ell_{2}\\) at points \\(M\\) and \\(N\\), respectively. Let \\(r=A M\\) and \\(s=A N\\). By symmetry, \\([A M N]=0.235\\), so \\(r s=0.47\\). Additionally, in coordinates line \\(\\ell_{2}\\) is just \\(\\frac{x}{r}+\\frac{y}{s}=1\\). Therefore line \\(\\ell_{4}\\) is given by \\(\\frac{x}{r}+\\frac{y}{s}=3\\). Since \\(C=(1,1)\\) lies on this line, \\(\\frac{1}{r}+\\frac{1}{s}=3\\).\nThe answer that we want is\n\n\\[1-\\frac{2 r+2 s}{4}=1-\\frac{r+s}{2}\\]\n\nOn the other hand, the condition \\(\\frac{1}{r}+\\frac{1}{s}=3\\) rearranges to \\(3 r s=r+s\\), so \\(r+s=1.41\\). Thus the answer is \\(1-\\frac{1.41}{2}=0.295=\\frac{59}{200}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

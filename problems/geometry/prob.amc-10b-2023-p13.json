@@ -1,0 +1,94 @@
+{
+  "id": "prob.amc-10b-2023-p13",
+  "title": "2023 AMC 10B Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.absolute-value",
+      "label": "Absolute value",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.area",
+      "label": "Area",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2023,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 25.9,
+    "source": 1600,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "What is the area of the region in the coordinate plane defined by the inequality \\[\\bigl||x| - 1\\bigr| + \\bigl||y| - 1\\bigr| \\le 1?\\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(12\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "8"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2023-p13.live",
+      "kind": "proof-sketch",
+      "text": "Substitute \\(u = |x|,\\) \\(v = |y|.\\) Then \\(|u - 1| + |v - 1| \\le 1\\) is a diamond centered at \\((1, 1)\\) with diagonals of length \\(2,\\) so it has area \\(2,\\) and it sits entirely in \\(u, v \\ge 0.\\) The map \\((x, y) \\mapsto (|x|, |y|)\\) is four-to-one over \\(u, v \\gt 0,\\) so the full region has area \\(4 \\times 2 = 8.\\) Thus, B is the correct answer.",
+      "hints": [
+        "Substitute \\(u = |x|\\) and \\(v = |y|;\\) then \\(|u - 1| + |v - 1| \\le 1\\) is a diamond",
+        "Reflecting the first-quadrant piece across both axes copies it \\(4\\) times"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

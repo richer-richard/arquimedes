@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2009-p7",
+  "title": "2009 AIME I Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.telescoping",
+      "label": "Telescoping",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2009,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 47.7,
+    "source": 2450,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "The sequence \\((a_n)\\) satisfies \\(a_1 = 1\\) and \\(5^{(a_{n+1} - a_n)} - 1 = \\frac{1}{n + \\frac{2}{3}}\\) for \\(n \\ge 1.\\) Let \\(k\\) be the least integer greater than \\(1\\) for which \\(a_k\\) is an integer. Find \\(k.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "41",
+    "value": "41"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2009-p7.live",
+      "kind": "proof-sketch",
+      "text": "The relation says \\(5^{a_{n+1} - a_n} = 1 + \\frac{3}{3n + 2} = \\frac{3n+5}{3n+2}.\\) Multiplying these equations for \\(n = 1,\\) \\(2,\\) \\(\\ldots,\\) \\(k - 1\\) telescopes: \\[5^{a_k - a_1} = \\frac{3k + 2}{5},\\] so \\[ \\begin{aligned} a_k &= 1 + \\log_5 \\frac{3k+2}{5} \\\\ &= \\log_5 (3k + 2). \\end{aligned} \\]\n\nThus \\(a_k\\) is an integer exactly when \\(3k + 2\\) is a power of \\(5.\\) Since \\(5^j \\equiv 2^j \\pmod 3,\\) only odd exponents \\(j\\) give numbers of the form \\(3k + 2.\\) The power \\(5^1 = 5\\) gives \\(k = 1,\\) which is excluded, and the next, \\(5^3 = 125 = 3 \\cdot 41 + 2,\\) gives \\(k = 41.\\)",
+      "hints": [
+        "Rewrite the relation as \\(5^{a_{n+1} - a_n} = \\frac{3n+5}{3n+2}\\) and multiply successive instances to telescope",
+        "The closed form is \\(a_k = \\log_5(3k+2),\\) so you need \\(3k + 2\\) to be a power of \\(5\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

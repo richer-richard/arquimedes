@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-team-2010-p10",
+  "title": "2010 HMMT November Team Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2010,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 61.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A function \\(f\\left(x_{1}, x_{2}, \\ldots, x_{n}\\right)\\) is linear in each of the \\(x_{i}\\) and \\(f\\left(x_{1}, x_{2}, \\ldots, x_{n}\\right)=\\frac{1}{x_{1} x_{2} \\cdots x_{n}}\\) when \\(x_{i} \\in\\{3,4\\}\\) for all \\(i\\). In terms of \\(n\\), what is \\(f(5,5, \\ldots, 5) ?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2010-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{1}{6^{n}}\\) Let \\(f_{n}\\left(x_{1}, x_{2}, \\ldots, x_{n}\\right)\\) denote the \\(n\\)-variable version of the function. We will prove that \\(f_{n}(5, \\ldots, 5)=\\frac{1}{6^{n}}\\) by induction. The base case was done in the two previous problems. Suppose we know that \\(f_{n-1}(5,5, \\ldots, 5)=\\frac{1}{.6^{n-1}}\\). Let \\(g\\left(x_{1}, \\ldots, x_{n-1}\\right)=3 f_{n}\\left(x_{1}, \\ldots, x_{n-1}, 3\\right)\\). We have that \\(g\\) is linear in \\(x_{1}, \\ldots, x_{n-1}\\) and \\(g\\left(x_{1}, \\ldots, x_{n-1}\\right)=\\frac{1}{x_{1} \\cdots x_{n-1}}\\) for all \\(x_{1}, \\ldots, x_{n-1} \\in\\{3,4\\}\\). By the inductive hypothesis, we have \\(g(5, \\ldots, 5)=\\frac{1}{6^{n-1}}=f_{n-1}(5, \\ldots, 5)\\). Therefore, \\(f_{n}(5, \\ldots, 5,3)=\\frac{f_{n-1}(5, \\ldots, 5)}{3}\\). Similarly, \\(f_{n}(5, \\ldots, 5,4)=\\frac{f_{n-1}(5, \\ldots, 5)}{4}\\).\n\n\\[\\begin{aligned}\nf_{n}(5,5, \\ldots, 5,5) & =2 f_{n}(5,5, \\ldots, 5,4)-f_{n}(5,5, \\ldots, 5,3) \\\\\n& =\\frac{1}{2} f_{n-1}(5,5, \\ldots, 5)-\\frac{1}{3} f_{n-1} \\\\\n& =\\frac{1}{6} f_{n-1}(5,5, \\ldots, 5) \\\\\n& =\\frac{1}{6 \\cdot 6^{n-1}} \\\\\n& =\\frac{1}{6^{n}}\n\\end{aligned}\\]\n\nand this proves our conjecture by induction.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

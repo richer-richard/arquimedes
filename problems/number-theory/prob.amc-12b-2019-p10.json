@@ -1,0 +1,90 @@
+{
+  "id": "prob.amc-12b-2019-p10",
+  "title": "2019 AMC 12B Problem 10",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.parity",
+      "label": "Parity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2019,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 28.9,
+    "source": 1640,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The figure below is a map showing \\(12\\) cities and \\(17\\) roads connecting certain pairs of cities. Paula wishes to travel along exactly \\(13\\) of those roads, starting at city \\(A\\) and ending at city \\(L,\\) without traveling along any portion of a road more than once. (Paula is allowed to visit a city more than once.) How many different routes can Paula take?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2019-p10.live",
+      "kind": "proof-sketch",
+      "text": "Name the four cities in the top row \\(A,B,C,D,\\) those in the middle row \\(E,F,G,H,\\) and those in the bottom row \\(I,J,K,L.\\) A route using \\(13\\) roads is an open Euler trail, so in the used graph exactly \\(A\\) and \\(L\\) have odd degree.\n\nIn the full map, the vertices whose degree parity must change are \\(A,B,C,E,H,J,K,L.\\) Because only \\(4\\) roads are removed, those roads must pair these \\(8\\) vertices. Among them, \\(E\\) is adjacent only to \\(A,\\) forcing \\(AE\\) to be removed; then \\(BC\\) is forced. Similarly \\(H\\) is adjacent only to \\(L,\\) forcing \\(HL,\\) and then \\(JK.\\)\n\nThe remaining graph is a chain \\[ \\begin{gathered} A-B-F,\\\\ F-E-I-J-F,\\\\ F-G,\\\\ G-C-D-H-G,\\\\ G-K-L. \\end{gathered} \\] Each of the two \\(4\\)-cycles can be traversed in either direction, and everything else is forced. Hence there are \\(2\\cdot2=4\\) routes.\n\nThus, E is the correct answer.",
+      "hints": [
+        "Using \\(13\\) of the \\(17\\) roads leaves exactly \\(4\\) roads unused",
+        "A trail exists only if just \\(A\\) and \\(L\\) have odd degree; this forces which \\(4\\) roads to drop"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "cf72c5071441ff556ad68f5410abc5a5da862069b770db9cd06a93742ae86706"
+    ],
+    "solutions": []
+  }
+}

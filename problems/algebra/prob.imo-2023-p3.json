@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2023-p3",
+  "title": "2023 IMO Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2023,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 102.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For each integer \\(k\\geq 2\\), determine all infinite sequences of positive integers\n\\(a_1\\), \\(a_2\\), \\dots\\ for which there exists a polynomial \\(P\\) of the form\n\\[ P(x)=x^k+c_{k-1}x^{k-1}+\\dots + c_1 x+c_0, \\]\nwhere \\(c_0\\), \\(c_1\\), \\dots, \\(c_{k-1}\\) are non-negative integers, such that\n\\[ P(a_n)=a_{n+1}a_{n+2}\\dotsm a_{n+k} \\]\nfor every integer \\(n\\geq 1\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2023-p3.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is \\(a_n\\) being an arithmetic progression.\nIndeed, if \\(a_n = d(n-1) + a_1\\) for \\(d \\ge 0\\) and \\(n \\ge 1\\), then\n\\[ a_{n+1} a_{n+2} \\dots a_{n+k} = (a_n+d)(a_n+2d)\\dots(a_n+kd) \\]\nso we can just take \\(P(x) = (x+d)(x+2d) \\dots (x+kd)\\).\n\nThe converse direction takes a few parts.\n\nClaim.\n Either \\(a_1 < a_2 < \\dotsb\\) or the sequence is constant.\n\nProof.\n Note that\n \\[\\begin{aligned}\n P(a_{n-1}) &= a_{n}a_{n+1}\\dotsm a_{n+k-1} \\\\\n P(a_n) &= a_{n+1}a_{n+2}\\dotsm a_{n+k} \\\\\n \\implies a_{n+k} &= \\frac{P(a_n)}{P(a_{n-1})} \\cdot a_n.\n \\end{aligned}\\]\n Now the polynomial \\(P\\) is strictly increasing over \\(\\mathbb{N}\\).\n\n So assume for contradiction there's an index \\(n\\) such that \\(a_n < a_{n-1}\\).\n Then in fact the above equation shows \\(a_{n+k} < a_n < a_{n-1}\\).\n Then there's an index \\(\\ell \\in [n+1,n+k]\\) such that\n \\(a_\\ell < a_{\\ell-1}\\), and also \\(a_\\ell < a_n\\).\n Continuing in this way, we can an infinite descending subsequence of \\((a_n)\\),\n but that's impossible because we assumed integers.\n\n Hence we have \\(a_1 \\le a_2 \\le \\dotsb\\).\n Now similarly, if \\(a_n = a_{n-1}\\) for any index \\(n\\), then \\(a_{n+k} = a_n\\),\n ergo \\(a_{n-1} = a_n = a_{n+1} = \\dots = a_{n+k}\\).\n So the sequence is eventually constant, and then by downwards induction,\n it is fully constant.\n\nClaim.\n There exists a constant \\(C\\) (depending only \\(P\\), \\(k\\))\n such that we have \\(a_{n+1} \\leq a_n + C\\).\n\nProof.\n Let \\(C\\) be a constant such that \\(P(x) < x^k + Cx^{k-1}\\) for all \\(x \\in \\mathbb{N}\\)\n (for example \\(C = c_0 + c_1 + \\dots + c_{k-1} + 1\\) works).\n We have\n \\[\\begin{aligned}\n a_{n+k} &= \\frac{P(a_n)}{a_{n+1} a_{n+2} \\dots a_{n+k-1}} \\\\\n &< \\frac{P(a_n)}{(a_n+1)(a_n+2)\\dots(a_n+k-1)} \\\\\n &< \\frac{a_n^k + C \\cdot a_n^{k-1}}{(a_n+1)(a_n+2)\\dots(a_n+k-1)} \\\\\n &< a_n + C + 1. \\qedhere\n \\end{aligned}\\]\n\nAssume henceforth \\(a_n\\) is nonconstant, and hence unbounded.\nFor each index \\(n\\) and term \\(a_n\\) in the sequence,\nconsider the associated differences\n\\(d_1 = a_{n+1} - a_n\\), \\(d_2 = a_{n+2} - a_{n+1}\\), \\dots, \\(d_k = a_{n+k}-a_{n+k-1}\\),\nwhich we denote by\n\\[ \\Delta(n) \\coloneq (d_1, \\dots, d_k).\\]\nThis \\(\\Delta\\) can only take up to \\(C^k\\) different values.\nSo in particular, some tuple \\((d_1, \\dots, d_n)\\)\nmust appear infinitely often as \\(\\Delta(n)\\); for that tuple, we obtain\n\\[ P(a_N) = (a_N+d_1)(a_N+d_1+d_2) \\dots (a_N+d_1+\\dots+d_k) \\]\nfor infinitely many \\(N\\).\nBut because of that, we actually must have\n\\[ P(X) = (X+d_1)(X+d_1+d_2) \\dots (X+d_1+\\dots+d_k). \\]\n\nHowever, this also means that exactly one output to \\(\\Delta\\)\noccurs infinitely often (because that output is determined by \\(P\\)).\nConsequently, it follows that \\(\\Delta\\) is eventually constant.\nFor this to happen, \\(a_n\\) must eventually coincide with an arithmetic\nprogression of some common difference \\(d\\),\nand \\(P(X) = (X+d)(X+2d) \\dots (X+kd)\\).\nFinally, this implies by downwards induction that \\(a_n\\) is\nan arithmetic progression on all inputs.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

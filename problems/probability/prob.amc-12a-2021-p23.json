@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12a-2021-p23",
+  "title": "2021 AMC 12A Problem 23",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.random-walk",
+      "label": "Random walk",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.recursive-probability",
+      "label": "Recursive probability",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2021,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 49.5,
+    "source": 2520,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Frieda the frog begins a sequence of hops on a \\(3\\times 3\\) grid of squares, moving one square on each hop and choosing at random the direction of each hop: up, down, left, or right. She does not hop diagonally. When the direction of a hop would take Frieda off the grid, she “wraps around” and jumps to the opposite edge. For example, if Frieda begins in the center square and makes two hops “up,” the first hop places her in the top row middle square, and the second hop causes her to jump to the opposite edge, landing in the bottom row middle square. Suppose Frieda starts from the center square, makes at most four hops at random, and stops hopping if she lands on a corner square. What is the probability that she reaches a corner square on one of the four hops?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{9}{16}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{5}{8}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{3}{4}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{25}{32}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{13}{16}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "25/32"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2021-p23.live",
+      "kind": "proof-sketch",
+      "text": "Classify squares as center \\(C,\\) edge-middle \\(E,\\) or corner (absorbing). From \\(C,\\) every hop lands on an \\(E\\) square. From an \\(E\\) square, two of the four neighbors are corners, one is the center, and one is another \\(E\\) square, so \\(P(\\text{corner}) = \\tfrac12,\\) \\(P(\\text{center}) = \\tfrac14,\\) \\(P(E) = \\tfrac14.\\)\n\nLet \\(a_n\\) be the probability of reaching a corner within \\(n\\) hops starting from an edge square, and let \\(c_n\\) be the corresponding probability from the center. Set \\(a_0=c_0=0.\\) Then \\(c_n=a_{n-1}\\) and \\(a_n=\\tfrac12+\\tfrac14c_{n-1}+\\tfrac14a_{n-1}.\\) Thus \\(a_1=\\tfrac12,\\) \\(a_2=\\tfrac12+\\tfrac14\\cdot\\tfrac12=\\tfrac58,\\) and \\[ a_3 = \\tfrac12 + \\tfrac14\\cdot\\tfrac12 + \\tfrac14\\cdot\\tfrac58 = \\tfrac{25}{32}. \\]\n\nStarting from the center with four hops available, the probability equals \\(a_3 = \\tfrac{25}{32}\\) (the first hop reaches an edge, leaving three hops).\n\nThus, the correct answer is D.",
+      "hints": [
+        "Group squares into three states: center, edge-middle, and corner (absorbing); find the transition probabilities from each",
+        "From an edge square, Frieda reaches a corner with probability \\(\\tfrac12,\\) returns to center with \\(\\tfrac14,\\) or moves to another edge with \\(\\tfrac14\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

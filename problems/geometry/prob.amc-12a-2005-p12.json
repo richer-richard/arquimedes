@@ -1,0 +1,89 @@
+{
+  "id": "prob.amc-12a-2005-p12",
+  "title": "2005 AMC 12A Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.lattice-point",
+      "label": "Lattice point",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.slope",
+      "label": "Slope",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2005,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 27.7,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A line passes through \\(A(1, 1)\\) and \\(B(100, 1000).\\) How many other points with integer coordinates are on the line and strictly between \\(A\\) and \\(B?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(9\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "8"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2005-p12.live",
+      "kind": "proof-sketch",
+      "text": "The slope is \\[ \\dfrac{1000 - 1}{100 - 1} = \\dfrac{999}{99} = \\dfrac{111}{11}. \\]\n\nSo every point on the line has the form \\((1 + 11t,\\ 1 + 111t),\\) which is a lattice point exactly when \\(t\\) is an integer. The point is strictly between \\(A\\) and \\(B\\) when \\(0 \\lt t \\lt 9.\\)\n\nThere are \\(8\\) such integers \\(t,\\) giving \\(8\\) lattice points.\n\nThus, the correct answer is D.",
+      "hints": [
+        "Reduce the slope \\(\\dfrac{1000 - 1}{100 - 1}\\) to lowest terms",
+        "Points on the line take the form \\((1 + 11t,\\ 1 + 111t);\\) count integer \\(t\\) strictly between the endpoints"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

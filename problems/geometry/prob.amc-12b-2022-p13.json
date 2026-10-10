@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2022-p13",
+  "title": "2022 AMC 12B Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-decomposition",
+      "label": "Area decomposition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-triple",
+      "label": "Pythagorean Triple",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2022,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 27.5,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The diagram below shows a rectangle with side lengths \\(4\\) and \\(8\\) and a square with side length \\(5.\\) Three vertices of the square lie on three different sides of the rectangle, as shown. What is the area of the region inside both the square and the rectangle?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(15\\dfrac18\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(15\\dfrac38\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(15\\dfrac12\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(15\\dfrac58\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(15\\dfrac78\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "125/8"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2022-p13.live",
+      "kind": "proof-sketch",
+      "text": "Place the rectangle as \\([0,8] \\times [0,4].\\) The tilted square, using the \\(3\\)-\\(4\\)-\\(5\\) right triangles, has vertices \\((4, 0),\\) \\((0, 3),\\) \\((3, 7),\\) and \\((7, 4).\\)\n\nThe entire square lies inside the rectangle except for the triangle poking above the top edge \\(y = 4.\\) That triangle has vertices \\((0.75, 4),\\) \\((3, 7),\\) and \\((7, 4),\\) with area \\[ \\dfrac12 \\cdot (7 - 0.75) \\cdot (7 - 4) = \\dfrac{75}{8}. \\]\n\nThe region inside both is \\(25 - \\dfrac{75}{8} = \\dfrac{125}{8} = 15\\dfrac58.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Set up coordinates; the tilt of the square makes \\(3\\)-\\(4\\)-\\(5\\) right triangles at the corners",
+        "The whole square lies inside the rectangle except one triangle sticking out past the top edge; subtract that triangle from \\(25\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "95f8772b324ecb768d3f1db04abb735c09b10d7b9e6aabf2f9aba5d1da11015e"
+    ],
+    "solutions": []
+  }
+}

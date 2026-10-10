@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2021-p6",
+  "title": "2021 IMO Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2021,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 106.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(m \\ge 2\\) be an integer,\n\\(A\\) a finite set of integers (not necessarily positive)\nand \\(B_1\\), \\(B_2\\), \\dots, \\(B_m\\) subsets of \\(A\\).\nSuppose that, for every \\(k=1,2,\\dots,m\\),\nthe sum of the elements of \\(B_k\\) is \\(m^k\\).\nProve that \\(A\\) contains at least \\(\\frac{m}{2}\\) elements.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2021-p6.evanchen",
+      "kind": "proof-sketch",
+      "text": "If \\(0 \\le X < m^{m+1}\\) is a multiple of \\(m\\), then write it in base \\(m\\) as\n\\[ X = \\sum_{i=1}^m c_i m^i \\qquad c_i \\in \\{0,1,2,\\dots,m-1\\} \\]\nThen swapping the summation to over \\(A\\) through the \\(B_i\\)'s gives\n\\[ X = \\sum_{i = 1}^n \\left( \\sum_{b \\in B_i} b \\right) c_i\n = \\sum_{a \\in A} f_a(X) a\n \\quad\\text{where}\\quad f_a(X) \\coloneq \\sum_{i : a \\in B_i} c_i. \\]\n\nEvidently, \\(0 \\le f_a(X) \\le m(m-1)\\) for any \\(a\\) and \\(X\\).\nHence the right-hand side of the display takes on at most\n\\(\\left( m(m-1) + 1 \\right)^{|A|}\\) distinct values.\nThis means\n\\[ m^m \\le \\left( m(m-1) \\right)^{|A|} \\]\nwhich implies \\(|A| \\ge m/2\\).\n\nRemark.\n [Motivation comments from USJL]\n Let \\(n \\coloneq |A|\\).\n In linear algebra terms,\n we have some \\(n\\)-dimensional 0/1 vectors \\(\\vec{v_1}\\), \\dots, \\(\\vec{v_m}\\)\n and an \\(n\\)-dimensional vector \\(\\vec a\\)\n such that \\(\\vec{v_i} \\cdot \\vec a = m^i\\) for \\(i=1, \\dots, m\\).\n The intuition is that if \\(n\\) is too small,\n then there should be lots of linear dependences between \\(\\vec{v_i}\\).\n\n In fact, Siegel's lemma is a result that says,\n if there are many more vectors than the dimension of the ambient space,\n there exist linear dependences whose coefficients are not-too-big integers.\n On the other hand, any linear dependence between \\(m\\), \\(m^2\\), \\dots, \\(m^m\\)\n is going to have coefficients that are pretty big;\n at least one of them needs to exceed \\(m\\).\n\n Applying Siegel's lemma turns out to solve the problem\n (and is roughly equivalent to the solution above).\n\nRemark.\n In ,\n dgrozev shows the stronger bound\n \\(n \\ge \\left(\\frac{2}{3}+\\frac{c}{\\log m} \\right)m\\) elements,\n for some absolute constant \\(c > 0\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

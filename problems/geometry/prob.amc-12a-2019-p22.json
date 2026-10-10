@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12a-2019-p22",
+  "title": "2019 AMC 12A Problem 22",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.tangent-line",
+      "label": "Tangent line",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2019,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 40.3,
+    "source": 2310,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Circles \\(\\omega\\) and \\(\\gamma,\\) both centered at \\(O,\\) have radii \\(20\\) and \\(17,\\) respectively. Equilateral triangle \\(ABC,\\) whose interior lies in the interior of \\(\\omega\\) but in the exterior of \\(\\gamma,\\) has vertex \\(A\\) on \\(\\omega,\\) and the line containing side \\(BC\\) is tangent to \\(\\gamma.\\) Segments \\(AO\\) and \\(BC\\) intersect at \\(P,\\) and \\(\\dfrac{BP}{CP} = 3.\\) Then \\(AB\\) can be written in the form \\(\\dfrac{m}{\\sqrt{n}} - \\dfrac{p}{\\sqrt{q}}\\) for positive integers \\(m,\\) \\(n,\\) \\(p,\\) \\(q\\) with \\(\\gcd(m, n) = \\gcd(p, q) = 1.\\) What is \\(m + n + p + q?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(42\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(86\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(92\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(114\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(130\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "130"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2019-p22.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(s = AB.\\) Since \\(\\dfrac{BP}{CP} = 3,\\) we have \\(BP = \\dfrac{3s}{4}\\) and \\(CP = \\dfrac{s}{4}.\\) Put \\(P\\) at the origin with \\(BC\\) on the \\(x\\)-axis, \\(B = \\left(-\\tfrac{3s}{4}, 0\\right),\\) \\(C = \\left(\\tfrac{s}{4}, 0\\right),\\) and apex \\(A = \\left(-\\tfrac{s}{4}, \\tfrac{s\\sqrt{3}}{2}\\right).\\)\n\nPoints \\(P, O, A\\) are collinear, so \\(O = t \\cdot A\\) for some scalar \\(t.\\) Two conditions pin it down: \\(O\\) is at distance \\(17\\) from line \\(BC,\\) giving \\(|t| \\cdot \\dfrac{s\\sqrt{3}}{2} = 17,\\) and \\(A\\) is on \\(\\omega,\\) giving \\(|t - 1| \\cdot \\dfrac{s\\sqrt{13}}{4} = 20\\) since \\(|A| = \\dfrac{s\\sqrt{13}}{4}.\\)\n\nSolving, \\(|t| s = \\dfrac{34}{\\sqrt{3}}\\) and \\(|t - 1| s = \\dfrac{80}{\\sqrt{13}}.\\) The valid configuration has \\(O\\) and \\(A\\) on opposite sides of \\(P,\\) so \\(|t-1|s=|t|s+s.\\) Therefore \\[ AB = s = \\dfrac{80}{\\sqrt{13}} - \\dfrac{34}{\\sqrt{3}}. \\]\n\nThen \\(m + n + p + q = 80 + 13\\) \\(+ 34 + 3 = 130.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "Let \\(s = AB.\\) Since \\(\\tfrac{BP}{CP} = 3,\\) we have \\(BP = \\tfrac{3s}{4}\\) and \\(CP = \\tfrac{s}{4}\\)",
+        "Place \\(P\\) at the origin with \\(BC\\) horizontal; \\(O\\) lies on line \\(AP\\) at distance \\(17\\) from \\(BC\\) and \\(20\\) from \\(A\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

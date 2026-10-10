@@ -1,0 +1,77 @@
+{
+  "id": "prob.hmmt-feb-algebra-2004-p10",
+  "title": "2004 HMMT February Algebra Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2004,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 93.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "There exists a polynomial \\(P\\) of degree 5 with the following property: if \\(z\\) is a complex number such that \\(z^{5}+2004 z=1\\), then \\(P\\left(z^{2}\\right)=0\\). Calculate the quotient \\(P(1) / P(-1)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-2004-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "-2010012/2010013\nLet \\(z_{1}, \\ldots, z_{5}\\) be the roots of \\(Q(z)=z^{5}+2004 z-1\\). We can check these are distinct (by using the fact that there's one in a small neighborhood of each root of \\(z^{5}+2004 z\\), or by noting that \\(Q(z)\\) is relatively prime to its derivative). And certainly none of the roots of \\(Q\\) is the negative of another, since \\(z^{5}+2004 z=1\\) implies \\((-z)^{5}+2004(-z)=-1\\), so their squares are distinct as well. Then, \\(z_{1}^{2}, \\ldots, z_{5}^{2}\\) are the roots of \\(P\\), so if we write \\(C\\) for the leading coefficient of \\(P\\), we have\n\n\\[\\begin{aligned}\n\\frac{P(1)}{P(-1)} & =\\frac{C\\left(1-z_{1}^{2}\\right) \\cdots\\left(1-z_{5}^{2}\\right)}{C\\left(-1-z_{1}^{2}\\right) \\cdots\\left(-1-z_{5}^{2}\\right)} \\\\\n& =\\frac{\\left[\\left(1-z_{1}\\right) \\cdots\\left(1-z_{5}\\right)\\right] \\cdot\\left[\\left(1+z_{1}\\right) \\cdots\\left(1+z_{5}\\right)\\right]}{\\left[\\left(i-z_{1}\\right) \\cdots\\left(i-z_{5}\\right)\\right] \\cdot\\left[\\left(i+z_{1}\\right) \\cdots\\left(i+z_{5}\\right)\\right]} \\\\\n& =\\frac{\\left[\\left(1-z_{1}\\right) \\cdots\\left(1-z_{5}\\right)\\right] \\cdot\\left[\\left(-1-z_{1}\\right) \\cdots\\left(-1-z_{5}\\right)\\right]}{\\left[\\left(i-z_{1}\\right) \\cdots\\left(i-z_{5}\\right)\\right] \\cdot\\left[\\left(-i-z_{1}\\right) \\cdots\\left(-i-z_{5}\\right)\\right]} \\\\\n& =\\frac{\\left(1^{5}+2004 \\cdot 1-1\\right)\\left(-1^{5}+2004 \\cdot(-1)-1\\right)}{\\left(i^{5}+2004 \\cdot i-1\\right)\\left(-i^{5}+2004 \\cdot(-i)-1\\right)} \\\\\n& =\\frac{(2004)(-2006)}{(-1+2005 i)(-1-2005 i)} \\\\\n& =-\\frac{2005^{2}-1}{2005^{2}+1} \\\\\n& =-4020024 / 4020026=-2010012 / 2010013 .\n\\end{aligned}\\]\n\nAlternative Solution: In fact, we can construct the polynomial \\(P\\) explicitly (up to multiplication by a constant). We write \\(P\\left(z^{2}\\right)\\) as a polynomial in \\(z\\); it must use only\neven powers of \\(z\\) and be divisible by \\(z^{5}+2004 z-1\\), so we are inspired to try a difference of squares,\n\n\\[P\\left(z^{2}\\right)=\\left(z^{5}+2004 z-1\\right)\\left(z^{5}+2004 z+1\\right)=\\left(z^{5}+2004 z\\right)^{2}-1^{2}=z^{2}\\left(z^{4}+2004\\right)^{2}-1,\\]\n\ngiving\n\n\\[P(z)=z\\left(z^{2}+2004\\right)^{2}-1 .\\]\n\nNow plugging in \\(z=1\\) and \\(z=-1\\) rapidly gives \\(\\left(2005^{2}-1\\right) /\\left(-2005^{2}-1\\right)\\) as before.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

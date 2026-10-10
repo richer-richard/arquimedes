@@ -1,0 +1,56 @@
+{
+  "id": "prob.hmmt-feb-guts-2005-p40",
+  "title": "2005 HMMT February Guts Problem 40",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.probability",
+      "label": "Probability",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2005,
+    "number": 40
+  },
+  "difficulty": {
+    "course": 75.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In a town of \\(n\\) people, a governing council is elected as follows: each person casts one vote for some person in the town, and anyone that receives at least five votes is elected to council. Let \\(c(n)\\) denote the average number of people elected to council if everyone votes randomly. Find \\(\\lim _{n \\rightarrow \\infty} c(n) / n\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2005-p40.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(1-65 / 24 e\\)\nLet \\(c_{k}(n)\\) denote the expected number of people that will receive exactly \\(k\\) votes. We will show that \\(\\lim _{n \\rightarrow \\infty} c_{k}(n) / n=1 /(e \\cdot k!)\\). The probability that any given person receives exactly \\(k\\) votes, which is the same as the average proportion of people that receive exactly \\(k\\) votes, is\n\n\\[\\binom{n}{k} \\cdot\\left(\\frac{1}{n}\\right)^{k} \\cdot\\left(\\frac{n-1}{n}\\right)^{n-k}=\\left(\\frac{n-1}{n}\\right)^{n} \\cdot \\frac{n(n-1) \\cdots(n-k+1)}{k!\\cdot(n-1)^{k}} .\\]\n\nTaking the limit as \\(n \\rightarrow \\infty\\) and noting that \\(\\lim _{n \\rightarrow \\infty}\\left(1-\\frac{1}{n}\\right)^{n}=\\frac{1}{e}\\) gives that the limit is \\(1 /(e \\cdot k!)\\), as desired. Therefore, the limit of the average proportion of the town that receives at least five votes is\n\n\\[1-\\frac{1}{e}\\left(\\frac{1}{0!}+\\frac{1}{1!}+\\frac{1}{2!}+\\frac{1}{3!}+\\frac{1}{4!}\\right)=1-\\frac{65}{24 e}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

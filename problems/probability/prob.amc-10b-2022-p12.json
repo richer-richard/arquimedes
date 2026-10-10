@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-10b-2022-p12",
+  "title": "2022 AMC 10B Problem 12",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.complementary-probability",
+      "label": "Complementary probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.dice-probability",
+      "label": "Dice (probability)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2022,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 9.5,
+    "source": 960,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "A pair of fair \\(6\\)-sided dice is rolled \\(n\\) times. What is the least value of \\(n\\) such that the probability that the sum of the numbers face up on a roll equals \\(7\\) at least once is greater than \\(\\dfrac{1}{2}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 2 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 3 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 4 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 5 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 6 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2022-p12.live",
+      "kind": "proof-sketch",
+      "text": "To compute this, we can also find the least \\(n\\) such that the probability of not rolling a \\(7\\) is less than \\(\\dfrac 12.\\) Each roll has an independent probability of \\(\\dfrac 16\\) of getting \\(7,\\) so it has a \\(\\dfrac 56\\) probability of not landing on \\(7.\\)\n\nThus, the probability of none of the rolls being \\(7\\) is \\(\\left(\\dfrac 56\\right)^n.\\) We must find the least \\(n\\) such that \\(\\left(\\dfrac 56\\right)^n < \\dfrac 12. \\)\n\nIf \\(n=3,\\) then the probability is \\(\\dfrac{125}{216},\\) which is greater than \\(\\dfrac 12.\\)\n\nIf \\(n=4,\\) then the probability is \\(\\dfrac{625}{1296},\\) which is less than \\(\\dfrac 12.\\) This makes the answer \\(4.\\)\n\nThus, the answer is C .",
+      "hints": [
+        "Compare \\(\\left(\\frac56\\right)^n\\) with \\(\\frac12\\)",
+        "Use the complement: no roll has sum \\(7\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

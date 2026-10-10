@@ -1,0 +1,81 @@
+{
+  "id": "prob.amc-10a-2021-p18",
+  "title": "2021 AMC 10A Problem 18",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functional-equation",
+      "label": "Functional equation",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2021,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 23.2,
+    "source": 1280,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(f\\) be a function defined on the set of positive rational numbers with the property that \\(f(a\\cdot b)=f(a)+f(b)\\) for all positive rational numbers \\(a\\) and \\(b.\\) Suppose that \\(f\\) also has the property that \\(f(p)=p\\) for every prime number \\(p.\\) For which of the following numbers \\(x\\) is \\(f(x) < 0?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{17}{32}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{11}{16}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{7}{9}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{7}{6}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{25}{11}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2021-p18.live",
+      "kind": "proof-sketch",
+      "text": "Repeated use of the functional equation gives \\(f(p^e)=ef(p)=ep\\) for every prime \\(p\\) and positive integer \\(e.\\) Also, \\[f(a)=f\\left(\\frac ab\\right)+f(b),\\] so \\(f(\\frac{a}{b})=f(a)-f(b).\\)\n\nEvaluating the choices by prime factorization, \\[ \\begin{aligned} f(\\frac{17}{32})&=17-5\\cdot2=7,\\\\ f(\\frac{11}{16})&=11-4\\cdot2=3,\\\\ f(\\frac{7}{9})&=7-2\\cdot3=1,\\\\ f(\\frac{7}{6})&=7-2-3=2,\\\\ f(\\frac{25}{11})&=2\\cdot5-11=-1. \\end{aligned} \\] Only the final value is negative.\n\nThus, E is the correct answer.",
+      "hints": [
+        "First determine \\(f(p^e)\\) and \\(f(\\frac{a}{b})\\)",
+        "Evaluate the choices by prime factorization"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

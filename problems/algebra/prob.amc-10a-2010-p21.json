@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-10a-2010-p21",
+  "title": "2010 AMC 10A Problem 21",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2010,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 31.8,
+    "source": 2070,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The polynomial \\[x^3-ax^2+bx-2010\\] has three positive integer zeros. What is the smallest possible value of \\(a?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(78\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(88\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(98\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(108\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(118\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "78"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2010-p21.live",
+      "kind": "proof-sketch",
+      "text": "Let the roots be positive integers \\(r\\le s\\le t.\\) By Vieta’s formulas, \\(rst=2010\\) and \\(a=r+s+t.\\)\n\nSince \\(2010=2\\cdot3\\cdot5\\cdot67,\\) one root must be divisible by \\(67.\\) If that root is larger than \\(67,\\) then it is at least \\(134,\\) which is already worse than the construction below.\n\nThus take \\(t=67\\) and minimize \\(r+s\\) with \\(rs=30.\\) The factor pair with smallest sum is \\(5\\) and \\(6,\\) so \\(a=5+6+67=78.\\)\n\nThus, A is the correct answer.",
+      "hints": [
+        "The roots multiply to \\(2010\\) and sum to \\(a\\)",
+        "Put \\(67\\) alone, then split \\(30\\) into two factors with smallest sum"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

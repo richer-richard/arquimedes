@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2020-p25",
+  "title": "2020 AMC 12B Problem 25",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-probability",
+      "label": "Geometric probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2020,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 40.2,
+    "source": 2540,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "For each real number \\(a\\) with \\(0 \\le a \\le 1,\\) let numbers \\(x\\) and \\(y\\) be chosen independently at random from the intervals \\([0, a]\\) and \\([0, 1],\\) respectively, and let \\(P(a)\\) be the probability that \\[\\sin^2(\\pi x) + \\sin^2(\\pi y) \\gt 1.\\] What is the maximum value of \\(P(a)?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{7}{12}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2 - \\sqrt{2}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1 + \\sqrt{2}}{4}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{\\sqrt{5} - 1}{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac58\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2020-p25.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(\\sin^2(\\pi y) = 1 - \\cos^2(\\pi y),\\) the condition is \\(|\\sin \\pi x| \\gt |\\cos \\pi y|.\\) For fixed \\(x,\\) the probability over \\(y \\in [0, 1]\\) is \\(g(x) = 2x\\) for \\(0 \\le x \\le \\tfrac12\\) and \\(g(x) = 2 - 2x\\) for \\(\\tfrac12 \\le x \\le 1.\\)\n\nThen \\(P(a) = \\tfrac1a \\int_0^a g(x)\\,dx.\\) For \\(a \\le \\tfrac12,\\) \\(P(a) = a,\\) increasing to \\(\\tfrac12.\\) For \\(a \\ge \\tfrac12,\\) \\[ \\begin{gathered} P(a) = \\frac{2a - a^2 - \\tfrac12}{a} \\\\ {}= 2 - a - \\frac{1}{2a}. \\end{gathered} \\]\n\nSetting the derivative to zero gives \\(2a^2 = 1,\\) so \\(a = \\tfrac{1}{\\sqrt2},\\) and \\(P\\!\\left(\\tfrac{1}{\\sqrt2}\\right) = 2 - \\sqrt2.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "The condition is \\(|\\sin \\pi x| \\gt |\\cos \\pi y|;\\) for fixed \\(x,\\) the probability over \\(y\\) is a simple triangular function",
+        "Express \\(P(a) = \\tfrac1a \\int_0^a g(x)\\,dx\\) where \\(g\\) rises then falls, then maximize over \\(a\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2009-p4",
+  "title": "2009 USAMO Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2009,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 83.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For \\(n \\ge 2\\) let \\(a_1\\), \\(a_2\\), ..., \\(a_n\\) be positive real numbers such that\n\n\\[\n(a_1+a_2+ ... +a_n)\\left( {1 \\over a_1} + {1 \\over a_2} + ... +{1 \\over a_n} \\right) \\le \\left(n+ {1 \\over 2} \\right) ^2\n\\]\n\nProve that \\(\\text{max}(a_1, a_2, ... ,a_n) \\le 4 \\text{min}(a_1, a_2, ... , a_n)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2009-p4.imported",
+      "kind": "proof-sketch",
+      "text": "Assume without loss of generality that $a_1 \\geq a_2 \\geq \\cdots \\geq a_n$. Now we seek to prove that $a_1 \\le 4a_n$.\nBy the Cauchy-Schwarz Inequality, \\begin{align*} (a_n+a_2+ a_3 + ... +a_{n-1}+a_1)\\left({1 \\over a_1} + {1 \\over a_2} + ... +{1 \\over a_n}\\right) &\\ge \\left( \\sqrt{a_n \\over a_1} + n-2 + \\sqrt{a_1 \\over a_n} \\right)^2 \\\\ (n+ {1 \\over 2})^2 &\\ge \\left( \\sqrt{a_n \\over a_1} + n-2 + \\sqrt{a_1 \\over a_n} \\right)^2 \\\\ n+ {1 \\over 2} &\\ge n-2 + \\sqrt{a_n \\over a_1} + \\sqrt{a_1 \\over a_n} \\\\ {5 \\over 2} &\\ge \\sqrt{a_n \\over a_1} + \\sqrt{a_1 \\over a_n} \\\\ {17 \\over 4} &\\ge {a_n \\over a_1} + {a_1 \\over a_n} \\\\ 0 &\\ge (a_1 - 4a_n)\\left(a_1 - {a_n \\over 4}\\right) \\end{align*}\nSince $a_1 \\ge a_n$, clearly $(a_1 - {a_n \\over 4}) > 0$, dividing yields:\n\\[0 \\ge (a_1 - 4a_n) \\Longrightarrow 4a_n \\ge a_1\\]\nas desired.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

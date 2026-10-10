@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-invitational-2015-p5",
+  "title": "2015 HMMT Invitational Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2015,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\omega=e^{2 \\pi i / 5}\\) be a primitive fifth root of unity. Prove that there do not exist integers \\(a, b, c, d, k\\) with \\(k>1\\) such that\n\n\\[\\left(a+b \\omega+c \\omega^{2}+d \\omega^{3}\\right)^{k}=1+\\omega\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2015-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "N/A\nProof. Let \\(\\zeta=\\omega=e^{2 \\pi i / 5}\\) be a primitive fifth root of unity. If \\(x=a+b \\zeta+c \\zeta^{2}+d \\zeta^{3}(a, b, c, d \\in \\mathbb{Z})\\), then from \\(\\zeta+\\zeta^{-1}=\\frac{\\sqrt{5}-1}{2}\\) and \\(\\zeta^{2}+\\zeta^{-2}=\\zeta^{3}+\\zeta^{-3}=-\\frac{\\sqrt{5}+1}{2}\\), we deduce \\(|x|^{2}=\\left(a^{2}+b^{2}+c^{2}+d^{2}\\right)+\\) \\(\\frac{\\sqrt{5}-1}{2}(a b+b c+c d)-\\frac{\\sqrt{5}+1}{2}(a c+b d+a d) \\in \\mathbb{Z}[\\phi]\\), where \\(\\phi=\\frac{1+\\sqrt{5}}{2}\\).\n\nBut \\(|x|^{2 k}=|1+\\zeta|^{2}=2+\\phi^{-1}=\\phi^{2}\\), so \\(\\phi^{2 / k}=|x|^{2} \\in \\mathbb{Z}[\\phi]\\). It follows that \\(|x|^{2}\\) has norm \\(\\phi^{2 / k} \\bar{\\phi}^{2 / k}\\) in \\(\\mathbb{Z}[\\phi]\\), and so must be a positive unit. Yet by the lemma below, the positive units are precisely the integer powers of \\(\\phi\\), so \\(k>1\\) forces \\(k=2\\).\nHowever, there must exist \\(f, g \\in \\mathbb{Z}[t]\\) such that \\(f(t)^{k}=1+t+g(t)\\left(t^{4}+t^{3}+t^{2}+t+1\\right)(\\) if \\(f(\\zeta)=x\\), then the minimal polynomial of \\(\\zeta\\) over \\(\\mathbb{Q}\\) must divide \\(\\left.f(t)^{k}-1-t\\right)\\), whence \\(f(1)^{k} \\equiv 2(\\bmod 5)\\), so \\(2 \\nmid k\\), contradiction.\n(Alternatively, \\(k=2\\) would force \\(a^{2}+b^{2}+c^{2}+d^{2}-a b-b c-c d=0\\), which can only occur if \\(a=b=c=d=0 ـ^{2}\\)\n\nLemma 0.2. The positive units of \\(\\mathbb{Z}[\\phi]\\) are precisely the integer powers of \\(\\phi\\). (In other words, \\({ }^{3} \\phi\\) is the fundamental unit of \\(\\mathbb{Q}(\\sqrt{5})\\).)\n\nProof. To prove this, one can either use Pell equation theory, or reason more directly as follows: a unit \\(m+n \\phi>1\\) must be at least \\(\\phi\\). (Sketch: unit is equivalent to norm \\(\\pm 1\\), and so its conjugate \\(m+n \\bar{\\phi}=\\frac{ \\pm 1}{m+n \\phi}\\) lies in \\((-1,1)\\), so \\(n \\sqrt{5}=n(\\phi-\\bar{\\phi})>0\\) forces \\(n\\) positive, and then \\(-1<m+n \\bar{\\phi}\\) forces \\(m>-n \\bar{\\phi}-1=\\frac{n}{\\phi}-1>-1\\). Hence \\(m+n \\phi \\geq 0+1 \\phi=\\phi\\), as desired.) If it's not a positive power of \\(\\phi\\), then for some \\(\\ell>0, \\frac{m+n \\phi}{\\phi^{\\ell}}\\) is a unit lying in \\((1, \\phi)\\), contradiction.\nRemark 0.12. This problem was proposed by Carl Lian.\nRemark 0.13. The \"morally correct\" (purely algebraic) way to think about about the above solution is via the tower of (number field) extensions\n\n\\[\\mathbb{Q}(\\zeta) / \\mathbb{Q}(\\sqrt{5}) / \\mathbb{Q}\\]\n\nInstead of thinking in terms of complex absolute value \\(|\\cdot|\\), it is better to reason in terms of the norm \\(N_{\\mathbb{Q}(\\zeta) / \\mathbb{Q}(\\sqrt{5})}(\\cdot): \\mathbb{Q}(\\zeta) \\rightarrow \\mathbb{Q}(\\sqrt{5})\\) (which happens to be the same as looking at the square of complex absolute value, in our case), which maps algebraic integers to algebraic integers; the norm of \\(x^{k}=1+\\zeta\\) over \\(\\mathbb{Q}(\\sqrt{5})\\) is \\(\\phi^{2}\\), and \\(\\phi\\) is the fundamental unit of \\(\\mathbb{Q}(\\sqrt{5})\\). Then one proceeds as in the above solution.\n\n[^1]\n[^0]:    \\({ }^{1}\\) The reason for choosing the threshold \\(3 n\\) will become clear.\n\n[^1]:    \\({ }^{2}\\) On a silly note, this inspired HMMT November 2013 General Problem 7.\n    \\({ }^{3}\\) since \\(\\mathbb{Z}[\\phi]\\) is the ring of integers of \\(\\mathbb{Q}(\\sqrt{ } 5)\\)",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-invitational-2018-p1",
+  "title": "2018 HMMT Invitational Problem 1",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2018,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(m>1\\) be a fixed positive integer. For a nonempty string of base-ten digits \\(S\\), let \\(c(S)\\) be the number of ways to split \\(S\\) into contiguous nonempty strings of digits such that the base-ten number represented by each string is divisible by \\(m\\). These strings are allowed to have leading zeroes.\nIn terms of \\(m\\), what are the possible values that \\(c(S)\\) can take?\nFor example, if \\(m=2\\), then \\(c(1234)=2\\) as the splits 1234 and \\(12 \\mid 34\\) are valid, while the other six splits are invalid.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2018-p1.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 0 and \\(2^{n}\\) for all nonnegative integer \\(n\\)\nFirst, we note that \\(c(1)=0\\) and \\(c(00 \\ldots 0)=2^{n-1}\\) if there are \\(n\\) zeroes in the string. Now we show that these are the only possibilities. Note that a split can be added if and only if the string before this split (ignoring all other splits) represent a multiple of \\(m\\) (if there is a split before it, then removing the digits before this preceding split is equivalent to subtracting the removed number times a power of 10 , which will also be a multiple of \\(m\\), so the remaining number between the two splits remain a multiple of \\(m\\) ). Thus, whether we can add a split or not depends only on the string itself and no other splits, so \\(c(S)\\) is 0 if the number is not divisible by \\(m\\) and a power of two otherwise.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

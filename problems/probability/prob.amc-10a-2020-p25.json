@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2020-p25",
+  "title": "2020 AMC 10A Problem 25",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.dice-probability",
+      "label": "Dice (probability)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2020,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 35.7,
+    "source": 2380,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Jason rolls three fair standard six-sided dice. Then he looks at the rolls and chooses a subset of the dice (possibly empty, possibly all three dice) to reroll. After rerolling, he wins if and only if the sum of the numbers face up on the three dice is exactly \\(7.\\) Jason always plays to optimize his chances of winning. What is the probability that he chooses to reroll exactly two of the dice?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\displaystyle \\frac{7}{36}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\displaystyle \\frac{5}{24}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\displaystyle \\frac{2}{9}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\displaystyle \\frac{17}{72}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\displaystyle \\frac{1}{4}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "7/36"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2020-p25.live",
+      "kind": "proof-sketch",
+      "text": "For any initial roll, Jason compares the best probabilities from rerolling \\(0,1,2,\\) or \\(3\\) dice. Rerolling all three dice has probability \\(\\frac{15}{216}=\\frac{5}{72}\\). Rerolling one die has probability \\(\\frac{1}{6}\\) whenever some pair of kept dice has sum at most \\(6\\).\n\nIf he rerolls exactly two dice, he keeps one die. Keeping a die showing \\(1,2,3,4,5,6\\) gives probabilities \\(5,4,3,2,1,0\\) out of \\(36\\), respectively. This can be optimal only when the two smallest dice sum at least \\(7\\) and the smallest die is \\(1,2,\\) or \\(3\\).\n\nThe sorted rolls satisfying this are \\((1,6,6)\\), \\((2,5,5),(2,5,6),(2,6,6)\\), and \\((3,4,4),\\) \\((3,4,5),\\) \\((3,4,6),\\) \\((3,5,5),\\) \\((3,5,6),\\) \\((3,6,6)\\). Counting permutations gives \\(3+12+27=42\\) rolls out of \\(216\\), so the probability is \\(\\frac{42}{216}=\\frac{7}{36}\\). Thus, A is the correct answer.",
+      "hints": [
+        "Compare the best chance from rerolling \\(0,1,2,\\) or \\(3\\) dice",
+        "Rerolling two dice is optimal only for certain sorted initial rolls with large two-smallest sum"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

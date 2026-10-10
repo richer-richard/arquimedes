@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-theme-2012-p7",
+  "title": "2012 HMMT November Theme Problem 7",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.combinations",
+      "label": "Combinations",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "prob.counting-methods",
+      "label": "Counting Methods",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2012,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 45.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The game of rock-scissors is played just like rock-paper-scissors, except that neither player is allowed to play paper. You play against a poorly-designed computer program that plays rock with \\(50 \\%\\) probability and scissors with \\(50 \\%\\) probability. If you play optimally against the computer, find the probability that after 8 games you have won at least 4 .",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2012-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{163}{256}\\) Since rock will always win against scissors, the optimum strategy is for you to always play rock; then, you win a game if and only if the computer plays scissors. Let \\(p_{n}\\) be the probability that the computer plays scissors \\(n\\) times; we want \\(p_{0}+p_{1}+p_{2}+p_{3}+p_{4}\\). Note that by symmetry, \\(p_{n}=p_{8-n}\\) for \\(n=0,1, \\ldots, 8\\), and because \\(p_{0}+p_{1}+\\cdots+p_{8}=1, p_{0}+\\cdots+p_{3}=p_{5}+\\cdots+p_{8}=\\left(1-p_{4}\\right) / 2\\). Our answer will thus be \\(\\left(1+p_{4}\\right) / 2\\).\nIf the computer is to play scissors exactly 4 times, there are \\(\\binom{8}{4}\\) ways in which it can do so, compared to \\(2^{8}\\) possible combinations of eight plays. Thus, \\(p_{4}=\\binom{8}{4} / 2^{8}=35 / 128\\). Our answer is thus \\(\\frac{1+\\frac{35}{128}}{2}=\\) \\(\\frac{163}{256}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

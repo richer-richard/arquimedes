@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2008-p19",
+  "title": "2008 AMC 10B Problem 19",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cylinder",
+      "label": "Cylinder",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.sector",
+      "label": "Sector",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.volume",
+      "label": "Volume",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2008,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 27.0,
+    "source": 1680,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A cylindrical tank with radius \\(4\\) feet and height \\(9\\) feet is lying on its side. The tank is filled with water to a depth of \\(2\\) feet. What is the volume of the water, in cubic feet?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(24\\pi-36\\sqrt{2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(24\\pi-24\\sqrt{3}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(36\\pi-36\\sqrt{3}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(36\\pi-24\\sqrt{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(48\\pi-36\\sqrt{3}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2008-p19.live",
+      "kind": "proof-sketch",
+      "text": "The submerged cross-section is a circular segment. The chord is \\(4-2=2\\) feet below the center, and \\(\\cos\\theta=\\tfrac{2}{4}=\\tfrac12,\\) so the half-angle is \\(60^\\circ\\) and the central angle is \\(120^\\circ.\\)\n\nThe sector area is \\(\\tfrac{120}{360}\\pi(4)^2=\\tfrac{16\\pi}{3},\\) and the triangle formed by the two radii has area \\(\\tfrac12(4)^2\\sin 120^\\circ=4\\sqrt3.\\) The segment area is \\(\\tfrac{16\\pi}{3}-4\\sqrt3.\\)\n\nMultiplying by the length \\(9\\) gives \\(9\\left(\\tfrac{16\\pi}{3}-4\\sqrt3\\right)=48\\pi-36\\sqrt3.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "The water cross-section is a circular segment cut by a chord \\(2\\) feet below the center",
+        "Its area is a \\(120^\\circ\\) sector minus a triangle; multiply by the length \\(9\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "prob.amc-8-2009-p12",
+  "title": "2009 AMC 8 Problem 12",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "nt.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime",
+      "label": "Prime",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2009,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 11.3,
+    "source": 1120,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "The two spinners shown are spun once and each lands on one of the numbered sectors. What is the probability that the sum of the numbers in the two sectors is prime?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{2}{3}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{3}{4}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{7}{9}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{5}{6}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "7/9"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2009-p12.live",
+      "kind": "proof-sketch",
+      "text": "We can find the sum of the two numbers in every possible outcome.\n\n\\[ \\begin{gather*} 1 + 2 = 3 \\\\ 1 + 4 = 5 \\\\ 1 + 6 = 7 \\\\ 3 + 2 = 5 \\\\ 3 + 4 = 7 \\\\ 3 + 6 = 9 \\\\ 5 + 2 = 7 \\\\ 5 + 4 = 9 \\\\ 5 + 6 = 11. \\end{gather*} \\]\n\nThere are only \\(2\\) outcomes where the sum is not prime (the two instances when the sum is \\(9\\)). Therefore, the probability that the sum is prime is \\(\\dfrac{7}{9}.\\)\n\nThus, D is the correct answer.",
+      "hints": [
+        "Make a \\(3\\times3\\) table of possible sums.",
+        "Only sums of \\(9\\) are not prime among the possible outcomes."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "33f89b35b2a67dbe0b413d0d02f001d6284562e029c03d4ddfdb468c65a4c61b"
+    ],
+    "solutions": []
+  }
+}

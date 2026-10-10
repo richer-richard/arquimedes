@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2001-p9",
+  "title": "2001 AIME I Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.algebraic-manipulation",
+      "label": "Algebraic manipulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.symmetry-algebra",
+      "label": "Symmetry (algebra)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2001,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 50.5,
+    "source": 2560,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "In triangle \\(ABC,\\) \\(AB = 13,\\) \\(BC = 15,\\) and \\(CA = 17.\\) Point \\(D\\) is on \\(\\overline{AB},\\) \\(E\\) is on \\(\\overline{BC},\\) and \\(F\\) is on \\(\\overline{CA}.\\) Let \\(AD = p \\cdot AB,\\) \\(BE = q \\cdot BC,\\) and \\(CF = r \\cdot CA,\\) where \\(p,\\) \\(q,\\) and \\(r\\) are positive and satisfy \\(p + q + r = \\frac{2}{3}\\) and \\(p^2 + q^2 + r^2 = \\frac{2}{5}.\\) The ratio of the area of triangle \\(DEF\\) to the area of triangle \\(ABC\\) can be written in the form \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "61",
+    "value": "61"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2001-p9.live",
+      "kind": "proof-sketch",
+      "text": "Each corner triangle’s area is a product of side fractions: \\([ADF] = p(1-r)[ABC],\\) \\([BED] = q(1-p)[ABC],\\) and \\([CFE] = r(1-q)[ABC],\\) using the formula \\(\\frac{1}{2}xy\\sin\\theta\\) on the shared angles. Subtracting, \\[ \\begin{aligned} \\frac{[DEF]}{[ABC]} &= 1 - p(1-r) \\\\ &\\quad {}- q(1-p) - r(1-q) \\\\ &= 1 - (p+q+r) \\\\ &\\quad {}+ (pq+qr+rp). \\end{aligned} \\]\n\nFrom the given values, \\(pq + qr + rp = \\frac{(\\frac{2}{3})^2 - \\frac{2}{5}}{2}\\) \\(= \\frac{\\frac{4}{9} - \\frac{2}{5}}{2}\\) \\(= \\frac{1}{45}.\\)\n\nTherefore the ratio is \\(1 - \\frac{2}{3} + \\frac{1}{45} = \\frac{16}{45},\\) and \\(m + n = 16 + 45 = 61.\\)",
+      "hints": [
+        "Subtract the three corner triangles: \\(\\frac{[DEF]}{[ABC]} = 1\\) \\(- p(1-r)\\) \\(- q(1-p)\\) \\(- r(1-q)\\)",
+        "\\(pq + qr + rp = \\frac{(p+q+r)^2 - (p^2+q^2+r^2)}{2}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-team-2024-p2",
+  "title": "2024 HMMT November Team Problem 2",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.diophantine-equations",
+      "label": "Diophantine equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2024,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 49.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the sum of all positive integers \\(x\\) such that \\((x-17) \\sqrt{x-1}+(x-1) \\sqrt{x+15}\\) is an integer. Proposed by: Edward Yu",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2024-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "First, we prove the following claim.\nClaim 1. If integers \\(a, b, c, d, n\\) satisfy \\(a\\) and \\(c\\) are nonzero, \\(b\\) and \\(d\\) are nonnegative, and \\(a \\sqrt{b}+c \\sqrt{d}=\\) \\(n\\), then either \\(n=0\\) or both \\(b\\) and \\(d\\) are perfect squares.\n\nProof. We know \\(a \\sqrt{b}=n-c \\sqrt{d}\\). Squaring both sides, we get\n\n\\[a^{2} b=(n-c \\sqrt{d})^{2}=n^{2}+c^{2} d-2 n c \\sqrt{d}\\]\n\nso \\(2 n c \\sqrt{d}\\) is an integer. If \\(\\sqrt{d}\\) is not an integer, then it is not rational, so \\(2 n c \\sqrt{d}=0\\). Since \\(c\\) and \\(\\sqrt{d}\\) are nonzero, we must have \\(n=0\\).\nSimilarly, if \\(\\sqrt{b}\\) is not an integer, \\(n=0\\). Thus either \\(n=0\\) or both \\(b\\) and \\(d\\) are perfect squares.\nApplying our claim to the given expression, we get three cases.\n\n- Case 1: Either \\(x-17\\) or \\(x-1\\) is zero. It is easy to verify \\(x=1\\) is a solution, while \\(x=17\\) is not.\n- Case 2: \\((x-17) \\sqrt{x-1}+(x-1) \\sqrt{x+15}=0\\). Then\n\n\\[(x-17)^{2}(x-1)=(x-1)^{2}(x+15) \\Longrightarrow(x-1)(-48 x+304)=0\\]\n\nThus \\(x=1\\) or \\(x=\\frac{304}{48}\\), and the latter isn't an integer.\n\n- Case 3: \\(x-1\\) and \\(x+15\\) are both perfect squares. Let \\(x+15=y^{2}\\) and \\(x-1=z^{2}\\) for nonnegative integers \\(y\\) and \\(z\\). Then,\n\n\\[(y+z)(y-z)=y^{2}-z^{2}=(x+15)-(x-1)=16 .\\]\n\nObserve that \\(y+z\\) is nonnegative and \\(y+z \\geq y-z\\), so we have the following cases for \\(y+z\\) and \\(y-z\\) :\n\\(-y+z=16, y-z=1 \\Longrightarrow y=\\frac{17}{2}, z=\\frac{15}{2}\\)\n\\(-y+z=8, y-z=2 \\Longrightarrow y=5, z=3\\)\n\\(-y+z=4, y-z=4 \\Longrightarrow y=4, z=0\\).\nThe only nonnegative integer solutions are \\((y, z)=(5,3)\\) or \\((y, z)=(4,0)\\), which correspond to \\(x=10\\) and \\(x=1\\). Both of these are indeed solutions.\n\nHence, the only \\(x\\) that work are \\(x=1\\) and \\(x=10\\), for a total of 11 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

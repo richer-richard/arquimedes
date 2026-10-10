@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-nov-guts-2016-p20",
+  "title": "2016 HMMT November Guts Problem 20",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.algebraic-properties-of-binomial-coefficients",
+      "label": "Algebraic properties of binomial coefficients",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.jensen-smoothing",
+      "label": "Jensen / smoothing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.volume",
+      "label": "Volume",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2016,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 53.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\mathcal{V}\\) be the volume enclosed by the graph\n\n\\[x^{2016}+y^{2016}+z^{2}=2016\\]\n\nFind \\(\\mathcal{V}\\) rounded to the nearest multiple of ten.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2016-p20.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 360\nLet \\(R\\) be the region in question. Then we have\n\n\\[[-1,1]^{2} \\times[-\\sqrt{2014}, \\sqrt{2014}] \\subset R \\subset[-\\sqrt[2016]{2016}, \\sqrt[2016]{2016}]^{2} \\times[\\sqrt{2016}, \\sqrt{2016}]\\]\n\nWe find some bounds: we have\n\n\\[\\sqrt{2016}<\\sqrt{2025}=45\\]\n\nBy concavity of \\(\\sqrt{\\cdot}\\), we have the bound\n\n\\[\\sqrt{2014} \\leq \\frac{11}{89} \\sqrt{1936}+\\frac{78}{89} \\sqrt{2025}=45-\\frac{11}{89}\\]\n\nFinally, if we let \\(\\sqrt[2016]{2016}=1+\\epsilon\\), then \\((1+\\epsilon)^{2016}=2016\\), so\n\n\\[\\binom{2016}{5} \\epsilon^{5}<2016 \\Rightarrow \\epsilon<\\sqrt[5]{\\frac{120}{2015 \\cdot 2014 \\cdot 2013 \\cdot 2012}}<\\sqrt[5]{\\frac{120}{2000^{4}}}=\\sqrt[5]{\\frac{7500}{10^{15}}}=\\frac{\\sqrt[5]{7500}}{1000}<\\frac{6}{1000}\\]\n\nTherefore, the volume of \\(R\\) is lower-bounded by\n\n\\[2^{2} \\cdot 2\\left(45-\\frac{11}{89}\\right)=360-\\frac{88}{89}>355\\]\n\nand upper-bounded by\n\n\\[2^{2}\\left(1+\\frac{0.8}{100}\\right)^{2} \\cdot 2(45)=360\\left(1+\\frac{6}{1000}\\right)^{2}<365\\]\n\nThus, \\(R\\) rounded to the nearest ten is 360 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

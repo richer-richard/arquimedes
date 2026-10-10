@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-1994-p23",
+  "title": "1994 AMC 8 Problem 23",
+  "category": "logic-foundations",
+  "subjects": [
+    "logic-foundations",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "logic.cryptarithm",
+      "label": "Cryptarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "logic.place-value",
+      "label": "Place value",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1994,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 12.8,
+    "source": 1090,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "If \\(X,\\) \\(Y,\\) and \\(Z\\) are different digits, then the largest possible \\(3\\)-digit sum for\n\n\\[\\begin{array}{cr} & XXX \\\\ & YX \\\\ + & X \\\\ \\hline \\end{array}\\]\n\nhas the form",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(XXY\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(XYZ\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(YYX\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(YYZ\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(ZZY\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1994-p23.live",
+      "kind": "proof-sketch",
+      "text": "The hundreds digit of the sum comes from \\(X\\) plus any carry, so if \\(X = 9\\) the sum would spill over into four digits. The largest allowed value is \\(X = 8.\\)\n\nTo make the sum as large as possible, take \\(Y = 9:\\) then \\(888 + 98 + 8 = 994.\\) Its digits are \\(9,\\) \\(9,\\) \\(4;\\) since \\(9 = Y\\) and \\(4\\) is a new digit \\(Z,\\) the sum has the form \\(YYZ.\\)\n\nThus, the correct answer is D .",
+      "hints": [
+        "Write the addition in columns; if \\(X\\) is too large the hundreds place carries and the answer gains a fourth digit.",
+        "Take the largest \\(X\\) that keeps the sum to three digits, then choose \\(Y\\) to make the total as large as possible and see which letters the resulting digits match."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

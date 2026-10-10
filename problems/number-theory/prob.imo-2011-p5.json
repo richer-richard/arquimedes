@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2011-p5",
+  "title": "2011 IMO Problem 5",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2011,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 88.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(f \\colon \\mathbb{Z} \\to \\mathbb{Z}_{>0}\\) be a function such that\n\\(f(m-n) \\mid f(m) - f(n)\\) for \\(m,n \\in \\mathbb{Z}\\).\nProve that if \\(m,n \\in \\mathbb{Z}\\) satisfy \\(f(m) \\le f(n)\\)\nthen \\(f(m) \\mid f(n)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2011-p5.evanchen",
+      "kind": "proof-sketch",
+      "text": "Let \\(P(m,n)\\) denote the given assertion.\nFirst, we claim \\(f\\) is even.\nThis is straight calculation:\n\n• \\(P(x,0) \\implies f(x) \\mid f(x)-f(0) \\implies f(x) \\mid M \\coloneq f(0)\\).\n\n• \\(P(0,x) \\implies f(-x) \\mid M-f(x) \\implies f(-x) \\mid f(x)\\).\n Analogously, \\(f(x) \\mid f(-x)\\). So \\(f(x) = f(-x)\\) and \\(f\\) is even.\n\nClaim.\n Let \\(x\\), \\(y\\), \\(z\\) be integers with \\(x+y+z=0\\).\n Then among \\(f(x)\\), \\(f(y)\\), \\(f(z)\\), two of them are equal and divide the third.\n\nProof.\n Let \\(a = f(\\pm x)\\), \\(b = f(\\pm y)\\), \\(c = f(\\pm z)\\) be positive integers.\n Note that\n \\[\\begin{aligned}\n a &\\mid b-c \\\\\n b &\\mid c-a \\\\\n c &\\mid a-b\n \\end{aligned}\\]\n from \\(P(y,-z)\\) and similarly.\n WLOG \\(c = \\max(a,b,c)\\); then \\(c > |a-b|\\) so \\(a=b\\).\n Thus \\(a=b \\mid c\\) from the first two.\n\nThis implies the problem, by taking \\(x\\) and \\(y\\) in the previous claim\nto be the integers \\(m\\) and \\(n\\).\n\nRemark.\n At ,\n Davi Medeiros gives the following characterization\n of functions \\(f\\) satisfying the hypothesis.\n\n Pick \\(f(0)\\), \\(k\\) positive integers,\n a chain \\(d_1 \\mid d_2 \\mid \\dots \\mid d_k\\) of divisors of \\(f(0)\\),\n and positive integers \\(a_1,a_2,\\dots,a_{k-1}\\),\n greater than \\(1\\) (if \\(k=1\\), \\(a_i\\) doesn't exist, for every \\(i\\)).\n We'll define \\(f\\) as follows:\n\n• \\(f(n)=d_1\\), for every integer \\(n\\) that is not divisible by \\(a_1\\);\n\n• \\(f(a_1n)=d_2\\), for every integer \\(n\\) that is not divisible by \\(a_2\\);\n\n• \\(f(a_1a_2n)=d_3\\), for every integer \\(n\\) that is not divisible by \\(a_3\\);\n\n• \\(f(a_1a_2a_3n)=d_4\\), for every integer \\(n\\) that is not divisible by \\(a_4\\);\n\n• \\dots\n\n• \\(f(a_1a_2 \\dots a_{k-1}n)=d_k\\), for every integer \\(n\\);",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

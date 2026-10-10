@@ -1,0 +1,92 @@
+{
+  "id": "prob.hmmt-feb-team-2018-p8",
+  "title": "2018 HMMT February Team Problem 8",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coloring",
+      "label": "Coloring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.games-and-strategy",
+      "label": "Games and strategy",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2018,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 87.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Allen plays a game on a tree with \\(2 n\\) vertices, each of whose vertices can be red or blue. Initially, all of the vertices of the tree are colored red. In one move, Allen is allowed to take two vertices of the same color which are connected by an edge and change both of them to the opposite color. He wins if at any time, all of the vertices of the tree are colored blue.\n(a) (20) Show that Allen can win if and only if the vertices can be split up into two groups \\(V_{1}\\) and \\(V_{2}\\) of size \\(n\\), such that each edge in the tree has one endpoint in \\(V_{1}\\) and one endpoint in \\(V_{2}\\).\n(b) (40) Let \\(V_{1}=\\left\\{a_{1}, \\ldots, a_{n}\\right\\}\\) and \\(V_{2}=\\left\\{b_{1}, \\ldots, b_{n}\\right\\}\\) from part (a). Let \\(M\\) be the minimum over all permutations \\(\\sigma\\) of \\(\\{1, \\ldots, n\\}\\) of the quantity\n\n\\[\\sum_{i=1}^{n} d\\left(a_{i}, b_{\\sigma(i)}\\right)\\]\n\nwhere \\(d(v, w)\\) denotes the number of edges along the shortest path between vertices \\(v\\) and \\(w\\) in the tree.\nShow that if Allen can win, then the minimum number of moves that it can take for Allen to win is equal to \\(M\\).\n(A graph consists of a set of vertices and some edges between distinct pairs of vertices. It is connected if every pair of vertices are connected by some path of one or more edges. A tree is a graph which is connected, in which the number of edges is one less than the number of vertices.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2018-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "Part (a): First we show that if we can't split the vertices in the desired way then Allen cannot win. To do so, observe that there is a unique way to split the vertices into two groups so that all edges cross between the two groups, since trees are bipartite. Each of Allen's moves either adds one more blue vertex to each group or removes a blue vertex from each group, so the difference in the number of blue vertices between the two groups is invariant. Both groups initially have no blue vertices, so Allen can only possibly arrive at a state where both groups have all blue vertices if both groups were initially of equal size.\nTo show that Allen can win when the splitting is possible, we induct on \\(n\\). It's trivial for \\(n=1\\). A tree on \\(2 n\\) vertices has \\(2 n-1\\) edges, so the total degree for each of the two \\(n\\)-vertex groups is \\(2 n-1\\). Therefore, at least one vertex in each group is a leaf, say \\(L_{1}\\) in one group and \\(L_{2}\\) in the other. Allen can then flip all the vertices from \\(L_{1}\\) to \\(L_{2}\\) since there is a path of even length (in terms of number of vertices) from one to the other, including flipping \\(L_{1}\\) and \\(L_{2}\\), and then flip back all of the middle vertices in the path, with the end result being that \\(L_{1}\\) and \\(L_{2}\\) are blue while all other vertices in the tree remain red. This lets us remove \\(L_{1}\\) and \\(L_{2}\\) from consideration and apply the inductive hypothesis on the remaining graph.\nPart (b): For each edge \\(e\\) in the graph, we can determine a minimum number of times Allen must perform an operation on the endpoints of that edge (henceforth, \"flip this edge\"), as follows. Observe that removing \\(e\\) disconnects the graph into two components. Each component is still a tree which can be split into two groups as before, though not necessarily with an equal number of vertices. In particular, suppose that the two groups differ by \\(d\\) vertices. Flipping any edge other than \\(e\\) does not change the difference in number of blue vertices between the two groups of the component. So \\(e\\) must flip at least \\(d\\) times if Allen is to win. Let \\(m_{e}\\) be the minimum number of times that edge \\(e\\) must flip, as determined in this way, and let \\(M^{\\prime}\\) be the total sum of all of the \\(m_{e}\\). And let \\(T^{\\prime}\\) be the original tree with every edge duplicated \\(m_{e}\\) times (or removed if \\(m_{e}=0\\) ).\nObserve that any permutation \\(\\sigma\\) that gives us \\(n\\) paths must have total length at least \\(M^{\\prime}\\) for the same reasons as in the above paragraph, so \\(M^{\\prime} \\leq M\\).\nIn fact, we will show that \\(M^{\\prime}=M\\). To show that \\(M^{\\prime}=M\\), it suffices to show that \\(M^{\\prime} \\geq M\\), which we will show by finding a partitioning of \\(T^{\\prime}\\) into \\(n\\) odd-length paths for which every vertex is the endpoint of exactly one path. This will show that \\(M^{\\prime}\\) is the sum of path lengths for some permutation, meaning it is at least the sum of path lengths for the optimal permutation. We do this by strong induction. The base case is trivial, and if any \\(m_{e}\\) is 0 then we're immediately done because we can split the \\(T^{\\prime}\\) into two smaller trees. Otherwise we repeat the argument from part (a) where we use a path between two leaves, since each group of \\(n\\) vertices must contain a leaf, thereby reducing the number of vertices in our tree by 2 and allowing us to use our inductive hypothesis.\nIt now suffices to show that Allen can win the game in \\(M^{\\prime}\\) moves, but this is exactly the same induction as in the previous paragraph. If any \\(m_{e}\\) is 0 then we're immediately done by splitting \\(T^{\\prime}\\) into two smaller trees, otherwise we use the path between the two leaves to use our inductive hypothesis.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

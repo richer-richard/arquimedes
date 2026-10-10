@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2019-p11",
+  "title": "2019 AIME II Problem 11",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangent-line",
+      "label": "Tangent line",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2019,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 60.9,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Triangle \\(ABC\\) has side lengths \\(AB = 7,\\) \\(BC = 8,\\) and \\(CA = 9.\\) Circle \\(\\omega_1\\) passes through \\(B\\) and is tangent to line \\(AC\\) at \\(A.\\) Circle \\(\\omega_2\\) passes through \\(C\\) and is tangent to line \\(AB\\) at \\(A.\\) Let \\(K\\) be the intersection of circles \\(\\omega_1\\) and \\(\\omega_2\\) not equal to \\(A.\\) Then \\(AK = \\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "11",
+    "value": "11"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2019-p11.live",
+      "kind": "proof-sketch",
+      "text": "By the tangent-chord angle in \\(\\omega_1\\) (tangent \\(AC,\\) chord \\(AK\\)), \\(\\angle KAC = \\angle KBA,\\) and in \\(\\omega_2\\) (tangent \\(AB,\\) chord \\(AK\\)), \\(\\angle KAB = \\angle KCA.\\) Write \\(u = \\angle KAC\\) and \\(v = \\angle KAB,\\) so \\(u + v = \\angle A.\\) Triangles \\(KAB\\) and \\(KCA\\) then have \\(\\angle KAB = v = \\angle KCA\\) and \\(\\angle KBA = u = \\angle KAC,\\) so \\(\\triangle KAB \\sim \\triangle KCA.\\) With \\(t = AK\\) this gives \\[\\frac{KB}{t} = \\frac{t}{KC} = \\frac{AB}{CA} = \\frac{7}{9},\\] so \\(KB = \\frac{7t}{9}\\) and \\(KC = \\frac{9t}{7}.\\) Also \\(\\angle AKB = \\angle AKC\\) \\(= 180^\\circ - u - v\\) \\(= 180^\\circ - \\angle A,\\) so \\(\\angle BKC = 360^\\circ - 2(180^\\circ - \\angle A)\\) \\(= 2\\angle A.\\)\n\nFrom the law of cosines in \\(ABC,\\) \\(\\cos A = \\frac{49 + 81 - 64}{2 \\cdot 7 \\cdot 9} = \\frac{11}{21},\\) so \\(\\cos 2A = 2\\left(\\frac{11}{21}\\right)^2 - 1 = -\\frac{199}{441}.\\) The law of cosines in triangle \\(BKC\\) gives \\[ \\begin{aligned} 64 &= \\frac{49t^2}{81} + \\frac{81t^2}{49} - 2t^2\\cos 2A \\\\ &= t^2 \\cdot \\frac{2401 + 6561 + 3582}{3969} \\\\ &= \\frac{12544\\,t^2}{3969}, \\end{aligned} \\] so \\(t^2 = \\frac{64 \\cdot 3969}{12544} = \\frac{3969}{196}\\) and \\(t = \\frac{63}{14} = \\frac{9}{2}.\\)\n\nHence \\(AK = \\frac{9}{2}\\) and \\(m + n = 9 + 2 = 11.\\)",
+      "hints": [
+        "Use the tangent-chord angle in each circle: \\(\\angle KAC = \\angle KBA\\) and \\(\\angle KAB = \\angle KCA\\)",
+        "Those equal angles make triangles \\(KAB\\) and \\(KCA\\) similar and give \\(\\angle BKC = 2\\angle A;\\) apply the law of cosines in triangle \\(BKC\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

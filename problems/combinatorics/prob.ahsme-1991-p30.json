@@ -1,0 +1,71 @@
+{
+  "id": "prob.ahsme-1991-p30",
+  "title": "1991 AHSME Problem 30",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.subsets",
+      "label": "Subsets",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1991,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 47.2,
+    "source": 2430,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "For any set \\(S,\\) let \\(|S|\\) denote the number of elements in \\(S,\\) and let \\(n(S)\\) be the number of subsets of \\(S,\\) including the empty set and the set \\(S\\) itself. If \\(A,\\) \\(B,\\) and \\(C\\) are sets for which \\[ \\begin{gathered} n(A)+n(B)+n(C)\\\\ {}=n(A\\cup B\\cup C),\\\\ |A|=|B|=100, \\end{gathered} \\] then what is the minimum possible value of \\(|A\\cap B\\cap C|?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(96\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(97\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(98\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(99\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(100\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "97"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1991-p30.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(c=|C|\\) and \\(u=|A\\cup B\\cup C|.\\) Since \\(n(S)=2^{|S|},\\) the equation becomes \\(2^{101}+2^c=2^u.\\) The two summands must be equal, so \\(c=101\\) and \\(u=102.\\) Within the union, \\(A,\\) \\(B,\\) and \\(C\\) omit \\(2,\\) \\(2,\\) and \\(1\\) elements. Thus at most five distinct elements are absent from the triple intersection, giving \\(|A\\cap B\\cap C|\\ge97.\\) Equality is attained by making those omissions distinct.\n\nThus the correct answer is B.",
+      "hints": [
+        "Use \\(n(S)=2^{|S|}\\) and determine \\(|C|\\) and \\(|A\\cup B\\cup C|\\)",
+        "Within the union, count how many elements each of \\(A,\\) \\(B,\\) and \\(C\\) can omit"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

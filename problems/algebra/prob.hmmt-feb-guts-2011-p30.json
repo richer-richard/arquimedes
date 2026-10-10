@@ -1,0 +1,86 @@
+{
+  "id": "prob.hmmt-feb-guts-2011-p30",
+  "title": "2011 HMMT February Guts Problem 30",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.coloring",
+      "label": "Coloring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.probability",
+      "label": "Probability",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.recurrences",
+      "label": "Recurrences",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 84.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many ways are there to color the vertices of a \\(2 n\\)-gon with three colors such that no vertex has the same color as its either of its two neighbors or the vertex directly across from it?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2011-p30.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(3^{n}+(-2)^{n+1}-1\\)\nLet the \\(2 n\\)-gon have vertices \\(A_{1}, A_{2}, \\ldots, A_{2 n}\\), in that order. Consider the diagonals \\(d_{1}=\\left(A_{1}, A_{n+1}\\right)\\), \\(d_{2}=\\left(A_{2}, A_{n+2}\\right), \\cdots, d_{n}=\\left(A_{n}, A_{2 n}\\right)\\). Suppose the three colors are red (R), green (G), and blue (B). Each diagonal can either be colored \\((R, G),(G, R),(G, B),(B, G),(B, R)\\), or \\((R, B)\\). We first choose one of the six colorings for \\(d_{1}\\), which then constrains the possible colorings for \\(d_{2}\\), which constrains the possible colorings for \\(d_{3}\\), and so on. This graph shows the possible configurations; two pairs of colors are connected by an edge if they can be the colors for \\(d_{i}\\) and \\(d_{i+1}\\) for any \\(1 \\leq i \\leq n-1\\).\n\nSuppose without loss of generality that \\(d_{1}\\) is colored \\((R, G)\\). (At the end, we multiply our answer by 6.) Then \\(d_{n}\\) must be either \\((R, G),(B, G)\\), or \\((R, B)\\). Now, we simply need to count the number of paths of length \\(n-1\\) within this graph from \\((R, G)\\) to one of these three points.\nSuppose we are making a random walk of \\(n-1\\) steps, where at each move we pick one of the three possible edges with probability \\(\\frac{1}{3}\\). We will calculate the probability that the walk ends at one of \\((R, G)\\), \\((B, G)\\), or \\((R, B)\\).\nLet \\(a_{i}\\) and \\(b_{i}\\) be the probability that, after \\(i\\) steps, we are at \\((R, G)\\) and \\((B, G)\\), respectively. By symmetry, \\(b_{i}\\) is also the probability that we are at \\((R, B)\\) after \\(i\\) steps.\nObserve that after each move, the probability of arriving at either \\((R, G)\\) or \\((G, R)\\) will always be \\(\\frac{1}{3}\\). Therefore, the probability of being at \\((G, R)\\) after \\(i\\) steps is \\(\\frac{1}{3}-a_{i}\\). Similarly, the probability of being at \\((G, B)\\) is \\(\\frac{1}{3}-b_{i}\\) and the probability of being at \\((B, R)\\) is \\(\\frac{1}{3}-b_{i}\\).\n\nNow, for \\(i \\geq 1\\) we have the recurrences\n\n\\[\\begin{aligned}\na_{i+1} & =\\frac{1}{3}\\left(\\left(\\frac{1}{3}-a_{i}\\right)+\\left(\\frac{1}{3}-b_{i}\\right)+\\left(\\frac{1}{3}-b_{i}\\right)\\right) \\\\\n& =\\frac{1}{3}-\\frac{1}{3} a_{i}-\\frac{2}{3} b_{i} \\\\\nb_{i+1} & =\\frac{1}{3}\\left(\\left(\\frac{1}{3}-a_{i}\\right)+\\left(\\frac{1}{3}-b_{i}\\right)+b_{i}\\right) \\\\\n& =\\frac{2}{9}-\\frac{1}{3} a_{i}\n\\end{aligned}\\]\n\nSo then\n\n\\[\\begin{aligned}\na_{i+2} & =\\frac{1}{3}-\\frac{1}{3} a_{i+1}-\\frac{2}{3} b_{i+1} \\\\\na_{i+2} & =\\frac{1}{3}-\\frac{1}{3} a_{i+1}-\\frac{2}{3}\\left(\\frac{2}{9}-\\frac{1}{3} a_{i}\\right) \\\\\na_{i+2} & =\\frac{5}{27}-\\frac{1}{3} a_{i+1}+\\frac{2}{9} a_{i} \\\\\n\\left(a_{i+2}-\\frac{1}{6}\\right) & =-\\frac{1}{3}\\left(a_{i+1}-\\frac{1}{6}\\right)+\\frac{2}{9}\\left(a_{i}-\\frac{1}{6}\\right)\n\\end{aligned}\\]\n\nThis recurrence has a characteristic polynomial \\(x^{2}+\\frac{1}{3} x-\\frac{2}{9}\\), which has roots \\(\\frac{1}{3}\\) and \\(-\\frac{2}{3}\\). We can write \\(a_{i}=\\frac{1}{6}+A\\left(\\frac{1}{3}\\right)^{i}+B\\left(-\\frac{2}{3}\\right)^{i}\\) for some constants \\(A\\) and \\(B\\) for \\(i \\geq 1\\). Since \\(a_{1}=0\\) and \\(a_{2}=\\frac{1}{3}\\), we can solve for \\(A\\) and \\(B\\) and get\n\n\\[a_{i}=\\frac{1}{6}+\\frac{1}{6}\\left(\\frac{1}{3}\\right)^{i}+\\frac{1}{3}\\left(-\\frac{2}{3}\\right)^{i}\\]\n\nThe answer to the problem is then\n\n\\[\\begin{aligned}\n6 \\cdot 3^{n-1}\\left(a_{n-1}+2 b_{n-1}\\right) & =6 \\cdot 3^{n-1}\\left(a_{n-1}+1-a_{n-1}-3 a_{n}\\right) \\\\\n& =6 \\cdot 3^{n-1}\\left(1-3 a_{n}\\right) \\\\\n& =6 \\cdot 3^{n-1}\\left(1-3\\left(\\frac{1}{6}+\\frac{1}{6}\\left(\\frac{1}{3}\\right)^{n}+\\frac{1}{3}\\left(-\\frac{2}{3}\\right)^{n}\\right)\\right) \\\\\n& =6 \\cdot 3^{n-1}\\left(\\frac{1}{2}-\\frac{1}{2}\\left(\\frac{1}{3}\\right)^{n}-\\left(-\\frac{2}{3}\\right)^{n}\\right) \\\\\n& =3^{n}+(-2)^{n+1}-1\n\\end{aligned}\\]\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

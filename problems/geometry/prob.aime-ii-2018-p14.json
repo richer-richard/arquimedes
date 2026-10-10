@@ -1,0 +1,76 @@
+{
+  "id": "prob.aime-ii-2018-p14",
+  "title": "2018 AIME II Problem 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.incircle-incenter-and-inradius",
+      "label": "Incircle, incenter, and inradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.law-of-sines",
+      "label": "Law of sines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.tangent-line",
+      "label": "Tangent line",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2018,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 70.5,
+    "source": 3500,
+    "mohs": null
+  },
+  "estimatedMinutes": 22,
+  "statement": "The incircle \\(\\omega\\) of triangle \\(ABC\\) is tangent to \\(\\overline{BC}\\) at \\(X.\\) Let \\(Y \\neq X\\) be the other intersection of \\(\\overline{AX}\\) with \\(\\omega.\\) Points \\(P\\) and \\(Q\\) lie on \\(\\overline{AB}\\) and \\(\\overline{AC},\\) respectively, so that \\(\\overline{PQ}\\) is tangent to \\(\\omega\\) at \\(Y.\\) Assume that \\(AP = 3,\\) \\(PB = 4,\\) \\(AC = 8,\\) and \\(AQ = \\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "227",
+    "value": "227"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2018-p14.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(\\omega\\) touch \\(\\overline{AB}\\) at \\(Z\\) and \\(\\overline{AC}\\) at \\(W,\\) and set \\(\\alpha = \\angle BAX\\) and \\(\\beta = \\angle AXC.\\) The tangent-chord angle between \\(PQ\\) and chord \\(XY\\) equals the one between \\(BC\\) and \\(XY,\\) so \\(\\angle QYX = \\angle YXC = \\beta,\\) and vertical angles give \\(\\angle AYP = \\beta.\\) In triangle \\(APY\\) the law of sines gives \\(PY = AP\\,\\frac{\\sin\\alpha}{\\sin\\beta},\\) and by equal tangents \\(PZ = PY,\\) so \\(\\frac{AZ}{AP} = 1 + \\frac{PY}{AP} = 1 + \\frac{\\sin\\alpha}{\\sin\\beta}.\\) In triangle \\(ABX,\\) since \\(\\angle AXB = 180^\\circ - \\beta,\\) similarly \\(BX = AB\\,\\frac{\\sin\\alpha}{\\sin\\beta},\\) and \\(BZ = BX\\) gives \\(\\frac{AZ}{AB} = 1 - \\frac{\\sin\\alpha}{\\sin\\beta}.\\)\n\nAdding the two relations, \\(\\frac{AZ}{AP} + \\frac{AZ}{AB} = 2,\\) so with \\(AP = 3\\) and \\(AB = 7\\) we get \\(AZ\\left(\\frac{1}{3} + \\frac{1}{7}\\right) = 2,\\) hence \\(AZ = \\frac{21}{5}.\\) The identical argument on side \\(AC\\) (using \\(\\angle XAC\\) in triangles \\(AQY\\) and \\(ACX\\)) gives \\(\\frac{AW}{AQ} + \\frac{AW}{AC} = 2,\\) and \\(AW = AZ = \\frac{21}{5}\\) by equal tangents from \\(A.\\) Therefore \\[\\frac{1}{AQ} = \\frac{10}{21} - \\frac{1}{8} = \\frac{59}{168},\\] so \\(AQ = \\frac{168}{59}\\) and \\(m + n = 168 + 59 = 227.\\)",
+      "hints": [
+        "Let the incircle touch \\(AB\\) at \\(Z\\) and \\(AC\\) at \\(W.\\) Tangent-chord angles at \\(Y\\) and \\(X\\) show \\(\\angle AYP = \\angle YXC;\\) use the law of sines in triangles \\(APY\\) and \\(ABX\\)",
+        "\\(AZ\\) is the harmonic mean of \\(AP\\) and \\(AB:\\) \\(\\frac{2}{AZ} = \\frac{1}{AP} + \\frac{1}{AB},\\) and likewise \\(\\frac{2}{AW} = \\frac{1}{AQ} + \\frac{1}{AC}\\) with \\(AW = AZ\\)"
+      ],
+      "images": [
+        "fd344636d8b3cf6a8584450b1a421aae9f130a91486be1bf407b13e9e58e525f"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "fd344636d8b3cf6a8584450b1a421aae9f130a91486be1bf407b13e9e58e525f"
+    ]
+  }
+}

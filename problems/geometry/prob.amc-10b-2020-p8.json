@@ -1,0 +1,93 @@
+{
+  "id": "prob.amc-10b-2020-p8",
+  "title": "2020 AMC 10B Problem 8",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.right-triangle",
+      "label": "Right triangle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2020,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 23.2,
+    "source": 1420,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Points \\(P\\) and \\(Q\\) lie in a plane with \\(PQ=8.\\) How many locations for point \\(R\\) in this plane are there such that the triangle with vertices \\(P,\\) \\(Q,\\) and \\(R\\) is a right triangle with area \\(12\\) square units?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(12\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "8"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2020-p8.live",
+      "kind": "proof-sketch",
+      "text": "Place \\(P=(-4,0)\\) and \\(Q=(4,0).\\) Since the area is \\(12\\) and \\(PQ=8,\\) the distance from \\(R\\) to line \\(PQ\\) is \\(3,\\) so \\(R=(x,\\pm 3).\\)\n\nIf the right angle is at \\(P,\\) then \\(R=(-4,\\pm 3),\\) giving \\(2\\) points. If it is at \\(Q,\\) then \\(R=(4,\\pm 3),\\) giving \\(2\\) more points.\n\nIf the right angle is at \\(R,\\) then \\(PQ\\) is the hypotenuse, so \\[ \\begin{aligned} &64=PR^2+QR^2 \\\\ &\\quad =(x+4)^2+9 \\\\ &\\quad {}+(x-4)^2+9 \\\\ &\\quad =2x^2+50. \\end{aligned} \\] Thus \\(x^2=7,\\) giving \\(R=(\\pm\\sqrt7,\\pm 3),\\) another \\(4\\) points.\n\nThe total is \\(2+2+4=8.\\)\n\nThus, the correct answer is D .",
+      "hints": [
+        "The area condition fixes the distance from \\(R\\) to line \\(PQ\\)",
+        "Separate the cases where the right angle is at \\(P,\\) \\(Q,\\) or \\(R\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

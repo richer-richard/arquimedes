@@ -1,0 +1,84 @@
+{
+  "id": "prob.hmmt-invitational-2018-p3",
+  "title": "2018 HMMT Invitational Problem 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity-and-scaling",
+      "label": "Similarity and scaling",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2018,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A polygon in the plane (with no self-intersections) is called equitable if every line passing through the origin divides the polygon into two (possibly disconnected) regions of equal area.\nDoes there exist an equitable polygon which is not centrally symmetric about the origin?\n(A polygon is centrally symmetric about the origin if a 180-degree rotation about the origin sends the polygon to itself.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2018-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "Consider the polygon with vertices\n\n\\[\\begin{aligned}\n& A(1,0), B(0,1), C(0,5), D(5,0), E(7,0) \\\\\n& F(0,-7), G(-7,0), H(-\\sqrt{84}, 0), I(0, \\sqrt{84}), J(0,6) \\\\\n& K(-6,0), L(-5,0), M(0,-5), N(0,-1)\n\\end{aligned}\\]\n\nNotice that its intersection with each of the four quadrants are all trapezoids with angles \\(45^{\\circ}, 45^{\\circ}, 135^{\\circ}, 135^{\\circ}\\), and the trapezoids in quadrant 1 and 3 both have area \\(\\frac{5^{2}-1^{2}}{2}=\\frac{7^{2}-5^{2}}{2}=12\\), and the trapezoids in quadrant 2 and 4 both have area \\(\\frac{7^{2}-1^{2}}{2}=\\frac{84-6^{2}}{2}=24\\), so by similar triangles, we can show that this polygon is indeed equitable. It is also apparent that this polygon is not centrally symmetric.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

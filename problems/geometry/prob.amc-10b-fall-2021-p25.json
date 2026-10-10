@@ -1,0 +1,94 @@
+{
+  "id": "prob.amc-10b-fall-2021-p25",
+  "title": "2021 Fall AMC 10B Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.square-geometry",
+      "label": "Square (geometry)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2021,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 48.5,
+    "source": 2480,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "A rectangle with side lengths \\(1\\) and \\(3,\\) a square with side length \\(1,\\) and a rectangle \\(R\\) are inscribed inside a larger square as shown. The sum of all possible values for the area of \\(R\\) can be written in the form \\(\\tfrac mn,\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. What is \\(m+n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 14 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 23 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 46 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 59 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 67 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "67"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-fall-2021-p25.live",
+      "kind": "proof-sketch",
+      "text": "Use similar triangles as shown in the diagram. The left side of the large square has length \\(4x+2y,\\) and the bottom side has length \\(3y+x.\\) Since these are equal, \\(3y+x=4x+2y,\\) so \\(y=3x.\\) The side length of the large square is therefore \\(10x.\\)\n\nIn the upper part of the figure, let the marked horizontal segment be \\(m.\\) The two right triangles formed by the sides of rectangle \\(R\\) have parallel corresponding sides and equal hypotenuses, so they are congruent. This gives the lengths shown below.\n\nSimilar triangles give \\[\\frac{m}{3x}=\\frac{4x-\\frac m3}{6x-m}.\\] Hence \\(6xm-m^2=12x^2-xm,\\) so \\[ \\begin{gathered} m^2-7xm+12x^2=0\\\\ =(m-3x)(m-4x). \\end{gathered} \\]\n\nIf \\(m=3x,\\) rectangle \\(R\\) has side length \\(3\\sqrt2x\\) in both directions, so its area is \\(18x^2.\\) If \\(m=4x,\\) its side lengths are \\(5x\\) and \\(\\frac{10}{3}x,\\) so its area is \\(\\frac{50}{3}x^2.\\)\n\nThe two possible areas sum to \\(\\frac{104}{3}x^2.\\) Since the \\(1\\times3\\) rectangle gives \\(x^2+(3x)^2=1,\\) we have \\(x^2=\\frac1{10}.\\) The sum of the possible areas is \\[\\frac{104}{3}\\cdot\\frac1{10}=\\frac{52}{15}.\\]\n\nThus \\(m+n=52+15=67,\\) and the answer is E .",
+      "hints": [
+        "Use the slope of the \\(1\\times3\\) rectangle to set \\(x^2+(3x)^2=1\\)",
+        "The similar-triangle equation factors as \\((m-3x)(m-4x)=0\\)"
+      ],
+      "images": [
+        "ff7dbdcbae13dea4cef49a018acdca616b709c4223a5c0c4873b0328b8041a1b",
+        "ff3ebb44530aa2b02c3b40a6c618386ebde8b7e873935b7f11991f2d0a552880"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [
+      "4550df600957e6260b220d7df268c430b750406a7ad2861ba6d4db58731abea2"
+    ],
+    "solutions": [
+      "ff3ebb44530aa2b02c3b40a6c618386ebde8b7e873935b7f11991f2d0a552880",
+      "ff7dbdcbae13dea4cef49a018acdca616b709c4223a5c0c4873b0328b8041a1b"
+    ]
+  }
+}

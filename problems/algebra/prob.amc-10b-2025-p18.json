@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-10b-2025-p18",
+  "title": "2025 AMC 10B Problem 18",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sum-of-first-n-squares",
+      "label": "Sum of first n squares",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2025,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 29.3,
+    "source": 1730,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "What is the ones digit of the sum \\(\\lfloor\\sqrt{1}\\rfloor + \\lfloor\\sqrt{2}\\rfloor + \\lfloor\\sqrt{3}\\rfloor\\) \\(+ \\cdots + \\lfloor\\sqrt{2024}\\rfloor\\) \\(+ \\lfloor\\sqrt{2025}\\rfloor?\\) (Recall that \\(\\lfloor x \\rfloor\\) denotes the greatest integer less than or equal to \\(x.\\))",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(8\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2025-p18.live",
+      "kind": "proof-sketch",
+      "text": "For each \\(m,\\) \\(\\lfloor\\sqrt{n}\\rfloor = m\\) on the \\(2m + 1\\) integers \\(m^2 \\le n \\le (m + 1)^2 - 1.\\) Since \\(\\sqrt{2025} = 45,\\) the terms with \\(1 \\le m \\le 44\\) contribute \\(\\sum_{m=1}^{44} m(2m + 1),\\) and \\(n = 2025\\) tacks on \\(45.\\) That sum is \\(\\sum_{m=1}^{44}(2m^2 + m)\\) \\(= 2 \\cdot \\tfrac{44 \\cdot 45 \\cdot 89}{6}\\) \\(+ \\tfrac{44 \\cdot 45}{2} = 58740\\) \\(+ 990 = 59730,\\) so the total is \\(59775.\\) Its ones digit is \\(5.\\) Therefore, the answer is D.",
+      "hints": [
+        "\\(\\lfloor\\sqrt{n}\\rfloor = m\\) for the \\(2m + 1\\) values \\(m^2 \\le n \\le (m + 1)^2 - 1\\)",
+        "Since \\(\\sqrt{2025} = 45,\\) sum \\(m(2m + 1)\\) for \\(m = 1\\) to \\(44\\) and add the final term \\(45\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-10a-2021-p22",
+  "title": "2021 AMC 10A 22",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.mean",
+      "label": "Mean",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2021,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 30.2,
+    "source": 1820,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Hiram’s algebra notes are \\(50\\) pages long and are printed on \\(25\\) sheets of paper; the first sheet contains pages \\(1\\) and \\(2,\\) the second sheet contains pages \\(3\\) and \\(4,\\) and so on. One day he leaves his notes on the table before leaving for lunch, and his roommate decides to borrow some pages from the middle of the notes. When Hiram comes back, he discovers that his roommate has taken a consecutive set of sheets from the notes and that the average (mean) of the page numbers on all remaining sheets is exactly \\(19.\\) How many sheets were borrowed?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(20\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "13"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2021-p22.live",
+      "kind": "proof-sketch",
+      "text": "Suppose the borrowed sheets are sheets \\(a\\) through \\(b,\\) and let \\(s=b-a+1.\\) The borrowed pages run from \\(2a-1\\) through \\(2b,\\) so there are \\(2s\\) borrowed pages and their sum is \\(s(2a+2b-1).\\)\n\nThe total sum of all page numbers is \\(\\frac{50\\cdot51}{2}=1275.\\) If the remaining pages have mean \\(19,\\) then \\[ \\begin{aligned} 1275&-s(2a+2b-1)\\\\ &=19(50-2s),\\\\ s(2a+2b-39)&=325. \\end{aligned} \\]\n\nBecause \\(b-a+1\\) is a positive divisor of \\(325\\) and is at most \\(25,\\) its only possibilities are \\(1,5,13,25.\\) The first two would force \\(b>25,\\) and \\(25\\) would remove every sheet. Thus the only valid possibility is\n\n\\[ \\begin{aligned} 2a+2b-39 &=25, \\\\ b-a+1 &=13. \\end{aligned} \\]\n\nThus \\(a+b=32\\) and \\(b-a=12,\\) so \\(a=10\\) and \\(b=22.\\) Therefore \\(13\\) sheets were borrowed.\n\nThus, B is the correct answer.",
+      "hints": [
+        "Let the borrowed sheets run from sheet \\(a\\) through sheet \\(b\\)",
+        "Use the total page sum and the mean of the remaining pages to factor an equation"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

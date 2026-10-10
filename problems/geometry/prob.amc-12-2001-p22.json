@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-12-2001-p22",
+  "title": "2001 AMC 12 Problem 22",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12",
+    "year": 2001,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 32.8,
+    "source": 1870,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "In rectangle \\(ABCD,\\) points \\(F\\) and \\(G\\) lie on \\(\\overline{AB}\\) so that \\(AF = FG = GB\\) and \\(E\\) is the midpoint of \\(\\overline{DC}.\\) Also, \\(\\overline{AC}\\) intersects \\(\\overline{EF}\\) at \\(H\\) and \\(\\overline{EG}\\) at \\(J.\\) The area of rectangle \\(ABCD\\) is \\(70.\\) Find the area of triangle \\(EHJ.\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{5}{2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{35}{12}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{7}{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{35}{8}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "3"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12-2001-p22.live",
+      "kind": "proof-sketch",
+      "text": "Triangle \\(EFG\\) has base \\(FG = \\dfrac{1}{3}AB\\) and height equal to the rectangle’s height, so its area is \\(\\dfrac{1}{6}(70) = \\dfrac{35}{3}.\\)\n\nBecause \\(EC \\parallel AF,\\) triangles \\(AFH\\) and \\(CEH\\) are similar with ratio \\(\\dfrac{EC}{AF} = \\dfrac{3}{2},\\) so \\(\\dfrac{EH}{EF} = \\dfrac{3}{5}.\\) Likewise \\(\\dfrac{EJ}{EG} = \\dfrac{3}{7}.\\)\n\nThen \\(\\dfrac{[EHJ]}{[EFG]}\\) \\(= \\dfrac{EH}{EF}\\cdot\\dfrac{EJ}{EG}\\) \\(= \\dfrac{3}{5}\\cdot\\dfrac{3}{7}\\) \\(= \\dfrac{9}{35},\\) giving \\[ [EHJ] = \\dfrac{9}{35}\\cdot\\dfrac{35}{3} = 3. \\]\n\nThus, the correct answer is C.",
+      "hints": [
+        "Triangle \\(EFG\\) has base \\(\\dfrac{1}{3}AB\\) and the full height, so its area is \\(\\dfrac{1}{6}\\) of the rectangle",
+        "Use \\(EC \\parallel AB\\) to get \\(\\dfrac{EH}{EF} = \\dfrac{3}{5}\\) and \\(\\dfrac{EJ}{EG} = \\dfrac{3}{7}\\) from similar triangles"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "f6fb5f1d290bac537dcabdf5b0d6b97f13db64072ca3cfa47485156a51405f97"
+    ],
+    "solutions": []
+  }
+}

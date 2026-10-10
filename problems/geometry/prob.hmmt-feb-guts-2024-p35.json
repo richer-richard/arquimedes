@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2024-p35",
+  "title": "2024 HMMT February Guts Problem 35",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.convex-hulls",
+      "label": "Convex hulls",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2024,
+    "number": 35
+  },
+  "difficulty": {
+    "course": 85.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Barry picks infinitely many points inside a unit circle, each independently and uniformly at random, \\(P_{1}, P_{2}, \\ldots\\) Compute the expected value of \\(N\\), where \\(N\\) is the smallest integer such that \\(P_{N+1}\\) is inside the convex hull formed by the points \\(P_{1}, P_{2}, \\ldots, P_{N}\\).\n\nSubmit a positive real number \\(E\\). If the correct answer is \\(A\\), you will receive \\(\\lfloor 100 \\cdot \\max (0.2099-|E-A|, 0)\\rfloor\\) points.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "6.54",
+    "value": "6.54"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2024-p35.hmmt",
+      "kind": "proof-sketch",
+      "text": "Clearly, \\(N \\geq 3\\), and let's scale the circle to have area 1 . We can see that the probability to not reach \\(N=4\\) is equal to the probability that the fourth point is inside the convex hull of the past three points. That is, the probability is just one minus the expected area of those \\(N\\) points. The area of this turns out to be really small, and is around 0.074 , and so \\((1-0.074)\\) of all sequences of points make it to \\(N=4\\). The probability to reach to the fifth point from there should be around \\((1-0.074)(1-0.074 \\cdot 2)\\), as any four points in convex configuration can be covered with 2 triangles. Similarly, the chance of reaching \\(N=6\\) should be around \\((1-0.074)(1-0.074 \\cdot 2)(1-0.074 \\cdot 3)\\), and so on. Noting that our terms eventually decay to zero around term \\(1 / 0.074=13\\), our answer should be an underestimate. In particular, we get\n\n\\[3+(1-0.074)(1+(1-0.074 \\cdot 2)(1+(1-0.074 \\cdot 3)(1+\\cdots))) \\approx 6.3\\]\n\nGuessing anything slightly above this lower bound should give a positive score.\nHere is a Python code that simulates the result.\n\n```\nfrom random import randrange,getrandbits\nimport itertools, math\nfrom tqdm import tqdm\nimport numpy as np\nDEBUG = False\ndef unit_circle_pt():\n    while True:\n        x = randrange(-(2**32), 2**32+1)\n        y = randrange(-(2**32), 2**32+1)\n            if x*x + y*y < 2**64:\n                return (x,y)\ndef area_of_triangle(p1, p2, p3):\n    return abs((p2[0] - p1[0])*(p3[1] - p2[1]) - (p2[1] - p1[1])*(p3[0] - p2[0]))\ndef pt_inside_polygon(point, polygon):\n    # point is a pair\n    # polygon is an angle-sorted list of points that are the vertices of a convex polygon in\n                        some order\n    # area of polygon\n    # plot the polygon and the point\n    if DEBUG:\n        import matplotlib.pyplot as plt\n        # plot the big circle\n        circle = plt.Circle((0,0), 2**32, color='b', fill=False)\n        # fix view to circle\n        plt.xlim(-2**32,2**32)\n        plt.ylim(-2**32,2**32)\n        plt.gca().add_artist(circle)\n        # make the window to scale\n        plt.gca().set_aspect('equal', adjustable='box')\n        plt.plot([x for x,_ in polygon], [y for _,y in polygon])\n        plt.scatter([point[0]], [point[1]])\n        plt.show()\n    area = 0\n    for i in range(1, len(polygon)-1):\n        # add on area between points 0, i, i+1\n        area += area_of_triangle(polygon[0], polygon[i], polygon[i+1])\n```\n\n```\n    # point is inside polygon if the area of the triangles formed by the point and each edge\n                                    of the polygon sum to the area of the\n                                    polygon\n    area_sum = 0\n    for i in range(len(polygon)):\n        # add on area between points point, polygon[i], polygon[(i+1)%len(polygon)]\n        area_sum += area_of_triangle(point, polygon[i], polygon[(i+1)%len(polygon)])\n    return area_sum == area\ndef convex_hull(points):\n    # sort by x, then y\n    points = sorted(points, key=lambda x: (x[0], x[1]))\n    # graham scan\n    # find the lowest point\n    lowest = points[0]\n    for p in points:\n        if p[1] < lowest[1]:\n            lowest = p\n    # sort by angle\n    points = sorted(points, key=lambda x: (math.atan2(x[1]-lowest[1], x[0]-lowest[0]), -x[1]\n                        , x[0]))\n    # remove duplicates\n    points = list(k for k,_ in itertools.groupby(points))\n    # stack to hold the points\n    stack = []\n    for p in points:\n        while len(stack) > 1 and (stack[-1][0]-stack[-2][0])*(p[1]-stack[-2][1]) - (stack[-1\n                                    ][1]-stack[-2][1])*(p[0]-stack[-2][\n                                    0]) <= 0:\n            stack.pop()\n        stack.append(p)\n    return stack\ndef pulse(horizon=1000):\n    cur = [unit_circle_pt() for _ in range(3)]\n    for N in range(3, horizon):\n        pt = unit_circle_pt()\n        if pt_inside_polygon(pt, cur):\n                return N\n            cur = convex_hull(cur + [pt])\ntrials = 1000\nblocks = 100000\ncur_trials = 0\ncur_sum = 0\nresults = []\nfor block in range(trials):\n    for _ in tqdm(range(blocks)):\n        results.append(pulse())\n    cur_trials += blocks\n    mean = np.mean(results)\n    stddev = np.std(results)\n    z = 5.0\n    ci = (mean - z*stddev/np.sqrt(cur_trials), mean + z*stddev/np.sqrt(cur_trials))\n    print(block+1, mean, stddev, ci)\n```",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

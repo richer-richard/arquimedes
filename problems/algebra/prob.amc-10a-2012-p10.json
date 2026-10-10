@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2012-p10",
+  "title": "2012 AMC 10A Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2012,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 23.3,
+    "source": 1420,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Mary divides a circle into \\(12\\) sectors. The central angles of these sectors, measured in degrees, are all integers and they form an arithmetic sequence. What is the degree measure of the smallest possible sector angle?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(12\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "8"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2012-p10.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(a\\) be the smallest possible sector angle and \\(d\\) be the difference in the arithmetic sequence.\n\nThen we have that \\[ \\dfrac{12}{2}(a + a + 11d) = 12a + 66d \\] is the sum of the arithmetic sequence.\n\nWe have that this sums to \\(360,\\) so \\[ 12a + 66d = 360 \\] \\[ 2a + 11d = 60. \\]\n\nWe want to minimize \\(a,\\) so we maximize \\(d.\\) If \\(d = 5,\\) then \\(a\\) is not an integer, so \\(d = 4\\) and \\(a = 8.\\)\n\nThus, C is the correct answer.",
+      "hints": [
+        "Let the arithmetic sequence be \\(a,a+d,\\ldots,a+11d\\)",
+        "Use \\(12a+66d=360\\) and maximize \\(d\\) while keeping \\(a\\) positive"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

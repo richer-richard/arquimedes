@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-team-2004-p16",
+  "title": "2004 HMMT February Team Problem 16",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithms-and-exponentials",
+      "label": "Logarithms and exponentials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2004,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 81.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Now suppose again that \\(n\\) is odd. Prove that\n\n\\[\\sigma(1)\\left\\lfloor\\log _{2} n\\right\\rfloor+\\sigma(3)\\left\\lfloor\\log _{2}(n / 3)\\right\\rfloor+\\sigma(5)\\left\\lfloor\\log _{2}(n / 5)\\right\\rfloor+\\cdots+\\sigma(n)\\left\\lfloor\\log _{2}(n / n)\\right\\rfloor<n^{2} / 8\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2004-p16.hmmt",
+      "kind": "proof-sketch",
+      "text": "The term \\(\\sigma(i)\\left\\lfloor\\log _{2}(n / i)\\right\\rfloor\\) is the sum of the divisors of \\(i\\) times the number of even numbers \\(\\leq n\\) whose greatest odd divisor is \\(i\\). Thus, summing over all odd \\(i\\),\nwe get the sum of \\(d\\) over all pairs \\((d, j)\\), where \\(j<n\\) is even and \\(d\\) is an odd divisor of \\(j\\). Each odd number \\(d\\) then appears \\(\\lfloor n / 2 d\\rfloor\\) times, since this is the number of even numbers \\(<n\\) that have \\(d\\) as a divisor. So the sum equals\n\n\\[\\begin{aligned}\n\\lfloor n / 2\\rfloor+3\\lfloor n / 6\\rfloor & +5\\lfloor n / 10\\rfloor+\\cdots+n\\lfloor n / 2 n\\rfloor \\\\\n& \\leq(n-1) / 2+3(n-1) / 6+\\cdots+m(n-1) / 2 m\n\\end{aligned}\\]\n\nwhere \\(m\\) is the greatest odd integer less than \\(n / 2\\). (We can ignore the terms \\(d\\lfloor n / 2 d\\rfloor\\) for \\(d>m\\) because these floors are zero.) This expression equals\n\n\\[(n-1) / 2+(n-1) / 2+\\cdots+(n-1) / 2=(n-1)(m+1) / 4 \\leq(n-1)(n+1) / 8\\]\n\nwhich is less than \\(n^{2} / 8\\), as required.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

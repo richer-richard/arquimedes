@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2009-p14",
+  "title": "2009 AIME II Problem 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.recursion",
+      "label": "Recursion",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.substitution",
+      "label": "Substitution",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2009,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 65.9,
+    "source": 3160,
+    "mohs": null
+  },
+  "estimatedMinutes": 20,
+  "statement": "The sequence \\((a_n)\\) satisfies \\(a_0 = 0\\) and \\(a_{n+1} = \\frac{8}{5}a_n + \\frac{6}{5}\\sqrt{4^n - a_n^2}\\) for \\(n \\ge 0.\\) Find the greatest integer less than or equal to \\(a_{10}.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "983",
+    "value": "983"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2009-p14.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(a_n = 2^n \\sin\\theta_n\\) with \\(\\theta_0 = 0,\\) so \\(\\sqrt{4^n - a_n^2} = 2^n\\,|\\cos\\theta_n|.\\) Let \\(\\theta = \\arcsin\\frac{3}{5},\\) so \\(\\cos\\theta = \\frac{4}{5}.\\) The recursion becomes \\[ \\begin{aligned} &a_{n+1} \\\\ &= 2^{n+1} \\\\ &\\quad {}\\cdot \\left(\\cos\\theta \\sin\\theta_n + \\sin\\theta\\,|\\cos\\theta_n|\\right) \\\\ &= 2^{n+1}\\sin(\\theta_n \\pm \\theta), \\end{aligned} \\] with the plus sign when \\(\\cos\\theta_n \\ge 0\\) and the minus sign when \\(\\cos\\theta_n \\lt 0.\\)\n\nSince \\(\\frac{1}{2} \\lt \\frac{3}{5} \\lt \\frac{\\sqrt{2}}{2},\\) we have \\(30^\\circ \\lt \\theta \\lt 45^\\circ.\\) The angles \\(\\theta,\\) \\(2\\theta\\) have positive cosine, so the sequence of angles runs \\(0,\\) \\(\\theta,\\) \\(2\\theta,\\) \\(3\\theta.\\) But \\(90^\\circ \\lt 3\\theta \\lt 135^\\circ\\) has negative cosine, so \\(\\theta_4 = 2\\theta,\\) and from then on the angle alternates between \\(3\\theta\\) and \\(2\\theta.\\) In particular \\(\\theta_n = 2\\theta\\) for every even \\(n \\ge 2.\\)\n\nWith \\(\\sin 2\\theta = 2 \\cdot \\frac{3}{5} \\cdot \\frac{4}{5} = \\frac{24}{25},\\) \\[ \\begin{aligned} a_{10} &= 2^{10} \\sin 2\\theta \\\\ &= 1024 \\cdot \\frac{24}{25} \\\\ &= \\frac{24576}{25} = 983.04, \\end{aligned} \\] so the answer is \\(983.\\)",
+      "hints": [
+        "Try \\(a_n = 2^n \\sin\\theta_n:\\) then \\(\\sqrt{4^n - a_n^2} = 2^n\\,|\\cos\\theta_n|\\) and the recursion is angle addition with \\(\\theta = \\arcsin\\frac{3}{5}\\)",
+        "Since \\(30^\\circ \\lt \\theta \\lt 45^\\circ,\\) the angle climbs to \\(3\\theta,\\) whose cosine is negative, and then oscillates between \\(2\\theta\\) and \\(3\\theta\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

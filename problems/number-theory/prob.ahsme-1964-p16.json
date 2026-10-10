@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1964-p16",
+  "title": "1964 AHSME Problem 16",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1964,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 22.1,
+    "source": 1450,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Let \\(f(x)=x^2+3x+2\\) and let \\(S\\) be the set of integers \\(\\{0,1,2,\\ldots,25\\}.\\) The number of members \\(s\\) of \\(S\\) such that \\(f(s)\\) has remainder zero when divided by \\(6\\) is:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(25\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(22\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(17\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "17"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1964-p16.live",
+      "kind": "proof-sketch",
+      "text": "We have \\(f(s)=(s+1)(s+2),\\) a product of consecutive integers, so it is always even. It is divisible by \\(3\\) unless \\(s\\equiv0\\pmod3.\\) Among \\(0,1,\\ldots,25,\\) nine values are multiples of \\(3.\\) Thus \\(26-9=17\\) values work.\n\nTherefore, the correct answer is E.",
+      "hints": [
+        "Factor \\(f(s)\\) as \\((s+1)(s+2)\\)",
+        "The product is always even; determine which residue of \\(s\\) modulo \\(3\\) fails"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-1996-p10",
+  "title": "1996 AIME Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.linear-equation",
+      "label": "Linear equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1996,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 33.6,
+    "source": 1900,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Find the smallest positive integer solution to \\[\\tan(19x^\\circ)=\\frac{\\cos96^\\circ+\\sin96^\\circ}{\\cos96^\\circ-\\sin96^\\circ}.\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "159",
+    "value": "159"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1996-p10.live",
+      "kind": "proof-sketch",
+      "text": "The tangent addition formula gives \\[\\begin{gathered}\\frac{\\cos96^\\circ+\\sin96^\\circ}{\\cos96^\\circ-\\sin96^\\circ}\\\\=\\tan(45^\\circ+96^\\circ)\\\\=\\tan141^\\circ.\\end{gathered}\\] Hence \\(19x\\equiv141\\pmod {180}.\\) Since \\(19^2=361\\equiv1\\pmod {180},\\) multiplying by \\(19\\) gives \\[x\\equiv19\\cdot141\\equiv159\\pmod {180}.\\] The smallest positive solution is \\(159.\\)",
+      "hints": [
+        "Recognize the right-hand side using the tangent addition formula",
+        "Solve the resulting congruence modulo \\(180\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

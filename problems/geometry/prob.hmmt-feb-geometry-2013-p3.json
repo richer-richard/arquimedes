@@ -1,0 +1,76 @@
+{
+  "id": "prob.hmmt-feb-geometry-2013-p3",
+  "title": "2013 HMMT February Geometry Problem 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity-and-scaling",
+      "label": "Similarity and scaling",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2013,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 74.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A_{1} A_{2} A_{3} A_{4} A_{5} A_{6}\\) be a convex hexagon such that \\(A_{i} A_{i+2} \\| A_{i+3} A_{i+5}\\) for \\(i=1,2,3\\) (we take \\(A_{i+6}=A_{i}\\) for each \\(i\\). Segment \\(A_{i} A_{i+2}\\) intersects segment \\(A_{i+1} A_{i+3}\\) at \\(B_{i}\\), for \\(1 \\leq i \\leq 6\\), as shown. Furthermore, suppose that \\(\\triangle A_{1} A_{3} A_{5} \\cong \\triangle A_{4} A_{6} A_{2}\\). Given that \\(\\left[A_{1} B_{5} B_{6}\\right]=1,\\left[A_{2} B_{6} B_{1}\\right]=\\) 4, and \\(\\left[A_{3} B_{1} B_{2}\\right]=9\\) (by \\([X Y Z]\\) we mean the area of \\(\\triangle X Y Z\\) ), determine the area of hexagon \\(B_{1} B_{2} B_{3} B_{4} B_{5} B_{6}\\).\n\n[Diagram omitted from this imported transcription; consult the HMMT archive while reviewing the problem.]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2013-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "22 Because \\(B_{6} A_{3} B_{3} A_{6}\\) and \\(B_{1} A_{4} B_{4} A_{1}\\) are parallelograms, \\(B_{6} A_{3}=A_{6} B_{3}\\) and \\(A_{1} B_{1}=\\) \\(A_{4} B_{4}\\). By the congruence of the large triangles \\(A_{1} A_{3} A_{5}\\) and \\(A_{2} A_{4} A_{6}, A_{1} A_{3}=A_{4} A_{6}\\). Thus, \\(B_{6} A_{3}+\\) \\(A_{1} B_{1}-A_{1} A_{3}=A_{6} B_{3}+A_{4} B_{4}-A_{4} A_{6}\\), so \\(B_{6} B_{1}=B_{3} B_{4}\\). Similarly, opposite sides of hexagon \\(B_{1} B_{2} B_{3} B_{4} B_{5} B_{6}\\) are equal, and implying that the triangles opposite each other on the outside of this hexagon are congruent.\nFurthermore, by definition \\(B_{5} B_{6}\\left\\|A_{3} A_{5}, B_{3} B_{4}\\right\\| A_{1} A_{3}, B_{6} B_{1} \\| A_{4} A_{6}\\) and \\(B_{1} B_{2} \\| A_{1} A_{5}\\). Let the area of triangle \\(A_{1} A_{3} A_{5}\\) and triangle \\(A_{2} A_{4} A_{6}\\) be \\(k^{2}\\). Then, by similar triangles,\n\n\\[\\begin{aligned}\n& \\sqrt{\\frac{1}{k^{2}}}=\\frac{A_{1} B_{6}}{A_{1} A_{3}} \\\\\n& \\sqrt{\\frac{4}{k^{2}}}=\\frac{B_{6} B_{1}}{A_{4} A_{6}}=\\frac{B_{1} B_{6}}{A_{1} A_{3}} \\\\\n& \\sqrt{\\frac{9}{k^{2}}}=\\frac{A_{3} B_{1}}{A_{1} A_{3}}\n\\end{aligned}\\]\n\nSumming yields \\(6 / k=1\\), so \\(k^{2}=36\\). To finish, the area of \\(B_{1} B_{2} B_{3} B_{4} B_{5} B_{6}\\) is equivalent to the area of the triangle \\(A_{1} A_{3} A_{5}\\) minus the areas of the smaller triangles provided in the hypothesis. Thus, our answer is \\(36-1-4-9=22\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

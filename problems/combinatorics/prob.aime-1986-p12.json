@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-1986-p12",
+  "title": "1986 AIME Problem 12",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.extremal-argument",
+      "label": "Extremal argument",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.mean",
+      "label": "Mean",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.subsets",
+      "label": "Subsets",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1986,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": 3270,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "Let the sum of a set of numbers be the sum of its elements. Let \\(S\\) be a set of positive integers, none greater than \\(15.\\) Suppose no two disjoint subsets of \\(S\\) have the same sum. What is the largest sum a set \\(S\\) with these properties can have?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "61",
+    "value": "61"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1986-p12.live",
+      "kind": "proof-sketch",
+      "text": "First, \\(S\\) has at most five elements. If it had six elements \\(s_1,\\ldots,s_6,\\) then its \\(64\\) subset sums would all be distinct: equality between two subset sums, after cancelling their common elements, would violate the given condition.\n\nChoose a subset uniformly at random and let \\(X\\) be its sum. Then \\[ \\begin{gathered} \\operatorname{Var}(X) =\\frac14\\sum_{i=1}^6s_i^2\\\\ {}\\leq\\frac14(10^2+11^2+\\cdots+15^2)\\\\ {}=\\frac{955}{4}. \\end{gathered} \\] On the other hand, \\(X\\) is uniform on \\(64\\) distinct integers. The least possible variance for \\(64\\) distinct integers occurs when they are consecutive, and is \\[ \\frac{64^2-1}{12}=\\frac{1365}{4}, \\] a contradiction.\n\nA set with at most four elements has sum at most \\(12+13+14+15=54.\\) There are only seven five-element subsets of \\(\\{1,\\ldots,15\\}\\) whose sums are at least \\(62.\\) Each fails, as witnessed by the following equal sums:\n\n\\(\\{8,12,13,14,15\\}:\\) \\(13+14=12+15.\\) \\(\\{9,11,13,14,15\\}:\\) \\(11+13=9+15.\\) \\(\\{9,12,13,14,15\\}:\\) \\(13+14=12+15.\\)\n\n\\(\\{10,11,12,14,15\\}:\\) \\(11+14=10+15.\\) \\(\\{10,11,13,14,15\\}:\\) \\(11+13=10+14.\\)\n\n\\(\\{10,12,13,14,15\\}:\\) \\(12+13=10+15.\\) \\(\\{11,12,13,14,15\\}:\\) \\(12+13=11+14.\\)\n\nThus the answer is at most \\(61.\\)\n\nThe set \\(\\{8,11,13,14,15\\}\\) attains \\(61.\\) Its \\(32\\) subset sums, in order, are \\[ \\begin{gathered} 0,8,11,13,14,15,19,21,\\\\ 22,23,24,25,26,27,28,29,\\\\ 32,33,34,35,36,37,38,39,\\\\ 40,42,46,47,48,50,53,61, \\end{gathered} \\] all distinct. Equal sums from arbitrary subsets would, after deleting their intersection, give equal sums from disjoint subsets, so this verifies the required property.",
+      "hints": [
+        "If \\(S\\) had six elements, compare the variance of its \\(64\\) subset sums with that of \\(64\\) consecutive integers",
+        "After bounding the size of \\(S,\\) inspect the five-element subsets whose sums exceed the candidate"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

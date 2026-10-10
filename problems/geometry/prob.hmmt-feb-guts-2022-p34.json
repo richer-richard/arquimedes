@@ -1,0 +1,77 @@
+{
+  "id": "prob.hmmt-feb-guts-2022-p34",
+  "title": "2022 HMMT February Guts Problem 34",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.optimization-in-geometry",
+      "label": "Optimization in geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.sums-and-products",
+      "label": "Sums and products",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-inequalities",
+      "label": "Triangle inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2022,
+    "number": 34
+  },
+  "difficulty": {
+    "course": 85.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Estimate \\(A\\), the number of unordered triples of integers \\((a, b, c)\\) so that there exists a nondegenerate triangle with side lengths \\(a, b\\), and \\(c\\) fitting inside a \\(100 \\times 100\\) square. An estimate of \\(E\\) earns \\(\\max (0,\\lfloor 20-|A-E| / 1000\\rfloor)\\) points.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "194162",
+    "value": "194162"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2022-p34.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let's first count the number of such triangles with perimeter equal to \\(p\\). By Stars and Bars, there are \\(\\binom{p}{2} \\approx \\frac{p^{2}}{2}\\) ordered triples of positive integers that sum to \\(p\\). Additionally, note that only about a quarter of them satisfy the triangle inequality, we have only \\(\\frac{p^{2}}{8}\\) possible triples. Dividing by 3 ! gives us approximately \\(\\frac{p^{2}}{48}\\) nondegenerate triangles with perimeter \\(p\\). Summing this from \\(p=1\\) to \\(n\\) gives us approximately \\(\\frac{n^{3}}{144}\\) triangles with perimeter at most \\(n\\).\n\nNow, note that there are two \"extremes\" for our triangles. One extreme is a triangle that is very close to a line. In that case, we have that the maximum perimeter is \\(200 \\sqrt{2} \\approx 283\\). In the other extreme, we have a triangle that is very close to an equilateral triangle, in which case we have the maximum perimeter is \\(3 \\cdot \\frac{100}{\\cos 15^{\\circ}} \\approx 311\\). Thus, as a compromise between these extremes, we can plug in \\(n=300\\) to get a value of \\(\\frac{300^{3}}{144}=187500\\), which would have earned 13 points.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

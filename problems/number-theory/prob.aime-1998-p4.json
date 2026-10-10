@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-1998-p4",
+  "title": "1998 AIME Problem 4",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "nt.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.parity",
+      "label": "Parity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1998,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 45.1,
+    "source": 2350,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Nine tiles are numbered \\(1,\\) \\(2,\\) \\(3,\\) \\(\\ldots,\\) \\(9,\\) respectively. Each of three players randomly selects and keeps three of the tiles, and sums those three values. The probability that all three players obtain an odd sum is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "17",
+    "value": "17"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1998-p4.live",
+      "kind": "proof-sketch",
+      "text": "A player’s three tiles have an odd sum exactly when the player holds an odd number of odd tiles — one or three. The nine tiles include five odd and four even, and the only way to split five odd tiles into three groups of size one or three is \\(3 + 1 + 1.\\)\n\nCount favorable deals: choose which player gets three odd tiles (\\(3\\) ways), choose that player’s odd tiles (\\(\\binom{5}{3} = 10\\) ways), give one of the two remaining odd tiles to each other player (\\(2\\) ways), then split the four even tiles two and two between those players (\\(\\binom{4}{2} = 6\\) ways), for \\(3 \\cdot 10 \\cdot 2 \\cdot 6 = 360\\) deals. The total number of deals is \\(\\binom{9}{3}\\binom{6}{3} = 84 \\cdot 20 = 1680.\\)\n\nThe probability is \\(\\frac{360}{1680} = \\frac{3}{14},\\) so \\(m + n = 3 + 14 = 17.\\)",
+      "hints": [
+        "A player’s sum is odd exactly when the player holds an odd number of odd tiles; there are five odd tiles in all",
+        "The odd tiles must split \\(3,\\) \\(1,\\) \\(1\\) among the players. Count the ways to deal odds and evens separately."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

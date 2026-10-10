@@ -1,0 +1,75 @@
+{
+  "id": "prob.hmmt-nov-team-2017-p4",
+  "title": "2017 HMMT November Team Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.constructions-and-loci",
+      "label": "Constructions and loci",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.distance-chasing",
+      "label": "Distance chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.optimization-in-geometry",
+      "label": "Optimization in geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangents",
+      "label": "Tangents",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2017,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 52.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "An equiangular hexagon has side lengths \\(1,1, a, 1,1, a\\) in that order. Given that there exists a circle that intersects the hexagon at 12 distinct points, we have \\(M<a<N\\) for some real numbers \\(M\\) and \\(N\\). Determine the minimum possible value of the ratio \\(\\frac{N}{M}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2017-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\frac{3}{\\sqrt{3}-1}\\) OR \\(\\frac{3 \\sqrt{3}+3}{2}\\)\nWe claim that the greatest possible value of \\(M\\) is \\(\\sqrt{3}-1\\), whereas the least possible value of \\(N\\) is 3 .\nTo begin, note that the condition requires the circle to intersect each side of the hexagon at two points on its interior. This implies that the center must be inside the hexagon as its projection onto all six sides must be on their interior. Suppose that the hexagon is \\(A B C D E F\\), with \\(A B=B C=D E=E F=1\\), \\(C D=F A=a\\), and the center \\(O\\).\nWhen \\(a \\leq \\sqrt{3}-1\\), we note that the distance from \\(O\\) to \\(C D\\) (which is \\(\\frac{\\sqrt{3}}{2}\\) ) is greater than or equal to the distance from \\(O\\) to \\(B\\) or \\(E\\) (which is \\(\\frac{a+1}{2}\\) ). However, for the circle to intersect all six sides at two points each, the distance from the center of the circle to \\(C D\\) and to \\(F A\\) must be strictly less than that from the center to \\(B\\) and to \\(E\\), because otherwise any circle that intersects \\(C D\\) and \\(F A\\) at two points each must include \\(B\\) or \\(E\\) on its boundary or interior, which will not satisfy the condition. WLOG assume that the center of the circle is closer to \\(F A\\) than to \\(C D\\), including equality (in other words, the center is on the same side of \\(B E\\) as \\(F A\\), possibly on \\(B E\\) itself), then note that the parabola with foci \\(B\\) and \\(E\\) and common directrix \\(C D\\) intersects on point \\(O\\), which means that there does not exist a point in the hexagon on the same side of \\(B E\\) as \\(F A\\) that lies on the same side of both parabola as \\(C D\\). This means that the center of the circle cannot be chosen.\nWhen \\(a=\\sqrt{3}-1+\\epsilon\\) for some very small real number \\(\\epsilon>0\\), the circle with center \\(O\\) and radius \\(r=\\frac{\\sqrt{3}}{2}\\) intersects sides \\(A B, B C, D E, E F\\) at two points each and is tangent to \\(C D\\) and \\(F A\\) on their interior. Therefore, there exists a real number \\(\\epsilon^{\\prime}>0\\) such that the circle with center \\(O\\) and radius \\(r^{\\prime}=r+\\epsilon^{\\prime}\\) satisfy the requirement.\nWhen \\(a \\geq 3\\), we note that the projection of \\(B F\\) onto \\(B C\\) has length \\(\\left|\\frac{1}{2}-\\frac{a}{2}\\right| \\geq 1\\), which means that the projection of \\(F\\) onto side \\(B C\\) is not on its interior, and the same goes for side \\(E F\\) onto \\(B C\\). However, for a circle to intersect both \\(B C\\) and \\(E F\\) at two points, the projection of center of the circle onto the two sides must be on their interior, which cannot happen in this case.\nWhen \\(a=3-\\epsilon\\) for some very small real number \\(\\epsilon>0\\), a circle with center \\(O\\) and radius \\(r=\\frac{\\sqrt{3}}{4}(a+1)\\) intersects \\(A F\\) and \\(C D\\) at two points each and is tangent to all four other sides on their interior. Therefore, there exists a real number \\(\\epsilon^{\\prime}>0\\) such that the circle with center \\(O\\) and radius \\(r^{\\prime}=r+\\epsilon^{\\prime}\\) satisfy the requirement.\nWith \\(M \\leq \\sqrt{3}-1\\) and \\(N \\geq 3\\), we have \\(\\frac{N}{M} \\geq \\frac{3}{\\sqrt{3}-1}=\\frac{3 \\sqrt{3}+3}{2}\\), which is our answer.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

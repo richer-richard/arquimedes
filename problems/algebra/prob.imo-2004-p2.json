@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2004-p2",
+  "title": "2004 IMO Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2004,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 93.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find all polynomials \\(P\\) with real coefficients such that\nfor all reals \\(a\\), \\(b\\), \\(c\\) such that \\(ab+bc+ca = 0\\), we have\n\\[ P(a-b) + P(b-c) + P(c-a) = 2P(a+b+c). \\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2004-p2.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is \\[ P(x) = \\alpha x^4 + \\beta x^2 \\]\nwhich can be checked to work, for any real numbers \\(\\alpha\\) and \\(\\beta\\).\n\nIt is easy to obtain that \\(P\\) is even and \\(P(0) = 0\\).\nThe trick is now to choose \\((a,b,c) = (6x,3x,-2x)\\)\nand then compare the leading coefficients to get\n\\[ 3^n + 5^n + 8^n = 2 \\cdot 7^n \\]\nfor \\(n = \\deg f\\) (which is even).\nAs \\(n \\ge 7 \\implies (8/7)^n > 2\\), this means that we must have \\(n \\le 6\\).\nMoreover, taking modulo \\(7\\) we have \\(3^n + 5^n \\equiv 6 \\pmod 7\\)\nwhich gives \\(n \\equiv 2, 4 \\pmod 6\\).\n\nThus \\(\\deg P \\le 4\\), which (combined with \\(P\\) even) resolves the problem.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "id": "prob.hmmt-nov-team-2020-p6",
+  "title": "2020 HMMT November Team Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2020,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 54.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Regular hexagon \\(P_{1} P_{2} P_{3} P_{4} P_{5} P_{6}\\) has side length 2 . For \\(1 \\leq i \\leq 6\\), let \\(C_{i}\\) be a unit circle centered at \\(P_{i}\\) and \\(\\ell_{i}\\) be one of the internal common tangents of \\(C_{i}\\) and \\(C_{i+2}\\), where \\(C_{7}=C_{1}\\) and \\(C_{8}=C_{2}\\). Assume that the lines \\(\\left\\{\\ell_{1}, \\ell_{2}, \\ell_{3}, \\ell_{4}, \\ell_{5}, \\ell_{6}\\right\\}\\) bound a regular hexagon. The area of this hexagon can be expressed as \\(\\sqrt{\\frac{a}{b}}\\), where \\(a\\) and \\(b\\) are relatively prime positive integers. Compute \\(100 a+b\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "1603",
+    "value": "1603"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2020-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "The only way for the lines \\(\\ell_{i}\\) to bound a regular hexagon \\(H\\) is if they are rotationally symmetric around the center \\(O\\) of the original hexagon. (A quick way to see this is to note that the angle between the two internal common tangents of \\(C_{i}\\) and \\(C_{i+2}\\) cannot be a multiple of \\(60^{\\circ}\\).) Thus all we need to do is to compute \\(h\\), the distance from the center \\(O\\) to the sides of \\(H\\), because then we can compute the side length of \\(H\\) as \\(\\frac{2}{\\sqrt{3}} h\\) and thus its area as\n\n\\[6 \\frac{\\sqrt{3}}{4}\\left(\\frac{2 h}{\\sqrt{3}}\\right)^{2}=2 \\sqrt{3} h^{2}\\]\n\nWithout loss of generality, let's only consider \\(\\ell_{1}\\). Let \\(M\\) be the midpoint of \\(P_{1} P_{3}\\) and let \\(T_{1}\\) and \\(T_{3}\\) be the tangency points between \\(\\ell_{1}\\) and \\(C_{1}\\) and \\(C_{3}\\), respectively. Without loss of generality, assume \\(T_{1}\\) is closer to \\(O\\) than \\(T_{3}\\). Finally, let \\(Q\\) be the projection of \\(O\\) onto \\(\\ell_{1}\\), so that \\(h=O Q\\).\nNow, note that \\(\\angle O M Q=90^{\\circ}-\\angle T_{1} M P_{1}=\\angle M P_{1} T_{1}\\), so \\(\\triangle O M Q \\sim \\triangle M P_{1} T_{1}\\). Therefore, since \\(O M=O P_{2} / 2=1\\), we find\n\n\\[h=O Q=\\frac{O Q}{O M}=\\frac{T_{1} M}{M P_{1}}=\\frac{\\sqrt{M P_{1}^{2}-P_{1} T_{1}^{2}}}{M P_{1}}=\\sqrt{\\frac{2}{3}},\\]\n\nsince \\(M P_{1}=P_{1} P_{3} / 2=\\sqrt{3}\\). Thus the final area is \\(\\frac{2}{3} 2 \\sqrt{3}=\\sqrt{16 / 3}\\).\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

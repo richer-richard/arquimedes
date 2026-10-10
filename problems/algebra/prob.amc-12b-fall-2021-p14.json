@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-12b-fall-2021-p14",
+  "title": "2021 Fall AMC 12B Problem 14",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.extremal-argument",
+      "label": "Extremal argument",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2021,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 31.1,
+    "source": 1850,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Suppose that \\(P(z),\\) \\(Q(z),\\) and \\(R(z)\\) are polynomials with real coefficients, having degrees \\(2,\\) \\(3,\\) and \\(6,\\) respectively, and constant terms \\(1,\\) \\(2,\\) and \\(3,\\) respectively. Let \\(N\\) be the number of distinct complex numbers \\(z\\) that satisfy the equation \\[P(z) \\cdot Q(z) = R(z).\\] What is the minimum possible value of \\(N?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-fall-2021-p14.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(D(z) = P(z)Q(z) - R(z).\\) Since \\(P Q\\) has degree \\(5\\) and \\(R\\) has degree \\(6,\\) the degree of \\(D\\) is \\(6.\\) Its constant term is \\(1 \\cdot 2 - 3 = -1 \\neq 0.\\)\n\nBecause \\(R\\) is otherwise unconstrained, \\(D\\) can be made equal to any real degree-\\(6\\) polynomial with constant term \\(-1,\\) for instance \\(-(z - 1)^6.\\)\n\nSuch a polynomial has a single distinct root, so the minimum is \\(N = 1.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Consider \\(D(z) = P(z)Q(z) - R(z)\\); what is its degree and constant term?",
+        "A degree-\\(6\\) polynomial can have a single root of multiplicity \\(6\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

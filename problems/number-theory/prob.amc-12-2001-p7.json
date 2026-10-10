@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12-2001-p7",
+  "title": "2001 AMC 12 Problem 7",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12",
+    "year": 2001,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 20.0,
+    "source": 1370,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A charity sells \\(140\\) benefit tickets for a total of \\(\\$2001.\\) Some tickets sell for full price (a whole dollar amount), and the rest sell for half price. How much money is raised by the full-price tickets?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\$782\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\$986\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\$1158\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\$1219\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\$1449\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "782"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12-2001-p7.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(n\\) tickets sell at full price \\(p\\) dollars. Then \\[ np + (140 - n)\\dfrac{p}{2} = 2001, \\] so \\(p(n + 140)\\) \\(= 4002\\) \\(= 2 \\cdot 3 \\cdot 23 \\cdot 29.\\)\n\nSince \\(0 \\le n \\le 140,\\) we need a factor of \\(4002\\) with \\(140 \\le n + 140 \\le 280.\\) The only such factor is \\(174 = 2 \\cdot 3 \\cdot 29,\\) giving \\(n = 34\\) and \\(p = 23.\\)\n\nThe full-price tickets raise \\(34 \\cdot 23 = 782\\) dollars.\n\nThus, the correct answer is A.",
+      "hints": [
+        "With \\(n\\) full-price tickets at price \\(p,\\) the total is \\(np + (140 - n)\\dfrac{p}{2} = 2001\\)",
+        "This becomes \\(p(n + 140)\\) \\(= 4002\\) \\(= 2 \\cdot 3 \\cdot 23 \\cdot 29,\\) and \\(n + 140\\) lies between \\(140\\) and \\(280\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

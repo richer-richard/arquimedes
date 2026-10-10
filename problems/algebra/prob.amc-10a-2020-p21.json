@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2020-p21",
+  "title": "2020 AMC 10A Problem 21",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.pairing-and-grouping",
+      "label": "Pairing and grouping",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2020,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 35.8,
+    "source": 2380,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "There exists a unique strictly increasing sequence of nonnegative integers \\(a_1<a_2<\\cdots<a_k\\) such that \\[\\frac{2^{289}+1}{2^{17}+1}=2^{a_1}+2^{a_2}+\\cdots+2^{a_k}.\\] What is \\(k?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(117\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(136\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(137\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(273\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(306\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "137"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2020-p21.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(X=2^{17}\\). Then \\[ \\begin{gathered} \\dfrac{2^{289}+1}{2^{17}+1} = \\dfrac{X^{17}+1}{X+1} \\\\ = X^{16}-X^{15}+X^{14} \\\\ {}-\\cdots-X+1 \\end{gathered} \\].\n\nPair consecutive terms: \\(X^{16}-X^{15}\\), \\(X^{14}-X^{13}\\), \\(\\ldots\\), \\(X^2-X\\), and then the final \\(+1\\). Each pair is \\(2^{17m}(2^{17}-1)\\), contributing \\(17\\) ones in binary. There are \\(8\\) such pairs plus the final \\(1\\), so \\(k=8\\cdot17+1=137\\). Thus, C is the correct answer.",
+      "hints": [
+        "Set \\(X=2^{17}\\) and divide \\(X^{17}+1\\) by \\(X+1\\)",
+        "Pair positive and negative powers to create blocks of binary ones"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

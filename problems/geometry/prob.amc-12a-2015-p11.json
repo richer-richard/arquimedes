@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2015-p11",
+  "title": "2015 AMC 12A Problem 11",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle",
+      "label": "Circle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.tangent-line",
+      "label": "Tangent line",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2015,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 28.4,
+    "source": 1570,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "On a sheet of paper, Isabella draws a circle of radius \\(2,\\) a circle of radius \\(3,\\) and all possible lines simultaneously tangent to both circles. Isabella notices that she has drawn exactly \\(k \\ge 0\\) lines. How many different values of \\(k\\) are possible?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(6\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2015-p11.live",
+      "kind": "proof-sketch",
+      "text": "The number of common tangent lines depends on the relative position of the two circles:\n\nIf the smaller circle is inside the larger, there are \\(0\\) tangents. If it is internally tangent, there is \\(1.\\) If the circles intersect at two points, there are \\(2.\\) If they are externally tangent, there are \\(3.\\) If they are separated, there are \\(4.\\)\n\nThus \\(k\\) can be any of \\(0, 1, 2, 3, 4,\\) which gives \\(5\\) possible values.\n\nThus, the correct answer is D.",
+      "hints": [
+        "The number of common tangents depends on how the two circles are positioned",
+        "Move the circles from one inside the other out to fully separated and count at each stage"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "id": "prob.hmmt-feb-guts-2008-p28",
+  "title": "2008 HMMT February Guts Problem 28",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.solid-geometry",
+      "label": "Solid geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2008,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 81.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(P\\) be a polyhedron where every face is a regular polygon, and every edge has length 1. Each vertex of \\(P\\) is incident to two regular hexagons and one square. Choose a vertex \\(V\\) of the polyhedron. Find the volume of the set of all points contained in \\(P\\) that are closer to \\(V\\) than to any other vertex.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2008-p28.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\quad \\frac{\\sqrt{2}}{3}\\) Observe that \\(P\\) is a truncated octahedron, formed by cutting off the corners from a regular octahedron with edge length 3 . So, to compute the value of \\(P\\), we can find the volume of the octahedron, and then subtract off the volume of truncated corners. Given a square pyramid where each triangular face an equilateral triangle, and whose side length is \\(s\\), the height of the pyramid is \\(\\frac{\\sqrt{2}}{2} s\\), and thus the volume is \\(\\frac{1}{3} \\cdot s^{2} \\cdot \\frac{\\sqrt{2}}{2} s=\\frac{\\sqrt{2}}{6} s^{3}\\). The side length of the octahedron is 3 , and noting that the octahedron is made up of two square pyramids, its volume must be is \\(2 \\cdot \\frac{\\sqrt{2}(3)^{3}}{6}=9 \\sqrt{2}\\). The six \"corners\" that we remove are all square pyramids, each with volume \\(\\frac{\\sqrt{2}}{6}\\), and so the resulting polyhedron \\(P\\) has volume \\(9 \\sqrt{2}-6 \\cdot \\frac{\\sqrt{2}}{6}=8 \\sqrt{2}\\).\nFinally, to find the volume of all points closer to one particular vertex than any other vertex, note that due to symmetry, every point in \\(P\\) (except for a set with zero volume), is closest to one of the 24 vertices. Due to symmetry, it doesn't matter which \\(V\\) is picked, so we can just divide the volume of \\(P\\) by 24 to obtain the answer \\(\\frac{\\sqrt{2}}{3}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

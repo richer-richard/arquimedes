@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-10b-2007-p21",
+  "title": "2007 AMC 10B Problem 21",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.altitude",
+      "label": "Altitude",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.right-triangle",
+      "label": "Right triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2007,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 28.8,
+    "source": 1720,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Right \\(\\triangle ABC\\) has \\(AB=3,\\) \\(BC=4,\\) and \\(AC=5.\\) Square \\(XYZW\\) is inscribed in \\(\\triangle ABC\\) with \\(X\\) and \\(Y\\) on \\(\\overline{AC},\\) \\(W\\) on \\(\\overline{AB},\\) and \\(Z\\) on \\(\\overline{BC}.\\) What is the side length of the square?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{3}{2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{60}{37}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{12}{7}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{23}{13}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "60/37"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2007-p21.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(s\\) be the side of the square and \\(h\\) the altitude from \\(B\\) to \\(AC.\\) Then \\(h=\\dfrac{AB\\cdot BC}{AC}=\\dfrac{3\\cdot 4}{5}=\\dfrac{12}{5}.\\)\n\nThe small triangle above the square is similar to \\(\\triangle ABC\\) with the square’s top side as its base, giving \\(\\dfrac{h-s}{h}=\\dfrac{s}{AC},\\) so \\(s=\\dfrac{AC\\cdot h}{AC+h}.\\)\n\nSubstituting, \\(s=\\dfrac{5\\cdot\\frac{12}{5}}{5+\\frac{12}{5}}=\\dfrac{12}{\\frac{37}{5}}=\\dfrac{60}{37}.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Find the altitude from \\(B\\) to the hypotenuse \\(AC\\)",
+        "Use the similarity between the whole triangle and the small triangle above the square"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "508e303eaaedccfc514753b717ce90540ca605068061539ff87ea2103becd4fb"
+    ],
+    "solutions": []
+  }
+}

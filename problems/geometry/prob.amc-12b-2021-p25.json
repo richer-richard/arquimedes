@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2021-p25",
+  "title": "2021 AMC 12B Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.lattice-point",
+      "label": "Lattice point",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2021,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 39.4,
+    "source": 2600,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Let \\(S\\) be the set of lattice points in the coordinate plane, both of whose coordinates are integers between \\(1\\) and \\(30,\\) inclusive. Exactly \\(300\\) points in \\(S\\) lie on or below a line with equation \\(y=mx.\\) The possible values of \\(m\\) lie in an interval of length \\(\\dfrac{a}{b},\\) where \\(a\\) and \\(b\\) are relatively prime positive integers. What is \\(a+b?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(31\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(47\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(62\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(72\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(85\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "85"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2021-p25.live",
+      "kind": "proof-sketch",
+      "text": "For slope \\(m,\\) column \\(x\\) (with \\(1\\le x\\le 30\\)) contributes \\(\\min(30,\\lfloor mx\\rfloor)\\) points on or below \\(y=mx,\\) and we need the total to equal \\(300.\\)\n\nAt \\(m=\\tfrac23,\\) the cap at \\(30\\) is inactive and \\(\\sum_{x=1}^{30}\\lfloor \\frac{2x}{3}\\rfloor=300.\\) The count remains fixed until the next larger slope \\(\\frac{y}{x}\\) with \\(x\\le30.\\)\n\nIf \\(\\frac{y}{x}>\\frac{2}{3},\\) then \\(3y-2x\\) is a positive integer. The closest possibility has \\(3y-2x=1;\\) maximizing \\(x\\le30\\) in this congruence gives \\((y,x)=(19,28).\\) Any numerator at least \\(2\\) gives a larger gap. Hence the interval is \\([\\tfrac23,\\tfrac{19}{28}),\\) whose length is \\(\\tfrac{19}{28}-\\tfrac23=\\tfrac1{84}.\\)\n\nSince \\(\\gcd(1,84)=1,\\) \\(a+b=1+84=85.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "For a given \\(m,\\) column \\(x\\) contributes \\(\\min(30,\\lfloor mx\\rfloor)\\) points at or below the line",
+        "As \\(m\\) increases, the count jumps at slopes \\(\\tfrac{y}{x};\\) find the two consecutive such slopes bracketing a count of \\(300\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

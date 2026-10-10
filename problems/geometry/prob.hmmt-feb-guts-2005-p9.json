@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-guts-2005-p9",
+  "title": "2005 HMMT February Guts Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2005,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 70.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Farmer Bill's 1000 animals - ducks, cows, and rabbits - are standing in a circle. In order to feel safe, every duck must either be standing next to at least one cow or between two rabbits. If there are 600 ducks, what is the least number of cows there can be for this to be possible?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2005-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "201\nSuppose Bill has \\(r\\) rabbits and \\(c\\) cows. At most \\(r-1\\) ducks can be between two rabbits: each rabbit can serve up to two such ducks, so at most \\(2 r / 2=r\\) ducks will each be served by two rabbits, but we cannot have equality, since this would require alternating between rabbits and ducks all the way around the circle, contradicting the fact that more than half the animals are ducks. Also, at most \\(2 c\\) ducks can each be adjacent to a cow. So we need \\(600 \\leq r-1+2 c=(400-c)-1+2 c\\), giving \\(c \\geq 201\\). Conversely, an arrangement with 201 cows is possible:\n\n\\[\\underbrace{R D R D R \\cdots D R}_{199_{R}, 198 D} \\underbrace{D C D D C D D C D \\cdots D C D}_{201 C, 402 D} .\\]\n\nSo 201 is the answer.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

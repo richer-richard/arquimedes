@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12b-2023-p21",
+  "title": "2023 AMC 12B Problem 21",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cone",
+      "label": "Cone",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.net-3d-geometry",
+      "label": "Net (3D geometry)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangent-line",
+      "label": "Tangent line",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2023,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 36.7,
+    "source": 2020,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "A lampshade is made in the form of the lateral surface of the frustum of a right circular cone. The height of the frustum is \\(3\\sqrt{3}\\) inches, its top diameter is \\(6\\) inches, and its bottom diameter is \\(12\\) inches. A bug is at the bottom of the lampshade and there is a glob of honey on the top edge of the lampshade at the spot farthest from the bug. The bug wants to crawl to the honey, but it must stay on the surface of the lampshade. What is the length in inches of its shortest path to the honey?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(6+3\\pi\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6+6\\pi\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6\\sqrt{3}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6\\sqrt{5}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(6\\sqrt{3}+\\pi\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2023-p21.live",
+      "kind": "proof-sketch",
+      "text": "Extend the frustum to a full cone. Since the radii are \\(3\\) and \\(6\\) with slant band \\(6,\\) the apex is slant distance \\(6\\) from the top rim and \\(12\\) from the bottom rim. The bottom circumference \\(12\\pi\\) unrolls to a sector of radius \\(12\\) and angle \\(\\dfrac{12\\pi}{12}=\\pi.\\) Place the bug at \\((12,0)\\) in this pattern; the honey, halfway around the base, is at radius \\(6\\) and angle \\(\\tfrac{\\pi}{2}.\\) The straight chord between them passes within radius \\(6\\) (off the surface), so the geodesic goes tangent to the circle of radius \\(6:\\) the tangent has length \\(\\sqrt{12^2-6^2}=6\\sqrt3\\) and touches at angle \\(\\tfrac{\\pi}{3},\\) after which the path follows the arc of angle \\(\\tfrac{\\pi}{6}\\) on radius \\(6,\\) of length \\(6\\cdot\\tfrac{\\pi}{6}=\\pi.\\) The shortest path is \\(6\\sqrt3+\\pi.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "Extend the frustum to a full cone (apex slant distances \\(6\\) and \\(12\\)); it unrolls to a sector of angle \\(\\pi\\)",
+        "The straight line to the honey cuts across the missing top cone, so the path runs tangent to the inner circle of radius \\(6,\\) then along its arc"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2015-p21",
+  "title": "2015 AMC 10B Problem 21",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2015,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 31.8,
+    "source": 2180,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Cozy the Cat and Dash the Dog are going up a staircase with a certain number of steps. However, instead of walking up the steps one at a time, both Cozy and Dash jump.\n\nCozy goes two steps up with each jump (though if necessary, he will just jump the last step).\n\nDash goes five steps up with each jump (though if necessary, he will just jump the last steps if there are fewer than \\(5\\) steps left).\n\nSuppose Dash takes \\(19\\) fewer jumps than Cozy to reach the top of the staircase. Let \\(s\\) denote the sum of all possible numbers of steps this staircase can have. What is the sum of the digits of \\(s?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 9 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 11 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 12 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 13 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 15 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "13"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2015-p21.live",
+      "kind": "proof-sketch",
+      "text": "Suppose Dash takes \\(d+1\\) jumps. Then the number of steps \\(t\\) is one of \\[ \\begin{gathered} 5d+1,5d+2,5d+3, \\\\ 5d+4,5d+5. \\end{gathered} \\] Cozy takes \\(19\\) more jumps, so Cozy takes \\(d+20\\) jumps, which means \\(t\\) is either \\(2d+39\\) or \\(2d+40\\).\n\nMatching these possibilities, the integer solutions are \\[ \\begin{gathered} 5d+3=2d+39, \\\\ 5d+1=2d+40, \\\\ 5d+4=2d+40. \\end{gathered} \\] They give \\(t=63,66,64\\), respectively.\n\nThus \\(s=63+66+64=193\\), and the sum of its digits is \\(13\\).\n\nThus, the correct answer is D.",
+      "hints": [
+        "Let Dash take \\(d+1\\) jumps and Cozy take \\(d+20\\)",
+        "Match \\(t\\) between \\(5d+1,\\ldots,5d+5\\) and \\(2d+39,2d+40\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

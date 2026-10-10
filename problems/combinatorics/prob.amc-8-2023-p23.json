@@ -1,0 +1,82 @@
+{
+  "id": "prob.amc-8-2023-p23",
+  "title": "2023 AMC 8 Problem 23",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2023,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 32.1,
+    "source": 1840,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Each square in a \\(3 \\times 3\\) grid is randomly filled with one of the \\(4\\) shaded-and-unshaded tiles shown below on the right.\n\nWhat is the probability that the tiling will contain a large shaded diamond in one of the smaller \\(2 \\times 2\\) grids? Below is an example of such a tiling.",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{1024}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1}{256}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{64}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{1}{16}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{1}{4}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "1/64"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2023-p23.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(4^9\\) possible tilings. There are \\(4\\) possible \\(2\\times2\\) grids where a large shaded diamond could appear.\n\nAfter one of these \\(2\\times2\\) grids is chosen, the four tile orientations inside it are forced, and the other \\(5\\) squares can be filled in any way. This gives \\(4^5\\) tilings for each chosen \\(2\\times2\\) grid.\n\nTwo different \\(2\\times2\\) grids cannot both contain a large shaded diamond, because their overlapping squares would require incompatible tile orientations. Therefore the number of favorable tilings is \\(4\\cdot4^5=4^6.\\)\n\nThe desired probability is then \\[ \\dfrac{4^6}{4^9} = \\dfrac{1}{4^3} = \\dfrac{1}{64}. \\]\n\nThus, C is the correct answer.",
+      "hints": [
+        "Choose which \\(2\\times2\\) grid contains the large diamond",
+        "Once a \\(2\\times2\\) grid is chosen, its four tile orientations are forced"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "8f48f3e69e193ca65a314332b06474dfb9ff5f550ec403173af785860a41c860",
+      "0afde561520e0c8afd4da801eb68c5e4fd8f122370be5609e95a48aa8a9d7d2c"
+    ],
+    "solutions": []
+  }
+}

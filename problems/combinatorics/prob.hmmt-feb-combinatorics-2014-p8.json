@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2014-p8",
+  "title": "2014 HMMT February Combinatorics Problem 8",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.coloring-schemes-extremal-arguments",
+      "label": "Coloring schemes, extremal arguments",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.invariants-and-monovariants",
+      "label": "Invariants and monovariants",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2014,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 77.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The integers \\(1,2, \\ldots, 64\\) are written in the squares of a \\(8 \\times 8\\) chess board, such that for each \\(1 \\leq i<64\\), the numbers \\(i\\) and \\(i+1\\) are in squares that share an edge. What is the largest possible sum that can appear along one of the diagonals?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2014-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "432 Our answer is \\(26+52+54+56+58+60+62+64\\).\nOne possible configuration:\n\nWLOG, we seek to maximize the sum of the numbers on the main diagonal (top left to bottom right). If we color the squares in a checker-board pattern and use the fact that \\(a\\) and \\(a+1\\) lie on different colored squares, we notice that all numbers appearing on the main diagonal must be of the same parity.\n\nConsider the smallest value \\(m\\) on the main diagonal. All numbers from 1 to \\(m-1\\) must lie on one side of the diagonal since the main diagonal disconnects the board into two regions, and by assumption, all\n\n| 26 | 25 | 24 | 23 | 18 | 17 | 8 | 7 |\n| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |\n| 27 | 52 | 53 | 22 | 19 | 16 | 9 | 6 |\n| 28 | 51 | 54 | 21 | 20 | 15 | 10 | 5 |\n| 29 | 50 | 55 | 56 | 57 | 14 | 11 | 4 |\n| 30 | 49 | 44 | 43 | 58 | 13 | 12 | 3 |\n| 31 | 48 | 45 | 42 | 59 | 60 | 61 | 2 |\n| 32 | 47 | 46 | 41 | 40 | 39 | 62 | 1 |\n| 33 | 34 | 35 | 36 | 37 | 38 | 63 | 64 |\n\nnumbers less than \\(m\\) cannot lie on the main diagonal. Therefore, \\(m \\leq 29\\) (one more than the seventh triangular number) But if \\(m=29\\), then the sum of the numbers on the main diagonal is at most \\(29+51+53+55+57+59+61+63=428\\), as these numbers must be odd. Similarly, \\(m=27\\) is also not optimal.\n\nThis leaves \\(m=28\\) as a possibility. But if this were the case, the only way it beats our answer is if we have \\(28+52+54+\\ldots+64\\), which would require \\(52,54, \\ldots, 64\\) to appear sequentially along the diagonal, forcing 28 to be in one of the corners.\n\nNow label the squares (row, column) with \\((1,1)\\) being the top left and \\((8,8)\\) being the bottom right. Assume WLOG that 28 occupies \\((1,1)\\). Since 62 and 64 are in \\((7,7)\\) and \\((8,8)\\), respectively, we must have 63 in \\((7,8)\\) or \\((8,7)\\), and WLOG, assume it's in \\((8,7)\\). Since 61 is next to 60 , it is not difficult to see that \\((7,8)\\) must be occupied by 1 (all numbers \\(a\\) between 2 and 60 must have \\(a-1\\) and \\(a+1\\) as neighbors). Since 1 is above the main diagonal, all numbers from 1 to 27 must also be above the main diagonal. Since there are 28 squares above the main diagonal, there is exactly one number above the main diagonal greater than 28 .\n\nNotice that 61 must occupy \\((7,6)\\) or \\((6,7)\\). If it occupies \\((7,6)\\), then we are stuck at \\((8,6)\\), since it must contain a number between 2 and 59 , which is impossible. Therefore, 61 must occupy \\((6,7)\\), and no more numbers greater than 28 can be above the main diagonal. This forces \\(59,57,55\\), and 53 to occupy \\((6,5),(5,4),(4,3),(3,2)\\), respectively. But we see that 27 occupies \\((1,2)\\) and 29 occupies \\((2,1)\\), leaving nowhere for 51 .\n\nThis is a contradiction, so our answer is therefore optimal.\n\nAlternate solution: Another method of proving that \\(m \\leq 26\\) is to note that each side of the diagonal has 28 squares, 16 of which are one color and 12 of which are the other color. As the path has to alternate colors, one can make at most \\(13+12=25\\) steps before moving on the diagonal.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

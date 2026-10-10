@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2018-p12",
+  "title": "2018 AMC 12B Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-bisector-theorem",
+      "label": "Angle bisector theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.triangle-inequality",
+      "label": "Triangle inequality",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2018,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 30.5,
+    "source": 1820,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Side \\(\\overline{AB}\\) of \\(\\triangle ABC\\) has length \\(10.\\) The bisector of angle \\(A\\) meets \\(\\overline{BC}\\) at \\(D,\\) and \\(CD=3.\\) The set of all possible values of \\(AC\\) is an open interval \\((m, n).\\) What is \\(m+n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(19\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(20\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "18"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2018-p12.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(q=AC\\) and \\(r=BD.\\) The angle bisector theorem gives \\(\\tfrac{q}{3}=\\tfrac{10}{r},\\) so \\(r=\\tfrac{30}{q}.\\)\n\nApplying the triangle inequalities to sides \\(q,\\) \\(10,\\) and \\(3+r\\) and substituting \\(r=\\tfrac{30}{q}\\) yields \\((q-15)(q+2)\\lt0\\) and \\((q-3)(q+10)\\gt0\\) (the third inequality holds automatically). Together these force \\(3\\lt q\\lt15.\\)\n\nSo \\((m,n)=(3,15)\\) and \\(m+n=18.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "By the angle bisector theorem, \\(\\dfrac{AC}{CD}=\\dfrac{AB}{BD}\\)",
+        "Let \\(AC=q,\\) so \\(BD=\\dfrac{30}{q};\\) then apply the three triangle inequalities"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

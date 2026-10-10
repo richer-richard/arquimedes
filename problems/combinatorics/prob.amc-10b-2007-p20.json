@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-10b-2007-p20",
+  "title": "2007 AMC 10B Problem 20",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "comb.permutations",
+      "label": "Permutations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2007,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 27.2,
+    "source": 1700,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A set of \\(25\\) square blocks is arranged into a \\(5\\times 5\\) square. How many different combinations of \\(3\\) blocks can be selected from that set so that no two are in the same row or column?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(100\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(125\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(600\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2300\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(3600\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "600"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2007-p20.live",
+      "kind": "proof-sketch",
+      "text": "Choose \\(3\\) of the \\(5\\) rows in \\(\\binom{5}{3}=10\\) ways and \\(3\\) of the \\(5\\) columns in \\(\\binom{5}{3}=10\\) ways.\n\nThe three chosen blocks must occupy distinct rows and columns, so they form a matching between the three rows and three columns, which can be done in \\(3!=6\\) ways.\n\nThe total is \\(10\\cdot 10\\cdot 6=600.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Choose which \\(3\\) rows and which \\(3\\) columns are used",
+        "After picking \\(3\\) rows and \\(3\\) columns, the blocks correspond to a matching between them"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

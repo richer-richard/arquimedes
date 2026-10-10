@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2014-p8",
+  "title": "2014 AMC 12B Problem 8",
+  "category": "logic-foundations",
+  "subjects": [
+    "logic-foundations",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "logic.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "logic.cryptarithm",
+      "label": "Cryptarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "logic.place-value",
+      "label": "Place value",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2014,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 25.5,
+    "source": 1580,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In the addition shown below \\(A,\\) \\(B,\\) \\(C,\\) and \\(D\\) are distinct digits. How many different values are possible for \\(D?\\)\n\n\\[\\begin{array}{cccccc} & A & B & B & C & B \\\\ + & B & C & A & D & A \\\\ \\hline & D & B & D & D & D \\end{array}\\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(9\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "7"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2014-p8.live",
+      "kind": "proof-sketch",
+      "text": "The leftmost column shows \\(A+B = D\\) with no carry out, so \\(A+B \\le 9.\\) Examining the tens and thousands columns (each of the form \\(C + \\text{digit} + \\text{carry}\\) producing the same digit) forces \\(C = 0\\) and eliminates all carries.\n\nEvery column then reduces to \\(A+B = D,\\) with \\(A, B, C=0\\) distinct. Since \\(A\\) and \\(B\\) are distinct positive digits, \\(D = A+B\\) can be any value from \\(3\\) up to \\(9,\\) giving \\(7\\) possibilities, for example \\((A,B,C,D) = (1,2,0,3),\\) \\((1,3,0,4), \\ldots,\\) \\((2,7,0,9).\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "The leftmost column gives \\(A+B=D\\) with no carry, so \\(A+B \\le 9\\)",
+        "The second and fourth columns force \\(C=0\\) and no carries anywhere"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

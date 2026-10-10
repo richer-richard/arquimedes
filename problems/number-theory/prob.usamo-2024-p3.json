@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2024-p3",
+  "title": "2024 USAMO Problem 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2024,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 111.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(m\\) be a positive integer. A triangulation of a polygon is \\(m\\)-balanced if its triangles can be colored with \\(m\\) colors in such a way that the sum of the areas of all triangles of the same color is the same for each of the \\(m\\) colors. Find all positive integers \\(n\\) for which there exists an \\(m\\)-balanced triangulation of a regular \\(n\\)-gon. Note: A triangulation of a convex polygon \\(\\mathcal{P}\\) with \\(n \\geq 3\\) sides is any partitioning of \\(\\mathcal{P}\\) into \\(n-2\\) triangles by \\(n-3\\) diagonals of \\(\\mathcal{P}\\) that do not intersect in the polygon's interior.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2024-p3.imported",
+      "kind": "proof-sketch",
+      "text": "The answer is if and only if \\(m\\) is a proper divisor of \\(n\\).\n\nWe represent the vertices of the regular \\(n\\)-gon using complex numbers. Let \\(\\omega = \\exp(2\\pi i/n)\\) be a primitive \\(n\\)-th root of unity, and label the vertices as \\(1, \\omega, \\omega^2, \\ldots, \\omega^{n-1}\\).\n\nKey Lemma:\n\nThe triangle with vertices \\(\\omega^k, \\omega^{k+a}, \\omega^{k+b}\\) has signed area:\n\n\\[\nT(a, b) := \\frac{(\\omega^a - 1)(\\omega^b - 1)(\\omega^{-b} - \\omega^{-a})}{4i}\n\\]\n\nProof of Lemma:\n\nWe can rotate by \\(\\omega^{-k}\\) to assume without loss of generality that \\(k = 0\\). Then we apply the complex shoelace formula to the triangle with vertices \\(1, \\omega^a, \\omega^b\\):\n\n\\[\n\\frac{i}{4} \\det \\begin{bmatrix} 1 & 1 & 1 \\\\ \\omega^a & \\omega^{-a} & 1 \\\\ \\omega^b & \\omega^{-b} & 1 \\end{bmatrix} = \\frac{i}{4} \\det \\begin{bmatrix} 0 & 0 & 1 \\\\ \\omega^a - 1 & \\omega^{-a} - 1 & 1 \\\\ \\omega^b - 1 & \\omega^{-b} - 1 & 1 \\end{bmatrix}\n\\]\n\nwhich simplifies to the expression for \\(T(a, b)\\) above.\n\nConstruction (Sufficiency):\n\nTo construct a valid triangulation and coloring when \\(m\\) divides \\(n\\), we draw all the diagonals from vertex 1, and then color the resulting triangles with the \\(m\\) colors in cyclic order.\n\nFor example, when \\(n = 9\\) and \\(m = 3\\), we get a coloring with red, green, blue as shown in the image, repeating cyclically.\n\nTo prove this works, we fix a residue \\(r \\mod m\\) corresponding to one of the colors. Then the total area of triangles with this color is:\n\n\\[\n\\sum_{\\substack{0 \\leq j < n \\\\ j \\equiv r \\mod m}} \\text{Area}(\\omega^0, \\omega^j, \\omega^{j+1}) = \\sum_{\\substack{0 \\leq j < n \\\\ j \\equiv r \\mod m}} T(j, j+1)\n\\]\n\nAfter algebraic manipulation:\n\n\\[\n= \\frac{\\omega - 1}{4i} \\left(\\frac{n}{m}(1 + \\omega^{-1}) + \\sum_{\\substack{0 \\leq j < n \\\\ j \\equiv r \\mod m}} (\\omega^{-1-j} - \\omega^j)\\right)\n\\]\n\nWhen \\(m\\) divides \\(n\\), we can show that the inner sum vanishes, and the total area of each color equals:\n\n\\[\n\\sum_{\\substack{0 \\leq j < n \\\\ j \\equiv r \\mod m}} \\text{Area}(\\omega^0, \\omega^j, \\omega^{j+1}) = \\frac{n}{m} \\cdot \\frac{\\omega - \\omega^{-1}}{4i}\n\\]\n\nSince the right-hand side does not depend on the residue \\(r\\), this shows all colors have equal area.\n\nNecessity:\n\nTo prove that \\(m\\) must divide \\(n\\), we note that if there were a valid triangulation and coloring, the total area of each color would equal:\n\n\\[\nS := \\frac{n}{m} \\cdot \\frac{\\omega - \\omega^{-1}}{4i}\n\\]\n\nWe then prove the following claim:\n\nThe number \\(4i \\cdot S\\) is not an algebraic integer when \\(m \\nmid n\\).\n\nThis can be shown using the fact that \\(K = \\mathbb{Q}(\\omega)\\) is a number field with ring of integers \\(\\mathcal{O}_K = \\mathbb{Z}[\\omega]\\). We demonstrate that:\n\n\\[\n\\omega \\cdot 4i \\cdot S = \\frac{n}{m}\\omega^2 - \\frac{n}{m}\n\\]\n\nis not an algebraic integer when \\(m\\) doesn't divide \\(n\\) because \\(\\frac{n}{m} \\not\\in \\mathbb{Z}\\).\n\nHowever, for any triangle in our construction, \\(4i \\cdot T(a,b)\\) is always an algebraic integer. Since a finite sum of algebraic integers is also an algebraic integer, the sum of expressions of the form \\(4i \\cdot T(a,b)\\) can never equal \\(4i \\cdot S\\) unless \\(m\\) divides \\(n\\).\n\nWe can also show this directly by noting that \\(T(a,b)\\) is always divisible by \\(\\frac{\\omega - \\omega^{-1}}{4i}\\), which means we need \\(\\frac{n}{m}\\) to be an algebraic integer. A rational number is an algebraic integer if and only if it's a rational integer, so \\(\\frac{n}{m}\\) is an algebraic integer exactly when \\(m\\) divides \\(n\\).\n\nTherefore, a valid triangulation and coloring exists if and only if \\(m\\) is a proper divisor of \\(n\\).\n\n~ brandonyee",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

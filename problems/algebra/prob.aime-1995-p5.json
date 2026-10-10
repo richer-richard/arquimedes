@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1995-p5",
+  "title": "1995 AIME Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1995,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 39.0,
+    "source": 2110,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "For certain real values of \\(a,\\) \\(b,\\) \\(c,\\) and \\(d,\\) the equation \\[x^4+ax^3+bx^2+cx+d=0\\] has four non-real roots. The product of two of these roots is \\(13+i\\) and the sum of the other two roots is \\(3+4i,\\) where \\(i=\\sqrt{-1}.\\) Find \\(b.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "51",
+    "value": "51"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1995-p5.live",
+      "kind": "proof-sketch",
+      "text": "Let the first two roots be \\(\\alpha\\) and \\(\\beta.\\) Since \\(\\alpha\\beta=13+i\\) is not real, they are not conjugates, so the other roots are \\(\\overline\\alpha\\) and \\(\\overline\\beta.\\) Hence \\(\\alpha+\\beta=3-4i\\) and \\(\\overline\\alpha\\,\\overline\\beta=13-i.\\) By Vieta’s formulas, \\[\\begin{aligned}b&=\\alpha\\beta+\\overline\\alpha\\,\\overline\\beta\\\\&\\quad+(3-4i)(3+4i)\\\\&=26+25=51.\\end{aligned}\\]",
+      "hints": [
+        "Because the polynomial has real coefficients, its non-real roots occur in conjugate pairs",
+        "Group the six pairwise products into the products within the two groups and the four cross-products"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

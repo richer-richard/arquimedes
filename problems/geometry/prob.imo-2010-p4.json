@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2010-p4",
+  "title": "2010 IMO Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2010,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 84.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(P\\) be a point interior to triangle \\(ABC\\) (with \\(CA \\neq CB\\)).\nThe lines \\(AP\\), \\(BP\\) and \\(CP\\) meet again its circumcircle \\(\\Gamma\\)\nat \\(K\\), \\(L\\), \\(M\\), respectively.\nThe tangent line at \\(C\\) to \\(\\Gamma\\) meets the line \\(AB\\) at \\(S\\).\nShow that from \\(SC = SP\\) follows \\(MK = ML\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2010-p4.evanchen",
+      "kind": "proof-sketch",
+      "text": "We present two solutions using harmonic bundles.\n\nFirst solution (Evan Chen)..\nLet \\(N\\) be the antipode of \\(M\\), and let \\(NP\\) meet \\(\\Gamma\\) again at \\(D\\).\nFocus only on \\(CDMN\\) for now (ignoring the condition).\nThen \\(C\\) and \\(D\\) are feet of altitudes in \\(\\triangle MNP\\);\nit is well-known that the circumcircle of \\(\\triangle CDP\\)\nis orthogonal to \\(\\Gamma\\)\n(passing through the orthocenter of \\(\\triangle MPN\\)).\n\n[Diagram omitted from this imported TeX transcription.]\n\nNow, we are given that point \\(S\\) is such that \\(\\overline{SC}\\)\nis tangent to \\(\\Gamma\\), and \\(SC = SP\\).\nIt follows that \\(S\\) is the circumcenter of \\(\\triangle CDP\\),\nand hence \\(\\overline{SC}\\) and \\(\\overline{SD}\\) are tangents to \\(\\Gamma\\).\n\nThen \\(-1 = (AB;CD) \\overset{P}{=} (KL;MN)\\).\nSince \\(\\overline{MN}\\) is a diameter, this implies \\(MK = ML\\).\n\nRemark.\n I think it's more natural to come up with\n this solution in reverse.\n Namely, suppose we define the points the other way:\n let \\(\\overline{SD}\\) be the other tangent, so \\((AB;CD) = -1\\).\n Then project through \\(P\\) to get \\((KL;MN) = -1\\),\n where \\(N\\) is the second intersection of \\(\\overline{DP}\\).\n However, if \\(ML = MK\\) then \\(KMLN\\) must be a kite.\n Thus one can recover the solution in reverse.\n\nSecond solution (Sebastian Jeon)..\nWe have \\[ SP^2 = SC^2 = SA \\cdot SB\n \\implies\n \\measuredangle SPA = \\measuredangle PBA = \\measuredangle LBA = \\measuredangle LKA = \\measuredangle LKP \\]\n(the latter half is Reim's theorem).\nTherefore \\(\\overline{SP}\\) and \\(\\overline{LK}\\) are parallel.\n\nNow, let \\(\\overline{SP}\\) meet \\(\\Gamma\\) again at \\(X\\) and \\(Y\\),\nand let \\(Q\\) be the antipode of \\(P\\) on \\((S)\\).\nThen\n\\[ SP^2 = SQ^2 = SX \\cdot SY\n \\implies (PQ;XY) = -1 \\implies \\angle QCP = 90^\\circ \\]\nthat \\(\\overline{CP}\\) bisects \\(\\angle XCY\\).\nSince \\(\\overline{XY} \\parallel \\overline{KL}\\),\nit follows \\(\\overline{CP}\\) bisects to \\(\\angle LCK\\) too.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

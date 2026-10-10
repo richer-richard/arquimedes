@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-ii-2010-p8",
+  "title": "2010 AIME II Problem 8",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.subsets",
+      "label": "Subsets",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2010,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 49.5,
+    "source": 2520,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "Let \\(N\\) be the number of ordered pairs of nonempty sets \\(\\mathcal{A}\\) and \\(\\mathcal{B}\\) that have the following properties:\n\n• \\(\\mathcal{A} \\cup \\mathcal{B}\\) \\(\\small = \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12\\},\\)\n\n• \\(\\mathcal{A} \\cap \\mathcal{B} = \\emptyset,\\)\n\n• the number of elements of \\(\\mathcal{A}\\) is not an element of \\(\\mathcal{A},\\)\n\n• the number of elements of \\(\\mathcal{B}\\) is not an element of \\(\\mathcal{B}.\\)\n\nFind \\(N.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "772",
+    "value": "772"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2010-p8.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(k = |\\mathcal{A}|,\\) so \\(|\\mathcal{B}| = 12 - k\\) with \\(1 \\le k \\le 11.\\) Since every element lies in exactly one set, \\(k \\notin \\mathcal{A}\\) means \\(k \\in \\mathcal{B},\\) and \\(12 - k \\notin \\mathcal{B}\\) means \\(12 - k \\in \\mathcal{A}.\\) If \\(k = 6,\\) then \\(6\\) would have to belong to both sets, which is impossible, so \\(k \\ne 6.\\)\n\nFor each other \\(k,\\) the elements \\(k\\) and \\(12 - k\\) are already placed, and the remaining \\(k - 1\\) elements of \\(\\mathcal{A}\\) can be chosen from the other \\(10\\) numbers in \\(\\binom{10}{k-1}\\) ways, with \\(\\mathcal{B}\\) taking the rest. Hence \\[ \\begin{aligned} N &= \\sum_{k=1}^{11} \\binom{10}{k-1} - \\binom{10}{5} \\\\ &= 2^{10} - 252 = 772. \\end{aligned} \\]",
+      "hints": [
+        "If \\(|\\mathcal{A}| = k,\\) then \\(|\\mathcal{B}| = 12 - k,\\) and the conditions force \\(k \\in \\mathcal{B}\\) and \\(12 - k \\in \\mathcal{A}\\)",
+        "For each \\(k \\ne 6,\\) choose the remaining \\(k - 1\\) elements of \\(\\mathcal{A}\\) from the \\(10\\) unassigned numbers. The case \\(k = 6\\) fails because \\(6\\) would have to lie in both sets."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

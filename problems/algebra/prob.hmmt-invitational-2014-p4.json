@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-invitational-2014-p4",
+  "title": "2014 HMMT Invitational Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.algebraic-numbers",
+      "label": "Algebraic numbers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.field-theory",
+      "label": "Field Theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2014,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\omega\\) be a root of unity and \\(f\\) be a polynomial with integer coefficients. Show that if \\(|f(\\omega)|=1\\), then \\(f(\\omega)\\) is also a root of unity.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2014-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "N/A Suppose \\(\\omega\\) is a primitive \\(n\\)th root, so that \\(\\Phi_{n}(x)\\) is the minimal polynomial of \\(\\omega\\) (over \\(\\mathbb{Q}\\) ). Thus \\(f(\\omega) f\\left(\\omega^{-1}\\right)=1\\) implies \\(\\Phi_{n}(x) \\mid f(x) f\\left(x^{-1}\\right)-1\\) (divisibility as Laurent polynomials). Hence \\(\\left|f\\left(\\omega^{k}\\right)\\right|=1\\) whenever \\(\\operatorname{gcd}(k, n)=1\\), and \\(\\prod_{\\operatorname{gcd}(k, n)=1}\\left(t-f\\left(\\omega^{k}\\right)\\right)\\) is a monic integer-coefficient polynomial with all roots within the unit disk, so its roots must all be roots of unity (since 0 is clearly not a root), and we're done.\nComment. The result used at the end (a monic integer-coefficient polynomial with all roots within the unit disk has every root either 0 or a root of unity) is classical. See for instance the discussion here or here. This result is sometimes called Kronecker's theorem, and appears, for instance, in Problems from the Book.\nComment. Note that the proof works as long as \\(f \\in \\mathbb{Q}[x]\\) and \\(f(\\omega)\\) is an algebraic integer. Once is it known that \\(f(\\omega)\\) is a root of unity, more can be said about the order \\(m\\) of \\(f(\\omega)\\). If \\(\\omega\\) is a primitive \\(n\\)th root of unity, then the conjugates of \\(f(\\omega)\\) lie among the \\(\\leq \\phi(n)\\) numbers in \\(\\left\\{f\\left(\\omega^{k}\\right): \\operatorname{gcd}(k, n)=1\\right\\}\\). In particular, \\(\\phi(m) \\leq \\phi(n)\\), which (e.g. through a naive estimate using \\(p-1 \\geq \\sqrt{p}\\) for \\(p \\geq 3\\) to get \\(\\phi(m) \\geq \\sqrt{m / 2}\\) ) shows that \\(m \\leq 2 \\phi(n)^{2}\\) (for instance), so there exists \\(g \\in \\mathbb{Q}[x]\\) with \\(g(\\omega)\\) a root of unity of maximal order \\(N\\), which then must generate the unit group of \\(\\mathbb{Q}(\\omega)\\) (or else we could find a larger order). In particular, since \\(\\omega\\) lies in this group, \\(n \\mid N\\). But \\(\\phi(N) \\leq \\phi(n)\\) by our earlier argument, so either \\(N=n\\) or \\(N=2 n\\) if \\(n\\) is odd. Either way, it's clear that \\(g(\\omega)= \\pm \\omega^{k}\\) for some \\(k\\), so our original \\(f(\\omega)\\) must also be \\(\\pm \\omega^{j}\\) for some \\(j\\).\nAlternative Solution. We follow the paper here, but fill in some of the details to make the ideas as accessible as possible. We will use the fact that if \\(A\\) is a finitely generated abelian group, then any subgroup \\(B\\) is also finitely generated, and furthermore, \\(\\operatorname{rank}(B) \\leq \\operatorname{rank}(A)\\). (For instance, see Theorem 14.6.5 in Artin's Algebra, 3rd ed. for a proof of finite generation, which for our particular case of modules over a PID (namely, \\(\\mathbb{Z}\\) ) can be done in parallel to the \\(\\operatorname{rank}(B) \\leq \\operatorname{rank}(A)\\) proof-the proof is very similar to Gaussian elimination.)\n\nLet \\(K=\\mathbb{Q}(\\omega), V\\) the set of algebraic integers in \\(K\\) of modulus 1 (which must be units of \\(K\\) ), \\(U \\supseteq V\\) the set of units in \\(K, R=U \\cap \\mathbb{R}\\) the set of real units in \\(K\\) (which, importantly, is also the set of units in \\(K \\cap \\mathbb{R}\\) ), and \\(L=K \\cap \\mathbb{R}\\) denote the maximal real subfield of \\(K\\).\n\nThe key is that \\(\\operatorname{rank}(V)=\\operatorname{rank}(U)-\\operatorname{rank}(R)\\). To prove this, we note that for \\(u \\in U, \\bar{u} \\in U\\) as well (since \\(\\bar{K}=K\\) ), so \\(u \\bar{u}=|u|^{2} \\in R\\) and \\(u / \\bar{u} \\in V\\), which gives \\(u^{2}=(u \\bar{u})(u / \\bar{u}) \\in R V\\). Thus \\(S:=\\left\\{u^{2}: u \\in U\\right\\} \\subseteq R V \\subseteq U\\). But \\(U\\) is a finitely generated abelian group by Dirichlet's unit theorem, so \\(S, R V\\) are as well, and furthermore \\(\\operatorname{rank}(S) \\leq \\operatorname{rank}(R V) \\leq \\operatorname{rank}(U)\\). Now take multiplicatively independent \\(u_{1}, \\ldots, u_{\\operatorname{rank}(U)} \\in U\\); then clearly \\(u_{1}^{2}, \\ldots, u_{\\operatorname{rank}(U)}^{2} \\in S\\) are multiplicatively independent as well, so \\(\\operatorname{rank}(U) \\leq \\operatorname{rank}(S)\\), whence \\(\\operatorname{rank}(R V)=\\operatorname{rank}(U)\\). Of course, \\(R \\cap V=\\{ \\pm 1\\}\\), so \\(\\operatorname{rank}(R V)=\\) \\(\\operatorname{rank}(R)+\\operatorname{rank}(V)-\\operatorname{rank}(R \\cap V)=\\operatorname{rank}(R)+\\operatorname{rank}(V)\\) (the proof here for \\(\\mathbb{Z}\\)-modules is essentially the same as that for \\(\\mathbb{Q}\\)-vector spaces), finishing the proof.\n\\(V\\) contains only roots of unity if and only if \\(\\operatorname{rank}(V)=0\\) (no free elements), so we must prove \\(\\operatorname{rank}(U)=\\operatorname{rank}(R)\\). Let \\(r, s\\) denote the number of real and complex embeddings of a number field, so \\([K: \\mathbb{Q}]=r(K)+2 s(K),[L: \\mathbb{Q}]=r(L)+2 s(L)\\), and thus \\(r(K)+2 s(K)=[K: L](r(L)+2 s(L))\\). By Dirichlet's unit theorem, \\(\\operatorname{rank}(U)=r(K)+s(K)-1\\) and \\(\\operatorname{rank}(R)=r(L)+s(L)-1\\).\nIf \\(K=L\\) (equivalently, \\(K\\) is totally real), we're trivially done. Otherwise, if \\([K: L]>1\\), it's easy to check that we have \\(\\operatorname{rank}(U)=\\operatorname{rank}(R)\\) if and only if \\([K: L]=2\\) and \\(r(K)=s(L)=0\\) ( \\(K\\) is totally imaginary and \\(L\\) is totally real) - then \\(r(L)=s(K)\\) automatically holds. This is precisely the condition that \\(K\\) is a CM-field.\n(CM-field \\(K\\) just means \\(K\\) is totally imaginary (no real embeddings), and \\(K\\) is a quadratic extension of \\(K \\cap \\mathbb{R}\\).)\nIn particular, the cyclotomic field \\(K=\\mathbb{Q}(\\omega)=\\mathbb{Q}[\\omega]\\) is a totally imaginary quadratic extension of the totally real field \\(\\mathbb{Q}\\left(\\omega+\\omega^{-1}\\right)=\\mathbb{Q}\\left[\\omega+\\omega^{-1}\\right]\\). Indeed, it is easy to check that the latter is simply \\(K \\cap \\mathbb{R}\\), and \\(K=\\mathbb{Q}\\left(\\omega+\\omega^{-1}, \\omega-\\omega^{-1}= \\pm \\sqrt{\\left(\\omega+\\omega^{-1}\\right)^{2}-4}\\right)\\). So we're done.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2021-p13",
+  "title": "2021 AMC 12B Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.systematic-listing",
+      "label": "Systematic listing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2021,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 32.3,
+    "source": 1850,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "How many values of \\(\\theta\\) in the interval \\(0\\lt\\theta\\le 2\\pi\\) satisfy the following equation? \\[1-3\\sin\\theta+5\\cos 3\\theta=0\\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(8\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2021-p13.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(f(\\theta)=1-3\\sin\\theta+5\\cos 3\\theta.\\) At \\(\\theta=0,\\tfrac\\pi3,\\tfrac{2\\pi}3,\\ldots,2\\pi,\\) its signs alternate \\(+,-,+,-,+,-,+.\\) Therefore there is at least one root in each of the six intervening intervals.\n\nAt any root, \\(5\\cos3\\theta=3\\sin\\theta-1.\\) Consequently \\[ \\begin{aligned} &25\\sin^2 3\\theta-\\cos^2\\theta \\\\ &\\quad =23+6\\sin\\theta-8\\sin^2\\theta>0. \\end{aligned} \\] Hence \\(15|\\sin3\\theta|>3|\\cos\\theta|.\\) In the interval \\((\\tfrac{k\\pi}{3},\\tfrac{(k+1)\\pi}{3}),\\) the sign of \\(f'(\\theta)=-3\\cos\\theta-15\\sin3\\theta\\) is therefore \\((-1)^{k+1}\\) at every root.\n\nThus every root in a given interval crosses the axis in the same direction. Two such roots would require an intervening crossing in the opposite direction, so each interval has exactly one root. There are \\(6\\) solutions in all.\n\nThus, the correct answer is D.",
+      "hints": [
+        "The term \\(5\\cos 3\\theta\\) swings between \\(-5\\) and \\(5,\\) dominating the slowly varying \\(1-3\\sin\\theta\\)",
+        "Check \\(f(\\theta)=1-3\\sin\\theta+5\\cos 3\\theta\\) at multiples of \\(60^\\circ,\\) then use \\(f'\\) to rule out extra roots"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

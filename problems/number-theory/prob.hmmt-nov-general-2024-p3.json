@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-general-2024-p3",
+  "title": "2024 HMMT November General Problem 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.diophantine-equations-techniques",
+      "label": "Diophantine Equations techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2024,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 44.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Suppose that \\(a, b\\), and \\(c\\) are distinct positive integers such that \\(a^{b} b^{c}=a^{c}\\). Across all possible values of \\(a, b\\), and \\(c\\), compute the minimum value of \\(a+b+c\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "13",
+    "value": "13"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2024-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "We claim that \\((8,2,3)\\) is the desired solution.\nObserve that \\(a^{c-b}=b^{c}\\), so clearly \\(a \\neq 1\\) and \\(b<a\\). Furthermore, \\(a\\) and \\(b\\) must be distinct powers of the same integer.\nIf \\(a\\) and \\(b\\) were powers of an integer \\(n>2\\), then we would have \\(a+b+c \\geq 3^{2}+3+1=13\\). Thus, we only need to consider when they are powers of 2 .\nIf \\((a, b)=(4,2)\\) then \\((c-b)=\\frac{c}{2}\\), so \\(c=4\\), which makes the values not distinct.\nIf \\((a, b)=(8,2)\\) we get our aforementioned solution.\nAny other \\((a, b)\\) sum to at least 12 , in which case \\(a+b+c \\geq 13\\).\nThus 13 is minimal.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

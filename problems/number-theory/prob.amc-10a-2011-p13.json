@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2011-p13",
+  "title": "2011 AMC 10A Problem 13",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2011,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 21.5,
+    "source": 1280,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many even integers are there between \\(200\\) and \\(700\\) whose digits are all different and come from the set \\(\\{1,2,5,7,8,9\\}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(72\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(120\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(200\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "12"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2011-p13.live",
+      "kind": "proof-sketch",
+      "text": "Since the hundreds digit can only be a \\(2\\) or \\(5,\\) we can case on this value.\n\nCase \\(1:\\) hundreds digit is \\(2\\)\n\nThe only option for the units digit is \\(8,\\) since the number must be even. This leaves \\(4\\) options for the tens digit.\n\nThis gives us \\(1 \\cdot 4 = 4\\) numbers for this case.\n\nCase \\(2:\\) hundreds digit is \\(5\\)\n\nSimilarly to above, \\(2\\) and \\(8\\) are the only options for the units digit, leaving \\(4\\) options for the tens digit.\n\nThis gives us \\(2 \\cdot 4 = 8\\) numbers for this case.\n\nThe total number of integers is then \\(4 + 8 = 12.\\)\n\nThus, A is the correct answer.",
+      "hints": [
+        "The units digit must be \\(2\\) or \\(8\\)",
+        "Case on whether the hundreds digit is \\(2\\) or \\(5\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

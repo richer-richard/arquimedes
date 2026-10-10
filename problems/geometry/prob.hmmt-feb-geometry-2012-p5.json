@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-feb-geometry-2012-p5",
+  "title": "2012 HMMT February Geometry Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2012,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 82.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A mouse lives in a circular cage with completely reflective walls. At the edge of this cage, a small flashlight with vertex on the circle whose beam forms an angle of \\(15^{\\circ}\\) is centered at an angle of \\(37.5^{\\circ}\\) away from the center. The mouse will die in the dark. What fraction of the total area of the cage can keep the mouse alive?\n\nGeometry Test\n\n[Diagram omitted from this imported transcription; consult the HMMT archive while reviewing the problem.]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2012-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "| \\(\\frac{3}{4}\\) |\n| :---: |\n| We claim that the lit region is the entire cage except for a circle of half the radius | of the cage in the center, along with some isolated points on the boundary of the circle and possibly minus a set of area 0 . Note that the region is the same except for a set of area 0 if we disallow the light paths at the very edge of the beam. In that case, we can see that the lit region is an open subset of the disk, as clearly the region after \\(k\\) bounces is open for each \\(k\\) and the union of open sets is again open. We will then show that a dense subset of the claimed region of the cage is lit.\n\nFirst, let us show that no part of the inner circle is lit. For any given light path, each chord of the circle is the same length, and in particular the minimum distance from the center of the circle is the same on each chord of the path. Since none of the initial chords can come closer than half the cage's radius to the center, the circle with half the cage's radius is indeed dark.\nNow we need to show that for each open subset of the outer region, there is a light path passing through it, which will imply that the unlit region outside the small circle contains no open set, and thus has area 0 . To do this, simply consider a light path whose angle away from the center is irrational such that the distance \\(d\\) from the center of the cage to the midpoint of the first chord is sufficiently close to the distance from the center of the cage to a point in the open set we're considering. Each successive chord of the light path can be seen as a rotation of the original one, and since at each step it is translated by an irrational angle, we obtain a dense subset of all the possible chords. This means that we obtain a dense subset of the circumference of the circle of radius \\(d\\) centered at the center of the cage, and in particular a point inside the open set under consideration, as desired.\nTherefore, the lit region of the cage is the area outside the concentric circle of half the radius plus or minus some regions of area 0 , which tells us that \\(\\frac{3}{4}\\) of the cage is lit.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

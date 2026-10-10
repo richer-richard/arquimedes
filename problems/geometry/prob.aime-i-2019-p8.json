@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2019-p8",
+  "title": "2019 AIME I Problem 8",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.newtons-sums",
+      "label": "Newton’s Sums",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.substitution",
+      "label": "Substitution",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2019,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 56.9,
+    "source": 2720,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Let \\(x\\) be a real number such that \\(\\sin^{10} x + \\cos^{10} x = \\frac{11}{36}.\\) Then \\(\\sin^{12} x + \\cos^{12} x = \\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "67",
+    "value": "67"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2019-p8.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(u = \\sin^2 x\\) and \\(v = \\cos^2 x,\\) so \\(u + v = 1,\\) and set \\(p = uv.\\) Expanding \\((u+v)^5\\) gives \\(u^5 + v^5 = 1\\) \\(- 5p(u+v)^3 + 5p^2(u+v)\\) \\(= 1 - 5p + 5p^2,\\) so the hypothesis reads \\[ \\begin{aligned} 1 - 5p + 5p^2 &= \\frac{11}{36} \\\\ &\\Longrightarrow 36p^2 - 36p \\\\ &\\quad {}+ 5 = 0, \\end{aligned} \\] with roots \\(p = \\frac{1}{6}\\) and \\(p = \\frac{5}{6}.\\) Since \\(p = \\sin^2 x \\cos^2 x\\) \\(= \\frac{1}{4}\\sin^2 2x \\le \\frac{1}{4},\\) we must have \\(p = \\frac{1}{6}.\\)\n\nSimilarly \\[ \\begin{aligned} u^6 + v^6 &= (u^2 + v^2)^3 \\\\ &\\quad {}- 3p^2(u^2+v^2) \\\\ &= (1 - 2p)^3 \\\\ &\\quad {}- 3p^2(1 - 2p) \\\\ &= 1 - 6p + 9p^2 - 2p^3. \\end{aligned} \\] Substituting \\(p = \\frac{1}{6},\\) \\[ \\begin{aligned} u^6 + v^6 &= 1 - 1 + \\frac{1}{4} - \\frac{1}{108} \\\\ &= \\frac{26}{108} = \\frac{13}{54}, \\end{aligned} \\] so \\(m + n = 13 + 54 = 67.\\)",
+      "hints": [
+        "Set \\(u = \\sin^2 x\\) and \\(v = \\cos^2 x,\\) so \\(u + v = 1;\\) every symmetric power sum is a polynomial in \\(p = uv\\)",
+        "\\(u^5 + v^5 = 1 - 5p + 5p^2;\\) solve for \\(p\\) (only one root satisfies \\(p \\le \\frac{1}{4}\\)) and plug into \\(u^6 + v^6 = 1 - 6p + 9p^2 - 2p^3\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

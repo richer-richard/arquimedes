@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2004-p4",
+  "title": "2004 AMC 10B Problem 4",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2004,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 24.8,
+    "source": 1190,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A standard six-sided die is rolled, and \\(P\\) is the product of the five numbers that are visible. What is the largest number that is certain to divide \\(P?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(144\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(720\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "12"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2004-p4.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(6! = 720 = 2^4 \\cdot 3^2 \\cdot 5,\\) the visible product uses only the primes \\(2,\\) \\(3,\\) and \\(5.\\)\n\nHiding \\(4\\) leaves the fewest \\(2\\)’s, namely \\(2^2.\\) Hiding \\(3\\) or \\(6\\) leaves the fewest \\(3\\)’s, namely one. Hiding \\(5\\) leaves no factor of \\(5.\\)\n\nTherefore \\(P\\) is always divisible by \\(2^2 \\cdot 3 = 12,\\) but not necessarily by any larger number.\n\nThus, the correct answer is B.",
+      "hints": [
+        "The product of all six faces is \\(6! = 720\\); exactly one face is hidden",
+        "For each prime, find how many copies must remain no matter which face is hidden"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

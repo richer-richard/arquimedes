@@ -1,0 +1,88 @@
+{
+  "id": "prob.ahsme-1979-p23",
+  "title": "1979 AHSME Problem 23",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.distance-formula",
+      "label": "Distance formula",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1979,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 38.7,
+    "source": 2100,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The edges of a regular tetrahedron with vertices \\(A,\\) \\(B,\\) \\(C,\\) and \\(D\\) each have length one. Find the least possible distance between a pair of points \\(P\\) and \\(Q,\\) where \\(P\\) is on edge \\(AB\\) and \\(Q\\) is on edge \\(CD.\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\frac12\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\frac34\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\frac{\\sqrt2}{2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\frac{\\sqrt3}{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\frac{\\sqrt3}{3}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1979-p23.live",
+      "kind": "proof-sketch",
+      "text": "Before scaling, take \\[ \\begin{aligned} A&=(1,1,1),\\\\ B&=(1,-1,-1),\\\\ C&=(-1,1,-1),\\\\ D&=(-1,-1,1). \\end{aligned} \\] These edges have length \\(2\\sqrt2,\\) so scale by \\(\\frac{1}{2\\sqrt2}.\\) Points on \\(AB\\) and \\(CD\\) have forms \\(P=(1,t,t)\\) and \\(Q=(-1,u,-u).\\) Before scaling, \\[ \\begin{aligned} PQ^2&=4+(t-u)^2+(t+u)^2\\\\ &=4+2t^2+2u^2, \\end{aligned} \\] minimized at \\(t=u=0.\\) After scaling, the minimum squared distance is \\(\\frac{4}{8}=\\frac{1}{2},\\) so the distance is \\(\\frac{\\sqrt2}{2}.\\)\n\nTherefore, the correct answer is C.",
+      "hints": [
+        "Use symmetric coordinates for a regular tetrahedron with vertices \\((\\pm1,\\pm1,\\pm1)\\)",
+        "Parameterize points on the two opposite edges and minimize the squared distance"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "a4d8ff0215faf2ee9ffe2798f5465685b3f76fbdb20351c47f673905e60ed1ce"
+    ],
+    "solutions": []
+  }
+}

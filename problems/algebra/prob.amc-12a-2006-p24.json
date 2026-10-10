@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2006-p24",
+  "title": "2006 AMC 12A Problem 24",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.basic-counting",
+      "label": "Basic counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.binomial-theorem",
+      "label": "Binomial theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.parity",
+      "label": "Parity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2006,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 39.8,
+    "source": 2340,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The expression\n\n\\[ (x + y + z)^{2006} + (x - y - z)^{2006} \\]\n\nis simplified by expanding it and combining like terms. How many terms are in the simplified expression?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(6018\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(671{,}676\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1{,}007{,}514\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(1{,}008{,}016\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2{,}015{,}028\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "1008016"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2006-p24.live",
+      "kind": "proof-sketch",
+      "text": "A term \\(x^a y^b z^c\\) survives only when \\(a\\) is even, since terms with odd \\(a\\) cancel between the two expansions.\n\nFor each even \\(a\\) with \\(0 \\le a \\le 2006,\\) the exponent \\(b\\) ranges over \\(2007 - a\\) values and \\(c = 2006 - a - b\\) is then determined. Summing over even \\(a:\\) \\[ \\begin{gathered} (2007 - 0) + (2007 - 2) \\\\ {}+ \\cdots + (2007 - 2006) \\\\ = 2007 + 2005 + \\cdots + 1, \\end{gathered} \\] the sum of the first \\(1004\\) odd positive integers, which is \\(1004^2 = 1{,}008{,}016.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "A monomial \\(x^a y^b z^c\\) survives only when \\(a\\) is even; the odd-\\(a\\) terms cancel",
+        "For each even \\(a\\) from \\(0\\) to \\(2006,\\) count the possible values of \\(b\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

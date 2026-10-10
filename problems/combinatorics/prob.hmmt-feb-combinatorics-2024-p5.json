@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2024-p5",
+  "title": "2024 HMMT February Combinatorics Problem 5",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.discrete-mathematics",
+      "label": "Discrete Mathematics",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.enumeration-with-symmetry",
+      "label": "Enumeration with symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2024,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 79.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The country of HMMTLand has 8 cities. Its government decides to construct several two-way roads between pairs of distinct cities. After they finish construction, it turns out that each city can reach exactly 3 other cities via a single road, and from any pair of distinct cities, either exactly 0 or 2 other cities can be reached from both cities by a single road. Compute the number of ways HMMTLand could have constructed the roads.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "875",
+    "value": "875"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2024-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let the cities be numbered \\(1,2,3,4,5,6,7,8\\). WLOG, 1 is connected to 2,3 , and 4 . First suppose 2 and 3 are connected; then 3 and 1 share a second common neighbor, which must be 4 (as 1 is not connected to anything else). Likewise 2 and 4 are connected, and so 5, 6, 7, 8 are pairwise connected as well, so the graph consists of two disjoint copies of \\(K_{4}\\) :\n\nThere are \\(\\frac{1}{2}\\binom{8}{4}=35\\) ways to partition the 8 vertices into two groups of 4 , so there are 35 such graphs.\nOtherwise, none of \\(2,3,4\\) are connected to each other. Then 2 and 3 must share a common neighbor, as must 3 and 4 , and 2 and 4 . If these are the same neighbor, this vertex would share all three neighbors with 1, so they must be pairwise distinct. The last vertex must then be connected to these three, creating a cube graph.\n\nA cube has 48 symmetries, so the number of such graphs is \\(\\frac{8!}{48}=840\\).\nThe total is \\(35+840=875\\).\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

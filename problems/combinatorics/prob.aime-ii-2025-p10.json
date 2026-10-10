@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2025-p10",
+  "title": "2025 AIME II Problem 10",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2025,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 56.4,
+    "source": 2790,
+    "mohs": null
+  },
+  "estimatedMinutes": 12,
+  "statement": "Sixteen chairs are arranged in a row. Eight people each select a chair in which to sit so that no person sits next to two other people. Let \\(N\\) be the number of subsets of \\(16\\) chairs that could be selected. Find the remainder when \\(N\\) is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "907",
+    "value": "907"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2025-p10.live",
+      "kind": "proof-sketch",
+      "text": "A person sits next to two others exactly when three consecutive chairs are all occupied, so we count \\(8\\)-element subsets of the \\(16\\) chairs with no three consecutive chairs chosen. The occupied chairs then form maximal blocks of size \\(1\\) or \\(2.\\) If there are \\(m\\) blocks, then \\(8 - m\\) of them are pairs and \\(2m - 8\\) are singles, so \\(4 \\le m \\le 8,\\) and the pair positions can be chosen in \\(\\binom{m}{8-m}\\) ways. The \\(8\\) empty chairs create \\(9\\) gaps (including the ends), and the \\(m\\) blocks occupy \\(m\\) distinct gaps: \\(\\binom{9}{m}\\) ways.\n\nTherefore \\[ \\begin{gathered} N = \\sum_{m=4}^{8} \\binom{m}{8-m}\\binom{9}{m} \\\\ = 1 \\cdot 126 + 10 \\cdot 126 + 15 \\cdot 84 \\\\ \\quad {}+ 7 \\cdot 36 + 1 \\cdot 9 = 2907. \\end{gathered} \\]\n\nThe remainder when \\(N = 2907\\) is divided by \\(1000\\) is \\(907.\\)",
+      "hints": [
+        "No one sitting next to two others means no \\(3\\) consecutive occupied chairs: the \\(8\\) people form blocks of size \\(1\\) or \\(2\\)",
+        "With \\(m\\) blocks, pick which are pairs in \\(\\binom{m}{8-m}\\) ways and place the blocks in the \\(9\\) gaps around the \\(8\\) empty chairs in \\(\\binom{9}{m}\\) ways"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

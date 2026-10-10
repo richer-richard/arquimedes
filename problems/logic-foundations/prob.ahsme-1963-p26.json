@@ -1,0 +1,71 @@
+{
+  "id": "prob.ahsme-1963-p26",
+  "title": "1963 AHSME Problem 26",
+  "category": "logic-foundations",
+  "subjects": [
+    "logic-foundations"
+  ],
+  "concepts": [
+    {
+      "id": "logic.logical-deduction",
+      "label": "Logical deduction",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1963,
+    "number": 26
+  },
+  "difficulty": {
+    "course": 33.1,
+    "source": 1880,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Form I. Consider the statements\n\n\\[ \\begin{aligned} (1)\\quad&p\\land\\neg q\\land r,\\\\ (2)\\quad&\\neg p\\land\\neg q\\land r,\\\\ (3)\\quad&p\\land\\neg q\\land\\neg r,\\\\ (4)\\quad&\\neg p\\land q\\land r, \\end{aligned} \\]\n\nwhere \\(p,\\) \\(q,\\) \\(r\\) are propositions. How many of these imply the truth of \\((p\\to q)\\to r?\\)\n\nForm II. Consider the statements \\((1)\\) \\(p\\) and \\(r\\) are true and \\(q\\) is false, \\((2)\\) \\(r\\) is true and \\(p\\) and \\(q\\) are false, \\((3)\\) \\(p\\) is true and \\(q\\) and \\(r\\) are false, \\((4)\\) \\(q\\) and \\(r\\) are true and \\(p\\) is false. How many of these imply the truth of the statement “\\(r\\) is implied by the statement that \\(p\\) implies \\(q\\)”?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "4"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1963-p26.live",
+      "kind": "proof-sketch",
+      "text": "In cases \\((1)\\) and \\((3),\\) \\(p\\to q\\) is false, so the outer implication is true. In cases \\((2)\\) and \\((4),\\) \\(p\\to q\\) is true, but \\(r\\) is also true, so the outer implication is again true. All four statements imply it.\n\nThus, the correct answer is E.",
+      "hints": [
+        "An implication is false only when its antecedent is true and its consequent is false",
+        "Evaluate \\(p\\to q\\) first in each of the four assignments"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

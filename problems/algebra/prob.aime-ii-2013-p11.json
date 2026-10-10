@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2013-p11",
+  "title": "2013 AIME II Problem 11",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.function",
+      "label": "Function",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2013,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 61.1,
+    "source": 2890,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "Let \\(A = \\{1, 2, 3, 4, 5, 6, 7\\},\\) and let \\(N\\) be the number of functions \\(f\\) from set \\(A\\) to set \\(A\\) such that \\(f(f(x))\\) is a constant function. Find the remainder when \\(N\\) is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "399",
+    "value": "399"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2013-p11.live",
+      "kind": "proof-sketch",
+      "text": "Say \\(f(f(x)) = a\\) for all \\(x,\\) and let \\(S = \\{x : f(x) = a\\}.\\) Picking any \\(t \\in S,\\) we get \\(a = f(f(t)) = f(a),\\) so \\(a \\in S.\\) Every \\(x\\) satisfies \\(f(x) \\in S\\) (because \\(f(f(x)) = a\\)), and if \\(x \\notin S\\) then \\(f(x) \\ne a,\\) so \\(f\\) maps the complement of \\(S\\) into \\(S \\setminus \\{a\\}.\\) Conversely, any \\(f\\) built this way works.\n\nIf \\(|S| = k,\\) we choose the constant \\(a\\) in \\(7\\) ways, the remaining \\(k - 1\\) elements of \\(S\\) in \\(\\binom{6}{k-1}\\) ways, and an image in \\(S \\setminus \\{a\\}\\) for each of the \\(7 - k\\) other elements in \\((k-1)^{7-k}\\) ways. Hence \\[ \\begin{aligned} N &= \\scriptsize 7\\sum_{k=1}^{7} \\binom{6}{k-1}(k-1)^{7-k} \\\\ &\\scriptsize = 7\\,(0 + 6 + 240 + 540 + 240 + 30 + 1) \\\\ &= 7 \\cdot 1057 = 7399. \\end{aligned} \\]\n\nThe remainder when \\(N\\) is divided by \\(1000\\) is \\(399.\\)",
+      "hints": [
+        "If \\(f(f(x)) = a\\) always, let \\(S\\) be the set of elements that \\(f\\) sends to \\(a.\\) Show \\(f(a) = a\\) and every element outside \\(S\\) maps into \\(S \\setminus \\{a\\}\\)",
+        "With \\(|S| = k:\\) choose \\(a,\\) choose the rest of \\(S,\\) then send each of the \\(7 - k\\) outside elements anywhere in \\(S \\setminus \\{a\\},\\) and sum over \\(k\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

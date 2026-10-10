@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2012-p24",
+  "title": "2012 AMC 10A Problem 24",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.algebraic-manipulation",
+      "label": "Algebraic manipulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2012,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 37.0,
+    "source": 2350,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(a,\\) \\(b,\\) and \\(c\\) be positive integers with \\(a\\ge b\\ge c\\) such that \\[a^2-b^2-c^2+ab=2011\\] and \\[a^2+3b^2+3c^2-3ab-2ac-2bc\\]\\[=-1997.\\] What is \\(a?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(249\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(250\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(251\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(252\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(253\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "253"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2012-p24.live",
+      "kind": "proof-sketch",
+      "text": "Adding together the equations gives us \\[ 2(a^2 + b^2 + c^2) - 2(ab + ac + bc)\\]\\[ = 14. \\]\n\nWe can group terms and factor this to get \\[ (a - b)^2 + (a - c)^2 + (b - c)^2\\]\\[ = 14. \\]\n\nNote that every term on the left hand side is a nonnegative square integer. The only triple of squares that add to \\(14\\) is \\(9, 4,\\) and \\(1.\\)\n\nWe have that \\(a - c\\) is the biggest difference among the three pairs. Therefore, \\(a - c = 3.\\)\n\nWe cannot discern which of the other terms we can match with the other squares. Let us try \\(a - b = 1\\) and \\(b - c = 2.\\)\n\nPlugging in these values into the first equation gives us \\[ a^2 - (a - 1)^2 - (a - 3)^2 \\] \\[ + a(a - 1) = 2011. \\] Simplifying yields \\(7a = 2021.\\) Since \\(2021\\) is not divisible by \\(7,\\) we have that \\(a - b = 2\\) and \\(b - c = 1.\\)\n\nIn the other case, \\(b=a-2\\) and \\(c=a-3.\\) The first equation becomes \\[\\begin{aligned} a^2-(a-2)^2-(a-3)^2\\\\ {}+a(a-2)&=2011, \\end{aligned}\\] or \\(8a-13=2011.\\) Hence \\(a=253.\\)\n\nThus, E is the correct answer.",
+      "hints": [
+        "Add the two equations first",
+        "The three squared differences must be \\(9,4,1\\) in some order"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

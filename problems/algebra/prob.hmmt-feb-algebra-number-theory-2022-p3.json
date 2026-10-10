@@ -1,0 +1,48 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2022-p3",
+  "title": "2022 HMMT February Algebra and Number Theory Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.algebra-and-number-theory",
+      "label": "Algebra and Number Theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2022,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(x_{1}, x_{2}, \\ldots, x_{2022}\\) be nonzero real numbers. Suppose that \\(x_{k}+\\frac{1}{x_{k+1}}<0\\) for each \\(1 \\leq k \\leq 2022\\), where \\(x_{2023}=x_{1}\\). Compute the maximum possible number of integers \\(1 \\leq n \\leq 2022\\) such that \\(x_{n}>0\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "1010",
+    "value": "1010"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2022-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let the answer be \\(M\\). If \\(M>1011\\), there would exist two consecutive positive terms \\(x_{k}, x_{k+1}\\) which contradicts the assumption that \\(x_{k}+\\frac{1}{x_{k+1}}<0\\). Thus, \\(M \\leq 1011\\). If \\(M=1011\\), then the \\(2022 x_{i}\\) s must alternate between positive and negative. WLOG, assume \\(x_{2 k-1}>0\\) and \\(x_{2 k}<0\\) for each \\(k\\). Then, we have\n\n\\[\\begin{aligned}\n& x_{2 k-1}+\\frac{1}{x_{2 k}}<0 \\Longrightarrow\\left|x_{2 k-1} x_{2 k}\\right|<1, \\\\\n& x_{2 k}+\\frac{1}{x_{2 k+1}}<0 \\Longrightarrow\\left|x_{2 k} x_{2 k+1}\\right|>1 .\n\\end{aligned}\\]\n\nMultiplying the first equation over all \\(k\\) gives us \\(\\prod_{i=1}^{2022}\\left|x_{i}\\right|<1\\), while multiplying the second equation over all \\(k\\) gives us \\(\\prod_{i=1}^{2022}\\left|x_{i}\\right|>1\\). Thus, we must have \\(M<1011\\).\n\\(M=1010\\) is possible by the following construction:\n\n\\[1,-\\frac{1}{2}, 3,-\\frac{1}{4}, \\ldots, 2019,-\\frac{1}{2020},-10000,-10000\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

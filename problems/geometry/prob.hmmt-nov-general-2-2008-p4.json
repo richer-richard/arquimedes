@@ -1,0 +1,70 @@
+{
+  "id": "prob.hmmt-nov-general-2-2008-p4",
+  "title": "2008 HMMT November General Round 2 Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.probability",
+      "label": "Probability",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2008,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Joe B. is frustrated with chess. He breaks the board, leaving a \\(4 \\times 4\\) board, and throws 3 black knights and 3 white kings at the board. Miraculously, they all land in distinct squares! What is the expected number of checks in the resulting position? (Note that a knight can administer multiple checks and a king can be checked by multiple knights.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2-2008-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\quad \\frac{9}{5}\\) We first compute the expected number of checks between a single knight-king pair. If the king is located at any of the 4 corners, the knight has 2 possible checks. If the king is located in one of the 8 squares on the side of the board but not in the corner, the knight has 3 possible checks. If the king is located in any of the 4 central squares, the knight has 4 possible checks. Summing up, \\(4 \\cdot 2+8 \\cdot 3+4 \\cdot 4=48\\) of the \\(16 \\cdot 15\\) knight-king positions yield a single check, so each pair yields \\(\\frac{48}{16 \\cdot 15}=\\frac{1}{5}\\) expected checks. Now, note that each of the 9 knight-king pairs is in each of \\(16 \\cdot 15\\) possible positions with equal probability, so by linearity of expectation the answer is \\(9 \\cdot \\frac{1}{5}=\\frac{9}{5}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "prob.aime-ii-2003-p9",
+  "title": "2003 AIME II Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2003,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 46.4,
+    "source": 2400,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "Consider the polynomials \\(P(x) = x^6 - x^5 - x^3 - x^2 - x\\) and \\(Q(x) = x^4 - x^3 - x^2 - 1.\\) Given that \\(z_1,\\) \\(z_2,\\) \\(z_3,\\) and \\(z_4\\) are the roots of \\(Q(x) = 0,\\) find \\(P(z_1) + P(z_2) + P(z_3) + P(z_4).\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "6",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2003-p9.live",
+      "kind": "proof-sketch",
+      "text": "Polynomial division gives \\[ \\begin{aligned} &P(x) = Q(x)\\,(x^2 + 1) \\\\ &\\quad {}+ x^2 - x + 1, \\end{aligned} \\] so \\(P(z_i) = z_i^2 - z_i + 1\\) for each root \\(z_i\\) of \\(Q.\\)\n\nBy Vieta’s formulas for \\(Q(x) = x^4 - x^3 - x^2 - 1,\\) we have \\(\\sum z_i = 1\\) and \\(\\sum_{i \\lt j} z_i z_j = -1,\\) so \\(\\sum z_i^2 = \\left(\\sum z_i\\right)^2 - 2\\sum_{i \\lt j} z_i z_j\\) \\(= 1 + 2 = 3.\\) Therefore \\[\\sum_{i=1}^4 P(z_i) = 3 - 1 + 4 = 6.\\]",
+      "hints": [
+        "Divide \\(P(x)\\) by \\(Q(x);\\) at the roots of \\(Q,\\) only the remainder survives",
+        "\\(P(x) = Q(x)(x^2 + 1)\\) \\(+ x^2 - x + 1,\\) so sum \\(z_i^2 - z_i + 1\\) using Vieta’s formulas on \\(Q\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

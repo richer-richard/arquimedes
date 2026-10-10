@@ -1,0 +1,81 @@
+{
+  "id": "prob.amc-8-2022-p22",
+  "title": "2022 AMC 8 Problem 22",
+  "category": "arithmetic",
+  "subjects": [
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "arith.distance-rate-and-time",
+      "label": "Distance rate and time",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "arith.process-simulation",
+      "label": "Process simulation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2022,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 17.4,
+    "source": 1510,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A bus takes \\(2\\) minutes to drive from one stop to the next, and waits \\(1\\) minute at each stop to let passengers board. Zia takes \\(5\\) minutes to walk from one bus stop to the next. As Zia reaches a bus stop, if the bus is at the previous stop or has already left the previous stop, then she will wait for the bus. Otherwise she will start walking toward the next stop. Suppose the bus and Zia start at the same time toward the library, with the bus \\(3\\) stops behind. After how many minutes will Zia board the bus?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(19\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(23\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "17"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2022-p22.live",
+      "kind": "proof-sketch",
+      "text": "The bus takes \\(2\\) minutes to drive to the next stop and then waits \\(1\\) minute, so it moves through one-stop cycles every \\(3\\) minutes.\n\nZia makes a decision only when she reaches a stop, every \\(5\\) minutes. Measure stops from the bus’s starting stop. Zia starts at stop \\(3\\).\n\nAfter \\(5\\) minutes, Zia is at stop \\(4\\), while the bus is waiting at stop \\(2\\), so she keeps walking. After \\(10\\) minutes, Zia is at stop \\(5\\), while the bus is between stops \\(3\\) and \\(4\\), so she keeps walking. After \\(15\\) minutes, Zia is at stop \\(6\\), while the bus is at stop \\(5\\), the previous stop, so she waits.\n\nThe bus then takes \\(2\\) more minutes to reach her stop, so she boards after \\(17\\) minutes.\n\nThus, the correct answer is A.",
+      "hints": [
+        "Check Zia’s decision only when she reaches a stop",
+        "Compare positions at \\(5\\), \\(10\\), and \\(15\\) minutes"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "a7b7f754a6162eb21a6ab55d0c2a3487455ae09fde28b2f69352c86d7f1315d5"
+    ],
+    "solutions": []
+  }
+}

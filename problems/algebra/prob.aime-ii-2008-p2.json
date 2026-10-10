@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-ii-2008-p2",
+  "title": "2008 AIME II Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.distance-rate-and-time",
+      "label": "Distance rate and time",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.rational-equation",
+      "label": "Rational equation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2008,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 36.7,
+    "source": 2020,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Rudolph bikes at a constant rate and stops for a five-minute break at the end of every mile. Jennifer bikes at a constant rate which is three-quarters the rate that Rudolph bikes, but Jennifer takes a five-minute break at the end of every two miles. Jennifer and Rudolph begin biking at the same time and arrive at the \\(50\\)-mile mark at exactly the same time. How many minutes has it taken them?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "620",
+    "value": "620"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2008-p2.live",
+      "kind": "proof-sketch",
+      "text": "Let Rudolph bike at \\(r\\) miles per minute. He rests after each of miles \\(1\\) through \\(49,\\) so his total time is \\(\\frac{50}{r} + 49 \\cdot 5 = \\frac{50}{r} + 245\\) minutes. Jennifer bikes at \\(\\frac{3r}{4}\\) miles per minute and rests after each of miles \\(2, 4, \\ldots, 48,\\) so her total time is \\(\\frac{50}{\\frac{3r}{4}} + 24 \\cdot 5 = \\frac{200}{3r} + 120\\) minutes.\n\nSetting the times equal gives \\[\\frac{50}{r} + 245 = \\frac{200}{3r} + 120,\\] so \\[ \\begin{aligned} 125 &= \\frac{200 - 150}{3r} \\\\ &= \\frac{50}{3r}, \\end{aligned} \\] and \\(r = \\frac{2}{15}.\\) The common time is \\(\\frac{50}{\\frac{2}{15}} + 245 = 375 + 245 = 620\\) minutes.",
+      "hints": [
+        "Neither rider takes a break upon arriving, so Rudolph takes \\(49\\) breaks and Jennifer takes \\(24\\)",
+        "With Rudolph’s rate \\(r\\) miles per minute, equate \\(\\frac{50}{r} + 245\\) and \\(\\frac{200}{3r} + 120\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

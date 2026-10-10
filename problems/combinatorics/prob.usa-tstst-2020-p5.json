@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tstst-2020-p5",
+  "title": "USA TSTST 2020 Problem 5",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TSTST",
+    "year": 2020,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 97.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\mathbb{N}^2\\) denote the set of ordered pairs of positive integers.\nA finite subset \\(S\\) of \\(\\mathbb{N}^2\\) is stable if whenever \\((x,y)\\) is in \\(S\\),\nthen so are all points \\((x',y')\\) of \\(\\mathbb{N}^2\\) with both \\(x' \\leq x\\) and \\(y' \\leq y\\).\n\nProve that if \\(S\\) is a stable set, then among all stable subsets of \\(S\\)\n(including the empty set and \\(S\\) itself),\nat least half of them have an even number of elements.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tstst-2020-p5.evanchen",
+      "kind": "proof-sketch",
+      "text": "The following inductive solution was given by Nikolai Beluhov.\nWe proceed by induction on \\(|S|\\), with \\(|S| \\le 1\\) clear.\n\nSuppose \\(|S| \\ge 2\\).\nFor any \\(p \\in S\\), let \\(R(p)\\) denote\nthe stable rectangle with upper-right corner \\(p\\).\nWe say such \\(p\\) is pivotal if \\(p + (1, 1) \\notin S\\)\nand \\(|R(p)|\\) is even.\n\n[Diagram omitted from this imported TeX transcription.]\n\nClaim.\n If \\(|S| \\ge 2\\), then a pivotal \\(p\\) always exists.\n\nProof.\n Consider the top row of \\(S\\).\n\n• If it has length at least \\(2\\), one of the two rightmost points in it is pivotal.\n\n• Otherwise, the top row has length \\(1\\).\n Now either the top point or the point below it (which exists as \\(|S| \\ge 2\\)) is pivotal.\n \\qquad \\square\n\nWe describe how to complete the induction, given some pivotal \\(p \\in S\\).\nThere is a partition\n\\[ S = R(p) \\sqcup S_1 \\sqcup S_2 \\]\nwhere \\(S_1\\) and \\(S_2\\) are the sets of points in \\(S\\)\nabove and to the right of \\(p\\) (possibly empty).\n\nClaim.\n The desired inequality holds for stable subsets containing \\(p\\).\n\nProof.\n Let \\(E_1\\) denote the number of even stable subsets of \\(S_1\\);\n denote \\(E_2\\), \\(O_1\\), \\(O_2\\) analogously.\n The stable subsets containing \\(p\\) are exactly \\(R(p) \\sqcup T_1 \\sqcup T_2\\),\n where \\(T_1 \\subseteq S_1\\) and \\(T_2 \\subseteq S_2\\) are stable.\n\n Since \\(|R(p)|\\) is even,\n exactly \\(E_1E_2 + O_1O_2\\) stable subsets containing \\(p\\) are even,\n and exactly \\(E_1O_2 + E_2O_1\\) are odd.\n As \\(E_1 \\ge O_1\\) and \\(E_2 \\ge O_2\\) by inductive hypothesis,\n we obtain \\(E_1E_2 + O_1O_2 \\ge E_1O_2 + E_2O_1\\) as desired.\n\nBy the inductive hypothesis, the desired inequality also holds\nfor stable subsets not containing \\(p\\), so we are done.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

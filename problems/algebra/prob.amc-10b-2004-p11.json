@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2004-p11",
+  "title": "2004 AMC 10B Problem 11",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.dice-probability",
+      "label": "Dice (probability)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.simons-favorite-factoring-trick",
+      "label": "Simon’s Favorite Factoring Trick",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2004,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 26.8,
+    "source": 1430,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Two eight-sided dice each have faces numbered \\(1\\) through \\(8.\\) When the dice are rolled, each face has an equal probability of appearing on the top. What is the probability that the product of the two top numbers is greater than their sum?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{47}{64}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{3}{4}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{55}{64}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{7}{8}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "3/4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2004-p11.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(8 \\cdot 8 = 64\\) ordered pairs. The inequality \\(mn \\gt m + n\\) is equivalent to \\((m-1)(n-1) \\gt 1.\\)\n\nThis fails only when \\(m = 1,\\) \\(n = 1,\\) or \\(m = n = 2,\\) which account for \\(8 + 8 - 1 + 1 = 16\\) pairs.\n\nThe probability is \\(\\dfrac{64 - 16}{64} = \\dfrac{48}{64} = \\dfrac{3}{4}.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "The condition \\(mn \\gt m + n\\) rearranges to \\((m-1)(n-1) \\gt 1\\)",
+        "Count the ordered pairs where \\((m-1)(n-1) \\le 1\\) instead"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

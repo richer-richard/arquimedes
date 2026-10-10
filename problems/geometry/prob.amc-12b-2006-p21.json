@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2006-p21",
+  "title": "2006 AMC 12B Problem 21",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.algebraic-manipulation",
+      "label": "Algebraic manipulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.ellipse",
+      "label": "Ellipse",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2006,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 37.3,
+    "source": 2150,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Rectangle \\(ABCD\\) has area \\(2006.\\) An ellipse with area \\(2006\\pi\\) passes through \\(A\\) and \\(C\\) and has foci at \\(B\\) and \\(D.\\) What is the perimeter of the rectangle? (The area of an ellipse is \\(\\pi ab,\\) where \\(2a\\) and \\(2b\\) are the lengths of its axes.)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{16\\sqrt{2006}}{\\pi}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1003}{4}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(8\\sqrt{1003}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6\\sqrt{2006}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{32\\sqrt{1003}}{\\pi}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2006-p21.live",
+      "kind": "proof-sketch",
+      "text": "Let the rectangle’s sides be \\(x\\) and \\(y.\\) Point \\(A\\) is on the ellipse with foci \\(B\\) and \\(D,\\) so \\(x + y = AB + AD = 2a.\\) The distance between the foci is the diagonal, so \\(\\sqrt{x^2 + y^2} = 2\\sqrt{a^2 - b^2}.\\)\n\nThen \\(2xy = (x + y)^2 - (x^2 + y^2)\\) \\(= 4a^2 - (4a^2 - 4b^2)\\) \\(= 4b^2,\\) so \\(xy = 2b^2.\\) The area gives \\(2b^2 = 2006,\\) hence \\(b^2 = 1003.\\)\n\nThe ellipse area gives \\(\\pi ab = 2006\\pi,\\) so \\(ab = 2006\\) and \\(a = \\dfrac{2006}{\\sqrt{1003}} = 2\\sqrt{1003}.\\)\n\nThe perimeter is \\(2(x + y) = 4a = 8\\sqrt{1003}.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "For the ellipse, the sum of distances from \\(A\\) to the foci \\(B, D\\) equals a rectangle diagonal plus a side",
+        "Let the sides be \\(x, y;\\) then \\(x + y = 2a\\) and the diagonal \\(\\sqrt{x^2 + y^2} = 2\\sqrt{a^2 - b^2}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

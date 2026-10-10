@@ -1,0 +1,71 @@
+{
+  "id": "prob.amc-12a-2005-p19",
+  "title": "2005 AMC 12A Problem 19",
+  "category": "arithmetic",
+  "subjects": [
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "arith.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2005,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 31.7,
+    "source": 1950,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A faulty car odometer proceeds from digit \\(3\\) to digit \\(5,\\) always skipping the digit \\(4,\\) regardless of position. For example, after traveling one mile the odometer changed from \\(000039\\) to \\(000050.\\) If the odometer now reads \\(002005,\\) how many miles has the car actually traveled?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1404\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1462\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1604\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(1605\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(1804\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1462"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2005-p19.live",
+      "kind": "proof-sketch",
+      "text": "Because the odometer never displays a \\(4,\\) it uses only \\(9\\) symbols and counts in base \\(9,\\) where its digits \\(5, 6, 7, 8, 9\\) represent the base-\\(9\\) digits \\(4, 5, 6, 7, 8.\\)\n\nThe reading \\(002005\\) therefore corresponds to \\(2004\\) in base \\(9,\\) which equals \\[ 2 \\cdot 9^3 + 4 = 2 \\cdot 729 + 4 = 1462. \\]\n\nThus, the correct answer is B.",
+      "hints": [
+        "The odometer only ever shows \\(9\\) distinct digits, so it is really counting in base \\(9\\)",
+        "Map each shown digit to its base-\\(9\\) value: \\(5, 6, 7, 8, 9\\) stand for \\(4, 5, 6, 7, 8\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

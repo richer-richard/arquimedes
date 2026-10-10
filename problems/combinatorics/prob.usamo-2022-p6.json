@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2022-p6",
+  "title": "2022 USAMO Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2022,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 120.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "There are \\(2022\\) users on a social network called Mathbook, and some of them are Mathbook-friends. (On Mathbook, friendship is always mutual and permanent.)\n\nStarting now, Mathbook will only allow a new friendship to be formed between two users if they have at least two friends in common. What is the minimum number of friendships that must already exist so that every user could eventually become friends with every other user?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2022-p6.imported",
+      "kind": "proof-sketch",
+      "text": "To answer this question, we need to consider how friendships on Mathbook are formed. If two users have at least two friends in common, then they will be able to become friends with each other. This means that the minimum number of friendships that must already exist in order for every user to eventually become friends with every other user is the smallest number of friendships that guarantees that each pair of users has at least two friends in common.\n\nOne way to guarantee that each pair of users has at least two friends in common is to create a complete graph, where each user is friends with every other user. In this case, each pair of users has exactly \\(2022 - 2 = 2020\\) friends in common. However, this is not the minimum number of friendships required, since some pairs of users may have more than two friends in common without forming a complete graph.\n\nTo find the minimum number of friendships required, we can use the fact that a friendship between two users implies that they share all of their mutual friends. In other words, if two users are friends, then they must have at least two friends in common. This means that if we want to guarantee that each pair of users has at least two friends in common, we can do so by ensuring that each user has at least two friends.\n\nTherefore, the minimum number of friendships that must already exist in order for every user to eventually become friends with every other user is \\(2 \\cdot 2022 = \\boxed{4044}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

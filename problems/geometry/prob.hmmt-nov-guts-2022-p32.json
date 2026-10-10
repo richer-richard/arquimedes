@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-nov-guts-2022-p32",
+  "title": "2022 HMMT November Guts Problem 32",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity-and-scaling",
+      "label": "Similarity and scaling",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2022,
+    "number": 32
+  },
+  "difficulty": {
+    "course": 66.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Suppose point \\(P\\) is inside triangle \\(A B C\\). Let \\(A P, B P\\), and \\(C P\\) intersect sides \\(B C, C A\\), and \\(A B\\) at points \\(D, E\\), and \\(F\\), respectively. Suppose \\(\\angle A P B=\\angle B P C=\\angle C P A, P D=\\frac{1}{4}, P E=\\frac{1}{5}\\), and \\(P F=\\frac{1}{7}\\). Compute \\(A P+B P+C P\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{19}{12}",
+    "value": "\\frac{19}{12}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2022-p32.hmmt",
+      "kind": "proof-sketch",
+      "text": "The key is the following lemma:\nLemma: If \\(\\angle X=120^{\\circ}\\) in \\(\\triangle X Y Z\\), and the bisector of \\(X\\) intersects \\(Y Z\\) at \\(T\\), then\n\n\\[\\frac{1}{X Y}+\\frac{1}{X Z}=\\frac{1}{X T}\\]\n\nProof of the Lemma. Construct point \\(W\\) on \\(X Y\\) such that \\(\\triangle X W T\\) is equilateral. We also have \\(T W \\|\\) \\(X Z\\). Thus, by similar triangles,\n\n\\[\\frac{X T}{X Z}=\\frac{Y T}{Y X}=1-\\frac{X T}{X Y},\\]\n\nimplying the conclusion.\nNow we can write\n\n\\[\\begin{aligned}\n& \\frac{1}{P B}+\\frac{1}{P C}=4, \\\\\n& \\frac{1}{P C}+\\frac{1}{P A}=5, \\text { and } \\\\\n& \\frac{1}{P A}+\\frac{1}{P B}=7 .\n\\end{aligned}\\]\n\nFrom here we can solve to obtain \\(\\frac{1}{P A}=4, \\frac{1}{P B}=3, \\frac{1}{P C}=1\\), making the answer \\(\\frac{19}{12}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2006-p18",
+  "title": "2006 AMC 12B Problem 18",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.basic-counting",
+      "label": "Basic counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.lattice-point",
+      "label": "Lattice point",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.parity",
+      "label": "Parity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2006,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 31.5,
+    "source": 1820,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "An object in the plane moves from one lattice point to another. At each step, the object may move one unit to the right, one unit to the left, one unit up, or one unit down. If the object starts at the origin and takes a ten-step path, how many different points could be the final point?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(120\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(121\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(221\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(230\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(231\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "121"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2006-p18.live",
+      "kind": "proof-sketch",
+      "text": "Each step changes the coordinate sum by \\(1,\\) so after \\(10\\) steps the endpoint \\((a, b)\\) has \\(a + b\\) even, and \\(|a| + |b| \\le 10.\\) Any such point is reachable: walk \\(|a| + |b|\\) steps to it, then use the remaining even number of steps going out and back.\n\nThe reachable points lie on the lines \\(a + b = 2k\\) for \\(-5 \\le k \\le 5.\\) Each such line meets the diamond in exactly \\(11\\) lattice points.\n\nWith \\(11\\) lines and \\(11\\) points each, there are \\(121\\) points.\n\nThus, the correct answer is B.",
+      "hints": [
+        "After \\(10\\) steps the endpoint \\((a, b)\\) satisfies \\(|a| + |b| \\le 10\\) with \\(a + b\\) even",
+        "Count lattice points with even coordinate sum inside the diamond \\(|a| + |b| \\le 10\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

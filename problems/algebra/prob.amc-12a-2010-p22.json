@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2010-p22",
+  "title": "2010 AMC 12A Problem 22",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.absolute-value",
+      "label": "Absolute value",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2010,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 35.1,
+    "source": 2000,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "What is the minimum value of \\[ \\begin{gathered} f(x) = |x-1|+|2x-1| \\\\ {}+|3x-1|+\\cdots+|119x-1|? \\end{gathered} \\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(49\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(50\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(51\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(52\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(53\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "49"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2010-p22.live",
+      "kind": "proof-sketch",
+      "text": "The function \\(f\\) is piecewise linear with breakpoints at \\(x=\\tfrac1k.\\) On the interval \\(\\left[\\tfrac1m,\\tfrac1{m-1}\\right]\\) its slope is \\[ \\begin{aligned} &\\sum_{k=m}^{119}k \\\\ &\\quad {}-\\sum_{k=1}^{m-1}k=7140-(m-1)m, \\end{aligned} \\] where \\(7140=\\tfrac{119\\cdot120}{2}.\\)\n\nThis slope is zero when \\((m-1)m=7140,\\) i.e. \\(m=85,\\) so the minimum occurs at the right endpoint \\(x=\\tfrac1{84}.\\)\n\nThere, terms with \\(k\\le84\\) contribute \\(\\tfrac{84-k}{84}\\) and terms with \\(k\\ge85\\) contribute \\(\\tfrac{k-84}{84},\\) so \\[ \\begin{aligned} f\\left(\\tfrac1{84}\\right) &= \\frac{3486}{84}+\\frac{630}{84} \\\\ &= 41.5+7.5=49. \\end{aligned} \\]\n\nThus, A is the correct answer.",
+      "hints": [
+        "\\(f\\) is piecewise linear with corners at \\(x=\\tfrac1k;\\) the minimum is where its slope turns from negative to positive",
+        "On \\(\\left[\\tfrac1m,\\tfrac1{m-1}\\right]\\) the slope is \\(7140-(m-1)m;\\) find where it vanishes"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

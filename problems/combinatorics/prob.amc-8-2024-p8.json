@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-2024-p8",
+  "title": "2024 AMC 8 Problem 8",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.systematic-listing",
+      "label": "Systematic listing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.tree-diagram",
+      "label": "Tree diagram",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2024,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 11.3,
+    "source": 1030,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "On Monday Taye has \\(\\$2.\\) Every day, he either gains \\(\\$3\\) or doubles the amount of money he had on the previous day. How many different dollar amounts could Taye have on Thursday, \\(3\\) days later?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(7\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2024-p8.live",
+      "kind": "proof-sketch",
+      "text": "After Tuesday, Taye could have \\(5\\) or \\(4\\) dollars. After Wednesday, the possible amounts are \\[ 8,10,7,8, \\] so the distinct amounts are \\(7,8,10\\).\n\nAfter Thursday, these can become \\[ 10,14,\\quad 11,16,\\quad 13,20. \\] These are \\(6\\) distinct dollar amounts.\n\nThus, D is the correct answer.",
+      "hints": [
+        "After each day, branch into adding \\(3\\) or doubling",
+        "List the amounts after Tuesday, then Wednesday, then Thursday"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

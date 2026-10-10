@@ -1,0 +1,61 @@
+{
+  "id": "prob.usa-tst-2019-p3",
+  "title": "USA TST 2019 Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.algorithms",
+      "label": "Algorithms",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.games-and-greedy-algorithms",
+      "label": "Games and greedy algorithms",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TST",
+    "year": 2019,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 120.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A snake of length \\(k\\) is an animal\nwhich occupies an ordered \\(k\\)-tuple\n\\((s_1, \\dots, s_k)\\) of cells in an \\(n \\times n\\) grid of square unit cells.\nThese cells must be pairwise distinct,\nand \\(s_i\\) and \\(s_{i+1}\\) must share a side for \\(i=1,\\dots,k-1\\).\nIf the snake is currently occupying \\((s_1, \\dots, s_k)\\)\nand \\(s\\) is an unoccupied cell sharing a side with \\(s_1\\),\nthe snake can move to occupy \\((s, s_1, \\dots, s_{k-1})\\) instead.\nThe snake has turned around if it occupied \\((s_1, s_2, \\dots, s_k)\\)\nat the beginning, but after a finite number of moves\noccupies \\((s_k, s_{k-1}, \\dots, s_1)\\) instead.\n\nDetermine whether there exists an integer \\(n > 1\\)\nsuch that one can place some snake of length at least\n\\(0.9n^2\\) in an \\(n \\times n\\) grid which can turn around.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tst-2019-p3.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is yes (and \\(0.9\\) is arbitrary).\n\nFirst grid-based solution..\nThe following solution is due to Brian Lawrence.\nFor illustration reasons, we give below a figure\nof a snake of length \\(89\\) turning around in an \\(11 \\times 11\\) square\n(which generalizes readily to odd \\(n\\)).\nWe will see that a snake of length \\((n-1)(n-2)-1\\) can turn\naround in an \\(n \\times n\\) square,\nso this certainly implies the problem.\n\n[Diagram omitted from this imported TeX transcription.]\n\nUse the obvious coordinate system with \\((1,1)\\) in the bottom left.\nStart with the snake as shown in Figure 1,\nthen have it move to \\((2,1)\\), \\((2,n)\\), \\((n,n-1)\\)\nas in Figure 2.\nThen, have the snake shift to the position in Figure 3;\nthis is possible since the snake can just walk to \\((n,n)\\),\nthen start walking to the left and then follow the route;\nby the time it reaches the \\(i\\)th row\nfrom the top its tail will have vacated by then.\nOnce it achieves Figure 3, move the head of the snake\nto \\((3,n)\\) to achieve Figure 4.\n\nIn Figure 5 and 6, the snake begins to ``deform'' its loop continuously.\nIn general, this deformation by two squares\nis possible in the following way.\nThe snake walks first to \\((1,n)\\) then retraces the steps\nleft by its tail,\nexcept when it reaches \\((n-1,3)\\) it makes a brief detour to\n\\((n-2,3)\\), \\((n-2,4)\\), \\((n-1,4)\\) and continues along its way;\nthis gives the position in Figure 5.\nThen it retraces the entire loop again,\nexcept that when it reaches \\((n-4,4)\\) it turns directly\ndown, and continues retracing its path;\nthus at the end of this second revolution, we arrive at Figure 6.\n\nBy repeatedly doing perturbations of two cells,\nwe can move move all the ``bumps'' in the path gradually\nto protrude from the right; Figure 7 shows a partial application of the\nprocedure, with the final state as shown in Figure 8.\n\nIn Figure 9, we stretch the bottom-most bump by two more cells;\nthis shortens the ``tail'' by two units, which is fine.\nDoing this for all \\((n-3)/2\\) bumps arrives at the situation in\nFigure 10, with the snake's head at \\((3,n)\\).\nWe then begin deforming the turns on the bottom-right\nby two steps each as in Figure 11,\nwhich visually will increase the length of the head.\nDoing this arrives finally at the situation in Figure 12.\nThus the snake has turned around.\n\nSecond solution phrased using graph theory (Nikolai Beluhov)..\nLet \\(G\\) be any undirected graph.\nConsider a snake of length \\(k\\) lying within \\(G\\), with each segment of the snake occupying one vertex,\nconsecutive segments occupying adjacent vertices, and no two segments occupying the same vertex.\nOne move of the snake consists of the snake's head advancing to an adjacent\nempty vertex and segment \\(i\\) advancing to the vertex of segment \\(i - 1\\) for \\(i = 2\\), 3, \\dots, \\(k\\).\n\nThe solution proceeds in two stages.\nFirst we construct a planar graph \\(G\\) such that it is possible for a snake that\noccupies nearly all of \\(G\\) to turn around inside \\(G\\).\nThen we construct a subgraph \\(H\\) of a grid adjacency graph such that \\(H\\) is\nisomorphic to \\(G\\) and \\(H\\) occupies nearly all of the grid.\n\nFor the first stage of the solution, we construct \\(G\\) as follows.\n\nLet \\(r\\) and \\(\\ell\\) be positive integers.\nStart with \\(r\\) disjoint main paths \\(p_1\\), \\(p_2\\), \\dots, \\(p_r\\), each of length at least \\(\\ell\\),\nwith \\(p_i\\) leading from \\(A_i\\) to \\(B_i\\) for \\(i = 1\\), 2, \\dots, \\(r\\).\nAdd to those \\(r\\) linking paths, one leading from \\(B_i\\) to \\(A_{i + 1}\\) for each \\(i = 1\\), 2, \\dots,\n\\(r - 1\\), and one leading from \\(B_r\\) to \\(A_1\\).\nFinally, add to those two families of transit paths,\nwith one family containing one transit path joining \\(A_1\\) to each of \\(A_2\\), \\(A_3\\), \\dots,\n\\(A_r\\) and the other containing one path joining \\(B_r\\) to each of \\(B_1\\), \\(B_2\\), \\dots, \\(B_{r - 1}\\).\nWe require that all paths specified in the construction have no interior vertices in common,\nwith the exception of transit paths in the same family.\n\nWe claim that a snake of length \\((r - 1)\\ell\\) can turn around inside \\(G\\).\n\nTo this end, let the concatenation \\(A_1B_1A_2B_2\\dots A_r B_r\\) of all main and\nlinking paths be the great cycle.\nWe refer to \\(A_1B_1A_2B_2\\dots A_r B_r\\) as the counterclockwise orientation of the great cycle,\nand to \\(B_r A_r B_{r - 1}A_{r - 1}\\dots B_1A_1\\) as its clockwise orientation.\n\nPlace the snake so that its tail is at \\(A_1\\) and its body extends counterclockwise along the great cycle.\nThen let the snake manoeuvre as follows.\n(We track only the snake's head,\nas its movement uniquely determines the movement of the complete body of the snake.)\n\nAt phase 1, advance counterclockwise along the great cycle to \\(B_{r - 1}\\),\ntake a detour along a transit path to \\(B_r\\), and advance clockwise along the great cycle to \\(A_r\\).\n\nFor \\(i = 2\\), 3, \\dots, \\(r - 1\\), at phase \\(i\\), take a detour along a transit path to \\(A_1\\),\nadvance counterclockwise along the great cycle to \\(B_{r - i}\\), take a detour along a transit path to \\(B_r\\),\nand advance clockwise along the great cycle to \\(A_{r - i + 1}\\).\n\nAt phase \\(r\\), simply advance clockwise along the great cycle to \\(A_1\\).\n\nFor the second stage of the solution, let \\(n\\) be a sufficiently large positive integer.\nConsider an \\(n \\times n\\) grid \\(S\\).\nNumber the columns of \\(S\\) from 1 to \\(n\\) from left to right, and its rows from 1 to \\(n\\) from bottom to top.\n\nLet \\(a_1\\), \\(a_2\\), \\dots, \\(a_{r + 1}\\) be cells of \\(S\\) such that all of \\(a_1\\), \\(a_2\\), \\dots,\n\\(a_{r + 1}\\) lie in column 2, \\(a_1\\) lies in row 2, \\(a_{r + 1}\\) lies in row \\(n - 1\\), and \\(a_1\\), \\(a_2\\), \\dots,\n\\(a_{r + 1}\\) are approximately equally spaced.\nLet \\(b_1\\), \\(b_2\\), \\dots, \\(b_r\\) be cells of \\(S\\) such that all of \\(b_1\\), \\(b_2\\), \\dots,\n\\(b_r\\) lie in column \\(n - 2\\) and \\(b_i\\) lies in the row of \\(a_{i + 1}\\) for \\(i = 1\\), 2, \\dots, \\(r\\).\n\nConstruct \\(H\\) as follows. For \\(i = 1\\), 2, \\dots, \\(r\\),\nlet the main path from \\(a_i\\) to \\(b_i\\) fill up the rectangle bounded by the rows\nand columns of \\(a_i\\) and \\(b_i\\) nearly completely.\nThen every main path is of length approximately \\(\\frac{1}{r}n^2\\).\n\nFor \\(i = 1\\), 2, \\dots, \\(r - 1\\),\nlet the linking path that leads from \\(b_i\\) to \\(a_{i + 1}\\) lie inside the row of\n\\(b_i\\) and \\(a_{i + 1}\\) and let the linking path that leads from \\(b_r\\) to \\(a_1\\) lie inside row \\(n\\), column \\(n\\),\nand row \\(1\\).\n\nLastly, let the union of the first family of transit paths be column 1 and let\nthe union of the second family of transit paths be column \\(n - 1\\),\nwith the exception of their bottommost and topmost squares.\n\nAs in the first stage of the solution,\nby this construction a snake of length \\(k\\) approximately equal to\n\\(\\frac{r - 1}{r}n^2\\) can turn around inside an \\(n \\times n\\) grid \\(S\\).\nWhen \\(r\\) is fixed and \\(n\\) tends to infinity, \\(\\frac{k}{n^2}\\) tends to \\(\\frac{r - 1}{r}\\).\nFurthermore, when \\(r\\) tends to infinity, \\(\\frac{r - 1}{r}\\) tends to \\(1\\). This gives the answer.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

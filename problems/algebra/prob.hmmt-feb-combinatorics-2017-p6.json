@@ -1,0 +1,56 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2017-p6",
+  "title": "2017 HMMT February Combinatorics Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2017,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 79.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Emily starts with an empty bucket. Every second, she either adds a stone to the bucket or removes a stone from the bucket, each with probability \\(\\frac{1}{2}\\). If she wants to remove a stone from the bucket and the bucket is currently empty, she merely does nothing for that second (still with probability \\(\\frac{1}{2}\\) ). What is the probability that after 2017 seconds her bucket contains exactly 1337 stones?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2017-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\frac{\\left(\\begin{array}{l}2017 \\\\ 340 \\\\ 2^{2017} \\\\ \\hline\\end{array}\\right)}{}\\)\nReplace 2017 with \\(n\\) and 1337 with \\(k\\) and denote the general answer by \\(f(n, k)\\). I claim that \\(f(n, k)=\\) \\(\\frac{\\left(\\left\\lfloor\\frac{n-k}{2}\\right\\rfloor\\right.}{2^{n}}\\) ) We proceed by induction on \\(n\\).\nThe claim is obviously true for \\(n=0\\) since \\(f(0,0)=1\\). Moreover, we have that \\(f(n, 0)=\\frac{1}{2} f(n-\\) \\(1,0)+\\frac{1}{2} f(n-1,1)\\) and \\(f(n, k)=\\frac{1}{2} f(n-1, k-1)+\\frac{1}{2} f(n-1, k+1)\\) for \\(k>0\\) so the inductive step is immediate by Pascal's identity. This concludes the proof.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

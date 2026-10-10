@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-algebra-2013-p6",
+  "title": "2013 HMMT February Algebra Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.floors-and-ceilings",
+      "label": "Floors and ceilings",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2013,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 83.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find the number of integers \\(n\\) such that\n\n\\[1+\\left\\lfloor\\frac{100 n}{101}\\right\\rfloor=\\left\\lceil\\frac{99 n}{100}\\right\\rceil\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-2013-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "10100 Consider \\(f(n)=\\left\\lceil\\frac{99 n}{100}\\right\\rceil-\\left\\lfloor\\frac{100 n}{101}\\right\\rfloor\\). Note that \\(f(n+10100)=\\left\\lceil\\frac{99 n}{100}+99 \\cdot 101\\right\\rceil-\\) \\(\\left\\lfloor\\frac{100 n}{101}+100^{2}\\right\\rfloor=f(n)+99 \\cdot 101-100^{2}=f(n)-1\\). Thus, for each residue class \\(r\\) modulo 10100, there is exactly one value of \\(n\\) for which \\(f(n)=1\\) and \\(n \\equiv r(\\bmod 10100)\\). It follows immediately that the answer is 10100 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "id": "prob.hmmt-feb-team-2001-p12",
+  "title": "2001 HMMT February Team Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2001,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 81.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "All subscripts in this problem are to be considered modulo 6 , that means for example that \\(\\omega_{7}\\) is the same as \\(\\omega_{1}\\). Let \\(\\omega_{1}, \\ldots \\omega_{6}\\) be circles of radius \\(r\\), whose centers lie on a regular hexagon of side length 1 . Let \\(P_{i}\\) be the intersection of \\(\\omega_{i}\\) and \\(\\omega_{i+1}\\) that lies further from the center of the hexagon, for \\(i=1, \\ldots 6\\). Let \\(Q_{i}, i=1 \\ldots 6\\), lie on \\(\\omega_{i}\\) such that \\(Q_{i}, P_{i}, Q_{i+1}\\) are colinear. Find the number of possible values of \\(r\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2001-p12.hmmt",
+      "kind": "proof-sketch",
+      "text": "Consider two consecutive circles \\(\\omega_{i}\\) and \\(\\omega_{i+1}\\). Let \\(Q_{i}, Q_{i}^{\\prime}\\) be two points on \\(\\omega_{i}\\) and \\(Q_{i+1}, Q_{i+1}^{\\prime}\\) on \\(\\omega_{i+1}\\) such that \\(Q_{i}, P_{i}\\) and \\(Q_{i+1}\\) are colinear and also \\(Q_{i}^{\\prime}, P_{i}\\) and \\(Q_{i+1}^{\\prime}\\). Then \\(Q_{i} Q_{i}^{\\prime}=2 \\angle Q_{i} P_{i} Q_{i}^{\\prime}=2 \\angle Q_{i+1} P_{i} Q_{i+1}^{\\prime}=\\angle Q_{i+1} Q_{i+1}^{\\prime}\\). Refer to the center of \\(\\omega_{i}\\) as \\(O_{i}\\). The previous result shows that the lines \\(O_{i} Q_{i}\\) and \\(O_{i+1} Q_{i+1}\\) meet at the same angle as the lines \\(O_{i} Q_{i}^{\\prime}\\) and \\(O_{i+1} Q_{i+1}^{\\prime}\\), call this angle \\(\\psi_{i}\\). \\(\\psi_{i}\\) is a function solely of the circles \\(\\omega_{i}\\) and \\(\\omega_{i+1}\\) and the distance between them (we have just showed that any two points \\(Q_{i}\\) and \\(Q_{i}^{\\prime}\\) on \\(\\omega_{i}\\) give the same value of \\(\\psi_{i}\\), so \\(\\psi_{i}\\) can't depend on this.) Now, the geometry of \\(\\omega_{i}\\) and \\(\\omega_{i+1}\\) is the same for every \\(i\\), so \\(\\psi_{i}\\) is simply a constant \\(\\psi\\) which depends only on \\(r\\). We know \\(6 \\psi=0 \\bmod 2 \\pi\\) because \\(Q_{7}=Q_{1}\\).\n\nWe now compute \\(\\psi\\). It suffices to do the computaiton for some specific choice of \\(Q_{i}\\). Take \\(Q_{i}\\) to be the intersection of \\(O_{i} O_{i+1}\\) and \\(\\omega_{i}\\) which is further from \\(O_{i+1}\\). We are to compute the angle between \\(O_{i} Q_{i}\\) and \\(O_{i+1} Q_{i+1}\\) which is the same as \\(\\angle O_{i} O_{i+1} Q_{i+1}\\). Note the triangle \\(\\triangle O_{i} P_{i} O_{i+1}\\) is isosceles, call the base angle \\(\\xi\\). We have \\(\\angle O_{i} O_{i+1} Q_{i+1}=\\angle O_{i} O_{i+1} P_{i}+\\) \\(\\angle P_{i} O_{i+1} Q_{i+1}=\\xi+\\left(\\pi-2 \\angle O_{i+1} P_{i} Q_{i+1}\\right)=\\xi+\\left(\\pi-2\\left(\\pi-\\angle Q_{i} O_{i+1} P_{i}-\\angle P_{i} Q_{i} O_{i+1}\\right)\\right)=\\) \\(\\xi-\\pi+2\\left(\\xi+(1 / 2) \\angle P_{i} O_{i} O_{i+1}\\right)=\\xi-\\pi+2(\\xi+(1 / 2) \\xi)=4 \\xi-\\pi\\).\n\nSo we get \\(6(4 \\xi-\\pi)=0 \\bmod 2 \\pi\\). Noting that \\(\\xi\\) must be acute, \\(\\xi=\\pi / 12, \\pi / 6, \\pi / 4, \\pi / 3\\) or \\(5 \\pi / 12\\). \\(r\\) is uniquely determined as \\((1 / 2) \\sec \\xi\\) so there are 5 possible values of \\(r\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

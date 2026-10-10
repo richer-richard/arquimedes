@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-guts-2017-p4",
+  "title": "2017 HMMT November Guts Problem 4",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.permutations",
+      "label": "Permutations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2017,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 42.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Alec wishes to construct a string of 6 letters using the letters A, C, G, and N, such that:\n\n- The first three letters are pairwise distinct, and so are the last three letters;\n- The first, second, fourth, and fifth letters are pairwise distinct.\n\nIn how many ways can he construct the string?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2017-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "There are \\(4!=24\\) ways to decide the first, second, fourth, and fifth letters because these letters can be selected sequentially without replacement from the four possible letters. Once these four letters are selected, there are 2 ways to select the third letter because two distinct letters have already been selected for the first and second letters, leaving two possibilities. The same analysis applies to the sixth letter. Thus, there are \\(24 \\cdot 2^{2}=96\\) total ways to construct the string.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

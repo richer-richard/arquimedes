@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-guts-2018-p19",
+  "title": "2018 HMMT February Guts Problem 19",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.coloring-schemes-extremal-arguments",
+      "label": "Coloring schemes, extremal arguments",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2018,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 72.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Suppose there are 100 cookies arranged in a circle, and 53 of them are chocolate chip, with the remainder being oatmeal. Pearl wants to choose a contiguous subsegment of exactly 67 cookies and wants this subsegment to have exactly \\(k\\) chocolate chip cookies. Find the sum of the \\(k\\) for which Pearl is guaranteed to succeed regardless of how the cookies are arranged.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2018-p19.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 71\nWe claim that the only values of \\(k\\) are 35 and 36 .\nWLOG assume that the cookies are labelled 0 through 99 around the circle. Consider the following arrangement: cookies 0 through 17,34 through 50 , and 67 through 84 are chocolate chip, and the remaining are oatmeal. (The cookies form six alternating blocks around the circle of length \\(18,16,17,16,18,15\\).) Consider the block of 33 cookies that are not chosen. It is not difficult to see that since the sum of the lengths of each two adjacent block is always at least 33 and at most 34 , this block of unchosen cookies always contains at least one complete block of cookies of the same type (and no other cookies of this type). So this block contains 17 or 18 or \\(33-16=17\\) or \\(33-15=18\\) chocolate chip cookies. Therefore, the block of 67 chosen cookies can only have \\(53-17=36\\) or \\(53-18=35\\) chocolate chip cookies.\n\nNow we show that 35 and 36 can always be obtained. Consider all possible ways to choose 67 cookies: cookies 0 through 66,1 through \\(67, \\ldots, 99\\) through 65 . It is not difficult to see that the number of chocolate chip cookies in the block changes by at most 1 as we advance from one way to the next.\n\nMoreover, each cookie will be chosen 67 times, so on average there will be \\(\\frac{67.53}{100}=35.51\\) chocolate chip cookies in each block. Since not all blocks are below average and not all blocks are above average, there must be a point where a block below average transition into a block above average. The difference of these two blocks is at most 1 , so one must be 35 and one must be 36 .\nTherefore, the sum of all possible values of \\(k\\) is \\(35+36=71\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2015-p15",
+  "title": "2015 AMC 10A Problem 15",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.fraction",
+      "label": "Fraction",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.simons-favorite-factoring-trick",
+      "label": "Simon’s Favorite Factoring Trick",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2015,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 29.0,
+    "source": 1860,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Consider the set of all fractions \\(\\dfrac{x}{y},\\) where \\(x\\) and \\(y\\) are relatively prime positive integers. How many of these fractions have the property that if both numerator and denominator are increased by \\(1,\\) the value of the fraction is increased by \\(10\\%?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\text{infinitely many}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2015-p15.live",
+      "kind": "proof-sketch",
+      "text": "The condition is \\[\\frac{x+1}{y+1}=\\frac{11}{10}\\cdot\\frac{x}{y}.\\] Cross-multiplying gives \\(10y(x+1)=11x(y+1)\\), or \\(xy+11x-10y=0\\).\n\nFactoring by grouping after subtracting \\(110\\) gives \\[(x-10)(y+11)=-110.\\] Since \\(x,y\\) are positive, the useful negative factor pairs are \\((-1,110)\\), \\((-2,55)\\), and \\((-5,22)\\), producing \\((x,y)=(9,99),(8,44),(5,11)\\).\n\nOnly \\(\\frac{5}{11}\\) has relatively prime numerator and denominator, so exactly one fraction works.\n\nThus, B is the correct answer.",
+      "hints": [
+        "Turn the fraction condition into a factorization",
+        "Only negative factor pairs with \\(y+11>11\\) can work"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

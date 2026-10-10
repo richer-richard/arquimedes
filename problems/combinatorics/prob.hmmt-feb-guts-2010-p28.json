@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2010-p28",
+  "title": "2010 HMMT February Guts Problem 28",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2010,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 83.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Danielle Bellatrix Robinson is organizing a poker tournament with 9 people. The tournament will have 4 rounds, and in each round the 9 players are split into 3 groups of 3 . During the tournament, each player plays every other player exactly once. How many different ways can Danielle divide the 9 people into three groups in each round to satisfy these requirements?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2010-p28.hmmt",
+      "kind": "proof-sketch",
+      "text": "20160 We first split the 9 people up arbitrarily into groups of 3 . There are \\(\\frac{\\binom{9}{3}\\binom{6}{3}\\binom{3}{3}}{3!}=280\\) ways of doing this. Without loss of generality, label the people 1 through 9 so that the first round groups are \\(\\{1,2,3\\},\\{4,5,6\\}\\), and \\(\\{7,8,9\\}\\). We will use this numbering to count the number of ways DBR can divide the 9 players in rounds 2,3 , and 4 .\n\nIn round 2 , because players 1,2 , and 3 are together in the first round, they must be in separate groups, and likewise for \\(\\{4,5,6\\}\\) and \\(\\{7,8,9\\}\\). Disregarding ordering of the three groups in a single round, we will first place 1,2 , and 3 into their groups, then count the number of ways to place \\(\\{4,5,6\\}\\) and \\(\\{7,8,9\\}\\) in the groups with them. We do this by placing one member from each of \\(\\{4,5,6\\}\\) and \\(\\{7,8,9\\}\\) into each group. There are \\((3!)^{2}\\) ways to do this. Now, because of symmetry, we can use the round 2 grouping \\(\\{1,4,7\\},\\{2,5,8\\},\\{3,6,9\\}\\) to list out the remaining possibilities for round 3 and 4 groupings.\nCasework shows that there are 2 ways to group the players in the remaining two rounds. We multiply \\(280 \\cdot(3!)^{2} \\cdot 2\\) to get 20160.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

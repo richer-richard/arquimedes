@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2016-p5",
+  "title": "2016 AIME I Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2016,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 48.7,
+    "source": 2430,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Anh read a book. On the first day she read \\(n\\) pages in \\(t\\) minutes, where \\(n\\) and \\(t\\) are positive integers. On the second day Anh read \\(n + 1\\) pages in \\(t + 1\\) minutes. Each day thereafter Anh read one more page than she read on the previous day, and it took her one more minute than on the previous day until she completely read the \\(374\\) page book. It took her a total of \\(319\\) minutes to read the book. Find \\(n + t.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "53",
+    "value": "53"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2016-p5.live",
+      "kind": "proof-sketch",
+      "text": "Say Anh finished on day \\(k.\\) Summing the arithmetic progressions of pages and of minutes, \\[\\frac{k(2n + k - 1)}{2} = 374\\] and \\[\\frac{k(2t + k - 1)}{2} = 319,\\] so \\(k(2n + k - 1) = 748\\) and \\(k(2t + k - 1) = 638.\\)\n\nSubtracting, \\(2k(n - t) = 110,\\) so \\(k(n - t) = 55.\\) Thus \\(k\\) divides both \\(55\\) and \\(\\gcd(748, 638) = 22,\\) so \\(k\\) divides \\(11.\\) Since the story spans more than one day, \\(k = 11.\\)\n\nThen \\(2n + 10 = \\frac{748}{11} = 68\\) gives \\(n = 29,\\) and \\(2t + 10 = \\frac{638}{11} = 58\\) gives \\(t = 24.\\) Hence \\(n + t = 29 + 24 = 53.\\)",
+      "hints": [
+        "If she finished in \\(k\\) days, arithmetic series give \\(k(2n + k - 1) = 748\\) and \\(k(2t + k - 1) = 638\\)",
+        "Subtracting gives \\(k(n - t) = 55,\\) and \\(k\\) also divides \\(\\gcd(748, 638) = 22\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

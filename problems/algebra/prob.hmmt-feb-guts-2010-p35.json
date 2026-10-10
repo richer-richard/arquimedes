@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2010-p35",
+  "title": "2010 HMMT February Guts Problem 35",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.logarithms-and-exponentials",
+      "label": "Logarithms and exponentials",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.probability",
+      "label": "Probability",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2010,
+    "number": 35
+  },
+  "difficulty": {
+    "course": 82.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Call an positive integer almost-square if it can be written as \\(a \\cdot b\\), where \\(a\\) and \\(b\\) are integers and \\(a \\leq b \\leq \\frac{4}{3} a\\). How many almost-square positive integers are less than or equal to 1000000 ? Your score will be equal to \\(25-65 \\frac{|A-C|}{\\min (A, C)}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2010-p35.hmmt",
+      "kind": "proof-sketch",
+      "text": "130348 To get a good estimate for the number of almost-square integers, note that any number of the form \\(a \\cdot b\\), with \\(b \\leq \\frac{4}{3} a\\), will be by definition almost-square. Let's assume that it's relatively unlikely that a number is almost-square in more than one way. Then the number of almostsquare numbers less than \\(n\\) will be approximately\n\n\\[\\sum_{a=1}^{\\sqrt{n}} \\sum_{b=a}^{\\frac{4}{3} a} 1=\\frac{1}{3} \\sum_{a=1}^{\\sqrt{n}} a=\\frac{1}{6} \\sqrt{n}(\\sqrt{n}+1)\\]\n\nwhich is about \\(\\frac{n}{6}\\). So, \\(\\frac{n}{6}\\) will be a fairly good estimate for the number of almost-square numbers less than \\(n\\), making 160000 a reasonable guess.\n\nWe can do better, though. For example, we summed \\(\\frac{a}{3}\\) all the way up to \\(\\sqrt{n}\\), but we are really overcounting here because when \\(a\\) is close to \\(\\sqrt{n}, a \\cdot b\\) will be less than \\(n\\) only when \\(b \\leq \\frac{n}{a}\\), as opposed to \\(b \\leq \\frac{4 a}{3}\\). So we should really be taking the sum\n\n[^4]\\[\\begin{aligned}\n& \\sum_{a=1}^{\\sqrt{\\frac{3 n}{4}}} \\sum_{b=a}^{\\frac{4 a}{3}} 1+\\sum_{a=\\sqrt{\\frac{3 n}{4}}}^{\\sqrt{n}} \\sum_{b=a}^{\\frac{n}{a}} 1 \\\\\n& \\quad=\\sum_{a=1}^{\\sqrt{\\frac{3 n}{4}}} \\frac{a}{3}+\\sum_{a=\\sqrt{\\frac{3 n}{4}}}^{\\sqrt{n}}\\left(\\frac{n}{a}-a\\right) \\\\\n& \\quad \\approx \\frac{1}{6} \\frac{3 n}{4}+n\\left(\\log (\\sqrt{n})-\\log \\left(\\sqrt{\\frac{3 n}{4}}\\right)\\right)-\\left(\\frac{n}{2}-\\frac{3 n}{8}\\right) \\\\\n& \\quad=\\frac{n}{8}+n \\frac{\\log (4)-\\log (3)}{2}-\\frac{n}{8} \\\\\n& \\quad=n \\frac{\\log (4)-\\log (3)}{2}\n\\end{aligned}\\]\n\nIn the process of taking the sum, we saw that we had something between \\(\\frac{n}{8}\\) and \\(\\frac{n}{6}\\), so we could also guess something between 166000 and 125000 , which would give us about 145000 , an even better answer. If we actually calculate \\(\\frac{\\log (4)-\\log (3)}{2}\\), we see that it's about 0.14384 , so 143840 would be the best guess if we were to use this strategy. In reality, we would want to round down a bit in both cases, since we are overcounting (because numbers could be square-free in multiple ways), so we should probably answer something like 140000 .\n\nA final refinement to our calculation (and perhaps easier than the previous one), is to assume that the products \\(a \\cdot b\\) that we consider are randomly distributed between 1 and \\(n\\), and to compute the expected number of distinct numbers we end up with. This is the same type of problem as number 31 on this contest, and we compute that if we randomly distribute \\(k\\) numbers between 1 and \\(n\\) then we expect to end up with \\(n\\left(1-\\left(1-\\frac{1}{n}\\right)^{k}\\right)\\) distinct numbers. When \\(k=n \\frac{\\log (4)-\\log (3)}{2}\\), we get that this equals\n\n\\[\\begin{aligned}\nn\\left(1-\\left(\\left(1-\\frac{1}{n}\\right)^{n}\\right)^{\\frac{\\log (4)-\\log (3)}{2}}\\right) & =n\\left(1-\\sqrt{e^{\\log (3)-\\log (4)}}\\right) \\\\\n& =n\\left(1-\\sqrt{\\frac{3}{4}}\\right) \\\\\n& =n\\left(1-\\frac{\\sqrt{3}}{2}\\right) \\\\\n& \\approx 0.134 n\n\\end{aligned}\\]\n\nGiving us an answer of 134000 , which is very close to the correct answer.\nThe actual answer was found by computer, using the following \\(\\mathrm{C}++\\) program:\n\n```\n#include <stdio.h>\nusing namespace std;\nbool isAlmostSquare(int n){\n    for(int k=1;k*k<=n;k++)\n        if(n%k==0 && 3*(n/k) <= 4*k) return true;\n    return false;\n}\n```\n\n```\nint main(){\n    int c = 0;\n    for(int n=1;n<=1000000;n++)\n        if(isAlmostSquare(n)) c++;\n    printf(\"%d\\n\",c);\n    return 0;\n}\n```",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

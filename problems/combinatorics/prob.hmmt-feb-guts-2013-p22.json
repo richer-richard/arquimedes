@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-guts-2013-p22",
+  "title": "2013 HMMT February Guts Problem 22",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.games-and-greedy-algorithms",
+      "label": "Games and greedy algorithms",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2013,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 79.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Sherry and Val are playing a game. Sherry has a deck containing 2011 red cards and 2012 black cards, shuffled randomly. Sherry flips these cards over one at a time, and before she flips each card over, Val guesses whether it is red or black. If Val guesses correctly, she wins 1 dollar; otherwise, she loses 1 dollar. In addition, Val must guess red exactly 2011 times. If Val plays optimally, what is her expected profit from this game?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2013-p22.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{1}{4023}\\) We will prove by induction on \\(r+b\\) that the expected profit for guessing if there are \\(r\\) red cards, \\(b\\) black cards, and where \\(g\\) guesses must be red, is equal to \\((b-r)+\\frac{2(r-b)}{(r+b)} g\\). It is not difficult to check that this holds in the cases \\((r, b, g)=(1,0,0),(0,1,0),(1,0,1),(0,1,1)\\). Then, suppose that this is true as long as the number of cards is strictly less than \\(r+b\\); we will prove that it also holds true when there are \\(r\\) red and \\(b\\) blue cards.\nLet \\(f(r, b, g)\\) be her expected profit under these conditions. If she guesses red, her expected profit is\n\n\\[\\frac{r}{r+b}(1+f(r-1, b, g-1))+\\frac{b}{r+b}(-1+f(r, b-1, g-1))=(b-r)+\\frac{2(r-b)}{(r+b)} g\\]\n\nSimilarly, if she guesses black, her expected profit is\n\n\\[\\frac{r}{r+b}(-1+f(r-1, b, g))+\\frac{b}{r+b}(1+f(r, b-1, g))=(b-r)+\\frac{2(r-b)}{(r+b)} g .\\]\n\nPlugging in the our starting values gives an expected profit of \\(\\frac{1}{4023}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

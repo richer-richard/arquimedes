@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2014-p2",
+  "title": "2014 USAMO Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2014,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 97.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\mathbb{Z}\\) be the set of integers. Find all functions \\(f : \\mathbb{Z} \\rightarrow \\mathbb{Z}\\) such that\n\n\\[\nxf(2f(y)-x)+y^2f(2x-f(y))=\\frac{f(x)^2}{x}+f(yf(y))\n\\]\n\nfor all \\(x, y \\in \\mathbb{Z}\\) with \\(x \\neq 0\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2014-p2.imported",
+      "kind": "proof-sketch",
+      "text": "Note: This solution is kind of rough. I didn't want to put my 7-page solution all over again. It would be nice if someone could edit in the details of the expansions.\nLemma 1: $f(0) = 0$.\nProof: Assume the opposite for a contradiction. Plug in $x = 2f(0)$ (because we assumed that $f(0) \\neq 0$), $y = 0$. What you get eventually reduces to:\n\\[4f(0)-2 = \\left( \\frac{f(2f(0))}{f(0)} \\right)^2\\]\nwhich is a contradiction since the LHS is divisible by 2 but not 4.\nThen plug in $y = 0$ into the original equation and simplify by Lemma 1. We get:\n\\[x^2f(-x) = f(x)^2\\]\nThen:\n\\begin{align*} x^6f(x) &= x^4\\bigl(x^2f(x)\\bigr)\\\\ &= x^4\\bigl((-x)^2f(-(-x))\\bigr)\\\\ &= x^4(-x)^2f(-(-x))\\\\ &= x^4f(-x)^2\\\\ &= f(x)^4 \\end{align*}\nTherefore, $f(x)$ must be 0 or $x^2$.\nNow either $f(x)$ is $x^2$ for all $x$ or there exists $a \\neq 0$ such that $f(a)=0$. The first case gives a valid solution. In the second case, we let $y = a$ in the original equation and simplify to get:\n\\[xf(-x) + a^2f(2x) = \\frac{f(x)^2}{x}\\]\nBut we know that $xf(-x) = \\frac{f(x)^2}{x}$, so:\n\\[a^2f(2x) = 0\\]\nSince $a$ is not 0, $f(2x)$ is 0 for all $x$ (including 0). Now either $f(x)$ is 0 for all $x$, or there exists some $m \\neq 0$ such that $f(m) = m^2$. Then $m$ must be odd. We can let $x = 2k$ in the original equation, and since $f(2x)$ is 0 for all $x$, stuff cancels and we get:\n\\[y^2f(4k - f(y)) = f(yf(y))\\]\n<b>for $\\mathbf{k \\neq 0}$.</b>\nNow, let $y = m$ and we get:\n\\[m^2f(4k - m^2) = f(m^3)\\]\nNow, either both sides are 0 or both are equal to $m^6$. If both are $m^6$ then:\n\\[m^2(4k - m^2)^2 = m^6\\]\nwhich simplifies to:\n\\[4k - m^2 = \\pm m^2\\]\nSince $k \\neq 0$ and $m$ is odd, both cases are impossible, so we must have:\n\\[m^2f(4k - m^2) = f(m^3) = 0\\]\nThen we can let $k$ be anything except 0, and get $f(x)$ is 0 for all $x \\equiv 3 \\pmod{4}$ except $-m^2$. Also since $x^2f(-x) = f(x)^2$, we have $f(x) = 0 \\Rightarrow f(-x) = 0$, so $f(x)$ is 0 for all $x \\equiv 1 \\pmod{4}$ except $m^2$. So $f(x)$ is 0 for all $x$ except $\\pm m^2$. Since $f(m) \\neq 0$, $m = \\pm m^2$. Squaring, $m^2 = m^4$ and dividing by $m$, $m = m^3$. Since $f(m^3) = 0$, $f(m) = 0$, which is a contradiction for $m \\neq 1$. However, if we plug in $x = 1$ with $f(1) = 1$ and $y$ as an arbitrary large number with $f(y) = 0$ into the original equation, we get $0 = 1$ which is a clear contradiction, so our only solutions are $f(x) = 0$ and $f(x) = x^2$.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

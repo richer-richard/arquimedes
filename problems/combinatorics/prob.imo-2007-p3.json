@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2007-p3",
+  "title": "2007 IMO Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2007,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 115.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In a mathematical competition some competitors are (mutual) friends.\nCall a group of competitors a clique if each two of them are friends.\nGiven that the largest size of a clique is even,\nprove that the competitors can be arranged into two rooms\nsuch that the largest size of a clique contained in one room\nis the same as the largest size of a clique contained in the other room.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2007-p3.evanchen",
+      "kind": "proof-sketch",
+      "text": "Take the obvious graph interpretation \\(G\\).\nWe paint red any vertices in one of the maximal cliques \\(K\\),\nwhich we assume has \\(2r\\) vertices, and paint the remaining vertices green.\nWe let \\(\\alpha(\\bullet)\\) denote the clique number.\n\nInitially, let the two rooms \\(A = K\\), \\(B = G-K\\).\n\nClaim.\n We can move at most \\(r\\) vertices of \\(A\\) into \\(B\\)\n to arrive at \\(\\alpha(A) \\le \\alpha(B) \\le \\alpha(A)+1\\).\n\nProof.\n This is actually obvious by discrete continuity.\n We move one vertex at a time, noting \\(\\alpha(A)\\) decreases by one at each step,\n while \\(\\alpha(B)\\) increases by either zero or one at each step.\n\n We stop once \\(\\alpha(B) \\ge \\alpha(A)\\), which happens before we have moved \\(r\\) vertices\n (since then we have \\(\\alpha(B) \\ge r = \\alpha(A)\\)).\n The conclusion follows.\n\nSo let's consider the situation\n\\[ \\alpha(A) = k \\ge r \\qquad\\text{and}\\qquad \\alpha(B) = k+1. \\]\n\nAt this point \\(A\\) is a set of \\(k\\) red vertices,\nwhile \\(B\\) has the remaining \\(2r-k\\) red vertices (and all the green ones).\nAn example is shown below with \\(k=4\\) and \\(2r = 6\\).\n\n[Diagram omitted from this imported TeX transcription.]\n\nNow, if we can move any red vertex from \\(B\\) back to \\(A\\)\nwithout changing the clique number of \\(B\\), we do so, and win.\n\nOtherwise, it must be the case that every\n\\((k+1)\\)-clique in \\(B\\) uses every red vertex in \\(B\\).\nFor each \\((k+1)\\)-clique in \\(B\\) (in arbitrary order), we do the following procedure.\n\n• If all \\(k+1\\) vertices are still green, pick one and re-color it blue.\n This is possible since \\(k+1 > 2r-k\\).\n\n• Otherwise, do nothing.\n\nThen we move all the blue vertices from \\(B\\) to \\(A\\),\none at a time, in the same order we re-colored them.\nThis forcibly decreases the clique number of \\(B\\) to \\(k\\),\nsince the clique number is \\(k+1\\) just before the last blue vertex is moved,\nand strictly less than \\(k+1\\) (hence equal to \\(k\\)) immediately after that.\n\nClaim.\n After this, \\(\\alpha(A) = k\\) still holds.\n\nProof.\n Assume not, and we have a \\((k+1)\\)-clique\n which uses \\(b\\) blue vertices and \\((k+1)-b\\) red vertices in \\(A\\).\n Together with the \\(2r-k\\) red vertices already in \\(B\\) we then get a clique of size\n \\[ b + \\left( (k+1-b) \\right) + \\left( 2r-k \\right) = 2r + 1 \\]\n which is a contradiction.\n\nRemark.\n Dragomir Grozev posted the following motivation on\n his blog:\n\n I think, it's a natural idea to place all students in one room and begin\n moving them one by one into the other one.\n Then the max size of the cliques in the first and second room\n increase (resp.\\ decrease) at most with one.\n So, there would be a moment both sizes are almost the same.\n At that moment we may adjust something.\n\n Trying the idea, I had some difficulties\n keeping track of the maximal cliques in the both rooms.\n It seemed easier all the students in one of the rooms to comprise a clique.\n It could be achieved by moving only the members of the maximal clique.\n Following this path the remaining obstacles can be overcome naturally.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

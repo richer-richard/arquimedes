@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-feb-geometry-2015-p10",
+  "title": "2015 HMMT February Geometry Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cartesian-coordinates",
+      "label": "Cartesian coordinates",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangents",
+      "label": "Tangents",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2015,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 88.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\mathcal{G}\\) be the set of all points \\((x, y)\\) in the Cartesian plane such that \\(0 \\leq y \\leq 8\\) and\n\n\\[(x-3)^{2}+31=(y-4)^{2}+8 \\sqrt{y(8-y)}\\]\n\nThere exists a unique line \\(\\ell\\) of negative slope tangent to \\(\\mathcal{G}\\) and passing through the point \\((0,4)\\). Suppose \\(\\ell\\) is tangent to \\(\\mathcal{G}\\) at a unique point \\(P\\). Find the coordinates \\((\\alpha, \\beta)\\) of \\(P\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2015-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\left(\\frac{12}{5}, \\frac{8}{5}\\right)\\) Let \\(G\\) be \\(\\mathcal{G}\\) restricted to the strip of plane \\(0 \\leq y \\leq 4\\) (we only care about this region since \\(\\ell\\) has negative slope going down from \\((0,4)\\) ). By completing the square, the original equation rearranges to \\((x-3)^{2}+(\\sqrt{y(8-y)}-4)^{2}=1\\). One could finish the problem in a completely standard way via the single-variable parameterization \\((x, \\sqrt{y(8-y)})=(3+\\cos t, 4+\\sin t)\\) on the appropriate interval of \\(t\\)-just take derivatives with respect to \\(t\\) to find slopes (the computations would probably not be too bad) -but we will present a slightly cleaner solution.\nConsider the bijective plane transformation \\(\\Phi:(x, y) \\mapsto(x, \\sqrt{y(8-y)})\\), with inverse \\(\\Phi^{-1}:(x, y) \\mapsto\\) \\(\\left(x, 4-\\sqrt{16-y^{2}}\\right)\\). In general, \\(\\Phi\\) maps curves as follows: \\(\\Phi(\\{(x, y): f(x, y)=c\\})=\\{\\Phi(x, y): f(x, y)=\\) \\(c\\}=\\left\\{\\left(x^{\\prime}, y^{\\prime}\\right): f\\left(\\Phi^{-1}\\left(x^{\\prime}, y^{\\prime}\\right)\\right)=c\\right\\}\\).\nOur line \\(\\ell\\) has the form \\(y-4=-m x\\) for some \\(m>0\\). We have \\(\\Phi(G)=\\left\\{(x-3)^{2}+(y-4)^{2}=1: 0 \\leq\\right.\\) \\(y \\leq 4\\}\\) and \\(\\Phi(\\{4-y=m x: 0 \\leq y \\leq 4\\})=\\left\\{\\sqrt{16-y^{2}}=m x: 0 \\leq y \\leq 4\\right\\}\\). Since \\(\\ell\\) is unique, \\(m\\) must\nalso be. But it's easy to see that \\(m=1\\) gives a tangency point, so if our original tangency point was \\((u, v)\\), then our new tangency point is \\((u, \\sqrt{v(8-v)})=\\frac{4}{5}(3,4)=\\left(\\frac{12}{5}, \\frac{16}{5}\\right)\\), and so \\((u, v)=\\left(\\frac{12}{5}, \\frac{8}{5}\\right)\\).\nRemark. To see what \\(\\mathcal{G}\\) looks like, see Wolfram Alpha using the plotting/graphing commands",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

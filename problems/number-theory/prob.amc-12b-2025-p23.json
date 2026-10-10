@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12b-2025-p23",
+  "title": "2025 AMC 12B Problem 23",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.sum-of-factors",
+      "label": "Sum of factors",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2025,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 45.9,
+    "source": 2380,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Let \\(S\\) be the set of all integers \\(z \\gt 1\\) such that for all pairs of nonnegative integers \\((x, y)\\) with \\(x \\lt y \\lt z,\\) the remainder when \\(2025x\\) is divided by \\(z\\) is less than the remainder when \\(2025y\\) is divided by \\(z.\\) What is the sum of the elements of \\(S?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3041\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3542\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3750\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4044\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4319\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "4319"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2025-p23.live",
+      "kind": "proof-sketch",
+      "text": "The condition requires \\(k \\mapsto 2025k \\bmod z\\) to be strictly increasing on \\(\\{0, 1, \\ldots, z-1\\}.\\) A strictly increasing list of \\(z\\) distinct values in \\([0, z-1]\\) must be \\(0, 1, \\ldots, z-1,\\) so \\(2025 \\equiv 1 \\pmod z,\\) i.e. \\(2024\\) is divisible by \\(z.\\) Since \\(2024 = 2^3 \\cdot 11 \\cdot 23,\\) the sum of all its divisors is \\((1+2+4+8)(1+11)(1+23)\\) \\(= 15 \\cdot 12 \\cdot 24\\) \\(= 4320.\\) Excluding \\(z = 1\\) leaves \\(4319.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "The condition says the map \\(k \\mapsto 2025k \\bmod z\\) is strictly increasing on \\(0, 1, \\ldots, z-1\\)",
+        "An increasing rearrangement of \\(0, 1, \\ldots, z-1\\) starting at \\(0\\) must be the identity, forcing \\(2025 \\equiv 1 \\pmod z\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

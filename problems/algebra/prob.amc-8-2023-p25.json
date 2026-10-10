@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-8-2023-p25",
+  "title": "2023 AMC 8 Problem 25",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2023,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 34.9,
+    "source": 1950,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Fifteen integers \\(a_1,\\) \\(a_2,\\) \\(a_3,\\) \\(\\cdots,\\) \\(a_{15}\\) are arranged in order on a number line. The integers are equally spaced and have the property that\n\n\\[ 1 \\leq a_1 \\leq 10, \\]\n\n\\[ 13 \\leq a_2 \\leq 20, \\]\n\nand\n\n\\[ 241 \\leq a_{15} \\leq 250. \\]\n\nWhat is the sum of the digits of \\(a_{14}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(12\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "8"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2023-p25.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(d\\) be the common difference. Using the largest possible value \\(10\\) for \\(a_1\\) and the smallest possible value \\(241\\) for \\(a_{15},\\) we have \\[ d \\geq \\dfrac{241 - 10}{14} = 16.5. \\] Since all the numbers are integers, \\(d\\) must be at least \\(17.\\)\n\nUsing the smallest possible value \\(1\\) for \\(a_1\\) and the largest possible value \\(250\\) for \\(a_{15},\\) we have \\[ d \\leq \\dfrac{250 - 1}{14} \\approx 17.8. \\] Since all the numbers are integers, \\(d\\) is at most \\(17.\\) Therefore, \\(d=17.\\)\n\nNote that \\(17 \\cdot 14 = 238.\\) Since \\(a_{15}\\) is at least \\(241,\\) \\(a_1\\) must be at least \\(3.\\)\n\nOn the other hand, if \\(a_1\\) were greater than \\(3,\\) then \\(a_2=a_1+17\\) would be greater than \\(20,\\) which is not allowed.\n\nNow we know that \\(a_1 = 3\\) and \\(d = 17.\\) This tells us that \\[ a_{14} = 3 + 13 \\cdot 17 = 224. \\]\n\nTherefore, sum of the digits is \\[2 + 2 + 4 = 8.\\]\n\nThus, A is the correct answer.",
+      "hints": [
+        "Let \\(d\\) be the common difference",
+        "Use the widest possible bounds for \\(a_1\\) and \\(a_{15}\\) to force \\(d\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

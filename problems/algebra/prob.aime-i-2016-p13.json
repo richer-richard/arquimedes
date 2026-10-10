@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2016-p13",
+  "title": "2016 AIME I Problem 13",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.expected-value",
+      "label": "Expected value",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.random-walk",
+      "label": "Random walk",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2016,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 64.7,
+    "source": 3270,
+    "mohs": null
+  },
+  "estimatedMinutes": 17,
+  "statement": "Freddy the frog is jumping around the coordinate plane searching for a river, which lies on the horizontal line \\(y = 24.\\) A fence is located at the horizontal line \\(y = 0.\\) On each jump Freddy randomly chooses a direction parallel to one of the coordinate axes and moves one unit in that direction. When he is at a point where \\(y = 0,\\) with equal likelihoods he chooses one of three directions where he either jumps parallel to the fence or jumps away from the fence, but he never chooses the direction that would have him cross over the fence to where \\(y \\lt 0.\\) Freddy starts his search at the point \\((0, 21)\\) and will stop once he reaches a point on the river. Find the expected number of jumps it will take Freddy to reach the river.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "273",
+    "value": "273"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2016-p13.live",
+      "kind": "proof-sketch",
+      "text": "Horizontal jumps change nothing that matters, so let \\(T(y)\\) be the expected number of jumps to reach the river from height \\(y.\\) Then \\(T(24) = 0;\\) for \\(1 \\le y \\le 23\\) each jump goes up, down, or sideways with probabilities \\(\\frac{1}{4},\\) \\(\\frac{1}{4},\\) \\(\\frac{1}{2},\\) so \\[ \\begin{aligned} T(y) &= 1 + \\tfrac{1}{4}T(y + 1) \\\\ &\\quad {}+ \\tfrac{1}{4}T(y - 1) \\\\ &\\quad {}+ \\tfrac{1}{2}T(y), \\end{aligned} \\] which simplifies to \\(2T(y) = 4 + T(y - 1)\\) \\(+ T(y + 1).\\) At the fence the three equally likely moves give \\(T(0) = 1 + \\frac{2}{3}T(0) + \\frac{1}{3}T(1),\\) that is \\(T(0) = 3 + T(1).\\)\n\nSumming \\(2T(y) = 4 + T(y - 1)\\) \\(+ T(y + 1)\\) over \\(y = 1, \\ldots, 23\\) telescopes to \\(T(1) + T(23) = 92 + T(0)\\) \\(+ T(24).\\) Substituting \\(T(0) = 3 + T(1)\\) and \\(T(24) = 0\\) yields \\(T(23) = 95.\\)\n\nNow run the recurrence downward as \\(T(y - 1) = 2T(y) - T(y + 1)\\) \\(- 4:\\) from \\(T(24) = 0\\) and \\(T(23) = 95,\\) we get \\(T(22) = 2 \\cdot 95 - 0 - 4 = 186\\) and \\(T(21) = 2 \\cdot 186 - 95 - 4 = 273.\\) Freddy starts at height \\(21,\\) so the answer is \\(273.\\)",
+      "hints": [
+        "Only the height \\(y\\) matters. If \\(T(y)\\) is the expected number of jumps from height \\(y,\\) then \\(2T(y) = 4 + T(y - 1)\\) \\(+ T(y + 1)\\) for \\(1 \\le y \\le 23.\\)",
+        "At the fence \\(T(0) = 3 + T(1).\\) Sum the recurrence over \\(y = 1, \\ldots, 23\\) to telescope, then work down from \\(T(24) = 0.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

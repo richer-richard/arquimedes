@@ -1,0 +1,84 @@
+{
+  "id": "prob.hmmt-invitational-2025-p5",
+  "title": "2025 HMMT Invitational Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.diophantine-equations",
+      "label": "Diophantine equations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2025,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the smallest positive integer \\(k > 45\\) for which there exists a sequence \\(a_{1}\\) , \\(a_{2}\\) , \\(a_{3}\\) , ..., \\(a_{k - 1}\\) of positive integers satisfying the following conditions:\n\n\\(a_{i} = i\\) for all integers \\(1\\leq i\\leq 45\\) \\(a_{k - i} = i\\) for all integers \\(1\\leq i\\leq 45\\) , and for any odd integer \\(1\\leq n\\leq k - 45\\) , the sequence \\(a_{n}\\) , \\(a_{n + 1}\\) , ..., \\(a_{n + 44}\\) is a permutation of \\(\\{1,2,\\ldots ,45\\}\\) .",
+  "answerChoices": [],
+  "answer": {
+    "letter": "1059",
+    "value": "1059"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2025-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "First, we show 1059 is optimal. Assume for sake of contradiction that \\(k< 1059\\)\n\nThe given condition ensures that \\(\\{a_{1},a_{2}\\} = \\{a_{46},a_{47}\\}\\) , \\(\\{a_{3},a_{4}\\} = \\{a_{48},a_{49}\\}\\) , and so on. In particular, if \\(a_{i} = j\\) , the next appearance of \\(j\\) must either be \\(a_{i + 44}\\) , \\(a_{i + 45}\\) , or \\(a_{i + 46}\\) ; working modulo 45, these indices all differ from \\(i\\) by at most 1. Furthermore, \\(a_{i} = a_{i + 44}\\) is only possible if \\(i\\) is even, and \\(a_{i} = a_{i + 46}\\) is only possible if \\(i\\) is odd.\n\nAlso, \\(a_{1}\\neq a_{45}\\) by definition. Thus, if the sequence contains the same number at least 25 times, the 25th appearance has index at least \\(2 + 24\\cdot 44 = 1058\\) , implying \\(k\\geq 1059\\) . Hence, we can assume every number appears at most 24 times in the sequence.\n\nObserve that there exists a unique integer \\(1\\leq j\\leq 45\\) such that\n\n\\[(k - j) - j = k - 2j\\equiv 22\\pmod {45}.\\]\n\nLet \\(k_{1} = j\\) , \\(k_{2}\\) , \\(k_{3}\\) , ..., \\(k_{\\ell} = k - j\\) be the indices of where \\(j\\) appears in the sequence; as assumed above, \\(\\ell \\leq 24\\) . For any \\(i\\) , we proved \\(k_{i} - k_{i - 1}\\) is either 44, 45, or 46, and thus either 0 or \\(\\pm 1\\) modulo 45. Since \\(k - j\\) and \\(j\\) differ by \\(22\\equiv - 23\\) modulo 45, either \\(k_{i} - k_{i - 1} = 46\\) for at least 22 different \\(i\\) , or \\(k_{i} - k_{i - 1} = 44\\) for at least 23 different \\(i\\) . We split into cases based on which.\n\nIf \\(k_{i} - k_{i - 1} = 46\\) at least 22 times, we claim \\(\\ell = 23\\) . Indeed, if \\(\\ell = 24\\) , then\n\n\\[(k - j)\\geq j + 22\\cdot 46 + 44 = j + 1056.\\]\n\nSince \\((k - j) - j\\equiv 22\\) (mod 45), we actually have \\((k - j)\\geq j + 1057\\) , so \\(k\\geq 2j + 1057\\geq 1059\\) , contradiction.\n\nThus, \\(\\ell = 23\\) , so \\(k_{i} - k_{i - 1} = 46\\) for all \\(i\\) , and \\(k = 2j + 22\\cdot 46 = 2j + 1012\\) , which means we can assume \\(j\\leq 23\\) (otherwise \\(k > 1059\\) ).\n\nSince \\(a_{j} = a_{j + 46}\\) , we must also have \\(a_{j + 1} = a_{j + 45}\\) be the second appearance of \\(j + 1\\) , which means \\(j\\) must be odd. Then, as \\(j + 45\\) is even, \\(a_{j + 45} = j + 1\\) must either be equal to either \\(a_{j + 89}\\) or \\(a_{j + 90}\\) . Now, \\(a_{k - j - 1} = j + 1\\) as well, and\n\n\\[(k - j - 1) - (j + 90)\\equiv 21\\pmod {45},\\]\n\nso if \\(a_{j + 90}\\) is the 3rd appearance of \\(j + 1\\) , then \\(a_{k - j - 1}\\) must be at least the 24th. Thus, it must be exactly the 24th, with each appearance of \\(j + 1\\) being exactly 46 terms after the previous. Thus,\n\n\\[k - j - 1\\geq (j + 90) + 21\\cdot 46 = j + 1056,\\]\n\nand \\(k\\geq 2j + 1057\\geq 1059\\) , as desired. If \\(a_{j + 89}\\) is the 3rd appearance of \\(j + 1\\) , then since \\((k - j - 1) - (j + 89)\\equiv 22\\) (mod 45), it follows that \\(a_{k - j - 1}\\) must be at least the 25th appearance, contradiction.\n\nThe other case, where \\(k_{i} - k_{i - 1} = 44\\) at least 23 times (i.e., for all \\(i\\) ) plays out similarly. Since \\(k_{2} = k_{1} + 44\\) , we immediately have \\(j = k_{1}\\) is even. Furthermore, \\(a_{j - 1} = a_{j + 45} = j - 1\\) is the second appearance of \\(j - 1\\) , and since \\(j + 45\\) is odd, the third appearance is either \\(a_{j + 90}\\) or \\(a_{j + 91}\\) . However,\n\n\\[(k - j + 1) - (j + 90)\\equiv -22\\pmod {45},\\]\n\nso regardless of whether \\(a_{j + 90}\\) or \\(a_{j + 91}\\) is the 3rd appearance of \\(j - 1\\) , we know \\(a_{k - j + 1}\\) must be at least the 25th, contradiction.\n\nThus \\(k \\geq 1059\\) , and it suffices to provide a construction.\n\nGiven an integer \\(m\\) , let \\(\\alpha\\) represent the permutation on \\(\\{1,2,\\ldots ,m\\}\\) given by swapping 1 and 2, 3 and 4, etc. and let \\(\\beta\\) represent the permutation given by swapping 2 and 3, 4 and 5, etc.\n\nClaim 1. Both of the products \\(\\dots \\beta \\alpha \\beta \\alpha\\) and \\(\\dots \\alpha \\beta \\alpha \\beta\\) , with exactly \\(m\\) terms in the products, equal the reverse permutation.\n\nProof. If we track any number \\(i\\) , observe that if \\(i\\) is odd,\n\n\\[\\alpha (i) = i + 1\\] \\[\\beta \\alpha (i) = i + 2\\] \\[\\vdots\\] \\[\\dots \\beta \\alpha (i) = m\\] \\[\\underset {m - i}{\\underbrace{\\dots \\beta \\alpha (i) = m}}\\] \\[\\underset {m - i + 1}{\\underbrace{\\dots \\beta \\alpha (i) = m - 1}}\\] \\[\\underset {m - i + 2}{\\underbrace{\\dots \\beta \\alpha (i) = m - i + 1}}.\\]\n\nA similar chain occurs if \\(i\\) is even, so \\(\\dots \\beta \\alpha\\) is indeed the reverse permutation. The same argument shows that the product \\(\\dots \\alpha \\beta\\) is also the reverse permutation. \\(\\square\\)\n\nOur construction now goes as follows: for any odd \\(n\\) , let \\(a_{n + 46} = a_{n}\\) and \\(a_{n + 45} = a_{n + i}\\) unless \\(n \\equiv 0\\) or 23 mod 45. Then, we can note that \\(a_{46}\\) through \\(a_{68}\\) are the permutation \\(\\alpha\\) on \\(\\{1,2,\\ldots ,23\\}\\) , and \\(a_{91}\\) through \\(a_{113}\\) are \\(\\alpha \\beta\\) , etc. By our claim, \\(a_{1 + 23\\cdot 45} = a_{1036}\\) through \\(a_{1058}\\) are 1 through 23 reversed. Similarly, as there are only 22 numbers from 24 through 45, we know \\(a_{24 + 22\\cdot 45} = a_{1014}\\) through \\(a_{1035}\\) are 24 through 45 reversed. It follows that this sequence satisfies the above conditions for \\(k = \\left\\lfloor 1059\\right\\rfloor\\) .\n\nThe diagram below shows what the construction would look like when 45 is replaced with 9. The sequence can be read row- by- row. The vertical line separates 1 through 5 from 6 through 9.\n\n\\[1 2 3 4 5 6 7 8 9\\] \\[2 1 4 3 5 6 8 7 9\\] \\[2 4 1 5 3 8 6 9 7\\] \\[4 2 5 1 3 8 9 6 7\\] \\[4 5 2 3 1 9 8 7 6\\] \\[5 4 3 2 1\\]\n\nRemark. The exact same proof and construction work for all odd \\(n \\geq 5\\) , yielding an answer of \\(\\frac{n^2 + 2n + 3}{2}\\) . Notably, for \\(n = 3\\) the answer is 6 instead of 9.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

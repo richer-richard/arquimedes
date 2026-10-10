@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2003-p10",
+  "title": "2003 AIME II Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.difference-of-squares",
+      "label": "Difference of squares",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2003,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 52.8,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Two positive integers differ by \\(60.\\) The sum of their square roots is the square root of an integer that is not a perfect square. What is the maximum possible sum of the two integers?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "156",
+    "value": "156"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2003-p10.live",
+      "kind": "proof-sketch",
+      "text": "Let the integers be \\(x\\) and \\(x + 60,\\) and suppose \\(\\sqrt{x} + \\sqrt{x + 60} = \\sqrt{y}.\\) Squaring, \\(y = 2x + 60 + 2\\sqrt{x(x + 60)},\\) so \\(x(x + 60)\\) must be a perfect square, say \\(z^2.\\) Completing the square, \\[(x + 30)^2 - z^2 = 900,\\] i.e. \\[(x + 30 + z)(x + 30 - z) = 900.\\] The two factors have the same parity and their product is even, so both are even.\n\nThe factor pairs \\((450, 2),\\) \\((150, 6),\\) \\((90, 10),\\) \\((50, 18)\\) give \\(x + 30 = 226,\\) \\(78,\\) \\(50,\\) \\(34,\\) so \\(x = 196,\\) \\(48,\\) \\(20,\\) \\(4.\\) For \\(x = 196\\) the integers are \\(196\\) and \\(256,\\) both perfect squares, so \\(\\sqrt{y} = 14 + 16 = 30\\) and \\(y = 900\\) is a perfect square — not allowed. For \\(x = 48\\) the integers are \\(48\\) and \\(108,\\) with \\(\\sqrt{48} + \\sqrt{108} = 4\\sqrt{3} + 6\\sqrt{3}\\) \\(= \\sqrt{300},\\) and \\(300\\) is not a perfect square.\n\nThe maximum possible sum is therefore \\(48 + 108 = 156.\\)",
+      "hints": [
+        "Write the integers as \\(x\\) and \\(x + 60.\\) If \\(\\sqrt{x} + \\sqrt{x + 60} = \\sqrt{y}\\) with \\(y\\) an integer, then \\(x(x + 60)\\) must be a perfect square",
+        "Set \\(x(x + 60) = z^2\\) and factor \\((x + 30 + z)(x + 30 - z) = 900;\\) discard the case where both integers are perfect squares"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

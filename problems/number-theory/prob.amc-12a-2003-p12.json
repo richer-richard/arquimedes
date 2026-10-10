@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2003-p12",
+  "title": "2003 AMC 12A Problem 12",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "logic-foundations"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.logical-deduction",
+      "label": "Logical deduction",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2003,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 23.4,
+    "source": 1500,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Sally has five red cards numbered \\(1\\) through \\(5\\) and four blue cards numbered \\(3\\) through \\(6.\\) She stacks the cards so that the colors alternate and so that the number on each red card divides evenly into the number on each neighboring blue card. What is the sum of the numbers on the middle three cards?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(12\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "12"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2003-p12.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(4\\) divides only \\(4\\) and \\(5\\) divides only \\(5\\) among \\(3,4,5,6,\\) the two ends must be \\(R4,B4,\\dots,B5,R5.\\)\n\nBecause \\(2\\) divides only \\(4\\) and \\(6,\\) the next card is \\(R2,B6,\\) and since \\(3\\) divides only \\(3\\) and \\(6,\\) the full stack is \\(R4,\\) \\(B4,\\) \\(R2,\\) \\(B6,\\) \\(R3,\\) \\(B3,\\) \\(R1,\\) \\(B5,\\) \\(R5.\\)\n\nThe middle three cards are \\(6,3,3,\\) which sum to \\(12.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "Among the blue numbers \\(3\\text{-}6,\\) the red \\(4\\) divides only \\(4\\) and the red \\(5\\) divides only \\(5\\)",
+        "Work inward from the forced ends \\(R4,B4\\) and \\(B5,R5\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

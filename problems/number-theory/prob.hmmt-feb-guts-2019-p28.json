@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-guts-2019-p28",
+  "title": "2019 HMMT February Guts Problem 28",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.chinese-remainder-theorem",
+      "label": "Chinese remainder theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.primitive-roots-mod-p-p-n",
+      "label": "Primitive roots mod p / p^n",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2019,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 76.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many positive integers \\(2 \\leq a \\leq 101\\) have the property that there exists a positive integer \\(N\\) for which the last two digits in the decimal representation of \\(a^{2^{n}}\\) is the same for all \\(n \\geq N\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "36",
+    "value": "36"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2019-p28.hmmt",
+      "kind": "proof-sketch",
+      "text": "An equivalent formulation of the problem is to ask for how many elements of \\(\\mathbb{Z}_{100}\\) the map \\(x \\mapsto x^{2}\\) reaches a fixed point. We may separately solve this modulo 4 and modulo 25.\nModulo 4, it is easy to see that all four elements work.\n\nModulo 25 , all multiples of 5 will work, of which there are 5 . For the remaining 25 elements that are coprime to 5 , we may use the existence of a primitive root to equivalently ask for how many elements of \\(\\mathbb{Z}_{20}\\) the map \\(y \\mapsto 2 y\\) reaches a fixed point. The only fixed point is 0 , so the only valid choices are the multiples of 5 again. There are \\(5+4=9\\) solutions here.\nFinally, the number of solutions modulo 100 is \\(4 \\times 9=36\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

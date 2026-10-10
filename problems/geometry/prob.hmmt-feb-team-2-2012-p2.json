@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-team-2-2012-p2",
+  "title": "2012 HMMT February Team Round 2 Problem 2",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2012,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 81.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "You are given two line segments of length \\(2^{n}\\) for each integer \\(0 \\leq n \\leq 10\\). How many distinct nondegenerate triangles can you form with three of the segments? Two triangles are considered distinct if they are not congruent.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2-2012-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "55 First, observe that if we have three sticks of distinct lengths \\(2^{a}<2^{b}<2^{c}\\), then \\(2^{a}+2^{b}<2^{b+1} \\leq 2^{c}\\), so we cannot form a triangle. Thus, we must have (exactly) two of our sticks the same length, so that our triangle has side lengths \\(2^{a}, 2^{a}, 2^{b}\\). This triangle is non-degenerate if and only if \\(2^{a+1}>2^{b}\\), and since \\(a \\neq b\\), this happens if and only if \\(a>b\\). Clearly, there are \\(\\binom{11}{2}=55\\) ways to choose such \\(a, b\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

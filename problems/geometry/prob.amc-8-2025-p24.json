@@ -1,0 +1,92 @@
+{
+  "id": "prob.amc-8-2025-p24",
+  "title": "2025 AMC 8 Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2025,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 32.1,
+    "source": 1840,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In trapezoid \\(ABCD,\\) angles \\(B\\) and \\(C\\) measure \\(60^\\circ\\) and \\(AB = DC.\\) The side lengths are all positive integers and the perimeter of \\(ABCD\\) is \\(30\\) units. How many non-congruent trapezoids satisfy all of these conditions?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2025-p24.live",
+      "kind": "proof-sketch",
+      "text": "Draw a line through \\(A\\) parallel to line \\(CD,\\) and observe that some lengths are automatically equal to each other:\n\nThat is because \\(\\angle AEB = \\angle DCB = 60^\\circ,\\) and so triangle \\(ABE\\) is equilateral. All lengths labeled \\(x\\) are always equal.\n\nAlso, \\(ADCE\\) is a parallelogram (not necessarily a rhombus), so the remaining lengths labeled \\(y\\) are always equal to each other, but not necessarily equal to \\(x.\\)\n\nThe perimeter is \\(3x + 2y,\\) but it is also supposed to be \\(30.\\)\n\nThe problem then amounts to counting how many positive integer solutions there are to the equation \\(3x + 2y = 30.\\)\n\nAs we consider positive integers for \\(x,\\) observe that it is precisely the even integers which give an integer solution for \\(y,\\) because \\(30 - 3x\\) is the even number \\(2y.\\)\n\nAnd, once we get to \\(x = 10,\\) the \\(y\\) that satisfies the equation is \\(y = \\frac{30 - 3 \\times 10}{2} = 0,\\) which is not a positive integer.\n\nSo, the values that work for \\(x\\) are the positive even integers less than \\(10,\\) or \\(\\{2, 4, 6, 8\\}.\\) There are \\(4\\) options, which gives the answer of E.",
+      "hints": [
+        "Draw a line through \\(A\\) parallel to \\(CD\\)",
+        "The perimeter becomes \\(3x+2y\\) for positive integers \\(x,y\\)"
+      ],
+      "images": [
+        "fd047013dccabaa907890da616670660be1a692d39e722b3aca562f4ca92cc93"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [
+      "c8e29eb149d7f24ee19e965a9bde0b799f24803b1df252a7bbc0d3f00625a5db"
+    ],
+    "solutions": [
+      "fd047013dccabaa907890da616670660be1a692d39e722b3aca562f4ca92cc93"
+    ]
+  }
+}

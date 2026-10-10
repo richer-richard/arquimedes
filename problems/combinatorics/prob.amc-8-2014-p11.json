@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-8-2014-p11",
+  "title": "2014 AMC 8 Problem 11",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.lattice-paths",
+      "label": "Lattice paths",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2014,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 10.8,
+    "source": 1100,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Jack wants to bike from his house to Jill’s house, which is located three blocks east and two blocks north of Jack’s house. After biking each block, Jack can continue either east or north, but he needs to avoid a dangerous intersection one block east and one block north of his house. In how many ways can he reach Jill’s house by biking a total of five blocks?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 4 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 5 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 6 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 8 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 10 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2014-p11.live",
+      "kind": "proof-sketch",
+      "text": "Let E represent traveling one block east and N represent traveling one block north. A shortest route uses three E moves and two N moves. To avoid the dangerous intersection one block east and one block north of Jack’s house, the first two moves must be either EE or NN.\n\nThe possible routes are \\(EEENN\\), \\(EENEN\\), \\(EENNE\\), and \\(NNEEE\\), for \\(4\\) routes.\n\nThus, A is the correct answer.",
+      "hints": [
+        "Any shortest path uses three east moves and two north moves.",
+        "Count or list only the paths that avoid the intersection after one east and one north move."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

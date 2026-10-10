@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2014-p4",
+  "title": "2014 AIME II Problem 4",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.repeating-decimal",
+      "label": "Repeating decimal",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2014,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 45.8,
+    "source": 2230,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "The repeating decimals \\(0.abab\\overline{ab}\\) and \\(0.abcabc\\overline{abc}\\) satisfy \\[0.abab\\overline{ab} + 0.abcabc\\overline{abc} = \\frac{33}{37},\\] where \\(a,\\) \\(b,\\) and \\(c\\) are (not necessarily distinct) digits. Find the three-digit number \\(abc.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "447",
+    "value": "447"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2014-p4.live",
+      "kind": "proof-sketch",
+      "text": "Writing \\(ab\\) and \\(abc\\) for the two- and three-digit numbers, the decimals equal \\(\\frac{ab}{99}\\) and \\(\\frac{abc}{999}.\\) Since \\(99 = 9 \\cdot 11\\) and \\(999 = 27 \\cdot 37,\\) the common denominator is \\(27 \\cdot 37 \\cdot 11 = 10989,\\) and multiplying the equation by it gives \\[ \\begin{aligned} &111 \\cdot ab + 11 \\cdot abc \\\\ &= \\frac{33}{37} \\cdot 10989 \\\\ &= 9801. \\end{aligned} \\]\n\nModulo \\(11,\\) since \\(9801 = 11 \\cdot 891\\) and \\(111 \\equiv 1,\\) this forces \\(ab\\) to be divisible by \\(11,\\) so \\(a = b.\\) Then \\(ab = 11a,\\) and dividing the equation by \\(11\\) gives \\(111a + abc = 891.\\) Since \\(abc = 110a + c,\\) this is \\(221a + c = 891,\\) which requires \\(a = 4\\) and \\(c = 7.\\)\n\nThus \\(a = b = 4,\\) \\(c = 7,\\) and the three-digit number \\(abc\\) is \\(447.\\)",
+      "hints": [
+        "Write the decimals as \\(\\frac{ab}{99}\\) and \\(\\frac{abc}{999},\\) then clear denominators using \\(99 = 9 \\cdot 11\\) and \\(999 = 27 \\cdot 37\\)",
+        "Reducing the equation modulo \\(11\\) forces \\(a = b;\\) then a short linear equation pins down the digits"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

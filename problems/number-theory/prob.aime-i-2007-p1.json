@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2007-p1",
+  "title": "2007 AIME I Problem 1",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.multiple",
+      "label": "Multiple",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2007,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 30.8,
+    "source": 1790,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "How many positive perfect squares less than \\(10^6\\) are multiples of \\(24?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "83",
+    "value": "83"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2007-p1.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(24 = 2^3 \\cdot 3,\\) a square \\(N^2\\) is a multiple of \\(24\\) exactly when \\(N\\) is a multiple of \\(12:\\) the factor \\(2^3\\) forces \\(N\\) to contain \\(2^2,\\) the factor \\(3\\) forces \\(N\\) to contain \\(3,\\) and conversely \\((12m)^2 = 144m^2\\) is always a multiple of \\(24.\\) Also \\(N^2 \\lt 10^6\\) exactly when \\(N \\lt 1000.\\)\n\nThe multiples of \\(12\\) less than \\(1000\\) are \\(12, 24, \\ldots, 996,\\) and there are \\(\\frac{996}{12} = 83\\) of them.",
+      "hints": [
+        "A perfect square is a multiple of \\(24 = 2^3 \\cdot 3\\) exactly when its square root is a multiple of \\(12\\)",
+        "Count the multiples of \\(12\\) whose squares are less than \\(10^6,\\) i.e. the multiples of \\(12\\) less than \\(1000\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-guts-2014-p35",
+  "title": "2014 HMMT November Guts Problem 35",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.enumeration-with-symmetry",
+      "label": "Enumeration with symmetry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.graph-theory",
+      "label": "Graph Theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2014,
+    "number": 35
+  },
+  "difficulty": {
+    "course": 59.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Ten points are equally spaced on a circle. A graph is a set of segments (possibly empty) drawn between pairs of points, so that every two points are joined by either zero or one segments. Two graphs are considered the same if we can obtain one from the other by rearranging the points.\nLet \\(N\\) denote the number of graphs with the property that for any two points, there exists a path from one to the other among the segments of the graph. Estimate the value of \\(N\\). If your answer is a positive integer \\(A\\), your score on this problem will be the larger of 0 and \\(\\lfloor 20-5|\\ln (A / N)|\\rfloor\\). Otherwise, your score will be zero.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2014-p35.hmmt",
+      "kind": "proof-sketch",
+      "text": "11716571 The question asks for the number of isomorphism classes of connected graphs on 10 vertices. This is enumerated in http://oeis.org/A001349, the answer is 11716571.\nIn fact, of the \\(2^{45} \\approx 3.51 \\cdot 10^{13} \\approx 3 \\cdot 10^{13}\\) graphs on 10 labelled vertices, virtually all (about \\(3.45 \\cdot 10^{13}\\) ) are connected. You might guess this by noticing that an \"average\" graph has 22.5 edges, which is fairly dense (and virtually all graphs with many edges are connected). Moreover, a \"typical\" isomorphism class contains \\(10!\\approx 3 \\cdot 10^{6}\\) elements, one for each permutation of the vertices. So estimating the quotient \\(\\frac{3 \\cdot 10^{13}}{3 \\cdot 10^{6}}=10^{7}\\) gives a very close estimate.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

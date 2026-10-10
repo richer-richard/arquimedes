@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-guts-2023-p35",
+  "title": "2023 HMMT November Guts Problem 35",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.coloring-schemes-extremal-arguments",
+      "label": "Coloring schemes, extremal arguments",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2023,
+    "number": 35
+  },
+  "difficulty": {
+    "course": 58.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Dorothea has a \\(3 \\times 4\\) grid of dots. She colors each dot red, blue, or dark gray. Compute the number of ways Dorothea can color the grid such that there is no rectangle whose sides are parallel to the grid lines and whose vertices all have the same color.\nSubmit a positive integer \\(A\\). If the correct answer is \\(C\\) and your answer is \\(A\\), you will receive \\(\\left\\lfloor 20\\left(\\min \\left(\\frac{A}{C}, \\frac{C}{A}\\right)\\right)^{2}\\right\\rfloor\\) points.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "284688",
+    "value": "284688"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2023-p35.hmmt",
+      "kind": "proof-sketch",
+      "text": "To find an appropriate estimate, we will lower bound the number of rectangles. Let \\(P(R)\\) be the probability a random 3 by 4 grid will have a rectangle with all the same color in the grid. Let \\(P(r)\\) be the probability that a specific rectangle in the grid will have the same color. Note \\(P(r)=\\frac{3}{3^{4}}=\\frac{1}{27}\\). Observe that there are \\(\\binom{4}{2}\\binom{3}{2}=18\\) rectangles in the grid. Hence, we know that \\(P(R) \\leq 18 \\cdot P(r)=\\frac{18}{27}=\\frac{2}{3}\\). Thus, \\(1-P(R)\\), the probability no such rectangle is in the grid, is at most \\(\\frac{1}{3}\\). This implies that our answer should be at least \\(\\frac{3^{12}}{3}=3^{11}\\), which is enough for around half points. Closer estimations can be obtained by using more values of Inclusion-Exclusion.\n\n```\nn}=\ncnt = 0\nfor i in range( }3**(3*n))\n    mask = i\n    a= [[], [], []]\n    for x in range(3):\n        for y in range(n):\n            a[x].append(mask % 3)\n            mask //= =\n        pairs = [set() for i in range(3)]\n        works = True\n        for i in range(n):\n        for j,k in [(0,1), (0,2), (1,2)]:\n            if a[j][i] =a[k][i]:\n                        if (j,k) in pairs[a[j][i]]:\n                        works = False\n            else:\n                pairs[a[j][i]].add((j , k))\n    if works:\n        cnt += 1\nprint(cnt)\n```",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

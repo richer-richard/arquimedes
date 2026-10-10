@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-guts-2015-p24",
+  "title": "2015 HMMT November Guts Problem 24",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.sums-and-products",
+      "label": "Sums and products",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2015,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 51.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Three ants begin on three different vertices of a tetrahedron. Every second, they choose one of the three edges connecting to the vertex they are on with equal probability and travel to the other vertex on that edge. They all stop when any two ants reach the same vertex at the same time. What is the probability that all three ants are at the same vertex when they stop?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2015-p24.hmmt",
+      "kind": "proof-sketch",
+      "text": "## Answer: \\(\\frac{1}{16}\\)\n\nAt every second, each ant can travel to any of the three vertices they are not currently on. Given that, at one second, the three ants are on different vertices, the probability of them all going to the same vertex is \\(\\frac{1}{27}\\) and the probability of them all going to different vertices is \\(\\frac{11}{27}\\), so the probability of the three ants all meeting for the first time on the \\(n^{t h}\\) step is \\(\\left(\\frac{11}{27}\\right)^{n-1} \\times \\frac{1}{27}\\). Then the probability the three ants all meet at the same time is \\(\\sum_{i=0}^{\\infty}\\left(\\frac{11}{27}\\right)^{i} \\times \\frac{1}{27}=\\frac{\\frac{1}{27}}{1-\\frac{11}{27}}=\\frac{1}{16}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

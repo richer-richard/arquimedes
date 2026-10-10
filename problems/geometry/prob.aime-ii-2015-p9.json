@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2015-p9",
+  "title": "2015 AIME II Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pyramid",
+      "label": "Pyramid",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.volume",
+      "label": "Volume",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2015,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 55.0,
+    "source": 2760,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "A cylindrical barrel with radius \\(4\\) feet and height \\(10\\) feet is full of water. A solid cube with side length \\(8\\) feet is set into the barrel so that the diagonal of the cube is vertical. The volume of water thus displaced is \\(v\\) cubic feet. Find \\(v^2.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "384",
+    "value": "384"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2015-p9.live",
+      "kind": "proof-sketch",
+      "text": "The displaced volume equals the volume of the part of the cube lying below the plane of the barrel’s rim. By symmetry that region is a tetrahedron cut from the bottom corner of the cube: three mutually perpendicular edges of equal length \\(\\ell\\) along the cube’s edges, capped by an equilateral triangle in the rim plane. The equilateral cross-section is inscribed in the rim circle of radius \\(4,\\) so its side length is \\(4\\sqrt{3},\\) and therefore \\(\\ell = \\frac{4\\sqrt{3}}{\\sqrt{2}} = 2\\sqrt{6}.\\)\n\nTaking one of the right isosceles faces as the base, the volume is \\[ \\begin{aligned} &\\frac{1}{3}\\left(\\frac{1}{2}\\ell^2\\right)\\ell = \\frac{\\ell^3}{6} \\\\ &= \\frac{(2\\sqrt{6})^3}{6} \\\\ &= \\frac{48\\sqrt{6}}{6} = 8\\sqrt{6}. \\end{aligned} \\]\n\nThus \\(v = 8\\sqrt{6}\\) and \\(v^2 = 64 \\cdot 6 = 384.\\)",
+      "hints": [
+        "The displaced water fills the part of the cube below the plane of the barrel’s rim: a corner tetrahedron with three mutually perpendicular equal edges",
+        "The rim cross-section is an equilateral triangle inscribed in the radius-\\(4\\) circle, so its side is \\(4\\sqrt{3}\\) and the perpendicular edges have length \\(2\\sqrt{6}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "5af59679bc458176c59538bd4c6f877c3448c9671132f24438272a46e99cc87a"
+    ],
+    "solutions": []
+  }
+}

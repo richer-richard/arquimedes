@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12a-2013-p12",
+  "title": "2013 AMC 12A Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2013,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 31.4,
+    "source": 1740,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The angles in a particular triangle are in arithmetic progression, and the side lengths are \\(4,\\) \\(5,\\) and \\(x.\\) The sum of the possible values of \\(x\\) equals \\(a + \\sqrt{b} + \\sqrt{c},\\) where \\(a,\\) \\(b,\\) and \\(c\\) are positive integers. What is \\(a + b + c?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(36\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(38\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(40\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(42\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(44\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "36"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2013-p12.live",
+      "kind": "proof-sketch",
+      "text": "If the angles are \\(\\alpha - \\delta, \\alpha, \\alpha + \\delta,\\) their sum \\(3\\alpha = 180^\\circ\\) gives \\(\\alpha = 60^\\circ,\\) so one angle is \\(60^\\circ.\\)\n\nIf \\(x\\) is opposite the \\(60^\\circ\\) angle, the Law of Cosines gives \\[ \\begin{gathered} x^2 = 4^2 + 5^2 - 2\\cdot 4\\cdot 5\\cos 60^\\circ \\\\ = 21, \\end{gathered} \\] so \\(x = \\sqrt{21}.\\)\n\nIf \\(5\\) is opposite the \\(60^\\circ\\) angle, then \\(25 = x^2 - 4x + 16,\\) whose positive solution is \\(x = 2 + \\sqrt{13}.\\) If \\(4\\) is opposite, then \\(16 = x^2 - 5x + 25\\) has no real solution.\n\nThe sum of the possible values is \\(2 + \\sqrt{13} + \\sqrt{21},\\) so \\(a + b + c = 2 + 13 + 21 = 36.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "Angles in arithmetic progression summing to \\(180^\\circ\\) force the middle angle to be \\(60^\\circ\\)",
+        "Apply the Law of Cosines in each case for which side is opposite the \\(60^\\circ\\) angle"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

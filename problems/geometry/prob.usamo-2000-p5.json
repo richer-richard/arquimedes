@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2000-p5",
+  "title": "2000 USAMO Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2000,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 85.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A_1A_2A_3\\) be a triangle and let \\(\\omega_1\\) be a circle in its plane passing through \\(A_1\\) and \\(A_2.\\) Suppose there exist circles \\(\\omega_2, \\omega_3, \\dots, \\omega_7\\) such that for \\(k = 2, 3, \\dots, 7,\\) \\(\\omega_k\\) is externally tangent to \\(\\omega_{k - 1}\\) and passes through \\(A_k\\) and \\(A_{k + 1},\\) where \\(A_{n + 3} = A_{n}\\) for all \\(n \\ge 1\\). Prove that \\(\\omega_7 = \\omega_1.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2000-p5.imported",
+      "kind": "proof-sketch",
+      "text": "Let the circumcenter of $\\triangle ABC$ be $O$, and let the center of $\\omega_k$ be $O_k$. $\\omega_k$ and $\\omega_{k-1}$ are externally tangent at the point $A_k$, so $O_k, A_k, O_{k-1}$ are collinear.\n$O$ is the intersection of the perpendicular bisectors of $\\overline{A_1A_2}, \\overline{A_2A_3}, \\overline{A_3A_1}$, and each of the centers $O_k$ lie on the perpendicular bisector of the side of the triangle that determines $\\omega_k$. It follows from $OA_k = OA_{k+1}, O_kA_k = O_kA_{k+1}, OO_k = OO_k \\Longrightarrow \\triangle OA_kO_k \\cong \\triangle OA_{k+1}O_k$ that $\\angle OA_kO_k = \\angle OA_{k+1}O_k$.\n\nSince $O, A_k$, and the perpendicular bisector of $\\overline{A_kA_{k+1}}$ are fixed, the angle $OA_kO_k$ determines the position of $O_k$ (since $O_k$ lies on the perpendicular bisector). Let $\\theta_k = m\\angle OA_kO_k$; then, $\\theta_i = \\theta_j$ and $i \\equiv j \\pmod{3}$ together imply that $O_i \\equiv O_j$.\nNow $\\theta_1 = \\angle OA_1O_1 = \\angle OA_2O_1 = 180 - \\angle OA_2O_2 = 180 - \\theta_2$ (due to collinearility). Hence, we have the recursion $\\theta_k = 180 - \\theta_{k-1}$, and so $\\theta_k = \\theta_{k-2}$. Thus, $\\theta_{1} = \\theta_{7}$.\n$\\theta_{1} = \\theta_{7}$ implies that $O_1 \\equiv O_7$, and circles $\\omega_1$ and $\\omega_7$ are the same circle since they have the same center and go through the same two points.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

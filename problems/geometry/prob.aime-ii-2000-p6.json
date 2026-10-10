@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-ii-2000-p6",
+  "title": "2000 AIME II Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2000,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 47.7,
+    "source": 2450,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "One base of a trapezoid is \\(100\\) units longer than the other base. The segment that joins the midpoints of the legs divides the trapezoid into two regions whose areas are in the ratio \\(2 : 3.\\) Let \\(x\\) be the length of the segment joining the legs of the trapezoid that is parallel to the bases and that divides the trapezoid into two regions of equal area. Find the greatest integer that does not exceed \\(\\frac{x^2}{100}.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "181",
+    "value": "181"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2000-p6.live",
+      "kind": "proof-sketch",
+      "text": "Let the bases be \\(b\\) and \\(b + 100.\\) The midsegment has length \\(b + 50\\) and splits the trapezoid into two trapezoids of equal height, whose areas are proportional to the sums of their parallel sides, \\(b + (b + 50)\\) and \\((b + 50) + (b + 100).\\) Setting \\(\\frac{2b + 50}{2b + 150} = \\frac{2}{3}\\) gives \\(b = 75,\\) so the bases are \\(75\\) and \\(175.\\)\n\nExtend the legs to meet at an apex, creating similar triangles: a segment parallel to the bases with length \\(\\ell\\) cuts off a triangle of area \\(c\\ell^2\\) for a fixed constant \\(c.\\) The segment of length \\(x\\) bisects the trapezoid’s area exactly when \\(cx^2 - c \\cdot 75^2 = c \\cdot 175^2 - cx^2,\\) so \\[x^2 = \\frac{75^2 + 175^2}{2} = 18125.\\]\n\nThen \\(\\frac{x^2}{100} = 181.25,\\) and the greatest integer not exceeding it is \\(181.\\)",
+      "hints": [
+        "With bases \\(b\\) and \\(b + 100,\\) the midsegment splits the trapezoid into pieces with areas proportional to \\(2b + 50\\) and \\(2b + 150\\)",
+        "Extend the legs to an apex: a parallel segment of length \\(\\ell\\) cuts off a triangle of area proportional to \\(\\ell^2,\\) so \\(x^2\\) is the average of the squares of the two bases"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

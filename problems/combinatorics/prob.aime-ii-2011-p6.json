@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2011-p6",
+  "title": "2011 AIME II Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.bijection",
+      "label": "Bijection",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2011,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 46.2,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Define an ordered quadruple of integers \\((a, b, c, d)\\) to be interesting if \\(1 \\le a \\lt b \\lt c \\lt d \\le 10\\) and \\(a + d \\gt b + c.\\) How many interesting ordered quadruples are there?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "80",
+    "value": "80"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2011-p6.live",
+      "kind": "proof-sketch",
+      "text": "The condition \\(a + d \\gt b + c\\) is equivalent to \\(d - c \\gt b - a.\\) There are \\(\\binom{10}{4} = 210\\) quadruples in all, and the involution \\((a, b, c, d)\\) \\(\\small \\mapsto (11 - d,\\, 11 - c,\\, 11 - b,\\, 11 - a)\\) exchanges the outer gaps \\(b - a\\) and \\(d - c.\\) So the quadruples with \\(d - c \\gt b - a\\) and those with \\(d - c \\lt b - a\\) are equinumerous, and the answer is \\(\\frac{210 - T}{2},\\) where \\(T\\) counts quadruples with \\(d - c = b - a.\\)\n\nIf \\(b - a = d - c = k\\) and \\(c - b = j,\\) the quadruple is determined by \\((a, j, k)\\) with \\(a, j, k \\ge 1\\) and \\(a + 2k + j \\le 10.\\) For \\(k = 1,\\) \\(2,\\) \\(3,\\) and \\(4,\\) respectively, the bounds on \\(a + j\\) are \\(8,\\) \\(6,\\) \\(4,\\) and \\(2;\\) the corresponding counts are \\(28,\\) \\(15,\\) \\(6,\\) and \\(1,\\) so \\(T = 50.\\)\n\nTherefore the number of interesting quadruples is \\(\\frac{210 - 50}{2} = 80.\\)",
+      "hints": [
+        "The condition \\(a + d \\gt b + c\\) is the same as \\(d - c \\gt b - a\\)",
+        "The map \\((a, b, c, d)\\) \\(\\small \\mapsto (11 - d,\\, 11 - c,\\, 11 - b,\\, 11 - a)\\) swaps \\(d - c\\) with \\(b - a;\\) count the quadruples with \\(d - c = b - a\\) and use symmetry"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

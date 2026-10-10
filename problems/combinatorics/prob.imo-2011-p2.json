@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2011-p2",
+  "title": "2011 IMO Problem 2",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2011,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 115.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\mathcal{S}\\) be a finite set of at least two points in the plane.\nAssume that no three points of \\(\\mathcal S\\) are collinear.\nA windmill is a process that starts with a\nline \\(\\ell\\) going through a single point \\(P \\in \\mathcal S\\).\nThe line rotates clockwise about the pivot \\(P\\) until the first time\nthat the line meets some other point belonging to \\(\\mathcal S\\).\nThis point, \\(Q\\), takes over as the new pivot,\nand the line now rotates clockwise about \\(Q\\),\nuntil it next meets a point of \\(\\mathcal S\\).\nThis process continues indefinitely.\n\nShow that we can choose a point \\(P\\) in \\(\\mathcal S\\) and\na line \\(\\ell\\) going through \\(P\\) such that the resulting windmill\nuses each point of \\(\\mathcal S\\) as a pivot infinitely many times.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2011-p2.evanchen",
+      "kind": "proof-sketch",
+      "text": "Orient \\(\\ell\\) in some direction,\nand color the plane such that its left half is red\nand right half is blue.\nThe critical observation is that:\n\nClaim.\n The number of points on the red side of \\(\\ell\\) does not change,\n nor does the number of points on the blue side\n (except at a moment when \\(\\ell\\) contains two points).\n\nThus, if \\(|\\mathcal S| = n+1\\),\nit suffices to pick the initial configuration\nso that there are \\(\\left\\lfloor n/2 \\right\\rfloor\\)\nred and \\(\\left\\lceil n/2 \\right\\rceil\\) blue points.\nThen when the line \\(\\ell\\) does a full \\(180^\\circ\\) rotation,\nthe red and blue sides ``switch'',\nso the windmill has passed through every point.\n\n(See official shortlist for verbose write-up;\nthis is deliberately short to make a point.)",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

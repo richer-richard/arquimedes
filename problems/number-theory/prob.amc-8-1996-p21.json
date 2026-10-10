@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-1996-p21",
+  "title": "1996 AMC 8 Problem 21",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.parity",
+      "label": "Parity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1996,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 15.7,
+    "source": 1200,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "How many subsets containing three different numbers can be selected from the set \\(\\{89, 95, 99, 132, 166, 173\\}\\) so that the sum of the three numbers is even?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(24\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "12"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1996-p21.live",
+      "kind": "proof-sketch",
+      "text": "The set has \\(4\\) odd numbers—\\(89,\\) \\(95,\\) \\(99,\\) and \\(173\\)—and \\(2\\) even numbers—\\(132\\) and \\(166.\\) A sum of three is even only with two odds and one even, since three evens is impossible with just two available.\n\nThe count is \\(\\binom{4}{2} \\cdot \\binom{2}{1} = 6 \\cdot 2 = 12.\\)\n\nThus, the correct answer is D .",
+      "hints": [
+        "With only two even numbers available, an even sum must use two odd numbers and one even",
+        "There are \\(4\\) odd and \\(2\\) even numbers; choose \\(2\\) of the \\(4\\) odds and \\(1\\) of the \\(2\\) evens"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

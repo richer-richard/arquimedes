@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-8-2022-p19",
+  "title": "2022 AMC 8 Problem 19",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.data-and-graph-interpretation",
+      "label": "Data and graph interpretation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.median-data",
+      "label": "Median (data)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2022,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 14.8,
+    "source": 1370,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Mr. Ramos gave a test to his class of \\(20\\) students. The dot plot below shows the distribution of test scores.\n\nLater Mr. Ramos discovered that there was a scoring error on one of the questions. He regraded the tests, awarding some of the students \\(5\\) extra points, which increased the median test score to \\(85.\\) What is the minimum number of students who received extra points?\n\n(Note that the median test score equals the average of the \\(2\\) scores in the middle if the \\(20\\) test scores are arranged in increasing order.)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(6\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2022-p19.live",
+      "kind": "proof-sketch",
+      "text": "All scores are multiples of \\(5,\\) and adding \\(5\\) preserves that fact. If the \\(10\\)th and \\(11\\)th scores average \\(85\\) but are not both \\(85,\\) then the \\(11\\)th score must be at least \\(90.\\) That would require at least \\(10\\) scores of \\(90\\) or more.\n\nHowever, even after regrading, only the original scores of \\(85\\) or more can reach \\(90.\\) The plot has only \\(7\\) such scores, so the two middle scores must both be \\(85.\\)\n\nThe plot initially has \\(7\\) scores of at least \\(85.\\) To make the \\(10\\)th and \\(11\\)th scores both \\(85,\\) there must be at least \\(11\\) scores of at least \\(85.\\) Raising four of the \\(80\\)’s to \\(85\\) is both necessary and sufficient.\n\nThus, the correct answer is C.",
+      "hints": [
+        "The median is controlled by the \\(10\\)th and \\(11\\)th scores",
+        "Count how many scores are at least \\(85\\) before and after regrading"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "4338c8aed2de6c268f8bfdcadc243c004686f6e5d555008ba0fbc973c183afb3"
+    ],
+    "solutions": []
+  }
+}

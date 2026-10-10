@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2009-p24",
+  "title": "2009 HMMT February Guts Problem 24",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2009,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 77.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute, in terms of \\(n\\),\n\n\\[\\sum_{k=0}^{n}\\binom{n-k}{k} 2^{k}\\]\n\nNote that whenever \\(s<t,\\binom{s}{t}=0\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2009-p24.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(T_{n}=\\sum_{k=0}^{n}\\binom{n-k}{k} 2^{k}\\). From Pascal's recursion for binomial coefficients, we can find \\(T_{n}=2 T_{n-2}+T_{n-1}\\), with \\(T_{0}=1\\) and \\(T_{1}=1\\). The characteristic polynomial of this recursion is \\(x^{2}-x-2=0\\), which has roots 2 and -1 . Thus \\(T_{n}=a \\cdot 2^{n}+b \\cdot(-1)^{n}\\) for some \\(a\\) and \\(b\\). From the initial conditions we have \\(a+b=1\\) and \\(2 a-b=1\\). It follows that \\(a=2 / 3\\) and \\(b=1 / 3\\), from which the conclusion follows.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

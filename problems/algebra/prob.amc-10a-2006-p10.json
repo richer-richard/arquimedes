@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2006-p10",
+  "title": "2006 AMC 10A Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.radical",
+      "label": "Radical",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2006,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 24.6,
+    "source": 1390,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "For how many real values of \\(x\\) is \\(\\sqrt{120 - \\sqrt{x}}\\) an integer?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(11\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "11"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2006-p10.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(k = \\sqrt{120 - \\sqrt{x}}.\\) Since \\(\\sqrt{x} \\ge 0,\\) we need \\(0 \\le k \\le \\sqrt{120},\\) so \\(k \\in \\{0, 1, \\ldots, 10\\},\\) giving \\(11\\) values.\n\nEach \\(k\\) yields \\(\\sqrt{x} = 120 - k^2,\\) and since \\(120 - k^2\\) is positive and strictly decreasing, the resulting values \\(x = (120 - k^2)^2\\) are distinct.\n\nThus, the correct answer is E.",
+      "hints": [
+        "Let \\(k = \\sqrt{120 - \\sqrt{x}}\\) and bound \\(k\\)",
+        "\\(k\\) is an integer with \\(0 \\le k \\le 10\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

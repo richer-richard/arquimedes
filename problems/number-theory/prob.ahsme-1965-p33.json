@@ -1,0 +1,93 @@
+{
+  "id": "prob.ahsme-1965-p33",
+  "title": "1965 AHSME Problem 33",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factorial",
+      "label": "Factorial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.trailing-zeros",
+      "label": "Trailing zeros",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1965,
+    "number": 33
+  },
+  "difficulty": {
+    "course": 36.2,
+    "source": 2000,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "If the number \\(15!,\\) that is, \\(15\\cdot14\\cdot13\\cdots1,\\) ends with \\(k\\) zeros when given to the base \\(12\\) and ends with \\(h\\) zeros when given to the base \\(10,\\) then \\(k+h\\) equals:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(9\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "8"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1965-p33.live",
+      "kind": "proof-sketch",
+      "text": "The prime valuations are \\[ \\begin{gathered} v_2(15!)=11,\\\\ v_3(15!)=6,\\\\ v_5(15!)=3. \\end{gathered} \\] Hence \\(k=\\min(\\lfloor\\frac{11}{2}\\rfloor,6)=5\\) in base \\(12,\\) and \\(h=\\min(11,3)=3\\) in base \\(10.\\) Thus \\(k+h=8.\\)\n\nTherefore, the correct answer is D.",
+      "hints": [
+        "Count the powers of \\(2,\\) \\(3,\\) and \\(5\\) in \\(15!\\)",
+        "A base-\\(12\\) zero uses \\(2^2\\cdot3\\), while a base-\\(10\\) zero uses \\(2\\cdot5\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

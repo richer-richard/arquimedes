@@ -1,0 +1,77 @@
+{
+  "id": "prob.hmmt-feb-guts-2003-p31",
+  "title": "2003 HMMT February Guts Problem 31",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.solid-geometry",
+      "label": "Solid geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2003,
+    "number": 31
+  },
+  "difficulty": {
+    "course": 92.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A cylinder of base radius 1 is cut into two equal parts along a plane passing through the center of the cylinder and tangent to the two base circles. Suppose that each piece's surface area is \\(m\\) times its volume. Find the greatest lower bound for all possible values of \\(m\\) as the height of the cylinder varies.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2003-p31.hmmt",
+      "kind": "proof-sketch",
+      "text": "3\n\nLet \\(h\\) be the height of the cylinder. Then the volume of each piece is half the volume of the cylinder, so it is \\(\\frac{1}{2} \\pi h\\). The base of the piece has area \\(\\pi\\), and the ellipse formed by the cut has area \\(\\pi \\cdot 1 \\cdot \\sqrt{1+\\frac{h^{2}}{4}}\\) because its area is the product of the semiaxes times \\(\\pi\\). The rest of the area of the piece is half the lateral area of the cylinder, so it is \\(\\pi h\\). Thus, the value of \\(m\\) is\n\n\\[\\begin{aligned}\n\\frac{\\pi+\\pi \\sqrt{1+h^{2} / 4}+\\pi h}{\\pi h / 2} & =\\frac{2+2 h+\\sqrt{4+h^{2}}}{h} \\\\\n& =\\frac{2}{h}+2+\\sqrt{\\frac{4}{h^{2}}+1}\n\\end{aligned}\\]\n\na decreasing function of \\(h\\) whose limit as \\(h \\rightarrow \\infty\\) is 3 . Therefore the greatest lower bound of \\(m\\) is 3 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

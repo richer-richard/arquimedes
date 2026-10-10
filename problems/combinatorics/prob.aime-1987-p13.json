@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-1987-p13",
+  "title": "1987 AIME Problem 13",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.permutations",
+      "label": "Permutations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.process-simulation",
+      "label": "Process simulation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1987,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 47.7,
+    "source": 2450,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "A given sequence \\(r_1,\\) \\(r_2,\\) \\(\\ldots,\\) \\(r_n\\) of distinct real numbers can be put in ascending order by means of one or more “bubble passes.” A bubble pass through a given sequence consists of comparing the second term with the first term, and exchanging them if and only if the second term is smaller, then comparing the third term with the second term and exchanging them if and only if the third term is smaller, and so on in order, through comparing the last term, \\(r_n,\\) with its current predecessor and exchanging them if and only if the last term is smaller.\n\nThe example below shows how the sequence \\(1,\\) \\(9,\\) \\(8,\\) \\(7\\) is transformed into the sequence \\(1,\\) \\(8,\\) \\(7,\\) \\(9\\) by one bubble pass. The numbers compared at each step are underlined.\n\n\\[\\begin{aligned} \\underline{1}\\quad\\underline{9}\\quad8\\quad7\\\\ 1\\quad\\underline{9}\\quad\\underline{8}\\quad7\\\\ 1\\quad8\\quad\\underline{9}\\quad\\underline{7}\\\\ 1\\quad8\\quad7\\quad9 \\end{aligned}\\]\n\nSuppose that \\(n=40,\\) and that the terms of the initial sequence \\(r_1,\\) \\(r_2,\\) \\(\\ldots,\\) \\(r_{40}\\) are distinct from one another and are in random order. Let \\(\\frac{p}{q},\\) in lowest terms, be the probability that the number that begins as \\(r_{20}\\) will end up, after one bubble pass, in the \\(30\\)th place. Find \\(p+q.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "931",
+    "value": "931"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1987-p13.live",
+      "kind": "proof-sketch",
+      "text": "For \\(r_{20}\\) to move right to position \\(30,\\) it must exceed every other term among \\(r_1,\\ldots,r_{30}.\\) It stops at position \\(30\\) exactly when \\(r_{31}>r_{20}.\\) Thus among the first \\(31\\) terms, \\(r_{31}\\) must be greatest and \\(r_{20}\\) second greatest. These two ordered rank assignments have probability \\(\\frac1{31}\\cdot\\frac1{30}=\\frac1{930}.\\) Therefore \\(p+q=1+930=931.\\)",
+      "hints": [
+        "After the comparison reaching position \\(j,\\) that position holds the maximum of the first \\(j\\) original terms",
+        "Characterize the relative ranks of \\(r_{20}\\) and \\(r_{31}\\) among the first \\(31\\) terms"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

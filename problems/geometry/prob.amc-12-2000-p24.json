@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12-2000-p24",
+  "title": "2000 AMC12 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.arc",
+      "label": "Arc",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.power-of-a-point",
+      "label": "Power of a point",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.tangent-circles",
+      "label": "Tangent circles",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12",
+    "year": 2000,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 46.2,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "If circular arcs \\(AC\\) and \\(BC\\) have centers at \\(B\\) and \\(A,\\) respectively, then there exists a circle tangent to both arc \\(AC\\) and arc \\(BC,\\) and to \\(\\overline{AB}.\\) If the length of arc \\(BC\\) is \\(12,\\) then what is the circumference of the circle?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(25\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(26\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(27\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(28\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "27"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12-2000-p24.live",
+      "kind": "proof-sketch",
+      "text": "Each arc has radius \\(AB,\\) and \\(C\\) is at distance \\(AB\\) from both \\(A\\) and \\(B,\\) so \\(\\triangle ABC\\) is equilateral. Thus arc \\(BC\\) subtends \\(60^\\circ\\) of a circle of radius \\(AB,\\) whose full circumference is \\(6 \\cdot 12 = 72.\\)\n\nLet the small circle have radius \\(r\\) and touch \\(\\overline{AB}\\) at its midpoint \\(D,\\) where \\(AD = \\tfrac12 AB.\\) By Power of a Point, \\(AD^2 = AB(AB - 2r),\\) so \\[ \\frac{AB^2}{4} = AB^2 - 2r\\,AB, \\] giving \\(2r = \\tfrac34 AB,\\) hence \\(r = \\tfrac38 AB.\\)\n\nThe circumferences are in the ratio of the radii, so the small circle’s circumference is \\(\\tfrac38 \\cdot 72 = 27.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Both arcs have radius \\(AB,\\) and \\(C\\) is at distance \\(AB\\) from both \\(A\\) and \\(B,\\) so \\(\\triangle ABC\\) is equilateral",
+        "Use Power of a Point at \\(A\\) with \\(AD = \\tfrac12 AB\\) to find the small circle’s radius \\(r = \\tfrac38 AB\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "5039cc66d9fd4301da4359fb5a4e5354ed93558361bf515effb410c022e32c8e"
+    ],
+    "solutions": []
+  }
+}

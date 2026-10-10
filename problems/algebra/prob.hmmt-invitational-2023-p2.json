@@ -1,0 +1,76 @@
+{
+  "id": "prob.hmmt-invitational-2023-p2",
+  "title": "2023 HMMT Invitational Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2023,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A prime number \\(p\\) is mundane if there exist positive integers \\(a\\) and \\(b\\) less than \\(\\frac{p}{2}\\) such that \\(\\frac{a b-1}{p}\\) is a positive integer. Find, with proof, all prime numbers that are not mundane.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "p \\in\\{2,3,5,7,13\\}, which can be checked to work",
+    "value": "p \\in\\{2,3,5,7,13\\}, which can be checked to work"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2023-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "Assume \\(p \\geq 3\\). We look for \\(a, b\\) where \\(|a-b|\\) is small. Consider the equation \\(x(x+k) \\equiv 1\\) \\((\\bmod p)\\), which is equivalent to \\((2 x+k)^{2} \\equiv 4+k^{2}(\\bmod p)\\). Taking \\(k=1,2,6\\), at least one of the values \\(5,8,40\\) is a quadratic residue modulo \\(p\\), so this equation has a solution with \\(k \\in\\{1,2,6\\}\\). Now take an \\(x\\) satisfying this equation and consider replacing \\(x\\) with \\(p-k-x\\) if this is \\(\\geq 2\\) and smaller. This gives the desired \\(a, b\\) unless \\(x<p / 2<x+k\\). We now casework based on \\(k\\).\n\n- If \\(k=1\\), then \\(x<p / 2<x+1\\), which force \\(x=\\frac{p-1}{2}\\). Hence,\n\n\\[1 \\equiv x(x+1) \\equiv\\left(-\\frac{1}{2}\\right)\\left(\\frac{1}{2}\\right) \\equiv-\\frac{1}{4} \\quad(\\bmod p)\\]\n\nforcing \\(p=5\\).\n\n- If \\(k=2\\), then \\(x<p / 2<x+2\\), which force \\(x \\in\\left\\{\\frac{p-1}{2}, \\frac{p-3}{2}\\right\\} \\equiv\\left\\{-\\frac{1}{2},-\\frac{3}{2}\\right\\}\\). Now we have,\n\n\\[\\begin{aligned}\n& x \\equiv-\\frac{1}{2} \\Longrightarrow 1 \\equiv x(x+2) \\equiv\\left(-\\frac{1}{2}\\right)\\left(\\frac{3}{2}\\right) \\equiv-\\frac{3}{4} \\quad(\\bmod p) \\Longrightarrow p=7 \\\\\n& x \\equiv-\\frac{3}{2} \\Longrightarrow 1 \\equiv x(x+2) \\equiv\\left(-\\frac{3}{2}\\right)\\left(\\frac{1}{2}\\right) \\equiv-\\frac{3}{4} \\quad(\\bmod p) \\Longrightarrow p=7\n\\end{aligned}\\]\n\nforcing \\(p=7\\).\n\n- If \\(k=6\\), then we have \\(x<p / 2<x+6\\), then \\(x \\in\\left\\{\\frac{p-1}{2}, \\frac{p-3}{2}, \\ldots, \\frac{p-11}{2}\\right\\} \\equiv\\left\\{-\\frac{1}{2},-\\frac{3}{2}, \\ldots,-\\frac{11}{2}\\right\\}\\). We have\n\n| \\(x\\) | \\(x(x+6)\\) | \\(p\\) |\n| :---: | :---: | :---: |\n| \\(-\\frac{1}{2}\\) | \\(-\\frac{11}{4}\\) | 3,5 |\n| \\(-\\frac{3}{2}\\) | \\(-\\frac{27}{4}\\) | 31 |\n| \\(-\\frac{5}{2}\\) | \\(-\\frac{35}{4}\\) | 3,13 |\n| \\(-\\frac{7}{2}\\) | \\(-\\frac{35}{4}\\) | 3,13 |\n| \\(-\\frac{9}{2}\\) | \\(-\\frac{27}{4}\\) | 31 |\n| \\(-\\frac{11}{2}\\) | \\(-\\frac{11}{4}\\) | 3,5 |\n\nThus, all that remains is to eliminate \\(p=31\\). This is by \\(4 \\cdot 8 \\equiv 1(\\bmod 31)\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

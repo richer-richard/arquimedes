@@ -1,0 +1,89 @@
+{
+  "id": "prob.ahsme-1977-p20",
+  "title": "1977 AHSME Problem 20",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-counting",
+      "label": "Basic counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.lattice-paths",
+      "label": "Lattice paths",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1977,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 41.3,
+    "source": 2200,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "For how many paths consisting of a sequence of horizontal and/or vertical line segments, with each segment connecting a pair of adjacent letters in the diagram below, is the word CONTEST spelled out as the path is traversed from beginning to end?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(63\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(128\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(129\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(255\\)"
+    },
+    {
+      "label": "E",
+      "text": "none of these"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1977-p20.live",
+      "kind": "proof-sketch",
+      "text": "Reverse the paths and spell TSETNOC from the central bottom \\(T.\\) In the family whose horizontal moves go left, each of the six steps has two choices: up or left. This gives \\(2^6=64\\) paths. By symmetry, \\(64\\) paths have horizontal moves going right. The all-vertical central path belongs to both families, so the total is \\[ 64+64-1=127. \\] This number is not among the first four choices.\n\nTherefore, the correct answer is E.",
+      "hints": [
+        "Reverse each path, starting from the central \\(T\\) in the bottom row",
+        "Count the left-going and right-going families separately, then correct for their common path"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "954e2d74350b53ffdcae7a31014bda2a897bb1ca13574bbc6872aca0d39c353f"
+    ],
+    "solutions": []
+  }
+}

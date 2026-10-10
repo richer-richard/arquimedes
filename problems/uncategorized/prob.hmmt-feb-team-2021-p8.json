@@ -1,0 +1,37 @@
+{
+  "id": "prob.hmmt-feb-team-2021-p8",
+  "title": "2021 HMMT February Team Problem 8",
+  "category": "uncategorized",
+  "subjects": [],
+  "concepts": [],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2021,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 87.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For each positive real number \\(\\alpha\\), define\n\n\\[\\lfloor\\alpha \\mathbb{N}\\rfloor:=\\{\\lfloor\\alpha m\\rfloor \\mid m \\in \\mathbb{N}\\}\\]\n\nLet \\(n\\) be a positive integer. A set \\(S \\subseteq\\{1,2, \\ldots, n\\}\\) has the property that: for each real \\(\\beta>0\\),\n\n\\[\\text { if } S \\subseteq\\lfloor\\beta \\mathbb{N}\\rfloor \\text {, then }\\{1,2, \\ldots, n\\} \\subseteq\\lfloor\\beta \\mathbb{N}\\rfloor\\]\n\nDetermine, with proof, the smallest possible size of \\(S\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\lfloor n / 2\\rfloor+1",
+    "value": "\\lfloor n / 2\\rfloor+1"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2021-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "For each \\(k \\in\\{\\lceil n / 2\\rceil, \\ldots, n\\}\\), picking \\(\\beta=1+1 / k\\) gives\n\n\\[\\lfloor\\beta \\mathbb{N}\\rfloor \\cap[n]=[n] \\backslash\\{k\\}\\]\n\nso \\(S\\) must contain \\(k\\).\nNow we show that \\(S=\\{\\lceil n / 2\\rceil, \\ldots, n\\}\\) works; this set \\(S\\) has \\(\\lfloor n / 2\\rfloor+1\\) elements.\nSuppose \\(\\beta\\) satisfy \\(S \\subseteq\\lfloor\\beta \\mathbb{N}\\rfloor\\), and suppose for the sake of contradiction that \\([n] \\not \\subset\\lfloor\\beta \\mathbb{N}\\rfloor\\). Since we may increase \\(\\beta\\) by a small amount \\(\\varepsilon\\) without affecting \\(\\lfloor\\beta \\mathbb{N}\\rfloor \\cap[n]\\), we may assume \\(\\beta\\) is irrational. Let \\(\\alpha\\) satisfy \\(1 / \\alpha+1 / \\beta=1\\). By Beatty's Theorem, \\(\\lfloor\\alpha \\mathbb{N}\\rfloor\\) and \\(\\lfloor\\beta \\mathbb{N}\\rfloor\\) are complement sets in \\(\\mathbb{N}\\).\n\nLet \\(m\\) be the maximal element of \\([n\\rfloor\\) that is not in \\(\\lfloor\\beta \\mathbb{N}\\rfloor\\). Then \\(m=\\lfloor k \\alpha\\rfloor\\) for some integer \\(k\\). Consider \\(m^{\\prime}=\\lfloor 2 k \\alpha\\rfloor \\in\\{2 m, 2 m+1\\}\\), which must be an element of \\(\\lfloor\\alpha \\mathbb{N}\\rfloor\\). Clearly, \\(m^{\\prime}>m\\), and since \\(m<n / 2\\), \\(m^{\\prime} \\leqslant n\\), so \\(m^{\\prime}\\) is also an element of \\([n]\\) that is not in \\(\\lfloor\\beta \\mathbb{N}\\rfloor\\). This contradicts the maximality of \\(m\\), and we are done.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

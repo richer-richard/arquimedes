@@ -1,0 +1,99 @@
+{
+  "id": "prob.usa-tst-2019-p1",
+  "title": "USA TST 2019 Problem 1",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.brocard-point-symmedians",
+      "label": "Brocard point, symmedians",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.homothety",
+      "label": "Homothety",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.inversion",
+      "label": "Inversion",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.isogonal-isotomic-conjugates-barycentric-coordinates",
+      "label": "Isogonal/isotomic conjugates, barycentric coordinates",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.miquel-point",
+      "label": "Miquel point",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangents",
+      "label": "Tangents",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TST",
+    "year": 2019,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 93.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(ABC\\) be a triangle and let \\(M\\) and \\(N\\)\ndenote the midpoints of \\(\\overline{AB}\\) and \\(\\overline{AC}\\), respectively.\nLet \\(X\\) be a point such that \\(\\overline{AX}\\)\nis tangent to the circumcircle of triangle \\(ABC\\).\nDenote by \\(\\omega_B\\) the circle through \\(M\\) and \\(B\\) tangent to \\(\\overline{MX}\\),\nand by \\(\\omega_C\\) the circle through \\(N\\) and \\(C\\) tangent to \\(\\overline{NX}\\).\nShow that \\(\\omega_B\\) and \\(\\omega_C\\) intersect on line \\(BC\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tst-2019-p1.evanchen",
+      "kind": "proof-sketch",
+      "text": "We present four solutions,\nthe second of which shows that \\(M\\) and \\(N\\)\ncan be replaced by any two points on \\(AB\\) and \\(AC\\)\nsatisfying \\(AM/AB + AN/AC = 1\\).\n\nFirst solution using symmedians (Merlijn Staps)..\nLet \\(\\overline{XY}\\) be the other tangent from \\(X\\) to \\((AMN)\\).\n\nClaim.\n Line \\(\\overline{XM}\\) is tangent to \\((BMY)\\);\n hence \\(Y\\) lies on \\(\\omega_B\\).\n\n[Diagram omitted from this imported TeX transcription.]\n\nProof.\n Let \\(Z\\) be the midpoint of \\(\\overline{AY}\\).\n Then \\(\\overline{MX}\\) is the \\(M\\)-symmedian in triangle \\(AMY\\).\n Since \\(\\overline{MZ} \\parallel \\overline{BY}\\),\n it follows that \\(\\measuredangle AMX = \\measuredangle ZMY = \\measuredangle BYM\\).\n We conclude that \\(\\overline{XM}\\) is tangent\n to the circumcircle of triangle \\(BMY\\).\n\nSimilarly, \\(\\omega_C\\) is the circumcircle of triangle \\(CNY\\).\nAs \\(AMYN\\) is cyclic too,\nit follows that \\(\\omega_B\\) and \\(\\omega_C\\) intersect on \\(\\overline{BC}\\),\nby Miquel's theorem.\n\nRemark.\n The converse of Miquel's theorem is true,\n which means the problem is equivalent\n to showing that the second intersection\n of the \\(\\omega_B\\) and \\(\\omega_C\\) moves along \\((AMN)\\).\n Thus the construction of \\(Y\\) above is not so unnatural.\n\nSecond solution (Jetze Zoethout)..\nLet \\(\\omega_B\\) intersect \\(\\overline{BC}\\) again at \\(S\\)\nand let \\(\\overline{MS}\\) intersect \\(\\overline{AC}\\) again at \\(Y\\).\nAngle chasing gives\n\\(\\measuredangle XMY = \\measuredangle XMS = \\measuredangle MBS = \\measuredangle ABC = \\measuredangle XAC = \\measuredangle XAY\\),\nso \\(Y\\) is on the circumcircle of triangle \\(AMX\\).\nFurthermore, from \\(\\measuredangle XMY = \\measuredangle ABC\\) and\n\\(\\measuredangle ACB = \\measuredangle XAB = \\measuredangle XYM\\) it follows that\n\\(\\triangle ABC \\sim \\triangle XMY\\) and from \\(\\measuredangle XAY = \\measuredangle MBS\\)\nand \\(\\measuredangle YXA = \\measuredangle YMA = \\measuredangle BMS\\) it follows that\n\\(\\triangle AXY \\sim \\triangle BMS\\).\n\n[Diagram omitted from this imported TeX transcription.]\n\nWe now find\n\\[\n\\frac{AN}{AX} = \\frac{AN/BM}{AX/BM} = \\frac{AC/AB}{MS/XY} = \\frac{AB/AB}{MS/XM} = \\frac{XM}{MS},\n\\]\nwhich together with \\(\\angle XMS = \\angle XAN\\) yields\n\\(\\triangle XMS \\sim \\triangle XAN\\).\nFrom \\(\\measuredangle XSY = \\measuredangle XSM = \\measuredangle XNA = \\measuredangle XNY\\)\nwe now have that \\(S\\) is on the circumcircle of triangle \\(XNY\\).\nFinally, we have \\(\\measuredangle XNS = \\measuredangle XYS = \\measuredangle XYM = \\measuredangle ACB = \\measuredangle NCS\\)\nso \\(\\overline{XN}\\) is tangent to the circle through \\(C\\), \\(N\\), and \\(S\\), as desired.\n\nThird solution by moving points method..\nFix triangle \\(ABC\\) and animate \\(X\\) along the tangent at \\(A\\).\nWe let \\(D\\) denote the second intersection point of \\(\\omega_C\\)\nwith line \\(\\overline{BC}\\).\n\nClaim.\n The composed map \\(X \\mapsto D\\) is a fractional linear transformation\n (i.e.\\ a projective map) in terms of\n a real coordinate on line \\(\\overline{AA}\\), \\(\\overline{BC}\\).\n\nProof.\n Let \\(\\ell\\) denote the perpendicular bisector of \\(\\overline{CN}\\),\n also equipped with a real coordinate.\n We let \\(P\\) denote the intersection of \\(\\overline{XM}\\) with \\(\\ell\\),\n \\(S\\) the circumcenter of \\(\\triangle CMD\\).\n Let \\(T\\) denote the midpoint of \\(\\overline{BD}\\).\n\n We claim that the composed map\n \\[\\begin{aligned}\n \\overline{AA} &\\to \\ell \\to \\ell \\to \\overline{BC} \\to \\overline{BC} \\\\\n \\text{by} \\quad\n X &\\mapsto P \\mapsto S \\mapsto T \\mapsto D\n \\end{aligned}\\]\n is projective, by showing each individual map is projective.\n\n[Diagram omitted from this imported TeX transcription.]\n\n• The map \\(X \\mapsto P\\) is projective since it is\n a perspectivity through \\(N\\) from \\(\\overline{AA}\\) to \\(\\ell\\).\n\n• The map \\(P \\mapsto S\\) is projective\n since it is equivalent to a negative inversion on \\(\\ell\\)\n at the midpoint of \\(\\overline{NC}\\) with radius \\(\\frac{1}{2} NC\\).\n (Note \\(\\angle PNS = 90^\\circ\\) is fixed.)\n\n• The map \\(S \\mapsto T\\) is projective\n since it is a perspectivity \\(\\ell \\to \\overline{BC}\\)\n through the point at infinity perpendicular to \\(\\overline{BC}\\)\n (in fact, it is linear).\n\n• The map \\(T \\mapsto D\\) is projective (in fact, linear)\n since it is a homothety through \\(C\\) with fixed ratio \\(2\\).\n\n Thus the composed map is projective as well.\n\nSimilarly, if we define \\(D'\\) so that \\(\\overline{XM}\\)\nis tangent to \\((BMD')\\), the map \\(X \\mapsto D'\\) is projective as well.\nWe aim to show \\(D = D'\\), and since the maps\ncorrespond to fractional linear transformations\nin projective coordinates,\nit suffices to verify it for three distinct choices of \\(X\\).\nWe do so:\n\n• If \\(X = \\overline{AA} \\cap \\overline{MN}\\),\n then \\(D\\) and \\(D'\\) satisfy \\(MB = MD'\\), \\(NC = ND\\).\n This means they are the feet of the \\(A\\)-altitude on \\(\\overline{BC}\\).\n\n• As \\(X\\) approaches \\(A\\) the points \\(D\\) and \\(D'\\)\n approach the infinity point along \\(\\overline{BC}\\).\n\n• If \\(X\\) is a point at infinity along \\(\\overline{AA}\\),\n then \\(D\\) and \\(D'\\) coincide with the midpoint of \\(\\overline{BC}\\).\n\nThis completes the solution.\n\nRemark.\n [Anant Mudgal]\n An alternative (shorter) way to show \\(X \\mapsto D\\) is projective\n is to notice \\(\\measuredangle XND\\) is a constant angle.\n I left the longer ``original'' proof for instructional reasons.\n\nFourth solution by isogonal conjugates (Anant Mudgal)..\nLet \\(Y\\) be the isogonal conjugate of \\(X\\) in \\(\\triangle AMN\\)\nand \\(Z\\) be the reflection of \\(Y\\) in \\(\\overline{MN}\\).\nAs \\(\\overline{AX}\\) is tangent to the circumcircle of \\(\\triangle AMN\\),\nit follows that \\(\\overline{AY} \\parallel \\overline{MN}\\).\nThus \\(Z\\) lies on \\(\\overline{BC}\\) since \\(\\overline{MN}\\)\nbisects the strip made by \\(\\overline{AY}\\) and \\(\\overline{BC}\\).\n\n[Diagram omitted from this imported TeX transcription.]\n\nFinally, \\[ \\measuredangle ZMX=\\measuredangle ZMN+\\measuredangle NMX=\\measuredangle NMY+\\measuredangle YMA\n = \\measuredangle NMA=\\measuredangle ZBM \\]\nso \\(\\overline{XM}\\) is tangent to the circumcircle of\n\\(\\triangle ZMB\\), hence \\(Z\\) lies on \\(\\omega_B\\).\nSimilarly, \\(Z\\) lies on \\(\\omega_C\\) and we're done.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

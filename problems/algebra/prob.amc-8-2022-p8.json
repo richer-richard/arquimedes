@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-8-2022-p8",
+  "title": "2022 AMC 8 Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.fraction",
+      "label": "Fraction",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.telescoping",
+      "label": "Telescoping",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2022,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 10.5,
+    "source": 1020,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "What is the value of:\n\n\\[ \\dfrac{1}{3} \\cdot \\dfrac{2}{4} \\cdot \\dfrac{3}{5} \\cdots \\dfrac{18}{20} \\cdot \\dfrac{19}{21} \\cdot \\dfrac{20}{22} \\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\displaystyle \\dfrac{1}{462}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\displaystyle \\dfrac{1}{231}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\displaystyle \\dfrac{1}{132}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\displaystyle \\dfrac{2}{213}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\displaystyle \\dfrac{1}{22}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1/231"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2022-p8.live",
+      "kind": "proof-sketch",
+      "text": "Since every integer from \\(3\\) to \\(20\\) occurs once as a denominator and once as a numerator, they cancel each other out.\n\nAfter canceling every number out, we have only \\(1\\) and \\(2\\) left as numerators and \\(21\\) and \\(22\\) left as denominators.\n\nThe remaining fraction is \\( \\dfrac{1 \\cdot 2}{21 \\cdot 22} .\\) This simplifies to \\( \\dfrac{2}{462} = \\dfrac{1}{231} \\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Most numerator and denominator factors cancel",
+        "After cancellation, only \\(1\\cdot2\\) remains on top"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

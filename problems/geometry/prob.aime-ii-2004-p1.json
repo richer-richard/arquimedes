@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2004-p1",
+  "title": "2004 AIME II Problem 1",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.chord",
+      "label": "Chord",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.circle-area",
+      "label": "Circle area",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.sector",
+      "label": "Sector",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2004,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 37.5,
+    "source": 2050,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "A chord of a circle is perpendicular to a radius at the midpoint of the radius. The ratio of the area of the larger of the two regions into which the chord divides the circle to the smaller can be expressed in the form \\(\\frac{a\\pi + b\\sqrt{c}}{d\\pi - e\\sqrt{f}},\\) where \\(a,\\) \\(b,\\) \\(c,\\) \\(d,\\) \\(e,\\) and \\(f\\) are positive integers, \\(a\\) and \\(e\\) are relatively prime, and neither \\(c\\) nor \\(f\\) is divisible by the square of any prime. Find the remainder when the product \\(a \\cdot b \\cdot c \\cdot d \\cdot e \\cdot f\\) is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "592",
+    "value": "592"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2004-p1.live",
+      "kind": "proof-sketch",
+      "text": "Scale so the radius is \\(2.\\) The chord lies at distance \\(1\\) from the center, so each radius to an endpoint of the chord makes a \\(60^\\circ\\) angle with the bisected radius, and the two endpoint radii form a central angle of \\(120^\\circ.\\) The isosceles triangle they cut off has area \\(\\frac{1}{2} \\cdot 2 \\cdot 2 \\sin 120^\\circ = \\sqrt{3},\\) and the whole disk has area \\(4\\pi.\\)\n\nThe smaller region is the \\(120^\\circ\\) sector minus the triangle, \\(\\frac{4\\pi}{3} - \\sqrt{3},\\) and the larger region is the rest, \\(\\frac{8\\pi}{3} + \\sqrt{3}.\\) The ratio is \\[\\frac{\\frac{8\\pi}{3} + \\sqrt{3}}{\\frac{4\\pi}{3} - \\sqrt{3}} = \\frac{8\\pi + 3\\sqrt{3}}{4\\pi - 3\\sqrt{3}},\\] which has the required form with \\((a, b, c, d, e, f) = (8, 3, 3, 4, 3, 3).\\)\n\nThe product is \\(8 \\cdot 3 \\cdot 3 \\cdot 4 \\cdot 3 \\cdot 3 = 2592,\\) whose remainder upon division by \\(1000\\) is \\(592.\\)",
+      "hints": [
+        "Take the radius to be \\(2;\\) the chord then lies at distance \\(1\\) from the center, so it subtends a \\(120^\\circ\\) central angle",
+        "The smaller region is a third of the disk minus a triangle of area \\(\\sqrt{3};\\) the larger is two-thirds of the disk plus that triangle"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

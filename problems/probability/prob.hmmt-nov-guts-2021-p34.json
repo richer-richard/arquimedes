@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-guts-2021-p34",
+  "title": "2021 HMMT November Guts Problem 34",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.counting-methods",
+      "label": "Counting Methods",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2021,
+    "number": 34
+  },
+  "difficulty": {
+    "course": 52.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Suppose two distinct competitors of the HMMT 2021 November contest are chosen uniformly at random. Let \\(p\\) be the probability that they can be labelled \\(A\\) and \\(B\\) so that \\(A\\) 's score on the General round is strictly greater than \\(B\\) 's, and \\(B\\) 's score on the theme round is strictly greater than \\(A\\) 's. Estimate \\(P=\\lfloor 10000 p\\rfloor\\).\n\nAn estimate of \\(E\\) will earn \\(\\left\\lfloor 20 \\min \\left(\\frac{A}{E}, \\frac{E}{A}\\right)^{6}\\right\\rfloor\\) points.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "2443",
+    "value": "2443"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2021-p34.hmmt",
+      "kind": "proof-sketch",
+      "text": "If competitors' scores on the General and Theme rounds were completely uncorrelated, we would expect the answer to be approximately \\(\\frac{1}{2}\\). If they were maximally correlated, we would expect the answer to be exactly 0 . It turns out that guessing \\(\\frac{1}{4} \\rightarrow 2500\\) achieves almost full points \\(-17 / 20\\).\nOne could try to come up with a more concrete model of what is happening. For example, we could start by looking only at the number of questions answered on each test, rather than the score, and assuming that two competitors could satisfy the desired property only if they have similar skill levels. In the case that they are similarly skilled, we assume it's \\(50 / 50\\) who wins on each test.\nHow do we determine the probability that two random competitors are similarly skilled? We could make some reasonable guess about the distribution of number of questions solved on the general round and assume that two competitors are similarly skilled if the number of questions they answered differs by exactly 1 . Most of the action on the general round happens in the first five problems, so let's assume that \\(\\frac{1}{6}\\) of competitors answer 1 problem, \\(\\frac{1}{3}\\) answer \\(2, \\frac{1}{3}\\) answer 3 , and \\(\\frac{1}{6}\\) answer 4 . Then two competitors are similarly skilled with probability \\(\\frac{4}{9}\\), which gives a final estimate of \\(\\frac{2}{9} \\rightarrow 2222\\).\nThis is farther from the true answer and only achieves 11 points, but one can imagine slight changes to this model that lead to a better estimate. For example, one could guess a different distribution of general round scores. Also, one could assume that slight differences in the subject distribution across\nthe tests can in fact cause Theme round scores of competitors who score similarly on the General round to in fact be weakly inversely correlated (since many students are stronger in one subject area than others), so that the probability that the higher General scorer scores lower on the Theme round is a little greater than \\(50 \\%\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

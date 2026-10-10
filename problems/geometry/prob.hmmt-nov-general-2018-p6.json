@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-nov-general-2018-p6",
+  "title": "2018 HMMT November General Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.distance-chasing",
+      "label": "Distance chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2018,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 55.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Call a polygon normal if it can be inscribed in a unit circle. How many non-congruent normal polygons are there such that the square of each side length is a positive integer?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2018-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 14\nThe side lengths of the polygon can only be from the set \\(\\{1, \\sqrt{2}, \\sqrt{3}, 2\\}\\), which take up \\(60^{\\circ}, 90^{\\circ}, 120^{\\circ}, 180^{\\circ}\\) of the circle respectively. By working modulo 60 degrees we see that \\(\\sqrt{2}\\) must be used an even number of times. We now proceed to casework on the longest side of the polygon.\n\nCase 1: If the longest side has length 2, then the remaining sides must contribute the remaining 180 degrees. There are 3 possibilities: \\((1,1,1,2),(1, \\sqrt{3}, 2),(\\sqrt{2}, \\sqrt{2}, 2)\\).\nCase 2: If the longest side has length \\(\\sqrt{3}\\), then it takes up either \\(120^{\\circ}\\) or \\(240^{\\circ}\\) of the circle. In the former case we have 6 possibilities: \\((1,1,1,1, \\sqrt{3}),(1, \\sqrt{2}, \\sqrt{2}, \\sqrt{3}),(\\sqrt{2}, 1, \\sqrt{2}, \\sqrt{3}),(1,1, \\sqrt{3}, \\sqrt{3})\\), \\((1, \\sqrt{3}, 1, \\sqrt{3}),(\\sqrt{3}, \\sqrt{3}, \\sqrt{3})\\). In the latter case there is only 1 possibility: \\((1,1, \\sqrt{3})\\).\nCase 3: If the longest side has length \\(\\sqrt{2}\\), then it shows up either twice or four times. In the former case we have 2 possibilities: \\((1,1,1, \\sqrt{2}, \\sqrt{2}),(1,1, \\sqrt{2}, 1, \\sqrt{2})\\). In the latter case there is only 1 possibility: \\((\\sqrt{2}, \\sqrt{2}, \\sqrt{2}, \\sqrt{2})\\).\nCase 4: If all sides have length 1 , then there is 1 possibility: \\((1,1,1,1,1,1)\\).\nAdding up all cases, we have \\(3+6+1+2+1+1=14\\) polygons.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-i-2025-p6",
+  "title": "2025 AIME I Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.incircle-incenter-and-inradius",
+      "label": "Incircle, incenter, and inradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2025,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 42.1,
+    "source": 2230,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "An isosceles trapezoid has an inscribed circle tangent to each of its four sides. The radius of the circle is \\(3,\\) and the area of the trapezoid is \\(72.\\) Let the parallel sides of the trapezoid have lengths \\(r\\) and \\(s,\\) with \\(r \\ne s.\\) Find \\(r^2 + s^2.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "504",
+    "value": "504"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2025-p6.live",
+      "kind": "proof-sketch",
+      "text": "The circle is tangent to both parallel sides, so the height of the trapezoid is \\(2 \\cdot 3 = 6.\\) From the area, \\(\\frac{r + s}{2} \\cdot 6 = 72,\\) so \\(r + s = 24.\\) By the Pitot theorem the legs together also sum to \\(24,\\) and since the trapezoid is isosceles each leg is \\(12.\\)\n\nDropping a perpendicular from an endpoint of the shorter base, the leg is the hypotenuse of a right triangle with legs \\(6\\) and \\(\\frac{|r - s|}{2}:\\) \\[144 = 36 + \\left(\\frac{r - s}{2}\\right)^2,\\] so \\((r - s)^2 = 432.\\) Therefore \\(r^2 + s^2 = \\frac{(r+s)^2 + (r-s)^2}{2}\\) \\(= \\frac{576 + 432}{2} = 504.\\)",
+      "hints": [
+        "The height is twice the inradius, so the area formula gives \\(r + s = 24\\)",
+        "In a tangential quadrilateral the two pairs of opposite sides have equal sums, so each leg is \\(12;\\) use the Pythagorean theorem to get \\((r - s)^2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

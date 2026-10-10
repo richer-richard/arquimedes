@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-invitational-2019-p4",
+  "title": "2019 HMMT Invitational Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2019,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A cactus is a finite simple connected graph where no two cycles share an edge. Show that in a nonempty cactus, there must exist a vertex which is part of at most one cycle.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2019-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(C\\) be the original cactus. For every cycle in \\(C\\), arbitrarily remove one of its edges, yielding a new graph \\(T\\). Observe that since the cycles are edge-disjoint, we removed exactly one edge from every cycle, meaning the graph stays connected. However, there are no longer any cycles, so \\(T\\) is a tree.\nNow consider any leaf \\(v\\) of \\(T\\) (note that any nonempty tree must have a leaf). If \\(v\\) is the only vertex in the graph we're trivially done, since then \\(v\\) was the only vertex in \\(C\\). Otherwise \\(v\\) has degree 1 . If \\(v\\) was originally a leaf of \\(C\\), we're done. If not, observe that in the process of turning \\(C\\) into \\(T\\), a vertex's degree cannot decrease by more than half, because for every cycle that a vertex is part of in \\(C\\), it gains a degree of 2 , but can only lose 1 degree from an edge of that cycle being removed. Therefore, the original degree of \\(v\\) in \\(C\\) was at most 2 , meaning it could have been part of at most 1 cycle, as desired.\nRemark. The problem originally did not state that the graph is finite. We apologize for the omission.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

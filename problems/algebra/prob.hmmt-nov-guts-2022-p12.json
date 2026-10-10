@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-guts-2022-p12",
+  "title": "2022 HMMT November Guts Problem 12",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.integers",
+      "label": "Integers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sums-and-products",
+      "label": "Sums and products",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2022,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 42.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Candice starts driving home from work at 5:00 PM. Starting at exactly 5:01 PM, and every minute after that, Candice encounters a new speed limit sign and slows down by 1 mph . Candice's speed, in miles per hour, is always a positive integer. Candice drives for \\(2 / 3\\) of a mile in total. She drives for a whole number of minutes, and arrives at her house driving slower than when she left. What time is it when she gets home?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "5:05 (pm)",
+    "value": "5:05 (PM)"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2022-p12.hmmt",
+      "kind": "proof-sketch",
+      "text": "Suppose that Candice starts driving at \\(n\\) miles per hour. Then she slows down and drives \\((n-1) \\mathrm{mph},(n-2) \\mathrm{mph}\\), and so on, with her last speed being \\((m+1) \\mathrm{mph}\\).\n\nThen the total distance traveled is\n\n\\[\\begin{aligned}\n\\frac{n}{60}+\\frac{n-1}{60}+\\cdots+\\frac{m+1}{60} & =\\frac{1}{60}\\left(\\frac{n(n+1)}{2}-\\frac{m(m+1)}{2}\\right) \\\\\n& =\\frac{n^{2}+n-m^{2}-m}{120} \\\\\n& =\\frac{(n+m+1)(n-m)}{120}\n\\end{aligned}\\]\n\nSince the total distance travelled is \\(2 / 3\\), we have \\((n+m+1)(n-m)=120 \\cdot 2 / 3=80\\). We know \\(m\\) is nonnegative since Candice's speed is always positive, so \\(n+m+1>n-m\\). Thus, \\(n+m+1\\) and \\(n-m\\) are a factor pair of 80 , with \\(n+m+1\\) greater and \\(n-m\\) smaller. Since one is even and one is odd, this means we either have \\((n+m+1, n-m)=(80,1)\\) or \\((16,5)\\). The first case is impossible since it gives \\(n-m=1\\), which would imply that Candice drives at \\(n \\mathrm{mph}\\) the whole way home. Therefore, \\((n+m-1, n-m)=(16,5)\\). Since \\(n-m=5\\), she gets home at 5:05 pm.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

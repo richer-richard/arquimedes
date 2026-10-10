@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1981-p30",
+  "title": "1981 AHSME Problem 30",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.substitution",
+      "label": "Substitution",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1981,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 40.5,
+    "source": 2170,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "If \\(a,\\) \\(b,\\) \\(c,\\) \\(d\\) are the solutions of the equation \\(x^4-bx-3=0,\\) then an equation whose solutions are \\[ \\begin{gathered} \\frac{a+b+c}{d^2},\\quad \\frac{a+b+d}{c^2},\\\\ \\frac{a+c+d}{b^2},\\quad \\frac{b+c+d}{a^2} \\end{gathered} \\] is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3x^4+bx+1=0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3x^4-bx+1=0\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3x^4+bx^3-1=0\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3x^4-bx^3-1=0\\)"
+    },
+    {
+      "label": "E",
+      "text": "none of these"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1981-p30.live",
+      "kind": "proof-sketch",
+      "text": "Vieta’s formulas give \\(a+b+c+d=0.\\) Thus, for example, \\[ \\frac{a+b+c}{d^2}=-\\frac1d, \\] and similarly the new roots are \\(-\\frac{1}{a},\\) \\(-\\frac{1}{b},\\) \\(-\\frac{1}{c},\\) \\(-\\frac{1}{d}.\\) Put \\(x=-\\frac{1}{r}\\) in \\(r^4-br-3=0.\\) Multiplying by \\(x^4\\) gives \\(1+bx^3-3x^4=0,\\) or \\[ 3x^4-bx^3-1=0. \\]\n\nTherefore, the correct answer is D.",
+      "hints": [
+        "Use the missing cubic term to find \\(a+b+c+d\\)",
+        "Each listed expression becomes the negative reciprocal of one original root"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

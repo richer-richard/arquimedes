@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-1995-p12",
+  "title": "1995 AIME Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vector",
+      "label": "Vector",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1995,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 47.7,
+    "source": 2450,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "Pyramid \\(OABCD\\) has square base \\(ABCD,\\) congruent edges \\(\\overline{OA},\\) \\(\\overline{OB},\\) \\(\\overline{OC},\\) and \\(\\overline{OD},\\) and \\(\\angle AOB=45^\\circ.\\) Let \\(\\theta\\) be the measure of the dihedral angle formed by faces \\(OAB\\) and \\(OBC.\\) Given that \\(\\cos\\theta=m+\\sqrt n,\\) where \\(m\\) and \\(n\\) are integers, find \\(m+n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "5",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1995-p12.live",
+      "kind": "proof-sketch",
+      "text": "Take adjacent base vertices \\(A=(1,1,0),\\) \\(B=(-1,1,0),\\) \\(C=(-1,-1,0)\\) and \\(O=(0,0,h).\\) From \\(\\angle AOB=45^\\circ,\\) \\[\\begin{aligned}\\frac{h^2}{h^2+2}&=\\frac1{\\sqrt2},\\\\h^2&=2+2\\sqrt2.\\end{aligned}\\] Normals to the two faces may be taken as \\((0,2h,2)\\) and \\((-2h,0,2).\\) Their acute angle has cosine \\(\\frac{1}{h^2+1}=3-2\\sqrt2.\\) The interior dihedral angle is its supplement, so \\[\\cos\\theta=2\\sqrt2-3=-3+\\sqrt8.\\] Thus \\(m+n=-3+8=5.\\)",
+      "hints": [
+        "Place the square’s vertices at \\((\\pm1,\\pm1,0)\\) and the apex at \\((0,0,h)\\)",
+        "Find \\(h^2\\) from \\(\\angle AOB,\\) then take the supplement of the angle between suitable face normals"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

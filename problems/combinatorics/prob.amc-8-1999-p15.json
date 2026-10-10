@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-8-1999-p15",
+  "title": "1999 AMC 8 Problem 15",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1999,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 15.0,
+    "source": 1330,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Bicycle license plates in Flatville each contain three letters. The first is chosen from the set \\(\\{C,H,L,P,R\\},\\) the second from \\(\\{A,I,O\\},\\) and the third from \\(\\{D,M,N,T\\}.\\)\n\nWhen Flatville needed more license plates, they added two new letters. The new letters may both be added to one set or one letter may be added to one set and one to another set. What is the largest possible number of additional license plates that can be made by adding two letters?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(30\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(36\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(40\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(60\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "40"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1999-p15.live",
+      "kind": "proof-sketch",
+      "text": "There are currently \\[5 \\cdot 3 \\cdot 4 = 60\\] license plates that can be made.\n\nIf both letters are added to the first set, then there are \\[ 7 \\cdot 3 \\cdot 4 = 84 \\] possible plates.\n\nIf they are both added to the second, there are \\[ 5 \\cdot 5 \\cdot 4 = 100 \\] plates.\n\nIf they are added to the third, there are \\[ 5 \\cdot 3 \\cdot 6 = 90 \\] choices.\n\nIf one is added to the first set and the other to the second set, there are \\[ 6 \\cdot 4 \\cdot 4 = 96 \\] plates.\n\nIf the other is added to the third set, we get \\[ 6 \\cdot 3 \\cdot 5 = 90 \\] possible plates.\n\nFinally, if the letters are added to the second and third sets, there are \\[ 5 \\cdot 4 \\cdot 5 = 100 \\] plates.\n\nWe see that \\(100\\) is the greatest number of plates that we can achieve. This is an additional \\(100 - 60 = 40\\) plates.\n\nThus, D is the correct answer.",
+      "hints": [
+        "The old number of plates is \\(5\\cdot3\\cdot4\\)",
+        "To maximize a product, make the three factors as balanced as possible"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

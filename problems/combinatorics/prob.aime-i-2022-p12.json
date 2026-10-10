@@ -1,0 +1,71 @@
+{
+  "id": "prob.aime-i-2022-p12",
+  "title": "2022 AIME I Problem 12",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.double-counting",
+      "label": "Double counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.subsets",
+      "label": "Subsets",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "comb.vandermondes-convolution",
+      "label": "Vandermonde’s Convolution",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2022,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 62.9,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 13,
+  "statement": "For any finite set \\(X,\\) let \\(|X|\\) denote the number of elements in \\(X.\\) Define \\[S_n = \\sum |A \\cap B|,\\] where the sum is taken over all ordered pairs \\((A, B)\\) such that \\(A\\) and \\(B\\) are subsets of \\(\\{1, 2, 3, \\ldots, n\\}\\) with \\(|A| = |B|.\\) For example, \\(S_2 = 4\\) because the sum is taken over the pairs of subsets \\[ \\begin{aligned} &(A, B) \\in {}\\\\ &\\quad \\small\\left\\{\\begin{gathered} (\\emptyset, \\emptyset), (\\{1\\}, \\{1\\}), \\\\ (\\{1\\}, \\{2\\}), (\\{2\\}, \\{1\\}), \\\\ (\\{2\\}, \\{2\\}), (\\{1, 2\\}, \\{1, 2\\}) \\end{gathered}\\right\\}, \\end{aligned} \\] giving \\(S_2 = 0 + 1 + 0 + 0 + 1 + 2 = 4.\\) Let \\(\\frac{S_{2022}}{S_{2021}} = \\frac{p}{q},\\) where \\(p\\) and \\(q\\) are relatively prime positive integers. Find the remainder when \\(p + q\\) is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "245",
+    "value": "245"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2022-p12.live",
+      "kind": "proof-sketch",
+      "text": "Count element by element: \\(S_n\\) equals the number of triples \\((x, A, B)\\) with \\(|A| = |B|\\) and \\(x \\in A \\cap B.\\) For a fixed \\(x\\) and size \\(k,\\) there are \\(\\binom{n-1}{k-1}\\) choices for each of \\(A\\) and \\(B\\) containing \\(x,\\) so by the Vandermonde identity \\[ \\begin{aligned} S_n &= n \\sum_{k=1}^{n} \\binom{n-1}{k-1}^2 \\\\ &= n\\binom{2n-2}{n-1}. \\end{aligned} \\]\n\nTherefore \\[ \\begin{aligned} \\frac{S_{2022}}{S_{2021}} &= \\frac{2022\\binom{4042}{2021}}{2021\\binom{4040}{2020}} \\\\ &= \\frac{2022}{2021} \\cdot \\frac{4042 \\cdot 4041}{2021^2} \\\\ &= \\frac{2 \\cdot 2022 \\cdot 4041}{2021^2}. \\end{aligned} \\] Since \\(2021 = 43 \\cdot 47\\) divides neither \\(2022,\\) \\(4041 = 3^2 \\cdot 449,\\) nor \\(2,\\) this fraction is in lowest terms: \\(p = 2 \\cdot 2022 \\cdot 4041 = 16341804\\) and \\(q = 2021^2 = 4084441.\\)\n\nThen \\(p + q = 20426245,\\) whose remainder modulo \\(1000\\) is \\(245.\\)",
+      "hints": [
+        "Swap the order of summation: for each element, count the pairs \\((A, B)\\) with \\(|A| = |B|\\) that contain it in both sets",
+        "\\(\\sum_k \\binom{n-1}{k-1}^2 = \\binom{2n-2}{n-1},\\) so \\(S_n = n\\binom{2n-2}{n-1};\\) then simplify the ratio of consecutive terms"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

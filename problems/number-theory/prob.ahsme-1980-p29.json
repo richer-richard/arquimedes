@@ -1,0 +1,85 @@
+{
+  "id": "prob.ahsme-1980-p29",
+  "title": "1980 AHSME Problem 29",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1980,
+    "number": 29
+  },
+  "difficulty": {
+    "course": 38.7,
+    "source": 2100,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many ordered triples \\((x,y,z)\\) of integers satisfy the system of equations below? \\[ \\begin{aligned} x^2-3xy+2y^2-z^2&=31,\\\\ -x^2+6yz+2z^2&=44,\\\\ x^2+xy+8z^2&=100. \\end{aligned} \\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "a finite number greater than two"
+    },
+    {
+      "label": "E",
+      "text": "infinitely many"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "0"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1980-p29.live",
+      "kind": "proof-sketch",
+      "text": "Adding the three equations gives \\[ \\begin{aligned} x^2-2xy+2y^2 &{}+6yz+9z^2\\\\ &=175, \\end{aligned} \\] or \\[ (x-y)^2+(y+3z)^2=175. \\] A square is congruent to \\(0\\) or \\(1\\pmod4,\\) so a sum of two squares cannot be congruent to \\(3\\pmod4.\\) But \\(175\\equiv3\\pmod4,\\) a contradiction. Thus there are no integer triples.\n\nTherefore, the correct answer is A.",
+      "hints": [
+        "Add all three equations before trying to solve for the variables",
+        "Rewrite the resulting quadratic form as a sum of two squares and reduce modulo \\(4\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

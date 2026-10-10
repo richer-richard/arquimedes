@@ -1,0 +1,75 @@
+{
+  "id": "prob.hmmt-feb-guts-2020-p28",
+  "title": "2020 HMMT February Guts Problem 28",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2020,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 84.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\triangle A B C\\) be a triangle inscribed in a unit circle with center \\(O\\). Let \\(I\\) be the incenter of \\(\\triangle A B C\\), and let \\(D\\) be the intersection of \\(B C\\) and the angle bisector of \\(\\angle B A C\\). Suppose that the circumcircle of \\(\\triangle A D O\\) intersects \\(B C\\) again at a point \\(E\\) such that \\(E\\) lies on \\(I O\\). If \\(\\cos A=\\frac{12}{13}\\), find the area of \\(\\triangle A B C\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{15}{169}",
+    "value": "\\frac{15}{169}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2020-p28.hmmt",
+      "kind": "proof-sketch",
+      "text": "Consider the following lemma:\nLemma. \\(A D \\perp E O\\).\n\nProof. By the Shooting Lemma, the reflection of the midpoint \\(M\\) of arc \\(B C\\) not containing \\(A\\) over \\(B C\\) lies on \\((A D O)\\). Hence\n\n\\[\\measuredangle A D E+\\measuredangle D E O=\\measuredangle M D C+\\measuredangle D M^{\\prime} O=\\measuredangle M D C+\\measuredangle M^{\\prime} M D=90^{\\circ}\\]\n\nThis is enough to imply \\(A D \\perp E O\\).\n\nThus \\(I\\) is the foot from \\(O\\) onto \\(A D\\). Now\n\n\\[A I^{2}+I O^{2}=A O^{2}\\]\n\nBy Euler's formula,\n\n\\[\\left(\\frac{r}{\\sin \\frac{A}{2}}\\right)^{2}+R^{2}-2 R r=R^{2}\\]\n\nHence\n\n\\[r=2 R \\sin ^{2} \\frac{A}{2}\\]\n\nThen\n\n\\[s=a+\\frac{r}{\\tan \\frac{A}{2}}=a+R \\sin A=3 R \\sin A\\]\n\nand\n\n\\[[A B C]=r s=\\left(2 R \\sin ^{2} \\frac{A}{2}\\right)(3 R \\sin A)\\]\n\nSince \\(R=1\\), we get\n\n\\[[A B C]=3(1-\\cos A) \\sin A\\]\n\nPlugging in \\(\\sin A=\\frac{5}{13}\\) and \\(\\cos A=\\frac{12}{13}\\), we get\n\n\\[[A B C]=3 \\cdot \\frac{1}{13} \\cdot \\frac{5}{13}=\\frac{15}{169}\\]\n\nRemark. On the contest, this problem stated that \\(\\triangle A B C\\) is an acute triangle and that \\(\\sin A=\\frac{5}{13}\\), rather than \\(\\cos A=\\frac{12}{13}\\). This is erroneous because there is no acute triangle satisfying the conditions of the problem statement (the given diagram is not accurate). We apologize for the mistake.\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

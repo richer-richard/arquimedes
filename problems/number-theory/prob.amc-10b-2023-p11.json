@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2023-p11",
+  "title": "2023 AMC 10B Problem 11",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.basic-counting",
+      "label": "Basic counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.parity",
+      "label": "Parity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2023,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 23.4,
+    "source": 1500,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Suzanne went to the bank and withdrew \\(\\$800.\\) The teller gave her this amount using \\(\\$20\\) bills, \\(\\$50\\) bills, and \\(\\$100\\) bills, with at least one of each denomination. How many different collections of bills could Suzanne have received?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(45\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(36\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(28\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(32\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "21"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2023-p11.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(a, b, c \\ge 1\\) count the \\(\\$20, \\$50, \\$100\\) bills. Then \\(20a + 50b + 100c = 800,\\) which divides down to \\(2a + 5b + 10c = 80.\\) Both \\(2a\\) and \\(10c\\) are even, so \\(5b\\) is too, forcing \\(b = 2t.\\) Now \\(a = 40 - 5t - 5c \\ge 1\\) means \\(t + c \\le 7.\\) With \\(t, c \\ge 1,\\) the pairs number \\(1 + 2 + \\cdots + 6 = 21.\\) Thus, B is the correct answer.",
+      "hints": [
+        "Divide \\(20a + 50b + 100c = 800\\) by \\(10;\\) parity then forces the number of \\(\\$50\\) bills to be even",
+        "Writing \\(b = 2t,\\) count positive integer pairs \\((t, c)\\) with \\(t + c \\le 7\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

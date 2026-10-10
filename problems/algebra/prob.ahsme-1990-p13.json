@@ -1,0 +1,78 @@
+{
+  "id": "prob.ahsme-1990-p13",
+  "title": "1990 AHSME Problem 13",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1990,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 26.7,
+    "source": 1630,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "If the following instructions are carried out by a computer, which value of \\(X\\) will be printed because of instruction \\(5?\\)\n\n\\(1.\\) START \\(X\\) AT \\(3\\) AND \\(S\\) AT \\(0.\\)\n\n\\(2.\\) INCREASE THE VALUE OF \\(X\\) BY \\(2.\\)\n\n\\(3.\\) INCREASE THE VALUE OF \\(S\\) BY THE VALUE OF \\(X.\\)\n\n\\(4.\\) IF \\(S\\) IS AT LEAST \\(10000,\\) THEN GO TO INSTRUCTION \\(5;\\) OTHERWISE, GO TO INSTRUCTION \\(2\\) AND PROCEED FROM THERE.\n\n\\(5.\\) PRINT THE VALUE OF \\(X.\\)\n\n\\(6.\\) STOP.",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(19\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(23\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(199\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(201\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "201"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1990-p13.live",
+      "kind": "proof-sketch",
+      "text": "After \\(k\\) passes, \\(X=2k+3,\\) and \\[ \\begin{aligned} S&=5+7+\\cdots+(2k+3)\\\\ &=k(k+4). \\end{aligned} \\] Now \\(98(102)=9996\\lt10000,\\) while \\(99(103)=10197\\ge10000.\\) Thus the loop stops at \\(k=99,\\) when \\(X=2(99)+3=201.\\)\n\nThus the correct answer is E.",
+      "hints": [
+        "After \\(k\\) passes through instructions \\(2\\) and \\(3,\\) find \\(X\\) and \\(S\\)",
+        "The values added to \\(S\\) are consecutive odd numbers beginning with \\(5\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

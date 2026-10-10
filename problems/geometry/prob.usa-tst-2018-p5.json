@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tst-2018-p5",
+  "title": "USA TST 2018 Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TST",
+    "year": 2018,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 102.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(ABCD\\) be a convex cyclic quadrilateral which is not a kite,\nbut whose diagonals are perpendicular and meet at \\(H\\).\nDenote by \\(M\\) and \\(N\\) the midpoints of \\(\\overline{BC}\\) and \\(\\overline{CD}\\).\nRays \\(MH\\) and \\(NH\\) meet \\(\\overline{AD}\\) and \\(\\overline{AB}\\) at \\(S\\) and \\(T\\), respectively.\nProve there exists a point \\(E\\), lying outside quadrilateral \\(ABCD\\),\nsuch that\n\n• ray \\(EH\\) bisects both angles \\(\\angle BES\\), \\(\\angle TED\\), and\n\n• \\(\\angle BEN = \\angle MED\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tst-2018-p5.evanchen",
+      "kind": "proof-sketch",
+      "text": "The main claim is that \\(E\\) is the\nintersection of \\((ABCD)\\) with the circle with diameter \\(\\overline{AH}\\).\n\n[Diagram omitted from this imported TeX transcription.]\n\nThe following observation can be quickly made\nwithout reference to \\(E\\).\n\nLemma.\n We have \\(\\angle HSA = \\angle HTA = 90^\\circ\\).\n Consequently, quadrilateral \\(BTSD\\) is cyclic.\n\nProof.\n This is direct angle chasing.\n In fact, \\(\\overline{HM}\\) passes through the circumcenter of \\(\\triangle BHC\\)\n and \\(\\triangle HAD \\sim \\triangle HCB\\),\n so \\(\\overline{HS}\\) ought to be the altitude of \\(\\triangle HAD\\).\n\nFrom here it follows that \\(E\\) is the Miquel point of\ncyclic quadrilateral \\(BTSD\\).\nDefine \\(F\\) to be the point diametrically opposite \\(A\\),\nso that \\(E\\), \\(H\\), \\(F\\) are collinear, \\(\\overline{CF} \\parallel \\overline{BD}\\).\nBy now we already have\n\\[ \\measuredangle BEH = \\measuredangle BEF = \\measuredangle BAF = \\measuredangle CAD = \\measuredangle HAS = \\measuredangle HES \\]\nso \\(\\overline{EH}\\) bisects \\(\\angle BES\\), and \\(\\angle TED\\).\nHence it only remains to show \\(\\angle BEM = \\angle NED\\);\nwe present several proofs below.\n\nFirst proof (original solution)..\nLet \\(P\\) be the circumcenter of \\(BTSD\\).\nThe properties of the Miquel point imply \\(P\\) lies on\nthe common bisector \\(\\overline{EH}\\) already,\nand it also lies on the perpendicular bisector of \\(\\overline{BD}\\),\nhence it must be the midpoint of \\(\\overline{HF}\\).\n\nWe now contend quadrilaterals \\(BMPS\\) and \\(DNPT\\) are cyclic.\nObviously \\(\\overline{MP}\\) is the external angle bisector of \\(\\angle BMS\\),\nand \\(PB = PS\\), so \\(P\\) is the arc midpoint of \\((BMS)\\).\nThe proof for \\(DNPT\\) is analogous.\n\nIt remains to show \\(\\angle BEN = \\angle MED\\),\nor equivalently \\(\\angle BEM = \\angle NED\\).\nBy properties of Miquel point we have \\(E \\in (BMPS) \\cap (TPND)\\), so\n\\[ \\measuredangle BEM = \\measuredangle BPM = \\measuredangle PBD = \\measuredangle BDP = \\measuredangle NPD = \\measuredangle NED \\]\nas desired.\n\nSecond proof (2011 G4)..\nBy 2011 G4, the circumcircle of \\(\\triangle EMN\\)\nis tangent to the circumcircle of \\(ABCD\\).\nHence if we extend \\(\\overline{EM}\\) and \\(\\overline{EN}\\) to meet \\((ABCD)\\)\nagain at \\(X\\) and \\(Y\\), we get \\(\\overline{XY} \\parallel \\overline{MN} \\parallel \\overline{BD}\\).\nThus \\(\\measuredangle BEM = \\measuredangle BEX = \\measuredangle YED = \\measuredangle NED\\).\n\nThird proof (involutions, submitted by Daniel Liu)..\nLet \\(G = \\overline{BN} \\cap \\overline{MD}\\) denote the centroid of \\(\\triangle BCD\\),\nand note that it lies on \\(\\overline{EHF}\\).\n\nNow consider the dual of Desargues involution theorem on complete\nquadrilateral \\(BMDNCG\\) at point \\(E\\).\nWe get\n\\[ (EB,ED), \\quad (EM,EN), \\quad (EC,EG) \\]\nform an involutive pairing.\n\nHowever, the bisector of \\(\\angle BED\\), say \\(\\ell\\),\nis also the angle bisector of \\(\\angle CEF\\) (since \\(\\overline{CF} \\parallel \\overline{BD}\\)).\nSo the involution we found must coincide with reflection across \\(\\ell\\).\nThis means \\(\\angle MEN\\) is bisected by \\(\\ell\\) as well, as desired.\n\nAuthorship comments..\nThis diagram actually comes from the inverted\npicture in IMO 2014/3 (which I attended).\nI had heard for many years that one could\nsolve this problem quickly by inversion at \\(H\\) afterwards.\nBut when I actually tried to do it during an OTIS class\nyears later, I ended up with the picture in the TST problem,\nand couldn't see why it was true!\nIn the process of trying to reconstruct this rumored solution,\nI ended up finding most of the properties\nthat ended up in the January TST problem\n(but were overkill for the original IMO problem).\n\nLet us make the equivalence explicit\nby deducing the IMO problem from our work.\n\nLet rays \\(EM\\) and \\(EN\\) meet the circumcircles of \\(\\triangle BHC\\)\nand \\(\\triangle BNC\\) again at \\(X\\) and \\(Y\\), with \\(EM < EX\\) and \\(EN < EY\\).\nAs above we concluded \\(EM/EX = EN/EY\\)\nand so \\(\\overline{MN} \\parallel \\overline{XY} \\implies \\overline{XY} \\perp \\overline{AHC}\\).\n\nNow consider an inversion at \\(H\\) which swaps\n\\(B \\leftrightarrow D\\) and \\(A \\leftrightarrow C\\).\nThe point \\(E\\) goes to \\(E^\\ast\\) diametrically opposite \\(A\\).\nPoints \\(X\\) and \\(Y\\) go to points on \\(X^\\ast \\in \\overline{AD}\\) and \\(Y^\\ast \\in \\overline{AB}\\).\nSince the reflection of \\(E\\) across \\(\\overline{PX}\\) is supposed to lie on \\((BAE)\\),\nit follows that the circumcenter of \\(\\triangle HX^\\ast E^\\ast\\)\nlies on \\(\\overline{AD}\\).\nConsequently \\(X^\\ast\\) plays the role of point ``\\(T\\)'' in the IMO problem.\nThen \\(Y^\\ast\\) plays the role of point ``\\(S\\)'' in the IMO problem.\n\nNow the fact that \\((HX^\\ast Y^\\ast)\\) is tangent to \\(\\overline{BD}\\)\nis equivalent to \\(\\overline{XY} \\perp \\overline{AHC}\\) which we already knew.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

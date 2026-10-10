@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-fall-2021-p22",
+  "title": "2021 Fall AMC 12A Problem 22",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2021,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 43.1,
+    "source": 2270,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Azar and Carl play a game of tic-tac-toe. Azar places an \\(X\\) in one of the boxes in a \\(3\\)-by-\\(3\\) array of boxes, then Carl places an \\(O\\) in one of the remaining boxes. After that, Azar places an \\(X\\) in one of the remaining boxes, and so on until all \\(9\\) boxes are filled or one of the players has \\(3\\) of their symbols in a row — horizontal, vertical, or diagonal — whichever comes first, in which case that player wins the game. Suppose the players make their moves at random, rather than trying to follow a rational strategy, and that Carl wins the game when he places his third \\(O.\\) How many ways can the board look after the game is over?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(36\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(112\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(120\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(148\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(160\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "148"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-fall-2021-p22.live",
+      "kind": "proof-sketch",
+      "text": "Carl wins on his third \\(O,\\) so the board has three \\(O\\)s forming one of the \\(8\\) lines and three \\(X\\)s in the other six cells. The \\(X\\)s must not form a line (else Azar would have won first).\n\nIf the \\(O\\) line is a row or column (\\(6\\) choices), the remaining six cells contain two full lines, so valid \\(X\\) placements number \\(\\binom{6}{3} - 2 = 18.\\) If the \\(O\\) line is a diagonal (\\(2\\) choices), the remaining six cells contain no full line, giving \\(\\binom{6}{3} = 20.\\)\n\nThe total is \\(6\\cdot 18 + 2\\cdot 20 = 108 + 40 = 148.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "The final board has three \\(O\\)s forming a line and three \\(X\\)s that must not themselves form a line",
+        "Split into cases by whether \\(O\\)’s line is a row/column or a diagonal, since that changes how many \\(X\\) placements accidentally make a row"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

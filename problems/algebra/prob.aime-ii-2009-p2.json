@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-ii-2009-p2",
+  "title": "2009 AIME II Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.exponent",
+      "label": "Exponent",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2009,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 40.0,
+    "source": 2150,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Suppose that \\(a,\\) \\(b,\\) and \\(c\\) are positive real numbers such that \\(a^{\\log_3 7} = 27,\\) \\(b^{\\log_7 11} = 49,\\) and \\(c^{\\log_{11} 25} = \\sqrt{11}.\\) Find \\[a^{(\\log_3 7)^2} + b^{(\\log_7 11)^2} + c^{(\\log_{11} 25)^2}.\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "469",
+    "value": "469"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2009-p2.live",
+      "kind": "proof-sketch",
+      "text": "By the power rule for exponents, \\[ \\begin{aligned} a^{(\\log_3 7)^2} &= \\left(a^{\\log_3 7}\\right)^{\\log_3 7} = 27^{\\log_3 7} \\\\ &= \\left(3^{\\log_3 7}\\right)^3 = 7^3 = 343. \\end{aligned} \\]\n\nIn the same way, \\[ \\begin{aligned} b^{(\\log_7 11)^2} &= 49^{\\log_7 11} = \\left(7^{\\log_7 11}\\right)^2 \\\\ &= 11^2 = 121, \\end{aligned} \\] and \\[ \\begin{aligned} c^{(\\log_{11} 25)^2} &= \\left(\\sqrt{11}\\right)^{\\log_{11} 25} \\\\ &= \\left(11^{\\log_{11} 25}\\right)^{\\frac{1}{2}} \\\\ &= 25^{\\frac{1}{2}} = 5. \\end{aligned} \\]\n\nThe sum is \\(343 + 121 + 5 = 469.\\)",
+      "hints": [
+        "Write \\(a^{(\\log_3 7)^2}\\) as \\(\\left(a^{\\log_3 7}\\right)^{\\log_3 7} = 27^{\\log_3 7}\\)",
+        "\\(27^{\\log_3 7} = \\left(3^{\\log_3 7}\\right)^3 = 7^3.\\) Handle the other two terms the same way."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

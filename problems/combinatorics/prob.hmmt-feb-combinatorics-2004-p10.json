@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2004-p10",
+  "title": "2004 HMMT February Combinatorics Problem 10",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.games-and-strategy",
+      "label": "Games and strategy",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "comb.recurrences",
+      "label": "Recurrences",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2004,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 90.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In a game similar to three card monte, the dealer places three cards on the table: the queen of spades and two red cards. The cards are placed in a row, and the queen starts in the center; the card configuration is thus RQR. The dealer proceeds to move. With each move, the dealer randomly switches the center card with one of the two edge cards (so the configuration after the first move is either RRQ or QRR). What is the probability that, after 2004 moves, the center card is the queen?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2004-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(1 / 3+1 /\\left(3 \\cdot 2^{2003}\\right)\\)\nIf the probability that the queen is the center card after move n is \\(p_{n}\\), then the probability that the queen is an edge card is \\(1-p_{n}\\), and the probability that the queen is the center card after move \\(n+1\\) is \\(p_{n+1}=\\left(1-p_{n}\\right) / 2\\). This recursion allows us to calculate the first few values of \\(p_{n}\\). We might then notice in \\(1,0, \\frac{1}{2}, \\frac{1}{4}, \\frac{3}{8}, \\frac{5}{16}, \\frac{11}{32}, \\cdots\\), that the value of each fraction is close to \\(1 / 3\\), and getting closer for larger \\(n\\). In fact subtracting \\(1 / 3\\) from each fraction yields \\(\\frac{2}{3},-\\frac{1}{3}, \\frac{1}{6},-\\frac{1}{12}, \\frac{1}{24},-\\frac{1}{48}, \\cdots\\). This suggests the formula \\(p_{n}=\\frac{1}{3}+\\frac{2}{3}\\left(-\\frac{1}{2}\\right)^{n}\\), and one can then prove that this formula is in fact correct by induction. Thus, \\(p(2004)=\\frac{1}{3}+\\frac{2}{3}\\left(-\\frac{1}{2}\\right)^{2004}=\\frac{1}{3}+\\frac{1}{3 \\cdot 2^{2003}}\\).\nThe recurrence can also be solved without guessing - by generating functions, for example, or by using the fundamental theorem of linear recurrences, which ensures that the solution is of the form \\(p_{n}=a+b(-1 / 2)^{n}\\) for some constants \\(a, b\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

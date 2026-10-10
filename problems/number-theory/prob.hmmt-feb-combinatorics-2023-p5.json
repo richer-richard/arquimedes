@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2023-p5",
+  "title": "2023 HMMT February Combinatorics Problem 5",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.games-and-strategy",
+      "label": "Games and strategy",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2023,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 74.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Elbert and Yaiza each draw 10 cards from a 20 -card deck with cards numbered \\(1,2,3, \\ldots, 20\\). Then, starting with the player with the card numbered 1, the players take turns placing down the lowestnumbered card from their hand that is greater than every card previously placed. When a player cannot place a card, they lose and the game ends.\nGiven that Yaiza lost and 5 cards were placed in total, compute the number of ways the cards could have been initially distributed. (The order of cards in a player's hand does not matter.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "324",
+    "value": "324"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2023-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "Put each card in order and label them based on if Elbert or Yaiza got them. We will get a string of E's and Y's like EEYYYE..., and consider the \"blocks\" of consecutive letters. It is not hard to see that only the first card of each block is played, and the number of cards played is exactly the number of blocks. Thus, it suffices to count the ways to distribute 10 cards to each player to get exactly 5 blocks.\nNote that since Yaiza lost, Elbert must have the last block, and since blocks alternate in player, Elbert also has the first block. Then a card distribution is completely determined by where Yaiza's blocks are relative to Elbert's cards (e.g. one block is between the 4th and 5th card), as well as the number of cards in each block. Since Elbert has 10 cards, there are \\(\\binom{9}{2}\\) ways to pick the locations of the blocks, and 9 ways to distribute 10 cards between two blocks. This gives a total answer of \\(9\\binom{9}{2}=324\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

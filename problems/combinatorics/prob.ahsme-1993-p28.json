@@ -1,0 +1,71 @@
+{
+  "id": "prob.ahsme-1993-p28",
+  "title": "1993 AHSME Problem 28",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1993,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 42.8,
+    "source": 2260,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "How many triangles with positive area are there whose vertices are points in the \\(xy\\)-plane whose coordinates are integers \\((x,y)\\) satisfying \\(1\\le x\\le4\\) and \\(1\\le y\\le4?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(496\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(500\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(512\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(516\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(560\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "516"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1993-p28.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(\\binom{16}{3}=560\\) triples of grid points. The four rows and four columns contribute \\[ 8\\binom43=32 \\] collinear triples. For slope \\(1,\\) the diagonal lengths capable of containing three points are \\(3,\\) \\(4,\\) \\(3,\\) contributing \\(\\binom33+\\binom43+\\binom33=6;\\) slope \\(-1\\) contributes another \\(6.\\) No other slope fits three lattice points inside a \\(4\\)-by-\\(4\\) point array. Thus the number of positive-area triangles is \\(560-32-6-6=516.\\) Thus the correct answer is D.",
+      "hints": [
+        "Start with all \\(\\binom{16}{3}\\) triples and subtract collinear ones",
+        "Three collinear grid points can occur only horizontally, vertically, or on a slope-\\(\\pm1\\) diagonal"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

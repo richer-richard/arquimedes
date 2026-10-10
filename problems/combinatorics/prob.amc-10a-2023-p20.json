@@ -1,0 +1,81 @@
+{
+  "id": "prob.amc-10a-2023-p20",
+  "title": "2023 AMC 10A Problem 20",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2023,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 38.2,
+    "source": 2080,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Each square in a \\(3 \\times 3\\) grid of squares is colored red, white, blue, or green so that every \\(2 \\times 2\\) square contains one square of each color. One such coloring is shown on the right below. How many different colorings are possible?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(48\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(60\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(72\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(96\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "72"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2023-p20.live",
+      "kind": "proof-sketch",
+      "text": "Label the cells row by row as \\(a,\\) \\(b,\\) \\(c;\\) \\(d,\\) \\(e,\\) \\(f;\\) \\(g,\\) \\(h,\\) \\(i.\\) The top-left block \\(a, b, d, e\\) is a permutation of the four colors, so \\(4! = 24\\) ways. The block \\(\\{b, c, e, f\\}\\) is also all four colors, and \\(b, e\\) are fixed, so \\(\\{c, f\\}\\) is the remaining two in some order: \\(2\\) ways. Same story for \\(\\{g, h\\},\\) the two colors apart from \\(d, e,\\) another \\(2\\) ways. That leaves \\(i,\\) forced to whatever color is missing from \\(\\{e, f, h\\},\\) and that only works when \\(f \\ne h.\\) Of the \\(2 \\cdot 2 = 4\\) order combinations, exactly one has \\(f = h,\\) so \\(3\\) survive. The total is \\(24 \\cdot 3 = 72.\\) Therefore, the answer is D.",
+      "hints": [
+        "Label the cells row by row as \\(a,\\) \\(b,\\) \\(c;\\) \\(d,\\) \\(e,\\) \\(f;\\) \\(g,\\) \\(h,\\) \\(i;\\) the top-left four are a permutation of all four colors",
+        "Then \\(\\{c, f\\}\\) and \\(\\{g, h\\}\\) are each the two remaining colors in some order, and \\(i\\) is forced but works only when \\(f \\ne h\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "d93961723b94c7e773d008d2edb3af9c1c8c3d8f13d3cfba04ad4caeb7c50371"
+    ],
+    "solutions": []
+  }
+}

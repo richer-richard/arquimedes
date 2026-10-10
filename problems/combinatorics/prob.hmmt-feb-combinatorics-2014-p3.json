@@ -1,0 +1,48 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2014-p3",
+  "title": "2014 HMMT February Combinatorics Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2014,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 73.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Bob writes a random string of 5 letters, where each letter is either \\(A, B, C\\), or \\(D\\). The letter in each position is independently chosen, and each of the letters \\(A, B, C, D\\) is chosen with equal probability. Given that there are at least two \\(A\\) 's in the string, find the probability that there are at least three \\(A\\) 's in the string.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2014-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\quad \\frac{53}{188}\\) There are \\(\\binom{5}{2} 3^{3}=270\\) strings with \\(2 A\\) 's. There are \\(\\binom{5}{3} 3^{2}=90\\) strings with 3 A's.\nThere are \\(\\binom{5}{4} 3^{1}=15\\) strings with \\(4 A\\) 's. There is \\(\\binom{5}{5} 3^{0}=1\\) string with \\(5 A\\) 's.\nThe desired probability is \\(\\frac{90+15+1}{270+90+15+1}=\\frac{53}{188}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

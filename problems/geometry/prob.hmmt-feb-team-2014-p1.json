@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-feb-team-2014-p1",
+  "title": "2014 HMMT February Team Problem 1",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.constructions-and-loci",
+      "label": "Constructions and loci",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.distance-chasing",
+      "label": "Distance chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.homothety",
+      "label": "Homothety",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2014,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 75.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\omega\\) be a circle, and let \\(A\\) and \\(B\\) be two points in its interior. Prove that there exists a circle passing through \\(A\\) and \\(B\\) that is contained in the interior of \\(\\omega\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2014-p1.hmmt",
+      "kind": "proof-sketch",
+      "text": "N/A WLOG, suppose \\(O A \\geq O B\\). Let \\(\\omega^{\\prime}\\) be the circle of radius \\(O A\\) centered at \\(O\\). We have that \\(B\\) lies inside \\(\\omega^{\\prime}\\). Thus, it is possible to scale \\(\\omega^{\\prime}\\) down about the point \\(A\\) to get a circle \\(\\omega^{\\prime \\prime}\\) passing through both \\(A\\) and \\(B\\). Since \\(\\omega^{\\prime \\prime}\\) lies inside \\(\\omega^{\\prime}\\) and \\(\\omega^{\\prime}\\) lies inside \\(\\omega, \\omega^{\\prime \\prime}\\) lies inside \\(\\omega\\).\nAlternative solution 1: WLOG, suppose \\(O A \\geq O B\\). Since \\(O A \\geq O B\\), the perpendicular bisector of \\(A B\\) intersects segment \\(O A\\) at some point \\(C\\). We claim that the circle \\(\\omega^{\\prime}\\) passing through \\(A\\) and \\(B\\) and centered at \\(C\\) lies entirely in \\(\\omega\\). Let \\(x=O A\\) and \\(y=A C=B C\\). Note that \\(y\\) is the length of the radius of \\(\\omega^{\\prime}\\). By definition, any point \\(P\\) contained in \\(\\omega^{\\prime}\\) is of distance at most \\(y\\) from \\(C\\). Applying the triangle inequality to \\(O C P\\), we see that \\(O P \\leq O C+C P \\leq(x-y)+y=x\\), so \\(P\\) lies in \\(\\omega\\). Since \\(P\\) was arbitrary, it follows that \\(\\omega^{\\prime}\\) lies entirely in \\(\\omega\\).\nAlternative solution 2: Draw line \\(A B\\), and let it intersect \\(\\omega\\) at \\(A^{\\prime}\\) and \\(B^{\\prime}\\), where \\(A\\) and \\(A^{\\prime}\\) are on the same side of \\(B\\). Choose \\(X\\) inside the segment \\(A B\\) so that \\(A^{\\prime} X / A X=B^{\\prime} X / B X\\); such a point exists by the intermediate value theorem. Notice that \\(X\\) is the center of a dilation taking \\(A^{\\prime} B^{\\prime}\\) to \\(A B\\) - the same dilation carries \\(\\omega\\) to \\(\\omega^{\\prime}\\) which goes through \\(A\\) and \\(B\\). Since \\(\\omega^{\\prime}\\) is \\(\\omega\\) dilated with respect to a point in its interior, it's clear that \\(\\omega^{\\prime}\\) must be contained entirely within \\(\\omega\\), and so we are done.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

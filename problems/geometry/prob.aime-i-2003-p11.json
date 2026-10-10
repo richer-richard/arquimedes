@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2003-p11",
+  "title": "2003 AIME I Problem 11",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.geometric-probability",
+      "label": "Geometric probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-inequality",
+      "label": "Triangle inequality",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2003,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 54.4,
+    "source": 2710,
+    "mohs": null
+  },
+  "estimatedMinutes": 12,
+  "statement": "An angle \\(x\\) is chosen at random from the interval \\(0^\\circ \\lt x \\lt 90^\\circ.\\) Let \\(p\\) be the probability that the numbers \\(\\sin^2 x,\\) \\(\\cos^2 x,\\) and \\(\\sin x \\cos x\\) are not the lengths of the sides of a triangle. Given that \\(p = \\frac{d}{n},\\) where \\(d\\) is the number of degrees in \\(\\arctan m\\) and \\(m\\) and \\(n\\) are positive integers with \\(m + n \\lt 1000,\\) find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "92",
+    "value": "92"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2003-p11.live",
+      "kind": "proof-sketch",
+      "text": "Replacing \\(x\\) by \\(90^\\circ - x\\) swaps \\(\\sin x\\) and \\(\\cos x,\\) so the failure probability on \\((45^\\circ, 90^\\circ)\\) matches that on \\((0^\\circ, 45^\\circ),\\) and it suffices to consider \\(0^\\circ \\lt x \\le 45^\\circ.\\) There \\(\\cos^2 x \\ge \\sin x \\cos x \\ge \\sin^2 x,\\) so the three numbers fail to form a triangle exactly when \\[\\cos^2 x \\ge \\sin^2 x + \\sin x \\cos x.\\]\n\nSince \\(\\cos^2 x - \\sin^2 x = \\cos 2x\\) and \\(\\sin x \\cos x = \\frac{1}{2}\\sin 2x,\\) this says \\(\\cos 2x \\ge \\frac{1}{2} \\sin 2x,\\) i.e. \\(\\tan 2x \\le 2.\\) Because tangent increases on this range, that happens exactly for \\(x \\le \\frac{1}{2}\\arctan 2.\\)\n\nTherefore \\[p = \\frac{\\frac{1}{2}\\arctan 2}{45^\\circ} = \\frac{\\arctan 2}{90^\\circ},\\] so \\(m = 2\\) and \\(n = 90,\\) with \\(m + n = 92 \\lt 1000,\\) and the answer is \\(92.\\)",
+      "hints": [
+        "For \\(0^\\circ \\lt x \\le 45^\\circ\\) the largest of the three numbers is \\(\\cos^2 x,\\) so only one triangle inequality can fail",
+        "\\(\\cos^2 x \\ge \\sin^2 x + \\sin x \\cos x\\) rearranges via double angles to \\(\\tan 2x \\le 2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

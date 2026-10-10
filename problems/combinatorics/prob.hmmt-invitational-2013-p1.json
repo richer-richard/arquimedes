@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-invitational-2013-p1",
+  "title": "2013 HMMT Invitational Problem 1",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2013,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\mathcal{S}\\) be a set of size \\(n\\), and \\(k\\) be a positive integer. For each \\(1 \\leq i \\leq k n\\), there is a subset \\(S_{i} \\subset \\mathcal{S}\\) such that \\(\\left|S_{i}\\right|=2\\). Furthermore, for each \\(e \\in \\mathcal{S}\\), there are exactly \\(2 k\\) values of \\(i\\) such that \\(e \\in S_{i}\\). Show that it is possible to choose one element from \\(S_{i}\\) for each \\(1 \\leq i \\leq k n\\) such that every element of \\(\\mathcal{S}\\) is chosen exactly \\(k\\) times.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2013-p1.hmmt",
+      "kind": "proof-sketch",
+      "text": "N/A Consider the undirected graph \\(G=(\\mathcal{S}, E)\\) where the elements of \\(\\mathcal{S}\\) are the vertices, and for each \\(1 \\leq i \\leq k n\\), there is an edge between the two elements of \\(S_{i}\\). (Note that there might be multiedges if two subsets are the same, but there are no self-loops.) Consider any connected component \\(C\\) of \\(G\\), which must be a \\(2 k\\)-regular graph, and because \\(2 k\\) is even, \\(C\\) has an Eulerian circuit. Pick an orientation of the circuit, and hence a direction for each edge in \\(C\\). Then, for each \\(i\\) such that the edge corresponding to \\(S_{i}\\) is in \\(C\\), pick the element that is pointed to by that edge. Since the circuit goes into each vertex of \\(C k\\) times, each element in \\(C\\) is picked exactly \\(k\\) times as desired. Repeating for each connected component finishes the problem.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

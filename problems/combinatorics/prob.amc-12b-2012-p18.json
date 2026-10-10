@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12b-2012-p18",
+  "title": "2012 AMC 12B Problem 18",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.bijection",
+      "label": "Bijection",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2012,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 33.4,
+    "source": 1990,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\((a_1, a_2, \\ldots, a_{10})\\) be a list of the first \\(10\\) positive integers such that for each \\(2 \\le i \\le 10\\) either \\(a_i + 1\\) or \\(a_i - 1\\) or both appear somewhere before \\(a_i\\) in the list. How many such lists are there?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(120\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(512\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1024\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(181{,}440\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(362{,}880\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "512"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2012-p18.live",
+      "kind": "proof-sketch",
+      "text": "Once \\(a_1=k\\) is fixed, the numbers \\(k,k+1,\\ldots,10\\) must appear left to right in increasing order, and the numbers \\(1,\\ldots,k-1\\) must appear from right to left in increasing order (so each new small number has its successor already placed).\n\nFor each \\(k,\\) the list is determined by choosing which of the \\(9\\) positions after the first hold the numbers below \\(k,\\) giving \\(\\binom{9}{k-1}\\) lists.\n\nSumming, \\[ \\begin{aligned} \\sum_{k=1}^{10}\\binom{9}{k-1} &= \\sum_{j=0}^{9}\\binom{9}{j} \\\\ &= 2^9=512. \\end{aligned} \\]\n\nThus, the correct answer is B.",
+      "hints": [
+        "The numbers greater than or equal to \\(a_1\\) must appear in increasing order, and those less than \\(a_1\\) in decreasing order",
+        "Choosing which positions hold the small numbers determines the list, giving \\(\\sum_k \\binom{9}{k}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

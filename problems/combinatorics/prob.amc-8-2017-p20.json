@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-2017-p20",
+  "title": "2017 AMC 8 Problem 20",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2017,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 17.3,
+    "source": 1550,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "An integer between \\(1000\\) and \\(9999,\\) inclusive, is chosen at random. What is the probability that it is an odd integer whose digits are all distinct?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( \\dfrac{14}{75} \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( \\dfrac{56}{225} \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( \\dfrac{107}{400} \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( \\dfrac{7}{25} \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( \\dfrac{9}{25} \\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "56/225"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2017-p20.live",
+      "kind": "proof-sketch",
+      "text": "Since the number is odd, the last digit is odd, giving \\(5\\) possibilities. The thousands digit cannot be zero or the number we already got, so that gives \\(8\\) possibilities. Similarly, the hundreds digit has \\(8\\) possibilities, and the tens digit has \\(7\\) possibilities. This gives a total of \\(5 \\cdot 8 \\cdot 8 \\cdot 7 = 2{,}240,\\) making the probability \\(\\dfrac{2{,}240}{9{,}000} = \\dfrac{56}{225}.\\)\n\nThus, B is the correct answer.",
+      "hints": [
+        "Count favorable four-digit numbers directly, then divide by the number of four-digit integers.",
+        "Choose the odd units digit first, then choose the nonzero thousands digit, then the remaining two digits."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

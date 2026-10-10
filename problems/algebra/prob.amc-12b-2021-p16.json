@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12b-2021-p16",
+  "title": "2021 AMC 12B Problem 16",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2021,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 29.7,
+    "source": 1720,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(g(x)\\) be a polynomial with leading coefficient \\(1,\\) whose three roots are the reciprocals of the three roots of \\(f(x)=x^3+ax^2+bx+c,\\) where \\(1\\lt a\\lt b\\lt c.\\) What is \\(g(1)\\) in terms of \\(a,\\) \\(b,\\) and \\(c?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1+a+b+c}{c}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1+a+b+c\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1+a+b+c}{c^2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{a+b+c}{c^2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{1+a+b+c}{a+b+c}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2021-p16.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(f\\) have roots \\(r,s,t.\\) Since \\(g\\) is monic with roots \\(\\tfrac1r,\\tfrac1s,\\tfrac1t,\\) \\[ \\begin{aligned} g(1) &= \\left(1-\\tfrac1r\\right)\\left(1-\\tfrac1s\\right) \\\\ &\\quad {}\\cdot \\left(1-\\tfrac1t\\right) \\\\ &= \\dfrac{(r-1)(s-1)(t-1)}{rst}. \\end{aligned} \\]\n\nNow \\(f(1)=(1-r)(1-s)(1-t)\\) \\(=1+a+b+c,\\) so \\((r-1)(s-1)(t-1)\\) \\(=-(1+a+b+c).\\) Also \\(rst=-c.\\)\n\nTherefore \\(g(1)\\) \\(=\\dfrac{-(1+a+b+c)}{-c}\\) \\(=\\dfrac{1+a+b+c}{c}.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "If \\(f\\) has roots \\(r,s,t,\\) then \\(g(1)=\\left(1-\\tfrac1r\\right)\\left(1-\\tfrac1s\\right)\\left(1-\\tfrac1t\\right)\\)",
+        "This equals \\(\\dfrac{(r-1)(s-1)(t-1)}{rst};\\) relate the numerator to \\(f(1)\\) and the denominator to \\(c\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

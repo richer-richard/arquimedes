@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-team-2-2006-p14",
+  "title": "2006 HMMT February Team Round 2 Problem 14",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2006,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 81.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find the prime factorization of\n\n\\[2006^{2} \\cdot 2262-669^{2} \\cdot 3599+1593^{2} \\cdot 1337\\]\n\n(No proof is necessary.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2-2006-p14.hmmt",
+      "kind": "proof-sketch",
+      "text": "Upon observing that \\(2262=669+1593,3599=1593+2006\\), and \\(1337=\\) \\(2006-669\\), we are inspired to write \\(a=2006, b=669, c=-1593\\). The expression in question then rewrites as \\(a^{2}(b-c)+b^{2}(c-a)+c^{2}(a-b)\\). But, by experimenting in the general case (e.g. setting \\(a=b\\) ), we find that this polynomial is zero when two of \\(a, b, c\\) are equal. Immediately we see that it factors as \\((b-a)(c-b)(a-c)\\), so the original expression is a way of writing \\((-1337) \\cdot(-2262) \\cdot(3599)\\). Now, \\(1337=7 \\cdot 191\\), \\(2262=2 \\cdot 3 \\cdot 13 \\cdot 29\\), and \\(3599=60^{2}-1^{2}=59 \\cdot 61\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

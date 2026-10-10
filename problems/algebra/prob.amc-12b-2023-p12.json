@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12b-2023-p12",
+  "title": "2023 AMC 12B Problem 12",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.custom-operation",
+      "label": "Custom operation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2023,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 26.7,
+    "source": 1630,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "For complex numbers \\(u=a+bi\\) and \\(v=c+di,\\) define the binary operation \\(\\otimes\\) by\n\n\\[ u\\otimes v=ac+bdi. \\]\n\nSuppose \\(z\\) is a complex number such that \\(z\\otimes z=z^2+40.\\) What is \\(|z|?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\sqrt{5}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\sqrt{10}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5\\sqrt{2}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2023-p12.live",
+      "kind": "proof-sketch",
+      "text": "With \\(z=a+bi,\\) we have \\(z\\otimes z=a^2+b^2 i\\) and \\(z^2+40=(a^2-b^2+40)+2abi.\\) The real parts give \\(a^2=a^2-b^2+40,\\) so \\(b^2=40.\\) The imaginary parts give \\(b^2=2ab,\\) so \\(b=2a\\) and \\(a^2=\\tfrac{b^2}{4}=10.\\) Then \\(|z|^2=a^2+b^2=50,\\) so \\(|z|=5\\sqrt{2}.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "Write \\(z=a+bi;\\) then \\(z\\otimes z=a^2+b^2 i\\) while \\(z^2=a^2-b^2+2abi\\)",
+        "Match real and imaginary parts of \\(z\\otimes z=z^2+40,\\) then compute \\(a^2+b^2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

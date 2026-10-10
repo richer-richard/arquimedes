@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-ii-2012-p12",
+  "title": "2012 AIME II Problem 12",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.chinese-remainder-theorem",
+      "label": "Chinese Remainder Theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2012,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 60.1,
+    "source": 2920,
+    "mohs": null
+  },
+  "estimatedMinutes": 12,
+  "statement": "For a positive integer \\(p,\\) define the positive integer \\(n\\) to be \\(p\\)-safe if \\(n\\) differs in absolute value by more than \\(2\\) from all multiples of \\(p.\\) For example, the set of \\(10\\)-safe numbers is \\(\\{3,\\) \\(4,\\) \\(5,\\) \\(6,\\) \\(7,\\) \\(13,\\) \\(14,\\) \\(15,\\) \\(16,\\) \\(17,\\) \\(23,\\) \\(\\ldots\\}.\\) Find the number of positive integers less than or equal to \\(10{,}000\\) which are simultaneously \\(7\\)-safe, \\(11\\)-safe, and \\(13\\)-safe.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "958",
+    "value": "958"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2012-p12.live",
+      "kind": "proof-sketch",
+      "text": "Being \\(p\\)-safe depends only on \\(n \\bmod p:\\) it requires \\(3 \\le n \\bmod p \\le p - 3.\\) That allows \\(2\\) residues modulo \\(7,\\) \\(6\\) residues modulo \\(11,\\) and \\(8\\) residues modulo \\(13.\\) Since \\(7 \\cdot 11 \\cdot 13 = 1001,\\) the Chinese remainder theorem gives exactly \\(2 \\cdot 6 \\cdot 8 = 96\\) safe residues modulo \\(1001,\\) so each block of \\(1001\\) consecutive integers contains \\(96\\) safe numbers.\n\nThe integers \\(1\\) through \\(10010\\) form ten such blocks, containing \\(960\\) safe numbers. It remains to discard the safe numbers among \\(10001, \\ldots, 10010.\\) Their residues modulo \\(7\\) run \\(5, 6, 0, 1, 2, 3, 4, 5, 6, 0,\\) so only \\(10006\\) and \\(10007\\) are \\(7\\)-safe; both are also \\(11\\)-safe (residues \\(7\\) and \\(8\\)) and \\(13\\)-safe (residues \\(9\\) and \\(10\\)).\n\nTherefore the count is \\(960 - 2 = 958.\\)",
+      "hints": [
+        "\\(n\\) is \\(p\\)-safe exactly when \\(3 \\le n \\bmod p \\le p - 3\\)",
+        "Since \\(7 \\cdot 11 \\cdot 13 = 1001,\\) count the safe residues in each block of \\(1001\\) consecutive integers, then adjust near the cutoff \\(10{,}000\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

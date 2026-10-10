@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2025-p4",
+  "title": "2025 HMMT February Algebra and Number Theory Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.floors-and-ceilings",
+      "label": "Floors and ceilings",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.number-of-divisors",
+      "label": "Τ (number of divisors)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2025,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\lfloor z\\rfloor\\) denote the greatest integer less than or equal to \\(z\\) . Compute\n\n\\[\\sum_{j = -1000}^{1000} \\left\\lfloor \\frac{2025}{j + 0.5} \\right\\rfloor .\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "- 984",
+    "value": "- 984"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2025-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "The key idea is to pair up the terms \\(\\left\\lfloor \\frac{2025}{x} \\right\\rfloor\\) and \\(\\left\\lfloor \\frac{2025}{x} \\right\\rfloor\\) . There are 1000 such pairs and one lone term, \\(\\left\\lfloor \\frac{2025}{1000.5} \\right\\rfloor = 2\\) . Thus,\n\n\\[\\sum_{j = -1000}^{1000} \\left\\lfloor \\frac{2025}{j + 0.5} \\right\\rfloor = 2 + \\sum_{x \\in \\{0.5,1.5, \\ldots , 999.5\\}} \\left(\\left\\lfloor \\frac{2025}{x} \\right\\rfloor + \\left\\lfloor \\frac{2025}{-x} \\right\\rfloor \\right).\\]\n\nWe note that\n\nTherefore,\n\nAs \\(x\\) ranges in the set \\(\\{0.5, 1.5, 2.5, \\ldots , 999.5\\}\\) , \\(2 x\\) ranges in the set \\(\\{1, 3, 5, \\ldots , 1999\\}\\) . This set includes all 15 odd divisors of 4050 except for 2025. Thus, there are 14 values of \\(x\\) for which \\(\\left\\lfloor \\frac{2025}{x} \\right\\rfloor + \\left\\lfloor \\frac{2025}{- x} \\right\\rfloor\\) evaluates to 0, and the remaining \\(1000 - 14 = 986\\) values of \\(x\\) make it evaluate to \\(- 1\\) . Therefore,\n\n\\[\\sum_{j = -1000}^{1000} \\left\\lfloor \\frac{2025}{j + 0.5} \\right\\rfloor = 2 + \\sum_{x \\in \\{0.5,1.5, \\ldots , 999.5\\}} \\left(\\left\\lfloor \\frac{2025}{x} \\right\\rfloor + \\left\\lfloor \\frac{2025}{-x} \\right\\rfloor \\right) = 2 + 986 \\cdot (-1) = \\boxed{- 984}.\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

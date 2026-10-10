@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2022-p17",
+  "title": "2022 AMC 10B Problem 17",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2022,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 31.6,
+    "source": 1820,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "One of the following numbers is not divisible by any prime number less than \\(10.\\) Which is it?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 2^{606}-1 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 2^{606}+1 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 2^{607}-1 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 2^{607}+1 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 2^{607}+3^{607} \\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2022-p17.live",
+      "kind": "proof-sketch",
+      "text": "Use the fact that \\(a^n-b^n\\) is divisible by \\(a-b.\\)\n\nChoice A is \\(2^{606}-1=4^{303}-1,\\) which is divisible by \\(4-1=3.\\)\n\nChoice B is \\(2^{606}+1=4^{303}-(-1)^{303},\\) which is divisible by \\(4-(-1)=5.\\)\n\nChoice D is \\(2^{607}+1.\\) Since \\(2^{606}-1\\) is divisible by \\(3,\\) multiplying by \\(2\\) gives \\(2^{607}-2\\) divisible by \\(3,\\) so \\(2^{607}+1\\) is divisible by \\(3.\\)\n\nChoice E is \\(3^{607}+2^{607}=3^{607}-(-2)^{607},\\) which is divisible by \\(3-(-2)=5.\\)\n\nFor choice C, \\(2^{607}-1\\) is odd. Also \\(2^{607}\\equiv2\\pmod3,\\) \\(2^{607}\\equiv3\\pmod5,\\) and \\(2^{607}\\equiv2\\pmod7,\\) so \\(2^{607}-1\\) is not divisible by \\(3,5,\\) or \\(7.\\)\n\nThus, our answer is C .",
+      "hints": [
+        "For the remaining choice, test divisibility by \\(2,\\) \\(3,\\) \\(5,\\) and \\(7\\)",
+        "Eliminate four choices by finding a small prime divisor"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

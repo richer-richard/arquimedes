@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-ii-2026-p4",
+  "title": "2026 AIME2 4",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2026,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 43.9,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "For each positive integer \\(n\\) let \\(f(n)\\) be the value of the base-ten numeral \\(n\\) viewed in base \\(b,\\) where \\(b\\) is the least integer greater than the greatest digit in \\(n.\\) For example, if \\(n = 72,\\) then \\(b = 8,\\) and \\(72\\) as a numeral in base \\(8\\) equals \\(7 \\cdot 8 + 2 = 58;\\) therefore \\(f(72) = 58.\\) Find the number of positive integers \\(n\\) less than \\(1000\\) such that \\(f(n) = n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "279",
+    "value": "279"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2026-p4.live",
+      "kind": "proof-sketch",
+      "text": "If \\(n\\) has a single digit \\(d,\\) then the numeral \\(d\\) has value \\(d\\) in every base, so \\(f(n) = n:\\) all \\(9\\) one-digit numbers work. If \\(n\\) has digits \\(d_{k-1} \\ldots d_1 d_0\\) with \\(k \\ge 2,\\) then \\(b \\le 10\\) always, and if \\(b \\lt 10\\) then \\(f(n) = \\sum d_i b^i \\lt \\sum d_i 10^i = n\\) because the leading digit satisfies \\(d_{k-1} b^{k-1} \\lt d_{k-1} 10^{k-1}.\\) So a multi-digit \\(n\\) satisfies \\(f(n) = n\\) exactly when \\(b = 10,\\) that is, when some digit of \\(n\\) equals \\(9.\\)\n\nTwo-digit numbers containing a \\(9:\\) the numbers \\(90\\) through \\(99\\) plus \\(19, 29, \\ldots, 89,\\) for \\(10 + 8 = 18.\\) Three-digit numbers containing a \\(9:\\) \\(900 - 8 \\cdot 9 \\cdot 9 = 252,\\) subtracting the numbers with no \\(9\\) (leading digit \\(1\\)–\\(8,\\) others \\(0\\)–\\(8\\)).\n\nThe total is \\(9 + 18 + 252 = 279.\\)",
+      "hints": [
+        "One-digit numbers read the same in every base. For longer numerals compare place values: if \\(b \\lt 10,\\) each digit is worth less than in base ten.",
+        "So the multi-digit solutions are exactly the numbers containing a digit \\(9;\\) count those with complementary counting."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

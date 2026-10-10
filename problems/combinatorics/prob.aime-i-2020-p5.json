@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2020-p5",
+  "title": "2020 AIME I Problem 5",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.permutations",
+      "label": "Permutations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2020,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 52.2,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "Six cards numbered \\(1\\) through \\(6\\) are to be lined up in a row. Find the number of arrangements of these six cards where one of the cards can be removed leaving the remaining five cards in either ascending or descending order.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "52",
+    "value": "52"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2020-p5.live",
+      "kind": "proof-sketch",
+      "text": "First count arrangements from which some card’s removal leaves the rest ascending. Any such arrangement arises by choosing the card to remove (\\(6\\) ways) and inserting it into one of the \\(6\\) gaps of the other five cards written in increasing order, for \\(36\\) constructions. But the fully sorted row \\(123456\\) arises from all \\(6\\) card choices, and each of the \\(5\\) arrangements obtained by swapping two adjacent cards of the sorted row arises twice (move either card of the pair past the other). Every other construction gives a distinct arrangement.\n\nSo the ascending count is \\(1 + 5 + (36 - 6 - 10) = 26,\\) and by symmetry there are \\(26\\) descending arrangements. No arrangement is counted in both totals: that would require an ascending and a descending subsequence of five cards, needing at least \\(5 + 5 - 1 = 9\\) cards.\n\nThe total is \\(26 + 26 = 52.\\)",
+      "hints": [
+        "Count arrangements fixable to ascending order: insert one card into the other five written in increasing order. Beware of building the same arrangement twice.",
+        "The sorted row arises from all \\(6\\) insertions, and each adjacent swap arises twice. No arrangement works for both ascending and descending."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

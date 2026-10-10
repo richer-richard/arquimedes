@@ -1,0 +1,83 @@
+{
+  "id": "prob.hmmt-feb-team-2019-p7",
+  "title": "2019 HMMT February Team Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity-and-scaling",
+      "label": "Similarity and scaling",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2019,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 83.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A convex polygon on the plane is called wide if the projection of the polygon onto any line in the same plane is a segment with length at least 1 . Prove that a circle of radius \\(\\frac{1}{3}\\) can be placed completely inside any wide polygon.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2019-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "## Solution 1.\n\nLemma. for any polygon including its boundary, there exists a largest circle contained inside it.\nProof. Its easy to see that for any circle inside the polygon, it can be increased in size until it is tangent to at least three sides of the polygon. Then for any three sides of the polygon, there is only one circle tangent to all three, so there are only finitely many possibilities. Therefore there exists a largest one.\nAlternatively, one can show that the space of valid \\((x, y, r)\\) such that the circle with center \\((x, y)\\) and radius \\(r\\) is compact, e.g. by showing the complement is open and that the complement is open. Then the map \\((x, y, r) \\rightarrow r\\) is continuous and therefore has a maximum.\nNow, take the largest circle. It clearly must be tangent to three sides. If the circle lies inside the triangle made by the three lines, we can expand the polygon to that triangle and solve it for the triangle instead. Otherwise, we have the following diagram:\n\nHere the circle is an excircle of the triangle \\(A B C\\) made by the lines \\(A B, A D\\), and \\(B E\\). (Note that \\(A D\\) and \\(A B\\) dont have to be consecutive sides of the polygon, but the ones in between dont really matter.)\n\nThen since the circle is an excircle, we can consider a homothety at \\(C\\) with power \\(1+\\epsilon\\), which sends the circle to a slightly larger circle which does not touch line \\(A B\\). If this homothety causes the circle to leave the polygon for small enough \\(\\epsilon\\), it must be because the circle was initially tangent to another line \\(\\ell\\), for which it would be an incircle of the triangle made by \\(\\ell\\) and lines \\(A D, B E\\), bringing us back to the first case.\nThus we can reduce to a case where we have a triangle with each height at least 1 , and we want to show the inradius is at least \\(1 / 3\\). Let \\(K\\) be the area of the triangle, so the heights \\(\\frac{2 K}{a}, \\frac{2 K}{b}, \\frac{2 K}{c}\\) are all at least 1. Then the inradius \\(r\\) satisfies\n\n\\[r=\\frac{K}{s}=\\frac{2 K}{a+b+c} \\geq \\frac{2 K}{2 K+2 K+2 K}=\\frac{1}{3}\\]\n\nas desired.\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

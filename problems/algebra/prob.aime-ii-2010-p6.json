@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2010-p6",
+  "title": "2010 AIME II Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2010,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 49.0,
+    "source": 2500,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Find the smallest positive integer \\(n\\) with the property that the polynomial \\(x^4 - nx + 63\\) can be written as a product of two nonconstant polynomials with integer coefficients.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "8",
+    "value": "8"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2010-p6.live",
+      "kind": "proof-sketch",
+      "text": "If there is a linear factor, then some integer \\(b\\) is a root, so \\(b^4 - nb + 63 = 0\\) and \\(n = b^3 + \\frac{63}{b},\\) forcing \\(63\\) to be divisible by \\(b\\) and \\(b \\gt 0.\\) The smallest value is \\(48,\\) at \\(b = 3.\\)\n\nOtherwise the polynomial splits into two quadratics, which we may take monic; since the \\(x^3\\) coefficient vanishes, they have the form \\[ \\begin{aligned} &(x^2 + px + q)(x^2 - px + r) \\\\ &= x^4 + (q + r - p^2)x^2 \\\\ &\\quad {}+ p(r - q)x + qr. \\end{aligned} \\] Matching coefficients gives \\(q + r = p^2,\\) \\(qr = 63,\\) and \\(n = p(q - r).\\) The factor pairs of \\(63\\) with square sum are \\(\\{7, 9\\}\\) (sum \\(16,\\) so \\(p = 4\\)) and \\(\\{1, 63\\}\\) (sum \\(64,\\) so \\(p = 8\\)), giving \\(n = 4 \\cdot 2 = 8\\) or \\(n = 8 \\cdot 62 = 496.\\)\n\nThe smallest positive value overall is \\(n = 8;\\) indeed \\((x^2 + 4x + 9)(x^2 - 4x + 7)\\) \\(= x^4 - 8x + 63.\\)",
+      "hints": [
+        "Try splitting into two quadratics \\((x^2 + px + q)(x^2 - px + r);\\) matching coefficients gives \\(q + r = p^2\\) and \\(qr = 63\\)",
+        "Look for factor pairs of \\(63\\) whose sum is a perfect square, and also compare with the case of a linear factor, whose root must divide \\(63\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

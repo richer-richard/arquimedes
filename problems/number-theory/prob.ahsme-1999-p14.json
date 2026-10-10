@@ -1,0 +1,87 @@
+{
+  "id": "prob.ahsme-1999-p14",
+  "title": "1999 AHSME Problem 14",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.double-counting",
+      "label": "Double counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1999,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 26.2,
+    "source": 1610,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Four girls — Mary, Alina, Tina, and Hanna — sang songs in a concert as trios, with one girl sitting out each time. Hanna sang \\(7\\) songs, which was more than any other girl, and Mary sang \\(4\\) songs, which was fewer than any other girl. How many songs did these trios sing?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(11\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "7"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1999-p14.live",
+      "kind": "proof-sketch",
+      "text": "If \\(N\\) songs are sung, the total number of girl-appearances is \\(3N.\\) Alina and Tina each sang strictly between \\(4\\) and \\(7,\\) so each sang \\(5\\) or \\(6.\\)\n\nThen \\(3N = 7 + 4 + (\\text{Alina}) + (\\text{Tina}),\\) which is \\(21, 22,\\) or \\(23.\\) Only \\(21\\) is a multiple of \\(3,\\) so \\(N = 7.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "Each song has \\(3\\) singers, so the total number of girl-appearances is \\(3N\\)",
+        "Alina and Tina each sang \\(5\\) or \\(6,\\) and the total must be a multiple of \\(3\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

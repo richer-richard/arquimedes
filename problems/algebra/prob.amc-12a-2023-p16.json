@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2023-p16",
+  "title": "2023 AMC 12A Problem 16",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2023,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 32.1,
+    "source": 1840,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Consider the set of complex numbers \\(z\\) satisfying \\(|1+z+z^2|=4.\\) The maximum value of the imaginary part of \\(z\\) can be written in the form \\(\\dfrac{\\sqrt{m}}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. What is \\(m+n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(22\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(23\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(24\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "21"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2023-p16.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(z=x+yi.\\) Then \\(1+z+z^2\\) \\(=(1+x+x^2-y^2)\\) \\(+y(1+2x)i,\\) and the constraint is \\[ \\begin{gathered} (1+x+x^2-y^2)^2\\\\ {}+y^2(1+2x)^2=16. \\end{gathered} \\]\n\nAt a point where \\(y\\) is maximal on this closed, bounded curve, implicit differentiation (or Lagrange multipliers) gives \\((1+2x)\\bigl(P+2y^2\\bigr)=0,\\) where \\(P=1+x+x^2-y^2.\\) But \\(P+2y^2=x^2+x+1+y^2\\gt 0,\\) so \\(x=-\\tfrac12.\\)\n\nThen \\(1+2x=0,\\) so the constraint reduces to \\(\\left(\\tfrac34-y^2\\right)^2=16.\\) Taking \\(\\tfrac34-y^2=-4\\) gives \\(y^2=\\tfrac{19}{4},\\) so the maximum is \\(y=\\dfrac{\\sqrt{19}}{2}.\\)\n\nHere \\(m=19\\) and \\(n=2,\\) so \\(m+n=21.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Write \\(z=x+yi\\) and expand \\(|1+z+z^2|^2=16\\)",
+        "Maximizing \\(y\\) forces the symmetric case \\(x=-\\tfrac12;\\) solve the resulting equation for \\(y\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1962-p39",
+  "title": "1962 AHSME Problem 39",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area",
+      "label": "Area",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.median-geometry",
+      "label": "Median (geometry)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1962,
+    "number": 39
+  },
+  "difficulty": {
+    "course": 38.5,
+    "source": 2090,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The medians \\(AN\\) and \\(BP\\) of a triangle with unequal sides are, respectively, \\(3\\) inches and \\(6\\) inches long. Its area is \\(3\\sqrt{15}\\) square inches. The length of the third median, in inches, is:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3\\sqrt3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\sqrt6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6\\sqrt3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(6\\sqrt6\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1962-p39.live",
+      "kind": "proof-sketch",
+      "text": "The triangle whose sides are the three medians has area \\[ \\frac34\\left(3\\sqrt{15}\\right)=\\frac{9\\sqrt{15}}4. \\] If \\(\\theta\\) is the included angle between its sides \\(3\\) and \\(6,\\) then \\[ 9\\sin\\theta=\\frac{9\\sqrt{15}}4, \\] so \\(\\cos\\theta=\\pm\\frac{1}{4}.\\) By the law of cosines, the third median \\(m\\) satisfies \\[ m^2=3^2+6^2-2(3)(6)\\cos\\theta, \\] giving \\(m^2=36\\) or \\(54.\\) The value \\(m=6\\) would make two medians, and hence two sides, equal. Because the triangle has unequal sides, \\(m=\\sqrt{54}=3\\sqrt6.\\)\n\nTherefore, the correct answer is C.",
+      "hints": [
+        "The three medians form the side lengths of a triangle whose area is three-fourths the original area",
+        "Use the two known median lengths and that area to find the two possible included angles, then reject the case that makes two medians equal"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

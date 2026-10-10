@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-guts-2025-p26",
+  "title": "2025 HMMT February Guts Problem 26",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.invariants-and-monovariants",
+      "label": "Invariants and monovariants",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2025,
+    "number": 26
+  },
+  "difficulty": {
+    "course": 84.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Isabella has a bag with 20 blue diamonds and 25 purple diamonds. She repeats the following process 44 times: she removes a diamond from the bag uniformly at random, then puts one blue diamond and one purple diamond into the bag. Compute the expected number of blue diamonds in the bag after all 44 repetitions.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\boxed{\\frac{173}{4}}",
+    "value": "\\boxed{\\frac{173}{4}}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2025-p26.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(a = 20\\) and \\(b = 25\\) be the initial numbers of blue and purple diamonds, respectively, and let \\(c = 44\\) be the number of times Isabella performs the operation. Suppose that at some point, the bag contains \\(x\\) blue diamonds and \\(y\\) purple diamonds, for \\(x + y = z\\) total diamonds. After one step, the bag will have \\(z + 1\\) diamonds. The expected change in the number of blue diamonds in this step is \\((- x / z) + 1 = y / z\\) , and likewise this quantity for purple diamonds is \\(x / z\\) . Thus, the expected change in the difference between the number of blue and purple diamonds is \\((y - x) / z\\) . Since this difference was initially \\(x - y\\) , the expected value of this difference is multiplied by \\((z - 1) / z\\) at each step (regardless of \\(x - y\\) ). Since \\(z\\) starts at \\(a + b\\) and ends at \\(a + b + c\\) , the expected difference after \\(c\\) operations is\n\n\\[(a - b)\\cdot \\prod_{z = a + b}^{a + b + c - 1}\\frac{z - 1}{z} = \\frac{(a + b - 1)(a - b)}{(a + b + c - 1)},\\]\n\nand as the total number of diamonds is \\(a + b + c\\) , the expected number of blue diamonds at the end is\n\n\\[\\frac{a + b + c}{2} +\\frac{(a + b - 1)(a - b)}{2(a + b + c - 1)}.\\]\n\nPlugging in \\(a = 20\\) , \\(b = 25\\) , and \\(c = 44\\) gives us the answer, \\(\\boxed{\\frac{173}{4}}\\) .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

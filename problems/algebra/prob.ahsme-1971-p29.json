@@ -1,0 +1,94 @@
+{
+  "id": "prob.ahsme-1971-p29",
+  "title": "1971 AHSME Problem 29",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.exponent",
+      "label": "Exponent",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequality",
+      "label": "Inequality",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.triangular-number",
+      "label": "Triangular number",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1971,
+    "number": 29
+  },
+  "difficulty": {
+    "course": 30.0,
+    "source": 1760,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Given the progression \\[ \\begin{gathered} 10^{\\frac{1}{11}},10^{\\frac{2}{11}},10^{\\frac{3}{11}},\\\\ 10^{\\frac{4}{11}},\\ldots,10^{\\frac{n}{11}}, \\end{gathered} \\] the least positive integer \\(n\\) such that the product of the first \\(n\\) terms exceeds \\(100{,}000\\) is:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(11\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "11"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1971-p29.live",
+      "kind": "proof-sketch",
+      "text": "The product is \\[ 10^{\\frac{1+2+\\cdots+n}{11}}=10^{\\frac{n(n+1)}{22}}. \\] It exceeds \\(100{,}000=10^5\\) exactly when \\(n(n+1)\\gt110.\\) For \\(n=10\\) there is equality, while \\(n=11\\) works.\n\nTherefore, the correct answer is E.",
+      "hints": [
+        "Add the exponents when multiplying the terms",
+        "Require \\(\\frac{n(n+1)}{22}\\gt5\\), noting that equality is not enough"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-ii-2017-p11",
+  "title": "2017 AIME II Problem 11",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2017,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 62.0,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Five towns are connected by a system of roads. There is exactly one road connecting each pair of towns. Find the number of ways there are to make all the roads one-way in such a way that it is still possible to get from any town to any other town using the roads (possibly passing through other towns on the way).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "544",
+    "value": "544"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2017-p11.live",
+      "kind": "proof-sketch",
+      "text": "The assignment works if and only if no town has all four roads inbound or all four outbound. One direction is clear: an all-inbound town cannot be left, and an all-outbound town cannot be reached. Conversely, suppose every town has an inbound and an outbound road, yet town \\(B\\) cannot be reached from town \\(A.\\) Let \\(S\\) be the set of towns reachable from \\(A\\) (including \\(A\\)) and \\(T\\) the set of towns from which \\(B\\) is reachable (including \\(B\\)). These sets are disjoint, every outbound road of a town in \\(S\\) stays inside \\(S,\\) and every inbound road of a town in \\(T\\) comes from inside \\(T.\\) Since \\(A\\) has an outbound road, \\(|S| \\ge 2,\\) and similarly \\(|T| \\ge 2;\\) as \\(|S| + |T| \\le 5,\\) one of the two sets has exactly two towns. If \\(S = \\{A, X\\},\\) the outbound roads of \\(A\\) and of \\(X\\) must both stay inside \\(S,\\) forcing the single road between them to point both ways — a contradiction (and \\(|T| = 2\\) is symmetric).\n\nNow count assignments with a bad town among the \\(2^{10} = 1024\\) total. Choosing a town to be all-outbound (\\(5\\) ways) and orienting the remaining \\(\\binom{4}{2} = 6\\) roads freely gives \\(5 \\cdot 2^6 = 320\\) assignments, and there can be at most one all-outbound town. Similarly \\(320\\) assignments have an all-inbound town. Assignments with both are counted twice: choose the all-outbound town (\\(5\\)), the all-inbound town (\\(4\\)), and the other \\(3\\) roads freely, \\(5 \\cdot 4 \\cdot 2^3 = 160.\\) So \\(320 + 320 - 160 = 480\\) assignments fail.\n\nThe number that work is \\(1024 - 480 = 544.\\)",
+      "hints": [
+        "The one-way roads work if and only if no town has all four of its roads inbound or all four outbound",
+        "Count the bad assignments: \\(5 \\cdot 2^6\\) with an all-outbound town, the same with an all-inbound town, minus \\(5 \\cdot 4 \\cdot 2^3\\) counted twice"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

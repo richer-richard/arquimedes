@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-8-2023-p12",
+  "title": "2023 AMC 8 Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-area",
+      "label": "Circle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2023,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 20.0,
+    "source": 1370,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The figure below shows a large unshaded circle with a number of smaller unshaded and shaded circles in its interior. What fraction of the interior of the large unshaded circle is shaded?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{4}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{11}{36}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{3}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{19}{36}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{5}{9}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "11/36"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2023-p12.live",
+      "kind": "proof-sketch",
+      "text": "Let each smallest circle have radius \\(1.\\)\n\nThis means that there are \\(3\\) shaded unit circles, which total to \\(3 \\cdot 1^2 \\pi = 3 \\pi\\) area.\n\nThere is also a shaded circle with radius \\(4\\) with two unshaded circles of radius \\(2\\) inside.\n\nThis gives us an extra shaded area of \\[\\begin{align*} 4^2 \\pi - 2 \\cdot 2^2 \\pi &= 16 \\pi - 8 \\pi \\\\ &= 8 \\pi. \\end{align*}\\]\n\nThe total shaded area is \\[ 8\\pi + 3\\pi = 11\\pi. \\] The area of the large unshaded circle is \\[ 6^2\\pi = 36\\pi. \\] Therefore, the desired fraction is \\[ \\dfrac{11\\pi}{36\\pi} = \\dfrac{11}{36}. \\]\n\nThus, B is the correct answer.",
+      "hints": [
+        "Circle areas are proportional to the square of the radius",
+        "Count shaded area in units of the smallest circle’s area"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "34b882f226018548c6c27a550158f9e27e4d83f2376770a6016a256c4d57b784"
+    ],
+    "solutions": []
+  }
+}

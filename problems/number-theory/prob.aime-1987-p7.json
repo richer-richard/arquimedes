@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1987-p7",
+  "title": "1987 AIME Problem 7",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.least-common-multiple",
+      "label": "Least common multiple",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1987,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 42.1,
+    "source": 2230,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Let \\([r,s]\\) denote the least common multiple of positive integers \\(r,\\) \\(s.\\) Find the number of ordered triples \\((a,b,c)\\) for which \\([a,b]=1000,\\) \\([b,c]=2000,\\) and \\([c,a]=2000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "70",
+    "value": "70"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1987-p7.live",
+      "kind": "proof-sketch",
+      "text": "For the exponent of \\(5,\\) all three pairwise maxima equal \\(3.\\) Thus at least two exponents are \\(3:\\) there is one all-\\(3\\) triple and \\(3\\cdot3\\) triples with exactly two \\(3\\)’s, for \\(10\\) choices.\n\nFor the exponent of \\(2,\\) the first pair has maximum \\(3\\) while the other two have maximum \\(4.\\) The exponent of \\(c\\) must be \\(4,\\) and the exponents of \\(a\\) and \\(b\\) lie in \\(\\{0,1,2,3\\}\\) with maximum \\(3,\\) giving \\(4^2-3^2=7\\) choices. Independence gives \\(10\\cdot7=70.\\)",
+      "hints": [
+        "Treat the exponents of \\(2\\) and \\(5\\) independently",
+        "For each prime, translate every least common multiple into a condition on pairwise maxima"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

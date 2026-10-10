@@ -1,0 +1,89 @@
+{
+  "id": "prob.amc-12b-2022-p24",
+  "title": "2022 AMC 12B Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.chord",
+      "label": "Chord",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2022,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 45.7,
+    "source": 2370,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "The figure below depicts a regular \\(7\\)-gon inscribed in a unit circle.\n\nWhat is the sum of the \\(4\\)th powers of the lengths of all \\(21\\) of its edges and diagonals?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(49\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(98\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(147\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(168\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(196\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "147"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2022-p24.live",
+      "kind": "proof-sketch",
+      "text": "A chord joining two vertices \\(d\\) steps apart has squared length \\(2 - 2\\cos\\dfrac{2\\pi d}{7},\\) and there are \\(7\\) chords for each of \\(d = 1, 2, 3.\\) The required sum is \\[ 7 \\sum_{d=1}^{3} \\left(2 - 2\\cos\\tfrac{2\\pi d}{7}\\right)^2. \\]\n\nUsing \\(\\displaystyle\\sum_{d=1}^{3} \\cos\\tfrac{2\\pi d}{7} = -\\tfrac12\\) and \\(\\displaystyle\\sum_{d=1}^{3} \\cos^2\\tfrac{2\\pi d}{7} = \\tfrac54,\\) the inner sum expands to \\(4\\left(3 + 1 + \\tfrac54\\right) = 21.\\)\n\nTherefore the total is \\(7 \\cdot 21 = 147.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "A chord between vertices \\(d\\) apart has squared length \\(2 - 2\\cos\\dfrac{2\\pi d}{7};\\) there are \\(7\\) of each type \\(d = 1, 2, 3\\)",
+        "Use \\(\\sum_{d=1}^{3} \\cos\\dfrac{2\\pi d}{7} = -\\dfrac12\\) to evaluate \\(\\sum \\left(2 - 2\\cos\\dfrac{2\\pi d}{7}\\right)^2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "8e21782dcac5843695e3960bbb1df72fbe461c89a15fc0b507d8f0919e9621b4"
+    ],
+    "solutions": []
+  }
+}

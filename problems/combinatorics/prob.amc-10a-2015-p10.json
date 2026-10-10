@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2015-p10",
+  "title": "2015 AMC 10A Problem 10",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2015,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 21.1,
+    "source": 1370,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many rearrangements of \\(abcd\\) are there in which no two adjacent letters are also adjacent letters in the alphabet? For example, no such rearrangements could include either \\(ab\\) or \\(ba.\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2015-p10.live",
+      "kind": "proof-sketch",
+      "text": "The forbidden adjacent pairs are \\(ab,ba,bc,cb,cd,dc.\\)\n\nIf an arrangement starts with \\(a,\\) its second letter must be \\(c\\) or \\(d.\\)\n\nAfter \\(ac,\\) either remaining order contains \\(cb\\) or \\(cd.\\) After \\(ad,\\) the remaining \\(b\\) and \\(c\\) must be adjacent. Thus no valid arrangement starts with \\(a.\\)\n\nBy symmetry, no valid arrangement starts with \\(d.\\)\n\nIf an arrangement starts with \\(b,\\) it must continue with \\(d,\\) then \\(a,\\) then \\(c,\\) giving \\(bdac.\\)\n\nSimilarly, starting with \\(c\\) gives only \\(cadb.\\) Therefore there are \\(2\\) valid rearrangements.\n\nThus, C is the correct answer.",
+      "hints": [
+        "Forbid the adjacent alphabet pairs in either order",
+        "Starting with \\(b\\) or \\(c\\) is the only way to finish"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

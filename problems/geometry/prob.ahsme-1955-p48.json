@@ -1,0 +1,72 @@
+{
+  "id": "prob.ahsme-1955-p48",
+  "title": "1955 AHSME Problem 48",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.parallelogram",
+      "label": "Parallelogram",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1955,
+    "number": 48
+  },
+  "difficulty": {
+    "course": 44.1,
+    "source": 2310,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Given triangle \\(ABC\\) with medians \\(\\overline{AE},\\) \\(\\overline{BF},\\) \\(\\overline{CD};\\) \\(\\overline{FH}\\) parallel and equal in length to \\(\\overline{AE};\\) \\(\\overline{BH}\\) and \\(\\overline{HE}\\) are drawn; \\(\\overline{FE}\\) extended meets \\(\\overline{BH}\\) in \\(G.\\) Which one of the following statements is not necessarily correct?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(AEHF\\) is a parallelogram"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\overline{HE}=\\overline{HG}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\overline{BH}=\\overline{DC}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\overline{FG}=\\dfrac34\\overline{AB}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\overline{FG}\\) is a median of triangle \\(BFH\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1955-p48.live",
+      "kind": "proof-sketch",
+      "text": "Set \\(A=(0,0),\\) \\(B=(2,0),\\) \\(C=(u,v).\\) Then \\[ \\begin{aligned} D&=(1,0),\\\\ E&=\\left(\\frac{u+2}{2},\\frac v2\\right),\\\\ F&=\\left(\\frac u2,\\frac v2\\right). \\end{aligned} \\] Since \\(\\overrightarrow{FH}=\\overrightarrow{AE},\\) we get \\(H=(u+1,v).\\) The horizontal line \\(FE\\) meets \\(BH\\) halfway from \\(B\\) to \\(H,\\) at \\(G=(\\frac{u+3}{2},\\frac{v}{2}).\\) These coordinates verify that \\(AEHF\\) is a parallelogram, \\(\\overrightarrow{BH}=\\overrightarrow{DC},\\) \\(FG=\\frac{3AB}{4},\\) and \\(G\\) is the midpoint of \\(BH,\\) making \\(FG\\) a median. But \\[ \\begin{aligned} HE&=\\frac12\\sqrt{u^2+v^2},\\\\ HG&=\\frac12\\sqrt{(u-1)^2+v^2}, \\end{aligned} \\] which are not generally equal.\n\nThus, statement B is not necessarily correct.",
+      "hints": [
+        "Place \\(A=(0,0),\\) \\(B=(2,0),\\) \\(C=(u,v)\\) and compute the midpoints \\(D,E,F\\)",
+        "Use \\(\\overrightarrow{FH}=\\overrightarrow{AE}\\), then locate \\(G\\) where \\(BH\\) reaches height \\(\\frac{v}{2}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

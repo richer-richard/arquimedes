@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1991-p5",
+  "title": "1991 AIME Problem 5",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.subsets",
+      "label": "Subsets",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1991,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 42.6,
+    "source": 2250,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Given a rational number, write it as a fraction in lowest terms and calculate the product of the resulting numerator and denominator. For how many rational numbers between \\(0\\) and \\(1\\) will \\(20!\\) be the resulting product?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "128",
+    "value": "128"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1991-p5.live",
+      "kind": "proof-sketch",
+      "text": "The distinct primes dividing \\(20!\\) are \\(2,\\) \\(3,\\) \\(5,\\) \\(7,\\) \\(11,\\) \\(13,\\) \\(17,\\) and \\(19.\\) If \\(\\frac{a}{b}\\) is in lowest terms and \\(ab=20!,\\) the entire power of each of these eight primes must be assigned to either \\(a\\) or \\(b.\\) Thus there are \\(2^8\\) ordered coprime factorizations \\(ab=20!.\\) Since \\(a\\neq b,\\) exactly half have \\(0<\\frac{a}{b}<1.\\) The number sought is \\(2^7=128.\\)",
+      "hints": [
+        "If \\(\\frac{a}{b}\\) is in lowest terms and \\(ab=20!\\), each full prime power of \\(20!\\) must go entirely to one of \\(a\\) or \\(b\\)",
+        "Count ordered allocations of the distinct prime-power factors, then use the condition \\(a<b\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

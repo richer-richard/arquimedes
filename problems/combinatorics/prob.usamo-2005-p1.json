@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2005-p1",
+  "title": "2005 USAMO Problem 1",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2005,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 79.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Determine all composite positive integers \\(n\\) for which it is possible to arrange all divisors of \\(n\\) that are greater than 1 in a circle so that no two adjacent divisors are relatively prime.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2005-p1.imported",
+      "kind": "proof-sketch",
+      "text": "No such circular arrangement exists for $n=pq$, where $p$ and $q$ are distinct primes. In that case, the numbers to be arranged are $p$; $q$ and $pq$, and in any circular arrangement, $p$ and $q$ will be adjacent. We claim that the desired circular arrangement exists in all other cases. If $n=p^e$ where $e\\ge2$, an arbitrary circular arrangement works. Henceforth we assume that $n$ has prime factorization $p^{e_1}_{1}p^{e_2}_{2}\\cdots p^{e_k}_k$, where $p_1<p_2<\\cdots<p_k$ and either $k>2$ or else $\\max(e1,e2)>1$. To construct the desired circular arrangement of $D_n:=\\lbrace d:d|n\\ \\text{and}\\ d>1\\rbrace$, start with the circular arrangement of $n,p_{1}p_{2},p_{2}p_{3}\\ldots,p_{k-1}p_{k}$ as shown.\nThen between $n$ and $p_{1}p_{2}$, place (in arbitrary order) all other members of $D_n$ that have $p_1$ as their smallest prime factor. Between $p_{1}p_{2}$ and $p_{2}p_{3}$, place all members of $D_n$ other than $p_{2}p_{3}$ that have $p_2$ as their smallest prime factor. Continue in this way, ending by placing $p_k,p^{2}_{k},\\ldots,p^{e_k}_{k}$ between $p_{k-1}p_k$ and $n$. It is easy to see that each element of $D_n$ is placed exactly one time, and any two adjacent elements have a common prime factor. Hence this arrangement has the desired property.\n<i>Note.</i> In graph theory terms, this construction yields a Hamiltonian cycle in the graph with vertex set $D_n$ in which two vertices form an edge if the two corresponding numbers have a common prime factor. The graphs below illustrate the construction for the special cases $n=p^{2}q$ and $n=pqr$.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

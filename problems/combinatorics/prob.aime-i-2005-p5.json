@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-i-2005-p5",
+  "title": "2005 AIME I Problem 5",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2005,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 43.9,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "Robert has \\(4\\) indistinguishable gold coins and \\(4\\) indistinguishable silver coins. Each coin has an engraving of a face on one side, but not on the other. He wants to stack the eight coins on a table into a single stack so that no two adjacent coins are face to face. Find the number of possible distinguishable arrangements of the \\(8\\) coins.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "630",
+    "value": "630"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2005-p5.live",
+      "kind": "proof-sketch",
+      "text": "Choose the coin orientations and the gold/silver positions independently. Record the orientations from bottom to top as a string of \\(U\\) (engraved face up) and \\(D\\) (engraved face down). Two adjacent coins are face to face exactly when the lower coin’s engraved side faces up and the upper coin’s engraved side faces down — that is, exactly when a \\(U\\) is immediately followed by a \\(D.\\)\n\nA string of \\(U\\)’s and \\(D\\)’s avoids the pattern \\(UD\\) exactly when every \\(D\\) precedes every \\(U,\\) so the string is \\(\\text{D}^i\\text{U}^{8-i}\\) for some \\(i = 0, 1, \\ldots, 8:\\) there are \\(9\\) allowable orientation strings. Independently, the gold coins occupy \\(4\\) of the \\(8\\) positions in \\(\\binom{8}{4} = 70\\) ways.\n\nThe total is \\(9 \\cdot 70 = 630.\\)",
+      "hints": [
+        "Handle orientations and colors separately. Record each coin’s orientation, bottom to top, as \\(U\\) (face up) or \\(D\\) (face down).",
+        "Face to face happens exactly when a \\(U\\) sits directly below a \\(D,\\) so all the \\(D\\)’s must come before all the \\(U\\)’s"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

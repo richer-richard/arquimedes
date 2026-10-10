@@ -1,0 +1,73 @@
+{
+  "id": "prob.aime-ii-2015-p6",
+  "title": "2015 AIME II Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "logic-foundations",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logical-deduction",
+      "label": "Logical deduction",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2015,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 54.5,
+    "source": 2500,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "Steve says to Jon, “I am thinking of a polynomial whose roots are all positive integers. The polynomial has the form \\(P(x) = 2x^3 - 2ax^2\\) \\(+ (a^2 - 81)x - c\\) for some positive integers \\(a\\) and \\(c.\\) Can you tell me the values of \\(a\\) and \\(c?\\)”\n\nAfter some calculations, Jon says, “There is more than one such polynomial.”\n\nSteve says, “You’re right. Here is the value of \\(a.\\)” He writes down a positive integer and asks, “Can you tell me the value of \\(c?\\)”\n\nJon says, “There are still two possible values of \\(c.\\)”\n\nFind the sum of the two possible values of \\(c.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "440",
+    "value": "440"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2015-p6.live",
+      "kind": "proof-sketch",
+      "text": "Dividing by \\(2,\\) the roots \\(r \\le s \\le t\\) satisfy \\(r + s + t = a,\\) \\(rs + rt + st = \\frac{a^2 - 81}{2},\\) and \\(rst = \\frac{c}{2}.\\) Therefore \\[ \\begin{aligned} &r^2 + s^2 + t^2 \\\\ &= (r + s + t)^2 - 2(rs + rt + st) \\\\ &= a^2 - (a^2 - 81) \\\\ &= 81. \\end{aligned} \\]\n\nThe triples of positive integers whose squares sum to \\(81\\) are \\((1, 4, 8),\\) \\((4, 4, 7),\\) and \\((3, 6, 6),\\) with \\(a = r + s + t\\) equal to \\(13,\\) \\(15,\\) and \\(15.\\) Since knowing \\(a\\) still left Jon two choices, \\(a = 15,\\) and the two polynomials come from \\((4, 4, 7)\\) and \\((3, 6, 6).\\)\n\nThe corresponding values of \\(c = 2rst\\) are \\(2 \\cdot 4 \\cdot 4 \\cdot 7 = 224\\) and \\(2 \\cdot 3 \\cdot 6 \\cdot 6 = 216,\\) with sum \\(224 + 216 = 440.\\)",
+      "hints": [
+        "If the roots are \\(r,\\) \\(s,\\) and \\(t,\\) Vieta’s formulas give \\(r + s + t = a\\) and \\(rs + rt + st = \\frac{a^2 - 81}{2}\\)",
+        "Then \\(r^2 + s^2 + t^2 = 81.\\) List the positive integer triples and see which value of \\(a\\) occurs twice."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

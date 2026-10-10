@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2016-p17",
+  "title": "2016 AMC 10B Problem 17",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.am-gm-inequality",
+      "label": "AM-GM Inequality",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cube-geometry",
+      "label": "Cube geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2016,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 26.8,
+    "source": 1880,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "All the numbers \\(2,\\)\\( 3, \\)\\(4, \\)\\(5,\\)\\( 6,\\)\\( 7\\) are assigned to the six faces of a cube, one number to each face. For each of the eight vertices of the cube, a product of three numbers is computed, where the three numbers are the numbers assigned to the three faces that include that vertex. What is the greatest possible value of the sum of these eight products?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( \\ 312 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( \\ 343 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( \\ 625 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( \\ 729 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( \\ 1680 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "729"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2016-p17.live",
+      "kind": "proof-sketch",
+      "text": "Pair opposite faces as \\((a_1,a_2)\\), \\((b_1,b_2)\\), and \\((c_1,c_2)\\). Each vertex product uses one number from each pair, so the sum of all eight vertex products is \\[(a_1+a_2)(b_1+b_2)(c_1+c_2).\\]\n\nThe six face labels sum to \\(2+3+4+5+6+7=27\\), so the three opposite-pair sums have total \\(27\\). Their product is maximized when the sums are as equal as possible, namely \\(9,9,9\\), giving at most \\(9^3=729\\).\n\nThis maximum is attainable by pairing \\(2\\) with \\(7\\), \\(3\\) with \\(6\\), and \\(4\\) with \\(5\\). Hence the greatest possible sum is \\(729\\).\n\nThus, the correct answer is D.",
+      "hints": [
+        "Pair opposite faces of the cube",
+        "Maximize \\((a_1+a_2)(b_1+b_2)(c_1+c_2)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

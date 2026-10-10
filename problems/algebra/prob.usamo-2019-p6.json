@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2019-p6",
+  "title": "2019 USAMO Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2019,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 99.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find all polynomials \\(P\\) with real coefficients such that\n\n\\[\n\\frac{P(x)}{yz}+\\frac{P(y)}{zx}+\\frac{P(z)}{xy}=P(x-y)+P(y-z)+P(z-x)\n\\]\n\nholds for all nonzero real numbers \\(x,y,z\\) satisfying \\(2xyz=x+y+z\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2019-p6.imported",
+      "kind": "proof-sketch",
+      "text": "If $P(x)=c$ for a constant $c,$ then $\\dfrac{c(x+y+z)}{xyz}=3c$. We have $2c=3c.$ Therefore $c=0.$\nNow consider the case of non-constant polynomials.\nFirst we have \\[xP(x)+yP(y)+zP(z)=xyz(P(x-y)+P(y-z)+P(z-x))\\] for all nonzero real numbers $x,y,z$ satisfying $2xyz=x+y+z$. Both sides of the equality are polynomials (of $x,y,z$). They have the same values on the 2-dimensional surface $2xyz=x+y+z$, except for some 1-dimensional curves in it. By continuity, the equality holds for all points on the surface, including those with $z=0.$ Let $z=0,$ we have $y=-x$ and $x(P(x)-P(-x))=0.$ Therefore $P$ is an even function.\n(Here is a sketch of an elementary proof. Let $z=\\dfrac{x+y}{2xy-1}.$ We have\n\\[xP(x)+yP(y)+\\dfrac{x+y}{2xy-1}P(\\dfrac{x+y}{2xy-1})=xy\\dfrac{x+y}{2xy-1}(P(x-y)+P(y-\\dfrac{x+y}{2xy-1})+P(\\dfrac{x+y}{2xy-1}-x)).\\]\nThis is an equality of rational expressions. By multiplying $(2xy-1)^N$ on both sides for a sufficiently large $N$, they become polynomials, say $A(x,y)=B(x,y)$ for all real $x, y$ with $x\\ne 0, y\\ne 0, x+y\\ne 0$ and $2xy-1\\ne 0.$ For a fixed $x,$ we have two polynomials (of $y$) having same values for infinitely many $y$. They must be identical. Let $y=0,$ we have $x^{N+1}(P(x)-P(-x))=0.$ )\nNotice that if $P(x)$ is a solution, then is $cP(x)$ for any constant $c.$ For simplicity, we assume the leading coefficient of $P$ is $1$: \\[P(x)=x^n+a_{n-2}x^{n-2}+\\cdots +a_2x^2+a_0,\\] where $n$ is a positive even number.\nLet $y=\\dfrac{1}{x}$, $z=x+\\dfrac{1}{x}.$ we have \\[xP(x)+\\dfrac{1}{x}P\\left (\\dfrac{1}{x}\\right )+\\left ( x+\\dfrac{1}{x}\\right ) P\\left ( x+\\dfrac{1}{x}\\right ) =\\left (x+\\dfrac{1}{x}\\right )\\left ( P\\left (x-\\dfrac{1}{x}\\right )+P(-x)+P\\left (\\dfrac{1}{x}\\right )\\right ).\\]\nSimplify using $P(x)=P(-x),$\n\\[\\left (x+\\dfrac{1}{x}\\right ) \\left (P\\left (x+\\dfrac{1}{x}\\right )-P\\left (x-\\dfrac{1}{x}\\right )\\right )=\\dfrac{1}{x}P(x)+xP\\left (\\dfrac{1}{x}\\right ).\\]\nExpand and combine like terms, both sides are of the form \\[c_{n-1}x^{n-1}+c_{n-3}x^{n-3}+\\cdots+c_1x+c_{-1}x^{-1}+\\cdots+c_{-n+1}x^{-n+1}.\\]\nThey have the same values for infinitely many $x.$ They must be identical. We just compare their leading terms. On the left hand side it is $2nx^{n-1}$. There are two cases for the right hand sides: If $n>2$, it is $x^{n-1}$; If $n=2$, it is $(1+a_0)x.$ It does not work for $n>2.$ When $n=2,$ we have $4=1+a_0.$ therefore $a_0=3.$\nThe solution: $P(x)=c(x^2+3)$ for any constant $c.$",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

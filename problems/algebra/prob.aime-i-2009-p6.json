@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2009-p6",
+  "title": "2009 AIME I Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2009,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 46.2,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "How many positive integers \\(N\\) less than \\(1000\\) are there such that the equation \\(x^{\\lfloor x \\rfloor} = N\\) has a solution for \\(x?\\) (The notation \\(\\lfloor x \\rfloor\\) denotes the greatest integer that is less than or equal to \\(x.\\))",
+  "answerChoices": [],
+  "answer": {
+    "letter": "412",
+    "value": "412"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2009-p6.live",
+      "kind": "proof-sketch",
+      "text": "Suppose \\(\\lfloor x \\rfloor = k\\) for a positive integer \\(k.\\) As \\(x\\) runs over \\([k, k+1),\\) the value \\(x^k\\) increases continuously from \\(k^k\\) toward \\((k+1)^k,\\) so the attainable integers \\(N\\) are exactly those with \\(k^k \\le N \\le (k+1)^k - 1:\\) there are \\((k+1)^k - k^k\\) of them, and these ranges are disjoint for different \\(k.\\) If \\(0 \\lt x \\lt 1,\\) then \\(x^{\\lfloor x \\rfloor} = x^0 = 1,\\) which is already attained. If \\(x \\lt 0,\\) then \\(\\lfloor x \\rfloor\\) is negative; an odd exponent gives a negative value, while an even exponent gives a value strictly between \\(0\\) and \\(1.\\) Thus no \\(x \\lt 1\\) produces a new positive integer.\n\nFor \\(k = 1,\\) \\(2,\\) \\(3,\\) and \\(4,\\) the counts are \\(2 - 1 = 1,\\) \\(9 - 4 = 5,\\) \\(64 - 27 = 37,\\) and \\(625 - 256 = 369,\\) and every such \\(N\\) is at most \\(624 \\lt 1000.\\) For \\(k = 5\\) the smallest value is \\(5^5 = 3125 \\gt 1000.\\)\n\nThe total is \\(1 + 5 + 37 + 369 = 412.\\)",
+      "hints": [
+        "If \\(\\lfloor x \\rfloor = k,\\) then as \\(x\\) runs over \\([k, k+1)\\) the value \\(x^k\\) covers exactly the integers from \\(k^k\\) to \\((k+1)^k - 1\\)",
+        "Sum the counts \\((k+1)^k - k^k\\) for \\(k = 1,\\) \\(2,\\) \\(3,\\) and \\(4;\\) for \\(k = 5\\) the values already exceed \\(1000\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

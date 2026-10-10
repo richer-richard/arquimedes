@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10-2000-p6",
+  "title": "2000 AMC 10 Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.fibonacci",
+      "label": "Fibonacci",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.pattern-recognition",
+      "label": "Pattern recognition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.units-digit",
+      "label": "Units digit",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10",
+    "year": 2000,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 16.7,
+    "source": 1240,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The Fibonacci sequence \\(1,\\) \\(1,\\) \\(2,\\) \\(3,\\) \\(5,\\) \\(8,\\) \\(13,\\) \\(21,\\) \\(\\ldots\\) starts with two \\(1\\)s, and each term afterwards is the sum of its two predecessors. Which one of the ten digits is the last to appear in the units position of a number in the Fibonacci sequence?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(9\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10-2000-p6.live",
+      "kind": "proof-sketch",
+      "text": "Recording only the units digits gives the sequence \\[ \\begin{gathered} 1, 1, 2, 3, 5, 8, 3, 1, 4, 5, 9, \\\\ 4, 3, 7, 0, 7, 7, 4, 1, 5, 6, \\ldots \\end{gathered} \\]\n\nScanning for the first appearance of each digit, the digit \\(6\\) is the last of the ten digits to show up.\n\nThus, the correct answer is C.",
+      "hints": [
+        "Track only the units digit of each term, adding the two previous units digits modulo \\(10\\)",
+        "List the units digits and note which digit is slowest to first appear"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

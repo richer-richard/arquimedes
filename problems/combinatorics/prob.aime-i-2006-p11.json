@@ -1,0 +1,57 @@
+{
+  "id": "prob.aime-i-2006-p11",
+  "title": "2006 AIME I Problem 11",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.bijection",
+      "label": "Bijection",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.recursive-counting",
+      "label": "Recursive counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2006,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 55.7,
+    "source": 2760,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "A collection of \\(8\\) cubes consists of one cube with edge-length \\(k\\) for each integer \\(k,\\) \\(1 \\le k \\le 8.\\) A tower is to be built using all \\(8\\) cubes according to the rules:\n\n• Any cube may be the bottom cube in the tower.\n\n• The cube immediately on top of a cube with edge-length \\(k\\) must have edge-length at most \\(k + 2.\\)\n\nLet \\(T\\) be the number of different towers that can be constructed. What is the remainder when \\(T\\) is divided by \\(1000?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "458",
+    "value": "458"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2006-p11.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(S(n)\\) be the number of legal towers using the cubes of edge-lengths \\(1, \\ldots, n.\\) Given a legal tower of \\(n \\ge 2\\) cubes, cube \\(n + 1\\) can be inserted in exactly three places: at the bottom, immediately on top of cube \\(n,\\) or immediately on top of cube \\(n - 1\\) (anywhere else it would rest on a cube of edge-length at most \\(n - 2,\\) violating the rule). Each insertion stays legal, because the cube that ends up on top of cube \\(n + 1\\) has edge-length at most \\(n \\lt (n+1) + 2.\\) Conversely, deleting cube \\(n + 1\\) from a legal tower of \\(n + 1\\) cubes leaves a legal tower: the cube that was above it, of edge-length at most \\(n,\\) lands on a cube of edge-length at least \\(n - 1.\\)\n\nHence \\(S(n + 1) = 3 S(n)\\) for \\(n \\ge 2.\\) Since \\(S(2) = 2\\) (either of the two cubes may be on top), we get \\(T = S(8) = 2 \\cdot 3^6 = 1458,\\) and the remainder is \\(458.\\)",
+      "hints": [
+        "Build towers of the cubes \\(1, \\ldots, n + 1\\) by inserting the largest cube into a legal tower of the smaller ones",
+        "For \\(n \\ge 2,\\) cube \\(n + 1\\) can go on the bottom, on cube \\(n,\\) or on cube \\(n - 1\\) — the count triples at each step"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

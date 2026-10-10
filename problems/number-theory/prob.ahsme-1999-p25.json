@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1999-p25",
+  "title": "1999 AHSME Problem 25",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factorial",
+      "label": "Factorial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1999,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 36.9,
+    "source": 2030,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "There are unique integers \\(a_2,\\) \\(a_3,\\) \\(a_4,\\) \\(a_5,\\) \\(a_6,\\) \\(a_7\\) such that\n\n\\[ \\begin{aligned} &\\frac{5}{7} = \\frac{a_2}{2!} + \\frac{a_3}{3!} + \\frac{a_4}{4!} \\\\ &\\quad {}+ \\frac{a_5}{5!} + \\frac{a_6}{6!} + \\frac{a_7}{7!}, \\end{aligned} \\]\n\nwhere \\(0 \\le a_i \\lt i\\) for \\(i = 2,\\) \\(3,\\) \\(\\ldots,\\) \\(7.\\) Find \\(a_2 + a_3 + a_4 + a_5 + a_6 + a_7.\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(12\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "9"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1999-p25.live",
+      "kind": "proof-sketch",
+      "text": "Multiplying by \\(7! = 5040\\) gives \\[ \\begin{aligned} &3600 = 2520a_2 + 840a_3 \\\\ &\\quad {}+ 210a_4 + 42a_5 \\\\ &\\quad {}+ 7a_6 + a_7. \\end{aligned} \\] Reducing modulo \\(7,\\) \\(a_7 = 2.\\)\n\nThen \\(\\dfrac{3600 - 2}{7} = 514\\) \\(= 360a_2 + 120a_3\\) \\(+ 30a_4 + 6a_5\\) \\(+ a_6.\\) Reducing modulo \\(6\\) gives \\(a_6 = 4,\\) and continuing this way yields \\(a_5 = 0, a_4 = 1, a_3 = 1, a_2 = 1.\\)\n\nThe sum is \\(1 + 1 + 1 + 0 + 4 + 2 = 9.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Multiply both sides by \\(7!\\)",
+        "Reduce modulo \\(7,\\) then \\(6,\\) then \\(5, \\ldots\\) to peel off one digit at a time"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

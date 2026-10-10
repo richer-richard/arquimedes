@@ -1,0 +1,68 @@
+{
+  "id": "prob.hmmt-feb-guts-2022-p21",
+  "title": "2022 HMMT February Guts Problem 21",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2022,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 83.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In the Cartesian plane, let \\(A=(0,0), B=(200,100)\\), and \\(C=(30,330)\\). Compute the number of ordered pairs \\((x, y)\\) of integers so that \\(\\left(x+\\frac{1}{2}, y+\\frac{1}{2}\\right)\\) is in the interior of triangle \\(A B C\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "31480",
+    "value": "31480"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2022-p21.hmmt",
+      "kind": "proof-sketch",
+      "text": "We use Pick's Theorem, which states that in a lattice polygon with \\(I\\) lattice points in its interior and \\(B\\) lattice points on its boundary, the area is \\(I+B / 2-1\\). Also, call a point center if it is of the form \\(\\left(x+\\frac{1}{2}, y+\\frac{1}{2}\\right)\\) for integers \\(x\\) and \\(y\\).\nThe key observation is the following - suppose we draw in the center points, rotate \\(45^{\\circ}\\) degrees about the origin and scale up by \\(\\sqrt{2}\\). Then, the area of the triangle goes to \\(2 K\\), and the set of old lattice points and center points becomes a lattice. Hence, we can also apply Pick's theorem to this new lattice.\nLet the area of the original triangle be \\(K\\), let \\(I_{1}\\) and \\(B_{1}\\) be the number of interior lattice points and boundary lattice points, respectively. Let \\(I_{c}\\) and \\(B_{c}\\) be the number of interior and boundary points that are center points in the original triangle. Finally, let \\(I_{2}\\) and \\(B_{2}\\) be the number of interior and boundary points that are either lattice points or center points in the new triangle. By Pick's Theorem on both lattices,\n\n\\[\\begin{aligned}\nK & =I_{1}+B_{1} / 2-1 \\\\\n2 K & =I_{2}+B_{2} / 2-1 \\\\\n\\Longrightarrow\\left(I_{2}-I_{1}\\right) & =K-\\frac{B_{1}-B_{2}}{2} \\\\\n\\Longrightarrow I_{c} & =K-\\frac{B_{c}}{2} .\n\\end{aligned}\\]\n\nOne can compute that the area is 31500 . The number of center points that lie on on \\(A B, B C\\), and \\(C A\\) are 0,10 , and 30 , respectively. Thus, the final answer is \\(31500-\\frac{0+10+30}{2}=31480\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

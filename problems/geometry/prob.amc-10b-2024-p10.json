@@ -1,0 +1,93 @@
+{
+  "id": "prob.amc-10b-2024-p10",
+  "title": "2024 AMC 10B Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.parallelogram",
+      "label": "Parallelogram",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.shoelace-formula",
+      "label": "Shoelace formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2024,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 21.8,
+    "source": 1440,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Quadrilateral \\(ABCD\\) is a parallelogram, and \\(E\\) is the midpoint of the side \\(\\overline{AD}.\\) Let \\(F\\) be the intersection of lines \\(EB\\) and \\(AC.\\) What is the ratio of the area of quadrilateral \\(CDEF\\) to the area of triangle \\(CFB?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(5 : 4\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4 : 3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3 : 2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(5 : 3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2 : 1\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2024-p10.live",
+      "kind": "proof-sketch",
+      "text": "Area ratios don’t change under an affine map, so drop in convenient coordinates: \\(A = (0,0),\\) \\(B = (1,0),\\) \\(C = (1,1),\\) \\(D = (0,1),\\) which makes \\(E = (0, \\tfrac12).\\) Line \\(AC\\) is \\(y = x,\\) and line \\(EB\\) runs from \\((0, \\tfrac12)\\) to \\((1, 0);\\) they cross at \\(F = (\\tfrac13, \\tfrac13).\\) The shoelace formula gives quadrilateral \\(CDEF\\) area \\(\\tfrac{5}{12}\\) and triangle \\(CFB\\) area \\(\\tfrac13.\\) So the ratio is \\(\\tfrac{5}{12} : \\tfrac13 = 5 : 4.\\) Therefore, the answer is A.",
+      "hints": [
+        "Area ratios are unchanged by an affine map, so compute with \\(A = (0,0),\\) \\(B = (1,0),\\) \\(C = (1,1),\\) \\(D = (0,1)\\)",
+        "Find \\(F\\) as the intersection of line \\(AC\\) with line \\(EB,\\) then use the shoelace formula"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

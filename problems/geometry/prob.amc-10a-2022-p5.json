@@ -1,0 +1,90 @@
+{
+  "id": "prob.amc-10a-2022-p5",
+  "title": "2022 AMC 10A Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.rationalizing-denominator",
+      "label": "Rationalizing denominator",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.special-right-triangle",
+      "label": "Special right triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.square-geometry",
+      "label": "Square (geometry)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2022,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 24.4,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Square \\(ABCD\\) has side length \\(1.\\) Points \\(P,\\) \\(Q,\\) \\(R,\\) and \\(S\\) each lie on a side of \\(ABCD\\) such that \\(APQCRS\\) is an equilateral convex hexagon with side length \\(s.\\) What is \\(s?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{\\sqrt{2}}{3}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1}{2}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2 - \\sqrt{2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(1 - \\dfrac{\\sqrt{2}}{4}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{2}{3}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2022-p5.live",
+      "kind": "proof-sketch",
+      "text": "Consider the diagram:\n\nSince \\(AP = QC = s,\\) we know that \\(PB = BQ.\\) This shows that \\(\\triangle PBQ\\) is an isosceles right triangle with hypotenuse \\(PQ=s.\\) Using the Pythagorean theorem, we get that \\(PB = \\dfrac{s}{\\sqrt{2}}.\\)\n\nWe also know that \\[ 1 = AB = AP + PB = s + \\dfrac{s}{\\sqrt{2}}. \\]\n\nThis equation simplifies to \\[ 1 = (1 + \\dfrac{1}{\\sqrt{2}})s \\] Which implies that \\[ s = \\dfrac{1}{1 + \\dfrac{1}{\\sqrt{2}}} = \\dfrac{\\sqrt{2}}{\\sqrt{2} + 1}. \\]\n\nWe can rationalize this fraction to get\n\n\\[ \\dfrac{\\sqrt{2}}{\\sqrt{2} + 1} \\cdot \\dfrac{\\sqrt{2} - 1}{\\sqrt{2} - 1} = 2 - \\sqrt{2}. \\]\n\nThus, C is the correct answer.",
+      "hints": [
+        "Use the \\(45\\)–\\(45\\)–\\(90\\) triangle at a corner of the square",
+        "Write the side of the square as one hexagon side plus one corner leg"
+      ],
+      "images": [
+        "b9aa1d11dffb7c411353f6101facfb5f7d070b6744e7234f574ddd7435e641e0"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "b9aa1d11dffb7c411353f6101facfb5f7d070b6744e7234f574ddd7435e641e0"
+    ]
+  }
+}

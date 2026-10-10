@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12a-2014-p23",
+  "title": "2014 AMC 12A Problem 23",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.pattern-recognition",
+      "label": "Pattern recognition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.repeating-decimal",
+      "label": "Repeating decimal",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2014,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 39.7,
+    "source": 2380,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "The fraction \\[\\dfrac{1}{99^2}=0.\\overline{b_{n-1}b_{n-2}\\ldots b_2b_1b_0},\\] where \\(n\\) is the length of the period of the repeating decimal expansion. What is the sum \\(b_0+b_1+\\cdots+b_{n-1}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(874\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(883\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(887\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(891\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(892\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "883"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2014-p23.live",
+      "kind": "proof-sketch",
+      "text": "Reading the block in pairs of digits (base \\(100\\)), \\(\\dfrac{1}{9801}=\\dfrac{1}{99^2}\\) expands as \\(00,01,02,\\ldots,\\) since \\(\\dfrac{1}{(100-1)^2}=\\sum_{k\\ge1}k\\cdot100^{-k}.\\) Let \\(a_j\\) be the \\(j\\)th base-\\(100\\) digit of the repeating block. Multiplying the block by \\(99^2\\) shows first that \\(a_0=99.\\) The resulting carry gives \\(a_1=97,\\) after which there is no carry and successively \\(a_j=98-j\\) for \\(1\\le j\\le98.\\) The next digit is again \\(99,\\) so the period is \\(00,01,02,\\ldots,96,97,99,\\) with \\(98\\) omitted.\n\nIf the blocks \\(00\\) through \\(99\\) all appeared, the digit sum would be \\((0+1+\\cdots+9)\\cdot20=900.\\) Removing the missing \\(98\\) subtracts \\(9+8,\\) giving \\(900-9-8=883.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Since \\(\\dfrac{1}{99^2}=\\dfrac{1}{9801}\\), the repeating block satisfies \\(10^n-1=9801\\cdot\\overline{b_{n-1}\\ldots b_0}\\)",
+        "Group the repeating decimal into base-\\(100\\) digits and use \\((100-1)^{-2};\\) follow the carries until the first base-\\(100\\) digit repeats"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2015-p6",
+  "title": "2015 HMMT February Combinatorics Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.recurrence-relations",
+      "label": "Recurrence relations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2015,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 79.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Count the number of functions \\(f: \\mathbb{Z} \\rightarrow\\{\\) 'green', 'blue' \\(\\}\\) such that \\(f(x)=f(x+22)\\) for all integers \\(x\\) and there does not exist an integer \\(y\\) with \\(f(y)=f(y+2)=\\) 'green'.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2015-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "39601 It is clear that \\(f\\) is determined by \\(f(0), \\ldots, f(21)\\). The colors of the 11 even integers are independent of those of the odd integers because evens and odds are never exactly 2 apart.\nFirst, we count the number of ways to \"color\" the even integers. \\(f(0)\\) can either be 'green' or 'blue'. If \\(f(0)\\) is 'green', then \\(f(2)=f(20)=\\) 'blue'. A valid coloring of the 8 other even integers corresponds bijectively to a string of 8 bits such that no two consecutive bits are 1. In general, the number of such length \\(n\\) strings is well known to be \\(F_{n+2}\\) (indexed according to \\(F_{0}=0, F_{1}=1, F_{n+2}=F_{n+1}+F_{n}\\) ), which can be proven by recursion. Therefore, the number of colorings of even integers in this case is \\(F_{10}=55\\).\nIf \\(f(0)\\) is 'blue', then a valid coloring of the 10 other even integers corresponds bijectively to a string as above, of 10 bits. The number of colorings for this case is \\(F_{12}=144\\). The total number of colorings of even integers is \\(55+144=199\\).\nUsing the same reasoning for coloring the odd integers, we see that the number of colorings of all of the integers is \\(199^{2}=39601\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

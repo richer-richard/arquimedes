@@ -1,0 +1,68 @@
+{
+  "id": "prob.hmmt-feb-guts-2020-p24",
+  "title": "2020 HMMT February Guts Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2020,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 84.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In \\(\\triangle A B C, \\omega\\) is the circumcircle, \\(I\\) is the incenter and \\(I_{A}\\) is the \\(A\\)-excenter. Let \\(M\\) be the midpoint of arc \\(\\widehat{B A C}\\) on \\(\\omega\\), and suppose that \\(X, Y\\) are the projections of \\(I\\) onto \\(M I_{A}\\) and \\(I_{A}\\) onto \\(M I\\), respectively. If \\(\\triangle X Y I_{A}\\) is an equilateral triangle with side length 1 , compute the area of \\(\\triangle A B C\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{\\sqrt{6}}{7}",
+    "value": "\\frac{\\sqrt{6}}{7}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2020-p24.hmmt",
+      "kind": "proof-sketch",
+      "text": "By Fact 5, we construct the diagram first with \\(\\triangle X Y I_{A}\\) as the reference triangle.\n\nLet \\(M_{A}\\) be the circumcenter of \\(\\triangle X Y I_{A}\\) and let \\(\\Omega\\) be the circumcircle, which has circumradius \\(R=\\frac{1}{\\sqrt{3}}\\). Then by Fact \\(5, M_{A}\\) is the midpoint of minor arc \\(\\widehat{B C}\\), and \\(B, C \\in \\Omega\\). Now we show the following result:\n\nClaim. \\(b+c=2 a\\).\nProof. Letting \\(D\\) be the intersection of \\(I I_{A}\\) with \\(B C\\), we have \\(M_{A} D=\\frac{1}{2} R\\). Then by the Shooting Lemma,\n\n\\[M_{A} A \\cdot M_{A} D=R^{2} \\Longrightarrow M_{A} A=2 R\\]\n\nOn the other hand, by Ptolemy,\n\n\\[M_{A} B \\cdot A C+M_{A} C \\cdot A B=M_{A} A \\cdot B C \\Longrightarrow R \\cdot(b+c)=2 R \\cdot a\\]\n\nwhence the result follows.\n\nBy the triangle area formula, we have\n\n\\[[A B C]=s r=\\frac{1}{2}(a+b+c) r=\\frac{3}{2} a r .\\]\n\nTherefore, we are left to compute \\(a\\) and \\(r\\).\nSince \\(M_{A}\\) is the antipode of \\(M\\) on \\((A B C)\\) we get \\(M B, M C\\) are tangent to \\(\\Omega\\); in particular, \\(M B M_{A} C\\) is a kite with \\(M B=M C\\) and \\(M_{A} B=M_{A} C\\). Then by Power of a Point, we get\n\n\\[M B^{2}=M C^{2}=M I \\cdot M Y=2 R \\cdot 3 R=2\\]\n\nwhere \\(M I=I I_{A}=2 R\\) and \\(I Y=R\\).\nSince \\(I D=D M_{A}\\), we know that \\(r\\) is the length of the projection from \\(M_{A}\\) to \\(B C\\). Finally, given our above information, we can compute\n\n\\[\\begin{aligned}\n& r=\\frac{B M_{A}^{2}}{M_{A} M}=\\frac{B M_{A}^{2}}{\\sqrt{B M_{A}^{2}+M B^{2}}}=\\frac{1}{\\sqrt{21}} \\\\\n& a=2 r \\frac{B M_{A}}{M B}=\\frac{2 \\sqrt{2}}{7}\n\\end{aligned}\\]\n\nThe area of \\(A B C\\) is then\n\n\\[\\frac{3}{2}\\left(\\frac{2 \\sqrt{2}}{\\sqrt{7}}\\right)\\left(\\frac{1}{\\sqrt{21}}\\right)=\\frac{\\sqrt{6}}{7} .\\]\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

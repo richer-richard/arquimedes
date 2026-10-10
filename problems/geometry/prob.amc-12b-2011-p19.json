@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-12b-2011-p19",
+  "title": "2011 AMC 12B Problem 19",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.lattice-point",
+      "label": "Lattice point",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.slope",
+      "label": "Slope",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2011,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 34.8,
+    "source": 2090,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A lattice point in an \\(xy\\)-coordinate system is any point \\((x, y)\\) where both \\(x\\) and \\(y\\) are integers. The graph of \\(y=mx+2\\) passes through no lattice point with \\(0 \\lt x \\le 100\\) for all \\(m\\) such that \\(\\dfrac{1}{2} \\lt m \\lt a.\\) What is the maximum possible value of \\(a?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{51}{101}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{50}{99}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{51}{100}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{52}{101}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{13}{25}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "50/99"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2011-p19.live",
+      "kind": "proof-sketch",
+      "text": "For \\(0\\lt x\\le100,\\) the nearest lattice point above the line \\(y=\\tfrac12x+2\\) is \\(\\left(x,\\tfrac12x+3\\right)\\) if \\(x\\) is even and \\(\\left(x,\\tfrac12x+\\tfrac52\\right)\\) if \\(x\\) is odd.\n\nThe slope from \\((0,2)\\) to that point is \\(\\dfrac12+\\dfrac1x\\) for even \\(x\\) and \\(\\dfrac12+\\dfrac{1}{2x}\\) for odd \\(x.\\) The minimum such slope is \\(\\dfrac{51}{100}\\) for even \\(x\\) and \\(\\dfrac{50}{99}\\) for odd \\(x.\\)\n\nSince \\(\\dfrac{50}{99}\\lt\\dfrac{51}{100},\\) the line avoids all these lattice points exactly when \\(\\dfrac12\\lt m\\lt\\dfrac{50}{99},\\) so the maximum is \\(a=\\dfrac{50}{99}.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "For each \\(x,\\) find the smallest slope \\(\\gt\\dfrac12\\) from \\((0,2)\\) that reaches a lattice point at that \\(x\\)",
+        "Compare the minimum slopes for even \\(x\\) and odd \\(x;\\) the tighter bound wins"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

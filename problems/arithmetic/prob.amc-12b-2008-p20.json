@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2008-p20",
+  "title": "2008 AMC 12B Problem 20",
+  "category": "arithmetic",
+  "subjects": [
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "arith.distance-rate-and-time",
+      "label": "Distance rate and time",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "arith.process-simulation",
+      "label": "Process simulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "arith.relative-speed",
+      "label": "Relative speed",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2008,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 32.6,
+    "source": 1860,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Michael walks at the rate of \\(5\\) feet per second on a long straight path. Trash pails are located every \\(200\\) feet along the path. A garbage truck travels at \\(10\\) feet per second in the same direction as Michael and stops for \\(30\\) seconds at each pail. As Michael passes a pail, he notices the truck ahead of him just leaving the next pail. How many times will Michael and the truck meet?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(8\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2008-p20.live",
+      "kind": "proof-sketch",
+      "text": "Number the pails so Michael is at pail \\(0\\) and the truck at pail \\(1\\) at time \\(0.\\) Michael reaches pail \\(n\\) at \\(40n\\) seconds. The truck spends \\(20\\) seconds between pails and \\(30\\) stopped, so it leaves pail \\(n\\) at \\(50(n - 1)\\) seconds and (for \\(n \\ge 2\\)) arrives at \\(50(n - 1) - 30.\\)\n\nMichael is at pail \\(n\\) while the truck is there exactly when \\(50(n-1) - 30 \\le 40n\\) \\(\\le 50(n-1),\\) which simplifies to \\(5 \\le n \\le 8.\\) So they meet at pail \\(5\\) (at \\(t = 200,\\) as the truck departs), pail \\(6\\) (\\(t = 240\\)), pail \\(7\\) (\\(t = 280\\)), and pail \\(8\\) (\\(t = 320,\\) as the truck arrives).\n\nBetween pails \\(6\\) and \\(7\\) the truck (moving at \\(10\\) ft/s) pulls ahead of and is then overtaken by Michael once more, adding one crossing. In all, they meet \\(5\\) times.\n\nThus, the correct answer is B.",
+      "hints": [
+        "Number the pails so Michael starts at pail \\(0\\) and the truck at pail \\(1;\\) Michael reaches pail \\(n\\) at time \\(40n\\) seconds",
+        "The truck leaves pail \\(n\\) at \\(50(n - 1)\\) and arrives at \\(50(n - 1) - 30;\\) find the pails where they coincide, then check for a crossing while the truck moves between them"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "prob.aime-ii-2025-p4",
+  "title": "2025 AIME II Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.telescoping",
+      "label": "Telescoping",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2025,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 43.9,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "The product \\[ \\begin{gathered} \\prod_{k=4}^{63} \\frac{\\log_k (5^{k^2 - 1})}{\\log_{k+1} (5^{k^2 - 4})} \\\\ = \\frac{\\log_4 (5^{15})}{\\log_5 (5^{12})} \\\\ \\quad {}\\cdot \\frac{\\log_5 (5^{24})}{\\log_6 (5^{21})} \\\\ \\quad {}\\cdot \\frac{\\log_6 (5^{35})}{\\log_7 (5^{32})} \\\\ \\quad \\cdots \\frac{\\log_{63} (5^{3968})}{\\log_{64} (5^{3965})} \\end{gathered} \\] is equal to \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "106",
+    "value": "106"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2025-p4.live",
+      "kind": "proof-sketch",
+      "text": "By the change-of-base formula, \\(\\log_k (5^{k^2-1}) = \\frac{(k^2 - 1)\\log 5}{\\log k},\\) so each factor of the product equals \\[ \\begin{gathered} \\frac{\\frac{k^2-1}{\\log k}}{\\frac{k^2-4}{\\log(k+1)}} \\\\ = \\frac{(k-1)(k+1)}{(k-2)(k+2)} \\\\ \\quad {}\\cdot \\frac{\\log(k+1)}{\\log k}. \\end{gathered} \\]\n\nAll three pieces telescope over \\(k = 4, \\ldots, 63:\\) \\[\\prod_{k=4}^{63} \\frac{k-1}{k-2} = \\frac{62}{2} = 31,\\] \\[\\prod_{k=4}^{63} \\frac{k+1}{k+2} = \\frac{5}{65} = \\frac{1}{13},\\] \\[ \\begin{gathered} \\prod_{k=4}^{63} \\frac{\\log(k+1)}{\\log k} \\\\ = \\frac{\\log 64}{\\log 4} = 3. \\end{gathered} \\]\n\nThe product is \\(31 \\cdot \\frac{1}{13} \\cdot 3 = \\frac{93}{13},\\) which is in lowest terms, so \\(m + n = 93 + 13 = 106.\\)",
+      "hints": [
+        "By change of base, each factor equals \\(\\frac{k^2-1}{k^2-4} \\cdot \\frac{\\log(k+1)}{\\log k}\\)",
+        "Factor \\(k^2 - 1 = (k-1)(k+1)\\) and \\(k^2 - 4 = (k-2)(k+2);\\) everything telescopes"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

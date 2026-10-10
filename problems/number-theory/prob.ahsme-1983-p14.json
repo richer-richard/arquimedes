@@ -1,0 +1,78 @@
+{
+  "id": "prob.ahsme-1983-p14",
+  "title": "1983 AHSME Problem 14",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.modular-exponentiation",
+      "label": "Modular exponentiation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.units-digit",
+      "label": "Units digit",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1983,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 21.6,
+    "source": 1430,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "The units digit of \\(3^{1001}7^{1002}13^{1003}\\) is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(9\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "9"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1983-p14.live",
+      "kind": "proof-sketch",
+      "text": "Modulo \\(10,\\) \\[ 3^{1001}13^{1003}\\equiv3^{2004}\\equiv1 \\] because powers of \\(3\\) repeat every \\(4.\\) Also \\(7^{1002}\\equiv7^2\\equiv9\\pmod {10}.\\) Thus the product has units digit \\(9.\\)\n\nTherefore, the correct answer is E.",
+      "hints": [
+        "Reduce \\(13\\) to \\(3\\) when considering units digits",
+        "Combine the two powers of \\(3\\) and use the length-\\(4\\) units-digit cycles"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

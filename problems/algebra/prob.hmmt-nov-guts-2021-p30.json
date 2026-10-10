@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-guts-2021-p30",
+  "title": "2021 HMMT November Guts Problem 30",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.algebraic-properties-of-binomial-coefficients",
+      "label": "Algebraic properties of binomial coefficients",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recurrence-relations",
+      "label": "Recurrence relations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2021,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 66.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The function \\(f: \\mathbb{Z}^{2} \\rightarrow \\mathbb{Z}\\) satisfies\n\n- \\(f(x, 0)=f(0, y)=0\\), and\n- \\(f(x, y)=f(x-1, y)+f(x, y-1)+x+y\\)\nfor all nonnegative integers \\(x\\) and \\(y\\). Find \\(f(6,12)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "77500",
+    "value": "77500"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2021-p30.hmmt",
+      "kind": "proof-sketch",
+      "text": "We claim \\(f(x, y)=\\binom{x+y+2}{x+1}-(x+y+2)\\). Indeed, the hypothesis holds true for our base cases \\(f(x, 0)\\) and \\(f(0, y)\\), and moreover,\n\\(f(x-1, y)+f(x, y-1)+x+y=\\binom{x+y+1}{x}+\\binom{x+y+1}{x+1}-2(x+y+1)+x+y=\\binom{x+y+2}{x+1}-(x+y+2)\\).\nThus, the final answer is \\(\\binom{20}{7}-20=77500\\).\nHere is a way to derive this formula from scratch. The idea is that the second condition harks back to the Pascal's triangle rule, sans some modifications. Write \\(f(x, y)=g(x, y)-x-y\\), so then \\(g(0, t)=g(t, 0)=t\\) and \\(g(x, y)=g(x-1, y)+g(x, y-1)+2\\). Then, letting \\(g(x, y)=h(x, y)-2\\) gives \\(h(x, y)=h(x-1, y)+h(x, y-1)\\), which is exactly Pascal's rule. We are given the base cases \\(h(0, t)=h(t, 0)=t+2\\), which is starting \"inside\" of Pascal's triangle, so \\(h(x, y)=\\binom{x+y+2}{x+1}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

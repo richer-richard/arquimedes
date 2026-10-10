@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-1998-p22",
+  "title": "1998 AMC 8 Problem 22",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1998,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 22.8,
+    "source": 1480,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Terri produces a sequence of positive integers by following three rules. She starts with a positive integer, then applies the appropriate rule to the result, and continues in this fashion.\n\nRule \\(1:\\) If the integer is less than \\(10,\\) multiply it by \\(9.\\)\n\nRule \\(2:\\) If the integer is even and greater than \\(9,\\) divide it by \\(2.\\)\n\nRule \\(3:\\) If the integer is odd and greater than \\(9,\\) subtract \\(5\\) from it.\n\nFor example, consider the sample sequence \\(23,\\) \\(18,\\) \\(9,\\) \\(81,\\) \\(76,\\) \\(\\ldots.\\)\n\nFind the \\(98\\)th term of the sequence that begins \\(98,\\) \\(49,\\) \\(\\ldots.\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(6 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(11 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(22 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(27 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(54 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "27"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1998-p22.live",
+      "kind": "proof-sketch",
+      "text": "The sequence begins\n\n\\[ \\begin{gathered} 98,49,44,22,11, \\\\ 6,54,27,22,\\ldots. \\end{gathered} \\]\n\nAfter the first three terms, the cycle \\((22,11,6,54,27)\\) repeats. Since \\(98-3=95\\) is a multiple of \\(5,\\) the \\(98\\)th term is the fifth term of the cycle, \\(27.\\)\n\nThus, the correct answer is D .",
+      "hints": [
+        "Generate terms until a value repeats.",
+        "After the repeat begins, reduce the index modulo the cycle length."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2010-p16",
+  "title": "2010 AMC 12A 16",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2010,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 33.6,
+    "source": 1900,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Bernardo randomly picks \\(3\\) distinct numbers from the set \\[\\{1,2,3,4,5,6,7,8,9\\}\\] and arranges them in descending order to form a \\(3\\)-digit number. Silvia randomly picks \\(3\\) distinct numbers from the set \\[\\{1,2,3,4,5,6,7,8\\}\\] and also arranges them in descending order to form a \\(3\\)-digit number. What is the probability that Bernardo’s number is larger than Silvia’s number?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{47}{72}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{37}{56}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{2}{3}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{49}{72}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{39}{56}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "37/56"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2010-p16.live",
+      "kind": "proof-sketch",
+      "text": "There are two cases: Bernardo picks a \\(9\\) or he doesn’t.\n\nCase \\(1:\\) Bernardo picks a \\(9\\)\n\nSince a number is fixed, there are \\(\\binom{8}{2} = 28\\) ways to choose the other two numbers.\n\nThere are a total of \\(\\binom{9}{3} = 84\\) ways to pick all three numbers. The probability is then \\[ \\dfrac{28}{84} = \\dfrac{1}{3}. \\]\n\nNote that if Bernardo picks a \\(9,\\) he automatically has a greater number than Silvia.\n\nThis means that Bernardo always wins in this case.\n\nCase \\(2:\\) Bernardo doesn’t pick a \\(9\\)\n\nThere is a \\(1 - \\frac{1}{3} = \\frac{2}{3}\\) chance of this happening. Since both people are choosing from the same numbers, they have an equal chance of winning.\n\nWe still need to find the probability that the numbers are the same. There is a \\[ \\dfrac{1}{\\binom{8}{3}} = \\dfrac{1}{56} \\] chance that Silvia chooses the same numbers as Bernardo. The probability that Bernardo gets a higher number is then \\[ \\dfrac{1 - \\frac{1}{56}}{2} = \\dfrac{55}{112}. \\]\n\nThe total probability of Bernardo getting a higher number is then \\[ \\dfrac{1}{3} + \\dfrac{2}{3} \\cdot \\dfrac{55}{112} = \\dfrac{37}{56}. \\]\n\nThus, B is the correct answer.",
+      "hints": [
+        "Separate cases according to whether Bernardo picks \\(9\\)",
+        "Without a \\(9,\\) the two numbers are symmetric except when the chosen sets match"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

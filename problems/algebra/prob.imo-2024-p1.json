@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2024-p1",
+  "title": "2024 IMO Problem 1",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2024,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 79.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find all real numbers \\(\\alpha\\) so that, for every positive integer \\(n\\), the integer\n\\[ \\left\\lfloor \\alpha \\right\\rfloor + \\left\\lfloor 2 \\alpha \\right\\rfloor\n + \\left\\lfloor 3 \\alpha \\right\\rfloor + \\dots + \\left\\lfloor n \\alpha \\right\\rfloor \\]\nis divisible by \\(n\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2024-p1.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is that \\(\\alpha\\) must be an even integer.\nLet \\(S(n, \\alpha)\\) denote the sum in question.\n\nAnalysis for \\(\\alpha\\) an integer..\nIf \\(\\alpha\\) is an integer, then the sum equals\n\\[ S(n, \\alpha) = (1+2+\\dots+n) \\alpha = \\frac{n(n+1)}{2} \\cdot \\alpha \\]\nwhich is obviously a multiple of \\(n\\) if \\(2 \\mid \\alpha\\);\nmeanwhile, if \\(\\alpha\\) is an odd integer then \\(n = 2\\) gives a counterexample.\n\nMain case..\nSuppose \\(\\alpha\\) is not an integer; we show the desired condition can never be true.\nNote that replacing \\(\\alpha\\) with \\(\\alpha \\pm 2\\) changes by\n\\[ S(n \\pm 2, \\alpha) - S(n, \\alpha) = 2(1+2+\\dots+n) = n(n+1) \\equiv 0 \\pmod n \\]\nfor every \\(n\\).\nThus, by shifting appropriately we may assume \\(-1 < \\alpha < 1\\) and \\(\\alpha \\notin \\mathbb{Z}\\).\n\n• If \\(0 < \\alpha < 1\\),\n then let \\(m \\ge 2\\) be the smallest integer such that \\(m \\alpha \\ge 1\\).\n Then\n \\[ S(m, \\alpha) = \\underbrace{0 + \\dots + 0}_{m-1\\text{ terms}} + 1 = 1 \\]\n is not a multiple of \\(m\\).\n\n• If \\(-1 < \\alpha < 0\\),\n then let \\(m \\ge 2\\) be the smallest integer such that \\(m \\alpha < -1\\).\n Then\n \\[ S(m, \\alpha) = \\underbrace{(-1) + \\dots + (-1)}_{m-1\\text{ terms}} + (-2) = -(m+1) \\]\n is not a multiple of \\(m\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

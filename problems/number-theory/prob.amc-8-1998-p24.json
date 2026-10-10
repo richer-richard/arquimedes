@@ -1,0 +1,81 @@
+{
+  "id": "prob.amc-8-1998-p24",
+  "title": "1998 AMC 8 Problem 24",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.triangular-number",
+      "label": "Triangular number",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1998,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 26.7,
+    "source": 1630,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A rectangular board of \\(8\\) columns has squares numbered beginning in the upper left corner and moving left to right so row one is numbered \\(1\\) through \\(8,\\) row two is \\(9\\) through \\(16,\\) and so on. A student shades square \\(1,\\) then skips one square and shades square \\(3,\\) skips two squares and shades square \\(6,\\) skips \\(3\\) squares and shades square \\(10,\\) and continues in this way until there is at least one shaded square in each column.\n\nWhat is the number of the shaded square that first achieves this result?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(36 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(64 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(78 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(91 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(120 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "120"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1998-p24.live",
+      "kind": "proof-sketch",
+      "text": "The shaded squares are the triangular numbers \\(1,\\) \\(3,\\) \\(6,\\) \\(10,\\) \\(15,\\) \\(\\ldots.\\) Columns correspond to residues modulo \\(8,\\) with residue \\(0\\) representing the eighth column.\n\nThe triangular numbers through \\(105\\) have residues \\(1,\\) \\(3,\\) \\(6,\\) \\(2,\\) \\(7,\\) \\(5,\\) \\(4,\\) \\(4,\\) \\(5,\\) \\(7,\\) \\(2,\\) \\(6,\\) \\(3,\\) and \\(1.\\) Thus, the eighth-column residue has not appeared yet.\n\nThe next triangular number is \\(120,\\) and \\(120\\equiv 0\\pmod{8}.\\) This is the first time every column has a shaded square.\n\nThus, the correct answer is E .",
+      "hints": [
+        "Columns correspond to residues modulo \\(8.\\)",
+        "The shaded squares are triangular numbers."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "398e9769fd9f0445134658a5cdb499790e4623c003011c4f839390ddb328274e"
+    ],
+    "solutions": []
+  }
+}

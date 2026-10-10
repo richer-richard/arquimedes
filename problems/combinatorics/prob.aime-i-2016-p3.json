@@ -1,0 +1,59 @@
+{
+  "id": "prob.aime-i-2016-p3",
+  "title": "2016 AIME I Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2016,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 48.6,
+    "source": 2230,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "A regular icosahedron is a \\(20\\)-faced solid where each face is an equilateral triangle and five triangles meet at every vertex. The regular icosahedron shown below has one vertex at the top, one vertex at the bottom, an upper pentagon of five vertices all adjacent to the top vertex and all in the same horizontal plane, and a lower pentagon of five vertices all adjacent to the bottom vertex and all in another horizontal plane. Find the number of paths from the top vertex to the bottom vertex such that each part of a path goes downward or horizontally along an edge of the icosahedron, and no vertex is repeated.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "810",
+    "value": "810"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2016-p3.live",
+      "kind": "proof-sketch",
+      "text": "Each vertex of the upper pentagon is adjacent to the top vertex, two upper-pentagon neighbors, and two vertices of the lower pentagon; each vertex of the lower pentagon is adjacent to two upper vertices, two lower-pentagon neighbors, and the bottom vertex. So a downward-or-horizontal path with no repeated vertex must descend to the upper pentagon, circle part of it in one direction, drop to the lower pentagon, circle part of it in one direction, and end at the bottom.\n\nThere are \\(5\\) choices for the first step down. On the upper pentagon the path can take \\(0,\\) \\(1,\\) \\(2,\\) \\(3,\\) or \\(4\\) horizontal steps, in either of two directions (a reversal would repeat a vertex), for \\(1 + 2 \\cdot 4 = 9\\) options. Then there are \\(2\\) edges down to the lower pentagon, again \\(9\\) horizontal options there, and \\(1\\) final step down.\n\nThe total is \\(5 \\cdot 9 \\cdot 2 \\cdot 9 = 810.\\)",
+      "hints": [
+        "Every path goes: top vertex, around the upper pentagon, down, around the lower pentagon, down. Count each stage separately.",
+        "Around a pentagon there are \\(9\\) routes (\\(0\\) to \\(4\\) steps, clockwise or counterclockwise), and each upper vertex has \\(2\\) downward edges to the lower pentagon"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "dc612fc296bb0cf587698814fbd4b2f875a3b616da978d83ba629a30c1043829"
+    ],
+    "solutions": []
+  }
+}

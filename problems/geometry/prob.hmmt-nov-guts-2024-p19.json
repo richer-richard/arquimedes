@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-guts-2024-p19",
+  "title": "2024 HMMT November Guts Problem 19",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.radical-axis-theorem",
+      "label": "Radical axis theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-trigonometry",
+      "label": "Triangle trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2024,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 47.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "An equilateral triangle is inscribed in a circle \\(\\omega\\). A chord of \\(\\omega\\) is cut by the perimeter of the triangle into three segments of lengths 55,121 , and 55 in that order. Compute the sum of all possible side lengths of the triangle.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "410",
+    "value": "410"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2024-p19.hmmt",
+      "kind": "proof-sketch",
+      "text": "Note that the chord splits two of the sides into segments of lengths \\(a, b\\) and \\(c, d\\), where segments of length \\(a\\) and \\(c\\) is incident to the same vertex of the equilateral triangle. Moreover, \\(a+b=c+d\\) (as the triangle is equilateral) and \\(a b=c d=55 \\cdot 176\\) by Power of a Point. This means that \\(\\{a, b\\}=\\{c, d\\}\\).\nThis means that we have two cases.\n\n- Case 1: the chord is parallel to the third side. We must have \\(a=c=121\\) and by power of point, \\(b=d=(55 \\cdot 176) / 121=80\\), so the side length is \\(121+80=201\\).\n- Case 2: the chord is not parallel to the third side. In that case, we have that \\(a=d\\) and \\(c=b\\). Thus, by the Law of Cosines, we have\n\n\\[a^{2}+b^{2}-a b=121^{2} .\\]\n\nMoreover, \\(a b=55 \\cdot 176\\) by power of point. Thus,\n\n\\[a+b=\\sqrt{121^{2}+3 \\cdot 55 \\cdot 176}=11 \\sqrt{121+3 \\cdot 5 \\cdot 16}=209\\]\n\nso the side length is 209 .\nThis means that the answer is \\(201+209=410\\).\n(One can check that the two triangles indeed exist, as we can solve for \\(a, b, c, d\\) and see that they are positive real.)\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

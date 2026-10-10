@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2022-p9",
+  "title": "2022 AMC 12A Problem 9",
+  "category": "logic-foundations",
+  "subjects": [
+    "logic-foundations",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "logic.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "logic.logical-deduction",
+      "label": "Logical deduction",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "logic.truth-tellers-and-liars",
+      "label": "Truth-tellers and liars",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2022,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 24.1,
+    "source": 1530,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "On Halloween \\(31\\) children walked into the principal’s office asking for candy. They can be classified into three types: some always lie; some always tell the truth; and some alternately lie and tell the truth. The alternaters arbitrarily choose their first response, either a lie or the truth, but each subsequent statement has the opposite truth value from its predecessor. The principal asked everyone the same three questions in this order.\n\n“Are you a truth-teller?” The principal gave a piece of candy to each of the \\(22\\) children who answered yes.\n\n“Are you an alternater?” The principal gave a piece of candy to each of the \\(15\\) children who answered yes.\n\n“Are you a liar?” The principal gave a piece of candy to each of the \\(9\\) children who answered yes.\n\nHow many pieces of candy in all did the principal give to the children who always tell the truth?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(27\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(31\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "7"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2022-p9.live",
+      "kind": "proof-sketch",
+      "text": "To “Are you a truth-teller?” the truth-tellers and liars both answer yes, and only alternaters who lie on this question answer yes. To “Are you an alternater?” the liars answer yes, and among alternaters only those telling the truth on this question answer yes. To “Are you a liar?” only alternaters lying on this question answer yes.\n\nSplit the alternaters by first response. Those starting with a lie answer (lie, truth, lie), so they say yes to all three questions; those starting truthful answer (truth, lie, truth) and say yes to none of the three. The \\(9\\) yeses on the last question are exactly the lie-first alternaters, so there are \\(9\\) of them.\n\nThe second question’s \\(15\\) yeses are the liars plus these \\(9,\\) so there are \\(6\\) liars. The first question’s \\(22\\) yeses are truth-tellers plus liars plus the \\(9,\\) so the truth-tellers number \\(22-6-9=7.\\)\n\nTruth-tellers answer yes only to the first question, receiving one candy each, for \\(7\\cdot1=7\\) pieces.\n\nThus, the correct answer is A.",
+      "hints": [
+        "Work out how each of the three types answers each question",
+        "Only alternaters who lie first answer the last question yes, which pins down their count"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

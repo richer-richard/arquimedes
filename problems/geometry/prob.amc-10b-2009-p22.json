@@ -1,0 +1,95 @@
+{
+  "id": "prob.amc-10b-2009-p22",
+  "title": "2009 AMC 10B Problem 22",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.surface-area",
+      "label": "Surface area",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.volume",
+      "label": "Volume",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2009,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 28.0,
+    "source": 1750,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A cubical cake with edge length \\(2\\) inches is iced on the sides and the top. It is cut vertically into three pieces as shown in this top view, where \\(M\\) is the midpoint of a top edge. The piece whose top is triangle \\(B\\) contains \\(c\\) cubic inches of cake and \\(s\\) square inches of icing. What is \\(c+s?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{24}{5}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{32}{5}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(8+\\sqrt5\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(5+\\dfrac{16\\sqrt5}{5}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(10+5\\sqrt5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "32/5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2009-p22.live",
+      "kind": "proof-sketch",
+      "text": "Set the top face as a \\(2\\times2\\) square. The cut from \\(M\\) toward the far corner creates the top triangle \\(A\\) with legs \\(1\\) and \\(2,\\) so area \\(1\\) and hypotenuse \\(\\sqrt5.\\)\n\nTriangle \\(B\\) is similar to \\(A\\) but with hypotenuse \\(2,\\) so its area is \\(\\left(\\dfrac{2}{\\sqrt5}\\right)^2\\cdot1=\\dfrac45.\\) Since the cake has height \\(2,\\) the volume is \\(c=\\dfrac45\\cdot2=\\dfrac85.\\)\n\nThe icing on this piece is its top (\\(\\dfrac45\\)) plus the full cube side face it borders (\\(2\\times2=4\\)), so \\(s=\\dfrac45+4=\\dfrac{24}{5}.\\) Therefore \\(c+s=\\dfrac85+\\dfrac{24}{5}=\\dfrac{32}{5}.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Triangle \\(B\\) is similar to the triangle whose legs are \\(1\\) and \\(2\\)",
+        "The icing on \\(B\\) covers its top face and the entire cube face it borders"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "f11deb67a6020cabc2e0db42076f99c87ed8736e6d1b1feba158cf9a6bf7a583"
+    ],
+    "solutions": []
+  }
+}

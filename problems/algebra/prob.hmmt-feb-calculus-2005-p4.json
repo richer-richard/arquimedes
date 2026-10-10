@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-calculus-2005-p4",
+  "title": "2005 HMMT February Calculus Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2005,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 76.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(f: \\mathbf{R} \\rightarrow \\mathbf{R}\\) be a smooth function such that \\(f^{\\prime}(x)^{2}=f(x) f^{\\prime \\prime}(x)\\) for all \\(x\\). Suppose \\(f(0)=1\\) and \\(f^{(4)}(0)=9\\). Find all possible values of \\(f^{\\prime}(0)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-calculus-2005-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\pm \\sqrt{3}\\)\nLet \\(f^{\\prime}(0)=a\\). Then the equation gives \\(f^{\\prime \\prime}(0)=a^{2}\\). Differentiating the given equation gives\n\n\\[2 f^{\\prime}(x) f^{\\prime \\prime}(x)=f(x) f^{\\prime \\prime \\prime}(x)+f^{\\prime}(x) f^{\\prime \\prime}(x)\\]\n\nor \\(f^{\\prime}(x) f^{\\prime \\prime}(x)=f(x) f^{\\prime \\prime \\prime}(x)\\). Differentiating once more gives\n\n\\[f^{\\prime}(x) f^{\\prime \\prime \\prime}(x)+f^{\\prime \\prime}(x)^{2}=f(x) f^{(4)}(x)+f^{\\prime}(x) f^{\\prime \\prime \\prime}(x)\\]\n\nor \\(f^{\\prime \\prime}(x)^{2}=f(x) f^{(4)}(x)\\), giving \\(9=f^{(4)}(0)=a^{4}\\). Thus \\(a= \\pm \\sqrt{3}\\). These are indeed both attainable by \\(f(x)=e^{ \\pm x \\sqrt{3}}\\).\nAlternative Solution: Rewrite the given equation as \\(\\frac{f^{\\prime \\prime}(x)}{f^{\\prime}(x)}=\\frac{f^{\\prime}(x)}{f(x)}\\). Integrating both sides gives \\(\\ln f^{\\prime}(x)=\\ln f(x)+C_{1}\\), and exponentiating gives \\(f^{\\prime}(x)=C f(x)\\). This has solution \\(f(x)=A e^{C x}\\) for constants \\(A\\) and \\(C\\). Since \\(f(0)=1, A=1\\), and differentiating we find that \\(C^{4}=f^{(4)}(0)=9\\), yielding \\(f^{\\prime}(0)=C= \\pm \\sqrt{3}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

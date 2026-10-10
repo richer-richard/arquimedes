@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-1985-p6",
+  "title": "1985 AIME Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cevas-theorem",
+      "label": "Ceva’s Theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1985,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 47.5,
+    "source": 2440,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "As shown in the figure, triangle \\(ABC\\) is divided into six smaller triangles by lines drawn from the vertices through a common interior point. The areas of four of these triangles are as indicated. Find the area of triangle \\(ABC.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "315",
+    "value": "315"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1985-p6.live",
+      "kind": "proof-sketch",
+      "text": "Let the unlabeled upper-right and upper-left areas be \\(x\\) and \\(y,\\) respectively. The three side-division ratios and Ceva’s theorem give \\[ \\frac43\\cdot\\frac{35}{x}\\cdot\\frac{84}{y}=1, \\] so \\(xy=3920.\\)\n\nThe cevian from \\(A\\) meets \\(BC.\\) The ratio of the two segments of \\(BC\\) is \\(\\frac{35}{x}.\\) Computing the same ratio from the two large triangles with vertex \\(A\\) gives \\[ \\frac{35}{x}=\\frac{40+30+35}{x+y+84}, \\] so \\(y+84=2x.\\) Solving with \\(xy=3920\\) yields \\(x=70\\) and \\(y=56.\\) Therefore \\[ \\begin{aligned} [ABC]&=84+70+35\\\\ &\\quad{}+30+40+56=315. \\end{aligned} \\]",
+      "hints": [
+        "Call the upper-right unlabeled area \\(x\\) and the upper-left unlabeled area \\(y\\)",
+        "Use equal-altitude area ratios along the sides, together with Ceva’s theorem"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "ae07657d91123eebcfab1b4ffd984cb060f2fd69f12e6280af8cf7a0e0256edf"
+    ],
+    "solutions": []
+  }
+}

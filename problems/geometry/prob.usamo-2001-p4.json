@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2001-p4",
+  "title": "2001 USAMO Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2001,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 79.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(P\\) be a point in the plane of triangle \\(ABC\\) such that the segments \\(PA\\), \\(PB\\), and \\(PC\\) are the sides of an obtuse triangle. Assume that in this triangle the obtuse angle opposes the side congruent to \\(PA\\). Prove that \\(\\angle BAC\\) is acute.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2001-p4.imported",
+      "kind": "proof-sketch",
+      "text": "We know that $PB^2+PC^2 < PA^2$ and we wish to prove that $AB^2 + AC^2 > BC^2$.\nIt would be sufficient to prove that\n\\[PB^2+PC^2+AB^2+AC^2 \\geq PA^2 + BC^2.\\]\nSet $A(0,0)$, $B(1,0)$, $C(x,y)$, $P(p,q)$.\nThen, we wish to show\n\\[(p-1)^2 + q^2 + (p-x)^2 + (q-y)^2 + 1 + x^2 + y^2 \\geq p^2 + q^2 + (x-1)^2 + y^2\\]\n\\[2p^2 + 2q^2 + 2x^2 + 2y^2 - 2p - 2px - 2qy + 2 \\geq p^2 + q^2 + x^2 + y^2 - 2x + 1\\]\n\\[p^2 + q^2 + x^2 + y^2 + 2x - 2p - 2px - 2qy + 1 \\geq 0\\]\n\\[(x-p)^2 + (q-y)^2 + 2(x-p) + 1 \\geq 0\\]\n\\[(x-p+1)^2 + (q-y)^2 \\geq 0,\\]\nwhich is true by the trivial inequality.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

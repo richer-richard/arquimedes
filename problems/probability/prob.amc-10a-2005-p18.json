@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2005-p18",
+  "title": "2005 AMC 10A Problem 18",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.conditional-probability",
+      "label": "Conditional probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.systematic-listing",
+      "label": "Systematic listing",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2005,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 29.0,
+    "source": 1860,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Team A and team B play a series. The first team to win three games wins the series. Each team is equally likely to win each game, there are no ties, and the outcomes of the individual games are independent. If team B wins the second game and team A wins the series, what is the probability that team B wins the first game?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{5}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1}{4}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{3}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{1}{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{2}{3}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "1/5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2005-p18.live",
+      "kind": "proof-sketch",
+      "text": "Suppose all five games are played, so every sequence of five results is equally likely. Requiring that B wins game \\(2\\) and A ends up with the series (three wins) leaves the equally likely sequences\n\n\\[ \\begin{gathered} \\text{BBAAA}, \\quad \\text{ABBAA}, \\\\ \\text{ABABA}, \\quad \\text{ABAAB}, \\\\ \\text{ABAAA}. \\end{gathered} \\]\n\nOnly in BBAAA does team B win the first game, so the probability is \\(\\dfrac{1}{5}.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "Imagine all five games are played, even after the series is decided, so each five-game sequence is equally likely",
+        "List the sequences in which B wins game \\(2\\) and A wins the series, then see how many also have B winning game \\(1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

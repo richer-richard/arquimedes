@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12b-2022-p15",
+  "title": "2022 AMC 12B Problem 15",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.multiplicative-order",
+      "label": "Multiplicative order",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2022,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 29.3,
+    "source": 1730,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "One of the following numbers is not divisible by any prime number less than \\(10.\\) Which is it?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2^{606} - 1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2^{606} + 1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2^{607} - 1\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2^{607} + 1\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2^{607} + 3^{607}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2022-p15.live",
+      "kind": "proof-sketch",
+      "text": "Every option is odd, so only the primes \\(3, 5, 7\\) need checking.\n\nOption A: \\(2^{606} \\equiv 1 \\pmod 3,\\) so \\(2^{606} - 1\\) is divisible by \\(3.\\) Option B: \\(2^{606} \\equiv 4 \\pmod 5,\\) so \\(2^{606} + 1\\) is divisible by \\(5.\\) Option D: \\(2^{607} \\equiv 2 \\pmod 3,\\) so \\(2^{607} + 1\\) is divisible by \\(3.\\) Option E: modulo \\(5,\\) \\(2^{607} + 3^{607} \\equiv 3 + 2 = 5 \\equiv 0.\\)\n\nFor \\(2^{607} - 1:\\) it is \\(\\equiv 1 \\pmod 3,\\) \\(\\equiv 2 \\pmod 5,\\) and (since \\(2^3 \\equiv 1 \\pmod 7\\) and \\(607 \\equiv 1 \\pmod 3\\)) \\(\\equiv 1 \\pmod 7.\\) So it is not divisible by any prime below \\(10.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "All five numbers are odd, so test divisibility only by \\(3, 5,\\) and \\(7\\)",
+        "Use the cycles of \\(2^n\\) modulo \\(3, 5, 7:\\) for example \\(2^n \\equiv 1 \\pmod 3\\) when \\(n\\) is even"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

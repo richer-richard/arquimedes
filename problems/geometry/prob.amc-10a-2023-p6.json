@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2023-p6",
+  "title": "2023 AMC 10A Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cube-geometry",
+      "label": "Cube geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.double-counting",
+      "label": "Double counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2023,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 17.5,
+    "source": 1270,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "An integer is assigned to each vertex of a cube. The value of an edge is defined to be the sum of the values of the two vertices it touches, and the value of a face is defined to be the sum of the values of the four edges surrounding it. The value of the cube is defined as the sum of the values of its six faces. Suppose the sum of the integers assigned to the vertices is \\(21.\\) What is the value of the cube?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(42\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(63\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(84\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(126\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(252\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "126"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2023-p6.live",
+      "kind": "proof-sketch",
+      "text": "Count by incidences. Each edge lies on \\(2\\) faces, so the six face values together are \\(2\\) times the total of all edge values. Each vertex lies on \\(3\\) edges, so the total edge value is \\(3\\) times the vertex sum. Chaining these, the cube’s value is \\(2 \\cdot 3 \\cdot 21 = 126.\\) Therefore, the answer is D.",
+      "hints": [
+        "Each edge belongs to \\(2\\) faces, so the total face value is \\(2\\) times the total edge value",
+        "Each vertex belongs to \\(3\\) edges, so the total edge value is \\(3\\) times the vertex total"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

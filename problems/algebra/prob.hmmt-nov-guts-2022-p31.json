@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-guts-2022-p31",
+  "title": "2022 HMMT November Guts Problem 31",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functional-equations",
+      "label": "Functional Equations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sums-and-products",
+      "label": "Sums and products",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2022,
+    "number": 31
+  },
+  "difficulty": {
+    "course": 66.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Given positive integers \\(a_{1}, a_{2}, \\ldots, a_{2023}\\) such that\n\n\\[a_{k}=\\sum_{i=1}^{2023}\\left|a_{k}-a_{i}\\right|\\]\n\nfor all \\(1 \\leq k \\leq 2023\\), find the minimum possible value of \\(a_{1}+a_{2}+\\cdots+a_{2023}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "2046264",
+    "value": "2046264"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2022-p31.hmmt",
+      "kind": "proof-sketch",
+      "text": "Without loss of generality, let \\(a_{1} \\leq a_{2} \\leq \\cdots \\leq a_{2023}\\). Then, note that\n\n\\[\\begin{aligned}\na_{k+1}-a_{k} & =\\sum_{i=1}^{2023}\\left|a_{k+1}-a_{i}\\right|-\\left|a_{k}-a_{i}\\right| \\\\\n& =k\\left(a_{k+1}-a_{k}\\right)-(2023-k)\\left(a_{k+1}-a_{k}\\right) \\\\\n& =(2 k-2023)\\left(a_{k+1}-a_{k}\\right)\n\\end{aligned}\\]\n\nThus, \\(a_{k+1}=a_{k}\\) unless \\(k=1012\\), so \\(a_{1}=a_{2}=\\cdots=a_{1012}\\) and \\(a_{1013}=\\cdots=a_{2023}\\), and we can check that that they must be in a ratio of \\(1011: 1012\\). Thus, \\(a_{1}, \\ldots, a_{2023}\\) must consist of 1012 copies of \\(1011 c\\), and 1011 copies of \\(1012 c\\) for some \\(c\\), so for everything to be a positive integer, we need \\(c \\geq 1\\). This gives us the final answer of \\(1011 \\cdot 1012+1012 \\cdot 1011=2046264\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

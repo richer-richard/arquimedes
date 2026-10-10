@@ -1,0 +1,88 @@
+{
+  "id": "prob.ahsme-1965-p39",
+  "title": "1965 AHSME Problem 39",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.estimation",
+      "label": "Estimation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangent-circles",
+      "label": "Tangent circles",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1965,
+    "number": 39
+  },
+  "difficulty": {
+    "course": 46.7,
+    "source": 2410,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "A foreman noticed an inspector checking a \\(3\\)-inch hole with a \\(2\\)-inch plug and a \\(1\\)-inch plug and suggested that two more gauges be inserted to be sure that the fit was snug. If the new gauges are alike, then the diameter \\(d\\) of each, to the nearest hundredth of an inch, is:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0.87\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(0.86\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(0.83\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(0.75\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(0.71\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "0.86"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1965-p39.live",
+      "kind": "proof-sketch",
+      "text": "Place the hole’s center at the origin. The \\(2\\)-inch and \\(1\\)-inch plug centers are \\((0,-\\frac{1}{2})\\) and \\((0,1).\\) Let a new gauge have radius \\(r\\) and center \\((u,v).\\) Tangency to the two plugs gives \\[ \\begin{gathered} u^2+(v+\\frac{1}{2})^2=(1+r)^2,\\\\ u^2+(v-1)^2=(\\frac{1}{2}+r)^2, \\end{gathered} \\] while internal tangency to the hole gives \\(u^2+v^2=(\\frac{3}{2}-r)^2.\\) Subtracting pairs of equations yields \\(v=\\frac12+\\frac r3\\) and \\(v=\\frac32-2r.\\) Thus \\(r=\\frac{3}{7},\\) so \\(d=2r=\\frac{6}{7}\\approx0.86.\\)\n\nTherefore, the correct answer is B.",
+      "hints": [
+        "Use radii \\(\\frac{3}{2},\\) \\(1,\\) and \\(\\frac{1}{2},\\) and let a new gauge have radius \\(r\\)",
+        "If its center is \\((u,v)\\), subtract its three tangency-distance equations"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "17477bb86ca5051bdd9a423c339b9b85d2290a7e1c2e2865dff3518575282d3e"
+    ],
+    "solutions": []
+  }
+}

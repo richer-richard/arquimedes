@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2018-p3",
+  "title": "2018 IMO Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2018,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 111.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "An anti-Pascal triangle is an equilateral triangular array\nof numbers such that, except for the numbers in the bottom row,\neach number is the absolute value of the difference\nof the two numbers immediately below it.\nFor example, the following array is an anti-Pascal triangle\nwith four rows which contains every integer from \\(1\\) to \\(10\\).\n\n[Diagram omitted from this imported TeX transcription.]\n\nDoes there exist an anti-Pascal triangle with \\(2018\\) rows\nwhich contains every integer from \\(1\\) to \\(1+2+\\dots +2018\\)?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2018-p3.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is no, there is no anti-Pascal triangle\nwith the required properties.\n\nLet \\(n = 2018\\) and \\(N = 1+2+\\dots+n\\).\nFor every number \\(d\\) not in the bottom row,\ndraw an arrow from \\(d\\) to the larger of the two numbers below it\n(i.e.\\ if \\(d=a-b\\), draw \\(d \\to a\\)).\nThis creates an oriented forest (which looks like lightning strikes).\n\nConsider the directed path starting from the top vertex \\(A\\).\nStarting from the first number, it increments by at least \\(1+2+\\dots+n\\),\nsince the increments at each step in the path are distinct;\ntherefore equality must hold\nand thus the path from the top ends at \\(N = 1+2+\\dots+n\\)\nwith all the numbers \\(\\{1,2,\\dots,n\\}\\) being close by.\nLet \\(B\\) be that position.\n\n[Diagram omitted from this imported TeX transcription.]\n\nConsider the two left/right neighbors \\(X\\) and \\(Y\\) of the endpoint \\(B\\).\nAssume that \\(B\\) is to the right of the midpoint of the bottom side,\nand complete the equilateral triangle as shown to an apex \\(C\\).\nConsider the lightning strike from \\(C\\) hitting the bottom at \\(D\\).\nIt travels at least \\(\\left\\lfloor n/2-1 \\right\\rfloor\\) steps, by construction.\nBut the increases must be at least \\(n+1\\), \\(n+2\\), \\dots since \\(1,2,\\dots,n\\)\nare close to the \\(A \\to B\\) lightning path.\nThen the number at \\(D\\) is at least\n\\[ (n+1) + (n+2) + \\dots +\n \\left( n+\\left( \\left\\lfloor n/2-1 \\right\\rfloor \\right) \\right)\n > 1 + 2 + \\dots + n \\]\nfor \\(n \\ge 2018\\), contradiction.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

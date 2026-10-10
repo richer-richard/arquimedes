@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2002-p11",
+  "title": "2002 AMC 12B Problem 11",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.parity",
+      "label": "Parity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.prime",
+      "label": "Prime",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2002,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 21.6,
+    "source": 1430,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The positive integers \\(A,\\) \\(B,\\) \\(A-B,\\) and \\(A+B\\) are all prime numbers. The sum of these four primes is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "even"
+    },
+    {
+      "label": "B",
+      "text": "divisible by \\(3\\)"
+    },
+    {
+      "label": "C",
+      "text": "divisible by \\(5\\)"
+    },
+    {
+      "label": "D",
+      "text": "divisible by \\(7\\)"
+    },
+    {
+      "label": "E",
+      "text": "prime"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2002-p11.live",
+      "kind": "proof-sketch",
+      "text": "\\(A-B\\) and \\(A+B\\) have the same parity; being prime, both are odd, so \\(A\\) and \\(B\\) have opposite parity. If \\(A\\) were even, then the prime \\(A\\) would equal \\(2,\\) but the positive prime \\(B\\) would satisfy \\(B\\ge2\\) and make \\(A-B\\le0.\\) Hence \\(A\\) is odd and the even prime \\(B\\) is \\(2.\\)\n\nThen \\(A-2,\\) \\(A,\\) \\(A+2\\) are three primes. One is divisible by \\(3,\\) so that one must equal \\(3;\\) the triple is \\(3,\\) \\(5,\\) \\(7.\\) Their sum together with \\(2\\) is \\(2+3+5+7=17,\\) a prime.\n\nThus, the correct answer is E.",
+      "hints": [
+        "\\(A-B\\) and \\(A+B\\) have the same parity, and both are prime, so both are odd",
+        "Then \\(B=2,\\) making \\(A-2,\\) \\(A,\\) \\(A+2\\) three primes in arithmetic progression"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

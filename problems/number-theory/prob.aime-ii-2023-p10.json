@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-ii-2023-p10",
+  "title": "2023 AIME II Problem 10",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.multiset-permutations",
+      "label": "Multiset permutations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2023,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 59.8,
+    "source": 2920,
+    "mohs": null
+  },
+  "estimatedMinutes": 12,
+  "statement": "Let \\(N\\) be the number of ways to place the integers \\(1\\) through \\(12\\) in the \\(12\\) cells of a \\(2 \\times 6\\) grid so that for any two cells sharing a side, the difference between the numbers in those cells is not divisible by \\(3.\\) One way to do this is shown below. Find the number of positive integer divisors of \\(N.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "144",
+    "value": "144"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2023-p10.live",
+      "kind": "proof-sketch",
+      "text": "The condition says adjacent cells have different residues mod \\(3.\\) Each residue class among \\(1, \\ldots, 12\\) has exactly \\(4\\) members, so \\(N = K \\cdot (4!)^3,\\) where \\(K\\) is the number of ways to fill the grid with residues \\(0, 1, 2,\\) each used \\(4\\) times, with adjacent cells different.\n\nA column is an ordered pair \\((a, b)\\) of distinct residues. If the current column is \\((a, b)\\) and \\(e\\) is the third residue, the next column must be one of \\((b, a),\\) \\((b, e),\\) \\((e, a):\\) each of the three unordered pairs \\(\\{a,b\\},\\) \\(\\{b,e\\},\\) \\(\\{a,e\\}\\) occurs in exactly one allowed orientation. So a residue pattern is determined by the sequence of six unordered pairs together with the orientation of the first column. Since each residue must appear \\(4\\) times, each of the three pairs must be used exactly twice, giving \\(\\frac{6!}{2!\\,2!\\,2!} = 90\\) sequences and \\(K = 2 \\cdot 90 = 180.\\)\n\nTherefore \\(N = 180 \\cdot 24^3\\) \\(= 2{,}488{,}320\\) \\(= 2^{11} \\cdot 3^5 \\cdot 5,\\) which has \\(12 \\cdot 6 \\cdot 2 = 144\\) positive divisors.",
+      "hints": [
+        "Cells sharing a side must have different residues mod \\(3;\\) count the residue patterns first, then multiply by \\((4!)^3\\) to place the actual numbers",
+        "Each column shows two distinct residues; from any column, each of the three unordered residue pairs can come next in exactly one orientation, and each pair must occur twice"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "c97aa21b213840cd3c0a3397b7e1e5aa5500759df3518e716094258e59f90018"
+    ],
+    "solutions": []
+  }
+}

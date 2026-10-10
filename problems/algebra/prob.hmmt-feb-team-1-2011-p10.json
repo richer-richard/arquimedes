@@ -1,0 +1,78 @@
+{
+  "id": "prob.hmmt-feb-team-1-2011-p10",
+  "title": "2011 HMMT February Team Round 1 Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.games-and-strategy",
+      "label": "Games and strategy",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.probability",
+      "label": "Probability",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.recurrences",
+      "label": "Recurrences",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 88.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Once it has been demonstrated that \\(\\lim _{n \\rightarrow \\infty} p_{n}(0)\\) exists and is greater than 0 , it follows that \\(\\lim _{n \\rightarrow \\infty} p_{n}(k)\\) exists and is greater than 0 for all even positive integers \\(k\\) and that \\(\\sum_{k=0}^{\\infty} A_{2 k}=1\\). It also follows that \\(A_{0}=a_{1} A_{0}+a_{2} A_{2}+a_{3} A_{4}, A_{2}=b_{1} A_{0}+b_{2} A_{2}+b_{3} A_{4}+b_{4} A_{6}\\), and \\(A_{2 j}=c_{1} A_{2 j-2}+c_{2} A_{2 j}+\\) \\(c_{3} A_{2 j+2}+c_{4} A_{2 j+4}\\) for all positive integers \\(j \\geq 2\\), where \\(a_{1}, a_{2}, a_{3}, b_{1}, b_{2}, b_{3}, b_{4}\\), and \\(c_{1}, c_{2}, c_{3}, c_{4}\\) are the constants you found in problem 8. Assuming these results, determine, with proof, the value of \\(A_{0}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1-2011-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "By our recurrence relations,\n\n\\[\\begin{gathered}\n\\frac{1}{4} A_{0}=\\frac{1}{2} A_{2}+\\frac{1}{8} A_{4} \\\\\n\\frac{5}{8} A_{2}=\\frac{1}{4} A_{0}+\\frac{3}{8} A_{4}+\\frac{1}{8} A_{6}\n\\end{gathered}\\]\n\nand\n\n\\[\\frac{5}{8} A_{2 k}=\\frac{1}{8} A_{2 k-2}+\\frac{3}{8} A_{2 k+2}+\\frac{1}{8} A_{2 k+4}\\]\n\nfor all \\(k \\geq 2\\). So the terms \\(A_{2 k}(k \\geq 1)\\) satisfy a linear recurrence with characteristic equation \\(x^{3}+3 x^{2}+1=5 x\\). The roots of the characteristic equation are 1 and \\(-2 \\pm \\sqrt{5}\\), so for \\(k \\geq 2\\), \\(A_{2 k}=c_{1}+c_{2}(-2+\\sqrt{5})^{k}+c_{3}(-2-\\sqrt{5})^{k}\\). But clearly, \\(\\lim _{k \\rightarrow \\infty} A_{2 k}=0\\), so \\(c_{1}=c_{3}=0\\). Thus for \\(k \\geq 2\\), we are left with \\(A_{2 k}=c_{2}(-2+\\sqrt{5})^{k}=A_{4}(-2+\\sqrt{5})^{k-2}\\).\nNow, since \\(\\sum_{k=0}^{\\infty} A_{2 k}=1\\), we get \\(1=A_{0}+A_{2}+A_{4} \\sum_{j=0}^{\\infty}(\\sqrt{5}-2)^{j}=A_{0}+A_{2}+\\frac{A_{4}}{1-(\\sqrt{5}-2)}=\\) \\(A_{0}+A_{2}+\\frac{3+\\sqrt{5}}{4} A_{4}\\).\nWe now have the following equations.\n\n\\[\\begin{gathered}\n1=A_{0}+A_{2}+\\frac{3+\\sqrt{5}}{4} A_{4} \\\\\n0=2 A_{0}-4 A_{2}-A_{4} \\\\\n0=2 A_{0}-5 A_{2}+3 A_{4}+A_{6}=2 A_{0}-5 A_{2}+(1+\\sqrt{5}) A_{4}\n\\end{gathered}\\]\n\nWe have three equations with three unknowns. Solving this linear system gives \\(A_{0}=\\frac{\\sqrt{5}-1}{2}\\).\nRemark: The fact that \\(A_{0}=\\frac{\\sqrt{5}-1}{2}>\\frac{1}{2}\\) means that for arbitrarily large \\(n\\), the player wins more often than they lose, so the player is at an advantage. In addition the final answer is the reciprocal of the golden ratio, which is simply beautiful.\nThe probabilistic experiment explored in this problem is a type of random walk. A random walk is an infinite set of moves in some set (usually the \\(R^{n}\\) lattice but sometimes weird shapes or even fractals)\nwhere each move is determined by a random variable. The most basic random walk is a walk on the real line, where the walker starts at 0 , and at every move has probability \\(\\frac{1}{2}\\) of moving one unit to the left, and probability \\(\\frac{1}{2}\\) of moving one unit to the right.\nThe random walk explored in this problem is what is known as a 'biased' random walk, where the probabilities of movement are asymmetric, and weighted towards a certain direction or outcome. In this example the choice of the side of 1 out of every 4 coins biases the walk towards the origin.\nAn interesting inquiry for the reader to ponder is, what is the value of \\(A_{0}\\) if the game is played with 6 coins flipped each turn, or 8 , or \\(2 m\\). If the limits \\(A_{2 k}\\) exist, they will satisfy a linear recurrence with characteristic equation \\(\\left(\\frac{x+1}{2}\\right)^{2 m-1}=x^{m-1}\\), as is evident from this problem, where we solved the \\(m=2\\) case .\nWe now give proofs that \\(A_{k}\\) exists for all even \\(k\\), and that \\(\\sum_{k=0}^{\\infty} A_{2 k}=1\\)\nFirst note that we can use the inductive argument in problem 9 a to prove the stronger bound \\(p_{n}(0) \\geq\\) \\(\\frac{2+\\sqrt{5}}{2} p_{n}(2)\\) and \\(p_{n}(2 k) \\geq(2+\\sqrt{5}) p_{n}(2 k+2)\\) for all \\(k \\geq 1\\).\nNow,\n\n\\[\\begin{gathered}\np_{n+2}(0)+\\frac{1}{4} p_{n+1}(2)=\\frac{3}{4} p_{n+1}(0)+\\frac{3}{4} p_{n+1}(2)+\\frac{1}{8} p_{n+1}(4) \\\\\n=\\frac{3}{4} p_{n}(0)+\\frac{43}{64} p_{n}(2)+\\frac{27}{64} p_{n}(4)+\\frac{9}{64} p_{n}(6)+\\frac{1}{64} p_{n}(8) \\\\\n=p_{n+1}(0)+\\frac{11}{64} p_{n}(2)+\\frac{19}{64} p_{n}(4)+\\frac{9}{64} p_{n}(6)+\\frac{1}{64} p_{n}(8) \\\\\n=p_{n+1}(0)+\\frac{1}{4} p_{n}(2)-\\frac{5}{64} p_{n}(2)+\\frac{19}{64} p_{n}(4)+\\frac{9}{64} p_{n}(6)+\\frac{1}{64} p_{n}(8) \\\\\n\\leq p_{n+1}(0)+\\frac{1}{4} p_{n}(2)\n\\end{gathered}\\]\n\nSo \\(p_{n+1}(0)+p_{n}(2)\\) is a non-increasing sequence that is bounded below, so it converges to a limit, call it \\(A_{0}+A_{2}\\). Now \\(A_{2}=-\\lim _{n \\rightarrow \\infty} p_{n+1}(0)+\\lim _{n \\rightarrow \\infty}\\left(p_{n+1}(0)+p_{n}(2)\\right)=\\lim _{n \\rightarrow \\infty} p_{n}(2)\\).\nSo \\(\\lim _{n \\rightarrow \\infty} p_{n}(2)\\) exists. It follows from our recursions that \\(A_{2 k}\\) exists for all \\(k\\). Since \\(p_{n}(2 k) \\geq 0\\) for all \\(k\\), it follows that all the \\(A_{i}\\) are non-negative.\nNow we must show that \\(\\sum_{k=0}^{\\infty} A_{2 k}=1\\). This is not immediately clear because, while a finite sum of limits of sequences equals the limit of the finite sum of the sequences, the sum of the limits does not necessarily equal the limit of the sum if it is an infinite sum.\nNow it follows from part 8a, that for any \\(\\epsilon>0\\) there exists \\(N\\) such that \\(\\sum_{k=0}^{N} p_{n}(2 k)>1-\\frac{\\epsilon}{2}\\) for all \\(n\\). So \\(\\sum_{k=0}^{N} A_{2 k} \\geq 1-\\frac{\\epsilon}{2}>1-\\epsilon\\). Since \\(A_{2 k} \\geq 0\\) for all \\(k, \\sum_{k=0}^{\\infty} A_{2 k} \\geq 1\\).\nNow if \\(\\sum_{k=0}^{\\infty} A_{2 k}\\) is greater than 1 , or diverges, then there exists a pair \\(j\\) and \\(\\epsilon>0\\) such that \\(\\sum_{k=0}^{j} A_{2 k}=\\) \\(1+\\epsilon\\). But, \\(\\sum_{k=0}^{j} p_{n}(2 k) \\leq 1\\) for all \\(n\\), so \\(\\sum_{k=0}^{j} A_{2 k} \\leq 1\\), contradiction.\n\nSo \\(\\sum_{k=0}^{\\infty} A_{2 k}=1\\).\n\n## Geometry [90]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

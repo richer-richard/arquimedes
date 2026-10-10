@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-1990-p12",
+  "title": "1990 AIME Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.chord",
+      "label": "Chord",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.special-right-triangle",
+      "label": "Special right triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1990,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 45.9,
+    "source": 2380,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "A regular \\(12\\)-gon is inscribed in a circle of radius \\(12.\\) The sum of the lengths of all sides and diagonals of the \\(12\\)-gon can be written in the form \\[a+b\\sqrt2+c\\sqrt3+d\\sqrt6,\\] where \\(a,\\) \\(b,\\) \\(c,\\) and \\(d\\) are positive integers. Find \\(a+b+c+d.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "720",
+    "value": "720"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1990-p12.live",
+      "kind": "proof-sketch",
+      "text": "For \\(k\\) equal to \\(1,\\) \\(2,\\) \\(\\ldots,\\) and \\(5,\\) there are \\(12\\) chords of length \\(24\\sin(\\frac{k\\pi}{12}),\\) and there are \\(6\\) diameters of length \\(24.\\) The five chord lengths are \\[\\begin{gathered}6(\\sqrt6-\\sqrt2),\\quad12,\\quad12\\sqrt2,\\\\12\\sqrt3,\\quad6(\\sqrt6+\\sqrt2).\\end{gathered}\\] Their sum \\(U\\) is \\[\\begin{aligned}U&=12+12\\sqrt2\\\\&\\quad+12\\sqrt3+12\\sqrt6.\\end{aligned}\\] Therefore the total is \\[\\begin{aligned}12U+6(24)&=288+144\\sqrt2\\\\&\\quad+144\\sqrt3\\\\&\\quad+144\\sqrt6.\\end{aligned}\\] Hence \\(a=288\\) and \\(b=c=d=144,\\) so \\(a+b+c+d=720.\\)",
+      "hints": [
+        "Group the chords by the number of vertex steps \\(k,\\) where \\(k\\) is \\(1,\\) \\(2,\\) \\(\\ldots,\\) or \\(6\\)",
+        "For \\(k\\lt6\\) there are \\(12\\) chords of length \\(24\\sin(\\frac{k\\pi}{12}),\\) while there are \\(6\\) diameters"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

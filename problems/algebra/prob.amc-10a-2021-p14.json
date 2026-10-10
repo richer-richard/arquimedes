@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2021-p14",
+  "title": "2021 AMC 10A Problem 14",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2021,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 24.4,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "All the roots of the polynomial \\[ \\begin{aligned} &z^6-10z^5+Az^4+Bz^3\\\\ &\\quad+Cz^2+Dz+16 \\end{aligned} \\] are positive integers, possibly repeated. What is the value of \\(B?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(-88\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(-80\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(-64\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(-41\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(-40\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "-88"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2021-p14.live",
+      "kind": "proof-sketch",
+      "text": "By Vieta’s formulas, the six roots have sum \\(10\\) and product \\(16.\\) Because the product is a power of \\(2,\\) every positive integer root is a power of \\(2.\\) Distributing the four factors of \\(2\\) among six roots gives the least possible sum when four roots are \\(2\\) and two roots are \\(1\\); that sum is already \\(10.\\) Hence the roots are \\[1,1,2,2,2,2.\\]\n\nThe coefficient \\(B\\) is the negative of the sum of all products of three roots. Choosing zero, one, or two of the two roots equal to \\(1\\) gives \\[ \\begin{aligned} B&=-\\left(\\binom43 2^3+2\\binom42 2^2\\right.\\\\ &\\qquad\\left.+\\binom41 2\\right)\\\\ &=-88. \\end{aligned} \\]\n\nThus, A is the correct answer.",
+      "hints": [
+        "Use Vieta to determine the sum and product of the six positive integer roots",
+        "Find the only six positive integers with product \\(16\\) and sum \\(10\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

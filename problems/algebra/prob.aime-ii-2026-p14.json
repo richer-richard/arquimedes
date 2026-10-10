@@ -1,0 +1,76 @@
+{
+  "id": "prob.aime-ii-2026-p14",
+  "title": "2026 AIME2 14",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.custom-operation",
+      "label": "Custom operation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.parity",
+      "label": "Parity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.partitions-and-compositions",
+      "label": "Partitions and compositions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2026,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 71.3,
+    "source": 3370,
+    "mohs": null
+  },
+  "estimatedMinutes": 25,
+  "statement": "For integers \\(a\\) and \\(b,\\) let \\(a \\circ b = a - b\\) if \\(a\\) is odd and \\(b\\) is even, and \\(a \\circ b = a + b\\) otherwise. Find the number of sequences \\(a_1,\\) \\(a_2,\\) \\(a_3,\\) \\(\\ldots,\\) \\(a_n\\) of positive integers such that \\[a_1 + a_2 + a_3 + \\cdots + a_n = 12\\] and \\[a_1 \\circ a_2 \\circ a_3 \\circ \\cdots \\circ a_n = 0,\\] where the operations are performed from left to right; that is, \\(a_1 \\circ a_2 \\circ a_3\\) means \\((a_1 \\circ a_2) \\circ a_3.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "157",
+    "value": "157"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2026-p14.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(a - b \\equiv a + b \\pmod 2,\\) the running value after \\(k\\) steps has the same parity as \\(a_1 + \\cdots + a_k.\\) So term \\(a_k\\) is subtracted exactly when \\(a_k\\) is even and the prefix sum \\(a_1 + \\cdots + a_{k-1}\\) is odd, and the final value is \\(12\\) minus twice the total of the subtracted terms. We must count compositions of \\(12\\) in which the even terms sitting where the prefix sum is odd total exactly \\(6.\\) The prefix parity flips exactly at odd terms, so the odd terms come in \\(2m\\) (the total is even), and the subtracted terms are precisely the even terms lying between the \\((2i-1)\\)st and \\(2i\\)th odd terms; these \\(m\\) “odd stretches” must hold even terms totaling \\(6,\\) while the other \\(m + 1\\) stretches hold even terms totaling \\(6 - A,\\) where \\(A\\) is the sum of the odd terms.\n\nLet \\(f_r(t)\\) be the number of ways to fill \\(r\\) ordered stretches with sequences of even terms totaling \\(2t.\\) One stretch is a composition of \\(2t\\) into even parts, i.e. of \\(t:\\) \\(f_1(t) = 2^{t-1}\\) for \\(t \\ge 1\\) and \\(f_1(0) = 1;\\) convolving gives the values needed below: \\(f_r(0) = 1,\\) \\(f_r(1) = r,\\) \\(f_2(2) = 5,\\) and \\(f_1(3), f_2(3), f_3(3) = 4, 12, 25.\\) Compositions of \\(A\\) into \\(2m\\) odd parts number \\(\\binom{\\frac{A - 2m}{2} + 2m - 1}{2m - 1}.\\)\n\nCasework on \\(m\\) and \\(A:\\) for \\(m = 1:\\) \\(A = 2, 4, 6\\) give \\(1 \\cdot 4 \\cdot f_2(2) = 20,\\) \\(2 \\cdot 4 \\cdot f_2(1) = 16,\\) and \\(3 \\cdot 4 \\cdot 1 = 12.\\) For \\(m = 2:\\) \\(A = 4, 6\\) give \\(1 \\cdot 12 \\cdot f_3(1) = 36\\) and \\(4 \\cdot 12 \\cdot 1 = 48.\\) For \\(m = 3:\\) \\(A = 6\\) gives \\(1 \\cdot 25 \\cdot 1 = 25.\\) The total is \\(20 + 16 + 12 + 36\\) \\(+ 48 + 25 = 157.\\)",
+      "hints": [
+        "The running value always has the same parity as the running sum, so a term is subtracted exactly when it is even and the sum of the terms before it is odd.",
+        "The subtracted terms must total \\(6.\\) Prefix-sum parity flips only at odd terms, so split the sequence at its odd terms (there are \\(2,\\) \\(4,\\) or \\(6\\)) and count each case."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

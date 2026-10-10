@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12b-2005-p24",
+  "title": "2005 AMC 12B Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.parabola",
+      "label": "Parabola",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2005,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 38.6,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "All three vertices of an equilateral triangle are on the parabola \\(y = x^2,\\) and one of its sides has a slope of \\(2.\\) The \\(x\\)-coordinates of the three vertices have a sum of \\(\\dfrac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. What is the value of \\(m + n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(14\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(18\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "14"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2005-p24.live",
+      "kind": "proof-sketch",
+      "text": "For vertices \\((a, a^2), (b, b^2), (c, c^2),\\) the slope of a side is \\(\\dfrac{b^2 - a^2}{b - a} = a + b.\\) Adding the three side slopes, \\[ \\begin{aligned} &(a+b) + (b+c) + (c+a) \\\\ &= 2(a + b + c) \\\\ &= 2 \\cdot \\dfrac{m}{n}. \\end{aligned} \\]\n\nOne side has slope \\(2 = \\tan\\theta.\\) Because the triangle is equilateral, its sides make angles \\(\\theta\\) and \\(\\theta \\pm 60^\\circ,\\) so the other two slopes are \\[ \\begin{aligned} &\\tan(\\theta \\pm 60^\\circ) = \\dfrac{2 \\pm \\sqrt3}{1 \\mp 2\\sqrt3} \\\\ &= -\\dfrac{8 \\pm 5\\sqrt3}{11}. \\end{aligned} \\]\n\nThe sum of the three slopes is \\(2 - \\dfrac{8 + 5\\sqrt3}{11}\\) \\(- \\dfrac{8 - 5\\sqrt3}{11} =\\) \\(\\dfrac{22 - 16}{11} = \\dfrac{6}{11}.\\)\n\nThus \\(a + b + c = \\dfrac12 \\cdot \\dfrac{6}{11} = \\dfrac{3}{11},\\) so \\(m + n = 3 + 11 = 14.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "The chord joining \\((a, a^2)\\) and \\((b, b^2)\\) has slope \\(a + b\\)",
+        "The three side slopes are \\(\\tan\\theta\\) and \\(\\tan(\\theta \\pm 60^\\circ)\\); their sum is twice the vertex-sum"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

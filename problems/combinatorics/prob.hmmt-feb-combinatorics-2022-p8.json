@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2022-p8",
+  "title": "2022 HMMT February Combinatorics Problem 8",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2022,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 86.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Random sequences \\(a_{1}, a_{2}, \\ldots\\) and \\(b_{1}, b_{2}, \\ldots\\) are chosen so that every element in each sequence is chosen independently and uniformly from the set \\(\\{0,1,2,3, \\ldots, 100\\}\\). Compute the expected value of the smallest nonnegative integer \\(s\\) such that there exist positive integers \\(m\\) and \\(n\\) with\n\n\\[s=\\sum_{i=1}^{m} a_{i}=\\sum_{j=1}^{n} b_{j} .\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "2550",
+    "value": "2550"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2022-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let's first solve the problem, ignoring the possibility that the \\(a_{i}\\) and \\(b_{i}\\) can be zero. Call a positive integer \\(s\\) an \\(A\\)-sum if \\(s=\\sum_{i=1}^{m} a_{i}\\) for some nonnegative integer \\(m\\) (in particular, 0 is always an \\(A\\)-sum). Define the term \\(B\\)-sum similarly. Let \\(E\\) be the expected value of the smallest positive integer that is both an \\(A\\)-sum and a \\(B\\)-sum.\nThe first key observation to make is that if \\(s\\) is both an \\(A\\)-sum and a \\(B\\)-sum, then the distance to the next number that is both an \\(A\\)-sum and a \\(B\\)-sum is \\(E\\). To see this, note that if\n\n\\[s=\\sum_{i=1}^{m} a_{i}=\\sum_{j=1}^{n} b_{i}\\]\n\nthe distance to the next number that is both an \\(A\\)-sum and a \\(B\\)-sum is the minimal positive integer \\(t\\) so that there exist \\(m^{\\prime}\\) and \\(n^{\\prime}\\) so that\n\n\\[t=\\sum_{i=1}^{m^{\\prime}} a_{m+i}=\\sum_{j=1}^{n^{\\prime}} b_{n+i}\\]\n\nThis is the same question of which we defined \\(E\\) to be the answer, but with renamed variables, so the expected value of \\(t\\) is \\(E\\). As a result, we conclude that the expected density of numbers that are both \\(A\\)-sums and \\(B\\)-sums is \\(\\frac{1}{E}\\).\nWe now compute this density. Note that since the expected value of \\(a_{i}\\) is \\(\\frac{101}{2}\\), the density of \\(A\\)-sums is \\(\\frac{2}{101}\\). Also, the density of \\(B\\)-sums if \\(\\frac{2}{101}\\). Moreover, as \\(n\\) goes to infinity, the probability that \\(n\\) is an \\(A\\)-sum approaches \\(\\frac{2}{101}\\) and the probability that \\(n\\) is a \\(B\\)-sum approaches \\(\\frac{2}{101}\\). Thus, the density of numbers that are simultaneously \\(A\\)-sums and \\(B\\)-sums is \\(\\frac{4}{101^{2}}\\), so \\(E=\\frac{101^{2}}{4}\\).\nWe now add back the possibility that some of the \\(a_{i}\\) and \\(b_{i}\\) can be 0 . The only way this changes our answer is that the \\(s\\) we seek can be 0 , which happens if and only if \\(a_{1}=b_{1}=0\\). Thus our final answer is\n\n\\[\\frac{1}{101^{2}} \\cdot 0+\\frac{101^{2}-1}{101^{2}} \\cdot \\frac{101^{2}}{4}=\\frac{101^{2}-1}{4}=2550\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

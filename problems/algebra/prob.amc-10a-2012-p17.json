@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2012-p17",
+  "title": "2012 AMC 10A Problem 17",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.rational-equation",
+      "label": "Rational equation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2012,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 25.6,
+    "source": 1670,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(a\\) and \\(b\\) be relatively prime integers with \\(a > b > 0\\) and \\[\\dfrac{a^3-b^3}{(a-b)^3} = \\dfrac{73}{3}.\\] What is \\(a-b?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "3"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2012-p17.live",
+      "kind": "proof-sketch",
+      "text": "Recall that we can factor \\[ a^3 - b^3 = (a - b)(a^2 + ab + b^2). \\] Canceling out this factor gives us that \\[ \\dfrac{a^2 + ab + b^2}{a^2 - 2ab + b^2} = \\dfrac{73}{3}. \\]\n\nCross-multiplying and rearranging gives us \\[ 70a^2 - 149ab + 70b^2 = 0. \\] Since \\(b \\neq 0,\\) we can divide through by \\(b^2\\) to get \\[ 70\\left(\\dfrac{a}{b}\\right)^2 - 149\\dfrac{a}{b} + 70 = 0. \\]\n\nApplying the quadratic formula and noting that \\(a \\gt b\\) gives us that \\(\\dfrac{a}{b} = \\dfrac{10}{7}.\\)\n\nSince \\(a\\) and \\(b\\) are relatively prime, we have that \\(a = 10\\) and \\(b = 7.\\) Their difference is \\(10 - 7 = 3.\\)\n\nThus, C is the correct answer.",
+      "hints": [
+        "Factor \\(a^3-b^3\\)",
+        "The equation becomes a quadratic in \\(\\frac{a}{b}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

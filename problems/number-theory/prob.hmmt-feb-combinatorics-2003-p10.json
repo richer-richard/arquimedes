@@ -1,0 +1,56 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2003-p10",
+  "title": "2003 HMMT February Combinatorics Problem 10",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "nt.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2003,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 90.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A calculator has a display, which shows a nonnegative integer \\(N\\), and a button, which replaces \\(N\\) by a random integer chosen uniformly from the set \\(\\{0,1, \\ldots, N-1\\}\\), provided that \\(N>0\\). Initially, the display holds the number \\(N=2003\\). If the button is pressed repeatedly until \\(N=0\\), what is the probability that the numbers \\(1,10,100\\), and 1000 will each show up on the display at some point?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2003-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(1 / 2224222\\)\n\nFirst, we claim that if the display starts at some \\(N\\), the probability that any given number \\(M<N\\) will appear at some point is \\(1 /(M+1)\\). We can show this by induction on \\(N\\). If \\(N=M+1\\) (the base case), \\(M\\) can only be reached if it appears after the first step, and this occurs with probability \\(1 / N=1 /(M+1)\\). If \\(N>M+1\\) and the claim holds for \\(N-1\\), then there are two possibilities starting from \\(N\\). If the first step leads to \\(N-1\\) (this occurs with probability \\(1 / N\\) ), the probability of seeing \\(M\\) subsequently is \\(1 /(M+1)\\) by the induction hypothesis. If the first step leads to something less than \\(N-1\\) (probability \\((N-1) / N)\\), then it leads to any of the integers \\(\\{0,1, \\ldots, N-2\\}\\) with equal probability. But this is exactly what the first step would have been if we had started from \\(N-1\\); hence, the probability of seeing \\(M\\) is again \\(1 /(M+1)\\) by induction. Thus, the overall probability of seeing \\(M\\) is \\(\\frac{1}{N} \\cdot \\frac{1}{M+1}+\\frac{N-1}{N} \\cdot \\frac{1}{M+1}=1 /(M+1)\\), proving the induction step and the claim.\nNow let \\(P(N, M)(M<N)\\) be the probability of eventually seeing the number \\(M\\) if we start at \\(N\\); note that this is the same as the conditional probability of seeing \\(M\\) given that we see \\(N\\). Hence, the desired probability is\n\n\\[P(2003,1000) \\cdot P(1000,100) \\cdot P(100,10) \\cdot P(10,1)=\\frac{1}{1001} \\cdot \\frac{1}{101} \\cdot \\frac{1}{11} \\cdot \\frac{1}{2}=\\frac{1}{2224222} .\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

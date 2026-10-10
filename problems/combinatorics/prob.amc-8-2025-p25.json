@@ -1,0 +1,89 @@
+{
+  "id": "prob.amc-8-2025-p25",
+  "title": "2025 AMC 8 Problem 25",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.lattice-paths",
+      "label": "Lattice paths",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2025,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 34.4,
+    "source": 1930,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Makayla finds all the possible ways to draw a path in a \\(5 \\times 5\\) diamond-shaped grid. Each path starts at the bottom of the grid and ends at the top, always moving one unit northeast or northwest. She computes the area of the region between each path and the right side of the grid. Two examples are shown in the figures below. What is the sum of the areas determined by all possible paths?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2520\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3150\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3840\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4730\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5050\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "3150"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2025-p25.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(X\\) be the answer.\n\nBy symmetry, if the question asked for the sum of areas between each path and the left side of the grid, then the answer would be exactly the same \\(X.\\)\n\nBut if that answer is added to the original answer, that is exactly the same as the sum over all paths, of the sum of areas to the left and to the right.\n\nFor each path, that sum of areas is exactly \\(25.\\)\n\nThe number of paths is equal to the number of ways to rearrange \\(LLLLLRRRRR,\\) where \\(L\\) stands for left and \\(R\\) stands for right, as the path walks up. The number of rearrangements is \\(10\\) choose \\(5,\\) denoted \\(\\binom{10}{5}.\\)\n\nSo, \\(2X = 25 \\times \\binom{10}{5}.\\) Dividing by \\(2,\\) we get that \\(X\\) equals \\[ \\frac{10 \\times 9 \\times 8 \\times 7 \\times 6}{5 \\times 4 \\times 3 \\times 2 \\times 1} \\times \\frac{25}{2}, \\] which is \\(3150,\\) or choice B.",
+      "hints": [
+        "Pair every path with its mirror image",
+        "For a path and its mirror, the two regions fill the whole diamond"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "469e39aeeb66692dd4df4195be78503666a12d256c322af6b05091010c8d7648"
+    ],
+    "solutions": []
+  }
+}

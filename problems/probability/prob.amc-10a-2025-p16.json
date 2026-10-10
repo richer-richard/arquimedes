@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2025-p16",
+  "title": "2025 AMC 10A Problem 16",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.expected-value",
+      "label": "Expected value",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2025,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 26.7,
+    "source": 1630,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "There are three jars. Each of three coins is placed in one of the three jars, chosen at random and independently of the placements of the other coins. What is the expected number of coins in a jar with the most coins?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{4}{3}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{39}{27}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{5}{3}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{17}{9}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "17/9"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2025-p16.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(3^3 = 27\\) equally likely placements. Of these, \\(3\\) pile all coins into one jar (max \\(3\\)), and \\(6\\) put one coin in each jar (max \\(1\\)). The other \\(18\\) split \\(2\\)-\\(1\\) (max \\(2\\)). So the expected maximum is \\(\\frac{3 \\cdot 3 + 2 \\cdot 18 + 1 \\cdot 6}{27} = \\frac{51}{27} = \\frac{17}{9}.\\) Therefore, the answer is D.",
+      "hints": [
+        "There are \\(3^3 = 27\\) equally likely placements; classify each by how the coins are distributed",
+        "Count placements with max \\(3\\) (all in one jar), max \\(1\\) (one per jar), and max \\(2\\) (the rest)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

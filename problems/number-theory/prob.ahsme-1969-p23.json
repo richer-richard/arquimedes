@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1969-p23",
+  "title": "1969 AHSME Problem 23",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.factorial",
+      "label": "Factorial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime",
+      "label": "Prime",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1969,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 30.5,
+    "source": 1780,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "For any integer \\(n\\) greater than \\(1,\\) the number of prime numbers greater than \\(n!+1\\) and less than \\(n!+n\\) is:\n\nHere \\(n!=1\\cdot2\\cdots(n-1)n.\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac n2\\) for \\(n\\) even, \\(\\dfrac{n+1}{2}\\) for \\(n\\)\nodd"
+    },
+    {
+      "label": "D",
+      "text": "\\(n-1\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(n\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "0"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1969-p23.live",
+      "kind": "proof-sketch",
+      "text": "Every integer in the interval has the form \\(n!+k\\) for some \\(2\\le k\\le n-1.\\) Because \\(n!\\) is divisible by \\(k,\\) so is \\(n!+k,\\) and \\(n!+k\\gt k.\\) Thus every such integer is composite. (For \\(n=2,\\) the interval is empty.) Hence there are no primes in the interval.\n\nTherefore, the correct answer is A.",
+      "hints": [
+        "Every integer strictly between the endpoints has the form \\(n!+k\\) with \\(2\\le k\\le n-1\\)",
+        "Use the fact that \\(k\\) divides both \\(n!\\) and \\(n!+k\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

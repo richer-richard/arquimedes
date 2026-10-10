@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2019-p9",
+  "title": "2019 AIME II Problem 9",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2019,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 53.8,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "Call a positive integer \\(n\\) \\(k\\)-pretty if \\(n\\) has exactly \\(k\\) positive divisors and \\(n\\) is divisible by \\(k.\\) For example, \\(18\\) is \\(6\\)-pretty. Let \\(S\\) be the sum of the positive integers less than \\(2019\\) that are \\(20\\)-pretty. Find \\(\\frac{S}{20}.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "472",
+    "value": "472"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2019-p9.live",
+      "kind": "proof-sketch",
+      "text": "We need \\(n\\) to be a multiple of \\(20\\) and \\(\\tau(n) = 20.\\) Write \\(n = 2^a 5^b m\\) with \\(\\gcd(m, 10) = 1;\\) then \\(a \\ge 2,\\) \\(b \\ge 1,\\) and \\((a + 1)(b + 1)\\tau(m) = 20\\) with \\(a + 1 \\ge 3\\) and \\(b + 1 \\ge 2.\\) The factor \\(a + 1\\) must be a divisor of \\(20\\) that is at least \\(3:\\) one of \\(4,\\) \\(5,\\) \\(10,\\) \\(20.\\)\n\nIf \\(a + 1 = 4,\\) then \\((b + 1)\\tau(m) = 5\\) forces \\(b = 4,\\) \\(m = 1,\\) so \\(n = 2^3 5^4 = 5000,\\) too large. If \\(a + 1 = 10,\\) then \\(b = 1,\\) \\(m = 1,\\) and \\(n = 2^9 \\cdot 5 = 2560,\\) too large. The case \\(a + 1 = 20\\) is impossible because \\(b + 1 \\ge 2.\\) If \\(a + 1 = 5,\\) then \\((b + 1)\\tau(m) = 4,\\) giving either \\(b = 3,\\) \\(m = 1,\\) so \\(n = 2^4 5^3 = 2000 \\lt 2019,\\) or \\(b = 1\\) and \\(\\tau(m) = 2,\\) so \\(m = p\\) is a prime other than \\(2\\) and \\(5\\) and \\(n = 80p \\lt 2019,\\) i.e. \\(p \\le 25:\\) \\(p \\in \\{3, 7, 11, 13, 17, 19, 23\\}.\\)\n\nTherefore \\[ \\begin{aligned} S &= 2000 + 80(3 + 7 + 11 + 13 \\\\ &\\qquad {}+ 17 + 19 + 23) \\\\ &= 2000 + 80 \\cdot 93 \\\\ &= 9440, \\end{aligned} \\] and \\(\\frac{S}{20} = 472.\\)",
+      "hints": [
+        "Write \\(n = 2^a 5^b m\\) with \\(\\gcd(m, 10) = 1;\\) divisibility by \\(20\\) forces \\(a \\ge 2\\) and \\(b \\ge 1\\)",
+        "Then \\((a+1)(b+1)\\tau(m) = 20\\) with \\(a + 1 \\ge 3\\) and \\(b + 1 \\ge 2;\\) check which factorizations keep \\(n \\lt 2019\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

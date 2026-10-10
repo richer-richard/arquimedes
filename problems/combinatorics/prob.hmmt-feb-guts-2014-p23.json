@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2014-p23",
+  "title": "2014 HMMT February Guts Problem 23",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2014,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 77.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(S=\\{-100,-99,-98, \\ldots, 99,100\\}\\). Choose a 50 -element subset \\(T\\) of \\(S\\) at random. Find the expected number of elements of the set \\(\\{|x|: x \\in T\\}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2014-p23.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\square\\) Let us solve a more generalized version of the problem: Let \\(S\\) be a set with \\(2 n+1\\) elements, and partition \\(S\\) into sets \\(A_{0}, A_{1}, \\ldots, A_{n}\\) such that \\(\\left|A_{0}\\right|=1\\) and \\(\\left|A_{1}\\right|=\\left|A_{2}\\right|=\\cdots=\\left|A_{n}\\right|=2\\). (In this problem, we have \\(A_{0}=\\{0\\}\\) and \\(A_{k}=\\{k,-k\\}\\) for \\(k=1,2, \\ldots, 100\\).) Let \\(T\\) be a randomly chosen \\(m\\)-element subset of \\(S\\). What is the expected number of \\(A_{k}\\) 's that have a representative in \\(T\\) ?\nFor \\(k=0,1, \\ldots, n\\), let \\(w_{k}=1\\) if \\(T \\cap A_{k} \\neq \\emptyset\\) and 0 otherwise, so that the number of \\(A_{k}\\) 's that have a representative in \\(T\\) is equal to \\(\\sum_{k=0}^{n} w_{k}\\). It follows that the expected number of \\(A_{k}\\) 's that have a representative in \\(T\\) is equal to\n\n\\[\\mathrm{E}\\left[w_{0}+w_{1}+\\cdots+w_{n}\\right]=\\mathrm{E}\\left[w_{0}\\right]+\\mathrm{E}\\left[w_{1}\\right]+\\cdots+\\mathrm{E}\\left[w_{n}\\right]=\\mathrm{E}\\left[w_{0}\\right]+n \\mathrm{E}\\left[w_{1}\\right]\\]\n\nsince \\(\\mathrm{E}\\left[w_{1}\\right]=\\mathrm{E}\\left[w_{2}\\right]=\\cdots=\\mathrm{E}\\left[w_{n}\\right]\\) by symmetry.\nNow \\(\\mathrm{E}\\left[w_{0}\\right]\\) is equal to the probability that \\(T \\cap A_{0} \\neq \\emptyset\\), that is, the probability that the single element of \\(A_{0}\\) is in \\(T\\), which is \\(T\\left|/|S|=m /(2 n+1)\\right.\\). Similarly, \\(\\mathrm{E}\\left[w_{1}\\right]\\) is the probability that \\(T \\cap A_{1} \\neq \\emptyset\\), that is, the probability that at least one of the two elements of \\(A_{1}\\) is in \\(T\\). Since there are \\(\\binom{2 n-1}{m} m\\)-element subsets of \\(S\\) that exclude both elements of \\(A_{1}\\), and there are \\(\\binom{2 n+1}{m} m\\)-element subsets of \\(S\\) in total, we have that\n\n\\[\\mathrm{E}\\left[w_{1}\\right]=1-\\frac{\\binom{2 n-1}{m}}{\\binom{2 n+1}{m}}=1-\\frac{(2 n-m)(2 n-m+1)}{2 n(2 n+1)}\\]\n\nPutting this together, we find that the expected number of \\(A_{k}\\) 's that have a representative in \\(T\\) is\n\n\\[\\frac{m}{2 n+1}+n-\\frac{(2 n-m+1)(2 n-m)}{2(2 n+1)}\\]\n\nIn this particular problem, we have \\(n=100\\) and \\(m=50\\), so substituting these values gives our answer of \\(\\frac{8825}{201}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

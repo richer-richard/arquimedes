@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-guts-2024-p29",
+  "title": "2024 HMMT February Guts Problem 29",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.pigeonhole-principle",
+      "label": "Pigeonhole principle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomials-mod-p",
+      "label": "Polynomials mod p",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vieta-s-formulas",
+      "label": "Vieta's formulas",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2024,
+    "number": 29
+  },
+  "difficulty": {
+    "course": 92.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For each prime \\(p\\), a polynomial \\(P(x)\\) with rational coefficients is called \\(p\\)-good if and only if there exist three integers \\(a, b\\), and \\(c\\) such that \\(0 \\leq a<b<c<\\frac{p}{3}\\) and \\(p\\) divides all the numerators of \\(P(a)\\), \\(P(b)\\), and \\(P(c)\\), when written in simplest form. Compute the number of ordered pairs \\((r, s)\\) of rational numbers such that the polynomial \\(x^{3}+10 x^{2}+r x+s\\) is \\(p\\)-good for infinitely many primes \\(p\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2024-p29.hmmt",
+      "kind": "proof-sketch",
+      "text": "By Vieta, the sum of the roots is \\(-10(\\bmod p)\\). However, since the three roots are less than \\(p / 3\\), it follows that the roots are \\(\\left(p-a^{\\prime}\\right) / 3,\\left(p-b^{\\prime}\\right) / 3,\\left(p-c^{\\prime}\\right) / 3\\), where there are finitely many choices \\(a^{\\prime}<b^{\\prime}<c^{\\prime}\\). By pigeonhole, one choice, say \\((u, v, w)\\) must occur for infinitely many \\(p\\). We then get that the roots of \\(P\\) are \\(-u / 3,-v / 3\\), and \\(-w / 3\\). Moreover, we must have that \\(u, v, w\\) are all \\(1(\\bmod 3)\\) or all \\(2(\\bmod 3)\\), and by Vieta, we have \\(u+v+w=30\\).\nThe polynomial is then uniquely determined by \\(u, v, w\\). Thus, it suffices to count triples \\(u<v<w\\) of positive integers such that \\(u, v, w\\) are all \\(1(\\bmod 3)\\) or all \\(2(\\bmod 3)\\) and that \\(u+v+w=30\\). It's not very hard to list them all now.\nWhen \\(u, v, w \\equiv 1(\\bmod 3)\\), there are 7 triples: \\((1,4,25),(1,7,22),(1,10,19),(1,13,16),(4,7,19)\\), \\((4,10,16)\\), and \\((7,10,13)\\).\nWhen \\(u, v, w \\equiv 2(\\bmod 3)\\), there are 5 triples: \\((2,5,23),(2,8,20),(2,11,17),(5,8,17)\\), and \\((5,11,14)\\).\nHence, the answer is \\(7+5=12\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

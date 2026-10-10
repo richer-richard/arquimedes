@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-theme-2015-p5",
+  "title": "2015 HMMT November Theme Problem 5",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.coloring-schemes-extremal-arguments",
+      "label": "Coloring schemes, extremal arguments",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.pigeonhole-principle",
+      "label": "Pigeonhole principle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2015,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 44.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Consider a \\(5 \\times 5\\) grid of squares. Vladimir colors some of these squares red, such that the centers of any four red squares do not form an axis-parallel rectangle (i.e. a rectangle whose sides are parallel to those of the squares). What is the maximum number of squares he could have colored red?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2015-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 12\nWe claim that the answer is 12 . We first show that if 13 squares are colored red, then some four form an axis-parallel rectangle. Note that we can swap both columns and rows without affecting whether four squares form a rectangle, so we may assume without loss of generality that the top row has the most red squares colored; suppose it has \\(k\\) squares colored. We may further suppose that, without loss of generality, these \\(k\\) red squares are the first \\(k\\) squares in the top row from the left.\nConsider the \\(k \\times 5\\) rectangle formed by the first \\(k\\) columns. In this rectangle, no more than 1 square per row can be red (excluding the top one), so there are a maximum of \\(k+4\\) squares colored red. In the remaining \\((5-k) \\times 5\\) rectangle, at most \\(4(5-k)\\) squares are colored red (as the top row of this rectangle has no red squares), so there are a maximum of \\((k+4)+4(5-k)=24-3 k\\) squares colored red in the \\(5 \\times 5\\) grid. By assumption, at least 13 squares are colored red, so we have \\(13 \\leq 24-3 k \\Longleftrightarrow k \\leq 3\\).\nHence there are at most 3 red squares in any row. As there are at least 13 squares colored red, this implies that at least 3 rows have 3 red squares colored. Consider the \\(3 \\times 5\\) rectangle formed by these three rows. Suppose without loss of generality that the leftmost three squares in the top row are colored red, which forces the rightmost three squares in the second row to be colored red. But then, by the Pigeonhole Principle, some 2 of the 3 leftmost squares or some 2 of the 3 rightmost squares in the bottom row will be colored red, leading to an axis-parallel rectangle - a contradiction.\nHence there are most 12 squares colored red. It remains to show that there exists some coloring where exactly 12 squares are colored red, one example of which is illustrated below:\n\n|  | R | R | R | R |\n| :---: | :---: | :---: | :---: | :---: |\n| R | R |  |  |  |\n| R |  | R |  |  |\n| R |  |  | R |  |\n| R |  |  |  | R |\n\nThe maximum number of red squares, therefore, is 12 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

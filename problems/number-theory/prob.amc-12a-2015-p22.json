@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2015-p22",
+  "title": "2015 AMC 12A Problem 22",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.chinese-remainder-theorem",
+      "label": "Chinese Remainder Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.recursive-counting",
+      "label": "Recursive counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2015,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 38.0,
+    "source": 2270,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "For each positive integer \\(n,\\) let \\(S(n)\\) be the number of sequences of length \\(n\\) consisting solely of the letters \\(A\\) and \\(B,\\) with no more than three \\(A\\)s in a row and no more than three \\(B\\)s in a row. What is the remainder when \\(S(2015)\\) is divided by \\(12?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(10\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "8"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2015-p22.live",
+      "kind": "proof-sketch",
+      "text": "Note \\(S(1) = 2,\\) \\(S(2) = 4,\\) \\(S(3) = 8.\\) Every valid sequence ends in a run of one, two, or three equal letters; removing that run leaves a valid sequence of length \\(n-1,\\) \\(n-2,\\) or \\(n-3.\\) Thus \\[ \\begin{aligned} &S(n) = S(n-1) + S(n-2) \\\\ &\\quad {}+ S(n-3). \\end{aligned} \\]\n\nModulo \\(3,\\) the first \\(13\\) terms are \\[2,1,2,2,2,0,1,0,1,2,0,0,2.\\] The next three terms are \\(2,1,2,\\) which reproduce the initial state, so the recurrence repeats with period \\(13.\\) Since \\(2015 = 13\\cdot 155,\\) it follows that \\(S(2015) \\equiv S(13) \\equiv 2 \\pmod 3.\\)\n\nModulo \\(4,\\) the terms repeat as \\(2,0,0,2,\\) because the next three-term state after these four terms is again \\((2,0,0).\\) Thus the period is \\(4.\\) As \\(2015 = 4\\cdot 503 + 3,\\) we have \\(S(2015) \\equiv S(3) \\equiv 0 \\pmod 4.\\)\n\nWriting \\(S(2015) = 4k,\\) the condition \\(4k \\equiv 2 \\pmod 3\\) gives \\(k \\equiv 2 \\pmod 3,\\) so \\(S(2015) \\equiv 8 \\pmod{12}.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "A valid sequence ends in a run of \\(1,\\) \\(2,\\) or \\(3\\) equal letters, giving \\(S(n) = S(n-1)\\) \\(+ S(n-2)\\) \\(+ S(n-3)\\)",
+        "Reduce the recurrence modulo \\(3\\) and modulo \\(4\\) separately to find its period"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

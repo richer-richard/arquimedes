@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-algebra-2015-p9",
+  "title": "2015 HMMT February Algebra Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.greatest-common-divisors-gcd",
+      "label": "Greatest common divisors (gcd)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial-interpolation-newton-lagrange",
+      "label": "Polynomial interpolation: Newton, Lagrange",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomials-mod-p",
+      "label": "Polynomials mod p",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2015,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 85.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(N=30^{2015}\\). Find the number of ordered 4-tuples of integers \\((A, B, C, D) \\in\\{1,2, \\ldots, N\\}^{4}\\) (not necessarily distinct) such that for every integer \\(n, A n^{3}+B n^{2}+2 C n+D\\) is divisible by \\(N\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-2015-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "24 Note that \\(n^{0}=\\binom{n}{0}, n^{1}=\\binom{n}{1}, n^{2}=2\\binom{n}{2}+\\binom{n}{1}, n^{3}=6\\binom{n}{3}+6\\binom{n}{2}+\\binom{n}{1}\\) (generally see http://en.wikipedia.org/wiki/Stirling_numbers_of_the_second_kind). Thus the polynomial rewrites as\n\n\\[6 A\\binom{n}{3}+(6 A+2 B)\\binom{n}{2}+(A+B+2 C)\\binom{n}{1}+D\\binom{n}{0},\\]\n\n[^3]which by the classification of integer-valued polynomials is divisible by \\(N\\) always if and only if \\(6 A, 6 A+\\) \\(2 B, A+B+2 C, D\\) are always divisible by \\(N\\).\nWe can eliminate \\(B\\) and (trivially) \\(D\\) from the system: it's equivalent to the system \\(6 A \\equiv 0(\\bmod N)\\), \\(4 A-4 C \\equiv 0(\\bmod N), B \\equiv-A-2 C(\\bmod N), D \\equiv 0(\\bmod N)\\). So we want \\(1^{2}\\) times the number of \\((A, C)\\) with \\(A \\equiv 0(\\bmod N / 6), C \\equiv A(\\bmod N / 4)\\). So there are \\(N /(N / 6)=6\\) choices for \\(A\\), and then given such a choice of \\(A\\) there are \\(N /(N / 4)=4\\) choices for \\(C\\). So we have \\(6 \\cdot 4 \\cdot 1^{2}=24\\) solutions total.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

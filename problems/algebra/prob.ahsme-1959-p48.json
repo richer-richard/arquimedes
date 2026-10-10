@@ -1,0 +1,79 @@
+{
+  "id": "prob.ahsme-1959-p48",
+  "title": "1959 AHSME Problem 48",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1959,
+    "number": 48
+  },
+  "difficulty": {
+    "course": 29.3,
+    "source": 1730,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Given the polynomial \\[ \\begin{aligned} &a_0x^n+a_1x^{n-1}+\\cdots\\\\ &\\qquad{}+a_{n-1}x+a_n, \\end{aligned} \\] where \\(n\\) is a positive integer or zero, and \\(a_0\\) is a positive integer. The remaining \\(a\\)’s are integers or zero. Set \\[ \\begin{aligned} h={}&n+a_0+|a_1|+|a_2|\\\\ &{}+\\cdots+|a_n|. \\end{aligned} \\] [See example \\(25\\) for the meaning of \\(|x|.\\)] The number of polynomials with \\(h=3\\) is:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(9\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1959-p48.live",
+      "kind": "proof-sketch",
+      "text": "We count by degree. If \\(n=0,\\) then \\(a_0=3,\\) giving one polynomial. If \\(n=1,\\) then \\[ a_0+|a_1|=2. \\] This gives \\(a_0=2,a_1=0\\) or \\(a_0=1,a_1=\\pm1,\\) for three polynomials. If \\(n=2,\\) then \\(a_0=1\\) and \\(a_1=a_2=0,\\) giving one more. No higher degree is possible. The total is \\(1+3+1=5.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Since \\(n+a_0\\le3\\) and \\(a_0\\ge1,\\) consider only \\(n=0,1,2\\)",
+        "For each degree, count the integer coefficient tuples with the required sum of absolute values"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

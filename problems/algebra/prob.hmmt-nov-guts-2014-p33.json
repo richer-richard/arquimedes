@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-nov-guts-2014-p33",
+  "title": "2014 HMMT November Guts Problem 33",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.coloring-schemes-extremal-arguments",
+      "label": "Coloring schemes, extremal arguments",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.invariants-and-monovariants",
+      "label": "Invariants and monovariants",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2014,
+    "number": 33
+  },
+  "difficulty": {
+    "course": 55.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many ways can you remove one tile from a \\(2014 \\times 2014\\) grid such that the resulting figure can be tiled by \\(1 \\times 3\\) and \\(3 \\times 1\\) rectangles?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2014-p33.hmmt",
+      "kind": "proof-sketch",
+      "text": "451584 Number the rows and columns of the grid from 0 to 2013, thereby assigning an ordered pair to each tile. We claim that a tile \\((i, j)\\) may be selected if and only if \\(i \\equiv j \\equiv 0(\\bmod 3)\\); call such a square good.\nFirst, let us show that this condition is sufficient. Observe that any such square \\(s\\) is the corner of a canonical \\(4 \\times 4\\) square \\(S\\) whose vertices are all good. Then the sides of \\(S\\) partition the board into nine distinct regions. It's easy to see that all of them can be suitably tiled.\n\nNow we show that only good squares can be removed. Let \\(\\omega\\) be a non-real cube root of unity. In the tile with coordinates \\((i, j)\\), place the complex number \\(\\omega^{i+j}\\). Note that any \\(1 \\times 3\\) or \\(3 \\times 1\\) rectangle placed on the grid must cover three squares with sum \\(1+\\omega+\\omega^{2}=0\\). Now, note that the sum of the numbers on the whole \\(2014 \\times 2014\\) grid, including the removed tile, is\n\n\\[\\sum_{k=0}^{2013} \\sum_{l=0}^{2013} \\omega^{k+l}=\\left(\\sum_{k=0}^{2013} \\omega^{k}\\right)^{2}\\]\n\nwhich can be simplified to 1 using the identity \\(1+\\omega+\\omega^{2}=0\\). Therefore, it is necessary that \\(i+j \\equiv 0\\) \\((\\bmod 3)\\). By placing the complex number \\(\\omega^{i-j}\\) instead of \\(\\omega^{i+j}\\), the same calculations show that \\(i-j \\equiv 0\\) \\((\\bmod 3)\\) is necessary. This can only occur if \\(i \\equiv j \\equiv 0(\\bmod 3)\\).\nHence the answer is exactly the set of good squares, of which there are \\(672^{2}=451584\\).\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

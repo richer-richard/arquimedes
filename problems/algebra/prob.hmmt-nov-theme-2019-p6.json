@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-theme-2019-p6",
+  "title": "2019 HMMT November Theme Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counting",
+      "label": "Counting",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2019,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 41.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Wendy eats sushi for lunch. She wants to eat six pieces of sushi arranged in a \\(2 \\times 3\\) rectangular grid, but sushi is sticky, and Wendy can only eat a piece if it is adjacent to (not counting diagonally) at most two other pieces. In how many orders can Wendy eat the six pieces of sushi, assuming that the pieces of sushi are distinguishable?\n\n[Diagram omitted from this imported transcription; consult the HMMT archive while reviewing the problem.]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2019-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 360\nCall the sushi pieces \\(A, B, C\\) in the top row and \\(D, E, F\\) in the bottom row of the grid. Note that Wendy must first eat either \\(A, C, D\\), or \\(F\\). Due to the symmetry of the grid, all of these choices are equivalent. Without loss of generality, suppose Wendy eats piece \\(A\\).\n\nNow, note that Wendy cannot eat piece \\(E\\), but can eat all other pieces. If Wendy eats piece \\(B, D\\), or \\(F\\), then in the resulting configuration, all pieces of sushi are adjacent to at most 2 pieces, so she will have 4! ways to eat the sushi. Thus, the total number of possibilities in this case is \\(4 \\cdot 3 \\cdot 4!=288\\).\n\nIf Wendy eats \\(A\\) and then \\(C\\), then Wendy will only have 3 choices for her next piece of sushi, after which she will have 3! ways to eat the remaining 3 pieces of sushi. Thus, the total number of possibilities in this case is \\(4 \\cdot 1 \\cdot 3 \\cdot 3!=72\\).\nThus, the total number of ways for Wendy to eat the sushi is \\(288+72=360\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

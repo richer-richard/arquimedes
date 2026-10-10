@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-team-2019-p4",
+  "title": "2019 HMMT November Team Problem 4",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.games-and-greedy-algorithms",
+      "label": "Games and greedy algorithms",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.invariants-and-monovariants",
+      "label": "Invariants and monovariants",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular Arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2019,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 49.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Two players play a game, starting with a pile of \\(N\\) tokens. On each player's turn, they must remove \\(2^{n}\\) tokens from the pile for some nonnegative integer \\(n\\). If a player cannot make a move, they lose. For how many \\(N\\) between 1 and 2019 (inclusive) does the first player have a winning strategy?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2019-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 85\nNote that all integer \\(x\\) work. If \\(x\\) is not an integer then suppose \\(n<x<n+1\\). Then \\(x=n+\\frac{k}{2 n+1}\\), where \\(n\\) is an integer and \\(1 \\leq k \\leq 2 n\\) is also an integer, since the denominator of the fraction on the right hand side is \\(2 n+1\\). We now show that all \\(x\\) of this form work.\n\nNote that\n\n\\[x^{2}=n^{2}+\\frac{2 n k}{2 n+1}+\\left(\\frac{k}{2 n+1}\\right)^{2}=n^{2}+k-\\frac{k}{2 n+1}+\\left(\\frac{k}{2 n+1}\\right)^{2}\\]\n\nFor \\(\\frac{k}{2 n+1}\\) between 0 and \\(1,-\\frac{k}{2 n+1}+\\left(\\frac{k}{2 n+1}\\right)^{2}\\) is between \\(-\\frac{1}{4}\\) and 0 , so we have \\(n^{2}+k-1<x^{2} \\leq n^{2}+k\\), and \\(\\left\\lceil x^{2}\\right\\rceil=n^{2}+k\\).\nThen,\n\n\\[\\frac{\\left\\lceil x^{2}\\right\\rceil+\\lceil x\\rceil \\cdot\\lfloor x\\rfloor}{\\lceil x\\rceil+\\lfloor x\\rfloor}=\\frac{n^{2}+k+n \\cdot(n+1)}{2 n+1}=n+\\frac{k}{2 n+1}=x\\]\n\nso all \\(x\\) of this form work.\nNow, note that the \\(2 n\\) solutions in the interval \\((n, n+1)\\), together with the solution \\(n+1\\), form an arithmetic progression with \\(2 n+1\\) terms and average value \\(n+\\frac{n+1}{2 n+1}\\). Thus, the sum of the solutions in the interval \\((n, n+1]\\) is \\(2 n^{2}+2 n+1=n^{2}+(n+1)^{2}\\). Summing this for \\(n\\) from 0 to 4 , we get that the answer is\n\n\\[0^{2}+2\\left(1^{2}+2^{2}+3^{2}+4^{2}\\right)+5^{2}=85\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

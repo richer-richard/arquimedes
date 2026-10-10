@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2026-p7",
+  "title": "2026 AIME2 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complementary-probability",
+      "label": "Complementary probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-distribution",
+      "label": "Geometric distribution",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2026,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 57.7,
+    "source": 2840,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "A standard fair six-sided die is rolled repeatedly. Each time the die reads \\(1\\) or \\(2,\\) Alice gets a coin; each time it reads \\(3\\) or \\(4,\\) Bob gets a coin; and each time it reads \\(5\\) or \\(6,\\) Carol gets a coin. The probability that Alice and Bob each receive at least two coins before Carol receives any coins can be written as \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(100m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "754",
+    "value": "754"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2026-p7.live",
+      "kind": "proof-sketch",
+      "text": "Each roll is an Alice roll, a Bob roll, or a Carol roll, each with probability \\(\\frac{1}{3}.\\) The event succeeds exactly when the rolls before the first Carol roll include at least two Alice rolls and at least two Bob rolls. The first Carol roll is roll \\(k + 1\\) with probability \\(\\left(\\frac{2}{3}\\right)^k \\frac{1}{3},\\) and given this, the first \\(k\\) rolls form one of \\(2^k\\) equally likely Alice/Bob strings. For \\(k \\ge 3\\) the bad strings — at most one Alice, or at most one Bob — number \\((k + 1) + (k + 1) = 2k + 2,\\) and no string is bad in both ways. Hence \\[ \\begin{aligned} P &= \\sum_{k \\ge 4} \\frac{1}{3}\\left(\\frac{2}{3}\\right)^k \\\\ &\\quad {}\\cdot \\left(1 - \\frac{2k + 2}{2^k}\\right). \\end{aligned} \\]\n\nThe first piece is \\(\\sum_{k \\ge 4} \\left(\\frac{2}{3}\\right)^k = \\frac{16}{27}.\\) For the second, \\(\\sum_{k \\ge 0} \\frac{k + 1}{3^k} = \\frac{1}{(1 - \\frac{1}{3})^2} = \\frac{9}{4},\\) so \\[ \\begin{aligned} &\\sum_{k \\ge 4} \\frac{2k + 2}{3^k} \\\\ &= 2\\left(\\frac{9}{4} - 1 - \\frac{2}{3} - \\frac{1}{3} - \\frac{4}{27}\\right) \\\\ &= 2 \\cdot \\frac{11}{108} = \\frac{11}{54}. \\end{aligned} \\]\n\nTherefore \\(P = \\frac{1}{3}\\left(\\frac{16}{27} - \\frac{11}{54}\\right)\\) \\(= \\frac{1}{3} \\cdot \\frac{21}{54} = \\frac{7}{54},\\) and \\(100m + n = 700 + 54 = 754.\\)",
+      "hints": [
+        "Condition on the first Carol roll being roll \\(k + 1:\\) the \\(k\\) rolls before it are Alice/Bob rolls that must include at least two of each.",
+        "Given \\(k\\) Alice/Bob rolls, all \\(2^k\\) patterns are equally likely, and \\(2k + 2\\) of them have at most one Alice or at most one Bob. Sum the resulting series."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

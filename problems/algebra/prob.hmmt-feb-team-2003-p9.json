@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-feb-team-2003-p9",
+  "title": "2003 HMMT February Team Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2003,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 89.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "(a) Show that if every cell of a 2-configuration of a finite set \\(A\\) is \\(m\\)-separable, then the whole 2-configuration is \\(m\\)-separable.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2003-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "It is sufficient to show each cell is 2 -separable, by part (a). A barren 2configuration by definition cannot have any cycles (i.e. subsets \\(\\left\\{a_{0}, \\ldots, a_{n}\\right\\}, n \\geq 2\\), where each \\(\\left\\{a_{i}, a_{i+1}\\right\\}\\) and \\(\\left\\{a_{n}, a_{0}\\right\\}\\) all belong to the 2 -configuration). For any two distinct elements \\(a, b\\) of \\(A\\) in the same cell of a 2-configuration \\(C\\), define the distance between them to be the smallest \\(n\\) such that there exists a sequence \\(a=a_{0}, a_{1}, \\ldots, a_{n}=\\)\n\\(b\\) with \\(\\left\\{a_{0}, a_{1}\\right\\},\\left\\{a_{1}, a_{2}\\right\\}, \\ldots,\\left\\{a_{n-1}, a_{n}\\right\\}\\) all belonging to the 2 -configuration. Notice that the terms of this sequence are all distinct: if \\(a_{i}=a_{j}\\) for \\(i<j\\), then we have the shorter sequence \\(a_{0}, a_{1}, \\ldots, a_{i}, a_{j+1}, \\ldots, a_{n}\\), contradicting minimality.\n\nNow let \\(C\\) be a barren 2 -configuration of \\(A\\). Pick any element \\(a\\) of \\(A\\); label it and all elements at even distance from it with the integer 1, and label all elements at odd distance from it with the integer 2 . We claim no two different elements with the same label appear in the same element of \\(C\\). Otherwise, let \\(b\\) and \\(c\\) be such elements, and let \\(a=a_{0}, a_{1}, \\ldots, a_{n}=b\\) and \\(a=a_{0}^{\\prime}, a_{1}^{\\prime}, \\ldots, a_{m}^{\\prime}=c\\) be the corresponding minimal sequences. Consider the largest \\(p\\) such that \\(a_{p} \\in\\left\\{a_{0}^{\\prime}, \\ldots, a_{m}^{\\prime}\\right\\}\\); write \\(a_{p}=a_{q}^{\\prime}\\). We claim the set \\(\\left\\{a_{n}, a_{n-1}, \\ldots, a_{p}, a_{q+1}^{\\prime}, \\ldots, a_{m}^{\\prime}\\right\\}\\) is then a cycle. It is straightforward to check that all its elements are distinct; the only issue is whether it has at least 3 elements. If not, we would have \\(a_{p}=a_{n}\\) or \\(a_{m}^{\\prime}\\). Assume that \\(a_{p}=a_{n} \\Rightarrow p=n \\Rightarrow q=m-1\\) (by minimality of our sequence \\(\\left(a_{i}^{\\prime}\\right)\\) ), but this means that \\(m=n+1\\), so the distances of \\(b\\) and \\(c\\) from \\(a\\) have opposite parities, contradicting the assumption that they have the same label. The case \\(a_{q}^{\\prime}=a_{m}^{\\prime}\\) is similar. Thus, our set really does have at least three elements, and it is a cycle. But since \\(A\\) is barren, it contains no cycles, and we have a contradiction.\n\nThus, after all, no two elements with the same label appear in the same pair of \\(C\\), so the cell containing \\(a\\) is 2 -separable, and we are done.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

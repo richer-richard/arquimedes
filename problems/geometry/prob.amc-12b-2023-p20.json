@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2023-p20",
+  "title": "2023 AMC 12B Problem 20",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.geometric-probability",
+      "label": "Geometric probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2023,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 39.0,
+    "source": 2110,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Cyrus the frog jumps \\(2\\) units in a direction, then \\(2\\) more in another direction. What is the probability that he lands less than \\(1\\) unit away from his starting position?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{6}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1}{5}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{\\sqrt{3}}{8}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{\\arctan\\tfrac12}{\\pi}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{2\\arcsin\\tfrac14}{\\pi}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2023-p20.live",
+      "kind": "proof-sketch",
+      "text": "Take the first jump as \\((2,0)\\) and the second as \\((2\\cos\\theta,2\\sin\\theta)\\) with \\(\\theta\\) uniform on \\([0,2\\pi).\\) The landing distance satisfies \\(R^2=(2+2\\cos\\theta)^2\\) \\(+(2\\sin\\theta)^2\\) \\(=8+8\\cos\\theta.\\) We need \\(R\\lt 1,\\) i.e. \\(\\cos\\theta\\lt-\\tfrac78.\\) The measure of such angles is \\(2\\arccos\\tfrac78,\\) so the probability is \\(\\dfrac{2\\arccos\\tfrac78}{2\\pi}= \\dfrac{\\arccos\\tfrac78}{\\pi}.\\) Using \\(\\arccos(1-2x^2)=2\\arcsin x\\) with \\(x=\\tfrac14\\) gives \\(\\arccos\\tfrac78=2\\arcsin\\tfrac14,\\) so the probability is \\(\\dfrac{2\\arcsin\\tfrac14}{\\pi}.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "Fix the first jump along the \\(x\\)-axis; the second jump makes a uniformly random angle \\(\\theta\\)",
+        "The landing distance satisfies \\(R^2=8+8\\cos\\theta;\\) require \\(R\\lt 1,\\) i.e. \\(\\cos\\theta\\lt-\\tfrac78\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2022-p14",
+  "title": "2022 AMC 10B Problem 14",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.extremal-argument",
+      "label": "Extremal argument",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.pairing-and-grouping",
+      "label": "Pairing and grouping",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.subsets",
+      "label": "Subsets",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2022,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 25.9,
+    "source": 1600,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Suppose that \\(S\\) is a subset of \\(\\left\\{ 1, 2, 3, \\cdots , 25 \\right\\}\\) such that the sum of any two (not necessarily distinct) elements of \\(S\\) is never an element of \\(S.\\) What is the maximum number of elements \\(S\\) may contain?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( \\ 12 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( \\ 13 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( \\ 14 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( \\ 15 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( \\ 16 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "13"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2022-p14.live",
+      "kind": "proof-sketch",
+      "text": "The set \\(S = \\{13,14 \\cdots ,25\\}\\) has \\(13\\) elements, and every pair has sum greater than \\(25,\\) so this size is attainable.\n\nConversely, let \\(m\\) be the maximum element of \\(S.\\) For every element of \\(S\\) satisfying \\(i<m,\\) the number \\(i\\) and the number \\(m-i\\) cannot both belong to \\(S.\\)\n\nThus, among the numbers below \\(m,\\) at most one number can be chosen from each pair with sum \\(m\\); if \\(m\\) is even, the middle number cannot be chosen either. Hence at most \\(\\lfloor \\dfrac {m-1}2 \\rfloor\\) elements lie below \\(m,\\) and including \\(m\\) gives at most \\(\\lfloor \\dfrac{m-1}2 \\rfloor +1\\) elements.\n\nThe maximum value of this has \\(m=25,\\) yielding \\(13.\\)\n\nThus, the answer is B .",
+      "hints": [
+        "Pair the numbers below the maximum element so that each pair sums to that maximum",
+        "Let \\(m\\) be the largest element of \\(S\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

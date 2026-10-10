@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2022-p28",
+  "title": "2022 HMMT February Guts Problem 28",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.telescoping-series",
+      "label": "Telescoping series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2022,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 79.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the nearest integer to\n\n\\[100 \\sum_{n=1}^{\\infty} 3^{n} \\sin ^{3}\\left(\\frac{\\pi}{3^{n}}\\right)\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "236",
+    "value": "236"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2022-p28.hmmt",
+      "kind": "proof-sketch",
+      "text": "Note that we have\n\n\\[\\sin 3 x=3 \\sin x-4 \\sin ^{3} x \\Longrightarrow \\sin ^{3} x=\\frac{1}{4}(3 \\sin x-\\sin 3 x)\\]\n\nwhich implies that\n\n\\[\\frac{\\sin ^{3} x}{3 x}=\\frac{1}{4}\\left(\\frac{\\sin x}{x}-\\frac{\\sin 3 x}{3 x}\\right)\\]\n\nSubstituting \\(x=\\frac{\\pi}{3^{n}}\\) and simplifying gives us\n\n\\[3^{n} \\sin ^{3} \\frac{\\pi}{3^{n}}=\\frac{3 \\pi}{4}\\left(\\frac{\\sin \\frac{\\pi}{3^{n}}}{\\frac{\\pi}{3^{n}}}-\\frac{\\sin \\frac{\\pi}{3^{n-1}}}{\\frac{\\pi}{3^{n-1}}}\\right)\\]\n\nSumming this from \\(n=1\\) to \\(N\\) and telescoping gives us\n\n\\[\\sum_{n=1}^{N} 3^{n} \\sin ^{3}\\left(\\frac{\\pi}{3^{n}}\\right)=\\frac{3 \\pi}{4}\\left(\\frac{\\sin \\frac{\\pi}{3^{N}}}{\\frac{\\pi}{3^{N}}}-\\frac{\\sin \\pi}{\\pi}\\right)\\]\n\nTaking \\(N \\rightarrow \\infty\\) gives us an answer of\n\n\\[100 \\cdot \\frac{3 \\pi}{4} \\approx 236\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

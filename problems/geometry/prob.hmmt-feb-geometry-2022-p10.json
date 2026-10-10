@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-feb-geometry-2022-p10",
+  "title": "2022 HMMT February Geometry Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2022,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 92.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Suppose \\(\\omega\\) is a circle centered at \\(O\\) with radius 8 . Let \\(A C\\) and \\(B D\\) be perpendicular chords of \\(\\omega\\). Let \\(P\\) be a point inside quadrilateral \\(A B C D\\) such that the circumcircles of triangles \\(A B P\\) and \\(C D P\\) are tangent, and the circumcircles of triangles \\(A D P\\) and \\(B C P\\) are tangent. If \\(A C=2 \\sqrt{61}\\) and \\(B D=6 \\sqrt{7}\\), then \\(O P\\) can be expressed as \\(\\sqrt{a}-\\sqrt{b}\\) for positive integers \\(a\\) and \\(b\\). Compute \\(100 a+b\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "103360",
+    "value": "103360"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2022-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(X=A C \\cap B D, Q=A B \\cap C D\\) and \\(R=B C \\cap A D\\). Since \\(Q A \\cdot Q B=Q C \\cdot Q D, Q\\) is on the radical axis of \\((A B P)\\) and \\((C D P)\\), so \\(Q\\) lies on the common tangent at \\(P\\). Thus, \\(Q P^{2}=Q A \\cdot Q B\\). Similarly, \\(R A \\cdot R C=R P^{2}\\). Let \\(M\\) be the Miquel point of quadrilateral \\(A B C D\\) : in particular, \\(M=O X \\cap Q R\\) is the foot from \\(O\\) to \\(Q R\\). By properties of the Miquel point, \\(A B M R\\) and \\(A C M Q\\) are cyclic. Thus,\n\n\\[\\begin{aligned}\nQ P^{2} & =Q A \\cdot Q B \\\\\nR P^{2} & =R A \\cdot R C \\\\\nQ P^{2}+R P^{2} & =Q M \\cdot Q R+R M \\cdot R Q=(Q R+R M) Q R=Q R^{2}\n\\end{aligned}\\]\n\nAs a result, \\(\\angle Q P R=90^{\\circ}\\).\nNow, let \\(P^{\\prime}\\) the inverse of \\(P\\) with respect to \\(\\omega\\). Note that by properties of inversion, \\(\\left(A B P^{\\prime}\\right)\\) and \\(\\left(C D P^{\\prime}\\right)\\) are tangent, and \\(\\left(A C P^{\\prime}\\right)\\) and \\(\\left(B D P^{\\prime}\\right)\\) are also tangent.\nBut now,\n\n\\[\\begin{aligned}\nQ P^{2}=Q P^{\\prime 2} & =Q A \\cdot Q B \\\\\nR P^{2}=R P^{\\prime 2} & =R A \\cdot R C \\\\\nQ P^{2}+R P^{2}=Q P^{\\prime 2}+R P^{\\prime 2} & =Q R^{2} .\n\\end{aligned}\\]\n\nThus, \\(P Q P^{\\prime} R\\) is a cyclic kite, so \\(P\\) and \\(P^{\\prime}\\) are reflections of each other across \\(Q R\\). In particular, since \\(O, P, P^{\\prime}\\) are collinear, then \\(M\\) lies on line \\(O P P^{\\prime}\\).\nWe can now compute \\(O P\\) by using the fact that \\(O P+\\frac{r^{2}}{O P}=2 O M=\\frac{2 r^{2}}{O X}\\), where \\(r=8\\). Since \\(O X\\) can be computed to equal 2 quite easily, then \\(O P+\\frac{64}{O P}=64\\), or \\(O P^{2}-64 O P+64=0\\). Solving this yields \\(O P=32 \\pm 8 \\sqrt{15}\\), and because \\(P\\) is inside the circle, \\(O P=32-8 \\sqrt{15}=\\sqrt{1024}-\\sqrt{960}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

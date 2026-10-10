@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-guts-2011-p25",
+  "title": "2011 HMMT February Guts Problem 25",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recurrences",
+      "label": "Recurrences",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 83.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n\\) be an integer greater than 3 . Let \\(R\\) be the set of lattice points \\((x, y)\\) such that \\(0 \\leq x, y \\leq n\\) and \\(|x-y| \\leq 3\\). Let \\(A_{n}\\) be the number of paths from \\((0,0)\\) to \\((n, n)\\) that consist only of steps of the form \\((x, y) \\rightarrow(x, y+1)\\) and \\((x, y) \\rightarrow(x+1, y)\\) and are contained entirely within \\(R\\). Find the smallest positive real number that is greater than \\(\\frac{A_{n+1}}{A_{n}}\\) for all \\(n\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2011-p25.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(2+\\sqrt{2}\\)\nWe first find \\(A_{n}\\) in terms of \\(n\\). Let \\(a_{n}\\) be the number of ways to get to the point \\((n, n+3)\\), and let \\(b_{n}\\) be the number of ways to get to the point \\((n+1, n+2)\\). By symmetry, \\(a_{n}\\) is also the number of ways to get to \\((n+3, n)\\) and \\(b_{n}\\) is also the number of ways to get to the point \\((n+2, n+1)\\).\n\nGuts Round\n\nWe can easily see that \\(a_{0}=1\\) and \\(b_{0}=3\\). This also means that \\(A_{n}=a_{n-3}+3 b_{n-3}+3 b_{n-3}+a_{n-3}=\\) \\(2 a_{n-3}+6 b_{n-3}\\).\nWe also get the recurrence:\n\n\\[\\begin{aligned}\na_{i+1} & =a_{i}+b_{i} \\\\\nb_{i+1} & =a_{i}+3 b_{i}\n\\end{aligned}\\]\n\nWe have both \\(3 a_{i+1}=3 a_{i}+3 b_{i}\\) and \\(a_{i+2}=a_{i+1}+b_{i+1}\\). Subtracting these gives\n\n\\[\\begin{aligned}\na_{i+2}-3 a_{i+1} & =a_{i+1}-3 a_{i}+b_{i+1}-3 b_{i} \\\\\na_{i+2}-3 a_{i+1} & =a_{i+1}-3 a_{i}+a_{i} \\\\\na_{i+2} & =4 a_{i+1}-2 a_{i}\n\\end{aligned}\\]\n\nNow we can solve this recurrence using its characteristic polynomial \\(x^{2}-4 x+2\\), which has roots of \\(2+\\sqrt{2}\\) and \\(2-\\sqrt{2}\\). We can then write \\(a_{i}=A(2+\\sqrt{2})^{i}+B(2-\\sqrt{2})^{i}\\) for some constants \\(A\\) and \\(B\\). Now, \\(a_{0}=a\\) and \\(a_{1}=a_{0}+b_{0}=4\\). Using this, we solve for \\(A\\) and \\(B\\) to get\n\n\\[a_{i}=\\left(\\frac{1+\\sqrt{2}}{2}\\right)(2+\\sqrt{2})^{i}+\\left(\\frac{1-\\sqrt{2}}{2}\\right)(2-\\sqrt{2})^{i}\\]\n\nThen,\n\n\\[\\begin{aligned}\nb_{i} & =a_{i+1}-a_{i} \\\\\n& =\\left(\\frac{1+\\sqrt{2}}{2}\\right)\\left((2+\\sqrt{2})^{i+1}-(2+\\sqrt{2})^{i}\\right)+\\left(\\frac{1-\\sqrt{2}}{2}\\right)\\left((2-\\sqrt{2})^{i+1}-(2-\\sqrt{2})^{i}\\right) \\\\\n& =\\left(\\frac{1+\\sqrt{2}}{2}\\right)(1+\\sqrt{2})(2+\\sqrt{2})^{i}+\\left(\\frac{1-\\sqrt{2}}{2}\\right)(1-\\sqrt{2})(2-\\sqrt{2})^{i} \\\\\n& =\\left(\\frac{3+2 \\sqrt{2}}{2}\\right)(2+\\sqrt{2})^{i}+\\left(\\frac{3-2 \\sqrt{2}}{2}\\right)(2-\\sqrt{2})^{i}\n\\end{aligned}\\]\n\nTherefore,\n\n\\[A_{n}=2 a_{n-3}+6 b_{n-3}=(10+7 \\sqrt{2})(2+\\sqrt{2})^{n-3}+(10-7 \\sqrt{2})(2-\\sqrt{2})^{n-3}\\]\n\nWe can then easily see that \\(A_{n}<(2+\\sqrt{2}) A_{n-1}\\). Also, since \\(2-\\sqrt{2}<1\\), as \\(n\\) approaches infinity, the ratio \\(\\frac{A_{n}}{A_{n-1}}\\) approaches \\(2+\\sqrt{2}\\). Hence the least upper bound of \\(\\frac{A_{n}}{A_{n-1}}\\) is \\(2+\\sqrt{2}\\).\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

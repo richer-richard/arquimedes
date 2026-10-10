@@ -1,0 +1,94 @@
+{
+  "id": "prob.amc-10a-2024-p10",
+  "title": "2024 AMC 10A Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.pattern-recognition",
+      "label": "Pattern recognition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.process-simulation",
+      "label": "Process simulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2024,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 19.5,
+    "source": 1350,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Consider the following operation. Given a positive integer \\(n,\\) if \\(n\\) is a multiple of \\(3,\\) then you replace \\(n\\) by \\(\\tfrac{n}{3}.\\) If \\(n\\) is not a multiple of \\(3,\\) then you replace \\(n\\) by \\(n + 10.\\) Then continue this process. For example, beginning with \\(n = 4,\\) this procedure gives \\(4 \\to 14 \\to 24 \\to 8\\) \\(\\to 18 \\to 6 \\to 2 \\to 12 \\to \\cdots.\\)\n\nSuppose you start with \\(n = 100.\\) What value results if you perform this operation exactly \\(100\\) times?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(30\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(40\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(50\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "30"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2024-p10.live",
+      "kind": "proof-sketch",
+      "text": "Just run it from \\(100:\\) \\(100 \\to 110 \\to 120 \\to 40\\) \\(\\to 50 \\to 60 \\to 20\\) \\(\\to 30 \\to 10 \\to 20\\) \\(\\to 30 \\to 10 \\to \\cdots.\\) After the \\(8\\)th step we’re at \\(10,\\) and from there it cycles \\(10, 20, 30\\) with period \\(3.\\) So step \\(8 + k\\) is the \\(k\\)th entry of the cycle. For step \\(100,\\) \\(k = 92,\\) and \\(92 \\equiv 2 \\pmod 3,\\) which lands on \\(30.\\) Therefore, the answer is C.",
+      "hints": [
+        "Compute the first several terms from \\(100;\\) the values soon start repeating",
+        "Once the sequence reaches \\(10\\) it cycles \\(10 \\to 20 \\to 30\\) with period \\(3;\\) locate step \\(100\\) in the cycle"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

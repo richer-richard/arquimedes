@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2003-p36",
+  "title": "2003 HMMT February Guts Problem 36",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2003,
+    "number": 36
+  },
+  "difficulty": {
+    "course": 83.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A teacher must divide 221 apples evenly among 403 students. What is the minimal number of pieces into which she must cut the apples? (A whole uncut apple counts as one piece.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2003-p36.hmmt",
+      "kind": "proof-sketch",
+      "text": "611\n\nConsider a bipartite graph, with 221 vertices representing the apples and 403 vertices representing the students; each student is connected to each apple that she gets a\npiece of. The number of pieces then equals the number of edges in the graph. Each student gets a total of \\(221 / 403=17 / 31\\) apple, but each component of the graph represents a complete distribution of an integer number of apples to an integer number of students and therefore uses at least 17 apple vertices and 31 student vertices. Then we have at most \\(221 / 17=403 / 31=13\\) components in the graph, so there are at least \\(221+403-13=611\\) edges. On the other hand, if we simply distribute in the straightforward manner - proceeding through the students, cutting up a new apple whenever necessary but never returning to a previous apple or student - we can create a graph without cycles, and each component does involve 17 apples and 31 students. Thus, we get 13 trees, and 611 edges is attainable.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

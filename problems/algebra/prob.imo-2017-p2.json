@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2017-p2",
+  "title": "2017 IMO Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2017,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 111.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Solve over \\(\\mathbb{R}\\) the functional equation\n\\[ f\\left( f(x)f(y) \\right) + f(x+y) = f(xy). \\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2017-p2.evanchen",
+      "kind": "proof-sketch",
+      "text": "The only solutions are \\(f(x) = 0\\), \\(f(x) = x-1\\) and \\(f(x)=1-x\\),\nwhich clearly work.\n\nNote that\n\n• If \\(f\\) is a solution, so is \\(-f\\).\n\n• Moreover, if \\(f(0)=0\\) then setting \\(y=0\\) gives \\(f\\equiv0\\).\n So henceforth we assume \\(f(0)>0\\).\n\nClaim.\n We have \\(f(z) = 0 \\iff z =1\\).\n Also, \\(f(0)=1\\) and \\(f(1)=0\\).\n\nProof.\n For the forwards direction, if \\(f(z)=0\\) and \\(z \\neq 1\\)\n one may put \\((x,y) = \\left( z, z(z-1)^{-1} \\right)\\)\n (so that \\(x+y=xy\\)) we deduce \\(f(0) = 0\\) which is a contradiction.\n\n For the reverse, \\(f(f(0)^2)=0\\) by setting \\(x=y=0\\), and use the previous part.\n We also conclude \\(f(1) = 0\\), \\(f(0) = 1\\).\n\nClaim.\n If \\(f\\) is injective, we are done.\n\nProof.\n Setting \\(y=0\\) in the original equation gives \\(f(f(x)) = 1-f(x)\\).\n We apply this three times on the expression \\(f^3(x)\\):\n \\[ f(1-f(x)) = f(f(f(x))) = 1 - f(f(x)) = f(x). \\]\n Hence \\(1-f(x) = x\\) or \\(f(x) = 1-x\\).\n\nRemark.\n The result \\(f(f(x)) + f(x) = 1\\) also implies that surjectivity\n would solve the problem.\n\nClaim.\n \\(f\\) is injective.\n\nProof.\n Setting \\(y=1\\) in the original equation gives \\(f(x+1) = f(x)-1\\), and by induction\n \\[\n f(x+n) = f(x)-n.\n\n \\]\n Assume now \\(f(a) = f(b)\\).\n By using the referenced result we may shift \\(a\\) and \\(b\\) to be large enough that\n we may find \\(x\\) and \\(y\\) obeying \\(x+y=a+1\\), \\(xy=b\\).\n Setting these gives\n \\[\\begin{aligned}\n f(f(x)f(y)) &= f(xy) - f(x+y) = f(b) - f(a+1) \\\\\n &= f(b) + 1 - f(a) = 1\n \\end{aligned}\\]\n from which we conclude\n \\[ f\\left( f(x)f(y) + 1 \\right) = 0. \\]\n Hence by the first claim\n we have \\(f(x)f(y) + 1 = 1\\), so \\(f(x)f(y) = 0\\).\n Applying the first claim again gives \\(1 \\in \\{x,y\\}\\).\n But that implies \\(a=b\\).\n\nRemark.\n Jessica Wan points out that for any \\(a \\neq b\\),\n at least one of \\(a^2 > 4(b-1)\\) and \\(b^2 > 4(a-1)\\) is true.\n So shifting via the referenced result is actually unnecessary for this proof.\n\nRemark.\n One can solve the problem over \\(\\mathbb{Q}\\) using only the referenced result and the easy parts.\n Indeed, that already implies \\(f(n) = 1-n\\) for all \\(n\\).\n Now we induct to show \\(f(p/q) = 1-p/q\\) for all \\(0 < p < q\\) (on \\(q\\)).\n By choosing \\(x = 1+p/q\\), \\(y = 1+q/p\\), we cause \\(xy = x+y\\),\n and hence \\(0 = f\\left( f(1+p/q)f(1+q/p) \\right)\\)\n or \\(1 = f(1+p/q)f(1+q/p)\\).\n\n By induction we compute \\(f(1+q/p)\\) and this gives \\(f(p/q+1) = f(p/q)-1\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

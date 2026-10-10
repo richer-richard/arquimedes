@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2026-p13",
+  "title": "2026 AIME1 13",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.binomial-theorem",
+      "label": "Binomial theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2026,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 71.3,
+    "source": 3370,
+    "mohs": null
+  },
+  "estimatedMinutes": 25,
+  "statement": "For each nonnegative integer \\(r\\) less than \\(502\\) define \\[S_r = \\sum_{m \\ge 0} \\binom{10{,}000}{502m + r},\\] where \\(\\binom{10{,}000}{n}\\) is defined to be \\(0\\) when \\(n \\gt 10{,}000.\\) That is, \\(S_r\\) is the sum of all the binomial coefficients of the form \\(\\binom{10{,}000}{k}\\) for which \\(0 \\le k \\le 10{,}000\\) and \\(k - r\\) is a multiple of \\(502.\\)\n\nFind the number of integers in the list \\(S_0,\\) \\(S_1,\\) \\(S_2,\\) \\(\\ldots,\\) \\(S_{501}\\) that are multiples of the prime number \\(503.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "39",
+    "value": "39"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2026-p13.live",
+      "kind": "proof-sketch",
+      "text": "Work in the ring \\(\\frac{\\mathbb{F}_{503}[x]}{x^{502} - 1}.\\) Reducing \\((1 + x)^{10000} = \\sum_k \\binom{10000}{k} x^k\\) replaces each exponent \\(k\\) by \\(k \\bmod 502,\\) so \\[ \\begin{aligned} &(1+x)^{10000} \\equiv \\sum_{r=0}^{501} S_r \\, x^r \\\\ &\\pmod{503,\\ x^{502} - 1}. \\end{aligned} \\]\n\nSince \\(503\\) is prime, \\((1+x)^{503} \\equiv\\) \\(1 + x^{503} \\pmod{503},\\) and \\(x^{503} = x \\cdot x^{502} \\equiv x,\\) so \\((1+x)^{503} \\equiv 1 + x\\) in this ring. Writing \\(10000 = 19 \\cdot 503 + 443,\\) \\[ \\begin{aligned} &(1+x)^{10000} \\\\ &= \\left((1+x)^{503}\\right)^{19} \\\\ &\\quad {}\\cdot (1+x)^{443} \\\\ &\\equiv (1+x)^{19} \\\\ &\\quad {}\\cdot (1+x)^{443} \\\\ &= (1+x)^{462}. \\end{aligned} \\] As \\(462 \\lt 502,\\) no exponents fold, so \\(S_r \\equiv \\binom{462}{r} \\pmod{503}\\) for \\(0 \\le r \\le 501,\\) where \\(\\binom{462}{r} = 0\\) for \\(r \\gt 462.\\)\n\nFor \\(0 \\le r \\le 462\\) the binomial coefficient \\(\\binom{462}{r}\\) is not divisible by \\(503:\\) both \\(462\\) and \\(r\\) are single digits in base \\(503,\\) so Lucas’ theorem gives a nonzero value (indeed \\(\\binom{462}{r} = \\frac{462!}{r!\\,(462-r)!}\\) involves no factor of \\(503\\)). Hence \\(S_r \\equiv 0 \\pmod{503}\\) exactly for \\(r = 463, 464, \\ldots, 501,\\) which is \\(501 - 463 + 1 = 39\\) values.",
+      "hints": [
+        "Work with \\((1+x)^{10000}\\) in \\(\\mathbb{F}_{503}[x]\\) modulo \\(x^{502} - 1,\\) where the coefficient of \\(x^r\\) becomes exactly \\(S_r\\)",
+        "Use \\((1+x)^{503} \\equiv 1 + x^{503} \\equiv 1 + x\\) to collapse \\((1+x)^{10000}\\) to a power of degree less than \\(502\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

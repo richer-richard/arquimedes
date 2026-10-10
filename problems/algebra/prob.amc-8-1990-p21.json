@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-1990-p21",
+  "title": "1990 AMC 8 Problem 21",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.work-backwards",
+      "label": "Work backwards",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1990,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 15.7,
+    "source": 1200,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A list of \\(8\\) numbers is formed by beginning with two given numbers. Each new number in the list is the product of the two previous numbers. Find the first number if the last three are \\(16,\\) \\(64,\\) \\(1024\\):\n\n\\[?, \\underline{\\phantom{x}}, \\underline{\\phantom{x}}, \\underline{\\phantom{x}}, \\underline{\\phantom{x}}, 16, 64, 1024\\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{64} \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1}{4} \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1/4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1990-p21.live",
+      "kind": "proof-sketch",
+      "text": "Since each term is the product of the two before it, dividing any term by the term just before it recovers the term two positions earlier. Working backwards from the last three terms \\(16,\\) \\(64,\\) \\(1024\\):\n\n\\[ \\begin{gathered} 64 \\div 16 = 4, \\quad 16 \\div 4 = 4, \\\\ 4 \\div 4 = 1, \\quad 4 \\div 1 = 4, \\\\ 1 \\div 4 = \\dfrac14. \\end{gathered} \\]\n\nThese fill in the earlier terms, giving the full list \\(\\dfrac14,\\) \\(4,\\) \\(1,\\) \\(4,\\) \\(4,\\) \\(16,\\) \\(64,\\) \\(1024\\). The first number is \\(\\dfrac14\\).\n\nThus, the correct answer is B .",
+      "hints": [
+        "If a term is the product of the two before it, then dividing a term by the one just before it recovers the term two positions back",
+        "Work backwards from the end, filling one earlier term at a time by dividing"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

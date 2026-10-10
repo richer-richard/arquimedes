@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2008-p20",
+  "title": "2008 AMC 12A Problem 20",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-bisector-theorem",
+      "label": "Angle bisector theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.incircle-incenter-and-inradius",
+      "label": "Incircle, incenter, and inradius",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2008,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 36.2,
+    "source": 2100,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Triangle \\(ABC\\) has \\(AC = 3,\\) \\(BC = 4,\\) and \\(AB = 5.\\) Point \\(D\\) is on \\(AB,\\) and \\(CD\\) bisects the right angle. The inscribed circles of \\(\\triangle ADC\\) and \\(\\triangle BCD\\) have radii \\(r_a\\) and \\(r_b,\\) respectively. What is \\(\\frac{r_a}{r_b}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{28}(10 - \\sqrt{2})\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{3}{56}(10 - \\sqrt{2})\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{14}(10 - \\sqrt{2})\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{5}{56}(10 - \\sqrt{2})\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{3}{28}(10 - \\sqrt{2})\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2008-p20.live",
+      "kind": "proof-sketch",
+      "text": "By the Angle Bisector Theorem, \\(AD:DB = CA:CB = 3:4,\\) so \\(AD = \\tfrac{15}{7}\\) and \\(BD = \\tfrac{20}{7}.\\) The areas of \\(\\triangle ADC\\) and \\(\\triangle BCD\\) share base \\(CD,\\) so they are in ratio \\(3:4,\\) namely \\(\\tfrac{18}{7}\\) and \\(\\tfrac{24}{7}.\\)\n\nSplitting \\(\\triangle ABC\\) along \\(CD,\\) which meets each leg at \\(45^\\circ,\\) gives \\[ \\dfrac{3 \\cdot CD}{2\\sqrt{2}} + \\dfrac{4 \\cdot CD}{2\\sqrt{2}} = 6, \\] so \\(CD = \\tfrac{12\\sqrt{2}}{7}.\\)\n\nThe two semiperimeters are \\[ \\begin{aligned} s_a &= \\dfrac{6}{7}(3 + \\sqrt{2}), \\\\ s_b &= \\dfrac{6}{7}(4 + \\sqrt{2}). \\end{aligned} \\] Using \\(r = \\frac{\\text{area}}{s},\\) \\[ \\begin{aligned} \\dfrac{r_a}{r_b} &= \\dfrac{[ADC]}{[BCD]} \\cdot \\dfrac{s_b}{s_a} \\\\ &= \\dfrac{3}{4} \\cdot \\dfrac{4 + \\sqrt{2}}{3 + \\sqrt{2}}, \\end{aligned} \\]\n\nRationalizing, \\(\\dfrac{4 + \\sqrt{2}}{3 + \\sqrt{2}} = \\dfrac{10 - \\sqrt{2}}{7},\\) so \\[ \\begin{aligned} \\dfrac{r_a}{r_b} &= \\dfrac{3}{4} \\cdot \\dfrac{10 - \\sqrt{2}}{7} \\\\ &= \\dfrac{3}{28}(10 - \\sqrt{2}). \\end{aligned} \\]\n\nThus, E is the correct answer.",
+      "hints": [
+        "By the Angle Bisector Theorem, \\(AD:DB = CA:CB = 3:4\\)",
+        "For each small triangle \\(r = \\frac{\\text{area}}{s};\\) the two triangles share the base \\(CD\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

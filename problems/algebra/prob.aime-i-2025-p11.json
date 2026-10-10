@@ -1,0 +1,74 @@
+{
+  "id": "prob.aime-i-2025-p11",
+  "title": "2025 AIME I Problem 11",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.function",
+      "label": "Function",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2025,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 61.6,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "A piecewise linear function is defined by \\[f(x) = \\begin{cases} x & \\text{if } -1 \\le x \\lt 1 \\\\ 2 - x & \\text{if } 1 \\le x \\lt 3 \\end{cases}\\] and \\(f(x + 4) = f(x)\\) for all real numbers \\(x.\\) The graph of \\(f(x)\\) has the sawtooth pattern depicted below.\n\nThe parabola \\(x = 34y^2\\) intersects the graph of \\(f(x)\\) at finitely many points. The sum of the \\(y\\)-coordinates of all these intersection points can be expressed in the form \\(\\frac{a + b\\sqrt{c}}{d},\\) where \\(a,\\) \\(b,\\) \\(c,\\) and \\(d\\) are positive integers such that \\(a,\\) \\(b,\\) \\(d\\) have greatest common divisor equal to \\(1,\\) and \\(c\\) is not divisible by the square of any prime. Find \\(a + b + c + d.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "259",
+    "value": "259"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2025-p11.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(f\\) only takes values in \\([-1, 1],\\) any intersection has \\(-1 \\le y \\le 1\\) and hence \\(x = 34y^2 \\in [0, 34].\\) On the rising pieces, \\(x \\in [4k - 1, 4k + 1)\\) with \\(f(x) = x - 4k,\\) so \\(y = f(34y^2)\\) becomes \\(34y^2 - y - 4k = 0;\\) on the falling pieces, \\(x \\in [4k + 1, 4k + 3)\\) with \\(f(x) = 4k + 2 - x,\\) giving \\(34y^2 + y - (4k + 2) = 0.\\) In each case a root is valid exactly when it lies in \\([-1, 1)\\) (rising) or \\((-1, 1]\\) (falling), since then \\(x = 34y^2\\) automatically falls in the correct interval.\n\nFor the rising pieces the roots are \\(\\frac{1 \\pm \\sqrt{1 + 544k}}{68},\\) and both are valid exactly when \\(\\sqrt{1 + 544k} \\le 67,\\) i.e. for \\(k = 0, 1, \\ldots, 8:\\) nine quadratics, each contributing root sum \\(\\frac{1}{34}\\) by Vieta. For the falling pieces the roots are \\(\\frac{-1 \\pm \\sqrt{544k + 273}}{68}.\\) The root with the minus sign requires \\(\\sqrt{544k + 273} \\lt 67,\\) which holds for \\(k = 0, \\ldots, 7;\\) those eight quadratics each contribute \\(-\\frac{1}{34}.\\) For \\(k = 8\\) only the positive root \\(\\frac{-1 + \\sqrt{4625}}{68} = \\frac{-1 + 5\\sqrt{185}}{68}\\) is valid.\n\nThe total is \\[ \\begin{aligned} &\\frac{9}{34} - \\frac{8}{34} + \\frac{-1 + 5\\sqrt{185}}{68} \\\\ &\\quad = \\frac{1 + 5\\sqrt{185}}{68}, \\end{aligned} \\] and \\(185 = 5 \\cdot 37\\) is squarefree, so \\(a + b + c + d\\) \\(= 1 + 5 + 185 + 68\\) \\(= 259.\\)",
+      "hints": [
+        "On the parabola \\(x = 34y^2,\\) intersections are the solutions of \\(y = f(34y^2)\\) with \\(-1 \\le y \\le 1,\\) so \\(0 \\le x \\le 34\\)",
+        "Each linear piece turns \\(y = f(34y^2)\\) into a quadratic; add the roots with Vieta’s formulas, but check which roots actually land in the piece’s interval"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "7e60d63b1ba44a0e608e85db170da99683ee3203cd3b5e602b00497dc28761b2"
+    ],
+    "solutions": []
+  }
+}

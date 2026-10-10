@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2003-p30",
+  "title": "2003 HMMT February Guts Problem 30",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.recurrences",
+      "label": "Recurrences",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2003,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 84.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The sequence \\(a_{1}, a_{2}, a_{3}, \\ldots\\) of real numbers satisfies the recurrence\n\n\\[a_{n+1}=\\frac{a_{n}^{2}-a_{n-1}+2 a_{n}}{a_{n-1}+1} .\\]\n\nGiven that \\(a_{1}=1\\) and \\(a_{9}=7\\), find \\(a_{5}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2003-p30.hmmt",
+      "kind": "proof-sketch",
+      "text": "3\nLet \\(b_{n}=a_{n}+1\\). Then the recurrence becomes \\(b_{n+1}-1=\\left(b_{n}^{2}-b_{n-1}\\right) / b_{n-1}=b_{n}^{2} / b_{n-1}-1\\), so \\(b_{n+1}=b_{n}^{2} / b_{n-1}\\). It follows that the sequence \\(\\left(b_{n}\\right)\\) is a geometric progression, from which \\(b_{5}^{2}=b_{1} b_{9}=2 \\cdot 8=16 \\Rightarrow b_{5}= \\pm 4\\). However, since all \\(b_{n}\\) are real, they either alternate in sign or all have the same sign (depending on the sign of the progression's common ratio); either way, \\(b_{5}\\) has the same sign as \\(b_{1}\\), so \\(b_{5}=4 \\Rightarrow a_{5}=3\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

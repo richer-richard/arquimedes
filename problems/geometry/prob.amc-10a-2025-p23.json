@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2025-p23",
+  "title": "2025 AMC 10A Problem 23",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-bisector-theorem",
+      "label": "Angle bisector theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2025,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 43.1,
+    "source": 2270,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Triangle \\(\\triangle ABC\\) has side lengths \\(AB = 80,\\) \\(BC = 45,\\) and \\(AC = 75.\\) The bisector of \\(\\angle B\\) and the altitude to side \\(AB\\) intersect at point \\(P.\\) What is \\(BP?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(19\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(22\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "21"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2025-p23.live",
+      "kind": "proof-sketch",
+      "text": "Let the bisector of \\(\\angle B\\) hit \\(AC\\) at \\(D.\\) By the Angle Bisector Theorem, \\(\\frac{AD}{DC} = \\frac{AB}{BC} = \\frac{80}{45},\\) and since \\(AC = 75,\\) we get \\(AD = 48\\) and \\(CD = 27.\\) Triangles \\(BCD\\) and \\(ACB\\) share \\(\\angle C,\\) with adjacent sides in the common ratio \\(\\tfrac{45}{75}=\\tfrac{27}{45}=\\tfrac35,\\) so they are similar by SAS. Hence \\(BD=\\tfrac35\\cdot80=48=AD,\\) making \\(\\triangle ADB\\) isosceles. Put \\(\\angle DAB=\\angle DBA=\\theta.\\) Because the altitude through \\(C\\) is perpendicular to \\(AB,\\) both \\(\\angle DPC\\) and \\(\\angle DCP\\) equal \\(90^\\circ-\\theta.\\) Thus \\(\\triangle CDP\\) is isosceles, so \\(PD=CD=27.\\) Since \\(P\\) lies on \\(BD,\\) we get \\(BP=BD-PD\\) \\(=48-27=21.\\) Thus, D is the correct answer.",
+      "hints": [
+        "Let the bisector of \\(\\angle B\\) meet \\(AC\\) at \\(D;\\) the Angle Bisector Theorem gives \\(AD = 48\\) and \\(CD = 27\\)",
+        "Show \\(BD = 48,\\) so \\(\\triangle ADB\\) is isosceles; then angle-chase to find \\(\\triangle CDP\\) isosceles with \\(PD = CD\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

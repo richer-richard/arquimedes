@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-nov-guts-2017-p7",
+  "title": "2017 HMMT November Guts Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomial-operations",
+      "label": "Polynomial operations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sums-and-products",
+      "label": "Sums and products",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.telescoping-series",
+      "label": "Telescoping series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2017,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 43.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute\n\n\\[100^{2}+99^{2}-98^{2}-97^{2}+96^{2}+95^{2}-94^{2}-93^{2}+\\ldots+4^{2}+3^{2}-2^{2}-1^{2}\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2017-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 10100\nNote that \\((n+3)^{2}-(n+2)^{2}-(n+1)^{2}+n^{2}=4\\) for every \\(n\\). Therefore, adding \\(0^{2}\\) to the end of the given sum and applying this identity for every four consecutive terms after \\(100^{2}\\), we see that the given sum is equivalent to \\(100^{2}+25 \\cdot 4=10100\\).\nAlternatively, we can apply the difference-of-squares factorization to rewrite \\(100^{2}-98^{2}=(100-\\) \\(98)(100+98)=2(100+98), 99^{2}-97^{2}=(99-97)(99+97)=2(99+97)\\), etc. Thus, the given sum is equivalent to \\(2(100+99+\\cdots+2+1)=2 \\cdot \\frac{100 \\cdot 101}{2}=10100\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

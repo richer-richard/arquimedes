@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2019-p15",
+  "title": "2019 AIME II Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.power-of-a-point",
+      "label": "Power of a point",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2019,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 69.0,
+    "source": 3370,
+    "mohs": null
+  },
+  "estimatedMinutes": 30,
+  "statement": "In acute triangle \\(ABC,\\) points \\(P\\) and \\(Q\\) are the feet of the perpendiculars from \\(C\\) to \\(\\overline{AB}\\) and from \\(B\\) to \\(\\overline{AC},\\) respectively. Line \\(PQ\\) intersects the circumcircle of \\(\\triangle ABC\\) in two distinct points, \\(X\\) and \\(Y.\\) Suppose \\(XP = 10,\\) \\(PQ = 25,\\) and \\(QY = 15.\\) The value of \\(AB \\cdot AC\\) can be written in the form \\(m\\sqrt{n},\\) where \\(m\\) and \\(n\\) are positive integers, and \\(n\\) is not divisible by the square of any prime. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "574",
+    "value": "574"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2019-p15.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(b = AC,\\) \\(c = AB,\\) \\(a = BC,\\) and \\(k = \\cos A.\\) Right triangles \\(APC\\) and \\(AQB\\) give \\(AP = bk\\) and \\(AQ = ck,\\) so triangle \\(APQ\\) is similar to triangle \\(ACB\\) with ratio \\(k,\\) whence \\(PQ = ak = 25.\\) The points on the line occur in the order \\(X, P, Q, Y,\\) so the power of \\(P\\) gives \\(XP \\cdot PY = 10 \\cdot 40 = 400\\) \\(= AP \\cdot PB,\\) and the power of \\(Q\\) gives \\(YQ \\cdot QX = 15 \\cdot 35 = 525\\) \\(= AQ \\cdot QC.\\) With \\(u = bk\\) and \\(v = ck\\) these read \\[ \\begin{aligned} &u(c - u) = 400, \\\\ &\\qquad v(b - v) = 525, \\end{aligned} \\] that is, \\(w - u^2 = 400\\) and \\(w - v^2 = 525,\\) where \\(w = \\frac{uv}{k} = bck.\\)\n\nBy the law of cosines, \\(a^2 = b^2 + c^2 - 2bck,\\) so \\(a^2k^2 = u^2 + v^2 - 2uvk = 625.\\) Substituting \\(u^2 = w - 400\\) and \\(v^2 = w - 525,\\) and \\(uv = wk,\\) gives \\(2w - 925 - 2wk^2 = 625,\\) so \\(wk^2 = w - 775.\\) Then \\[ \\begin{aligned} (uv)^2 &= w^2k^2 \\\\ &= w(w - 775) \\\\ &= (w - 400)(w - 525), \\end{aligned} \\] which simplifies to \\(150w = 210000,\\) so \\(w = 1400\\) and \\(k^2 = \\frac{1400 - 775}{1400} = \\frac{25}{56}.\\)\n\nThus \\(k = \\frac{5}{2\\sqrt{14}}\\) and \\[ \\begin{aligned} bc = \\frac{w}{k} &= 1400 \\cdot \\frac{2\\sqrt{14}}{5} \\\\ &= 560\\sqrt{14}, \\end{aligned} \\] so \\(m + n = 560 + 14 = 574.\\)",
+      "hints": [
+        "Compute the powers of \\(P\\) and \\(Q\\) with respect to the circumcircle: \\(XP \\cdot PY = AP \\cdot PB\\) and \\(YQ \\cdot QX = AQ \\cdot QC\\)",
+        "\\(AP = AC\\cos A,\\) \\(AQ = AB\\cos A,\\) and \\(PQ = BC\\cos A;\\) combine the two power equations with the law of cosines to solve for \\(AB \\cdot AC\\) and \\(\\cos A\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

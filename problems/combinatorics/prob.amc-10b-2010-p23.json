@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-2010-p23",
+  "title": "2010 AMC 10B Problem 23",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2010,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 32.0,
+    "source": 2030,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The entries in a \\(3 \\times 3\\) array include all the digits from \\(1\\) through \\(9,\\) arranged so that the entries in every row and column are in increasing order. How many such arrays are there?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(36\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(42\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(60\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "42"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2010-p23.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(a_{ij}\\) be the entry in row \\(i\\) and column \\(j.\\) The increasing conditions force \\(a_{11}=1,\\) \\(a_{33}=9,\\) and \\(a_{22}\\) to be \\(4,\\) \\(5,\\) or \\(6.\\)\n\nIf \\(a_{22}=4,\\) then \\(\\{a_{12},a_{21}\\}=\\{2,3\\}.\\) Choose which two of \\(5,\\) \\(6,\\) \\(7,\\) and \\(8\\) go in the bottom-left pair \\(\\{a_{31},a_{32}\\};\\) the other two go in the top-right pair \\(\\{a_{13},a_{23}\\}.\\) Each pair then has only one increasing order. There are \\(2\\binom42=12\\) arrays: two orders for \\(2,\\) \\(3\\) around the upper-left corner and \\(\\binom42\\) choices for the bottom-left pair. By reversing the digits and rotating the array, there are also \\(12\\) arrays with center \\(6.\\)\n\nIf \\(a_{22}=5,\\) choose the three entries in positions \\(a_{12},\\) \\(a_{13},\\) and \\(a_{23}.\\) They can be any three of \\(\\{2,3,4,6,7,8\\}\\) except \\(\\{2,3,4\\}\\) or \\(\\{6,7,8\\};\\) those two choices would put all three small or all three large entries on one side and violate a required comparison with the center. Every other choice uniquely determines the remaining entries and their increasing orders. This gives \\(\\binom63-2=18\\) arrays.\n\nThe total is \\(12+18+12=42.\\)\n\nThus, D is the correct answer.",
+      "hints": [
+        "The center entry can only be \\(4,5,\\) or \\(6\\)",
+        "Case on the center and use the row-column increasing constraints"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

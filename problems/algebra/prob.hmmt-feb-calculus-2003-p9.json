@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-calculus-2003-p9",
+  "title": "2003 HMMT February Calculus Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2003,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 94.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Two differentiable real functions \\(f(x)\\) and \\(g(x)\\) satisfy\n\n\\[\\frac{f^{\\prime}(x)}{g^{\\prime}(x)}=e^{f(x)-g(x)}\\]\n\nfor all \\(x\\), and \\(f(0)=g(2003)=1\\). Find the largest constant \\(c\\) such that \\(f(2003)>c\\) for all such functions \\(f, g\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-calculus-2003-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(1-\\ln 2\\)\nRearranging the given equation gives \\(f^{\\prime}(x) e^{-f(x)}=g^{\\prime}(x) e^{-g(x)}\\) for all \\(x\\), so \\(\\frac{d}{d x}\\left(e^{-f(x)}-\\right.\\) \\(\\left.e^{-g(x)}\\right)=-f^{\\prime}(x) e^{-f(x)}+g^{\\prime}(x) e^{-g(x)}=0\\). Thus, \\(e^{-f(x)}-e^{-g(x)}\\) is a constant, and it must be less than \\(e^{-f(0)}=e^{-1}\\). Thus, \\(e^{-f(2003)}<e^{-g(2003)}+e^{-1}=2 e^{-1}=e^{\\ln 2-1} \\Rightarrow f(2003)>\\) \\(1-\\ln 2\\). On the other hand, we can find positive-valued functions \\(e^{-f(x)}, e^{-g(x)}\\) that take on the required values at 0 and 2003 and have constant difference arbitrarily close to \\(e^{-1}\\). For example, for arbitrarily large \\(t\\), we can set \\(e^{-f(x)}=e^{-(t(2003-x)+1)}+e^{-1}-\\) \\(e^{-(2003 t+1)}\\) and \\(e^{-g(x)}=e^{-(t(2003-x)+1)}\\), and we can check that the resulting functions \\(f, g\\) satisfy the required conditions. Thus, we can make \\(f(2003)\\) arbitrarily close to \\(1-\\ln 2\\), so this is the answer.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

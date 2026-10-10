@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-team-1-2008-p3",
+  "title": "2008 HMMT February Team Round 1 Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2008,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 83.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n>4\\) be a positive integer. Determine the number of ways to walk from \\((0,0)\\) to \\((n, 2)\\) using only up and right unit steps such that the path does not meet the lines \\(y=x\\) or \\(y=x-n+2\\) except at the start and at the end.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1-2008-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "It is easy to see the the first two steps and the last two steps must all be right steps. So we need to compute the number of walks from \\((2,0)\\) to \\((n-2,0)\\) that does not pass through \\((2,2)\\) and \\((n-2,0)\\). There are \\(\\binom{n-2}{2}\\) paths from \\((2,0)\\) to \\((n-2,0)\\), and exactly two of them are invalid. So the answer is \\(\\binom{n-2}{2}-2=\\frac{1}{2}(n-2)(n-3)-2=\\frac{1}{2}\\left(n^{2}-5 n+2\\right)\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

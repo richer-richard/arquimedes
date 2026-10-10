@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-10a-2004-p12",
+  "title": "2004 AMC 10A Problem 12",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.subsets",
+      "label": "Subsets",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2004,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 21.6,
+    "source": 1190,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Henry’s Hamburger Heaven offers its hamburgers with the following condiments: ketchup, mustard, mayonnaise, tomato, lettuce, pickles, cheese, and onions. A customer can choose one, two, or three meat patties, and any collection of condiments. How many different kinds of hamburgers can be ordered?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(256\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(768\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(40{,}320\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(120{,}960\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "768"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2004-p12.live",
+      "kind": "proof-sketch",
+      "text": "Each of the \\(8\\) condiments is independently in or out, giving \\(2^8 = 256\\) condiment combinations.\n\nFor each of these there are \\(3\\) choices of patty count, so the number of hamburgers is \\[ 3 \\times 256 = 768. \\]\n\nThus, the correct answer is C.",
+      "hints": [
+        "Each of the \\(8\\) condiments is independently included or left out",
+        "Multiply the \\(2^8\\) condiment choices by the \\(3\\) choices of patty count"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

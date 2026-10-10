@@ -1,0 +1,79 @@
+{
+  "id": "prob.ahsme-1987-p25",
+  "title": "1987 AHSME Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1987,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 40.5,
+    "source": 2170,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "\\(ABC\\) is a triangle: \\(A=(0,0),\\) \\(B=(36,15),\\) and both the coordinates of \\(C\\) are integers. What is the minimum area \\(\\triangle ABC\\) can have?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\frac12\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\frac32\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\frac{13}{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "there is no minimum"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "3/2"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1987-p25.live",
+      "kind": "proof-sketch",
+      "text": "For \\(C=(u,v),\\) the area is \\[ \\frac12|36v-15u|. \\] Since \\(\\gcd(36,15)=3,\\) the smallest possible positive value of the determinant is at least \\(3.\\) It is attained, for example, by \\(u=7,\\ v=3,\\) since \\(36(3)-15(7)=3.\\) Therefore the minimum area is \\(\\frac{3}{2}.\\)\n\nThus the correct answer is C.",
+      "hints": [
+        "Write \\(C=(u,v)\\) and use the determinant formula for triangle area",
+        "Find the smallest positive value of \\(|36v-15u|\\) using \\(\\gcd(36,15)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

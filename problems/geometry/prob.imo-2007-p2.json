@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2007-p2",
+  "title": "2007 IMO Problem 2",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2007,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 88.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Consider five points \\(A\\), \\(B\\), \\(C\\), \\(D\\) and \\(E\\)\nsuch that \\(ABCD\\) is a parallelogram and \\(BCED\\) is a cyclic quadrilateral.\nLet \\(\\ell\\) be a line passing through \\(A\\).\nSuppose that \\(\\ell\\) intersects the interior of the segment \\(DC\\) at \\(F\\)\nand intersects line \\(BC\\) at \\(G\\).\nSuppose also that \\(EF = EG = EC\\).\nProve that \\(\\ell\\) is the bisector of angle \\(DAB\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2007-p2.evanchen",
+      "kind": "proof-sketch",
+      "text": "Let \\(M\\), \\(N\\), \\(P\\) denote the midpoints of \\(\\overline{CF}\\), \\(\\overline{CG}\\), \\(\\overline{AC}\\)\n(noting \\(P\\) is also the midpoint of \\(\\overline{BD}\\)).\n\nBy a homothety at \\(C\\) with ratio \\(\\frac{1}{2}\\),\nwe find \\(\\overline{MNP}\\) is the image of line \\(\\ell \\equiv \\overline{AGF}\\).\n\n[Diagram omitted from this imported TeX transcription.]\n\nHowever, since we also have \\(\\overline{EM} \\perp \\overline{CF}\\)\nand \\(\\overline{EN} \\perp \\overline{CG}\\) (from \\(EF=EG=EC\\))\nwe conclude \\(\\overline{PMN}\\) is the Simson line of \\(E\\) with respect to \\(\\triangle BCD\\),\nwhich implies \\(\\overline{EP} \\perp \\overline{BD}\\).\nIn other words, \\(\\overline{EP}\\) is the perpendicular bisector of \\(\\overline{BD}\\),\nso \\(E\\) is the midpoint of arc \\(\\widehat{BCD}\\).\n\nFinally,\n\\[\\begin{aligned}\n \\measuredangle(\\overline{AB}, \\ell) &= \\measuredangle(\\overline{CD}, \\overline{MNP}) = \\measuredangle CMN = \\measuredangle CEN \\\\\n &= 90^\\circ - \\measuredangle NCE = 90^\\circ + \\measuredangle ECB\n\\end{aligned}\\]\nwhich means that \\(\\ell\\) is parallel to a bisector of \\(\\angle BCD\\),\nand hence to one of \\(\\angle BAD\\).\n(Moreover since \\(F\\) lies on the interior of \\(\\overline{CD}\\),\nit is actually the internal bisector.)",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

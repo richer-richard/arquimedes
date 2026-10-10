@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12a-2004-p7",
+  "title": "2004 AMC 12A Problem 7",
+  "category": "problem-solving-techniques",
+  "subjects": [
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "strategy.invariant",
+      "label": "Invariant",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "strategy.process-simulation",
+      "label": "Process simulation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2004,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 20.5,
+    "source": 1390,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A game is played with tokens according to the following rule. In each round, the player with the most tokens gives one token to each of the other players and also places one token into a discard pile. The game ends when some player runs out of tokens. Players \\(A,\\) \\(B,\\) and \\(C\\) start with \\(15,\\) \\(14,\\) and \\(13\\) tokens, respectively. How many rounds will there be in the game?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(36\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(37\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(38\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(39\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(40\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "37"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2004-p7.live",
+      "kind": "proof-sketch",
+      "text": "After three rounds the players \\(A,\\) \\(B,\\) and \\(C\\) have \\(14,\\) \\(13,\\) and \\(12\\) tokens, respectively. Every subsequent three rounds reduces each player’s supply by one token.\n\nAfter \\(36\\) rounds they have \\(3,\\) \\(2,\\) and \\(1\\) tokens. In the \\(37\\)th round player \\(A,\\) who has the most, gives away all three of their tokens and runs out, ending the game.\n\nThus, the correct answer is B.",
+      "hints": [
+        "Track the token counts over one full cycle of three rounds",
+        "Every three rounds each player loses exactly one token, so find when the leader hits \\(0\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

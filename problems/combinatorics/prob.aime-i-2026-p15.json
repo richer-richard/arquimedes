@@ -1,0 +1,68 @@
+{
+  "id": "prob.aime-i-2026-p15",
+  "title": "2026 AIME1 15",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.extremal-argument",
+      "label": "Extremal argument",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.recursive-counting",
+      "label": "Recursive counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.tiling",
+      "label": "Tiling",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2026,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 79.8,
+    "source": 3700,
+    "mohs": null
+  },
+  "estimatedMinutes": 40,
+  "statement": "Let \\(a,\\) \\(b,\\) and \\(n\\) be positive integers with both \\(a\\) and \\(b\\) greater than or equal to \\(2\\) and less than or equal to \\(2n.\\) Define an \\(a \\times b\\) cell loop in a \\(2n \\times 2n\\) grid of cells to be the \\(2a + 2b - 4\\) cells that surround an \\((a-2) \\times (b-2)\\) (possibly empty) rectangle of cells in the grid. For example, the following diagram shows a way to partition a \\(6 \\times 6\\) grid of cells into \\(4\\) cell loops.\n\nFind the number of ways to partition a \\(10 \\times 10\\) grid of cells into \\(5\\) cell loops so that every cell of the grid belongs to exactly one cell loop.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "83",
+    "value": "83"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2026-p15.live",
+      "kind": "proof-sketch",
+      "text": "Since the five loops cover \\(\\sum \\left(2(a_i + b_i) - 4\\right) = 100\\) cells, \\(\\sum (a_i + b_i) = 60.\\) Every loop has an even number of cells, so no odd-by-odd rectangle can be exactly filled by loops; and filling a rectangle whose shortest even side is \\(e\\) requires at least \\(\\frac{e}{2}\\) loops, since peeling off an outermost loop shrinks that side by exactly \\(2\\) while splitting a rectangle into smaller ones only adds up such requirements. Now consider the outermost loops of a partition (those whose rectangles lie inside no other loop’s rectangle): their rectangles tile the \\(10 \\times 10\\) square. If outermost rectangle \\(R_i\\) has shortest even side \\(e_i,\\) it uses \\(n_i \\ge \\frac{e_i}{2}\\) loops and covers at most \\(10\\,e_i\\) cells. Summing over the tiling, \\(100 \\le \\sum 10\\,e_i \\le 20 \\sum n_i = 100,\\) so equality holds throughout: each \\(R_i\\) spans the full \\(10\\) in one direction, has even width \\(e_i,\\) and is filled with exactly \\(\\frac{e_i}{2}\\) loops. Two full-length slabs in different directions would overlap, so the outermost rectangles are the whole square or parallel slabs, and the same equality argument repeats inside every loop’s inner rectangle.\n\nLet \\(s(w)\\) be the number of ways to fill a full-height slab of even width \\(w\\) with \\(\\frac{w}{2}\\) loops, subject to the slab’s own \\(10 \\times w\\) boundary being one outermost loop. (A split into smaller outermost slabs is counted later instead.) A width-\\(2\\) slab is a single loop: \\(s(2) = 1.\\) A width-\\(4\\) slab is a \\(10 \\times 4\\) loop around an \\(8 \\times 2\\) loop: \\(s(4) = 1.\\) A width-\\(6\\) slab is a \\(10 \\times 6\\) loop around an \\(8 \\times 4\\) region holding two loops — either nested (\\(8 \\times 4\\) around \\(6 \\times 2\\)) or two \\(8 \\times 2\\) slabs — so \\(s(6) = 2.\\) A width-\\(8\\) slab surrounds an \\(8 \\times 6\\) region holding three loops: an \\(8 \\times 6\\) loop around a \\(6 \\times 4\\) region with two loops (\\(2\\) ways as before), or full-height strips of widths \\(2 + 2 + 2\\) (\\(1\\) way), or widths \\(2 + 4\\) in two orders (\\(2\\) ways), so \\(s(8) = 5.\\) The same recursion counts the full square: a \\(10 \\times 10\\) loop around an \\(8 \\times 8\\) region with four loops, where the \\(4 \\times 4,\\) \\(6 \\times 6,\\) and \\(8 \\times 8\\) regions admit \\(3,\\) then \\(3 + 3 + 3 = 9,\\) then \\(9 + 9 + 9 = 27\\) fillings (single nested loop, vertical strips, or horizontal strips at each stage).\n\nFinally, tally the outermost structures. The single \\(10 \\times 10\\) rectangle gives \\(27\\) partitions. For parallel slabs, the widths form a composition of \\(10\\) into even parts with at least two parts, and orientations (vertical or horizontal) double the count: \\((2,2,2,2,2)\\) gives \\(1;\\) \\((4,2,2,2)\\) in \\(4\\) orders gives \\(4;\\) \\((4,4,2)\\) in \\(3\\) orders gives \\(3;\\) \\((6,2,2)\\) in \\(3\\) orders gives \\(3 \\cdot 2 = 6;\\) \\((6,4)\\) in \\(2\\) orders gives \\(2 \\cdot 2 = 4;\\) and \\((8,2)\\) in \\(2\\) orders gives \\(2 \\cdot 5 = 10,\\) for \\(28\\) per orientation. The total is \\(27 + 2 \\cdot 28 = 83.\\)",
+      "hints": [
+        "Every loop’s rectangle must have its inner rectangle exactly filled by other loops, and the loop sizes force \\(\\sum (a_i + b_i) = 60.\\) Study the rectangles of the outermost loops.",
+        "Area and loop counts force the outermost rectangles to be the full square or parallel full-length slabs of even width \\(w,\\) each using exactly \\(\\frac{w}{2}\\) loops"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "4fcef63f14594d5b09921f3ecf478e933b736aed259362da39571a92c8268d58"
+    ],
+    "solutions": []
+  }
+}

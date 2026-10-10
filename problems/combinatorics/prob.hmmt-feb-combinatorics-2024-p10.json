@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2024-p10",
+  "title": "2024 HMMT February Combinatorics Problem 10",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2024,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 91.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A peacock is a ten-digit positive integer that uses each digit exactly once. Compute the number of peacocks that are exactly twice another peacock.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "184320",
+    "value": "184320"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2024-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "We begin with the following observation:\nClaim 1. Let \\(x\\) be a peacock. Then, \\(2 x\\) is a peacock if and only if:\n\n- the multiplication \\(x \\cdot 2\\) uses five carries,\n- each of the pairs of digits \\((0,5),(1,6),(2,7),(3,8),(4,9)\\) receives exactly one carry.\n- The leading digit is not \\(5,6,7,8,9\\).\n\nProof. After the multiplication of \\(x \\cdot 2\\), we will have a ten digit number. Let's first consider the output without carrying. It consists of the digits \\(0,2,4,6,8\\) twice each, occupying positions where pairs of digits \\((0,5),(1,6),(2,7),(3,8),(4,9)\\) were in \\(x\\). However, we guaranteed that one digit from each pair received a carry, meaning all ten digits are present after adding in the carries.\n\nWe will now biject all peacocks to the following combination of objects:\n\n- a queue of low digits \\(0,1,2,3,4\\), in any order with the constraint that 0 is not first,\n- a queue of high digits \\(5,6,7,8,9\\), in any order, and\n- of each of the pairs of digits \\((0,5),(1,6),(2,7),(3,8),(4,9)\\) mark one of them to receive a carry, except we are not allowed to mark the final digit in the high queue.\n\nWe construct a correspondence from these objects to peacocks by accumulating digits to an initially empty string. We'll say that we poll a queue by popping its front entry and appending it to the end of this string. First, poll the low queue. Then, if we have just polled a marked digit, poll the high queue; otherwise, poll the low queue. We repeat this until all queues are emptied.\nAs an example of this process, let our low queue be \\(1,4,0,2,3\\), our high queue be \\(8,5,9,6,7\\), and mark the digits \\(0,1,2,3,9\\) marked to receive a carry. Our steps are as follows:\n\n- Poll the low queue, so that our string is now 1.\n- Since 1 was marked to receive a carry, we poll the high queue, making our string 18.\n- Since 8 was not marked, we poll the low queue to reach 184.\n- Since 4 was not marked, we poll the low queue to reach 1840 .\n- Since 0 was marked, we poll the high queue to reach 18405.\n- etc.\n\nIn the end, we will construct the peacock 1840529637, which is the one shown earlier to work.\nClaim 2. Any string of digits \\(x\\) constructed through this process will be a peacock that satisfies the constraints outlined in Claim 1.\n\nThe order in which digits get polled to construct 1840529637; note the 4 connected components in the high queue. The circled digits are those that have been marked for carrying.\n\nProof. We first argue that all digits end up being polled. In particular, if a high digit is marked, let's connect it by an edge to the digit on its right (using the requirement that the last digit is not marked). If \\(h\\) of the high digits are marked, then we will have \\(5-h\\) connected components among these high digits. However, we then have \\(5-h\\) marked digits in the low queue, and every time we poll a marked low digit we will end up polling all digits from the next connected component in the high queue.\nSo, all digits end up being polled. Notice that our marked digits will always be followed immediately by a high digit, satisfying the first and second conditions of the claim. As we do not start with a high\ndigit, the third constraint is satisfied. Therefore any peacock \\(x\\) output by this process will also have \\(2 x\\) a peacock.\n\nSince we always use all the digits, this process is evidently injective. To map from peacocks back to these sequences of digits, we can just let the queues be the order of appearances of the low and high digits in the peacock, and mark the carried digits accordingly. Indeed, we notice that this mapping is also injective.\nUsing this bijection, we just need to find the number of initial settings of the queues and marked digits. There are \\(4 \\cdot 4\\) ! ways to order the low number queue. There are then 5 ! ways to order the high number queue. Finally, of each of the four pairs of digits not inluding the final high digit, there are \\(2^{4}\\) ways to mark them. This gives an answer of\n\n\\[4 \\cdot 4!\\cdot 5!\\cdot 2^{4}=184320\\]\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

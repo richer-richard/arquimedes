@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-1999-p4",
+  "title": "1999 AIME Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-decomposition",
+      "label": "Area decomposition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.square-geometry",
+      "label": "Square (geometry)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1999,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 45.1,
+    "source": 2350,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "The two squares shown share the same center \\(O\\) and have sides of length \\(1.\\) The length of \\(\\overline{AB}\\) is \\(\\frac{43}{99}\\) and the area of octagon \\(ABCDEFGH\\) is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "185",
+    "value": "185"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1999-p4.live",
+      "kind": "proof-sketch",
+      "text": "The whole configuration is unchanged by rotating \\(90^\\circ\\) about \\(O,\\) which cycles the octagon side \\(AB\\) to \\(CD,\\) \\(EF,\\) \\(GH,\\) and it is also unchanged by the reflection that swaps the two squares, which carries those sides to \\(BC,\\) \\(DE,\\) \\(FG,\\) \\(HA.\\) So all eight sides of the octagon have the same length, \\(\\frac{43}{99}.\\)\n\nSegments from \\(O\\) to the eight vertices cut the octagon into \\(8\\) triangles. Each has base \\(\\frac{43}{99}\\) lying on a side of one of the unit squares, so its height from \\(O\\) is the distance from the center to that side, namely \\(\\frac{1}{2}.\\) The area is \\[8 \\cdot \\frac{1}{2} \\cdot \\frac{43}{99} \\cdot \\frac{1}{2} = \\frac{86}{99}.\\]\n\nSince \\(\\gcd(86, 99) = 1,\\) the answer is \\(86 + 99 = 185.\\)",
+      "hints": [
+        "By the symmetries swapping the two squares and rotating by \\(90^\\circ,\\) all eight sides of the octagon are congruent",
+        "Cut the octagon into \\(8\\) triangles with apex \\(O;\\) each side of the octagon lies on a side of a square, at distance \\(\\frac{1}{2}\\) from \\(O\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "c4d779f0181eeba728faea419fbe314cb859dbdef3d86f4920fba0b6edc4c619"
+    ],
+    "solutions": []
+  }
+}

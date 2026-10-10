@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-10b-2022-p1",
+  "title": "2022 AMC 10B Problem 1",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.absolute-value",
+      "label": "Absolute value",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.custom-operation",
+      "label": "Custom operation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2022,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 0.0,
+    "source": 560,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Define \\(x~\\diamondsuit~ y\\) to be \\(|x-y|\\) for all real numbers \\(x\\) and \\(y.\\) What is the value of \\[(1~\\diamondsuit~(2~\\diamondsuit~3))-((1~\\diamondsuit~2)~\\diamondsuit~3)?\\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( -2 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( -1 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 0 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 1 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 2 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "-2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2022-p1.live",
+      "kind": "proof-sketch",
+      "text": "Working from the innermost operations outward gives \\[ \\begin{aligned} 1\\mathbin\\diamondsuit(2\\mathbin\\diamondsuit3)&=|1-|2-3||=0,\\\\ (1\\mathbin\\diamondsuit2)\\mathbin\\diamondsuit3&=||1-2|-3|=2. \\end{aligned} \\] Therefore, the given difference is \\(0-2=-2.\\)\n\nThus, the answer is A .",
+      "hints": [
+        "Remember that the operation is absolute difference",
+        "Evaluate each diamond operation from the inside out"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1994-p10",
+  "title": "1994 AIME Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.altitude",
+      "label": "Altitude",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-triple",
+      "label": "Pythagorean Triple",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1994,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 43.1,
+    "source": 2270,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "In triangle \\(ABC,\\) angle \\(C\\) is a right angle and the altitude from \\(C\\) meets \\(\\overline{AB}\\) at \\(D.\\) The lengths of the sides of \\(\\triangle ABC\\) are integers, \\(BD=29^3,\\) and \\(\\cos B=\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m+n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "450",
+    "value": "450"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1994-p10.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(\\frac{BC}{AB}=\\frac{m}{n}\\) in lowest terms, with \\(BC=km\\) and \\(AB=kn.\\) Similarity gives \\[29^3=BD=\\frac{BC^2}{AB}=\\frac{km^2}{n}.\\] Hence \\(k\\) is divisible by \\(n;\\) writing \\(k=nt\\) gives \\(tm^2=29^3.\\) The possibility \\(m=1\\) cannot be a leg of a nondegenerate integer right triangle, so \\(m=29.\\) Writing the other leg of the primitive triple as \\(u,\\) we have \\((n-u)(n+u)=29^2,\\) giving \\(n=421\\) and \\(u=420.\\) Therefore \\(m+n=29+421=450.\\)",
+      "hints": [
+        "Use similarity to write \\(BD=\\frac{BC^2}{AB}\\)",
+        "Express \\(\\frac{BC}{AB}=\\frac{m}{n}\\) in lowest terms and use the prime factorization of \\(29^3\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

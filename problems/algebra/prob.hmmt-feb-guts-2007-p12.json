@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-guts-2007-p12",
+  "title": "2007 HMMT February Guts Problem 12",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2007,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 71.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A_{11}\\) denote the answer to problem 11. Determine the smallest prime \\(p\\) such that the arithmetic sequence \\(p, p+A_{11}, p+2 A_{11}, \\ldots\\) begins with the largest possible number of primes.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2007-p12.hmmt",
+      "kind": "proof-sketch",
+      "text": "7. First, note that the maximal number of initial primes is bounded above by the smallest prime not dividing \\(A_{11}\\), with equality possible only if \\(p\\) is this prime. For, if \\(q\\) is the smallest prime not dividing \\(A_{11}\\), then the first \\(q\\) terms of the arithmetic sequence determine a complete residue class modulo \\(q\\), and the multiple of \\(q\\) is nonprime unless it equals \\(q\\). If \\(q<A_{11}\\), then \\(q\\) must appear first in the sequence, and thus divide the \\((q+1)\\) st term. If \\(q>A_{11}\\), then \\(A_{11}=2\\) and \\(q=3\\) by Bertrand's postulate, so \\(q\\) must appear first by inspection.\nNow since \\(A_{11}=30\\), the bound is 7 . In fact, \\(7,37,67,97,127\\), and 157 are prime, but 187 is not. Then on the one hand, our bound of seven initial primes is not realizable. On the other hand, this implies an upper bound of six, and this bound is achieved by \\(p=7\\). Smaller primes \\(p\\) yield only one initial prime, so 7 is the answer.\n\nRemarks. A number of famous theorems are concerned with the distribution of prime numbers. For two relatively prime positive integers \\(a\\) and \\(b\\), the arithmetic progression \\(a, a+b, a+2 b, \\ldots\\) contains infinitely many primes, a result known as Dirichlet's theorem. It was shown recently (c. 2004) that there exist arbitrarily long arithmetic progressions consisting of primes only. Bertrand's postulate states that for any positive integer \\(n\\), there exists a prime \\(p\\) such that \\(n<p \\leq 2 n\\). This is an unfortunate misnomer, as the statement is known to be true. As with many theorems concerning the distributions of primes, these results are easily stated in elementary terms, concealing elaborate proofs.\n\nThere is just one triple of possible \\(\\left(A_{10}, A_{11}, A_{12}\\right)\\) of answers to these three problems. Your team will receive credit only for answers matching these. (So, for example, submitting a wrong answer for problem 11 will not alter the correctness of your answer to problem 12.)",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

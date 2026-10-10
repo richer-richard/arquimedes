@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-team-1-2005-p11",
+  "title": "2005 HMMT February Team Round 1 Problem 11",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2005,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 83.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(P(x)=a_{n} x^{n}+a_{n-1} x^{n-1}+\\cdots+a_{0}\\) be a polynomial with real coefficients, \\(a_{n} \\neq 0\\). Suppose every root of \\(P\\) is a root of unity, but \\(P(1) \\neq 0\\). Show that the coefficients of \\(P\\) are symmetric; that is, show that \\(a_{n}=a_{0}, a_{n-1}=a_{1}, \\ldots\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1-2005-p11.hmmt",
+      "kind": "proof-sketch",
+      "text": "Since the coefficients of \\(P\\) are real, the complex conjugates of the roots of \\(P\\) are also roots of \\(P\\). Now, if \\(x\\) is a root of unity, then \\(x^{-1}=\\bar{x}\\). But the roots of\n\n\\[x^{n} P\\left(x^{-1}\\right)=a_{0} x^{n}+a_{1} x^{n-1}+\\cdots+a_{n}\\]\n\nare then just the complex conjugates of the roots of \\(P\\), so they are the roots of \\(P\\). Therefore, \\(P(x)\\) and \\(x^{n} P\\left(x^{-1}\\right)\\) differ by a constant multiple \\(c\\). Since \\(a_{n}=c a_{0}\\) and \\(a_{0}=c a_{n}, c\\) is either 1 or -1 . But if it were -1 , then\n\n\\[P(1)=a_{n}+a_{n-1}+\\cdots+a_{0}=\\frac{1}{2}\\left(\\left(a_{n}+a_{0}\\right)+\\left(a_{n-1}+a_{1}\\right)+\\cdots+\\left(a_{0}+a_{n}\\right)\\right)=0,\\]\n\na contradiction. Therefore \\(c=1\\), giving the result.\n\n## Early Re-tile-ment [125]\n\nLet \\(S=\\left\\{s_{0}, \\ldots, s_{n}\\right\\}\\) be a finite set of integers, and define \\(S+k=\\left\\{s_{0}+k, \\ldots, s_{n}+k\\right\\}\\). We say that two sets \\(S\\) and \\(T\\) are equivalent, written \\(S \\sim T\\), if \\(T=S+k\\) for some \\(k\\). Given a (possibly infinite) set of integers \\(A\\), we say that \\(S\\) tiles \\(A\\) if \\(A\\) can be partitioned into subsets equivalent to \\(S\\). Such a partition is called a tiling of \\(A\\) by \\(S\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

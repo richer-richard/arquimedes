@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12a-2021-p2",
+  "title": "2021 AMC 12A Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.algebraic-manipulation",
+      "label": "Algebraic manipulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.radical",
+      "label": "Radical",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2021,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 15.7,
+    "source": 1200,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Under what conditions is \\(\\sqrt{a^2 + b^2} = a + b\\) true, where \\(a\\) and \\(b\\) are real numbers?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "It is never true."
+    },
+    {
+      "label": "B",
+      "text": "It is true if and only if \\(ab = 0.\\)"
+    },
+    {
+      "label": "C",
+      "text": "It is true if and only if \\(a + b \\ge 0.\\)"
+    },
+    {
+      "label": "D",
+      "text": "It is true if and only if \\(ab = 0\\) and \\(a +\nb \\ge 0.\\)"
+    },
+    {
+      "label": "E",
+      "text": "It is always true."
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2021-p2.live",
+      "kind": "proof-sketch",
+      "text": "Because \\(\\sqrt{a^2+b^2}\\) is never negative, equality requires \\(a + b \\ge 0.\\) Squaring both sides gives \\(a^2 + b^2 = (a+b)^2\\) \\(= a^2 + 2ab + b^2,\\) which simplifies to \\(2ab = 0,\\) i.e. \\(ab = 0.\\)\n\nConversely, if \\(ab = 0\\) then \\(a^2 + b^2 = (a+b)^2,\\) and if additionally \\(a + b \\ge 0\\) then \\(\\sqrt{a^2+b^2} = |a+b| = a+b.\\) So both conditions together are exactly what is needed.\n\nThus, the correct answer is D.",
+      "hints": [
+        "The left side is a square root, so it can never be negative; this forces \\(a + b \\ge 0\\)",
+        "Squaring gives \\(a^2 + b^2 = a^2 + 2ab + b^2,\\) so \\(2ab = 0\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

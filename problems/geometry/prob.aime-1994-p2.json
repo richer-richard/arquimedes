@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-1994-p2",
+  "title": "1994 AIME Problem 2",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.chord",
+      "label": "Chord",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.square-geometry",
+      "label": "Square (geometry)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1994,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 40.5,
+    "source": 2170,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "A circle with diameter \\(\\overline{PQ}\\) of length \\(10\\) is internally tangent at \\(P\\) to a circle of radius \\(20.\\) Square \\(ABCD\\) is constructed with \\(A\\) and \\(B\\) on the larger circle, \\(\\overline{CD}\\) tangent at \\(Q\\) to the smaller circle, and the smaller circle outside \\(ABCD.\\) The length of \\(\\overline{AB}\\) can be written in the form \\(m+\\sqrt n,\\) where \\(m\\) and \\(n\\) are integers. Find \\(m+n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "312",
+    "value": "312"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1994-p2.live",
+      "kind": "proof-sketch",
+      "text": "Put the large circle at the origin with \\(P=(20,0)\\) and \\(Q=(10,0).\\) Let the square’s side be \\(s.\\) Because the smaller circle is outside the square, \\(\\overline{CD}\\) lies on \\(x=10\\) and the parallel chord \\(\\overline{AB}\\) lies on \\(x=10-s.\\) A chord of the radius-\\(20\\) circle then gives \\[s=2\\sqrt{400-(10-s)^2}.\\] Squaring yields \\(s^2-16s-240=0,\\) so \\(s=8+4\\sqrt{19}=8+\\sqrt{304}.\\) Thus \\(m+n=8+304=312.\\)",
+      "hints": [
+        "Place the large circle at the origin and put \\(P\\) and \\(Q\\) on a diameter",
+        "If the square’s side is \\(s\\), its chord side \\(AB\\) lies at distance \\(|10-s|\\) from the large circle’s center"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

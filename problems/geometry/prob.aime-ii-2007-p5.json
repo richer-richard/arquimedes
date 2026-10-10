@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-ii-2007-p5",
+  "title": "2007 AIME II Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.lattice-point",
+      "label": "Lattice point",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2007,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 46.2,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "The graph of the equation \\(9x + 223y = 2007\\) is drawn on graph paper with each square representing one unit in each direction. How many of the \\(1\\) by \\(1\\) graph paper squares have interiors lying entirely below the graph and entirely in the first quadrant?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "888",
+    "value": "888"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2007-p5.live",
+      "kind": "proof-sketch",
+      "text": "The line meets the axes at \\((223, 0)\\) and \\((0, 9),\\) so all qualifying squares lie inside the \\(223 \\times 9\\) rectangle, which contains \\(223 \\cdot 9 = 2007\\) unit squares. Because \\(\\gcd(9, 223) = 1,\\) the segment passes through no interior lattice point; it crosses \\(222\\) interior vertical lines and \\(8\\) interior horizontal lines, entering a new square at each crossing, so it passes through the interiors of \\(223 + 9 - 1 = 231\\) squares.\n\nThe other \\(2007 - 231 = 1776\\) squares lie entirely above or entirely below the segment. The segment’s midpoint \\(\\left(\\frac{223}{2}, \\frac{9}{2}\\right)\\) is the center of the rectangle, so rotating by \\(180^\\circ\\) about it swaps the two groups. Hence exactly half of them, \\(888,\\) lie below the graph.",
+      "hints": [
+        "The segment runs from \\((0, 9)\\) to \\((223, 0);\\) count how many unit squares it cuts through in the \\(223 \\times 9\\) rectangle of \\(2007\\) squares",
+        "Since \\(\\gcd(9, 223) = 1\\) the segment hits no interior lattice point, so it crosses \\(223 + 9 - 1\\) squares; symmetry splits the untouched squares evenly"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

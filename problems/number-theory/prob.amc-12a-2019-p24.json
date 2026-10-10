@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2019-p24",
+  "title": "2019 AMC 12A Problem 24",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.legendres-formula",
+      "label": "Legendre’s Formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.prime",
+      "label": "Prime",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2019,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 46.9,
+    "source": 2420,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "For how many integers \\(n\\) between \\(1\\) and \\(50,\\) inclusive, is \\[ \\dfrac{(n^2 - 1)!}{(n!)^n} \\] an integer? (Recall that \\(0! = 1.\\))",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(31\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(32\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(33\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(34\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(35\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "34"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2019-p24.live",
+      "kind": "proof-sketch",
+      "text": "Fix a prime \\(p\\le n.\\) By Legendre’s formula, the difference between the exponent of \\(p\\) in the numerator and its exponent in the denominator is \\[ \\begin{aligned} D_p &=\\sum_{k\\ge1}\\left\\lfloor\\dfrac{n^2-1}{p^k}\\right\\rfloor\\\\ &\\quad-n\\sum_{k\\ge1}\\left\\lfloor\\dfrac{n}{p^k}\\right\\rfloor. \\end{aligned} \\] If \\(r_k\\) is the remainder of \\(n\\) modulo \\(p^k,\\) the \\(k\\)th summand is \\(\\left\\lfloor\\dfrac{nr_k-1}{p^k}\\right\\rfloor.\\)\n\nLet \\(a=v_p(n).\\) The first \\(a\\) summands are \\(-1.\\) If \\(n\\) is not a power of \\(p,\\) write \\(n=p^a m\\) with \\(m\\ge2.\\) When \\(a\\ge1,\\) the next summand is at least \\(\\dfrac{n}{p}-1\\ge a,\\) and all later summands are nonnegative; when \\(a=0,\\) every summand is already nonnegative. Thus \\(D_p\\ge0\\) unless \\(n\\) is a power of \\(p.\\)\n\nFor \\(n=p^a,\\) Legendre’s formula reduces the requirement to \\(p^a-1\\ge2a(p-1).\\) Among prime powers at most \\(50,\\) this fails exactly when \\(a=1\\) (so \\(n\\) is prime) and when \\(n=2^2=4.\\) There are \\(15\\) primes at most \\(50,\\) plus \\(n=4,\\) giving \\(16\\) failures. Hence \\(50 - 16 = 34\\) values of \\(n\\) work.\n\nThus, the correct answer is D.",
+      "hints": [
+        "Compare the exponent of a prime \\(p\\) in numerator and denominator using \\(v_p(m!) = \\dfrac{m - s_p(m)}{p - 1}\\)",
+        "Failure requires \\(n\\) to be a prime power \\(p^a\\) with \\(p^a - 1 \\lt 2a(p - 1)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

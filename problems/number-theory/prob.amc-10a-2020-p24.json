@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-10a-2020-p24",
+  "title": "2020 AMC 10A 24",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.chinese-remainder-theorem",
+      "label": "Chinese Remainder Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2020,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 30.0,
+    "source": 1820,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(n\\) be the least positive integer greater than \\(1000\\) for which \\[ \\begin{gathered} \\gcd(63,n+120)=21\\\\ \\text{and}\\\\ \\gcd(n+63,120)=60. \\end{gathered} \\] What is the sum of the digits of \\(n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(24\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "18"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2020-p24.live",
+      "kind": "proof-sketch",
+      "text": "The first gcd condition gives \\(n+120\\equiv0\\pmod{21}\\), so \\(n\\equiv6\\pmod{21}\\), but \\(n+120\\) must not be divisible by \\(63\\). The second gives \\(n+63\\equiv0\\pmod{60}\\), so \\(n\\equiv57\\pmod{60}\\), but \\(n+63\\) must not be divisible by \\(120\\).\n\nSolving \\(n\\equiv6\\pmod{21}\\) and \\(n\\equiv57\\pmod{60}\\) gives \\(n\\equiv237\\pmod{420}\\). The candidates above \\(1000\\) are \\(1077,1497,1917,\\ldots\\). The first fails the first gcd condition, the second fails the second gcd condition, and \\(1917\\) works. The digit sum is \\(18\\). Thus, C is the correct answer.",
+      "hints": [
+        "Translate each gcd condition into a congruence plus an exclusion",
+        "Solve the two congruences first, then test candidates above \\(1000\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

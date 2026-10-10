@@ -1,0 +1,77 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2022-p9",
+  "title": "2022 HMMT February Algebra and Number Theory Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2022,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Suppose \\(P(x)\\) is a monic polynomial of degree 2023 such that\n\n\\[P(k)=k^{2023} P\\left(1-\\frac{1}{k}\\right)\\]\n\nfor every positive integer \\(1 \\leq k \\leq 2023\\). Then \\(P(-1)=\\frac{a}{b}\\), where \\(a\\) and \\(b\\) relatively prime integers. Compute the unique integer \\(0 \\leq n<2027\\) such that \\(b n-a\\) is divisible by the prime 2027 .",
+  "answerChoices": [],
+  "answer": {
+    "letter": "406",
+    "value": "406"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2022-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(n=2023\\). If \\(P(x)=x^{n}+a_{n-1} x^{n-1}+\\cdots+a_{0}\\), then let\n\n\\[R(x)=x^{n} P\\left(1-\\frac{1}{x}\\right)=(x-1)^{n}+a_{n-1}(x-1)^{n} x+\\cdots+a_{0} x^{n}\\]\n\nThen, note that \\(Q(x)=P(x)-R(x)\\) is a polynomial of degree at most \\(n\\), and it has roots \\(1,2, \\ldots, n\\), so we have \\(Q(x)=k(x-1) \\cdots(x-n)\\) for some real constant \\(k\\). Now we determine \\(P(x)\\) in terms of \\(Q(x)\\). If \\(g(x)=1-1 / x\\), then \\(g(g(x))=\\frac{1}{1-x}\\) and \\(g(g(g(x)))=x\\). Therefore, we have\n\n\\[\\begin{aligned}\nP(x)-x^{n} P\\left(1-\\frac{1}{x}\\right) & =Q(x) \\\\\nP\\left(1-\\frac{1}{x}\\right)-\\left(1-\\frac{1}{x}\\right)^{n} P\\left(\\frac{1}{1-x}\\right) & =Q\\left(1-\\frac{1}{x}\\right) \\\\\nP\\left(\\frac{1}{1-x}\\right)-\\left(\\frac{1}{1-x}\\right)^{n} P(x) & =Q\\left(\\frac{1}{1-x}\\right) .\n\\end{aligned}\\]\n\nAdding the first equation, \\(x^{n}\\) times the second, and \\((x-1)^{n}\\) times the third yields\n\n\\[2 P(x)=Q(x)+x^{n} Q\\left(\\frac{x-1}{x}\\right)+(x-1)^{n} Q\\left(\\frac{1}{1-x}\\right),\\]\n\nso\n\n\\[\\begin{aligned}\n& P(x)=\\frac{k}{2}((x-1)(x-2) \\cdots(x-n)+(0 x-1)(-1 x-1) \\cdots(-(n-1) x-1) \\\\\n&+(-1 x+0)(-2 x+1) \\cdots(-n x+(n-1))) .\n\\end{aligned}\\]\n\nTherefore,\n\n\\[P(-1)=\\frac{k}{2}(-(n+1)!+0+(2 n+1)!!)\\]\n\nAlso, since \\(P\\) is monic, we know that\n\n\\[1=\\frac{k}{2}(1+0-n!)\\]\n\nso\n\n\\[P(-1)=\\frac{(2 n-1)!!-(n+1)!}{1-n!}\\]\n\nModulo 2027, \\((n+1)!=2026!/(2026 \\cdot 2025) \\equiv-1 /(-1 \\cdot-2) \\equiv-1 / 2\\) and \\(n!=(n+1)!/ 2024 \\equiv 1 / 6\\). Also, \\((2 n+1)!!\\equiv 0\\). So our answer is\n\n\\[\\frac{1 / 2}{1-1 / 6}=\\frac{3}{5} \\equiv \\frac{2030}{5}=406\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

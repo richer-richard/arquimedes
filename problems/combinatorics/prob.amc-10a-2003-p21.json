@@ -1,0 +1,72 @@
+{
+  "id": "prob.amc-10a-2003-p21",
+  "title": "2003 AMC 10A Problem 21",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.stars-and-bars",
+      "label": "Stars and bars",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2003,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 25.7,
+    "source": 1600,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Pat is to select six cookies from a tray containing only chocolate chip, oatmeal, and peanut butter cookies. There are at least six of each of these three kinds of cookies on the tray. How many different assortments of six cookies can be selected?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(22\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(25\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(27\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(28\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(729\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "28"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2003-p21.live",
+      "kind": "proof-sketch",
+      "text": "An assortment is determined by how many of each type are chosen, so we count nonnegative integer solutions to \\(a + b + c = 6.\\)\n\nBy stars and bars, placing \\(2\\) dividers among \\(8\\) slots gives \\(\\dbinom{8}{2} = 28\\) assortments.\n\nThus, the correct answer is D.",
+      "hints": [
+        "Count the nonnegative integer solutions to \\(a + b + c = 6\\)",
+        "By stars and bars this is \\(\\dbinom{6 + 2}{2}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

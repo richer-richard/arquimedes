@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2019-p6",
+  "title": "2019 AMC 10B Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.algebraic-manipulation",
+      "label": "Algebraic manipulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.factorial",
+      "label": "Factorial",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2019,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 19.3,
+    "source": 1190,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "A positive integer \\(n\\) satisfies the equation \\[(n+1)! + (n+2)! = n! \\cdot 440.\\] What is the sum of the digits of \\(n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 2 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 5 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 10 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 12 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 15 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "10"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2019-p6.live",
+      "kind": "proof-sketch",
+      "text": "We can rewrite the left side as \\[(n+1)n!+(n+2)(n+1)n!\\]\\[=((n+2)^2-1)n!,\\] so \\[((n+2)^2-1) n! = 440 n!\\] Therefore, \\[(n+2)^2=441,\\] so \\(n=19.\\) The sum of its digits is \\(10.\\)\n\nThus, the answer is C .",
+      "hints": [
+        "Factor \\((n+1)!\\) and \\((n+2)!\\) in terms of \\(n!\\)",
+        "Divide by \\(n!\\) and solve the resulting square equation"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

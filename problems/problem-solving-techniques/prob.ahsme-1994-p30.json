@@ -1,0 +1,71 @@
+{
+  "id": "prob.ahsme-1994-p30",
+  "title": "1994 AHSME Problem 30",
+  "category": "problem-solving-techniques",
+  "subjects": [
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "strategy.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1994,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 40.0,
+    "source": 2150,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "When \\(n\\) standard \\(6\\)-sided dice are rolled, the probability of obtaining a sum of \\(1994\\) is greater than zero and is the same as the probability of obtaining a sum of \\(S.\\) The smallest possible value of \\(S\\) is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(333\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(335\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(337\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(339\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(341\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "337"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1994-p30.live",
+      "kind": "proof-sketch",
+      "text": "The smallest feasible number of dice is \\[ n=\\left\\lceil\\frac{1994}{6}\\right\\rceil=333. \\] Replacing every die result \\(d\\) by \\(7-d\\) is a bijection between outcomes of sum \\(T\\) and outcomes of sum \\(7n-T.\\) Thus for \\(n=333,\\) the sum paired with \\(1994\\) is \\[ S=7(333)-1994=337. \\] Dice-sum counts increase strictly from the minimum sum up to the mean, so for any feasible \\(n\\) no sum below \\(337\\) can match the count at \\(1994.\\) Thus the smallest value is \\(337,\\) and the correct answer is C.",
+      "hints": [
+        "A sum of \\(1994\\) is possible only when \\(6n\\ge1994\\)",
+        "Replacing every die value \\(d\\) by \\(7-d\\) pairs sums \\(T\\) and \\(7n-T\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

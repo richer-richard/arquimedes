@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2023-p7",
+  "title": "2023 AIME II Problem 7",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2023,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 51.6,
+    "source": 2600,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "Each vertex of a regular dodecagon (\\(12\\)-gon) is to be colored either red or blue, and thus there are \\(2^{12}\\) possible colorings. Find the number of these colorings with the property that no four vertices colored the same color are the four vertices of a rectangle.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "928",
+    "value": "928"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2023-p7.live",
+      "kind": "proof-sketch",
+      "text": "The twelve vertices lie on a circle, and a rectangle inscribed in a circle must have its diagonals pass through the center. So the rectangles with vertices among the twelve are exactly the pairs of distinct diameters, where the diameters join the \\(6\\) antipodal pairs of vertices. A monochromatic rectangle appears exactly when two antipodal pairs are each colored solidly in the same color.\n\nEach antipodal pair is independently both red (\\(1\\) way), both blue (\\(1\\) way), or mixed (\\(2\\) ways). A coloring is valid exactly when at most one pair is both red and at most one pair is both blue. Counting by the numbers of solid red and solid blue pairs: \\[ \\begin{gathered} 2^6 + 6 \\cdot 2^5 \\\\ {}+ 6 \\cdot 2^5 + 6 \\cdot 5 \\cdot 2^4 \\\\ = 64 + 192 + 192 + 480 \\\\ = 928. \\end{gathered} \\]",
+      "hints": [
+        "A rectangle inscribed in the circle must have both diagonals as diameters, so rectangles correspond to pairs of the \\(6\\) antipodal pairs of vertices",
+        "Classify each antipodal pair as both red, both blue, or mixed; a coloring works exactly when at most one pair is both red and at most one is both blue"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2022-p23",
+  "title": "2022 AMC 10B Problem 23",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.geometric-probability",
+      "label": "Geometric probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.independent-events",
+      "label": "Independent events",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2022,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 40.0,
+    "source": 2150,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Ant Amelia starts on the number line at \\(0\\) and crawls in the following manner. For \\(n=1,\\) \\(2,\\) \\(3;\\) Amelia chooses a time duration \\(t_n\\) and an increment \\(x_n\\) independently and uniformly at random from the interval \\((0,1).\\) During the \\(n\\)th step of the process, Amelia moves \\(x_n\\) units in the positive direction, using up \\(t_n\\) minutes. If the total elapsed time has exceeded \\(1\\) minute during the \\(n\\)th step, she stops at the end of that step; otherwise, she continues with the next step, taking at most \\(3\\) steps in all. What is the probability that Amelia’s position when she stops will be greater than \\(1?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( \\dfrac 13 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( \\dfrac 12 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( \\dfrac 23 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( \\dfrac 34 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( \\dfrac 56 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "2/3"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2022-p23.live",
+      "kind": "proof-sketch",
+      "text": "The stopping time depends only on the time variables, while the final position depends only on the distance variables, so the corresponding probabilities multiply.\n\nFor two independent numbers in \\((0,1),\\) the probability that their sum is less than \\(1\\) is the area of a right triangle, namely \\(\\frac12.\\)\n\nFor three independent numbers in \\((0,1),\\) the probability that their sum is less than \\(1\\) is the volume of a tetrahedron with side intercepts \\(1,\\) namely \\(\\frac16.\\)\n\nIf \\(t_1+t_2>1,\\) Amelia stops after two steps. This has probability \\(\\frac12,\\) and independently \\(x_1+x_2>1\\) has probability \\(\\frac12,\\) contributing \\(\\frac14.\\)\n\nIf \\(t_1+t_2<1,\\) Amelia takes the third step. This has probability \\(\\frac12,\\) and independently \\(x_1+x_2+x_3>1\\) has probability \\(1-\\frac16=\\frac56,\\) contributing \\(\\frac5{12}.\\)\n\nThe total probability is \\(\\frac14+\\frac5{12}=\\frac23.\\)\n\nThus, the answer is C .",
+      "hints": [
+        "Use geometric probabilities for sums of two or three independent numbers in \\((0,1)\\)",
+        "The stopping time depends only on the variables \\(t_1,\\) \\(t_2,\\) and \\(t_3\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

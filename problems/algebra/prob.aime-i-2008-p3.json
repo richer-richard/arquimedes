@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-i-2008-p3",
+  "title": "2008 AIME I Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.rate",
+      "label": "Rate",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2008,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 36.7,
+    "source": 2020,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Ed and Sue bike at equal and constant rates. Similarly, they jog at equal and constant rates, and they swim at equal and constant rates. Ed covers \\(74\\) kilometers after biking for \\(2\\) hours, jogging for \\(3\\) hours, and swimming for \\(4\\) hours, while Sue covers \\(91\\) kilometers after jogging for \\(2\\) hours, swimming for \\(3\\) hours, and biking for \\(4\\) hours. Their biking, jogging, and swimming rates are all whole numbers of kilometers per hour. Find the sum of the squares of Ed’s biking, jogging, and swimming rates.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "314",
+    "value": "314"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2008-p3.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(b,\\) \\(j,\\) and \\(s\\) be the biking, jogging, and swimming rates. The two trips give \\[2b + 3j + 4s = 74\\] and \\[4b + 2j + 3s = 91.\\] Doubling the first equation and subtracting the second yields \\(4j + 5s = 57,\\) whose positive integer solutions are \\((j, s) = (13, 1),\\) \\((8, 5),\\) and \\((3, 9).\\)\n\nThe corresponding values of \\(2b = 74 - 3j - 4s\\) are \\(31,\\) \\(30,\\) and \\(29,\\) so only \\((j, s) = (8, 5)\\) gives a whole-number rate, \\(b = 15.\\) The sum of the squares is \\(15^2 + 8^2 + 5^2\\) \\(= 225 + 64 + 25\\) \\(= 314.\\)",
+      "hints": [
+        "The two trips give \\(2b + 3j + 4s = 74\\) and \\(4b + 2j + 3s = 91\\) in whole numbers",
+        "Eliminate \\(b\\) to get \\(4j + 5s = 57;\\) of its three positive solutions, only one makes \\(b\\) a whole number"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

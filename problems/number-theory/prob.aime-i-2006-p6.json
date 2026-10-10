@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-i-2006-p6",
+  "title": "2006 AIME I Problem 6",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.repeating-decimal",
+      "label": "Repeating decimal",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2006,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 43.9,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Let \\(\\mathcal{S}\\) be the set of real numbers that can be represented as repeating decimals of the form \\(0.\\overline{abc}\\) where \\(a,\\) \\(b,\\) \\(c\\) are distinct digits. Find the sum of the elements of \\(\\mathcal{S}.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "360",
+    "value": "360"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2006-p6.live",
+      "kind": "proof-sketch",
+      "text": "Each element equals \\(0.\\overline{abc} = \\frac{100a + 10b + c}{999},\\) and there are \\(10 \\cdot 9 \\cdot 8 = 720\\) ordered triples of distinct digits. By symmetry, each digit \\(0\\) through \\(9\\) appears in each of the three positions exactly \\(\\frac{720}{10} = 72\\) times.\n\nThe numerators therefore total \\[ \\begin{aligned} &72 (0 + 1 + \\cdots + 9) \\\\ &\\quad {}\\cdot (100 + 10 + 1) \\\\ &= 72 \\cdot 45 \\cdot 111 = 359640, \\end{aligned} \\] so the sum of the elements is \\(\\frac{359640}{999} = 360.\\)",
+      "hints": [
+        "\\(0.\\overline{abc} = \\frac{100a + 10b + c}{999},\\) and there are \\(10 \\cdot 9 \\cdot 8 = 720\\) elements to add",
+        "By symmetry each digit \\(0\\) through \\(9\\) appears exactly \\(72\\) times in each of the three positions"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

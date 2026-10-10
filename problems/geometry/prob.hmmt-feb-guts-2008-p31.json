@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-guts-2008-p31",
+  "title": "2008 HMMT February Guts Problem 31",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2008,
+    "number": 31
+  },
+  "difficulty": {
+    "course": 92.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\mathcal{C}\\) be the hyperbola \\(y^{2}-x^{2}=1\\). Given a point \\(P_{0}\\) on the \\(x\\)-axis, we construct a sequence of points \\(\\left(P_{n}\\right)\\) on the \\(x\\)-axis in the following manner: let \\(\\ell_{n}\\) be the line with slope 1 passing passing\nthrough \\(P_{n}\\), then \\(P_{n+1}\\) is the orthogonal projection of the point of intersection of \\(\\ell_{n}\\) and \\(\\mathcal{C}\\) onto the \\(x\\)-axis. (If \\(P_{n}=0\\), then the sequence simply terminates.)\nLet \\(N\\) be the number of starting positions \\(P_{0}\\) on the \\(x\\)-axis such that \\(P_{0}=P_{2008}\\). Determine the remainder of \\(N\\) when divided by 2008.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2008-p31.hmmt",
+      "kind": "proof-sketch",
+      "text": "254 Let \\(P_{n}=\\left(x_{n}, 0\\right)\\). Then the \\(\\ell_{n}\\) meet \\(\\mathcal{C}\\) at \\(\\left(x_{n+1}, x_{n+1}-x_{n}\\right)\\). Since this point lies on the hyperbola, we have \\(\\left(x_{n+1}-x_{n}\\right)^{2}-x_{n+1}^{2}=1\\). Rearranging this equation gives\n\n\\[x_{n+1}=\\frac{x_{n}^{2}-1}{2 x_{n}}\\]\n\nChoose a \\(\\theta_{0} \\in(0, \\pi)\\) with \\(\\cot \\theta_{0}=x_{0}\\), and define \\(\\theta_{n}=2^{n} \\theta_{0}\\). Using the double-angle formula, we have\n\n\\[\\cot \\theta_{n+1}=\\cot \\left(2 \\theta_{n}\\right)=\\frac{\\cot ^{2} \\theta_{n}-1}{2 \\cot \\theta_{n}}\\]\n\nIt follows by induction that \\(x_{n}=\\cot \\theta_{n}\\). Then, \\(P_{0}=P_{2008}\\) corresponds to \\(\\cot \\theta_{0}=\\cot \\left(2^{2008} \\theta_{0}\\right)\\) (assuming that \\(P_{0}\\) is never at the origin, or equivalently, \\(2^{n} \\theta\\) is never an integer multiple of \\(\\pi\\) ). So, we need to find the number of \\(\\theta_{0} \\in(0, \\pi)\\) with the property that \\(2^{2008} \\theta_{0}-\\theta_{0}=k \\pi\\) for some integer \\(k\\). We have \\(\\theta_{0}=\\frac{k \\pi}{2^{2008}-1}\\), so \\(k\\) can be any integer between 1 and \\(2^{2008}-2\\) inclusive (and note that since the denominator is odd, the sequence never terminates). It follows that the number of starting positions is \\(N=2^{2008}-2\\).\nFinally, we need to compute the remainder when \\(N\\) is divided by 2008 . We have \\(2008=2^{3} \\times 251\\). Using Fermat's Little Theorem with 251 , we get \\(2^{2008} \\equiv\\left(2^{250}\\right)^{4} \\cdot 256 \\equiv 1^{4} \\cdot 5=5(\\bmod 251)\\). So we have \\(N \\equiv 3(\\bmod 251)\\) and \\(N \\equiv-2(\\bmod 8)\\). Using Chinese Remainder Theorem, we get \\(N \\equiv 254\\) \\((\\bmod 2008)\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

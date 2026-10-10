@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2020-p17",
+  "title": "2020 AMC 12A 17",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.shoelace-formula",
+      "label": "Shoelace formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2020,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 33.0,
+    "source": 1860,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The vertices of a quadrilateral lie on the graph of \\(y = \\ln x,\\) and the \\(x\\)-coordinates of these vertices are consecutive positive integers. The area of the quadrilateral is \\(\\ln\\dfrac{91}{90}.\\) What is the \\(x\\)-coordinate of the leftmost vertex?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(13\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "12"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2020-p17.live",
+      "kind": "proof-sketch",
+      "text": "Let the vertices have \\(x\\)-coordinates \\(n, n+1, n+2, n+3\\) with \\(y\\)-coordinates \\(\\ln\\) of those values. Applying the shoelace formula and simplifying, the area is \\(\\ln\\dfrac{(n+1)(n+2)}{n(n+3)}.\\)\n\nSetting \\(\\dfrac{(n+1)(n+2)}{n(n+3)} = \\dfrac{91}{90}\\) gives \\(1 + \\dfrac{2}{n^2 + 3n} = \\dfrac{91}{90},\\) so \\(n^2 + 3n = 180.\\)\n\nThen \\((n - 12)(n + 15) = 0,\\) so \\(n = 12.\\)\n\nThus, D is the correct answer.",
+      "hints": [
+        "Let the \\(x\\)-coordinates be \\(n, n+1, n+2, n+3\\) and apply the shoelace formula",
+        "The area simplifies to \\(\\ln\\dfrac{(n+1)(n+2)}{n(n+3)};\\) set it equal to \\(\\ln\\dfrac{91}{90}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

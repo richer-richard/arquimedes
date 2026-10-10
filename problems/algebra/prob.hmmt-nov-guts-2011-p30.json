@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-nov-guts-2011-p30",
+  "title": "2011 HMMT November Guts Problem 30",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2011,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 66.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(S\\) be a set of consecutive positive integers such that for any integer \\(n\\) in \\(S\\), the sum of the digits of \\(n\\) is not a multiple of 11. Determine the largest possible number of elements of \\(S\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2011-p30.hmmt",
+      "kind": "proof-sketch",
+      "text": "38 We claim that the answer is 38 . This can be achieved by taking the smallest integer in the set to be 999981. Then, our sums of digits of the integers in the set are\n\n\\[45, \\ldots, 53,45, \\ldots, 54,1, \\ldots, 10,2, \\ldots, 10\\]\n\nnone of which are divisible by 11 .\nSuppose now that we can find a larger set \\(S\\) : then we can then take a 39-element subset of \\(S\\) which has the same property. Note that this implies that there are consecutive integers \\(a-1, a, a+1\\) for which \\(10 b, \\ldots, 10 b+9\\) are all in \\(S\\) for \\(b=a-1, a, a+1\\). Now, let \\(10 a\\) have sum of digits \\(N\\). Then, the sums of digits of \\(10 a+1,10 a+2, \\ldots, 10 a+9\\) are \\(N+1, N+2, \\ldots, N+9\\), respectively, and it follows that \\(n \\equiv 1(\\bmod 11)\\).\nIf the tens digit of \\(10 a\\) is not 9 , note that \\(10(a+1)+9\\) has sum of digits \\(N+10\\), which is divisible by 11 , a contradiction. On the other hand, if the tens digit of \\(10 a\\) is 9 , the sum of digits of \\(10(a-1)\\) is \\(N-1\\), which is also divisible by 11 . Thus, \\(S\\) has at most 38 elements.\nMotivation: We want to focus on subsets of \\(S\\) of the form \\(\\{10 a, \\ldots, 10 a+9\\}\\), since the sum of digits goes up by 1 most of the time. If the tens digit of \\(10 a\\) is anything other than 0 or 9 , we see that \\(S\\) can at most contain the integers between \\(10 a-8\\) and \\(10 a+18\\), inclusive. However, we can attempt to make \\(10(a-1)+9\\) have sum of digits congruent to \\(N+9\\) modulo 11 , as to be able to add as many integers to the beginning as possible, which can be achieved by making \\(10(a-1)+9\\) end in the appropriate number of nines. We see that we want to take \\(10(a-1)+9=999999\\) so that the sum of digits upon adding 1 goes down by \\(53 \\equiv 9(\\bmod 11)\\), giving the example we constructed previously.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

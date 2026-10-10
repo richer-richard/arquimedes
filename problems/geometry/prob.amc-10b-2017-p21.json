@@ -1,0 +1,90 @@
+{
+  "id": "prob.amc-10b-2017-p21",
+  "title": "2017 AMC 10B Problem 21",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.incircle-incenter-and-inradius",
+      "label": "Incircle, incenter, and inradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.right-triangle",
+      "label": "Right triangle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2017,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 27.7,
+    "source": 1720,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In \\(\\triangle ABC,\\) \\(AB=6,\\) \\(AC=8,\\) \\(BC=10,\\) and \\(D\\) is the midpoint of \\(\\overline{BC}.\\) What is the sum of the radii of the circles inscribed in \\(\\triangle ADB\\) and \\(\\triangle ADC?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\sqrt{5} \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{11}{4} \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\sqrt{2} \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{17}{6} \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(3 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "17/6"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2017-p21.live",
+      "kind": "proof-sketch",
+      "text": "The triangle \\(ABC\\) is a right triangle with a right angle at \\(A.\\) This makes \\(D\\) the circumcenter of the triangle since it is the midpoint of the hypotenuse.\n\nTherefore, \\[AD = BD = DC = 5.\\] Also, the area of \\(ABC\\) is \\[\\dfrac{6\\cdot 8}2 = 24.\\]\n\nThe bases \\(BD\\) and \\(DC\\) are equal, and the two triangles share the same altitude from \\(A.\\) Therefore, \\(\\triangle ABD\\) and \\(\\triangle ACD\\) each have area \\(12.\\)\n\nThen, for each triangle, we have \\(A = rs\\) where \\(A\\) is the area, \\(r\\) is the inradius, and \\(s\\) is the semiperimeter. Equivalently, \\(12=\\dfrac12rP,\\) where \\(P\\) is the perimeter, so \\(r=\\dfrac{24}{P}.\\) For \\(\\triangle ABD,\\) the inradius is \\(\\dfrac{24}{5+5+6}=\\dfrac32.\\) For \\(\\triangle ACD,\\) it is \\(\\dfrac{24}{5+5+8}=\\dfrac43.\\)\n\nTheir sum is \\(\\dfrac 32 + \\dfrac 43 = \\dfrac{17}6 .\\)\n\nThus, the correct answer is D .",
+      "hints": [
+        "First recognize the \\(6,8,10\\) triangle as right",
+        "Use area equals inradius times semiperimeter for the two smaller triangles"
+      ],
+      "images": [
+        "2e5a7f3f73e597a290ed07cfa98e11442b49b5efdc1497eca651b177ab8d58a6"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "2e5a7f3f73e597a290ed07cfa98e11442b49b5efdc1497eca651b177ab8d58a6"
+    ]
+  }
+}

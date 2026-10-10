@@ -1,0 +1,56 @@
+{
+  "id": "prob.hmmt-feb-guts-2010-p15",
+  "title": "2010 HMMT February Guts Problem 15",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "nt.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.probability",
+      "label": "Probability",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2010,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 77.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Pick a random integer between 0 and 4095, inclusive. Write it in base 2 (without any leading zeroes). What is the expected number of consecutive digits that are not the same (that is, the expected number of occurrences of either 01 or 10 in the base 2 representation)?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2010-p15.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{20481}{4096}\\) Note that every number in the range can be written as a 12-digit binary string. For \\(i=1,2, \\ldots 11\\), let \\(R_{i}\\) be a random variable which is 1 if the \\(i\\) th and \\((i+1)\\) st digits differ in a randomly chosen number in the range. By linearity of expectation, \\(E\\left(\\sum_{i} R_{i}\\right)=\\sum E\\left(R_{i}\\right)\\).\nSince we choose every binary string of length 12 with equal probability, the sum of the expectations is \\(\\frac{11}{2}\\). However, this is not the expected number of 01 s and \\(10 s\\) - we need to subtract the occasions where the leading digit is zero. There is a \\(\\frac{1}{2}\\) chance that the number starts with a 0 , in which case we must ignore the first digit change - unless the number was 0 , in which case there are no digit changes. Therefore, our answer is \\(\\frac{11}{2}-\\frac{1}{2}+\\frac{1}{4096}=\\frac{20481}{4096}\\).\n\\(13^{\\text {th }}\\) ANNUAL HARVARD-MIT MATHEMATICS TOURNAMENT, 20 FEBRUARY 2010 - GUTS ROUND",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

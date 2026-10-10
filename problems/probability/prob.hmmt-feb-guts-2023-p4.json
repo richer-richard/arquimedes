@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2023-p4",
+  "title": "2023 HMMT February Guts Problem 4",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.counting-methods",
+      "label": "Counting Methods",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2023,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 67.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A standard \\(n\\)-sided die has \\(n\\) sides labeled 1 to \\(n\\). Luis, Luke, and Sean play a game in which they roll a fair standard 4 -sided die, a fair standard 6 -sided die, and a fair standard 8 -sided die, respectively. They lose the game if Luis's roll is less than Luke's roll, and Luke's roll is less than Sean's roll. Compute the probability that they lose the game.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{1}{4}",
+    "value": "\\frac{1}{4}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2023-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "We perform casework on Luke's roll. If Luke rolls \\(n\\), with \\(2 \\leq n \\leq 5\\), then the probability Luis rolls less than Luke is \\(\\frac{n-1}{4}\\), and the probability Sean rolls more than Luke is \\(\\frac{8-n}{8}\\). If Luke rolls 6 then Luis will definitely roll less than Luke, and Sean rolls more than Luke with probability \\(\\frac{2}{8}=\\frac{1}{4}\\). (If Luke rolls 1 then they cannot lose the game.) Thus, the probability they lose is\n\n\\[\\frac{1}{6}\\left(\\frac{1}{4} \\cdot \\frac{6}{8}+\\frac{2}{4} \\cdot \\frac{5}{8}+\\frac{3}{4} \\cdot \\frac{4}{8}+\\frac{4}{4} \\cdot \\frac{3}{8}+\\frac{1}{4}\\right)=\\frac{48}{6 \\cdot 4 \\cdot 8}=\\frac{1}{4} .\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

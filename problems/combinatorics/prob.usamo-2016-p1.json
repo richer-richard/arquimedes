@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2016-p1",
+  "title": "2016 USAMO Problem 1",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2016,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 87.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(X_1, X_2, \\ldots, X_{100}\\) be a sequence of mutually distinct nonempty subsets of a set \\(S\\). Any two sets \\(X_i\\) and \\(X_{i+1}\\) are disjoint and their union is not the whole set \\(S\\), that is, \\(X_i\\cap X_{i+1}=\\emptyset\\) and \\(X_i\\cup X_{i+1}\\neq S\\), for all \\(i\\in\\{1, \\ldots, 99\\}\\). Find the smallest possible number of elements in \\(S\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2016-p1.imported",
+      "kind": "proof-sketch",
+      "text": "The answer is that $|S| \\ge 8$.\nFirst, we provide a inductive construction for $S = \\left\\{ 1, \\dots, 8 \\right\\}$. Actually, for $n \\ge 4$ we will provide a construction for $S = \\left\\{ 1, \\dots, n \\right\\}$ which has $2^{n-1} + 1$ elements in a line. (This is sufficient, since we then get $129$ for $n = 8$.) The idea is to start with the following construction for $|S| = 4$: \\[\\begin{array}{ccccccccc} 34 & 1 & 23 & 4 & 12 & 3 & 14 & 2 & 13 \\end{array}.\\]Then inductively, we do the following procedure to move from $n$ to $n+1$: take the chain for $n$ elements, delete an element, and make two copies of the chain (which now has even length). Glue the two copies together, joined by $\\varnothing$ in between. Then place the element $n+1$ in alternating positions starting with the first (in particular, this hits $n+1$). For example, the first iteration of this construction gives: \\[\\begin{array}{ccccccccc} 345 & 1 & 235 & 4 & 125 & 3 & 145 & 2 & 5 \\\\ 34 & 15 & 23 & 45 & 12 & 35 & 14 & 25 & \\end{array}\\]\nNow let's check $|S| \\ge 8$ is sufficient. Consider a chain on a set of size $|S| = 7$. (We need $|S| \\ge 7$ else $2^{|S|} < 100$.) Observe that there are sets of size $\\ge 4$ can only be neighbored by sets of size $\\le 2$, of which there are $\\binom 71 + \\binom 72 = 28$. So there are $\\le 30$ sets of size $\\ge 4$. Also, there are $\\binom 73 = 35$ sets of size $3$. So the total number of sets in a chain can be at most $30 + 28 + 35 = 93 < 100$.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

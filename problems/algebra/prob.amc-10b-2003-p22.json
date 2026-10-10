@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2003-p22",
+  "title": "2003 AMC 10B Problem 22",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.date-and-time",
+      "label": "Date and time",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.process-simulation",
+      "label": "Process simulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2003,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 28.2,
+    "source": 1690,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A clock chimes once at \\(30\\) minutes past each hour and chimes on the hour according to the hour. For example, at \\(1\\) PM there is one chime and at noon and midnight there are twelve chimes. Starting at \\(11{:}15\\) AM on February \\(26,\\) \\(2003,\\) on what date will the \\(2003\\)rd chime occur?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "March \\(8\\)"
+    },
+    {
+      "label": "B",
+      "text": "March \\(9\\)"
+    },
+    {
+      "label": "C",
+      "text": "March \\(10\\)"
+    },
+    {
+      "label": "D",
+      "text": "March \\(20\\)"
+    },
+    {
+      "label": "E",
+      "text": "March \\(21\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2003-p22.live",
+      "kind": "proof-sketch",
+      "text": "Each \\(12\\)-hour period has \\(12 + 78 = 90\\) chimes, so each full day has \\(180.\\)\n\nAfter \\(11{:}15\\) AM on February \\(26,\\) the rest of that day has \\(91\\) chimes. Adding \\(180\\) for each following full day, the count reaches \\(1891\\) by the end of March \\(8.\\)\n\nThe remaining chimes fall on March \\(9:\\) the \\(2003\\)rd chime is the \\(112\\)th chime of that day, occurring at \\(3{:}30\\) PM on March \\(9.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "In each \\(12\\)-hour period there are \\(12\\) half-hour chimes and \\(1+2+\\cdots+12=78\\) hour chimes",
+        "A full day has \\(180\\) chimes; count how many occur after \\(11{:}15\\) AM on Feb \\(26\\) and accumulate by day"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

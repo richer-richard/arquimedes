@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-calculus-combinatorics-2011-p14",
+  "title": "2011 HMMT February Calculus and Combinatorics Problem 14",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(f:[0,1] \\rightarrow[0,1]\\) be a continuous function such that \\(f(f(x))=1\\) for all \\(x \\in[0,1]\\). Determine the set of possible values of \\(\\int_{0}^{1} f(x) d x\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-calculus-combinatorics-2011-p14.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\left(\\frac{3}{4}, 1\\right]\\) Since the maximum value of \\(f\\) is \\(1, \\int_{0}^{1} f(x) d x \\leq 1\\).\nBy our condition \\(f(f(x))=1, f\\) is 1 at any point within the range of \\(f\\). Clearly, 1 is in the range of \\(f\\), so \\(f(1)=1\\). Now \\(f(x)\\) is continuous on a closed interval so it attains a minimum value \\(c\\). Since \\(c\\) is in the range of \\(f, f(c)=1\\).\nIf \\(c=1, f(x)=1\\) for all \\(x\\) and \\(\\int_{0}^{1} f(x) d x=1\\).\nNow assume \\(c<1\\). By the intermediate value theorem, since \\(f\\) is continuous it attains all values between \\(c\\) and 1 . So for all \\(x \\geq c, f(x)=1\\). Therefore,\n\n\\[\\int_{0}^{1} f(x) d x=\\int_{0}^{c} f(x) d x+(1-c) .\\]\n\nSince \\(f(x) \\geq c, \\int_{0}^{c} f(x) d x>c^{2}\\), and the equality is strict because \\(f\\) is continuous and thus cannot be \\(c\\) for all \\(x<c\\) and 1 at \\(c\\). So\n\n\\[\\int_{0}^{1} f(x) d x>c^{2}+(1-c)=\\left(c-\\frac{1}{2}\\right)^{2}+\\frac{3}{4} \\geq \\frac{3}{4}\\]\n\nTherefore \\(\\frac{3}{4}<\\int_{0}^{1} f(x) d x \\leq 1\\), and it is easy to show that every value in this interval can be reached.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

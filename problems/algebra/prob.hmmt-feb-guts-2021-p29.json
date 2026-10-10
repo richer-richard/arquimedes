@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-feb-guts-2021-p29",
+  "title": "2021 HMMT February Guts Problem 29",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.polynomial-operations",
+      "label": "Polynomial operations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.sums-and-products",
+      "label": "Sums and products",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2021,
+    "number": 29
+  },
+  "difficulty": {
+    "course": 81.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the number of complex numbers \\(z\\) with \\(|z|=1\\) that satisfy\n\n\\[1+z^{5}+z^{10}+z^{15}+z^{18}+z^{21}+z^{24}+z^{27}=0\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "11",
+    "value": "11"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2021-p29.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let the polynomial be \\(f(z)\\). One can observe that\n\n\\[f(z)=\\frac{1-z^{15}}{1-z^{5}}+z^{15} \\frac{1-z^{15}}{1-z^{3}}=\\frac{1-z^{20}}{1-z^{5}}+z^{18} \\frac{1-z^{12}}{1-z^{3}}\\]\n\nso all primitive 15 th roots of unity are roots, along with -1 and \\(\\pm i\\).\nTo show that there are no more, we can try to find \\(\\operatorname{gcd}(f(z), f(1 / z))\\). One can show that there exist \\(a, b\\) so that \\(z^{a} f(z)-z^{b} f(1 / z)\\) can be either of these four polynomials:\n\n\\[\\begin{aligned}\n\\left(1+z^{5}+z^{10}\\right)\\left(1-z^{32}\\right), & \\left(1+z^{5}+z^{10}+z^{15}\\right)\\left(1-z^{30}\\right) \\\\\n\\left(1+z^{3}+z^{6}+z^{9}+z^{12}\\right)\\left(z^{32}-1\\right), & \\left(1+z^{3}+z^{6}+z^{9}\\right)\\left(z^{30}-1\\right)\n\\end{aligned}\\]\n\nThus any unit circle root of \\(f(z)\\) must divide the four polynomials \\(\\left(1-z^{15}\\right)\\left(1-z^{32}\\right) /\\left(1-z^{5}\\right)\\), \\(\\left(1-z^{20}\\right)\\left(1-z^{30}\\right) /\\left(1-z^{5}\\right),\\left(1-z^{15}\\right)\\left(1-z^{32}\\right) /\\left(1-z^{3}\\right),\\left(1-z^{12}\\right)\\left(1-z^{30}\\right) /\\left(1-z^{3}\\right)\\). This implies that \\(z\\) must be a primitive \\(k\\) th root of unity, where \\(k \\in\\{1,2,4,15\\}\\). The case \\(k=1\\) is clearly extraneous, so we are done.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-team-2004-p13",
+  "title": "2004 HMMT February Team Problem 13",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithms-and-exponentials",
+      "label": "Logarithms and exponentials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2004,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 81.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n\\) be a positive odd integer. Prove that\n\n\\[\\left\\lfloor\\log _{2} n\\right\\rfloor+\\left\\lfloor\\log _{2}(n / 3)\\right\\rfloor+\\left\\lfloor\\log _{2}(n / 5)\\right\\rfloor+\\left\\lfloor\\log _{2}(n / 7)\\right\\rfloor+\\cdots+\\left\\lfloor\\log _{2}(n / n)\\right\\rfloor=(n-1) / 2 .\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2004-p13.hmmt",
+      "kind": "proof-sketch",
+      "text": "Note that \\(\\left\\lfloor\\log _{2} k\\right\\rfloor\\) is the cardinality of the set \\(\\left\\{2,4,8, \\ldots, 2^{\\left\\lfloor\\log _{2} k\\right\\rfloor}\\right\\}\\), i.e., the number of powers of 2 that are even and are at most \\(k\\). Then \\(\\left\\lfloor\\log _{2}(n / k)\\right\\rfloor\\) is the number of even powers of 2 that are at most \\(n / k\\), or equivalently (multiplying each such number by \\(k\\) ) the number of positive even numbers \\(\\leq n\\) whose greatest odd divisor is \\(k\\). Summing over all odd \\(k\\), we get the number of even numbers \\(\\leq n\\), which is just \\((n-1) / 2\\).\n\nLet \\(\\sigma(n)\\) denote the sum of the (positive) divisors of \\(n\\), including 1 and \\(n\\) itself.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

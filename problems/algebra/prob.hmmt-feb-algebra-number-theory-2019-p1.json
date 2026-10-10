@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2019-p1",
+  "title": "2019 HMMT February Algebra and Number Theory Problem 1",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.integers",
+      "label": "Integers",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.number-theory",
+      "label": "Number Theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2019,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "What is the smallest positive integer that cannot be written as the sum of two nonnegative palindromic integers? (An integer is palindromic if the sequence of decimal digits are the same when read backwards.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2019-p1.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 21\nWe need to first prove that every positive integer \\(N\\) less than 21 can be written as sum of two nonnegative palindromic integers. If \\(N\\) is in the interval \\([1,9]\\), then it can be written as \\(0+N\\). If \\(N\\) is in the interval \\([10,18]\\), it can be written as \\(9+(N-9)\\). In addition, 19 and 20 can be written as \\(11+8\\) and \\(11+9\\), respectively.\nSecond, we need to show that 21 cannot be expressed in such a way. Lets suppose \\(21=a+b\\) with \\(a \\leq b\\). It follows that \\(b\\) has to be at least 11 . Since \\(b \\leq 21\\), the only way for \\(b\\) to be palindromic is that \\(b=11\\). However, this leads to \\(a=21-b=10\\), which is not a palindrome. Therefore, 21 is the smallest number that satisfy the problem condition.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

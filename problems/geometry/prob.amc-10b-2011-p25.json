@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2011-p25",
+  "title": "2011 AMC 10B Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.incircle-incenter-and-inradius",
+      "label": "Incircle, incenter, and inradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-inequality",
+      "label": "Triangle inequality",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2011,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 36.3,
+    "source": 2490,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Let \\(T_1\\) be a triangle with side lengths \\(2011,\\) \\(2012,\\) and \\(2013.\\) For \\(n \\ge 1,\\) if \\(T_n = \\triangle ABC\\) and \\(D,\\) \\(E,\\) and \\(F\\) are the points of tangency of the incircle of \\(\\triangle ABC\\) to the sides \\(AB,\\) \\(BC,\\) and \\(AC,\\) respectively, then \\(T_{n+1}\\) is a triangle with side lengths \\(AD,\\) \\(BE,\\) and \\(CF,\\) if it exists. What is the perimeter of the last triangle in the sequence \\(( T_n )?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1509}{8} \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1509}{32} \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1509}{64} \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{1509}{128} \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{1509}{256} \\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "1509/128"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2011-p25.live",
+      "kind": "proof-sketch",
+      "text": "For a triangle with side lengths \\(a=BC\\), \\(b=CA\\), and \\(c=AB\\), equal tangents from the same vertex give the next side lengths \\[ \\begin{gathered} \\dfrac{b+c-a}{2}, \\\\ \\quad \\dfrac{a+c-b}{2}, \\\\ \\quad \\dfrac{a+b-c}{2}. \\end{gathered} \\]\n\nIf the current side lengths are \\(s-1,s,s+1\\), then the next side lengths are \\(\\dfrac{s}{2}-1,\\dfrac{s}{2},\\dfrac{s}{2}+1\\). Thus the same form persists while the middle side halves each time.\n\nFor \\(T_n\\), the middle side is \\(\\frac{2012}{2^{n-1}}\\). A triangle of the form \\(s-1,s,s+1\\) exists exactly when \\(s>2\\).\n\nThe last valid triangle has \\(\\frac{2012}{2^{n-1}}>2\\), but the next one does not. This gives \\(n=10\\), with middle side \\(\\frac{2012}{2^9}=\\frac{503}{128}\\).\n\nThe perimeter is \\(3\\cdot\\dfrac{503}{128}=\\dfrac{1509}{128}\\).\n\nThus, D is the correct answer.",
+      "hints": [
+        "Tangent lengths from the same vertex are equal",
+        "For side lengths \\(s-1,s,s+1\\), the next middle side is \\(\\frac{s}{2}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

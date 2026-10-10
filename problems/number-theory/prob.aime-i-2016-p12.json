@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2016-p12",
+  "title": "2016 AIME I Problem 12",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2016,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 62.2,
+    "source": 3160,
+    "mohs": null
+  },
+  "estimatedMinutes": 14,
+  "statement": "Find the least positive integer \\(m\\) such that \\(m^2 - m + 11\\) is a product of at least four not necessarily distinct primes.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "132",
+    "value": "132"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2016-p12.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(e(m) = m^2 - m + 11.\\) Since \\(m^2 - m\\) is always even, \\(e(m)\\) is odd. Checking all residues shows \\(m^2 - m + 11\\) is never \\(0\\) modulo \\(3,\\) \\(5,\\) or \\(7\\) either, so every prime factor of \\(e(m)\\) is at least \\(11.\\) A product of four such primes is at least \\(11^4 = 14641,\\) and the two smallest candidates are \\(11^4\\) and \\(11^3 \\cdot 13 = 17303.\\)\n\nFor \\(e(m) = 14641,\\) the discriminant of \\(m^2 - m - 14630 = 0\\) is \\(58521,\\) which lies strictly between \\(241^2 = 58081\\) and \\(242^2 = 58564,\\) so there is no integer solution. For \\(e(m) = 17303:\\) since \\(e(m) = m(m - 1) + 11\\) must be divisible by \\(11,\\) either \\(m = 11k\\) or \\(m = 11k + 1.\\) Trying \\(m = 11k\\) gives \\(11k^2 - k + 1 = 1573,\\) that is \\(k(11k - 1) = 1572,\\) which \\(k = 12\\) satisfies: \\(12 \\cdot 131 = 1572.\\)\n\nSince \\(e\\) is increasing for \\(m \\ge 1,\\) every smaller \\(m\\) has \\(e(m) \\lt 17303,\\) and the only four-prime value below that, \\(11^4,\\) is unattainable. Hence the least \\(m\\) is \\(11 \\cdot 12 = 132,\\) where \\(e(132) = 17303 = 11^3 \\cdot 13.\\)",
+      "hints": [
+        "Check \\(m^2 - m + 11\\) modulo \\(2,\\) \\(3,\\) \\(5,\\) and \\(7:\\) it is never divisible by any of them",
+        "So every prime factor is at least \\(11.\\) Test the candidates \\(11^4\\) and \\(11^3 \\cdot 13,\\) using \\(m \\equiv 0\\) or \\(1 \\pmod{11}.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

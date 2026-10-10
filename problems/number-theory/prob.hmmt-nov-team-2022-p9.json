@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-team-2022-p9",
+  "title": "2022 HMMT November Team Problem 9",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.fermat-euler-wilson-theorems",
+      "label": "Fermat / Euler / Wilson theorems",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2022,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 60.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Call an ordered pair \\((a, b)\\) of positive integers fantastic if and only if \\(a, b \\leq 10^{4}\\) and\n\n\\[\\operatorname{gcd}(a \\cdot n!-1, a \\cdot(n+1)!+b)>1\\]\n\nfor infinitely many positive integers \\(n\\). Find the sum of \\(a+b\\) across all fantastic pairs \\((a, b)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "5183",
+    "value": "5183"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2022-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "We first prove the following lemma, which will be useful later.\nLemma: Let \\(p\\) be a prime and \\(1 \\leq n \\leq p-1\\) be an integer. Then, \\(n!(p-1-n)!\\equiv(-1)^{n-1}(\\bmod p)\\).\nProof. Write\n\n\\[\\begin{aligned}\nn!(p-n-1)! & =(1 \\cdot 2 \\cdots n)((p-n-1) \\cdots 2 \\cdot 1) \\\\\n& \\equiv(-1)^{p-n-1}(1 \\cdot 2 \\cdots n)((n+1) \\cdots(p-2)(p-1)) \\quad(\\bmod p) \\\\\n& =(-1)^{n}(p-1)! \\\\\n& \\equiv(-1)^{n-1} \\quad(\\bmod p)\n\\end{aligned}\\]\n\n(where we have used Wilson's theorem). This implies the result.\n\nNow, we begin the solution. Suppose that a prime \\(p\\) divides both \\(a \\cdot n!-1\\) and \\(a \\cdot(n+1)!+b\\). Then, since\n\n\\[-b \\equiv a \\cdot(n+1)!\\equiv(n+1) \\cdot(a \\cdot n!) \\equiv(n+1) \\quad(\\bmod p)\\]\n\nwe get that \\(p \\mid n+b+1\\). Since we must have \\(n<p\\) (or else \\(p \\mid n!\\) ), we get that, for large enough \\(n\\), \\(n=p-b-1\\). However, by the lemma,\n\n\\[a(-1)^{b-1} \\equiv a \\cdot b!(p-1-b)!=a \\cdot b!n!\\equiv b!\\quad(\\bmod p)\\]\n\nThis must hold for infinitely many \\(p\\), so \\(a=(-1)^{b-1} b\\) !. This forces all fantastic pairs to be in form \\(((2 k-1)!, 2 k-1)\\).\nNow, we prove that these pairs all work. Take \\(n=p-2 k\\) for all large primes \\(p\\). Then, we have\n\n\\[\\begin{aligned}\na \\cdot n! & \\equiv(2 k-1)!(p-2 k)! \\\\\n& \\equiv(-1)^{2 k} \\equiv 1 \\quad(\\bmod p) \\\\\na \\cdot(n+1)! & \\equiv(n+1) \\cdot(a \\cdot n!) \\\\\n& \\equiv(p-2 k+1) \\cdot 1 \\equiv-(2 k-1) \\quad(\\bmod p)\n\\end{aligned}\\]\n\nso \\(p\\) divides the gcd.\nThe answer is \\((1+1)+(6+3)+(120+5)+(5040+7)=5183\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

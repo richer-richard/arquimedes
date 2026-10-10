@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-team-1-2011-p1",
+  "title": "2011 HMMT February Team Round 1 Problem 1",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.games-and-strategy",
+      "label": "Games and strategy",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 83.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Alice and Barbara play a game on a blackboard. At the start, zero is written on the board. Alice goes first, and the players alternate turns. On her turn, each player replaces \\(x\\) - the number written on the board - with any real number \\(y\\), subject to the constraint that \\(0<y-x<1\\).\n(a) [10] If the first player to write a number greater than or equal to 2010 wins, determine, with proof, who has the winning strategy.\n(b) [10] If the first player to write a number greater than or equal to 2010 on her 2011th turn or later wins (if a player writes a number greater than or equal to 2010 on her 2010th turn or earlier, she loses immediately), determine, with proof, who has the winning strategy.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1-2011-p1.hmmt",
+      "kind": "proof-sketch",
+      "text": "Each turn of the game is equivalent to adding a number between 0 and 1 to the number on the board.\n(a) Barbara has the winning strategy: whenever Alice adds \\(z\\) to the number on the board, Barbara adds \\(1-z\\). After Barbara's \\(i\\) th turn, the number on the board will be \\(i\\). Therefore, after Barbara's 2009th turn, Alice will be forced to write a number between 2009 and 2010, after which Barbara can write 2010 and win the game.\n(b) Alice has the winning strategy: she writes any number \\(a\\) on her first turn, and, after that, whenever Barbara adds \\(z\\) to the number on the board, Alice adds \\(1-z\\). After Alice's \\(i\\) th turn, the number on the board will be \\((i-1)+a\\), so after Alice's 2010th turn, the number will be \\(2009+a\\). Since Barbara cannot write a number greater than or equal to 2010 on her 2010 th turn, she will be forced to write a number between \\(2009+a\\) and 2010 , after which Alice can write 2010 and win the game.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

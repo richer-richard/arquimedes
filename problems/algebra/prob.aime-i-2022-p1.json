@@ -1,0 +1,71 @@
+{
+  "id": "prob.aime-i-2022-p1",
+  "title": "2022 AIME I Problem 1",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomial-operations",
+      "label": "Polynomial operations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.quadratic-functions",
+      "label": "Quadratic functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.linear-equation",
+      "label": "Linear equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2022,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 42.9,
+    "source": 1890,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Quadratic polynomials \\(P(x)\\) and \\(Q(x)\\) have leading coefficients of \\(2\\) and \\(-2,\\) respectively. The graphs of both polynomials pass through the two points \\((16, 54)\\) and \\((20, 53).\\) Find \\(P(0) + Q(0).\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "116",
+    "value": "116"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2022-p1.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(R(x) = P(x) + Q(x).\\) The leading coefficients \\(2\\) and \\(-2\\) cancel, so \\(R\\) is a linear function. Since both graphs pass through \\((16, 54)\\) and \\((20, 53),\\) we get \\(R(16) = 108\\) and \\(R(20) = 106.\\)\n\nThe slope of \\(R\\) is \\(\\frac{106 - 108}{20 - 16} = -\\frac{1}{2},\\) so \\[ \\begin{aligned} P(0) + Q(0) &= R(0) \\\\ &= R(16) + 16 \\cdot \\frac{1}{2} \\\\ &= 108 + 8 = 116. \\end{aligned} \\]",
+      "hints": [
+        "Consider \\(R(x) = P(x) + Q(x):\\) the quadratic terms cancel, so \\(R\\) is linear",
+        "\\(R\\) passes through \\((16, 108)\\) and \\((20, 106);\\) extend that line back to \\(x = 0\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

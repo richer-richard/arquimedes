@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-general-1-2010-p7",
+  "title": "2010 HMMT November General Round 1 Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2010,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "What is the remainder when \\((1+x)^{2010}\\) is divided by \\(1+x+x^{2}\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-1-2010-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "1 We use polynomial congruence \\(\\bmod 1+x+x^{2}\\) to find the desired remainder. Since \\(x^{2}+x+1 \\mid x^{3}-1\\), we have that \\(x^{3} \\equiv 1\\left(\\bmod 1+x+x^{2}\\right)\\). Now:\n\n\\[\\begin{aligned}\n(1+x)^{2010} & \\equiv\\left(-x^{2}\\right)^{2010} \\quad\\left(\\bmod 1+x+x^{2}\\right) \\\\\n& \\equiv x^{4020} \\quad\\left(\\bmod 1+x+x^{2}\\right) \\\\\n& \\equiv\\left(x^{3}\\right)^{1340} \\quad\\left(\\bmod 1+x+x^{2}\\right) \\\\\n& \\equiv 1^{1340} \\quad\\left(\\bmod 1+x+x^{2}\\right) \\\\\n& \\equiv 1 \\quad\\left(\\bmod 1+x+x^{2}\\right)\n\\end{aligned}\\]\n\nThus, the answer is 1 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

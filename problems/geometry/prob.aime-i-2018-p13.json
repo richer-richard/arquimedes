@@ -1,0 +1,73 @@
+{
+  "id": "prob.aime-i-2018-p13",
+  "title": "2018 AIME I Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.incircle-incenter-and-inradius",
+      "label": "Incircle, incenter, and inradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.law-of-sines",
+      "label": "Law of sines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2018,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 67.0,
+    "source": 3270,
+    "mohs": null
+  },
+  "estimatedMinutes": 20,
+  "statement": "Let \\(\\triangle ABC\\) have side lengths \\(AB = 30,\\) \\(BC = 32,\\) and \\(AC = 34.\\) Point \\(X\\) lies in the interior of \\(\\overline{BC},\\) and points \\(I_1\\) and \\(I_2\\) are the incenters of \\(\\triangle ABX\\) and \\(\\triangle ACX,\\) respectively. Find the minimum possible area of \\(\\triangle AI_1I_2\\) as \\(X\\) varies along \\(\\overline{BC}.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "126",
+    "value": "126"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2018-p13.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(AI_1\\) and \\(AI_2\\) bisect angles \\(BAX\\) and \\(XAC,\\) \\(\\angle I_1AI_2 = \\frac{1}{2}\\angle BAX\\) \\(+ \\frac{1}{2}\\angle XAC = \\frac{A}{2},\\) a constant. Let \\(\\alpha = \\angle AXB.\\) The incenter angle formula gives \\(\\angle AI_1B = 90^\\circ + \\frac{\\alpha}{2},\\) so the law of sines in \\(\\triangle ABI_1\\) yields \\(AI_1 = \\frac{AB \\sin\\frac{B}{2}}{\\cos\\frac{\\alpha}{2}},\\) and similarly, since \\(\\angle AXC = 180^\\circ - \\alpha,\\) \\(AI_2 = \\frac{AC \\sin\\frac{C}{2}}{\\sin\\frac{\\alpha}{2}}.\\)\n\nTherefore \\[ \\begin{aligned} &[\\triangle AI_1I_2] = \\frac{1}{2}\\,AI_1 \\cdot AI_2 \\sin\\frac{A}{2} \\\\ &= \\frac{AB \\cdot AC \\sin\\frac{A}{2}\\sin\\frac{B}{2}\\sin\\frac{C}{2}}{\\sin\\alpha}, \\end{aligned} \\] which is minimized when \\(\\alpha = 90^\\circ,\\) that is, when \\(X\\) is the foot of the altitude from \\(A.\\)\n\nWith \\(a = 32,\\) \\(b = 34,\\) \\(c = 30,\\) and \\(s = 48,\\) the half-angle formulas give \\(\\sin\\frac{A}{2}\\sin\\frac{B}{2}\\sin\\frac{C}{2}\\) \\(= \\frac{(s-a)(s-b)(s-c)}{abc},\\) so the minimum area is \\[ \\begin{aligned} &bc \\cdot \\frac{(s-a)(s-b)(s-c)}{abc} \\\\ &= \\frac{16 \\cdot 14 \\cdot 18}{32} = 126. \\end{aligned} \\]",
+      "hints": [
+        "\\(\\angle I_1AI_2 = \\frac{A}{2}\\) for every position of \\(X,\\) so it suffices to minimize \\(AI_1 \\cdot AI_2\\)",
+        "Using \\(\\angle AI_1B = 90^\\circ + \\frac{1}{2}\\angle AXB\\) and the law of sines, the area is proportional to \\(\\frac{1}{\\sin \\angle AXB},\\) minimized when \\(\\angle AXB = 90^\\circ\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

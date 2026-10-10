@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1981-p13",
+  "title": "1981 AHSME Problem 13",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.exponent",
+      "label": "Exponent",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequality",
+      "label": "Inequality",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1981,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 27.5,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Suppose that at the end of any year, a unit of money has lost \\(10\\%\\) of the value it had at the beginning of that year. Find the smallest integer \\(n\\) such that after \\(n\\) years the unit of money will have lost at least \\(90\\%\\) of its value. (To the nearest thousandth \\(\\log_{10}3\\) is \\(0.477.\\))",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(14\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(22\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "22"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1981-p13.live",
+      "kind": "proof-sketch",
+      "text": "At least \\(90\\%\\) lost means \\(0.9^n\\le0.1.\\) Now \\[ \\begin{aligned} \\log_{10}0.9 &=\\log_{10}9-1\\\\ &=2(0.477)-1\\\\ &=-0.046. \\end{aligned} \\] Thus \\(n(-0.046)\\le-1,\\) so \\(n\\ge21.739\\ldots.\\) The least integer is \\(22.\\)\n\nTherefore, the correct answer is E.",
+      "hints": [
+        "After \\(n\\) years, the fraction of value remaining is \\(0.9^n\\)",
+        "Use \\(\\log_{10}0.9=2\\log_{10}3-1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

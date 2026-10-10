@@ -1,0 +1,72 @@
+{
+  "id": "prob.aime-i-2026-p12",
+  "title": "2026 AIME1 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.sphere",
+      "label": "Sphere",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.transformation",
+      "label": "Transformation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2026,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 63.3,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 19,
+  "statement": "Triangle \\(\\triangle ABC\\) lies in plane \\(\\mathcal{P}\\) with \\(AB = 6,\\) \\(AC = 4,\\) and \\(\\angle BAC = 90^\\circ.\\) Let \\(D\\) be the reflection across \\(\\overline{BC}\\) of the centroid of \\(\\triangle ABC.\\) Four spheres, all on the same side of \\(\\mathcal{P},\\) have radii \\(1,\\) \\(2,\\) \\(3,\\) and \\(r\\) and are tangent to \\(\\mathcal{P}\\) at points \\(A,\\) \\(B,\\) \\(C,\\) and \\(D,\\) respectively. The four spheres are also each tangent to a second plane \\(\\mathcal{T}\\) and are all on the same side of \\(\\mathcal{T}.\\) The value of \\(r\\) can be written as \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "161",
+    "value": "161"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2026-p12.live",
+      "kind": "proof-sketch",
+      "text": "A sphere of radius \\(\\rho\\) tangent to \\(\\mathcal{P}\\) at \\(P\\) has center \\(P + \\rho k,\\) where \\(k\\) is the upward unit normal of \\(\\mathcal{P}.\\) Write \\(\\mathcal{T}\\) as \\(\\{x : n \\cdot x = c\\}\\) with unit normal \\(n = (n_1, n_2, h)\\) in coordinates where \\(\\mathcal{P}\\) is the \\(xy\\)-plane. Tangency with all spheres on the same side means \\(n \\cdot (P + \\rho k) - c = \\rho\\) for each sphere, that is \\(n_1 x_P + n_2 y_P - c = (1 - h)\\rho.\\) Here \\(h \\ne 1,\\) since otherwise the left side would be constant while the radii differ. So \\(\\rho = g(P)\\) for the affine function \\(g(x,y) = \\frac{n_1 x + n_2 y - c}{1 - h}.\\)\n\nTake \\(A = (0,0),\\) \\(B = (6,0),\\) \\(C = (0,4).\\) The affine function with \\(g(A) = 1,\\) \\(g(B) = 2,\\) \\(g(C) = 3\\) is \\(g(x,y) = 1 + \\frac{x}{6} + \\frac{y}{2}.\\) The centroid is \\(G = \\left(2, \\frac{4}{3}\\right),\\) and line \\(BC\\) is \\(2x + 3y = 12.\\) Since \\(2 \\cdot 2 + 3 \\cdot \\frac{4}{3} - 12 = -4,\\) reflecting gives \\[ \\begin{aligned} D &= G + \\frac{8}{13}\\,(2, 3) \\\\ &= \\left(\\frac{42}{13},\\ \\frac{124}{39}\\right). \\end{aligned} \\]\n\nTherefore \\(r = g(D)\\) \\(= 1 + \\frac{1}{6} \\cdot \\frac{42}{13}\\) \\(+ \\frac{1}{2} \\cdot \\frac{124}{39}\\) \\(= 1 + \\frac{21}{39} + \\frac{62}{39}\\) \\(= \\frac{122}{39}.\\) (Such a plane exists: the normal condition \\((1-h)^2\\left|\\nabla g\\right|^2 = 1 - h^2\\) with \\(\\left|\\nabla g\\right|^2 = \\frac{5}{18}\\) gives \\(h = -\\frac{13}{23}.\\)) Since \\(\\gcd(122, 39) = 1,\\) the answer is \\(122 + 39 = 161.\\)",
+      "hints": [
+        "Each center lies at height equal to its radius above its tangency point; write the second plane as \\(n \\cdot x = c\\) with \\(n\\) a unit vector and express both tangencies",
+        "The conditions say the radius is an affine function of the tangency point in \\(\\mathcal{P};\\) it takes values \\(1, 2, 3\\) at \\(A, B, C,\\) so evaluate that function at \\(D\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-1987-p25",
+  "title": "1987 AMC 8 Problem 25",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "nt.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.parity",
+      "label": "Parity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1987,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 12.8,
+    "source": 1090,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Ten balls numbered \\(1\\) to \\(10\\) are in a jar. Jack reaches into the jar and randomly removes one of the balls. Then Jill reaches into the jar and randomly removes a different ball. What is the probability that the sum of the two numbers on the balls removed is even?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{4}{9}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{9}{19}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{10}{19}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{5}{9}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "4/9"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1987-p25.live",
+      "kind": "proof-sketch",
+      "text": "The sum is even when both balls are odd or both are even. There are \\(\\binom{5}{2} = 10\\) all-odd pairs and \\(\\binom{5}{2} = 10\\) all-even pairs, for \\(20\\) favorable pairs.\n\nThe total number of pairs is \\(\\binom{10}{2} = 45,\\) so the probability is \\(\\dfrac{20}{45} = \\dfrac49.\\)\n\nThus, the correct answer is A .",
+      "hints": [
+        "The sum of two numbers is even exactly when both are odd or both are even",
+        "There are \\(5\\) odd and \\(5\\) even balls; count the matching-parity pairs out of all \\(\\binom{10}{2}\\) pairs"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

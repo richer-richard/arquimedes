@@ -1,0 +1,76 @@
+{
+  "id": "prob.usa-tst-2021-p1",
+  "title": "USA TST 2021 Problem 1",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.field-theory",
+      "label": "Field Theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.polynomials-mod-p",
+      "label": "Polynomials mod p",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TST",
+    "year": 2021,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 84.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Determine all integers \\(s \\ge 4\\)\nfor which there exist positive integers \\(a\\), \\(b\\), \\(c\\), \\(d\\)\nsuch that \\(s = a+b+c+d\\)\nand \\(s\\) divides \\(abc+abd+acd+bcd\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tst-2021-p1.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is \\(s\\) composite.\n\nComposite construction..\nWrite \\(s = (w+x)(y+z)\\),\nwhere \\(w\\), \\(x\\), \\(y\\), \\(z\\) are positive integers.\nLet \\(a=wy\\), \\(b=wz\\), \\(c=xy\\), \\(d=xz\\).\nThen\n\\[ abc+abd+acd+bcd = wxyz(w+x)(y+z) \\]\nso this works.\n\nPrime proof..\nChoose suitable \\(a\\), \\(b\\), \\(c\\), \\(d\\). Then\n\\[\n (a+b)(a+c)(a+d)\n = (abc+abd+acd+bcd) + a^2(a+b+c+d)\n \\equiv 0 \\pmod s.\n\\]\nHence \\(s\\) divides a product of positive integers less than \\(s\\),\nso \\(s\\) is composite.\n\nRemark.\n Here is another proof that \\(s\\) is composite.\n\n Suppose that \\(s\\) is prime.\n Then the polynomial \\((x-a)(x-b)(x-c)(x-d) \\in \\mathbb{F}_s[x]\\)\n is even, so the roots come in two opposite pairs in \\(\\mathbb{F}_s\\).\n Thus the sum of each pair is at least \\(s\\),\n so the sum of all four is at least \\(2s > s\\), contradiction.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

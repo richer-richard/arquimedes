@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2008-p4",
+  "title": "2008 AIME I Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.completing-the-square",
+      "label": "Completing the square",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.difference-of-squares",
+      "label": "Difference of squares",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2008,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 42.1,
+    "source": 2230,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "There exist unique positive integers \\(x\\) and \\(y\\) that satisfy the equation \\(x^2 + 84x + 2008 = y^2.\\) Find \\(x + y.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "80",
+    "value": "80"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2008-p4.live",
+      "kind": "proof-sketch",
+      "text": "Completing the square, \\(x^2 + 84x + 2008\\) \\(= (x + 42)^2 + 244,\\) so \\(y^2 - (x + 42)^2 = 244,\\) which factors as \\[ \\begin{aligned} &(y - x - 42) \\\\ &\\quad {}\\cdot (y + x + 42) \\\\ &= 244 \\\\ &= 2^2 \\cdot 61. \\end{aligned} \\] The two factors have the same parity, and their product is even, so both are even: \\(y - x - 42 = 2\\) and \\(y + x + 42 = 122.\\)\n\nAdding gives \\(y = 62,\\) and then \\(x = 18;\\) indeed \\(18^2 + 84 \\cdot 18 + 2008\\) \\(= 3844\\) \\(= 62^2.\\) Therefore \\(x + y = 18 + 62 = 80.\\)",
+      "hints": [
+        "Compare \\(x^2 + 84x + 2008\\) with \\((x + 42)^2 = x^2 + 84x + 1764\\)",
+        "Write \\(y^2 - (x + 42)^2 = 244\\) and factor: \\(244 = 2 \\cdot 2 \\cdot 61,\\) and both factors of the difference of squares must be even"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

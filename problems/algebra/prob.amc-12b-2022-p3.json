@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2022-p3",
+  "title": "2022 AMC 12B Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.prime",
+      "label": "Prime",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2022,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 19.5,
+    "source": 1350,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many of the first ten numbers of the sequence \\(121,\\) \\(11211,\\) \\(1112111,\\) \\(\\ldots\\) are prime numbers?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "0"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2022-p3.live",
+      "kind": "proof-sketch",
+      "text": "The \\(n\\)th term consists of \\(n\\) ones, then a \\(2,\\) then \\(n\\) ones. It factors as a repunit times a number of the form \\(10^n + 1:\\) \\[ \\begin{aligned} &121 = 11 \\cdot 11, \\\\ &\\quad 11211 = 111 \\cdot 101, \\\\ &\\quad 1112111 = 1111 \\cdot 1001, \\end{aligned} \\] and in general the \\(n\\)th term equals \\(\\underbrace{1\\cdots1}_{n+1} \\cdot (10^n + 1).\\)\n\nFor every \\(n \\ge 1\\) both factors exceed \\(1,\\) so every term is composite. None of the ten numbers is prime.\n\nThus, the correct answer is A.",
+      "hints": [
+        "Look for a factorization of each term into two integers both greater than \\(1\\)",
+        "Try writing a term as a repunit times a number of the form \\(10^n + 1,\\) for example \\(11211 = 111 \\cdot 101\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

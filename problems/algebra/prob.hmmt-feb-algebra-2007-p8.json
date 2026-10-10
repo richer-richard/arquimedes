@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-algebra-2007-p8",
+  "title": "2007 HMMT February Algebra Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithms-and-exponentials",
+      "label": "Logarithms and exponentials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2007,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 86.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A:=\\mathbb{Q} \\backslash\\{0,1\\}\\) denote the set of all rationals other than 0 and 1. A function \\(f: A \\rightarrow \\mathbb{R}\\) has the property that for all \\(x \\in A\\),\n\n\\[f(x)+f\\left(1-\\frac{1}{x}\\right)=\\log |x|\\]\n\nCompute the value of \\(f(2007)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-2007-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\log (\\mathbf{2 0 0 7} / \\mathbf{2 0 0 6})\\). Let \\(g: A \\rightarrow A\\) be defined by \\(g(x):=1-1 / x\\); the key property is that\n\n\\[g(g(g(x)))=1-\\frac{1}{1-\\frac{1}{1-\\frac{1}{x}}}=x\\]\n\nThe given equation rewrites as \\(f(x)+f(g(x))=\\log |x|\\). Substituting \\(x=g(y)\\) and \\(x=g(g(z))\\) gives the further equations \\(f(g(y))+f(g(g(y)))=\\log |g(x)|\\) and \\(f(g(g(z)))+f(z)=\\log |g(g(x))|\\). Setting \\(y\\) and \\(z\\) to \\(x\\) and solving the system of three equations for \\(f(x)\\) gives\n\n\\[f(x)=\\frac{1}{2} \\cdot(\\log |x|-\\log |g(x)|+\\log |g(g(x))|)\\]\n\nFor \\(x=2007\\), we have \\(g(x)=\\frac{2006}{2007}\\) and \\(g(g(x))=\\frac{-1}{2006}\\), so that\n\n\\[f(2007)=\\frac{\\log |2007|-\\log \\left|\\frac{2006}{2007}\\right|+\\log \\left|\\frac{-1}{2006}\\right|}{2}=\\log (2007 / 2006)\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

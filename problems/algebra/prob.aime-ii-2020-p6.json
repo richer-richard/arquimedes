@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-ii-2020-p6",
+  "title": "2020 AIME II Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.pattern-recognition",
+      "label": "Pattern recognition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2020,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 44.9,
+    "source": 2340,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Define a sequence recursively by \\(t_1 = 20,\\) \\(t_2 = 21,\\) and \\[t_n = \\frac{5t_{n-1} + 1}{25t_{n-2}}\\] for all \\(n \\ge 3.\\) Then \\(t_{2020}\\) can be written as \\(\\frac{p}{q},\\) where \\(p\\) and \\(q\\) are relatively prime positive integers. Find \\(p + q.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "626",
+    "value": "626"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2020-p6.live",
+      "kind": "proof-sketch",
+      "text": "Computing terms exactly: \\[ \\begin{aligned} t_3 &= \\frac{5 \\cdot 21 + 1}{25 \\cdot 20} = \\frac{53}{250}, \\\\ t_4 &= \\frac{5 \\cdot \\frac{53}{250} + 1}{25 \\cdot 21} = \\frac{103}{26250}, \\\\ t_5 &= \\frac{5 \\cdot \\frac{103}{26250} + 1}{25 \\cdot \\frac{53}{250}} \\\\ &= \\frac{5353}{5250} \\cdot \\frac{10}{53} = \\frac{101}{525}, \\end{aligned} \\] using \\(5353 = 53 \\cdot 101.\\) Then \\(t_6 = \\frac{5 \\cdot \\frac{101}{525} + 1}{25 \\cdot \\frac{103}{26250}}\\) \\(= \\frac{206}{105} \\cdot \\frac{1050}{103}\\) \\(= 20 = t_1\\) and \\(t_7 = \\frac{101}{\\frac{101}{21}} = 21 = t_2.\\)\n\nSince each term depends only on the two preceding terms, the sequence repeats with period \\(5.\\) Because \\(2020\\) is a multiple of \\(5,\\) we get \\(t_{2020} = t_5 = \\frac{101}{525}.\\) As \\(101\\) is prime and does not divide \\(525,\\) the fraction is reduced, and \\(p + q = 101 + 525 = 626.\\)",
+      "hints": [
+        "Compute \\(t_3,\\) \\(t_4,\\) \\(t_5,\\) \\(t_6,\\) and \\(t_7\\) exactly as fractions — a pattern appears",
+        "The sequence is periodic with period \\(5,\\) so \\(t_{2020} = t_5\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

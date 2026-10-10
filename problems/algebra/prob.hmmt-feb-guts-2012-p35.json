@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-feb-guts-2012-p35",
+  "title": "2012 HMMT February Guts Problem 35",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2012,
+    "number": 35
+  },
+  "difficulty": {
+    "course": 92.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(N\\) be the number of distinct roots of \\(\\prod_{k=1}^{2012}\\left(x^{k}-1\\right)\\). Give lower and upper bounds \\(L\\) and \\(U\\) on \\(N\\). If \\(0<L \\leq N \\leq U\\), then your score will be \\(\\left\\lfloor\\frac{23}{(U / L)^{1.7}}\\right\\rfloor\\). Otherwise, your score will be 0 .",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2012-p35.hmmt",
+      "kind": "proof-sketch",
+      "text": "1231288 For \\(x\\) to be such a number is equivalent to \\(x\\) being an \\(k^{\\text {th }}\\) root of unity for some \\(k\\) up to 2012. For each \\(k\\), there are \\(\\varphi(k)\\) primitive \\(k^{\\text {th }}\\) roots of unity, so the total number of roots is \\(\\sum_{k=1}^{2012} \\varphi(k)\\).\nWe will give a good approximation of this number using well known facts about the Möbius function, defined by \\(\\mu(n)=\\left\\{\\begin{array}{ll}0 & \\text { if } n \\text { is not squarefree } \\\\ (-1)^{r} & \\text { if } n \\text { has } r \\text { distinct prime factors }\\end{array}\\right.\\). It turns out that if \\(f(n)=\\sum_{d \\mid n} g(d)\\), then \\(g(n)=\\sum_{d \\mid n} \\mu(d) f\\left(\\frac{n}{d}\\right)\\). Using this fact, since \\(n=\\sum_{d \\mid n} \\varphi(d)\\), we have that \\(\\varphi(n)=\\sum_{d \\mid n} \\mu(d) \\frac{n}{d}\\). Now we have reduced the problem to estimating \\(\\sum_{k=1}^{2012} \\sum_{d \\mid k} \\mu(d) \\frac{k}{d}\\). Let \\(a=\\frac{k}{d}\\), so we obtain \\(\\sum_{k=1}^{2012} \\sum_{d \\mid k} a \\mu(d)\\).\n\nWe can interchange the order of summation by writing\n\n\\[\\begin{aligned}\n\\sum_{d=1}^{2012} \\sum_{a=1}^{\\left\\lfloor\\frac{2012}{d}\\right\\rfloor} a \\mu(d) & \\approx \\sum_{d=1}^{2012} \\mu(d) \\frac{1}{2}\\left(\\left\\lfloor\\frac{2012}{d}\\right\\rfloor\\right)^{2} \\\\\n& \\approx \\sum_{d=1}^{2012} \\mu(d) \\frac{2012^{2}}{2 d^{2}} \\\\\n& =\\frac{2012^{2}}{2} \\sum_{d=1}^{2012} \\frac{\\mu(d)}{d^{2}} \\\\\n& \\approx \\frac{2012^{2}}{2} \\sum_{d=1}^{\\infty} \\frac{\\mu(d)}{d^{2}}\n\\end{aligned}\\]\n\nThe Möbius function also satisfies the property that \\(\\sum_{d \\mid n} \\mu(d)=\\left\\{\\begin{array}{ll}1 & \\text { if } n=1 \\\\ 0 & \\text { otherwise }\\end{array}\\right.\\), which can be seen as a special case of the theorem above (letting \\(f(n)=1, g(n)=\\left\\{\\begin{array}{ll}1 & \\text { if } n=1 \\\\ 0 & \\text { otherwise }\\end{array}\\right.\\) ). We can then see that \\(\\left(\\sum_{d=1}^{\\infty} \\frac{\\mu(d)}{d^{2}}\\right)\\left(\\sum_{c=1}^{\\infty} \\frac{1}{c^{2}}\\right)=\\frac{1}{1^{2}}=1\\), so \\(\\sum_{d=1}^{\\infty} \\frac{\\mu(d)}{d^{2}}=\\frac{6}{\\pi^{2}}\\). Therefore, we have \\(\\sum_{k=1}^{2012} \\varphi(k) \\approx \\frac{3}{\\pi^{2}} \\cdot 2012^{2}=\\) 1230488.266... 2012 is large enough that all of our approximations are pretty accurate and we should be comfortable perturbing this estimate by a small factor to give bounding values.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

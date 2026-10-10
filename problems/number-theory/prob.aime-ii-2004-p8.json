@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2004-p8",
+  "title": "2004 AIME2 8",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.stars-and-bars",
+      "label": "Stars and bars",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2004,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 47.7,
+    "source": 2450,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "How many positive integer divisors of \\(2004^{2004}\\) are divisible by exactly \\(2004\\) positive integers?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "54",
+    "value": "54"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2004-p8.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(2004 = 2^2 \\cdot 3 \\cdot 167,\\) we have \\(2004^{2004} = 2^{4008} \\cdot 3^{2004} \\cdot 167^{2004},\\) so its divisors are \\(N = 2^i 3^j 167^k\\) with \\(i \\le 4008\\) and \\(j, k \\le 2004.\\) Such an \\(N\\) has \\((i+1)(j+1)(k+1)\\) divisors, so we need \\((i+1)(j+1)(k+1) = 2004.\\)\n\nEvery ordered triple of positive integers with product \\(2004\\) yields admissible exponents, since each factor is at most \\(2004.\\) Counting prime by prime: the exponent \\(2\\) of the prime \\(2\\) is split among the three factors in \\(\\binom{2+2}{2} = 6\\) ways by stars and bars, and each of the primes \\(3\\) and \\(167\\) goes to one of the \\(3\\) factors.\n\nThe count is \\(6 \\cdot 3 \\cdot 3 = 54.\\)",
+      "hints": [
+        "Since \\(2004 = 2^2 \\cdot 3 \\cdot 167,\\) a divisor \\(2^i 3^j 167^k\\) of \\(2004^{2004}\\) has exactly \\((i+1)(j+1)(k+1)\\) divisors",
+        "Count ordered triples with product \\(2004\\) prime by prime: split \\(2^2\\) among three factors in \\(\\binom{4}{2}\\) ways, and each of \\(3\\) and \\(167\\) in \\(3\\) ways"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

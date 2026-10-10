@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12a-2007-p20",
+  "title": "2007 AMC 12A Problem 20",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cube-geometry",
+      "label": "Cube geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.volume",
+      "label": "Volume",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2007,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 33.5,
+    "source": 1840,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Corners are sliced off a unit cube so that the six faces each become regular octagons. What is the total volume of the removed tetrahedra?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{5\\sqrt2-7}{3}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{10-7\\sqrt2}{3}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{3-2\\sqrt2}{3}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{8\\sqrt2-11}{3}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{6-4\\sqrt2}{3}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2007-p20.live",
+      "kind": "proof-sketch",
+      "text": "Slicing removes two equal segments of length \\(x\\) from each edge. Each octagon then has side length \\(x\\sqrt2,\\) and the edge satisfies \\(1=2x+x\\sqrt2,\\) so \\[x=\\frac{1}{2+\\sqrt2}=\\frac{2-\\sqrt2}{2}.\\]\n\nEach removed corner is a tetrahedron with three mutually perpendicular legs of length \\(x,\\) so its volume is \\(\\tfrac16 x^3.\\) There are \\(8\\) corners, giving total volume \\[ \\begin{aligned} &8\\cdot\\tfrac16 x^3 \\\\ &=\\tfrac43\\left(\\tfrac{2-\\sqrt2}{2}\\right)^3 \\\\ &=\\frac{10-7\\sqrt2}{3}. \\end{aligned} \\]\n\nThus, the correct answer is B.",
+      "hints": [
+        "Cutting length \\(x\\) from each end of an edge leaves an octagon side of \\(x\\sqrt2\\)",
+        "From \\(1=2x+x\\sqrt2\\) find \\(x\\); each corner tetrahedron has volume \\(\\tfrac16 x^3\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

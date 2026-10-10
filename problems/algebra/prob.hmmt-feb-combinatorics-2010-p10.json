@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2010-p10",
+  "title": "2010 HMMT February Combinatorics Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.coloring",
+      "label": "Coloring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.pigeonhole-principle",
+      "label": "Pigeonhole principle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2010,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 78.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In a \\(16 \\times 16\\) table of integers, each row and column contains at most 4 distinct integers. What is the maximum number of distinct integers that there can be in the whole table?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2010-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "49 First, we show that 50 is too big. Assume for sake of contradiction that a labeling with at least 50 distinct integers exists. By the Pigeonhole Principle, there must be at least one row, say the first row, with at least 4 distinct integers in it; in this case, that is exactly 4 , since that is the maximum number of distinct integers in one row. Then, in the remaining 15 rows there must be at least 46 distinct integers (these 46 will also be distinct from the 4 in the first row). Using Pigeonhole again, there will be another row, say the second row, with 4 distinct integers in it. Call the set of integers in the first and second rows \\(S\\). Because the 4 distinct integers in the second row are distinct from the 4 in the first row, there are 8 distinct values in the first two rows, so \\(|S|=8\\). Now consider the subcolumns containing the cells in rows 3 to 16 . In each subcolumn, there are at most 2 values not in \\(S\\), because there are already two distinct values in that column from the cells in the first two rows. So, the maximum number of distinct values in the table is \\(16 \\cdot 2+8=40\\), a contradiction. So a valid labeling must have fewer than 50 distinct integers. Below, we show by example that 49 is attainable.\n\n| 1 | 17 | 33 | - | - | - | - | - | - | - | - | - | - | - | - | - |\n| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |\n| - | 2 | 18 | 34 | - | - | - | - | - | - | - | - | - | - | - | - |\n| - | - | 3 | 19 | 35 | - | - | - | - | - | - | - | - | - | - | - |\n| - | - | - | 4 | 20 | 36 | - | - | - | - | - | - | - | - | - | - |\n| - | - | - | - | 5 | 21 | 37 | - | - | - | - | - | - | - | - | - |\n| - | - | - | - | - | 6 | 22 | 38 | - | - | - | - | - | - | - | - |\n| - | - | - | - | - | - | 7 | 23 | 39 | - | - | - | - | - | - | - |\n| - | - | - | - | - | - | - | 8 | 24 | 40 | - | - | - | - | - | - |\n| - | - | - | - | - | - | - | - | 9 | 25 | 41 | - | - | - | - | - |\n| - | - | - | - | - | - | - | - | - | 10 | 26 | 42 | - | - | - | - |\n| - | - | - | - | - | - | - | - | - | - | 11 | 27 | 43 | - | - | - |\n| - | - | - | - | - | - | - | - | - | - | - | 12 | 28 | 44 | - | - |\n| - | - | - | - | - | - | - | - | - | - | - | - | 13 | 29 | 45 | - |\n| - | - | - | - | - | - | - | - | - | - | - | - | - | 14 | 30 | 46 |\n| 47 | - | - | - | - | - | - | - | - | - | - | - | - | - | 15 | 31 |\n| 32 | 48 | - | - | - | - | - | - | - | - | - | - | - | - | - | 16 |\n\nCells that do not contain a number are colored with color 49 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

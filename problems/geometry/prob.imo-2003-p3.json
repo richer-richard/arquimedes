@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2003-p3",
+  "title": "2003 IMO Problem 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2003,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 111.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Each pair of opposite sides of convex hexagon has the property that\nthe distance between their midpoints is \\(\\frac{\\sqrt3}{2}\\)\ntimes the sum of their lengths.\nProve that the hexagon is equiangular.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2003-p3.evanchen",
+      "kind": "proof-sketch",
+      "text": "Unsurprisingly, this is a geometric inequality.\nDenote the hexagon by \\(ABCDEF\\).\nThen we have that\n\\[\n \\left\\lvert\n \\frac{\\vec D + \\vec E}{2} - \\frac{\\vec A + \\vec B}{2}\n \\right\\rvert\n = \\sqrt3 \\cdot \\frac{\\left\\lvert \\vec B - \\vec A \\right\\rvert\n + \\left\\lvert \\vec E - \\vec D \\right\\rvert}{2}\n \\ge \\sqrt 3 \\cdot\n \\left\\lvert \\frac{(\\vec B - \\vec A) - (\\vec E - \\vec D)}{2} \\right\\rvert\n\\]\nand cyclic variations.\nSuppose we define the right-hand sides as variables\n\\[\\begin{aligned}\n \\vec x = (\\vec B - \\vec A) - (\\vec E - \\vec D) \\\\\n \\vec y = (\\vec D - \\vec C) - (\\vec A - \\vec F) \\\\\n \\vec z = (\\vec F - \\vec E) - (\\vec C - \\vec B).\n\\end{aligned}\\]\nThen we now have\n\\[\\begin{aligned}\n \\left\\lvert \\vec y - \\vec z \\right\\rvert\n &\\ge \\sqrt 3 \\left\\lvert \\vec x \\right\\rvert \\\\\n \\left\\lvert \\vec z - \\vec x \\right\\rvert\n &\\ge \\sqrt 3 \\left\\lvert \\vec y \\right\\rvert \\\\\n \\left\\lvert \\vec x - \\vec y \\right\\rvert\n &\\ge \\sqrt 3 \\left\\lvert \\vec z \\right\\rvert.\n\\end{aligned}\\]\nWe square all sides (using\n\\(\\left\\lvert \\vec v \\right\\rvert^2 = \\vec v \\cdot \\vec v\\))\nand then sum to get\n\\[ \\sum_{\\text{cyc}} (\\vec y - \\vec z) \\cdot (\\vec y - \\vec z)\n \\ge 3 \\sum_{\\text{cyc}} \\vec x \\cdot \\vec x \\]\nwhich rearranges to\n\\[- \\left\\lvert \\vec x + \\vec y + \\vec z \\right\\rvert^2 \\ge 0. \\]\nThis can only happen if \\(\\vec x + \\vec y + \\vec z =0\\),\nand moreover all the inequalities above were actually equalities.\nThat means that our triangle inequalities above were actually sharp\n(and already we have \\(\\overline{AB} \\parallel \\overline{DE}\\) and so on).\n\nWorking with just \\(x\\) and \\(y\\) now we have\n\\[\\begin{aligned}\n 3 (\\vec x \\cdot \\vec x) &= (2 \\vec y - \\vec x) \\cdot (2 \\vec y - \\vec x) \\\\\n &= \\vec x \\cdot \\vec x - 4 \\vec y \\cdot \\vec x + 4 \\vec y \\cdot \\vec y \\\\\n \\implies\n -\\vec x \\cdot \\vec x + 2 (\\vec y \\cdot \\vec y) &= 2 \\vec x \\cdot \\vec y \\\\\n 2 (\\vec x \\cdot \\vec x) - \\vec y \\cdot \\vec y &= 2 \\vec x \\cdot \\vec y.\n\\end{aligned}\\]\nwhich implies \\(\\vec x \\cdot \\vec x = \\vec y \\cdot \\vec y\\),\nthat is, \\(\\vec x\\) and \\(\\vec y\\) have the same magnitude.\nIn this way we find \\(\\vec x\\), \\(\\vec y\\), \\(\\vec z\\) all\nhave the same magnitude,\nand since \\(\\vec x + \\vec y + \\vec z = 0\\)\nthey are related by \\(120^\\circ\\) rotations, as desired.\n\nRemark.\n In fact one can show further that the equiangular hexagons\n which work are exactly those formed by taking an equilateral triangle\n and cutting off equally sized corners.\n This equality case helps motivate the solution.\n\nRemark.\n One can note this ``must'' be an inequality\n because the space of such hexagons is \\(2\\)-dimensional,\n even though a priori the space of hexagons satisfying\n three given conditions should have dimension \\(9-3=6\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

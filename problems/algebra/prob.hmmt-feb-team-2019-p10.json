@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-team-2019-p10",
+  "title": "2019 HMMT February Team Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.intermediate-value-theorem",
+      "label": "Intermediate Value Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2019,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 91.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Prove that for all positive integers \\(n\\), all complex roots \\(r\\) of the polynomial\n\n\\[P(x)=(2 n) x^{2 n}+(2 n-1) x^{2 n-1}+\\cdots+(n+1) x^{n+1}+n x^{n}+(n+1) x^{n-1}+\\cdots+(2 n-1) x+2 n\\]\n\nlie on the unit circle (i.e. \\(|r|=1\\) ).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2019-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "Note that neither 0 nor 1 are roots of the polynomial. Consider the function\n\\(Q(x)=P(x) / x^{n}=(2 n) x^{n}+(2 n) x^{-n}+(2 n-1) x^{n-1}+(2 n-1) x^{-n+1}+\\cdots+(n+1) x^{1}+(n+1) x^{-1}+n\\).\nAll \\(2 n\\) of the complex roots of \\(P(x)\\) will be roots of \\(Q(x)\\).\nIf \\(|x|=1\\), then \\(x=e^{i \\theta}\\), and\n\n\\[\\begin{aligned}\nQ(x) & =(2 n)\\left(x^{n}+x^{-n}\\right)+(2 n-1)\\left(x^{n-1}+x^{-n+1}\\right)+\\cdots+(n+1)\\left(x+x^{-1}\\right)+n \\\\\n& =(2 n)\\left(e^{i n \\theta}+e^{-i n \\theta}\\right)+(2 n-1)\\left(e^{i(n-1) \\theta}+e^{-i(n-1) \\theta}\\right)+\\cdots+(n+1)\\left(e^{i \\theta}+e^{-i \\theta}\\right)+n \\\\\n& =(2 n)(2 \\cos (n \\theta))+(2 n-1)(2 \\cos ((n-1) \\theta))+\\cdots+(n+1)(\\cos (\\theta))+n\n\\end{aligned}\\]\n\nwhich is real. Thus on the unit circle, we have \\(Q(x)\\) is real, and we want to show it has \\(2 n\\) roots there. Rewrite\n\n\\[\\begin{aligned}\nP(x) & =(2 n) x^{2 n}+(2 n-1) x^{2 n-1}+\\cdots+(n+1) x^{n+1}+n x^{n}+(n+1) x^{n-1}+\\cdots+2 n \\\\\n& =(2 n)\\left(x^{2 n}+x^{2 n-1}+\\cdots+1\\right) \\\\\n& \\quad-\\left(x^{2 n-1}+2 x^{2 n-2}+\\cdots+(n-1) x^{n}+n x^{n-1}+(n-1) x^{n-2}+\\cdots+2 x^{2}+x\\right) \\\\\n& =2 n \\frac{x^{2 n+1}-1}{x-1}-x\\left(x^{2 n-2}+2 x^{2 n-3}+\\cdots+(n-1) x^{n}+n x^{n-1}+(n-1) x^{n-2}+\\cdots+2 x+1\\right) \\\\\n& =2 n \\frac{x^{2 n+1}-1}{x-1}-x\\left(x^{n-1}+x^{n-2}+\\cdots+x+1\\right)^{2} \\\\\n& =2 n \\frac{x^{2 n+1}-1}{x-1}-x\\left(\\frac{x^{n}-1}{x-1}\\right)^{2}\n\\end{aligned}\\]\n\nand thus\n\n\\[Q(x)=\\frac{2 n}{x^{n}} \\frac{x^{2 n+1}-1}{x-1}-\\frac{x}{x^{n}}\\left(\\frac{x^{n}-1}{x-1}\\right)^{2}\\]\n\nConsider the roots of unity \\(r_{j}=e^{i \\frac{2 \\pi}{2 n} j}\\), for \\(j=0\\) to \\(2 n-1\\). There are \\(2 n\\) such roots of unity: they all have \\(r_{j}^{2 n}=1\\), and they alternate between those which satisfy \\(r_{j}^{n}=1\\) or \\(r_{j}^{n}=-1\\). At those \\(x=r_{j}\\), if\n\\(r_{j}^{n}=1\\) but \\(x \\neq 1\\), then\n\n\\[\\begin{aligned}\nQ(x) & =\\frac{2 n}{x^{n}} \\frac{x^{2 n+1}-1}{x-1}-\\frac{x}{x^{n}}\\left(\\frac{x^{n}-1}{x-1}\\right)^{2} \\\\\n& =2 n \\frac{x^{1}-1}{x-1}-x\\left(\\frac{1-1}{x-1}\\right)^{2}=2 n>0\n\\end{aligned}\\]\n\nAt \\(x=1\\), we can easily see \\(Q(1)>0\\).\nIf \\(r_{j}^{n}=-1\\), then\n\n\\[\\begin{aligned}\nQ(x) & =\\frac{2 n}{x^{n}} \\frac{x^{2 n+1}-1}{x-1}-\\frac{x}{x^{n}}\\left(\\frac{x^{n}-1}{x-1}\\right)^{2} \\\\\n& =-2 n \\frac{x^{1}-1}{x-1}+x\\left(\\frac{-1-1}{x-1}\\right)^{2} \\\\\n& =-2 n+\\frac{4 x}{(x-1)^{2}} \\\\\n& =-2 n+\\frac{4}{x-2+1 / x} \\\\\n& =-2 n+\\frac{4}{2 \\cos \\left(\\frac{2 \\pi}{2 n} j\\right)-2}<-2 n-4<0\n\\end{aligned}\\]\n\nsince the denominator of this second term is strictly negative \\((j \\neq 0)\\).\nThus at each of the \\(2 n\\)-roots of unity, \\(Q(x)\\) alternates in sign, and because \\(Q(x)\\) is real and continuous on the unit circle, it has at least one root between every pair of consecutive roots of unity. Since there are \\(2 n\\) of these pairs, and we know that \\(Q(x)\\) has exactly \\(2 n\\) roots (by the Fundamental Theorem of Algebra), we have found all of \\(Q\\) 's roots, and therefore those of \\(P\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

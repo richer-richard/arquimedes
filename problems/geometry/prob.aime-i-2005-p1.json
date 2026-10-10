@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-i-2005-p1",
+  "title": "2005 AIME I Problem 1",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle-area",
+      "label": "Circle area",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.regular-polygon",
+      "label": "Regular polygon",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangent-circles",
+      "label": "Tangent circles",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2005,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 36.4,
+    "source": 2010,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Six congruent circles form a ring with each circle externally tangent to the two circles adjacent to it. All six circles are internally tangent to a circle \\(\\mathcal{C}\\) with radius \\(30.\\) Let \\(K\\) be the area of the region inside \\(\\mathcal{C}\\) and outside all of the six circles in the ring. Find \\(\\lfloor K\\rfloor.\\) (The notation \\(\\lfloor K\\rfloor\\) denotes the greatest integer that is less than or equal to \\(K.\\))",
+  "answerChoices": [],
+  "answer": {
+    "letter": "942",
+    "value": "942"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2005-p1.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(r\\) be the common radius of the six circles. Adjacent circles are externally tangent, so their centers are \\(2r\\) apart, and the six centers form a regular hexagon with side \\(2r.\\) Since a regular hexagon’s circumradius equals its side length, each center is at distance \\(2r\\) from the center \\(O\\) of \\(\\mathcal{C}.\\) Internal tangency to \\(\\mathcal{C}\\) means the distance from \\(O\\) to each small center plus \\(r\\) equals \\(30,\\) so \\(3r = 30\\) and \\(r = 10.\\)\n\nTherefore \\[ \\begin{aligned} K &= \\pi\\left(30^2 - 6 \\cdot 10^2\\right) \\\\ &= 300\\pi \\approx 942.48, \\end{aligned} \\] and \\(\\lfloor K\\rfloor = 942.\\)",
+      "hints": [
+        "The six centers form a regular hexagon of side \\(2r,\\) and a regular hexagon’s circumradius equals its side",
+        "Internal tangency to \\(\\mathcal{C}\\) gives \\(2r + r = 30;\\) then subtract the six small disks from the big one"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

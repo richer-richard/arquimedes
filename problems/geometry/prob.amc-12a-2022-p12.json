@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2022-p12",
+  "title": "2022 AMC 12A Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.median-geometry",
+      "label": "Median (geometry)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2022,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 26.7,
+    "source": 1630,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(M\\) be the midpoint of \\(\\overline{AB}\\) in regular tetrahedron \\(ABCD.\\) What is \\(\\cos(\\angle CMD)?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac14\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac13\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac25\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac12\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{\\sqrt3}{2}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1/3"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2022-p12.live",
+      "kind": "proof-sketch",
+      "text": "Take edge length \\(1.\\) Since \\(M\\) is the midpoint of \\(\\overline{AB},\\) segments \\(CM\\) and \\(DM\\) are altitudes of the equilateral faces, each of length \\(\\dfrac{\\sqrt3}{2}.\\) Also \\(CD=1.\\)\n\nBy the Law of Cosines in \\(\\triangle CMD,\\) \\[ \\begin{aligned} \\cos(\\angle CMD) &=\\frac{\\frac34+\\frac34-1}{2\\cdot\\frac34} \\\\ &=\\frac{\\frac{1}{2}}{\\frac{3}{2}}=\\frac13. \\end{aligned} \\]\n\nThus, the correct answer is B.",
+      "hints": [
+        "\\(CM\\) and \\(DM\\) are medians of equilateral faces with edge length \\(1\\)",
+        "\\(CM=DM=\\dfrac{\\sqrt3}{2}\\) and \\(CD=1;\\) apply the Law of Cosines in \\(\\triangle CMD\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

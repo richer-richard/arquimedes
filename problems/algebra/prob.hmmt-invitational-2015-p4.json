@@ -1,0 +1,102 @@
+{
+  "id": "prob.hmmt-invitational-2015-p4",
+  "title": "2015 HMMT Invitational Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.logarithms-and-exponentials",
+      "label": "Logarithms and exponentials",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.pigeonhole-principle",
+      "label": "Pigeonhole principle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2015,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Prove that there exists a positive integer \\(N\\) such that for any positive integer \\(n \\geq N\\), there are at least 2015 non-empty subsets \\(S\\) of \\(\\left\\{n^{2}+1, n^{2}+2, \\ldots, n^{2}+3 n\\right\\}\\) with the property that the product of the elements of \\(S\\) is a perfect square.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2015-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "N/A\nLemma 0.1. Let \\(n, k\\) be integers with \\(1 \\leq k \\leq n\\). Then\n\n\\[\\binom{n}{k} \\leq\\left(\\frac{e n}{k}\\right)^{k}\\]\n\nwhere \\(e \\approx 2.71828 \\ldots\\) is Euler's number.\nProof. We have\n\n\\[\\begin{aligned}\n\\binom{n}{k} & =\\frac{n(n-1) \\cdots(n-k+1)}{k!} \\\\\n& \\leq \\frac{n^{k}}{k!} \\\\\n& =\\left(\\frac{n}{k}\\right)^{k} \\frac{k^{k}}{k!} \\\\\n& \\leq\\left(\\frac{n}{k}\\right)^{k} \\sum_{m=0}^{\\infty} \\frac{k^{m}}{m!} \\\\\n& =\\left(\\frac{e n}{k}\\right)^{k}\n\\end{aligned}\\]\n\nwhere the last step follows from the series expansion\n\n\\[e^{x}=\\sum_{m=0}^{\\infty} \\frac{x^{m}}{m!}\\]\n\napplied to \\(x=k\\).\nIn the solution below, all logarithms are to the base \\(e\\). If \\(f\\) and \\(g\\) are two functions of the variable \\(n\\), then write \\(f(n) \\sim g(n)\\) to denote that\n\n\\[\\lim _{n \\rightarrow \\infty} \\frac{f(n)}{g(n)}=1\\]\n\nProof of original problem. Let \\(U\\) be the set of elements of \\(\\left\\{n^{2}+1, \\ldots, n^{2}+3 n\\right\\}\\) with no prime factor greater than \\(3 n{ }^{1}\\) Let \\(s\\) be the number of primes \\(p \\leq 3 n\\). By the pigeonhole principle, we can find distinct subsets \\(X_{1}, \\ldots, X_{r} \\subset U\\) with \\(r \\geq \\frac{2^{|U|}}{2^{s}}\\) such that every prime \\(p \\leq 3 n\\) either divides all the products\n\n\\[\\prod_{x \\in X_{1}} x, \\ldots, \\prod_{x \\in X_{r}} x\\]\n\nan even number of times or divides all of them an odd number of times. Define the subsets \\(Y_{1}, \\ldots, Y_{r} \\subset\\) \\(U\\) by\n\n\\[Y_{i}:=X_{1} \\Delta X_{i}=\\left(X_{1}-X_{i}\\right) \\cup\\left(X_{i}-X_{1}\\right)\\]\n\nfor \\(1 \\leq i \\leq r\\). Then by construction, the sets \\(Y_{1}, \\ldots, Y_{r}\\) are distinct, and they have the property that every prime \\(p \\leq 3 n\\) divides each of the products\n\n\\[\\prod_{y \\in Y_{1}} y, \\ldots, \\prod_{y \\in Y_{r}} y\\]\n\nan even number of times. Since \\(Y_{1}, \\ldots, Y_{r} \\subset U\\), the products\n\n\\[\\prod_{y \\in Y_{1}} y, \\ldots, \\prod_{y \\in Y_{r}} y\\]\n\ndo not have any prime factor greater than \\(3 n\\), so they are perfect squares.\nWe have found \\(r\\) distinct subsets of \\(\\left\\{n^{2}+1, \\ldots, n^{2}+3 n\\right\\}\\) whose products are perfect squares. Therefore, it remains only to show that \\(r \\geq 2016\\) for \\(n\\) large enough. Since \\(r \\geq \\frac{2^{|U|}}{2^{s}}\\), it suffices to show that \\(|U| \\geq s+11\\) for \\(n\\) large enough.\nLet \\(T\\) be the set of prime numbers \\(p>3 n\\) that divide an element of \\(\\left\\{n^{2}+1, \\ldots, n^{2}+3 n\\right\\}\\). Every element of \\(T\\) evidently divides the binomial coefficient\n\n\\[\\binom{n^{2}+3 n}{3 n}=\\frac{\\left(n^{2}+1\\right) \\cdots\\left(n^{2}+3 n\\right)}{(3 n)!}\\]\n\nso the product of the elements of \\(T\\) divides \\(\\binom{n^{2}+3 n}{3 n}\\) as well. We then have the chain of inequalities\n\n\\[\\begin{aligned}\n(3 n)^{|T|} & \\leq \\prod_{p \\in T} p \\\\\n& \\leq\\binom{ n^{2}+3 n}{3 n} \\\\\n& \\leq\\left(\\frac{e(n+3)}{3}\\right)^{3 n}\n\\end{aligned}\\]\n\n[^0]where the last inequality follows from the lemma. Therefore,\n\\[\\begin{aligned}\n|T| & \\leq \\frac{\\log \\left(\\left(\\frac{e(n+3)}{3}\\right)^{3 n}\\right)}{\\log (3 n)} \\\\\n& =3 n \\frac{1+\\log (n+3)-\\log 3}{\\log 3+\\log n}\n\\end{aligned}\\]\n\nIt follows that\n\n\\[\\begin{aligned}\n|U| & \\geq 3 n-|T| \\\\\n& \\geq 3 n\\left(1-\\frac{1+\\log (n+3)-\\log 3}{\\log 3+\\log n}\\right) \\\\\n& \\sim(2 \\log 3-1) \\frac{3 n}{\\log (3 n)} .\n\\end{aligned}\\]\n\nOn the other hand, by the prime number theorem we have\n\n\\[s \\sim \\frac{3 n}{\\log (3 n)}\\]\n\nSince \\(2 \\log 3-1>1\\), we conclude that \\(|U| \\geq s+11\\) for \\(n\\) large enough, as desired.\nRemark 0.8. This problem was proposed by Dhroova Aiylam. Thanks to Mitchell Lee for writing the solution, and also working out Remark 0.10 .\nRemark 0.9. In fact, the above proof gives a lower bound for \\(r\\) of the form \\(2^{(2 \\log 3-2+o(1)) \\frac{3 n}{\\log (3 n)}}\\) where \\(o(1)\\) denotes a term that approaches 0 as \\(n \\rightarrow \\infty\\).\nRemark 0.10. In fact, for any real number \\(\\epsilon>0\\) there is an integer \\(N_{\\epsilon}\\) such that the set\n\n\\[\\left\\{n^{2}+1, \\ldots, n^{2}+\\left\\lceil\\left(\\sqrt{\\frac{3}{2}} e^{3 / 2}+\\epsilon\\right) \\frac{n}{\\log n}\\right\\rceil\\right\\}\\]\n\ncontains a nonempty subset whose product is a square for any \\(n>N_{\\epsilon}\\). The proof of this is similar to the above solution with \\(3 n\\) replaced by\n\n\\[\\left(\\sqrt{\\frac{3}{2}} e^{3 / 2}+\\epsilon\\right) \\frac{n}{\\log n}\\]\n\nand a more careful lower bound for\n\n\\[\\prod_{p \\in T} p\\]\n\nRemark 0.11. Compare with the following problem (addressing higher powers): http://www.aops. com/community/c6h495623_perfect_powers_in_intervals.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

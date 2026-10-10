@@ -1,0 +1,78 @@
+{
+  "id": "prob.ahsme-1963-p37",
+  "title": "1963 AHSME Problem 37",
+  "category": "problem-solving-techniques",
+  "subjects": [
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "strategy.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "strategy.pairing-and-grouping",
+      "label": "Pairing and grouping",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1963,
+    "number": 37
+  },
+  "difficulty": {
+    "course": 26.9,
+    "source": 1640,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Given points \\(P_1,\\) \\(P_2,\\) \\(\\ldots,\\) \\(P_7\\) on a straight line, in the order stated (not necessarily evenly spaced). Let \\(P\\) be an arbitrarily selected point on the line and let \\(s\\) be the sum of the undirected lengths\n\n\\[ PP_1,\\ PP_2,\\ \\ldots,\\ PP_7. \\]\n\nThen \\(s\\) is smallest if and only if the point \\(P\\) is:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "midway between \\(P_1\\) and \\(P_7\\)"
+    },
+    {
+      "label": "B",
+      "text": "midway between \\(P_2\\) and \\(P_6\\)"
+    },
+    {
+      "label": "C",
+      "text": "midway between \\(P_3\\) and \\(P_5\\)"
+    },
+    {
+      "label": "D",
+      "text": "at \\(P_4\\)"
+    },
+    {
+      "label": "E",
+      "text": "at \\(P_1\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1963-p37.live",
+      "kind": "proof-sketch",
+      "text": "For any pair \\(P_i,P_{8-i},\\) the sum \\(PP_i+PP_{8-i}\\) is minimized when \\(P\\) lies between them. The three such intervals all contain \\(P_4.\\) The remaining term \\(PP_4\\) is uniquely minimized at \\(P=P_4.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Pair the distances to \\(P_1,P_7\\), then \\(P_2,P_6\\), then \\(P_3,P_5\\)",
+        "Each paired sum is minimized throughout its intervening segment; the unpaired middle point selects one location"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2016-p20",
+  "title": "2016 AMC 10B Problem 20",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.homothety",
+      "label": "Homothety",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vector",
+      "label": "Vector",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2016,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 26.5,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A dilation of the plane—that is, a size transformation with a positive scale factor—sends the circle of radius \\(2\\) centered at \\(A(2,2)\\) to the circle of radius \\(3\\) centered at \\(A'(5,6).\\) What distance does the origin \\(O(0,0),\\) move under this transformation?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( \\ 0 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( \\ 3 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( \\ \\sqrt{13} \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( \\ 4 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( \\ 5 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2016-p20.live",
+      "kind": "proof-sketch",
+      "text": "The dilation scale factor is \\(\\frac32\\), since the radius changes from \\(2\\) to \\(3\\). The center of dilation \\(C\\) lies on the line through \\(A(2,2)\\) and \\(A'(5,6)\\).\n\nThe vector from \\(A\\) to \\(A'\\) is \\((3,4)\\). If \\(C\\) is the dilation center, then the scale factor gives \\[A'-A=\\frac12(A-C).\\] Thus \\(A-C=2(3,4)\\), so \\(C=(2,2)-2(3,4)=(-4,-6).\\)\n\nUnder a scale factor \\(\\frac32\\) dilation about \\(C\\), a point moves by half its distance from \\(C\\). Since \\(CO=\\sqrt{(-4)^2+(-6)^2}=\\sqrt{52}\\), the origin moves \\(\\frac12\\sqrt{52}=\\sqrt{13}\\).\n\nThus, the correct answer is C.",
+      "hints": [
+        "The dilation scale factor is \\(\\frac{3}{2}\\)",
+        "The center of dilation lies on the line through the two circle centers"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

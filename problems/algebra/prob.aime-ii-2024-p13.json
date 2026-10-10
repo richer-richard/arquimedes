@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2024-p13",
+  "title": "2024 AIME II Problem 13",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2024,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 63.3,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Let \\(\\omega \\neq 1\\) be a \\(13\\)th root of unity. Find the remainder when \\[\\prod_{k=0}^{12} \\left(2 - 2\\omega^k + \\omega^{2k}\\right)\\] is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "321",
+    "value": "321"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2024-p13.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(2 - 2x + x^2 = (x - 1)^2 + 1\\) \\(= (x - (1+\\mathrm{i}))(x - (1-\\mathrm{i})),\\) each factor of the product splits, and as \\(k\\) runs from \\(0\\) to \\(12,\\) \\(\\omega^k\\) runs over all \\(13\\)th roots of unity. Because \\(\\prod_k (x - \\omega^k) = x^{13} - 1,\\) for any \\(\\alpha\\) we get \\(\\prod_k (\\omega^k - \\alpha) = (-1)^{13}(\\alpha^{13} - 1)\\) \\(= 1 - \\alpha^{13}.\\) Hence the product equals \\[\\left(1 - (1+\\mathrm{i})^{13}\\right)\\left(1 - (1-\\mathrm{i})^{13}\\right).\\]\n\nSince \\((1+\\mathrm{i})^2 = 2\\mathrm{i},\\) we get \\((1+\\mathrm{i})^{13} = (1+\\mathrm{i})(2\\mathrm{i})^6\\) \\(= -64(1 + \\mathrm{i}) = -64 - 64\\mathrm{i},\\) and by conjugation \\((1-\\mathrm{i})^{13} = -64 + 64\\mathrm{i}.\\) So the product is \\[ \\begin{gathered} (65 + 64\\mathrm{i})(65 - 64\\mathrm{i}) \\\\ = 65^2 + 64^2 = 4225 + 4096 \\\\ = 8321, \\end{gathered} \\] whose remainder upon division by \\(1000\\) is \\(321.\\)",
+      "hints": [
+        "Factor \\(2 - 2x + x^2\\) \\(= (x - (1+\\mathrm{i}))(x - (1-\\mathrm{i})),\\) and use \\(\\prod_k (x - \\omega^k) = x^{13} - 1\\) over all \\(13\\)th roots of unity",
+        "\\((1+\\mathrm{i})^2 = 2\\mathrm{i}\\) makes \\((1+\\mathrm{i})^{13}\\) easy to compute; the whole product becomes \\(\\left(1 - (1+\\mathrm{i})^{13}\\right)\\left(1 - (1-\\mathrm{i})^{13}\\right)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

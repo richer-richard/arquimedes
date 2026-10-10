@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12a-2008-p23",
+  "title": "2008 AMC 12A Problem 23",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.binomial-theorem",
+      "label": "Binomial theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2008,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 38.3,
+    "source": 2240,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The solutions of the equation \\[z^4 + 4z^3 i - 6z^2 - 4zi - i = 0\\] are the vertices of a convex polygon in the complex plane. What is the area of the polygon?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2^{\\frac{5}{8}}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2^{\\frac{3}{4}}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2^{\\frac{5}{4}}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2^{\\frac{3}{2}}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2008-p23.live",
+      "kind": "proof-sketch",
+      "text": "Adding \\(1 + i\\) to both sides, the left side becomes \\[ \\begin{aligned} &z^4 + 4z^3 i - 6z^2 - 4zi + 1 \\\\ &= (z + i)^4, \\end{aligned} \\] so \\((z + i)^4 = 1 + i.\\)\n\nThe four solutions for \\(w = z + i\\) are equally spaced on a circle of radius \\(|1 + i|^{\\frac{1}{4}} = (2^{\\frac{1}{2}})^{\\frac{1}{4}} = 2^{\\frac{1}{8}},\\) and they form a square. Subtracting \\(i\\) merely translates it.\n\nA square inscribed in a circle of radius \\(2^{\\frac{1}{8}}\\) has diagonal \\(2 \\cdot 2^{\\frac{1}{8}} = 2^{\\frac{9}{8}},\\) so its side is \\(\\tfrac{2^{\\frac{9}{8}}}{\\sqrt{2}} = 2^{\\frac{5}{8}}.\\)\n\nThe area is \\[ \\left(2^{\\frac{5}{8}}\\right)^2 = 2^{\\frac{5}{4}}. \\]\n\nThus, D is the correct answer.",
+      "hints": [
+        "Add \\(1 + i\\) to both sides to recognize a perfect fourth power",
+        "The four values of \\(z + i\\) lie equally spaced on a circle of radius \\(2^{\\frac{1}{8}},\\) forming a square"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

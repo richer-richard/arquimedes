@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12b-2018-p17",
+  "title": "2018 AMC 12B Problem 17",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.fraction",
+      "label": "Fraction",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.inequality",
+      "label": "Inequality",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2018,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 32.4,
+    "source": 2090,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(p\\) and \\(q\\) be positive integers such that \\[ \\dfrac{5}{9}\\lt\\dfrac{p}{q}\\lt\\dfrac{4}{7} \\] and \\(q\\) is as small as possible. What is \\(q-p?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(19\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "7"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2018-p17.live",
+      "kind": "proof-sketch",
+      "text": "From \\(\\tfrac59\\lt\\tfrac pq\\) we get \\(9p-5q\\ge1,\\) and from \\(\\tfrac pq\\lt\\tfrac47\\) we get \\(4q-7p\\ge1.\\) Now \\[ \\begin{gathered} \\dfrac{1}{63}=\\dfrac47-\\dfrac59 \\\\ =\\dfrac{4q-7p}{7q}+\\dfrac{9p-5q}{9q} \\\\ \\ge\\dfrac{1}{7q}+\\dfrac{1}{9q} \\\\ =\\dfrac{16}{63q}. \\end{gathered} \\]\n\nHence \\(q\\ge16.\\) With \\(q=16,\\) the fraction \\(\\tfrac{9}{16}\\) lies strictly between \\(\\tfrac59\\) and \\(\\tfrac47,\\) so \\(p=9\\) and \\(q-p=16-9=7.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "Since \\(9p\\gt5q\\) and \\(4q\\gt7p\\) with integer sides, \\(9p-5q\\ge1\\) and \\(4q-7p\\ge1\\)",
+        "Add these after writing \\(\\tfrac{4}{7}-\\tfrac{5}{9}=\\tfrac{1}{63}\\) to bound \\(q\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-feb-guts-2015-p34",
+  "title": "2015 HMMT February Guts Problem 34",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cartesian-coordinates",
+      "label": "Cartesian coordinates",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.quadratic-forms",
+      "label": "Quadratic forms",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2015,
+    "number": 34
+  },
+  "difficulty": {
+    "course": 83.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For an integer \\(n\\), let \\(f(n)\\) denote the number of pairs \\((x, y)\\) of integers such that \\(x^{2}+x y+y^{2}=n\\). Compute the sum\n\n\\[\\sum_{n=1}^{10^{6}} n f(n)\\]\n\nWrite your answer in the form \\(a \\cdot 10^{b}\\), where \\(b\\) is an integer and \\(1 \\leq a<10\\) is a decimal number.\nIf your answer is written in this form, your score will be \\(\\left.\\max \\left\\{0,25-\\left\\lfloor 100\\left|\\log _{10}(A / N)\\right|\\right\\rfloor\\right)\\right\\}\\), where \\(N=a \\cdot 10^{b}\\) is your answer to this problem and \\(A\\) is the actual answer. Otherwise, your score will be zero.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2015-p34.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(1.813759629294 \\cdot 10^{12}\\) Rewrite the sum as\n\n\\[\\sum_{x^{2}+x y+y^{2} \\leq 10^{6}}\\left(x^{2}+x y+y^{2}\\right),\\]\n\nwhere the sum is over all pairs \\((x, y)\\) of integers with \\(x^{2}+x y+y^{2} \\leq 10^{6}\\). We can find a crude upper bound for this sum by noting that\n\n\\[x^{2}+x y+y^{2}=\\frac{3}{4} x^{2}+\\left(\\frac{x}{2}+y\\right)^{2} \\geq \\frac{3}{4} x^{2}\\]\n\nso each term of this sum has \\(|x| \\leq \\frac{2}{\\sqrt{3}} 10^{3}\\). Similarly, \\(|y| \\leq \\frac{2}{\\sqrt{3}} 10^{3}\\). Therefore, the number of terms in the sum is at most\n\n\\[\\left(\\frac{4}{\\sqrt{3}} 10^{3}+1\\right)^{2} \\approx 10^{6}\\]\n\n(We are throwing away \"small\" factors like \\(\\frac{16}{3}\\) in the approximation.) Furthermore, each term in the sum is at most \\(10^{6}\\), so the total sum is less than about \\(10^{12}\\). The answer \\(1 \\cdot 10^{12}\\) would unfortunately still get a score of 0 .\nFor a better answer, we can approximate the sum by an integral:\n\n\\[\\sum_{x^{2}+x y+y^{2} \\leq 10^{6}}\\left(x^{2}+x y+y^{2}\\right) \\approx \\iint_{x^{2}+x y+y^{2} \\leq 10^{6}}\\left(x^{2}+x y+y^{2}\\right) d y d x\\]\n\nPerforming the change of variables \\((u, v)=\\left(\\frac{\\sqrt{3}}{2} x, \\frac{1}{2} x+y\\right)\\) and then switching to polar coordinates \\((r, \\theta)=\\left(\\sqrt{u^{2}+v^{2}}, \\tan ^{-1}(v / u)\\right)\\) yields\n\n\\[\\begin{aligned}\n\\iint_{x^{2}+x y+y^{2} \\leq 10^{6}}\\left(x^{2}+x y+y^{2}\\right) d y d x & =\\frac{2}{\\sqrt{3}} \\iint_{u^{2}+v^{2} \\leq 10^{6}}\\left(u^{2}+v^{2}\\right) d v d u \\\\\n& =\\frac{2}{\\sqrt{3}} \\int_{0}^{2 \\pi} \\int_{0}^{10^{3}} r^{3} d r d \\theta \\\\\n& =\\frac{4 \\pi}{\\sqrt{3}} \\int_{0}^{10^{3}} r^{3} d r \\\\\n& =\\frac{\\pi}{\\sqrt{3}} \\cdot 10^{12}\n\\end{aligned}\\]\n\nThis is approximately \\(1.8138 \\cdot 10^{12}\\), which is much closer to the actual answer. (An answer of \\(1.8 \\cdot 10^{12}\\) is good enough for full credit.)\nThe answer can also be computed exactly by the Common Lisp code:\n\n```\n(defconstant +MAX+ 1e6)\n(defvar +lower+ -2000)\n(defvar +upper+ 2000)\n(princ\n```\n\n```\n(loop for x from +lower+ to +upper+ sum\n    (loop for y from +lower+ to +upper+\n        sum\n        (let ((S (+ (* x x) (* x y) (* y y))))\n            (if (and (<= S +MAX+) (> S 0)) S 0)))))\n```",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

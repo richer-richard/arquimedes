@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12b-2008-p15",
+  "title": "2008 AMC 12B Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2008,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 29.2,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "On each side of a unit square, an equilateral triangle of side length \\(1\\) is constructed. On each new side of each equilateral triangle, another equilateral triangle of side length \\(1\\) is constructed. The interiors of the square and the \\(12\\) triangles have no points in common. Let \\(R\\) be the region formed by the union of the square and all the triangles, and let \\(S\\) be the smallest convex polygon that contains \\(R.\\) What is the area of the region that is inside \\(S\\) but outside \\(R?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{4}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{\\sqrt{2}}{4}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\sqrt{3}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2\\sqrt{3}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "1"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2008-p15.live",
+      "kind": "proof-sketch",
+      "text": "The convex hull \\(S\\) differs from \\(R\\) only near the four corners of the square, where a small triangular gap forms. Each gap triangle has two sides of length \\(1\\) (outer edges of adjacent triangles).\n\nThe angle between those two sides is \\(360^\\circ - 90^\\circ - 4 \\cdot 60^\\circ = 30^\\circ,\\) so each gap has area \\[ \\tfrac12 \\cdot 1 \\cdot 1 \\cdot \\sin 30^\\circ = \\tfrac14. \\]\n\nThe total area is \\(4 \\cdot \\tfrac14 = 1.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "The gap between \\(S\\) and \\(R\\) is four small triangles, one at each corner of the square",
+        "Each gap triangle has two sides of length \\(1\\) meeting at angle \\(360^\\circ - 90^\\circ - 4 \\cdot 60^\\circ;\\) use \\(\\tfrac12 ab \\sin C\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

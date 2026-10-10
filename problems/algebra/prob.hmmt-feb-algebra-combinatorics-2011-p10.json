@@ -1,0 +1,56 @@
+{
+  "id": "prob.hmmt-feb-algebra-combinatorics-2011-p10",
+  "title": "2011 HMMT February Algebra and Combinatorics Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.games-and-strategy",
+      "label": "Games and strategy",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The integers from 1 to \\(n\\) are written in increasing order from left to right on a blackboard. David and Goliath play the following game: starting with David, the two players alternate erasing any two consecutive numbers and replacing them with their sum or product. Play continues until only one number on the board remains. If it is odd, David wins, but if it is even, Goliath wins. Find the 2011th smallest positive integer greater than 1 for which David can guarantee victory.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-combinatorics-2011-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "4022 If \\(n\\) is odd and greater than 1 , then Goliath makes the last move. No matter what two numbers are on the board, Goliath can combine them to make an even number. Hence Goliath has a winning strategy in this case.\nNow suppose \\(n\\) is even. We can replace all numbers on the board by their residues modulo 2. Initially the board reads \\(1,0,1,0, \\ldots, 1,0\\). David combines the rightmost 1 and 0 by addition to make 1 , so now the board reads \\(1,0,1,0, \\ldots, 0,1\\). We call a board of this form a \"good\" board. When it is Goliath's turn, and there is a good board, no matter where he moves, David can make a move to restore a good board. Indeed, Goliath must combine a neighboring 0 and 1 ; David can then combine that number with a neighboring 1 to make 1 and create a good board with two fewer numbers.\nDavid can ensure a good board after his last turn. But a good board with one number is simply 1 , so David wins. So David has a winning strategy if \\(n\\) is even. Therefore, the 2011th smallest positive integer greater than 1 for which David can guarantee victory is the 2011th even positive integer, which is 4022 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

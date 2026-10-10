@@ -1,0 +1,73 @@
+{
+  "id": "prob.aime-ii-2017-p8",
+  "title": "2017 AIME2 8",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.factorial",
+      "label": "Factorial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2017,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 58.0,
+    "source": 2840,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "Find the number of positive integers \\(n\\) less than \\(2017\\) such that \\[ \\begin{aligned} &1 + n + \\frac{n^2}{2!} + \\frac{n^3}{3!} + \\frac{n^4}{4!} \\\\ &{}+ \\frac{n^5}{5!} + \\frac{n^6}{6!} \\end{aligned} \\] is an integer.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "134",
+    "value": "134"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2017-p8.live",
+      "kind": "proof-sketch",
+      "text": "Multiplying by \\(6! = 720,\\) the sum is an integer exactly when \\[ \\begin{aligned} &n^6 + 6n^5 + 30n^4 \\\\ &{}+ 120n^3 + 360n^2 \\\\ &\\text{is divisible by } 720. \\end{aligned} \\] If \\(n\\) were odd, every term except \\(n^6\\) would be even, making the total odd. If \\(n\\) is not divisible by \\(3,\\) then modulo \\(3\\) every term except \\(n^6\\) vanishes while \\(n^6 \\equiv 1 \\pmod 3.\\) So \\(n\\) must be a multiple of \\(6.\\)\n\nWrite \\(n = 6k.\\) Then \\(30n^4 = 720 \\cdot 54k^4,\\) \\(120n^3 = 720 \\cdot 36k^3,\\) and \\(360n^2 = 720 \\cdot 18k^2\\) are all divisible by \\(720,\\) while \\(n^6 + 6n^5 = 6^6 k^5(k + 1).\\) Since \\(6^6 = 2^6 3^6\\) supplies the factors \\(2^4\\) and \\(3^2\\) of \\(720 = 2^4 \\cdot 3^2 \\cdot 5,\\) the condition reduces to \\(k(k + 1)\\) being divisible by \\(5,\\) that is, \\(k \\equiv 0\\) or \\(4 \\pmod 5.\\)\n\nFor \\(n = 6k \\lt 2017\\) we need \\(1 \\le k \\le 336.\\) That range contains \\(67\\) multiples of \\(5\\) and \\(67\\) values with \\(k \\equiv 4 \\pmod 5,\\) so there are \\(67 + 67 = 134\\) such \\(n.\\)",
+      "hints": [
+        "Multiply by \\(6! = 720:\\) the sum is an integer exactly when \\(720\\) divides \\(n^6 + 6n^5 + 30n^4\\) \\(+ 120n^3 + 360n^2\\)",
+        "Checking mod \\(2\\) and mod \\(3\\) forces \\(n\\) to be a multiple of \\(6;\\) write \\(n = 6k,\\) and only the condition that \\(5\\) divides \\(k(k + 1)\\) survives"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

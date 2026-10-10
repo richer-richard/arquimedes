@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1989-p2",
+  "title": "1989 AIME Problem 2",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.subsets",
+      "label": "Subsets",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1989,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 30.5,
+    "source": 1780,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Ten points are marked on a circle. How many distinct convex polygons of three or more sides can be drawn using some (or all) of the ten points as vertices?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "968",
+    "value": "968"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1989-p2.live",
+      "kind": "proof-sketch",
+      "text": "Every subset of at least three points determines exactly one convex polygon. There are \\(2^{10}=1024\\) subsets in all. Of these, \\(\\binom{10}{0}=1,\\) \\(\\binom{10}{1}=10,\\) and \\(\\binom{10}{2}=45\\) have fewer than three points. Therefore the required number is \\(1024-1-10-45=968.\\)",
+      "hints": [
+        "Each choice of at least three marked points determines one convex polygon",
+        "Count all subsets and remove those of sizes \\(0,\\) \\(1,\\) and \\(2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2021-p2",
+  "title": "2021 AIME II Problem 2",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2021,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 48.0,
+    "source": 2460,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "Equilateral triangle \\(ABC\\) has side length \\(840.\\) Point \\(D\\) lies on the same side of line \\(BC\\) as \\(A\\) such that \\(\\overline{BD} \\perp \\overline{BC}.\\) The line \\(\\ell\\) through \\(D\\) parallel to line \\(BC\\) intersects sides \\(\\overline{AB}\\) and \\(\\overline{AC}\\) at points \\(E\\) and \\(F,\\) respectively. Point \\(G\\) lies on \\(\\ell\\) such that \\(F\\) is between \\(E\\) and \\(G,\\) \\(\\triangle AFG\\) is isosceles, and the ratio of the area of \\(\\triangle AFG\\) to the area of \\(\\triangle BED\\) is \\(8 : 9.\\) Find \\(AF.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "336",
+    "value": "336"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2021-p2.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(\\ell \\parallel BC,\\) triangle \\(AEF\\) is equilateral; let \\(s = AF = EF.\\) The distance between \\(\\ell\\) and \\(BC\\) is the height of \\(ABC\\) minus the height of \\(AEF,\\) so \\(BD = \\frac{\\sqrt{3}}{2}(840 - s);\\) write \\(h = BD.\\)\n\nIn triangle \\(BED,\\) the base \\(\\overline{BD}\\) is perpendicular to \\(BC\\) and has length \\(h,\\) while \\(E\\) lies at horizontal distance \\(\\frac{h}{\\sqrt{3}}\\) from line \\(BD\\) because \\(\\angle EBC = 60^\\circ.\\) Hence \\([BED] = \\frac{h^2}{2\\sqrt{3}}.\\) Also \\(\\angle AFG = 180^\\circ - \\angle AFE\\) \\(= 120^\\circ,\\) and an isosceles triangle with a \\(120^\\circ\\) angle must have it as the apex angle, so \\(FA = FG = s\\) and \\([AFG] = \\frac{1}{2}s^2 \\sin 120^\\circ = \\frac{\\sqrt{3}}{4}s^2.\\)\n\nThe ratio condition gives \\[ \\begin{aligned} \\frac{[AFG]}{[BED]} &= \\frac{\\frac{\\sqrt{3}s^2}{4}}{\\frac{h^2}{2\\sqrt{3}}} \\\\ &= \\frac{3}{2} \\cdot \\frac{s^2}{h^2} = \\frac{8}{9}, \\end{aligned} \\] so \\(\\frac{s}{h} = \\frac{4}{3\\sqrt{3}}.\\) Substituting \\(h = \\frac{\\sqrt{3}}{2}(840 - s)\\) yields \\(s = \\frac{2}{3}(840 - s),\\) so \\(5s = 1680\\) and \\(AF = 336.\\)",
+      "hints": [
+        "Triangle \\(AEF\\) is equilateral with side \\(AF,\\) and \\(BD\\) equals the distance between the parallel lines \\(\\ell\\) and \\(BC\\)",
+        "\\(\\angle AFG = 120^\\circ,\\) so isosceles forces \\(FA = FG.\\) Express both areas in terms of \\(AF\\) and the height \\(BD.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "085b5847d27e9456cc3f3a39b9e360516f3dd578f86ec4d240b1f3b429b2a973"
+    ],
+    "solutions": []
+  }
+}

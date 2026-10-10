@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-fall-2021-p12",
+  "title": "2021 Fall AMC 12A Problem 12",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.binomial-theorem",
+      "label": "Binomial theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2021,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 27.7,
+    "source": 1630,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "What is the number of terms with rational coefficients among the \\(1001\\) terms in the expansion of \\[ \\left(x\\sqrt[3]{2} + y\\sqrt{3}\\right)^{1000}? \\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(166\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(167\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(500\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(501\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "167"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-fall-2021-p12.live",
+      "kind": "proof-sketch",
+      "text": "The general term is \\(\\binom{1000}{k}(x\\sqrt[3]{2})^{1000-k}(y\\sqrt{3})^{k},\\) whose coefficient contains \\(2^{\\frac{1000-k}{3}}\\) and \\(3^{\\frac{k}{2}}.\\) This is rational exactly when \\((1000 - k)\\) is a multiple of \\(3\\) and \\(k\\) is even.\n\nSince \\(1000 \\equiv 1 \\pmod 3,\\) we need \\(k \\equiv 1 \\pmod 3\\) and \\(k\\) even, which combine to \\(k \\equiv 4 \\pmod 6.\\) The valid values \\(k = 4, 10, \\ldots, 1000\\) number \\(\\dfrac{1000 - 4}{6} + 1 = 167.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "The term for index \\(k\\) carries \\(2^{\\frac{1000-k}{3}}\\,3^{\\frac{k}{2}};\\) rationality needs \\(1000 - k\\) to be a multiple of \\(3\\) and \\(k\\) to be a multiple of \\(2\\)",
+        "These force \\(k \\equiv 1 \\pmod 3\\) and \\(k\\) even, i.e. \\(k \\equiv 4 \\pmod 6\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-geometry-2019-p4",
+  "title": "2019 HMMT February Geometry Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.distance-chasing",
+      "label": "Distance chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.quadrilaterals",
+      "label": "Quadrilaterals",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2019,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 77.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Convex hexagon \\(A B C D E F\\) is drawn in the plane such that \\(A C D F\\) and \\(A B D E\\) are parallelograms with area 168. \\(A C\\) and \\(B D\\) intersect at \\(G\\). Given that the area of \\(A G B\\) is 10 more than the area of \\(C G B\\), find the smallest possible area of hexagon \\(A B C D E F\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2019-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 196\nSince \\(A C D F\\) and \\(A B D E\\) have area 168, triangles \\(A B D\\) and \\(A C D\\) (which are each half a parallelogram) both have area 84 . Thus, \\(B\\) and \\(C\\) are the same height away from \\(A D\\), and since \\(A B C D E F\\) is convex, \\(B\\) and \\(C\\) are on the same side of \\(A D\\). Thus, \\(B C\\) is parallel to \\(A D\\), and \\(A B C D\\) is a trapezoid. In particular, we have that the area of \\(A B G\\) equals the area of \\(C D G\\). Letting this quantity be \\(x\\), we have that the area of \\(B C G\\) is \\(x-10\\), and the area of \\(A D G\\) is \\(84-x\\). Then notice that \\(\\frac{[A B G]}{[C B G]}=\\frac{A G}{G C}=\\frac{[A D G]}{[C D G]}\\). This means that \\(\\frac{x}{x-10}=\\frac{84-x}{x}\\). Simplifying, we have \\(x^{2}-47 x+420=0\\); this has solutions \\(x=12\\) and \\(x=35\\). The area of \\(A B C D E F\\) is twice the area of trapezoid \\(A B C D\\), or \\(2[x+(x-10)+(84-x)+x]=4 x+148\\); choosing \\(x=12\\), we get that the smallest possible area is \\(48+148=196\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

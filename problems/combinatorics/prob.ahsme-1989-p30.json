@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1989-p30",
+  "title": "1989 AHSME Problem 30",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.double-counting",
+      "label": "Double counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.expected-value",
+      "label": "Expected value",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.permutations",
+      "label": "Permutations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1989,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 50.3,
+    "source": 2550,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Suppose that \\(7\\) boys and \\(13\\) girls line up in a row. Let \\(S\\) be the number of places in the row where a boy and a girl are standing next to each other. For example, for the row \\(GBBGGGBGBG\\)\\(GGBGBGGBGG\\) we have \\(S=12.\\) The average value of \\(S\\) (if all possible orders of these \\(20\\) people are considered) is closest to",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(13\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "9"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1989-p30.live",
+      "kind": "proof-sketch",
+      "text": "For each of the \\(19\\) adjacent position pairs, the probability of mixed sexes is \\[ \\frac7{20}\\cdot\\frac{13}{19} +\\frac{13}{20}\\cdot\\frac7{19}. \\] By linearity of expectation, \\[ \\begin{aligned} \\mathbb E[S] &=19\\cdot\\frac{2\\cdot7\\cdot13}{20\\cdot19}\\\\ &=\\frac{91}{10}=9.1, \\end{aligned} \\] which is closest to \\(9.\\)\n\nThus the correct answer is A.",
+      "hints": [
+        "Use an indicator for each of the \\(19\\) adjacent pairs",
+        "For a fixed adjacent pair, compute the probability of seeing \\(BG\\) or \\(GB\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

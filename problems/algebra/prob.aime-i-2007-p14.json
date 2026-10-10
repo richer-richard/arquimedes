@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2007-p14",
+  "title": "2007 AIME I Problem 14",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.invariant",
+      "label": "Invariant",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2007,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 65.9,
+    "source": 3160,
+    "mohs": null
+  },
+  "estimatedMinutes": 20,
+  "statement": "Let a sequence be defined as follows: \\(a_1 = 3,\\) \\(a_2 = 3,\\) and for \\(n \\ge 2,\\) \\(a_{n+1}a_{n-1} = a_n^2 + 2007.\\) Find the largest integer less than or equal to \\(\\frac{a_{2007}^2 + a_{2006}^2}{a_{2007}a_{2006}}.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "224",
+    "value": "224"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2007-p14.live",
+      "kind": "proof-sketch",
+      "text": "For \\(n \\ge 3,\\) both \\(a_{n+1}a_{n-1} = a_n^2 + 2007\\) and \\(a_n a_{n-2} = a_{n-1}^2 + 2007\\) hold. Subtracting and regrouping gives \\(a_{n-1}(a_{n+1} + a_{n-1})\\) \\(= a_n(a_n + a_{n-2}),\\) so \\(\\frac{a_{n+1} + a_{n-1}}{a_n}\\) has the same value for every \\(n \\ge 2.\\) Since \\(a_3 = \\frac{3^2 + 2007}{3} = 672,\\) that value is \\(\\frac{672 + 3}{3} = 225,\\) and the sequence satisfies \\(a_{n+1} = 225a_n - a_{n-1}.\\)\n\nMultiplying \\(a_{n+1} + a_{n-1} = 225a_n\\) by \\(a_{n+1}\\) and substituting \\(a_{n+1}a_{n-1} = a_n^2 + 2007\\) yields \\(a_{n+1}^2 + a_n^2 + 2007 = 225\\,a_n a_{n+1},\\) so \\[\\frac{a_{n+1}^2 + a_n^2}{a_{n+1}a_n} = 225 - \\frac{2007}{a_n a_{n+1}}.\\]\n\nThe sequence increases: \\(a_3 = 672 \\gt a_2,\\) and \\(a_{n+1} = 225a_n - a_{n-1} \\gt a_n\\) whenever \\(a_n \\gt a_{n-1}.\\) Hence \\(a_{2006}a_{2007} \\gt 672^2 \\gt 2007,\\) so the fraction lies strictly between \\(224\\) and \\(225,\\) and the answer is \\(224.\\)",
+      "hints": [
+        "Subtract the relation for consecutive indices to show \\(\\frac{a_{n+1} + a_{n-1}}{a_n}\\) is the same for all \\(n\\)",
+        "Multiply the constant-ratio relation by \\(a_{n+1}\\) and use the original recurrence: the target fraction is that constant minus a tiny positive amount"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

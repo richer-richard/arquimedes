@@ -1,0 +1,89 @@
+{
+  "id": "prob.amc-10a-2025-p19",
+  "title": "2025 AMC 10A Problem 19",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.pattern-recognition",
+      "label": "Pattern recognition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.triangular-number",
+      "label": "Triangular number",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2025,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 33.9,
+    "source": 1910,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "An array of numbers is constructed beginning with the numbers \\(-1,\\) \\(3,\\) \\(1\\) in the top row. Each adjacent pair of numbers is summed to produce a number in the next row. Each row will begin and end with the numbers \\(-1\\) and \\(1,\\) respectively. The first three rows are shown below.\n\nIf the process continues, one of the rows will sum to \\(12{,}288.\\) In that row, what is the third number from the left?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(-29\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(-21\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(-14\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(-8\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(-3\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "-29"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2025-p19.live",
+      "kind": "proof-sketch",
+      "text": "Each interior entry feeds two entries below, and the end values \\(-1\\) and \\(1\\) cancel in the sum. So every row’s total doubles the one above. The top row sums to \\(3,\\) and \\(12{,}288 = 3 \\cdot 2^{12},\\) so this is the \\(12\\)th row (counting the top as row \\(0\\)). Track the diagonals from the left. The second diagonal is \\(3, 2, 1, 0, -1, \\ldots,\\) dropping by \\(1\\) each row. The third diagonal adds these up: for \\(n \\ge 4\\) it equals \\(7 - (0 + 1 + \\cdots + (n-4))\\) \\(= 7 - \\frac{(n-4)(n-3)}{2}.\\) Plug in \\(n = 12\\): \\(7 - \\frac{8 \\cdot 9}{2} = -29.\\) Thus, A is the correct answer.",
+      "hints": [
+        "Each interior entry feeds two sums below, so each row’s total doubles; the top row sums to \\(3\\)",
+        "Track the third diagonal from the left, which accumulates the second diagonal \\(3, 2, 1, 0, \\ldots\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "0a08b0473d922792cbad0860a4c3911ea6cbcf07aaf241aad1cf5eac90bb4894"
+    ],
+    "solutions": []
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2006-p2",
+  "title": "2006 AIME I Problem 2",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.extremal-argument",
+      "label": "Extremal argument",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.subsets",
+      "label": "Subsets",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2006,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 33.4,
+    "source": 1890,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let set \\(\\mathcal{A}\\) be a \\(90\\)-element subset of \\(\\{1, 2, 3, \\ldots, 100\\},\\) and let \\(S\\) be the sum of the elements of \\(\\mathcal{A}.\\) Find the number of possible values of \\(S.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "901",
+    "value": "901"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2006-p2.live",
+      "kind": "proof-sketch",
+      "text": "The smallest possible sum is \\(1 + 2 + \\cdots + 90 = 4095,\\) and the largest is \\(11 + 12 + \\cdots + 100 = 4995.\\)\n\nEvery integer in between also occurs. Suppose \\(\\mathcal{A}\\) has sum \\(S \\le 4994,\\) and let \\(k\\) be the smallest element of \\(\\mathcal{A}\\) with \\(k + 1 \\notin \\mathcal{A}.\\) If \\(k\\) were \\(100,\\) then \\(\\mathcal{A}\\) would be a block of consecutive integers ending at \\(100,\\) namely \\(\\{11, \\ldots, 100\\},\\) whose sum exceeds \\(4994.\\) So \\(k \\ne 100,\\) and replacing \\(k\\) by \\(k + 1\\) produces a \\(90\\)-element subset with sum \\(S + 1.\\)\n\nHence \\(S\\) takes every value from \\(4095\\) to \\(4995,\\) for \\(4995 - 4095 + 1 = 901\\) possible values.",
+      "hints": [
+        "Find the smallest and largest possible sums, then show every value between them occurs",
+        "If the sum is not maximal, some element \\(k\\) of \\(\\mathcal{A}\\) has \\(k + 1 \\notin \\mathcal{A};\\) replacing \\(k\\) by \\(k + 1\\) raises the sum by exactly \\(1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

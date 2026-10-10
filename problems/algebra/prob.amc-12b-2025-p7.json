@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2025-p7",
+  "title": "2025 AMC 12B Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.telescoping",
+      "label": "Telescoping",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2025,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 21.3,
+    "source": 1420,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "What is the value of\n\n\\[ \\sum_{n=2}^{255} \\frac{\\log_2\\left(1 + \\frac{1}{n}\\right)}{(\\log_2 n)(\\log_2(n+1))}? \\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{3}{4}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1 - \\dfrac{1}{\\log_2 255}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{7}{8}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{15}{16}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(1\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "7/8"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2025-p7.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(a_n = \\log_2 n.\\) The numerator equals \\(a_{n+1} - a_n,\\) so each term is \\(\\dfrac{a_{n+1} - a_n}{a_n a_{n+1}} = \\dfrac{1}{a_n} - \\dfrac{1}{a_{n+1}}.\\) Telescoping from \\(n = 2\\) to \\(255\\) leaves \\(\\dfrac{1}{\\log_2 2} - \\dfrac{1}{\\log_2 256} = 1 - \\dfrac{1}{8}\\) \\(= \\dfrac{7}{8}.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Write \\(\\log_2\\!\\left(1 + \\frac{1}{n}\\right)\\) \\(= \\log_2(n+1) - \\log_2 n\\)",
+        "With \\(a_n = \\log_2 n,\\) each term becomes \\(\\dfrac{1}{a_n} - \\dfrac{1}{a_{n+1}}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

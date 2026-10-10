@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2018-p18",
+  "title": "2018 AMC 12B Problem 18",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.telescoping",
+      "label": "Telescoping",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2018,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 40.0,
+    "source": 2150,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A function \\(f\\) is defined recursively by \\(f(1)=f(2)=1\\) and \\[ f(n)=f(n-1)-f(n-2)+n \\] for all integers \\(n\\ge3.\\) What is \\(f(2018)?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2016\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2017\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2018\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2019\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2020\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "2017"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2018-p18.live",
+      "kind": "proof-sketch",
+      "text": "Repeatedly substituting the recursion into itself gives \\[ f(n)=f(n-6)+6. \\] So \\(f\\) increases by \\(6\\) every time \\(n\\) increases by \\(6.\\)\n\nSince \\(2018=2+6\\cdot336,\\) we have \\(f(2018)=f(2)+6\\cdot336\\) \\(=1+2016=2017.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Compute several terms and look for a pattern in \\(f(n)-n\\)",
+        "Expanding the recursion four times shows \\(f(n)=f(n-6)+6\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

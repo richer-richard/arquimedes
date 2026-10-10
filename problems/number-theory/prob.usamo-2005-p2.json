@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2005-p2",
+  "title": "2005 USAMO Problem 2",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2005,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 85.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Prove that the system\n\n\\[\n\\begin{align*}x^6 + x^3 + x^3y + y &= 147^{157} \\\\ x^3 + x^3y + y^2 + y + z^9 &= 157^{147}\\end{align*}\n\\]\n\nhas no solutions in integers \\(x\\), \\(y\\), and \\(z\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2005-p2.imported",
+      "kind": "proof-sketch",
+      "text": "It suffices to show that there are no solutions to this system in the integers mod 19. We note that $152 = 8 \\cdot 19$, so $157 \\equiv -147 \\equiv 5 \\pmod{19}$. For reference, we construct a table of powers of five:\n\\[\\begin{array}{c|c||c|c} n& 5^n &n & 5^n \\\\\\hline 1 & 5 & 6 & 7 \\\\ 2 & 6 & 7 & -3 \\\\ 3 & -8 & 8 & 4 \\\\ 4 & -2 & 9 & 1 \\\\ 5 & 9 && \\end{array}\\]\nEvidently, the order of 5 is 9. Hence 5 is the square of a multiplicative generator of the nonzero integers mod 19, so this table shows all nonzero squares mod 19, as well.\nIt follows that $147^{157} \\equiv (-5)^{13} \\equiv -5^4 \\equiv 2$, and $157^{147} \\equiv 5^3 \\equiv -8$. Thus we rewrite our system thus:\n\\begin{align*} (x^3+y)(x^3+1) &\\equiv 2 \\\\ (x^3+y)(y+1) + z^9 &\\equiv -8 . \\end{align*}\nAdding these, we have\n\\[(x^3+y+1)^2 - 1 + z^9 \\equiv -6,\\]\nor\n\\[(x^3+y+1)^2 \\equiv -z^9 - 5 .\\]\nBy Fermat's Little Theorem, the only possible values of $z^9$ are $\\pm 1$ and 0, so the only possible values of $(x^3+y+1)^2$ are $-4,-5$, and $-6$. But none of these are squares mod 19, a contradiction. Therefore the system has no solutions in the integers mod 19. Therefore the solution has no equation in the integers. $\\blacksquare$",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

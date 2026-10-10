@@ -1,0 +1,59 @@
+{
+  "id": "prob.aime-1996-p12",
+  "title": "1996 AIME Problem 12",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting-pairs",
+      "label": "Counting pairs",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.expected-value",
+      "label": "Expected value",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1996,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 32.3,
+    "source": 1850,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "For each permutation \\(a_1,\\) \\(a_2,\\) \\(a_3,\\) \\(\\ldots,\\) \\(a_{10}\\) of the integers \\(1,\\) \\(2,\\) \\(3,\\) \\(\\ldots,\\) \\(10,\\) form the sum \\[\\begin{gathered}|a_1-a_2|+|a_3-a_4|\\\\+|a_5-a_6|+|a_7-a_8|\\\\+|a_9-a_{10}|.\\end{gathered}\\] The average value of all such sums can be written in the form \\(\\frac{p}{q},\\) where \\(p\\) and \\(q\\) are relatively prime positive integers. Find \\(p+q.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "58",
+    "value": "58"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1996-p12.live",
+      "kind": "proof-sketch",
+      "text": "Each paired difference has the same expected value as the difference of a uniformly selected unordered pair from \\(1,\\ldots,10.\\) Therefore \\[\\begin{aligned}\\mathbb E|a_1-a_2|&=\\frac{\\sum_{d=1}^9d(10-d)}{\\binom{10}{2}}\\\\&=\\frac{10\\sum_{d=1}^9d}{45}\\\\&\\quad-\\frac{\\sum_{d=1}^9d^2}{45}\\\\&=\\frac{450-285}{45}=\\frac{11}{3}.\\end{aligned}\\] By linearity of expectation, the average of the five-term sum is \\(\\frac{5\\cdot11}{3}=\\frac{55}{3}.\\) Thus \\(p+q=58.\\)",
+      "hints": [
+        "Each of the five absolute differences has the same average",
+        "For a random unordered pair, difference \\(d\\) occurs \\(10-d\\) times"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

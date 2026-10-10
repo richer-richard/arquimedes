@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2013-p25",
+  "title": "2013 AMC 12A Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.lattice-point",
+      "label": "Lattice point",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2013,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 44.4,
+    "source": 2790,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Let \\(f : \\mathbb{C} \\to \\mathbb{C}\\) be defined by \\(f(z) = z^2 + iz + 1.\\) How many complex numbers \\(z\\) are there such that \\(\\operatorname{Im}(z) \\gt 0\\) and both the real and the imaginary parts of \\(f(z)\\) are integers with absolute value at most \\(10?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(399\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(401\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(413\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(431\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(441\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "399"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2013-p25.live",
+      "kind": "proof-sketch",
+      "text": "On the upper half-plane \\(H,\\) if \\(f(z_1) = f(z_2)\\) then \\((z_1 - z_2)(z_1 + z_2 + i) = 0;\\) since \\(\\operatorname{Im}(z_1), \\operatorname{Im}(z_2) \\gt 0,\\) the factor \\(z_1 + z_2 + i \\ne 0,\\) so \\(f\\) is one-to-one on \\(H.\\)\n\nFor real \\(r,\\) the boundary values \\(f(r)=r^2+1+ir\\) trace the parabola \\(\\operatorname{Re}(w)=(\\operatorname{Im}(w))^2+1.\\) Since \\(f(i)=-1\\) lies to its left and \\(f\\) is continuous and one-to-one on \\(H,\\) its image consists precisely of the values \\(w\\) satisfying \\(\\operatorname{Re}(w)<(\\operatorname{Im}(w))^2+1.\\) Thus we count \\(w = a + ib\\) with \\(a, b \\in \\mathbb{Z},\\) \\(|a|, |b| \\le 10,\\) and \\(a \\lt b^2 + 1:\\) \\[ \\begin{gathered} |S| = 21^2 \\\\ {}- \\sum_{b=-3}^{3}(10 - b^2) \\\\ = 441 - 42 = 399. \\end{gathered} \\]\n\nThus, the correct answer is A.",
+      "hints": [
+        "Show \\(f\\) is one-to-one on the upper half-plane, so counting \\(z\\) equals counting valid \\(f(z)\\)",
+        "The image is \\(\\{w : \\operatorname{Re}(w) \\lt (\\operatorname{Im}(w))^2 + 1\\};\\) count lattice points with \\(|\\operatorname{Re}|, |\\operatorname{Im}| \\le 10\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

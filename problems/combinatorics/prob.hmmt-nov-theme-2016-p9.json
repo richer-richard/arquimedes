@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-theme-2016-p9",
+  "title": "2016 HMMT November Theme Problem 9",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.coloring-schemes-extremal-arguments",
+      "label": "Coloring schemes, extremal arguments",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2016,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 48.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The vertices of a regular nonagon are colored such that 1 ) adjacent vertices are different colors and 2) if 3 vertices form an equilateral triangle, they are all different colors.\nLet \\(m\\) be the minimum number of colors needed for a valid coloring, and \\(n\\) be the total number of colorings using \\(m\\) colors. Determine \\(m n\\). (Assume each vertex is distinguishable.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2016-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 54\n\nIt's clear that \\(m\\) is more than 2 since it's impossible to alternate the color of the vertices without having two of the same color adjacent (since the graph is not bipartite). However, it's possible to use 3 colors. Number the vertices 1 through 9 in order and let the colors be \\(A, B, C\\). Coloring the vertices in the order \\(B C B C A C A B A\\) gives a configuration that works, so \\(m\\) is 3 . To determine \\(n\\), we can partition the nonagon into three equilateral triangles. Vertices \\(1,4,7\\) must be different colors, which we can choose in \\(3!=6\\) ways. Suppose WLOG that they're \\(A, B, C\\) respectively. Then we look at vertices \\(2,5,8\\). Vertex 2 can be colored \\(B\\) or \\(C\\). If 2 is \\(B\\), then vertex 8 must be \\(A\\), and vertex 5 must be \\(C\\). In this case there are two ways to color the remaining vertices \\(3,6,9\\). Otherwise, if vertex 2 is \\(C\\), then vertex 5 must be \\(A\\), and vertex 8 must be \\(B\\). This gives us only 1 possible coloring for the remaining three vertices. So \\(n\\) is \\(6(2+1)=18\\). So our answer is \\(m n=54\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

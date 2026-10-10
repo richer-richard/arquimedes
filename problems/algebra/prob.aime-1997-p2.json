@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1997-p2",
+  "title": "1997 AIME Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.counting-shapes-in-figures",
+      "label": "Counting shapes in figures",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sum-of-first-n-squares",
+      "label": "Sum of first n squares",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1997,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 33.4,
+    "source": 1890,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "The nine horizontal and nine vertical lines on an \\(8 \\times 8\\) checkerboard form \\(r\\) rectangles, of which \\(s\\) are squares. The number \\(\\frac{s}{r}\\) can be written in the form \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "125",
+    "value": "125"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1997-p2.live",
+      "kind": "proof-sketch",
+      "text": "A rectangle is determined by choosing two of the nine horizontal lines and two of the nine vertical lines, so \\(r = \\binom{9}{2}^2 = 36^2 = 1296.\\)\n\nA \\(k \\times k\\) square can be placed in \\((9 - k)^2\\) positions, so \\[ \\begin{aligned} s &= \\sum_{k=1}^{8} (9 - k)^2 \\\\ &= 8^2 + 7^2 + \\cdots + 1^2 \\\\ &= \\frac{8 \\cdot 9 \\cdot 17}{6} = 204. \\end{aligned} \\]\n\nThen \\(\\frac{s}{r} = \\frac{204}{1296} = \\frac{17}{108},\\) which is in lowest terms, so \\(m + n = 17 + 108 = 125.\\)",
+      "hints": [
+        "A rectangle is determined by choosing \\(2\\) of the \\(9\\) horizontal lines and \\(2\\) of the \\(9\\) vertical lines",
+        "There are \\((9 - k)^2\\) squares of size \\(k \\times k;\\) sum over \\(k = 1\\) to \\(8\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

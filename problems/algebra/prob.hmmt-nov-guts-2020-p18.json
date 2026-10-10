@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-guts-2020-p18",
+  "title": "2020 HMMT November Guts Problem 18",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2020,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 47.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Suppose Harvard Yard is a \\(17 \\times 17\\) square. There are 14 dorms located on the perimeter of the Yard. If \\(s\\) is the minimum distance between two dorms, the maximum possible value of \\(s\\) can be expressed as \\(a-\\sqrt{b}\\) where \\(a, b\\) are positive integers. Compute \\(100 a+b\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "602",
+    "value": "602"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2020-p18.hmmt",
+      "kind": "proof-sketch",
+      "text": "If two neighboring dorms are separated by a distance of more than \\(s\\), we can move them slightly closer together and adjust the other dorms, increasing \\(s\\). Therefore, in an optimal arrangement, the dorms form an equilateral 14 -gon with side length \\(s\\).\nBy scaling, the problem is now equivalent to finding the smallest \\(a\\) such that there exist 14 vertices on the boundary of an \\(a \\times a\\) square that form an equilateral 14 -gon with side length 1 . Such a 14 -gon must be centrally symmetric, yielding the following picture:\n\nWe know that \\(x_{1}^{2}+y_{1}^{2}=x_{2}^{2}+y_{2}^{2}=1\\) and \\(x_{1}+x_{2}+3=y_{1}+y_{2}+2=a\\). Moreover, if these equations are satisfied, then such a 14 -gon exists. We now consider the vectors \\(\\vec{v}_{1}=\\left(x_{1}, y_{1}\\right)\\) and \\(\\vec{v}_{2}=\\left(x_{2}, y_{2}\\right)\\). These unit vectors are in the first quadrant and add to \\((a-3, a-2)\\), which lies on the line \\(y=x+1\\).\n\nSince \\(\\vec{v}_{1}\\) and \\(\\vec{v}_{2}\\) must lie on the first quadrant, from the above diagram we deduce that the minimum value of \\(a\\) occurs when one of \\(\\vec{v}_{1}, \\vec{v}_{2}\\) is \\((0,1)\\), meaning that \\((a-3, a-2)=\\left(\\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{2}}{2}+1\\right)\\). This means that \\(a=\\frac{\\sqrt{2}}{2}+3\\), so the maximum possible value of \\(s\\) is\n\n\\[\\frac{17}{\\frac{\\sqrt{2}}{2}+3}=17 \\cdot \\frac{3-\\frac{\\sqrt{2}}{2}}{17 / 2}=6-\\sqrt{2}\\]\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

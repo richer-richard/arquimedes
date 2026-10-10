@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12b-2006-p23",
+  "title": "2006 AMC 12B Problem 23",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.transformation",
+      "label": "Transformation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2006,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 40.5,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Isosceles \\(\\triangle ABC\\) has a right angle at \\(C.\\) Point \\(P\\) is inside \\(\\triangle ABC,\\) such that \\(PA = 11,\\) \\(PB = 7,\\) and \\(PC = 6.\\) Legs \\(\\overline{AC}\\) and \\(\\overline{BC}\\) have length \\(s = \\sqrt{a + b\\sqrt{2}},\\) where \\(a\\) and \\(b\\) are positive integers. What is \\(a + b?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(85\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(91\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(108\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(121\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(127\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "127"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2006-p23.live",
+      "kind": "proof-sketch",
+      "text": "Rotate \\(\\triangle ABC\\) by \\(90^\\circ\\) about \\(C,\\) sending \\(A\\) to \\(B\\) and \\(P\\) to \\(P'.\\) Then \\(CP' = CP = 6\\) and \\(\\angle PCP' = 90^\\circ,\\) so \\(\\triangle PCP'\\) is an isosceles right triangle with \\(PP' = 6\\sqrt2.\\)\n\nAlso \\(BP' = AP = 11.\\) Since \\((6\\sqrt2)^2 + 7^2 = 72 + 49\\) \\(= 121 = 11^2,\\) triangle \\(BPP'\\) has a right angle at \\(P.\\) Hence \\(\\angle BPC = \\angle BPP'\\) \\(+ \\angle P'PC = 90^\\circ\\) \\(+ 45^\\circ = 135^\\circ.\\)\n\nBy the Law of Cosines in \\(\\triangle BPC,\\) \\[ \\begin{aligned} &BC^2 = 6^2 + 7^2 \\\\ &\\quad {}- 2 \\cdot 6 \\cdot 7 \\cos 135^\\circ \\\\ &\\quad = 85 + 42\\sqrt2. \\end{aligned} \\]\n\nSo \\(s^2 = 85 + 42\\sqrt2,\\) giving \\(a = 85,\\) \\(b = 42,\\) and \\(a + b = 127.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "Rotate \\(\\triangle ABC\\) by \\(90^\\circ\\) about \\(C\\) so that \\(A\\) maps onto \\(B\\)",
+        "The image of \\(P\\) forms an isosceles right triangle with \\(P,\\) which pins down \\(\\angle BPC\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "cedf803e2bddd938ada7c727ca60b8f328224b7ca4ff1b46807ab91afb8e84c5"
+    ],
+    "solutions": []
+  }
+}

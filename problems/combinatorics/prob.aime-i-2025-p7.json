@@ -1,0 +1,73 @@
+{
+  "id": "prob.aime-i-2025-p7",
+  "title": "2025 AIME I Problem 7",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.matchings-marriage-lemma-tutte-s-theorem",
+      "label": "Matchings, Marriage Lemma, Tutte's theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2025,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 54.4,
+    "source": 2710,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "The twelve letters \\(A,\\) \\(B,\\) \\(C,\\) \\(D,\\) \\(E,\\) \\(F,\\) \\(G,\\) \\(H,\\) \\(I,\\) \\(J,\\) \\(K,\\) and \\(L\\) are randomly grouped into six pairs of letters. The two letters in each pair are placed next to each other in alphabetical order to form six two-letter words, and then those six words are listed alphabetically. For example, a possible result is \\(AB,\\) \\(CJ,\\) \\(DG,\\) \\(EK,\\) \\(FL,\\) \\(HI.\\) The probability that the last word listed contains \\(G\\) is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "821",
+    "value": "821"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2025-p7.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(11 \\cdot 9 \\cdot 7 \\cdot 5 \\cdot 3 \\cdot 1 = 10395\\) ways to pair the letters. Each word begins with the smaller letter of its pair, so the last word alphabetically is the pair whose smaller letter is largest.\n\nCase \\(1:\\) \\(G\\) is the smaller letter of the last word. Then \\(G\\) pairs with one of \\(H,\\) \\(I,\\) \\(J,\\) \\(K,\\) or \\(L\\) (\\(5\\) ways), and no two of the remaining four late letters may pair together (such a pair would start with a letter after \\(G\\)). Those four letters must take distinct partners from \\(\\{A, \\ldots, F\\},\\) in \\(6 \\cdot 5 \\cdot 4 \\cdot 3 = 360\\) ways, and the two leftover early letters pair with each other. That gives \\(5 \\cdot 360 = 1800\\) pairings. Case \\(2:\\) \\(G\\) is the larger letter, paired with some \\(x\\) before \\(G.\\) Then none of \\(H, \\ldots, L\\) may pair together, so all five take partners among the other five early letters; the six smaller letters are then exactly \\(A\\) through \\(F,\\) and the largest is \\(F.\\) For the last word to contain \\(G,\\) its smaller letter must therefore be \\(F,\\) so the last word is \\(FG,\\) and \\(H, \\ldots, L\\) match with \\(A, \\ldots, E\\) in \\(5! = 120\\) ways.\n\nThe probability is \\(\\frac{1800 + 120}{10395} = \\frac{1920}{10395} = \\frac{128}{693},\\) so \\(m + n = 128 + 693 = 821.\\)",
+      "hints": [
+        "The last word’s first letter is the largest among the six smaller letters of the pairs",
+        "Either \\(G\\) pairs with a later letter and no two of \\(H\\) through \\(L\\) pair together, or the last word is \\(FG\\) with \\(H\\) through \\(L\\) all paired into \\(A\\) through \\(E\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

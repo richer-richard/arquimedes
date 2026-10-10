@@ -1,0 +1,97 @@
+{
+  "id": "prob.amc-10a-fall-2021-p15",
+  "title": "2021 Fall AMC 10A Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circumcircle-circumcenter-and-circumradius",
+      "label": "Circumcircle, circumcenter, and circumradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cyclic-quadrilateral",
+      "label": "Cyclic quadrilateral",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.tangent-line",
+      "label": "Tangent line",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2021,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 28.2,
+    "source": 1820,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Isosceles triangle \\(ABC\\) has \\(AB = AC = 3\\sqrt6,\\) and a circle with radius \\(5\\sqrt2\\) is tangent to line \\(AB\\) at \\(B\\) and to line \\(AC\\) at \\(C.\\) What is the area of the circle that passes through vertices \\(A,\\) \\(B,\\) and \\(C?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(24\\pi\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(25\\pi\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(26\\pi\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(27\\pi\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(28\\pi\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-fall-2021-p15.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(O_1\\) be the center of the circle tangent to \\(AB\\) and \\(AC.\\) Then \\(\\angle ABO_1=\\angle ACO_1=90^\\circ,\\) so \\(A,B,O_1,C\\) are concyclic.\n\nBecause the right angles at \\(B\\) and \\(C\\) subtend \\(AO_1,\\) the segment \\(AO_1\\) is a diameter of this circle. Let \\(O_2\\) be its center. The same circle passes through \\(A,B,\\) and \\(C,\\) so it is the desired circumcircle.\n\nBy the Pythagorean Theorem in \\(\\triangle ABO_1,\\) \\[ \\begin{aligned} AO_1&=\\sqrt{AB^2+BO_1^2}\\\\ &=\\sqrt{54+50}=2\\sqrt{26}. \\end{aligned} \\] Therefore, the circumradius is \\(\\sqrt{26},\\) and the requested area is \\(26\\pi.\\)\n\nThus, C is the correct answer.",
+      "hints": [
+        "Join the center of the tangent circle to \\(B\\) and \\(C\\)",
+        "Right angles at \\(B\\) and \\(C\\) put \\(A,B,O,C\\) on one circle"
+      ],
+      "images": [
+        "53de9f5d078c335dc8788eefb98fac8d93126d372dd525787eb6aad434664a6e"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "53de9f5d078c335dc8788eefb98fac8d93126d372dd525787eb6aad434664a6e"
+    ]
+  }
+}

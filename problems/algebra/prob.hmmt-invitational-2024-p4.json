@@ -1,0 +1,70 @@
+{
+  "id": "prob.hmmt-invitational-2024-p4",
+  "title": "2024 HMMT Invitational Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.recurrences",
+      "label": "Recurrences",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2024,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Given a positive integer \\(n\\), let \\([n]=\\{1,2, \\ldots, n\\}\\).\n\n- Let \\(a_{n}\\) denote the number of functions \\(f:[n] \\rightarrow[n]\\) such that \\(f(f(i)) \\geq i\\) for all \\(i\\).\n- Let \\(b_{n}\\) denote the number of ordered set partitions of [ \\(n\\) ], i.e., the number of ways to pick an integer \\(k\\) and an ordered \\(k\\)-tuple of pairwise disjoint nonempty sets \\(\\left(A_{1}, \\ldots, A_{k}\\right)\\) whose union is [ \\(n\\) ].\n\nProve that \\(a_{n}=b_{n}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2024-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "Solution: It suffices to define a bijection between the two types of objects in the problem for each \\(n\\). We'll be a bit more general and define a recursive bijection from ordered set partitions of \\(S \\subseteq[n]\\) to functions \\(f: S \\rightarrow S\\) described in the problem as follows:\n\nIf \\(S\\) is empty, return the trivial function \\(f: \\varnothing \\rightarrow \\varnothing\\).\nOtherwise, consider some ordered set partition \\(A_{1}, \\ldots, A_{k}\\) of \\(S \\subseteq[n]\\), and take \\(A_{1}\\). Order the elements of \\(S\\) as \\(s_{1}<s_{2}<\\cdots<s_{\\ell}\\). Now, let \\(s_{m}\\) denote the largest element of \\(A_{1}\\). Set \\(f\\left(s_{1}\\right)=s_{m}\\), and for each \\(s_{i} \\in A_{1} \\backslash\\left\\{s_{m}\\right\\}\\), set \\(f\\left(s_{i+1}\\right)=s_{1}\\).\nThen, let \\(A_{1}^{\\prime}=\\left\\{s_{i+1}: s_{i} \\in A_{1}, s_{i} \\neq s_{m}\\right\\} \\cup\\left\\{s_{1}\\right\\}\\) to be the elements of \\(A_{1} \\backslash\\left\\{s_{m}\\right\\}\\) shifted over by 1 index with \\(s_{1}\\) added in. Create a new ordered set partition of \\(S \\backslash A_{1}^{\\prime}\\) by taking the relative ordering of entries of \\(A_{2}, \\ldots A_{k}\\), and relabelling them to match the elements of \\(S \\backslash A_{1}^{\\prime}\\). To verify that this reordering can be done, we need to check that the sizes \\(\\left|A_{1}^{\\prime}\\right|=\\left|A_{1}\\right|\\). However, \\(\\left|\\left\\{s_{i+1}: s_{i} \\in A_{1}, s_{i} \\neq s_{m}\\right\\}\\right|=\\left|A_{1}\\right|-1\\), and \\(s_{1}\\) is not in this set, so the new partition is valid.\nLet \\(f^{\\prime}: S \\backslash A_{1}^{\\prime} \\rightarrow S \\backslash A_{1}^{\\prime}\\) be the output of this process recursively applied on the set \\(S \\backslash A_{1}^{\\prime}\\) with the new set partition. We can then naturally merge our values of \\(f, f^{\\prime}\\) such that if \\(x \\in A_{1}^{\\prime}, f(x)\\) is defined as above, and if \\(x \\in S \\backslash A_{1}^{\\prime}\\), we take \\(f(x):=f^{\\prime}(x)\\).\n\nWe now need to show that this process is well-defined, i.e. any input partition causes it to output a function \\(f: S \\rightarrow S\\) satisfying the desired property, and that it has a well-defined inverse.\nFirst, we observe that the process always outputs a valid function. We can do this by induction; it is vacuously true on the base case \\(S=\\varnothing\\). Then, it suffices to show that if the recursive step output \\(f^{\\prime}: S \\backslash A_{1}^{\\prime} \\rightarrow S \\backslash A_{1}^{\\prime}\\) satisfies \\(f^{\\prime}\\left(f^{\\prime}(i)\\right) \\geq i\\), then adding on the new values of \\(f\\) for \\(A_{1}^{\\prime}\\) preserves this property. Indeed, we only need to verify it at inputs in \\(A_{1}^{\\prime}\\), which are \\(s_{i+1}\\) for \\(s_{i} \\in A_{1}\\) with \\(i<m\\), and also \\(s_{1}\\).\nTo check this, let \\(s_{i} \\in A_{1}\\) with \\(s_{i}<s_{m}\\). Then\n\n\\[f\\left(f\\left(s_{i+1}\\right)\\right)=f\\left(s_{1}\\right)=s_{m} \\geq s_{i+1}\\]\n\nSimilarly, it is always true that \\(f\\left(f\\left(s_{1}\\right)\\right) \\geq s_{1}\\) since it is the smallest element of \\(S\\). So, the induction is complete.\nFinally, we need to show that this process is invertible. We do this with another recursive process; start any function \\(f: S \\rightarrow S\\) satisfying the desired property. We can then define \\(A_{1}\\) to be \\(\\left\\{s_{i-1}\\right.\\) : \\(\\left.s_{i} \\in f^{-1}\\left(s_{1}\\right), s_{i}>s_{1}\\right\\} \\cup\\left\\{f\\left(s_{1}\\right)\\right\\}\\) for \\(f^{-1}\\left(s_{1}\\right)\\) the preimage of \\(s_{1}\\) in \\(f\\). Note that for any \\(s_{i} \\in S\\) with \\(s_{i}>s_{1}\\), we do not have \\(f\\left(s_{i}\\right) \\in f^{-1}\\left(s_{1}\\right)\\) as otherwise \\(f\\left(f\\left(s_{i}\\right)\\right)=s_{1}<s_{i}\\). Furthermore, no elements of \\(S \\backslash f^{-1}\\left(s_{1}\\right)\\) can map to \\(s_{1}\\) due to the definition of a preimage. So, we can restrict \\(f\\) to a function \\(f^{\\prime}: S \\backslash\\left(f^{-1}\\left(s_{1}\\right) \\cup\\left\\{s_{1}\\right\\}\\right) \\rightarrow S \\backslash\\left(f^{-1}\\left(s_{1}\\right) \\cup\\left\\{s_{1}\\right\\}\\right)\\), on which we can recurse to obtain a partition \\(A_{2}, \\ldots, A_{k}\\) and relabel to \\(S \\backslash A_{1}\\) to obtain a partition \\(A_{1}, \\ldots, A_{k}\\) of \\(S\\).\nThis process is well-defined, and is clearly an inverse, as desired.\nBelow is an example of the bijection for \\(n=8\\) with the ordered set partition \\(\\{3,4,6,7\\} \\cup\\{1,5\\} \\cup\\{2,8\\}\\) :\n\nStep 1\n\\(A_{1}=\\{3,4,6,7\\}\\)\n\\(A_{2}, A_{3}:\\{1,5\\},\\{2,8\\}\\)\nUnused elements: \\(\\{2,3,6,8\\}\\)\nRelabeled \\(A_{2}, A_{3}:\\{2,6\\},\\{3,8\\}\\)\n\nStep 2\n\n\\[A_{2}=\\{2,6\\}\\]\n\n\\(A_{3}:\\{3,8\\}\\)\nUnused elements: \\(\\{6,8\\}\\)\nRelabeled \\(A_{3}:\\{6,8\\}\\)\n\nStep 3\n\n\\[A_{3}=\\{6,8\\}\\]\n\n## Output function:\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

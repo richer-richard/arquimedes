@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12a-2010-p13",
+  "title": "2010 AMC 12A Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle",
+      "label": "Circle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.hyperbola",
+      "label": "Hyperbola",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2010,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 29.3,
+    "source": 1590,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "For how many integer values of \\(k\\) do the graphs of \\(x^2+y^2=k^2\\) and \\(xy=k\\) not intersect?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(8\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2010-p13.live",
+      "kind": "proof-sketch",
+      "text": "For \\(k=0,\\) the graph of \\(x^2+y^2=0\\) is the single point \\((0,0)\\) and \\(xy=0\\) is the two axes, which meet at the origin, so the graphs intersect.\n\nFor \\(k\\ne0,\\) the circle has radius \\(|k|,\\) and the hyperbola \\(xy=k\\) has its two vertices nearest the origin at distance \\(\\sqrt{2|k|}.\\) The graphs meet exactly when \\(|k|\\ge\\sqrt{2|k|},\\) that is \\(|k|\\ge2.\\)\n\nSo they fail to intersect only when \\(|k|=1,\\) namely \\(k=1\\) and \\(k=-1,\\) giving \\(2\\) values.\n\nThus, C is the correct answer.",
+      "hints": [
+        "For \\(k\\ne0,\\) \\(x^2+y^2=k^2\\) is a circle of radius \\(|k|\\) and \\(xy=k\\) is a hyperbola",
+        "The hyperbola’s points closest to the origin are at distance \\(\\sqrt{2|k|};\\) compare with the radius \\(|k|\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

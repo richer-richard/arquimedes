@@ -1,0 +1,77 @@
+{
+  "id": "prob.hmmt-feb-geometry-2010-p5",
+  "title": "2010 HMMT February Geometry Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.solid-geometry",
+      "label": "Solid geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2010,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 78.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A sphere is the set of points at a fixed positive distance \\(r\\) from its center. Let \\(\\mathcal{S}\\) be a set of 2010dimensional spheres. Suppose that the number of points lying on every element of \\(\\mathcal{S}\\) is a finite number \\(n\\). Find the maximum possible value of \\(n\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2010-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "2 The answer is 2 for any number of dimensions. We prove this by induction on the dimension.\nNote that 1-dimensional spheres are pairs of points, and 2-dimensional spheres are circles.\nBase case, \\(d=2\\) : The intersection of two circles is either a circle (if the original circles are identical, and in the same place), a pair of points, a single point (if the circles are tangent), or the empty set. Thus, in dimension 2, the largest finite number of intersection points is 2 , because the number of pairwise intersection points is 0,1 , or 2 for distinct circles.\nWe now prove that the intersection of two \\(k\\)-dimensional spheres is either the empty set, a \\((k-1)\\) dimensional sphere, a \\(k\\)-dimensional sphere (which only occurs if the original spheres are identical and coincident). Consider two spheres in \\(k\\)-dimensional space, and impose a coordinate system such that the centers of the two spheres lie on one coordinate axis. Then the equations for the two spheres become identical in all but one coordinate:\n\n\\[\\begin{aligned}\n& \\left(x_{1}-a_{1}\\right)^{2}+x_{2}^{2}+\\ldots+x_{k}^{2}=r_{1}^{2} \\\\\n& \\left(x_{1}-a_{2}\\right)^{2}+x_{2}^{2}+\\ldots+x_{k}^{2}=r_{2}^{2}\n\\end{aligned}\\]\n\nIf \\(a_{1}=a_{2}\\), the spheres are concentric, and so they are either nonintersecting or coincident, intersecting in a \\(k\\)-dimensional sphere. If \\(a_{1} \\neq a_{2}\\), then subtracting the equations and solving for \\(x_{1}\\) yields \\(x_{1}=\\frac{r_{1}^{2}-a_{1}^{2}-r_{2}^{2}+a_{2}^{2}}{2\\left(a_{2}-a_{2}\\right)}\\). Plugging this in to either equation above yields a single equation equation that describes a \\((k-1)\\)-dimensional sphere.\nAssume we are in dimension \\(d\\), and suppose for induction that for all \\(k\\) less than \\(d\\), any two distinct \\(k\\)-dimensional spheres intersecting in a finite number of points intersect in at most two points. Suppose we have a collection of \\(d\\)-dimensional spheres \\(s_{1}, s_{2}, \\ldots, s_{m}\\). Without loss of generality, suppose the \\(s_{i}\\) are distinct. Let \\(t_{i}\\) be the intersection of \\(s_{i}\\) and \\(s_{i+1}\\) for \\(1 \\leq i<m\\). If any \\(t_{i}\\) are the empty set, then the intersection of the \\(t_{i}\\) is empty. None of the \\(t_{i}\\) is a \\(d\\)-dimensional sphere because the \\(s_{i}\\) are distinct. Thus each of \\(t_{1}, t_{2}, \\ldots, t_{m-1}\\) is a \\((d-1)\\)-dimensional sphere, and the intersection of all of them is the same as the intersection of the \\(d\\)-dimensional spheres. We can then apply the inductive hypothesis to find that \\(t_{1}, \\ldots, t_{m-1}\\) intersect in at most two points. Thus, by induction, a set of spheres in any dimension which intersect at only finitely many points intersect at at most two points.\nWe now exhibit a set of \\(2^{2009} 2010\\)-dimensional spheres, and prove that their intersection contains exactly two points. Take the spheres with radii \\(\\sqrt{2013}\\) and centers \\((0, \\pm 1, \\pm 1, \\ldots, \\pm 1)\\), where the sign of each coordinate is independent from the sign of every other coordinate. Because of our choice of radius, all these spheres pass through the points \\(( \\pm 2,0,0, \\ldots 0)\\). Then the intersection is the set of\n\n[^1]points \\(\\left(x_{1}, x_{2}, \\ldots, x_{2010}\\right)\\) which satisfy the equations \\(x_{1}^{2}+\\left(x_{2} \\pm 1\\right)^{2}+\\cdots+\\left(x_{2010} \\pm 1\\right)^{2}=2013\\). The only solutions to these equations are the points \\(( \\pm 2,0,0, \\ldots, 0)\\) (since \\(\\left(x_{i}+1\\right)^{2}\\) must be the same as \\(\\left(x_{i}-1\\right)^{2}\\) for all \\(i>1\\), because we may hold all but one of the \\(\\pm\\) choices constant, and change the remaining one).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

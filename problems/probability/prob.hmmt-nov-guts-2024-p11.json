@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-guts-2024-p11",
+  "title": "2024 HMMT November Guts Problem 11",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.permutations",
+      "label": "Permutations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2024,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 45.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A four-digit integer in base 10 is friendly if its digits are four consecutive digits in any order. A four-digit integer is shy if there exist two adjacent digits in its representation that differ by 1. Compute the number of four-digit integers that are both friendly and shy.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "148",
+    "value": "148"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2024-p11.hmmt",
+      "kind": "proof-sketch",
+      "text": "There are 24 friendly numbers with digits \\(d_{1}=a, d_{2}=a+1, d_{3}=a+2, d_{4}=a+3\\), for any \\(1 \\leq a \\leq 6\\), and 18 with \\(a=0\\). Out of these, only the numbers\n\n\\[\\overline{d_{2} d_{4} d_{1} d_{3}}, \\quad \\text { and } \\overline{d_{3} d_{1} d_{4} d_{2}}\\]\n\nare not shy, none of which has a leading digit zero. Therefore, the answer is:\n\n\\[6 \\cdot 24+18-7 \\cdot 2=148 .\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

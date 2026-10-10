@@ -1,0 +1,91 @@
+{
+  "id": "prob.amc-10a-2022-p23",
+  "title": "2022 AMC 10A 23",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.ptolemys-theorem",
+      "label": "Ptolemy’s Theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2022,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 42.1,
+    "source": 2230,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Isosceles trapezoid \\(ABCD\\) has parallel sides \\(\\overline{AD}\\) and \\(\\overline{BC},\\) with \\(BC < AD\\) and \\(AB = CD.\\) There is a point \\(P\\) in the plane such that \\(PA=1,\\) \\(PB=2,\\) \\(PC=3,\\) and \\(PD=4.\\) What is \\(\\tfrac{BC}{AD}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{4}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1}{3}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{2}{3}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{3}{4}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1/3"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2022-p23.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(P'\\) be the reflection of \\(P\\) across the perpendicular bisector of \\(\\overline{BC}.\\)\n\nThis forms two new isosceles trapezoids: \\(CBPP'\\) and \\(DAPP'.\\)\n\nTherefore, we get \\[\\begin{gathered} P'A = PD = 4 \\\\ P'D = PA = 1 \\\\ P'C = PB = 2 \\\\ P'B = PC = 3. \\end{gathered}\\]\n\nUsing Ptolemy’s theorem, we know that the product of the diagonals is equal to the sum of the products of the opposite sides. Therefore: \\[\\begin{gathered} PP' \\cdot AD + 1 = 16 \\\\ PP' \\cdot BC + 4 = 9. \\end{gathered}\\]\n\nThis gets us \\(PP' \\cdot AD = 15\\) and \\(PP' \\cdot BC = 5.\\) Dividing these two equations yields \\(\\dfrac{BC}{AD} = \\dfrac{1}{3}.\\)\n\nThus, B is the correct answer.",
+      "hints": [
+        "Reflect P across the symmetry line of the isosceles trapezoid",
+        "Apply Ptolemy to the two cyclic trapezoids formed by the reflection"
+      ],
+      "images": [
+        "78322e7decdb8a1d58180ba9713f731eaa2c1ffec0bb1f79804e86b89282ea26"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "78322e7decdb8a1d58180ba9713f731eaa2c1ffec0bb1f79804e86b89282ea26"
+    ]
+  }
+}

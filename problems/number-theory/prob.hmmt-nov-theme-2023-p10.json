@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-theme-2023-p10",
+  "title": "2023 HMMT November Theme Problem 10",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.greatest-common-divisors-gcd",
+      "label": "Greatest common divisors (gcd)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular Arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2023,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 62.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "It is midnight on April 29th, and Abigail is listening to a song by her favorite artist while staring at her clock, which has an hour, minute, and second hand. These hands move continuously. Between two consecutive midnights, compute the number of times the hour, minute, and second hands form two equal angles and no two hands overlap.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "5700",
+    "value": "5700"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2023-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(t \\in[0,2]\\) represent the position of the hour hand, i.e., how many full revolutions it has made. Then, the position of the minute hand is \\(12 t\\) (it makes 12 full revolutions per 1 revolution of the hour hand), and the position of the second hand is \\(720 t\\) (it makes 60 full revolutions per 1 revolution of the minute hand). Then, in order for equal angles to be formed, we need \\((a-b)-(b-c)=a-2 b+c \\equiv 0\\) \\((\\bmod 1)\\), where \\(a, b, c\\) is a permutation of \\(t, 12 t, 720 t\\). (Here, \\(b\\) would correspond to the hand that's the angle bisector.) Checking all three possibilities,\n\n\\[\\begin{aligned}\n12 t-2(t)+720 t \\equiv 697 t & \\equiv 0 \\quad(\\bmod 1) \\\\\nt-2(12 t)+720 t \\equiv 730 t \\equiv 0 & (\\bmod 1), \\\\\nt-2(720 t)+12 t \\equiv-1427 t & \\equiv 0 \\quad(\\bmod 1)\n\\end{aligned}\\]\n\nThen we require \\(t\\) to be a multiple of \\(\\frac{1}{697}, \\frac{1}{730}\\), or \\(\\frac{1}{1427}\\). Since 697,730 , and 1427 are pairwise relatively prime, the possible values of \\(t\\) are\n\n\\[\\begin{array}{r}\n\\frac{1}{697}, \\frac{2}{697}, \\ldots, \\frac{696}{697}, \\frac{698}{697}, \\ldots, \\frac{2 \\cdot 697-1}{697}, \\\\\n\\frac{1}{730}, \\frac{2}{730}, \\ldots, \\frac{729}{730}, \\frac{731}{730}, \\ldots, \\frac{2 \\cdot 730-1}{730}, \\\\\n\\frac{1}{1427}, \\frac{2}{1427}, \\ldots, \\frac{1426}{1427}, \\frac{1428}{1427}, \\ldots, \\frac{2 \\cdot 1427-1}{1427}\n\\end{array}\\]\n\nsince \\(t \\in[0,2]\\). This gives a count of \\(2((697-1)+(730-1)+(1427-1))=5702\\).\nNote that in the above count we don't count \\(t=0,1,2\\) since then all three hands would overlap. If two hands overlap, then one of \\(11 t, 708 t, 719 t \\equiv 0(\\bmod 1)\\), and the only way one of these can happen and \\(t\\) being a multiple of \\(\\frac{1}{697}, \\frac{1}{730}\\), or \\(\\frac{1}{1427}\\) is if \\(t=\\frac{1}{2}\\) and \\(t=\\frac{3}{2}\\) (which correspond to 6:00 AM and \\(\\mathrm{PM})\\). This is because the only pair of numbers that are not relatively prime among 11, 708, 719, 697, 730,1427 is 708 and 730 . The only common divisor of these two numbers is 2 , hence \\(t=\\frac{1}{2}, \\frac{3}{2}\\). Thus the final answer is \\(5702-2=5700\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

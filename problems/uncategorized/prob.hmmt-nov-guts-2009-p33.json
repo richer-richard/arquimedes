@@ -1,0 +1,37 @@
+{
+  "id": "prob.hmmt-nov-guts-2009-p33",
+  "title": "2009 HMMT November Guts Problem 33",
+  "category": "uncategorized",
+  "subjects": [],
+  "concepts": [],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2009,
+    "number": 33
+  },
+  "difficulty": {
+    "course": 57.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute\n\n\\[\\sum_{n=2009}^{\\infty} \\frac{1}{\\binom{n}{2009}}\\]\n\nNote that \\(\\binom{n}{k}\\) is defined as \\(\\frac{n!}{k!(n-k)!}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2009-p33.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{2009}{2008}\\) Observe that\n\n\\[\\begin{aligned}\n\\frac{k+1}{k}\\left(\\frac{1}{\\binom{n-1}{k}}-\\frac{1}{\\binom{n}{k}}\\right) & =\\frac{k+1}{k} \\frac{\\binom{n}{k}-\\binom{n-1}{k}}{\\binom{n}{k}\\binom{n-1}{k}} \\\\\n& =\\frac{k+1}{k} \\frac{\\binom{n-1}{k-1}}{\\binom{n}{k}\\binom{n-1}{k}} \\\\\n& =\\frac{k+1}{k} \\frac{(n-1)!k!k!(n-k-1)!(n-k)!}{n!(n-1)!(k-1)!(n-k)!} \\\\\n& =\\frac{k+1}{k} \\frac{k \\cdot k!(n-k-1)!}{n!} \\\\\n& =\\frac{(k+1)!(n-k-1)!}{n!} \\\\\n& =\\frac{1}{\\binom{n}{k+1}}\n\\end{aligned}\\]\n\nNow apply this with \\(k=2008\\) and sum across all \\(n\\) from 2009 to \\(\\infty\\). We get\n\n\\[\\sum_{n=2009}^{\\infty} \\frac{1}{\\binom{n}{2009}}=\\frac{2009}{2008} \\sum_{n=2009}^{\\infty} \\frac{1}{\\binom{n-1}{2008}}-\\frac{1}{\\binom{n}{2008}}\\]\n\nAll terms from the sum on the right-hand-side cancel, except for the initial \\(\\frac{1}{\\binom{2008}{2008}}\\), which is equal to 1 , so we get \\(\\sum_{n=2009}^{\\infty} \\frac{1}{\\binom{n}{2009}}=\\frac{2009}{2008}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

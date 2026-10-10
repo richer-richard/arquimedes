@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12b-2018-p23",
+  "title": "2018 AMC 12B Problem 23",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.sphere",
+      "label": "Sphere",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.vector",
+      "label": "Vector",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2018,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 38.0,
+    "source": 2400,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Ajay is standing at point \\(A\\) near Pontianak, Indonesia, \\(0^\\circ\\) latitude and \\(110^\\circ\\) E longitude. Billy is standing at point \\(B\\) near Big Baldy Mountain, Idaho, USA, \\(45^\\circ\\) N latitude and \\(115^\\circ\\) W longitude. Assume that Earth is a perfect sphere with center \\(C.\\) What is the degree measure of \\(\\angle ACB?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(105\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(112\\tfrac{1}{2}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(120\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(135\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(150\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "120"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2018-p23.live",
+      "kind": "proof-sketch",
+      "text": "The longitudes differ by \\(360^\\circ-(110^\\circ+115^\\circ)=135^\\circ,\\) and \\(B\\) is at latitude \\(45^\\circ\\) N. Place \\(A=(1,0,0)\\) on the unit sphere.\n\nThen \\(B=\\tiny\\left(\\cos45^\\circ\\cos135^\\circ,\\ \\cos45^\\circ\\sin135^\\circ,\\ \\sin45^\\circ\\right)\\) \\(=\\left(-\\tfrac12,\\tfrac12,\\tfrac{\\sqrt2}{2}\\right).\\) The dot product is \\(A\\cdot B=-\\tfrac12,\\) so \\(\\cos\\angle ACB=-\\tfrac12\\) and \\(\\angle ACB=120^\\circ.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "The longitude difference is \\(360^\\circ-(110^\\circ+115^\\circ)=135^\\circ\\)",
+        "Put both points on a unit sphere and take the dot product of their position vectors"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

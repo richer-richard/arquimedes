@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2021-p3",
+  "title": "2021 AIME II Problem 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.permutations",
+      "label": "Permutations",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2021,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 45.1,
+    "source": 2350,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Find the number of permutations \\(x_1,\\) \\(x_2,\\) \\(x_3,\\) \\(x_4,\\) \\(x_5\\) of numbers \\(1,\\) \\(2,\\) \\(3,\\) \\(4,\\) \\(5\\) such that the sum of five products \\[ \\begin{aligned} &x_1x_2x_3 + x_2x_3x_4 \\\\ &\\quad {}+ x_3x_4x_5 + x_4x_5x_1 \\\\ &\\quad {}+ x_5x_1x_2 \\end{aligned} \\] is divisible by \\(3.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "80",
+    "value": "80"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2021-p3.live",
+      "kind": "proof-sketch",
+      "text": "Work modulo \\(3.\\) The value \\(3\\) is the only multiple of \\(3,\\) and each of the five products covers three cyclically consecutive positions, so if \\(x_i = 3\\) exactly two products avoid position \\(i:\\) those covering positions \\(i+1, i+2, i+3\\) and \\(i+2, i+3, i+4\\) (indices mod \\(5\\)). Their sum is \\(x_{i+2}x_{i+3}(x_{i+1} + x_{i+4}),\\) and since \\(x_{i+2}x_{i+3}\\) is not divisible by \\(3,\\) the condition is \\(x_{i+1} + x_{i+4} \\equiv 0 \\pmod 3.\\)\n\nAmong the remaining values, \\(1\\) and \\(4\\) are \\(\\equiv 1\\) while \\(2\\) and \\(5\\) are \\(\\equiv 2 \\pmod 3,\\) so positions \\(i+1\\) and \\(i+4\\) must take one value from each class: \\(2 \\cdot 2 \\cdot 2 = 8\\) ordered choices. The other two values fill positions \\(i+2\\) and \\(i+3\\) in \\(2\\) ways. With \\(5\\) choices for the position of \\(3,\\) the count is \\(5 \\cdot 8 \\cdot 2 = 80.\\)",
+      "hints": [
+        "Work modulo \\(3:\\) every product containing the value \\(3\\) vanishes, so only two of the five products survive",
+        "If \\(x_i = 3,\\) the sum reduces to \\(x_{i+2}x_{i+3}(x_{i+1} + x_{i+4}),\\) so you need \\(x_{i+1} + x_{i+4} \\equiv 0 \\pmod 3\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

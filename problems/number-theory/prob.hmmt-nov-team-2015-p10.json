@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-nov-team-2015-p10",
+  "title": "2015 HMMT November Team Problem 10",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.diophantine-equations",
+      "label": "Diophantine equations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2015,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 64.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A number \\(n\\) is \\(b a d\\) if there exists some integer \\(c\\) for which \\(x^{x} \\equiv c(\\bmod n)\\) has no integer solutions for \\(x\\). Find the number of bad integers between 2 and 42 inclusive.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2015-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 25\n\nCall a number good if it is not bad. We claim all good numbers are products of distinct primes, none of which are equivalent to 1 modulo another.\nWe first show that all such numbers are good. Consider \\(n=p_{1} p_{2} \\ldots p_{k}\\), and let \\(x\\) be a number satisfying \\(x \\equiv c\\left(\\bmod p_{1} p_{2} \\ldots p_{k}\\right)\\) and \\(x \\equiv 1\\left(\\bmod \\left(p_{1}-1\\right)\\left(p_{2}-1\\right) \\ldots\\left(p_{k}-1\\right)\\right)\\). Since, by assumption, \\(p_{1} p_{2} \\ldots p_{k}\\) and \\(\\left(p_{1}-1\\right)\\left(p_{2}-1\\right) \\ldots\\left(p_{k}-1\\right)\\) are relatively prime, such an \\(x\\) must exist by CRT. Then \\(x^{x} \\equiv c^{1}=c\\) \\((\\bmod n)\\), for any \\(c\\), as desired.\nWe now show that all other numbers are bad. Suppose that there exist some \\(p_{1}, p_{2} \\mid n\\) such that \\(\\operatorname{gcd}\\left(p_{1}, p_{2}-1\\right) \\neq 1\\) (which must hold for some two primes by assumption), and hence \\(\\operatorname{gcd}\\left(p_{1}, p_{2}-1\\right)=p_{1}\\). Consider some \\(c\\) for which \\(p_{1} c\\) is not a \\(p_{1}\\) th power modulo \\(p_{2}\\), which must exist as \\(p_{1} c\\) can take any value modulo \\(p_{2}\\) (as \\(p_{1}, p_{2}\\) are relatively prime). We then claim that \\(x^{x} \\equiv p_{1} c(\\bmod n)\\) is not solvable.\nSince \\(p_{1} p_{2} \\mid n\\), we have \\(x^{x} \\equiv p_{1} c\\left(\\bmod p_{1} p_{2}\\right)\\), hence \\(p_{1} \\mid x\\). But then \\(x^{x} \\equiv p_{1} c\\) is a \\(p_{1}\\) th power modulo \\(p_{2}\\) as \\(p_{1} \\mid x\\), contradicting our choice of \\(c\\). As a result, all such numbers are bad.\n\nFinally, it is easy to see that \\(n\\) is bad if it is not squarefree. If \\(p_{1}\\) divides \\(n\\) twice, then letting \\(c=p_{1}\\) makes the given equivalence unsolvable.\nHence, there are 16 numbers ( 13 primes: \\(2,3,5,7,11,13,17,19,23,29,31,37,41\\); and 3 semiprimes: \\(3 \\cdot 5=15,3 \\cdot 11=33,5 \\cdot 7=35\\) ) that are good, which means that \\(41-16=25\\) numbers are bad.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

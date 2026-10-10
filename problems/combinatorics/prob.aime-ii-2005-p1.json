@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-ii-2005-p1",
+  "title": "2005 AIME II Problem 1",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.factorial",
+      "label": "Factorial",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2005,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 33.4,
+    "source": 1890,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A game uses a deck of \\(n\\) different cards, where \\(n\\) is an integer and \\(n \\ge 6.\\) The number of possible sets of \\(6\\) cards that can be drawn from the deck is \\(6\\) times the number of possible sets of \\(3\\) cards that can be drawn. Find \\(n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "13",
+    "value": "13"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2005-p1.live",
+      "kind": "proof-sketch",
+      "text": "The condition says \\(\\binom{n}{6} = 6\\binom{n}{3}.\\) Dividing the binomial coefficients, \\[ \\begin{aligned} \\frac{\\binom{n}{6}}{\\binom{n}{3}} &= \\frac{(n-3)(n-4)(n-5)}{6 \\cdot 5 \\cdot 4} \\\\ &= 6, \\end{aligned} \\] so \\((n-3)(n-4)(n-5) = 720\\) \\(= 10 \\cdot 9 \\cdot 8.\\)\n\nSince the product \\((n-3)(n-4)(n-5)\\) is increasing in \\(n,\\) the only solution is \\(n - 3 = 10,\\) that is, \\(n = 13.\\)",
+      "hints": [
+        "Write the ratio \\(\\frac{\\binom{n}{6}}{\\binom{n}{3}}\\) in factorials; almost everything cancels",
+        "Solve \\((n-3)(n-4)(n-5) = 720\\) by writing \\(720 = 10 \\cdot 9 \\cdot 8\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

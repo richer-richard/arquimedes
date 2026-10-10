@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-theme-2014-p3",
+  "title": "2014 HMMT November Theme Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.induction-smoothing",
+      "label": "Induction / smoothing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recurrence-relations",
+      "label": "Recurrence relations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2014,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 44.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find the smallest positive integer \\(n\\) such that, if there are initially \\(n+1\\) townspeople and \\(n\\) goons, then the probability the townspeople win is less than \\(1 \\%\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2014-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "6 By a similar inductive argument, the probability for a given \\(n\\) is\n\n\\[p_{n}=\\frac{n!}{(2 n+1)!!} .\\]\n\nClearly this is decreasing in \\(n\\). It is easy to see that\n\n\\[p_{5}=\\frac{1 \\cdot 2 \\cdot 3 \\cdot 4 \\cdot 5}{3 \\cdot 5 \\cdot 7 \\cdot 9 \\cdot 11}=\\frac{8}{693}>0.01\\]\n\nand\n\n\\[p_{6}=\\frac{6}{13} p_{5}=\\frac{48}{693 \\cdot 13}<0.01\\]\n\nHence the answer is \\(n=6\\). Heuristically, \\(p_{n+1} \\approx \\frac{1}{2} p_{n}\\) for each \\(n\\), so arriving at these estimates for the correct answer of \\(n\\) is not difficult.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

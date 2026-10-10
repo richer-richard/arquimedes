@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tstst-2017-p2",
+  "title": "USA TSTST 2017 Problem 2",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TSTST",
+    "year": 2017,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 88.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Ana and Banana are playing a game. First Ana picks a word,\nwhich is defined to be a nonempty sequence of capital English letters.\nThen Banana picks a nonnegative integer \\(k\\) and challenges Ana\nto supply a word with exactly \\(k\\) subsequences which are equal to Ana's word.\nAna wins if she is able to supply such a word, otherwise she loses.\nFor example, if Ana picks the word ``TST'', and Banana chooses \\(k = 4\\),\nthen Ana can supply the word ``TSTST'' which has \\(4\\) subsequences\nwhich are equal to Ana's word.\nWhich words can Ana pick so that she can win no matter what value of\n\\(k\\) Banana chooses?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tstst-2017-p2.evanchen",
+      "kind": "proof-sketch",
+      "text": "First we introduce some notation.\nDefine a block of letters to be a maximal\ncontiguous subsequence of consecutive letters.\nFor example, the word \\(AABBBCAAA\\) has four blocks, namely \\(AA\\), \\(BBB\\), \\(C\\), \\(AAA\\).\nThroughout the solution, we fix the word \\(A\\) that Ana picks,\nand introduce the following notation for its \\(m\\) blocks:\n\\[ A =\n A_1 A_2 \\dots A_m\n = \\underbrace{a_1 \\dots a_1}_{x_1}\n \\underbrace{a_2 \\dots a_2}_{x_2}\n \\dots\n \\underbrace{a_m \\dots a_m}_{x_m}.\n\\]\nA rainbow will be a subsequence equal to Ana's initial word \\(A\\)\n(meaning Ana seeks words with exactly \\(k\\) rainbows).\nFinally, for brevity, let \\(A_i = \\underbrace{a_i \\dots a_i}_{x_i}\\),\nso \\(A = A_1 \\dots A_m\\).\n\nWe prove two claims that resolve the problem.\n\nClaim.\n If \\(x_i = 1\\) for some \\(i\\), then for any \\(k \\ge 1\\), the word\n \\[ W = A_1 \\dots A_{i-1} \\underbrace{a_i \\dots a_i}_{k} A_{i+1} \\dots A_m \\]\n obtained by repeating the \\(i\\)th letter \\(k\\) times\n has exactly \\(k\\) rainbows.\n\nProof.\n Obviously there are at least \\(\\binom{k}{k-1}=k\\) rainbows,\n obtained by deleting \\(k-1\\) choices of the letter \\(a_i\\)\n in the repeated block.\n We show they are the only ones.\n\n Given a rainbow, consider the location of this singleton block in \\(W\\).\n It cannot occur within the first \\(|A_1| + \\dots + |A_{i-1}|\\) letters,\n nor can it occur within the final \\(|A_{i+1}| + \\dots + |A_m|\\) letters.\n So it must appear in the \\(i\\)th block of \\(W\\).\n That implies that all the other \\(a_i\\)'s in the\n \\(i\\)th block of \\(W\\) must be deleted, as desired.\n (This last argument is actually nontrivial, and has some substance;\n many students failed to realize that the upper bound requires care.)\n\nClaim.\n If \\(x_i \\ge 2\\) for all \\(i\\), then no word \\(W\\) has exactly two rainbows.\n\nProof.\n We prove if there are two rainbows of \\(W\\), then we can construct\n at least three rainbows.\n\n Let \\(W = w_1 \\dots w_n\\) and consider the two rainbows of \\(W\\).\n Since they are not the same, there must be a block \\(A_p\\) of the rainbow,\n of length \\(\\ell \\ge 2\\), which do not occupy the same locations in \\(W\\).\n\n Assume the first rainbow uses \\(w_{i_1}\\), \\dots, \\(w_{i_\\ell}\\) for this block\n and the second rainbow uses \\(w_{j_1}\\), \\dots, \\(w_{j_\\ell}\\) for this block.\n Then among the letters \\(w_q\\) for\n \\(\\min(i_1, j_1) \\le q \\le \\max(i_\\ell, j_\\ell)\\),\n there must be at least \\(\\ell+1\\) copies of the letter \\(a_p\\).\n Moreover, given a choice of \\(\\ell\\) copies of the letter \\(a_p\\)\n in this range, one can complete the subsequence to a rainbow.\n So the number of rainbows is at least \\(\\binom{\\ell+1}{\\ell} \\ge \\ell+1\\).\n\n Since \\(\\ell \\ge 2\\), this proves \\(W\\) has at least three rainbows.\n\nIn summary, Ana wins if and only if \\(x_i = 1\\) for some \\(i\\),\nsince she can duplicate the isolated letter \\(k\\) times;\nbut if \\(x_i \\ge 2\\) for all \\(i\\) then Banana only needs to supply \\(k = 2\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

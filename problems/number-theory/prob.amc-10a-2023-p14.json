@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2023-p14",
+  "title": "2023 AMC 10A Problem 14",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "nt.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2023,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 26.7,
+    "source": 1630,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A number is chosen at random from among the first \\(100\\) positive integers, and a positive integer divisor of that number is then chosen at random. What is the probability that the chosen divisor is divisible by \\(11?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{4}{100}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{9}{200}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{20}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{11}{200}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{3}{50}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "9/200"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2023-p14.live",
+      "kind": "proof-sketch",
+      "text": "A number \\(n \\le 100\\) can only have a divisor divisible by \\(11\\) when \\(n\\) is divisible by \\(11,\\) so \\(n \\in \\{11, 22, \\ldots, 99\\}.\\) Write \\(n = 11m\\) with \\(m \\le 9.\\) Here \\(m\\) is not a multiple of \\(11,\\) so \\(d(11m) = 2\\,d(m),\\) and the divisors that are multiples of \\(11\\) are exactly the \\(d(m)\\) numbers \\(11d.\\) That makes the chance \\(\\frac{d(m)}{2\\,d(m)} = \\frac12\\) for each such \\(n.\\) Averaging over all \\(100\\) starting numbers, the probability is \\(\\frac{1}{100}\\sum_{m=1}^{9}\\frac12 = \\frac{9}{200}.\\) Therefore, the answer is B.",
+      "hints": [
+        "Only multiples of \\(11\\) up to \\(100\\) can have a divisor divisible by \\(11\\)",
+        "For \\(n = 11m\\) with \\(m \\le 9,\\) exactly half of \\(n\\)’s divisors are multiples of \\(11,\\) since \\(m\\) is not a multiple of \\(11\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

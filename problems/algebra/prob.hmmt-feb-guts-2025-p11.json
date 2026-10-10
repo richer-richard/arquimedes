@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2025-p11",
+  "title": "2025 HMMT February Guts Problem 11",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2025,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 70.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(f(n) = n^{2} + 100\\) . Compute the remainder when \\(f(f(\\dots f(f(1))\\dots))\\) is divided by \\(10^{4}\\) .",
+  "answerChoices": [],
+  "answer": {
+    "letter": "3101",
+    "value": "3101"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2025-p11.hmmt",
+      "kind": "proof-sketch",
+      "text": "We claim that \\(f^{k}(n)\\equiv 1 + 100(2^{n} - 1)\\bmod 10^{4}\\) . We can see this by induction, as\n\n\\[f(1 + 100(2^{n} - 1)) = (1 + 100(2^{n} - 1))^{2} + 100\\] \\[\\qquad \\equiv 1 + 200(2^{n} - 1) + 100\\pmod {10^{4}}\\] \\[\\qquad \\equiv 1 + 100(2^{n + 1} - 1)\\pmod {10^{4}}.\\]\n\nThus, it suffices to compute \\(2^{2025}\\bmod 100\\) . We note that \\(2^{2025}\\equiv 0\\) (mod 4) and by Euler's Totient theorem, \\(2^{2025}\\equiv 2^{5}\\) (mod 25), so \\(2^{2025}\\equiv 32\\) (mod 100). Hence, we can compute\n\n\\[f^{2025}(1)\\equiv 1 + 100(31)\\equiv \\boxed {3101}\\bmod 10^{4}.\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

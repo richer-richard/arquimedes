@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2005-p8",
+  "title": "2005 AMC 12A 8",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2005,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 25.3,
+    "source": 1350,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Let \\(A,\\) \\(M,\\) and \\(C\\) be digits with \\[ \\begin{aligned} &(100A + 10M + C) \\\\ &\\quad {}\\cdot (A + M + C) = 2005. \\end{aligned} \\] What is \\(A?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2005-p8.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(A + M + C \\le 9 + 9 + 9 = 27,\\) and \\(2005 = 5 \\cdot 401,\\) the digit sum can only be \\(1\\) or \\(5.\\) It cannot be \\(1,\\) because then \\(100A+10M+C=2005>999.\\) Thus it must be the smaller nontrivial factor: \\[ \\begin{aligned} &100A + 10M + C = 401, \\\\ &\\quad A + M + C = 5. \\end{aligned} \\]\n\nReading off the digits, \\(A = 4,\\) \\(M = 0,\\) and \\(C = 1.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Factor \\(2005\\) into primes",
+        "The digit sum \\(A + M + C\\) is at most \\(27,\\) which pins down which factor it equals"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

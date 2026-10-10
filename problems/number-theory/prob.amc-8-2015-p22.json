@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-8-2015-p22",
+  "title": "2015 AMC 8 Problem 22",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.least-common-multiple",
+      "label": "Least common multiple",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2015,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 16.1,
+    "source": 1460,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "On June \\(1,\\) a group of students is standing in rows, with \\(15\\) students in each row. On June \\(2,\\) the same group is standing with all of the students in one long row. On June \\(3,\\) the same group is standing with just one student in each row. On June \\(4,\\) the same group is standing with \\(6\\) students in each row. This process continues through June \\(12\\) with a different number of students per row each day. However, on June \\(13,\\) they cannot find a new way of organizing the students. What is the smallest possible number of students in the group?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 21 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 30 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 60 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 90 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 1080 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "60"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2015-p22.live",
+      "kind": "proof-sketch",
+      "text": "The possible numbers of students per row are exactly the positive divisors of the total number of students. Since June \\(1\\) through June \\(12\\) give different arrangements and June \\(13\\) gives no new one, the total number of students must have exactly \\(12\\) positive divisors.\n\nThe number must be divisible by both \\(15\\) and \\(6,\\) hence by \\(\\operatorname{lcm}(15,6)=30=2\\cdot3\\cdot5.\\) This number has only \\(8\\) divisors.\n\nThe smallest multiple of \\(30\\) with \\(12\\) divisors is \\(60=2^2\\cdot3\\cdot5,\\) which has \\((2+1)(1+1)(1+1)=12\\) divisors.\n\nThus, C is the correct answer.",
+      "hints": [
+        "The different row sizes are the divisors of the group size.",
+        "You need the smallest multiple of both \\(6\\) and \\(15\\) with exactly \\(12\\) divisors."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

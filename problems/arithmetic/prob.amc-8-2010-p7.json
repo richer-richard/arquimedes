@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-2010-p7",
+  "title": "2010 AMC 8 Problem 7",
+  "category": "arithmetic",
+  "subjects": [
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "arith.money",
+      "label": "Money",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "arith.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2010,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 14.5,
+    "source": 1350,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Using only pennies, nickels, dimes, and quarters, what is the smallest number of coins Freddie would need so he could pay any amount of money less than a dollar?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( \\ 6 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( \\ 10 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( \\ 15 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( \\ 25 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( \\ 99 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "10"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2010-p7.live",
+      "kind": "proof-sketch",
+      "text": "At least four pennies are necessary to pay \\(4\\) cents. After those four pennies, the next coin must be worth at most \\(5\\) cents so that \\(5\\) cents can be paid; a nickel is the best choice. Those five coins total only \\(9\\) cents. The next coin must be worth at most \\(10\\) cents, and even a dime brings the total to only \\(19\\) cents. One more coin worth at most \\(20\\) cents is therefore necessary, so at least seven coins are needed before quarters can be used without leaving a gap.\n\nWith only nine coins total, at most two coins could remain after those required seven. The first seven can total at most \\(4+5+10+10=29\\) cents, and two more quarters would bring the total to only \\(79\\) cents, so nine coins cannot pay every amount through \\(99\\) cents.\n\nTen coins do work: four pennies, one nickel, two dimes, and three quarters can make every amount from \\(1\\) through \\(99\\) cents. Therefore the minimum is \\(10\\).\n\nTherefore, the answer is B .",
+      "hints": [
+        "After making every amount through \\(24\\) cents, quarters can extend the range to \\(99\\) cents.",
+        "First force the coins needed to make small amounts like \\(4\\), \\(9\\), and \\(24\\) cents."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

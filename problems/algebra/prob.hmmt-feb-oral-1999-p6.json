@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-oral-1999-p6",
+  "title": "1999 HMMT February Oral Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 1999,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "You want to sort the numbers 54321 using block moves. In other words, you can take any set of numbers that appear consecutively and put them back in at any spot as a block. For example, \\(653421 \\rightarrow 426531\\) is a valid block move for 6 numbers. What is the minimum number of block moves necessary to get 12345 ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-oral-1999-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "Here is a sequence of 3 moves that works: \\(54321 \\rightarrow 32541 \\rightarrow 34125 \\rightarrow 12345\\). But how do we know we can't do it in 2 moves? From any position there are 20 possible permutations via block moves, 16 from moving a block of size 1 and 4 from moving a block of size 2 . One could simply write the 20 permutations of 54321 and the 20 permutations of 12345 and try to see that they have nothing in common, which would suffice since the inverse of a block move is also a block move. A more clever method is to notice that if we could sort 54321 in 2 moves then we could sort 4321 in 2 moves as well by simply deleting the 5 from each step. But 4321 has only 10 permutations from block moves, namely \\(3421,3241,3214,4231,4213,2431,4312,1432,4132\\), and 2143 . The 10\npermutations of 1234 are \\(2134,2314,2341,1324,1342,3124,1243,4123,1423\\), and 3412 . These two sets of permutations have nothing in common, thus it takes at least 3 moves to sort 4321, and hence at least 3 moves to sort 54321.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

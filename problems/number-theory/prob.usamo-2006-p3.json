@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2006-p3",
+  "title": "2006 USAMO Problem 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2006,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 107.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For integral \\(m\\), let \\(p(m)\\) be the greatest prime divisor of \\(m\\). By convention, we set \\(p(\\pm 1)=1\\) and \\(p(0)=\\infty\\). Find all polynomials \\(f\\) with integer coefficients such that the sequence \\(\\{ p(f(n^2))-2n) \\}_{n \\in \\mathbb{Z} \\ge 0}\\) is bounded above. (In particular, this requires \\(f(n^2)\\neq 0\\) for \\(n\\ge 0\\).)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2006-p3.imported",
+      "kind": "proof-sketch",
+      "text": "Let $f(x)$ be a non-constant polynomial in $x$ of degree $d$ with\ninteger coefficients, suppose further that no prime divides all the\ncoefficients of $f$ (otherwise consider the polynomial obtained by\ndividing $f$ by the gcd of its coefficients). We further normalize\n$f$ by multiplying by $-1$, if necessary, to ensure that the\nleading coefficient (of $x^d$) is positive.\nLet $g(n) = f(n^2)$, then $g(n)$ is a polynomial of degree $2$ or\nmore and $g(n) = g(-n)$. Let $g_1, \\ldots, g_k$ be the factorization\nof $g$ into irreducible factors with positive leading coefficients.\nSuch a factorization is unique. Let $d(g_i)$ denote the degree of\n$g_i$. Since $g(-n) = g(n)$ the factors $g_i$ are either even\nfunctions of $n$ or come in pairs $(g_i, h_i)$ with $g_i(-n) = (-1)^{d(g_i)} h_i(n)$.\nLet $P(0) = \\infty$, $P(\\pm 1) = 1$. For any other integer $m$ let\n$P(m)$ be the largest prime factor of $m$.\nSuppose that for some finite constant $C$ and all $n \\ge 0$ we have\n$P(g(n)) - 2n < C$. Since the polynomials $g_i$ divide $g$, the\nsame must be true for each of the irreducible polynomials $g_i$.\nA theorem of T. Nagell implies that if $d(g_i) \\ge 2$ the ratio\n$P(g_i(n))/n$ is unbounded for large values of $n$. Since in our case the $P(g_i(n))/n$ is asymptotically bounded above\nby $2$ for large $n$, we conclude that all the irreducible\nfactors $g_i$ are linear. Since linear polynomials are not even\nfunctions of $n$, they must occur in pairs $g_i(n) = a_in + b_i$,\n$h_i(n) = a_in - b_i$. Without loss of generality, $b_i \\ge 0$.\nSince the coefficients of $f$ are relatively prime, so are $a_i$\nand $b_i$, and since $P(0) = \\infty$, neither polynomial can have\nany non-negative integer roots, so $a_i > 1$ and thus $b_i > 0$.\nOn the other hand, by Dirichlet's theorem, $a_i \\le 2$, since\notherwise the sequence $a_in + b_i$ would yield infinitely many\nprime values with $P(g_i(n)) = a_in + b_i \\ge 3n.$ So $a_i = 2$ and\ntherefore $b_i$ is a positive odd integer. Setting $b_i = 2c_i + 1$, clearly $P(g_i(n)) - 2n < 2c_i + 2$. Since this holds for each\nfactor $g_i$, it is true for the product $g$ of all the factors\nwith the bound determined by the factor with the largest value of\n$c_i$.\nTherefore, for suitable non-negative integers $c_i$, $g(n)$ is a\nproduct of polynomials of the form $4n^2 - (2c_i + 1)^2$. Now,\nsince $g(n) = f(n^2)$, we conclude that $f(n)$ is a product of\nlinear factors of the form $4n - (2c_i + 1)^2$.\nSince we restricted ourselves to non-constant polynomials with\nrelatively prime coefficients, we can now relax this condition and\nadmit a possibly empty list of linear factors as well as an arbitrary\nnon-zero integer multiple $M$. Thus for a suitable non-zero integer\n$M$ and $k \\ge 0$ non-negative integers $c_i$, we have: \\[f(n) = M \\cdot \\prod_{i=1}^k (4n - (2c_i + 1)^2)\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

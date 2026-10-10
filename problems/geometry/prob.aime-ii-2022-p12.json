@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2022-p12",
+  "title": "2022 AIME II Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.ellipse",
+      "label": "Ellipse",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-inequality",
+      "label": "Triangle inequality",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2022,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 65.9,
+    "source": 3160,
+    "mohs": null
+  },
+  "estimatedMinutes": 17,
+  "statement": "Let \\(a,\\) \\(b,\\) \\(x,\\) and \\(y\\) be real numbers with \\(a \\gt 4\\) and \\(b \\gt 1\\) such that \\[ \\begin{aligned} \\frac{x^2}{a^2} + \\frac{y^2}{a^2 - 16} &= \\frac{(x - 20)^2}{b^2 - 1} \\\\ &\\quad {}+ \\frac{(y - 11)^2}{b^2} \\\\ &= 1. \\end{aligned} \\] Find the least possible value of \\(a + b.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "23",
+    "value": "23"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2022-p12.live",
+      "kind": "proof-sketch",
+      "text": "The first ellipse has \\(c^2 = a^2 - (a^2 - 16) = 16,\\) hence foci \\(F_1 = (-4, 0)\\) and \\(F_2 = (4, 0),\\) with distance sum \\(2a.\\) The second is centered at \\((20, 11)\\) with vertical major axis and \\(c^2 = b^2 - (b^2 - 1) = 1,\\) hence foci \\(G_1 = (20, 10)\\) and \\(G_2 = (20, 12),\\) with distance sum \\(2b.\\) If \\(P = (x, y)\\) lies on both, then \\[ \\begin{aligned} 2a + 2b \\\\ &= (PF_1 + PG_1) \\\\ &\\quad {}+ (PF_2 + PG_2) \\\\ &\\ge F_1G_1 + F_2G_2 \\\\ &= \\sqrt{24^2 + 10^2} \\\\ &\\quad {}+ \\sqrt{16^2 + 12^2} \\\\ &= 26 + 20 \\\\ &= 46, \\end{aligned} \\] so \\(a + b \\ge 23.\\)\n\nEquality requires \\(P\\) to lie on both segments \\(\\overline{F_1G_1}\\) and \\(\\overline{F_2G_2}.\\) These segments do intersect, at \\(P = \\left(14, \\frac{15}{2}\\right):\\) then \\(PF_1 = \\frac{39}{2},\\) \\(PF_2 = \\frac{25}{2},\\) so \\(2a = 32,\\) \\(a = 16 \\gt 4;\\) and \\(PG_1 = \\frac{13}{2},\\) \\(PG_2 = \\frac{15}{2},\\) so \\(2b = 14,\\) \\(b = 7 \\gt 1.\\)\n\nHence the least possible value of \\(a + b\\) is \\(16 + 7 = 23.\\)",
+      "hints": [
+        "Both equations are ellipses through a common point: the first has foci \\((\\pm 4, 0),\\) the second has foci \\((20, 10)\\) and \\((20, 12)\\)",
+        "\\(2a + 2b\\) is the sum of the four focal distances of the common point; pair the foci so the triangle inequality gives segments that actually intersect"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

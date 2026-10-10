@@ -1,0 +1,57 @@
+{
+  "id": "prob.aime-ii-2019-p7",
+  "title": "2019 AIME II Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.parallel-lines",
+      "label": "Parallel lines",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2019,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 54.9,
+    "source": 2790,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "Triangle \\(ABC\\) has side lengths \\(AB = 120,\\) \\(BC = 220,\\) and \\(AC = 180.\\) Lines \\(\\ell_A,\\) \\(\\ell_B,\\) and \\(\\ell_C\\) are drawn parallel to \\(\\overline{BC},\\) \\(\\overline{AC},\\) and \\(\\overline{AB},\\) respectively, such that the intersections of \\(\\ell_A,\\) \\(\\ell_B,\\) and \\(\\ell_C\\) with the interior of \\(\\triangle ABC\\) are segments of lengths \\(55,\\) \\(45,\\) and \\(15,\\) respectively. Find the perimeter of the triangle whose sides lie on lines \\(\\ell_A,\\) \\(\\ell_B,\\) and \\(\\ell_C.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "715",
+    "value": "715"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2019-p7.live",
+      "kind": "proof-sketch",
+      "text": "For a point \\(P,\\) let \\(\\alpha\\) be the distance from \\(P\\) to line \\(BC\\) divided by the length of the altitude from \\(A,\\) and define \\(\\beta\\) (to \\(CA\\)) and \\(\\gamma\\) (to \\(AB\\)) similarly; then \\(\\alpha + \\beta + \\gamma = 1\\) for points inside, since \\([PBC] + [PCA]\\) \\(+ [PAB] = [ABC].\\) A chord parallel to \\(\\overline{BC}\\) at level \\(\\alpha\\) cuts off a triangle at \\(A\\) similar to \\(ABC\\) with ratio \\(1 - \\alpha,\\) so its length is \\(220(1 - \\alpha).\\) The chord of length \\(55\\) gives \\(1 - \\alpha = \\frac{1}{4},\\) so \\(\\ell_A\\) is the line \\(\\alpha = \\frac{3}{4};\\) similarly \\(45 = 180(1 - \\beta)\\) puts \\(\\ell_B\\) at \\(\\beta = \\frac{3}{4},\\) and \\(15 = 120(1 - \\gamma)\\) puts \\(\\ell_C\\) at \\(\\gamma = \\frac{7}{8}.\\)\n\nAlong any line parallel to \\(\\overline{BC},\\) the coordinate \\(\\beta\\) varies linearly, and on the chord at level \\(\\alpha\\) inside the triangle, \\(\\beta\\) runs over an interval of length \\(1 - \\alpha\\) while the chord has length \\(220(1 - \\alpha);\\) hence a segment parallel to \\(\\overline{BC}\\) with endpoints differing by \\(\\Delta\\beta\\) has length \\(220\\,|\\Delta\\beta|.\\) The side of the new triangle on \\(\\ell_A\\) runs from \\(\\ell_A \\cap \\ell_B,\\) where \\(\\beta = \\frac{3}{4},\\) to \\(\\ell_A \\cap \\ell_C,\\) where \\(\\beta = 1 - \\frac{3}{4} - \\frac{7}{8} = -\\frac{5}{8}.\\) Its length is \\[220\\left(\\frac{3}{4} + \\frac{5}{8}\\right) = 220 \\cdot \\frac{11}{8}.\\]\n\nSince the three lines are parallel to the sides of \\(ABC,\\) the triangle they bound is similar to \\(ABC,\\) here with ratio \\(\\frac{11}{8}.\\) Its perimeter is \\(\\frac{11}{8}(120 + 220 + 180)\\) \\(= \\frac{11}{8} \\cdot 520 = 715.\\)",
+      "hints": [
+        "Each chord cuts off a triangle similar to \\(ABC:\\) the ratios are \\(\\frac{55}{220},\\) \\(\\frac{45}{180},\\) and \\(\\frac{15}{120}\\)",
+        "Measure distances to the sides as fractions of the altitudes, which sum to \\(1;\\) the lines sit at levels \\(\\frac34,\\) \\(\\frac34,\\) \\(\\frac78\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "prob.amc-8-1988-p16",
+  "title": "1988 AMC 8 Problem 16",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.extremal-argument",
+      "label": "Extremal argument",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.pigeonhole-principle",
+      "label": "Pigeonhole principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1988,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 13.6,
+    "source": 1120,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Placing no more than one X in each small square, what is the greatest number of X’s that can be put on a \\(3 \\times 3\\) grid without getting three X’s in a row vertically, horizontally, or diagonally?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(6\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1988-p16.live",
+      "kind": "proof-sketch",
+      "text": "A placement of \\(6\\) X’s works: leave the three squares along one main diagonal empty and fill the other six. Then each row and each column is missing one square, the used diagonal has an empty square, and the other diagonal passes through the empty center, so no line of three is complete.\n\nSeven X’s is impossible: only two squares would be empty, and two empty squares can lie in at most two of the three rows, forcing the remaining row to be completely filled with three X’s.\n\nSo the greatest number is \\(6.\\)\n\nThus, the correct answer is E .",
+      "hints": [
+        "Try to leave one square empty in each row and column so no line gets filled",
+        "With \\(7\\) X’s only two squares are empty, but two empty squares cannot break all three rows, so some row would be full"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "bdc22a25f19627f104b23899e26c528a77d7a6faa69860c85101ae8c97919cb9"
+    ],
+    "solutions": []
+  }
+}

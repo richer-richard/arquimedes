@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-2011-p23",
+  "title": "2011 AMC 8 Problem 23",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2011,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 19.6,
+    "source": 1690,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many \\(4\\)-digit positive integers have four different digits, where the leading digit is not zero, the integer is a multiple of \\(5,\\) and \\(5\\) is the largest digit?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(48\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(60\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(84\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(108\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "84"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2011-p23.live",
+      "kind": "proof-sketch",
+      "text": "For a number to be divisible by \\(5,\\) the units digit must be either \\(0\\) or \\(5.\\)\n\nIf the units digit is \\(0,\\) one of the other three digits must be \\(5.\\) The remaining two digits must be chosen from \\(\\{1, 2, 3, 4\\}.\\) There are \\(6\\) ways to choose the pair, and there are \\(6\\) ways to arrange the three digits for a total of \\(6 \\cdot 6 = 36\\) numbers.\n\nIf the units digit is \\(5,\\) there are \\(4\\) ways to choose the thousands digit. There are \\(4 \\cdot 3 = 12\\) ways to choose the other \\(2\\) digits. This leaves a total of \\(4 \\cdot 12 = 48\\) numbers for this case.\n\nCombining both cases, we get the total number of such integers is \\(36 + 48 = 84.\\)\n\nThus, D is the correct answer.",
+      "hints": [
+        "Handle the two possible units digits as separate cases.",
+        "A multiple of \\(5\\) must end in \\(0\\) or \\(5\\)."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

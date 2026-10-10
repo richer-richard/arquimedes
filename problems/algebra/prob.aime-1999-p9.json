@@ -1,0 +1,57 @@
+{
+  "id": "prob.aime-1999-p9",
+  "title": "1999 AIME 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.algebraic-manipulation",
+      "label": "Algebraic manipulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1999,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 43.1,
+    "source": 2270,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "A function \\(f\\) is defined on the complex numbers by \\(f(z) = (a + bi)z,\\) where \\(a\\) and \\(b\\) are positive numbers. This function has the property that the image of each point in the complex plane is equidistant from that point and the origin. Given that \\(|a + bi| = 8\\) and that \\(b^2 = \\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers, find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "259",
+    "value": "259"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1999-p9.live",
+      "kind": "proof-sketch",
+      "text": "The condition is \\(|f(z) - z| = |f(z)|\\) for all \\(z,\\) that is, \\(|(a - 1 + bi)z| = |(a + bi)z|.\\) Dividing by \\(|z|\\) (for \\(z \\ne 0\\)) gives \\(|a - 1 + bi| = |a + bi|,\\) so \\[(a - 1)^2 + b^2 = a^2 + b^2,\\] which forces \\(a = \\frac{1}{2}.\\)\n\nSince \\(|a + bi| = 8,\\) we have \\(a^2 + b^2 = 64,\\) so \\(b^2 = 64 - \\frac{1}{4} = \\frac{255}{4}.\\) As \\(\\gcd(255, 4) = 1,\\) the answer is \\(255 + 4 = 259.\\)",
+      "hints": [
+        "The condition says \\(|f(z) - z| = |f(z)|\\) for every \\(z;\\) write both sides as a modulus times \\(|z|\\)",
+        "You need \\(|a - 1 + bi| = |a + bi|,\\) which pins down \\(a;\\) then use \\(a^2 + b^2 = 64\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

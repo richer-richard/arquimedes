@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-2016-p5",
+  "title": "2016 AMC 8 Problem 5",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.systematic-listing",
+      "label": "Systematic listing",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2016,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 9.2,
+    "source": 940,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "The number \\(N\\) is a two-digit number with the following properties:\n\nWhen \\(N\\) is divided by \\(9,\\) the remainder is \\(1.\\)\n\nWhen \\(N\\) is divided by \\(10,\\) the remainder is \\(3.\\)\n\nWhat is the remainder when \\(N\\) is divided by \\(11?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 0 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 2 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 4 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 5 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 7 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "7"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2016-p5.live",
+      "kind": "proof-sketch",
+      "text": "The second condition says that \\(N\\) ends in \\(3\\), so the possibilities are \\(13,\\) \\(23,\\) \\(33,\\) \\(43,\\) \\(53,\\) \\(63,\\) \\(73,\\) \\(83,\\) \\(93.\\) Of these, only \\(73\\) leaves remainder \\(1\\) when divided by \\(9\\), because its digit sum is \\(10\\). Finally, \\(73=6\\cdot11+7\\), so the requested remainder is \\(7\\).\n\nThus, E is the correct answer.",
+      "hints": [
+        "The remainder when divided by \\(10\\) tells you the units digit of \\(N\\).",
+        "List the two-digit numbers ending in \\(3\\) and test the condition modulo \\(9\\)."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

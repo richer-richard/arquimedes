@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-general-2014-p5",
+  "title": "2014 HMMT November General Problem 5",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.games-and-greedy-algorithms",
+      "label": "Games and greedy algorithms",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.invariants-and-monovariants",
+      "label": "Invariants and monovariants",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular Arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2014,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 49.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Mark and William are playing a game with a stored value. On his turn, a player may either multiply the stored value by 2 and add 1 or he may multiply the stored value by 4 and add 3 . The first player to make the stored value exceed \\(2^{100}\\) wins. The stored value starts at 1 and Mark goes first. Assuming both players play optimally, what is the maximum number of times that William can make a move?\n(By optimal play, we mean that on any turn the player selects the move which leads to the best possible outcome given that the opponent is also playing optimally. If both moves lead to the same outcome, the player selects one of them arbitrarily.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2014-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "33 We will work in the binary system in this solution.\n\nLet multiplying the stored value by 2 and adding 1 be Move \\(A\\) and multiplying the stored value by 4 and adding 3 be Move \\(B\\). Let the stored value be \\(S\\). Then, Move \\(A\\) affixes one 1 to \\(S\\), while Move \\(B\\) affixes two 1 s . The goal is to have greater than or equal to 1011 s . If any player makes the number of 1 s in \\(S\\) congruent to \\(2 \\bmod 3\\), then no matter what the other player does, he will lose, since the number of 1 s in \\(S\\) reaches 101 or 102 only from \\(99 \\equiv 0(\\bmod 3)\\) or \\(100 \\equiv 1(\\bmod 3)\\).\n\nMark's winning strategy: Do Move \\(A\\). In the succeeding moves, if William does Move \\(B\\), then Mark does Move \\(A\\), and vice versa, which in total, affixes three 1s to \\(S\\). This ensures that William always takes his turn while the number of 1 s in \\(S\\) is congruent to \\(2 \\bmod 3\\). Note that Mark has to follow this strategy because once he does not, then William can follow the same strategy and make Mark lose, a contradiction to the required optimal play. Since \\(S\\) starts out with one 1, this process gives William a maximum of 33 moves.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

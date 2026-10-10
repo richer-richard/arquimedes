@@ -1,0 +1,73 @@
+{
+  "id": "prob.aime-i-2026-p8",
+  "title": "2026 AIME1 8",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.parity",
+      "label": "Parity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2026,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 51.6,
+    "source": 2600,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "Let \\(N\\) be the number of positive integer divisors of \\(17017^{17}\\) that leave a remainder of \\(5\\) upon division by \\(12.\\) Find the remainder when \\(N\\) is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "244",
+    "value": "244"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2026-p8.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(17017 = 7 \\cdot 11 \\cdot 13 \\cdot 17,\\) the divisors of \\(17017^{17}\\) are \\(7^a 11^b 13^c 17^d\\) with each exponent between \\(0\\) and \\(17.\\) Modulo \\(12\\) we have \\(13 \\equiv 1,\\) and \\(7^2 \\equiv 11^2 \\equiv 17^2 \\equiv 1\\) (as \\(17 \\equiv 5\\)), so the residue of a divisor is \\(7^{\\alpha} \\, 11^{\\beta} \\, 5^{\\delta} \\pmod{12},\\) where \\(\\alpha, \\beta, \\delta\\) are the parities of \\(a, b, d.\\)\n\nThe four possible values \\(1, 5, 7, 11\\) multiply like the group \\(\\{1, 5, 7, 11\\}\\) mod \\(12,\\) in which \\(7 \\cdot 11 \\equiv 5.\\) Checking the eight parity patterns, the residue is \\(5\\) exactly when \\((\\alpha, \\beta, \\delta) = (0, 0, 1)\\) or \\((1, 1, 0).\\) Each parity condition is satisfied by \\(9\\) of the \\(18\\) choices of that exponent, while \\(c\\) is free with \\(18\\) choices.\n\nTherefore \\(N = 2 \\cdot 9 \\cdot 9 \\cdot 9 \\cdot 18 = 26244,\\) and the remainder mod \\(1000\\) is \\(244.\\)",
+      "hints": [
+        "Factor \\(17017 = 7 \\cdot 11 \\cdot 13 \\cdot 17\\) and reduce mod \\(12:\\) the primes become \\(7,\\) \\(11,\\) \\(1,\\) \\(5,\\) with \\(7^2 \\equiv 11^2 \\equiv 5^2 \\equiv 1\\)",
+        "Only the parities of the exponents of \\(7,\\) \\(11,\\) \\(17\\) matter, and \\(7 \\cdot 11 \\equiv 5 \\pmod{12},\\) so exactly two parity patterns give remainder \\(5\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

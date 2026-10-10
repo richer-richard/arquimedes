@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1999-p26",
+  "title": "1999 AHSME Problem 26",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.perimeter",
+      "label": "Perimeter",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.regular-polygon",
+      "label": "Regular polygon",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1999,
+    "number": 26
+  },
+  "difficulty": {
+    "course": 38.5,
+    "source": 2090,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Three non-overlapping regular plane polygons, at least two of which are congruent, all have sides of length \\(1.\\) The polygons meet at a point \\(A\\) in such a way that the sum of the three interior angles at \\(A\\) is \\(360^\\circ.\\) Thus the three polygons form a new polygon with \\(A\\) as an interior point. What is the largest possible perimeter that this polygon can have?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(14\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(24\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "21"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1999-p26.live",
+      "kind": "proof-sketch",
+      "text": "Let two congruent \\(a\\)-gons and one \\(b\\)-gon meet at \\(A.\\) Their interior angles satisfy \\[ \\begin{aligned} &2 \\cdot 180\\left(1 - \\tfrac2a\\right) \\\\ &\\quad {}+ 180\\left(1 - \\tfrac2b\\right) = 360, \\end{aligned} \\] which reduces to \\((a - 4)(b - 2) = 8.\\)\n\nThe solutions \\((a, b)\\) are \\((5, 10), (6, 6), (8, 4),\\) and \\((12, 3).\\) The new polygon’s perimeter is \\(2a + b - 6,\\) giving \\(14, 12, 14,\\) and \\(21.\\) The largest is \\(21.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "With two \\(a\\)-gons and one \\(b\\)-gon, \\(2 \\cdot 180\\left(1 - \\tfrac2a\\right)\\) \\(+ 180\\left(1 - \\tfrac2b\\right)\\) \\(= 360\\)",
+        "This simplifies to \\((a - 4)(b - 2) = 8\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

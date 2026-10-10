@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-i-2011-p15",
+  "title": "2011 AIME I Problem 15",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2011,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": 3270,
+    "mohs": null
+  },
+  "estimatedMinutes": 20,
+  "statement": "For some integer \\(m,\\) the polynomial \\(x^3 - 2011x + m\\) has the three integer roots \\(a,\\) \\(b,\\) and \\(c.\\) Find \\(|a| + |b| + |c|.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "98",
+    "value": "98"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2011-p15.live",
+      "kind": "proof-sketch",
+      "text": "By Vieta’s formulas, \\(a + b + c = 0\\) and \\(ab + bc + ca = -2011.\\) Negating all three roots replaces \\(m\\) by \\(-m,\\) so we may assume two roots, say \\(a \\ge b,\\) are nonnegative. Substituting \\(c = -(a + b)\\) into the second equation gives \\(ab - (a + b)^2 = -2011,\\) that is, \\[a^2 + ab + b^2 = 2011.\\]\n\nMultiplying by \\(4\\) and completing the square, \\((2a + b)^2 + 3b^2 = 8044.\\) Since \\(a \\ge b \\ge 0,\\) we have \\(3b^2 \\le a^2 + ab + b^2 = 2011,\\) so \\(0 \\le b \\le 25.\\) Checking these values, \\(8044 - 3b^2\\) is a perfect square only for \\(b = 10,\\) where \\(8044 - 300 = 7744 = 88^2.\\)\n\nThen \\(2a + b = 88\\) gives \\(a = 39,\\) and \\(c = -(a + b) = -49.\\) (Indeed \\(39 \\cdot 10 - 49^2 = -2011.\\)) Therefore \\(|a| + |b| + |c| = 39 + 10 + 49\\) \\(= 98.\\)",
+      "hints": [
+        "Vieta gives \\(a + b + c = 0\\) and \\(ab + bc + ca = -2011;\\) eliminate \\(c\\) to get \\(a^2 + ab + b^2 = 2011\\)",
+        "Multiply by \\(4:\\) \\((2a + b)^2 + 3b^2 = 8044.\\) If \\(b\\) is the smaller nonnegative root, then \\(3b^2 \\le 2011;\\) test which \\(b\\) makes \\(8044 - 3b^2\\) a perfect square."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

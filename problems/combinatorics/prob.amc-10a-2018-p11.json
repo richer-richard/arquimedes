@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-10a-2018-p11",
+  "title": "2018 AMC 10A 11",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.dice-probability",
+      "label": "Dice (probability)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.stars-and-bars",
+      "label": "Stars and bars",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2018,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 24.3,
+    "source": 1420,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "When \\(7\\) fair standard \\(6\\)-sided dice are thrown, the probability that the sum of the numbers on the top faces is \\(10\\) can be written as \\[\\dfrac{n}{6^{7}},\\] where \\(n\\) is a positive integer. What is \\(n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(42\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(49\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(56\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(63\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(84\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "84"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2018-p11.live",
+      "kind": "proof-sketch",
+      "text": "We can use stars and bars to find \\(n.\\) It is the same as finding the number of ways to put \\(10\\) balls into \\(7\\) boxes, where each box has at least one ball.\n\nThe formula for such a scenario is \\[ \\binom{n - 1}{k - 1}, \\] where \\(n\\) is the number of balls and \\(k\\) is the number of boxes.\n\nNo die can exceed \\(4\\) in a sum of \\(10\\) from seven positive rolls, so the upper bound of \\(6\\) creates no additional restriction. The desired answer is therefore \\[ \\binom{9}{6} = \\binom{9}{3} = 84. \\]\n\nThus, E is the correct answer.",
+      "hints": [
+        "List the unordered ways seven positive die rolls can sum to \\(10\\)",
+        "Count the orderings for each listed pattern"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

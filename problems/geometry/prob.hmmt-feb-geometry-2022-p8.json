@@ -1,0 +1,68 @@
+{
+  "id": "prob.hmmt-feb-geometry-2022-p8",
+  "title": "2022 HMMT February Geometry Problem 8",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.distance-chasing",
+      "label": "Distance chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.radical-axis-theorem",
+      "label": "Radical axis theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-centers",
+      "label": "Triangle centers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-centers-centroid-incenter-circumcenter-orthocenter-euler-line-nine-point-circle",
+      "label": "Triangle centers: centroid, incenter, circumcenter, orthocenter, Euler line, nine-point circle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2022,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 88.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\mathcal{E}\\) be an ellipse with foci \\(A\\) and \\(B\\). Suppose there exists a parabola \\(\\mathcal{P}\\) such that\n\n- \\(\\mathcal{P}\\) passes through \\(A\\) and \\(B\\),\n- the focus \\(F\\) of \\(\\mathcal{P}\\) lies on \\(\\mathcal{E}\\),\n- the orthocenter \\(H\\) of \\(\\triangle F A B\\) lies on the directrix of \\(\\mathcal{P}\\).\n\nIf the major and minor axes of \\(\\mathcal{E}\\) have lengths 50 and 14 , respectively, compute \\(A H^{2}+B H^{2}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "2402",
+    "value": "2402"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2022-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(D\\) and \\(E\\) be the projections of \\(A\\) and \\(B\\) onto the directrix of \\(\\mathcal{P}\\), respectively. Also, let \\(\\omega_{A}\\) be the circle centered at \\(A\\) with radius \\(A D=A F\\), and define \\(\\omega_{B}\\) similarly.\nIf \\(M\\) is the midpoint of \\(\\overline{D E}\\), then \\(M\\) lies on the radical axis of \\(\\omega_{A}\\) and \\(\\omega_{B}\\) since \\(M D^{2}=M E^{2}\\). Since \\(F\\) lies on both \\(\\omega_{A}\\) and \\(\\omega_{B}\\), it follows that \\(M F\\) is the radical axis of the two circles. Moreover, \\(M F \\perp A B\\), so we must have \\(M=H\\).\nLet \\(N\\) be the midpoint of \\(\\overline{A B}\\). We compute that \\(A D+B E=A F+F B=50\\), so \\(H N=\\frac{1}{2}(A D+B E)=\\) 25. Since \\(A B=2 \\sqrt{25^{2}-7^{2}}=48\\), we have\n\n\\[\\begin{aligned}\n25^{2}=H N^{2} & =\\frac{1}{2}\\left(A H^{2}+B H^{2}\\right)-\\frac{1}{4} A B^{2} \\\\\n& =\\frac{1}{2}\\left(A H^{2}+B H^{2}\\right)-24^{2} .\n\\end{aligned}\\]\n\nby the median lengtb formula. Thus \\(A H^{2}+B H^{2}=2\\left(25^{2}+24^{2}\\right)=2402\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

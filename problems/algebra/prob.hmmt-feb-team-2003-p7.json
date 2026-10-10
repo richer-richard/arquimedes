@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-team-2003-p7",
+  "title": "2003 HMMT February Team Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2003,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 83.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Show that, given any 2 -configuration of a set \\(A\\), every element of \\(A\\) belongs to exactly one cell.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2003-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "First, given \\(a\\), let \\(C_{a}\\) be the set of all \\(b \\in A\\) for which there exists a sequence \\(a=c_{0}, c_{1}, \\ldots, c_{n}=b\\) as in the definition of a cell. Certainly \\(a \\in C_{a}\\) (take \\(n=0\\) ); we claim that \\(C_{a}\\) is a cell. If \\(b, b^{\\prime} \\in C_{a}\\), then there exist sequences \\(a=c_{0}, c_{1}, \\ldots, c_{n}=b\\) and \\(a=c_{0}^{\\prime}, c_{1}^{\\prime}, \\ldots, c_{m}^{\\prime}=b^{\\prime}\\), so the sequence \\(b=c_{n}, c_{n-1}, \\ldots, c_{1}, c_{0}, c_{1}^{\\prime}, \\ldots, c_{m}^{\\prime}=b^{\\prime}\\) shows that the first condition is met. For the second, suppose that there does exist a sequence \\(b=c_{0}, c_{1}, \\ldots, c_{n}=b^{\\prime}\\) with \\(b \\in C_{a}, b^{\\prime} \\notin C_{a}\\). Then, concatenating with our sequence from \\(a\\) to \\(b\\), we get a sequence from \\(a\\) to \\(b^{\\prime}\\), contradicting the assumption \\(b^{\\prime} \\notin C_{a}\\). Thus, the second condition holds, and \\(C_{a}\\) is a cell. So \\(a\\) lies in at least one cell.\n\nBut now, note that if \\(C\\) is a cell containing \\(a\\), then all \\(b\\) for which such a sequence from \\(a\\) to \\(b\\) exists must lie in \\(C\\) (or the second condition is violated), and if no such sequence exists, then \\(b\\) cannot lie in \\(C\\) (or the first condition is violated). Thus, the elements of \\(C\\) are uniquely determined, so there is exactly one cell containing \\(a\\), and the proof is complete.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

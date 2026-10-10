@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-1992-p13",
+  "title": "1992 AIME Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1992,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 49.2,
+    "source": 2510,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "Triangle \\(ABC\\) has \\(AB=9\\) and \\(BC:AC=40:41.\\) What’s the largest area that this triangle can have?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "820",
+    "value": "820"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1992-p13.live",
+      "kind": "proof-sketch",
+      "text": "Set \\(BC=40t,\\) \\(AC=41t,\\) and \\(x=\\cos C.\\) The Law of Cosines gives \\[81=t^2(3281-3280x),\\] while the area is \\(820t^2\\sqrt{1-x^2}.\\) Hence it equals \\[820\\cdot81\\,\\frac{\\sqrt{1-x^2}}{3281-3280x}.\\] Differentiating its logarithm shows the maximum occurs at \\(x=\\frac{3280}{3281}.\\) Then \\(\\sqrt{1-x^2}=\\frac{81}{3281}\\) and \\(3281-3280x=\\frac{6561}{3281},\\) so the maximum area is \\(820.\\)",
+      "hints": [
+        "Set \\(BC=40t,\\) \\(AC=41t,\\) and use the Law of Cosines with \\(AB=9\\)",
+        "Express the area as a function of \\(\\cos C\\) and maximize its square"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-2018-p20",
+  "title": "2018 AMC 10B 20",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.pattern-recognition",
+      "label": "Pattern recognition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2018,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 29.3,
+    "source": 1910,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A function \\(f\\) is defined recursively by \\(f(1) = f(2) = 1\\) and\n\n\\[f(n) = f(n - 1) - f(n - 2) + n\\]\n\nfor all integers \\(n \\ge 3.\\) What is \\(f(2018)?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2016\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2017\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2018\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2019\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2020\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "2017"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2018-p20.live",
+      "kind": "proof-sketch",
+      "text": "Notice \\(f(n) = n + 1\\) solves the recurrence on its own, so write \\(f(n) = (n + 1) + g(n).\\) Then \\(g\\) satisfies the homogeneous version \\(g(n) = g(n-1) - g(n-2).\\) With \\(g(1) = -1\\) and \\(g(2) = -2,\\) it cycles with period \\(6\\): \\(-1, -2, -1, 1, 2, 1, \\ldots.\\) Since \\(2018 \\equiv 2 \\pmod 6,\\) we get \\(g(2018) = -2,\\) so \\(f(2018) = 2019 - 2 = 2017.\\) Therefore, the answer is B.",
+      "hints": [
+        "Look for a particular solution of the form \\(f(n) = n + c;\\) subtracting it leaves \\(g(n) = g(n-1) - g(n-2)\\)",
+        "That homogeneous recursion is periodic with period \\(6;\\) reduce \\(2018\\) modulo \\(6\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

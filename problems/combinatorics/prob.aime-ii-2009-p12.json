@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-ii-2009-p12",
+  "title": "2009 AIME II Problem 12",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.double-counting",
+      "label": "Double counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.extremal-argument",
+      "label": "Extremal argument",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2009,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 63.3,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 18,
+  "statement": "From the set of integers \\(\\{1, 2, 3, \\ldots, 2009\\},\\) choose \\(k\\) pairs \\(\\{a_i, b_i\\}\\) with \\(a_i \\lt b_i\\) so that no two pairs have a common element. Suppose that all the sums \\(a_i + b_i\\) are distinct and less than or equal to \\(2009.\\) Find the maximum possible value of \\(k.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "803",
+    "value": "803"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2009-p12.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(S = \\sum_{i=1}^{k} (a_i + b_i).\\) The \\(2k\\) chosen elements are distinct positive integers, so \\(S \\ge 1 + 2 + \\cdots + 2k\\) \\(= k(2k + 1).\\) The \\(k\\) sums are distinct integers at most \\(2009,\\) so \\(S \\le 2009 + 2008 + \\cdots\\) \\({}+ (2010 - k)\\) \\(= \\frac{k(4019 - k)}{2}.\\) Combining, \\[ \\begin{aligned} &k(2k + 1) \\le \\frac{k(4019 - k)}{2} \\\\ &\\implies 4k + 2 \\le 4019 - k \\\\ &\\implies k \\le \\frac{4017}{5} = 803.4, \\end{aligned} \\] so \\(k \\le 803.\\)\n\nTo achieve \\(k = 803,\\) take the pairs \\((i,\\, 1206 + i)\\) for \\(1 \\le i \\le 401,\\) whose sums are the even numbers \\(1208,\\) \\(1210,\\) \\(\\ldots,\\) \\(2008,\\) together with the pairs \\((a,\\, a + 403)\\) for \\(402 \\le a \\le 803,\\) whose sums are the odd numbers \\(1207,\\) \\(1209,\\) \\(\\ldots,\\) \\(2009.\\) The elements used are \\(1\\)–\\(803,\\) \\(805\\)–\\(1607\\) with no repeats, and all \\(803\\) sums are distinct and at most \\(2009.\\)\n\nThe maximum is \\(k = 803.\\)",
+      "hints": [
+        "Add up all \\(k\\) sums in two ways: the \\(2k\\) elements are distinct, so the total is at least \\(1 + 2 + \\cdots + 2k\\)",
+        "The \\(k\\) sums are distinct integers at most \\(2009,\\) so the total is at most \\(2009 + 2008 + \\cdots.\\) Compare the bounds, then build a pairing that achieves the resulting \\(k.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-1992-p15",
+  "title": "1992 AIME Problem 15",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.factorial",
+      "label": "Factorial",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.trailing-zeros",
+      "label": "Trailing zeros",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1992,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 52.8,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "Define a positive integer \\(n\\) to be a factorial tail if there is some positive integer \\(m\\) such that the decimal representation of \\(m!\\) ends with exactly \\(n\\) zeroes. How many positive integers less than \\(1992\\) are not factorial tails?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "396",
+    "value": "396"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1992-p15.live",
+      "kind": "proof-sketch",
+      "text": "The number of trailing zeroes is \\(f(m)=\\sum_{j\\geq1}\\lfloor \\frac{m}{5^j}\\rfloor.\\) Its positive distinct values occur at the multiples \\(5k,\\) and \\[f(5k)=k+f(k)\\] is strictly increasing with \\(k.\\) Now \\[\\begin{aligned}f(1595)&=319+63\\\\&\\quad+12+2=396,\\end{aligned}\\] so \\(f(7975)=1595+396=1991.\\) For \\(k=1596,\\) the same calculation gives \\(f(k)=396,\\) hence \\(f(5k)=1992.\\) Therefore exactly \\(1595\\) positive values through \\(1991\\) are factorial tails. Of the \\(1991\\) positive integers below \\(1992,\\) the number omitted is \\(1991-1595=396.\\)",
+      "hints": [
+        "Let \\(f(m)=\\sum_{j\\geq1}\\lfloor \\frac{m}{5^j}\\rfloor\\), the number of trailing zeroes in \\(m!\\)",
+        "Every positive value attained by \\(f\\) first appears at a multiple \\(5k\\), where \\(f(5k)=k+f(k)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

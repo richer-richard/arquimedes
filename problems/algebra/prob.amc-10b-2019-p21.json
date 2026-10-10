@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-2019-p21",
+  "title": "2019 AMC 10B Problem 21",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2019,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 26.0,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Debra flips a fair coin repeatedly, keeping track of how many heads and how many tails she has seen in total, until she gets either two heads in a row or two tails in a row, at which point she stops flipping. What is the probability that she gets two heads in a row but she sees a second tail before she sees a second head?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( \\dfrac{1}{36} \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( \\dfrac{1}{24} \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( \\dfrac{1}{18} \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( \\dfrac{1}{12} \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( \\dfrac{1}{6} \\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1/24"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2019-p21.live",
+      "kind": "proof-sketch",
+      "text": "Before the final repeated flip, the sequence must alternate. If it starts with \\(H\\), the second head necessarily occurs before the second tail, so a successful sequence must start with \\(T\\). To see a second tail before ending with \\(HH\\), it must begin \\(THT\\).\n\nThus the successful sequences are \\(THTHH,THTHTHH,\\ldots\\): exactly one sequence of each odd length at least \\(5\\). Their total probability is \\[ \\begin{gathered} \\frac1{2^5}+\\frac1{2^7}+\\cdots\\\\ =\\frac1{32}\\cdot\\frac1{1-\\frac14}\\\\ =\\frac1{24}. \\end{gathered} \\]\n\nThus, the answer is B .",
+      "hints": [
+        "The sequence must alternate until the final matching pair",
+        "Sum the probabilities of the possible odd lengths"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

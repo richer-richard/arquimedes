@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-feb-guts-2003-p40",
+  "title": "2003 HMMT February Guts Problem 40",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2003,
+    "number": 40
+  },
+  "difficulty": {
+    "course": 75.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "All the sequences consisting of five letters from the set \\(\\{T, U, R, N, I, P\\}\\) (with repetitions allowed) are arranged in alphabetical order in a dictionary. Two sequences are called \"anagrams\" of each other if one can be obtained by rearranging the letters of the\nother. How many pairs of anagrams are there that have exactly 100 other sequences between them in the dictionary?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2003-p40.hmmt",
+      "kind": "proof-sketch",
+      "text": "0\nConvert each letter to a digit in base \\(6: I \\mapsto 0, N \\mapsto 1, P \\mapsto 2, R \\mapsto 3, T \\mapsto 4, U \\mapsto 5\\). Then the dictionary simply consists of all base-6 integers from \\(00000_{6}\\) to \\(55555_{6}\\) in numerical order. If one number can be obtained from another by a rearrangement of digits, then the numbers are congruent modulo 5 (this holds because a number \\(a^{a b c d e_{6}}\\) \\(=6^{4} \\cdot a+6^{3} \\cdot b+6^{2} \\cdot c+6 \\cdot d+e\\) is congruent modulo 5 to \\(a+b+c+d+e\\) ), but if there are 100 other numbers between them, then their difference is 101 , which is not divisible by 5 . So there are no such pairs.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

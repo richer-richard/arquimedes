@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2009-p12",
+  "title": "2009 AMC 12A Problem 12",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2009,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 28.8,
+    "source": 1730,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many positive integers less than \\(1000\\) are \\(6\\) times the sum of their digits?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(12\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2009-p12.live",
+      "kind": "proof-sketch",
+      "text": "If \\(N = 6\\cdot(\\text{digit sum}),\\) then since the digit sum of a number below \\(1000\\) is at most \\(27,\\) we have \\(N \\le 162.\\)\n\nFor a two-digit number \\(10t + u = 6(t + u)\\) gives \\(4t = 5u,\\) forcing \\(t = 5\\) and \\(u = 4,\\) so \\(N = 54.\\) A one-digit number would need \\(6u = u,\\) impossible for \\(u \\gt 0.\\) A three-digit number \\(100h + 10t + u = 6(h + t + u)\\) gives \\(94h + 4t = 5u,\\) whose left side is at least \\(94\\) while the right side is at most \\(45,\\) so there is no solution.\n\nHence exactly one number, \\(54,\\) works.\n\nThus, the correct answer is B.",
+      "hints": [
+        "If \\(N\\) equals \\(6\\) times its digit sum, then \\(N\\) is a multiple of \\(6\\) and \\(N\\) is small",
+        "The digit sum of a number below \\(1000\\) is at most \\(27,\\) so \\(N \\le 162\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

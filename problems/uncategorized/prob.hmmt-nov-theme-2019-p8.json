@@ -1,0 +1,37 @@
+{
+  "id": "prob.hmmt-nov-theme-2019-p8",
+  "title": "2019 HMMT November Theme Problem 8",
+  "category": "uncategorized",
+  "subjects": [],
+  "concepts": [],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2019,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 50.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Omkar, \\(\\mathrm{Krit}_{1}, \\mathrm{Krit}_{2}\\), and \\(\\mathrm{Krit}_{3}\\) are sharing \\(x>0\\) pints of soup for dinner. Omkar always takes 1 pint of soup (unless the amount left is less than one pint, in which case he simply takes all the remaining soup). Krit \\(_{1}\\) always takes \\(\\frac{1}{6}\\) of what is left, Krit \\({ }_{2}\\) always takes \\(\\frac{1}{5}\\) of what is left, and Krit \\({ }_{3}\\) always takes \\(\\frac{1}{4}\\) of what is left. They take soup in the order of Omkar, \\(\\mathrm{Krit}_{1}, \\mathrm{Krit}_{2}\\), \\(\\mathrm{Krit}_{3}\\), and then cycle through this order until no soup remains. Find all \\(x\\) for which everyone gets the same amount of soup.\n\n[Diagram omitted from this imported transcription; consult the HMMT archive while reviewing the problem.]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2019-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\frac{49}{3}\\)\nThe main observation is that if \\(x>1\\) pints of soup are left, then in one round, Omkar gets 1 and each Krit \\(_{n}\\) gets \\(\\frac{x-1}{6}\\), with \\(\\frac{x-1}{2}\\) soup left. Thus it is evident that each Krit \\({ }_{n}\\) gets the same amount of soup, which means it suffices to find \\(x\\) for which Omkar gets \\(\\frac{x}{4}\\).\nOmkar gets 1 for each cycle and then all the remaining soup when there is less than one pint remaining.\nThe amount of soup becomes (after each cycle)\n\n\\[x \\rightarrow \\frac{x-1}{2} \\rightarrow \\frac{x-3}{4} \\rightarrow \\cdots \\rightarrow \\frac{x+1}{2^{n}}-1\\]\n\nso if \\(n\\) is the number of cycles, then Omkar's soup is \\(n+\\frac{x+1}{2^{n}}-1\\). Setting this equal to \\(\\frac{x}{4}\\), we obtain\n\n\\[x=\\frac{n+1 / 2^{n}-1}{1 / 4-1 / 2^{n}}=\\frac{(n-1) 2^{n}+1}{2^{n-2}-1}\\]\n\nThis immediately implies \\(n>2\\). On the other hand, we necessarily have \\(0 \\leq \\frac{x+1}{2^{n}}-1 \\leq 1\\), so \\(2^{n} \\leq x+1 \\leq 2^{n+1}\\). But\n\n\\[x+1=\\frac{(n-1) 2^{n}+2^{n-2}}{2^{n-2}-1} \\leq \\frac{(n-1) 2^{n}+2^{n}}{2^{n-3}}=8 n\\]\n\nSo \\(2^{n} \\leq 8 n \\Longrightarrow n \\leq 5\\). Testing \\(n=3,4,5\\) :\n\n- For \\(n=3\\) we get \\(x=17\\) which is greater than \\(2^{4}\\).\n- For \\(n=4\\) we get \\(x=\\frac{49}{3}\\) which works.\n- For \\(n=5\\) we get \\(x=\\frac{129}{7}\\) which is less than \\(2^{5}\\).\n\nWe see that only \\(n=4\\) and \\(x=\\frac{49}{3}\\) works.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

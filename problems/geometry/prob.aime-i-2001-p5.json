@@ -1,0 +1,72 @@
+{
+  "id": "prob.aime-i-2001-p5",
+  "title": "2001 AIME I Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.ellipse",
+      "label": "Ellipse",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2001,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 49.2,
+    "source": 2510,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "An equilateral triangle is inscribed in the ellipse whose equation is \\(x^2 + 4y^2 = 4.\\) One vertex of the triangle is \\((0, 1),\\) one altitude is contained in the \\(y\\)-axis, and the length of each side is \\(\\sqrt{\\frac{m}{n}},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "937",
+    "value": "937"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2001-p5.live",
+      "kind": "proof-sketch",
+      "text": "Since one altitude lies along the \\(y\\)-axis, the other two vertices are symmetric: \\((x, y)\\) and \\((-x, y)\\) with \\(x \\gt 0.\\) The side from \\((0,1)\\) to \\((x,y)\\) makes a \\(120^\\circ\\) angle with the positive \\(x\\)-axis, so it lies on the line \\(y = -\\sqrt{3}\\,x + 1.\\)\n\nSubstituting into \\(x^2 + 4y^2 = 4\\) gives \\(x^2 + 4(1 - \\sqrt{3}x)^2 = 4,\\) which simplifies to \\(13x^2 - 8\\sqrt{3}\\,x = 0,\\) so \\(x = \\frac{8\\sqrt{3}}{13}.\\)\n\nThe side length is \\(2x = \\frac{16\\sqrt{3}}{13},\\) whose square is \\(\\frac{768}{169}.\\) Since \\(\\gcd(768, 169) = 1,\\) the answer is \\(768 + 169 = 937.\\)",
+      "hints": [
+        "By symmetry the other two vertices are \\((\\pm x, y),\\) and the side through \\((0, 1)\\) makes a \\(120^\\circ\\) angle with the positive \\(x\\)-axis",
+        "Substitute \\(y = -\\sqrt{3}\\,x + 1\\) into \\(x^2 + 4y^2 = 4\\) and solve for \\(x;\\) the side length is \\(2x\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-feb-guts-2020-p18",
+  "title": "2020 HMMT February Guts Problem 18",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.coloring-schemes-extremal-arguments",
+      "label": "Coloring schemes, extremal arguments",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.games-and-greedy-algorithms",
+      "label": "Games and greedy algorithms",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.invariants-and-monovariants",
+      "label": "Invariants and monovariants",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2020,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 75.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A vertex-induced subgraph is a subset of the vertices of a graph together with any edges whose endpoints are both in this subset.\nAn undirected graph contains 10 nodes and \\(m\\) edges, with no loops or multiple edges. What is the minimum possible value of \\(m\\) such that this graph must contain a nonempty vertex-induced subgraph where all vertices have degree at least 5 ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "31",
+    "value": "31"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2020-p18.hmmt",
+      "kind": "proof-sketch",
+      "text": "Suppose that we want to find the vertex-induced subgraph of maximum size where each vertex has degree at least 5 . To do so, we start with the entire graph and repeatedly remove any vertex with degree less than 5 .\nIf there are vertices left after this process terminates, then the subgraph induced by these vertices must have all degrees at least 5 . Conversely, if there is a vertex-induced subgraph where all degrees are at least 5 , then none of these vertices can be removed during the removing process. Thus, there are vertices remaining after this process if and only if such a vertex-induced subgraph exists.\nIf the process ends with an empty graph, the largest possible number of edges are removed when the first 5 removed vertices all have 4 edges at the time of removal, and the last 5 vertices are all connected to each other, resulting in \\(5 \\times 4+4+3+2+1+0=30\\) removed edges. The answer is \\(30+1=31\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

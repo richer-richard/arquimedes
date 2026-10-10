@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2016-p33",
+  "title": "2016 HMMT February Guts Problem 33",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2016,
+    "number": 33
+  },
+  "difficulty": {
+    "course": 83.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "(Lucas Numbers) The Lucas numbers are defined by \\(L_{0}=2, L_{1}=1\\), and \\(L_{n+2}=L_{n+1}+L_{n}\\) for every \\(n \\geq 0\\). There are \\(N\\) integers \\(1 \\leq n \\leq 2016\\) such that \\(L_{n}\\) contains the digit 1 . Estimate \\(N\\).\nAn estimate of \\(E\\) earns \\(\\lfloor 20-2|N-E|\\rfloor\\) or 0 points, whichever is greater.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2016-p33.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 1984\nlucas_ones \\(n=\\) length . filter (elem '1') \\$ take ( \\(\\mathrm{n}+1\\) ) lucas_strs\nwhere\nlucas \\(=2\\) : 1 : zipWith (+) lucas (tail lucas)\nlucas_strs = map show lucas\nmain \\(=\\) putStrLn . show \\$ lucas_ones 2016",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

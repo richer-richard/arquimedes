@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2025-p13",
+  "title": "2025 HMMT February Guts Problem 13",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.combinatorics",
+      "label": "Combinatorics",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular Arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2025,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 71.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A number is upwards if its digits in base 10 are nondecreasing when read from left to right. Compute the number of positive integers less than \\(10^{6}\\) that are both upwards and multiples of 11.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "219",
+    "value": "219"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2025-p13.hmmt",
+      "kind": "proof-sketch",
+      "text": "For a number \\(d_{5}d_{4}d_{3}d_{2}d_{1}d_{0}\\) (allowing leading 0s) to be upwards and a multiple of 11, we must have\n\n\\[d_{5}\\leq d_{4}\\leq d_{3}\\leq d_{2}\\leq d_{1}\\leq d_{0},\\]\n\n\\[d_{0} - d_{1} + d_{2} - d_{3} + d_{4} - d_{5}\\equiv 0\\pmod {11}.\\]\n\nNote that \\(d_{0} - d_{1}\\) , \\(d_{2} - d_{3}\\) , and \\(d_{4} - d_{5}\\) are all nonnegative. Thus,\n\n\\[0\\leq (d_{0} - d_{1}) + (d_{2} - d_{3}) + (d_{4} - d_{5})\\] \\[\\leq (d_{0} - d_{1}) + (d_{1} - d_{2}) + (d_{2} - d_{3}) + (d_{3} - d_{4}) + (d_{4} - d_{5})\\] \\[= d_{0} - d_{5}\\] \\[\\leq 9.\\]\n\nTherefore,\n\n\\[(d_{0} - d_{1}) + (d_{2} - d_{3}) + (d_{4} - d_{5}) = 0,\\]\n\nwhich can only occur when \\(d_{0} = d_{1}\\) , \\(d_{2} = d_{3}\\) , and \\(d_{4} = d_{5}\\) , i.e. the number is of the form \\(aabccc\\) . We can easily verify that all numbers of the form \\(aabccc\\) for digits \\(a \\leq b \\leq c\\) satisfy our conditions, so we simply have to count them.\n\nThere are \\(\\binom{12}{3} = 220\\) such triples of digits \\((a,b,c)\\) . However, one of these triples is \\((0,0,0)\\) , which corresponds to the number 0. Thus our answer is \\(220 - 1 = \\left\\lfloor \\frac{219}{2}\\right\\rfloor\\) .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

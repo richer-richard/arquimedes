@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2014-p24",
+  "title": "2014 HMMT February Guts Problem 24",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2014,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 76.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A=\\left\\{a_{1}, a_{2}, \\ldots, a_{7}\\right\\}\\) be a set of distinct positive integers such that the mean of the elements of any nonempty subset of \\(A\\) is an integer. Find the smallest possible value of the sum of the elements in \\(A\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2014-p24.hmmt",
+      "kind": "proof-sketch",
+      "text": "1267 For \\(2 \\leq i \\leq 6\\), we claim that \\(a_{1} \\equiv \\ldots \\equiv a_{7}(\\bmod i)\\). This is because if we consider any \\(i-1\\) of the 7 numbers, the other \\(7-(i-1)=8-i\\) of them must all be equal modulo \\(i\\), because we want the sum of all subsets of size \\(i\\) to be a multiple of \\(i\\). However, \\(8-i \\geq 2\\), and this argument applies to any \\(8-i\\) of the 7 integers, so in fact all of them must be equal modulo \\(i\\).\nWe now have that all of the integers are equivalent modulo all of \\(2, \\ldots, 6\\), so they are equivalent modulo 60 , their least common multiple. Therefore, if the smallest integer is \\(k\\), then the other 6 integers must be at least \\(k+60, k+60 \\cdot 2, \\ldots, k+60 \\cdot 6\\). This means the sum is \\(7 k+60 \\cdot 21 \\geq 7+60 \\cdot 21=1267\\). 1267 is achievable with \\(\\{1,1+60, \\ldots, 1+60 \\cdot 6\\}\\), so it is the answer.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

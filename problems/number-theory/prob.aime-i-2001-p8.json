@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2001-p8",
+  "title": "2001 AIME I Problem 8",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2001,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 47.2,
+    "source": 2430,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "Call a positive integer \\(N\\) a \\(7\\)–\\(10\\) double if the digits of the base-\\(7\\) representation of \\(N\\) form a base-\\(10\\) number that is twice \\(N.\\) For example, \\(51\\) is a \\(7\\)–\\(10\\) double because its base-\\(7\\) representation is \\(102.\\) What is the largest \\(7\\)–\\(10\\) double?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "315",
+    "value": "315"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2001-p8.live",
+      "kind": "proof-sketch",
+      "text": "Suppose \\(N\\) has base-\\(7\\) digits \\(d_k \\ldots d_1 d_0.\\) The condition is \\(\\sum d_i \\, 10^i = 2 \\sum d_i \\, 7^i,\\) that is \\(\\sum d_i \\,(10^i - 2 \\cdot 7^i) = 0.\\) The coefficients \\(10^i - 2 \\cdot 7^i\\) for \\(i = 0, 1, 2, 3\\) are \\(-1,\\) \\(-4,\\) \\(2,\\) \\(314.\\) Every coefficient for \\(i\\ge3\\) is positive and at least \\(314.\\) Thus if any digit in a place \\(i\\ge3\\) were nonzero, its positive contribution could not be canceled by the two negative terms, whose total magnitude is at most \\(4\\cdot6+6=30.\\) So \\(N\\) has at most three base-\\(7\\) digits.\n\nFor three digits the condition reads \\(2 d_2 = 4 d_1 + d_0.\\) To maximize \\(N = 49 d_2 + 7 d_1 + d_0,\\) take \\(d_2 = 6,\\) so \\(4 d_1 + d_0 = 12;\\) the largest value of \\(7 d_1 + d_0\\) comes from \\(d_1 = 3,\\) \\(d_0 = 0.\\)\n\nThus \\(N = 49 \\cdot 6 + 7 \\cdot 3 = 315,\\) whose base-\\(7\\) representation is \\(630 = 2 \\cdot 315.\\)",
+      "hints": [
+        "If \\(N\\) has base-\\(7\\) digits \\(d_2 d_1 d_0,\\) the condition says \\(100 d_2 + 10 d_1 + d_0\\) \\(= 2(49 d_2 + 7 d_1 + d_0)\\)",
+        "That simplifies to \\(2 d_2 = 4 d_1 + d_0.\\) A fourth digit is impossible because \\(10^3 - 2 \\cdot 7^3 = 314\\) is bigger than the other terms could balance."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

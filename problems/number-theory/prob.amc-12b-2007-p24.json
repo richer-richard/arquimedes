@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2007-p24",
+  "title": "2007 AMC 12B Problem 24",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2007,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 39.3,
+    "source": 2340,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "How many pairs of positive integers \\((a,b)\\) are there such that \\(\\gcd(a,b)=1\\) and \\[\\dfrac{a}{b}+\\dfrac{14b}{9a}\\] is an integer?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "E",
+      "text": "infinitely many"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2007-p24.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(k\\) be the integer value of the original expression. Multiplying by \\(b\\) and subtracting \\(a\\) gives \\(\\dfrac{14b^2}{9a}=bk-a,\\) an integer. Since \\(\\gcd(a,b)=1,\\) it follows that \\(14\\) is divisible by \\(a.\\) Multiplying instead by \\(9a\\) and subtracting \\(14b\\) gives \\(\\dfrac{9a^2}{b}=9ak-14b,\\) so \\(9\\) is divisible by \\(b.\\)\n\nThus \\(a\\in\\{1,2,7,14\\}\\) and \\(b\\in\\{1,3,9\\}.\\) Checking the coprime candidates, the expression is an integer only for \\((a,b)=(1,3),\\) \\((2,3),\\) \\((7,3),\\) \\((14,3).\\)\n\nSo there are \\(4\\) such pairs.\n\nThus, the correct answer is A.",
+      "hints": [
+        "Clearing \\(b\\) shows \\(\\dfrac{14b^2}{9a}\\) is an integer, and since \\(\\gcd(a,b)=1,\\) \\(14\\) is divisible by \\(a\\)",
+        "Similarly \\(9\\) is divisible by \\(b,\\) so \\(a\\in\\{1,2,7,14\\}\\) and \\(b\\in\\{1,3,9\\};\\) test the coprime pairs"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

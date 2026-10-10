@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-nov-general-2-2010-p9",
+  "title": "2010 HMMT November General Round 2 Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.games-and-strategy",
+      "label": "Games and strategy",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2010,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Newton and Leibniz are playing a game with a coin that comes up heads with probability \\(p\\). They take turns flipping the coin until one of them wins with Newton going first. Newton wins if he flips a heads and Leibniz wins if he flips a tails. Given that Newton and Leibniz each win the game half of the time, what is the probability \\(p\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2-2010-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{\\frac{3-\\sqrt{5}}{2}}{}\\) The probability that Newton will win on the first flip is \\(p\\). The probability that Newton will win on the third flip is \\((1-p) p^{2}\\), since the first flip must be tails, the second must be heads, and the third flip must be heads. By the same logic, the probability Newton will win on the \\((2 n+1)^{\\text {st }}\\) flip is \\((1-p)^{n}(p)^{n+1}\\). Thus, we have an infinite geometric sequence \\(p+(1-p) p^{2}+(1-p)^{2} p^{3}+\\ldots\\) which equals \\(\\frac{p}{1-p(1-p)}\\). We are given that this sum must equal \\(\\frac{1}{2}\\), so \\(1-p+p^{2}=2 p\\), so \\(p=\\frac{3-\\sqrt{5}}{2}\\) (the other solution is greater than 1).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

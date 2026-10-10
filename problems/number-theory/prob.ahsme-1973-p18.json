@@ -1,0 +1,85 @@
+{
+  "id": "prob.ahsme-1973-p18",
+  "title": "1973 AHSME Problem 18",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime",
+      "label": "Prime",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1973,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 26.2,
+    "source": 1610,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "If \\(p\\ge5\\) is a prime number, then \\(24\\) divides \\(p^2-1\\) without remainder",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "never"
+    },
+    {
+      "label": "B",
+      "text": "sometimes only"
+    },
+    {
+      "label": "C",
+      "text": "always"
+    },
+    {
+      "label": "D",
+      "text": "only if \\(p=5\\)"
+    },
+    {
+      "label": "E",
+      "text": "none of these"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1973-p18.live",
+      "kind": "proof-sketch",
+      "text": "A prime \\(p\\ge5\\) is odd, so \\(p-1\\) and \\(p+1\\) are consecutive even integers. One is divisible by \\(4,\\) making their product divisible by \\(8.\\) Among the three consecutive integers \\(p-1,\\) \\(p,\\) \\(p+1,\\) one is divisible by \\(3.\\) It cannot be \\(p,\\) since \\(p\\ge5\\) is prime, so \\(3\\) also divides \\((p-1)(p+1).\\) Because \\(3\\) and \\(8\\) are relatively prime, \\[ (p-1)(p+1)=p^2-1 \\] is always divisible by \\(24.\\)\n\nTherefore, the correct answer is C.",
+      "hints": [
+        "Factor \\(p^2-1=(p-1)(p+1)\\)",
+        "Among the three consecutive integers \\(p-1,\\) \\(p,\\) \\(p+1,\\) locate factors of \\(3\\) and \\(8\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-i-2023-p5",
+  "title": "2023 AIME I Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle",
+      "label": "Circle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2023,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 46.4,
+    "source": 2400,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "Let \\(P\\) be a point on the circle circumscribing square \\(ABCD\\) that satisfies \\(PA \\cdot PC = 56\\) and \\(PB \\cdot PD = 90.\\) Find the area of \\(ABCD.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "106",
+    "value": "106"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2023-p5.live",
+      "kind": "proof-sketch",
+      "text": "Let the circle have center \\(O\\) and radius \\(R,\\) with \\(A = (R, 0),\\) \\(B = (0, R),\\) \\(C = (-R, 0),\\) \\(D = (0, -R),\\) and \\(P = (R\\cos\\theta, R\\sin\\theta).\\) Then \\(PA^2 = 2R^2(1 - \\cos\\theta)\\) and \\(PC^2 = 2R^2(1 + \\cos\\theta),\\) so \\(PA \\cdot PC = 2R^2|\\sin\\theta| = 56.\\) In the same way \\(PB \\cdot PD = 2R^2|\\cos\\theta| = 90.\\)\n\nSquaring and adding, \\(4R^4 = 56^2 + 90^2 = 11236,\\) so \\(2R^2 = \\sqrt{11236} = 106.\\) The square has diagonal \\(2R,\\) hence area \\(\\frac{(2R)^2}{2} = 2R^2 = 106.\\)",
+      "hints": [
+        "Put the center at the origin with \\(A = (R, 0),\\) \\(B = (0, R),\\) \\(C = (-R, 0),\\) \\(D = (0, -R),\\) and \\(P = (R\\cos\\theta, R\\sin\\theta).\\)",
+        "Show \\(PA \\cdot PC = 2R^2|\\sin\\theta|\\) and \\(PB \\cdot PD = 2R^2|\\cos\\theta|;\\) a Pythagorean identity links the two products."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

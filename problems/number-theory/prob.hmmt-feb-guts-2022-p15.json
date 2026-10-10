@@ -1,0 +1,76 @@
+{
+  "id": "prob.hmmt-feb-guts-2022-p15",
+  "title": "2022 HMMT February Guts Problem 15",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.enumeration-with-symmetry",
+      "label": "Enumeration with symmetry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.greatest-common-divisors-gcd",
+      "label": "Greatest common divisors (gcd)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2022,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 76.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(N\\) be the number of triples of positive integers \\((a, b, c)\\) satisfying\n\n\\[a \\leq b \\leq c, \\quad \\operatorname{gcd}(a, b, c)=1, \\quad a b c=6^{2020}\\]\n\nCompute the remainder when \\(N\\) is divided by 1000.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "602",
+    "value": "602"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2022-p15.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(n=2020\\). If we let \\(a=2^{p_{1}} \\cdot 3^{q_{1}}, b=2^{p_{2}} \\cdot 3^{q_{2}}, c=2^{p_{3}} \\cdot 3^{q_{3}}\\), then the number of ordered triples \\((a, b, c)\\) that satisfy the second and third conditions is the number of nonnegative solutions to \\(p_{1}+p_{2}+p_{3}=n\\) and \\(q_{1}+q_{2}+q_{3}=n\\), where at least one of \\(p_{1}, p_{2}, p_{3}\\) is zero and at least one of \\(q_{1}, q_{2}, q_{3}\\) is zero (otherwise, \\(\\operatorname{gcd}(a, b, c)>1\\) ). By complementary counting, the number is\n\n\\[\\left(\\binom{n+2}{2}-\\binom{n-1}{2}\\right)^{2}=9 n^{2}\\]\n\nLet \\(\\ell\\) be the number of unordered triples \\((a, b, c)\\) with \\(a, b, c\\) distinct, and \\(m\\) the number of unordered triples \\((a, b, c)\\) with two numbers equal. Since it is impossible for \\(a=b=c\\), we have \\(9 n^{2}=6 \\ell+3 m\\).\n\nWe now count \\(m\\). Without loss of generality, assume \\(a=b\\). For the factors of 2 , we have two choices: either assign \\(2^{2020}\\) to \\(c\\) or assign \\(2^{1010}\\) to both \\(a\\) and \\(b\\). We have a similar two choices for the factors of 3 . Therefore \\(m=4\\).\nOur final answer is\n\n\\[N=m+n=\\frac{6 \\ell+3 m+3 m}{6}=\\frac{9 \\cdot 2020^{2}+12}{6}=2+6 \\cdot 1010^{2} \\equiv 602 \\quad(\\bmod 1000)\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

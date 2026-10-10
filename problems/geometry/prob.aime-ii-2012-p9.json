@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-ii-2012-p9",
+  "title": "2012 AIME II Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.algebraic-manipulation",
+      "label": "Algebraic manipulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2012,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 53.6,
+    "source": 2560,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Let \\(x\\) and \\(y\\) be real numbers such that \\(\\frac{\\sin x}{\\sin y} = 3\\) and \\(\\frac{\\cos x}{\\cos y} = \\frac{1}{2}.\\) The value of \\(\\frac{\\sin 2x}{\\sin 2y} + \\frac{\\cos 2x}{\\cos 2y}\\) can be expressed in the form \\(\\frac{p}{q},\\) where \\(p\\) and \\(q\\) are relatively prime positive integers. Find \\(p + q.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "107",
+    "value": "107"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2012-p9.live",
+      "kind": "proof-sketch",
+      "text": "From the double-angle formula, \\[ \\begin{aligned} \\frac{\\sin 2x}{\\sin 2y} &= \\frac{2\\sin x \\cos x}{2\\sin y \\cos y} \\\\ &= 3 \\cdot \\frac{1}{2} = \\frac{3}{2}. \\end{aligned} \\]\n\nSquaring the given equations, \\(\\sin^2 x = 9\\sin^2 y\\) and \\(\\cos^2 x = \\frac{1}{4}\\cos^2 y.\\) Adding, \\(1 = 9(1 - \\cos^2 y) + \\frac{1}{4}\\cos^2 y,\\) so \\(\\frac{35}{4}\\cos^2 y = 8\\) and \\(\\cos^2 y = \\frac{32}{35}.\\) Then \\(\\cos 2y = 2\\cos^2 y - 1 = \\frac{29}{35}\\) and \\(\\cos 2x = 2\\cos^2 x - 1\\) \\(= \\frac{1}{2}\\cos^2 y - 1\\) \\(= -\\frac{19}{35},\\) so \\(\\frac{\\cos 2x}{\\cos 2y} = -\\frac{19}{29}.\\)\n\nThe requested value is \\(\\frac{3}{2} - \\frac{19}{29} = \\frac{87 - 38}{58} = \\frac{49}{58},\\) and \\(p + q = 49 + 58 = 107.\\)",
+      "hints": [
+        "\\(\\frac{\\sin 2x}{\\sin 2y}\\) is just the product of the two given ratios",
+        "Square both given equations and add, using \\(\\sin^2 + \\cos^2 = 1,\\) to find \\(\\cos^2 y;\\) then apply \\(\\cos 2\\theta = 2\\cos^2\\theta - 1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

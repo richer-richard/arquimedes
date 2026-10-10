@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-theme-2022-p3",
+  "title": "2022 HMMT November Theme Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.integers",
+      "label": "Integers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2022,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 45.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Alice is bored in class, so she thinks of a positive integer. Every second after that, she subtracts from her current number its smallest prime divisor, possibly itself. After 2022 seconds, she realizes that her number is prime. Find the sum of all possible values of her initial number.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "8093",
+    "value": "8093"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2022-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(a_{k}\\) denote Alice's number after \\(k\\) seconds, and let \\(p_{k}\\) be the smallest prime divisor of \\(a_{k}\\). We are given that \\(a_{2022}\\) is prime, and want to find \\(a_{0}\\).\nIf \\(a_{0}\\) is even, then \\(a_{n+1}=a_{n}-2\\), since every \\(a_{n}\\) is even. Then we need \\(a_{2022}=2\\), so \\(a_{0}=4046\\).\nIf \\(a_{0}\\) is odd, then \\(a_{1}=a_{0}-p_{0}\\) is even, so by similar logic to the even case, \\(a_{1}=4044\\). Then since \\(p_{0} \\mid a_{0}-p_{0}\\) and \\(4044=4 \\cdot 3 \\cdot 337\\), we must have \\(p_{0}=3\\) or 337 . But if \\(p_{0}=337, a_{0}=12 \\cdot 337+337=13 \\cdot 337\\), so 337 is not the smallest prime divisor of \\(a_{0}\\). Thus, we need \\(p_{0}=3\\), so \\(a_{0}=4047\\), which works.\n\nThus, the final answer is \\(4046+4047=8093\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

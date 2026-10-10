@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-guts-2016-p25",
+  "title": "2016 HMMT November Guts Problem 25",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.permutations",
+      "label": "Permutations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2016,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 51.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Chris and Paul each rent a different room of a hotel from rooms \\(1-60\\). However, the hotel manager mistakes them for one person and gives \"Chris Paul\" a room with Chris's and Paul's room concatenated. For example, if Chris had 15 and Paul had 9, \"Chris Paul\" has 159. If there are 360 rooms in the hotel, what is the probability that \"Chris Paul\" has a valid room?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2016-p25.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\frac{153}{1180}\\)\nThere are \\(60 \\cdot 59=3540\\) total possible outcomes, and we need to count the number of these which concatenate into a number at most 60 . Of these, \\(9 \\cdot 8\\) result from both Chris and Paul getting one-digit room numbers. If Chris gets a two-digit number, then he must get a number at most 35 and Paul should get a one-digit room number, giving \\((35-9) \\cdot 9\\) possibilties. If Chris gets a one-digit number, it must be 1,2 , or 3 . If Chris gets 1,2 or 3 , Paul can get any two-digit number from 10 to 60 to guarantee a valid room, giving \\(51 \\cdot 3\\) outcomes. The total number of correct outcomes is \\(72+51 * 3+26 * 9=459\\), so the desired probability is \\(\\frac{153}{1180}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

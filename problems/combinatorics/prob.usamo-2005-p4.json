@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2005-p4",
+  "title": "2005 USAMO Problem 4",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2005,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 75.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Legs \\(L_1, L_2, L_3, L_4\\) of a square table each have length \\(n\\), where \\(n\\) is a positive integer. For how many ordered 4-tuples \\((k_1, k_2, k_3, k_4)\\) of nonnegative integers can we cut a piece of length \\(k_i\\) from the end of leg \\(L_i \\; (i = 1,2,3,4)\\) and still have a stable table?\n\n(The table is stable if it can be placed so that all four of the leg ends touch the floor. Note that a cut leg of length 0 is permitted.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2005-p4.imported",
+      "kind": "proof-sketch",
+      "text": "First flip the table upside down and observe the plane that the ends of the legs form. Let this plane be $ax+by+c=z$. Assume WLOG that the table is the square with endpoints $(0,0), (0,1), (1,0), (1,1)$ on the xy plane. Thus the lengths of the legs will be $c, c+b, c+a, c+a+b$ respectively. In other words $k_1+k_3=k_2+k_4=x$ for some $0 \\le x \\le 2n$.\nFor $0 \\le x \\le n$, it is easy to see that the number of stable tables is $(x+1)^2$.\nFor $n+1 \\le x \\le 2n$, we can biject the stable tables of $x$ to the stable of $2n-x$ by replacing all of the legs with the cut off portions.\nSo the total number of stable tables is $1^2+2^2+...+n^2+(n+1)^2+n^2+...+2^2+1^2 =$ $(1^2+2^2+...+(n+1)^2)+(1^2+2^2+...+n^2) =$ $\\dfrac{(n+1)(n+2)(2n+3)}{6}+\\dfrac{n(n+1)(2n+1)}{6}=\\boxed{\\dfrac{2n^3+6n^2+7n+3}{3}}$.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

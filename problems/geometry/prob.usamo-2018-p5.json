@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2018-p5",
+  "title": "2018 USAMO Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2018,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 97.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In convex cyclic quadrilateral \\(ABCD,\\) we know that lines \\(AC\\) and \\(BD\\) intersect at \\(E,\\) lines \\(AB\\) and \\(CD\\) intersect at \\(F,\\) and lines \\(BC\\) and \\(DA\\) intersect at \\(G.\\) Suppose that the circumcircle of \\(\\triangle ABE\\) intersects line \\(CB\\) at \\(B\\) and \\(P\\), and the circumcircle of \\(\\triangle ADE\\) intersects line \\(CD\\) at \\(D\\) and \\(Q\\), where \\(C,B,P,G\\) and \\(C,Q,D,F\\) are collinear in that order. Prove that if lines \\(FP\\) and \\(GQ\\) intersect at \\(M\\), then \\(\\angle MAC = 90^{\\circ}.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2018-p5.imported",
+      "kind": "proof-sketch",
+      "text": "\\begin{align*} &\\mathrel{\\phantom{=}}\\angle DEQ+\\angle AED+\\angle AEP\\\\ &=\\angle DAQ+\\angle AQD+\\angle AEP\\\\ &=180-\\angle ADC+\\angle AEP\\\\ &=180-\\angle ADC+\\angle ABP\\\\ &=\\angle ABP+\\angle ABC\\\\ &=180 \\end{align*}\nso $P,E,Q$ are collinear. Furthermore, note that $DQBP$ is cyclic because:\n\\[\\angle EDQ = \\angle BAE = BPE.\\]\nNotice that since $A$ is the intersection of $(EDQ)$ and $(BPE)$, it is the Miquel point of $DQBP$.\nNow define $X$ as the intersection of $BQ$ and $DP$. From Pappus's theorem on $BFPDGQ$ that $A,M,X$ are collinear. It's a well known property of Miquel points that $\\angle EAX = 90$, so it follows that $MA \\perp AE$, as desired. $\\blacksquare$",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

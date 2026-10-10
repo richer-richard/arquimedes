@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12a-2019-p19",
+  "title": "2019 AMC 12A Problem 19",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "geo.law-of-sines",
+      "label": "Law of sines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.ratio-and-proportion",
+      "label": "Ratio and proportion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-inequality",
+      "label": "Triangle inequality",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2019,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 34.8,
+    "source": 2000,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "In \\(\\triangle ABC\\) with integer side lengths,\n\n\\[ \\begin{aligned} \\cos A &= \\dfrac{11}{16}, \\\\ \\cos B &= \\dfrac{7}{8}, \\\\ \\cos C &= -\\dfrac{1}{4}. \\end{aligned} \\]\n\nWhat is the least possible perimeter for \\(\\triangle ABC?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(23\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(27\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(44\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "9"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2019-p19.live",
+      "kind": "proof-sketch",
+      "text": "Each sine is \\(\\sqrt{1 - \\cos^2}:\\) \\(\\sin A = \\dfrac{3\\sqrt{15}}{16},\\) \\(\\sin B = \\dfrac{2\\sqrt{15}}{16},\\) \\(\\sin C = \\dfrac{4\\sqrt{15}}{16}.\\)\n\nBy the Law of Sines the sides are in ratio \\(3 : 2 : 4.\\) The smallest integer sides are \\(3, 2, 4,\\) which satisfy the triangle inequality.\n\nThe least perimeter is \\(3 + 2 + 4 = 9.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "Find \\(\\sin A, \\sin B, \\sin C\\) from the given cosines",
+        "By the Law of Sines the sides are proportional to \\(\\sin A : \\sin B : \\sin C = 3 : 2 : 4\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

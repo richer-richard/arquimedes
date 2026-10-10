@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2020-p1",
+  "title": "2020 AIME I Problem 1",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.angle-sum",
+      "label": "Angle sum",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.isosceles-triangle",
+      "label": "Isosceles triangle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2020,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 47.3,
+    "source": 2150,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "In \\(\\triangle ABC\\) with \\(AB = AC,\\) point \\(D\\) lies strictly between \\(A\\) and \\(C\\) on side \\(\\overline{AC},\\) and point \\(E\\) lies strictly between \\(A\\) and \\(B\\) on side \\(\\overline{AB}\\) such that \\(AE = ED = DB = BC.\\) The degree measure of \\(\\angle ABC\\) is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "547",
+    "value": "547"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2020-p1.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(\\angle BAC = \\alpha.\\) Since \\(AE = ED,\\) triangle \\(AED\\) is isosceles with \\(\\angle ADE = \\angle DAE = \\alpha,\\) so the exterior angle at \\(E\\) gives \\(\\angle DEB = 2\\alpha.\\) Since \\(ED = DB,\\) triangle \\(EDB\\) has \\(\\angle DBE = \\angle DEB = 2\\alpha,\\) hence \\(\\angle EDB = 180^\\circ - 4\\alpha.\\)\n\nThe three angles at \\(D\\) on segment \\(\\overline{AC}\\) sum to a straight angle: \\(\\alpha + (180^\\circ - 4\\alpha)\\) \\(+ \\angle BDC = 180^\\circ,\\) so \\(\\angle BDC = 3\\alpha.\\) Since \\(DB = BC,\\) also \\(\\angle BCD = \\angle BDC = 3\\alpha.\\) But \\(AB = AC\\) makes \\(\\angle ABC = \\angle ACB = 3\\alpha,\\) so the angle sum of \\(\\triangle ABC\\) gives \\(\\alpha + 3\\alpha + 3\\alpha = 180^\\circ,\\) hence \\(\\alpha = \\frac{180}{7}\\) degrees.\n\nThen \\(\\angle ABC = 3\\alpha = \\frac{540}{7}\\) degrees, and \\(m + n = 540 + 7 = 547.\\)",
+      "hints": [
+        "Let \\(\\angle BAC = \\alpha\\) and chase angles along the chain of isosceles triangles \\(AED,\\) \\(EDB,\\) and \\(DBC.\\)",
+        "The exterior angle gives \\(\\angle DEB = 2\\alpha;\\) then the three angles at \\(D\\) along \\(\\overline{AC}\\) force \\(\\angle BDC = 3\\alpha = \\angle BCD.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

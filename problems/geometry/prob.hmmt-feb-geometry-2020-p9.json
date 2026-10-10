@@ -1,0 +1,68 @@
+{
+  "id": "prob.hmmt-feb-geometry-2020-p9",
+  "title": "2020 HMMT February Geometry Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity-and-scaling",
+      "label": "Similarity and scaling",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2020,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 88.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Circles \\(\\omega_{a}, \\omega_{b}, \\omega_{c}\\) have centers \\(A, B, C\\), respectively and are pairwise externally tangent at points \\(D, E, F\\) (with \\(D \\in B C, E \\in C A, F \\in A B\\) ). Lines \\(B E\\) and \\(C F\\) meet at \\(T\\). Given that \\(\\omega_{a}\\) has radius 341 , there exists a line \\(\\ell\\) tangent to all three circles, and there exists a circle of radius 49 tangent to all three circles, compute the distance from \\(T\\) to \\(\\ell\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "294",
+    "value": "294"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2020-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "We will use the following notation: let \\(\\omega\\) be the circle of radius 49 tangent to each of \\(\\omega_{a}, \\omega_{b}, \\omega_{c}\\). Let \\(\\omega_{a}, \\omega_{b}, \\omega_{c}\\) have radii \\(r_{a}, r_{b}, r_{c}\\) respectively. Let \\(\\gamma\\) be the incircle of \\(A B C\\), with center \\(I\\) and radius \\(r\\). Note that \\(D E F\\) is the intouch triangle of \\(A B C\\) and \\(\\gamma\\) is orthogonal to \\(\\omega_{a}, \\omega_{b}, \\omega_{c}\\) (i.e. \\(I D, I E, I F\\) are the common internal tangents). Since \\(A D, B E, C F\\) are concurrent at \\(T\\), we have \\(K=A B \\cap D E\\) satisfies \\((A, B ; F, K)=-1\\), so \\(K\\) is the external center of homothety of \\(\\omega_{a}\\) and \\(\\omega_{b}\\). In particular, \\(K\\) lies on \\(\\ell\\). Similarly, \\(B C \\cap E F\\) also lies on \\(\\ell\\), so \\(\\ell\\) is the polar of \\(T\\) to \\(\\gamma\\). Hence \\(I T \\perp \\ell\\) so if \\(L\\) is the foot from \\(I\\) to \\(\\ell\\), we have \\(I T \\cdot I L=r^{2}\\).\n\nAn inversion about \\(\\gamma\\) preserves \\(\\omega_{a}, \\omega_{b}, \\omega_{c}\\) and sends \\(\\ell\\) to the circle with diameter \\(I T\\). Since inversion preserves tangency, the circle with diameter \\(I T\\) must be \\(\\omega\\). Therefore \\(I T=98\\) by the condition of the problem statement. Letting \\(a, b, c\\) be the radii of \\(\\omega_{a}, \\omega_{b}, \\omega_{c}\\) respectively and invoking Heron's formula as well as \\(A=r s\\) for triangle \\(A B C\\), we see that \\(\\gamma\\) has radius\n\n\\[r=\\sqrt{\\frac{r_{a} r_{b} r_{c}}{r_{a}+r_{b}+r_{c}}} .\\]\n\nWe will compute this quantity using Descartes' theorem. Note that there are two circles tangent to \\(\\omega_{a}\\), \\(\\omega_{b}, \\omega_{c}\\), one with radius \\(I T / 2\\) and one with radius \\(\\infty\\). By Descartes' circle theorem, we have (where \\(k_{a}:=1 / a\\) is the curvature)\n\n\\[k_{a}+k_{b}+k_{c}+2 \\sqrt{k_{a} k_{b}+k_{b} k_{c}+k_{a} k_{c}}=\\frac{1}{I T / 2}\\]\n\nand\n\n\\[k_{a}+k_{b}+k_{c}-2 \\sqrt{k_{a} k_{b}+k_{b} k_{c}+k_{c} k_{a}}=0\\]\n\nwhich implies\n\n\\[\\sqrt{\\frac{r_{a}+r_{b}+r_{c}}{r_{a} r_{b} r_{c}}}=\\sqrt{k_{a} k_{b}+k_{b} k_{c}+k_{c} k_{a}}=\\frac{1}{2 I T} .\\]\n\nTherefore \\(r=2 I T\\), which means \\(I L=\\frac{r^{2}}{I T}=4 I T\\) and \\(T L=3 I T=294\\).\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

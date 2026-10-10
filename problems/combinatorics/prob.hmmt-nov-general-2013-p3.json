@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-general-2013-p3",
+  "title": "2013 HMMT November General Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2013,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 44.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A 24-hour digital clock shows times \\(h: m: s\\), where \\(h, m\\), and \\(s\\) are integers with \\(0 \\leq h \\leq 23\\), \\(0 \\leq m \\leq 59\\), and \\(0 \\leq s \\leq 59\\). How many times \\(h: m: s\\) satisfy \\(h+m=s\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2013-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "1164 We are solving \\(h+m=s\\) in \\(0 \\leq s \\leq 59,0 \\leq m \\leq 59\\), and \\(0 \\leq h \\leq 23\\). If \\(s \\geq 24\\), each \\(h\\) corresponds to exactly 1 solution, so we get \\(24(59-23)=24(36)\\) in this case. If \\(s \\leq 23\\), we want the number of nonnegative integer solutions to \\(h+m \\leq 23\\), which by lattice point counting (or balls and urns) is \\(\\binom{23+2}{2}=(23+2)(23+1) / 2=25 \\cdot 12\\). Thus our total is \\(12(72+25)=12(100-3)=1164\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10-2001-p23",
+  "title": "2001 AMC 10 Problem 23",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.sampling-without-replacement",
+      "label": "Sampling without replacement",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10",
+    "year": 2001,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 28.2,
+    "source": 1690,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A box contains exactly five chips, three red and two white. Chips are randomly removed one at a time without replacement until all the red chips are drawn or all the white chips are drawn. What is the probability that the last chip drawn is white?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{3}{10}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac25\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac12\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac35\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{7}{10}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "3/5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10-2001-p23.live",
+      "kind": "proof-sketch",
+      "text": "Imagine drawing all five chips in a random order. The drawing stops on a white chip exactly when both white chips come out before all three reds, which happens precisely when the very last chip in the full ordering is red.\n\nThat probability is \\(\\dfrac{3}{5}.\\) Thus, the correct answer is D.",
+      "hints": [
+        "Imagine drawing all five chips; the game stops when one color is exhausted",
+        "The last drawn chip is white exactly when the very last of all five chips is red"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

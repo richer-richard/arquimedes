@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12-2001-p15",
+  "title": "2001 AMC 12 Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.net-3d-geometry",
+      "label": "Net (3D geometry)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.rhombus",
+      "label": "Rhombus",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12",
+    "year": 2001,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 27.5,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "An insect lives on the surface of a regular tetrahedron with edges of length \\(1.\\) It wishes to travel on the surface of the tetrahedron from the midpoint of one edge to the midpoint of the opposite edge. What is the length of the shortest such trip? (Note: Two edges of a tetrahedron are opposite if they have no common endpoint.)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{2}\\sqrt{3}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\sqrt{2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{3}{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12-2001-p15.live",
+      "kind": "proof-sketch",
+      "text": "A shortest path leaves the starting edge through one of its two incident faces and reaches the opposite edge through one of its two incident faces. Any such pair of faces shares an edge. Unfolding that pair gives a rhombus of side \\(1\\) made of two equilateral triangles.\n\nThe two opposite-edge midpoints become the midpoints of opposite sides of this rhombus, which are exactly \\(1\\) unit apart along a straight segment. Folding back preserves the length, so the shortest trip is \\(1.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Unfold the two faces the path crosses into a single flat figure",
+        "The two faces form a rhombus of side \\(1,\\) and the midpoints become midpoints of opposite sides"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "56d6422406dddb80ec5bbab1c6e7e79b9ab1c7ff371eed131bfacfe3031fb5ba"
+    ],
+    "solutions": []
+  }
+}

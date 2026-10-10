@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12b-2005-p12",
+  "title": "2005 AMC 12B 12",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2005,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 24.1,
+    "source": 1530,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The quadratic equation \\(x^2 + mx + n = 0\\) has roots that are twice those of \\(x^2 + px + m = 0,\\) and none of \\(m,\\) \\(n,\\) and \\(p\\) is zero. What is the value of \\(\\dfrac{n}{p}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(16\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "8"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2005-p12.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(r_1\\) and \\(r_2\\) be the roots of \\(x^2 + px + m = 0,\\) so \\(m = r_1 r_2\\) and \\(p = -(r_1 + r_2).\\)\n\nThe roots of \\(x^2 + mx + n = 0\\) are \\(2r_1\\) and \\(2r_2,\\) so \\(n = 4r_1 r_2\\) and \\(m = -2(r_1 + r_2).\\)\n\nThen \\(n = 4m\\) and \\(m = 2p,\\) which gives \\(p = \\dfrac{m}{2},\\) so \\[ \\dfrac{n}{p} = \\dfrac{4m}{\\tfrac{m}{2}} = 8. \\]\n\nThus, the correct answer is D.",
+      "hints": [
+        "Let \\(r_1, r_2\\) be the roots of \\(x^2 + px + m = 0\\); the other equation has roots \\(2r_1, 2r_2\\)",
+        "Write \\(m, n, p\\) in terms of \\(r_1 r_2\\) and \\(r_1 + r_2\\) using Vieta’s formulas"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

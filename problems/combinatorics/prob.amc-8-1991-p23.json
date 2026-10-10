@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-8-1991-p23",
+  "title": "1991 AMC 8 Problem 23",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.venn-diagram",
+      "label": "Venn Diagram",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1991,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 15.7,
+    "source": 1200,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The Pythagoras High School band has \\(100\\) female and \\(80\\) male members. The Pythagoras High School orchestra has \\(80\\) female and \\(100\\) male members. There are \\(60\\) females who are members in both band and orchestra. Altogether, there are \\(230\\) students who are in either band or orchestra or both. The number of males in the band who are NOT in the orchestra is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(30\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(50\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(70\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "10"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1991-p23.live",
+      "kind": "proof-sketch",
+      "text": "Females in band or orchestra: \\(100 + 80 - 60 = 120.\\) So males in at least one group: \\(230 - 120 = 110.\\)\n\nWith \\(80\\) males in band and \\(100\\) in orchestra, the males in both are \\(80 + 100 - 110 = 70.\\) Hence males in band but not orchestra: \\(80 - 70 = 10.\\)\n\nThus, the correct answer is A .",
+      "hints": [
+        "First find how many females are in at least one group, using \\(100 + 80 - 60\\)",
+        "Subtract the females from the \\(230\\) total to get the males in at least one group, then use inclusion–exclusion to find how many males are in both groups"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

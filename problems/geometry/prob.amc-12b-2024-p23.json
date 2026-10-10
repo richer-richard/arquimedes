@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12b-2024-p23",
+  "title": "2024 AMC 12B Problem 23",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pyramid",
+      "label": "Pyramid",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.regular-polygon",
+      "label": "Regular polygon",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2024,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 43.9,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "A right pyramid has regular octagon \\(ABCDEFGH\\) with side length \\(1\\) as its base and apex \\(V.\\) Segments \\(\\overline{AV}\\) and \\(\\overline{DV}\\) are perpendicular. What is the square of the height of the pyramid?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1 + \\sqrt2}{2}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\sqrt2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{3}{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{2 + \\sqrt2}{3}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2024-p23.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(R\\) be the circumradius of the octagon and \\(L\\) the length of each lateral edge, so \\(L^2 = h^2 + R^2.\\) Since \\(\\angle AVD = 90^\\circ,\\) \\(AD^2 = 2L^2.\\)\n\nVertices \\(A\\) and \\(D\\) are three steps apart, a central angle of \\(135^\\circ,\\) so \\(AD^2\\) \\(= 2R^2(1 - \\cos 135^\\circ)\\) \\(= R^2(2 + \\sqrt2).\\) Setting \\(R^2(2 + \\sqrt2) = 2(h^2 + R^2)\\) gives \\(2h^2 = R^2\\sqrt2.\\)\n\nFor a regular octagon of side \\(1,\\) \\(R^2 = \\dfrac{1}{2\\sin^2(22.5^\\circ)} = \\dfrac{2 + \\sqrt2}{2}.\\) Therefore \\(h^2\\) \\(= \\dfrac{R^2\\sqrt2}{2}\\) \\(= \\dfrac{(2 + \\sqrt2)\\sqrt2}{4}\\) \\(= \\dfrac{2\\sqrt2 + 2}{4}\\) \\(= \\dfrac{1 + \\sqrt2}{2}.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Each lateral edge has length \\(L\\) with \\(L^2 = h^2 + R^2,\\) where \\(R\\) is the octagon’s circumradius; the right angle at \\(V\\) gives \\(AD^2 = 2L^2\\)",
+        "\\(A\\) and \\(D\\) are three vertices apart, so the central angle is \\(135^\\circ\\) and \\(AD^2 = R^2(2 + \\sqrt2);\\) also \\(R^2 = \\dfrac{2 + \\sqrt2}{2}.\\) Solve for \\(h^2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

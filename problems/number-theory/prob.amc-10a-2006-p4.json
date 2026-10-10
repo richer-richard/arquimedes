@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2006-p4",
+  "title": "2006 AMC 10A Problem 4",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.clock",
+      "label": "Clock",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2006,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 15.9,
+    "source": 1030,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "A digital watch displays hours and minutes with am and pm. What is the largest possible sum of the digits in the display?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(19\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(22\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(23\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "23"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2006-p4.live",
+      "kind": "proof-sketch",
+      "text": "The minutes run from \\(00\\) to \\(59,\\) so the largest digit sum for the minutes is \\(5 + 9 = 14,\\) at \\(59\\) minutes.\n\nFor the hour, the single digit \\(9\\) beats \\(1 + 2 = 3\\) from \\(12.\\) The largest total is \\(9 + 14 = 23,\\) occurring at \\(9\\!:\\!59.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "The display uses a \\(12\\)-hour clock, so the hour is \\(1\\) through \\(12\\)",
+        "Maximize the minutes’ digit sum and the hour’s digit sum separately"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

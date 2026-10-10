@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-ii-2009-p4",
+  "title": "2009 AIME II Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factor",
+      "label": "Factor",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2009,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 39.0,
+    "source": 2110,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "A group of children held a grape-eating contest. When the contest was over, the winner had eaten \\(n\\) grapes, and the child in \\(k\\)th place had eaten \\(n + 2 - 2k\\) grapes. The total number of grapes eaten in the contest was \\(2009.\\) Find the smallest possible value of \\(n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "89",
+    "value": "89"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2009-p4.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(c\\) be the number of children. The grape counts \\(n,\\) \\(n - 2,\\) \\(\\ldots,\\) \\(n + 2 - 2c\\) form an arithmetic sequence, so the total is \\(c\\) times the average of the first and last terms: \\[ \\begin{aligned} &c \\cdot \\frac{n + (n + 2 - 2c)}{2} \\\\ &= c(n + 1 - c) \\\\ &= 2009 = 7^2 \\cdot 41. \\end{aligned} \\] Thus \\(2009\\) is divisible by \\(c\\) and \\(n = \\frac{2009}{c} + c - 1.\\)\n\nThe last-place child ate \\(n + 2 - 2c = \\frac{2009}{c} + 1 - c \\ge 0\\) grapes, which forces \\(c(c - 1) \\le 2009,\\) ruling out \\(c = 49,\\) \\(287,\\) and \\(2009.\\) The remaining divisors give \\(n = 2009\\) for \\(c = 1,\\) \\(n = 287 + 6 = 293\\) for \\(c = 7,\\) and \\(n = 49 + 40 = 89\\) for \\(c = 41.\\)\n\nThe smallest possible value is \\(n = 89.\\)",
+      "hints": [
+        "With \\(c\\) children the grape counts are an arithmetic sequence, and the total is \\(c(n + 1 - c) = 2009 = 7^2 \\cdot 41\\)",
+        "The last-place child ate \\(n + 2 - 2c \\ge 0\\) grapes; check which divisors \\(c\\) of \\(2009\\) survive that condition"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

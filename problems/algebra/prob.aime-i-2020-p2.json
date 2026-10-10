@@ -1,0 +1,57 @@
+{
+  "id": "prob.aime-i-2020-p2",
+  "title": "2020 AIME I Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2020,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 43.1,
+    "source": 1950,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "There is a unique positive real number \\(x\\) such that the three numbers \\(\\log_8(2x),\\) \\(\\log_4 x,\\) and \\(\\log_2 x,\\) in that order, form a geometric progression with positive common ratio. The number \\(x\\) can be written as \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "17",
+    "value": "17"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2020-p2.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(t = \\log_2 x.\\) Then \\(\\log_4 x = \\frac{t}{2}\\) and \\(\\log_8(2x) = \\frac{1 + t}{3}.\\) In a geometric progression the middle term squared equals the product of the outer terms: \\[\\left(\\frac{t}{2}\\right)^2 = \\frac{1 + t}{3} \\cdot t.\\]\n\nSince \\(t = 0\\) gives no valid ratio, divide by \\(t:\\) \\(\\frac{t}{4} = \\frac{1 + t}{3},\\) so \\(3t = 4 + 4t\\) and \\(t = -4.\\) Thus \\(x = 2^{-4} = \\frac{1}{16},\\) and the progression is \\(-1,\\) \\(-2,\\) \\(-4\\) with common ratio \\(2,\\) which is positive as required.\n\nTherefore \\(m + n = 1 + 16 = 17.\\)",
+      "hints": [
+        "Set \\(t = \\log_2 x;\\) the three terms become \\(\\frac{1+t}{3},\\) \\(\\frac{t}{2},\\) and \\(t.\\)",
+        "The middle term squared equals the product of its neighbors; solve for \\(t,\\) discarding \\(t = 0.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

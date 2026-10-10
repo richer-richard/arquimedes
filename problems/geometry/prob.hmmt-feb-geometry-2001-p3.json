@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-feb-geometry-2001-p3",
+  "title": "2001 HMMT February Geometry Problem 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2001,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 74.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Square \\(A B C D\\) is drawn. Isosceles Triangle \\(C D E\\) is drawn with \\(E\\) a right angle. Square \\(D E F G\\) is drawn. Isosceles triangle \\(F G H\\) is drawn with \\(H\\) a right angle. This process is repeated infinitely so that no two figures overlap each other. If square \\(A B C D\\) has area 1 , compute the area of the entire figure.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2001-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let the area of the \\(n\\)th square drawn be \\(S_{n}\\) and the area of the \\(n\\)th triangle be \\(T_{n}\\). Since the hypotenuse of the \\(n\\)th triangle is of length \\(\\sqrt{S_{n}}\\), its legs are of length \\(l=\\sqrt{\\frac{S_{n}}{2}}\\), so \\(S_{n+1}=l^{2}=\\frac{S_{n}}{2}\\) and \\(T_{n}=\\frac{l^{2}}{2}=\\frac{S_{n}}{4}\\). Using the recursion relations, \\(S_{n}=\\frac{1}{2^{n-1}}\\) and \\(T_{n}=\\frac{1}{2^{n+1}}\\), so \\(S_{n}+T_{n}=\\frac{1}{2^{n-1}}+\\frac{1}{2^{n+1}}=\\left(\\frac{1}{2}+2\\right) \\frac{1}{2^{n}}=\\frac{5}{2} \\frac{1}{2^{n}}\\). Thus the total area of the figure is \\(\\sum_{n=1}^{\\infty} S_{n}+T_{n}=\\frac{5}{2} \\sum_{n=1}^{\\infty} \\frac{1}{2^{n}}=\\frac{5}{2}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

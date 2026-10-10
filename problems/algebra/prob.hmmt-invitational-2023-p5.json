@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-invitational-2023-p5",
+  "title": "2023 HMMT Invitational Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2023,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a_{1}, a_{2}, \\ldots\\) be an infinite sequence of positive integers such that, for all positive integers \\(m\\) and \\(n\\), we have that \\(a_{m+n}\\) divides \\(a_{m} a_{n}-1\\). Prove that there exists an integer \\(C\\) such that, for all positive integers \\(k>C\\), we have \\(a_{k}=1\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2023-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "Solution: For convenience, define \\(g(x): \\mathbb{N} \\rightarrow \\mathbb{N}\\) to be \\(g(n)=a_{n}\\).\n\nWe first prove that \\(1 \\in \\operatorname{Im}(g)\\). Assume otherwise. First, note that \\(\\operatorname{gcd}(g(m+n), g(m))=1\\) for all positive integers \\(m, n\\), so thus if \\(g\\) never takes the value 1 then \\(g\\) is injective (and the values it takes are pairwise relatively prime.) Now, let \\(g(1)=a\\) and \\(g(2)=b\\). Note that for every \\(x\\), there exists integers \\(m, n, p\\) such that\n\n\\[\\begin{aligned}\ng(x+1) & =\\frac{a g(x)-1}{m} \\\\\ng(x+1) & =\\frac{b g(x-1)-1}{n} \\\\\ng(x) & =\\frac{a g(x-1)-1}{p} .\n\\end{aligned}\\]\n\nHence,\n\n\\[g(x+1)=\\frac{b g(x-1)-1}{n}=\\frac{a^{2} g(x-1)-a-p}{m p} .\\]\n\nNow, suppose \\(g(x+1) \\geq g(x-1)\\). Then we must have \\(n<b, m p<a^{2}\\). Hence there are finitely many choices for \\((n, m, p)\\), and each such choice leads to finitely many possibilities to \\(g(x-1)\\) unless \\(b m p=n a^{2}\\). But \\(\\operatorname{gcd}\\left(b, a^{2}\\right)=1\\), so this implies that \\(b \\mid n\\), and hence \\(b \\leq n\\), which is false. Hence this means that if \\(g(x+1) \\geq g(x-1)\\) then \\(g(x-1)\\) must take one of a finite set of possible values.\nNow, recall that \\(g\\) is injective. Hence this implies that in fact \\(g(x+1) \\geq g(x-1)\\) can only occur a finite number of times, and so for all sufficiently large \\(x, g(x+1)<g(x-1)\\). But this is a contradiction to \\(g\\) being injective, and so our hypothesis was false and hence \\(1 \\in \\operatorname{Im}(g)\\).\nNote that this proof works identically if we scale all the inputs by any positive integer, so this implies that every integer has a multiple in \\(S:=g^{-1}(\\{1\\})\\).\nWe now finish the problem. Consider the smallest value of \\(\\operatorname{Im}(g)\\) not equal to 1 (if it doesn't exist then we are done), and say \\(g(c)\\) is equal to this value. Then note that if \\(a \\in S\\), then \\(g(a+c) \\leq g(c)-1\\) and so \\(a+c \\in S\\). Now, let \\(k c\\) be a multiple of \\(c\\) which is in \\(S\\); then \\(d c \\in S\\) for all \\(d \\geq k\\). Now, for each residue class modulo \\(c\\), select an element \\(j\\) for which \\(g(j) \\neq 1\\) (if no such element exists we'll still be done, as we will see.) Then for all \\(d \\geq k, g(j+d c) \\leq g(j)-1\\). Hence \\(g\\) is bounded in each residue class, and so \\(g\\) is bounded. Now note that \\(g\\) is injective in \\(\\mathbb{Z}^{+} \\backslash S\\), so in fact \\(\\mathbb{Z}^{+} \\backslash S\\) must be finite! So \\(g(x)=1\\) for all sufficiently large \\(x\\), as desired.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "prob.ahsme-1992-p30",
+  "title": "1992 AHSME Problem 30",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1992,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 46.4,
+    "source": 2400,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(ABCD\\) be an isosceles trapezoid with bases \\(AB=92\\) and \\(CD=19.\\) Suppose \\(AD=BC=x\\) and a circle with center on \\(\\overline{AB}\\) is tangent to segments \\(\\overline{AD}\\) and \\(\\overline{BC}.\\) If \\(m\\) is the smallest possible value of \\(x,\\) then \\(m^2=\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1369\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1679\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1748\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2109\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(8825\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1679"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1992-p30.live",
+      "kind": "proof-sketch",
+      "text": "Place \\(A=(-46,0),\\) \\(B=(46,0),\\) \\(D=(-\\frac{19}{2},h),\\) and \\(C=(\\frac{19}{2},h).\\) Symmetry forces the circle’s center to be \\(O=(0,0).\\) The horizontal offset along each leg is \\(\\frac{73}{2},\\) so \\[ x^2=h^2+\\left(\\frac{73}{2}\\right)^2. \\] The perpendicular from \\(O\\) to a leg first has its foot on the segment when the foot reaches the upper endpoint; this boundary condition is \\(OD\\perp AD.\\) Thus \\[ \\begin{aligned} (-\\frac{19}{2},h)\\cdot(\\frac{73}{2},h)&=0,\\\\ h^2&=\\frac{1387}{4}. \\end{aligned} \\] Therefore \\[ m^2=\\frac{1387+5329}{4}=1679. \\]\n\nThus the correct answer is B.",
+      "hints": [
+        "By symmetry, place the trapezoid with its bases centered on the same vertical axis and put the circle’s center at the midpoint of \\(AB\\)",
+        "Write the distance from the center to a leg and require the tangency point to lie on the leg segment; the minimum occurs at an endpoint case"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-guts-2020-p7",
+  "title": "2020 HMMT February Guts Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2020,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 73.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Ana and Banana are rolling a standard six-sided die. Ana rolls the die twice, obtaining \\(a_{1}\\) and \\(a_{2}\\), then Banana rolls the die twice, obtaining \\(b_{1}\\) and \\(b_{2}\\). After Ana's two rolls but before Banana's two rolls, they compute the probability \\(p\\) that \\(a_{1} b_{1}+a_{2} b_{2}\\) will be a multiple of 6 . What is the probability that \\(p=\\frac{1}{6}\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{2}{3}",
+    "value": "\\frac{2}{3}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2020-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "If either \\(a_{1}\\) or \\(a_{2}\\) is relatively prime to 6 , then \\(p=\\frac{1}{6}\\). If one of them is a multiple of 2 but not 6 , while the other is a multiple of 3 but not 6 , we also have \\(p=\\frac{1}{6}\\). In other words, \\(p=\\frac{1}{6}\\) if \\(\\operatorname{gcd}\\left(a_{1}, a_{2}\\right)\\) is coprime to 6 , and otherwise \\(p \\neq \\frac{1}{6}\\). The probability that \\(p=\\frac{1}{6}\\) is \\(\\frac{\\left(3^{2}-1\\right)\\left(2^{2}-1\\right)}{6^{2}}=\\frac{2}{3}\\) where \\(\\frac{q^{2}-1}{q^{2}}\\) corresponds to the probability that at least one of \\(a_{1}\\) and \\(a_{2}\\) is not divisible by \\(q\\) for \\(q=2,3\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

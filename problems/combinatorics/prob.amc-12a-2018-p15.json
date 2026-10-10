@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-12a-2018-p15",
+  "title": "2018 AMC 12A Problem 15",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-counting",
+      "label": "Basic counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2018,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 31.0,
+    "source": 1800,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A scanning code consists of a \\(7 \\times 7\\) grid of squares, with some of its squares colored black and the rest colored white. There must be at least one square of each color in this grid of \\(49\\) squares. A scanning code is called symmetric if its look does not change when the entire square is rotated by a multiple of \\(90^\\circ\\) counterclockwise around its center, nor when it is reflected across a line joining opposite corners or a line joining midpoints of opposite sides. What is the total number of possible symmetric scanning codes?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(510\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1022\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(8190\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(8192\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(65{,}534\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1022"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2018-p15.live",
+      "kind": "proof-sketch",
+      "text": "Under the symmetry group of the square, the \\(49\\) cells break into orbits, and every cell in an orbit must have the same color. Give a cell coordinates \\((i,j)\\) relative to the center, where \\(-3\\le i,j\\le3.\\) Rotations and reflections can change signs and interchange the coordinates, so each orbit has one representative with \\(0\\le i\\le j\\le3.\\) There are \\(1+2+3+4=10\\) such pairs. Each orbit is black or white, giving \\(2^{10}\\) colorings, but the all-black and all-white grids are excluded. So there are \\(2^{10} - 2 = 1022\\) symmetric scanning codes.\n\nThus, the correct answer is B.",
+      "hints": [
+        "The required symmetries force every square in one rotation-reflection orbit to share a color",
+        "There are \\(10\\) independent orbits, each freely black or white; exclude the all-black and all-white codes"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

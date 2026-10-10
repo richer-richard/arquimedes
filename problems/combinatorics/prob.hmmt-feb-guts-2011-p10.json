@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2011-p10",
+  "title": "2011 HMMT February Guts Problem 10",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 76.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In how many ways can one fill a \\(4 \\times 4\\) grid with a 0 or 1 in each square such that the sum of the entries in each row, column, and long diagonal is even?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2011-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "256\nFirst we name the elements of the square as follows:\n\n| \\(a_{11}\\) | \\(a_{12}\\) | \\(a_{13}\\) | \\(a_{14}\\) |\n| :--- | :--- | :--- | :--- |\n| \\(a_{21}\\) | \\(a_{22}\\) | \\(a_{23}\\) | \\(a_{24}\\) |\n| \\(a_{31}\\) | \\(a_{32}\\) | \\(a_{33}\\) | \\(a_{34}\\) |\n| \\(a_{41}\\) | \\(a_{42}\\) | \\(a_{43}\\) | \\(a_{44}\\) |\n\nWe claim that for any given values of \\(a_{11}, a_{12}, a_{13}, a_{21}, a_{22}, a_{23}, a_{32}\\), and \\(a_{33}\\) (the + signs in the diagram below), there is a unique way to assign values to the rest of the entries such that all necessary sums are even.\n\n\\[\\begin{array}{cccc}\n+ & + & + & a_{14} \\\\\n+ & + & + & a_{24} \\\\\na_{31} & + & + & a_{34} \\\\\na_{41} & a_{42} & a_{43} & a_{44}\n\\end{array}\\]\n\nTaking additions mod 2, we have\n\n\\[\\begin{aligned}\na_{14} & =a_{11}+a_{12}+a_{13} \\\\\na_{24} & =a_{21}+a_{22}+a_{23} \\\\\na_{44} & =a_{11}+a_{22}+a_{33} \\\\\na_{42} & =a_{12}+a_{22}+a_{32} \\\\\na_{43} & =a_{13}+a_{23}+a_{33}\n\\end{aligned}\\]\n\nSince the 4 th column, the 4 th row, and the 1 st column must have entries that sum to 0 , we have\n\n\\[\\begin{aligned}\n& a_{34}=a_{14}+a_{24}+a_{44}=a_{12}+a_{13}+a_{21}+a_{23}+a_{33} \\\\\n& a_{41}=a_{42}+a_{43}+a_{44}=a_{11}+a_{12}+a_{13}+a_{23}+a_{32} \\\\\n& a_{31}=a_{11}+a_{21}+a_{41}=a_{12}+a_{13}+a_{21}+a_{23}+a_{32}\n\\end{aligned}\\]\n\nIt is easy to check that the sum of entries in every row, column, and the main diagonal is even. Since there are \\(2^{8}=256\\) ways to assign the values to the initial 8 entries, there are exactly 256 ways to fill the board.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

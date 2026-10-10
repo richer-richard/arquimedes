@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2011-p14",
+  "title": "2011 AIME II Problem 14",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.chinese-remainder-theorem",
+      "label": "Chinese Remainder Theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.permutations",
+      "label": "Permutations",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2011,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": 3270,
+    "mohs": null
+  },
+  "estimatedMinutes": 24,
+  "statement": "There are \\(N\\) permutations \\((a_1, a_2, \\ldots, a_{30})\\) of \\(1,\\) \\(2,\\) \\(\\ldots,\\) \\(30\\) such that for \\(m \\in \\{2, 3, 5\\},\\) \\(m\\) divides \\(a_{n+m} - a_n\\) for all integers \\(n\\) with \\(1 \\le n \\lt n + m \\le 30.\\) Find the remainder when \\(N\\) is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "440",
+    "value": "440"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2011-p14.live",
+      "kind": "proof-sketch",
+      "text": "For each \\(m \\in \\{2, 3, 5\\},\\) the condition \\(a_{n+m} \\equiv a_n \\pmod{m}\\) means the residue of \\(a_n\\) modulo \\(m\\) depends only on \\(n \\bmod m,\\) defining a map \\(\\sigma_m\\) from residues to residues. Each residue class of positions has \\(\\frac{30}{m}\\) members, and so does each residue class of values; if \\(\\sigma_m\\) sent two position classes to the same value class, that class’s \\(\\frac{30}{m}\\) values would have to fill \\(\\frac{60}{m}\\) positions, which is impossible. So each \\(\\sigma_m\\) is a permutation of the residues modulo \\(m.\\)\n\nConversely, by the Chinese remainder theorem each position \\(n \\in \\{1, \\ldots, 30\\}\\) corresponds to a unique triple \\((n \\bmod 2,\\, n \\bmod 3,\\, n \\bmod 5),\\) and likewise for values. Any choice of permutations \\((\\sigma_2, \\sigma_3, \\sigma_5)\\) therefore determines a unique valid permutation of \\(1, \\ldots, 30,\\) sending the position triple to the prescribed value triple.\n\nHence \\(N = 2! \\cdot 3! \\cdot 5! = 1440,\\) and the remainder upon division by \\(1000\\) is \\(440.\\)",
+      "hints": [
+        "The conditions say that \\(a_n \\bmod m\\) depends only on \\(n \\bmod m,\\) for each of \\(m = 2,\\) \\(3,\\) and \\(5\\)",
+        "By CRT, positions and values both correspond to triples of residues mod \\(2,\\) \\(3,\\) \\(5;\\) a valid permutation is exactly a choice of one residue permutation for each modulus"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

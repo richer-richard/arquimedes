@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-feb-team-2020-p4",
+  "title": "2020 HMMT February Team Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.complex-numbers-in-geometry",
+      "label": "Complex numbers in geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.rotation",
+      "label": "Rotation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2020,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 81.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Alan draws a convex 2020-gon \\(\\mathcal{A}=A_{1} A_{2} \\cdots A_{2020}\\) with vertices in clockwise order and chooses 2020 angles \\(\\theta_{1}, \\theta_{2}, \\ldots, \\theta_{2020} \\in(0, \\pi)\\) in radians with sum \\(1010 \\pi\\). He then constructs isosceles triangles \\(\\triangle A_{i} B_{i} A_{i+1}\\) on the exterior of \\(\\mathcal{A}\\) with \\(B_{i} A_{i}=B_{i} A_{i+1}\\) and \\(\\angle A_{i} B_{i} A_{i+1}=\\theta_{i}\\). (Here, \\(A_{2021}=A_{1}\\).) Finally, he erases \\(\\mathcal{A}\\) and the point \\(B_{1}\\). He then tells Jason the angles \\(\\theta_{1}, \\theta_{2}, \\ldots, \\theta_{2020}\\) he chose. Show that Jason can determine where \\(B_{1}\\) was from the remaining 2019 points, i.e. show that \\(B_{1}\\) is uniquely determined by the information Jason has.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2020-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(A_{1} A_{2} \\cdots A_{2020}\\) and \\(\\tilde{A}_{1} \\tilde{A}_{2} \\cdots \\tilde{A}_{2020}\\) be two 2020 -gons that satisfy the conditions in the problem statement, and let \\(B_{k}, \\tilde{B}_{k}\\) be the points Alan would construct with respect to these two polygons. It suffices to show that if \\(B_{k}=\\tilde{B}_{k}\\) for \\(k=2,3, \\ldots, 2020\\), then \\(B_{1}=\\tilde{B}_{1}\\).\nFor \\(2 \\leq k \\leq 2020\\), we note that\n\n\\[A_{k} B_{k}=A_{k+1} B_{k}, \\quad \\tilde{A}_{k} B_{k}=\\tilde{A}_{k+1} B_{k}\\]\n\nFurthermore, we have the equality of directed angles \\(\\angle A_{k} B_{k} A_{k+1}=\\angle \\tilde{A}_{k} B_{k} \\tilde{A}_{k+1}=\\theta_{k}\\), therefore \\(\\angle A_{k} B_{k} \\tilde{A}_{k}=\\angle A_{k+1} B_{k} \\tilde{A}_{k+1}\\). This implies the congruence \\(\\triangle A_{k} B_{k} \\tilde{A}_{k} \\cong \\triangle A_{k+1} B_{k} \\tilde{A}_{k+1}\\).\nThe congruence shows that \\(A_{k} \\tilde{A}_{k}=A_{k+1} \\tilde{A}_{k+1}\\); furthermore, the angle from the directed segment \\(\\overrightarrow{A_{k} \\tilde{A}_{k}}\\) to \\(\\overrightarrow{A_{k+1} \\tilde{A}_{k+1}}\\) is \\(\\theta_{k}\\) counterclockwise. This holds for \\(k=2,3, \\ldots, 2020\\); we conclude that \\(A_{1} \\tilde{A}_{1}=A_{2} \\tilde{A}_{2}\\), and the angle from the directed segments \\(\\overrightarrow{A_{1}} \\tilde{A}_{1}\\) to \\(\\overrightarrow{A_{2}} \\tilde{A}_{2}\\) is\n\n\\[-\\sum_{k=2}^{2020} \\theta_{k}=\\theta_{1}-1010 \\pi=\\theta_{1}\\]\n\ncounterclockwise.\nFinally we observe that \\(A_{1} B_{1}=A_{2} B_{1}\\), and the angle from the directed segment \\(\\overrightarrow{A_{1} B_{1}}\\) to \\(\\overrightarrow{A_{2} B_{1}}\\) is \\(\\theta_{1}\\) counterclockwise. This implies \\(\\angle B_{1} A_{1} \\tilde{A}_{1}=\\angle B_{1} A_{2} \\tilde{A}_{2}\\), so \\(\\triangle A_{1} B_{1} \\tilde{A}_{1} \\cong \\triangle A_{2} B_{1} \\tilde{A}_{2}\\). Thus \\(\\tilde{A}_{1} B_{1}=\\) \\(\\tilde{A}_{2} B_{1}\\), and the angle from \\(\\overrightarrow{\\tilde{A}_{1} B_{1}}\\) to \\(\\overrightarrow{\\tilde{A}_{2} B_{1}}\\) is \\(\\theta_{1}\\) counterclockwise. We conclude that \\(B_{1}=\\tilde{B}_{1}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

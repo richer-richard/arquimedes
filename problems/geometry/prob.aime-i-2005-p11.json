@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2005-p11",
+  "title": "2005 AIME I Problem 11",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangent-line",
+      "label": "Tangent line",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2005,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 61.6,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "A semicircle with diameter \\(d\\) is contained in a square whose sides have length \\(8.\\) Given that the maximum value of \\(d\\) is \\(m - \\sqrt{n},\\) where \\(m\\) and \\(n\\) are integers, find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "544",
+    "value": "544"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2005-p11.live",
+      "kind": "proof-sketch",
+      "text": "Scale to a semicircle of radius \\(1\\) and ask for the smallest square containing it when its diameter makes angle \\(\\theta\\) with one pair of sides, where \\(0 \\le \\theta \\le 90^\\circ.\\) Squeeze the semicircle between two pairs of parallel lines in the square’s two side directions: in each direction one line of the pair is tangent to the arc and the other passes through an endpoint of the diameter, and the distances between the pairs are \\(1 + \\cos\\theta\\) and \\(1 + \\sin\\theta.\\) So the smallest enclosing square in that orientation has side \\(\\max\\{1 + \\cos\\theta,\\ 1 + \\sin\\theta\\},\\) which is minimized when \\(\\theta = 45^\\circ,\\) giving side \\(1 + \\frac{\\sqrt{2}}{2} = \\frac{2 + \\sqrt{2}}{2}.\\)\n\nScaling this optimal configuration so the square has side \\(8,\\) the radius becomes \\[ \\begin{aligned} r &= \\frac{8}{\\frac{2 + \\sqrt{2}}{2}} \\\\ &= \\frac{16}{2 + \\sqrt{2}} \\\\ &= 8\\left(2 - \\sqrt{2}\\right), \\end{aligned} \\] so \\[ \\begin{aligned} d &= 2r = 16\\left(2 - \\sqrt{2}\\right) \\\\ &= 32 - 16\\sqrt{2} = 32 - \\sqrt{512}. \\end{aligned} \\]\n\nThus \\(m + n = 32 + 512 = 544.\\)",
+      "hints": [
+        "The best semicircle is tilted: try slanting the diameter at \\(45^\\circ\\) to the sides of the square",
+        "For radius \\(r\\) and diameter at angle \\(\\theta,\\) the smallest enclosing square has side \\(r\\,\\max\\{1 + \\cos\\theta,\\ 1 + \\sin\\theta\\},\\) minimized at \\(\\theta = 45^\\circ\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

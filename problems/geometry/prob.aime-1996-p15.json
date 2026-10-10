@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1996-p15",
+  "title": "1996 AIME Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.law-of-sines",
+      "label": "Law of sines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.parallelogram",
+      "label": "Parallelogram",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1996,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 50.5,
+    "source": 2560,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "In parallelogram \\(ABCD,\\) let \\(O\\) be the intersection of diagonals \\(\\overline{AC}\\) and \\(\\overline{BD}.\\) Angles \\(CAB\\) and \\(DBC\\) are each twice as large as angle \\(DBA,\\) and angle \\(ACB\\) is \\(r\\) times as large as angle \\(AOB.\\) Find the greatest integer that does not exceed \\(1000r.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "777",
+    "value": "777"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1996-p15.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(\\angle DBA=\\alpha.\\) Then \\(\\angle DBC=\\angle CAB=2\\alpha,\\) so in \\(\\triangle ABC\\) the angles are \\(2\\alpha,\\) \\(3\\alpha,\\) and \\(180^\\circ-5\\alpha.\\) Because \\(AD\\parallel BC,\\) triangle \\(ABD\\) has angles \\(\\alpha,\\) \\(2\\alpha,\\) and \\(180^\\circ-3\\alpha.\\)\n\nApplying the law of sines in the two triangles and using \\(AD=BC\\) gives \\[\\frac{AB}{BC}=\\frac{\\sin5\\alpha}{\\sin2\\alpha}=\\frac{\\sin2\\alpha}{\\sin\\alpha}.\\] With \\(u=\\cos^2\\alpha,\\) this becomes \\[16u^2-16u+1=0.\\] Since \\(5\\alpha<180^\\circ,\\) the valid root is \\(u=\\frac{2+\\sqrt3}{4}=\\cos^2 15^\\circ,\\) so \\(\\alpha=15^\\circ.\\) Thus \\(\\angle ACB=105^\\circ.\\) In \\(\\triangle AOB,\\) the angles at \\(A\\) and \\(B\\) are \\(30^\\circ\\) and \\(15^\\circ,\\) so \\(\\angle AOB=135^\\circ.\\) Therefore \\[\\begin{aligned}r&=\\frac{105}{135}=\\frac79,\\\\\\left\\lfloor1000r\\right\\rfloor&=777.\\end{aligned}\\]",
+      "hints": [
+        "Set \\(\\angle DBA=\\alpha\\) and compare triangles \\(ABC\\) and \\(ABD\\)",
+        "Use the law of sines to obtain an equation involving \\(\\sin5\\alpha,\\) \\(\\sin2\\alpha,\\) and \\(\\sin\\alpha\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

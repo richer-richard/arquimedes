@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-guts-2016-p4",
+  "title": "2016 HMMT February Guts Problem 4",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.games-and-greedy-algorithms",
+      "label": "Games and greedy algorithms",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2016,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 67.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Consider a three-person game involving the following three types of fair six-sided dice.\n\n- Dice of type \\(A\\) have faces labelled \\(2,2,4,4,9,9\\).\n- Dice of type \\(B\\) have faces labelled \\(1,1,6,6,8,8\\).\n- Dice of type \\(C\\) have faces labelled \\(3,3,5,5,7,7\\).\n\nAll three players simultaneously choose a die (more than one person can choose the same type of die, and the players don't know one another's choices) and roll it. Then the score of a player \\(P\\) is the number of players whose roll is less than \\(P\\) 's roll (and hence is either 0,1 , or 2 ). Assuming all three players play optimally, what is the expected score of a particular player?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2016-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\frac{8}{9}\\)\nShort version: third player doesn't matter; against 1 opponent, by symmetry, you'd both play the same strategy. Type A beats B, B beats C, and C beats A all with probability \\(5 / 9\\). It can be determined that choosing each die with probability \\(1 / 3\\) is the best strategy. Then, whatever you pick, there is a \\(1 / 3\\) of dominating, a \\(1 / 3\\) chance of getting dominated, and a \\(1 / 3\\) chance of picking the same die (which gives a \\(1 / 3 \\cdot 2 / 3+1 / 3 \\cdot 1 / 3=1 / 3\\) chance of rolling a higher number). Fix your selection; then the expected payout is then \\(1 / 3 \\cdot 5 / 9+1 / 3 \\cdot 4 / 9+1 / 3 \\cdot 1 / 3=1 / 3+1 / 9=4 / 9\\). Against 2 players, your EV is just \\(E(p 1)+E(p 2)=2 E(p 1)=8 / 9\\)",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

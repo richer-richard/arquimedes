@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-i-2002-p1",
+  "title": "2002 AIME I Problem 1",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "nt.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.palindrome",
+      "label": "Palindrome",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2002,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 33.4,
+    "source": 1890,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Many states use a sequence of three letters followed by a sequence of three digits as their standard license-plate pattern. Given that each three-letter three-digit arrangement is equally likely, the probability that such a license plate will contain at least one palindrome (a three-letter arrangement or a three-digit arrangement that reads the same left-to-right as it does right-to-left) is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "59",
+    "value": "59"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2002-p1.live",
+      "kind": "proof-sketch",
+      "text": "A three-letter arrangement is a palindrome exactly when the third letter matches the first, so the probability of a letter palindrome is \\(\\frac{1}{26}.\\) Similarly, the probability of a digit palindrome is \\(\\frac{1}{10},\\) and the two events are independent.\n\nBy inclusion-exclusion, the probability of at least one palindrome is \\[ \\begin{aligned} &\\frac{1}{26} + \\frac{1}{10} - \\frac{1}{26} \\cdot \\frac{1}{10} \\\\ &= \\frac{10 + 26 - 1}{260} \\\\ &= \\frac{35}{260} \\\\ &= \\frac{7}{52}. \\end{aligned} \\] Thus \\(m + n = 7 + 52 = 59.\\)",
+      "hints": [
+        "A three-letter arrangement is a palindrome exactly when the third letter equals the first, so that probability is \\(\\frac{1}{26}\\)",
+        "Combine the letter and digit events by inclusion-exclusion: \\(\\frac{1}{26} + \\frac{1}{10} - \\frac{1}{26} \\cdot \\frac{1}{10}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2010-p5",
+  "title": "2010 AIME I Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.difference-of-squares",
+      "label": "Difference of squares",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2010,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 42.1,
+    "source": 2230,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Positive integers \\(a,\\) \\(b,\\) \\(c,\\) and \\(d\\) satisfy \\(a \\gt b \\gt c \\gt d,\\) \\(a + b + c + d = 2010,\\) and \\(a^2 - b^2 + c^2 - d^2 = 2010.\\) Find the number of possible values of \\(a.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "501",
+    "value": "501"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2010-p5.live",
+      "kind": "proof-sketch",
+      "text": "Factoring, \\[ \\begin{gathered} a^2 - b^2 + c^2 - d^2 \\\\ = (a-b)(a+b) \\\\ {}+ (c-d)(c+d) \\\\ \\ge (a+b) + (c+d) = 2010, \\end{gathered} \\] since \\(a - b \\ge 1\\) and \\(c - d \\ge 1.\\) Equality holds, so \\(a - b = c - d = 1,\\) that is, \\(b = a - 1\\) and \\(d = c - 1.\\) Then \\(2010 = a + (a-1) + c + (c-1)\\) gives \\(a + c = 1006.\\)\n\nThe condition \\(b \\gt c\\) means \\(a - 1 \\gt c = 1006 - a,\\) so \\(a \\ge 504,\\) and \\(d \\ge 1\\) means \\(c \\ge 2,\\) so \\(a \\le 1004.\\) Every \\(a\\) in this range works, via \\((a, b, c, d)\\) \\(= (a,\\, a-1,\\,\\) \\(1006-a,\\, 1005-a).\\)\n\nThe count is \\(1004 - 504 + 1 = 501.\\)",
+      "hints": [
+        "Factor: \\(a^2 - b^2 + c^2 - d^2\\) \\(= (a-b)(a+b)\\) \\(+ (c-d)(c+d)\\) \\(\\ge (a+b) + (c+d)\\)",
+        "Equality forces \\(a - b = c - d = 1,\\) so \\(a + c = 1006;\\) then find the range of \\(a\\) allowed by \\(b \\gt c\\) and \\(d \\ge 1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

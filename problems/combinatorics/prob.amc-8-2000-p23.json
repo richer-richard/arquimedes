@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-2000-p23",
+  "title": "2000 AMC 8 Problem 23",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.double-counting",
+      "label": "Double counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.mean",
+      "label": "Mean",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2000,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 17.4,
+    "source": 1610,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "There is a list of seven numbers. The average of the first four numbers is \\(5,\\) and the average of the last four numbers is \\(8.\\) If the average of all seven numbers is \\(6\\frac{4}{7},\\) then the number common to both sets of four numbers is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(5\\frac{3}{7}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6\\frac{4}{7}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(7\\frac{3}{7}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2000-p23.live",
+      "kind": "proof-sketch",
+      "text": "The sum of the first four numbers is \\(4 \\cdot 5 = 20.\\) The sum of the last four numbers is \\(4 \\cdot 8 = 32.\\)\n\nThe sum of all seven numbers is \\(7 \\cdot 6\\frac{4}{7} = 46.\\) We know that the number common to both sets is included in both of the first two sums.\n\nThis means that the sum of the first two sums includes every number once, except for the common number which is included twice.\n\nThe third sum, however, only includes every number once. This means that the sum of the first two sums minus the third sum yields our desired number.\n\nTherefore, the common number is \\[ 20 + 32 - 46 = 52 - 46 = 6. \\]\n\nThus, B is the correct answer.",
+      "hints": [
+        "Convert each average into a sum",
+        "The shared number is counted twice in the two four-number sums"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

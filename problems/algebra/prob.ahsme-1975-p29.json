@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1975-p29",
+  "title": "1975 AHSME Problem 29",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.binomial-theorem",
+      "label": "Binomial theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.radical",
+      "label": "Radical",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1975,
+    "number": 29
+  },
+  "difficulty": {
+    "course": 35.7,
+    "source": 1980,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "What is the smallest integer larger than \\((\\sqrt3+\\sqrt2)^6?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(972\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(971\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(970\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(969\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(968\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "970"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1975-p29.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(\\alpha=\\sqrt3+\\sqrt2\\) and \\(\\beta=\\sqrt3-\\sqrt2.\\) Adding their sixth powers cancels all odd radical terms: \\[ \\begin{aligned} \\alpha^6+\\beta^6 &=2\\bigl(3^3+15(3^2)(2)\\\\ &\\qquad+15(3)(2^2)+2^3\\bigr)\\\\ &=970. \\end{aligned} \\] Since \\(0\\lt\\beta\\lt1,\\) we have \\(969\\lt\\alpha^6=970-\\beta^6\\lt970.\\) Thus the smallest larger integer is \\(970.\\)\n\nTherefore, the correct answer is C.",
+      "hints": [
+        "Pair the expression with its conjugate \\((\\sqrt3-\\sqrt2)^6\\)",
+        "Their sum is an integer, while the conjugate term lies strictly between \\(0\\) and \\(1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

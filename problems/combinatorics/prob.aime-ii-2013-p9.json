@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2013-p9",
+  "title": "2013 AIME II Problem 9",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.tiling",
+      "label": "Tiling",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2013,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 57.3,
+    "source": 2610,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "A \\(7 \\times 1\\) board is completely covered by \\(m \\times 1\\) tiles without overlap; each tile may cover any number of consecutive squares, and each tile lies completely on the board. Each tile is either red, blue, or green. Let \\(N\\) be the number of tilings of the \\(7 \\times 1\\) board in which all three colors are used at least once. For example, a \\(1 \\times 1\\) red tile followed by a \\(2 \\times 1\\) green tile, a \\(1 \\times 1\\) green tile, a \\(2 \\times 1\\) blue tile, and a \\(1 \\times 1\\) green tile is a valid tiling. Note that if the \\(2 \\times 1\\) blue tile is replaced by two \\(1 \\times 1\\) blue tiles, this results in a different tiling. Find the remainder when \\(N\\) is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "106",
+    "value": "106"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2013-p9.live",
+      "kind": "proof-sketch",
+      "text": "First count colored tilings when \\(k\\) colors are available. The first square’s tile can be colored in \\(k\\) ways, and each of the remaining \\(6\\) squares either extends the current tile or starts a new tile in one of the \\(k\\) colors, giving \\(k + 1\\) choices per square. So there are \\(k(k+1)^6\\) tilings.\n\nWith three colors that is \\(3 \\cdot 4^6 = 12288\\) tilings. By inclusion-exclusion over the unused colors, the number using all three colors is \\[ \\begin{aligned} N &= 3 \\cdot 4^6 - 3 \\cdot (2 \\cdot 3^6) \\\\ &\\quad {}+ 3 \\cdot (1 \\cdot 2^6) \\\\ &= 12288 - 4374 + 192 \\\\ &= 8106. \\end{aligned} \\]\n\nThe remainder when \\(N\\) is divided by \\(1000\\) is \\(106.\\)",
+      "hints": [
+        "First count all tilings when \\(k\\) colors are allowed: scan left to right, and note each new square either extends the current tile or starts a fresh tile",
+        "That count is \\(k(k+1)^6.\\) Then use inclusion-exclusion over which of the three colors go unused."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "prob.usa-tstst-2020-p3",
+  "title": "USA TSTST 2020 Problem 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.chebyshev-polynomials",
+      "label": "Chebyshev polynomials",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.greatest-common-divisors-gcd",
+      "label": "Greatest common divisors (gcd)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.irreducibility-rational-root-theorem-gauss-s-lemma-eisenstein",
+      "label": "Irreducibility: Rational Root Theorem, Gauss's Lemma, Eisenstein",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-trigonometry",
+      "label": "Triangle trigonometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TSTST",
+    "year": 2020,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 111.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "We say a nondegenerate triangle whose angles have\nmeasures \\(\\theta_1\\), \\(\\theta_2\\), \\(\\theta_3\\) is quirky\nif there exists integers \\(r_1\\), \\(r_2\\), \\(r_3\\), not all zero,\nsuch that \\[ r_1 \\theta_1 + r_2 \\theta_2 + r_3 \\theta_3 = 0. \\]\nFind all integers \\(n \\ge 3\\) for which a triangle with\nside lengths \\(n-1\\), \\(n\\), \\(n+1\\) is quirky.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tstst-2020-p3.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is \\(n = 3,\\ 4,\\ 5,\\ 7\\).\n\nWe first introduce a variant of the \\(k\\)th Chebyshev polynomials\nin the following lemma (which is standard, and easily shown by induction).\n\nLemma.\n For each \\(k \\ge 0\\) there exists \\(P_k(X) \\in \\mathbb{Z}[X]\\),\n monic for \\(k \\ge 1\\) and with degree \\(k\\), such that\n \\[ P_k( X + X^{-1} ) \\equiv X^k + X^{-k}. \\]\n The first few are \\(P_0(X) \\equiv 2\\),\n \\(P_1(X) \\equiv X\\), \\(P_2(X) \\equiv X^2-2\\), \\(P_3(X) \\equiv X^3-3X\\).\n\nSuppose the angles of the triangle are \\(\\alpha < \\beta < \\gamma\\),\nso the law of cosines implies that\n\\[ 2\\cos\\alpha =\\frac{n+4}{n+1} \\qquad \\text{and} \\qquad 2\\cos\\gamma = \\frac{n-4}{n-1}. \\]\n\nClaim.\n The triangle is quirky iff there exists \\(r,s \\in \\mathbb{Z}_{\\ge0}\\) not both zero such that\n \\[ \\cos(r\\alpha) = \\pm \\cos(s\\gamma)\n \\qquad \\text{or equivalently} \\qquad\n P_r\\left( \\frac{n+4}{n+1} \\right) = \\pm P_s\\left( \\frac{n-4}{n-1} \\right). \\]\n\nProof.\nIf there are integers \\(x\\), \\(y\\), \\(z\\) for which \\(x\\alpha + y\\beta + z\\gamma = 0\\),\nthen we have that \\((x-y)\\alpha = (y-z)\\gamma - \\pi y\\),\nwhence it follows that we may take \\(r = |x-y|\\) and \\(s = |y-z|\\)\n(noting \\(r=s=0\\) implies the absurd \\(x=y=z\\)).\nConversely, given such \\(r\\) and \\(s\\) with \\(\\cos(r\\alpha) = \\pm \\cos(s\\gamma)\\),\nthen it follows that \\(r \\alpha \\pm s \\gamma = k\\pi = k(\\alpha + \\beta + \\gamma)\\)\nfor some \\(k\\), so the triangle is quirky.\n\nIf \\(r=0\\), then by rational root theorem on \\(P_s(X) \\pm 2\\) it follows\n\\(\\frac{n-4}{n-1}\\) must be an integer which occurs only when \\(n = 4\\) (recall \\(n \\ge 3\\)).\nSimilarly we may discard the case \\(s = 0\\).\n\nThus in what follows assume \\(n \\neq 4\\) and \\(r,s > 0\\).\nThen, from the fact that \\(P_r\\) and \\(P_s\\) are nonconstant\nmonic polynomials, we find\n\nCorollary.\n If \\(n \\neq 4\\) works, then when \\(\\frac{n+4}{n+1}\\)\n and \\(\\frac{n-4}{n-1}\\) are written as fractions in lowest terms,\n the denominators have the same set of prime factors.\n\nBut \\(\\gcd(n+1, n-1)\\) divides \\(2\\), and \\(\\gcd(n+4, n+1)\\), \\(\\gcd(n-4,n-1)\\) divide \\(3\\).\nSo we only have three possibilities:\n\n• \\(n+1 = 2^u\\) and \\(n-1 = 2^v\\) for some \\(u,v \\ge 0\\).\n This is only possible if \\(n = 3\\).\n Here \\(2\\cos\\alpha = \\frac74\\) and \\(2\\cos\\gamma = -\\frac12\\),\n and indeed \\(P_2(-1/2) = -7/4\\).\n\n• \\(n+1 = 3 \\cdot 2^u\\) and \\(n-1 = 2^v\\) for some \\(u,v \\ge 0\\),\n which implies \\(n = 5\\).\n Here \\(2\\cos\\alpha = \\frac32\\) and \\(2\\cos\\gamma = \\frac14\\),\n and indeed \\(P_2(3/2) = 1/4\\).\n\n• \\(n+1 = 2^u\\) and \\(n-1 = 3 \\cdot 2^v\\) for some \\(u,v \\ge 0\\),\n which implies \\(n = 7\\).\n Here \\(2\\cos\\alpha = \\frac{11}{8}\\) and \\(2\\cos\\gamma = \\frac12\\),\n and indeed \\(P_3(1/2) = -11/8\\).\n\nFinally, \\(n=4\\) works because the triangle is right, completing the solution.\n\nRemark.\n [Major generalization due to Luke Robitaille]\n In fact one may find all quirky triangles\n whose sides are integers in arithmetic progression.\n\n Indeed, if the side lengths of the triangle are \\(x-y\\), \\(x\\), \\(x+y\\)\n with \\(\\gcd(x,y) = 1\\) then the problem becomes\n \\[ P_r\\left( \\frac{x+4y}{x+y} \\right) = \\pm P_s \\left( \\frac{x-4y}{x-y} \\right) \\]\n and so in the same way as before,\n we ought to have \\(x+y\\) and \\(x-y\\) are both of the form \\(3 \\cdot 2^{\\ast}\\) unless \\(rs = 0\\).\n This time, when \\(rs=0\\), we get the extra solutions \\((1,0)\\), \\((4,1)\\), and \\((5,2)\\).\n\n For \\(rs \\neq 0\\), by triangle inequality, we have \\(x-y \\le x+y < 3(x-y)\\),\n and \\(\\min(\\nu_2(x-y), \\nu_2(x+y)) \\le 1\\),\n so it follows one of \\(x-y\\) or \\(x+y\\) must be in \\(\\{1,2,3,6\\}\\).\n An exhaustive check then leads to\n \\[ (x,y) \\in \\left\\{ (3,1), (5,1), (7,1), (11,5) \\right\\}\n \\cup \\left\\{ (1,0), (5,2), (4,1) \\right\\} \\]\n as the solution set. And in fact they all work.\n\n In conclusion the equilateral triangle, \\(3-5-7\\) triangle (which has a \\(120^\\circ\\) angle)\n and \\(6-11-16\\) triangle (which satisfies \\(B=3A+4C\\))\n are exactly the new quirky triangles (up to similarity)\n whose sides are integers in arithmetic progression.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

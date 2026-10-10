@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-oral-1999-p7",
+  "title": "1999 HMMT February Oral Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 1999,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Evaluate \\(\\sum_{n=1}^{\\infty} \\frac{n^{5}}{n!}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-oral-1999-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "We start by noticing that \\(\\sum_{n=1}^{\\infty} \\frac{n}{n!}=\\sum_{n=1}^{\\infty} \\frac{1}{(n-1)!}=\\sum_{n=0}^{\\infty} \\frac{1}{n!}=e\\). Next we see that \\(\\sum_{n=1}^{\\infty} \\frac{n^{2}}{n!}=\\sum_{n=1}^{\\infty} \\frac{n}{(n-1)!}=\\sum_{n=0}^{\\infty} \\frac{1+n}{n!}=\\sum_{n=0}^{\\infty} \\frac{1}{n!}+\\sum_{n=0}^{\\infty} \\frac{n}{n!}=e+e=2 e\\). Let \\(f(k)=\\sum_{n=1}^{\\infty} \\frac{n^{k}}{n!}\\), then \\(\\sum_{n=1}^{\\infty} \\frac{n^{k}}{n!}=\\sum_{n=1}^{\\infty} \\frac{n^{k-1}}{(n-1)!}=\\sum_{n=0}^{\\infty} \\frac{(1+n)^{k-1}}{n!}\\), so by the binomial theorem \\(f(k)=\\sum_{j=0}^{k-1}\\binom{k-1}{j} \\cdot f(j)\\). Armed with this formula, we can easily compute \\(f(3)=f(0)+2 f(1)+f(2)=e+2 e+2 e=5 e\\), \\(f(4)=1 \\cdot e+3 \\cdot e+3 \\cdot 2 e+1 \\cdot 5 e=15 e\\), and \\(f(5)=1 \\cdot e+4 \\cdot e+6 \\cdot 2 e+4 \\cdot 5 e+1 \\cdot 15 e=52 \\mathbf{e}\\).\n\nScore 30 points for the correct answer, 25 points for a correct justification. If on the right track with a good justification, but an arithmetic error is made along the way, score 5 points for each \\(f(j), j=0,1,2,3,4\\), correctly computed.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

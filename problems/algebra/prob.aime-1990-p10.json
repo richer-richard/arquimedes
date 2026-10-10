@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1990-p10",
+  "title": "1990 AIME Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.least-common-multiple",
+      "label": "Least common multiple",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1990,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 43.1,
+    "source": 2270,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "The sets \\(A=\\{z:z^{18}=1\\}\\) and \\(B=\\{w:w^{48}=1\\}\\) are both sets of complex roots of unity. The set \\(C=\\{zw:z\\in A,\\ w\\in B\\}\\) is also a set of complex roots of unity. How many distinct elements are in \\(C?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "144",
+    "value": "144"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1990-p10.live",
+      "kind": "proof-sketch",
+      "text": "The arguments of products in \\(C\\) are \\[2\\pi\\left(\\frac a{18}+\\frac b{48}\\right)=\\frac{2\\pi(8a+3b)}{144}.\\] Since \\(\\gcd(8,3)=1,\\) the residues \\(8a+3b\\) generate every residue modulo \\(144.\\) Thus \\(C\\) is precisely the set of \\(144\\)th roots of unity. Equivalently, its order is \\(\\operatorname{lcm}(18,48)=144.\\)",
+      "hints": [
+        "Write the roots as exponentials whose arguments are multiples of \\(\\frac{2\\pi}{18}\\) and \\(\\frac{2\\pi}{48}\\)",
+        "The sums of those arguments generate all multiples of \\(\\frac{2\\pi}{\\operatorname{lcm}(18,48)}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

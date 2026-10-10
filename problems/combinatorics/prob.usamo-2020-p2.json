@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2020-p2",
+  "title": "2020 USAMO Problem 2",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2020,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 93.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "An empty \\(2020 \\times 2020 \\times 2020\\) cube is given, and a \\(2020 \\times 2020\\) grid of square unit cells is drawn on each of its six faces. A beam is a \\(1 \\times 1 \\times 2020\\) rectangular prism. Several beams are placed inside the cube subject to the following conditions:\n\n- The two \\(1 \\times 1\\) faces of each beam coincide with unit cells lying on opposite faces of the cube. (Hence, there are \\(3 \\cdot 2020^2\\) possible positions for a beam.)\n- No two beams have intersecting interiors.\n- The interiors of each of the four \\(1 \\times 2020\\) faces of each beam touch either a face of the cube or the interior of the face of another beam.\n\nWhat is the smallest positive number of beams that can be placed to satisfy these conditions?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2020-p2.imported",
+      "kind": "proof-sketch",
+      "text": "Take one vertex of the cube as origin and establish 3D coordinates along the cube's edges.\nDefine a beam as $x-dir$ if its long edge is parallel to x-axis. Similarly for $y-dir$ and $z-dir$.\nDefine a beam's location as (direction, ($1 \\times 1$ face's location in 2D coordinate).\nFor example, (y, 2, 4) indicates the beam with vertex (1, 0, 3) and (2, 2020, 4)\nApparently $x$ beam needs the other $x$ or $y$ beams to touch its $xy$ faces, $x$ or $z$ beams to touch its $xz$ faces. Similarly for $y$ and $z$ beam.\nIf there are only 1-dir or 2-dirs beams, it is easy to approve that $2020 \\times 2020$ is the minimal number beams.\n(for example, if only use $x-dir$ and $y-dir$ beams, all the $x-dir$ beams's xz faces can only be touched by $x-dir$ beams. In the other word, $2020 x-dir$ beams will be stacked to meet xz faces touch requirements in that xz layer)\nConsider cases with all $3-dirs$ beams.\nWLOG there is a $x-dir$ beam and it needs $x-dir$ or $y-dir$ beams to touch its $xy$ faces (unless it touches the cube surface).\nAnd this $y-dir$ beam also needs a $x-dir$ or $y-dir$ to touch it's $xy$ faces. And so on until one which touches cube surface. So from $xy$ face perspective, it needs $2020$ beams.\nSimilarly from $xz$ and $yz$ face perspective, it also needs $2020$ and $2020$ beams.\nConsider one beam has four $1 \\times 2020$ faces and it can be counted twice. So there should be at least $2020 \\times 3 \\div 2=3030$ beams.\nHere is one solution with 3030 beams.\n$(x, 1, 1),\\ (y, 1, 2),\\ (z, 2, 2),$\n$\\cdots ,$\n$(x, (2n+1), (2n+1)),\\ (y, (2n+1), (2n+2)),\\ (z, (2n+2), (2n+2)),$\n$\\cdots ,$\n$(x, (2019, 2019)),\\ (y, 2019, 2020),\\ (z, 2020, 2020)$",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-10b-2018-p16",
+  "title": "2018 AMC 10B 16",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2018,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 27.7,
+    "source": 1710,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(a_1,\\) \\(a_2,\\) \\(\\ldots,\\) \\(a_{2018}\\) be a strictly increasing sequence of positive integers such that\n\n\\[a_1 + a_2 + \\cdots + a_{2018} = 2018^{2018}.\\]\n\nWhat is the remainder when \\(a_1^3 + a_2^3 + \\cdots + a_{2018}^3\\) is divided by \\(6?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2018-p16.live",
+      "kind": "proof-sketch",
+      "text": "For any integer \\(n,\\) \\(n^3 - n = (n-1)n(n+1)\\) is a product of three consecutive integers, so it’s divisible by \\(6.\\) That means \\(n^3 \\equiv n \\pmod 6.\\) Summing, \\(\\sum a_i^3 \\equiv \\sum a_i\\) \\(= 2018^{2018} \\pmod 6.\\) Now \\(2018 \\equiv 2 \\pmod 6,\\) and powers of \\(2\\) mod \\(6\\) alternate \\(2, 4, 2, 4, \\ldots.\\) The exponent \\(2018\\) is even, so \\(2^{2018} \\equiv 4 \\pmod 6.\\) The remainder is \\(4.\\) Therefore, the answer is E.",
+      "hints": [
+        "\\(n^3 \\equiv n \\pmod 6,\\) because \\(n^3 - n = (n-1)n(n+1)\\) is a product of three consecutive integers",
+        "So the sum of cubes is congruent to \\(2018^{2018} \\pmod 6;\\) reduce that modulo \\(6\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

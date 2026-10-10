@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2009-p15",
+  "title": "2009 AMC 10A Problem 15",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2009,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 20.8,
+    "source": 1400,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The figures \\(F_1,\\) \\(F_2,\\) \\(F_3,\\) and \\(F_4\\) shown are the first in a sequence of figures. For \\(n \\ge 3,\\) \\(F_n\\) is constructed from \\(F_{n-1}\\) by surrounding it with a square and placing one more diamond on each side of the new square than \\(F_{n-1}\\) had on each side of its outside square. For example, figure \\(F_3\\) has \\(13\\) diamonds. How many diamonds are there in figure \\(F_{20}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(401\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(485\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(585\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(626\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(761\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "761"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2009-p15.live",
+      "kind": "proof-sketch",
+      "text": "Going from \\(F_{n-1}\\) to \\(F_n,\\) the new outside square carries \\(4(n-1)\\) diamonds. Starting from the single diamond of \\(F_1,\\) \\[ \\begin{aligned} F_n &= 1 \\\\ &\\quad {}+ 4\\big(1 + 2 + \\cdots + (n-1)\\big) \\\\ &= 1 + 4 \\cdot \\dfrac{(n-1)n}{2} \\\\ &= 1 + 2n(n-1). \\end{aligned} \\]\n\nTherefore \\[F_{20} = 1 + 2 \\cdot 20 \\cdot 19 = 761.\\]\n\nThus, the correct answer is E.",
+      "hints": [
+        "The outside square of \\(F_n\\) contributes \\(4(n-1)\\) new diamonds",
+        "The total is \\(1\\) plus \\(4\\big(1 + 2 + \\cdots + (n-1)\\big)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "66997bfc516efd3d6abce1d2f4707dabdb7fc465c29dfcd17b01487bb219190e"
+    ],
+    "solutions": []
+  }
+}

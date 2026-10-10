@@ -1,0 +1,71 @@
+{
+  "id": "prob.ahsme-1997-p29",
+  "title": "1997 AHSME Problem 29",
+  "category": "arithmetic",
+  "subjects": [
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "arith.place-value",
+      "label": "Place value",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1997,
+    "number": 29
+  },
+  "difficulty": {
+    "course": 46.7,
+    "source": 2410,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Call a positive real number special if it has a decimal representation that consists entirely of digits \\(0\\) and \\(7.\\) For example, \\(\\frac{700}{99}=7.07=7.070707\\ldots\\) and \\(77.007\\) are special numbers. What is the smallest \\(n\\) such that \\(1\\) can be written as a sum of \\(n\\) special numbers?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(1\\) cannot be represented as a sum of finitely many special\nnumbers"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "8"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1997-p29.live",
+      "kind": "proof-sketch",
+      "text": "Suppose \\(1\\) is a sum of \\(n\\) special numbers, and let \\(a_k\\) count summands having a \\(7\\) in the \\(k\\)th decimal place. Dividing by \\(7\\) gives \\[ \\begin{aligned} \\frac17&=\\frac{a_1}{10}+\\frac{a_2}{10^2}+\\cdots\\\\ &=0.\\overline{142857}. \\end{aligned} \\] For \\(n\\le9,\\) each \\(a_k\\) is a digit, so \\(a_1,a_2,\\ldots=1,4,2,8,5,7,\\ldots;\\) hence \\(n\\ge8.\\) Eight suffice because the repeating special decimals represented by \\[ \\begin{aligned} 700700+2(070707)\\\\ {}+2(077777)\\\\ {}+3(000777)&=999999. \\end{aligned} \\] Their sum is \\(1.\\) Therefore the minimum is \\(8,\\) and B is correct.",
+      "hints": [
+        "If \\(a_k\\) summands have \\(7\\) in decimal place \\(k\\), divide the sum by \\(7\\)",
+        "Compare the resulting digit counts with the repeating decimal for \\(\\frac{1}{7}\\), then seek a six-digit repeating construction"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

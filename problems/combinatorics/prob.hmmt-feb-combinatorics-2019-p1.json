@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2019-p1",
+  "title": "2019 HMMT February Combinatorics Problem 1",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2019,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 68.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many distinct permutations of the letters of the word REDDER are there that do not contain a palindromic substring of length at least two? (A substring is a contiguous block of letters that is part of the string. A string is palindromic if it is the same when read backwards.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2019-p1.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 6\nIf two identical letters are adjacent or have a single letter in between, there is clearly a palindromic substring of length (respectively) two or three. So there cannot be any such substrings.\nSay we have a permutation of the word REDDER without any palindromic substrings. Let us call the first letter X. The second letter has to be different, let us call it Y. The third letter cannot be X or Y, let it be Z. Again, the fourth letter cannot be Y or Z, and we only have 3 letters to choose from, so it has to be X . Continuing analogously, the fifth letter has to be Y , and the sixth letter has to be Z . So any word satisfying the problem statement has to be of the form XYZXYZ. It is easy to check that such a word indeed does not have any palindromic substrings. \\(\\mathrm{X}, \\mathrm{Y}, \\mathrm{Z}\\) can be any permutation of R , E, D, giving a total of 6 possibilities.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

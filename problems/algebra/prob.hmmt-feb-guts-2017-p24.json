@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-feb-guts-2017-p24",
+  "title": "2017 HMMT February Guts Problem 24",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2017,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 75.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "At a recent math contest, Evan was asked to find \\(2^{2016}(\\bmod p)\\) for a given prime number \\(p\\) with \\(100<p<500\\). Evan has forgotten what the prime \\(p\\) was, but still remembers how he solved it:\n\n- Evan first tried taking 2016 modulo \\(p-1\\), but got a value \\(e\\) larger than 100 .\n- However, Evan noted that \\(e-\\frac{1}{2}(p-1)=21\\), and then realized the answer was \\(-2^{21}(\\bmod p)\\).\n\nWhat was the prime \\(p\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2017-p24.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 211\nAnswer is \\(p=211\\). Let \\(p=2 d+1,50<d<250\\). The information in the problem boils down to\n\n\\[2016=d+21 \\quad(\\bmod 2 d)\\]\n\nFrom this we can at least read off \\(d \\mid 1995\\).\nNow factor \\(1995=3 \\cdot 5 \\cdot 7 \\cdot 19\\). The values of \\(d\\) in this interval are \\(57,95,105,133\\). The prime values of \\(2 d+1\\) are then 191 and 211. Of these, we take 211 since \\((2 / 191)=+1\\) while \\((2 / 211)=-1\\).\nAlso, this is (almost) a true story: the contest in question was the PUMaC 2016 Live Round.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

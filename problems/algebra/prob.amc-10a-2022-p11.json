@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2022-p11",
+  "title": "2022 AMC 10A Problem 11",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.exponent",
+      "label": "Exponent",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2022,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 17.7,
+    "source": 1280,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Ted mistakenly wrote \\[2^m\\cdot\\sqrt{\\dfrac{1}{4096}}\\] as \\[2\\cdot\\sqrt[m]{\\dfrac{1}{4096}}.\\]\n\nWhat is the sum of all real numbers \\(m\\) for which these two expressions have the same value?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(9\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "7"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2022-p11.live",
+      "kind": "proof-sketch",
+      "text": "We can rewrite \\(4096\\) as \\(2^{12},\\) so \\(\\dfrac{1}{4096} = 2^{-12}.\\) Then if we equate the given expressions, we get \\[ 2^m \\cdot 2^{-6} = 2 \\cdot 2^{\\frac{-12}{m}}. \\] Equating the exponents, we get \\[ m - 6 = 1 + \\dfrac{-12}{m}. \\]\n\nMultiplying by \\(m,\\) we get \\[ m^2 - 6m = m - 12 \\] and so \\[ m^2 - 7m + 12 = 0 \\]\\[(m-4)(m-3)\\]\\[m=4,~m=3\\]\n\nTherefore, we can see that the sum of the solutions is \\(7.\\)\n\nThus, C is the correct answer.",
+      "hints": [
+        "Rewrite \\(4096\\) as a power of \\(2\\)",
+        "After matching powers of \\(2,\\) solve the resulting quadratic equation in m"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

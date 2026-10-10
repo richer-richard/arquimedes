@@ -1,0 +1,70 @@
+{
+  "id": "prob.hmmt-feb-algebra-2009-p10",
+  "title": "2009 HMMT February Algebra Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2009,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 93.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(f(x)=2 x^{3}-2 x\\). For what positive values of \\(a\\) do there exist distinct \\(b, c, d\\) such that \\((a, f(a))\\), \\((b, f(b)),(c, f(c)),(d, f(d))\\) is a rectangle?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-2009-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "Say we have four points \\((a, f(a)),(b, f(b)),(c, f(c)),(d, f(d))\\) on the curve which form a rectangle. If we interpolate a cubic through these points, that cubic will be symmetric around the center of the rectangle. But the unique cubic through the four points is \\(f(x)\\), and \\(f(x)\\) has only one point of symmetry, the point \\((0,0)\\).\nSo every rectangle with all four points on \\(f(x)\\) is of the form \\((a, f(a)),(b, f(b)),(-a, f(-a)),(-b, f(-b))\\), and without loss of generality we let \\(a, b>0\\). Then for any choice of \\(a\\) and \\(b\\) these points form a parallelogram, which is a rectangle if and only if the distance from \\((a, f(a))\\) to \\((0,0)\\) is equal to the distance from \\((b, f(b))\\) to \\((0,0)\\). Let \\(g(x)=x^{2}+(f(x))^{2}=4 x^{6}-8 x^{4}+5 x^{2}\\), and consider \\(g(x)\\) restricted to \\(x \\geq 0\\). We are looking for all the values of \\(a\\) such that \\(g(x)=g(a)\\) has solutions other than \\(a\\).\nNote that \\(g(x)=h\\left(x^{2}\\right)\\) where \\(h(x)=4 x^{3}-8 x^{2}+5 x\\). This polynomial \\(h(x)\\) has a relative maximum of 1 at \\(x=\\frac{1}{2}\\) and a relative minimum of \\(25 / 27\\) at \\(x=\\frac{5}{6}\\). Thus the polynomial \\(h(x)-h(1 / 2)\\) has the double root \\(1 / 2\\) and factors as \\(\\left(4 x^{2}-4 x+1\\right)(x-1)\\), the largest possible value of \\(a^{2}\\) for which \\(h\\left(x^{2}\\right)=h\\left(a^{2}\\right)\\) is \\(a^{2}=1\\), or \\(a=1\\). The smallest such value is that which evaluates to \\(25 / 27\\) other than \\(5 / 6\\), which is similarly found to be \\(a^{2}=1 / 3\\), or \\(a=\\frac{\\sqrt{3}}{3}\\). Thus, for \\(a\\) in the range \\(\\frac{\\sqrt{3}}{3} \\leq a \\leq 1\\) the equation \\(g(x)=g(a)\\) has nontrivial solutions and hence an inscribed rectangle exists.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

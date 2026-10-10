@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2019-p5",
+  "title": "2019 AMC 12A Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.shoelace-formula",
+      "label": "Shoelace formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2019,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 17.7,
+    "source": 1280,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Two lines with slopes \\(\\dfrac{1}{2}\\) and \\(2\\) intersect at \\((2, 2).\\) What is the area of the triangle enclosed by these two lines and the line \\(x + y = 10?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4\\sqrt{2}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(6\\sqrt{2}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2019-p5.live",
+      "kind": "proof-sketch",
+      "text": "The two lines are \\(y = \\tfrac{1}{2}x + 1\\) and \\(y = 2x - 2.\\) Intersecting each with \\(x + y = 10\\) gives the points \\((6, 4)\\) and \\((4, 6).\\)\n\nThe triangle has vertices \\((2, 2),\\) \\((6, 4),\\) and \\((4, 6).\\) By the shoelace formula,\n\n\\[ \\begin{aligned} &\\small \\tfrac{1}{2}\\left| 2(4 - 6) + 6(6 - 2) + 4(2 - 4) \\right| \\\\ &= \\tfrac{1}{2}\\left| -4 + 24 - 8 \\right| \\\\ &= 6. \\end{aligned} \\]\n\nThus, the correct answer is C.",
+      "hints": [
+        "Find where each line meets \\(x + y = 10\\)",
+        "The three vertices are \\((2, 2),\\) \\((6, 4),\\) and \\((4, 6);\\) use the shoelace formula"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

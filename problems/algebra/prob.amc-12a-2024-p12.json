@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2024-p12",
+  "title": "2024 AMC 12A Problem 12",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factor",
+      "label": "Factor",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2024,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 26.7,
+    "source": 1630,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The first three terms of a geometric sequence are the integers \\(a,\\) \\(720,\\) and \\(b,\\) where \\(a\\lt720\\lt b.\\) What is the sum of the digits of the least possible value of \\(b?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(21\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "21"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2024-p12.live",
+      "kind": "proof-sketch",
+      "text": "Since the terms are geometric, \\(720^2=ab,\\) so \\(ab=518400=2^8\\cdot3^4\\cdot5^2.\\) Because \\(b=\\frac{518400}{a},\\) minimizing \\(b\\) means finding the smallest divisor of \\(518400\\) greater than \\(720.\\) There is no divisor strictly between \\(720\\) and \\(768:\\) if its exponent of \\(5\\) is \\(2,1,\\) or \\(0,\\) then after dividing by \\(25,5,\\) or \\(1,\\) respectively, a number of the form \\(2^i3^j\\) would have to lie in \\((28.8,30.72),\\ (144,153.6),\\) or \\((720,768);\\) the allowed powers \\(i\\le8,j\\le4\\) give none. Since \\(768=2^8\\cdot3\\) is a divisor, it is the least possible \\(b.\\) Its paired divisor is \\(a=\\frac{518400}{768}=675,\\) and the digit sum of \\(b\\) is \\(7+6+8=21.\\) Thus, the correct answer is E.",
+      "hints": [
+        "The middle term gives \\(720^2=ab,\\) so \\(ab=518400\\)",
+        "To minimize \\(b,\\) take the largest divisor \\(a\\lt720\\) of \\(518400\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

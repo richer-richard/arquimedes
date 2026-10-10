@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2021-p11",
+  "title": "2021 AMC 12B Problem 11",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.parallel-lines",
+      "label": "Parallel lines",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2021,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 28.3,
+    "source": 1690,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Triangle \\(ABC\\) has \\(AB=13,\\) \\(BC=14,\\) and \\(AC=15.\\) Let \\(P\\) be the point on \\(\\overline{AC}\\) such that \\(PC=10.\\) There are exactly two points \\(D\\) and \\(E\\) on line \\(BP\\) such that quadrilaterals \\(ABCD\\) and \\(ABCE\\) are trapezoids. What is the distance \\(DE?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{42}{5}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\sqrt2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{84}{5}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(12\\sqrt2\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(18\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2021-p11.live",
+      "kind": "proof-sketch",
+      "text": "Place \\(A=(0,0)\\) and \\(C=(15,0).\\) Then \\(B=\\left(\\tfrac{33}{5},\\tfrac{56}{5}\\right),\\) and since \\(PC=10,\\) \\(P=(5,0).\\) Line \\(BP\\) has slope \\(7,\\) so it is \\(y=7(x-5).\\)\n\nFor \\(ABCD\\) to be a trapezoid with \\(D\\) on line \\(BP,\\) take \\(CD\\parallel AB.\\) The line through \\(C\\) parallel to \\(AB\\) meets line \\(BP\\) at \\((\\tfrac95,-\\tfrac{112}{5}).\\)\n\nFor \\(ABCE\\) with \\(E\\) on line \\(BP,\\) take \\(AE\\parallel BC.\\) The line through \\(A\\) parallel to \\(BC\\) meets line \\(BP\\) at \\((\\tfrac{21}{5},-\\tfrac{28}{5}).\\)\n\nTheir coordinate differences are \\(\\tfrac{12}{5}\\) and \\(\\tfrac{84}{5},\\) so \\(DE=\\tfrac15\\sqrt{12^2+84^2}=12\\sqrt2.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Place \\(A=(0,0),\\) \\(C=(15,0);\\) then \\(B=\\left(\\tfrac{33}{5},\\tfrac{56}{5}\\right)\\) and \\(P=(5,0)\\)",
+        "One trapezoid needs \\(CD\\parallel AB,\\) the other needs \\(AE\\parallel BC;\\) find where each parallel line meets line \\(BP\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

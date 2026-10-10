@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2013-p7",
+  "title": "2013 AIME II Problem 7",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.rate",
+      "label": "Rate",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2013,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 48.0,
+    "source": 2310,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "A group of clerks is assigned the task of sorting \\(1775\\) files. Each clerk sorts at a constant rate of \\(30\\) files per hour. At the end of the first hour, some of the clerks are reassigned to another task; at the end of the second hour, the same number of the remaining clerks are also reassigned to another task, and a similar reassignment occurs at the end of the third hour. The group finishes the sorting in \\(3\\) hours and \\(10\\) minutes. Find the number of files sorted during the first one and a half hours of sorting.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "945",
+    "value": "945"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2013-p7.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(n\\) clerks start and \\(k\\) be reassigned at the end of each hour. In the final \\(10\\) minutes each remaining clerk sorts \\(5\\) files, so \\[ \\begin{aligned} &30n + 30(n - k) + 30(n - 2k) \\\\ &\\quad {}+ 5(n - 3k) = 1775, \\end{aligned} \\] which simplifies to \\(95n - 105k = 1775,\\) or \\(19n - 21k = 355.\\)\n\nModulo \\(19\\) this reads \\(-2k \\equiv 13,\\) so \\(2k \\equiv 6\\) and \\(k \\equiv 3 \\pmod{19}.\\) Taking \\(k = 3\\) gives \\(n = \\frac{355 + 63}{19} = 22;\\) the next candidate, \\(k = 22,\\) gives \\(n = 43,\\) for which \\(n - 3k \\lt 0.\\) So \\(n = 22\\) and \\(k = 3.\\)\n\nIn the first hour \\(22\\) clerks sort \\(30 \\cdot 22 = 660\\) files, and in the next half hour \\(19\\) clerks sort \\(15 \\cdot 19 = 285,\\) for a total of \\(660 + 285 = 945.\\)",
+      "hints": [
+        "With \\(n\\) clerks at the start and \\(k\\) removed at the end of each hour, add up the files sorted in each hour plus the final \\(10\\) minutes",
+        "The total reduces to \\(19n - 21k = 355;\\) solve in positive integers by working modulo \\(19,\\) keeping \\(n - 3k \\gt 0\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

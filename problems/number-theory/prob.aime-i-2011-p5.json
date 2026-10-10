@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2011-p5",
+  "title": "2011 AIME I Problem 5",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.circular-arrangements",
+      "label": "Circular arrangements",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2011,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 46.9,
+    "source": 2420,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "The vertices of a regular nonagon (\\(9\\)-sided polygon) are to be labeled with the digits \\(1\\) through \\(9\\) in such a way that the sum of the numbers on every three consecutive vertices is a multiple of \\(3.\\) Two acceptable arrangements are considered to be indistinguishable if one can be obtained from the other by rotating the nonagon in the plane. Find the number of distinguishable acceptable arrangements.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "144",
+    "value": "144"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2011-p5.live",
+      "kind": "proof-sketch",
+      "text": "Two overlapping triples of consecutive vertices share two labels, so their sums differ by labels three positions apart. Since all triple sums are multiples of \\(3,\\) labels three apart are congruent mod \\(3.\\) Thus the position classes \\(\\{1, 4, 7\\},\\) \\(\\{2, 5, 8\\},\\) \\(\\{3, 6, 9\\}\\) each carry a single residue class of digits, and the digits \\(1\\) through \\(9\\) consist of exactly three digits from each residue class mod \\(3.\\)\n\nEvery triple of consecutive positions then contains one digit from each residue class, with sum \\(\\equiv 0 + 1 + 2 \\equiv 0 \\pmod 3,\\) so all \\(3!\\) assignments of residue classes to position classes are acceptable, and within each position class the three digits can be arranged in \\(3!\\) ways. That gives \\(3! \\cdot (3!)^3 = 6^4 = 1296\\) acceptable labelings.\n\nBecause the digits are distinct, no nontrivial rotation fixes a labeling, so the \\(1296\\) labelings split into rotation classes of size \\(9,\\) giving \\(\\frac{1296}{9} = 144\\) distinguishable arrangements.",
+      "hints": [
+        "Compare two overlapping triples of consecutive vertices: their sums differ by the labels three apart, so labels three apart are congruent mod \\(3\\)",
+        "Each of the residue classes \\(\\{3,6,9\\},\\) \\(\\{1,4,7\\},\\) \\(\\{2,5,8\\}\\) occupies one of the three position classes; count assignments and orderings, then divide by \\(9\\) rotations"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-12b-2007-p16",
+  "title": "2007 AMC 12B Problem 16",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.burnsides-lemma",
+      "label": "Burnside’s Lemma",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "comb.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2007,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 34.1,
+    "source": 2000,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Each face of a regular tetrahedron is painted either red, white, or blue. Two colorings are considered indistinguishable if two congruent tetrahedra with those colorings can be rotated so that their appearances are identical. How many distinguishable colorings are possible?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(27\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(54\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(81\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "15"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2007-p16.live",
+      "kind": "proof-sketch",
+      "text": "The rotation group of the tetrahedron has \\(12\\) elements: the identity, \\(8\\) rotations of order \\(3\\) about a vertex-face axis, and \\(3\\) rotations of order \\(2\\) about an edge-midpoint axis.\n\nThe identity fixes all \\(3^4=81\\) colorings. Each vertex rotation fixes one face and cycles the other three, so it fixes \\(3^2=9\\) colorings; likewise each edge rotation swaps two pairs of faces and fixes \\(3^2=9.\\)\n\nBy Burnside’s lemma the number of distinguishable colorings is \\[ \\dfrac{81+8\\cdot9+3\\cdot9}{12}=\\dfrac{180}{12}=15. \\]\n\nThus, the correct answer is A.",
+      "hints": [
+        "The tetrahedron has \\(12\\) rotational symmetries; apply Burnside’s lemma",
+        "Count colorings fixed by the identity, the \\(8\\) vertex rotations, and the \\(3\\) edge rotations"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

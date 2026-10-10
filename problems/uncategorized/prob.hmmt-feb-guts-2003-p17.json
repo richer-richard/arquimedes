@@ -1,0 +1,37 @@
+{
+  "id": "prob.hmmt-feb-guts-2003-p17",
+  "title": "2003 HMMT February Guts Problem 17",
+  "category": "uncategorized",
+  "subjects": [],
+  "concepts": [],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2003,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 73.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "There are 10 cities in a state, and some pairs of cities are connected by roads. There are 40 roads altogether. A city is called a \"hub\" if it is directly connected to every other city. What is the largest possible number of hubs?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2003-p17.hmmt",
+      "kind": "proof-sketch",
+      "text": "6\nIf there are \\(h\\) hubs, then \\(\\binom{h}{2}\\) roads connect the hubs to each other, and each hub is connected to the other \\(10-h\\) cities; we thus get \\(\\binom{h}{2}+h(10-h)\\) distinct roads. So, \\(40 \\geq\\binom{ h}{2}+h(10-h)=-h^{2} / 2+19 h / 2\\), or \\(80 \\geq h(19-h)\\). The largest \\(h \\leq 10\\) satisfying this condition is \\(h=6\\), and conversely, if we connect each of 6 cities to every other city and place the remaining \\(40-\\left[\\binom{6}{2}+6(10-6)\\right]=1\\) road wherever we wish, we can achieve 6 hubs. So 6 is the answer.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

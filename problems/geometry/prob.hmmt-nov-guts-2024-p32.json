@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-nov-guts-2024-p32",
+  "title": "2024 HMMT November Guts Problem 32",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2024,
+    "number": 32
+  },
+  "difficulty": {
+    "course": 66.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A B C\\) be an acute triangle and \\(D\\) be the foot of altitude from \\(A\\) to \\(\\overline{B C}\\). Let \\(X\\) and \\(Y\\) be points on the segment \\(\\overline{B C}\\) such that \\(\\angle B A X=\\angle Y A C, B X=2, X Y=6\\), and \\(Y C=3\\). Given that \\(A D=12\\), compute \\(B D\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "12 \\sqrt{2}-16=\\sqrt{288}-16",
+    "value": "12 \\sqrt{2}-16=\\sqrt{288}-16"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2024-p32.hmmt",
+      "kind": "proof-sketch",
+      "text": "Suppose that \\(B D=c\\). From the length conditions, we get that\n\n\\[\\tan \\angle B A D=\\frac{c}{12}, \\quad \\tan \\angle D A X=\\frac{2-c}{12}, \\quad \\tan \\angle D A C=\\frac{11-c}{12}, \\quad \\tan \\angle D A Y=\\frac{8-c}{12}\\]\n\nThus, using tangent addition formula, we get that\n\n\\[\\begin{aligned}\n& \\tan \\angle B A X=\\tan (\\angle B A D+\\angle D A X)=\\frac{\\frac{c}{12}+\\frac{2-c}{12}}{1-\\frac{c}{12} \\cdot \\frac{2-c}{12}}=\\frac{\\frac{2}{12}}{\\frac{144-2 c+c^{2}}{144}}=\\frac{24}{144-2 c+c^{2}} \\\\\n& \\tan \\angle Y A C=\\tan (\\angle D A C-\\angle D A Y)=\\frac{\\frac{11-c}{12}-\\frac{8-c}{12}}{1+\\frac{11-c}{12} \\cdot \\frac{8-c}{12}}=\\frac{\\frac{3}{12}}{\\frac{c^{2}-19 c+232}{144}}=\\frac{36}{c^{2}-19 c+232}\n\\end{aligned}\\]\n\nHence, the condition \\(\\angle B A X=\\angle C A Y\\) translates to\n\n\\[\\begin{aligned}\n\\frac{24}{144-2 c+c^{2}} & =\\frac{36}{c^{2}-19 c+232} \\\\\n36\\left(c^{2}-2 c+144\\right)-24\\left(c^{2}-19 c+232\\right) & =0 \\\\\n3\\left(c^{2}-2 c+144\\right)-2\\left(c^{2}-19 c+232\\right) & =0 \\\\\nc^{2}+32 c-32 & =0 \\\\\nc & =-16 \\pm 12 \\sqrt{2}\n\\end{aligned}\\]\n\nSince \\(c\\) is positive, the answer is \\(B D=12 \\sqrt{2}-16\\).\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

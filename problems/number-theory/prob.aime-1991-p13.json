@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-1991-p13",
+  "title": "1991 AIME Problem 13",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.sampling-without-replacement",
+      "label": "Sampling without replacement",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1991,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 42.6,
+    "source": 2250,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "A drawer contains a mixture of red socks and blue socks, at most \\(1991\\) in all. It so happens that, when two socks are selected randomly without replacement, there is a probability of exactly \\(\\frac{1}{2}\\) that both are red or both are blue. What is the largest possible number of red socks in the drawer that is consistent with this data?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "990",
+    "value": "990"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1991-p13.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(r\\) and \\(b\\) be the two color counts and \\(n=r+b.\\) The probability of drawing different colors is also \\(\\frac{1}{2},\\) so \\[\\begin{aligned}\\frac{rb}{\\binom n2}&=\\frac12,\\\\4rb&=n(n-1).\\end{aligned}\\] Since \\(4rb=(r+b)^2-(r-b)^2,\\) this becomes \\((r-b)^2=n.\\) Thus \\(n=k^2\\) and, choosing red as the more numerous color, \\[r=\\frac{k^2+k}{2}.\\] The largest square at most \\(1991\\) is \\(44^2=1936,\\) giving \\(r=\\frac{1936+44}{2}=990.\\)",
+      "hints": [
+        "If there are \\(r\\) red and \\(b\\) blue socks, it is equivalent to require probability \\(\\frac{1}{2}\\) of drawing one of each color",
+        "Use \\(n=r+b\\) and \\(d=r-b\\) to turn the probability equation into a square condition"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

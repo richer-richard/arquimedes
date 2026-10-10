@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2012-p6",
+  "title": "2012 USAMO Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2012,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 95.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For integer \\(n \\ge 2\\), let \\(x_1\\), \\(x_2\\), \\(\\dots\\), \\(x_n\\) be real numbers satisfying\n\n\\[\nx_1 + x_2 + \\dots + x_n = 0, \\quad \\text{and} \\quad x_1^2 + x_2^2 + \\dots + x_n^2 = 1.\n\\]\n\nFor each subset \\(A \\subseteq \\{1, 2, \\dots, n\\}\\), define\n\n\\[\nS_A = \\sum_{i \\in A} x_i.\n\\]\n\n(If \\(A\\) is the empty set, then \\(S_A = 0\\).)\n\nProve that for any positive number \\(\\lambda\\), the number of sets \\(A\\) satisfying \\(S_A \\ge \\lambda\\) is at most \\(2^{n - 3}/\\lambda^2\\). For what choices of \\(x_1\\), \\(x_2\\), \\(\\dots\\), \\(x_n\\), \\(\\lambda\\) does equality hold?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2012-p6.imported",
+      "kind": "proof-sketch",
+      "text": "For convenience, let $N=\\{1,2,\\dots,n\\}$.\nNote that $2\\sum_{1\\leq i<j\\leq n} x_ix_j=\\left(\\sum_{i=1}^{n}x_i\\right)^2-\\left(\\sum_{j=1}^{n} x_i^2\\right)=-1$, so the sum of the $x_i$ taken two at a time is $-1/2$. Now consider the following sum:\n\\[\\sum_{A\\subseteq N}S_A^2=2^{n-1}\\left(\\sum_{j=1}^{n} x_i^2\\right)+2^{n-1}\\left(\\sum_{1\\leq i<j\\leq n} x_ix_j\\right)=2^{n-2}.\\]\nSince $S_A^2\\geq 0$, it follows that at most $2^{n-2}/\\lambda^2$ sets $A\\subseteq N$ have $|S_A|\\geq \\lambda$.\nNow note that $S_A+S_{N/A}=0$. It follows that at most half of the $S_A$ such that $|S_A|\\geq\\lambda$ are positive. This shows that at most $2^{n-3}/\\lambda^2$ sets $A\\subseteq N$ satisfy $S_A\\geq \\lambda$.\nNote that if equality holds, every subset $A$ of $N$ has $S_A\\in\\{-\\lambda,0,\\lambda\\}$. It immediately follows that $(x_1,x_2,\\ldots , x_n)$ is a permutation of $(\\lambda,-\\lambda,0,0,\\ldots , 0)$. Since we know that $\\sum_{i=1}^{n} x_i^2=1$, we have that $\\lambda=1/\\sqrt{2}$.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

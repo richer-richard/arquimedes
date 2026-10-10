@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-8-1995-p12",
+  "title": "1995 AMC 8 Problem 12",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.factor",
+      "label": "Factor",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1995,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 13.6,
+    "source": 1120,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A lucky year is one in which at least one date, when written in the form month/day/year, has the following property: the product of the month times the day equals the last two digits of the year. For example, \\(1956\\) is a lucky year because it has the date \\(7/8/56\\) and \\(7 \\times 8 = 56.\\) Which of the following is NOT a lucky year?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1990\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1991\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1992\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(1993\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(1994\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "1994"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1995-p12.live",
+      "kind": "proof-sketch",
+      "text": "Each of the other years works: \\(90 = 9 \\times 10,\\) \\(91 = 7 \\times 13,\\) \\(92 = 4 \\times 23,\\) and \\(93 = 3 \\times 31,\\) each a valid month/day.\n\nFor \\(1994,\\) the last two digits factor only as \\(94 = 2 \\times 47,\\) and \\(47\\) is too large for a day (and \\(94\\) or \\(47\\) is too large for a month). So \\(1994\\) has no lucky date.\n\nThus, the correct answer is E .",
+      "hints": [
+        "For each year, try to write its last two digits as (month) \\(\\times\\) (day) with a valid month and day",
+        "A year fails only when the last two digits cannot be a product of a number at most \\(12\\) and a number at most \\(31\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2016-p28",
+  "title": "2016 HMMT February Guts Problem 28",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2016,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 92.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Among citizens of Cambridge there exist 8 different types of blood antigens. In a crowded lecture hall are 256 students, each of whom has a blood type corresponding to a distinct subset of the antigens; the remaining of the antigens are foreign to them.\nQuito the Mosquito flies around the lecture hall, picks a subset of the students uniformly at random, and bites the chosen students in a random order. After biting a student, Quito stores a bit of any antigens that student had. A student bitten while Quito had \\(k\\) blood antigen foreign to him/her will suffer for \\(k\\) hours. What is the expected total suffering of all 256 students, in hours?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2016-p28.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\frac{2^{135}-2^{128}+1}{2^{119} \\cdot 129}\\)\nLet \\(n=8\\).\nFirst, consider any given student \\(S\\) and an antigen \\(a\\) foreign to him/her. Assuming \\(S\\) has been bitten, we claim the probability \\(S\\) will suffer due to \\(a\\) is\n\n\\[1-\\frac{2^{2^{n-1}+1}-1}{2^{2^{n-1}}\\left(2^{n-1}+1\\right)}\\]\n\nIndeed, let \\(N=2^{n-1}\\) denote the number of students with \\(a\\). So considering just these students and summing over the number bitten, we obtain a probability\n\n\\[\\frac{1}{2^{N}} \\sum_{t=0}^{N}\\binom{N}{t}\\binom{N}{t} \\frac{t}{t+1}=\\frac{1}{2^{N}} \\frac{2^{N} N-2^{N}+1}{N+1}\\]\n\nWe now use linearity over all pairs \\((S, a)\\) of students \\(S\\) and antigens \\(a\\) foreign to them. Noting that each student is bitten with probability \\(\\frac{1}{2}\\), and retaining the notation \\(N=2^{n-1}\\), we get\n\n\\[\\frac{1}{2} \\sum_{k=0}^{n}\\left[\\binom{n}{k} \\cdot k\\left(\\frac{2^{N} N-2^{N}+1}{2^{N}(N+1)}\\right)\\right]=\\frac{n N\\left(2^{N} N-2^{N}+1\\right)}{2^{N+1}(N+1)} .\\]\n\nFinally, setting \\(n=8=2^{3}\\) and \\(N=2^{n-1}=2^{7}=128\\), we get the claimed answer.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

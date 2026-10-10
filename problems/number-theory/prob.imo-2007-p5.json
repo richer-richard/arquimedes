@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2007-p5",
+  "title": "2007 IMO Problem 5",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2007,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 97.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a\\) and \\(b\\) be positive integers.\nShow that if \\(4ab - 1\\) divides \\((4a^2 - 1)^2\\), then \\(a = b\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2007-p5.evanchen",
+      "kind": "proof-sketch",
+      "text": "As usual,\n\\[ 4ab-1 \\mid (4a^2-1)^2 \\iff 4ab-1 \\mid (4ab \\cdot a-b)^2\n \\iff 4ab-1 \\mid (a-b)^2. \\]\nThen we use a typical Vieta jumping argument.\nDefine \\[ k = \\frac{(a-b)^2}{4ab-1}. \\]\nNote that \\(k = 0 \\iff a = b\\).\nSo we will prove that \\(k > 0\\) leads to a contradiction.\n\nIndeed, suppose \\((a, b)\\) is a minimal solution with \\(a > b\\)\n(we have \\(a \\neq b\\) since \\(k \\neq 0\\)).\nBy Vieta jumping, \\((b, \\frac{b^2+k}{a})\\) is also such a solution.\nBut now\n\\[\\begin{aligned}\n \\frac{b^2+k}{a} \\ge a &\\implies k \\ge a^2 - b^2 \\\\\n &\\implies \\frac{(a-b)^2}{4ab-1} \\ge a^2-b^2 \\\\\n &\\implies a-b \\ge (4ab-1)(a+b)\n\\end{aligned}\\]\nwhich is absurd for \\(a,b \\in \\mathbb{Z}_{>0}\\).\n(In the last step we divided by \\(a-b > 0\\).)",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

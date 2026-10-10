@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-general-1-2010-p6",
+  "title": "2010 HMMT February General Round 1 Problem 6",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.diophantine-equations",
+      "label": "Diophantine equations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2010,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "John needs to pay 2010 dollars for his dinner. He has an unlimited supply of 2, 5, and 10 dollar notes. In how many ways can he pay?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-general-1-2010-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "20503\n\nLet the number of 2,5 , and 10 dollar notes John can use be \\(x, y\\), and \\(z\\) respectively. We wish to find the number of nonnegative integer solutions to \\(2 x+5 y+10 z=2010\\). Consider this equation \\(\\bmod 2\\). Because \\(2 x, 10 z\\), and 2010 are even, \\(5 y\\) must also be even, so \\(y\\) must be even. Now consider the equation \\(\\bmod 5\\). Because \\(5 y, 10 z\\), and 2010 are divisible by \\(5,2 x\\) must also be divisible by 5 , so \\(x\\) must be divisible by 5 . So both \\(2 x\\) and \\(5 y\\) are divisible by 10 . So the equation is equivalent to \\(10 x^{\\prime}+10 y^{\\prime}+10 z=2010\\), or \\(x^{\\prime}+y^{\\prime}+z=201\\), with \\(x^{\\prime}, y^{\\prime}\\), and \\(z\\) nonnegative integers. There is a well-known bijection between solutions of this equation and picking 2 of 203 balls in a row on the table (explained in further detail below), so there are \\(\\binom{203}{2}=20503\\) ways.\nThe bijection between solutions of \\(x^{\\prime}+y^{\\prime}+z=201\\) and arrangements of 203 balls in a row is as follows. Given a solution of the equation, we put \\(x^{\\prime}\\) white balls in a row, then a black ball, then \\(y^{\\prime}\\) white balls, then a black ball, then \\(z\\) white balls. This is like having 203 balls in a row on a table and picking two of them to be black. To go from an arrangement of balls to a solution of the equation, we just read off \\(x^{\\prime}, y^{\\prime}\\), and \\(z\\) from the number of white balls in a row. There are \\(\\binom{203}{2}\\) ways to choose 2 of 203 balls to be black, so there are \\(\\binom{203}{2}\\) solutions to \\(x^{\\prime}+y^{\\prime}+z=201\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

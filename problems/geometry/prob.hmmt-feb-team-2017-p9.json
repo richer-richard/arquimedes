@@ -1,0 +1,78 @@
+{
+  "id": "prob.hmmt-feb-team-2017-p9",
+  "title": "2017 HMMT February Team Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2017,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 89.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n\\) be a positive odd integer greater than 2 , and consider a regular \\(n\\)-gon \\(\\mathcal{G}\\) in the plane centered at the origin. Let a subpolygon \\(\\mathcal{G}^{\\prime}\\) be a polygon with at least 3 vertices whose vertex set is a subset of that of \\(\\mathcal{G}\\). Say \\(\\mathcal{G}^{\\prime}\\) is well-centered if its centroid is the origin. Also, say \\(\\mathcal{G}^{\\prime}\\) is decomposable if its vertex set can be written as the disjoint union of regular polygons with at least 3 vertices. Show that all well-centered subpolygons are decomposable if and only if \\(n\\) has at most two distinct prime divisors.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2017-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\Rightarrow\\), i.e. \\(n\\) has \\(\\geq 3\\) prime divisors: Let \\(n=\\prod p_{i}^{e_{i}}\\). Note it suffices to only consider regular \\(p_{i}\\)-gons. Label the vertices of the \\(n\\)-gon \\(0,1, \\ldots, n-1\\). Let \\(S=\\left\\{\\frac{x n}{p_{1}}: 0 \\leq x \\leq p_{1}-1\\right\\}\\), and let \\(S_{j}=S+\\frac{j n}{p_{3}}\\) for \\(0 \\leq j \\leq p_{3}-2 .\\left(S+a=\\{s+a: s \\in S\\}\\right.\\).) Then let \\(S_{p_{3}-1}=\\left\\{\\frac{x n}{p_{2}}: 0 \\leq x \\leq p_{2}-1\\right\\}+\\frac{\\left(p_{3}-1\\right) n}{p_{3}}\\). Finally, let \\(S^{\\prime}=\\left\\{\\frac{x n}{p_{3}}: 0 \\leq x \\leq p_{3}-1\\right\\}\\). Then I claim\n\n\\[\\left(\\bigsqcup_{i=0}^{p_{3}-1} S_{i}\\right) \\backslash S^{\\prime}\\]\n\nis well-centered but not decomposable. Well-centered follows from the construction: I only added and subtracted off regular polygons. To show that its decomposable, consider \\(\\frac{n}{p_{1}}\\). Clearly this is in the set, but isn't in \\(S^{\\prime}\\). I claim that \\(\\frac{n}{p_{1}}\\) isn't in any more regular \\(p_{i}\\)-gons. For \\(i \\geq 4\\), this means that \\(\\frac{n}{p_{1}}+\\frac{n}{p_{i}}\\) is in some set. But this is a contradiction, as we can easily check that all points we added in are multiples of \\(p_{i}^{e_{i}}\\), while \\(\\frac{n}{p_{i}}\\) isn't.\n\nFor \\(i=1\\), note that 0 was removed by \\(S^{\\prime}\\). For \\(i=2\\), note that the only multiples of \\(p_{3}^{e_{3}}\\) that are in some \\(S_{j}\\) are \\(0, \\frac{n}{p_{1}}, \\ldots, \\frac{\\left(p_{1}-1\\right) n}{p_{1}}\\). In particular, \\(\\frac{n}{p_{1}}+\\frac{n}{p_{2}}\\) isn't in any \\(S_{j}\\). So it suffices to consider the case \\(i=3\\), but it is easy to show that \\(\\frac{n}{p_{1}}+\\frac{\\left(p_{3}-1\\right) n}{p_{3}}\\) isn't in any \\(S_{i}\\). So we're done.\n\\(\\Leftarrow\\), i.e. \\(n\\) has \\(\\leq 2\\) prime divisors: This part seems to require knowledge of cyclotomic polynomials. These will easily give a solution in the case \\(n=p^{a}\\). Now, instead turn to the case \\(n=p^{a} q^{b}\\). The next lemma is the key ingredient to the solution.\nLemma: Every well-centered subpolygon can be gotten by adding in and subtracting off regular polygons.\n\nNote that this is weaker than the problem claim, as the problem claims that adding in polygons is enough.\n\nProof. It is easy to verify that \\(\\phi_{n}(x)=\\frac{\\left(x^{n}-1\\right)\\left(x^{\\frac{n}{p q}}-1\\right)}{\\left(x^{\\frac{n}{p}}-1\\right)\\left(x^{\\frac{n}{q}}-1\\right)}\\). Therefore, it suffices to check that there exist integer polynomials \\(c(x), d(x)\\) such that\n\n\\[\\frac{x^{n}-1}{x^{\\frac{n}{p}}-1} \\cdot c(x)+\\frac{x^{n}-1}{x^{\\frac{n}{q}}-1} \\cdot d(x)=\\frac{\\left(x^{n}-1\\right)\\left(x^{\\frac{n}{p q}}-1\\right)}{\\left(x^{\\frac{n}{p}}-1\\right)\\left(x^{\\frac{n}{q}}-1\\right)}\\]\n\nRearranging means that we want\n\n\\[\\left(x^{\\frac{n}{q}}-1\\right) \\cdot c(x)+\\left(x^{\\frac{n}{p}}-1\\right) \\cdot d(x)=x^{\\frac{n}{p q}}-1 .\\]\n\nBut now, since \\(\\underset{\\substack{s n}}{\\operatorname{gcd}}(n / p, n / q) \\underset{\\substack{s n}}{=n / p q}\\), there exist positive integers \\(s, t\\) such that \\(\\frac{s n}{q}-\\frac{t n}{p}=\\frac{n}{p q}\\). Now choose \\(c(x)=\\frac{x^{\\frac{s n}{q}}-1}{x^{\\frac{n}{q}}-1}, d(x)=\\frac{x^{\\frac{s n}{q}}-x^{\\frac{n}{p q}}}{x^{\\frac{n}{p}}-1}\\) to finish.\n\nNow we can finish combinatorially. Say we need subtraction, and at some point we subtract off a \\(p\\)-gon. All the points in the \\(p\\)-gon must have been added at some point. If any of them was added from a \\(p\\)-gon, we could just cancel both \\(p\\)-gons. If they all came from a \\(q\\)-gon, then the sum of those \\(p q\\)-gons would be a \\(p q\\)-gon, which could have been instead written as the sum of \\(q p\\)-gons. So we don't need subtraction either way. This completes the proof.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

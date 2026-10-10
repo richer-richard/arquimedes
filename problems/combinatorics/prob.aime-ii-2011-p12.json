@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2011-p12",
+  "title": "2011 AIME II Problem 12",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.circular-arrangements",
+      "label": "Circular arrangements",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2011,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 63.3,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Nine delegates, three each from three different countries, randomly select chairs at a round table that seats nine people. Let the probability that each delegate sits next to at least one delegate from another country be \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "97",
+    "value": "97"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2011-p12.live",
+      "kind": "proof-sketch",
+      "text": "Only the pattern of countries in the nine chairs matters, and all \\(\\frac{9!}{3!\\,3!\\,3!} = 1680\\) patterns are equally likely. The condition fails for some delegate exactly when both of his neighbors are compatriots, which happens exactly when some country’s three delegates occupy three consecutive chairs. Let \\(A_i\\) be the set of patterns in which country \\(i\\)’s delegates are consecutive.\n\nThere are \\(9\\) triples of consecutive chairs, so \\(|A_i| = 9\\binom{6}{3} = 180,\\) choosing which \\(3\\) of the remaining \\(6\\) chairs go to one of the other countries. For two countries, after placing the first block (\\(9\\) ways) the remaining six chairs form an arc containing \\(4\\) triples of consecutive chairs, so \\(|A_i \\cap A_j| = 9 \\cdot 4 = 36.\\) For all three, the circle must split into three consecutive triples (\\(3\\) ways) assigned to the countries in \\(3!\\) orders: \\(|A_1 \\cap A_2 \\cap A_3| = 18.\\) By inclusion-exclusion, \\[ \\begin{aligned} |A_1 \\cup A_2 \\cup A_3| &= 3 \\cdot 180 - 3 \\cdot 36 \\\\ &\\quad {}+ 18 = 450. \\end{aligned} \\]\n\nThe probability is \\(1 - \\frac{450}{1680} = 1 - \\frac{15}{56} = \\frac{41}{56},\\) so \\(m + n = 41 + 56 = 97.\\)",
+      "hints": [
+        "A delegate sits next to only compatriots exactly when his country’s three delegates occupy three consecutive chairs; count the complement",
+        "Only the country pattern matters: \\(\\frac{9!}{3!\\,3!\\,3!} = 1680\\) equally likely patterns; apply inclusion-exclusion to the three consecutive-block events"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

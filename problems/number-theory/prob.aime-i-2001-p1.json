@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2001-p1",
+  "title": "2001 AIME I Problem 1",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2001,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 34.9,
+    "source": 1950,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Find the sum of all positive two-digit integers that are divisible by each of their digits.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "630",
+    "value": "630"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2001-p1.live",
+      "kind": "proof-sketch",
+      "text": "Let the number be \\(10a + b\\) with tens digit \\(a\\) and units digit \\(b.\\) Since \\(10a + b\\) is divisible by \\(a,\\) we need \\(b\\) to be divisible by \\(a,\\) so \\(b = ka\\) for some positive integer \\(k.\\) Since \\(10a + b\\) is divisible by \\(b,\\) we need \\(10a\\) to be divisible by \\(b,\\) that is \\(10a\\) is divisible by \\(ka,\\) so \\(10\\) is divisible by \\(k.\\) Because \\(b = ka \\le 9,\\) only \\(k = 1,\\) \\(2,\\) and \\(5\\) are possible.\n\nFor \\(k = 1\\) the numbers are \\(11, 22, \\ldots, 99,\\) with sum \\(11 \\cdot 45 = 495.\\) For \\(k = 2\\) they are \\(12, 24, 36, 48,\\) with sum \\(120.\\) For \\(k = 5\\) the only one is \\(15.\\)\n\nThe total is \\(495 + 120 + 15 = 630.\\)",
+      "hints": [
+        "If the number is \\(10a + b,\\) divisibility by the tens digit \\(a\\) forces \\(b\\) to be a multiple of \\(a\\)",
+        "Write \\(b = ka.\\) Then \\(10a + b\\) divisible by \\(b\\) forces \\(k = 1,\\) \\(2,\\) or \\(5\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

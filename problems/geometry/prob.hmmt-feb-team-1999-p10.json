@@ -1,0 +1,100 @@
+{
+  "id": "prob.hmmt-feb-team-1999-p10",
+  "title": "1999 HMMT February Team Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pigeonhole-principle",
+      "label": "Pigeonhole principle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 1999,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 91.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "If 5 points are placed in the plane at lattice points (i.e. points \\((x, y)\\) where \\(x\\) and \\(y\\) are both integers) such that no three are collinear, then there are 10 triangles whose vertices are among these points. What is the minimum possible number of these triangles that have area greater than \\(1 / 2\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1999-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "By the pigeonhole principle, the 5 points cannot all be distinct modulo 2, so two of them must have a midpoint that is also a lattice point. This midpoint is not one of the 5 since no 3 are collinear. Pick's theorem states that the area of a polygon whose vertices are lattice points is \\(B / 2+I-1\\) where \\(B\\) is the number of lattice points on the boundary and \\(I\\) is the number in the interior. Thus those two points form the base of 3 triangles whose area will be greater than \\(1 / 2\\) by Pick's theorem since there are 4 lattice points on the boundary. Now it also turns out that at least one of the triangles must contain a lattice point, thus giving us a fourth triangle with area greater than \\(1 / 2\\). This is actually pretty easy to show with the aid of a picture or some visualization. Suppose we have 4 points and we're trying to find a 5 th one so that no triangle will contain an interior lattice point. The 4 lattice points must form a quadrilateral of area 1 , so in fact it is a parallelogram (think deeply about it). Draw the four sides, extending them throughout the plain. Each vertex is now the tip of an infinite triangular region of the plane, and if the 5th lattice point is chosen in that region then the triangle formed by the 5th point and the two vertices of the parallelogram adjacent to the one we are considering will form a triangle containing the vertex we\nare considering. But the part of the plane that isn't in one of these 4 regions contains no lattice points or else we could draw a parallelogram congruent to the first one with lattice point vertices and containing that lattice point, but that would violate Pick's theorem since the parallelogram has area 1 . Therefore we must have a fourth triangle with area greater than \\(1 / 2\\) (one must justify that this really is in addition to the 3 triangles we already knew we'd get). An example that achieves this minimum is the points \\((0,0),(1,0),(1,1),(2,1)\\), and \\((2,-1)\\). Therefore the minumum possible number of these triangles that have area greater than \\(1 / 2\\) is 4 .\nA less trivial example that achieves the minimum is \\((0,0),(1,1),(2,1),(3,2)\\), and \\((7,5)\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

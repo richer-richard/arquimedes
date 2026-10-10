@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-8-2009-p17",
+  "title": "2009 AMC 8 Problem 17",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.perfect-power",
+      "label": "Perfect power",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2009,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 15.8,
+    "source": 1400,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The positive integers \\(x\\) and \\(y\\) are the two smallest positive integers for which the product of \\(360\\) and \\(x\\) is a square and the product of \\(360\\) and \\(y\\) is a cube. What is the sum of \\(x\\) and \\(y?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(80\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(85\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(115\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(165\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(610\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "85"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2009-p17.live",
+      "kind": "proof-sketch",
+      "text": "For a number to be a perfect square, every exponent in the prime factorization must be even. For it to be a cube, the exponents must be divisible by \\(3.\\)\n\nWe can factor \\(360\\) to get \\[ 360 = 2^3 \\cdot 3^2 \\cdot 5. \\] For \\(360x\\) to be a perfect square and \\(x\\) to be minimized, \\(x\\) must have one factor of \\(2\\) and one factor of \\(5.\\) Therefore, we can let \\(x = 10.\\)\n\nFor \\(360y\\) to be a cube, \\(y\\) must have one factor of \\(3\\) and two factors of \\(5.\\) Therefore, we can let \\(y = 75,\\) suggesting \\(x + y = 85.\\)\n\nThus, B is the correct answer.",
+      "hints": [
+        "Factor \\(360\\) into primes.",
+        "Make exponents even for a square and multiples of \\(3\\) for a cube."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2023-p13",
+  "title": "2023 AIME II Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.units-digit",
+      "label": "Units digit",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2023,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 63.3,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Let \\(A\\) be an acute angle such that \\(\\tan A = 2 \\cos A.\\) Find the number of positive integers \\(n\\) less than or equal to \\(1000\\) such that \\(\\sec^n A + \\tan^n A\\) is a positive integer whose units digit is \\(9.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "167",
+    "value": "167"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2023-p13.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(s = \\sec A\\) and \\(t = \\tan A.\\) The hypothesis \\(\\tan A = 2\\cos A\\) says \\(\\tan A \\sec A = 2,\\) i.e. \\(st = 2,\\) and always \\(s^2 - t^2 = 1.\\) Then \\((s^2 + t^2)^2\\) \\(= (s^2 - t^2)^2 + 4s^2t^2\\) \\(= 17,\\) so \\(u = s^2\\) and \\(v = t^2\\) satisfy \\(u + v = \\sqrt{17},\\) \\(uv = 4.\\) The sums \\(w_m = u^m + v^m\\) obey \\(w_{m+1} = \\sqrt{17}\\,w_m - 4w_{m-1}\\) with \\(w_0 = 2,\\) \\(w_1 = \\sqrt{17};\\) by induction, when \\(m\\) is even, \\(w_m\\) is a positive integer, and when \\(m\\) is odd, it is an integer times \\(\\sqrt{17}.\\)\n\nFor even \\(n = 2m,\\) \\(s^n + t^n = w_m,\\) an integer exactly when \\(m\\) is even, i.e. \\(4\\) divides \\(n.\\) For odd \\(n,\\) \\((s^n + t^n)^2\\) \\(= w_n + 2 (st)^n\\) \\(= w_n + 2^{n+1}\\) is irrational, so \\(s^n + t^n\\) is not an integer. Thus write \\(n = 4j\\) and \\(x_j = w_{2j}.\\) Since \\(u^2 + v^2 = 9\\) and \\(u^2 v^2 = 16,\\) the integers \\(x_j\\) satisfy \\[ \\begin{gathered} x_{j+1} = 9x_j - 16x_{j-1}, \\\\ x_0 = 2, \\\\ x_1 = 9, \\end{gathered} \\] giving \\(9, 49, 297, 1889, \\ldots\\) whose units digits repeat with period three: \\(9, 9, 7.\\) The units digit is \\(7\\) when \\(3\\) divides \\(j\\) and \\(9\\) otherwise.\n\nThe valid \\(n \\le 1000\\) are \\(n = 4j\\) with \\(1 \\le j \\le 250\\) and \\(j\\) not divisible by \\(3:\\) there are \\(250 - 83 = 167\\) of them.",
+      "hints": [
+        "With \\(s = \\sec A\\) and \\(t = \\tan A,\\) the condition says \\(st = 2,\\) and always \\(s^2 - t^2 = 1,\\) so \\(s^2 + t^2 = \\sqrt{17}\\)",
+        "\\(s^n + t^n\\) is an integer only when \\(4\\) divides \\(n,\\) and \\(x_j = s^{4j} + t^{4j}\\) satisfies \\(x_{j+1} = 9x_j - 16x_{j-1};\\) track the units digits"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

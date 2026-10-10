@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-team-2022-p10",
+  "title": "2022 HMMT November Team Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sums-and-products",
+      "label": "Sums and products",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2022,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 57.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "There is a unit circle that starts out painted white. Every second, you choose uniformly at random an arc of arclength 1 of the circle and paint it a new color. You use a new color each time, and new paint covers up old paint. Let \\(c_{n}\\) be the expected number of colors visible after \\(n\\) seconds. Compute \\(\\lim _{n \\rightarrow \\infty} c_{n}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "4 \\pi",
+    "value": "4 \\pi"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2022-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "Consider the probability that the \\(k\\)-th last added arc is visible. Suppose there are \\(j\\) arcs after the \\(k\\)-th last arc that partially covers this arc. Then the probability that the \\(k\\)-th last arc is still visible is \\(\\frac{j+1}{2^{j}}\\), since this is equivalent to randomly choosing \\(j\\) positions within the \\(k\\)-th last arc to place an arc in, then randomly choosing a direction, and there are \\(2^{j}\\) ways to choose directions and \\(j+1\\) of them are good. The probability that any arc partially covers the \\(k\\)-th last arc is \\(\\frac{2}{2 \\pi}\\). Putting everything together, the probability that the \\(k\\)-th last arc is visible is\n\n\\[\\sum_{j=0}^{k-1} \\frac{j+1}{2^{j}} \\cdot\\binom{k-1}{j} \\cdot\\left(\\frac{2}{2 \\pi}\\right)^{j} \\cdot\\left(1-\\frac{2}{2 \\pi}\\right)^{k-1-j}\\]\n\nso the answer is\n\n\\[1+\\sum_{k=2}^{n} \\sum_{j=0}^{k-1} \\frac{j+1}{2^{j}} \\cdot\\binom{k-1}{j} \\cdot\\left(\\frac{2}{2 \\pi}\\right)^{j} \\cdot\\left(1-\\frac{2}{2 \\pi}\\right)^{k-1-j}\\]\n\n(as the last arc is definitely visible).\nWe can write this as\n\n\\[1+\\sum_{k=2}^{n} \\sum_{j=0}^{k-1}(j+1) \\cdot\\binom{k-1}{j} \\cdot\\left(\\frac{1}{2 \\pi}\\right)^{j} \\cdot\\left(1-\\frac{2}{2 \\pi}\\right)^{k-1-j}\\]\n\nNow,\n\n\\[\\sum_{j=0}^{k-1} 1 \\cdot\\binom{k-1}{j} \\cdot\\left(\\frac{1}{2 \\pi}\\right)^{j} \\cdot\\left(1-\\frac{2}{2 \\pi}\\right)^{k-1-j}=\\left(\\frac{1}{2 \\pi}+1-\\frac{2}{2 \\pi}\\right)^{k-1}\\]\n\nby binomial theorem. We can write \\(j \\cdot\\binom{k-1}{j}=(k-1)\\binom{k-2}{j-1}\\), so\n\n\\[\\begin{aligned}\n\\sum_{j=0}^{k-1} j \\cdot\\binom{k-1}{j} \\cdot\\left(\\frac{1}{2 \\pi}\\right)^{j} \\cdot\\left(1-\\frac{2}{2 \\pi}\\right)^{k-1-j} & =(k-1) \\sum_{j=1}^{k-1}\\binom{k-2}{j-1} \\cdot\\left(\\frac{1}{2 \\pi}\\right)^{j} \\cdot\\left(1-\\frac{2}{2 \\pi}\\right)^{k-1-j} \\\\\n& =(k-1) \\sum_{j=0}^{k-2}\\binom{k-2}{j} \\cdot\\left(\\frac{1}{2 \\pi}\\right)^{j+1} \\cdot\\left(1-\\frac{2}{2 \\pi}\\right)^{k-2-j} \\\\\n& =\\frac{k-1}{2 \\pi} \\cdot\\left(\\frac{1}{2 \\pi}+1-\\frac{2}{2 \\pi}\\right)^{k-2}\n\\end{aligned}\\]\n\nTherefore the answer is\n\n\\[1+\\sum_{k=2}^{n}\\left(1-\\frac{1}{2 \\pi}+\\frac{k-1}{2 \\pi}\\right)\\left(1-\\frac{1}{2 \\pi}\\right)^{k-2}\\]\n\nwhich is an arithmetic sequence times a geometric sequence. Standard techniques simplify this to \\(4 \\pi\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2014-p12",
+  "title": "2014 AIME I Problem 12",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.function",
+      "label": "Function",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2014,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 62.8,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 12,
+  "statement": "Let \\(A = \\{1, 2, 3, 4\\},\\) and let \\(f\\) and \\(g\\) be randomly chosen (not necessarily distinct) functions from \\(A\\) to \\(A.\\) The probability that the range of \\(f\\) and the range of \\(g\\) are disjoint is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "453",
+    "value": "453"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2014-p12.live",
+      "kind": "proof-sketch",
+      "text": "Condition on the range of \\(f.\\) If it has \\(k\\) elements, then the range of \\(g\\) is disjoint from it exactly when \\(g\\) maps \\(A\\) into the remaining \\(4 - k\\) elements, which happens for \\((4-k)^4\\) of the \\(4^4 = 256\\) functions \\(g.\\)\n\nCount functions \\(f\\) by range size: \\(4\\) constant functions; \\(\\binom{4}{2}(2^4 - 2) = 84\\) with range size \\(2;\\) \\(\\binom{4}{3} \\cdot 36 = 144\\) with range size \\(3\\) (there are \\(36\\) surjections from four elements onto three); and \\(4! = 24\\) bijections. The number of favorable pairs is \\[ \\begin{aligned} &4 \\cdot 3^4 + 84 \\cdot 2^4 \\\\ &\\quad {}+ 144 \\cdot 1^4 + 24 \\cdot 0^4 \\\\ &= 324 + 1344 + 144 = 1812. \\end{aligned} \\]\n\nThe probability is \\(\\frac{1812}{4^8} = \\frac{1812}{65536} = \\frac{453}{16384},\\) and since \\(16384\\) is a power of \\(2\\) while \\(453 = 3 \\cdot 151\\) is odd, this is in lowest terms. Thus \\(m = 453.\\)",
+      "hints": [
+        "If the range of \\(f\\) has \\(k\\) elements, exactly \\((4-k)^4\\) functions \\(g\\) have range disjoint from it",
+        "Count functions by range size: \\(4\\) with size \\(1,\\) \\(84\\) with size \\(2,\\) \\(144\\) with size \\(3,\\) \\(24\\) with size \\(4\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

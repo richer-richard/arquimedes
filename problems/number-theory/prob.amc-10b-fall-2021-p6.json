@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-fall-2021-p6",
+  "title": "2021 Fall AMC 10B Problem 6",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2021,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 23.0,
+    "source": 1420,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The least positive integer with exactly \\(2021\\) distinct positive divisors can be written in the form \\(m \\cdot 6^k,\\) where \\(m\\) and \\(k\\) are integers and \\(6\\) is not a divisor of \\(m.\\) What is \\(m+k?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 47 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 58 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 59 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 88 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 90 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "58"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-fall-2021-p6.live",
+      "kind": "proof-sketch",
+      "text": "Before starting, note that if we can represent the prime factorization of an integer \\(z\\) as \\[z=p_1^{e_1} p_2^{e_2} \\cdots,\\] then there are \\((e_1+1)(e_2+1) \\cdots\\) distinct positive factors.\n\nIf the number in question has \\(2021\\) factors, by the previous logic, \\[2021=(e_1+1)(e_2+1) \\cdots,\\] and as the prime factorization of \\(2021 = 43\\cdot 47,\\) then our number must be \\(p_1^{46}p_2^{42} \\) or \\(p^{2020}.\\)\n\nThe smallest number we can make in either of these is making \\(p_1 = 2,p_2=3\\) in the first configuration, yielding \\[2^{46}3^{42} = 16\\cdot 6^{42} .\\]\n\nTherefore, \\[m=16\\]\\[k=42,\\] so \\[m+k = 42+16 = 58.\\]\n\nThus, the answer is B .",
+      "hints": [
+        "\\(2021=43\\cdot47\\)",
+        "To minimize the number, put the larger exponent on the smaller prime"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2005-p12",
+  "title": "2005 AIME II Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.square-geometry",
+      "label": "Square (geometry)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2005,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 63.3,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Square \\(ABCD\\) has center \\(O,\\) \\(AB = 900,\\) \\(E\\) and \\(F\\) are on \\(\\overline{AB}\\) with \\(AE \\lt BF\\) and \\(E\\) between \\(A\\) and \\(F,\\) \\(m\\angle EOF = 45^\\circ,\\) and \\(EF = 400.\\) Given that \\(BF = p + q\\sqrt{r},\\) where \\(p,\\) \\(q,\\) and \\(r\\) are positive integers and \\(r\\) is not divisible by the square of any prime, find \\(p + q + r.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "307",
+    "value": "307"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2005-p12.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(G\\) be the midpoint of \\(\\overline{AB},\\) so \\(OG \\perp AB\\) and \\(OG = 450.\\) With \\(\\alpha = \\angle EOG\\) and \\(\\beta = \\angle FOG\\) on either side of ray \\(OG,\\) we have \\(EG = 450\\tan\\alpha,\\) \\(FG = 450\\tan\\beta,\\) and \\(\\alpha + \\beta = 45^\\circ.\\) From \\(EG + FG = EF = 400,\\) we get \\(\\tan\\alpha + \\tan\\beta = \\frac{8}{9}.\\)\n\nThe tangent addition formula gives \\[1 = \\tan 45^\\circ = \\frac{\\tan\\alpha + \\tan\\beta}{1 - \\tan\\alpha\\tan\\beta},\\] so \\(\\tan\\alpha\\tan\\beta = 1 - \\frac{8}{9} = \\frac{1}{9}.\\) Hence \\(\\tan\\alpha\\) and \\(\\tan\\beta\\) are the roots of \\(9t^2 - 8t + 1 = 0,\\) namely \\(\\frac{4 \\pm \\sqrt{7}}{9}.\\)\n\nSince \\(AE = 450 - EG\\) and \\(BF = 450 - FG,\\) the condition \\(AE \\lt BF\\) means \\(EG \\gt FG,\\) so \\(\\tan\\beta = \\frac{4 - \\sqrt{7}}{9}.\\) Then \\(BF = 450 - 450 \\cdot \\frac{4 - \\sqrt{7}}{9}\\) \\(= 250 + 50\\sqrt{7},\\) and \\(p + q + r = 250 + 50 + 7 = 307.\\)",
+      "hints": [
+        "Let \\(G\\) be the midpoint of \\(\\overline{AB};\\) then \\(OG = 450,\\) and ray \\(OG\\) splits the \\(45^\\circ\\) angle into \\(\\alpha + \\beta\\)",
+        "From \\(\\tan\\alpha + \\tan\\beta = \\frac{8}{9}\\) and \\(\\tan(\\alpha + \\beta) = 1,\\) get \\(\\tan\\alpha\\tan\\beta = \\frac{1}{9};\\) then solve a quadratic"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

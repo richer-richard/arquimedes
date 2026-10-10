@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-12b-2025-p17",
+  "title": "2025 AMC 12B Problem 17",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.burnsides-lemma",
+      "label": "Burnside’s Lemma",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2025,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 35.7,
+    "source": 1980,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Each of the \\(9\\) squares in a \\(3 \\times 3\\) grid is to be colored red, blue, or yellow in such a way that each red square shares an edge with at least one blue square, each blue square shares an edge with at least one yellow square, and each yellow square shares an edge with at least one red square. Colorings that can be obtained from one another by rotations and/or reflections are to be considered the same. How many different colorings are possible?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(27\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "12"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2025-p17.live",
+      "kind": "proof-sketch",
+      "text": "First count colorings of the grid with its positions labeled. Checking the \\(27\\) possible rows in succession and rejecting a row as soon as a square whose neighbors are now known lacks its required next color gives the following complete count by the numbers of red, blue, and yellow squares: \\[ \\begin{array}{c|c} (\\#R,\\#B,\\#Y)&\\text{valid colorings}\\\\ \\hline (2,4,3)&16\\\\ (3,2,4)&16\\\\ (3,3,3)&36\\\\ (4,3,2)&16 \\end{array} \\] Thus the identity symmetry fixes \\(16+16+36+16=84\\) colorings.\n\nFor the other symmetries, the fixed-coloring counts are \\(0\\) for each nontrivial rotation, \\(6\\) for each reflection across a horizontal or vertical axis, and \\(0\\) for each diagonal reflection. (For an axis reflection, a direct check of the three palindromic rows gives the \\(6\\) possibilities.) Therefore Burnside’s lemma gives \\[ \\frac{84+2\\cdot6}{8}=12. \\]\n\nThus, the correct answer is C.",
+      "hints": [
+        "Every color must appear, and the cyclic conditions red \\(\\to\\) blue \\(\\to\\) yellow \\(\\to\\) red tightly constrain the layout",
+        "Count all valid colorings of the fixed (labeled) grid, then reduce by the \\(8\\) rotations and reflections using Burnside’s lemma"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

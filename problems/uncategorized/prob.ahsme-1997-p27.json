@@ -1,0 +1,61 @@
+{
+  "id": "prob.ahsme-1997-p27",
+  "title": "1997 AHSME Problem 27",
+  "category": "uncategorized",
+  "subjects": [],
+  "concepts": [],
+  "source": {
+    "collection": "AHSME",
+    "year": 1997,
+    "number": 27
+  },
+  "difficulty": {
+    "course": 40.8,
+    "source": 2180,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Consider those functions \\(f\\) that satisfy \\(f(x+4)+f(x-4)=f(x)\\) for all real \\(x.\\) Any such function is periodic, and there is a least common positive period \\(p\\) for all of them. Find \\(p.\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(32\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "24"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1997-p27.live",
+      "kind": "proof-sketch",
+      "text": "For \\(u_n=f(x+4n),\\) the equation is \\(u_{n+1}=u_n-u_{n-1}.\\) Starting from \\(u_0,u_1,\\) the sequence is \\[ \\begin{gathered} u_0,u_1,u_1-u_0,-u_0,\\\\ -u_1,u_0-u_1,u_0,u_1,\\ldots, \\end{gathered} \\] so every such function has period \\(6\\cdot4=24.\\) This is least because \\(f(x)=\\sin(\\frac{\\pi x}{12})\\) satisfies the equation and has fundamental period \\(24.\\) Hence D is correct.",
+      "hints": [
+        "For fixed \\(x\\), study the sequence \\(u_n=f(x+4n)\\)",
+        "Use \\(u_{n+1}+u_{n-1}=u_n\\) repeatedly to find when every initial pair returns"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

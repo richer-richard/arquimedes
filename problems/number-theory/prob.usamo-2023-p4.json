@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2023-p4",
+  "title": "2023 USAMO Problem 4",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2023,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 83.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A positive integer \\(a\\) is selected, and some positive integers are written on a board. Alice and Bob play the following game. On Alice's turn, she must replace some integer \\(n\\) on the board with \\(n+a\\), and on Bob's turn he must replace some even integer \\(n\\) on the board with \\(n/2\\). Alice goes first and they alternate turns. If on his turn Bob has no valid moves, the game ends.\n\nAfter analyzing the integers on the board, Bob realizes that, regardless of what moves Alice makes, he will be able to force the game to end eventually. Show that, in fact, for this value of \\(a\\) and these integers on the board, the game is guaranteed to end regardless of Alice's or Bob's moves.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2023-p4.imported",
+      "kind": "proof-sketch",
+      "text": "The contrapositive of the claim is somewhat easier to conceptualize: If it is not guaranteed that the game will end (i.e. the game could potentially last forever), then Bob is not able to force the game to end (i.e. Alice can force it to last forever). So we want to prove that, if the game can potentially last indefinitely, then Alice can force it to last indefinitely.\nClearly, if there is $1$ number on the board initially, all moves are forced. This means the claim is true in this specific case, because if the game \"potentially\" can last forever, this means it must last forever, since the game can only be played in one way. Ergo Alice can \"force\" this to occur because it is guaranteed to occur. Now we look at all cases where there is more than $1$ number on the board.\nCase 1: $v_2 (a)=0$\nThe game lasts forever here no matter what. This is true because, if the game ends, it means the board was in some position $P$, Alice added $a$ to some number on the board, and all the numbers now on the board are odd. If there are only odd numbers on the board in position $P$, Alice will add $a$ to some number on the board, making it even, meaning this cannot have been the state $P$ of the board. If at least one number n on the board is even, Alice can add $a$ to a number other than $n$, meaning there is still at least 1 even number on the board, meaning this also cannot have been the state $P$ of the board. This covers all possible boards when $v_2 (a)=0$, so we're done.\nCase 2: $v_2 (a)=1$\nIf there is at least one number n on the board that is even, the game can also last forever. On any move, Alice will add $a$ to this number $n$ if and only if $v_2 (n)=1$. This way, the new number $n'= n+a$ satisfies $v_2 (n') \\geq 2$. If Bob does divides $n'$ until $v_2 (n)=1$, Alice will again add $a$ to $n$ resulting in $v_2 (n') \\geq 2$. This means that Alice can always keep an even number on the board for Bob to divide no matter how Bob plays.\nIf there is no even number on the board, then the game can clearly not last forever. No matter what Alice does, Bob will have no even number to divide after her move.\nGeneral Case: $v_2 (a)=x$\nIn general, it seems to be the case that the game can last indefinitely for some given $a$ if and only if there exists some number $n$ on the board such that $v_2 (n) \\geq v_2 (a)$, so we should aim to prove this.\n1. \"If\"\nAlice can apply a similar strategy to the strategy used in case 2. On any move, Alice will add $a$ to $n$ if and only if $v_2 (n)=v_2 (a)$. If she does this addition, then $v_2 (n') \\geq v_2 (a)+1$, keeping an even number on the board. Even if Bob divides $n'$ until $v_2 (n)=v_2 (a)$, Alice will apply the same strategy and keep $v_2 (n') \\geq v_2 (a)+1$. Alice's use of this strategy ensures that there always exists some number n on the board such that $v_2 (n) \\geq v_2 (a)$, ensuring there always exists an even number n on the board.\n2.\"Only If\"\nIf $v_2 (n) < v_2 (a)$ for all n on the board, this means that Alice can never change the value of $v_2 (n)$ for any $n$ on the board. Only Bob can do this, and Bob will subtract $1$ from each $v_2 (n)$ until they are all equal to $0$ (all odd), ending the game.\nWe've shown that the game can last indefinitely iff there exists some number $n$ on the board such that $v_2 (n) \\geq v_2 (a)$, and have shown that Alice can ensure the game lasts forever in these scenarios using the above strategy. This proves the contrapositive, proving the claim.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

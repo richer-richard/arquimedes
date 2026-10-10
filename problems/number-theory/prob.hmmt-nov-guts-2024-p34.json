@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-guts-2024-p34",
+  "title": "2024 HMMT November Guts Problem 34",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2024,
+    "number": 34
+  },
+  "difficulty": {
+    "course": 56.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The largest known prime number as of October 2024 is \\(2^{136279841}-1\\). It happens to be an example of a prime number of the form \\(2 x^{2}-1\\). Estimate the number of positive integers \\(x \\leq 10^{6}\\) such that \\(2 x^{2}-1\\) is prime.\nSubmit a positive integer \\(E\\). If the correct answer is \\(A\\), you will receive \\(\\left\\lfloor 20.99 \\max \\left(0,1-\\frac{|E-A|}{A}\\right)^{2.5}\\right\\rfloor\\) points.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "141444",
+    "value": "141444"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2024-p34.hmmt",
+      "kind": "proof-sketch",
+      "text": "If \\(x \\leq 10^{6}\\), then \\(2 x^{2}-1<2 \\cdot 10^{12}\\). The density of prime numbers up to \\(2 \\cdot 10^{12}\\) is roughly\n\n\\[\\frac{1}{\\ln \\left(2 \\cdot 10^{12}\\right)-1} \\approx 0.0366\\]\n\nHowever, \\(2 x^{2}-1\\) can never be divisible by 2 , 3 , or 5 . Only \\(\\frac{1}{2} \\cdot \\frac{2}{3} \\cdot \\frac{4}{5}=\\frac{4}{15}\\) of numbers are not divisible by 2,3 , or 5 , including all of the primes, so the density of primes among such numbers is a factor of \\(\\frac{15}{4}\\) higher. Among the \\(10^{6}\\) possible values of \\(x\\), we get an estimate of\n\n\\[\\frac{15}{4} \\cdot 0.0366 \\cdot 10^{6}=137250\\]\n\nprimes, which is close enough for 19 points.\nTo refine this estimate further, observe that the values of \\(2 x^{2}-1\\) are not uniformly distributed from 1 to \\(2 \\cdot 10^{12}\\). Their average is very close to \\(\\frac{2}{3} \\cdot 10^{12}\\), so as a crude estimate, we can take the density of prime numbers up to \\(\\frac{4}{3} \\cdot 10^{12}\\) instead:\n\n\\[\\frac{1}{\\ln \\left(\\frac{4}{3} \\cdot 10^{12}\\right)-1} \\approx 0.03715\\]\n\nThis gives us an estimate of\n\n\\[\\frac{15}{4} \\cdot 0.03715 \\cdot 10^{6} \\approx 139313\\]\n\nwhich earns all 20 points.\nUsing sage, one can easily obtain the exact answer by the following code.\n\n```\ncnt = 0\nfor x in range(1, 10^6+1):\n    if is_prime(2*x^2-1):\n        cnt += 1\nprint(cnt)\n```",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

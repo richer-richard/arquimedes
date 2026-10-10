@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-guts-2010-p24",
+  "title": "2010 HMMT February Guts Problem 24",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.recurrences",
+      "label": "Recurrences",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2010,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 74.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Define a sequence of polynomials as follows: let \\(a_{1}=3 x^{2}-x\\), let \\(a_{2}=3 x^{2}-7 x+3\\), and for \\(n \\geq 1\\), let \\(a_{n+2}=\\frac{5}{2} a_{n+1}-a_{n}\\). As \\(n\\) tends to infinity, what is the limit of the sum of the roots of \\(a_{n}\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2010-p24.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{13}{3}\\) By using standard methods for solving linear recurrences \\({ }^{2}\\), we see that this recurrence has a characteristic polynomial of \\(x^{2}-\\frac{5}{2} x+1=\\left(x-\\frac{1}{2}\\right)(x-2)\\), hence \\(a_{n}(x)=c(x) \\cdot 2^{n}+d(x) \\cdot 2^{-n}\\) for some polynomials \\(c\\) and \\(d\\). Plugging in \\(n=1\\) and \\(n=2\\) gives\n\n\\[2 c(x)+\\frac{1}{2} d(x)=3 x^{2}-x\\]\n\nand\n\n\\[4 c(x)+\\frac{1}{4} d(x)=3 x^{2}-7 x+3\\]\n\nSubtracting the first equation from two times the second equation gives \\(6 c(x)=3 x^{2}-13 x+6\\), so \\(c(x)=\\frac{3 x^{2}-13 x+6}{6}\\). As \\(n\\) grows large, the \\(c(x) 2^{n}\\) term dominates compared to the \\(d(x) 2^{-n}\\) term, so the roots of \\(a_{n}(x)\\) converge to the roots of \\(c(x)\\). Thus the roots of \\(a_{n}(x)\\) converge to the roots of \\(3 x^{2}-13 x+6\\), which by Vieta's formula \\({ }^{3}\\) have a sum of \\(\\frac{13}{3}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

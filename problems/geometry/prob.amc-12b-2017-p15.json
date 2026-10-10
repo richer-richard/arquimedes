@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12b-2017-p15",
+  "title": "2017 AMC 12B Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-decomposition",
+      "label": "Area decomposition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2017,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 27.5,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(ABC\\) be an equilateral triangle. Extend side \\(\\overline{AB}\\) beyond \\(B\\) to a point \\(B'\\) so that \\(BB' = 3 \\cdot AB.\\) Similarly, extend side \\(\\overline{BC}\\) beyond \\(C\\) to a point \\(C'\\) so that \\(CC' = 3 \\cdot BC,\\) and extend side \\(\\overline{CA}\\) beyond \\(A\\) to a point \\(A'\\) so that \\(AA' = 3 \\cdot CA.\\) What is the ratio of the area of \\(\\triangle A'B'C'\\) to the area of \\(\\triangle ABC?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(9 : 1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(16 : 1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(25 : 1\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(36 : 1\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(37 : 1\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2017-p15.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(X = [\\triangle ABC],\\) and draw segments \\(CB',\\) \\(AC',\\) and \\(BA'.\\) Triangle \\(BB'C\\) has base \\(BB' = 3 \\cdot AB\\) and the same altitude as \\(\\triangle ABC\\) from \\(C\\) to line \\(AB,\\) so its area is \\(3X;\\) likewise \\(\\triangle CC'A\\) and \\(\\triangle AA'B\\) each have area \\(3X.\\) Next, \\(\\triangle AA'C'\\) has \\(3\\) times the base and the same height as \\(\\triangle ACC',\\) so its area is \\(9X;\\) similarly \\(\\triangle CC'B'\\) and \\(\\triangle BB'A'\\) each have area \\(9X.\\) Thus \\[ \\begin{aligned} &[\\triangle A'B'C'] = X \\\\ &\\quad {}+ 3(3X) + 3(9X) \\\\ &\\quad {}= 37X, \\end{aligned} \\] so the ratio is \\(37 : 1.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "Let \\(X\\) be the area of \\(\\triangle ABC.\\) Draw \\(CB',\\) \\(AC',\\) \\(BA'\\) to split \\(\\triangle A'B'C'\\) into pieces",
+        "A triangle with \\(k\\) times the base and the same height has \\(k\\) times the area; find each piece as a multiple of \\(X\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

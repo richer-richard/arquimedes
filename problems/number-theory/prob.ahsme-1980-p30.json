@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1980-p30",
+  "title": "1980 AHSME Problem 30",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.systematic-listing",
+      "label": "Systematic listing",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1980,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 40.3,
+    "source": 2160,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A six digit number (base \\(10\\)) is squarish if it satisfies the following conditions:\n\n(i) none of its digits is zero;\n\n(ii) it is a perfect square; and\n\n(iii) the first two digits, the middle two digits and the last two digits of the number are all perfect squares when considered as two digit numbers.\n\nHow many squarish numbers are there?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(9\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "2"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1980-p30.live",
+      "kind": "proof-sketch",
+      "text": "Each two-digit block must belong to \\[ \\{16,25,36,49,64,81\\}. \\] Restricting the square root by the first block and retaining only squares with an allowed final block leaves the following possible middle blocks:\n\n first block possible middle blocks\n\n \\(16\\) \\(32,\\) \\(40,\\) \\(48,\\) \\(56,\\) \\(64,\\) \\(72\\)\n\n \\(25\\) \\(40,\\) \\(50,\\) \\(60,\\) \\(70,\\) \\(80,\\) \\(90\\)\n\n \\(36\\) \\(48,\\) \\(60,\\) \\(72,\\) \\(84,\\) \\(96\\)\n\n \\(49\\) \\(56,\\) \\(70,\\) \\(84,\\) \\(98\\)\n\n \\(64\\) \\(64,\\) \\(80,\\) \\(96\\)\n\n \\(81\\) \\(72,\\) \\(90\\)\n\nOnly the middle block \\(64\\) is allowed, producing \\[ \\begin{aligned} 166464&=408^2,\\\\ 646416&=804^2. \\end{aligned} \\] Thus there are \\(2\\) squarish numbers.\n\nTherefore, the correct answer is B.",
+      "hints": [
+        "List the two-digit perfect squares having no zero digit",
+        "Use the first pair to restrict the square root to a short interval, then filter by the final pair"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

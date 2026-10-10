@@ -1,0 +1,57 @@
+{
+  "id": "prob.aime-ii-2003-p2",
+  "title": "2003 AIME II Problem 2",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2003,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 35.4,
+    "source": 1970,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Let \\(N\\) be the greatest integer multiple of \\(8,\\) no two of whose digits are the same. What is the remainder when \\(N\\) is divided by \\(1000?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "120",
+    "value": "120"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2003-p2.live",
+      "kind": "proof-sketch",
+      "text": "An integer is divisible by \\(8\\) exactly when the number formed by its last three digits is. To make \\(N\\) as large as possible, use all ten digits once each and put the largest digits first: the leading digits are \\(9876543,\\) and the final three digits are some arrangement of \\(0,\\) \\(1,\\) \\(2\\) — provided one of those arrangements is a multiple of \\(8.\\)\n\nChecking \\(012,\\) \\(021,\\) \\(102,\\) \\(120,\\) \\(201,\\) \\(210,\\) the only multiple of \\(8\\) is \\(120.\\) So \\(N = 9{,}876{,}543{,}120,\\) and the remainder upon division by \\(1000\\) is \\(120.\\)",
+      "hints": [
+        "A number is a multiple of \\(8\\) exactly when the number formed by its last three digits is a multiple of \\(8\\)",
+        "Use all ten digits, putting \\(9876543\\) up front, and arrange the digits \\(0,\\) \\(1,\\) \\(2\\) at the end to form a multiple of \\(8\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

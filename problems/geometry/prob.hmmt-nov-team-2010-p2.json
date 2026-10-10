@@ -1,0 +1,64 @@
+{
+  "id": "prob.hmmt-nov-team-2010-p2",
+  "title": "2010 HMMT November Team Problem 2",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.probability",
+      "label": "Probability",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2010,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 49.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In terms of \\(k\\), for \\(k>0\\) how likely is he to be back where he started after \\(2 k\\) minutes?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2010-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{1}{4}+\\frac{3}{4}\\left(\\frac{1}{9}\\right)^{k}\\) Again, Travis starts at \\((0,0,0)\\). At each step, exactly one of the three coordinates will change. The parity of the sum of the three coordinates will change at each step, so after \\(2 k\\) steps, the sum of the coordinates must be even. There are only four possibilites for Travis's position: \\((0,0,0),(1,1,0),(1,0,1)\\), and \\((0,1,1)\\). Let \\(p_{k}\\) be the probability that Travis is at \\((0,0,0)\\) after \\(2 k\\) steps. Then \\(1-p_{k}\\) is the probability that he is on \\((1,1,0),(1,0,1)\\), or \\((0,1,1)\\). Suppose we want to compute \\(p_{k+1}\\). There are two possibilities: we were either at \\((0,0,0)\\) after \\(2 k\\) steps or not. If we were, then there is a \\(\\frac{1}{3}\\) probability that we will return (since our \\((2 k+1)^{\\text {th }}\\) step can be arbitary, but there is a \\(\\frac{1}{3}\\) chance that we will reverse that as our \\((2 k+2)^{\\text {th }}\\) step). If we were not at \\((0,0,0)\\) after our \\(2 k^{\\text {th }}\\) steps, then two of our coordinates must have been ones. There is a \\(\\frac{2}{3}\\) probability that the \\((2 k+1)^{\\text {th }}\\) step will change one of those to a zero, and there is a \\(\\frac{1}{3}\\) step that that the \\((2 k+2)^{\\text {th }}\\) step will change the remaining one. Hence, in this case, there is a \\(\\left(\\frac{2}{3}\\right)\\left(\\frac{1}{3}\\right)=\\frac{2}{9}\\) probability that Travis ends up \\((0,0,0)\\) in this case. So we have:\n\n\\[\\begin{aligned}\np_{k+1} & =p_{k}\\left(\\frac{1}{3}\\right)+\\left(1-p_{k}\\right)\\left(\\frac{2}{9}\\right) \\\\\np_{k+1} & =\\frac{1}{9} p_{k}+\\frac{2}{9} \\\\\n\\left(p_{k+1}-\\frac{1}{4}\\right) & =\\frac{1}{9}\\left(p_{k}-\\frac{1}{4}\\right)\n\\end{aligned}\\]\n\n(We get the value \\(\\frac{1}{4}\\) either by guessing that the sequence \\(p_{0}, p_{1}, p_{2}, \\ldots\\) should converge to \\(\\frac{1}{4}\\) or simply by solving the equation \\(-\\frac{1}{9} x+x=\\frac{2}{9}\\).) This shows that \\(p_{0}-\\frac{1}{4}, p_{1}-\\frac{1}{4}, \\ldots\\) is a geometric series with ratio \\(\\frac{1}{9}\\). Since \\(p_{0}-\\frac{1}{4}=1-\\frac{1}{4}=\\frac{3}{4}\\), we get that \\(p_{k}-\\frac{1}{4}=\\frac{3}{4}\\left(\\frac{1}{9}\\right)^{k}\\), or that \\(p_{k}=\\frac{1}{4}+\\frac{3}{4}\\left(\\frac{1}{9}\\right)^{k}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

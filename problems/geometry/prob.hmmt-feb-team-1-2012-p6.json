@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-team-1-2012-p6",
+  "title": "2012 HMMT February Team Round 1 Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2012,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 83.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "It has recently been discovered that the right triangle with vertices \\((0,0),(0,2012)\\), and \\((2012,0)\\) is a giant pond that is home to many frogs. Frogs have the special ability that, if they are at a lattice point \\((x, y)\\), they can hop to any of the three lattice points \\((x+1, y+1),(x-2, y+1)\\), and \\((x+1, y-2)\\), assuming the given lattice point lies in or on the boundary of the triangle.\nFrog Jeff starts at the corner \\((0,0)\\), while Frog Kenny starts at the corner \\((0,2012)\\). Show that the set of points that Jeff can reach is equal in size to the set of points that Kenny can reach.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1-2012-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "see below\n\nWe transform the triangle as follows: map each lattice point \\((x, y)\\) to the point\n\n\\[x(1,0)+y(1 / 2, \\sqrt{3} / 2)=(x+y / 2, y \\sqrt{3} / 2) .\\]\n\nThis transforms the right triangle into an equilateral triangle as shown above.\nNow, the three allowed movements\n\n\\[\\begin{aligned}\n& (x, y) \\mapsto(x+1, y+1), \\\\\n& (x, y) \\mapsto(x-2, y+1), \\\\\n& (x, y) \\mapsto(x+1, y-2)\n\\end{aligned}\\]\n\nbecome the movements\n\n\\[\\begin{aligned}\n(x, y) & \\mapsto(x+3 / 2, y+\\sqrt{3} / 2), \\\\\n(x, y) & \\mapsto(x-3 / 2, y+\\sqrt{3} / 2), \\\\\n(x, y) & \\mapsto(x, y-\\sqrt{3})\n\\end{aligned}\\]\n\nThat is, each step is a movement of \\(\\sqrt{3}\\) in any of these three directions, which are separated by \\(120^{\\circ}\\) angles. The pond is now completely symmetrical with respect to \\(120^{\\circ}\\) rotations, so it does not matter which vertex you start at. The lower left vertex corresponds to the original point \\((0,0)\\), and the top vertex corresponds to the original point \\((0,2012)\\).\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

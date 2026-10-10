@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2024-p3",
+  "title": "2024 HMMT February Guts Problem 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.coloring-schemes-extremal-arguments",
+      "label": "Coloring schemes, extremal arguments",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular Arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2024,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 68.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the number of even positive integers \\(n \\leq 2024\\) such that \\(1,2, \\ldots, n\\) can be split into \\(\\frac{n}{2}\\) pairs, and the sum of the numbers in each pair is a multiple of 3.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "675",
+    "value": "675"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2024-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "There have to be an even number of multiples of 3 at most \\(n\\), so this means that \\(n \\equiv 0,2\\) \\((\\bmod 6)\\). (We can also say that there should be an equal number of \\(1(\\bmod 3)\\) and \\(2(\\bmod 3)\\) numbers, which gives the same restriction.)\nWe claim that all these work. We know there are an even number of multiples of 3, so we can pair them; then we can pair \\(3 k+1\\) and \\(3 k+2\\) for all \\(k\\).\nThis means the answer is \\(\\frac{2022}{3}+1=675\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

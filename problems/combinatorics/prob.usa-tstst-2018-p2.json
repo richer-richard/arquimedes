@@ -1,0 +1,54 @@
+{
+  "id": "prob.usa-tstst-2018-p2",
+  "title": "USA TSTST 2018 Problem 2",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.matchings-marriage-lemma-tutte-s-theorem",
+      "label": "Matchings, Marriage Lemma, Tutte's theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TSTST",
+    "year": 2018,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 88.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In the nation of Onewaynia,\ncertain pairs of cities are connected by one-way roads.\nEvery road connects exactly two cities\n(roads are allowed to cross each other, e.g., via bridges),\nand each pair of cities has at most one road between them.\nMoreover, every city has exactly two roads leaving it and\nexactly two roads entering it.\n\nWe wish to close half the roads of Onewaynia in such a way that\nevery city has exactly one road leaving it and exactly one road entering it.\nShow that the number of ways to do so is a power of \\(2\\) greater than \\(1\\)\n(i.e.\\ of the form \\(2^n\\) for some integer \\(n \\ge 1\\)).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tstst-2018-p2.evanchen",
+      "kind": "proof-sketch",
+      "text": "In the language of graph theory, we have a simple digraph \\(G\\)\nwhich is 2-regular and we seek the\nnumber of sub-digraphs which are \\(1\\)-regular.\nWe now present two solution paths.\n\nFirst solution, combinatorial..\nWe construct a simple undirected bipartite graph \\(\\Gamma\\) as follows:\n\n• the vertex set consists of two copies of \\(V(G)\\),\n say \\(V_{\\text{out}}\\) and \\(V_{\\text{in}}\\); and\n\n• for \\(v \\in V_{\\text{out}}\\) and \\(w \\in V_{\\text{in}}\\)\n we have an undirected edge \\(vw \\in E(\\Gamma)\\)\n if and only if the directed edge \\(v \\to w\\) is in \\(G\\).\n\nMoreover, the desired sub-digraphs of \\(H\\) correspond exactly\nto perfect matchings of \\(\\Gamma\\).\n\nHowever the graph \\(\\Gamma\\) is \\(2\\)-regular\nand hence consists of several disjoint (simple) cycles of even length.\nIf there are \\(n\\) such cycles, the number of perfect matchings\nis \\(2^n\\), as desired.\n\nRemark.\n The construction of \\(\\Gamma\\) is not as magical as it may first seem.\n\n Suppose we pick a road \\(v_1 \\to v_2\\) to use.\n Then, the other road \\(v_3 \\to v_2\\) is certainly not used;\n hence some other road \\(v_3 \\to v_4\\) must be used, etc.\n We thus get a cycle of forced decisions until\n we eventually return to the vertex \\(v_1\\).\n\n These cycles in the original graph \\(G\\)\n (where the arrows alternate directions)\n correspond to the cycles we found in \\(\\Gamma\\).\n It's merely that phrasing the solution in terms of \\(\\Gamma\\)\n makes it cleaner in a linguistic sense,\n but not really in a mathematical sense.\n\n\\paragraph{Second solution by linear algebra over \\(\\mathbb{F}_2\\) (Brian Lawrence).}\nThis is actually not that different from the first solution.\nFor each edge \\(e\\), we create an indicator variable \\(x_e\\).\nWe then require for each vertex \\(v\\) that:\n\n• If \\(e_1\\) and \\(e_2\\) are the two edges leaving \\(v\\),\n then we require \\(x_{e_1} + x_{e_2} \\equiv 1 \\pmod 2\\).\n\n• If \\(e_3\\) and \\(e_4\\) are the two edges entering \\(v\\),\n then we require \\(x_{e_3} + x_{e_4} \\equiv 1 \\pmod 2\\).\n\nWe thus get a large system of equations.\nMoreover, the solutions come in natural pairs \\(\\vec x\\) and \\(\\vec x + \\vec 1\\)\nand therefore the number of solutions is either zero, or a power of two.\nSo we just have to prove there is at least one solution.\n\nFor linear algebra reasons, there can only be zero solutions\nif some nontrivial linear combination of the equations gives the sum \\(0 \\equiv 1\\).\nSo suppose we added up some subset \\(S\\) of the equations\nfor which every variable appeared on the left-hand side an even number of times.\nThen every variable that did appear appeared exactly twice;\nand accordingly we see that the edges corresponding to these variables\nform one or more even cycles as in the previous solution.\nOf course, this means \\(|S|\\) is even, so we really have \\(0 \\equiv 0 \\pmod 2\\) as needed.\n\nRemark.\n The author's original proposal contained a second part\n asking to show that it was not always possible\n for the resulting \\(H\\) to be connected,\n even if \\(G\\) was strongly connected.\n This problem is related to IMO Shortlist 2002 C6,\n which gives an example of a strongly connected graph\n which does have a full directed Hamiltonian cycle.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

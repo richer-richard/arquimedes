@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-guts-2017-p16",
+  "title": "2017 HMMT November Guts Problem 16",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.integers",
+      "label": "Integers",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sums-and-products",
+      "label": "Sums and products",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2017,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 45.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A repunit is a positive integer, all of whose digits are 1 s. Let \\(a_{1}<a_{2}<a_{3}<\\ldots\\) be a list of all the positive integers that can be expressed as the sum of distinct repunits. Compute \\(a_{111}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2017-p16.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 1223456\nLet \\(\\left\\{r_{n}\\right\\}_{n \\geq 0}\\) be the repunits (so \\(r_{0}=1, r_{1}=11\\), and so on). We see that for any \\(n\\), there is\n\n\\[r_{n-1}+r_{n-2}+\\cdots+r_{0}<\\frac{r_{n}}{10}+\\frac{r_{n}}{100}+\\cdots<\\frac{r_{n}}{9}<r_{n}\\]\n\nso \\(r_{n}\\) is only needed when all possible combinations of the first \\(n\\) repunits are exhausted (after \\(2^{n}\\) terms), which shows that there is a bijection between the sequence \\(\\left\\{a_{n}\\right\\}\\) and the binary numbers. In particular, if \\(k=2^{n_{1}}+2^{n_{2}}+\\cdots+2^{n_{s}}\\) for distinct \\(n_{i}\\) 's, then \\(a_{k}=r_{n_{1}}+r_{n_{2}}+\\cdots+r_{n_{s}}\\). Since \\(111=1101111_{2}=2^{0}+2^{1}+2^{2}+2^{3}+2^{5}+2^{6}\\), we have\n\n\\[a_{111}=r_{0}+r_{1}+r_{2}+r_{3}+r_{5}+r_{6}=1223456\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

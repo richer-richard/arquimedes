@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2025-p6",
+  "title": "2025 AMC 12B Problem 6",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.place-value",
+      "label": "Place value",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2025,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 20.5,
+    "source": 1390,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Emmy says to Max, “I ordered \\(36\\) math club sweatshirts today.” Max asks, “How much did each shirt cost?” Emmy responds, “I’ll give you a hint. The total cost was \\(\\$\\underline{A}\\,\\underline{B}\\,\\underline{B}.\\underline{B}\\,\\underline{A},\\) where \\(A\\) and \\(B\\) are digits and \\(A \\neq 0.\\)” After a pause, Max says, “That was a good price.” What is \\(A + B?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(14\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(15\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "11"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2025-p6.live",
+      "kind": "proof-sketch",
+      "text": "The total in cents is \\(10000A + 1110B + A\\) \\(= 10001A + 1110B,\\) which must be a multiple of \\(36.\\) Since \\(10001 \\equiv 29\\) and \\(1110 \\equiv 30 \\pmod{36},\\) the condition is \\(29A + 30B \\equiv 0,\\) i.e. \\(7A + 6B \\equiv 0 \\pmod{36}.\\) Reducing once more modulo \\(6\\) gives \\(A\\equiv0\\pmod6,\\) so the only possible nonzero digit is \\(A=6.\\) Then \\(42+6B\\) is divisible by \\(36\\) only for the digit \\(B=5.\\) Indeed \\(\\$655.56 = 36 \\times \\$18.21,\\) so \\(A+B=11.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "In cents the total is \\(10001A + 1110B,\\) and it must be divisible by \\(36\\)",
+        "Reduce modulo \\(36\\) to get \\(7A + 6B \\equiv 0,\\) then test digits with \\(A \\neq 0\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

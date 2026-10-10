@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2021-p21",
+  "title": "2021 AMC 10A Problem 21",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.equiangular-polygon",
+      "label": "Equiangular polygon",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2021,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 33.9,
+    "source": 2150,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(ABCDEF\\) be an equiangular hexagon. The lines \\(AB,\\) \\(CD,\\) and \\(EF\\) determine a triangle with area \\(192\\sqrt{3},\\) and the lines \\(BC,\\) \\(DE,\\) and \\(FA\\) determine a triangle with area \\(324\\sqrt{3}.\\) The perimeter of hexagon \\(ABCDEF\\) can be expressed as \\(m +n\\sqrt{p},\\) where \\(m,\\) \\(n,\\) and \\(p\\) are positive integers and \\(p\\) is not divisible by the square of any prime. What is \\(m + n + p?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(47\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(52\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(55\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(58\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(63\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "55"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2021-p21.live",
+      "kind": "proof-sketch",
+      "text": "Let the intersections of lines \\(AB,CD,EF\\) form triangle \\(PQR,\\) and let the intersections of lines \\(BC,DE,FA\\) form triangle \\(XYZ.\\) Because the hexagon is equiangular, all these outer triangles are equilateral.\n\nFor an equilateral triangle with side length \\(s,\\) the area is \\(\\frac{\\sqrt3}{4}s^2.\\) Hence\n\n\\[ \\begin{aligned} \\frac{\\sqrt3}{4}PQ^2 &=192\\sqrt3, \\\\ \\frac{\\sqrt3}{4}YZ^2 &=324\\sqrt3. \\end{aligned} \\]\n\nSo \\(PQ=16\\sqrt3\\) and \\(YZ=36.\\) To justify the perimeter relation, write the consecutive hexagon side lengths as \\(a,b,c,d,e,f.\\) The two alternating-line triangles have side lengths \\(b+c+d\\) and \\(c+d+e,\\) while closure of the hexagon gives \\(a+f=c+d.\\) Hence their side-length sum is \\[ \\begin{aligned} &(b+c+d)\\\\ &\\quad+(c+d+e)\\\\ &=b+e+2(c+d)\\\\ &=(a+b+c)+(d+e+f), \\end{aligned} \\] the hexagon’s perimeter. Therefore the perimeter is\n\n\\[PQ+YZ=16\\sqrt3+36.\\]\n\nThus \\(m+n+p=36+16+3=55.\\)\n\nThus, C is the correct answer.",
+      "hints": [
+        "The three alternating side lines form equilateral triangles",
+        "Convert the two given triangle areas into side lengths"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-geometry-2011-p12",
+  "title": "2011 HMMT February Combinatorics and Geometry Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The ordered pairs \\((2011,2),(2010,3),(2009,4), \\ldots,(1008,1005),(1007,1006)\\) are written from left to right on a blackboard. Every minute, Elizabeth selects a pair of adjacent pairs \\(\\left(x_{i}, y_{i}\\right)\\) and \\(\\left(x_{j}, y_{j}\\right)\\), with \\(\\left(x_{i}, y_{i}\\right)\\) left of \\(\\left(x_{j}, y_{j}\\right)\\), erases them, and writes \\(\\left(\\frac{x_{i} y_{i} x_{j}}{y_{j}}, \\frac{x_{i} y_{i} y_{j}}{x_{j}}\\right)\\) in their place. Elizabeth continues this process until only one ordered pair remains. How many possible ordered pairs \\((x, y)\\) could appear on the blackboard after the process has come to a conclusion?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-geometry-2011-p12.hmmt",
+      "kind": "proof-sketch",
+      "text": "504510 First, note that none of the numbers will ever be 0 . Let \\(\\star\\) denote the replacement operation. For each pair on the board \\(\\left(x_{i}, y_{i}\\right)\\) define its primary form to be \\(\\left(x_{i}, y_{i}\\right)\\) and its secondary form to be \\(\\left[x_{i} y_{i}, \\frac{x_{i}}{y_{i}}\\right]\\). Note that the primary form determines the secondary form uniquely and vice versa. In secondary form,\n\n\\[\\left[a_{1}, b_{1}\\right] \\star\\left[a_{2}, b_{2}\\right]=\\left(\\sqrt{a_{1} b_{1}}, \\sqrt{\\frac{a_{1}}{b_{1}}}\\right) \\star\\left(\\sqrt{a_{2} b_{2}}, \\sqrt{\\frac{a_{2}}{b_{2}}}\\right)=\\left(a_{1} b_{2}, \\frac{a_{1}}{b_{2}}\\right)=\\left[a_{1}^{2}, b_{2}^{2}\\right] .\\]\n\nThus we may replace all pairs on the board by their secondary form and use the above rule for \\(\\star\\) instead. From the above rule, we see that if the leftmost number on the board is \\(x\\), then after one minute it will be \\(x\\) or \\(x^{2}\\) depending on whether it was erased in the intervening step, and similarly for the rightmost number. Let \\(k\\) be the number of times the leftmost pair is erased and \\(n\\) be the number of times the rightmost pair is erased. Then the final pair is\n\n\\[\\left[4022^{2^{k}},\\left(\\frac{1007}{1006}\\right)^{2^{n}}\\right]\\]\n\nAny step except the last cannot involve both the leftmost and rightmost pair, so \\(k+n \\leq 1005\\). Since every pair must be erased at least once, \\(k, n \\geq 1\\). Every pair of integers satisfying the above can occur, for example, by making \\(1005-k-n\\) moves involving only the pairs in the middle, then making \\(k-1\\) moves involving the leftmost pair, and finally \\(n\\) moves involving the rightmost pair.\nIn light of (2), the answer is the number of possible pairs \\((k, n)\\), which is\n\n\\[\\sum_{k=1}^{1004} \\sum_{n=1}^{1005-k} 1=\\sum_{k=1}^{1004} 1005-k=\\sum_{k=1}^{1004} k=\\frac{1004 \\cdot 1005}{2}=504510\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

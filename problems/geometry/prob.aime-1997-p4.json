@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1997-p4",
+  "title": "1997 AIME Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.perpendicular-bisector",
+      "label": "Perpendicular bisector",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangent-circles",
+      "label": "Tangent circles",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1997,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 46.2,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "Circles of radii \\(5,\\) \\(5,\\) \\(8,\\) and \\(\\frac{m}{n}\\) are mutually externally tangent, where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "17",
+    "value": "17"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1997-p4.live",
+      "kind": "proof-sketch",
+      "text": "Let the radius-\\(5\\) circles have centers \\(P_1\\) and \\(P_2,\\) so \\(P_1P_2 = 5 + 5 = 10,\\) and let \\(M\\) be the midpoint. The radius-\\(8\\) circle’s center \\(Q\\) satisfies \\(QP_1 = QP_2 = 13,\\) so \\(Q\\) lies on the perpendicular bisector of \\(\\overline{P_1P_2}\\) at distance \\(\\sqrt{13^2 - 5^2} = 12\\) from \\(M.\\) Likewise the fourth circle, of radius \\(r,\\) has its center \\(R\\) on the same perpendicular bisector with \\(RP_1 = 5 + r,\\) so \\(RM = \\sqrt{(5+r)^2 - 25}\\) \\(= \\sqrt{r^2 + 10r}.\\)\n\nThe centers \\(Q\\) and \\(R\\) cannot lie on opposite sides of \\(M:\\) that would give \\(12 + RM = 8 + r,\\) hence \\(RM = r - 4,\\) but squaring would yield \\(18r = 16,\\) contrary to \\(r \\ge 4.\\) Nor can \\(R\\) lie beyond \\(Q,\\) since then \\(RM - 12 = 8 + r\\) would force \\(RM = r + 20,\\) which is incompatible with \\(RM^2 = r^2 + 10r.\\) Thus \\(R\\) lies between \\(M\\) and \\(Q,\\) and external tangency to the radius-\\(8\\) circle gives \\[12 - \\sqrt{r^2 + 10r} = 8 + r.\\] Then \\(\\sqrt{r^2 + 10r} = 4 - r,\\) and squaring yields \\(r^2 + 10r = 16 - 8r + r^2,\\) so \\(18r = 16\\) and \\(r = \\frac{8}{9}.\\)\n\nThus \\(m + n = 8 + 9 = 17.\\)",
+      "hints": [
+        "The two radius-\\(5\\) centers are \\(10\\) apart, and the other two centers both lie on the perpendicular bisector of that segment",
+        "Right triangles give midpoint distances \\(12\\) and \\(\\sqrt{r^2 + 10r};\\) rule out opposite sides before subtracting them"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

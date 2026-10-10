@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2018-p8",
+  "title": "2018 AIME I Problem 8",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.equiangular-polygon",
+      "label": "Equiangular polygon",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.parallel-lines",
+      "label": "Parallel lines",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2018,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 57.2,
+    "source": 2920,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "Let \\(ABCDEF\\) be an equiangular hexagon such that \\(AB = 6,\\) \\(BC = 8,\\) \\(CD = 10,\\) and \\(DE = 12.\\) Denote by \\(d\\) the diameter of the largest circle that fits inside the hexagon. Find \\(d^2.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "147",
+    "value": "147"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2018-p8.live",
+      "kind": "proof-sketch",
+      "text": "All interior angles are \\(120^\\circ,\\) so opposite sides are parallel. Attaching equilateral triangles to two opposite sides produces a parallelogram, which forces \\(AB + BC = DE + EF\\) and \\(FA + AB = CD + DE.\\) Hence \\(EF = 2\\) and \\(FA = 16.\\)\n\nWalking from one side to the opposite side along the two connecting sides shows that the distance between a pair of opposite sides is \\(\\frac{\\sqrt{3}}{2}\\) times the sum of those two connecting sides: the strips have widths \\(\\frac{\\sqrt{3}}{2}(BC + CD) = 9\\sqrt{3}\\) between \\(AB\\) and \\(DE,\\) \\(\\frac{\\sqrt{3}}{2}(CD + DE) = 11\\sqrt{3}\\) between \\(BC\\) and \\(EF,\\) and \\(\\frac{\\sqrt{3}}{2}(DE + EF) = 7\\sqrt{3}\\) between \\(CD\\) and \\(FA.\\) Any circle inside the hexagon fits in the narrowest strip, so \\(d \\le 7\\sqrt{3}.\\)\n\nA circle of diameter \\(7\\sqrt{3}\\) tangent to lines \\(CD\\) and \\(FA\\) can be centered so that it also touches \\(DE\\) exactly and has distances \\(6\\sqrt{3},\\) \\(5\\sqrt{3},\\) and \\(\\frac{11\\sqrt{3}}{2}\\) from lines \\(EF,\\) \\(BC,\\) and \\(AB,\\) all more than its radius \\(\\frac{7\\sqrt{3}}{2},\\) so it fits inside the hexagon. Therefore \\(d = 7\\sqrt{3}\\) and \\(d^2 = 147.\\)",
+      "hints": [
+        "In an equiangular hexagon \\(AB + BC = DE + EF\\) and \\(FA + AB = CD + DE;\\) find \\(EF\\) and \\(FA\\)",
+        "Opposite sides are parallel, at distance \\(\\frac{\\sqrt{3}}{2}\\) times the sum of the two sides connecting them; the narrowest of the three strips limits the circle"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-10b-2010-p7",
+  "title": "2010 AMC 10B 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.perimeter",
+      "label": "Perimeter",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2010,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 17.1,
+    "source": 1220,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "A triangle has side lengths \\(10,\\) \\(10,\\) and \\(12.\\) A rectangle has width \\(4\\) and area equal to the area of the triangle. What is the perimeter of this rectangle?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(28\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(32\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(36\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "32"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2010-p7.live",
+      "kind": "proof-sketch",
+      "text": "To find the area of the triangle, we can drop the altitude to the side of length \\(12.\\)\n\nThen we have a right triangle with one leg \\(12 \\div 2 = 6\\) and hypotenuse \\(10.\\)\n\nThe other leg has length \\[ \\sqrt{10^2 - 6^2} = \\sqrt{64} = 8. \\]\n\nThe area of the triangle is then \\[ \\dfrac{8 \\cdot 12}{2} = 48. \\]\n\nThe length of the rectangle is then \\(48 \\div 4 = 12.\\) Its perimeter is \\[ 2(4 + 12) = 2 \\cdot 16 = 32. \\]\n\nThus, D is the correct answer.",
+      "hints": [
+        "Drop the altitude to the side of length \\(12\\)",
+        "The altitude splits the triangle into two \\(6\\)-\\(8\\)-\\(10\\) triangles"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

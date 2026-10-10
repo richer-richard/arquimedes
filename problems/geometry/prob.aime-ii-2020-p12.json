@@ -1,0 +1,75 @@
+{
+  "id": "prob.aime-ii-2020-p12",
+  "title": "2020 AIME II Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.midpoint",
+      "label": "Midpoint",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.slope",
+      "label": "Slope",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2020,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 65.9,
+    "source": 3160,
+    "mohs": null
+  },
+  "estimatedMinutes": 19,
+  "statement": "Let \\(m\\) and \\(n\\) be odd integers greater than \\(1.\\) An \\(m \\times n\\) rectangle is made up of unit squares where the squares in the top row are numbered left to right with the integers \\(1\\) through \\(n,\\) those in the second row are numbered left to right with the integers \\(n + 1\\) through \\(2n,\\) and so on. Square \\(200\\) is in the top row, and square \\(2000\\) is in the bottom row. Find the number of ordered pairs \\((m, n)\\) of odd integers greater than \\(1\\) with the property that, in the \\(m \\times n\\) rectangle, the line through the centers of squares \\(200\\) and \\(2000\\) intersects the interior of square \\(1099.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "248",
+    "value": "248"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2020-p12.live",
+      "kind": "proof-sketch",
+      "text": "Use column-row coordinates. Square \\(200\\) is in the top row, so \\(n \\ge 200\\) (hence \\(n \\ge 201\\) as \\(n\\) is odd) and its center is \\((200, 1).\\) Square \\(2000\\) is in the bottom row, so its column is \\(b = 2000 - (m-1)n\\) with \\(1 \\le b \\le n,\\) i.e. \\((m-1)n \\lt 2000 \\le mn,\\) and its center is \\((b, m).\\) Since \\(m\\) and \\(n\\) are odd, \\(b\\) is even, so the midpoint \\(\\left(\\frac{200 + b}{2}, \\frac{m+1}{2}\\right)\\) of the two centers has integer coordinates; its square number is \\(\\frac{(m-1)n + 200 + b}{2} = \\frac{2200}{2} = 1100.\\) Its column \\(100 + \\frac{b}{2}\\) lies between \\(101\\) and \\(n,\\) so the line passes through the center of square \\(1100,\\) and square \\(1099\\) sits immediately to its left in the same row.\n\nSquare \\(1099\\) lies only in that row, and the line crosses that row’s horizontal strip in a segment centered (by symmetry) at the center of square \\(1100,\\) extending \\(\\frac{1}{2|s|}\\) to each side, where \\(s = \\frac{m-1}{b - 200}\\) is the slope. So the line meets the interior of square \\(1099\\) exactly when \\(\\frac{1}{2|s|} \\gt \\frac{1}{2},\\) that is \\(|s| \\lt 1,\\) i.e. \\(m - 1 \\lt |b - 200|\\) \\(= |1800 - (m-1)n|\\) (a vertical line, \\(b = 200,\\) fails).\n\nSince \\(n \\ge 201\\) and \\((m-1)n \\lt 2000,\\) we need \\(m - 1 \\lt 10,\\) so \\(m \\in \\{3, 5, 7, 9\\}.\\) For \\(m = 3:\\) odd \\(n \\in [667, 999],\\) \\(167\\) values, excluding \\(|n - 900| \\le 1\\) (the odd cases \\(899\\) and \\(901\\)) leaves \\(165.\\) For \\(m = 5:\\) odd \\(n \\in [401, 499],\\) \\(50\\) values, excluding \\(449\\) and \\(451\\) leaves \\(48.\\) For \\(m = 7:\\) odd \\(n \\in [287, 333],\\) \\(24\\) values, excluding \\(299\\) and \\(301\\) leaves \\(22.\\) For \\(m = 9:\\) odd \\(n \\in [223, 249],\\) \\(14\\) values, excluding \\(225\\) leaves \\(13.\\) The total is \\(165 + 48 + 22 + 13 = 248.\\)",
+      "hints": [
+        "Since \\(m\\) and \\(n\\) are odd, the midpoint of the centers of squares \\(200\\) and \\(2000\\) is exactly the center of square \\(1100,\\) one square to the right of square \\(1099\\)",
+        "The line enters square \\(1099\\) precisely when its slope is less than \\(1\\) in absolute value; then count the odd \\(n\\) for each \\(m \\in \\{3, 5, 7, 9\\}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

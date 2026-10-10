@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2014-p17",
+  "title": "2014 AMC 10A Problem 17",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.dice-probability",
+      "label": "Dice (probability)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2014,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 25.1,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Three fair six-sided dice are rolled. What is the probability that the values shown on two of the dice sum to the value shown on the remaining die?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac16\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{13}{72}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac7{36}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac5{24}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac29\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "5/24"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2014-p17.live",
+      "kind": "proof-sketch",
+      "text": "Note that if one die is the sum of the other two dice, then it is strictly greater than the other two dice.\n\nThere are \\(3\\) ways to choose which of the dice is the sum of the other two, which makes it the greatest.\n\nThis die cannot be \\(1,\\) since there is no way to sum two positive integers to get \\(1.\\)\n\nThere is a \\(\\dfrac{1}{6}\\) chance that this die is any of the other numbers.\n\nThere is \\(1\\) way to get a sum of \\(2,\\) \\(2\\) ways for \\(3,\\) \\(3\\) for \\(4,\\) \\(4\\) for \\(5,\\) and \\(5\\) for \\(6.\\)\n\nWe take these numbers of ways out of a total of \\(6^2 = 36\\) possibilities. The desired probability is then \\[ 3 \\cdot \\dfrac{1}{6} \\cdot \\dfrac{1 + 2 + 3 + 4 + 5}{36} = \\dfrac{5}{24}. \\]\n\nThus, D is the correct answer.",
+      "hints": [
+        "List possible ordered dice pairs by their sum",
+        "Remember to count ordered triples of dice rolls"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

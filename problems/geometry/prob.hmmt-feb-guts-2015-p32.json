@@ -1,0 +1,56 @@
+{
+  "id": "prob.hmmt-feb-guts-2015-p32",
+  "title": "2015 HMMT February Guts Problem 32",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.sums-and-products",
+      "label": "Sums and products",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.volume",
+      "label": "Volume",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2015,
+    "number": 32
+  },
+  "difficulty": {
+    "course": 92.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A wealthy king has his blacksmith fashion him a large cup, whose inside is a cone of height 9 inches and base diameter 6 inches (that is, the opening at the top of the cup is 6 inches in diameter). At one of his many feasts, he orders the mug to be filled to the brim with cranberry juice.\nFor each positive integer \\(n\\), the king stirs his drink vigorously and takes a sip such that the height of fluid left in his cup after the sip goes down by \\(\\frac{1}{n^{2}}\\) inches. Shortly afterwards, while the king is distracted, the court jester adds pure Soylent to the cup until it's once again full. The king takes sips precisely every minute, and his first sip is exactly one minute after the feast begins.\nAs time progresses, the amount of juice consumed by the king (in cubic inches) approaches a number \\(r\\). Find \\(r\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2015-p32.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{216 \\pi^{3}-2187 \\sqrt{3}}{8 \\pi^{2}}\\) First, we find the total amount of juice consumed. We can simply subtract the amount of juice remaining at infinity from the initial amount of juice in the cup, which of course is simply the volume of the cup; we'll denote this value by \\(V\\).\nSince volume in the cup varies as the cube of height, the amount of juice remaining in the cup after \\(m\\) minutes is\n\n\\[V \\cdot \\prod_{n=1}^{m}\\left(\\frac{9-\\frac{1}{n^{2}}}{9}\\right)^{3}=V \\cdot\\left(\\prod_{n=1}^{m}\\left(1-\\frac{1}{9 n^{2}}\\right)\\right)^{3}\\]\n\nWe can now factor the term inside the product to find\n\n\\[V\\left(\\prod_{n=1}^{m} \\frac{(3 n+1)(3 n-1)}{9 n^{2}}\\right)^{3}=V\\left(\\frac{(3 m+1)!}{3^{3 m}(m!)^{3}}\\right)^{3}\\]\n\nIf remains to evaluate the limit of this expression as \\(m\\) goes to infinity.\nHowever, by Stirling's approximation, we have\n\n\\[\\begin{aligned}\n\\lim _{m \\rightarrow \\infty} \\frac{(3 m+1)!}{3^{3 m}(m!)^{3}} & =\\lim _{m \\rightarrow \\infty} \\frac{\\left(\\frac{3 n+1}{e}\\right)^{3 n+1} \\cdot \\sqrt{2 \\pi(3 n+1)}}{\\left(\\frac{3 n}{e}\\right)^{3 n} \\sqrt{(2 \\pi n)^{3}}} \\\\\n& =\\lim _{m \\rightarrow \\infty} \\frac{(3 n+1) \\sqrt{3}}{2 \\pi n e}\\left(\\frac{3 n+1}{3 n}\\right)^{3 n} \\\\\n& =\\frac{3 \\sqrt{3}}{2 \\pi} .\n\\end{aligned}\\]\n\nTherefore the total amount of juice the king consumes is\n\n\\[V-V\\left(\\frac{3 \\sqrt{3}}{2 \\pi}\\right)^{3}=\\left(\\frac{3^{2} \\cdot \\pi \\cdot 9}{3}\\right)\\left(\\frac{8 \\pi^{3}-81 \\sqrt{3}}{8 \\pi^{3}}\\right)=\\frac{216 \\pi^{3}-2187 \\sqrt{3}}{8 \\pi^{2}}\\]\n\nRemark. We present another way to calculate the limit at \\(m \\rightarrow \\infty\\) of \\(f(m)=\\frac{(3 m+1)!}{3^{3 m}(m!)^{3}}\\). We have\n\n\\[f(m+1)=\\frac{(3 m+4)!}{3^{3 m+3}(m+1)!^{3}}=f(m) \\frac{\\left(m+\\frac{2}{3}\\right)\\left(m+\\frac{4}{3}\\right)}{(m+1)^{2}}\\]\n\nwhence we can write\n\n\\[f(m)=\\frac{c \\Gamma\\left(m+\\frac{2}{3}\\right) \\Gamma\\left(m+\\frac{4}{3}\\right)}{\\Gamma(m+1)^{2}}\\]\n\nfor some constant \\(c\\). We can find \\(c\\) by equating the expressions at \\(m=0\\); we have\n\n\\[1=f(0)=\\frac{c \\Gamma\\left(\\frac{2}{3}\\right) \\Gamma\\left(\\frac{4}{3}\\right)}{\\Gamma(1)^{2}}\\]\n\nso that \\(c=\\Gamma(1)^{2} / \\Gamma\\left(\\frac{2}{3}\\right) \\Gamma\\left(\\frac{4}{3}\\right)\\).\nOf course, \\(\\Gamma(1)=0!=1\\). We can evaluate the other product as follows:\n\n\\[\\Gamma\\left(\\frac{2}{3}\\right) \\Gamma\\left(\\frac{4}{3}\\right)=\\frac{1}{3} \\Gamma\\left(\\frac{2}{3}\\right) \\Gamma\\left(\\frac{1}{3}\\right)=\\frac{1}{3} \\cdot \\frac{\\pi}{\\sin \\pi / 3}=\\frac{2 \\pi}{3 \\sqrt{3}}\\]\n\nHere the first step follows from \\(\\Gamma(n+1)=n \\Gamma(n)\\), while the second follows from Euler's reflection formula. Thus \\(c=3 \\sqrt{3} / 2 \\pi\\). We can now compute\n\n\\[\\lim _{m \\rightarrow \\infty} f(m)=\\lim _{m \\rightarrow \\infty} \\frac{c \\Gamma\\left(m+\\frac{2}{3}\\right) \\Gamma\\left(m+\\frac{4}{3}\\right)}{\\Gamma(m+1)^{2}}=\\frac{3 \\sqrt{3}}{2 \\pi} \\lim _{m \\rightarrow \\infty} \\frac{\\Gamma\\left(m+\\frac{2}{3}\\right) \\Gamma\\left(m+\\frac{4}{3}\\right)}{\\Gamma(m+1)^{2}}\\]\n\nSince \\(\\lim _{n \\rightarrow \\infty} \\Gamma(n+\\alpha) /\\left[\\Gamma(n) n^{\\alpha}\\right]=1\\), this final limit is 1 and \\(f(m) \\rightarrow 3 \\sqrt{3} / 2 \\pi\\) as \\(m \\rightarrow \\infty\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

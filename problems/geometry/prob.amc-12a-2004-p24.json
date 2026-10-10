@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2004-p24",
+  "title": "2004 AMC 12A Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-decomposition",
+      "label": "Area decomposition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle",
+      "label": "Circle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.sector",
+      "label": "Sector",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2004,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 41.0,
+    "source": 2350,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "A plane contains points \\(A\\) and \\(B\\) with \\(AB = 1.\\) Let \\(S\\) be the union of all disks of radius \\(1\\) in the plane that cover \\(\\overline{AB}.\\) What is the area of \\(S?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\pi + \\sqrt{3}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{8\\pi}{3}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\pi - \\dfrac{\\sqrt{3}}{2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{10\\pi}{3} - \\sqrt{3}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\pi - 2\\sqrt{3}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2004-p24.live",
+      "kind": "proof-sketch",
+      "text": "A radius-\\(1\\) disk covers segment \\(\\overline{AB}\\) exactly when its center is within \\(1\\) of both \\(A\\) and \\(B.\\) That region \\(R\\) is the lens where the two unit circles centered at \\(A\\) and \\(B\\) overlap.\n\nEach unit circle passes through the other’s center, so the lens is bounded by two \\(120^\\circ\\) arcs. Two \\(120^\\circ\\) sectors of area \\(\\tfrac{\\pi}{3}\\) overlap in two equilateral triangles of total area \\(\\tfrac{\\sqrt3}{2},\\) giving \\(R\\) area \\(\\tfrac{2\\pi}{3} - \\tfrac{\\sqrt3}{2}.\\)\n\nThe set \\(S\\) consists of all points within \\(1\\) of \\(R.\\) Beyond \\(R\\) itself, this adds two \\(60^\\circ\\) sectors of radius \\(1\\) (each area \\(\\tfrac{\\pi}{6}\\)) and two \\(120^\\circ\\) annuli of outer radius \\(2\\) and inner radius \\(1\\) (each area \\(\\pi\\)).\n\nTherefore the area of \\(S\\) is \\[ \\begin{aligned} &\\left(\\tfrac{2\\pi}{3} - \\tfrac{\\sqrt3}{2}\\right) + 2 \\cdot \\tfrac{\\pi}{6} \\\\ &\\quad {}+ 2\\pi = 3\\pi - \\tfrac{\\sqrt3}{2}. \\end{aligned} \\]\n\nThus, the correct answer is C.",
+      "hints": [
+        "A radius-\\(1\\) disk covers \\(\\overline{AB}\\) exactly when its center lies within \\(1\\) of both \\(A\\) and \\(B\\)",
+        "Find that lens-shaped region \\(R\\) of centers, then \\(S\\) is all points within \\(1\\) of \\(R\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

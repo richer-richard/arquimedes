@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2023-p12",
+  "title": "2023 AMC 10A Problem 12",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2023,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 21.8,
+    "source": 1440,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many three-digit positive integers \\(N\\) satisfy the following properties?\n\n• The number \\(N\\) is divisible by \\(7.\\)\n\n• The number formed by reversing the digits of \\(N\\) is divisible by \\(5.\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(14\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(17\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "14"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2023-p12.live",
+      "kind": "proof-sketch",
+      "text": "When we reverse \\(N,\\) its last digit is the first digit of \\(N.\\) For the reversal to be divisible by \\(5,\\) that digit is \\(0\\) or \\(5.\\) A three-digit number can’t start with \\(0,\\) so \\(N\\) starts with \\(5,\\) meaning \\(500 \\le N \\le 599\\) (and the reversal ends in \\(5,\\) always fine). Now just count multiples of \\(7\\) here: from \\(7 \\cdot 72 = 504\\) to \\(7 \\cdot 85 = 595,\\) that’s \\(14\\) numbers. Therefore, the answer is B.",
+      "hints": [
+        "The reversed number ends in the first digit of \\(N,\\) and for divisibility by \\(5\\) that digit must be \\(0\\) or \\(5\\)",
+        "Since \\(N\\) is three digits it starts with \\(5;\\) count the multiples of \\(7\\) from \\(500\\) to \\(599\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

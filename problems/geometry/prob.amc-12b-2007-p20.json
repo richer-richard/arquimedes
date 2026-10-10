@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2007-p20",
+  "title": "2007 AMC 12B 20",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.parallelogram",
+      "label": "Parallelogram",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2007,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 35.3,
+    "source": 2040,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The parallelogram bounded by the lines \\(y=ax+c,\\) \\(y=ax+d,\\) \\(y=bx+c,\\) and \\(y=bx+d\\) has area \\(18.\\) The parallelogram bounded by the lines \\(y=ax+c,\\) \\(y=ax-d,\\) \\(y=bx+c,\\) and \\(y=bx-d\\) has area \\(72.\\) Given that \\(a,\\) \\(b,\\) \\(c,\\) and \\(d\\) are positive integers, what is the smallest possible value of \\(a+b+c+d?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(14\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(17\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "16"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2007-p20.live",
+      "kind": "proof-sketch",
+      "text": "Two vertices of the first parallelogram lie at \\((0,c)\\) and \\((0,d),\\) and the other two have \\(x\\)-coordinates \\(\\pm\\dfrac{c-d}{b-a}.\\) Its area works out to \\(\\dfrac{(c-d)^2}{|b-a|}=18.\\) The same computation for the second gives \\(\\dfrac{(c+d)^2}{|b-a|}=72.\\)\n\nSo \\((c-d)^2=18|b-a|\\) and \\((c+d)^2=72|b-a|.\\) Subtracting, \\(4cd=54|b-a|,\\) i.e. \\(2cd=27|b-a|.\\)\n\nThus \\(|b-a|\\) is even, so \\(a+b\\) is smallest with \\(\\{a,b\\}=\\{1,3\\};\\) and \\(cd\\) is a multiple of \\(27,\\) so \\(c+d\\) is smallest with \\(\\{c,d\\}=\\{3,9\\}.\\) These satisfy all conditions, giving \\(a+b+c+d=1+3+3+9\\) \\(=16.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "The first parallelogram has area \\(\\dfrac{(c-d)^2}{|b-a|};\\) the second has area \\(\\dfrac{(c+d)^2}{|b-a|}\\)",
+        "Subtracting gives \\(4cd=54|b-a|;\\) then minimize with small positive integers"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

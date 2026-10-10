@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-2023-p22",
+  "title": "2023 AMC 8 Problem 22",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2023,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 30.8,
+    "source": 1790,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In a sequence of positive integers, each term after the second is the product of the previous two terms. The sixth term in the sequence is \\(4000.\\) What is the first term?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(10\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2023-p22.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(x\\) be the first term and \\(y\\) be the second.\n\nThen we get the following sequence: \\[ x, y, xy, xy^2, x^2y^3, x^3y^5, \\cdots \\] Thus \\(x^3y^5 = 4000.\\)\n\nFactoring \\(4000,\\) gives \\[ 4000 = 2^5 \\cdot 5^3. \\] Because \\(x\\) and \\(y\\) are positive integers, the only fifth powers that divide \\(4000\\) are \\(1\\) and \\(32.\\)\n\nIf \\(y = 1,\\) then \\(x^3 = 4000,\\) which is impossible because \\(4000\\) is not a perfect cube. Therefore, \\[ y^5 = 32 \\] and \\[ y = 2. \\]\n\nThis forces \\(x\\) to equal \\(5.\\)\n\nThus, D is the correct answer.",
+      "hints": [
+        "Write the first several terms using first term \\(x\\) and second term \\(y\\)",
+        "The sixth term is \\(x^3y^5\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2023-p20",
+  "title": "2023 AMC 12A Problem 20",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.units-digit",
+      "label": "Units digit",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2023,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 39.0,
+    "source": 2110,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Rows \\(1,\\) \\(2,\\) \\(3,\\) \\(4,\\) and \\(5\\) of a triangular array of integers are shown below.\n\n\\[\\begin{array}{ccccccccc} &&&&1&&&&\\\\ &&&1&&1&&&\\\\ &&1&&3&&1&&\\\\ &1&&5&&5&&1&\\\\ 1&&7&&11&&7&&1 \\end{array}\\]\n\nEach row after the first row is formed by placing a \\(1\\) at each end of the row, and each interior entry is \\(1\\) greater than the sum of the two numbers diagonally above it in the previous row. What is the units digit of the sum of the \\(2023\\) numbers in the \\(2023\\)rd row?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(9\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2023-p20.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(S_n\\) be the sum of row \\(n.\\) Each interior entry is \\(1\\) more than the sum of the two entries above it, and summing over the row gives the recurrence \\[ S_n=2S_{n-1}+(n-2). \\]\n\nWith \\(S_1=1,\\) this solves to \\(S_n=2^n-n\\) (check: \\(S_5=32-5=27\\) \\(=1+7+11+7+1\\)).\n\nSo \\(S_{2023}=2^{2023}-2023.\\) Since powers of \\(2\\) cycle with units digits \\(2,4,8,6\\) and \\(2023\\equiv 3\\pmod 4,\\) \\(2^{2023}\\) ends in \\(8.\\) Then \\(8-3=5\\) gives units digit \\(5.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Let \\(S_n\\) be the sum of row \\(n;\\) each interior entry adds two copies of the row above plus a \\(1\\)",
+        "This yields \\(S_n=2S_{n-1}+(n-2),\\) whose closed form is \\(S_n=2^n-n\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-invitational-2014-p3",
+  "title": "2014 HMMT Invitational Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.vectors",
+      "label": "Vectors",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2014,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Fix positive integers \\(m\\) and \\(n\\). Suppose that \\(a_{1}, a_{2}, \\ldots, a_{m}\\) are reals, and that pairwise distinct vectors \\(v_{1}, \\ldots, v_{m} \\in \\mathbb{R}^{n}\\) satisfy\n\n\\[\\sum_{j \\neq i} a_{j} \\frac{v_{j}-v_{i}}{\\left\\|v_{j}-v_{i}\\right\\|^{3}}=0\\]\n\nfor \\(i=1,2, \\ldots, m\\).\nProve that\n\n\\[\\sum_{1 \\leq i<j \\leq m} \\frac{a_{i} a_{j}}{\\left\\|v_{j}-v_{i}\\right\\|}=0\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2014-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "N/A Since \\(v_{i} \\cdot\\left(v_{j}-v_{i}\\right)+v_{j} \\cdot\\left(v_{i}-v_{j}\\right)=-\\left\\|v_{j}-v_{i}\\right\\|^{2}\\) for any \\(1 \\leq i<j \\leq m\\), we have\n\n\\[0=\\sum_{i=1}^{m} a_{i} v_{i} \\cdot 0=\\sum_{i=1}^{m} a_{i} v_{i} \\sum_{j \\neq i} a_{j} \\frac{v_{j}-v_{i}}{\\left\\|v_{j}-v_{i}\\right\\|^{3}}=-\\sum_{1 \\leq i<j \\leq m} \\frac{a_{i} a_{j}}{\\left\\|v_{j}-v_{i}\\right\\|}\\]\n\nas desired.\nAlternative Solution. Fix \\(a_{1}, \\ldots, a_{m}\\), and define \\(f:\\left(\\mathbb{R}^{n}\\right)^{m} \\rightarrow \\mathbb{R}\\) by\n\n\\[f\\left(x_{1}, \\ldots, x_{m}\\right)=\\sum_{1 \\leq i<j \\leq m} \\frac{a_{i} a_{j}}{\\left\\|x_{j}-x_{i}\\right\\|}\\]\n\nNow if we view \\(f\\left(x_{1}, \\ldots, x_{m}\\right)\\) individually as a function in \\(x_{k}\\) ( \\(k\\) fixed), then the problem condition for \\(i=k\\) says precisely that the gradient of \\(f\\) with respect to \\(x_{k}\\) (but of course, multiplied by \\(a_{k}\\) ) evaluated at \\(\\left(v_{1}, \\ldots, v_{m}\\right)\\) is 0 .\nFinally, the multivariate chain rule shows that \\(F(t):=f\\left(t v_{1}, \\ldots, t v_{m}\\right)=\\frac{1}{t} f\\left(v_{1}, \\ldots, v_{m}\\right)\\) must satisfy \\(F^{\\prime}(1)=0\\). Yet \\(F^{\\prime}(1)=-\\frac{1}{1^{2}} f\\left(v_{1}, \\ldots, v_{m}\\right)\\), so we have \\(f\\left(v_{1}, \\ldots, v_{m}\\right)=0\\), as desired.\nComment. This is (sort of) an energy minimization problem from physics (more precisely, minimizing electrostatic or gravitational potential).\nComment. It would be interesting to determine all differentiable \\(A: \\mathbb{R}^{+} \\rightarrow \\mathbb{R}\\) such that the problem still holds when the terms are replaced by \\(\\frac{v_{j}-v_{i}}{\\left\\|v_{j}-v_{i}\\right\\|} A^{\\prime}\\left(\\left\\|v_{j}-v_{i}\\right\\|\\right)\\) and \\(A\\left(\\left\\|v_{j}-v_{i}\\right\\|\\right)\\). (Here \\(A(t)=1 / t\\), which has a nice physical interpretation, but that's not important.) The obvious examples are \\(A(t)=c t^{s}\\) for constant \\(c\\) and real \\(s\\) (where both solutions easily carry through). But there may be others where instead of defining \\(F(t)\\) through the scaling transformation \\(\\left(v_{1}, \\ldots, v_{m}\\right) \\rightarrow\\left(t v_{1}, \\ldots, t v_{m}\\right)\\), there's a subtler translation.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

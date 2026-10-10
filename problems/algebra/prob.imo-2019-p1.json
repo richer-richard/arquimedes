@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2019-p1",
+  "title": "2019 IMO Problem 1",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2019,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 79.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Solve over \\(\\mathbb{Z}\\) the functional equation\n\\(f(2a) + 2f(b) = f(f(a+b))\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2019-p1.evanchen",
+      "kind": "proof-sketch",
+      "text": "Notice that \\(f(x) \\equiv 0\\) or \\(f(x) \\equiv 2x+k\\) work\nand are clearly the only linear solutions.\nWe now prove all solutions are linear.\n\nLet \\(P(a,b)\\) be the assertion.\n\nClaim.\n For each \\(x \\in \\mathbb{Z}\\) we have \\(f(2x) = 2f(x) - f(0)\\).\n\nProof.\n Compare \\(P(0,x)\\) and \\(P(x,0)\\).\n\nNow, \\(P(a,b)\\) and \\(P(0,a+b)\\) give\n\\[\\begin{aligned}\n f(f(a+b)) &= f(2a) + 2f(b) = f(0) + 2f(a+b) \\\\\n \\implies [2f(a) - f(0)] + 2f(b) &= f(0) + 2f(a+b) \\\\\n \\implies \\left( f(a)-f(0) \\right) + \\left( f(b)-f(0) \\right)\n &= \\left( f(a+b)-f(0) \\right).\n\\end{aligned}\\]\nThus the map \\(x \\mapsto f(x) - f(0)\\) is additive,\ntherefore linear.\n\nRemark.\n The same proof works on the functional equation\n \\[ f(2a) + 2f(b) = g(a+b) \\]\n where \\(g\\) is an arbitrary function (it implies that \\(f\\) is linear).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

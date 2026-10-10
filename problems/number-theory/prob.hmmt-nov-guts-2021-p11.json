@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-guts-2021-p11",
+  "title": "2021 HMMT November Guts Problem 11",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.number-of-divisors",
+      "label": "Τ (number of divisors)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2021,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 40.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n\\) be a positive integer. Given that \\(n^{n}\\) has 861 positive divisors, find \\(n\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "20",
+    "value": "20"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2021-p11.hmmt",
+      "kind": "proof-sketch",
+      "text": "If \\(n=p_{1}^{\\alpha_{1}} p_{2}^{\\alpha_{2}} \\ldots p_{k}^{\\alpha_{k}}\\), we must have \\(\\left(n \\alpha_{1}+1\\right)\\left(n \\alpha_{2}+1\\right) \\ldots\\left(n \\alpha_{k}+1\\right)=861=3 \\cdot 7 \\cdot 41\\). If \\(k=1\\), we have \\(n \\mid 860\\), and the only prime powers dividing 860 are \\(2,2^{2}, 5\\), and 43 , which are not solutions. Note that if \\(n \\alpha_{i}+1=3\\) or \\(n \\alpha_{i}+1=7\\) for some \\(i\\), then \\(n\\) is either \\(1,2,3\\), or 6 , which are not solutions. Therefore, we must have \\(n \\alpha_{i}+1=3 \\cdot 7\\) for some \\(i\\). The only divisor of 20 that is divisible by \\(p_{i}^{n / 20}\\) for some prime \\(p_{i}\\) is 20 , and it is indeed the solution.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

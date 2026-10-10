@@ -1,0 +1,75 @@
+{
+  "id": "prob.hmmt-nov-team-2011-p10",
+  "title": "2011 HMMT November Team Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2011,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 64.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(G_{1} G_{2} G_{3}\\) be a triangle with \\(G_{1} G_{2}=7, G_{2} G_{3}=13\\), and \\(G_{3} G_{1}=15\\). Let \\(G_{4}\\) be a point outside triangle \\(G_{1} G_{2} G_{3}\\) so that ray \\(\\overrightarrow{G_{1} G_{4}}\\) cuts through the interior of the triangle, \\(G_{3} G_{4}=G_{4} G_{2}\\), and \\(\\angle G_{3} G_{1} G_{4}=30^{\\circ}\\). Let \\(G_{3} G_{4}\\) and \\(G_{1} G_{2}\\) meet at \\(G_{5}\\). Determine the length of segment \\(G_{2} G_{5}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2011-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{169}{23}\\)\n\nWe first show that quadrilateral \\(G_{1} G_{2} G_{4} G_{3}\\) is cyclic. Note that by the law of cosines,\n\n\\[\\cos \\angle G_{2} G_{1} G_{3}=\\frac{7^{2}+15^{2}-13^{2}}{2 \\cdot 7 \\cdot 15}=\\frac{1}{2}\\]\n\nso \\(\\angle G_{2} G_{1} G_{3}=60^{\\circ}\\). However, we know that \\(\\angle G_{3} G_{1} G_{4}=30^{\\circ}\\), so \\(G_{1} G_{4}\\) is an angle bisector. Now, let \\(G_{1} G_{4}\\) intersect the circumcircle of triangle \\(G_{1} G_{2} G_{3}\\) at \\(X\\). Then, the minor arcs \\(\\widehat{G_{2} X}\\) and \\(\\widehat{G_{3} X}\\) are subtended by the equal angles \\(\\angle G_{2} G_{1} X\\) and \\(\\angle G_{3} G_{1} X\\), implying that \\(G_{2} X=G_{3} X\\), i.e. \\(X\\) is on the perpendicular bisector of \\(G_{2} G_{3}, l\\). Similarly, since \\(G_{4} G_{2}=G_{4} G_{3}, G_{4}\\) lies on \\(l\\). However, since \\(l\\) and \\(G_{1} G_{4}\\) are distinct (in particular, \\(G_{1}\\) lies on \\(G_{1} G_{4}\\) but not \\(l\\) ), we in fact have \\(X=G_{4}\\), so \\(G_{1} G_{2} G_{4} G_{3}\\) is cyclic.\nWe now have \\(G_{5} G_{2} G_{4} \\sim G_{5} G_{3} G_{1}\\) since \\(G_{1} G_{2} G_{4} G_{3}\\) is cyclic. Now, we have \\(\\angle G_{4} G_{3} G_{2}=\\angle G_{4} G_{1} G_{2}=\\) \\(30^{\\circ}\\), and we may now compute \\(G_{2} G_{4}=G_{4} G_{3}=13 / \\sqrt{3}\\). Let \\(G_{5} G_{2}=x\\) and \\(G_{5} G_{4}=y\\). Now, from \\(G_{5} G_{4} G_{2} \\sim G_{5} G_{1} G_{3}\\), we have:\n\n\\[\\frac{x}{y+13 / \\sqrt{3}}=\\frac{13 / \\sqrt{3}}{15}=\\frac{y}{x+7}\\]\n\nEquating the first and second expressions and cross-multiplying, we get\n\n\\[y+\\frac{13 \\sqrt{3}}{3}=\\frac{15 \\sqrt{3} x}{13} .\\]\n\nNow, equating the first and third expressions and and substituting gives\n\n\\[\\left(\\frac{15 \\sqrt{3} x}{13}-\\frac{13 \\sqrt{3}}{3}\\right)\\left(\\frac{15 \\sqrt{3} x}{13}\\right)=x(x+7)\\]\n\nUpon dividing both sides by \\(x\\), we obtain a linear equation from which we can solve to get \\(x=169 / 23\\).\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

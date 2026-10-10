@@ -1,0 +1,70 @@
+{
+  "id": "prob.hmmt-feb-algebra-2016-p10",
+  "title": "2016 HMMT February Algebra Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inversion",
+      "label": "Inversion",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.napoleon-and-fermat-points",
+      "label": "Napoleon and Fermat points",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-trigonometry",
+      "label": "Triangle trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2016,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 86.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a, b\\) and \\(c\\) be positive real numbers such that\n\n\\[\\begin{aligned}\na^{2}+a b+b^{2} & =9 \\\\\nb^{2}+b c+c^{2} & =52 \\\\\nc^{2}+c a+a^{2} & =49\n\\end{aligned}\\]\n\nCompute the value of \\(\\frac{49 b^{2}-33 b c+9 c^{2}}{a^{2}}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-2016-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 52\nConsider a triangle \\(A B C\\) with Fermat point \\(P\\) such that \\(A P=a, B P=b, C P=c\\). Then\n\n\\[A B^{2}=A P^{2}+B P^{2}-2 A P \\cdot B P \\cos \\left(120^{\\circ}\\right)\\]\n\nby the Law of Cosines, which becomes\n\n\\[A B^{2}=a^{2}+a b+b^{2}\\]\n\nand hence \\(A B=3\\). Similarly, \\(B C=\\sqrt{52}\\) and \\(A C=7\\).\nFurthermore, we have\n\n\\[\\begin{aligned}\nB C^{2}=52 & =A B^{2}+B C^{2}-2 A B \\cdot B C \\cos \\angle B A C \\\\\n& =3^{2}+7^{2}-2 \\cdot 3 \\cdot 7 \\cos \\angle B A C \\\\\n& =58-42 \\cos \\angle B A C\n\\end{aligned}\\]\n\nAnd so \\(\\cos \\angle B A C=\\frac{1}{7}\\).\nInvert about \\(A\\) with arbitrary radius \\(r\\). Let \\(B^{\\prime}, P^{\\prime}, C^{\\prime}\\) be the images of \\(B, P, C\\) respectively. Since \\(\\angle A P B=\\angle A B^{\\prime} P^{\\prime}=120^{\\circ}\\) and \\(\\angle A P C=\\angle A C^{\\prime} P^{\\prime}=120^{\\circ}\\), we note that \\(\\angle B^{\\prime} P^{\\prime} C^{\\prime}=120^{\\circ}-\\angle B A C\\), and so\n\n\\[\\begin{aligned}\n\\cos \\angle B^{\\prime} P^{\\prime} C^{\\prime} & =\\cos \\left(120^{\\circ}-\\angle B A C\\right) \\\\\n& =\\cos 120^{\\circ} \\cos \\angle B A C-\\sin 120^{\\circ} \\sin \\angle B A C \\\\\n& =-\\frac{1}{2}\\left(\\frac{1}{7}\\right)+\\frac{\\sqrt{3}}{2}\\left(\\frac{4 \\sqrt{3}}{7}\\right) \\\\\n& =\\frac{11}{14}\n\\end{aligned}\\]\n\nFurthermore, using the well-known result\n\n\\[B^{\\prime} C^{\\prime}=\\frac{r^{2} B C}{A B \\cdot A C}\\]\n\nfor an inversion about \\(A\\), we have\n\n\\[\\begin{aligned}\nB^{\\prime} P^{\\prime} & =\\frac{B P r^{2}}{A B \\cdot A P} \\\\\n& =\\frac{b r^{2}}{a \\cdot 3} \\\\\n& =\\frac{b r^{2}}{3 a}\n\\end{aligned}\\]\n\nand similarly \\(P^{\\prime} C^{\\prime}=\\frac{c r^{2}}{7 a}, B^{\\prime} C^{\\prime}=\\frac{r^{2} \\sqrt{52}}{21}\\). Applying the Law of Cosines to \\(B^{\\prime} P^{\\prime} C^{\\prime}\\) gives us\n\n\\[\\begin{aligned}\nB^{\\prime} C^{\\prime 2} & =B^{\\prime} P^{\\prime 2}+P^{\\prime} C^{\\prime 2}-2 B^{\\prime} P^{\\prime} \\cdot P^{\\prime} C^{\\prime} \\cos \\left(120^{\\circ}-\\angle B A C\\right) \\\\\n\\Longrightarrow \\frac{52 r^{4}}{21^{2}} & =\\frac{b^{2} r^{4}}{9 a^{2}}+\\frac{c^{2} r^{4}}{49 a^{2}}-\\frac{11 b c r^{4}}{147 a^{2}} \\\\\n\\Longrightarrow \\frac{52}{21^{2}} & =\\frac{b^{2}}{9 a^{2}}+\\frac{c^{2}}{49 a^{2}}-\\frac{11 b c}{147 a^{2}} \\\\\n\\Longrightarrow \\frac{52}{21^{2}} & =\\frac{49 b^{2}-33 b c+9 c^{2}}{21^{2} a^{2}}\n\\end{aligned}\\]\n\nand so \\(\\frac{49 b^{2}-33 b c+9 c^{2}}{a^{2}}=52\\).\nMotivation: the desired sum looks suspiciously like the result of some Law of Cosines, so we should try building a triangle with sides \\(\\frac{7 b}{a}\\) and \\(\\frac{3 c}{a}\\). Getting the \\(-\\frac{33 b c}{a}\\) term is then a matter of setting \\(\\cos \\theta=\\frac{11}{14}\\). Now there are two possible leaps: noticing that \\(\\cos \\theta=\\cos (120-\\angle B A C)\\), or realizing that it's pretty difficult to contrive a side of \\(\\frac{7 b}{a}\\) - but it's much easier to contrive a side of \\(\\frac{b}{3 a}\\). Either way leads to the natural inversion idea, and the rest is a matter of computation.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

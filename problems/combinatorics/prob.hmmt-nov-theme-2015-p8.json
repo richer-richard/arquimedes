@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-theme-2015-p8",
+  "title": "2015 HMMT November Theme Problem 8",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2015,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 53.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Consider an \\(8 \\times 8\\) grid of squares. A rook is placed in the lower left corner, and every minute it moves to a square in the same row or column with equal probability (the rook must move; i.e. it cannot stay in the same square). What is the expected number of minutes until the rook reaches the upper right corner?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2015-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 70\nLet the expected number of minutes it will take the rook to reach the upper right corner from the top or right edges be \\(E_{e}\\), and let the expected number of minutes it will take the rook to reach the upper right corner from any other square be \\(E_{c}\\). Note that this is justified because the expected time from any square on the top or right edges is the same, as is the expected time from any other square (this is because swapping any two rows or columns doesn't affect the movement of the rook). This gives us two linear equations:\n\n\\[\\begin{gathered}\nE_{c}=\\frac{2}{14}\\left(E_{e}+1\\right)+\\frac{12}{14}\\left(E_{c}+1\\right) \\\\\nE_{e}=\\frac{1}{14}(1)+\\frac{6}{14}\\left(E_{e}+1\\right)+\\frac{7}{14}\\left(E_{c}+1\\right)\n\\end{gathered}\\]\n\nwhich gives the solution \\(E_{e}=63, E_{c}=70\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

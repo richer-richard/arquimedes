@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1964-p35",
+  "title": "1964 AHSME Problem 35",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.altitude",
+      "label": "Altitude",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.herons-formula",
+      "label": "Heron’s Formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1964,
+    "number": 35
+  },
+  "difficulty": {
+    "course": 32.3,
+    "source": 1850,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The sides of a triangle are of lengths \\(13,\\) \\(14,\\) and \\(15.\\) The altitudes of the triangle meet at point \\(H.\\) If \\(AD\\) is the altitude to the side of length \\(14,\\) what is the ratio \\(HD:HA?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3:11\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(5:11\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1:2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2:3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(25:33\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "5/11"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1964-p35.live",
+      "kind": "proof-sketch",
+      "text": "Heron’s formula gives area \\(84,\\) so \\(AD=\\frac{2(84)}{14}=12.\\) The adjacent \\(13\\)-side has projection \\(\\sqrt{13^2-12^2}=5,\\) leaving \\(9\\) on the base. Put \\(D=(0,0),\\ A=(0,12),\\) \\(B=(-5,0),\\ C=(9,0).\\) Line \\(AC\\) has slope \\(-\\frac{4}{3},\\) so the altitude through \\(B\\) has slope \\(\\frac{3}{4}\\) and meets \\(AD\\) at height \\(\\frac{15}{4}.\\) Thus \\[ \\begin{gathered} HD=\\frac{15}{4},\\\\ HA=12-\\frac{15}{4}=\\frac{33}{4}, \\end{gathered} \\] giving \\(HD:HA=5:11.\\)\n\nTherefore, the correct answer is B.",
+      "hints": [
+        "The \\(13\\)-\\(14\\)-\\(15\\) triangle has area \\(84\\), so the altitude to side \\(14\\) is \\(12\\)",
+        "The altitude foot divides the side of length \\(14\\) into segments \\(5\\) and \\(9\\); use coordinates to locate \\(H\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

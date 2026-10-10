@@ -1,0 +1,37 @@
+{
+  "id": "prob.hmmt-feb-team-1999-p3",
+  "title": "1999 HMMT February Team Problem 3",
+  "category": "uncategorized",
+  "subjects": [],
+  "concepts": [],
+  "source": {
+    "collection": "HMMT February",
+    "year": 1999,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 80.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many non-empty subsets of \\(\\{1,2,3,4,5,6,7,8\\}\\) have exactly \\(k\\) elements and do not contain the element \\(k\\) for some \\(k=1,2, \\ldots, 8\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1999-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "Probably the easiest way to do this problem is to count how many non-empty subsets of \\(\\{1,2, \\ldots, n\\}\\) have \\(k\\) elements and do contain the element \\(k\\) for some \\(k\\). The element \\(k\\) must have \\(k-1\\) other elements with it to be in a subset of \\(k\\) elements, so there are \\(\\binom{n-1}{k-1}\\) such subsets. Now \\(\\sum_{k=1}^{n}\\binom{n-1}{k-1}=(1+1)^{n-1}=2^{n-1}\\), so that is how many non-empty sets contain some \\(k\\) and have \\(k\\) elements. The set \\(\\{1,2, \\ldots, n\\}\\) has \\(2^{n}\\) subsets (each element either is or is not in a particular subset), one of which is the empty set, so the number of non-empty subsets of \\(\\{1,2,3,4,5,6,7,8\\}\\) have exactly \\(k\\) elements and do not contain the element \\(k\\) for some \\(k\\) is \\(2^{n}-2^{n-1}-1=2^{n-1}-1\\). In the case \\(n=8\\), this yields \\(\\mathbf{1 2 7}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

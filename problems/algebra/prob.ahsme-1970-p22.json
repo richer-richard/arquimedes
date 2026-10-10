@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1970-p22",
+  "title": "1970 AHSME Problem 22",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.triangular-number",
+      "label": "Triangular number",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1970,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 25.7,
+    "source": 1590,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "If the sum of the first \\(3n\\) positive integers is \\(150\\) more than the sum of the first \\(n\\) positive integers, then the sum of the first \\(4n\\) positive integers is:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(300\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(350\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(400\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(450\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(600\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "300"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1970-p22.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(S_m=\\frac{m(m+1)}{2}.\\) Then \\[ \\begin{aligned} 2(S_{3n}-S_n) &=3n(3n+1)\\\\ &\\quad{}-n(n+1)\\\\ &=8n^2+2n. \\end{aligned} \\] Since \\(S_{3n}-S_n=150,\\) this gives \\(4n^2+n=150.\\) Hence \\((n-6)(4n+25)=0,\\) and the positive solution is \\(n=6.\\) Therefore \\[ S_{4n}=S_{24}=\\frac{24\\cdot25}{2}=300. \\]\n\nTherefore, the correct answer is A.",
+      "hints": [
+        "Use \\(1+2+\\cdots+m=\\frac{m(m+1)}{2}\\)",
+        "The given difference simplifies to \\(4n^2+n\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

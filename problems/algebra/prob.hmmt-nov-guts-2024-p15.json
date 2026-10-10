@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-guts-2024-p15",
+  "title": "2024 HMMT November Guts Problem 15",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sums-and-products",
+      "label": "Sums and products",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2024,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 45.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the sum of the three smallest positive integers \\(n\\) for which\n\n\\[\\frac{1+2+3+\\cdots+(2024 n-1)+2024 n}{1+2+3+\\cdots+(4 n-1)+4 n}\\]\n\nis an integer.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "89",
+    "value": "89"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2024-p15.hmmt",
+      "kind": "proof-sketch",
+      "text": "We simplify the expression as follows:\n\n\\[\\begin{aligned}\n\\frac{(2024 n)(2024 n+1) / 2}{(4 n)(4 n+1) / 2} & =\\frac{506 \\cdot(2024 n+1)}{4 n+1} \\\\\n& =\\frac{506 \\cdot(506 \\cdot(4 n+1)-505)}{4 n+1} \\\\\n& =506^{2}-\\frac{506 \\cdot 505}{4 n+1} \\\\\n& =506^{2}-\\frac{2 \\cdot 5 \\cdot 11 \\cdot 23 \\cdot 101}{4 n+1} .\n\\end{aligned}\\]\n\nThus, the expression is an integer if and only if \\(4 n+1\\) divides \\(5 \\cdot 11 \\cdot 23 \\cdot 101\\). The smallest divisors of \\(5 \\cdot 11 \\cdot 23 \\cdot 101\\) are\n\n\\[1,5,11,23,55,101,253 .\\]\n\nSince \\(4 n+1>1\\) and is 1 modulo 4 , the three smallest values it can take are 5,101 , and 253. Hence, the three smallest values of \\(n\\) are 1,25 , and 63 , giving the answer of \\(1+25+63=89\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

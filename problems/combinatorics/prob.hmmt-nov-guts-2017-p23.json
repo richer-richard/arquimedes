@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-nov-guts-2017-p23",
+  "title": "2017 HMMT November Guts Problem 23",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2017,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 57.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A string of digits is defined to be similar to another string of digits if it can be obtained by reversing some contiguous substring of the original string. For example, the strings 101 and 110 are similar, but the strings 3443 and 4334 are not. (Note that a string is always similar to itself.) Consider the string of digits\n\n\\[S=01234567890123456789012345678901234567890123456789\\]\n\nconsisting of the digits from 0 to 9 repeated five times. How many distinct strings are similar to \\(S\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2017-p23.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 1126\nWe first count the number of substrings that one could pick to reverse to yield a new substring. If we insert two dividers into the sequence of 50 digits, each arrangement of 2 dividers among the 52 total objects specifies a substring that is contained between the two dividers, for a total of \\(\\binom{52}{2}\\) substrings. Next, we account for overcounting. Every substring of length 0 or 1 will give the identity string when reversed, so we are overcounting here by \\(51+50-1=100\\) substrings. Next, for any longer substring \\(s\\) that starts and ends with the same digit, removing the digit from both ends results in a substring \\(s^{\\prime}\\), such that reversing \\(s\\) would give the same string as reversing \\(s^{\\prime}\\). Therefore, we are overcounting by \\(10 \\cdot\\binom{5}{2}\\) substrings. Our total number of strings similar to \\(S\\) is therefore \\(\\binom{52}{2}-100-10 \\cdot\\binom{5}{2}=1126\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

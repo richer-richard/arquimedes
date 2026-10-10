@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-team-2024-p6",
+  "title": "2024 HMMT February Team Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.injectivity-surjectivity",
+      "label": "Injectivity / surjectivity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2024,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 81.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\mathbb{Q}\\) be the set of rational numbers. Given a rational number \\(a \\neq 0\\), find, with proof, all functions \\(f: \\mathbb{Q} \\rightarrow \\mathbb{Q}\\) satisfying the equation\n\n\\[f(f(x)+a y)=a f(y)+x\\]\n\nfor all \\(x, y \\in \\mathbb{Q}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2024-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(P(x, y)\\) denote the functional equation. From \\(P(x, 0)\\), we have \\(f(f(x))=x+a f(0)\\). Thus, the tripling trick gives \\(f(x+a f(0))=f(f(f(x)))=f(x)+a f(0)\\).\n\nNow, here is the main idea: \\(P(f(x), y)\\) gives\n\n\\[\\begin{aligned}\nf(f(f(x))+a y) & =a f(y)+f(x) \\\\\nf(x+a f(0)+a y) & =f(x)+a f(y) \\\\\nf(x+a y) & =f(x)+a f(y)-a f(0)\n\\end{aligned}\\]\n\nIn particular, plugging in \\(x=0\\) into this equation gives \\(f(a y)=a f(y)+(1-a) f(0)\\), so inserting it back to the same equation gives\n\n\\[f(x+a y)=f(x)+f(a y)-f(0),\\]\n\nfor all rational numbers \\(x, y\\). In particular, the function \\(g(x)=f(x)-f(0)\\) is additive, so \\(f\\) is linear. Let \\(f(x)=b x+c\\). By substituting it in, we have \\(P(x, y)\\) iff\n\n\\[\\begin{aligned}\nf(a y+b x+c) & =a(b y+c)+x \\\\\na b y+b^{2} x+b c+c & =a b y+a c+x \\\\\n\\left(b^{2}-1\\right) x+(b+1-a) c & =0\n\\end{aligned}\\]\n\nSince \\(x\\) is arbitrary, we can state that \\(b^{2}-1=0\\) and \\((b+1-a) c=0\\), thus \\(b= \\pm 1\\). As \\(a \\neq 0\\), we know \\(b+1-a=0\\) only if \\(b=1\\) and \\(a=2\\). When \\(a \\neq 2\\) or \\(b \\neq 1\\), we know the only solutions are \\(b= \\pm 1, c=0\\), while for \\(a=2, b=1\\), the equation is automatically satisfied, so the final answer is\n\n\\[\\left\\{\\begin{array}{l}\nf(x)=x \\\\\nf(x)=-x \\\\\nf(x)=x+c \\text { for all rational number } c \\text { iff } a=2\n\\end{array}\\right.\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

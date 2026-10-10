@@ -1,0 +1,72 @@
+{
+  "id": "prob.aime-i-2026-p10",
+  "title": "2026 AIME1 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circumcircle-circumcenter-and-circumradius",
+      "label": "Circumcircle, circumcenter, and circumradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.shoelace-formula",
+      "label": "Shoelace formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.transformation",
+      "label": "Transformation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2026,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 59.8,
+    "source": 2920,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Let \\(\\triangle ABC\\) have side lengths \\(AB = 13,\\) \\(BC = 14,\\) and \\(CA = 15.\\) Triangle \\(\\triangle A'B'C'\\) is obtained by rotating \\(\\triangle ABC\\) about its circumcenter so that \\(\\overline{A'C'}\\) is perpendicular to \\(\\overline{BC},\\) with \\(A'\\) and \\(B\\) not on the same side of line \\(B'C'.\\) Find the integer closest to the area of hexagon \\(AA'CC'BB'.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "156",
+    "value": "156"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2026-p10.live",
+      "kind": "proof-sketch",
+      "text": "Place \\(B = (0,0),\\) \\(C = (14,0),\\) \\(A = (5,12).\\) The circumcenter lies on \\(x = 7,\\) and equating distances to \\(B\\) and \\(A\\) gives \\(O = \\left(7, \\frac{33}{8}\\right).\\) The direction of \\(\\overline{AC}\\) is \\(C - A = (9, -12),\\) parallel to \\((3, -4).\\) A rotation through \\(\\varphi\\) makes \\(\\overline{A'C'}\\) vertical exactly when it sends \\((3,-4)\\) to \\((0, \\pm 5),\\) so \\((\\cos\\varphi, \\sin\\varphi) = \\left(\\frac{4}{5}, -\\frac{3}{5}\\right)\\) or \\(\\left(-\\frac{4}{5}, \\frac{3}{5}\\right).\\) Use the scalar cross product to test sides of the directed line \\(B'C'.\\) For the first rotation, \\[ \\begin{aligned} (C'-B') \\times (A'-B') &= 168, \\\\ (C'-B') \\times (B-B') &= -\\frac{189}{4}, \\end{aligned} \\] while for the second rotation these quantities are \\(168\\) and \\(\\frac{651}{4},\\) respectively. Thus \\(A'\\) and \\(B\\) are on opposite sides only for \\(\\cos\\varphi = \\frac{4}{5},\\) \\(\\sin\\varphi = -\\frac{3}{5}.\\)\n\nWith this rotation, \\(P' = O + R(P - O)\\) gives \\[A' = \\left(\\tfrac{81}{8}, \\tfrac{93}{8}\\right),\\] \\[B' = \\left(-\\tfrac{43}{40}, \\tfrac{201}{40}\\right),\\] \\[C' = \\left(\\tfrac{81}{8}, -\\tfrac{27}{8}\\right).\\] For example, \\(A - O = \\left(-2, \\tfrac{63}{8}\\right)\\) rotates to \\(\\left(\\tfrac{25}{8}, \\tfrac{15}{2}\\right),\\) giving \\(A' = \\left(\\tfrac{81}{8}, \\tfrac{93}{8}\\right).\\)\n\nThe hexagon \\(A A' C C' B B'\\) is simple with these vertices in order, so the shoelace formula on \\((5,12),\\) \\(\\left(\\tfrac{81}{8}, \\tfrac{93}{8}\\right),\\) \\((14,0),\\) \\(\\left(\\tfrac{81}{8}, -\\tfrac{27}{8}\\right),\\) \\((0,0),\\) \\(\\left(-\\tfrac{43}{40}, \\tfrac{201}{40}\\right)\\) gives area \\(\\frac{1557}{10} = 155.7.\\) The closest integer is \\(156.\\)",
+      "hints": [
+        "Use \\(B = (0,0),\\) \\(C = (14,0),\\) \\(A = (5,12);\\) the circumcenter is \\(\\left(7, \\frac{33}{8}\\right),\\) and the rotation keeps all six vertices on the circumcircle",
+        "Rotate direction \\((3,-4)\\) of \\(\\overline{AC}\\) to vertical; the side condition selects \\(\\cos\\varphi = \\frac{4}{5},\\) \\(\\sin\\varphi = -\\frac{3}{5}.\\) Use the shoelace formula"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

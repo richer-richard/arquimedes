@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2003-p4",
+  "title": "2003 USAMO Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2003,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 79.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(ABC\\) be a triangle. A circle passing through \\(A\\) and \\(B\\) intersects segments \\(AC\\) and \\(BC\\) at \\(D\\) and \\(E\\), respectively. Lines \\(AB\\) and \\(DE\\) intersect at \\(F\\), while lines \\(BD\\) and \\(CF\\) intersect at \\(M\\). Prove that \\(MF = MC\\) if and only if \\(MB\\cdot MD = MC^2\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2003-p4.imported",
+      "kind": "proof-sketch",
+      "text": "Extend segment $DM$ through $M$ to $G$ such that $FG\\parallel CD$.\n\nThen $MF = MC$ if and only if quadrilateral $CDFG$ is a parallelogram, or, $FD\\parallel CG$. Hence $MC = MF$ if and only if $\\angle GCD = \\angle FDA$, that is, $\\angle FDA + \\angle CGF = 180^\\circ$.\nBecause quadrilateral $ABED$ is cyclic, $\\angle FDA = \\angle ABE$. It follows that $MC = MF$ if and only if\n\\[180^\\circ = \\angle FDA + \\angle CGF = \\angle ABE + \\angle CGF,\\]\nthat is, quadrilateral $CBFG$ is cyclic, which is equivalent to\n\\[\\angle CBM = \\angle CBG = \\angle CFG = \\angle DCF = \\angle DCM.\\]\nBecause $\\angle DMC = \\angle CMB$, $\\angle CBM = \\angle DCM$ if and only if triangles $BCM$ and $CDM$ are similar, that is\n\\[\\frac{CM}{BM} = \\frac{DM}{CM},\\]\nor $MB\\cdot MD = MC^2$.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

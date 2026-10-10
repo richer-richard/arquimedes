@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2023-p9",
+  "title": "2023 HMMT February Algebra and Number Theory Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithms-and-exponentials",
+      "label": "Logarithms and exponentials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2023,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For any positive integers \\(a\\) and \\(b\\) with \\(b>1\\), let \\(s_{b}(a)\\) be the sum of the digits of \\(a\\) when it is written in base \\(b\\). Suppose \\(n\\) is a positive integer such that\n\n\\[\\sum_{i=1}^{\\left\\lfloor\\log _{23} n\\right\\rfloor} s_{20}\\left(\\left\\lfloor\\frac{n}{23^{i}}\\right\\rfloor\\right)=103 \\text { and } \\sum_{i=1}^{\\left\\lfloor\\log _{20} n\\right\\rfloor} s_{23}\\left(\\left\\lfloor\\frac{n}{20^{i}}\\right\\rfloor\\right)=115\\]\n\nCompute \\(s_{20}(n)-s_{23}(n)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "81",
+    "value": "81"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2023-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "First we will prove that\n\n\\[s_{a}(n)=n-(a-1)\\left(\\sum_{i=1}^{\\infty}\\left\\lfloor\\frac{n}{a^{i}}\\right\\rfloor\\right) .\\]\n\nIf \\(n=\\left(n_{k} n_{k-1} \\cdots n_{1} n_{0}\\right)_{a}\\), then the digit \\(n_{i}\\) contributes \\(n_{i}\\) to the left side of the sum, while it contributes\n\n\\[n_{i}\\left(a^{i}-(a-1)\\left(a^{i-1}+a^{i-2}+\\cdots+a^{1}+a^{0}\\right)\\right)=n_{i}\\]\n\nto the right side, so the two are equal as claimed.\nNow we have\n\n\\[\\begin{aligned}\n103 & =\\sum_{i=1}^{\\infty} s_{20}\\left(\\left\\lfloor\\frac{n}{23^{i}}\\right\\rfloor\\right) \\\\\n& =\\sum_{i=1}^{\\infty}\\left(\\left\\lfloor\\frac{n}{23^{i}}\\right\\rfloor-19\\left(\\sum_{j=1}^{\\infty}\\left\\lfloor\\frac{\\left\\lfloor n / 23^{i}\\right\\rfloor}{20^{j}}\\right\\rfloor\\right)\\right) \\\\\n& =\\sum_{i=1}^{\\infty}\\left\\lfloor\\frac{n}{23^{i}}\\right\\rfloor-19 \\sum_{i=1}^{\\infty} \\sum_{j=1}^{\\infty}\\left\\lfloor\\frac{n}{20^{j} \\cdot 23^{i}}\\right\\rfloor\n\\end{aligned}\\]\n\nwhere we have used the fact that \\(\\left\\lfloor\\frac{\\lfloor n / p\\rfloor}{q}\\right\\rfloor=\\left\\lfloor\\frac{n}{p q}\\right\\rfloor\\) for positive integers \\(n, p, q\\). Similarly,\n\n\\[115=\\sum_{j=1}^{\\infty}\\left\\lfloor\\frac{n}{20^{j}}\\right\\rfloor-22 \\sum_{i=1}^{\\infty} \\sum_{j=1}^{\\infty}\\left\\lfloor\\frac{n}{20^{j} \\cdot 23^{i}}\\right\\rfloor\\]\n\nLet\n\n\\[A=\\sum_{j=1}^{\\infty}\\left\\lfloor\\frac{n}{20^{j}}\\right\\rfloor, \\quad B=\\sum_{i=1}^{\\infty}\\left\\lfloor\\frac{n}{23^{i}}\\right\\rfloor, \\quad \\text { and } \\quad X=\\sum_{i=1}^{\\infty} \\sum_{j=1}^{\\infty}\\left\\lfloor\\frac{n}{20^{j} \\cdot 23^{i}}\\right\\rfloor .\\]\n\nThen we have \\(103=B-19 X\\) and \\(115=A-22 X\\).\n\nThus, we have\n\n\\[\\begin{aligned}\ns_{20}(n)-s_{23}(n) & =\\left(n-19 \\sum_{j=1}^{\\infty}\\left\\lfloor\\frac{n}{20^{j}}\\right\\rfloor\\right)-\\left(n-22 \\sum_{i=1}^{\\infty}\\left\\lfloor\\frac{n}{23^{i}}\\right\\rfloor\\right) \\\\\n& =22 B-19 A \\\\\n& =22(103+19 X)-19(115+22 X) \\\\\n& =22 \\cdot 103-19 \\cdot 115=81\n\\end{aligned}\\]\n\nRemark. The value \\(n=22399976\\) satisfies both equations, so a valid solution to the system exists. It seems infeasible to compute this solution by hand.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "prob.aime-i-2015-p11",
+  "title": "2015 AIME I Problem 11",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.incircle-incenter-and-inradius",
+      "label": "Incircle, incenter, and inradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.isosceles-triangle",
+      "label": "Isosceles triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2015,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 63.3,
+    "source": 3160,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Triangle \\(ABC\\) has positive integer side lengths with \\(AB = AC.\\) Let \\(I\\) be the intersection of the bisectors of \\(\\angle B\\) and \\(\\angle C.\\) Suppose \\(BI = 8.\\) Find the smallest possible perimeter of \\(\\triangle ABC.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "108",
+    "value": "108"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2015-p11.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(M\\) be the midpoint of \\(\\overline{BC};\\) by symmetry \\(A,\\) \\(I,\\) and \\(M\\) are collinear with \\(AM \\perp BC.\\) With \\(a = AB\\) and \\(b = BM,\\) right triangles \\(ABM\\) and \\(IBM\\) give \\(\\cos\\angle ABM = \\frac{b}{a}\\) and \\(\\cos\\angle IBM = \\frac{b}{8}.\\) Since \\(BI\\) bisects \\(\\angle ABM,\\) the double-angle formula yields \\[ \\frac{b}{a} = 2\\left(\\frac{b}{8}\\right)^2 - 1, \\] so \\[ a = \\frac{32b}{b^2 - 32}. \\]\n\nWriting \\(c = BC = 2b,\\) this becomes \\(a = \\frac{64c}{c^2 - 128}.\\) We need \\(c^2 \\gt 128,\\) so \\(c \\ge 12,\\) while \\(\\cos\\angle IBM = \\frac{b}{8} \\lt 1\\) forces \\(c \\lt 16.\\) Testing \\(c = 12, 13, 14, 15,\\) only \\(c = 12\\) makes \\(a\\) an integer, namely \\(a = \\frac{768}{16} = 48.\\)\n\nThe triangle with sides \\(48,\\) \\(48,\\) \\(12\\) satisfies all the conditions, and its perimeter is \\(48 + 48 + 12 = 108.\\)",
+      "hints": [
+        "Let \\(M\\) be the midpoint of \\(BC:\\) right triangles at \\(M\\) give \\(\\cos\\angle ABM = \\frac{BM}{AB}\\) and \\(\\cos\\angle IBM = \\frac{BM}{8}\\)",
+        "Since \\(\\angle IBM\\) is half of \\(\\angle ABM,\\) the double-angle formula relates \\(AB\\) to \\(BC;\\) integrality and \\(BM \\lt 8\\) leave only a few cases to test"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

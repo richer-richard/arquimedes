@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-10a-2025-p17",
+  "title": "2025 AMC 10A Problem 17",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2025,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 29.3,
+    "source": 1730,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(N\\) be the unique positive integer such that dividing \\(273436\\) by \\(N\\) leaves a remainder of \\(16,\\) and dividing \\(272760\\) by \\(N\\) leaves a remainder of \\(15.\\) What is the tens digit of \\(N?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2025-p17.live",
+      "kind": "proof-sketch",
+      "text": "Subtract off the remainders. Both \\(273420 = 273436 - 16\\) and \\(272745 = 272760 - 15\\) are multiples of \\(N,\\) so their difference \\(675\\) is too. Now \\(272745 = 404 \\cdot 675 + 45,\\) which makes \\(45\\) a multiple of \\(N\\) as well. The remainder \\(16\\) means \\(N \\gt 16,\\) and the only divisor of \\(45\\) bigger than \\(16\\) is \\(45\\) itself. So \\(N = 45,\\) and its tens digit is \\(4.\\) Thus, E is the correct answer.",
+      "hints": [
+        "Both \\(273436 - 16\\) and \\(272760 - 15\\) are multiples of \\(N\\)",
+        "So is their difference; reduce it by subtracting further multiples, and remember \\(N \\gt 16\\) since the remainder is \\(16\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

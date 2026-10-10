@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-i-2004-p12",
+  "title": "2004 AIME I Problem 12",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2004,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 57.7,
+    "source": 2840,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "Let \\(\\mathcal{S}\\) be the set of ordered pairs \\((x, y)\\) such that \\(0 \\lt x \\le 1,\\) \\(0 \\lt y \\le 1,\\) and \\(\\left\\lfloor \\log_2\\left(\\frac{1}{x}\\right) \\right\\rfloor\\) and \\(\\left\\lfloor \\log_5\\left(\\frac{1}{y}\\right) \\right\\rfloor\\) are both even. Given that the area of the graph of \\(\\mathcal{S}\\) is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers, find \\(m + n.\\) The notation \\(\\lfloor z \\rfloor\\) denotes the greatest integer that is less than or equal to \\(z.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "14",
+    "value": "14"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2004-p12.live",
+      "kind": "proof-sketch",
+      "text": "For \\(0 \\lt x \\le 1,\\) the condition \\(\\lfloor \\log_2(\\frac{1}{x}) \\rfloor = 2k\\) (for an integer \\(k \\ge 0\\)) means \\(2k \\le \\log_2(\\frac{1}{x}) \\lt 2k + 1,\\) i.e. \\(x \\in \\left(2^{-2k-1}, 2^{-2k}\\right].\\) These intervals have total length \\[\\sum_{k \\ge 0} 2^{-2k-1} = \\frac{\\frac{1}{2}}{1 - \\frac{1}{4}} = \\frac{2}{3}.\\] Similarly, \\(\\lfloor \\log_5(\\frac{1}{y}) \\rfloor\\) is even for \\(y \\in \\left(5^{-2k-1}, 5^{-2k}\\right],\\) intervals of total length \\(\\sum_{k \\ge 0} \\frac{4}{5} \\cdot 25^{-k} = \\frac{\\frac{4}{5}}{1 - \\frac{1}{25}} = \\frac{5}{6}.\\)\n\nThe graph of \\(\\mathcal{S}\\) is the product of these two sets, so its area is \\(\\frac{2}{3} \\cdot \\frac{5}{6} = \\frac{5}{9},\\) and \\(m + n = 5 + 9 = 14.\\)",
+      "hints": [
+        "\\(\\lfloor \\log_2(\\frac{1}{x}) \\rfloor = 2k\\) exactly when \\(2^{-2k-1} \\lt x \\le 2^{-2k}\\)",
+        "The region is a product of a set of \\(x\\)-intervals and a set of \\(y\\)-intervals; sum each set of lengths as a geometric series and multiply"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

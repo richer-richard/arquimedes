@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2025-p18",
+  "title": "2025 AMC 12A Problem 18",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequality",
+      "label": "Inequality",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.permutations",
+      "label": "Permutations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2025,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 36.2,
+    "source": 2000,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "How many ordered triples \\((x, y, z)\\) of distinct nonnegative integers less than or equal to \\(8\\) satisfy \\(xy \\gt z,\\) \\(zx \\gt y,\\) and \\(yz \\gt x?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(36\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(84\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(186\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(336\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(486\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "186"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2025-p18.live",
+      "kind": "proof-sketch",
+      "text": "If any variable is \\(0,\\) say \\(z = 0,\\) then \\(zx = 0 \\gt y\\) is impossible. So \\(x, y, z \\in \\{1, \\ldots, 8\\}\\) are distinct positive integers.\n\nThe conditions are symmetric. For distinct values \\(a \\lt b \\lt c,\\) we have \\(ac \\gt b\\) and \\(bc \\gt a\\) automatically, so the only real constraint is \\(ab \\gt c.\\) When it holds, all \\(6\\) orderings work.\n\nFor each possible smallest value \\(a,\\) the numbers of pairs \\(a\\lt b\\lt c\\le8\\) satisfying \\(ab\\gt c\\) are \\[ \\begin{array}{c|rrrrrr} a&1&2&3&4&5&6\\\\ \\hline \\text{count}&0&11&10&6&3&1. \\end{array} \\] For fixed \\(a,b,\\) this count comes from choosing \\(c\\) between \\(b+1\\) and \\(\\min(8,ab-1).\\) Thus there are \\(31\\) unordered triples, and all \\(6\\) orderings of each work. The answer is \\(6\\cdot31=186.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "None of \\(x, y, z\\) can be \\(0,\\) since then some product equals \\(0\\) and cannot exceed a nonnegative value",
+        "For distinct \\(a \\lt b \\lt c,\\) the only binding condition is \\(ab \\gt c\\); count such \\(3\\)-subsets, then multiply by \\(6\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2001-p6",
+  "title": "2001 IMO Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2001,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 97.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a > b > c > d > 0\\) be integers satisfying\n\\[ ac + bd = (b+d+a-c)(b+d-a+c). \\]\nProve that \\(ab + cd\\) is not prime.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2001-p6.evanchen",
+      "kind": "proof-sketch",
+      "text": "The problem condition is equivalent to\n\\[ ac + bd = (b+d)^2 - (a-c)^2 \\]\nor\n\\[ a^2-ac+c^2 = b^2+bd+d^2. \\]\n\nLet us construct a quadrilateral \\(WXYZ\\) such that\n\\(WX = a\\), \\(XY = c\\), \\(YZ = b\\), \\(ZW = d\\),\nand \\[ WY = \\sqrt{a^2-ac+c^2} = \\sqrt{b^2+bd+d^2}.\\]\nThen by the law of cosines, we obtain \\(\\angle WXY = 60^\\circ\\)\nand \\(\\angle WZY = 120^\\circ\\).\nHence this quadrilateral is cyclic.\n\n[Diagram omitted from this imported TeX transcription.]\n\nBy the more precise version of Ptolemy's theorem,\nwe find that\n\\[ WY^2 = \\frac{(ab+cd)(ad+bc)}{ac+bd}. \\]\n\nNow assume for contradiction that that \\(ab+cd\\) is a prime \\(p\\).\nRecall that we assumed \\(a > b > c > d\\).\nIt follows, for example by rearrangement inequality, that\n\\[ p = ab+cd > ac+bd > ad+bc. \\]\nLet \\(y = ac+bd\\) and \\(x = ad+bc\\) now.\nThe point is that \\[ p \\cdot \\frac xy \\]\ncan never be an integer if \\(p\\) is prime and \\(x < y < p\\).\nBut \\(WY^2 = a^2-ac+c^2\\) is clearly an integer, and this is a contradiction.\n\nHence \\(ab+cd\\) cannot be prime.\n\nRemark.\n It may be tempting to try to apply the more typical form of\n Ptolemy to get \\(ab+cd = WY \\cdot XZ\\);\n the issue with this approach is that \\(WY\\) and \\(XZ\\) are usually not integers.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

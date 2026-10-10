@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-i-2007-p9",
+  "title": "2007 AIME I Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.right-triangle",
+      "label": "Right triangle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.tangent-circles",
+      "label": "Tangent circles",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2007,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 59.8,
+    "source": 2920,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "In right triangle \\(ABC\\) with right angle \\(C,\\) \\(CA = 30\\) and \\(CB = 16.\\) Its legs \\(\\overline{CA}\\) and \\(\\overline{CB}\\) are extended beyond \\(A\\) and \\(B.\\) Points \\(O_1\\) and \\(O_2\\) lie in the exterior of the triangle and are the centers of two circles with equal radii. The circle with center \\(O_1\\) is tangent to the hypotenuse and to the extension of leg \\(CA,\\) the circle with center \\(O_2\\) is tangent to the hypotenuse and to the extension of leg \\(CB,\\) and the circles are externally tangent to each other. The length of the radius of either circle can be expressed as \\(\\frac{p}{q},\\) where \\(p\\) and \\(q\\) are relatively prime positive integers. Find \\(p + q.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "737",
+    "value": "737"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2007-p9.live",
+      "kind": "proof-sketch",
+      "text": "The hypotenuse is \\(AB = \\sqrt{30^2 + 16^2} = 34.\\) Let \\(T_1\\) and \\(T_2\\) be the points where the circles touch \\(AB.\\) Both centers lie at distance \\(r\\) from line \\(AB\\) on the side away from the triangle, so \\(\\overline{O_1 O_2}\\) is parallel to \\(AB\\) and \\(T_1 T_2 = O_1 O_2 = 2r,\\) since the circles are externally tangent. Thus \\(AB = AT_1 + 2r + T_2 B.\\)\n\nCircle \\(O_1\\) is inscribed in the angle at \\(A\\) between ray \\(AB\\) and the extension of \\(\\overline{CA}\\) beyond \\(A,\\) which measures \\(180^\\circ - \\angle A.\\) Its tangent length from \\(A\\) is therefore \\(AT_1 = \\frac{r}{\\tan\\left(90^\\circ - \\tfrac{A}{2}\\right)}\\) \\(= r \\tan\\frac{A}{2}.\\) With \\(\\sin A = \\frac{16}{34}\\) and \\(\\cos A = \\frac{30}{34},\\) the half-angle formula gives \\(\\tan\\frac{A}{2} = \\frac{\\sin A}{1 + \\cos A} = \\frac{16}{64} = \\frac{1}{4},\\) and similarly \\(\\tan\\frac{B}{2} = \\frac{30}{34 + 16} = \\frac{3}{5}.\\)\n\nSo \\(34 = \\frac{r}{4} + 2r + \\frac{3r}{5} = \\frac{57r}{20},\\) giving \\(r = \\frac{680}{57}.\\) Since \\(680 = 2^3 \\cdot 5 \\cdot 17\\) and \\(57 = 3 \\cdot 19\\) share no common factor, \\(p + q = 680 + 57 = 737.\\)",
+      "hints": [
+        "Each circle is inscribed in an external angle of the triangle, so its tangent length from \\(A\\) along the hypotenuse is \\(r\\tan\\frac{A}{2}\\)",
+        "The tangency points split the hypotenuse: \\(AB = r\\tan\\frac{A}{2} + 2r + r\\tan\\frac{B}{2},\\) with \\(\\tan\\frac{A}{2} = \\frac{1}{4}\\) and \\(\\tan\\frac{B}{2} = \\frac{3}{5}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

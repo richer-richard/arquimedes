@@ -1,0 +1,83 @@
+{
+  "id": "prob.hmmt-feb-team-2025-p5",
+  "title": "2025 HMMT February Team Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.cyclic-quadrilaterals",
+      "label": "Cyclic quadrilaterals",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inversion",
+      "label": "Inversion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.isogonal-isotomic-conjugates-barycentric-coordinates",
+      "label": "Isogonal/isotomic conjugates, barycentric coordinates",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-centers",
+      "label": "Triangle centers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-centers-centroid-incenter-circumcenter-orthocenter-euler-line-nine-point-circle",
+      "label": "Triangle centers: centroid, incenter, circumcenter, orthocenter, Euler line, nine-point circle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2025,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 82.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\triangle ABC\\) be an acute triangle with orthocenter \\(H\\) . Points \\(E\\) and \\(F\\) are on segments \\(\\overline{AC}\\) and \\(\\overline{AB}\\) , respectively, such that \\(\\angle EHF = 90^{\\circ}\\) . Let \\(X\\) be the foot of the altitude from \\(H\\) to \\(\\overline{EF}\\) . Prove that \\(\\angle BXC = 90^{\\circ}\\) .",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2025-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "We begin by proving the following lemma.\n\nLemma 2. Let \\(A B C D\\) be a quadrilateral and \\(P\\) be a point such that \\(\\angle A P B + \\angle C P D = 180^{\\circ}\\) . Then, the feet of the altitudes from \\(P\\) to each side of \\(A B C D\\) are concyclic.\n\nProof. Let \\(P_{A},P_{B},P_{C},P_{D}\\) the feet of the altitudes from \\(P\\) to \\(A B\\) , \\(B C\\) , \\(C D\\) , and \\(D A\\) respectively. Note that quadrilateral \\(P_{A}P P_{B}B\\) is cyclic. By angle chasing,\n\n\\[\\angle P_{D}P_{A}P_{B} + \\angle P_{B}P_{C}P_{D} = \\angle P_{D}P_{A}P + \\angle P P_{A}P_{B} + \\angle P_{B}P_{C}P + \\angle P P_{C}P_{D}\\] \\[\\qquad = \\angle P_{D}A P + \\angle P B P_{B} + \\angle P_{B}C P + \\angle P D P_{D}\\] \\[\\qquad = (180^{\\circ} - \\angle A P D) + (180^{\\circ} - \\angle B P C)\\] \\[\\qquad = \\angle B P A + \\angle D P C\\] \\[\\qquad = 180^{\\circ}.\\]\n\nTherefore, \\(P_{A}P_{B}P_{C}P_{D}\\) is cyclic as desired.\n\nLet \\(P_{\\infty}\\) be the point at infinity on line \\(A C\\) . Let \\(Y\\) and \\(Z\\) be the feet of the altitudes from \\(H\\) to \\(A B\\) and \\(A C\\) , respectively. Note that \\(\\angle E H F + \\angle B H P_{\\infty} = 90^{\\circ} + 90^{\\circ} = 180^{\\circ}\\) . Thus, the feet of the altitudes from \\(H\\) to \\(E F\\) , \\(E B\\) , \\(B P_{\\infty}\\) , and \\(C P_{\\infty}\\) are concyclic. In other words, \\(X Y Z B\\) is cyclic. Since \\(B C Y Z\\) is a cyclic quadrilateral, we conclude \\(X\\) lies on this circle, giving us that \\(\\angle B X C = 90^{\\circ}\\) as desired.\n\nRemark. Here's another way to prove the lemma.\n\nIt is well known that, with the provided condition, there is a point \\(P^{\\prime}\\) that is the isogonal conjugate of \\(P\\) with respect to quadrilateral \\(A B C D\\) . Let \\(P_{A}\\) , \\(P_{B}\\) , \\(P_{C}\\) , and \\(P_{D}\\) be the feet of the altitudes from \\(P\\) to \\(A B\\) , \\(B C\\) , \\(C D\\) , and \\(D A\\) , respectively, and let \\(Q\\) be the foot of the altitude from \\(P^{\\prime}\\) to \\(A B\\) . Because \\(P\\) and \\(P^{\\prime}\\) are isogonal conjugates with respect to the triangle formed by lines \\(A B\\) , \\(B C\\) , and \\(C D\\) , we have \\(P_{A}P_{B}P_{C}Q\\) is cyclic. Similarly, because \\(P\\) and \\(P^{\\prime}\\) are also isogonal conjugate with respect to the triangle formed by lines \\(D A\\) , \\(A B\\) , and \\(B C\\) , we have \\(P_{D}P_{A}P_{B}Q\\) is cyclic. Consequently, \\(P_{A}P_{B}P_{C}P_{C}\\) is cyclic as desired.\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

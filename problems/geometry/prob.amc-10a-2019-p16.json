@@ -1,0 +1,91 @@
+{
+  "id": "prob.amc-10a-2019-p16",
+  "title": "2019 AMC 10A Problem 16",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle-area",
+      "label": "Circle area",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangent-circles",
+      "label": "Tangent circles",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2019,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 24.7,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The figure below shows \\(13\\) circles of radius \\(1\\) within a larger circle. All the intersections occur at points of tangency. What is the area of the region, shaded in the figure, inside the larger circle but outside all the circles of radius \\(1?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4 \\pi \\sqrt{3}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(7 \\pi\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\pi\\left(3\\sqrt{3} +2\\right)\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(10 \\pi \\left(\\sqrt{3} - 1\\right)\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\pi\\left(\\sqrt{3} + 6\\right)\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2019-p16.live",
+      "kind": "proof-sketch",
+      "text": "We know \\(\\triangle ABC\\) and \\(\\triangle ABO\\) are equilateral triangles.\n\nWe get that \\(OC = 2\\sqrt{3}\\) using special right triangles to find the altitudes of the triangles.\n\nThe radius of the larger circle is therefore \\(2\\sqrt{3} + 1,\\) since there is the extra unit radius after \\(\\overline{OC}.\\)\n\nThe area of the larger circle is \\[ (2\\sqrt{3} + 1)^2\\pi = (13 + 4\\sqrt{3})\\pi. \\]\n\nThe area of all the inner circles is \\(13\\pi.\\)\n\nThe area of the shaded region is \\[ (13 + 4\\sqrt{3})\\pi - 13\\pi = 4\\pi\\sqrt{3}. \\]\n\nThus, A is the correct answer.",
+      "hints": [
+        "Connect centers of tangent circles",
+        "The shaded area is the large circle area minus the areas of the small circles"
+      ],
+      "images": [
+        "618f0c0e4e324c1b4a3de0e578d85d704e0023e583c7745bec3616db16b5dc38"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [
+      "183c474fb70a7024d6df6f77c54d0c5b4dd699b25540309f54351bce931e7615"
+    ],
+    "solutions": [
+      "618f0c0e4e324c1b4a3de0e578d85d704e0023e583c7745bec3616db16b5dc38"
+    ]
+  }
+}

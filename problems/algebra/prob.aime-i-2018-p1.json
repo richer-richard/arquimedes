@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2018-p1",
+  "title": "2018 AIME I Problem 1",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.parity",
+      "label": "Parity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2018,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 49.4,
+    "source": 2260,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Let \\(S\\) be the number of ordered pairs of integers \\((a, b),\\) with \\(1 \\le a \\le 100\\) and \\(b \\ge 0,\\) such that the polynomial \\(x^2 + ax + b\\) can be factored into the product of two (not necessarily distinct) linear factors with integer coefficients. Find the remainder when \\(S\\) is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "600",
+    "value": "600"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2018-p1.live",
+      "kind": "proof-sketch",
+      "text": "The polynomial factors into integer linear factors exactly when its roots are integers, that is, when the discriminant \\(a^2 - 4b\\) equals \\(c^2\\) for some integer \\(c \\ge 0.\\) Given \\(a,\\) such a \\(b \\ge 0\\) exists exactly when \\(4b = a^2 - c^2 = (a-c)(a+c)\\) for some \\(c\\) with \\(0 \\le c \\le a\\) and \\(c \\equiv a \\pmod 2,\\) and distinct such \\(c\\) give distinct values \\(b = \\frac{a^2 - c^2}{4}.\\)\n\nFor odd \\(a\\) the valid \\(c\\) are \\(1, 3, \\ldots, a,\\) which is \\(\\frac{a+1}{2}\\) choices; for even \\(a\\) they are \\(0, 2, \\ldots, a,\\) which is \\(\\frac{a}{2} + 1\\) choices.\n\nSumming over \\(a = 1, \\ldots, 100:\\) the odd \\(a\\) contribute \\(1 + 2 + \\cdots + 50 = 1275,\\) and the even \\(a\\) contribute \\(2 + 3 + \\cdots + 51 = 1325.\\) Thus \\(S = 2600,\\) and the remainder is \\(600.\\)",
+      "hints": [
+        "The quadratic factors over the integers exactly when the discriminant \\(a^2 - 4b\\) is a perfect square",
+        "For each \\(a,\\) the valid \\(b\\) come from \\(4b = a^2 - c^2\\) with \\(0 \\le c \\le a\\) and \\(c \\equiv a \\pmod 2;\\) count those \\(c\\) and sum over \\(a\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

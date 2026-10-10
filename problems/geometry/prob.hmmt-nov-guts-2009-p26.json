@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-guts-2009-p26",
+  "title": "2009 HMMT November Guts Problem 26",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2009,
+    "number": 26
+  },
+  "difficulty": {
+    "course": 48.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In how many ways can the positive integers from 1 to 100 be arranged in a circle such that the sum of every two integers placed opposite each other is the same? (Arrangements that are rotations of each other count as the same.) Express your answer in the form \\(a!\\cdot b^{c}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2009-p26.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(49!\\cdot 2^{49}\\) Split the integers up into pairs of the form \\((x, 101-x)\\). In the top half of the circle, exactly one element from each pair occurs, and there are thus 50 ! ways to arrange them. and also \\(2^{50}\\) ways to decide whether the larger or smaller number in each pair occurs in the top half of the circle. We then need to divide by 100 since rotations are not considered distinct, so we get \\(\\frac{50!2^{50}}{100}=49!\\cdot 2^{49}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

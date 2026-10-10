@@ -1,0 +1,83 @@
+{
+  "id": "prob.hmmt-invitational-2024-p5",
+  "title": "2024 HMMT Invitational Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2024,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A B C\\) be an acute, scalene triangle with circumcenter \\(O\\) and symmedian point \\(K\\). Let \\(X\\) be the point on the circumcircle of triangle \\(B O C\\) such that \\(\\angle A X O=90^{\\circ}\\). Assume that \\(X \\neq K\\). The hyperbola passing through \\(B, C, O, K\\), and \\(X\\) intersects the circumcircle of triangle \\(A B C\\) at points \\(U\\) and \\(V\\), distinct from \\(B\\) and \\(C\\). Prove that \\(U V\\) is the perpendicular bisector of \\(A X\\).\nThe symmedian point of triangle \\(A B C\\) is the intersection of the reflections of \\(B\\)-median and \\(C\\)-median across the angle bisectors of \\(\\angle A B C\\) and \\(\\angle A C B\\), respectively.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2024-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "We prove the following main claim.\n\nClaim. Let \\(P\\) be a point on \\(A X\\), and let the conic through \\(B, C, O, X, P\\) meet \\((A B C)\\) again at \\(U^{\\prime}, V^{\\prime}\\). Then \\(U^{\\prime} V^{\\prime}\\) passes through a fixed point, and the map \\(P \\mapsto U^{\\prime} V^{\\prime} \\cap A X\\) is projective.\n\nProof. Take a projective transformation sending \\(B, C\\) to the circle points. Then the new problem is the following: We have points \\(A, X, O\\), a fixed circle \\(\\Omega\\) passing through \\(A\\), and a point \\(P\\) on \\(A X\\). Let \\((P O X)\\) meet \\(\\Omega\\) at \\(U^{\\prime} V^{\\prime}\\). Then \\(U^{\\prime} V^{\\prime}\\) passes through a fixed point and \\(P \\mapsto U^{\\prime} V^{\\prime} \\cap A X\\) is projective. First, if we take two points \\(P_{1}, P_{2}\\), by radical axis on \\(\\left(P_{1} O X\\right),\\left(P_{2} O X\\right)\\), and \\(\\Omega, U_{1}^{\\prime} V_{1}^{\\prime}, U_{2}^{\\prime} V_{2}^{\\prime}\\), and \\(O X\\) concur. Thus, \\(U^{\\prime} V^{\\prime}\\) meets \\(O X\\) at a fixed point. Let this point be \\(Q\\). Now let \\(O_{1}\\) be the center of \\(\\Omega\\) and \\(O_{P}\\) the center of \\((P O X)\\). \\(O_{P}\\) moves linearly w.r.t. \\(P\\), so \\(P \\mapsto O_{1} O_{P}\\) is projective. Then \\(U^{\\prime} V^{\\prime}\\) is the line through \\(Q\\) perpendicular to \\(O_{1} O_{P}\\), and hence also moves projectively. Finally, intersecting \\(U^{\\prime} V^{\\prime}\\) with \\(A X\\) is projective, so the entire map \\(P \\mapsto U^{\\prime} V^{\\prime} \\cap A X\\) is projective, as desired.\n\nWe now return to the original problem. Let the tangents to \\((A B C)\\) at \\(B, C\\) meet at \\(T\\). It is well-known that \\(A, X, K, T\\) are collinear, and \\(B, O, C, X, T\\) are concyclic. We now consider the following cases:\n\n- \\(\\boldsymbol{P}=\\boldsymbol{A} \\boldsymbol{X} \\cap \\boldsymbol{B C}\\) : The conic \\((B C O X P)\\) degenerates to the two lines \\(O X, B C\\), so \\(U^{\\prime} V^{\\prime}=O X\\), and \\(U^{\\prime} V^{\\prime} \\cap A X=X\\). Thus, \\(A X \\cap B C \\mapsto X\\).\n- \\(\\boldsymbol{P}=\\boldsymbol{T}\\) : The conic \\((B C O X T)\\) is just the circle \\((B O C)\\). Then \\((B O C)\\) meets \\((A B C)\\) again at the circle points, so \\(U^{\\prime} V^{\\prime}\\) is the line at infinity, and \\(T \\mapsto(A X)_{\\infty}\\).\n- \\(\\boldsymbol{P}=\\boldsymbol{A}\\) : In this case, \\(A=U^{\\prime}\\) or \\(V^{\\prime}\\), so \\(U^{\\prime} V^{\\prime} \\cap A X=A\\) and \\(A \\mapsto A\\).\n\nFrom the first two cases, we see that the fixed point \\(U^{\\prime} V^{\\prime}\\) passes through is \\((O X)_{\\infty}\\) i.e. \\(U^{\\prime} V^{\\prime}\\) is always parallel to \\(O X\\). Now note that the cross-ratio \\((A, A X \\cap B C ; K, T)=-1\\), and hence if \\(K \\mapsto f(K)\\), we have \\(\\left(A, X ; f(K),(A X)_{\\infty}\\right)=-1\\). Thus, \\(f(K)\\) must be the midpoint of \\(A X\\), and \\(U V\\) is the line through \\(f(K)\\) parallel to \\(O X\\) i.e. the perpendicular bisector of \\(A X\\).\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1967-p38",
+  "title": "1967 AHSME Problem 38",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "logic-foundations"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-counting",
+      "label": "Basic counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.logical-deduction",
+      "label": "Logical deduction",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1967,
+    "number": 38
+  },
+  "difficulty": {
+    "course": 36.9,
+    "source": 2030,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Given a set \\(S\\) consisting of two undefined elements “pib” and “maa,” and the four postulates:\n\n\\(\\mathrm{P}_1:\\) Every pib is a collection of maas.\n\n\\(\\mathrm{P}_2:\\) Any two distinct pibs have one and only one maa in common.\n\n\\(\\mathrm{P}_3:\\) Every maa belongs to two and only two pibs.\n\n\\(\\mathrm{P}_4:\\) There are exactly four pibs.\n\nConsider the three theorems:\n\n\\(\\mathrm{T}_1:\\) There are exactly six maas.\n\n\\(\\mathrm{T}_2:\\) There are exactly three maas in each pib.\n\n\\(\\mathrm{T}_3:\\) For each maa there is exactly one other maa not in the same pib with it.\n\nThe theorems which are deducible from the postulates are:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\mathrm{T}_3\\) only"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\mathrm{T}_2\\) and \\(\\mathrm{T}_3\\) only"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\mathrm{T}_1\\) and \\(\\mathrm{T}_2\\) only"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\mathrm{T}_1\\) and \\(\\mathrm{T}_3\\) only"
+    },
+    {
+      "label": "E",
+      "text": "all"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1967-p38.live",
+      "kind": "proof-sketch",
+      "text": "Label the four pibs \\(1,\\) \\(2,\\) \\(3,\\) and \\(4.\\) By \\(\\mathrm P_2\\) and \\(\\mathrm P_3,\\) every maa is exactly the common maa of one unordered pair of pibs. Thus there are \\(\\binom42=6\\) maas, proving \\(\\mathrm T_1.\\)\n\nA fixed pib \\(i\\) contains the three maas \\(ij\\) with \\(j\\ne i,\\) proving \\(\\mathrm T_2.\\) For maa \\(ij,\\) the unique maa sharing neither pib is the one belonging to the complementary pair of pibs, proving \\(\\mathrm T_3.\\) All three follow.\n\nTherefore, the correct answer is E.",
+      "hints": [
+        "Label the four pibs \\(1,\\) \\(2,\\) \\(3,\\) and \\(4\\)",
+        "Each maa corresponds to an unordered pair of pibs"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

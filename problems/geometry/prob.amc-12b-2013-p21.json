@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2013-p21",
+  "title": "2013 AMC 12B Problem 21",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.parabola",
+      "label": "Parabola",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2013,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 37.8,
+    "source": 2360,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Consider the set of \\(30\\) parabolas defined as follows: all parabolas have as focus the point \\((0, 0)\\) and the directrix lines have the form \\(y = ax + b\\) with \\(a\\) and \\(b\\) integers such that \\(a \\in \\{-2, -1, 0, 1, 2\\}\\) and \\(b \\in \\{-3, -2, -1, 1, 2, 3\\}.\\) No three of these parabolas have a common point. How many points in the plane are on two of these parabolas?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(720\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(760\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(810\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(840\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(870\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "810"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2013-p21.live",
+      "kind": "proof-sketch",
+      "text": "Two parabolas with common focus \\(O\\) meet in exactly \\(2\\) points, except when their directrices are parallel and \\(O\\) lies outside the strip between them, in which case they do not meet. The non-intersecting pairs have directrices of equal slope and \\(y\\)-intercepts of the same sign. There are \\(5\\) slopes, and for each, \\(2\\binom{3}{2} = 6\\) same-sign intercept pairs. Since every intersecting pair meets in \\(2\\) points and no point lies on three parabolas, the total is \\(2\\left(\\binom{30}{2} - 5\\cdot 6\\right)\\) \\(= 2(435 - 30)\\) \\(= 810.\\) Thus, the correct answer is C.",
+      "hints": [
+        "Two parabolas sharing a focus meet in \\(2\\) points unless their directrices are parallel with the focus not between them",
+        "From all \\(\\binom{30}{2}\\) pairs, subtract the non-intersecting ones: equal slope and same-sign \\(y\\)-intercepts"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

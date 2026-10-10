@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2003-p6",
+  "title": "2003 AIME I Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cube-geometry",
+      "label": "Cube geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2003,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 45.7,
+    "source": 2370,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "The sum of the areas of all triangles whose vertices are also vertices of a \\(1\\) by \\(1\\) by \\(1\\) cube is \\(m + \\sqrt{n} + \\sqrt{p},\\) where \\(m,\\) \\(n,\\) and \\(p\\) are integers. Find \\(m + n + p.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "348",
+    "value": "348"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2003-p6.live",
+      "kind": "proof-sketch",
+      "text": "Every side of such a triangle is a cube edge, a face diagonal of length \\(\\sqrt{2},\\) or a space diagonal of length \\(\\sqrt{3}.\\) Only three shapes occur. A triangle of two adjacent edges and a face diagonal is right with area \\(\\frac{1}{2};\\) there are \\(4\\) per face, or \\(24.\\) A triangle of three face diagonals is equilateral with area \\(\\frac{\\sqrt{3}}{2};\\) each is determined by the three vertices adjacent to one of the \\(8\\) cube vertices, so there are \\(8.\\) A triangle of an edge, a face diagonal, and a space diagonal is right with legs \\(1\\) and \\(\\sqrt{2},\\) so its area is \\(\\frac{\\sqrt{2}}{2};\\) each of the \\(4\\) space diagonals forms one with each of the \\(6\\) vertices off that diagonal, so there are \\(24.\\) (Indeed \\(24 + 8 + 24 = \\binom{8}{3} = 56.\\))\n\nThe total area is \\[ \\begin{aligned} &24 \\cdot \\frac{1}{2} + 8 \\cdot \\frac{\\sqrt{3}}{2} + 24 \\cdot \\frac{\\sqrt{2}}{2} \\\\ &= 12 + 4\\sqrt{3} + 12\\sqrt{2} \\\\ &= 12 + \\sqrt{48} + \\sqrt{288}, \\end{aligned} \\] so \\(m + n + p\\) \\(= 12 + 48 + 288\\) \\(= 348.\\)",
+      "hints": [
+        "Each side is a cube edge, a face diagonal of length \\(\\sqrt{2},\\) or a space diagonal of length \\(\\sqrt{3};\\) classify the \\(\\binom{8}{3} = 56\\) triangles",
+        "The three types are edge-edge-face diagonal, three face diagonals, and edge-face diagonal-space diagonal; there are \\(24,\\) \\(8,\\) and \\(24\\) of them"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

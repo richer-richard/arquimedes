@@ -1,0 +1,72 @@
+{
+  "id": "prob.hmmt-nov-guts-2023-p36",
+  "title": "2023 HMMT November Guts Problem 36",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.abel-summation",
+      "label": "Abel summation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.mobius-inversion",
+      "label": "Möbius inversion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.number-theory",
+      "label": "Number Theory",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2023,
+    "number": 36
+  },
+  "difficulty": {
+    "course": 60.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Isabella writes the expression \\(\\sqrt{d}\\) for each positive integer \\(d\\) not exceeding 8 ! on the board. Seeing that these expressions might not be worth points on HMMT, Vidur simplifies each expression to the form \\(a \\sqrt{b}\\), where \\(a\\) and \\(b\\) are integers such that \\(b\\) is not divisible by the square of a prime number. (For example, \\(\\sqrt{20}, \\sqrt{16}\\), and \\(\\sqrt{6}\\) simplify to \\(2 \\sqrt{5}, 4 \\sqrt{1}\\), and \\(1 \\sqrt{6}\\), respectively.) Compute the sum of \\(a+b\\) across all expressions that Vidur writes.\nSubmit a positive real number \\(A\\). If the correct answer is \\(C\\) and your answer is \\(A\\), you get \\(\\max \\left(0,\\left\\lceil 20\\left(1-|\\log (A / C)|^{1 / 5}\\right)\\right\\rceil\\right)\\) points.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "534810086",
+    "value": "534810086"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2023-p36.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(\\sqrt{n}\\) simplifies to \\(a_{n} \\sqrt{b_{n}}\\), and replace 8 ! by \\(x\\). First, notice that \\(\\sum_{n \\leq x} a_{n}\\) is small \\(\\left(O\\left(x^{3 / 2}\\right)\\right.\\) in particular) because each term cannot exceed \\(\\sqrt{x}\\). On the other hand, \\(\\sum_{n \\leq x} b_{n}\\) will be large; we have \\(b_{n}=n\\) when \\(n\\) is squarefree, and squarefree numbers occurs \\(\\frac{6}{\\pi^{2}}\\) over the time. Thus, it suffices to consider \\(\\sum_{n \\leq x} b_{n}\\).\nWe first explain how to derive the formula heuristically. Then, we will provide a rigorous proof that\n\n\\[B(x):=\\sum_{n \\leq x} b_{n}=\\frac{\\pi^{2}}{30} x^{2}+O\\left(x^{3 / 2}\\right)\\]\n\nFor heuristic explanation, we first rewrite the sum as\n\n\\[B(x)=\\sum_{\\substack{a^{2} b \\leq x \\\\ b \\text { squarefree }}} b=\\sum_{a \\leq x} \\sum_{\\substack{b \\leq x / a^{2} \\\\ b \\text { squarefree }}} b\\]\n\nWe estimate the inner sum as follows: first, recall that the density of squarefree numbers is \\(\\frac{6}{\\pi^{2}}\\). The sum of first \\(k\\) positive integers is approximately \\(k^{2} / 2\\), so the sum of squarefree numbers from \\(1,2, \\ldots, k\\) should roughly be about \\(\\frac{6}{\\pi^{2}} \\cdot \\frac{k^{2}}{2}=\\frac{3}{\\pi^{2}} k^{2}\\). Knowing this, we estimate\n\n\\[\\begin{aligned}\nB(x) & \\approx \\sum_{a \\leq x} \\frac{3}{\\pi^{2}}\\left(\\frac{x}{a^{2}}\\right)^{2} \\\\\n& =x^{2} \\sum_{a \\leq x} \\frac{3}{\\pi^{2}} \\frac{1}{a^{4}} \\\\\n& \\approx \\frac{3}{\\pi^{2}} x^{2} \\sum_{a=1}^{\\infty} \\frac{1}{a^{4}} \\\\\n& =\\frac{3}{\\pi^{2}} x^{2} \\cdot \\frac{\\pi^{4}}{90}=\\frac{\\pi^{2}}{30} x^{2}\n\\end{aligned}\\]\n\nThe estimate \\(\\frac{\\pi^{2}}{30} \\cdot(8!)^{2}=534834652\\) is good enough for 18 points.\nWe now give a rigorous proof, which is essentially the above proof, but the errors are properly treated. To do that, we need several lemmas and some standard techniques in analytic number theory.\nLemma 1. The number of squarefree integers not exceeding \\(x\\) is \\(\\frac{6}{\\pi^{2}} x+O(\\sqrt{x})\\).\nProof. This is a standard result in analytic number theory, but we give the full proof for completeness.\n\n\\[\\mu(n)= \\begin{cases}(-1)^{r} & n \\text { is the product of } r \\geq 0 \\text { distinct primes } \\\\ 0 & \\text { otherwise }\\end{cases}\\]\n\nThen, by Inclusion-Exclusion, we have\n\n\\[\\begin{aligned}\n\\#\\{\\text { squarefree } \\leq x\\} & =\\sum_{k \\leq \\sqrt{x}} \\mu(k)\\left\\lfloor\\frac{x}{k^{2}}\\right\\rfloor \\\\\n& =\\sum_{k \\leq \\sqrt{x}} \\mu(k) \\frac{x}{k^{2}}+O(\\sqrt{x}) \\\\\n& =x\\left(\\sum_{k \\leq \\sqrt{x}} \\frac{\\mu(k)}{k^{2}}\\right)+O(\\sqrt{x})\n\\end{aligned}\\]\n\nThe inner summation is\n\n\\[\\begin{aligned}\n\\sum_{k=1}^{\\infty} \\frac{\\mu(k)}{k^{2}}+O\\left(\\sum_{k \\geq \\sqrt{x}} \\frac{1}{k^{2}}\\right) & =\\prod_{p \\text { prime }}\\left(1-\\frac{1}{p^{2}}\\right)+O\\left(\\frac{1}{\\sqrt{x}}\\right) \\\\\n& =\\frac{1}{1+\\frac{1}{2^{2}}+\\frac{1}{3^{2}}+\\ldots}+O\\left(\\frac{1}{\\sqrt{x}}\\right) \\\\\n& =\\frac{6}{\\pi^{2}}+O\\left(\\frac{1}{\\sqrt{x}}\\right)\n\\end{aligned}\\]\n\nso putting it together, we get that\n\n\\[\\#\\{\\text { squarefree } \\leq x\\}=x\\left(\\frac{6}{\\pi^{2}}+O\\left(\\frac{1}{\\sqrt{x}}\\right)\\right)+O(\\sqrt{x})=\\frac{6}{\\pi^{2}} x+O(\\sqrt{x})\\]\n\nLemma 2. We have\n\n\\[\\sum_{\\substack{n \\text { squarefree } \\\\ n \\leq x}} n=\\frac{3}{\\pi^{2}} x^{2}+O\\left(x^{3 / 2}\\right)\\]\n\nProof. We apply Abel's summation formula on the sequence \\(a_{n}=\\mathbf{1}_{\\text {squarefree }}(n)\\) and weight \\(\\phi(n)=n\\). Define the partial summation \\(A(x)=\\sum_{n \\leq x} a_{n}\\). Applying Abel's summation, we get that\n\n\\[\\begin{aligned}\n\\sum_{\\substack{n \\text { squarefree } \\\\\nn \\leq x}} n & =\\sum_{n \\leq x} a_{n} \\phi(n) \\\\\n& =A(x) \\phi(x)-\\int_{1}^{x} A(t) \\phi^{\\prime}(t) d t \\\\\n& =\\left(\\frac{6}{\\pi^{2}} x+O(\\sqrt{x})\\right) x-\\int_{1}^{x}\\left(\\frac{6}{\\pi^{2}} t+O(\\sqrt{t})\\right) d t \\\\\n& =\\left(\\frac{6}{\\pi^{2} x}+O\\left(x^{3 / 2}\\right)\\right)-\\left(\\frac{6}{\\pi^{2}} \\cdot \\frac{x^{2}}{2}+O\\left(x^{3 / 2}\\right)\\right) \\\\\n& =\\frac{3}{\\pi^{2}} x^{2}+O\\left(x^{3 / 2}\\right)\n\\end{aligned}\\]\n\nMain Proof. Once we have Lemma 2., it is easy to get the desired estimate. We have\n\n\\[\\begin{aligned}\nB(x) & =\\sum_{\\substack{a^{2} b \\leq x \\\\\nb \\text { squarefree }}} b \\\\\n& =\\sum_{a \\leq x} \\sum_{\\substack{b \\leq x / a^{2} \\\\\nb \\text { squarefree }}} b \\\\\n& =\\sum_{a \\leq x} \\frac{3}{\\pi^{2}} \\frac{x^{2}}{a^{4}}+O\\left(\\frac{x^{3 / 2}}{a^{3}}\\right) \\\\\n& =\\frac{3}{\\pi^{2}} x^{2}\\left(\\sum_{a \\leq x} \\frac{1}{a^{4}}\\right)+O\\left(x^{3 / 2} \\sum_{a \\leq x} \\frac{1}{a^{3}}\\right) .\n\\end{aligned}\\]\n\nSince \\(\\sum_{a=1}^{\\infty} \\frac{1}{a^{3}}\\) converges, we get that the big- \\(O\\) term is indeed \\(O\\left(x^{3 / 2}\\right)\\). Now, we only need to deal with the main term. Note the estimate\n\n\\[\\sum_{a \\leq x} \\frac{1}{a^{4}}=\\sum_{a=1}^{\\infty} \\frac{1}{a^{4}}-\\sum_{a \\geq x} \\frac{1}{a^{4}}=\\frac{\\pi^{4}}{90}+O\\left(\\frac{1}{x^{3}}\\right)\\]\n\nHence, we have\n\n\\[B(x)=\\frac{3}{\\pi^{2}} x^{2} \\cdot \\frac{\\pi^{4}}{90}+O\\left(x^{3 / 2}\\right)=\\frac{\\pi^{2}}{30} x^{2}+O\\left(x^{3 / 2}\\right)\\]\n\nas desired.\nHere is the code that gives the exact answer:\n\n```\nimport math\nn}=4032\na}=[1 for i in range(n+1)\nfor d in range(1, math.ceil(math.sqrt(n))):\n    for }x\\mathrm{ in range(d**2, n+1, d**2):\n    a[x] = d\nb}=[\\textrm{i}//\\textrm{a}[\\textrm{i}]**2 for i in range(1, n+1)\nprint(sum(a)+sum(b))\n```",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

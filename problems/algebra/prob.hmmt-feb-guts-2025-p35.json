@@ -1,0 +1,78 @@
+{
+  "id": "prob.hmmt-feb-guts-2025-p35",
+  "title": "2025 HMMT February Guts Problem 35",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.probability",
+      "label": "Probability",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2025,
+    "number": 35
+  },
+  "difficulty": {
+    "course": 85.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Call an 8-digit number a flamingo if it uses each of the digits 2 through 9 exactly once. Estimate the number of flamingos that are prime.\n\nSubmit a positive integer \\(E\\) . If the correct answer is \\(A\\) , you will receive round \\(\\left(20 \\cdot \\min \\left(\\frac{A}{E}, \\frac{E}{A}\\right)^{21}\\right)\\) points.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "3098",
+    "value": "3098"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2025-p35.hmmt",
+      "kind": "proof-sketch",
+      "text": "There are \\(8! = 40320\\) flamingos which have average \\(m = 61111110.5\\) . No flamingo is divisible by 3, as they all have digit sum 44. Assuming each flamingo has a \\(\\frac{3}{2} \\cdot \\frac{1}{\\ln m}\\) probability of being prime, we get an estimate of 3373, which scores 3 points.\n\nWe can do a lot better by noting that \\(\\frac{3}{8}\\) of flamingos aren't divisible by 2 or 5 (the ones ending in 3, 7, or 9), as compared to \\(\\frac{4}{10}\\) of numbers in general. Adjusting our old estimate by a factor of \\(\\frac{3}{8} \\cdot \\frac{10}{4}\\) , we get a new estimate of 3162, which scores 12 points.\n\nWe can still make some minor improvements. Since the digit sum of a flamingo is 44, a flamingo is divisible by 11 if and only if the alternating digit sums are both 22 (as they can't be as low as 11). There are 8 four- element subsets of \\(\\{2,3,\\ldots ,9\\}\\) which have sum 22, and 70 four- element subsets in all, so \\(\\frac{8}{70}\\) of flamingos are divisible by 11. Adjusting our estimate by a factor of \\(\\frac{62}{70} \\cdot \\frac{11}{10}\\) , we get a new estimate of 3081, which scores 17 points.\n\nFinally, the estimate of \\(\\frac{1}{\\ln m}\\) isn't the most accurate. We can do better with the logarithmic integral; the number of primes from 23456789 to 98765432 is approximately \\(\\int_{23456789}^{\\mathrm{98765433}} \\frac{\\mathrm{d}t}{\\ln t}\\) , which can be approximated (e.g., using the asymptotic series). Its true value is around 4220000. There are 75308644 numbers from 23456789 to 98765432, respectively. Using these values to estimate prime density instead, we arrive at a final estimate of\n\n\\[\\frac{4220000}{75308644} \\cdot 8! \\cdot \\frac{3}{2} \\cdot \\frac{3}{8} \\cdot \\frac{10}{4} \\cdot \\frac{62}{70} \\cdot \\frac{11}{10} \\approx 3096,\\]\n\nwhich is accurate enough for all 20 points.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

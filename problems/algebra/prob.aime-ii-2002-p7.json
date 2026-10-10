@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2002-p7",
+  "title": "2002 AIME II Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.chinese-remainder-theorem",
+      "label": "Chinese Remainder Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sum-of-first-n-squares",
+      "label": "Sum of first n squares",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2002,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 49.0,
+    "source": 2500,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "It is known that, for all positive integers \\(k,\\) \\[ \\begin{aligned} &1^2 + 2^2 + 3^2 + \\cdots + k^2 \\\\ &= \\frac{k(k+1)(2k+1)}{6}. \\end{aligned} \\] Find the smallest positive integer \\(k\\) such that \\(1^2 + 2^2 + 3^2 + \\cdots + k^2\\) is a multiple of \\(200.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "112",
+    "value": "112"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2002-p7.live",
+      "kind": "proof-sketch",
+      "text": "The sum is a multiple of \\(200\\) exactly when \\(k(k+1)(2k+1)\\) is a multiple of \\(1200 = 2^4 \\cdot 3 \\cdot 5^2.\\) The factor \\(3\\) always divides \\(k(k+1)(2k+1)\\) (if \\(k \\equiv 1 \\pmod 3,\\) then \\(2k+1\\) is divisible by \\(3\\)), so only \\(2^4\\) and \\(5^2\\) matter.\n\nSince \\(2k+1\\) is odd and \\(k,\\) \\(k+1\\) cannot both be even, \\(16\\) must divide \\(k\\) or \\(k+1,\\) so \\(k \\equiv 0\\) or \\(15 \\pmod{16}.\\) Similarly \\(25\\) must divide one of \\(k,\\) \\(k+1,\\) \\(2k+1,\\) giving \\(k \\equiv 0,\\) \\(24,\\) or \\(12 \\pmod{25}.\\) Combining each pair of congruences modulo \\(400,\\) the smallest positive solutions are \\(112,\\) \\(175,\\) \\(224,\\) \\(287,\\) \\(399,\\) and \\(400.\\)\n\nThe least is \\(k = 112:\\) indeed \\(112 \\cdot 113 \\cdot 225\\) \\(= (16 \\cdot 7) \\cdot 113 \\cdot (9 \\cdot 25)\\) is a multiple of \\(1200.\\)",
+      "hints": [
+        "You need \\(k(k+1)(2k+1)\\) to be a multiple of \\(1200 = 2^4 \\cdot 3 \\cdot 5^2,\\) and the factor \\(3\\) comes for free",
+        "\\(2k+1\\) is odd, so \\(16\\) must divide \\(k\\) or \\(k+1;\\) separately \\(25\\) must divide \\(k,\\) \\(k+1,\\) or \\(2k+1.\\) Compare the smallest solutions of the combined congruences."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

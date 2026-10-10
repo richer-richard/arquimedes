@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1999-p14",
+  "title": "1999 AIME Problem 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.law-of-sines",
+      "label": "Law of sines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1999,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 61.6,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Point \\(P\\) is located inside triangle \\(ABC\\) so that angles \\(PAB,\\) \\(PBC,\\) and \\(PCA\\) are all congruent. The sides of the triangle have lengths \\(AB = 13,\\) \\(BC = 14,\\) and \\(CA = 15,\\) and the tangent of angle \\(PAB\\) is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "463",
+    "value": "463"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1999-p14.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(\\omega = \\angle PAB = \\angle PBC = \\angle PCA.\\) In triangle \\(ABP,\\) the angles at \\(A\\) and \\(B\\) are \\(\\omega\\) and \\(B - \\omega,\\) so \\(\\angle APB = 180^\\circ - B\\) and the law of sines gives \\(BP = \\frac{c \\sin\\omega}{\\sin B}.\\) In triangle \\(BCP,\\) the angles at \\(B\\) and \\(C\\) are \\(\\omega\\) and \\(C - \\omega,\\) so \\(\\angle BPC = 180^\\circ - C\\) and \\(BP = \\frac{a \\sin(C - \\omega)}{\\sin C}.\\)\n\nEquating and substituting \\(a = 2R\\sin A,\\) \\(c = 2R\\sin C\\) yields \\(\\sin^2 C \\sin\\omega\\) \\(= \\sin A \\sin B \\sin(C - \\omega).\\) Expanding \\(\\sin(C - \\omega)\\) and dividing by \\(\\sin A \\sin B \\sin C \\sin\\omega,\\) \\[\\frac{\\sin C}{\\sin A \\sin B} = \\cot\\omega - \\cot C,\\] and since \\(\\sin C\\) \\(= \\sin(A + B)\\) \\(= \\sin A \\cos B\\) \\(+ \\cos A \\sin B,\\) the left side is \\(\\cot A + \\cot B.\\) Hence \\(\\cot\\omega = \\cot A + \\cot B + \\cot C.\\)\n\nUsing \\(\\cot A = \\frac{b^2 + c^2 - a^2}{4K}\\) and its analogues, where \\(K\\) is the area, \\[ \\begin{aligned} \\cot\\omega &= \\frac{a^2 + b^2 + c^2}{4K} \\\\ &= \\frac{169 + 196 + 225}{4 \\cdot 84} \\\\ &= \\frac{590}{336} \\\\ &= \\frac{295}{168}, \\end{aligned} \\] since the \\(13\\)-\\(14\\)-\\(15\\) triangle has area \\(84.\\) So \\(\\tan\\omega = \\frac{168}{295},\\) which is in lowest terms, and \\(m + n = 168 + 295 = 463.\\)",
+      "hints": [
+        "Call the common angle \\(\\omega\\) and compute \\(BP\\) two ways, from triangles \\(ABP\\) and \\(BCP,\\) with the law of sines",
+        "The comparison simplifies to \\(\\cot\\omega = \\cot A + \\cot B + \\cot C,\\) and each cotangent can be written in terms of the side lengths and the area"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

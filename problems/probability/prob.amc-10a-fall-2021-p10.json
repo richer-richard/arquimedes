@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-fall-2021-p10",
+  "title": "2021 Fall AMC 10A Problem 10",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.expected-value",
+      "label": "Expected value",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "prob.mean",
+      "label": "Mean",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2021,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 20.3,
+    "source": 1140,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "A school has \\(100\\) students and \\(5\\) teachers. In the first period, each student is taking one class, and each teacher is teaching one class. The enrollments in the classes are \\(50,\\) \\(20,\\) \\(20,\\) \\(5,\\) and \\(5.\\) Let \\(t\\) be the average value obtained if a teacher is picked at random and the number of students in their class is noted. Let \\(s\\) be the average value obtained if a student was picked at random and the number of students in their class, including the student, is noted. What is \\(t-s?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(-18.5\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(-13.5\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(13.5\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(18.5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "-13.5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-fall-2021-p10.live",
+      "kind": "proof-sketch",
+      "text": "Recall the expected-value formula \\[ \\mathbb E[X]=\\sum_x x\\,\\Pr(X=x). \\]\n\nTherefore, \\[ t = \\dfrac{1}{5} (50 + 20 + 20 + 5 + 5) \\] \\[ = \\dfrac{1}{5} \\cdot 100 = 20 \\] and \\[ s = 50 \\cdot \\dfrac{50}{100} + 20 \\cdot \\dfrac{20}{100} \\]\\[ + 20 \\cdot \\dfrac{20}{100} + 5 \\cdot \\dfrac{5}{100} + 5 \\cdot \\dfrac{5}{100} \\] \\[ \\begin{aligned} &= 25 + 4 + 4 + 0.25 + 0.25 \\\\ &= 33.5 \\end{aligned} \\]\n\n\\(t - s = -13.5.\\)\n\nThus, B is the correct answer.",
+      "hints": [
+        "The teacher average weights each class once",
+        "The student average weights a class by its enrollment"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

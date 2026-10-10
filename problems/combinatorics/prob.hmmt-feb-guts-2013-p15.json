@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2013-p15",
+  "title": "2013 HMMT February Guts Problem 15",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2013,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 73.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Tim and Allen are playing a match of tenus. In a match of tenus, the two players play a series of games, each of which is won by one of the two players. The match ends when one player has won exactly two more games than the other player, at which point the player who has won more games wins the match. In odd-numbered games, Tim wins with probability \\(3 / 4\\), and in the even-numbered games, Allen wins with probability \\(3 / 4\\). What is the expected number of games in a match?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2013-p15.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\quad \\frac{16}{3}\\) Let the answer be \\(E\\). If Tim wins the first game and Allen wins the second game or vice versa, which occurs with probability \\((3 / 4)^{2}+(1 / 4)^{2}=5 / 8\\), the expected number of additional games is just \\(E\\), so the expected total number of games is \\(E+2\\). If, on the other hand, one of Tim and Allen wins both of the first two games, with probability \\(1-(5 / 8)=3 / 8\\), there are exactly 2 games in the match. It follows that\n\n\\[E=\\frac{3}{8} \\cdot 2+\\frac{5}{8} \\cdot(E+2)\\]\n\nand solving gives \\(E=\\frac{16}{3}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

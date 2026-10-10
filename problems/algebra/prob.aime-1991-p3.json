@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1991-p3",
+  "title": "1991 AIME Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.binomial-theorem",
+      "label": "Binomial theorem",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.inequality",
+      "label": "Inequality",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1991,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 37.7,
+    "source": 2060,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Expanding \\((1+0.2)^{1000}\\) by the binomial theorem and doing no further manipulation gives \\[\\begin{aligned}&\\binom{1000}{0}(0.2)^0+\\binom{1000}{1}(0.2)^1\\\\&+\\binom{1000}{2}(0.2)^2+\\cdots\\\\&+\\binom{1000}{1000}(0.2)^{1000}\\\\&=A_0+A_1+\\cdots+A_{1000},\\end{aligned}\\] where \\(A_k=\\binom{1000}{k}(0.2)^k\\) for \\(k=0,\\) \\(1,\\) \\(2,\\) \\(\\ldots,\\) \\(1000.\\) For which \\(k\\) is \\(A_k\\) the largest?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "166",
+    "value": "166"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1991-p3.live",
+      "kind": "proof-sketch",
+      "text": "Consecutive terms satisfy \\[\\frac{A_{k+1}}{A_k}=\\frac{1000-k}{k+1}\\cdot\\frac15.\\] This ratio exceeds \\(1\\) exactly when \\(1000-k>5k+5,\\) or \\(k<\\frac{995}{6}.\\) Thus the terms increase through \\(A_{166}\\) and decrease afterward. Therefore the largest term is \\(A_{166}.\\)",
+      "hints": [
+        "Compare \\(A_{k+1}\\) directly with \\(A_k\\) instead of estimating the binomial coefficients",
+        "Find the last \\(k\\) for which \\(\\frac{A_{k+1}}{A_k}\\) is greater than \\(1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

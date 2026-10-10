@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-invitational-2014-p1",
+  "title": "2014 HMMT Invitational Problem 1",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.combinatorial-geometry",
+      "label": "Combinatorial Geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2014,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Consider a regular \\(n\\)-gon with \\(n>3\\), and call a line acceptable if it passes through the interior of this \\(n\\)-gon. Draw \\(m\\) different acceptable lines, so that the \\(n\\)-gon is divided into several smaller polygons.\n(a) Prove that there exists an \\(m\\), depending only on \\(n\\), such that any collection of \\(m\\) acceptable lines results in one of the smaller polygons having 3 or 4 sides.\n(b) Find the smallest possible \\(m\\) which guarantees that at least one of the smaller polygons will have 3 or 4 sides.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2014-p1.hmmt",
+      "kind": "proof-sketch",
+      "text": "N/A We will prove that if \\(m \\geq n-4\\), then there is guaranteed to be a smaller polygon with 3 or 4 sides, while if \\(m \\leq n-5\\), there might not be a polygon with 3 or 4 sides. This will solve both parts of the problem.\nGiven a configuration of lines, let \\(P_{1}, \\ldots, P_{k}\\) be all of the resulting smaller polygons. Let \\(E\\left(P_{i}\\right)\\) be the number of edges in polygon \\(P_{i}\\), and let \\(E=E\\left(P_{1}\\right)+\\cdots+E\\left(P_{k}\\right)\\). First, note that whenever a new polygon is formed, it must have been because a larger polygon was split into two smaller polygons by a line passing through it. When this happens, \\(k\\) increases by 1 and \\(E\\) increases by at most 4 (it might be less than 4 if the line passes through vertices of the larger polygon). Therefore, if adding an acceptable line increases the number of polygons by \\(a\\), then \\(E\\) increases by at most \\(4 a\\).\nNow, assume \\(m \\geq n-4\\). At the beginning, we have \\(k=1\\) and \\(E=n\\). If the number of polygons at the end is \\(p+1\\), then \\(E \\leq n+4 p\\), so the average number of edges per polygon is less than or equal to \\(\\frac{n+4 p}{1+p}\\). Now, note that each acceptable line introduces at least one new polygon, so \\(p \\geq m \\geq n-4\\). Also, note that as \\(p\\) increases, \\(\\frac{n+4 p}{1+p}\\) strictly decreases, so it is maximized at \\(p=n-4\\), where \\(\\frac{n+4 p}{1+p}=\\) \\(\\frac{5 n-16}{n-3}=5-\\frac{1}{n-3}<5\\). Therefore, the average number of edges per polygon is less than 5 , so there must exist a polygon with either 3 or 4 edges, as desired.\nWe will now show that if \\(m \\leq n-5\\), then we can draw \\(m\\) acceptable lines in a regular \\(n\\)-gon \\(A_{1} A_{2} \\ldots A_{n}\\) such that there are no polygons with 3 or 4 sides. Let \\(M_{1}\\) be the midpoint of \\(A_{3} A_{4}\\), \\(M_{2}\\) be the midpoint of \\(A_{4} A_{5}, \\ldots, M_{n-5}\\) be the midpoint of \\(A_{n-3} A_{n-4}\\). Let the \\(m\\) acceptable lines be \\(A_{1} M_{1}, A_{1} M_{2}, \\ldots, A_{1} M_{m}\\). We can see that all resulting polygons have 5 sides or more, so we are done.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

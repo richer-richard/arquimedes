@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2024-p12",
+  "title": "2024 AIME II Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2024,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 65.9,
+    "source": 3160,
+    "mohs": null
+  },
+  "estimatedMinutes": 17,
+  "statement": "Let \\(O = (0, 0),\\) \\(A = \\left(\\tfrac{1}{2}, 0\\right),\\) and \\(B = \\left(0, \\tfrac{\\sqrt{3}}{2}\\right)\\) be points in the coordinate plane. Let \\(\\mathcal{F}\\) be the family of segments \\(\\overline{PQ}\\) of unit length lying in the first quadrant with \\(P\\) on the \\(x\\)-axis and \\(Q\\) on the \\(y\\)-axis. There is a unique point \\(C\\) on \\(\\overline{AB},\\) distinct from \\(A\\) and \\(B,\\) that does not belong to any segment from \\(\\mathcal{F}\\) other than \\(\\overline{AB}.\\) Then \\(OC^2 = \\tfrac{p}{q},\\) where \\(p\\) and \\(q\\) are relatively prime positive integers. Find \\(p + q.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "23",
+    "value": "23"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2024-p12.live",
+      "kind": "proof-sketch",
+      "text": "The members of \\(\\mathcal{F}\\) are the segments from \\((\\cos\\theta, 0)\\) to \\((0, \\sin\\theta)\\) for \\(0 \\lt \\theta \\lt 90^\\circ,\\) lying on the lines \\(\\frac{x}{\\cos\\theta} + \\frac{y}{\\sin\\theta} = 1;\\) the segment \\(\\overline{AB}\\) is the member with \\(\\theta = 60^\\circ.\\) For a point \\((x, y)\\) of \\(\\overline{AB}\\) with \\(x, y \\gt 0,\\) let \\[g(\\theta) = \\frac{x}{\\cos\\theta} + \\frac{y}{\\sin\\theta} - 1,\\] so the point lies on the member for angle \\(\\theta\\) exactly when \\(g(\\theta) = 0.\\) Note \\(g \\to +\\infty\\) at both endpoints of \\((0^\\circ, 90^\\circ)\\) and \\(g(60^\\circ) = 0.\\) If \\(g'(60^\\circ) \\neq 0,\\) then \\(g\\) is negative on one side of \\(60^\\circ,\\) and the intermediate value theorem produces another zero on that side — the point is covered by another segment. So \\(C\\) must satisfy \\(g'(60^\\circ) = 0.\\) Because both \\(\\sec\\theta\\) and \\(\\csc\\theta\\) are strictly convex on this interval, \\(g\\) is strictly convex; thus for that point \\(60^\\circ\\) is the strict global minimum of \\(g,\\) so no other segment contains it.\n\nNow \\(g'(\\theta) = \\frac{x \\sin\\theta}{\\cos^2\\theta} - \\frac{y \\cos\\theta}{\\sin^2\\theta},\\) and \\(g'(60^\\circ) = 0\\) gives \\(x \\sin^3 60^\\circ = y \\cos^3 60^\\circ,\\) i.e. \\(y = 3\\sqrt{3}\\,x.\\) Intersecting with \\(\\overline{AB}:\\) \\(y = \\frac{\\sqrt{3}}{2} - \\sqrt{3}\\,x\\) gives \\(3x = \\frac{1}{2} - x,\\) so \\(x = \\frac{1}{8}\\) and \\(y = \\frac{3\\sqrt{3}}{8},\\) an interior point of \\(\\overline{AB}.\\)\n\nTherefore \\(OC^2 = \\frac{1}{64} + \\frac{27}{64} = \\frac{28}{64} = \\frac{7}{16},\\) and \\(p + q = 7 + 16 = 23.\\)",
+      "hints": [
+        "The segment from \\((\\cos\\theta, 0)\\) to \\((0, \\sin\\theta)\\) lies on \\(\\frac{x}{\\cos\\theta} + \\frac{y}{\\sin\\theta} = 1;\\) \\(\\overline{AB}\\) is the member \\(\\theta = 60^\\circ\\)",
+        "Setting the \\(\\theta\\)-derivative of \\(\\frac{x}{\\cos\\theta} + \\frac{y}{\\sin\\theta}\\) to zero at \\(\\theta = 60^\\circ\\) gives \\(y = 3\\sqrt{3}\\,x;\\) intersect that with \\(\\overline{AB}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

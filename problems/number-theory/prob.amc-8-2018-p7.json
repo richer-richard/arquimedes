@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-8-2018-p7",
+  "title": "2018 AMC 8 Problem 7",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2018,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 8.2,
+    "source": 960,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "The \\(5\\)-digit number \\(\\underline{2}\\) \\(\\underline{0}\\) \\(\\underline{1}\\) \\(\\underline{8}\\) \\(\\underline{U}\\) is divisible by \\(9.\\) What is the remainder when this number is divided by \\(8?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 1 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 3 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 5 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 6 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 7 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "3"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2018-p7.live",
+      "kind": "proof-sketch",
+      "text": "Notice that a number is divisible by \\(9\\) if and only if the sum of its digits is also divisible by \\(9.\\)\n\nThe sum of the digits of the \\(5\\)-digit number in the problem is: \\[2+0+1+8+U= 11+U.\\] As \\(\\underline{2}\\) \\(\\underline{0}\\) \\(\\underline{1}\\) \\(\\underline{8}\\) \\(\\underline{U}\\) is divisible by \\(9,\\) \\(11+U\\) must also be divisible by \\(9.\\) Also, as \\(U\\) is a digit, we know that \\(0\\le U\\le 9.\\) This means that \\(U\\) can only be \\(7.\\)\n\nNow we know that the \\(5\\)-digit number in question is \\(20187,\\) and we want to find the remainder when we divide \\(20187\\) by \\(8.\\) To solve this, simply use long division to see that \\(20187=2523\\cdot 8 + 3.\\) Therefore, the remainder is \\(3.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Use the divisibility-by-\\(9\\) rule to determine \\(U\\).",
+        "Once \\(U\\) is known, only the last three digits matter for the remainder modulo \\(8\\)."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

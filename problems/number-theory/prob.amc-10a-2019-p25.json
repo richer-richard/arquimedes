@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2019-p25",
+  "title": "2019 AMC 10A Problem 25",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.factorial",
+      "label": "Factorial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime",
+      "label": "Prime",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2019,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 34.2,
+    "source": 2150,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "For how many integers \\(n\\) between \\(1\\) and \\(50,\\) inclusive, is \\[\\dfrac{(n^2-1)!}{(n!)^n}\\] an integer? (Recall that \\(0! = 1.\\))",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(31\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(32\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(33\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(34\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(35\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "34"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2019-p25.live",
+      "kind": "proof-sketch",
+      "text": "One fact that greatly helps with this problem is realizing that \\[ \\dfrac{(n^2)!}{(n!)^{n + 1}} \\] is always an integer.\n\nThis is because it is the number of ways to split up \\(n^2\\) objects into \\(n\\) unordered groups of size \\(n.\\)\n\nNow, we get that \\[ \\dfrac{(n^2 - 1)!}{(n!)^n} = \\dfrac{(n^2)!}{(n!)^{n + 1}} \\cdot \\dfrac{n!}{n^2}. \\]\n\nTherefore, whenever \\(n^2\\) divides \\(n!,\\) the original expression is an integer; this is equivalent to \\(n\\) dividing \\((n - 1)!.\\)\n\nSuppose \\(n\\) is composite. If \\(n=ab\\) with \\(2\\le a<b<n\\), then the distinct factors \\(a\\) and \\(b\\) both occur in \\((n-1)!\\), so \\((n-1)!\\) is divisible by \\(n\\). If \\(n=a^2\\) with \\(a\\ge3\\), then \\((n-1)!\\) contains the distinct factors \\(a\\) and \\(2a\\), whose product is a multiple of \\(n\\). Thus every composite \\(n\\ne4\\) works. The case \\(n=1\\) also works directly.\n\nConversely, if \\(n=p\\) is prime, the exponent of \\(p\\) in the denominator is \\(p,\\) while its exponent in \\((p^2-1)!\\) is \\(p-1,\\) so the expression is not an integer.\n\nFor \\(n=4,\\) the denominator contains \\(2^{12},\\) while \\(15!\\) contains only \\(2^{11},\\) so this case also fails.\n\nThere are \\(15\\) primes at most \\(50,\\) and adding \\(4,\\) we get \\(16\\) values for \\(n\\) that do not work.\n\nTherefore, the desired answer is \\(50 - 16 = 34.\\)\n\nThus, D is the correct answer.",
+      "hints": [
+        "Relate the expression to a multinomial coefficient",
+        "The remaining condition is whether \\(n\\) divides \\((n-1)!\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

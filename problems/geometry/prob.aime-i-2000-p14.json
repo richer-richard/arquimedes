@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2000-p14",
+  "title": "2000 AIME I Problem 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.isosceles-triangle",
+      "label": "Isosceles triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.law-of-sines",
+      "label": "Law of sines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2000,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 61.6,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "In triangle \\(ABC,\\) it is given that angles \\(B\\) and \\(C\\) are congruent. Points \\(P\\) and \\(Q\\) lie on \\(\\overline{AC}\\) and \\(\\overline{AB},\\) respectively, so that \\(AP = PQ = QB = BC.\\) Angle \\(ACB\\) is \\(r\\) times as large as angle \\(APQ,\\) where \\(r\\) is a positive real number. Find the greatest integer that does not exceed \\(1000r.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "571",
+    "value": "571"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2000-p14.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(\\angle A = \\alpha,\\) and scale so \\(AP = PQ = QB = BC = 1.\\) In triangle \\(APQ,\\) the equal sides \\(AP = PQ\\) give \\(\\angle AQP = \\angle A = \\alpha,\\) so \\(\\angle APQ = 180^\\circ - 2\\alpha\\) and, by the law of sines, \\(AQ = \\frac{\\sin 2\\alpha}{\\sin \\alpha} = 2\\cos\\alpha.\\) In triangle \\(ABC,\\) \\(\\angle B = \\angle C = 90^\\circ - \\frac{\\alpha}{2},\\) so \\[ \\begin{aligned} AB &= \\frac{BC \\sin C}{\\sin A} \\\\ &= \\frac{\\cos(\\frac{\\alpha}{2})}{\\sin\\alpha} = \\frac{1}{2\\sin(\\frac{\\alpha}{2})}. \\end{aligned} \\]\n\nSince \\(AQ + QB = AB,\\) \\[ \\begin{aligned} 2\\cos\\alpha + 1 &= \\frac{1}{2\\sin(\\frac{\\alpha}{2})} \\\\ &\\quad\\Longrightarrow\\quad 4\\sin\\tfrac{\\alpha}{2}\\cos\\alpha \\\\ &\\quad {}+ 2\\sin\\tfrac{\\alpha}{2} = 1. \\end{aligned} \\] By the product-to-sum identity, \\(4\\sin\\frac{\\alpha}{2}\\cos\\alpha\\) \\(= 2\\sin\\frac{3\\alpha}{2}\\) \\(- 2\\sin\\frac{\\alpha}{2},\\) so the equation collapses to \\(\\sin\\frac{3\\alpha}{2} = \\frac{1}{2}.\\) Then \\(\\alpha = 20^\\circ\\) or \\(\\alpha = 100^\\circ,\\) but the latter makes \\(AQ = 2\\cos\\alpha\\) negative, so \\(\\alpha = 20^\\circ.\\)\n\nNow \\(\\angle ACB = 80^\\circ\\) and \\(\\angle APQ = 140^\\circ,\\) so \\(r = \\frac{80}{140} = \\frac{4}{7},\\) and \\(\\lfloor 1000r \\rfloor = \\left\\lfloor \\frac{4000}{7} \\right\\rfloor = 571.\\)",
+      "hints": [
+        "Let \\(\\angle A = \\alpha\\) and \\(AP = 1.\\) Isosceles triangle \\(APQ\\) gives \\(\\angle AQP = \\alpha\\) and \\(AQ = 2\\cos\\alpha\\)",
+        "With \\(BC = 1,\\) the law of sines gives \\(AB = \\frac{1}{2\\sin(\\frac{\\alpha}{2})},\\) and \\(AQ + QB = AB\\) reduces to \\(\\sin\\frac{3\\alpha}{2} = \\frac{1}{2}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

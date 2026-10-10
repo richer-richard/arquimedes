@@ -1,0 +1,71 @@
+{
+  "id": "prob.ahsme-1991-p25",
+  "title": "1991 AHSME Problem 25",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.triangular-number",
+      "label": "Triangular number",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1991,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 34.9,
+    "source": 1950,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "If \\(T_n=1+2+3+\\cdots+n\\) and \\[ \\begin{aligned} P_n&=\\frac{T_2}{T_2-1} \\cdot\\frac{T_3}{T_3-1}\\\\ &\\quad\\cdot\\frac{T_4}{T_4-1} \\cdots\\frac{T_n}{T_n-1} \\end{aligned} \\] for \\(n=2,\\) \\(3,\\) \\(4,\\) \\(\\ldots,\\) then \\(P_{1991}\\) is closest to which of the following numbers?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2.0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2.3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2.6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2.9\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(3.2\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "2.9"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1991-p25.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(T_k=\\frac{k(k+1)}{2}\\) and \\(T_k-1=\\frac{(k-1)(k+2)}{2},\\) \\[ \\frac{T_k}{T_k-1} =\\frac{k}{k-1}\\cdot\\frac{k+1}{k+2}. \\] The product telescopes: \\[ \\begin{aligned} P_n &=\\left(\\prod_{k=2}^n\\frac{k}{k-1}\\right) \\left(\\prod_{k=2}^n\\frac{k+1}{k+2}\\right)\\\\ &=n\\cdot\\frac3{n+2}\\\\ &=\\frac{3n}{n+2}. \\end{aligned} \\] For \\(n=1991,\\) this is just under \\(3\\) and is closest to \\(2.9.\\)\n\nThus the correct answer is D.",
+      "hints": [
+        "Factor \\(T_k-1\\) and simplify each factor \\(\\frac{T_k}{T_k-1}\\)",
+        "Write each factor as \\(\\frac{k}{k-1}\\cdot\\frac{k+1}{k+2}\\) and telescope"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

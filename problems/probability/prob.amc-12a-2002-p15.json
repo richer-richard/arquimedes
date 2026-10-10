@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2002-p15",
+  "title": "2002 AMC 12A Problem 15",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.extremal-argument",
+      "label": "Extremal argument",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.mean",
+      "label": "Mean",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "prob.range",
+      "label": "Range",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2002,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 27.5,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The mean, median, unique mode, and range of a collection of eight integers are all equal to \\(8.\\) The largest integer that can be an element of this collection is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(14\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(15\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "14"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2002-p15.live",
+      "kind": "proof-sketch",
+      "text": "The collection \\(6, 6, 6, 8, 8, 8, 8, 14\\) has mean, median, unique mode, and range all equal to \\(8,\\) so \\(14\\) is attainable.\n\nSuppose the largest were \\(15.\\) The range \\(8\\) forces the smallest to be \\(7.\\) Because \\(8\\) is the mode, it occurs in the sorted list; together with median \\(8,\\) this forces the two middle values to be \\(8, 8.\\) Then \\(7 + 8 + 8 + 15 = 38,\\) so the remaining four values sum to \\(64 - 38 = 26,\\) averaging \\(6.5.\\) At least one would be below \\(7,\\) contradicting the minimum. So \\(15\\) is impossible.\n\nThus, the correct answer is D.",
+      "hints": [
+        "The eight integers sum to \\(8\\cdot 8 = 64,\\) and the mode \\(8\\) must repeat",
+        "Test the largest value \\(15;\\) the smallest would then be \\(7,\\) and check the remaining sum"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

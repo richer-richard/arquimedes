@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2018-p2",
+  "title": "2018 AIME I Problem 2",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.place-value",
+      "label": "Place value",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2018,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 45.5,
+    "source": 2180,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "The number \\(n\\) can be written in base \\(14\\) as \\(\\underline{a}\\,\\underline{b}\\,\\underline{c},\\) can be written in base \\(15\\) as \\(\\underline{a}\\,\\underline{c}\\,\\underline{b},\\) and can be written in base \\(6\\) as \\(\\underline{a}\\,\\underline{c}\\,\\underline{a}\\,\\underline{c},\\) where \\(a \\gt 0.\\) Find the base-\\(10\\) representation of \\(n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "925",
+    "value": "925"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2018-p2.live",
+      "kind": "proof-sketch",
+      "text": "Writing out the place values, \\(n = 196a + 14b + c\\) \\(= 225a + 15c + b\\) \\(= 222a + 37c,\\) where \\(a\\) and \\(c\\) are base-\\(6\\) digits with \\(1 \\le a \\le 5\\) and \\(0 \\le c \\le 5,\\) and \\(0 \\le b \\le 13.\\)\n\nEquating the last two expressions gives \\(b = 22c - 3a.\\) Substituting into \\(196a + 14b + c = 225a + 15c + b\\) (which says \\(13b = 29a + 14c\\)) yields \\(13(22c - 3a) = 29a + 14c,\\) so \\(272c = 68a,\\) that is \\(a = 4c.\\) The digit bounds force \\(c = 1,\\) \\(a = 4,\\) and then \\(b = 22 - 12 = 10,\\) which is a valid digit in bases \\(14\\) and \\(15.\\)\n\nTherefore \\(n = 222 \\cdot 4 + 37 \\cdot 1 = 925.\\) Indeed \\(925 = 196 \\cdot 4 + 14 \\cdot 10 + 1,\\) confirming the base-\\(14\\) form. The answer is \\(925.\\)",
+      "hints": [
+        "The three representations give \\(196a + 14b + c = 225a + 15c + b\\) \\(= 222a + 37c\\)",
+        "Comparing the last two gives \\(b = 22c - 3a;\\) substituting into the first forces \\(a = 4c,\\) where \\(a\\) and \\(c\\) are base-\\(6\\) digits"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

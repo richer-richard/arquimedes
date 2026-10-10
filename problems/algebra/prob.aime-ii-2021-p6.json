@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2021-p6",
+  "title": "2021 AIME II Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.subsets",
+      "label": "Subsets",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2021,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 47.5,
+    "source": 2440,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "For any finite set \\(S,\\) let \\(|S|\\) denote the number of elements in \\(S.\\) Find the number of ordered pairs \\((A, B)\\) such that \\(A\\) and \\(B\\) are (not necessarily distinct) subsets of \\(\\{1, 2, 3, 4, 5\\}\\) that satisfy \\[|A| \\cdot |B| = |A \\cap B| \\cdot |A \\cup B|.\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "454",
+    "value": "454"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2021-p6.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(a = |A|,\\) \\(b = |B|,\\) and \\(i = |A \\cap B|,\\) so \\(|A \\cup B| = a + b - i.\\) The condition \\(ab = i(a + b - i)\\) rearranges to \\[ \\begin{aligned} &ab - ia - ib + i^2 \\\\ &= (a - i)(b - i) = 0, \\end{aligned} \\] so \\(|A \\cap B| = |A|\\) or \\(|A \\cap B| = |B|.\\) Since \\(A \\cap B\\) is a subset of each, that means \\(A \\subseteq B\\) or \\(B \\subseteq A.\\)\n\nFor pairs with \\(A \\subseteq B,\\) each of the \\(5\\) elements independently lies in neither set, in \\(B\\) only, or in both: \\(3^5 = 243\\) pairs. Likewise \\(243\\) pairs satisfy \\(B \\subseteq A,\\) and the pairs counted twice are exactly those with \\(A = B,\\) of which there are \\(2^5 = 32.\\) The answer is \\(243 + 243 - 32 = 454.\\)",
+      "hints": [
+        "Write \\(a = |A|,\\) \\(b = |B|,\\) \\(i = |A \\cap B|;\\) then \\(|A \\cup B| = a + b - i\\)",
+        "The equation factors as \\((a - i)(b - i) = 0,\\) so the condition is \\(A \\subseteq B\\) or \\(B \\subseteq A\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

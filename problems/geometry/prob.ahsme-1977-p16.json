@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1977-p16",
+  "title": "1977 AHSME Problem 16",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1977,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 39.0,
+    "source": 2110,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "If \\(i^2=-1,\\) then the sum \\[ \\begin{aligned} &\\cos45^\\circ+i\\cos135^\\circ+\\cdots\\\\ &\\quad+i^n\\cos(45+90n)^\\circ+\\cdots\\\\ &\\quad+i^{40}\\cos3645^\\circ \\end{aligned} \\] equals",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\frac{\\sqrt2}{2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(-10i\\sqrt2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\frac{21\\sqrt2}{2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\frac{\\sqrt2}{2}(21-20i)\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\frac{\\sqrt2}{2}(21+20i)\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1977-p16.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(u_n=i^n\\cos(45+90n)^\\circ.\\) Then \\[ \\begin{aligned} u_{n+2} &=i^{n+2}\\cos(225+90n)^\\circ\\\\ &=(-i^n)(-\\cos(45+90n)^\\circ)\\\\ &=u_n. \\end{aligned} \\] Every even-indexed term equals \\(\\frac{\\sqrt2}{2},\\) and every odd-indexed term equals \\(-\\frac{i\\sqrt2}{2}.\\) There are \\(21\\) even indices and \\(20\\) odd indices, so the sum is \\(\\frac{\\sqrt2}{2}(21-20i).\\)\n\nTherefore, the correct answer is D.",
+      "hints": [
+        "Compare the term indexed by \\(n+2\\) with the term indexed by \\(n\\)",
+        "Count the even and odd indices from \\(0\\) through \\(40\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

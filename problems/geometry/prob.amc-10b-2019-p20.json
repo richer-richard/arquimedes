@@ -1,0 +1,93 @@
+{
+  "id": "prob.amc-10b-2019-p20",
+  "title": "2019 AMC 10B Problem 20",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-decomposition",
+      "label": "Area decomposition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.sector",
+      "label": "Sector",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangent-circles",
+      "label": "Tangent circles",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2019,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 35.3,
+    "source": 2380,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "As shown in the figure, line segment \\(\\overline{AD}\\) is trisected by points \\(B\\) and \\(C\\) so that \\(AB=BC=CD=2.\\) Three semicircles of radius \\(1,\\) \\(\\widehat{AEB},\\) \\(\\widehat{BFC},\\) and \\(\\widehat{CGD},\\) have their diameters on \\(\\overline{AD}\\), lie in the same halfplane determined by line \\(AD\\), and are tangent to line \\(EG\\) at \\(E,\\) \\(F,\\) and \\(G,\\) respectively. A circle of radius \\(2\\) has its center at \\(F.\\) The area of the region inside the circle but outside the three semicircles, shaded in the figure, can be expressed in the form \\[\\frac{a}{b}\\cdot\\pi-\\sqrt{c}+d,\\] where \\(a,\\) \\(b,\\) \\(c,\\) and \\(d\\) are positive integers and \\(a\\) and \\(b\\) are relatively prime. What is \\(a+b+c+d?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 13 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 14 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 15 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 16 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 17 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "17"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2019-p20.live",
+      "kind": "proof-sketch",
+      "text": "Line \\(EG\\) passes through the center \\(F\\) of the radius-\\(2\\) circle, so the shaded upper semicircle has area \\(2\\pi\\).\n\nThe chord \\(XZ\\) lies on \\(AD\\), one unit from \\(F\\). Thus \\[\\angle XFZ=2\\arccos\\left(\\frac12\\right)=\\frac{2\\pi}{3}.\\] The shaded circular segment below \\(AD\\) has area \\[ \\begin{aligned} &\\frac12(2^2)\\left(\\frac{2\\pi}{3}\\right)\\\\ &\\quad-\\frac12(2)(2)\\sin\\left(\\frac{2\\pi}{3}\\right)\\\\ &=\\frac{4\\pi}{3}-\\sqrt3. \\end{aligned} \\]\n\nThe portion between \\(EG\\) and \\(AD\\) consists of four congruent pieces of the following form.\n\nEach piece is a unit square with a quarter of a unit circle removed, so the four pieces have total area \\[4\\left(1-\\frac\\pi4\\right)=4-\\pi.\\]\n\nThe total shaded area is therefore \\[ \\begin{aligned} &2\\pi+\\left(\\frac{4\\pi}{3}-\\sqrt3\\right)\\\\ &\\quad+(4-\\pi)\\\\ &=\\frac{7\\pi}{3}-\\sqrt3+4. \\end{aligned} \\] Hence \\(a=7\\), \\(b=3\\), \\(c=3\\), and \\(d=4\\), giving \\(a+b+c+d=17\\).\n\nThus, the answer is E .",
+      "hints": [
+        "Break the shaded area into circular sectors and simple leftover pieces",
+        "Compute the central sector cut out by the radius-\\(2\\) circle"
+      ],
+      "images": [
+        "41b8e71e230a3b2b5c408da9cc4b1bf554b58633add4486c2031a525569b1513",
+        "725b025dd1a72c95a852bf7cf64a84cacdefd9c799872981078ae1ea3b7c89e7"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [
+      "08b1ebe90bb38cc9ae6651d6ca653580e3635e0f883da6a36901aebd6e42f900"
+    ],
+    "solutions": [
+      "41b8e71e230a3b2b5c408da9cc4b1bf554b58633add4486c2031a525569b1513",
+      "725b025dd1a72c95a852bf7cf64a84cacdefd9c799872981078ae1ea3b7c89e7"
+    ]
+  }
+}

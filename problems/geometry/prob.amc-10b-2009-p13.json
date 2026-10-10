@@ -1,0 +1,90 @@
+{
+  "id": "prob.amc-10b-2009-p13",
+  "title": "2009 AMC 10B Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.perimeter",
+      "label": "Perimeter",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.process-simulation",
+      "label": "Process simulation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2009,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 22.8,
+    "source": 1480,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "As shown below, convex pentagon \\(ABCDE\\) has sides \\(AB=3,\\) \\(BC=4,\\) \\(CD=6,\\) \\(DE=3,\\) and \\(EA=7.\\) The pentagon is originally positioned in the plane with vertex \\(A\\) at the origin and vertex \\(B\\) on the positive \\(x\\)-axis. The pentagon is then rolled clockwise to the right along the \\(x\\)-axis. Which side will touch the point \\(x=2009\\) on the \\(x\\)-axis?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\overline{AB}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\overline{BC}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\overline{CD}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\overline{DE}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\overline{EA}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2009-p13.live",
+      "kind": "proof-sketch",
+      "text": "The pentagon has perimeter \\(3+4+6+3+7=23.\\) One full roll advances the contact point by \\(23,\\) and \\(2009=23\\cdot87+8.\\)\n\nAfter \\(87\\) rolls, vertex \\(A\\) sits at \\(x=23\\cdot87=2001\\) and \\(B\\) at \\(2004.\\) Rolling further, \\(C\\) touches at \\(2004+4=2008\\) and \\(D\\) at \\(2008+6=2014.\\)\n\nSince \\(2009\\) lies between \\(2008\\) and \\(2014,\\) side \\(\\overline{CD}\\) touches that point.\n\nThus, the correct answer is C.",
+      "hints": [
+        "The perimeter is \\(23,\\) and \\(2009=23\\cdot87+8\\)",
+        "After \\(87\\) full turns, track where vertices \\(A, B, C, D\\) land"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "0292cd7e0ef632592e1ec84d381be5c741016e94e1ada0ce8d609c79c6bfa337"
+    ],
+    "solutions": []
+  }
+}

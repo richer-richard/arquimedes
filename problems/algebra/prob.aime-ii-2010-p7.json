@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-ii-2010-p7",
+  "title": "2010 AIME II Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2010,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 46.7,
+    "source": 2410,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "Let \\(P(z) = z^3 + az^2 + bz + c,\\) where \\(a,\\) \\(b,\\) and \\(c\\) are real. There exists a complex number \\(w\\) such that the three roots of \\(P(z)\\) are \\(w + 3i,\\) \\(w + 9i,\\) and \\(2w - 4,\\) where \\(i^2 = -1.\\) Find \\(|a + b + c|.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "136",
+    "value": "136"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2010-p7.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(w = x + yi\\) with \\(x\\) and \\(y\\) real. The sum of the roots is \\(4w + 12i - 4 = -a,\\) which is real, so \\(4y + 12 = 0\\) and \\(y = -3.\\) The roots are then \\(x,\\) \\(x + 6i,\\) and \\(2x - 4 - 6i.\\) Because the coefficients are real, the two non-real roots must be conjugates, so \\(2x - 4 = x,\\) giving \\(x = 4.\\) The roots are \\(4,\\) \\(4 + 6i,\\) and \\(4 - 6i.\\)\n\nNow \\[ \\begin{aligned} 1 + a + b + c &= P(1) \\\\ &= (1 - 4) \\\\ &\\quad {}\\cdot \\bigl(1 - (4 + 6i)\\bigr) \\\\ &\\quad {}\\cdot \\bigl(1 - (4 - 6i)\\bigr) \\\\ &= (-3)(9 + 36) \\\\ &= -135, \\end{aligned} \\] so \\(a + b + c = -136\\) and \\(|a + b + c| = 136.\\)",
+      "hints": [
+        "The sum of the roots, \\(4w + 12i - 4,\\) must be real; this determines the imaginary part of \\(w\\)",
+        "Real coefficients force the two non-real roots to be conjugates, and \\(1 + a + b + c = P(1)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

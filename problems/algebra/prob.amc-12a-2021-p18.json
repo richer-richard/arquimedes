@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-12a-2021-p18",
+  "title": "2021 AMC 12A Problem 18",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functional-equation",
+      "label": "Functional equation",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2021,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 34.9,
+    "source": 1950,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(f\\) be a function defined on the set of positive rational numbers with the property that \\(f(a\\cdot b) = f(a) + f(b)\\) for all positive rational numbers \\(a\\) and \\(b.\\) Suppose that \\(f\\) also has the property that \\(f(p) = p\\) for every prime number \\(p.\\) For which of the following numbers \\(x\\) is \\(f(x) \\lt 0?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{17}{32}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{11}{16}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{7}{9}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{7}{6}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{25}{11}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2021-p18.live",
+      "kind": "proof-sketch",
+      "text": "The functional equation makes \\(f\\) completely additive: for \\(x = \\prod p^{e_p},\\) we have \\(f(x) = \\sum e_p\\, f(p) = \\sum e_p\\, p,\\) where a prime in the denominator contributes a negative exponent (since \\(f(\\frac{1}{p}) = -p\\)).\n\nEvaluating: \\(f\\!\\left(\\tfrac{17}{32}\\right) = 17 - 5\\cdot 2 = 7,\\) \\(f\\!\\left(\\tfrac{11}{16}\\right) = 11 - 4\\cdot 2 = 3,\\) \\(f\\!\\left(\\tfrac{7}{9}\\right) = 7 - 2\\cdot 3 = 1,\\) \\(f\\!\\left(\\tfrac{7}{6}\\right) = 7 - 2 - 3 = 2,\\) and \\(f\\!\\left(\\tfrac{25}{11}\\right) = 2\\cdot 5 - 11 = -1.\\) Only the last is negative.\n\nThus, the correct answer is E.",
+      "hints": [
+        "The rule makes \\(f\\) additive over prime factors, and \\(f(\\frac{1}{p}) = -f(p) = -p\\)",
+        "For \\(x = \\prod p^{e_p},\\) compute \\(f(x) = \\sum e_p\\, p\\) (with negative exponents for denominators)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

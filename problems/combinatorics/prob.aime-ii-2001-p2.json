@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2001-p2",
+  "title": "2001 AIME II Problem 2",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.percentage",
+      "label": "Percentage",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2001,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 39.0,
+    "source": 2110,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Each of the \\(2001\\) students at a high school studies either Spanish or French, and some study both. The number who study Spanish is between \\(80\\) percent and \\(85\\) percent of the school population, and the number who study French is between \\(30\\) percent and \\(40\\) percent. Let \\(m\\) be the smallest number of students who could study both languages, and let \\(M\\) be the largest number of students who could study both languages. Find \\(M - m.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "298",
+    "value": "298"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2001-p2.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(s\\) and \\(f\\) be the numbers of students studying Spanish and French. Since every student studies at least one language, the number studying both is \\(s + f - 2001.\\) The bounds \\(1600.8 \\lt s \\lt 1700.85\\) force \\(1601 \\le s \\le 1700,\\) and \\(600.3 \\lt f \\lt 800.4\\) force \\(601 \\le f \\le 800.\\)\n\nThe overlap is smallest when \\(s + f\\) is smallest, giving \\(m = 1601 + 601 - 2001 = 201,\\) and largest when \\(s + f\\) is largest, giving \\(M = 1700 + 800 - 2001 = 499.\\) Both extremes are achievable, so \\(M - m = 499 - 201 = 298.\\)",
+      "hints": [
+        "If \\(s\\) study Spanish and \\(f\\) study French, then \\(s + f - 2001\\) students study both",
+        "The percentage bounds give \\(1601 \\le s \\le 1700\\) and \\(601 \\le f \\le 800;\\) push \\(s + f\\) to its two extremes"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

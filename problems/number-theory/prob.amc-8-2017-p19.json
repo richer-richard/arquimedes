@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-2017-p19",
+  "title": "2017 AMC 8 Problem 19",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factorial",
+      "label": "Factorial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.legendres-formula",
+      "label": "Legendre’s Formula",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2017,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 19.0,
+    "source": 1640,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "For any positive integer \\(M,\\) the notation \\(M!\\) denotes the product of the integers \\(1\\) through \\(M.\\) What is the largest integer \\(n\\) for which \\(5^n\\) is a factor of the sum: \\[98!+99!+100!\\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 23 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 24 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 25 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 26 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 27 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "26"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2017-p19.live",
+      "kind": "proof-sketch",
+      "text": "Factor out \\(98!\\): \\[\\begin{aligned} 98!+99!+100! &=98!\\bigl(1+99\\\\ &\\qquad+100\\cdot99\\bigr)\\\\ &=98!\\cdot100^2. \\end{aligned}\\]\n\nThe exponent of \\(5\\) in \\(98!\\) is \\(\\left\\lfloor\\frac{98}{5}\\right\\rfloor+\\left\\lfloor\\frac{98}{25}\\right\\rfloor\\), which equals \\(19+3=22.\\) The factor \\(100^2\\) contributes four more factors of \\(5\\), so the total exponent is \\(22+4=26.\\)\n\nThus, D is the correct answer.",
+      "hints": [
+        "Factor \\(98!\\) out of all three terms.",
+        "After factoring, count the powers of \\(5\\) in \\(98!\\) and in \\(100^2\\)."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

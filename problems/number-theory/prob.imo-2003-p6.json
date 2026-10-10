@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2003-p6",
+  "title": "2003 IMO Problem 6",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2003,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 106.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(p\\) be a prime number.\nProve that there exists a prime number \\(q\\) such that for every integer \\(n\\),\nthe number \\(n^p-p\\) is not divisible by \\(q\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2003-p6.evanchen",
+      "kind": "proof-sketch",
+      "text": "By orders, we must have \\(q=pk+1\\) for this to be possible\n(since if \\(q \\not \\equiv 1 \\pmod p\\), then \\(n^p\\) can be any residue modulo \\(q\\)).\nSince \\(p \\equiv n^p \\pmod q \\implies p^k \\equiv 1 \\pmod q\\),\nit suffices to prevent the latter situation from happening.\n\nSo we need a prime \\(q \\equiv 1 \\pmod p\\) such that \\(p^k \\not\\equiv 1 \\pmod q\\).\nTo do this, we first recall the following lemma.\n\nLemma.\n Let \\(\\Phi_p(X) = 1 + X + X^2 + \\dots + X^{p-1}\\).\n For any integer \\(a\\), if \\(q\\) is a prime divisor of \\(\\Phi_p(a)\\) other than \\(p\\),\n then \\(a \\pmod q\\) has order \\(p\\). (In particular, \\(q \\equiv 1 \\pmod p\\).)\n\nProof.\n We have \\(a^p-1 \\equiv 0 \\pmod q\\), so either the order is \\(1\\) or \\(p\\).\n If it is \\(1\\), then \\(a \\equiv 1 \\pmod q\\), so \\(q \\mid \\Phi_p(1) = p\\), hence \\(q = p\\).\n\nNow the idea is to extract a prime factor \\(q\\)\nfrom the cyclotomic polynomial\n\\[ \\Phi_p(p) = \\frac{p^p-1}{p-1} \\equiv 1+p \\pmod{p^2} \\]\nsuch that \\(q \\not\\equiv 1 \\pmod{p^2}\\);\nhence \\(k \\not\\equiv 0 \\pmod p\\),\nand as \\(p \\pmod q\\) has order \\(p\\) we have \\(p^k \\not\\equiv 1 \\pmod q\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

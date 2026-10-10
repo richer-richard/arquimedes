@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-guts-2013-p32",
+  "title": "2013 HMMT November Guts Problem 32",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.sums-and-products",
+      "label": "Sums and products",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2013,
+    "number": 32
+  },
+  "difficulty": {
+    "course": 66.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Suppose that \\(x\\) and \\(y\\) are chosen randomly and uniformly from \\((0,1)\\). What is the probability that \\(\\left\\lfloor\\sqrt{\\frac{x}{y}}\\right\\rfloor\\) is even? Hint: \\(\\sum_{n=1}^{\\infty} \\frac{1}{n^{2}}=\\frac{\\pi^{2}}{6}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2013-p32.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(1-\\frac{\\pi^{2}}{24}\\) OR \\(\\frac{24-\\pi^{2}}{24}\\) Note that for every positive integer \\(n\\), the probability that \\(\\left\\lfloor\\sqrt{\\frac{x}{y}}\\right\\rfloor=n\\) is just the area of the triangle formed between \\((0,0),\\left(1, \\frac{1}{n^{2}}\\right),\\left(1, \\frac{1}{(n+1)^{2}}\\right)\\), which is just \\(\\frac{1}{2}\\left(\\frac{1}{n^{2}}-\\frac{1}{(n+1)^{2}}\\right)\\).\n\nThus the probability that \\(\\left\\lfloor\\sqrt{\\frac{x}{y}}\\right\\rfloor\\) is odd is\n\n\\[\\begin{aligned}\n\\sum_{k=1}^{\\infty} \\frac{1}{2}\\left(\\frac{1}{(2 k-1)^{2}}-\\frac{1}{(2 k)^{2}}\\right) & =\\frac{1}{2} \\sum_{k=1}^{\\infty}\\left(\\frac{1}{(2 k-1)^{2}}+\\frac{1}{(2 k)^{2}}\\right)-\\sum_{k=1}^{\\infty} \\frac{1}{(2 k)^{2}} \\\\\n& =\\frac{1}{2} \\sum_{n=1}^{\\infty} \\frac{1}{n^{2}}-\\frac{1}{4} \\sum_{k=1}^{\\infty} \\frac{1}{k^{2}} \\\\\n& =\\frac{\\pi^{2}}{12}-\\frac{\\pi^{2}}{24}=\\frac{\\pi^{2}}{24}\n\\end{aligned}\\]\n\nThus our answer is just \\(1-\\frac{\\pi^{2}}{24}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

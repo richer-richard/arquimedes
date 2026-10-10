@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-i-2004-p11",
+  "title": "2004 AIME I Problem 11",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cone",
+      "label": "Cone",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.power-scaling-of-length-area-and-volume",
+      "label": "Power scaling of length, area, and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.surface-area",
+      "label": "Surface area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2004,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 54.4,
+    "source": 2710,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "A solid in the shape of a right circular cone is \\(4\\) inches tall and its base has a \\(3\\)-inch radius. The entire surface of the cone, including its base, is painted. A plane parallel to the base of the cone divides the cone into two solids, a smaller cone-shaped solid \\(\\mathcal{C}\\) and a frustum-shaped solid \\(\\mathcal{F},\\) in such a way that the ratio between the areas of the painted surfaces of \\(\\mathcal{C}\\) and \\(\\mathcal{F}\\) and the ratio between the volumes of \\(\\mathcal{C}\\) and \\(\\mathcal{F}\\) are both equal to \\(k.\\) Given that \\(k = \\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers, find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "512",
+    "value": "512"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2004-p11.live",
+      "kind": "proof-sketch",
+      "text": "The cone has radius \\(3,\\) height \\(4,\\) and slant height \\(5,\\) so its painted surface consists of lateral area \\(\\pi \\cdot 3 \\cdot 5 = 15\\pi\\) and base area \\(9\\pi,\\) totaling \\(24\\pi.\\) Suppose the cut is at similarity ratio \\(t,\\) so \\(\\mathcal{C}\\) is a cone with radius \\(3t\\) and slant height \\(5t.\\) Then \\(\\mathcal{C}\\)’s painted surface is only its lateral area \\(15\\pi t^2,\\) and \\(\\mathcal{F}\\)’s painted surface is the rest, \\(24\\pi - 15\\pi t^2.\\) The volumes are in ratio \\(t^3\\) to \\(1 - t^3.\\)\n\nSetting the two ratios equal, \\[\\frac{15 t^2}{24 - 15 t^2} = \\frac{t^3}{1 - t^3},\\] so \\(15 t^2 (1 - t^3) = t^3 (24 - 15 t^2),\\) which simplifies to \\(15 t^2 = 24 t^3,\\) giving \\(t = \\frac{5}{8}.\\)\n\nThen \\(k = \\frac{t^3}{1 - t^3} = \\frac{\\frac{125}{512}}{\\frac{387}{512}} = \\frac{125}{387},\\) which is in lowest terms since \\(387 = 3^2 \\cdot 43,\\) so \\(m + n = 125 + 387 = 512.\\)",
+      "hints": [
+        "If the cut is at fraction \\(t\\) of the way up, \\(\\mathcal{C}\\) has painted area \\(15\\pi t^2\\) of the total painted \\(24\\pi,\\) and volume fraction \\(t^3\\)",
+        "Equating \\(\\frac{15t^2}{24 - 15t^2} = \\frac{t^3}{1 - t^3}\\) simplifies to \\(15 = 24t\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

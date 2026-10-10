@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12b-fall-2021-p17",
+  "title": "2021 Fall AMC 12B Problem 17",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.random-walk",
+      "label": "Random walk",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.recursive-probability",
+      "label": "Recursive probability",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2021,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 34.7,
+    "source": 2230,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A bug starts at a vertex of a grid made of equilateral triangles of side length \\(1.\\) At each step the bug moves in one of the \\(6\\) possible directions along the grid lines randomly and independently with equal probability. What is the probability that after \\(5\\) moves the bug never will have been more than \\(1\\) unit away from the starting position?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{13}{108}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{7}{54}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{29}{216}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{4}{27}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{1}{16}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "13/108"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-fall-2021-p17.live",
+      "kind": "proof-sketch",
+      "text": "Staying within distance \\(1\\) means the bug is always at the origin or one of its \\(6\\) neighbors. From the origin, all \\(6\\) moves are allowed. From a neighbor, only \\(3\\) moves keep it in range: back to the origin, or to either of the two adjacent neighbors.\n\nLet \\(a_k\\) and \\(b_k\\) count valid \\(k\\)-step paths ending at the origin and at a neighbor. Then \\(a_{k+1} = b_k\\) and \\(b_{k+1} = 6a_k + 2b_k,\\) starting from \\(a_0 = 1,\\) \\(b_0 = 0.\\)\n\nIterating gives \\(b_1 = 6,\\) then \\((a_2, b_2) = (6, 12),\\) \\((a_3, b_3) = (12, 60),\\) \\((a_4, b_4) = (60, 192),\\) \\((a_5, b_5) = (192, 744).\\) The total number of valid paths is \\(192 + 744 = 936.\\)\n\nThe probability is \\(\\dfrac{936}{6^5} = \\dfrac{936}{7776} = \\dfrac{13}{108}.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "The bug must always be at the start or one of its \\(6\\) neighbors",
+        "From a neighbor, only \\(3\\) of the \\(6\\) moves stay within distance \\(1\\): back to start or to the two adjacent neighbors"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

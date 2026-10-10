@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2005-p3",
+  "title": "2005 IMO Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2005,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 102.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(x,y,z > 0\\) satisfy \\(xyz\\geq 1\\). Prove that\n\\[ \\frac { x^5-x^2 }{x^5+y^2+z^2}\n + \\frac {y^5-y^2}{x^2+y^5+z^2}\n + \\frac {z^5-z^2}{x^2+y^2+z^5} \\geq 0. \\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2005-p3.evanchen",
+      "kind": "proof-sketch",
+      "text": "Negating both sides and adding \\(3\\) eliminates the minus signs:\n\\[ \\sum_{\\text{cyc}} \\frac{1}{x^5+y^2+z^2}\n \\le \\frac{3}{x^2+y^2+z^2}. \\]\nThus we only need to consider the case \\(xyz = 1\\).\n\nDirect expansion and Muirhead works now!\nAs advertised, once we show it suffices to analyze if \\(xyz=1\\)\nthe inequality becomes more economically written as\n\\[ S = \\sum_{\\text{cyc}} x^2(x^2-yz)(y^4+x^3z+xz^3)(z^4+x^3y+xy^3)\n \\overset{?}{\\ge} 0. \\]\nSo, clearing all the denominators gives\n\\[\\begin{aligned}\n S &= \\sum_{\\text{cyc}} x^2(x^2-yz)\n \\left[ y^4z^4 + x^3y^5 + xy^7 + x^3z^5 + x^6yz + x^4y^3z\n + xz^7 + x^4yz^3 + x^2y^3z^3 \\right] \\\\\n &= \\sum_{\\text{cyc}}\n \\left[ x^4y^4z^4 + x^7y^5 + x^5y^7 + x^7z^5 + x^{10}yz + x^8y^3z\n + x^5z^7 + x^8yz^3 + x^6y^3z^3 \\right] \\\\\n &- \\sum_{\\text{cyc}}\n \\left[ x^2y^5z^5 + x^5y^6z + x^3y^8z + x^5yz^6 + x^8y^2z^2 + x^6y^4z^2\n + x^3yz^8 + x^6y^2z^4 + x^4y^4z^4 \\right] \\\\\n &= \\sum_{\\text{cyc}}\n \\left[ x^7y^5 + x^5y^7 + x^7z^5 + x^{10}yz\n + x^5z^7 + x^6y^3z^3 \\right] \\\\\n &- \\sum_{\\text{cyc}}\n \\left[ x^2y^5z^5 + x^5y^6z + x^5yz^6 + x^8y^2z^2 + x^6y^4z^2\n + x^6y^2z^4 \\right]\n\\end{aligned}\\]\nIn other words we need to show\n\\[\n \\sum_{\\text{sym}} \\left( 2x^7y^5\n +\\frac{1}{2} x^{10}yz + \\frac{1}{2} x^6y^3z^3 \\right)\n \\ge\n \\sum_{\\text{sym}} \\left( \\frac{1}{2} x^8 y^2 z^2\n + \\frac{1}{2} x^5 y^5 z^2 + x^6 y^4 z^2 + x^6 y^5 z \\right).\n\\]\nwhich follows by summing\n\\[\\begin{aligned}\n \\sum_{\\text{sym}} \\frac{x^{10} yz + x^6 y^3 z^3}{2}\n &\\ge \\sum_{\\text{sym}} x^8 y^2 z^2 \\\\\n \\frac{1}{2} \\sum_{\\text{sym}} x^8 y^2 z^2\n &\\ge \\frac{1}{2} \\sum_{\\text{sym}} x^6 y^4 z^2 \\\\\n \\frac{1}{2} \\sum_{\\text{sym}} x^7y^5\n &\\ge \\frac{1}{2} \\sum_{\\text{sym}} x^5 y^5 z^2 \\\\\n \\frac{1}{2} \\sum_{\\text{sym}} x^7y^5\n &\\ge \\frac{1}{2} \\sum_{\\text{sym}} x^6 y^4 z^2 \\\\\n \\sum_{\\text{sym}} x^7y^5\n &\\ge \\sum_{\\text{sym}} x^6 y^5 z.\n\\end{aligned}\\]\nThe first line here comes from AM-GM,\nthe rest come from Muirhead.\n\nRemark.\nMore elegant approach is to use Cauchy in the form\n\\[ \\frac{1}{x^5+y^2+z^2} \\le \\frac{x^{-1}+y^2+z^2}{(x^2+y^2+z^2)^2}. \\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

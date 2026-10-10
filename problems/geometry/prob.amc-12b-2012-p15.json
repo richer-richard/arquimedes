@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12b-2012-p15",
+  "title": "2012 AMC 12B Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cone",
+      "label": "Cone",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.volume",
+      "label": "Volume",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2012,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 29.0,
+    "source": 1800,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Jesse cuts a circular paper disk of radius \\(12\\) along two radii to form two sectors, the smaller having a central angle of \\(120\\) degrees. He makes two circular cones, using each sector to form the lateral surface of a cone. What is the ratio of the volume of the smaller cone to that of the larger?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{8}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1}{4}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{\\sqrt{10}}{10}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{\\sqrt{5}}{6}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{\\sqrt{10}}{5}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2012-p15.live",
+      "kind": "proof-sketch",
+      "text": "Each sector forms a cone with slant height \\(12.\\) The smaller sector’s arc length is \\(\\tfrac{120}{360}\\cdot2\\pi\\cdot12=8\\pi,\\) so its base radius is \\(4\\) and its height is \\(\\sqrt{12^2-4^2}=8\\sqrt2.\\)\n\nThe larger sector (central angle \\(240^\\circ\\)) has arc length \\(16\\pi,\\) base radius \\(8,\\) and height \\(\\sqrt{12^2-8^2}=4\\sqrt5.\\)\n\nThe ratio of volumes is \\[\\frac{\\tfrac13\\pi\\cdot4^2\\cdot8\\sqrt2}{\\tfrac13\\pi\\cdot8^2\\cdot4\\sqrt5} =\\frac{\\sqrt{10}}{10}.\\]\n\nThus, the correct answer is C.",
+      "hints": [
+        "The arc length of each sector becomes the circumference of that cone’s base, giving its base radius",
+        "Each cone has slant height \\(12,\\) so find each height with the Pythagorean theorem before comparing \\(\\tfrac13\\pi r^2 h\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

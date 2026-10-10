@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2020-p19",
+  "title": "2020 AMC 10B Problem 19",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2020,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 25.5,
+    "source": 1620,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In a certain card game, a player is dealt a hand of \\(10\\) cards from a deck of \\(52\\) distinct cards. The number of distinct (unordered) hands that can be dealt to the player can be written as \\(158A00A4AA0.\\) What is the digit \\(A?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(7\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2020-p19.live",
+      "kind": "proof-sketch",
+      "text": "After canceling factors in the binomial coefficient, \\[ \\begin{aligned} \\binom{52}{10} &=10\\cdot17\\cdot13\\cdot7\\\\ &\\quad\\cdot47\\cdot46\\cdot11\\cdot43. \\end{aligned} \\] Dividing \\(158A00A4AA0\\) by the final factor \\(10,\\) the units digit of the remaining product is \\(A.\\)\n\nWorking modulo \\(10,\\) \\[ \\begin{aligned} A&\\equiv7\\cdot3\\cdot7\\cdot7\\cdot6\\cdot1\\cdot3\\\\ &\\equiv2\\pmod{10}. \\end{aligned} \\] Hence \\(A=2.\\) Thus, A is the correct answer.",
+      "hints": [
+        "The number of hands is \\(\\binom{52}{10}\\)",
+        "After factoring out a final \\(10,\\) only the units digit of the remaining product is needed"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

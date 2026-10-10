@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-geometry-2023-p8",
+  "title": "2023 HMMT February Geometry Problem 8",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2023,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 84.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Triangle \\(A B C\\) with \\(\\angle B A C>90^{\\circ}\\) has \\(A B=5\\) and \\(A C=7\\). Points \\(D\\) and \\(E\\) lie on segment \\(B C\\) such that \\(B D=D E=E C\\). If \\(\\angle B A C+\\angle D A E=180^{\\circ}\\), compute \\(B C\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\sqrt{111}",
+    "value": "\\sqrt{111}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2023-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(M\\) be the midpoint of \\(B C\\), and consider dilating about \\(M\\) with ratio \\(-\\frac{1}{3}\\). This takes \\(B\\) to \\(E, C\\) to \\(D\\), and \\(A\\) to some point \\(A^{\\prime}\\) on \\(A M\\) with \\(A M=3 A^{\\prime} M\\). Then the angle condition implies \\(\\angle D A E+\\angle E A^{\\prime} D=180^{\\circ}\\), so \\(A D A^{\\prime} E\\) is cyclic. Then by power of a point, we get\n\n\\[\\frac{A M^{2}}{3}=A M \\cdot A^{\\prime} M=D M \\cdot E M=\\frac{B C^{2}}{36}\\]\n\nBut we also know \\(A M^{2}=\\frac{2 A B^{2}+2 A C^{2}-B C^{2}}{4}\\), so we have \\(\\frac{2 A B^{2}+2 A C^{2}-B C^{2}}{12}=\\frac{B C^{2}}{36}\\), which rearranges to \\(B C^{2}=\\frac{3}{2}\\left(A B^{2}+A C^{2}\\right)\\). Plugging in the values for \\(A B\\) and \\(A C\\) gives \\(B C=\\sqrt{111}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

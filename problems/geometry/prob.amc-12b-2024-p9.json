@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-12b-2024-p9",
+  "title": "2024 AMC 12B Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.annulus",
+      "label": "Annulus",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.geometric-probability",
+      "label": "Geometric probability",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2024,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 24.4,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A dartboard is the region \\(B\\) in the coordinate plane consisting of points \\((x, y)\\) such that \\(|x| + |y| \\le 8.\\) A target \\(T\\) is the region where \\((x^2 + y^2 - 25)^2 \\le 49.\\) A dart is thrown and lands at a random point in \\(B.\\) The probability that the dart lands in \\(T\\) can be expressed as \\(\\dfrac{m}{n} \\cdot \\pi,\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. What is \\(m + n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(39\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(71\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(73\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(75\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(135\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "71"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2024-p9.live",
+      "kind": "proof-sketch",
+      "text": "The dartboard \\(|x| + |y| \\le 8\\) is a square with diagonals \\(16,\\) so its area is \\(\\tfrac12 \\cdot 16 \\cdot 16 = 128.\\) The target condition \\((x^2 + y^2 - 25)^2 \\le 49\\) means \\(-7 \\le x^2 + y^2 - 25 \\le 7,\\) i.e. \\(18 \\le x^2 + y^2 \\le 32,\\) an annulus of area \\(\\pi(32 - 18) = 14\\pi.\\)\n\nThe distance from the origin to a side of the square (for instance \\(x + y = 8\\)) is \\(\\dfrac{8}{\\sqrt2} = \\sqrt{32},\\) exactly the annulus’s outer radius. So the annulus is tangent to the square and lies entirely within \\(B.\\) The probability is \\(\\dfrac{14\\pi}{128} = \\dfrac{7}{64}\\pi,\\) giving \\(m + n = 7 + 64 = 71.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "The region \\(B\\) is a square with diagonals of length \\(16,\\) and \\((x^2+y^2-25)^2 \\le 49\\) means \\(18 \\le x^2 + y^2 \\le 32\\)",
+        "The annulus \\(T\\) has area \\(\\pi(32 - 18);\\) check that its outer radius \\(\\sqrt{32}\\) exactly reaches the sides of \\(B,\\) so \\(T\\) lies entirely inside \\(B\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

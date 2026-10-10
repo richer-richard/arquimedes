@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2010-p9",
+  "title": "2010 HMMT February Combinatorics Problem 9",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.games-and-strategy",
+      "label": "Games and strategy",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2010,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 86.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Rosencrantz and Guildenstern are playing a game where they repeatedly flip coins. Rosencrantz wins if 1 heads followed by 2009 tails appears. Guildenstern wins if 2010 heads come in a row. They will flip coins until someone wins. What is the probability that Rosencrantz wins?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2010-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{2^{2009}-1}{3 \\cdot 2^{2008}-1}\\) We can assume the first throw is heads (because neither player can win starting from a string of only tails). Let \\(x\\) be the probability that Rosencrantz wins. Let \\(y\\) be the probability that Rosencrantz wins after HT.\n\nWhenever there is a string of less than 2009 tails followed by a heads, the heads basically means the two are starting from the beginning, where Rosencrantz has probability \\(x\\) of winning.\nWe also know that \\(x=y\\left(1-\\frac{1}{2^{2009}}\\right)\\). This is because from the initial heads there is a \\(\\left(1-\\frac{1}{2^{2009}}\\right)\\) chance Rosencrantz doesn't lose, and in this case the last two flips are HT, in which case Rosencrantz has probability \\(y\\) of winning.\nIf the first two throws are HT, there is a \\(\\frac{1}{2^{2008}}\\) chance Rosencrantz wins; otherwise, there is eventually a heads, and so we are back in the case of starting from a heads, which corresponds to \\(x\\). Therefore, \\(y=\\frac{1}{2^{2008}}+x\\left(1-\\frac{1}{2^{2008}}\\right)\\). Putting this together with the previous equation, we get:\n\n\\[\\begin{aligned}\nx & =\\left(\\frac{1}{2^{2008}}+x\\left(1-\\frac{1}{2^{2008}}\\right)\\right)\\left(1-\\frac{1}{2^{2009}}\\right) \\\\\n\\Longrightarrow \\quad x & =\\left(\\frac{1+2^{2008} x-x}{2^{2008}}\\right)\\left(\\frac{2^{2009}-1}{\\left.2^{2009}\\right)}\\right. \\\\\n\\Longrightarrow \\quad 2^{4017} x & =x\\left(2^{4017}-2^{2009}-2^{2008}+1\\right)+2^{2009}-1 \\\\\n\\Longrightarrow \\quad x & =\\frac{2^{2009}-1}{2^{2009}+2^{2008}-1},\n\\end{aligned}\\]\n\nso the answer is \\(\\frac{2^{2009}-1}{2^{2009}+2^{2008}-1}=\\frac{2^{2009}-1}{3 \\cdot 2^{2008}-1}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

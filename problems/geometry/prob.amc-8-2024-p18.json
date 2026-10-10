@@ -1,0 +1,89 @@
+{
+  "id": "prob.amc-8-2024-p18",
+  "title": "2024 AMC 8 Problem 18",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.annulus",
+      "label": "Annulus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.linear-equation",
+      "label": "Linear equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.sector",
+      "label": "Sector",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2024,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 24.4,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Three concentric circles centered at \\(O\\) have radii of \\(1,\\) \\(2,\\) and \\(3.\\) Points \\(B\\) and \\(C\\) lie on the largest circle. The region between the two smaller circles is shaded, as is the portion of the region between the two larger circles bounded by central angle \\(BOC,\\) as shown in the figure below. Suppose the shaded and unshaded regions are equal in area. What is the measure of \\(\\angle BOC\\) in degrees?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(108\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(120\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(135\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(144\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(150\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "108"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2024-p18.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(\\theta\\) be the measure of \\(\\angle BOC.\\)\n\nOne component of the shaded region is the area of the circle with radius \\(2\\) minus the area of the circle with radius \\(1.\\) This part has area \\(4\\pi-\\pi=3\\pi.\\) The remaining area is a sector of the biggest circle minus the area of the circle with radius \\(2\\). This has area \\(\\dfrac{\\theta}{360}(9\\pi-4\\pi) = \\dfrac{\\theta}{360}(5\\pi).\\) Hence, the total area of the shaded region is \\(3\\pi + \\dfrac{\\theta}{360}(5\\pi).\\)\n\nNext, we note that the unshaded region is composed of the smallest circle and the unshaded portion of the outer ring. This will have a total area of \\(\\pi + \\dfrac{360-\\theta}{360}(5\\pi).\\)\n\nLastly, we equate the area of both regions and solve for \\(\\theta:\\) \\[ \\begin{gathered} 3\\pi + \\dfrac{\\theta}{360}(5\\pi) \\\\ = \\pi + \\dfrac{360-\\theta}{360}(5\\pi) \\end{gathered} \\] \\[ 2\\pi = \\dfrac{360-\\theta-\\theta}{360}(5\\pi) \\] \\[ \\dfrac{2}{5} = 1 - \\dfrac{2\\theta}{360} \\] \\[ 2\\theta = \\dfrac{3}{5}(360) \\] \\[ \\theta = 108. \\]\n\nThus, A is the correct answer.",
+      "hints": [
+        "Compute the area of the shaded annulus between radii \\(1\\) and \\(2\\)",
+        "Set shaded area equal to unshaded area and solve for the sector angle"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "46eb63c10bb86b85a28a72c2d5a4144d08c62dc8eae0649fc56d9dc5bfec54f5"
+    ],
+    "solutions": []
+  }
+}

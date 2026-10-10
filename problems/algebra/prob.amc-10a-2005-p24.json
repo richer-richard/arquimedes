@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2005-p24",
+  "title": "2005 AMC 10A Problem 24",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.difference-of-squares",
+      "label": "Difference of squares",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.prime",
+      "label": "Prime",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2005,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 32.6,
+    "source": 2120,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "For each positive integer \\(m \\gt 1,\\) let \\(P(m)\\) denote the greatest prime factor of \\(m.\\) For how many positive integers \\(n\\) is it true that both \\(P(n) = \\sqrt{n}\\) and \\(P(n + 48) = \\sqrt{n + 48}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2005-p24.live",
+      "kind": "proof-sketch",
+      "text": "The condition \\(P(n) = \\sqrt{n}\\) means \\(n\\) is the square of a prime \\(q,\\) and likewise \\(n + 48 = p^2\\) for a prime \\(p.\\) Then \\(48 = p^2 - q^2 = (p - q)(p + q).\\) Checking the same-parity factorizations of \\(48,\\) only \\(p - q = 2,\\ p + q = 24\\) yields primes, giving \\((p, q) = (13, 11)\\) and \\(n = 121.\\) So there is exactly one such \\(n.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "\\(P(n) = \\sqrt{n}\\) forces \\(n\\) to be the square of a prime",
+        "Write \\(n = q^2\\) and \\(n + 48 = p^2;\\) then \\(48 = p^2 - q^2 = (p - q)(p + q)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

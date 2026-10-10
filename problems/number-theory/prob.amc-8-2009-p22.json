@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-8-2009-p22",
+  "title": "2009 AMC 8 Problem 22",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2009,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 15.9,
+    "source": 1400,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many whole numbers between \\(1\\) and \\(1000\\) do not contain the digit \\(1?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(512\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(648\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(720\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(728\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(800\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "728"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2009-p22.live",
+      "kind": "proof-sketch",
+      "text": "We can case on the number of digits.\n\nThere are \\(8\\) one digit numbers excluding \\(1.\\)\n\nThere are \\(8 \\cdot 9 = 72\\) two digit numbers that lack the digit \\(1.\\)\n\nThere are \\(8 \\cdot 9 \\cdot 9 = 648\\) three digit numbers that do not include \\(1.\\)\n\nThis yields a total of \\[ 8 + 72 + 648 = 728 \\] numbers that do not contain the digit \\(1.\\)\n\nThus, D is the correct answer.",
+      "hints": [
+        "Count by number of digits, or pad numbers with leading zeroes.",
+        "For three padded digits, each position has \\(9\\) choices if digit \\(1\\) is forbidden, but exclude \\(000.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

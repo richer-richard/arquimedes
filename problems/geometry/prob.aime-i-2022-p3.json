@@ -1,0 +1,85 @@
+{
+  "id": "prob.aime-i-2022-p3",
+  "title": "2022 AIME I Problem 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.distance-chasing",
+      "label": "Distance chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangents",
+      "label": "Tangents",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.angle-bisector",
+      "label": "Angle bisector",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.isosceles-triangle",
+      "label": "Isosceles triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2022,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 51.4,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "In isosceles trapezoid \\(ABCD,\\) parallel bases \\(\\overline{AB}\\) and \\(\\overline{CD}\\) have lengths \\(500\\) and \\(650,\\) respectively, and \\(AD = BC = 333.\\) The angle bisectors of \\(\\angle A\\) and \\(\\angle D\\) meet at \\(P,\\) and the angle bisectors of \\(\\angle B\\) and \\(\\angle C\\) meet at \\(Q.\\) Find \\(PQ.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "242",
+    "value": "242"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2022-p3.live",
+      "kind": "proof-sketch",
+      "text": "Let the bisector of \\(\\angle A\\) meet \\(\\overline{CD}\\) at \\(A'.\\) Since \\(\\overline{AB} \\parallel \\overline{CD},\\) we have \\(\\angle DA'A = \\angle A'AB = \\angle A'AD,\\) so triangle \\(ADA'\\) is isosceles with \\(DA' = DA = 333.\\) The bisector of \\(\\angle D\\) is then the median from \\(D\\) in this triangle, so \\(P,\\) which lies on both bisectors, is the midpoint of \\(\\overline{AA'}.\\) Symmetrically, \\(Q\\) is the midpoint of \\(\\overline{BB'},\\) where \\(B'\\) is on \\(\\overline{CD}\\) with \\(CB' = 333.\\)\n\nPlace \\(D = (0, 0)\\) and \\(C = (650, 0),\\) so \\(A = (75, h)\\) and \\(B = (575, h)\\) for the appropriate height \\(h.\\) Then \\(A' = (333, 0)\\) and \\(B' = (650 - 333, 0) = (317, 0),\\) so \\[ \\begin{aligned} P &= \\left(\\frac{75 + 333}{2}, \\frac{h}{2}\\right) \\\\ &= \\left(204, \\frac{h}{2}\\right), \\end{aligned} \\] \\[ \\begin{aligned} Q &= \\left(\\frac{575 + 317}{2}, \\frac{h}{2}\\right) \\\\ &= \\left(446, \\frac{h}{2}\\right). \\end{aligned} \\]\n\nTherefore \\(PQ = 446 - 204 = 242.\\)",
+      "hints": [
+        "Let the bisector of \\(\\angle A\\) meet \\(\\overline{CD}\\) at \\(A':\\) alternate interior angles make triangle \\(ADA'\\) isosceles with \\(DA' = 333\\)",
+        "In isosceles triangle \\(ADA',\\) the bisector from \\(D\\) is also the median, so \\(P\\) is the midpoint of \\(AA'.\\) Do the same for \\(Q\\) and use coordinates."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2020-p15",
+  "title": "2020 AMC 10A 15",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "nt.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2020,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 24.0,
+    "source": 1420,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A positive integer divisor of \\(12!\\) is chosen at random. The probability that the divisor chosen is a perfect square can be expressed as \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. What is \\(m+n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(23\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "23"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2020-p15.live",
+      "kind": "proof-sketch",
+      "text": "The prime factorization of \\(12!\\) is \\(2^{10}3^5 5^2 7^1 11^1\\). Therefore \\(12!\\) has \\((10+1)(5+1)\\) \\(\\cdot(2+1)(1+1)(1+1)=792\\) positive divisors.\n\nA square divisor must use only even exponents, giving \\(6\\cdot3\\cdot2\\cdot1\\cdot1=36\\) square divisors. The probability is \\(\\frac{36}{792}=\\frac{1}{22}\\), so \\(m+n=1+22=23\\). Thus, E is the correct answer.",
+      "hints": [
+        "Factor \\(12!\\) into primes",
+        "A square divisor must choose only even prime exponents"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

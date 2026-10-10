@@ -1,0 +1,57 @@
+{
+  "id": "prob.aime-i-2023-p2",
+  "title": "2023 AIME I Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.substitution",
+      "label": "Substitution",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2023,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 38.7,
+    "source": 2100,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Positive real numbers \\(b \\ne 1\\) and \\(n\\) satisfy the equations \\[\\sqrt{\\log_b n} = \\log_b \\sqrt{n}\\] and \\[b \\cdot \\log_b n = \\log_b (bn).\\] The value of \\(n\\) is \\(\\frac{j}{k},\\) where \\(j\\) and \\(k\\) are relatively prime positive integers. Find \\(j + k.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "881",
+    "value": "881"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2023-p2.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(x = \\log_b n.\\) The first equation says \\(\\sqrt{x} = \\log_b n^{\\frac{1}{2}} = \\frac{x}{2},\\) so \\(x = \\frac{x^2}{4},\\) giving \\(x = 0\\) or \\(x = 4.\\) If \\(x = 0\\) then \\(n = 1,\\) and the second equation would read \\(0 = \\log_b b = 1,\\) impossible; so \\(x = 4.\\)\n\nThe second equation says \\(bx = \\log_b b + \\log_b n = 1 + x,\\) so \\(4b = 5\\) and \\(b = \\frac{5}{4}.\\) Then \\[n = b^4 = \\left(\\frac{5}{4}\\right)^4 = \\frac{625}{256},\\] which is in lowest terms, so \\(j + k = 625 + 256 = 881.\\)",
+      "hints": [
+        "Set \\(x = \\log_b n\\) and rewrite both equations in terms of \\(x\\) and \\(b.\\)",
+        "The first equation forces \\(\\sqrt{x} = \\frac{x}{2};\\) discard the root that breaks the second equation, which reads \\(bx = 1 + x.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2023-p9",
+  "title": "2023 AMC 10A Problem 9",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.parity",
+      "label": "Parity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2023,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 21.0,
+    "source": 1410,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A digital display shows the current date as an \\(8\\)-digit integer consisting of a \\(4\\)-digit year, followed by a \\(2\\)-digit month, followed by a \\(2\\)-digit date within the month. For example, Arbor Day this year is displayed as \\(20230428.\\) For how many dates in \\(2023\\) will each digit appear an even number of times in the \\(8\\)-digit display for that date?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(9\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "9"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2023-p9.live",
+      "kind": "proof-sketch",
+      "text": "The year \\(2023\\) already gives two \\(2\\)s (even), one \\(0\\), and one \\(3\\). So to make every digit occur an even number of times, the four digits of \\(MM\\) and \\(DD\\) must supply one more \\(0\\), one more \\(3\\), and two equal digits, while keeping the number of \\(2\\)s even. Checking the legal dates gives \\(01/13,\\) \\(01/31,\\) \\(02/23,\\) \\(03/11,\\) \\(03/22,\\) \\(10/13,\\) \\(10/31,\\) \\(11/03,\\) and \\(11/30,\\) exactly \\(9\\) dates. Thus, E is the correct answer.",
+      "hints": [
+        "The year \\(2023\\) contributes two \\(2\\)s (even), one \\(0,\\) and one \\(3\\)",
+        "The four month-and-day digits must supply one more \\(0\\) and one more \\(3,\\) with the remaining two digits equal to each other"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

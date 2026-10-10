@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-1985-p9",
+  "title": "1985 AIME Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.chord",
+      "label": "Chord",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1985,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 46.7,
+    "source": 2410,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "In a circle, parallel chords of lengths \\(2,\\) \\(3,\\) and \\(4\\) determine central angles of \\(\\alpha,\\) \\(\\beta,\\) and \\(\\alpha+\\beta\\) radians, respectively, where \\(\\alpha+\\beta\\lt\\pi.\\) If \\(\\cos\\alpha,\\) which is a positive rational number, is expressed as a fraction in lowest terms, what is the sum of its numerator and denominator?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "49",
+    "value": "49"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1985-p9.live",
+      "kind": "proof-sketch",
+      "text": "Put \\(k=\\frac{1}{2R},\\) \\(x=\\cos(\\frac{\\alpha}{2}),\\) and \\(y=\\cos(\\frac{\\beta}{2}).\\) The chord data give \\[ \\begin{aligned} \\sin\\frac\\alpha2&=2k,\\\\ \\sin\\frac\\beta2&=3k,\\\\ \\sin\\frac{\\alpha+\\beta}{2}&=4k. \\end{aligned} \\] The addition formula yields \\(2y+3x=4.\\) Also \\[ \\frac{1-x^2}{4}=\\frac{1-y^2}{9}, \\] so \\(9x^2-4y^2=5.\\) Substituting \\(y=\\frac{4-3x}{2}\\) gives \\(x=\\frac{7}{8}.\\) Hence \\[ \\cos\\alpha=2x^2-1=\\frac{17}{32}, \\] and the requested sum is \\(17+32=49.\\)",
+      "hints": [
+        "A chord subtending angle \\(\\theta\\) has length \\(2R\\sin(\\frac{\\theta}{2})\\)",
+        "Let \\(x=\\cos(\\frac{\\alpha}{2})\\) and \\(y=\\cos(\\frac{\\beta}{2}),\\) then eliminate the common radius"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-10a-2002-p11",
+  "title": "2002 AMC 10A Problem 11",
+  "category": "problem-solving-techniques",
+  "subjects": [
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "strategy.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "strategy.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2002,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 21.3,
+    "source": 1420,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Jamal wants to store \\(30\\) computer files on floppy disks, each of which has a capacity of \\(1.44\\) megabytes (mb). Three of his files require \\(0.8\\) mb of memory each, \\(12\\) more require \\(0.7\\) mb each, and the remaining \\(15\\) require \\(0.4\\) mb each. No file can be split between floppy disks. What is the minimal number of floppy disks that will hold all the files?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(14\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(16\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "13"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2002-p11.live",
+      "kind": "proof-sketch",
+      "text": "The files need \\(3(0.8)+12(0.7)+15(0.4)\\) \\(=16.8\\) mb. On any disk holding a \\(0.8\\) mb file, only one \\(0.4\\) mb file fits alongside it (since \\(0.8+0.7\\gt 1.44\\)), leaving at least \\(0.24\\) mb wasted. Across the three such disks that is at least \\(0.72\\) mb, so the effective demand is at least \\(16.8+0.72=17.52\\) mb, requiring at least \\(\\left\\lceil\\dfrac{17.52}{1.44}\\right\\rceil=13\\) disks.\n\nThis is achievable: \\(3\\) disks each hold one \\(0.8\\) file and one \\(0.4\\) file, \\(6\\) disks each hold two \\(0.7\\) files, and \\(4\\) disks each hold three \\(0.4\\) files.\n\nThus, the correct answer is B.",
+      "hints": [
+        "A \\(0.8\\) mb file leaves room for only one \\(0.4\\) mb file on its disk",
+        "Account for the wasted space on the three \\(0.8\\) mb disks, then build a packing that reaches the bound"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

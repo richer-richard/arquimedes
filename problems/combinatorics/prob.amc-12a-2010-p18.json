@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2010-p18",
+  "title": "2010 AMC 12A 18",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.lattice-paths",
+      "label": "Lattice paths",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2010,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 33.0,
+    "source": 1880,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A \\(16\\)-step path is to go from \\((-4,-4)\\) to \\((4,4)\\) with each step increasing either the \\(x\\)-coordinate or the \\(y\\)-coordinate by \\(1.\\) How many such paths stay outside or on the boundary of the square \\(-2\\le x\\le2,\\) \\(-2\\le y\\le2\\) at each step?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(92\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(144\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1568\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(1698\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(12{,}800\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "1698"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2010-p18.live",
+      "kind": "proof-sketch",
+      "text": "Every step increases \\(x+y\\) by \\(1,\\) which runs from \\(-8\\) to \\(8,\\) so each path passes through exactly one lattice point with \\(x+y=0.\\)\n\nTo stay out of the open square, that point \\((t,-t)\\) must have \\(|t|\\ge2,\\) so it is one of \\((\\pm2,\\mp2),(\\pm3,\\mp3),(\\pm4,\\mp4).\\)\n\nBy symmetry consider the three points \\((-4,4),(-3,3),(-2,2)\\) and double. The number of paths from \\((-4,-4)\\) to \\((-(4-j),4-j)\\) is \\(\\binom{8}{j},\\) and the number continuing on to \\((4,4)\\) is also \\(\\binom{8}{j}.\\)\n\nTherefore the total is \\[ \\begin{gathered} 2\\left(\\binom80^2+\\binom81^2+\\binom82^2\\right) \\\\ =2(1+64+784) \\\\ =1698. \\end{gathered} \\]\n\nThus, D is the correct answer.",
+      "hints": [
+        "Each step increases \\(x+y\\) by \\(1,\\) so the path meets the line \\(x+y=0\\) at exactly one lattice point",
+        "To avoid the square’s interior, that point is \\((\\pm2,\\mp2),(\\pm3,\\mp3),\\) or \\((\\pm4,\\mp4);\\) count paths through each"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

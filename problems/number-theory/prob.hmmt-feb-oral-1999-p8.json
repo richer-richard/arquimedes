@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-oral-1999-p8",
+  "title": "1999 HMMT February Oral Problem 8",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 1999,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "What is the smallest square-free composite number that can divide a number of the form \\(4242 \\ldots 42 \\pm 1\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-oral-1999-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "It is easy to see that such a number can never be divisible by \\(2,3,5\\), or 7 . They can be divisible by 11, the smallest example being \\(4242424241=11 \\cdot 547 \\cdot 705073\\). What makes this problem hard is finding the next prime that can divide such a number. Let \\(T_{n}=\\sum_{i=0}^{n} 42 \\cdot 10^{2 i}\\). Then the numbers \\(T_{n}\\) modulo a prime \\(p\\) will always be periodic, since \\(T_{n}=100 T_{n_{1}}+42\\), so we just need to compute one period and see if it contains \\(\\pm 1\\). Thus we find that modulo 13 we get \\(3,4,0\\), \\(3, \\ldots\\), modulo 17 we get \\(8,9,7,11,3,2,4,0,8, \\ldots\\), modulo 19 we get \\(4,5,10,16,8,6,15,3,0,4\\), \\(\\ldots\\), and modulo 23 we get \\(19,10,7,6,21,3,20,18,2,12,0,19, \\ldots\\), so none of these primes can ever divide \\(T_{n} \\pm 1\\). But \\(424241=29 \\cdot 14629\\), so 29 can also divide numbers of this form. Therefore the smallest composite number that can divide \\(T_{n} \\pm 1\\) for some \\(n\\) is \\(\\mathbf{3 1 9}\\), and the smallest such \\(n\\) is 83 .\n\nScore 30 points for the correct answer, 15 points for showing it is the smallest, 10 points for showing it does work. Just seeing that 11 is the smallest prime divisor is worth 5 points, finding for exactly which \\(n\\) is worth 5 more.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

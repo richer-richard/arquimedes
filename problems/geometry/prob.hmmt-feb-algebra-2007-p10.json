@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-algebra-2007-p10",
+  "title": "2007 HMMT February Algebra Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2007,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 93.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The polynomial \\(f(x)=x^{2007}+17 x^{2006}+1\\) has distinct zeroes \\(r_{1}, \\ldots, r_{2007}\\). A polynomial \\(P\\) of degree 2007 has the property that \\(P\\left(r_{j}+\\frac{1}{r_{j}}\\right)=0\\) for \\(j=1, \\ldots, 2007\\). Determine the value of \\(P(1) / P(-1)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-2007-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "| \\(\\mathbf{2 8 9}\\). |\n| :---: |\n| For some constant \\(k\\), we have |\n\n\\[P(z)=k \\prod_{j=1}^{2007}\\left(z-\\left(r_{j}+\\frac{1}{r_{j}}\\right)\\right)\\]\n\nNow writing \\(\\omega^{3}=1\\) with \\(\\omega \\neq 1\\), we have \\(\\omega^{2}+\\omega=-1\\). Then\n\n\\[\\begin{gathered}\nP(1) / P(-1)=\\frac{k \\prod_{j=1}^{2007}\\left(1-\\left(r_{j}+\\frac{1}{r_{j}}\\right)\\right)}{k \\prod_{j=1}^{2007}\\left(-1-\\left(r_{j}+\\frac{1}{r_{j}}\\right)\\right)}=\\prod_{j=1}^{2007} \\frac{r_{j}^{2}-r_{j}+1}{r_{j}^{2}+r_{j}+1}=\\prod_{j=1}^{2007} \\frac{\\left(-\\omega-r_{j}\\right)\\left(-\\omega^{2}-r_{j}\\right)}{\\left(\\omega-r_{j}\\right)\\left(\\omega^{2}-r_{j}\\right)} \\\\\n=\\frac{f(-\\omega) f\\left(-\\omega^{2}\\right)}{f(\\omega) f\\left(\\omega^{2}\\right)}=\\frac{\\left(-\\omega^{2007}+17 \\omega^{2006}+1\\right)\\left(-\\left(\\omega^{2}\\right)^{2007}+17\\left(\\omega^{2}\\right)^{2006}+1\\right)}{\\left(\\omega^{2007}+17 \\omega^{2006}+1\\right)\\left(\\left(\\omega^{2}\\right)^{2007}+17\\left(\\omega^{2}\\right)^{2006}+1\\right)}=\\frac{\\left(17 \\omega^{2}\\right)(17 \\omega)}{\\left(2+17 \\omega^{2}\\right)(2+17 \\omega)} \\\\\n=\\frac{289}{4+34\\left(\\omega+\\omega^{2}\\right)+289}=\\frac{289}{259} .\n\\end{gathered}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

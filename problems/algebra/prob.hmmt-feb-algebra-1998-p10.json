@@ -1,0 +1,48 @@
+{
+  "id": "prob.hmmt-feb-algebra-1998-p10",
+  "title": "1998 HMMT February Algebra Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.diophantine-equations-techniques",
+      "label": "Diophantine Equations techniques",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 1998,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 93.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "G.H. Hardy once went to visit Srinivasa Ramanujan in the hospital, and he started the conversation with: \"I came here in taxi-cab number 1729. That number seems dull to me, which I hope isn't a bad omen.\" \"Nonsense,\" said Ramanujan. \"The number isn't dull at all. It's quite interesting. It's the smallest number that can be expressed as the sum of two cubes in two different ways.\" Ramanujan had immediately seen that \\(1729=12^{3}+1^{3}=10^{3}+9^{3}\\). What is the smallest positive integer representable as the sum of the cubes of three positive integers in two different ways?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-1998-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let this smallest positive integer be represented as \\(a^{3}+b^{3}+c^{3}=d^{3}+e^{3}+f^{3}\\). By inspection, a solution is not possible with the first 4 cubes. We prove that it is impossible to write the same number as two different sums of the first 5 cubes. Because we necessarily need to use the 5 th cube (otherwise, this proof would be for the first 4 cubes), we have \\(5^{3}+b^{3}+c^{3}=d^{3}+e^{3}+f^{3}\\). Without loss of generality, suppose \\(d=5\\). By inspection, there is no solution to \\(b^{3}+c^{3}=e^{3}+f^{3}\\), such that \\(b, c, e, f \\leq 5\\) and \\(b, c\\) and \\(e, f\\) are unique.\n\nThen none of \\(d, e, f\\) are 5 . Then at least two must be 4 , otherwise the RHS would be too small. Without loss of generality, suppose \\(d=e=4\\). Then \\(b^{3}+c^{3}=3+f^{3}\\). By inspection, there are no possible solutions if \\(b, c, f \\leq 4\\).\n\nThus if \\(a=5\\), there are no solutions.\nSuppose that there is a solution within the first 6 cubes. Then \\(a=6\\). By the same analysis as above, \\(d=e=5\\), otherwise the RHS would be too small. Then \\(b^{3}+c^{3}=34+f^{3}\\). By inspection, we see that a possible solution is \\(b=3, c=2, f=1\\). Then the desired integer is \\(6^{3}+3^{3}+2^{3}=251\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

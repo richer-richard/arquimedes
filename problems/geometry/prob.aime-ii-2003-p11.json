@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2003-p11",
+  "title": "2003 AIME II Problem 11",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.median-geometry",
+      "label": "Median (geometry)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2003,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 57.7,
+    "source": 2840,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "Triangle \\(ABC\\) is a right triangle with \\(AC = 7,\\) \\(BC = 24,\\) and right angle at \\(C.\\) Point \\(M\\) is the midpoint of \\(\\overline{AB},\\) and \\(D\\) is on the same side of line \\(AB\\) as \\(C\\) so that \\(AD = BD = 15.\\) Given that the area of \\(\\triangle CDM\\) can be expressed as \\(\\frac{m\\sqrt{n}}{p},\\) where \\(m,\\) \\(n,\\) and \\(p\\) are positive integers, \\(m\\) and \\(p\\) are relatively prime, and \\(n\\) is not divisible by the square of any prime, find \\(m + n + p.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "578",
+    "value": "578"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2003-p11.live",
+      "kind": "proof-sketch",
+      "text": "The hypotenuse is \\(AB = \\sqrt{7^2 + 24^2} = 25,\\) and the median to the hypotenuse gives \\(CM = \\frac{25}{2}.\\) Since \\(AD = BD,\\) point \\(D\\) lies on the perpendicular to \\(AB\\) at \\(M,\\) so \\(DM \\perp AB\\) and \\[ \\begin{aligned} DM &= \\sqrt{15^2 - \\left(\\tfrac{25}{2}\\right)^2} \\\\ &= \\sqrt{\\tfrac{275}{4}} = \\tfrac{5\\sqrt{11}}{2}. \\end{aligned} \\]\n\nLet \\(\\beta = \\angle AMC.\\) In triangle \\(AMC\\) with \\(AM = CM = \\frac{25}{2}\\) and \\(AC = 7,\\) the law of cosines gives \\[ \\begin{aligned} \\cos\\beta &= \\frac{\\left(\\frac{25}{2}\\right)^2 + \\left(\\frac{25}{2}\\right)^2 - 7^2} {2 \\cdot \\frac{25}{2} \\cdot \\frac{25}{2}} \\\\ &= \\frac{527}{625}. \\end{aligned} \\] Since \\(C\\) and \\(D\\) are on the same side of \\(AB\\) and \\(MD \\perp AB,\\) we have \\(\\angle CMD = 90^\\circ - \\beta,\\) so \\(\\sin\\angle CMD = \\cos\\beta.\\)\n\nTherefore \\[ \\begin{aligned} [CDM] &= \\frac{1}{2} \\cdot \\frac{25}{2} \\cdot \\frac{5\\sqrt{11}}{2} \\cdot \\frac{527}{625} \\\\ &= \\frac{527\\sqrt{11}}{40}, \\end{aligned} \\] and \\(m + n + p = 527 + 11 + 40\\) \\(= 578.\\)",
+      "hints": [
+        "The median to the hypotenuse gives \\(CM = \\frac{25}{2},\\) and \\(D\\) lies on the perpendicular to \\(AB\\) at \\(M,\\) so \\(DM = \\sqrt{15^2 - \\left(\\frac{25}{2}\\right)^2}\\)",
+        "Use area \\(= \\frac{1}{2} \\cdot CM \\cdot DM \\cdot \\sin\\angle CMD,\\) where \\(\\angle CMD = 90^\\circ - \\angle AMC,\\) and get \\(\\cos\\angle AMC\\) from the law of cosines in triangle \\(AMC\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

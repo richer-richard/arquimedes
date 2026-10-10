@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2004-p28",
+  "title": "2004 HMMT February Guts Problem 28",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.solid-geometry",
+      "label": "Solid geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2004,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 81.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find the value of\n\n\\[\\binom{2003}{1}+\\binom{2003}{4}+\\binom{2003}{7}+\\cdots+\\binom{2003}{2002}\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2004-p28.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\left(2^{2003}-2\\right) / 3\\)\nLet \\(\\omega=-1 / 2+i \\sqrt{3} / 2\\) be a complex cube root of unity. Then, by the binomial theorem, we have\n\n\\[\\begin{aligned}\n\\omega^{2}(\\omega+1)^{2003} & =\\binom{2003}{0} \\omega^{2}+\\binom{2003}{1} \\omega^{3}+\\binom{2003}{2} \\omega^{4}+\\cdots+\\binom{2003}{2003} \\omega^{2005} \\\\\n2^{2003} & =\\binom{2003}{0}+\\binom{2003}{1}+\\binom{2003}{2}+\\cdots+\\binom{2003}{2003} \\\\\n\\omega^{-2}\\left(\\omega^{-1}+1\\right)^{2003} & =\\binom{2003}{0} \\omega^{-2}+\\binom{2003}{1} \\omega^{-3}+\\binom{2003}{2} \\omega^{-4}+\\cdots+\\binom{2003}{2003} \\omega^{-2005}\n\\end{aligned}\\]\n\nIf we add these together, then the terms \\(\\binom{2003}{n}\\) for \\(n \\equiv 1(\\bmod 3)\\) appear with coefficient 3 , while the remaining terms appear with coefficient \\(1+\\omega+\\omega^{2}=0\\). Thus the desired sum is just \\(\\left(\\omega^{2}(\\omega+1)^{2003}+2^{2003}+\\omega^{-2}\\left(\\omega^{-1}+1\\right)^{2003}\\right) / 3\\). Simplifying using \\(\\omega+1=-\\omega^{2}\\) and \\(\\omega^{-1}+1=-\\omega\\) gives \\(\\left(-1+2^{2003}+-1\\right) / 3=\\left(2^{2003}-2\\right) / 3\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

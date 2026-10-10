@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-team-2015-p8",
+  "title": "2015 HMMT November Team Problem 8",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.diophantine-equations-techniques",
+      "label": "Diophantine Equations techniques",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2015,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 56.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find any quadruple of positive integers \\((a, b, c, d)\\) satisfying \\(a^{3}+b^{4}+c^{5}=d^{11}\\) and \\(a b c<10^{5}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2015-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\quad(a, b, c, d)=(128,32,16,4)\\) or \\((a, b, c, d)=(160,16,8,4)\\)\nIt's easy to guess that there are solutions such that \\(a, b, c, d\\) are in the form of \\(n^{x}\\), where \\(n\\) is a rather small number. After a few attempts, we can see that we obtain simple equations when \\(n=2\\) or \\(n=3\\) : for \\(n=2\\), the equation becomes in the form of \\(2^{t}+2^{t}+2^{t+1}=2^{t+2}\\) for some non-negative integer \\(t\\); for \\(n=3\\), the equation becomes in the form of \\(3^{t}+3^{t}+3^{t}=3^{t+1}\\) for some non-negative integer \\(t\\). In the first case, we hope that \\(t\\) is a multiple of two of \\(3,4,5\\), that \\(t+1\\) is a multiple of the last one, and that \\(t+2\\) is a multiple of 11 . Therefore, \\(t \\equiv 15,20,24(\\bmod 60)\\) and \\(t \\equiv 9(\\bmod 11)\\). It's easy to check that the only solution that satisfies the given inequality is the solution with \\(t=20\\), and \\((a, b, c, d)=(128,32,16,4)\\). In the case where \\(n=3\\), we must have that \\(t\\) is a multiple of 60 , which obviously doesn't satisfy the inequality restriction. Remark: By programming, we find that the only two solutions are \\((a, b, c, d)=(128,32,16,4)\\) and \\((a, b, c, d)=(160,16,8,4)\\), with the the former being the intended solution.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

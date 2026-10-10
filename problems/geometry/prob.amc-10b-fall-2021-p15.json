@@ -1,0 +1,94 @@
+{
+  "id": "prob.amc-10b-fall-2021-p15",
+  "title": "2021 Fall AMC 10B Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.congruence-geometry",
+      "label": "Congruence (geometry)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.square-geometry",
+      "label": "Square (geometry)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2021,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 34.9,
+    "source": 1950,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In square \\(ABCD,\\) points \\(P\\) and \\(Q\\) lie on \\(\\overline{AD}\\) and \\(\\overline{AB},\\) respectively. Segments \\(\\overline{BP}\\) and \\(\\overline{CQ}\\) intersect at right angles at \\(R,\\) with \\(BR = 6\\) and \\(PR = 7.\\) What is the area of the square?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 85 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 93 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 100 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 117 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 125 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "117"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-fall-2021-p15.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(BR=6\\) and \\(PR=7,\\) we have \\(BP=13.\\) The right-angle and square-angle chasing gives \\(\\triangle PAB\\cong\\triangle QBC,\\) so \\(CQ=BP=13.\\)\n\nBecause \\(BP\\perp CQ,\\) point \\(R\\) is the foot of the altitude from \\(B\\) to the hypotenuse \\(CQ\\) of right triangle \\(BQC.\\) Thus \\[QR\\cdot RC=BR^2=36\\] and \\[QR+RC=CQ=13.\\]\n\nSo \\(QR\\) and \\(RC\\) are \\(4\\) and \\(9.\\) Because \\(P\\) lies on \\(\\overline{AD},\\) we have \\(AP\\le AB.\\) Congruence gives \\(BQ=AP,\\) while the right-triangle projection formulas give \\(BQ^2=CQ\\cdot QR\\) and \\(BC^2=CQ\\cdot RC.\\) Hence \\(QR\\le RC,\\) so \\(QR=4\\) and \\(RC=9.\\) Therefore, \\[ \\begin{aligned} BC^2&=BR^2+RC^2\\\\ &=6^2+9^2\\\\ &=117. \\end{aligned} \\]\n\nThe area of the square is \\(117.\\)\n\nThus, the answer is D .",
+      "hints": [
+        "\\(BP=13\\) by the \\(6,7,13\\) triangle",
+        "Use the altitude theorem in right triangle \\(BQC\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "42e02764289b04e8773fb1753d91e866d5e31dab8053aaf554556c31ab56ae25"
+    ],
+    "solutions": []
+  }
+}

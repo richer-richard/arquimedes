@@ -1,0 +1,109 @@
+{
+  "id": "prob.usa-tst-2019-p6",
+  "title": "USA TST 2019 Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.cyclic-quadrilaterals",
+      "label": "Cyclic quadrilaterals",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inversion",
+      "label": "Inversion",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.miquel-point",
+      "label": "Miquel point",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pappus-theorem",
+      "label": "Pappus theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.radical-axis-theorem",
+      "label": "Radical axis theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.spiral-similarity",
+      "label": "Spiral similarity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.tangents",
+      "label": "Tangents",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TST",
+    "year": 2019,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 111.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(ABC\\) be a triangle with incenter \\(I\\),\nand let \\(D\\) be a point on line \\(BC\\) satisfying \\(\\angle AID = 90^\\circ\\).\nLet the excircle of triangle \\(ABC\\) opposite the vertex \\(A\\)\nbe tangent to \\(\\overline{BC}\\) at point \\(A_1\\).\nDefine points \\(B_1\\) on \\(\\overline{CA}\\) and \\(C_1\\) on \\(\\overline{AB}\\) analogously,\nusing the excircles opposite \\(B\\) and \\(C\\), respectively.\n\nProve that if quadrilateral \\(AB_1A_1C_1\\) is cyclic,\nthen \\(\\overline{AD}\\) is tangent to the circumcircle of \\(\\triangle DB_1C_1\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tst-2019-p6.evanchen",
+      "kind": "proof-sketch",
+      "text": "We present two solutions.\n\nFirst solution using spiral similarity (Ankan Bhattacharya)..\nFirst, we prove the part of the problem\nwhich does not depend on the condition \\(A B_1 A_1 C_1\\) is cyclic.\n\nLemma.\n Let \\(ABC\\) be a triangle and define \\(I\\), \\(D\\), \\(B_1\\), \\(C_1\\)\n as in the problem.\n Moreover, let \\(M\\) denote the midpoint of \\(\\overline{AD}\\).\n Then \\(\\overline{AD}\\) is tangent to \\((AB_1C_1)\\),\n and moreover \\(\\overline{B_1 C_1} \\parallel \\overline{IM}\\).\n\nProof.\n Let \\(E\\) and \\(F\\) be the tangency points of the incircle.\n Denote by \\(Z\\) the Miquel point of \\(BFEC\\),\n i.e.\\ the second intersection\n of the circle with diameter \\(\\overline{AI}\\) and the circumcircle.\n\n Note that \\(A\\), \\(Z\\), \\(D\\) are collinear,\n by radical axis on \\((ABC)\\), \\((AFIE)\\), \\((BIC)\\).\n\n[Diagram omitted from this imported TeX transcription.]\n\n Then the spiral similarity gives us\n \\[ \\frac{ZF}{ZE} = \\frac{BF}{CE} = \\frac{AC_1}{AB_1} \\]\n which together with \\(\\measuredangle FZE = \\measuredangle FAE = \\measuredangle BAC\\)\n implies that \\(\\triangle ZFE\\)\n and \\(\\triangle AC_1B_1\\) are (directly) similar.\n (See IMO Shortlist 2006 G9 for a similar application\n of spiral similarity.)\n\n Now the remainder of the proof is just angle chasing.\n First, since\n \\[ \\measuredangle DAC_1 = \\measuredangle ZAF = \\measuredangle ZEF = \\measuredangle AB_1C_1 \\]\n we have \\(\\overline{AD}\\) is tangent to \\((AB_1C_1)\\).\n Moreover, to see that \\(\\overline{IM} \\parallel \\overline{B_1C_1}\\), write\n \\[\\begin{aligned}\n \\measuredangle (\\overline{AI}, \\overline{B_1C_1})\n &= \\measuredangle IAC + \\measuredangle AB_1C_1 = \\measuredangle BAI + \\measuredangle ZEF\n = \\measuredangle FAI + \\measuredangle ZAF \\\\\n &= \\measuredangle ZAI = \\measuredangle MAI = \\measuredangle AIM\n \\end{aligned}\\]\n the last step since \\(\\triangle AID\\) is right with hypotenuse\n \\(\\overline{AD}\\), and median \\(\\overline{IM}\\).\n\nNow we return to the present problem\nwith the additional condition.\n\n[Diagram omitted from this imported TeX transcription.]\n\nClaim.\n Given the condition, we actually have\n \\(\\angle AB_1A_1 = \\angle AC_1A_1 = 90^\\circ\\).\n\nProof.\n Let \\(I_A\\), \\(I_B\\) and \\(I_C\\) be the excenters of \\(\\triangle ABC\\).\n Then the perpendiculars to \\(\\overline{BC}\\), \\(\\overline{CA}\\), \\(\\overline{AB}\\)\n from \\(A_1\\), \\(B_1\\), \\(C_1\\) respectively meet at\n the so-called Bevan point \\(V\\)\n (which is the circumcenter of \\(\\triangle I_A I_B I_C\\)).\n\n Now \\(\\triangle AB_1C_1\\) has circumdiameter \\(\\overline{AV}\\).\n We are given \\(A_1\\) lies on this circle,\n so if \\(V \\neq A_1\\) then \\(\\overline{AA_1} \\perp \\overline{A_1V}\\).\n But \\(\\overline{A_1V} \\perp \\overline{BC}\\) by definition,\n which would imply \\(\\overline{AA_1} \\parallel \\overline{BC}\\), which is absurd.\n\nClaim.\n Given the condition the points \\(B_1\\), \\(I\\), \\(C_1\\) are collinear\n (hence with \\(M\\)).\n\nProof.\n By Pappus theorem on \\(\\overline{I_B A I_C}\\) and \\(\\overline{BA_1C}\\)\n after the previous claim.\n\nTo finish, since \\(\\overline{DMA}\\) was tangent to the circumcircle of\n\\(\\triangle AB_1C_1\\), we have \\(MD^2 = MA^2 = MC_1 \\cdot MB_1\\),\nimplying the required tangency.\n\nRemark.\nThe triangles satisfying the problem hypothesis\nare exactly the ones satisfying \\(r_A = 2R\\),\nwhere \\(R\\) and \\(r_A\\) denote the circumradius and \\(A\\)-exradius.\n\nRemark.\n If \\(P\\) is the foot of the \\(A\\)-altitude\n then this should also imply \\(AB_1PC_1\\) is harmonic.\n\nSecond solution by inversion and mixtilinears (Anant Mudgal)..\nAs in the end of the preceding solution, we have\n\\(\\angle AB_1A_1=\\angle AC_1A_1=90^{\\circ}\n\\quad\\text{and}\\quad I \\in \\overline{B_1 C_1}\\).\nLet \\(M\\) be the midpoint of minor arc \\(BC\\)\nand \\(N\\) be the midpoint of arc \\(\\widehat{BAC}\\).\nLet \\(L\\) be the intouch point on \\(\\overline{BC}\\).\nLet \\(O\\) be the circumcenter of \\(\\triangle ABC\\).\nLet \\(K=\\overline{AI} \\cap \\overline{BC}\\).\n\n[Diagram omitted from this imported TeX transcription.]\n\nClaim.\nWe have \\(\\angle (\\overline{AI}, \\overline{B_1C_1})=\\angle IAD\\).\n\nProof. Let \\(Z\\) lie on \\((ABC)\\) with \\(\\angle AZI=90^{\\circ}\\). By radical axis theorem on \\((AIZ), (BIC),\\) and \\((ABC)\\), we conclude that \\(D\\) lies on \\(\\overline{AZ}\\). Let \\(\\overline{NI}\\) meet \\((ABC)\\) again at \\(T \\neq N\\).\n\nInversion in \\((BIC)\\) maps \\(\\overline{AI}\\) to \\(\\overline{KI}\\) and \\((ABC)\\) to \\(\\overline{BC}\\).\nThus, \\(Z\\) maps to \\(L\\), so \\(Z, L, M\\) are collinear.\nSince \\(BL=CV\\) and \\(OI=OV\\), we see that \\(MLIN\\) is a trapezoid with \\(\\overline{IL} \\parallel \\overline{MN}\\).\nThus, \\(\\overline{ZT} \\parallel \\overline{MN}\\).\n\nIt is known that \\(\\overline{AT}\\) and \\(\\overline{AA_1}\\) are isogonal in angle \\(BAC\\).\nSince \\(\\overline{AV}\\) is a circumdiameter in \\((AB_1C_1)\\), so \\(\\overline{AT} \\perp \\overline{B_1C_1}\\).\nSo \\(\\measuredangle ZAI=\\measuredangle NMT=90^{\\circ}-\\measuredangle TAI=\\measuredangle (\\overline{AI}, \\overline{B_1C_1})\\).\n\nLet \\(X\\) be the midpoint of \\(\\overline{AD}\\) and \\(G\\) be the reflection of \\(I\\) in \\(X\\).\nSince \\(AIDG\\) is a rectangle, we have \\(\\measuredangle AIG=\\measuredangle ZAI=\\measuredangle (\\overline{AI}, \\overline{B_1C_1})\\),\nby the previous claim. So \\(\\overline{IG}\\) coincides with \\(\\overline{B_1C_1}\\).\nNow \\(\\overline{AI}\\) bisects \\(\\angle B_1AC_1\\) and \\(\\angle IAG=90^{\\circ}\\), so \\((\\overline{IG}; \\overline{B_1C_1})=-1\\).\n\nSince \\(\\angle IDG=90^{\\circ}\\), we see that \\(\\overline{DI}\\) and \\(\\overline{DG}\\) are bisectors of angle \\(B_1DC_1\\).\nNow \\(\\angle XDI=\\angle XID \\implies \\angle XDC_1=\\angle XID-\\angle IDB_1=\\angle DB_1C_1\\),\nso \\(\\overline{XD}\\) is tangent to \\((DB_1C_1)\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

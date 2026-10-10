@@ -1,0 +1,79 @@
+{
+  "id": "prob.ahsme-1999-p30",
+  "title": "1999 AHSME Problem 30",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1999,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 48.0,
+    "source": 2460,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The number of ordered pairs of integers \\((m, n)\\) for which \\(mn \\ge 0\\) and\n\n\\[m^3 + n^3 + 99mn = 33^3\\]\n\nis equal to",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(33\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(35\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(99\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "35"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1999-p30.live",
+      "kind": "proof-sketch",
+      "text": "Writing \\(z = -33,\\) the equation becomes \\(m^3 + n^3 + z^3 - 3mnz = 0,\\) which factors as \\[ \\begin{aligned} &(m + n - 33) \\\\ &\\quad {}\\cdot \\scriptsize\\left(m^2 + n^2 + 33^2 - mn + 33m + 33n\\right) \\\\ &= 0. \\end{aligned} \\]\n\nThe second factor equals \\(\\scriptsize\\tfrac12\\big[(m - n)^2 + (m + 33)^2 + (n + 33)^2\\big],\\) which is \\(0\\) only at \\((m, n) = (-33, -33);\\) this satisfies \\(mn \\ge 0.\\)\n\nOtherwise \\(m + n = 33.\\) With \\(mn \\ge 0\\) both are nonnegative, giving \\((0, 33), (1, 32), \\ldots, (33, 0),\\) which is \\(34\\) pairs. Together there are \\(35\\) solutions.\n\nThus, the correct answer is D.",
+      "hints": [
+        "Since \\(99 = 3 \\cdot 33,\\) the equation is \\(m^3 + n^3 + (-33)^3\\) \\(- 3mn(-33) = 0\\)",
+        "Use \\(x^3 + y^3 + z^3\\) \\(- 3xyz = (x + y + z)\\) \\(\\cdot (x^2 + y^2 + z^2 - xy - yz - zx)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

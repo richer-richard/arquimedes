@@ -1,0 +1,59 @@
+{
+  "id": "prob.aime-ii-2006-p2",
+  "title": "2006 AIME II Problem 2",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-inequality",
+      "label": "Triangle inequality",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2006,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 33.4,
+    "source": 1890,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The lengths of the sides of a triangle with positive area are \\(\\log_{10} 12,\\) \\(\\log_{10} 75,\\) and \\(\\log_{10} n,\\) where \\(n\\) is a positive integer. Find the number of possible values for \\(n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "893",
+    "value": "893"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2006-p2.live",
+      "kind": "proof-sketch",
+      "text": "The triangle inequality requires \\(\\log n \\lt \\log 12 + \\log 75 = \\log 900\\) and \\(\\log 12 + \\log n \\gt \\log 75,\\) that is \\(\\log n \\gt \\log 75 - \\log 12 = \\log \\frac{25}{4}.\\) The remaining inequality, \\(\\log 75 + \\log n \\gt \\log 12,\\) is automatic because \\(n \\ge 1\\) and \\(75 \\gt 12.\\)\n\nSo \\(\\frac{25}{4} \\lt n \\lt 900,\\) which for integers means \\(7 \\le n \\le 899.\\) That gives \\(899 - 7 + 1 = 893\\) possible values of \\(n.\\)",
+      "hints": [
+        "The three lengths must satisfy the triangle inequality; two of the three conditions bound \\(\\log_{10} n\\) from both sides.",
+        "\\(\\log 75 - \\log 12\\) \\(\\lt \\log n \\lt\\) \\(\\log 75 + \\log 12,\\) so \\(\\frac{25}{4} \\lt n \\lt 900.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

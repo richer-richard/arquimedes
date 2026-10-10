@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-i-2019-p2",
+  "title": "2019 AIME I Problem 2",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.counting-pairs",
+      "label": "Counting pairs",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2019,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 45.6,
+    "source": 1950,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Jenn randomly chooses a number \\(J\\) from \\(1,\\) \\(2,\\) \\(3,\\) \\(\\ldots,\\) \\(19,\\) \\(20.\\) Bela then randomly chooses a number \\(B\\) from \\(1,\\) \\(2,\\) \\(3,\\) \\(\\ldots,\\) \\(19,\\) \\(20\\) distinct from \\(J.\\) The value of \\(B - J\\) is at least \\(2\\) with a probability that can be expressed in the form \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "29",
+    "value": "29"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2019-p2.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(20 \\cdot 19 = 380\\) equally likely ordered pairs \\((J, B)\\) with \\(B \\neq J.\\) The condition \\(B \\ge J + 2\\) allows \\(19 - J\\) choices of \\(B\\) for each \\(J \\le 18,\\) so the number of favorable pairs is \\[ \\begin{aligned} &\\sum_{J=1}^{18} (19 - J) \\\\ &= 18 + 17 + \\cdots + 1 = 171. \\end{aligned} \\]\n\nThe probability is \\(\\frac{171}{380} = \\frac{9}{20},\\) so \\(m + n = 9 + 20 = 29.\\)",
+      "hints": [
+        "All \\(20 \\cdot 19\\) ordered pairs \\((J, B)\\) with \\(B \\neq J\\) are equally likely",
+        "For each \\(J\\) there are \\(19 - J\\) values of \\(B\\) with \\(B \\ge J + 2,\\) so the favorable count is \\(1 + 2 + \\cdots + 18\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

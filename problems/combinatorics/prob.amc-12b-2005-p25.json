@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2005-p25",
+  "title": "2005 AMC 12B 25",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2005,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 41.0,
+    "source": 2520,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Six ants simultaneously stand on the six vertices of a regular octahedron, with each ant at a different vertex. Simultaneously and independently, each ant moves from its vertex to one of the four adjacent vertices, each with equal probability. What is the probability that no two ants arrive at the same vertex?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{5}{256}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{21}{1024}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{11}{512}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{23}{1024}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{3}{128}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "5/256"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2005-p25.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(4^6\\) equally likely combinations of moves. Label the vertices \\(A, B, C, A', B', C',\\) where primed vertices are opposite the corresponding unprimed ones. An ant cannot move to its own vertex or the opposite one, so a valid outcome is a permutation \\(f\\) with \\(f(A) \\notin \\{A, A'\\},\\) and similarly for each pair.\n\nThere are \\(4 \\cdot 3 = 12\\) ordered choices for \\((f(A), f(A')).\\) Of these, \\(f(A)\\) and \\(f(A')\\) are opposite in \\(4\\) cases and adjacent in \\(8.\\)\n\nIf \\(f(A), f(A')\\) are opposite, say \\(B, B',\\) then \\(\\{f(C), f(C')\\} = \\{A, A'\\}\\) and \\(\\{f(B), f(B')\\} = \\{C, C'\\},\\) giving \\(4 \\cdot 2 \\cdot 2 = 16\\) valid combinations.\n\nIf \\(f(A), f(A')\\) are adjacent, say \\(B, C,\\) then one of \\(f(B), f(B')\\) must be \\(C'\\) and there are \\(4\\) ordered choices for \\((f(B), f(B')),\\) each leaving \\(2\\) for \\((f(C), f(C')):\\) that is \\(8 \\cdot 4 \\cdot 2 = 64\\) valid combinations.\n\nHence the probability is \\[ \\dfrac{16 + 64}{4^6} = \\dfrac{80}{4096} = \\dfrac{5}{256}. \\]\n\nThus, the correct answer is A.",
+      "hints": [
+        "There are \\(4^6\\) move combinations; each vertex is non-adjacent only to its opposite",
+        "A valid final assignment is a permutation with no vertex sent to itself or its opposite; split by whether opposite vertices’ images are opposite or adjacent"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-i-2025-p2",
+  "title": "2025 AIME I Problem 2",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.shoelace-formula",
+      "label": "Shoelace formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.vector",
+      "label": "Vector",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2025,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 44.9,
+    "source": 2340,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "On \\(\\triangle ABC\\) points \\(A,\\) \\(D,\\) \\(E,\\) and \\(B\\) lie in that order on side \\(\\overline{AB}\\) with \\(AD = 4,\\) \\(DE = 16,\\) and \\(EB = 8.\\) Points \\(A,\\) \\(F,\\) \\(G,\\) and \\(C\\) lie in that order on side \\(\\overline{AC}\\) with \\(AF = 13,\\) \\(FG = 52,\\) and \\(GC = 26.\\) Let \\(M\\) be the reflection of \\(D\\) through \\(F,\\) and let \\(N\\) be the reflection of \\(G\\) through \\(E.\\) Quadrilateral \\(DEGF\\) has area \\(288.\\) Find the area of heptagon \\(AFNBCEM.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "588",
+    "value": "588"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2025-p2.live",
+      "kind": "proof-sketch",
+      "text": "Here \\(AB = 4 + 16 + 8 = 28\\) and \\(AC = 13 + 52 + 26 = 91,\\) so \\(D\\) and \\(F\\) lie \\(\\frac{1}{7}\\) of the way from \\(A\\) along their sides while \\(E\\) and \\(G\\) lie \\(\\frac{5}{7}\\) of the way. Triangles sharing angle \\(A\\) have areas proportional to the products of the adjacent sides, so \\([ADF] = \\frac{1}{49}[ABC]\\) and \\([AEG] = \\frac{25}{49}[ABC].\\) Therefore \\[ \\begin{aligned} [DEGF] &= [AEG] - [ADF] \\\\ &= \\frac{24}{49}[ABC] = 288, \\end{aligned} \\] which gives \\([ABC] = 588.\\)\n\nNow set \\(\\mathbf{b} = \\overrightarrow{AB}\\) and \\(\\mathbf{c} = \\overrightarrow{AC},\\) so that \\(D = \\frac{1}{7}\\mathbf{b},\\) \\(E = \\frac{5}{7}\\mathbf{b},\\) \\(F = \\frac{1}{7}\\mathbf{c},\\) \\(G = \\frac{5}{7}\\mathbf{c},\\) and the reflections are \\(M = 2F - D = \\frac{1}{7}(2\\mathbf{c} - \\mathbf{b})\\) and \\(N = 2E - G = \\frac{1}{7}(10\\mathbf{b} - 5\\mathbf{c}).\\) The shoelace formula for \\(AFNBCEM\\) sums cross products of consecutive vertices: the two terms at \\(A\\) vanish, and \\[ \\begin{aligned} F \\times N &= -\\tfrac{10}{49}\\,\\mathbf{b} \\times \\mathbf{c}, \\\\ N \\times B &= \\tfrac{5}{7}\\,\\mathbf{b} \\times \\mathbf{c}, \\\\ B \\times C &= \\mathbf{b} \\times \\mathbf{c}, \\\\ C \\times E &= -\\tfrac{5}{7}\\,\\mathbf{b} \\times \\mathbf{c}, \\\\ E \\times M &= \\tfrac{10}{49}\\,\\mathbf{b} \\times \\mathbf{c}. \\end{aligned} \\]\n\nEverything cancels except the single term \\(\\mathbf{b} \\times \\mathbf{c},\\) so the heptagon’s area is \\(\\frac{1}{2}\\left|\\mathbf{b} \\times \\mathbf{c}\\right| = [ABC] = 588.\\)",
+      "hints": [
+        "Since \\(AB = 28\\) and \\(AC = 91,\\) the points \\(D\\) and \\(F\\) sit \\(\\frac{1}{7}\\) of the way from \\(A,\\) while \\(E\\) and \\(G\\) sit \\(\\frac{5}{7}\\) of the way, so \\([DEGF]\\) is a fixed fraction of \\([ABC]\\)",
+        "Write \\(M = 2F - D\\) and \\(N = 2E - G\\) as vectors from \\(A,\\) then apply the shoelace formula to the heptagon; almost everything cancels"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "d50b19198903aec8dec475e00ff6469dd85f21348ac40b99513c84a1e150a7ad"
+    ],
+    "solutions": []
+  }
+}

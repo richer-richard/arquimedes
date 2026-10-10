@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-guts-2014-p32",
+  "title": "2014 HMMT February Guts Problem 32",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.quadratic-functions",
+      "label": "Quadratic functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2014,
+    "number": 32
+  },
+  "difficulty": {
+    "course": 85.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find all ordered pairs \\((a, b)\\) of complex numbers with \\(a^{2}+b^{2} \\neq 0, a+\\frac{10 b}{a^{2}+b^{2}}=5\\), and \\(b+\\frac{10 a}{a^{2}+b^{2}}=4\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2014-p32.hmmt",
+      "kind": "proof-sketch",
+      "text": "The first equation plus \\(i\\) times the second yields \\(5+4 i=a+b i+\\frac{10(b+a i)}{a^{2}+b^{2}}=a+b i-\\frac{10 i}{a+b i}\\), which is equivalent to \\(a+b i=\\frac{(5 \\pm 3)+4 i}{2}\\) by the quadratic formula.\nSimilarly, the second equation plus \\(i\\) times the first yields \\(4+5 i=b+a i-\\frac{10 i}{b+a i}\\), which is equivalent to \\(b+a i=\\frac{4+(5 \\pm 3) i}{2}\\).\nLetting \\(\\epsilon_{1}, \\epsilon_{2} \\in\\{-1,1\\}\\) be the signs in \\(a+b i\\) and \\(b+a i\\), we get \\((a, b)=\\frac{1}{2}(a+b i, b+a i)-\\frac{1}{2} i(b+a i, a+b i)=\\) \\(\\left(\\frac{10+\\left(\\epsilon_{1}+\\epsilon_{2}\\right) 3}{4}, \\frac{8+\\left(\\epsilon_{2}-\\epsilon_{1}\\right) 3 i}{4}\\right)\\).\nComment. Many alternative approaches are possible. For instance, \\(\\frac{5-a}{b}=\\frac{4-b}{a} \\Longrightarrow b-2=\\) \\(\\epsilon \\sqrt{(a-1)(a-4)}\\) for some \\(\\epsilon \\in\\{-1,1\\}\\), and substituting in and expanding gives \\(0=\\left(-2 a^{2}+5 a\\right) \\epsilon \\sqrt{(a-1)(a-4)}\\).\nMore symmetrically, we may write \\(a=\\lambda(4-b), b=\\lambda(5-a)\\) to get \\((a, b)=\\frac{\\lambda}{1-\\lambda^{2}}(4-5 \\lambda, 5-4 \\lambda)\\), and then plug into \\(a^{2}+b^{2}=10 \\lambda\\) to get \\(0=10\\left(\\lambda^{4}+1\\right)-41\\left(\\lambda^{3}+\\lambda\\right)+60 \\lambda^{2}=(\\lambda-2)(2 \\lambda-1)\\left(5 \\lambda^{2}-8 \\lambda+5\\right)\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

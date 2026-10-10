@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-guts-2024-p31",
+  "title": "2024 HMMT November Guts Problem 31",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.least-common-multiples-lcm",
+      "label": "Least common multiples (lcm)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular Arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.qm-am-gm-hm-power-mean",
+      "label": "QM-AM-GM-HM / Power Mean",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2024,
+    "number": 31
+  },
+  "difficulty": {
+    "course": 66.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Positive integers \\(a, b\\), and \\(c\\) have the property that \\(\\operatorname{lcm}(a, b), \\operatorname{lcm}(b, c)\\), and \\(\\operatorname{lcm}(c, a)\\) end in 4, 6, and 7, respectively, when written in base 10. Compute the minimum possible value of \\(a+b+c\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "28",
+    "value": "28"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2024-p31.hmmt",
+      "kind": "proof-sketch",
+      "text": "Note that \\(a+b+c=28\\) is achieved when \\((a, b, c)=(19,6,3)\\). To show we cannot do better, first observe we would need \\(a+c<27\\) and \\(\\operatorname{lcm}(a, c) \\leq a c \\leq 13 \\cdot 13=169\\), which is only possible when \\(\\operatorname{lcm}(a, c)\\) is \\(7,17,57,77\\), or 117 . We do casework on each value:\n\n- \\(\\operatorname{lcm}(a, c)=7\\). Then \\(a\\) and \\(c\\) are both 1 or 7 , so \\(\\operatorname{lcm}(a, b)\\) and \\(\\operatorname{lcm}(b, c)\\) are both \\(b\\) or \\(7 b\\). It is impossible for one of \\(b\\) and \\(7 b\\) to end in 4 and the other to end in 6.\n- \\(\\boldsymbol{\\operatorname { l c m }}(a, c)=\\mathbf{1 7}\\). The same argument as above proves this case is also impossible.\n- \\(\\boldsymbol{\\operatorname { l c m }}(\\boldsymbol{a}, \\boldsymbol{c})=\\mathbf{7 7}\\). Since the divisors of 77 only end in 1 and 7 , the same argument as above rules out this case.\n- \\(\\boldsymbol{\\operatorname { l c m }}(\\boldsymbol{a}, \\boldsymbol{c})=\\mathbf{5 7}\\). As \\(a+c<27\\), we must have \\(\\{a, c\\}=\\{3,19\\}\\). Then \\(b\\) is even and less than 6 , so it's easy to verify there are no solutions here.\n- \\(\\boldsymbol{\\operatorname { l c m }}(\\boldsymbol{a}, \\boldsymbol{c})=\\mathbf{1 1 7}\\). As \\(a+c<27\\), we must have \\(\\{a, c\\}=\\{9,13\\}\\). Then \\(b\\) is even and less than 6 , so it's easy to verify there are no solutions here.\n\nThis rules out all cases, so 28 is optimal.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

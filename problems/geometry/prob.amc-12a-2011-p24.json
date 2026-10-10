@@ -1,0 +1,94 @@
+{
+  "id": "prob.amc-12a-2011-p24",
+  "title": "2011 AMC 12A Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.brahmaguptas-formula",
+      "label": "Brahmagupta’s Formula",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cyclic-quadrilateral",
+      "label": "Cyclic quadrilateral",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.incircle-incenter-and-inradius",
+      "label": "Incircle, incenter, and inradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2011,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 39.4,
+    "source": 2460,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Consider all quadrilaterals \\(ABCD\\) such that \\(AB = 14,\\) \\(BC = 9,\\) \\(CD = 7,\\) and \\(DA = 12.\\) What is the radius of the largest possible circle that fits inside or on the boundary of such a quadrilateral?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\sqrt{15}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\sqrt{21}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\sqrt{6}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2\\sqrt{7}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2011-p24.live",
+      "kind": "proof-sketch",
+      "text": "Suppose a circle of radius \\(r\\) centered at \\(X\\) fits in one of the quadrilaterals. If \\(h_1,h_2,h_3,h_4\\) are the distances from \\(X\\) to the four side lines, then each \\(h_i\\ge r.\\) Splitting the quadrilateral into four triangles gives \\[ \\begin{aligned} K&=\\dfrac12(14h_1+9h_2 \\\\ &\\qquad+7h_3+12h_4) \\\\ &\\ge21r. \\end{aligned} \\]\n\nBretschneider’s inequality bounds the area of any quadrilateral with these sides by the cyclic case: \\[ \\begin{aligned} K^2&\\le(21-14)(21-9) \\\\ &\\qquad\\cdot(21-7)(21-12) \\\\ &=7\\cdot12\\cdot14\\cdot9, \\\\ K&\\le42\\sqrt6. \\end{aligned} \\]\n\nTherefore \\(r\\le \\frac{K}{21}\\le2\\sqrt6.\\) Equality is attainable: the cyclic quadrilateral with these sides is also tangential because \\(14+7=9+12,\\) and its incircle has radius \\(\\frac{K}{21}=2\\sqrt6.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "If a circle of radius \\(r\\) fits, splitting from its center shows the quadrilateral’s area is at least \\(21r\\)",
+        "Bretschneider’s inequality bounds the area by the cyclic case; the equality case is also tangential because opposite side sums are equal"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2017-p19",
+  "title": "2017 HMMT February Guts Problem 19",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2017,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 72.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find (in terms of \\(n \\geq 1\\) ) the number of terms with odd coefficients after expanding the product:\n\n\\[\\prod_{1 \\leq i<j \\leq n}\\left(x_{i}+x_{j}\\right)\\]\n\ne.g., for \\(n=3\\) the expanded product is given by \\(x_{1}^{2} x_{2}+x_{1}^{2} x_{3}+x_{2}^{2} x_{3}+x_{2}^{2} x_{1}+x_{3}^{2} x_{1}+x_{3}^{2} x_{2}+2 x_{1} x_{2} x_{3}\\) and so the answer would be 6 .",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2017-p19.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(n!\\)\nNote that if we take \\((\\bmod 2)\\), we get that\n\n\\[\\prod_{1 \\leq i<j \\leq n}\\left(x_{i}+x_{j}\\right) \\equiv \\prod_{1 \\leq i<j \\leq n}\\left(x_{j}-x_{i}\\right)=\\operatorname{det}(M)\\]\n\nwhere \\(M\\) is the matrix with \\(M_{i j}=x_{i}^{j-1}\\). This is called a Vandermonde determinant. Expanding this determinant using the formula\n\n\\[\\operatorname{det}(M)=\\sum_{\\sigma} \\prod_{i=1}^{n} x_{\\sigma(i)}^{i-1},\\]\n\nwhere the sum if over all \\(n!\\) permutations \\(\\sigma\\), gives the result.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

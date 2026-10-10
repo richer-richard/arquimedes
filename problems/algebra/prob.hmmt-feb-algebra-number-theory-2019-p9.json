@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2019-p9",
+  "title": "2019 HMMT February Algebra and Number Theory Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.discrete-mathematics",
+      "label": "Discrete Mathematics",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vectors",
+      "label": "Vectors",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2019,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Tessa the hyper-ant has a 2019-dimensional hypercube. For a real number \\(k\\), she calls a placement of nonzero real numbers on the \\(2^{2019}\\) vertices of the hypercube \\(k\\)-harmonic if for any vertex, the sum of all 2019 numbers that are edge-adjacent to this vertex is equal to \\(k\\) times the number on this vertex. Let \\(S\\) be the set of all possible values of \\(k\\) such that there exists a \\(k\\)-harmonic placement. Find \\(\\sum_{k \\in S}|k|\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2019-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 2040200\nBy adding up all the equations on each vertex, we get \\(2019 S=k S\\) where \\(S\\) is the sum of all entries, so \\(k=2019\\) unless \\(S=0\\). In the latter case, by adding up all the equations on a half of the cube, we get\n\\(2018 S-S=k S\\) where \\(S\\) is the sum of all entries on that half of the cube, so \\(k=2017\\) unless \\(S=0\\). In the latter case (the sum of all entries of any half is zero), by adding up all the equations on a half of the half-cube, we get \\(2017 S-2 S=k S\\), so \\(k=2015\\) unless \\(S=0\\). We continue this chain of casework until we get that the sum of every two vertices connected by unit segments is zero, in which case we have \\(k=-2019\\). This means that \\(k\\) can take any odd value between -2019 and 2019 inclusive, so the sum of absolute values is \\(2 \\cdot 1010^{2}=2040200\\).\nTo achieve these values, suppose that the vertices of the hypercube are \\(\\{0,1\\}^{2019}\\) and that the label of \\(\\left(x_{1}, x_{2}, \\ldots, x_{2019}\\right)\\) is \\(a_{1}^{x_{1}} a_{2}^{x_{2}} \\ldots a_{2019}^{x_{2019}}\\) for constants \\(a_{1}, a_{2}, \\ldots, a_{2019} \\in\\{-1,1\\}\\), then it is not difficult to see that this labeling is \\(\\left(a_{1}+a_{2}+\\cdots+a_{2019}\\right)\\)-harmonic for any choice of \\(a_{i}\\) 's, so this can achieve all odd values between - 2019 and 2019 inclusive.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

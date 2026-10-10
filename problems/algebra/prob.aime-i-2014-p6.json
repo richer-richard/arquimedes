@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2014-p6",
+  "title": "2014 AIME I Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2014,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 52.5,
+    "source": 2450,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "The graphs \\(y = 3(x-h)^2 + j\\) and \\(y = 2(x-h)^2 + k\\) have \\(y\\)-intercepts of \\(2013\\) and \\(2014,\\) respectively, and each graph has two positive integer \\(x\\)-intercepts. Find \\(h.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "36",
+    "value": "36"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2014-p6.live",
+      "kind": "proof-sketch",
+      "text": "Setting \\(x = 0\\) gives \\(3h^2 + j = 2013\\) and \\(2h^2 + k = 2014.\\) Expanding, the first graph is \\(y = 3x^2 - 6hx + 2013,\\) whose roots are positive integers with sum \\(2h\\) and product \\(\\frac{2013}{3} = 671 = 11 \\cdot 61.\\) Similarly the second is \\(y = 2x^2 - 4hx + 2014,\\) with integer roots of sum \\(2h\\) and product \\(\\frac{2014}{2} = 1007 = 19 \\cdot 53.\\)\n\nThe first pair of roots is \\(\\{11, 61\\}\\) or \\(\\{1, 671\\},\\) so \\(2h = 72\\) or \\(672;\\) the second pair is \\(\\{19, 53\\}\\) or \\(\\{1, 1007\\},\\) so \\(2h = 72\\) or \\(1008.\\) The only common value is \\(2h = 72,\\) so \\(h = 36,\\) which indeed gives \\(x\\)-intercepts \\(11,\\) \\(61\\) and \\(19,\\) \\(53.\\)",
+      "hints": [
+        "Set \\(x = 0\\) to get \\(3h^2 + j = 2013\\) and \\(2h^2 + k = 2014;\\) the \\(x\\)-intercepts are then roots of \\(3x^2 - 6hx + 2013\\) and \\(2x^2 - 4hx + 2014\\)",
+        "The positive integer roots multiply to \\(671 = 11 \\cdot 61\\) and \\(1007 = 19 \\cdot 53,\\) and both pairs must have the same sum \\(2h\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

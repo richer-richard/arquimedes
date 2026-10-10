@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-algebra-2014-p7",
+  "title": "2014 HMMT February Algebra Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.jensen-smoothing",
+      "label": "Jensen / smoothing",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2014,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 83.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find the largest real number \\(c\\) such that\n\n\\[\\sum_{i=1}^{101} x_{i}^{2} \\geq c M^{2}\\]\n\nwhenever \\(x_{1}, \\ldots, x_{101}\\) are real numbers such that \\(x_{1}+\\cdots+x_{101}=0\\) and \\(M\\) is the median of \\(x_{1}, \\ldots, x_{101}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-2014-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{5151}{50}\\) OR 103.02 OR \\(103 \\frac{1}{50}\\) Suppose without loss of generality that \\(x_{1} \\leq \\cdots \\leq x_{101}\\) and \\(M=x_{51} \\geq 0\\).\nNote that \\(f(t)=t^{2}\\) is a convex function over the reals, so we may \"smooth\" to the case \\(x_{1}=\\cdots=\\) \\(x_{5} 0 \\leq x_{51}=\\cdots=x_{101}\\) (the \\(x_{51}=\\cdots\\) is why we needed to assume \\(x_{51} \\geq 0\\) ). Indeed, by Jensen's inequality, the map \\(x_{1}, x_{2}, \\ldots, x_{50} \\rightarrow \\frac{x_{1}+\\cdots+x_{50}}{50}, \\ldots, \\frac{x_{1}+\\cdots+x_{50}}{50}\\) will decrease or fix the LHS, while preserving the ordering condition and the zero-sum condition.\nSimilarly, we may without loss of generality replace \\(x_{51}, \\ldots, x_{101}\\) with their average (which will decrease or fix the LHS, but also either fix or increase the RHS). But this simplified problem has \\(x_{1}=\\cdots=\\)\n\\(x_{50}=-51 r\\) and \\(x_{51}=\\cdots=x_{101}=50 r\\) for some \\(r \\geq 0\\), and by homogeneity, \\(C\\) works if and only if \\(C \\leq \\frac{50(51)^{2}+51(50)^{2}}{50^{2}}=\\frac{51(101)}{50}=\\frac{5151}{50}\\).\nComment: One may also use the Cauchy-Schwarz inequality or the QM-AM inequality instead of Jensen's inequality.\nComment: For this particular problem, there is another solution using the identity \\(101 \\sum x_{i}^{2}-\\left(\\sum x_{i}\\right)^{2}=\\) \\(\\sum\\left(x_{j}-x_{i}\\right)^{2}\\). Indeed, we may set \\(u=x_{51}-\\left(x_{1}+\\cdots+x_{50}\\right) / 50\\) and \\(v=\\left(x_{52}+\\cdots+x_{101}\\right) / 50-x_{51}\\), and use the fact that \\((u-v)^{2} \\leq u^{2}+v^{2}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

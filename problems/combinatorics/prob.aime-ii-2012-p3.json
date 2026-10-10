@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2012-p3",
+  "title": "2012 AIME II Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2012,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 46.7,
+    "source": 2070,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "At a certain university, the division of mathematical sciences consists of the departments of mathematics, statistics, and computer science. There are two male and two female professors in each department. A committee of six professors is to contain three men and three women and must also contain two professors from each of the three departments. Find the number of possible committees that can be formed subject to these requirements.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "88",
+    "value": "88"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2012-p3.live",
+      "kind": "proof-sketch",
+      "text": "Each department contributes exactly two committee members. If every department sends one man and one woman, there are \\(2 \\cdot 2 = 4\\) choices per department, for \\(4^3 = 64\\) committees.\n\nOtherwise some department sends two men. To keep three of each gender, another department must then send its two women, and the remaining department sends one man and one woman. There are \\(3\\) ways to pick the all-male department, \\(2\\) ways to pick the all-female department, and \\(2 \\cdot 2 = 4\\) choices in the mixed department (the two-man and two-woman selections are forced), for \\(3 \\cdot 2 \\cdot 4 = 24\\) committees.\n\nThe total is \\(64 + 24 = 88.\\)",
+      "hints": [
+        "Each department contributes exactly two members; classify by how the three men are spread across the departments",
+        "Either every department sends one man and one woman, or one department sends two men, another sends two women, and the third sends one of each"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

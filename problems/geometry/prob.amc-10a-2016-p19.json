@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-10a-2016-p19",
+  "title": "2016 AMC 10A Problem 19",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.rectangle",
+      "label": "Rectangle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2016,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 28.5,
+    "source": 1720,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In rectangle \\(ABCD,\\) \\(AB=6\\) and \\(BC=3.\\) Point \\(E\\) between \\(B\\) and \\(C,\\) and point \\(F\\) between \\(E\\) and \\(C\\) are such that \\(BE=EF=FC.\\) Segments \\(\\overline{AE}\\) and \\(\\overline{AF}\\) intersect \\(\\overline{BD}\\) at \\(P\\) and \\(Q,\\) respectively.\n\nThe ratio \\(BP:PQ:QD\\) can be written as \\(r:s:t\\) where the greatest common factor of \\(r,\\) \\(s,\\) and \\(t\\) is \\(1.\\) What is \\(r+s+t?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(20\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "20"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2016-p19.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(BC=3\\) and \\(BE=EF=FC\\), we have \\(BE=1\\) and \\(BF=2\\). Also \\(AD=3\\).\n\nFrom \\(\\triangle APD\\sim\\triangle EPB\\), \\[\\frac{BP}{BD}=\\frac{BE}{AD+BE}=\\frac14.\\] From \\(\\triangle AQD\\sim\\triangle FQB\\), \\[\\frac{BQ}{BD}=\\frac{BF}{AD+BF}=\\frac25.\\]\n\nTherefore \\(BP=\\frac14BD\\), \\(PQ=\\left(\\frac25-\\frac14\\right)BD=\\frac3{20}BD\\), and \\(QD=\\frac35BD\\). Thus \\[ \\begin{aligned} BP:PQ:QD &= \\frac14:\\frac3{20}:\\frac35 \\\\ &= 5:3:12. \\end{aligned} \\] The sum is \\(5+3+12=20\\).\n\nThus, the correct answer is E.",
+      "hints": [
+        "Use similar triangles on the two cevians from \\(A\\)",
+        "Convert \\(BP, PQ, QD\\) into fractions of \\(BD\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

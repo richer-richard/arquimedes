@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12b-2021-p17",
+  "title": "2021 AMC 12B Problem 17",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2021,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 36.4,
+    "source": 2010,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(ABCD\\) be an isosceles trapezoid having parallel bases \\(\\overline{AB}\\) and \\(\\overline{CD}\\) with \\(AB\\gt CD.\\) Line segments from a point inside \\(ABCD\\) to the vertices divide the trapezoid into four triangles whose areas are \\(2,\\) \\(3,\\) \\(4,\\) and \\(5\\) starting with the triangle with base \\(\\overline{CD}\\) and moving clockwise as shown in the diagram below. What is the ratio \\(\\dfrac{AB}{CD}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2+\\sqrt2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1+\\sqrt6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2\\sqrt3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(3\\sqrt2\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2021-p17.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(AB=a,\\) \\(CD=b,\\) and let the interior point be at heights \\(h_a\\) from \\(AB\\) and \\(h_b\\) from \\(CD.\\) The base triangles give \\(\\tfrac12 a h_a=4\\) and \\(\\tfrac12 b h_b=2,\\) so \\(a h_a=8\\) and \\(b h_b=4.\\)\n\nThe total area is \\(2+3+4+5=14\\) \\(=\\tfrac12(a+b)(h_a+h_b),\\) so \\((a+b)(h_a+h_b)=28.\\) Expanding, \\(a h_a+b h_b+a h_b+b h_a=28,\\) giving \\(a h_b+b h_a=16.\\)\n\nLet \\(u=a h_b\\) and \\(v=b h_a.\\) Then \\(u+v=16\\) and \\(uv=(a h_a)(b h_b)=32,\\) so \\(u,v=8\\pm 4\\sqrt2.\\)\n\nFinally \\(\\dfrac{AB}{CD}\\) \\(=\\dfrac{a}{b}\\) \\(=\\dfrac{a h_b}{b h_b}\\) \\(=\\dfrac{u}{4}\\) \\(=\\dfrac{8+4\\sqrt2}{4}\\) \\(=2+\\sqrt2.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "The triangles on the bases have areas \\(4\\) (base \\(AB\\)) and \\(2\\) (base \\(CD\\)); write them as \\(\\tfrac12 a h_a\\) and \\(\\tfrac12 b h_b\\)",
+        "With \\(a h_a=8,\\) \\(b h_b=4,\\) and \\((a+b)(h_a+h_b)=28,\\) the cross terms \\(a h_b\\) and \\(b h_a\\) satisfy a quadratic"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "83c70b1a8130d30ca9cd1265ec9a987b00472ec96aaae11eb3c4e893b0cef462"
+    ],
+    "solutions": []
+  }
+}

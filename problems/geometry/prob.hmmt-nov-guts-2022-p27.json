@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-nov-guts-2022-p27",
+  "title": "2022 HMMT November Guts Problem 27",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2022,
+    "number": 27
+  },
+  "difficulty": {
+    "course": 66.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many ways are there to cut a 1 by 1 square into 8 congruent polygonal pieces such that all of the interior angles for each piece are either 45 or 90 degrees? Two ways are considered distinct if they require cutting the square in different locations. In particular, rotations and reflections are considered distinct.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "54",
+    "value": "54"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2022-p27.hmmt",
+      "kind": "proof-sketch",
+      "text": "First note that only triangles and quadrilaterals are possible.\nThere are 3 possibilities:\n\n- \\(1 / 2\\) by \\(1 / 2\\) right isosceles triangles\n- 1 by \\(1 / 8\\) rectangles\n- \\(1 / 2\\) by \\(1 / 4\\) rectangles\n\nThe first case has 16 possibilities (there are 2 choices for the orientation of each quadrant). The second case has 2 possibilities (either all horizontal or all vertical).\nThe third case is the trickiest. Label the quadrants \\(A, B, C, D\\) where \\(A, B\\) are at the top and \\(B, C\\) are on the left. If each rectangle lies completely within a quadrant, there are 16 ways. If rectangles span quadrants \\(A, B\\) but not \\(C\\) or \\(D\\), there are 4 ways. Similarly, there are 4 ways each for [rectangles spanning \\(B, C\\) but not \\(D, A]\\), [rectangles spanning \\(C, D\\) but not \\(A, B\\) ], and [rectangles spanning \\(D, A\\) but not \\(B, C]\\). Next, if rectangles span both \\(A, B\\) and \\(C, D\\), there is 1 way, and if rectangles span both \\(B, C\\) and \\(D, A\\) there is 1 way. Finally there are 2 ways for each adjacent pair of quadrants to have a rectangle spanning them. This brings us to \\(16+4+4+4+4+1+1+2=36\\) ways.\nThe final answer is \\(16+2+36=54\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

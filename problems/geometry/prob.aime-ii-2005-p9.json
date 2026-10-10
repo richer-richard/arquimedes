@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2005-p9",
+  "title": "2005 AIME2 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.de-moivres-theorem",
+      "label": "De Moivre’s Theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2005,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 48.0,
+    "source": 2460,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "For how many positive integers \\(n\\) less than or equal to \\(1000\\) is \\[ \\begin{aligned} &(\\sin t + i \\cos t)^n \\\\ &= \\sin nt + i \\cos nt \\end{aligned} \\] true for all real \\(t?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "250",
+    "value": "250"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2005-p9.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(\\sin t + i\\cos t = i(\\cos t - i \\sin t)\\) and \\(\\sin nt + i\\cos nt\\) \\(= i(\\cos nt - i\\sin nt),\\) de Moivre’s theorem (applied to angle \\(-t\\)) gives \\[ \\begin{aligned} &(\\sin t + i \\cos t)^n \\\\ &= i^n(\\cos t - i\\sin t)^n \\\\ &= i^n(\\cos nt - i \\sin nt). \\end{aligned} \\]\n\nSo the equation holds for all real \\(t\\) exactly when \\(i^n = i,\\) that is, when \\(n \\equiv 1 \\pmod 4.\\) The values \\(n = 1, 5, 9, \\ldots, 997\\) give exactly \\(250\\) positive integers up to \\(1000.\\)",
+      "hints": [
+        "Write \\(\\sin t + i\\cos t = i(\\cos t - i\\sin t)\\) and \\(\\sin nt + i\\cos nt\\) \\(= i(\\cos nt - i\\sin nt)\\)",
+        "By de Moivre the equation reduces to \\(i^n = i,\\) so \\(n\\) must be \\(1\\) more than a multiple of \\(4\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

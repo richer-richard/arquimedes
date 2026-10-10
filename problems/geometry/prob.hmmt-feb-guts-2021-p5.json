@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2021-p5",
+  "title": "2021 HMMT February Guts Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2021,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 71.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(m, n>2\\) be integers. One of the angles of a regular \\(n\\)-gon is dissected into \\(m\\) angles of equal size by \\((m-1)\\) rays. If each of these rays intersects the polygon again at one of its vertices, we say \\(n\\) is \\(m\\)-cut. Compute the smallest positive integer \\(n\\) that is both 3 -cut and 4 -cut.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "14",
+    "value": "14"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2021-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "For the sake of simplicity, inscribe the regular polygon in a circle. Note that each interior angle of the regular \\(n\\)-gon will subtend \\(n-2\\) of the \\(n\\) arcs on the circle. Thus, if we dissect an interior angle into \\(m\\) equal angles, then each must be represented by a total of \\(\\frac{n-2}{m}\\) arcs. However, since each of the rays also passes through another vertex of the polygon, that means \\(\\frac{n-2}{m}\\) is an integer and thus our desired criteria is that \\(m\\) divides \\(n-2\\).\nThat means we want the smallest integer \\(n>2\\) such that \\(n-2\\) is divisible by 3 and 4 which is just \\(12+2=14\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

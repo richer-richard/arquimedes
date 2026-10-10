@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-team-2013-p2",
+  "title": "2013 HMMT February Team Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.coloring-schemes-extremal-arguments",
+      "label": "Coloring schemes, extremal arguments",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.combinatorial-optimization",
+      "label": "Combinatorial optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2013,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 78.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A cafe has 3 tables and 5 individual counter seats. People enter in groups of size between 1 and 4 , inclusive, and groups never share a table. A group of more than 1 will always try to sit at a table, but will sit in counter seats if no tables are available. Conversely, a group of 1 will always try to sit at the counter first. One morning, \\(M\\) groups consisting of a total of \\(N\\) people enter and sit down. Then, a single person walks in, and realizes that all the tables and counter seats are occupied by some person or group. What is the minimum possible value of \\(M+N\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2013-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "16 We first show that \\(M+N \\geq 16\\). Consider the point right before the last table is occupied. We have two cases: first suppose there exists at least one open counter seat. Then, every table must contribute at least 3 to the value of \\(M+N\\), because no groups of 1 will have taken a table with one of the counter seats open. By the end, the counter must contribute at least \\(5+2=7\\) to \\(M+N\\), as there must be at least two groups sitting at the counter. It follows that \\(M+N \\geq 16\\). For the second case, assume the counter is full right before the last table is taken. Then, everybody sitting at the counter must have entered as a singleton, since they entered when a table was still available. Consequently, the counter must contribute 10 to \\(M+N\\), and each table contributes at least 2 , so once again \\(M+N \\geq 16\\).\nNow, \\(M+N=16\\) is achievable with eight groups of one, who first fill the counter seats, then the three tables. Thus, our answer is 16 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

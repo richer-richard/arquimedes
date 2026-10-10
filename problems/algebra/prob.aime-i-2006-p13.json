@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2006-p13",
+  "title": "2006 AIME I Problem 13",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.power-of-2",
+      "label": "Power of 2",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2006,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 61.6,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 13,
+  "statement": "For each even positive integer \\(x,\\) let \\(g(x)\\) denote the greatest power of \\(2\\) that divides \\(x.\\) For example, \\(g(20) = 4\\) and \\(g(16) = 16.\\) For each positive integer \\(n,\\) let \\(S_n = \\sum_{k=1}^{2^{n-1}} g(2k).\\) Find the greatest integer \\(n\\) less than \\(1000\\) such that \\(S_n\\) is a perfect square.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "899",
+    "value": "899"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2006-p13.live",
+      "kind": "proof-sketch",
+      "text": "\\(S_n\\) is the sum of \\(g\\) over the even numbers \\(2, 4, \\ldots, 2^n.\\) Among these \\(2^{n-1}\\) numbers, exactly \\(2^{n-1-i}\\) are divisible by \\(2^i\\) but not \\(2^{i+1}\\) (so have \\(g = 2^i\\)) for each \\(1 \\le i \\le n - 1,\\) and the single number \\(2^n\\) has \\(g = 2^n.\\) Hence \\[ \\begin{aligned} S_n &= \\sum_{i=1}^{n-1} 2^i \\cdot 2^{n-1-i} \\\\ &\\quad {}+ 2^n \\\\ &= (n-1) 2^{n-1} + 2^n \\\\ &= (n+1) 2^{n-1}. \\end{aligned} \\]\n\nIf \\(n\\) is even, then \\(n + 1\\) is odd and the exponent \\(n - 1\\) is odd, so \\(S_n\\) has an odd number of factors of \\(2\\) and cannot be a perfect square. If \\(n\\) is odd, then \\(2^{n-1}\\) is already a perfect square, so \\(S_n\\) is a perfect square exactly when \\(n + 1\\) is.\n\nFor odd \\(n,\\) the number \\(n + 1\\) is even, and the greatest even perfect square at most \\(1000\\) is \\(900 = 30^2.\\) Thus the greatest valid \\(n \\lt 1000\\) is \\(n = 899.\\)",
+      "hints": [
+        "\\(S_n\\) sums \\(g\\) over \\(2, 4, \\ldots, 2^n;\\) exactly \\(2^{n-1-i}\\) of these numbers have \\(g = 2^i\\)",
+        "\\(S_n = (n+1) 2^{n-1},\\) so \\(n\\) must be odd and \\(n + 1\\) must be a perfect square"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

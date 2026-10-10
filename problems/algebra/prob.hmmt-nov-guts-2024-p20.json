@@ -1,0 +1,48 @@
+{
+  "id": "prob.hmmt-nov-guts-2024-p20",
+  "title": "2024 HMMT November Guts Problem 20",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.vieta-s-formulas",
+      "label": "Vieta's formulas",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2024,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 50.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "There exists a unique line tangent to the graph of \\(y=x^{4}-20 x^{3}+24 x^{2}-20 x+25\\) at two distinct points. Compute the product of the \\(x\\)-coordinates of the two tangency points.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "-38",
+    "value": "-38"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2024-p20.hmmt",
+      "kind": "proof-sketch",
+      "text": "If \\(f(x)\\) is tangent to the \\(x\\)-axis at \\((c, 0)\\), then \\(f(x)\\) will be divisible by \\((x-c)^{2}\\). Thus, if \\(f(x)\\) is tangent at the \\(x\\)-axis at \\(c_{1}\\) and \\(c_{2}\\), then \\(f(x)=P(x)\\left(x-c_{1}\\right)^{2}\\left(x-c_{2}\\right)^{2}\\) for some polynomial \\(P(x)\\). By adding \\(m x+b\\), we see that \\(f(x)\\) is tangent to \\(y=m x+b\\) at \\(x\\)-coordinates \\(c_{1}\\) and \\(c_{2}\\) if and only if\n\n\\[f(x)=P(x)\\left(x-c_{1}\\right)^{2}\\left(x-c_{2}\\right)^{2}+m x+b\\]\n\nfor some polynomial \\(P(x)\\).\nIn the case of our problem, \\(f(x)=x^{4}-20 x^{3}+24 x^{2}-20 x+5\\), we have by comparing the leading coefficient that \\(P(x)=1\\). Thus,\n\n\\[x^{4}-20 x^{2}+24 x^{2}-20 x+25=\\left(x-c_{1}\\right)^{2}\\left(x-c_{2}\\right)^{2}+m x+b .\\]\n\nBy Vieta's formulas,\n\n\\[\\begin{aligned}\n2\\left(c_{1}+c_{2}\\right) & =20 \\\\\nc_{1}^{2}+c_{2}^{2}+4 c_{1} c_{2} & =24\n\\end{aligned}\\]\n\nHence,\n\n\\[c_{1}^{2}+2 c_{1} c_{2}+c_{2}^{2}=10^{2}=100 \\Longrightarrow c_{1} c_{2}=\\frac{24-100}{2}=\\boxed{-38},\\]\n\nwhich is the answer.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

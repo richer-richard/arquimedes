@@ -1,0 +1,87 @@
+{
+  "id": "prob.ahsme-1966-p29",
+  "title": "1966 AHSME Problem 29",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1966,
+    "number": 29
+  },
+  "difficulty": {
+    "course": 15.2,
+    "source": 1180,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "The number of positive integers less than \\(1000\\) divisible by neither \\(5\\) nor \\(7\\) is:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(688\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(686\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(684\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(658\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(630\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "686"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1966-p29.live",
+      "kind": "proof-sketch",
+      "text": "By inclusion-exclusion, the count is \\[ \\begin{aligned} &999-\\left\\lfloor\\frac{999}{5}\\right\\rfloor -\\left\\lfloor\\frac{999}{7}\\right\\rfloor\\\\ &\\quad+\\left\\lfloor\\frac{999}{35}\\right\\rfloor\\\\ &=999-199-142+28\\\\ &=686. \\end{aligned} \\]\n\nTherefore, the correct answer is B.",
+      "hints": [
+        "There are \\(999\\) positive integers below \\(1000\\)",
+        "Subtract multiples of \\(5\\) and \\(7\\), then add back multiples of \\(35\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

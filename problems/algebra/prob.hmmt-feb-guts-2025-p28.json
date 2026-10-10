@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-feb-guts-2025-p28",
+  "title": "2025 HMMT February Guts Problem 28",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.floors-and-ceilings",
+      "label": "Floors and ceilings",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recurrence-relations",
+      "label": "Recurrence relations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.telescoping-series",
+      "label": "Telescoping series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2025,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 81.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(f\\) be a function from nonnegative integers to nonnegative integers such that \\(f(0) = 0\\) and\n\n\\[f(m) = f\\left(\\left\\lfloor \\frac{m}{2}\\right\\rfloor\\right) + \\left\\lceil \\frac{m}{2}\\right\\rceil^{2}\\]\n\nfor all positive integers \\(m\\) . Compute\n\n\\[\\frac{f(1)}{1\\cdot2} +\\frac{f(2)}{2\\cdot3} +\\frac{f(3)}{3\\cdot4} +\\dots +\\frac{f(31)}{31\\cdot32}.\\]\n\n(Here, \\(\\lfloor z\\rfloor\\) is the greatest integer less than or equal to \\(z\\) , and \\(\\lceil z\\rceil\\) is the least positive integer greater than or equal to \\(z\\) .)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{341}{32}",
+    "value": "\\frac{341}{32}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2025-p28.hmmt",
+      "kind": "proof-sketch",
+      "text": "For all positive integers \\(n\\) , let \\(\\omega (n) = f(n) - f(n - 1)\\) . We claim that \\(\\omega (n)\\) is the largest odd divisor of \\(n\\) for all \\(n > 0\\) . Indeed, for all positive integers \\(k\\) , we have\n\n\\[\\omega (2k) = f(2k) - f(2k - 1) = f(k) + k^{2} - (f(k - 1) + k^{2}) = f(k) - f(k - 1) = \\omega (k)\\]\n\nand\n\n\\[\\omega (2k + 1) = f(2k + 1) - f(2k) = f(k) + (k + 1)^{2} - (f(k) + k^{2}) = 2k + 1.\\]\n\nInducting on the positive integers implies that \\(\\omega (n)\\) is indeed the largest odd divisor of \\(n\\) .\n\nWe can now rewrite the sum as\n\n\\[\\sum_{n = 1}^{31}\\frac{f(n)}{n(n + 1)} = \\sum_{n = 1}^{31}\\left(\\frac{f(n)}{n} -\\frac{f(n)}{n + 1}\\right) = \\left(\\sum_{n = 1}^{30}\\frac{f(n) - f(n - 1)}{n}\\right) - \\frac{f(31)}{32}.\\]\n\nNote that by using the original recursive definition, we can compute\n\n\\[f(31) = 16^{2} + 8^{2} + 4^{2} + 2^{2} + 1^{2} = 341.\\]\n\nMoreover, we also see that \\(\\frac{f(n) - f(n - 1)}{n} = \\frac{\\omega(n)}{n} = 2^{-\\nu_{2}(n)}\\) , where \\(2^{\\nu_{2}(n)}\\) is the largest power of 2 dividing \\(n\\) . Thus, our desired sum is\n\n\\[\\left(\\sum_{n = 1}^{31}2^{-\\nu_{2}(n)}\\right) - \\frac{341}{32} = 16\\cdot 2^{-0} + 8\\cdot 2^{-1} + 4\\cdot 2^{-2} + 2\\cdot 2^{-3} + 1\\cdot 2^{-4} - \\frac{341}{32} = \\left\\lfloor \\frac{341}{32}\\right\\rfloor\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

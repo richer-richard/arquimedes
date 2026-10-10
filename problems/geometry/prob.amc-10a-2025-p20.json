@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2025-p20",
+  "title": "2025 AMC 10A Problem 20",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangent-line",
+      "label": "Tangent line",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2025,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 38.2,
+    "source": 2080,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "A silo (right circular cylinder) with diameter \\(20\\) meters stands in a field. MacDonald is located \\(20\\) meters west and \\(15\\) meters south of the center of the silo. McGregor is located \\(20\\) meters east and \\(g \\gt 0\\) meters south of the center of the silo. The line of sight between MacDonald and McGregor is tangent to the silo. The value of \\(g\\) can be written as \\(\\dfrac{a\\sqrt{b} - c}{d},\\) where \\(a,\\) \\(b,\\) \\(c,\\) and \\(d\\) are positive integers, \\(b\\) is not divisible by the square of any prime, and \\(d\\) is relatively prime to the greatest common divisor of \\(a\\) and \\(c.\\) What is \\(a + b + c + d?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(119\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(120\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(121\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(122\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(123\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "119"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2025-p20.live",
+      "kind": "proof-sketch",
+      "text": "Put the silo’s center at the origin with radius \\(10.\\) Then MacDonald is at \\(D = (-20, -15)\\) and McGregor at \\(G = (20, -g).\\) The tangent length from \\(D\\) is \\(DT = \\sqrt{DS^2 - 10^2}\\) \\(= \\sqrt{25^2 - 100}\\) \\(= \\sqrt{525},\\) and from \\(G\\) it is \\(TG = \\sqrt{g^2 + 20^2 - 10^2}.\\) The tangent point \\(T\\) sits between the two men, so \\(DG = DT + TG.\\) But also \\(DG = \\sqrt{40^2 + (15 - g)^2}.\\) Squaring twice and simplifying gives \\(3g^2 + 150g - 925 = 0.\\) Its positive root, which satisfies the original tangent-length equation, is \\(g = \\frac{20\\sqrt{21} - 75}{3}.\\) Therefore \\(a + b + c + d\\) \\(= 20 + 21 + 75 + 3\\) \\(= 119.\\) Thus, A is the correct answer.",
+      "hints": [
+        "Put the silo’s center at the origin; the line of sight is tangent to the circle of radius \\(10\\)",
+        "Along the tangent line \\(DG = DT + TG,\\) where each of \\(DT\\) and \\(TG\\) is a tangent length from a point to the circle"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

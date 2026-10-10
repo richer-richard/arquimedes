@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12a-2010-p12",
+  "title": "2010 AMC 12A Problem 12",
+  "category": "logic-foundations",
+  "subjects": [
+    "logic-foundations"
+  ],
+  "concepts": [
+    {
+      "id": "logic.logical-deduction",
+      "label": "Logical deduction",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "logic.truth-tellers-and-liars",
+      "label": "Truth-tellers and liars",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2010,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 24.4,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In a magical swamp there are two species of talking amphibians: toads, whose statements are always true, and frogs, whose statements are always false. Four amphibians, Brian, Chris, LeRoy, and Mike live together in this swamp, and they make the following statements.\n\nBrian: “Mike and I are different species.”\n\nChris: “LeRoy is a frog.”\n\nLeRoy: “Chris is a frog.”\n\nMike: “Of the four of us, at least two are toads.”\n\nHow many of these four amphibians are frogs?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "3"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2010-p12.live",
+      "kind": "proof-sketch",
+      "text": "Chris and LeRoy are of opposite species: if Chris is a toad, his statement makes LeRoy a frog; if Chris is a frog, his false statement makes LeRoy a toad. Thus exactly one of them is a toad.\n\nIf Brian is a toad, his true statement makes Mike a frog. If Brian is a frog, his false statement says that he and Mike are the same species, again making Mike a frog. Therefore Mike is always a frog.\n\nMike’s statement is therefore false, so there are fewer than two toads. Chris and LeRoy already supply exactly one toad, forcing Brian to be a frog. Hence there is one toad and \\(3\\) frogs.\n\nThus, D is the correct answer.",
+      "hints": [
+        "Chris and LeRoy cannot have the same species",
+        "If Brian were a toad, Mike’s statement would create a contradiction"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

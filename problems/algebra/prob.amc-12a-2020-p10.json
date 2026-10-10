@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12a-2020-p10",
+  "title": "2020 AMC 12A 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.substitution",
+      "label": "Substitution",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2020,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 26.1,
+    "source": 1500,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "There is a unique positive integer \\(n\\) such that \\[\\log_2(\\log_{16} n) = \\log_4(\\log_4 n).\\]\n\nWhat is the sum of the digits of \\(n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(13\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "13"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2020-p10.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(\\log_{16} n = \\tfrac12 \\log_4 n,\\) set \\(y = \\log_4 n.\\) The equation becomes \\(\\log_2\\left(\\tfrac{y}{2}\\right) = \\log_4 y = \\tfrac12 \\log_2 y.\\)\n\nMultiplying by \\(2\\) gives \\(\\log_2\\left(\\tfrac{y}{2}\\right)^2 = \\log_2 y,\\) so \\(\\left(\\tfrac{y}{2}\\right)^2 = y,\\) which yields \\(y = 4.\\)\n\nThen \\(\\log_4 n = 4,\\) so \\(n = 4^4 = 256,\\) and the digit sum is \\(2 + 5 + 6 = 13.\\)\n\nThus, E is the correct answer.",
+      "hints": [
+        "\\(\\log_{16} n = \\tfrac12 \\log_4 n,\\) so let \\(y = \\log_4 n\\)",
+        "The equation becomes \\(\\log_2\\left(\\tfrac{y}{2}\\right) = \\tfrac12 \\log_2 y;\\) square to solve for \\(y\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

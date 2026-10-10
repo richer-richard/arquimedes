@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2025-p17",
+  "title": "2025 AMC 10B Problem 17",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.mean",
+      "label": "Mean",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2025,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 33.9,
+    "source": 1910,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Consider a decreasing sequence of \\(n\\) positive integers \\(x_1 \\gt x_2 \\gt x_3 \\gt \\cdots \\gt x_n\\) that satisfies the following conditions. The average of the first \\(3\\) terms in the sequence is \\(2025.\\) For all \\(4 \\le k \\le n,\\) the average of the first \\(k\\) terms in the sequence is \\(1\\) less than the average of the first \\(k - 1\\) terms in the sequence.\n\nWhat is the greatest possible value of \\(n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1013\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1014\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1016\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2016\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2025\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1014"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2025-p17.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(A_k\\) be the average of the first \\(k\\) terms. Then \\(A_3 = 2025\\) and \\(A_k = A_{k-1} - 1\\) for \\(k \\ge 4,\\) so \\(A_k = 2028 - k.\\) The partial sum is \\(S_k = k(2028 - k),\\) and for \\(k \\ge 4\\) the terms are \\(x_k = S_k - S_{k-1} = 2029 - 2k,\\) namely \\(x_4 = 2021, x_5 = 2019, \\ldots.\\) These stay positive as long as \\(2029 - 2k \\gt 0,\\) that is \\(k \\le 1014,\\) with \\(x_{1014} = 1.\\) This bound is attainable: take \\((x_1,x_2,x_3) = (2030,2023,2022),\\) which is decreasing, sums to \\(6075,\\) and lies above \\(x_4 = 2021.\\) Thus the greatest possible value is \\(n = 1014,\\) so B is the correct answer.",
+      "hints": [
+        "Let \\(A_k\\) be the average of the first \\(k\\) terms; the conditions give \\(A_k = 2028 - k\\) for \\(k \\ge 3\\)",
+        "Then \\(x_k = k A_k\\) \\(- (k-1)A_{k-1} = 2029\\) \\(- 2k\\) for \\(k \\ge 4;\\) require it to stay a positive integer"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "id": "prob.aime-ii-2025-p12",
+  "title": "2025 AIME II Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.pattern-recognition",
+      "label": "Pattern recognition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2025,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 65.9,
+    "source": 3160,
+    "mohs": null
+  },
+  "estimatedMinutes": 18,
+  "statement": "Let \\(A_1A_2 \\ldots A_{11}\\) be an \\(11\\)-sided non-convex simple polygon with the following properties:\n\n• For every integer \\(2 \\le i \\le 10,\\) the area of \\(\\triangle A_iA_1A_{i+1}\\) is \\(1.\\)\n\n• For every integer \\(2 \\le i \\le 10,\\) \\(\\cos(\\angle A_iA_1A_{i+1}) = \\frac{12}{13}.\\)\n\n• The perimeter of the \\(11\\)-gon \\(A_1A_2 \\ldots A_{11}\\) is equal to \\(20.\\)\n\nThen \\(A_1A_2 + A_1A_{11}\\) can be expressed as \\(\\frac{m\\sqrt{n} - p}{q}\\) where \\(m,\\) \\(n,\\) \\(p,\\) and \\(q\\) are positive integers, \\(n\\) is not divisible by the square of any prime, and no prime divides all of \\(m,\\) \\(p,\\) and \\(q.\\) Find \\(m + n + p + q.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "19",
+    "value": "19"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2025-p12.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(r_i = A_1A_i\\) for \\(2 \\le i \\le 11,\\) and let \\(\\theta\\) be the common angle, with \\(\\cos\\theta = \\frac{12}{13}\\) and \\(\\sin\\theta = \\frac{5}{13}.\\) Each area condition says \\(\\frac{1}{2} r_i r_{i+1} \\cdot \\frac{5}{13} = 1,\\) so \\(r_i r_{i+1} = \\frac{26}{5}\\) for \\(i = 2, \\ldots, 10.\\) Consecutive products being equal forces the \\(r_i\\) to alternate between two values \\(a = r_2 = r_4 = \\cdots\\) and \\(b = r_3 = r_5 = \\cdots,\\) with \\(ab = \\frac{26}{5};\\) in particular \\(r_{11} = b.\\)\n\nBy the law of cosines, every side \\(A_iA_{i+1}\\) with \\(2 \\le i \\le 10\\) has the same length \\(s,\\) where \\[ \\begin{gathered} s^2 = a^2 + b^2 - 2ab \\cdot \\tfrac{12}{13} \\\\ = (a + b)^2 - 2ab - \\tfrac{48}{5} \\\\ = (a+b)^2 - 20. \\end{gathered} \\] Writing \\(u = a + b,\\) the perimeter condition is \\(9\\sqrt{u^2 - 20} + u = 20.\\) Squaring \\(9\\sqrt{u^2 - 20} = 20 - u\\) gives \\(81u^2 - 1620 = 400 - 40u + u^2,\\) which simplifies to \\(4u^2 + 2u - 101 = 0,\\) so \\(u = \\frac{-1 + 9\\sqrt{5}}{4}\\) (the positive root; then \\(20 - u \\gt 0\\) as required).\n\nThus \\(A_1A_2 + A_1A_{11} = a + b\\) \\(= \\frac{9\\sqrt{5} - 1}{4},\\) with \\(5\\) squarefree and no prime dividing all of \\(9,\\) \\(1,\\) \\(4.\\) The answer is \\(9 + 5 + 1 + 4 = 19.\\)",
+      "hints": [
+        "Let \\(r_i = A_1A_i.\\) The equal areas force \\(r_i r_{i+1} = \\frac{26}{5},\\) so the \\(r_i\\) alternate between two values \\(a\\) and \\(b\\)",
+        "Each side \\(A_iA_{i+1}\\) has the same length \\(s\\) with \\(s^2 = (a+b)^2 - 20;\\) the perimeter gives \\(9s + a + b = 20\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2015-p21",
+  "title": "2015 AMC 12A 21",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle",
+      "label": "Circle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.ellipse",
+      "label": "Ellipse",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2015,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 35.5,
+    "source": 2170,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A circle of radius \\(r\\) passes through both foci of, and exactly four points on, the ellipse with equation \\(x^2 + 16y^2 = 16.\\) The set of all possible values of \\(r\\) is an interval \\([a, b).\\) What is \\(a + b?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(5\\sqrt{2} + 4\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\sqrt{17} + 7\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6\\sqrt{2} + 3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\sqrt{15} + 8\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(12\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2015-p21.live",
+      "kind": "proof-sketch",
+      "text": "The ellipse \\(\\dfrac{x^2}{16} + y^2 = 1\\) has semi-axes \\(4\\) and \\(1,\\) so \\(c^2 = 16 - 1 = 15\\) and the foci are \\((\\pm\\sqrt{15}, 0).\\)\n\nA circle through both foci has its center on the \\(y\\)-axis, say \\((0, k),\\) with radius \\(\\sqrt{k^2 + 15}.\\) Its top point always lies outside the ellipse. For four intersection points, its bottom point \\((0, k - \\sqrt{k^2 + 15})\\) must be below \\(y = -1,\\) which happens exactly when \\(0 \\le k \\lt 7.\\)\n\nAs \\(k\\) ranges over \\([0, 7),\\) the radius \\(\\sqrt{k^2 + 15}\\) ranges over \\([\\sqrt{15}, 8),\\) so \\(a + b = \\sqrt{15} + 8.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "The ellipse is \\(\\dfrac{x^2}{16} + y^2 = 1,\\) with foci at \\((\\pm\\sqrt{15}, 0)\\)",
+        "A circle through both foci is centered at \\((0, k);\\) require its bottom point to lie outside the ellipse"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

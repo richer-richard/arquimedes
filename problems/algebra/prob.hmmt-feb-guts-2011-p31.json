@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-guts-2011-p31",
+  "title": "2011 HMMT February Guts Problem 31",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 31
+  },
+  "difficulty": {
+    "course": 92.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A=\\{1,2,3, \\ldots, 9\\}\\). Find the number of bijective functions \\(f: A \\rightarrow A\\) for which there exists at least one \\(i \\in A\\) such that\n\n\\[\\left|f(i)-f^{-1}(i)\\right|>1\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2011-p31.hmmt",
+      "kind": "proof-sketch",
+      "text": "359108\nWe count the complement - the number of functions \\(f\\) such that for all \\(i \\in A,\\left|f(i)-f^{-1}(i)\\right| \\leq 1\\).\nThe condition is equivalent to \\(|f(f(i))-i| \\leq 1\\) for all \\(i \\in A\\). If \\(f(j)=j\\), the inequality is automatically satisfied for \\(i=j\\). Otherwise, if \\(f(f(j))=j\\) but \\(f(j)=k \\neq j\\), then we will have \\(f(f(k))=k\\), allowing the inequality to be satisfied for \\(i=j\\), \\(k\\). Else, if \\(f(f(i)) \\neq i\\), say \\(f(f(i))=i+1\\) and \\(f(i)=k\\), then \\(f(f(k))=f(i+1)=k+1\\) or \\(k-1\\). Thus the function \\(f\\) allows us to partition the elements of \\(A\\) into three groups:\n(a) those such that \\(f(i)=i\\),\n(b) those that form pairs \\(\\{i, j\\}\\) such that \\(f(i)=j\\) and \\(f(j)=i\\), and\n(c) those that form quartets \\(\\{i, i+1, j, j+1\\}\\) such that \\(f\\) permutes them as ( \\(\\begin{aligned} & i \\\\ & j\\end{aligned} i+1 \\quad j+1\\) ) or (i \\(j+1 \\quad i+1 \\quad j\\) ), in cycle notation.\n\nLet \\(a\\) be the number of elements of the second type. Note that \\(a\\) is even.\nCase 1: There are no elements of the third type. If \\(a=8\\), there are \\(9 \\cdot 7 \\cdot 5 \\cdot 3=945\\) possibilities. If \\(a=6\\), there are \\(\\binom{9}{3} \\cdot 5 \\cdot 3=1260\\) possibilities. If \\(a=4\\), there are \\(\\binom{9}{5} \\cdot 3=378\\) possibilities. If \\(a=2\\), there are \\(\\binom{9}{7}=36\\) possibilities. If \\(a=0\\), there is 1 possibility. In total, case 1 offers \\(945+1260+378+36+1=2620\\) possibilities.\nCase 2: There are 4 elements of the third type. There are 21 ways to choose the quartet \\(\\{i, i+1, j, j+1\\}\\). For each way, there are two ways to assign the values of the function to each element (as described above). For the remaining 5 elements, we divide into cases according to the value of \\(a\\). If \\(a=4\\), there are \\(5 \\times 3=15\\) possibilities. If \\(a=2\\), there are \\(\\binom{5}{3}=10\\) possibilities. If \\(a=0\\), there is one possibility. In total, case 2 offers \\(21 \\times 2 \\times(15+10+1)=1092\\) possibilities.\n\nCase 3: There are 8 elements of the third type. There are 5 ways to choose the unique element not of the third type. Of the remaining eight, there are 3 ways to divide them into two quartets, and for each quartet, there are 2 ways to assign values of \\(f\\). In total, case 3 offers \\(5 \\times 3 \\times 2^{2}=60\\) possibilities. Therefore, the number of functions \\(f: A \\rightarrow A\\) such that for at least one \\(i \\in A,\\left|f(i)-f^{-1}(i)\\right|>1\\) is 9 ! \\(-2620-1092-60=359108\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

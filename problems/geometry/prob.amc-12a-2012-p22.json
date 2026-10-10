@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2012-p22",
+  "title": "2012 AMC 12A Problem 22",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cube-geometry",
+      "label": "Cube geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2012,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 40.3,
+    "source": 2460,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Distinct planes \\(p_1,\\) \\(p_2,\\) \\(\\ldots,\\) \\(p_k\\) intersect the interior of a cube \\(Q.\\) Let \\(S\\) be the union of the faces of \\(Q\\) and let \\(P = \\bigcup_{j=1}^{k} p_j.\\) The intersection of \\(P\\) and \\(S\\) consists of the union of all segments joining the midpoints of every pair of edges belonging to the same face of \\(Q.\\) What is the difference between the maximum and the minimum possible values of \\(k?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(23\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(24\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "20"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2012-p22.live",
+      "kind": "proof-sketch",
+      "text": "On every face, the required segments join midpoints of edges. A plane cutting the cube meets the faces in one of four symmetric shapes: a square through midpoints (\\(3\\) such planes), a rectangle per edge (\\(12\\) planes), a triangle per vertex (\\(8\\) planes), or a regular hexagon per pair of opposite vertices (\\(4\\) planes).\n\nUsing all of them gives the maximum \\(k = 3 + 12 + 8 + 4 = 27.\\)\n\nThe full figure consists of \\(24\\) short segments and \\(12\\) long segments. A square plane contains \\((0,4),\\) a rectangle \\((2,2),\\) a triangle \\((3,0),\\) and a hexagon \\((6,0)\\) short and long segments, respectively. Give each short segment weight \\(1\\) and each long segment weight \\(\\frac{3}{2}.\\) Every plane then covers weight at most \\(6,\\) whereas the required segments have total weight \\(24+(\\frac{3}{2})12=42.\\) Thus at least \\(7\\) planes are needed. The \\(4\\) hexagon planes cover all \\(24\\) short segments, and the \\(3\\) square planes cover all \\(12\\) long segments, so \\(k=7\\) is attainable.\n\nThe difference is \\(27 - 7 = 20.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "On each face the drawn segments join midpoints of edges; classify a plane’s cross-section as a square, rectangle, triangle, or hexagon",
+        "For the maximum, count all planes of each type; for the minimum, cover all \\(24\\) short and \\(12\\) long segments with as few planes as possible"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

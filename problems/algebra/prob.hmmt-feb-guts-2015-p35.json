@@ -1,0 +1,56 @@
+{
+  "id": "prob.hmmt-feb-guts-2015-p35",
+  "title": "2015 HMMT February Guts Problem 35",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vectors",
+      "label": "Vectors",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2015,
+    "number": 35
+  },
+  "difficulty": {
+    "course": 85.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(P\\) denote the set of all subsets of \\(\\{1, \\ldots, 23\\}\\). A subset \\(S \\subseteq P\\) is called good if whenever \\(A, B\\) are sets in \\(S\\), the set \\((A \\backslash B) \\cup(B \\backslash A)\\) is also in \\(S\\). (Here, \\(A \\backslash B\\) denotes the set of all elements in \\(A\\) that are not in \\(B\\), and \\(B \\backslash A\\) denotes the set of all elements in \\(B\\) that are not in \\(A\\).) What fraction of the good subsets of \\(P\\) have between 2015 and 3015 elements, inclusive?\nIf your answer is a decimal number or a fraction (of the form \\(m / n\\), where \\(m\\) and \\(n\\) are positive integers), then your score on this problem will be equal to \\(\\max \\{0,25-\\lfloor 1000|A-N|\\rfloor\\}\\), where \\(N\\) is your answer and \\(A\\) is the actual answer. Otherwise, your score will be zero.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2015-p35.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\quad \\frac{18839183877670041942218307147122500601235}{47691684840486192422095701784512492731212} \\approx 0.3950203047068107\\) Let \\(n=23\\), and \\(\\ell=\\) \\(\\lfloor n / 2\\rfloor=11\\).\nWe use the well-known rephrasing of the symmetric difference \\(((A \\backslash B) \\cup(B \\backslash A))\\) in terms of addition modulo 2 of \"indicators/characteristic vectors\". So we simply want the number \\(\\binom{n}{\\ell}_{2}\\) of dimension \\(\\ell\\) subspaces of the \\(F:=\\mathbb{F}_{2}\\)-vector space \\(V:=\\mathbb{F}_{2}^{n}\\). Indeed, good subsets of \\(2^{d}\\) elements simply correspond to dimension \\(d\\) subspaces (in particular, good subsets can only have sizes equal to powers of \\(|F|=2\\), and \\(2^{\\ell}\\) is the only power between 2015 and 3015 , inclusive).\nTo do this, it's easier to first count the number of (ordered) tuples of \\(\\ell\\) linearly independent elements of \\(V\\), and divide (to get the subspace count) by the number of (ordered) tuples of \\(\\ell\\) linearly independent elements of any \\(\\ell\\)-dimensional subspace of \\(V\\) (a well-defined number independent of the choice of subspace).\nIn general, if we want to count tuples of \\(m\\) linearly independent elements in an \\(n\\)-dimensional space (with \\(n \\geq m\\) ), just note that we are building on top of (0) (the zero-dimensional subspace), and once we've chosen \\(r \\leq m\\) elements (with \\(0 \\leq r \\leq m-1\\) ), there are \\(2^{n}-2^{r}\\) elements linearly independent to the previous \\(r\\) elements (which span a subspace of dimension \\(r\\), hence of \\(2^{r}\\) \"bad\" elements). Thus the number of \\(m\\)-dimensional subspaces of an \\(n\\)-dimensional space is\n\n\\[\\binom{n}{m}_{2}:=\\frac{\\left(2^{n}-2^{0}\\right)\\left(2^{n}-2^{1}\\right) \\cdots\\left(2^{n}-2^{m-1}\\right)}{\\left(2^{m}-2^{0}\\right)\\left(2^{m}-2^{1}\\right) \\cdots\\left(2^{m}-2^{m-1}\\right)}\\]\n\na \"Gaussian binomial coefficient.\"\nWe want to estimate\n\n\\[\\frac{\\binom{n}{\\ell}_{2}}{\\sum_{m=0}^{n}\\binom{n}{m}_{2}}=\\frac{1}{2} \\frac{\\binom{23}{11}_{2}}{\\sum_{m=0}^{11}\\binom{23}{m}_{2}}\\]\n\nTo do this, note that \\(\\binom{n}{m}_{2}=\\binom{n}{n-m}_{2}\\), so we may restrict our attention to the lower half. Intuitively, the Gaussian binomial coefficients should decay exponentially (or similarly quickly) away from the center; indeed, if \\(m \\leq n / 2\\), then\n\n\\[\\binom{n}{m-1}_{2} /\\binom{n}{m}_{2}=\\frac{\\left(2^{m}-2^{0}\\right) \\cdot 2^{m-1}}{\\left(2^{n}-2^{m-1}\\right)} \\approx 2^{2 m-1-n}\\]\n\nSo in fact, the decay is super-exponential, starting (for \\(n=23\\) odd and \\(m \\leq \\ell=11\\) ) at an \\(\\approx \\frac{1}{4}\\) rate. So most of the terms (past the first 2 to 4 , say) are negligible in our estimation. If we use the first two terms, we get an approximation of \\(\\frac{1}{2} \\cdot \\frac{1}{1+\\frac{1}{4}}=\\frac{2}{5}=0.4\\), which is enough for 20 points. (Including the next term gives an approximation of \\(\\frac{32}{81} \\approx 0.3950617\\), which is good enough to get full credit.)\nTo compute the exact answer, we used the following python3 code:\n\n```\nfrom functools import lru_cache\nfrom fractions import Fraction\n@lru_cache(maxsize=None)\ndef gauss_binom(n, k, e):\n    if k < O or k > n:\n        return 0\n    if k == 0 or k == n:\n        return 1\n    return e ** k * gauss_binom(n - 1, k, e) + \\\n                gauss_binom(n - 1, k - 1, e)\nN = 23\nK = 11\ngood = gauss_binom(N, K, 2)\ntotal = sum(gauss_binom(N, i, 2) for i in range(N + 1))\nprint(Fraction(good, total))\nprint(float(good/total))\n```",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

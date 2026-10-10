@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-general-1-2004-p10",
+  "title": "2004 HMMT February General Round 1 Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2004,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A floor is tiled with equilateral triangles of side length 1 , as shown. If you drop a needle of length 2 somewhere on the floor, what is the largest number of triangles it could end up intersecting? (Only count the triangles whose interiors are met by the needle - touching along edges or at corners doesn't qualify.)\n\n[Diagram omitted from this imported transcription; consult the HMMT archive while reviewing the problem.]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-general-1-2004-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "8\nLet \\(L\\) be the union of all the lines of the tiling. Imagine walking from one end of the needle to the other. We enter a new triangle precisely when we cross one of the lines of the tiling. Therefore, the problem is equivalent to maximizing the number of times the needle crosses \\(L\\). Now, the lines of the tiling each run in one of three directions. It is clear that the needle cannot cross more than three lines in any given direction, since the lines are a distance \\(\\sqrt{3} / 2\\) apart and the needle would therefore have to be of length greater than \\(3 \\sqrt{3} / 2>2\\). Moreover, it cannot cross three lines in each of two different directions. To see this, notice that its endpoints would have to lie in either the two light-shaded regions or the two dark-shaded regions shown, but the closest two points of such opposite regions are at a distance of 2 (twice the length of a side of a triangle), so the needle cannot penetrate both regions.\n\nTherefore, the needle can cross at most three lines in one direction and two lines in each of the other two directions, making for a maximum of \\(3+2+2=7\\) crossings and \\(7+1=8\\) triangles intersected. The example shows that 8 is achievable, as long as the needle has length greater than \\(\\sqrt{3}<2\\).\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

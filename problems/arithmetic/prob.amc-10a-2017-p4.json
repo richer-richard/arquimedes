@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2017-p4",
+  "title": "2017 AMC 10A Problem 4",
+  "category": "arithmetic",
+  "subjects": [
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "arith.process-simulation",
+      "label": "Process simulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "arith.rate",
+      "label": "Rate",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2017,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 20.5,
+    "source": 1140,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Mia is “helping” her mom pick up \\(30\\) toys that are strewn on the floor. Mia’s mom manages to put \\(3\\) toys into the toy box every \\(30\\) seconds, but each time immediately after those \\(30\\) seconds have elapsed, Mia takes \\(2\\) toys out of the box. How much time, in minutes, will it take Mia and her mom to put all \\(30\\) toys into the box for the first time?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(13.5\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(14\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(14.5\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(15.5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "14"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2017-p4.live",
+      "kind": "proof-sketch",
+      "text": "Note that after \\(30\\) seconds, there are \\(3\\) toys added and \\(2\\) removed, leaving a net total of \\(+1\\) toys in the box.\n\nWe have to be careful towards the end, however, since it is possible for the box to have \\(30\\) toys right after Mia’s mom adds the toys and before Mia removes them.\n\nAfter there are \\(27\\) toys in the box, Mia’s mom can add \\(3,\\) leaving \\(30\\) toys in the box.\n\nIt will take \\(27 \\cdot 30\\) seconds, plus another \\(30\\) seconds, which gives us \\[ 28 \\cdot 30 \\div 60 = 14 \\] minutes to get \\(30\\) toys in the box.\n\nThus, B is the correct answer.",
+      "hints": [
+        "Track the net change during a normal half-minute cycle",
+        "At the end, stop when the box first reaches \\(30\\) before another removal"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

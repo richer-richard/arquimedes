@@ -1,0 +1,86 @@
+{
+  "id": "prob.hmmt-feb-calculus-combinatorics-2011-p16",
+  "title": "2011 HMMT February Calculus and Combinatorics Problem 16",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.diophantine-equations",
+      "label": "Diophantine equations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(f(x)=x^{2}-r_{2} x+r_{3}\\) for all real numbers \\(x\\), where \\(r_{2}\\) and \\(r_{3}\\) are some real numbers. Define a sequence \\(\\left\\{g_{n}\\right\\}\\) for all nonnegative integers \\(n\\) by \\(g_{0}=0\\) and \\(g_{n+1}=f\\left(g_{n}\\right)\\). Assume that \\(\\left\\{g_{n}\\right\\}\\) satisfies the following three conditions: (i) \\(g_{2 i}<g_{2 i+1}\\) and \\(g_{2 i+1}>g_{2 i+2}\\) for all \\(0 \\leq i \\leq 2011\\); (ii) there exists a positive integer \\(j\\) such that \\(g_{i+1}>g_{i}\\) for all \\(i>j\\), and (iii) \\(\\left\\{g_{n}\\right\\}\\) is unbounded. If \\(A\\) is the greatest number such that \\(A \\leq\\left|r_{2}\\right|\\) for any function \\(f\\) satisfying these properties, find \\(A\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-calculus-combinatorics-2011-p16.hmmt",
+      "kind": "proof-sketch",
+      "text": "2\nConsider the function \\(f(x)-x\\). By the constraints of the problem, \\(f(x)-x\\) must be negative for some \\(x\\), namely, for \\(x=g_{2 i+1}, 0 \\leq i \\leq 2011\\). Since \\(f(x)-x\\) is positive for \\(x\\) of large absolute value, the graph of \\(f(x)-x\\) crosses the \\(x\\)-axis twice and \\(f(x)-x\\) has two real roots, say \\(a<b\\). Factoring gives \\(f(x)-x=(x-a)(x-b)\\), or \\(f(x)=(x-a)(x-b)+x\\).\nNow, for \\(x<a, f(x)>x>a\\), while for \\(x>b, f(x)>x>b\\). Let \\(c \\neq b\\) be the number such that \\(f(c)=f(b)=b\\). Note that \\(b\\) is not the vertex as \\(f(a)=a<b\\), so by the symmetry of quadratics, \\(c\\) exists and \\(\\frac{b+c}{2}=\\frac{r_{2}}{2}\\) as the vertex of the parabola. By the same token, \\(\\frac{b+a}{2}=\\frac{r_{2}+1}{2}\\) is the vertex of \\(f(x)-x\\). Hence \\(c=a-1\\). If \\(f(x)>b\\) then \\(x<c\\) or \\(x>b\\). Consider the smallest \\(j\\) such that \\(g_{j}>b\\). Then by the above observation, \\(g_{j-1}<c\\). (If \\(g_{i} \\geq b\\) then \\(f\\left(g_{i}\\right) \\geq g_{i} \\geq b\\) so by induction, \\(g_{i+1} \\geq g_{i}\\) for all \\(i \\geq j\\). Hence \\(j>1\\); in fact \\(j \\geq 4025\\).) Since \\(g_{j-1}=f\\left(g_{j-2}\\right)\\), the minimum value of \\(f\\) is less than \\(c\\). The minimum value is the value of \\(f\\) evaluated at its vertex, \\(\\frac{b+a-1}{2}\\), so\n\n\\[\\begin{aligned}\nf\\left(\\frac{b+a-1}{2}\\right) & <c \\\\\n\\left(\\frac{b+a-1}{2}-a\\right)\\left(\\frac{b+a-1}{2}-b\\right)+\\frac{b+a-1}{2} & <a-1 \\\\\n\\frac{1-(b-a)^{2}}{4}+\\frac{b-a+1}{2} & <0 \\\\\n\\frac{3}{4} & <\\frac{(b-a)^{2}}{4}-\\frac{b-a}{2} \\\\\n4 & <(b-a-1)^{2} .\n\\end{aligned}\\]\n\nThen either \\(b-a-1<-2\\) or \\(b-a-1>2\\), but \\(b>a\\), so the latter must hold and \\((b-a)^{2}>9\\). Now, the discriminant of \\(f(x)-x\\) equals \\((b-a)^{2}\\) (the square of the difference of the two roots) and \\(\\left(r_{2}+1\\right)^{2}-4 r_{3}\\) (from the coefficients), so \\(\\left(r_{2}+1\\right)^{2}>9+4 r_{3}\\). But \\(r_{3}=g_{1}>g_{0}=0\\) so \\(\\left|r_{2}\\right|>2\\).\nWe claim that we can make \\(\\left|r_{2}\\right|\\) arbitrarily close to 2 , so that the answer is 2 . First define \\(G_{i}, i \\geq 0\\) as follows. Let \\(N \\geq 2012\\) be an integer. For \\(\\varepsilon>0\\) let \\(h(x)=x^{2}-2-\\varepsilon, g_{\\varepsilon}(x)=-\\sqrt{x+2+\\varepsilon}\\) and \\(G_{2 N+1}=2+\\varepsilon\\), and define \\(G_{i}\\) recursively by \\(G_{i}=g_{\\varepsilon}\\left(G_{i+1}\\right), G_{i+1}=h\\left(G_{i}\\right)\\). (These two equations are consistent.) Note the following.\n(i) \\(G_{2 i}<G_{2 i+1}\\) and \\(G_{2 i+1}>G_{2 i+2}\\) for \\(0 \\leq i \\leq N-1\\). First note \\(G_{2 N}=-\\sqrt{4+2 \\varepsilon}>-\\sqrt{4+2 \\varepsilon+\\varepsilon^{2}}=\\) \\(-2-\\varepsilon\\). Let \\(l\\) be the negative solution to \\(h(x)=x\\). Note that \\(-2-\\varepsilon<G_{2 N}<l<0\\) since \\(h\\left(G_{2 N}\\right)>0>G_{2 N}\\). Now \\(g_{\\varepsilon}(x)\\) is defined as long as \\(x \\geq-2-\\varepsilon\\), and it sends \\((-2-\\varepsilon, l)\\) into \\((l, 0)\\) and \\((l, 0)\\) into \\((-2-\\varepsilon, l)\\). It follows that the \\(G_{i}, 0 \\leq i \\leq 2 N\\) are well-defined; moreover, \\(G_{2 i}<l\\) and \\(G_{2 i+1}>l\\) for \\(0 \\leq i \\leq N-1\\) by backwards induction on \\(i\\), so the desired inequalities follow.\n(ii) \\(G_{i}\\) is increasing for \\(i \\geq 2 N+1\\). Indeed, if \\(x \\geq 2+\\varepsilon\\), then \\(x^{2}-x=x(x-1)>2+\\varepsilon\\) so \\(h(x)>x\\). Hence \\(2+\\varepsilon=G_{2 N+1}<G_{2 N+2}<\\cdots\\).\n(iii) \\(G_{i}\\) is unbounded. This follows since \\(h(x)-x=x(x-2)-2-\\varepsilon\\) is increasing for \\(x>2+\\varepsilon\\), so \\(G_{i}\\) increases faster and faster for \\(i \\geq 2 N+1\\).\n\nNow define \\(f(x)=h\\left(x+G_{0}\\right)-G_{0}=x^{2}+2 G_{0} x+G_{0}^{2}-G_{0}-2-\\varepsilon\\). Note \\(G_{i+1}=h\\left(G_{i}\\right)\\) while \\(g_{i+1}=f\\left(g_{i}\\right)=h\\left(g_{i}+G_{0}\\right)-G_{0}\\), so by induction \\(g_{i}=G_{i}-G_{0}\\). Since \\(\\left\\{G_{i}\\right\\}_{i=0}^{\\infty}\\) satisfies (i), (ii), and (iii), so does \\(g_{i}\\).\n\nWe claim that we can make \\(G_{0}\\) arbitrarily close to -1 by choosing \\(N\\) large enough and \\(\\varepsilon\\) small enough; this will make \\(r_{2}=-2 G_{0}\\) arbitrarily close to 2 . Choosing \\(N\\) large corresponds to taking \\(G_{0}\\) to be a larger iterate of \\(2+\\varepsilon\\) under \\(g_{\\varepsilon}(x)\\). By continuity of this function with respect to \\(x\\) and \\(\\varepsilon\\), it suffices to take \\(\\varepsilon=0\\) and show that (letting \\(g=g_{0}\\) )\n\n\\[g^{(n)}(2)=\\underbrace{g(\\cdots g}_{n}(2) \\cdots) \\rightarrow-1 \\text { as } n \\rightarrow \\infty\\]\n\nBut note that for \\(0 \\leq \\theta \\leq \\frac{\\pi}{2}\\),\n\n\\[g(-2 \\cos \\theta)=-\\sqrt{2-2 \\cos \\theta}=-2 \\sin \\left(\\frac{\\theta}{2}\\right)=2 \\cos \\left(\\frac{\\pi}{2}-\\frac{\\theta}{2}\\right)\\]\n\nHence by induction, \\(g^{(n)}(-2 \\cos \\theta)=-2 \\cos \\left(\\frac{\\pi}{2}-\\frac{\\pi}{4}+\\cdots+(-1)^{n}\\left(\\theta-\\frac{\\pi}{2^{n}}\\right)\\right)\\). Hence \\(g^{(n)}(2)=g^{(n-1)}(-2 \\cos 0)\\) converges to \\(-2 \\cos \\left(\\frac{\\pi}{2}-\\frac{\\pi}{4}+\\cdots\\right)=-2 \\cos \\left(\\frac{\\pi}{3}\\right)=-1\\), as needed.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

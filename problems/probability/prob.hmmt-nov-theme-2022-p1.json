@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-theme-2022-p1",
+  "title": "2022 HMMT November Theme Problem 1",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.counting-methods",
+      "label": "Counting Methods",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2022,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 39.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Alice and Bob are playing in an eight-player single-elimination rock-paper-scissors tournament. In the first round, all players are paired up randomly to play a match. Each round after that, the winners of the previous round are paired up randomly. After three rounds, the last remaining player is considered the champion. Ties are broken with a coin flip. Given that Alice always plays rock, Bob always plays paper, and everyone else always plays scissors, what is the probability that Alice is crowned champion? Note that rock beats scissors, scissors beats paper, and paper beats rock.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{6}{7}",
+    "value": "\\frac{6}{7}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2022-p1.hmmt",
+      "kind": "proof-sketch",
+      "text": "Alice's opponent is chosen randomly in the first round. If Alice's first opponent is Bob, then she will lose immediately to him. Otherwise, Bob will not face Alice in the first round. This means he faces someone who plays scissors, so Bob will lose in the first round. Also, this means Alice will never face Bob; and since all other six possible opponents will play scissors, Alice's rock will beat all of them, so she will win the tournament. Hence, since 6 of the 7 first-round opponents lead to wins, the probability that Alice wins is \\(\\frac{6}{7}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

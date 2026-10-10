@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2013-p10",
+  "title": "2013 AMC 12A Problem 10",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factor",
+      "label": "Factor",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.repeating-decimal",
+      "label": "Repeating decimal",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2013,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 27.7,
+    "source": 1510,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(S\\) be the set of positive integers \\(n\\) for which \\(\\dfrac{1}{n}\\) has the repeating decimal representation \\(0.\\overline{ab} = 0.ababab\\ldots,\\) with \\(a\\) and \\(b\\) different digits. What is the sum of the elements of \\(S?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(44\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(110\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(143\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(155\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "143"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2013-p10.live",
+      "kind": "proof-sketch",
+      "text": "If \\(\\dfrac{1}{n} = 0.\\overline{ab},\\) then \\(\\dfrac{99}{n} = \\overline{ab},\\) a two-digit number. The positive divisors of \\(99\\) are \\(1, 3, 9, 11, 33, 99.\\)\n\nOnly \\(n = 11, 33, 99\\) make \\(\\dfrac{99}{n}\\) equal to \\(09, 03, 01,\\) which have two different digits. The requested sum is \\(11 + 33 + 99 = 143.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "A two-digit repeating block means \\(\\dfrac{1}{n} = \\dfrac{\\overline{ab}}{99}\\)",
+        "So \\(\\dfrac{99}{n}\\) is the two-digit number \\(\\overline{ab};\\) check the divisors of \\(99\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

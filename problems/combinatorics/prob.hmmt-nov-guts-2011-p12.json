@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-guts-2011-p12",
+  "title": "2011 HMMT November Guts Problem 12",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2011,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 49.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Joe has written 5 questions of different difficulties for a test with problems numbered 1 though 5 . He wants to make sure that problem \\(i\\) is harder than problem \\(j\\) whenever \\(i-j \\geq 3\\). In how many ways can he order the problems for his test?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2011-p12.hmmt",
+      "kind": "proof-sketch",
+      "text": "25 We will write \\(p_{i}>p_{j}\\) for integers \\(i, j\\) when the \\(i\\) th problem is harder than the \\(j\\) th problem. For the problem conditions to be true, we must have \\(p_{4}>p_{1}, p_{5}>p_{2}\\), and \\(p_{5}>p_{1}\\).\nThen, out of \\(5!=120\\) total orderings, we see that in half of them satisfy \\(p_{4}>p_{1}\\) and half satisfy \\(p_{5}>p_{2}\\), and that these two events occur independently. Hence, there are \\(\\left(\\frac{1}{2}\\right)\\left(\\frac{1}{2}\\right)(120)=30\\) orderings which satisfy the first two conditions. Then, we see that there are \\(\\frac{4!}{2!2!}=6\\) orderings of \\(p_{1}, p_{2}, p_{4}, p_{5}\\) which work; of these, only \\(p_{4}>p_{1}>p_{5}>p_{2}\\) violates the condition \\(p_{5}>p_{1}\\). Consequently, we have \\(\\frac{5}{6}(30)=25\\) good problem orderings.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

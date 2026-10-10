@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-10b-2019-p25",
+  "title": "2019 AMC 10B Problem 25",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.partitions-and-compositions",
+      "label": "Partitions and compositions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2019,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 28.4,
+    "source": 1770,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many sequences of \\(0\\)s and \\(1\\)s of length \\(19\\) are there that begin with a \\(0,\\) end with a \\(0,\\) contain no two consecutive \\(0\\)s, and contain no three consecutive \\(1\\)s?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 55 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 60 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 65 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 70 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 75 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "65"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2019-p25.live",
+      "kind": "proof-sketch",
+      "text": "Our sequence starts with a \\(0\\) then has sequences of \\(110\\) and \\(10\\) in some order, where they each come after a \\(0.\\)\n\nLet the number of \\(110\\) be \\(x\\) and let the number of \\(10\\) be \\(y.\\) Then the number of terms in the sequence is \\[3x+2y+1=19,\\] making \\[3x+2y=18.\\] The possible ordered pairs are \\[ \\begin{aligned} (x,y)&=(6,0),(4,3),\\\\ &\\quad(2,6),(0,9). \\end{aligned} \\] Then, the number of ways to order the \\(x+y\\) blocks is \\[\\binom{x+y}x,\\] since we choose which \\(x\\) of the \\(x+y\\) positions hold a \\(110\\) block.\n\nTherefore, the total number of ways is \\[\\binom 66 + \\binom 74 + \\binom 82 + \\binom 90\\]\\[=1+35+28+1\\]\\[=65.\\]\n\nThus, the answer is C .",
+      "hints": [
+        "After the initial \\(0\\), the string is made of blocks \\(10\\) and \\(110\\)",
+        "Solve \\(2y+3x=18\\) and count block orderings"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

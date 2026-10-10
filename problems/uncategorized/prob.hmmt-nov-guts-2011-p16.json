@@ -1,0 +1,37 @@
+{
+  "id": "prob.hmmt-nov-guts-2011-p16",
+  "title": "2011 HMMT November Guts Problem 16",
+  "category": "uncategorized",
+  "subjects": [],
+  "concepts": [],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2011,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 50.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A small fish is holding 17 cards, labeled 1 through 17 , which he shuffles into a random order. Then, he notices that although the cards are not currently sorted in ascending order, he can sort them into ascending order by removing one card and putting it back in a different position (at the beginning, between some two cards, or at the end). In how many possible orders could his cards currently be?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2011-p16.hmmt",
+      "kind": "proof-sketch",
+      "text": "256 Instead of looking at moves which put the cards in order, we start with the cards in order and consider possible starting positions by backtracking one move: each of 17 cards can be moved to 16 new places. But moving card \\(k\\) between card \\(k+1\\) and card \\(k+2\\) is equivalent to moving card \\(k+1\\) between card \\(k-1\\) and card \\(k\\). We note that these are the only possible pairs of moves which produce the same result, so we have double counted 16 moves. Thus, we have a total of \\(17 \\times 16-16=256\\) possible initial positions.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

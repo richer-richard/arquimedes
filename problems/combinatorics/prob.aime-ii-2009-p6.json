@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-ii-2009-p6",
+  "title": "2009 AIME II Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.bijection",
+      "label": "Bijection",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.subsets",
+      "label": "Subsets",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2009,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 43.9,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Let \\(m\\) be the number of five-element subsets that can be chosen from the set of the first \\(14\\) natural numbers so that at least two of the five numbers are consecutive. Find the remainder when \\(m\\) is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "750",
+    "value": "750"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2009-p6.live",
+      "kind": "proof-sketch",
+      "text": "Count the complement: subsets \\(a_1 \\lt a_2 \\lt a_3 \\lt a_4 \\lt a_5\\) with no two consecutive. Setting \\(b_i = a_i - (i - 1)\\) turns each such subset into five distinct numbers \\(b_1 \\lt b_2 \\lt \\cdots \\lt b_5\\) in \\(\\{1, \\ldots, 10\\},\\) and this map is reversible, so there are \\(\\binom{10}{5} = 252\\) subsets with no two consecutive numbers.\n\nTherefore \\(m = \\binom{14}{5} - \\binom{10}{5}\\) \\(= 2002 - 252 = 1750,\\) and the remainder upon division by \\(1000\\) is \\(750.\\)",
+      "hints": [
+        "Count the complement: five-element subsets with no two consecutive numbers",
+        "Subtracting \\(0,\\) \\(1,\\) \\(2,\\) \\(3,\\) \\(4\\) from the five numbers in increasing order matches no-two-consecutive subsets of \\(\\{1, \\ldots, 14\\}\\) with arbitrary subsets of \\(\\{1, \\ldots, 10\\}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

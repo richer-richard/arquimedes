@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1995-p6",
+  "title": "1995 AIME Problem 6",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.pairing-and-grouping",
+      "label": "Pairing and grouping",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1995,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 43.1,
+    "source": 2270,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Let \\(n=2^{31}3^{19}.\\) How many positive integer divisors of \\(n^2\\) are less than \\(n\\) but do not divide \\(n?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "589",
+    "value": "589"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1995-p6.live",
+      "kind": "proof-sketch",
+      "text": "The number \\(n^2=2^{62}3^{38}\\) has \\(63\\cdot39=2457\\) divisors. Pairing \\(d\\) with \\(\\frac{n^2}{d}\\) leaves only \\(n\\) unpaired, so \\(\\frac{2457-1}{2}=1228\\) divisors lie below \\(n.\\) The number \\(n\\) has \\(32\\cdot20=640\\) divisors, of which \\(639\\) are below \\(n.\\) Therefore the requested count is \\(1228-639=589.\\)",
+      "hints": [
+        "Pair each divisor \\(d\\) of \\(n^2\\) with \\(\\frac{n^2}{d}\\)",
+        "Among the divisors below \\(n\\), subtract those that already divide \\(n\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

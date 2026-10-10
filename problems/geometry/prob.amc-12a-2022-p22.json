@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12a-2022-p22",
+  "title": "2022 AMC 12A Problem 22",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2022,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 43.1,
+    "source": 2270,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(c\\) be a real number, and let \\(z_1,\\) \\(z_2\\) be the two complex numbers satisfying the quadratic \\(z^2-cz+10=0.\\) Points \\(z_1,\\) \\(z_2,\\) \\(\\dfrac{1}{z_1},\\) and \\(\\dfrac{1}{z_2}\\) are the vertices of a (convex) quadrilateral \\(Q\\) in the complex plane. When the area of \\(Q\\) obtains its maximum value, \\(c\\) is the closest to which of the following?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4.5\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(5.5\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(6.5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2022-p22.live",
+      "kind": "proof-sketch",
+      "text": "If the roots are non-real, then \\(z_1=\\sqrt{10}\\,e^{i\\theta}\\) and \\(z_2=\\overline{z_1},\\) since \\(z_1z_2=10.\\) Then \\(\\dfrac{1}{z_1}=\\dfrac{1}{\\sqrt{10}}e^{-i\\theta}\\) and \\(\\dfrac{1}{z_2}=\\dfrac{1}{\\sqrt{10}}e^{i\\theta}.\\)\n\nThe two vertical sides of this trapezoid have lengths \\(2\\sqrt{10}\\sin\\theta\\) and \\(\\frac{2\\sin\\theta}{\\sqrt{10}},\\) and their horizontal separation is \\((\\sqrt{10}-\\frac{1}{\\sqrt{10}})\\cos\\theta.\\) Hence its area is \\[ \\frac{99}{10}\\sin\\theta\\cos\\theta =\\frac{99}{20}\\sin2\\theta, \\] which is maximized at \\(\\theta=45^\\circ.\\)\n\nThen \\(c=z_1+z_2\\) \\(=2\\sqrt{10}\\cos45^\\circ\\) \\(=2\\sqrt5\\approx4.47,\\) closest to \\(4.5.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "For real \\(c\\) with complex roots, \\(z_2=\\overline{z_1}\\) and \\(|z_1|=|z_2|=\\sqrt{10}\\)",
+        "The four points form an isosceles trapezoid symmetric about the real axis; write its area in terms of the root’s angle \\(\\theta\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

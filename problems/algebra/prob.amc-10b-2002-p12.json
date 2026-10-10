@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-10b-2002-p12",
+  "title": "2002 AMC 10B Problem 12",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.linear-equation",
+      "label": "Linear equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.rational-equation",
+      "label": "Rational equation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2002,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 20.0,
+    "source": 1370,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "For which of the following values of \\(k\\) does the equation \\[\\dfrac{x - 1}{x - 2} = \\dfrac{x - k}{x - 6}\\] have no solution for \\(x?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2002-p12.live",
+      "kind": "proof-sketch",
+      "text": "Cross multiplying gives \\((x - 1)(x - 6) = (x - 2)(x - k),\\) which expands to \\[ \\begin{aligned} x^2 - 7x + 6 &= x^2 - (2 + k)x \\\\ &\\quad {}+ 2k. \\end{aligned} \\]\n\nCancelling \\(x^2\\) leaves \\((k - 5)x = 2k - 6.\\) For \\(k\\) equal to \\(1,\\) \\(2,\\) \\(3,\\) or \\(4,\\) this gives a valid value of \\(x\\) that is neither excluded denominator value \\(2\\) nor \\(6.\\) For \\(k=5,\\) the equation instead becomes \\(0\\cdot x=4,\\) which has no solution.\n\nThus, the correct answer is E.",
+      "hints": [
+        "Cross multiply and expand both sides",
+        "The equation becomes linear; it has no solution when the coefficient of \\(x\\) vanishes"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

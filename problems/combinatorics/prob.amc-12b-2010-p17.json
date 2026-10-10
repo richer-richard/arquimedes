@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2010-p17",
+  "title": "2010 AMC 12B Problem 17",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2010,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 35.7,
+    "source": 1980,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The entries in a \\(3\\times3\\) array include all the digits from \\(1\\) through \\(9,\\) arranged so that the entries in every row and column are in increasing order. How many such arrays are there?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(36\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(42\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(60\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "42"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2010-p17.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(a_{ij}\\) for the entry in row \\(i,\\) column \\(j.\\) The conditions force \\(a_{11}=1,\\) \\(a_{33}=9,\\) and \\(a_{22}\\in\\{4,5,6\\}.\\)\n\nIf \\(a_{22}=4,\\) then \\(\\{a_{12},a_{21}\\}=\\{2,3\\}\\) and \\(\\{5,6,7,8\\}\\) split as complementary pairs filling the rest of the last row and column: \\(\\binom42=6\\) splits times \\(2\\) orders for \\(\\{2,3\\}\\) gives \\(12\\) arrays. By symmetry \\(a_{22}=6\\) also gives \\(12.\\)\n\nIf \\(a_{22}=5,\\) then \\(\\{a_{12},a_{13},a_{23}\\}\\) and \\(\\{a_{21},a_{31},a_{32}\\}\\) are complementary subsets of \\(\\{2,3,4,6,7,8\\}\\) subject to the ordering constraints. The first set can be any three-element subset except \\(\\{2,3,4\\}\\) or \\(\\{6,7,8\\},\\) giving \\(\\binom63-2=18\\) arrays.\n\nAltogether \\(12+12+18=42.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "The top-left entry is forced to be \\(1\\) and the bottom-right to be \\(9\\)",
+        "Split into cases by the center entry, which must be \\(4, 5,\\) or \\(6\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

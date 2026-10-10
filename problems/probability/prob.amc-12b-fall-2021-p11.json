@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12b-fall-2021-p11",
+  "title": "2021 Fall AMC 12B Problem 11",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.complementary-probability",
+      "label": "Complementary probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.dice-probability",
+      "label": "Dice (probability)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2021,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 27.9,
+    "source": 1650,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Una rolls \\(6\\) standard \\(6\\)-sided dice simultaneously and calculates the product of the \\(6\\) numbers obtained. What is the probability that the product is divisible by \\(4?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{3}{4}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{57}{64}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{59}{64}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{187}{192}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{63}{64}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "59/64"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-fall-2021-p11.live",
+      "kind": "proof-sketch",
+      "text": "The product fails to be divisible by \\(4\\) when it has at most one factor of \\(2.\\) Each die is odd with probability \\(\\tfrac12,\\) contributes exactly one factor of \\(2\\) (a \\(2\\) or \\(6\\)) with probability \\(\\tfrac13,\\) and two factors (a \\(4\\)) with probability \\(\\tfrac16.\\)\n\nAll six odd: \\(\\left(\\tfrac12\\right)^6 = \\tfrac{1}{64}.\\) Exactly one die a \\(2\\) or \\(6\\) and the rest odd: \\(6 \\cdot \\tfrac13 \\cdot \\left(\\tfrac12\\right)^5 = \\tfrac{1}{16} = \\tfrac{4}{64}.\\)\n\nThe complement is \\(\\tfrac{1}{64} + \\tfrac{4}{64} = \\tfrac{5}{64},\\) so the answer is \\(1 - \\tfrac{5}{64} = \\tfrac{59}{64}.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Use complementary counting: the product has fewer than two factors of \\(2\\)",
+        "Track whether each die contributes zero, one, or two factors of \\(2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

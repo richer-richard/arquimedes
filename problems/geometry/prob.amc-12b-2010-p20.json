@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2010-p20",
+  "title": "2010 AMC 12B Problem 20",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2010,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 37.0,
+    "source": 2240,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A geometric sequence \\((a_n)\\) has \\(a_1=\\sin x,\\) \\(a_2=\\cos x,\\) and \\(a_3=\\tan x\\) for some real number \\(x.\\) For what value of \\(n\\) does \\(a_n=1+\\cos x?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(8\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "8"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2010-p20.live",
+      "kind": "proof-sketch",
+      "text": "The common ratio is \\(r=\\dfrac{a_2}{a_1}=\\cot x.\\) Then \\(a_4=a_3\\cdot r=\\tan x\\cot x=1.\\)\n\nFrom \\(a_3=a_1r^2,\\) we get \\(\\tan x=\\sin x\\cot^2 x=\\dfrac{\\cos^2 x}{\\sin x},\\) so \\(\\sin^2 x=\\cos^3 x,\\) i.e. \\((\\cos^2 x)(1+\\cos x)=1.\\)\n\nHence \\(1+\\cos x=\\dfrac{1}{\\cos^2 x}.\\) Also \\(r^2=\\dfrac{\\cos^2 x}{\\sin^2 x}=\\dfrac{\\cos^2 x}{\\cos^3 x}=\\dfrac{1}{\\cos x},\\) so \\(r^4=\\dfrac{1}{\\cos^2 x}=1+\\cos x.\\)\n\nTherefore \\(1+\\cos x=a_4\\cdot r^4=a_8,\\) so \\(n=8.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "The common ratio is \\(r=\\dfrac{\\cos x}{\\sin x}=\\cot x;\\) compute \\(a_4=a_3\\cdot r\\)",
+        "Show \\(a_4=1\\) and \\(1+\\cos x=r^4,\\) then write \\(1+\\cos x\\) as \\(a_4\\cdot r^4\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

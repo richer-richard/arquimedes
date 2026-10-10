@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-fall-2021-p25",
+  "title": "2021 Fall AMC 10A Problem 25",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.function",
+      "label": "Function",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2021,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 48.5,
+    "source": 2480,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "A quadratic polynomial \\(p(x)\\) with real coefficients and leading coefficient \\(1\\) is called disrespectful if the equation \\(p(p(x))=0\\) is satisfied by exactly three real numbers. Among all the disrespectful quadratic polynomials, there is a unique such polynomial \\(\\tilde{p}(x)\\) for which the sum of the roots is maximized. What is \\(\\tilde{p}(1)?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{5}{16}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1}{2}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{5}{8}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{9}{8}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "5/16"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-fall-2021-p25.live",
+      "kind": "proof-sketch",
+      "text": "The polynomial must have two distinct real roots: a repeated real root produces at most two real solutions of \\(p(p(x))=0,\\) while nonreal roots produce none. Let its roots be \\(r\\) and \\(s,\\) so \\[ \\begin{aligned} p(x) &=(x-r)(x-s) \\\\ &=x^2-(r+s)x+rs. \\end{aligned} \\] The equation \\(p(p(x))=0\\) is equivalent to \\(p(x)=r\\) or \\(p(x)=s.\\)\n\nFor exactly three real solutions, one of these two quadratic equations must have a double root and the other must have two distinct real roots. Suppose \\(p(x)=r\\) has the double root. Its discriminant is \\[ \\begin{aligned} &(r+s)^2-4(rs-r) \\\\ &=(r-s)^2+4r, \\end{aligned} \\] so \\((r-s)^2=-4r,\\) forcing \\(r\\le0.\\)\n\nThe other equation, \\(p(x)=s,\\) has discriminant \\((r-s)^2+4s\\) \\(=-4r+4s\\) \\(=4(s-r),\\) which must be positive. Hence \\(s\\gt r,\\) so \\(r-s=-2\\sqrt{-r}\\) and \\(s=r+2\\sqrt{-r}.\\)\n\nThe sum of the roots is \\(r+s=2r+2\\sqrt{-r}.\\) Let \\(u=\\sqrt{-r},\\) so this is \\(-2u^2+2u,\\) maximized at \\(u=\\frac{1}{2}.\\) Thus \\(r=-\\frac{1}{4}\\) and \\(s=\\frac{3}{4}.\\)\n\nTherefore \\(p(x)=x^2-\\frac{1}{2}x-\\frac{3}{16},\\) and \\[p(1)=1-\\frac{1}{2}-\\frac{3}{16}=\\frac{5}{16}.\\]\n\nThus, A is the correct answer.",
+      "hints": [
+        "If \\(r,s\\) are roots of \\(p,\\) solve \\(p(x)=r\\) and \\(p(x)=s\\)",
+        "Exactly one of those quadratics must have discriminant \\(0\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

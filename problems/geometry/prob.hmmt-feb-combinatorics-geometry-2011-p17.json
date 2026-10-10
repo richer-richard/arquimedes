@@ -1,0 +1,64 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-geometry-2011-p17",
+  "title": "2011 HMMT February Combinatorics and Geometry Problem 17",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n\\) be an odd positive integer, and suppose that \\(n\\) people sit on a committee that is in the process of electing a president. The members sit in a circle, and every member votes for the person either to his/her immediate left, or to his/her immediate right. If one member wins more votes than all the other members do, he/she will be declared to be the president; otherwise, one of the the members who won at least as many votes as all the other members did will be randomly selected to be the president. If Hermia and Lysander are two members of the committee, with Hermia sitting to Lysander's left and Lysander planning to vote for Hermia, determine the probability that Hermia is elected president, assuming that the other \\(n-1\\) members vote randomly.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-geometry-2011-p17.hmmt",
+      "kind": "proof-sketch",
+      "text": "| \\(\\frac{2^{n}-1}{n 2^{n-1}}\\) |\n| :---: |\n| Let \\(x\\) be the probability Hermia is elected if Lysander votes for her, and let \\(y\\) be the | probability that she wins if Lysander does not vote for her. We are trying to find \\(x\\), and do so by first finding \\(y\\). If Lysander votes for Hermia with probability \\(\\frac{1}{2}\\) then the probability that Hermia is elected chairman is \\(\\frac{x}{2}+\\frac{y}{2}\\), but it is also \\(\\frac{1}{n}\\) by symmetry. If Lysander does not vote for Hermia, Hermia can get at most 1 vote, and then can only be elected if everyone gets one vote and she wins the tiebreaker. The probability she wins the tiebreaker is \\(\\frac{1}{n}\\), and chasing around the circle, the probability that every person gets 1 vote is \\(\\frac{1}{2^{n-1}}\\). (Everyone votes for the person to the left, or everyone votes for the person to the right.) Hence\n\n\\[y=\\frac{1}{n 2^{n-1}} .\\]\n\nThen \\(\\frac{x}{2}+\\frac{1}{n 2^{n}}=\\frac{1}{n}\\), so solving for \\(x\\) gives\n\n\\[x=\\frac{2^{n}-1}{n 2^{n-1}} .\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

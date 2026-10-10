@@ -1,0 +1,74 @@
+{
+  "id": "prob.aime-ii-2009-p15",
+  "title": "2009 AIME II Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.am-gm-inequality",
+      "label": "AM-GM Inequality",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cyclic-quadrilateral",
+      "label": "Cyclic quadrilateral",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2009,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 71.3,
+    "source": 3370,
+    "mohs": null
+  },
+  "estimatedMinutes": 30,
+  "statement": "Let \\(\\overline{MN}\\) be a diameter of a circle with diameter \\(1.\\) Let \\(A\\) and \\(B\\) be points on one of the semicircular arcs determined by \\(\\overline{MN}\\) such that \\(A\\) is the midpoint of the semicircle and \\(MB = \\frac{3}{5}.\\) Point \\(C\\) lies on the other semicircular arc. Let \\(d\\) be the length of the line segment whose endpoints are the intersections of diameter \\(\\overline{MN}\\) with the chords \\(\\overline{AC}\\) and \\(\\overline{BC}.\\) The largest possible value of \\(d\\) can be written in the form \\(r - s\\sqrt{t},\\) where \\(r,\\) \\(s,\\) and \\(t\\) are positive integers and \\(t\\) is not divisible by the square of any prime. Find \\(r + s + t.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "14",
+    "value": "14"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2009-p15.live",
+      "kind": "proof-sketch",
+      "text": "Let chords \\(BC\\) and \\(AC\\) meet \\(\\overline{MN}\\) at \\(P\\) and \\(Q,\\) and set \\(x = \\frac{CM}{CN}.\\) Since \\(\\angle MBN = 90^\\circ\\) (angle in a semicircle) and \\(MB = \\frac{3}{5},\\) we get \\(BN = \\frac{4}{5};\\) also \\(AM = AN = \\frac{\\sqrt{2}}{2}.\\) Because \\(P\\) lies on both \\(MN\\) and \\(BC,\\) the ratio \\(\\frac{MP}{PN}\\) equals the ratio of the distances from \\(M\\) and \\(N\\) to line \\(BC,\\) i.e. \\(\\frac{[BMC]}{[BNC]}.\\) In cyclic quadrilateral \\(MBNC\\) the angles \\(BMC\\) and \\(BNC\\) are supplementary, so their sines are equal and \\[ \\begin{aligned} \\frac{MP}{PN} &= \\frac{BM \\cdot MC}{BN \\cdot NC} = \\frac{3x}{4}, \\\\ \\frac{MQ}{QN} &= \\frac{AM \\cdot MC}{AN \\cdot NC} = x. \\end{aligned} \\]\n\nSince \\(MN = 1,\\) these give \\(MP = \\frac{3x}{3x + 4}\\) and \\(MQ = \\frac{x}{x + 1},\\) so \\[ \\begin{aligned} &d = MQ - MP \\\\ &= \\frac{x}{x + 1} - \\frac{3x}{3x + 4} \\\\ &= \\frac{x}{3x^2 + 7x + 4} \\\\ &= \\frac{1}{3x + \\frac{4}{x} + 7}. \\end{aligned} \\]\n\nAs \\(C\\) ranges over the far semicircle, \\(x\\) takes every positive value. By AM-GM, \\(3x + \\frac{4}{x} \\ge 2\\sqrt{12} = 4\\sqrt{3},\\) with equality at \\(x = \\frac{2}{\\sqrt{3}}.\\) Hence the largest value of \\(d\\) is \\[\\frac{1}{7 + 4\\sqrt{3}} = 7 - 4\\sqrt{3},\\] since \\((7 + 4\\sqrt{3})(7 - 4\\sqrt{3}) = 1.\\) Then \\(r + s + t = 7 + 4 + 3 = 14.\\)",
+      "hints": [
+        "If chord \\(BC\\) meets \\(MN\\) at \\(P,\\) then \\(\\frac{MP}{PN} = \\frac{[BMC]}{[BNC]} = \\frac{BM \\cdot MC}{BN \\cdot NC},\\) since angles \\(BMC\\) and \\(BNC\\) are supplementary",
+        "With \\(x = \\frac{CM}{CN},\\) the length works out to \\(d = \\frac{x}{3x^2 + 7x + 4};\\) minimize \\(3x + \\frac{4}{x}\\) by AM-GM"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

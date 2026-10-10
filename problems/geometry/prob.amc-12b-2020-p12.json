@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2020-p12",
+  "title": "2020 AMC 12B 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.chord",
+      "label": "Chord",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2020,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 29.5,
+    "source": 1630,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(\\overline{AB}\\) be a diameter in a circle of radius \\(5\\sqrt2.\\) Let \\(\\overline{CD}\\) be a chord in the circle that intersects \\(\\overline{AB}\\) at a point \\(E\\) such that \\(BE = 2\\sqrt5\\) and \\(\\angle AEC = 45^\\circ.\\) What is \\(CE^2 + DE^2?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(96\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(98\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(44\\sqrt{5}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(70\\sqrt{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(100\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "100"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2020-p12.live",
+      "kind": "proof-sketch",
+      "text": "Place the center at the origin with \\(\\overline{AB}\\) on the \\(x\\)-axis; the radius is \\(R = 5\\sqrt2,\\) so \\(R^2 = 50.\\) Then \\(E = (x_E, 0)\\) with \\(x_E = R - 2\\sqrt5\\) (its exact value is not needed).\n\nParametrize the chord as \\(E + t\\left(\\tfrac{1}{\\sqrt2}, \\tfrac{1}{\\sqrt2}\\right).\\) Substituting into \\(x^2 + y^2 = 50\\) gives \\(t^2 + \\sqrt2\\,x_E\\, t + (x_E^2 - 50) = 0,\\) whose roots are the signed distances \\(t_1, t_2\\) to \\(C\\) and \\(D.\\)\n\nBy Vieta, \\(t_1 + t_2 = -\\sqrt2\\,x_E\\) and \\(t_1 t_2 = x_E^2 - 50,\\) so \\[ \\begin{gathered} CE^2 + DE^2 = t_1^2 + t_2^2 \\\\ {}= (t_1 + t_2)^2 - 2t_1 t_2 \\\\ {}= 2x_E^2 - 2(x_E^2 - 50) \\\\ {}= 100. \\end{gathered} \\]\n\nThus, the correct answer is E.",
+      "hints": [
+        "Put the center at the origin with \\(\\overline{AB}\\) on the \\(x\\)-axis and parametrize the chord from \\(E\\) at \\(45^\\circ\\)",
+        "If \\(t_1, t_2\\) are the signed distances from \\(E\\) to \\(C, D,\\) then \\(CE^2 + DE^2 = t_1^2 + t_2^2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

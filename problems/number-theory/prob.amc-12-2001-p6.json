@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12-2001-p6",
+  "title": "2001 AMC 12 Problem 6",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "logic-foundations",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.logical-deduction",
+      "label": "Logical deduction",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12",
+    "year": 2001,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 21.3,
+    "source": 1420,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A telephone number has the form \\(ABC - DEF - GHIJ,\\) where each letter represents a different digit. The digits in each part of the number are in decreasing order; that is, \\(A \\gt B \\gt C,\\) \\(D \\gt E \\gt F,\\) and \\(G \\gt H \\gt I \\gt J.\\) Furthermore, \\(D,\\) \\(E,\\) and \\(F\\) are consecutive even digits; \\(G,\\) \\(H,\\) \\(I,\\) and \\(J\\) are consecutive odd digits; and \\(A + B + C = 9.\\) Find \\(A.\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(8\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "8"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12-2001-p6.live",
+      "kind": "proof-sketch",
+      "text": "The four consecutive decreasing odd digits \\(GHIJ\\) are either \\(9753\\) or \\(7531,\\) leaving one odd digit (\\(1\\) or \\(9\\)) for \\(ABC.\\)\n\nSince \\(A + B + C = 9\\) and the other two digits of \\(ABC\\) are even, the odd digit must be \\(1\\) (a \\(9\\) would force the two even digits to sum to \\(0\\)). So the two even digits sum to \\(8.\\)\n\nThe three consecutive decreasing even digits \\(DEF\\) are \\(864,\\) \\(642,\\) or \\(420,\\) leaving the even pairs \\(\\{2, 0\\},\\) \\(\\{8, 0\\},\\) or \\(\\{8, 6\\}\\) for \\(ABC.\\) Only \\(\\{8, 0\\}\\) sums to \\(8,\\) so \\(ABC = 810\\) and \\(A = 8.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "Four consecutive decreasing odd digits must be \\(9753\\) or \\(7531\\)",
+        "The leftover odd digit sits in \\(ABC,\\) and with two even digits summing to \\(9\\) it must be \\(1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

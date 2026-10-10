@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tstst-2015-p6",
+  "title": "USA TSTST 2015 Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TSTST",
+    "year": 2015,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 120.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A Nim-style game is defined as follows. Two\npositive integers \\(k\\) and \\(n\\) are specified, along with a finite\nset \\(S\\) of \\(k\\)-tuples of integers (not necessarily positive). At\nthe start of the game, the \\(k\\)-tuple \\((n,0,0,\\dots,0)\\) is written\non the blackboard.\n\nA legal move consists of erasing the tuple \\((a_1,a_2,\\dots,a_k)\\)\nwhich is written on the blackboard and replacing it with\n\\((a_1+b_1,a_2+b_2,\\dots,a_k+b_k)\\), where \\((b_1,b_2,\\dots,b_k)\\)\nis an element of the set \\(S\\). Two players take turns making legal\nmoves, and the first to write a negative integer loses. In the\nevent that neither player is ever forced to write a negative\ninteger, the game is a draw.\n\nProve that there is a choice of \\(k\\) and \\(S\\) with the following\nproperty: the first player has a winning strategy if \\(n\\) is a\npower of \\(2\\), and otherwise the second player has a winning\nstrategy.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tstst-2015-p6.evanchen",
+      "kind": "proof-sketch",
+      "text": "Here we present a solution with \\(14\\) registers and \\(22\\) moves.\nInitially \\(X=n\\) and all other variables are zero.\n\n\\setlength{\\tabcolsep}{3pt}\n\\begin{tabular}{l|rr|r|rrr|rrr|r|rr|rr}\n&\\(X\\)&\\(Y\\)&Go&\\(S_X^0\\)&\\(S_X\\)&\\(S_X'\\)&\\(S_Y^0\\)&\\(S_Y\\)&\\(S_Y'\\)&Cl&\\(A\\)&\\(B\\)&Die&Die'\\\\\\hline\nInit&-1&&1&&&&&&&&&1&1&1\\\\\nBegin&1&&-1&1&&&&&&&-1&1&&\\\\\\hline\nSleep&&&&&&&&&&&1&-1&&\\\\\\hline\nStartX&&&&-1&1&&&&&&-1&1&&\\\\\nWorkX&-1&&&&-1&1&&&&&-1&1&&\\\\\nWorkX'&-1&1&&&1&-1&&&&&-1&1&&\\\\\nDoneX&&&&&-1&&1&&&&-1&1&&\\\\\nWrongX&-1&&&&&&-1&&&&&-1&&\\\\\\hline\nStartY&&&&&&&-1&1&&&-1&1&&\\\\\nWorkY&&-1&&&&&&-1&1&&-1&1&&\\\\\nWorkY'&1&-1&&&&&&1&-1&&-1&1&&\\\\\nDoneY&&&&1&&&&-1&&&-1&1&&\\\\\nWrongY&&-1&&-1&&&&&&&&-1&&\\\\\\hline\nClaimX&-1&&&-1&&&&&&1&-1&1&&\\\\\nClaimY&&-1&&&&&-1&&&1&-1&1&&\\\\\nFakeX&-1&&&&&&&&&-1&&-1&&\\\\\nFakeY&&-1&&&&&&&&-1&&-1&&\\\\\nWin&&&&&&&&&&-1&-1&&&\\\\\\hline\nPunA&&&&&&&&&&&&-2&&\\\\\nPunB&&&&&&&&&&&-1&-1&&\\\\\nKill&&&&&&&&&&&&-1&-2&1\\\\\nKill'&&&&&&&&&&&&-1&1&-2\n\\end{tabular}\n\nNow, the ``game'' is played as follows.\nThe mechanics are controlled by the turn counters \\(A\\) and \\(B\\).\n\nObserve the game starts with Alice playing Init.\nThereafter, we say that the game is\n\n• In the main part if \\(A+B = 1\\),\n and no one has played Init a second time.\n\n• In the death part otherwise.\n\nObserve that in the main state,\non Alice's turn we always have \\((A,B) = (1,0)\\)\nand on Bob's turn we always have \\((A,B) = (0,1)\\).\n\nClaim.\n A player who plays Init a second time must lose.\n In particular, a player who makes a move when \\(A=B=0\\) must lose.\n\nProof.\n Situations with \\(A+B \\ge 2\\) cannot occur during main part,\n so there are only a few possibilities.\n\n• Suppose the offending player is in a situation where \\(A=B=0\\).\n Then he/she must play Init.\n At this point, the opposing player can respond by playing Kill.\n Then the offending player must play Init again.\n The opposing player now responds with Kill'.\n This iteration continues until \\(X\\) reaches a negative number\n and the offending player loses.\n\n• Suppose Alice has \\((A,B) = (1,0)\\) but plays Init again anyways.\n Then Bob responds with PunB to punish her; he then wins as in the first case.\n\n• Suppose Bob has \\((A,B) = (0,1)\\) but plays Init again anyways.\n Alice responds with PunA in the same way. \\qquad \\square\n\nThus we may assume that players avoid the death part at all costs.\nHence the second moves consist of Bob playing Sleep,\nand then Alice playing Begin\n(thus restoring the value of \\(n\\) in \\(X\\)), then Bob playing Sleep.\n\nNow we return to analysis of the main part.\nWe say the game is in state \\(S\\) for\n\\(S \\in \\{S_X^0, S_X, S_X', S_Y^0, S_Y, S_Y', \\text{Cl} \\}\\)\nif \\(S = 1\\) and all other variables are zero.\nBy construction, this is always the case.\nFrom then on the main part is divided into several phases:\n\n• An \\(X\\)-phase: this begins with Alice at \\(S_X^0\\), and\n ends when the game is in a state other than \\(S_X\\) and \\(S_X'\\).\n (She can never return to \\(S_X^0\\) during an \\(X\\)-phase.)\n\n• A \\(Y\\)-phase: this begins with Alice at \\(S_Y^0\\), and\n ends when the game is in a state other than \\(S_Y\\) and \\(S_Y'\\).\n (She can never return to \\(S_Y^0\\) during a \\(Y\\)-phase.)\n\nClaim.\nConsider an \\(X\\)-phase in which \\((X,Y) = (x,0)\\), \\(x > 1\\).\nThen Alice can complete the phase without losing if and only if \\(x\\) is even;\nif so she begins a \\(Y\\)-phase with \\((X,Y) = (0,x/2)\\).\n\nProof.\nAs \\(x >1\\), Alice cannot play ClaimX since Bob will respond with FakeX and win.\nNow by alternating between WorkX and WorkX',\nAlice can repeatedly deduct \\(2\\) from \\(X\\) and add \\(1\\) to \\(Y\\),\nleading to \\((x-2,y+1)\\), \\((x-4,y+2)\\), and so on.\n(During this time, Bob can only play Sleep.)\nEventually, she must stop this process by playing DoneX, which begins a \\(Y\\)-phase.\n\nNow note that unless \\(X=0\\), Bob now has a winning move WrongX.\nConversely he may only play Sleep if \\(X=0\\).\n\nWe have an analogous claim for \\(Y\\)-phases.\nThus if \\(n\\) is not a power of \\(2\\), we see that Alice eventually loses.\n\nNow suppose \\(n = 2^k\\);\nthen Alice reaches \\((X,Y) = (0,2^{k-1}), \\; (2^{k-2}, 0), \\; \\dots\\)\nuntil either reaching \\((1,0)\\) or \\((0,1)\\).\nAt this point she can play ClaimX or ClaimY, respectively;\nthe game is now in state Cl.\nBob cannot play either FakeX or FakeY, so he must play Sleep,\nand then Alice wins by playing Win.\nThus Alice has a winning strategy when \\(n = 2^k\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

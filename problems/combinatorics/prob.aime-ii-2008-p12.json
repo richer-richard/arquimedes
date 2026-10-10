@@ -1,0 +1,71 @@
+{
+  "id": "prob.aime-ii-2008-p12",
+  "title": "2008 AIME II Problem 12",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.vandermondes-convolution",
+      "label": "Vandermonde’s Convolution",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2008,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 63.3,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "There are two distinguishable flagpoles, and there are \\(19\\) flags, of which \\(10\\) are identical blue flags, and \\(9\\) are identical green flags. Let \\(N\\) be the number of distinguishable arrangements using all of the flags in which each flagpole has at least one flag and no two green flags on either pole are adjacent. Find the remainder when \\(N\\) is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "310",
+    "value": "310"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2008-p12.live",
+      "kind": "proof-sketch",
+      "text": "Suppose the first pole gets \\(b\\) blue and \\(g\\) green flags, the second the remaining \\(10 - b\\) blue and \\(9 - g\\) green. On a pole with \\(b\\) blue flags, the green flags must occupy distinct gaps among the \\(b + 1\\) gaps around the blues, in \\(\\binom{b+1}{g}\\) ways. Temporarily ignoring the requirement that each pole be nonempty, the total is \\[ \\begin{aligned} &\\sum_{b=0}^{10} \\sum_{g=0}^{9} \\binom{b+1}{g} \\\\ &\\quad {}\\cdot \\binom{11-b}{9-g} \\\\ &= \\sum_{b=0}^{10} \\binom{12}{9} \\\\ &= 11 \\cdot 220 = 2420, \\end{aligned} \\] where the inner sum collapses by Vandermonde’s identity, since \\((b + 1) + (11 - b) = 12.\\)\n\nThe arrangements that leave a pole empty put all \\(19\\) flags on one pole, in \\(\\binom{11}{9} = 55\\) ways for each choice of pole. Hence \\[N = 2420 - 2 \\cdot 55 = 2310,\\] and the remainder when \\(N\\) is divided by \\(1000\\) is \\(310.\\)",
+      "hints": [
+        "On a pole with \\(b\\) blue and \\(g\\) green flags, the greens must occupy distinct gaps among the \\(b + 1\\) gaps determined by the blues: \\(\\binom{b+1}{g}\\) ways",
+        "Sum \\(\\binom{b+1}{g}\\binom{11-b}{9-g}\\) over \\(g\\) using Vandermonde’s identity, then subtract the arrangements that leave a pole empty"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

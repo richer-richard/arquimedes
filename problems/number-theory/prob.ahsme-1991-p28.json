@@ -1,0 +1,80 @@
+{
+  "id": "prob.ahsme-1991-p28",
+  "title": "1991 AHSME Problem 28",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.invariant",
+      "label": "Invariant",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.parity",
+      "label": "Parity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1991,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 44.6,
+    "source": 2330,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Initially an urn contains \\(100\\) black marbles and \\(100\\) white marbles. Repeatedly, three marbles are removed from the urn and replaced from a pile outside the urn as follows:\n\n Marbles removed Replaced with\n\n \\(3\\) black \\(1\\) black\n\n \\(2\\) black, \\(1\\) white \\(1\\) black, \\(1\\) white\n\n \\(1\\) black, \\(2\\) white \\(2\\) white\n\n \\(3\\) white \\(1\\) black, \\(1\\) white\n\n Which of the following sets of marbles could be the contents of the urn after repeated applications of this procedure?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\) black marbles"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\) white marbles"
+    },
+    {
+      "label": "C",
+      "text": "\\(1\\) black marble"
+    },
+    {
+      "label": "D",
+      "text": "\\(1\\) black and \\(1\\) white marble"
+    },
+    {
+      "label": "E",
+      "text": "\\(1\\) white marble"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1991-p28.live",
+      "kind": "proof-sketch",
+      "text": "The parity of the number of white marbles never changes, so choices with one white marble are impossible. Also a final operation starting with three marbles can leave \\(1\\) black, \\(1\\) black and \\(1\\) white, or \\(2\\) white, but never \\(2\\) black. The state with \\(2\\) white is attainable: repeatedly replace \\(3\\) black by \\(1\\) black until \\(2\\) black remain; twice use the \\(1\\)-black-\\(2\\)-white rule, leaving \\(100\\) white; then alternate the \\(3\\)-white rule with the \\(1\\)-black-\\(2\\)-white rule, reducing the number of white marbles by \\(2\\) per pair until \\(2\\) remain.\n\nThus the correct answer is B.",
+      "hints": [
+        "The number of white marbles always changes by \\(0\\) or \\(2\\)",
+        "When an operation first leaves at most two marbles, inspect the possible outputs of that final operation"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

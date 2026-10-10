@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-10a-2010-p25",
+  "title": "2010 AMC 10A Problem 25",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.work-backwards",
+      "label": "Work backwards",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2010,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 36.2,
+    "source": 2440,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Jim starts with a positive integer \\(n\\) and creates a sequence of numbers. Each successive number is obtained by subtracting the largest possible integer square less than or equal to the current number until zero is reached. For example, if Jim starts with \\(n = 55,\\) then his sequence contains \\(5\\) numbers: \\[\\begin{array}{ccccc} {}&{}&{}&{}&55\\\\ 55&-&7^2&=&6\\\\ 6&-&2^2&=&2\\\\ 2&-&1^2&=&1\\\\ 1&-&1^2&=&0\\\\ \\end{array}\\] Let \\(N\\) be the smallest number for which Jim’s sequence has \\(8\\) numbers. What is the units digit of \\(N?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(9\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "3"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2010-p25.live",
+      "kind": "proof-sketch",
+      "text": "We can work backwards starting with \\(0.\\) From this, we can add on \\(1^2\\) to get \\(1.\\)\n\nWe can again add on \\(1^2\\) to get \\(2.\\) Again, adding on \\(1^2\\) gives us \\(3.\\)\n\nIf we add on \\(1^2\\) now, we get \\(4,\\) but then \\(1^2\\) is not the greatest square less than or equal to \\(4.\\)\n\nThen adding on \\(2^2\\) gives us \\(7.\\) Continuing until there are eight terms in the forward sequence gives \\(7223.\\)\n\n\\[\\begin{array}{ccccc} {}&{}&{}&{}&7223\\\\ 7223&-&84^2&=&167\\\\ 167&-&12^2&=&23\\\\ 23&-&4^2&=&7\\\\ 7&-&2^2&=&3\\\\ 3&-&1^2&=&2\\\\2&-&1^2&=&1\\\\1&-&1^2&=&0\\end{array}\\]\n\nThus, B is the correct answer.",
+      "hints": [
+        "Build the smallest possible sequence backwards from \\(0\\)",
+        "At each reverse step, add the smallest square that the greedy rule would subtract"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

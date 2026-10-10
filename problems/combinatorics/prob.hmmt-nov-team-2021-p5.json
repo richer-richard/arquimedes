@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-team-2021-p5",
+  "title": "2021 HMMT November Team Problem 5",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.coloring-schemes-extremal-arguments",
+      "label": "Coloring schemes, extremal arguments",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2021,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 56.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many ways are there to place 31 knights in the cells of an \\(8 \\times 8\\) unit grid so that no two attack one another?\n(A knight attacks another knight if the distance between the centers of their cells is exactly \\(\\sqrt{5}\\).)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "68",
+    "value": "68"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2021-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "Consider coloring the squares of the chessboard so that 32 are black and 32 are white, and no two squares of the same color share a side. Then a knight in a square of one color only attacks squares of the opposite color. Any arrangement of knights in which all 31 are placed on the same color therefore works: there are 64 such arrangements (one for each square, in which that square is empty and the others of the same color are occupied). Also, if a knight is placed in a corner, it only attacks two squares. Therefore, for each corner, it is possible to place a knight in one corner and in all squares of theopposite color except the two attacked by the corner night. This gives 68 total arrangements. one can prove that no others are possible.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-10b-2020-p14",
+  "title": "2020 AMC 10B Problem 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-decomposition",
+      "label": "Area decomposition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.regular-polygon",
+      "label": "Regular polygon",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.sector",
+      "label": "Sector",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2020,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 24.3,
+    "source": 1530,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "As shown in the figure below, six semicircles lie in the interior of a regular hexagon with side length \\(2\\) so that the diameters of the semicircles coincide with the sides of the hexagon. What is the area of the shaded region—inside the hexagon but outside all of the semicircles?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(6\\sqrt3-3\\pi\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{9\\sqrt3}{2}-2\\pi\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{3\\sqrt3}{2}-\\dfrac{\\pi}{3}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\sqrt3-\\pi\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{9\\sqrt3}{2}-\\pi\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2020-p14.live",
+      "kind": "proof-sketch",
+      "text": "By symmetry, the shaded region is made of six congruent pieces. One such piece is the union of two equilateral triangles with side length \\(1,\\) minus a \\(60^\\circ\\) sector of a circle of radius \\(1.\\)\n\nThe two equilateral triangles have total area \\[2\\cdot\\frac{\\sqrt3}{4}=\\frac{\\sqrt3}{2}.\\] The sector has area \\[\\frac{60^\\circ}{360^\\circ}\\cdot\\pi(1)^2=\\frac{\\pi}{6}.\\] Thus one shaded piece has area \\(\\frac{\\sqrt3}{2}-\\frac{\\pi}{6},\\) and the total shaded area is \\[6\\left(\\frac{\\sqrt3}{2}-\\frac{\\pi}{6}\\right)=3\\sqrt3-\\pi.\\]\n\nThus, D is the correct answer.",
+      "hints": [
+        "Use the symmetry of the regular hexagon to split the shaded region into six equal pieces",
+        "Each piece is two equilateral triangles minus a \\(60^\\circ\\) sector of radius \\(1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "03670974c8613cd11bc4f77ced23a28f1887a36c7a26895413512064b5b147b1"
+    ],
+    "solutions": []
+  }
+}

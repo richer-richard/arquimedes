@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2010-p16",
+  "title": "2010 AMC 10A Problem 16",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-bisector-theorem",
+      "label": "Angle bisector theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-inequality",
+      "label": "Triangle inequality",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2010,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 24.9,
+    "source": 1600,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Nondegenerate \\(\\triangle ABC\\) has integer side lengths, \\(\\overline{BD}\\) is an angle bisector, \\(AD = 3,\\) and \\(DC = 8.\\) What is the smallest possible value of the perimeter?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(30\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(33\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(35\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(36\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(37\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "33"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2010-p16.live",
+      "kind": "proof-sketch",
+      "text": "Using the Angle Bisector Theorem, we have that \\[ \\dfrac{AB}{3} = \\dfrac{BC}{8} \\]\\[ AB = \\dfrac{3}{8} BC. \\]\n\nFor \\(AB\\) and \\(BC\\) to be integers, we must have that \\(BC\\) is a multiple of \\(8.\\)\n\nTo minimize the perimeter, we can set \\(BC = 8\\) and \\(AB = 3.\\) This, however, makes the triangle degenerate.\n\n\\(BC\\) must then be \\(16\\) and \\(AB = 6.\\) Since \\(AC = AD + DC = 11,\\) the perimeter is \\[ 16 + 6 + 11 = 33. \\]\n\nThus, B is the correct answer.",
+      "hints": [
+        "Use the Angle Bisector Theorem",
+        "\\(AB:BC=3:8\\), and \\(AC=11\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

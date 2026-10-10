@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2016-p2",
+  "title": "2016 USAMO Problem 2",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2016,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 89.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Prove that for any positive integer \\(k,\\)\n\n\\[\n\\left(k^2\\right)!\\cdot\\prod_{j=0}^{k-1}\\frac{j!}{\\left(j+k\\right)!}\n\\]\n\nis an integer.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2016-p2.imported",
+      "kind": "proof-sketch",
+      "text": "Define $v_p(N)$ for all rational numbers $N$ and primes $p$, where if $N=\\frac{x}{y}$, then $v_p(N)=v_p(x)-v_p(y)$, and $v_p(x)$ is the greatest power of $p$ that divides $x$ for integer $x$. Note that the expression(that we're trying to prove is an integer) is clearly rational, call it $N$.\n$v_p(N)=\\sum_{i=1}^\\infty \\left\\lfloor \\frac{k^{2}}{p^{i}} \\right\\rfloor+\\sum_{j=0}^{k-1} \\sum_{i=1}^\\infty \\left\\lfloor \\frac{j}{p^{i}}\\right\\rfloor-\\sum_{j=k}^{2k-1} \\sum_{i=1}^\\infty \\left\\lfloor \\frac{j}{p^{i}} \\right\\rfloor$, by Legendre. Clearly, $\\left\\lfloor{\\frac{x}{p}}\\right\\rfloor={\\frac{x-r(x,p)}{p}}$, and $\\sum_{i=0}^{k-1} r(i,m)\\leq \\sum_{i=k}^{2k-1} r(i,m)$, where $r(i,m)$ is the remainder function(we take out groups of $m$ which are just permutations of numbers $1$ to $m$ until there are less than $m$ left, then we have $m$ distinct values, which the minimum sum is attained at $0$ to $k-1$). Thus, $v_p(N)=\\sum_{m=p^{i}, i\\in \\mathbb{N}_{+}}-\\frac{k^{2}}{m}+\\left\\lfloor{\\frac{k^{2}}{m}}\\right\\rfloor-\\frac{\\sum_{i=0}^{k-1} r(i,m)-\\sum_{i=k}^{2k-1} r(i,m)}{m} \\geq \\sum_{m=p^{i}, i\\in \\mathbb{N}} \\left\\lceil -\\frac{k^{2}}{m}+\\lfloor{\\frac{k^{2}}{m}}\\rfloor\\right\\rceil \\geq 0$, as the term in each summand is a sum of floors also and is clearly an integer.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

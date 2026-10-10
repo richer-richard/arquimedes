@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-team-2022-p1",
+  "title": "2022 HMMT February Team Problem 1",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2022,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 75.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\left(a_{1}, a_{2}, \\ldots, a_{8}\\right)\\) be a permutation of \\((1,2, \\ldots, 8)\\). Find, with proof, the maximum possible number of elements of the set\n\n\\[\\left\\{a_{1}, a_{1}+a_{2}, \\ldots, a_{1}+a_{2}+\\cdots+a_{8}\\right\\}\\]\n\nthat can be perfect squares.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "5",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2022-p1.hmmt",
+      "kind": "proof-sketch",
+      "text": "We claim the maximum is 5 , achieved by the sequence ( \\(1,3,5,7,2,4,6,8\\) ). Now we prove that we cannot do better.\nSince \\(a_{1}+a_{2}+\\ldots+a_{8}=1+2+\\ldots+8=36\\), then there are at most 6 squares in\n\n\\[\\left\\{a_{1}, a_{1}+a_{2}, \\ldots, a_{1}+a_{2}+\\cdots+a_{8}\\right\\} .\\]\n\nNote that if \\(a_{1}+\\cdots+a_{k}=n^{2}\\) and \\(a_{1}+\\cdots+a_{j}=(n+1)^{2}\\), then \\(a_{k+1}+\\ldots+a_{j}=2 n+1\\). Since \\(2 n+1\\) is odd, \\(a_{m}\\) must be odd for some \\(m \\in[k+1, j]\\).\nThus, if all of \\(1,4,9,16,25\\), and 36 are in\n\n\\[\\left\\{a_{1}, a_{1}+a_{2}, \\ldots, a_{1}+a_{2}+\\cdots+a_{8}\\right\\}\\]\n\nthen \\(a_{1}=1\\), and there are five more odd values in \\(\\left\\{a_{1}, a_{2}, \\ldots, a_{8}\\right\\}\\), which is a contradiction because there are only four odd numbers in \\(\\{1,2, \\ldots, 8\\}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "prob.aime-ii-2001-p12",
+  "title": "2001 AIME II Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.power-scaling-of-length-area-and-volume",
+      "label": "Power scaling of length, area, and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.volume",
+      "label": "Volume",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2001,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 61.6,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 12,
+  "statement": "Given a triangle, its midpoint triangle is obtained by joining the midpoints of its sides. A sequence of polyhedra \\(\\mathcal{P}_i\\) is defined recursively as follows: \\(\\mathcal{P}_0\\) is a regular tetrahedron whose volume is \\(1.\\) To obtain \\(\\mathcal{P}_{i+1},\\) replace the midpoint triangle of every face of \\(\\mathcal{P}_i\\) by an outward-pointing regular tetrahedron that has the midpoint triangle as a face. The volume of \\(\\mathcal{P}_3\\) is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "101",
+    "value": "101"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2001-p12.live",
+      "kind": "proof-sketch",
+      "text": "Attaching a tetrahedron over the midpoint triangle of a face replaces that face by \\(6\\) equilateral triangles of half the side length: the \\(3\\) corner triangles plus \\(3\\) exposed faces of the new tetrahedron. So all faces of \\(\\mathcal{P}_i\\) are congruent, with side \\(\\left(\\frac{1}{2}\\right)^i\\) times the original, and \\(\\mathcal{P}_i\\) has \\(4 \\cdot 6^i\\) faces.\n\nPassing from \\(\\mathcal{P}_i\\) to \\(\\mathcal{P}_{i+1}\\) glues one regular tetrahedron onto each face; each is similar to \\(\\mathcal{P}_0\\) with ratio \\(\\left(\\frac{1}{2}\\right)^{i+1},\\) hence has volume \\(\\left(\\frac{1}{8}\\right)^{i+1}.\\) The volume added is \\[4 \\cdot 6^i \\left(\\frac{1}{8}\\right)^{i+1} = \\frac{1}{2}\\left(\\frac{3}{4}\\right)^i.\\]\n\nTherefore the volume of \\(\\mathcal{P}_3\\) is \\(1 + \\frac{1}{2} + \\frac{3}{8} + \\frac{9}{32} = \\frac{69}{32},\\) and \\(m + n = 69 + 32 = 101.\\)",
+      "hints": [
+        "Each face of \\(\\mathcal{P}_i\\) is replaced by \\(6\\) half-size faces, so \\(\\mathcal{P}_i\\) has \\(4 \\cdot 6^i\\) faces",
+        "The tetrahedra added at step \\(i + 1\\) each have volume \\(\\left(\\frac{1}{8}\\right)^{i+1},\\) so the total volume added is \\(\\frac{1}{2}\\left(\\frac{3}{4}\\right)^i\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

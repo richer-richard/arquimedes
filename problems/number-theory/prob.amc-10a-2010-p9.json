@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2010-p9",
+  "title": "2010 AMC 10A Problem 9",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.palindrome",
+      "label": "Palindrome",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2010,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 19.0,
+    "source": 1280,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A palindrome, such as \\(83438,\\) is a number that remains the same when its digits are reversed. The numbers \\(x\\) and \\(x + 32\\) are three-digit and four-digit palindromes, respectively. What is the sum of the digits of \\(x?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(22\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(23\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(24\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "24"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2010-p9.live",
+      "kind": "proof-sketch",
+      "text": "Note that \\(x\\) is at most \\(999.\\) This means that \\(x + 32\\) has a maximum of \\(1031.\\)\n\nSimilarly, we have that the minimum value of \\(x + 32\\) is \\(1000.\\)\n\nThe only palindrome in this range is \\(1001,\\) so this is what \\(x + 32\\) equals.\n\nThen \\[ x + 32 = 1001 \\]\\[ x = 969. \\]\n\nThe sum of the digits is then \\[ 9 + 6 + 9 = 24. \\]\n\nThus, E is the correct answer.",
+      "hints": [
+        "Bound the four-digit palindrome between \\(1000\\) and \\(1031\\)",
+        "Find the only palindrome in that interval, then subtract \\(32\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

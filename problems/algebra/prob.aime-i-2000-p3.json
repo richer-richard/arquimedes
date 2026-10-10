@@ -1,0 +1,59 @@
+{
+  "id": "prob.aime-i-2000-p3",
+  "title": "2000 AIME I Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.binomial-theorem",
+      "label": "Binomial theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2000,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 33.4,
+    "source": 1890,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "In the expansion of \\((ax + b)^{2000},\\) where \\(a\\) and \\(b\\) are relatively prime positive integers, the coefficients of \\(x^2\\) and \\(x^3\\) are equal. Find \\(a + b.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "667",
+    "value": "667"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2000-p3.live",
+      "kind": "proof-sketch",
+      "text": "By the binomial theorem, the coefficients of \\(x^2\\) and \\(x^3\\) are \\(\\binom{2000}{2} a^2 b^{1998}\\) and \\(\\binom{2000}{3} a^3 b^{1997}.\\) Setting them equal and cancelling \\(a^2 b^{1997}\\) gives \\[\\binom{2000}{2} b = \\binom{2000}{3} a,\\] so \\[b = \\frac{1998}{3}\\,a = 666a.\\]\n\nSince \\(\\gcd(a, b) = 1,\\) we must have \\(a = 1\\) and \\(b = 666,\\) so \\(a + b = 667.\\)",
+      "hints": [
+        "Set the coefficients \\(\\binom{2000}{2} a^2 b^{1998}\\) and \\(\\binom{2000}{3} a^3 b^{1997}\\) equal",
+        "Cancel common factors to get \\(3b = 1998a,\\) then use that \\(a\\) and \\(b\\) are relatively prime"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

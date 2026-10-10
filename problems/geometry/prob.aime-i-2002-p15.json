@@ -1,0 +1,68 @@
+{
+  "id": "prob.aime-i-2002-p15",
+  "title": "2002 AIME I Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.distance-formula",
+      "label": "Distance formula",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2002,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 65.9,
+    "source": 3160,
+    "mohs": null
+  },
+  "estimatedMinutes": 30,
+  "statement": "Polyhedron \\(ABCDEFG\\) has six faces. Face \\(ABCD\\) is a square with \\(AB = 12;\\) face \\(ABFG\\) is a trapezoid with \\(\\overline{AB}\\) parallel to \\(\\overline{GF},\\) \\(BF = AG = 8,\\) and \\(GF = 6;\\) and face \\(CDE\\) has \\(CE = DE = 14.\\) The other three faces are \\(ADEG,\\) \\(BCEF,\\) and \\(EFG.\\) The distance from \\(E\\) to face \\(ABCD\\) is \\(12.\\) Given that \\(EG^2 = p - q\\sqrt{r},\\) where \\(p,\\) \\(q,\\) and \\(r\\) are positive integers and \\(r\\) is not divisible by the square of any prime, find \\(p + q + r.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "163",
+    "value": "163"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2002-p15.live",
+      "kind": "proof-sketch",
+      "text": "Place \\(D = (0, 0, 0),\\) \\(C = (12, 0, 0),\\) \\(B = (12, 12, 0),\\) \\(A = (0, 12, 0),\\) and \\(E = (x, y, 12),\\) using the given distance from \\(E\\) to face \\(ABCD.\\) From \\(CE = DE\\) we get \\(x = 6,\\) and then \\(DE = 14\\) gives \\(36 + y^2 + 144 = 196,\\) so \\(y = 4\\) and \\(E = (6, 4, 12).\\)\n\nIn trapezoid \\(ABFG,\\) \\(\\overline{GF}\\) is parallel to \\(\\overline{AB}\\) with \\(GF = 6\\) and \\(AG = BF,\\) so \\(G\\) and \\(F\\) are symmetric about the plane \\(x = 6:\\) \\(G = (3, y_2, z_2)\\) and \\(F = (9, y_2, z_2).\\) Face \\(ADEG\\) is planar, and the plane through \\(A,\\) \\(D,\\) \\(E\\) contains the entire \\(y\\)-axis direction (both \\(A\\) and \\(D\\) have \\(x = z = 0\\)), so it is the plane \\(z = 2x,\\) which indeed contains \\(E.\\) Hence \\(z_2 = 6.\\) Now \\(AG = 8\\) gives \\(3^2 + (y_2 - 12)^2 + 6^2 = 64,\\) so \\(y_2 = 12 \\pm \\sqrt{19}.\\)\n\nThen \\[ \\begin{aligned} EG^2 &= 3^2 + (y_2 - 4)^2 + 6^2 \\\\ &= 45 + \\left(8 \\pm \\sqrt{19}\\right)^2 \\\\ &= 128 \\pm 16\\sqrt{19}, \\end{aligned} \\] and the stated form \\(p - q\\sqrt{r}\\) corresponds to \\(128 - 16\\sqrt{19}.\\) Thus \\[ \\begin{aligned} p + q + r &= 128 + 16 + 19 \\\\ &= 163. \\end{aligned} \\]",
+      "hints": [
+        "Set up coordinates with square \\(ABCD\\) in the \\(xy\\)-plane; the given lengths place \\(E = (6, 4, 12)\\)",
+        "Face \\(ADEG\\) is planar, so \\(G\\) lies on the plane \\(z = 2x\\) through \\(A,\\) \\(D,\\) \\(E;\\) trapezoid symmetry gives \\(G = (3, y, 6),\\) and \\(AG = 8\\) determines \\(y\\)"
+      ],
+      "images": [
+        "c03df84fbbc17b7da3bdd547aebfb51ae2e8ad46f3826fc24e1f8350bdd2d4a2"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "c03df84fbbc17b7da3bdd547aebfb51ae2e8ad46f3826fc24e1f8350bdd2d4a2"
+    ]
+  }
+}

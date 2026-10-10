@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1971-p30",
+  "title": "1971 AHSME Problem 30",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.function",
+      "label": "Function",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.transformation",
+      "label": "Transformation",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1971,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 44.9,
+    "source": 2340,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Given the linear fractional transformation \\[ f_1(x)=\\frac{2x-1}{x+1}, \\] define \\(f_{n+1}(x)=f_1(f_n(x))\\) for \\(n=1,\\) \\(2,\\) \\(3,\\) \\(\\ldots.\\) Assuming \\(f_{35}(x)=f_5(x),\\) it follows that \\(f_{28}(x)\\) is equal to:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(x\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\frac{1}{x}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\frac{x-1}{x}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\frac{1}{1-x}\\)"
+    },
+    {
+      "label": "E",
+      "text": "None of these"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1971-p30.live",
+      "kind": "proof-sketch",
+      "text": "The transformation is invertible. From \\(f_{35}=f_5,\\) composing with \\(f_5^{-1}\\) shows that \\(f_{30}\\) is the identity. Solving \\(y=\\frac{2x-1}{x+1}\\) for \\(x\\) gives \\[ g(y)=f_1^{-1}(y)=\\frac{y+1}{2-y}. \\] Since iterates have period \\(30,\\) \\(f_{28}=f_{-2}=g^2.\\) Direct composition gives \\[ g(g(x))=\\frac{1}{1-x}. \\]\n\nTherefore, the correct answer is D.",
+      "hints": [
+        "Cancel five iterates by composing with the inverse transformation",
+        "If \\(g=f_1^{-1}\\), then \\(f_{28}=g^2\\) once \\(f_{30}\\) is the identity"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

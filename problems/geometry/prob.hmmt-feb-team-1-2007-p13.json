@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-team-1-2007-p13",
+  "title": "2007 HMMT February Team Round 1 Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2007,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 83.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find all nonconstant polynomials \\(P(x)\\), with real coefficients and having only real zeros, such that \\(P(x+1) P\\left(x^{2}-x+1\\right)=P\\left(x^{3}+1\\right)\\) for all real numbers \\(x\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1-2007-p13.hmmt",
+      "kind": "proof-sketch",
+      "text": "Note that if \\(P(\\alpha)=0\\), then by setting \\(x=\\alpha-1\\) in the given equation, we find \\(0=P\\left(x^{3}+\\right.\\) \\(1)=P\\left(\\alpha^{3}-3 \\alpha^{2}+3 \\alpha\\right)\\). Because \\(P\\) is nonconstant, it has at least one zero. Because \\(P\\) has finite degree, there exist minimal and maximal roots of \\(P\\). Writing \\(\\alpha^{3}-3 \\alpha^{2}+3 \\alpha \\geq \\alpha \\Longleftrightarrow \\alpha(\\alpha-1)(\\alpha-2) \\geq 0\\), we see that the largest zero of \\(P\\) cannot exceed 2 . Likewise, the smallest zero cannot be negative, so all of the zeroes of \\(P\\) lie in [0,2]. Moreover, if \\(\\alpha \\notin\\{0,1,2\\}\\) is a zero of \\(P\\), then \\(\\alpha^{\\prime}=\\alpha^{3}-3 \\alpha^{2}+3 \\alpha\\) is another zero of \\(P\\) that lies strictly between \\(\\alpha\\) and 1. Because \\(P\\) has only finitely many zeroes, all of its zeroes must lie in \\(\\{0,1,2\\}\\). Now write \\(P(x)=k x^{p}(x-1)^{q}(x-2)^{r}\\) for nonnegative integers \\(p, q\\) and \\(r\\) having a positive sum. The given equation becomes\n\n\\[\\begin{aligned}\n& k^{2}(x+1)^{p} x^{q}(x-1)^{r}\\left(x^{2}-x+1\\right)^{p}\\left(x^{2}-x\\right)^{q}\\left(x^{2}-x-1\\right)^{r}=P(x+1) P\\left(x^{2}-x+1\\right) \\\\\n& \\quad=P\\left(x^{3}+1\\right)=k\\left(x^{3}+1\\right)^{p} x^{3 q}\\left(x^{3}-1\\right)^{r}\n\\end{aligned}\\]\n\nFor the leading coefficients to agree, we require \\(k=k^{2}\\). Because the leading coefficient is nonzero, \\(P\\) must be monic. In \\((*), r\\) must be zero lest \\(P\\left(x^{3}+1\\right)=0\\) have complex roots. Then \\(q\\) must be zero as well. For, if \\(q\\) is positive, then \\(P\\left(x^{2}-x+1\\right)=0\\) has 1 as a root while \\(P\\left(x^{3}+1\\right)\\) does not. Finally, the remaining possibilities are \\(P(x)=x^{p}\\) for \\(p\\) an arbitrary positive integer. It is easily seen that these polynomials are satisfactory.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tst-2017-p2",
+  "title": "USA TST 2017 Problem 2",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TST",
+    "year": 2017,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 97.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(ABC\\) be an acute scalene triangle with circumcenter \\(O\\),\nand let \\(T\\) be on line \\(BC\\) such that \\(\\angle TAO = 90^\\circ\\).\nThe circle with diameter \\(\\overline{AT}\\)\nintersects the circumcircle of \\(\\triangle BOC\\) at two points\n\\(A_1\\) and \\(A_2\\), where \\(OA_1 < OA_2\\).\nPoints \\(B_1\\), \\(B_2\\), \\(C_1\\), \\(C_2\\) are defined analogously.\n\n• a. Prove that \\(\\overline{AA_1}\\), \\(\\overline{BB_1}\\), \\(\\overline{CC_1}\\) are concurrent.\n\n• b. Prove that \\(\\overline{AA_2}\\), \\(\\overline{BB_2}\\), \\(\\overline{CC_2}\\) are concurrent\n on the Euler line of triangle \\(ABC\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tst-2017-p2.evanchen",
+      "kind": "proof-sketch",
+      "text": "Let triangle \\(ABC\\) have circumcircle \\(\\Gamma\\).\nLet \\(\\triangle XYZ\\) be the tangential triangle of \\(\\triangle ABC\\)\n(hence \\(\\Gamma\\) is the incircle of \\(\\triangle XYZ\\)),\nand denote by \\(\\Omega\\) its circumcircle.\nSuppose the symmedian \\(\\overline{AX}\\) meets \\(\\Gamma\\) again at \\(D\\),\nand let \\(M\\) be the midpoint of \\(\\overline{AD}\\).\nFinally, let \\(K\\) be the Miquel point of quadrilateral \\(ZBCY\\),\nmeaning it is the intersection of \\(\\Omega\\)\nand the circumcircle of \\(\\triangle BOC\\) (other than \\(X\\)).\n\n[Diagram omitted from this imported TeX transcription.]\n\nWe first claim that \\(M\\) and \\(K\\) are \\(A_1\\) and \\(A_2\\).\nIn that case \\(OM < OA < OK\\), so \\(M = A_1\\), \\(K = A_2\\).\n\nTo see that \\(M = A_1\\), note that \\(\\angle OMX = 90^\\circ\\),\nand moreover that \\(\\overline{TA}\\), \\(\\overline{TD}\\) are tangents to \\(\\Gamma\\),\nwhence we also have \\(M = \\overline{TO} \\cap \\overline{AD}\\).\nThus \\(M\\) lies on both \\((BOC)\\) and \\((AT)\\).\nThis solves part (a) of the problem:\nthe concurrency point is the symmedian point of \\(\\triangle ABC\\).\n\nNow, note that since \\(K\\) is the Miquel point,\n\\[ \\frac{ZK}{YK} = \\frac{ZB}{YC} = \\frac{ZA}{YA} \\]\nand hence \\(\\overline{KA}\\) is an angle bisector of \\(\\angle ZKY\\).\nThus from \\((TA;YZ)=-1\\) we obtain \\(\\angle TKA = 90^\\circ\\).\n\nIt remains to show \\(\\overline{AK}\\) passes through a fixed point on the Euler line.\nWe claim it is the exsimilicenter of \\(\\Gamma\\) and \\(\\Omega\\).\nLet \\(L\\) be the midpoint of the arc \\(YZ\\) of \\(\\triangle XYZ\\) not containing \\(X\\).\nThen we know that \\(K\\), \\(A\\), \\(L\\) are collinear.\nNow the positive homothety sending \\(\\Gamma\\) to \\(\\Omega\\) maps \\(A\\) to \\(L\\);\nthis proves the claim.\nFinally, it is well-known that the line through \\(O\\)\nand the circumcenter of \\(\\triangle XYZ\\)\ncoincides with the Euler line of \\(\\triangle ABC\\);\nhence done.\n\nA second approach to (b) presented by many contestants\nis to take an inversion around the circumcircle of \\(ABC\\).\nIn that situation, the part reduces to the following\nknown lemma: if \\(\\overline{AH_a}\\), \\(\\overline{BH_b}\\), \\(\\overline{CH_c}\\)\nare the altitudes of a triangle,\nthen the circumcircles of triangles \\(OAH_a\\), \\(BOH_b\\), \\(COH_c\\)\nare coaxial, and the radical axis coincides with the Euler line.\nIndeed one simply observes that the orthocenter\nhas equal power to all three circles.\n\nAuthorship comments..\nThis problem was inspired by the fact that \\(K\\), \\(A\\), \\(L\\)\nare collinear in the figure,\nwhich was produced by one of my students (Ryan Kim)\nin a solution to a homework problem.\nI realized for example that this implied that line \\(AK\\)\npassed through the \\(X_{56}\\) point of \\(\\triangle XYZ\\)\n(which lies on the Euler line of \\(\\triangle ABC\\)).\n\nThis problem was the result of playing around with\nthe resulting very nice picture:\nall the power comes from the ``magic'' point \\(K\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2012-p9",
+  "title": "2012 AIME I Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.exponent",
+      "label": "Exponent",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.substitution",
+      "label": "Substitution",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2012,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 56.3,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Let \\(x,\\) \\(y,\\) and \\(z\\) be positive real numbers that satisfy \\[ \\begin{aligned} 2\\log_{x}(2y) &= 2\\log_{2x}(4z) \\\\ &= \\log_{2x^4}(8yz) \\ne 0. \\end{aligned} \\] The value of \\(xy^5z\\) can be expressed in the form \\(\\frac{1}{2^{\\frac{p}{q}}},\\) where \\(p\\) and \\(q\\) are relatively prime positive integers. Find \\(p + q.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "49",
+    "value": "49"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2012-p9.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(x = 2^a,\\) \\(y = 2^b,\\) \\(z = 2^c.\\) Then \\(\\log_x(2y) = \\frac{b + 1}{a},\\) \\(\\log_{2x}(4z) = \\frac{c + 2}{a + 1},\\) and \\(\\log_{2x^4}(8yz) = \\frac{b + c + 3}{4a + 1},\\) so the condition is \\[ \\begin{aligned} \\frac{2(b + 1)}{a} &= \\frac{2(c + 2)}{a + 1} \\\\ &= \\frac{b + c + 3}{4a + 1} \\ne 0. \\end{aligned} \\]\n\nFrom the first two, \\(\\frac{b + 1}{a} = \\frac{c + 2}{a + 1},\\) and equal ratios also equal their mediant \\(\\frac{b + c + 3}{2a + 1}.\\) Comparing with the third expression gives \\(\\frac{2(b + c + 3)}{2a + 1} = \\frac{b + c + 3}{4a + 1}.\\) The common value is nonzero, so \\(b + c + 3 \\ne 0,\\) and thus \\(2(4a + 1) = 2a + 1,\\) giving \\(a = -\\frac{1}{6}.\\) Then \\(\\frac{b + 1}{-\\frac{1}{6}} = \\frac{c + 2}{\\frac{5}{6}}\\) yields \\(c + 2 = -5(b + 1),\\) that is, \\(5b + c = -7.\\)\n\nTherefore \\(xy^5z = 2^{a + 5b + c} = 2^{-\\frac{1}{6} - 7} = \\frac{1}{2^{\\frac{43}{6}}},\\) so \\(p + q = 43 + 6 = 49.\\)",
+      "hints": [
+        "Set \\(x = 2^a,\\) \\(y = 2^b,\\) \\(z = 2^c\\) so each logarithm becomes a ratio of linear expressions in the exponents",
+        "Equal ratios also equal their mediant: \\(\\frac{u_1}{v_1} = \\frac{u_2}{v_2} = \\frac{u_1 + u_2}{v_1 + v_2}.\\) Compare that with the third ratio to pin down \\(a.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

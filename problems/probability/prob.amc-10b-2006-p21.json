@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-10b-2006-p21",
+  "title": "2006 AMC 10B Problem 21",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.dice-probability",
+      "label": "Dice (probability)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2006,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 26.8,
+    "source": 1630,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "For a particular peculiar pair of dice, the probabilities of rolling \\(1,\\) \\(2,\\) \\(3,\\) \\(4,\\) \\(5,\\) and \\(6\\) on each die are in the ratio \\(1:2:3:4:5:6.\\) What is the probability of rolling a total of \\(7\\) on the two dice?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{4}{63}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1}{8}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{8}{63}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{1}{6}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{2}{7}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "8/63"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2006-p21.live",
+      "kind": "proof-sketch",
+      "text": "Each die shows \\(k\\) with probability \\(\\tfrac{k}{1+2+\\cdots+6}=\\tfrac{k}{21}.\\)\n\nFor a total of \\(7,\\) the ordered pairs \\((1,6),(2,5),\\ldots,(6,1)\\) contribute \\[ \\begin{aligned} &\\scriptsize\\dfrac{1\\cdot6+2\\cdot5+3\\cdot4+4\\cdot3+5\\cdot2+6\\cdot1}{21^2}\\\\ &=\\dfrac{56}{441}=\\dfrac{8}{63}. \\end{aligned} \\]\n\nThus, the correct answer is C.",
+      "hints": [
+        "The probability of rolling \\(k\\) is \\(\\tfrac{k}{21}\\)",
+        "Sum \\(P(i)P(7-i)\\) over the six ordered pairs with \\(i+j=7\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

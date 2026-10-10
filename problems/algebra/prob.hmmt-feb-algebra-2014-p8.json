@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-algebra-2014-p8",
+  "title": "2014 HMMT February Algebra Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomial-operations",
+      "label": "Polynomial operations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.quadratic-functions",
+      "label": "Quadratic functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2014,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 86.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find all real numbers \\(k\\) such that \\(r^{4}+k r^{3}+r^{2}+4 k r+16=0\\) is true for exactly one real number \\(r\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-2014-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\pm \\frac{9}{4}\\) (OR \\(\\frac{9}{4},-\\frac{9}{4}\\) OR \\(\\left.-\\frac{9}{4}, \\frac{9}{4}\\right)\\) OR \\(\\pm 2 \\frac{1}{4}\\) OR \\(\\pm 2.25\\) Any real quartic has an even number of real roots with multiplicity, so there exists real \\(r\\) such that \\(x^{4}+k x^{3}+x^{2}+4 k x+16\\) either takes the form \\((x+r)^{4}\\) (clearly impossible) or \\((x+r)^{2}\\left(x^{2}+a x+b\\right)\\) for some real \\(a, b\\) with \\(a^{2}<4 b\\). Clearly \\(r \\neq 0\\), so \\(b=\\frac{16}{r^{2}}\\) and \\(4 k=4(k)\\) yields \\(\\frac{32}{r}+a r^{2}=4(2 r+a) \\Longrightarrow a\\left(r^{2}-4\\right)=8 \\frac{r^{2}-4}{r}\\). Yet \\(a \\neq \\frac{8}{r}\\) (or else \\(a^{2}=4 b\\) ), so \\(r^{2}=4\\), and \\(1=r^{2}+2 r a+\\frac{16}{r^{2}} \\Longrightarrow a=\\frac{-7}{2 r}\\). Thus \\(k=2 r-\\frac{7}{2 r}= \\pm \\frac{9}{4}\\) (since \\(r= \\pm 2\\) ).\nIt is easy to check that \\(k=\\frac{9}{4}\\) works, since \\(x^{4}+(9 / 4) x^{3}+x^{2}+4(9 / 4) x+16=\\frac{1}{4}(x+2)^{2}\\left(4 x^{2}-7 x+16\\right)\\). The polynomial given by \\(k=-\\frac{9}{4}\\) is just \\(\\frac{1}{4}(-x+2)^{2}\\left(4 x^{2}+7 x+16\\right)\\).\nAlternate solution: \\(x^{4}+k x^{3}+x^{2}+4 k x+16=\\left(x^{2}+\\frac{k}{2} x+4\\right)^{2}+\\left(1-8-\\frac{k^{2}}{4}\\right) x^{2}\\), so for some \\(\\epsilon \\in\\{-1,1\\}\\), \\(2 x^{2}+\\left(k-\\epsilon \\sqrt{k^{2}+28}\\right) x+8\\) has a single real root and thus takes the form \\(2(x+r)^{2}\\) (using the same notation as above). But then \\(\\left(k-\\epsilon \\sqrt{k^{2}+28}\\right)^{2}=4(2)(8)=8^{2}\\), so we conclude that \\((k \\pm 8)^{2}=\\left(\\epsilon \\sqrt{k^{2}+28}\\right)^{2}\\) and \\(k= \\pm\\left(4-\\frac{7}{4}\\right)= \\pm \\frac{9}{4}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

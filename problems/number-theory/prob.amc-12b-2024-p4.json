@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12b-2024-p4",
+  "title": "2024 AMC 12B Problem 4",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.triangular-number",
+      "label": "Triangular number",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2024,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 17.5,
+    "source": 1270,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Balls numbered \\(1,\\) \\(2,\\) \\(3,\\) \\(\\ldots\\) are deposited in \\(5\\) bins, labeled \\(A,\\) \\(B,\\) \\(C,\\) \\(D,\\) and \\(E,\\) using the following procedure. Ball \\(1\\) is deposited in bin \\(A,\\) and balls \\(2\\) and \\(3\\) are deposited in \\(B.\\) The next three balls are deposited in bin \\(C,\\) the next \\(4\\) in bin \\(D,\\) and so on, cycling back to bin \\(A\\) after balls are deposited in bin \\(E.\\) (For example, \\(22,\\) \\(23,\\) \\(\\ldots,\\) \\(28\\) are deposited in bin \\(B\\) at step \\(7\\) of this process.) In which bin is ball \\(2024\\) deposited?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(A\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(B\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(C\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(D\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(E\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2024-p4.live",
+      "kind": "proof-sketch",
+      "text": "Step \\(k\\) deposits \\(k\\) balls, so after step \\(k\\) a total of \\(\\dfrac{k(k+1)}{2}\\) balls have been placed. Since \\(\\dfrac{63 \\cdot 64}{2} = 2016\\) and \\(\\dfrac{64 \\cdot 65}{2} = 2080,\\) ball \\(2024\\) falls in step \\(64.\\)\n\nThe steps cycle through the bins \\(A, B, C, D, E,\\) so step \\(k\\) uses position \\((k-1) \\bmod 5.\\) Here \\((64 - 1) \\bmod 5 = 63 \\bmod 5 = 3,\\) which is the fourth bin, \\(D.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "At step \\(k,\\) exactly \\(k\\) balls are deposited, so after \\(k\\) steps a total of \\(\\dfrac{k(k+1)}{2}\\) balls have been placed",
+        "Find the step containing ball \\(2024,\\) then note that step \\(k\\) uses the bin at position \\((k-1)\\bmod 5\\) in the cycle \\(A, B, C, D, E\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2006-p12",
+  "title": "2006 AIME I Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.sum-and-difference-of-cubes",
+      "label": "Sum and difference of cubes",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2006,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 61.6,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 12,
+  "statement": "Find the sum of the values of \\(x\\) such that \\(\\cos^3 3x + \\cos^3 5x\\) \\(= 8 \\cos^3 4x \\cos^3 x,\\) where \\(x\\) is measured in degrees and \\(100 \\lt x \\lt 200.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "906",
+    "value": "906"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2006-p12.live",
+      "kind": "proof-sketch",
+      "text": "By the product-to-sum identity, \\(2 \\cos 4x \\cos x = \\cos 5x + \\cos 3x,\\) so the right side is \\((\\cos 5x + \\cos 3x)^3.\\) Setting \\(y = \\cos 3x\\) and \\(z = \\cos 5x,\\) the equation becomes \\(y^3 + z^3 = (y + z)^3,\\) and since \\((y+z)^3 - y^3 - z^3 = 3yz(y + z),\\) it holds exactly when \\[ \\begin{aligned} \\cos 3x &= 0, \\\\ \\cos 5x &= 0, \\end{aligned} \\] or \\[ \\cos 4x \\cos x = 0. \\]\n\nFor \\(100 \\lt x \\lt 200\\) in degrees: \\(\\cos 3x = 0\\) gives \\(x = 150;\\) \\(\\cos 5x = 0\\) gives \\(x = 126,\\) \\(162,\\) \\(198;\\) \\(\\cos 4x = 0\\) gives \\(x = 112.5,\\) \\(157.5;\\) and \\(\\cos x = 0\\) gives no solutions in the interval.\n\nThe sum is \\[ \\begin{aligned} &150 + 126 + 162 \\\\ &\\quad {}+ 198 + 112.5 + 157.5 \\\\ &= 906. \\end{aligned} \\]",
+      "hints": [
+        "Product-to-sum: \\(2\\cos 4x \\cos x = \\cos 5x + \\cos 3x,\\) so the equation reads \\(y^3 + z^3 = (y + z)^3\\)",
+        "\\((y+z)^3 - y^3 - z^3 = 3yz(y+z),\\) so one of \\(\\cos 3x,\\) \\(\\cos 5x,\\) \\(\\cos 4x \\cos x\\) must vanish"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

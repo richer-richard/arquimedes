@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-team-2025-p7",
+  "title": "2025 HMMT February Team Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.euler-characteristic-v-e-f",
+      "label": "Euler characteristic: V-E+F",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2025,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 83.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Determine, with proof, whether a square can be dissected into finitely many (not necessarily congruent) triangles, each of which has interior angles \\(30^{\\circ}\\) , \\(75^{\\circ}\\) , and \\(75^{\\circ}\\) .",
+  "answerChoices": [],
+  "answer": {
+    "letter": "no",
+    "value": "No"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2025-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "Again assume for sake of contradiction that a dissection exists. Interpret the dissection as a graph \\(G\\) , where the vertices of the graph are the vertices of all the triangles, and edges connect each pair of consecutive vertices along a line segment.\n\nCall a vertex flat if it is on either the boundary of the square (including its corners) or the interior of an edge of any triangle. Let \\(X\\) be the number of flat vertices and \\(Y\\) be the number of non- flat vertices in \\(G\\) . Let \\(E\\) and \\(F\\) be the number of edges and faces (triangles) in the dissection, respectively. Then \\((X + Y) - E + F = 1\\) .\n\nObserving the angle combinations in the first solution, we see that any non- flat vertex must have at least 6 incident edges, and any flat vertex must have at least 4. Thus \\(2E \\geq 6Y + 4X\\) , so \\(E \\geq 3Y + 2X\\) .\n\nThe sum of the angles of all \\(F\\) triangles is \\(\\pi F\\) . Around any non- flat vertex, such angles sum to \\(2\\pi\\) . Around any flat vertex, the angles sum to \\(\\pi\\) , with the exception of the four corners of the square, where they sum to \\(\\pi /2\\) instead. Thus\n\n\\[F\\pi = (X - 4)\\pi +4(\\pi /2) + Y(2\\pi) = (X + 2Y - 2)\\pi ,\\]\n\nso \\(F = X + 2Y - 2\\) . This means\n\n\\[X + Y - E + F\\leq (X + Y) - (3Y + 2X) + (X + 2Y - 2) = -2,\\]\n\ncontradiction. Thus no dissection exists.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

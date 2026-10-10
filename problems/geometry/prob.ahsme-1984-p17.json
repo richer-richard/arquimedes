@@ -1,0 +1,95 @@
+{
+  "id": "prob.ahsme-1984-p17",
+  "title": "1984 AHSME Problem 17",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.altitude",
+      "label": "Altitude",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.right-triangle",
+      "label": "Right triangle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1984,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 34.1,
+    "source": 1920,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A right triangle \\(ABC\\) with hypotenuse \\(AB\\) has side \\(AC=15.\\) Altitude \\(CH\\) divides \\(AB\\) into segments \\(AH\\) and \\(HB,\\) with \\(HB=16.\\) The area of \\(\\triangle ABC\\) is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(120\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(144\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(150\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(216\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(144\\sqrt5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "150"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1984-p17.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(AH=h.\\) Similarity in the right triangle gives \\[ \\begin{aligned} AC^2&=AH\\cdot AB,\\\\ 225&=h(h+16), \\end{aligned} \\] so \\(h=9.\\) Hence \\(AB=25.\\) Also \\(CH=\\sqrt{AH\\cdot HB},\\) so \\(CH=\\sqrt{9\\cdot16}=12.\\) The area is \\(\\frac12\\cdot25\\cdot12=150.\\)\n\nTherefore, the correct answer is C.",
+      "hints": [
+        "Use the right-triangle projection relation \\(AC^2=AH\\cdot AB\\)",
+        "After finding \\(AH,\\) use \\(CH^2=AH\\cdot HB\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "0c01573a475b1e2dc8fadfd7f502c973fccf139f6068468917bd04b7e6a25936"
+    ],
+    "solutions": []
+  }
+}

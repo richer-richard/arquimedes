@@ -1,0 +1,71 @@
+{
+  "id": "prob.amc-8-2005-p5",
+  "title": "2005 AMC 8 Problem 5",
+  "category": "problem-solving-techniques",
+  "subjects": [
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "strategy.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2005,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 5.9,
+    "source": 730,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Soda is sold in packs of \\(6,\\) \\(12\\) and \\(24\\) cans. What is the minimum number of packs needed to buy exactly \\(90\\) cans of soda?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(15\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2005-p5.live",
+      "kind": "proof-sketch",
+      "text": "Four packs cannot be enough. Four \\(24\\)-packs would contain \\(96\\) cans, and replacing any \\(24\\)-pack by a smaller pack decreases the total by either \\(12\\) or \\(18\\) cans. There is no way to decrease \\(96\\) by exactly \\(6\\) cans to reach \\(90\\).\n\nFive packs do work: three \\(24\\)-packs, one \\(12\\)-pack, and one \\(6\\)-pack contain \\[3\\cdot24+12+6=90\\] cans. Therefore, the minimum number is \\(5\\).\n\nThus, B is the correct answer.",
+      "hints": [
+        "Use as many \\(24\\)-packs as possible without going over \\(90\\).",
+        "After three \\(24\\)-packs, finish the remaining cans with the fewest packs."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

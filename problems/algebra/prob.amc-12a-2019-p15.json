@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2019-p15",
+  "title": "2019 AMC 12A Problem 15",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2019,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 30.0,
+    "source": 1730,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Positive real numbers \\(a\\) and \\(b\\) have the property that\n\n\\[ \\begin{aligned} &\\sqrt{\\log a} + \\sqrt{\\log b} \\\\ &\\quad {}+ \\log \\sqrt{a} + \\log \\sqrt{b} = 100 \\end{aligned} \\]\n\nand all four terms on the left are positive integers, where \\(\\log\\) denotes the base \\(10\\) logarithm. What is \\(ab?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(10^{52}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(10^{100}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(10^{144}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(10^{164}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(10^{200}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2019-p15.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(\\sqrt{\\log a} = p\\) and \\(\\sqrt{\\log b} = q,\\) so \\(\\log a = p^2\\) and \\(\\log\\sqrt{a} = \\dfrac{p^2}{2}.\\) For this to be an integer, \\(p\\) is even; likewise \\(q.\\)\n\nWriting \\(p = 2m,\\) \\(q = 2n,\\) the equation \\(p + q + \\dfrac{p^2}{2} + \\dfrac{q^2}{2} = 100\\) becomes \\(m(m+1) + n(n+1) = 50.\\)\n\nThe only solution is \\(\\{m, n\\} = \\{4, 5\\},\\) giving \\(\\log(ab) = p^2 + q^2\\) \\(= 4(16 + 25) = 164.\\)\n\nTherefore \\(ab = 10^{164}.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Let \\(\\sqrt{\\log a} = p\\) and \\(\\sqrt{\\log b} = q;\\) then \\(\\log\\sqrt{a} = \\tfrac{p^2}{2}\\) must be an integer",
+        "With \\(p = 2m,\\) \\(q = 2n,\\) the equation becomes \\(m(m+1) + n(n+1) = 50\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

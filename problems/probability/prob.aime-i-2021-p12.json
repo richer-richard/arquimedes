@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-i-2021-p12",
+  "title": "2021 AIME I Problem 12",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.expected-value",
+      "label": "Expected value",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.random-walk",
+      "label": "Random walk",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.recursive-probability",
+      "label": "Recursive probability",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2021,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 62.7,
+    "source": 3160,
+    "mohs": null
+  },
+  "estimatedMinutes": 18,
+  "statement": "Let \\(A_1A_2A_3 \\ldots A_{12}\\) be a dodecagon (\\(12\\)-gon). Three frogs initially sit at \\(A_4,\\) \\(A_8,\\) and \\(A_{12}.\\) At the end of each minute, simultaneously, each of the three frogs jumps to one of the two vertices adjacent to its current position, chosen randomly and independently with both choices being equally likely. All three frogs stop jumping as soon as two frogs arrive at the same vertex at the same time. The expected number of minutes until the frogs stop jumping is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "19",
+    "value": "19"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2021-p12.live",
+      "kind": "proof-sketch",
+      "text": "Track the three gaps between consecutive frogs around the circle; they start at \\((4, 4, 4)\\) and always sum to \\(12.\\) If the frogs jump by \\(X_1, X_2, X_3 \\in \\{\\pm 1\\},\\) the gaps change by \\(X_2 - X_1,\\) \\(X_3 - X_2,\\) \\(X_1 - X_3,\\) so each gap stays even and the process stops exactly when some gap becomes \\(0.\\) Enumerating the \\(8\\) equally likely sign choices: from \\(\\{4,4,4\\},\\) the state stays with probability \\(\\frac{2}{8}\\) and moves to \\(\\{2,4,6\\}\\) with probability \\(\\frac{6}{8}.\\) From \\(\\{2,4,6\\}:\\) stay with probability \\(\\frac{4}{8},\\) move to \\(\\{4,4,4\\}\\) or \\(\\{2,2,8\\}\\) with probability \\(\\frac{1}{8}\\) each, and stop with probability \\(\\frac{2}{8}.\\) From \\(\\{2,2,8\\}:\\) stay with probability \\(\\frac{2}{8},\\) move to \\(\\{2,4,6\\}\\) with probability \\(\\frac{2}{8},\\) and stop with probability \\(\\frac{4}{8}.\\)\n\nLet \\(E_1, E_2, E_3\\) be the expected remaining times from \\(\\{4,4,4\\},\\) \\(\\{2,4,6\\},\\) \\(\\{2,2,8\\}.\\) Then \\[ \\begin{aligned} E_1 &= 1 + \\tfrac{1}{4}E_1 + \\tfrac{3}{4}E_2, \\\\ E_2 &= 1 + \\tfrac{1}{2}E_2 + \\tfrac{1}{8}E_1 \\\\ &\\quad {}+ \\tfrac{1}{8}E_3, \\\\ E_3 &= 1 + \\tfrac{1}{4}E_3 + \\tfrac{1}{4}E_2. \\end{aligned} \\] The third gives \\(E_3 = \\frac{4}{3} + \\frac{E_2}{3};\\) substituting into the second yields \\(E_2 = 4,\\) then \\(E_3 = \\frac{8}{3}\\) and \\(E_1 = \\frac{4}{3} + E_2 = \\frac{16}{3}.\\)\n\nThe expected number of minutes is \\(\\frac{16}{3},\\) so \\(m + n = 16 + 3 = 19.\\)",
+      "hints": [
+        "Track the three arc gaps between the frogs around the circle, starting at \\(4, 4, 4;\\) each minute every gap changes by \\(-2,\\) \\(0,\\) or \\(2,\\) and the frogs stop when a gap reaches \\(0\\)",
+        "Only gap multisets \\(\\{4,4,4\\},\\) \\(\\{2,4,6\\},\\) \\(\\{2,2,8\\}\\) occur before stopping. List the \\(8\\) equally likely jump combinations from each and solve three linear equations."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

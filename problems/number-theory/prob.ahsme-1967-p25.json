@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1967-p25",
+  "title": "1967 AHSME Problem 25",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.exponent",
+      "label": "Exponent",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1967,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 23.4,
+    "source": 1500,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "For every odd number \\(p\\gt1\\) we have:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\((p-1)^{\\frac{p-1}{2}}-1\\) is divisible by\n\\(p-2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\((p-1)^{\\frac{p-1}{2}}+1\\) is divisible by \\(p\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\((p-1)^{\\frac{p-1}{2}}\\) is divisible by \\(p\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\((p-1)^{\\frac{p-1}{2}}+1\\) is divisible by \\(p+1\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\((p-1)^{\\frac{p-1}{2}}-1\\) is divisible by \\(p-1\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1967-p25.live",
+      "kind": "proof-sketch",
+      "text": "Because \\(p\\gt1\\) is odd, \\(n=\\frac{p-1}{2}\\) is a positive integer. Modulo \\(p-2,\\) we have \\(p-1\\equiv1.\\) Therefore \\[ \\begin{aligned} (p-1)^n-1 &\\equiv1^n-1\\\\ &\\equiv0\\pmod{p-2}. \\end{aligned} \\] Thus choice (A) always holds.\n\nTherefore, the correct answer is A.",
+      "hints": [
+        "Work modulo \\(p-2\\) for choice (A)",
+        "Since \\(p-1\\equiv1\\pmod{p-2},\\) every positive power has the same residue"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

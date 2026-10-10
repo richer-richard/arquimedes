@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-nov-guts-2010-p26",
+  "title": "2010 HMMT November Guts Problem 26",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.systems-of-equations",
+      "label": "Systems of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2010,
+    "number": 26
+  },
+  "difficulty": {
+    "course": 66.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "\\(w, x, y, z\\) are real numbers such that\n\n\\[\\begin{aligned}\nw+x+y+z & =5 \\\\\n2 w+4 x+8 y+16 z & =7 \\\\\n3 w+9 x+27 y+81 z & =11 \\\\\n4 w+16 x+64 y+256 z & =1\n\\end{aligned}\\]\n\nWhat is the value of \\(5 w+25 x+125 y+625 z ?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2010-p26.hmmt",
+      "kind": "proof-sketch",
+      "text": "-60 We note this system of equations is equivalent to evaluating the polynomial (in \\(a\\) ) \\(P(a)=w a+x a^{2}+y a^{3}+z a^{4}\\) at \\(1,2,3\\), and 4 . We know that \\(P(0)=0, P(1)=5, P(2)=7, P(3)=11\\), \\(P(4)=1\\). The finite difference of a polynomial \\(f\\) is \\(f(n+1)-f(n)\\), which is a polynomial with degree one less than the degree of \\(f\\). The second, third, etc finite differences come from applying this operation repeatedly. The fourth finite difference of this polynomial is constant because this is a fourth degree polynomial. Repeatedly applying finite differences, we get\n\nand we see that the fourth finite difference is -21 . We can extend this table, knowing that the fourth finite difference is always -21 , and we find that that \\(P(5)=-60\\). The complete table is\n\n| 0 |  | 5 |  | 7 |  | 11 |  | 1 |  | -60 |\n| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |\n|  | 5 | 2 |  | 4 |  | -10 |  | -61 |  |  |\n|  |  | -3 |  | 2 |  | -14 |  | -51 |  |  |\n|  |  | 5 |  | -16 |  | -37 |  |  |  |  |\n|  |  |  |  | -21 |  | -21 |  |  |  |  |\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

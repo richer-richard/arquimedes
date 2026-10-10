@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1967-p39",
+  "title": "1967 AHSME Problem 39",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.triangular-number",
+      "label": "Triangular number",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1967,
+    "number": 39
+  },
+  "difficulty": {
+    "course": 23.4,
+    "source": 1500,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Given the sets of consecutive integers \\(\\{1\\},\\) \\(\\{2,3\\},\\) \\(\\{4,5,6\\},\\) \\(\\{7,8,9,10\\},\\) \\(\\ldots,\\) where each set contains one more element than the preceding one, and where the first element of each succeeding set is one more than the last element of the preceding set. Let \\(S_n\\) be the sum of the elements in the \\(n\\)th set. Then \\(S_{21}\\) equals:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1113\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4641\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(5082\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(53361\\)"
+    },
+    {
+      "label": "E",
+      "text": "none of these"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "4641"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1967-p39.live",
+      "kind": "proof-sketch",
+      "text": "The \\(n\\)th set ends at \\(\\frac{n(n+1)}{2}\\) and contains \\(n\\) consecutive integers. Its sum is \\[ \\begin{aligned} S_n &=n\\left(\\frac{n(n+1)}2\\right)\\\\ &\\quad-\\frac{n(n-1)}2\\\\ &=\\frac{n(n^2+1)}2. \\end{aligned} \\] Thus \\(S_{21}=\\frac{21(442)}{2}=4641.\\)\n\nTherefore, the correct answer is B.",
+      "hints": [
+        "The last number in the \\(n\\)th set is \\(\\frac{n(n+1)}{2}\\)",
+        "Sum the \\(n\\) consecutive integers ending at that number"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

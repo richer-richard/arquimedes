@@ -1,0 +1,87 @@
+{
+  "id": "prob.ahsme-1987-p30",
+  "title": "1987 AHSME Problem 30",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1987,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 46.4,
+    "source": 2400,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "In the figure, \\(\\triangle ABC\\) has \\(\\angle A=45^\\circ\\) and \\(\\angle B=30^\\circ.\\) A line \\(DE,\\) with \\(D\\) on \\(AB\\) and \\(\\angle ADE=60^\\circ,\\) divides \\(\\triangle ABC\\) into two pieces of equal area. (Note: the figure may not be accurate; perhaps \\(E\\) is on \\(CB\\) instead of \\(AC.\\)) The ratio \\(\\frac{AD}{AB}\\) is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\frac1{\\sqrt2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\frac2{2+\\sqrt2}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\frac1{\\sqrt3}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\frac1{\\sqrt[3]{6}}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\frac1{\\sqrt[4]{12}}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1987-p30.live",
+      "kind": "proof-sketch",
+      "text": "Set \\(AB=1,\\ A=(0,0),\\) and \\(B=(1,0).\\) Since \\(\\angle A=45^\\circ,\\) side \\(AC\\) lies on \\(y=x.\\) The line through \\(B\\) making angle \\(30^\\circ\\) with \\(BA\\) meets it at height \\[ h_C=\\frac1{1+\\sqrt3}. \\] Let \\(d=AD.\\) The ray \\(DE\\) has slope \\(-\\sqrt3,\\) so its intersection with \\(y=x\\) has height \\[ h_E=\\frac{\\sqrt3\\,d}{1+\\sqrt3}. \\] Equal areas require \\[ \\frac12d h_E=\\frac12\\left(\\frac12h_C\\right). \\] Therefore \\[ \\begin{aligned} \\frac{\\sqrt3\\,d^2}{2(1+\\sqrt3)} &=\\frac1{4(1+\\sqrt3)},\\\\ d^2&=\\frac1{2\\sqrt3} =\\frac1{\\sqrt{12}}. \\end{aligned} \\] Hence \\(\\frac{AD}{AB}=d=\\frac{1}{\\sqrt[4]{12}}.\\)\n\nThus the correct answer is E.",
+      "hints": [
+        "Scale so \\(AB=1\\) and place \\(A=(0,0),\\ B=(1,0)\\)",
+        "Find the height of \\(C\\) and the height of \\(E\\) in terms of \\(d=AD\\), then equate half the total area to the area of \\(\\triangle ADE\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "e89dded57054f2afa6c55fe5dc47f4a942e82d85a44fa4aa646282d6dc68f473"
+    ],
+    "solutions": []
+  }
+}

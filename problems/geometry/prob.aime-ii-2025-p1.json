@@ -1,0 +1,71 @@
+{
+  "id": "prob.aime-ii-2025-p1",
+  "title": "2025 AIME II Problem 1",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.distance-chasing",
+      "label": "Distance chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.distance-formula",
+      "label": "Distance formula",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2025,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 36.4,
+    "source": 2010,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Six points \\(A,\\) \\(B,\\) \\(C,\\) \\(D,\\) \\(E,\\) and \\(F\\) lie in a straight line in that order. Suppose that \\(G\\) is a point not on the line and that \\(AC = 26,\\) \\(BD = 22,\\) \\(CE = 31,\\) \\(DF = 33,\\) \\(AF = 73,\\) \\(CG = 40,\\) and \\(DG = 30.\\) Find the area of \\(\\triangle BGE.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "468",
+    "value": "468"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2025-p1.live",
+      "kind": "proof-sketch",
+      "text": "Place the line on a number line with \\(A = 0.\\) Then \\(C = 26,\\) \\(E = 26 + 31 = 57,\\) \\(F = 73,\\) \\(D = 73 - 33 = 40,\\) and \\(B = 40 - 22 = 18.\\)\n\nWrite \\(G = (x, y).\\) From \\(CG = 40\\) and \\(DG = 30,\\) \\[(x - 26)^2 + y^2 = 1600,\\] \\[(x - 40)^2 + y^2 = 900.\\] Subtracting gives \\(14(2x - 66) = 700,\\) so \\(x = 58,\\) and then \\(y^2 = 1600 - 32^2 = 576,\\) so \\(G\\) is at height \\(24\\) above the line.\n\nSince \\(B\\) and \\(E\\) both lie on the line, \\(BE = 57 - 18 = 39\\) is a base with height \\(24,\\) so the area is \\(\\frac{1}{2} \\cdot 39 \\cdot 24 = 468.\\)",
+      "hints": [
+        "Put the line on a number line with \\(A = 0;\\) the distances \\(AC,\\) \\(BD,\\) \\(CE,\\) \\(DF,\\) \\(AF\\) determine every point",
+        "With \\(CD = 14,\\) use \\(CG = 40\\) and \\(DG = 30\\) to find how high \\(G\\) sits above the line; \\(BE\\) is the base"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

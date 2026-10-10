@@ -1,0 +1,75 @@
+{
+  "id": "prob.aime-i-2023-p15",
+  "title": "2023 AIME I Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.factoring",
+      "label": "Factoring",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.prime",
+      "label": "Prime",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.triangle-inequality",
+      "label": "Triangle inequality",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2023,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 71.3,
+    "source": 3370,
+    "mohs": null
+  },
+  "estimatedMinutes": 25,
+  "statement": "Find the largest prime number \\(p \\lt 1000\\) for which there exists a complex number \\(z\\) satisfying\n\n• the real and imaginary part of \\(z\\) are both integers;\n\n• \\(|z| = \\sqrt{p},\\) and\n\n• there exists a triangle whose three side lengths are \\(p,\\) the real part of \\(z^3,\\) and the imaginary part of \\(z^3.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "349",
+    "value": "349"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2023-p15.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(z = a + bi\\) with \\(a^2 + b^2 = p.\\) The prime \\(p = 2\\) does qualify: for \\(z = -1 + i\\) we have \\(z^3 = 2 + 2i,\\) but it cannot be the largest answer. Hence consider an odd prime \\(p,\\) so \\(p \\equiv 1 \\pmod 4\\) and the pair \\(\\{|a|, |b|\\}\\) is unique. Replacing \\(z\\) by \\(\\pm z,\\) \\(\\pm\\bar{z},\\) \\(\\pm iz,\\) \\(\\pm i\\bar{z}\\) only changes the real and imaginary parts of \\(z^3\\) by signs and swaps, so we may take \\(a \\gt b \\gt 0,\\) and the two candidate side lengths are \\(|\\operatorname{Re} z^3|\\) and \\(|\\operatorname{Im} z^3|.\\) Expanding \\(z^3 = (a^3 - 3ab^2) + (3a^2b - b^3)i\\) and factoring, \\[ \\begin{aligned} &\\operatorname{Re} z^3 + \\operatorname{Im} z^3 \\\\ &\\quad = (a - b)(p + 4ab), \\qquad \\\\ &\\operatorname{Re} z^3 - \\operatorname{Im} z^3 \\\\ &\\quad = (a + b)(p - 4ab). \\end{aligned} \\] The triangle exists exactly when \\(\\bigl||\\operatorname{Re}| - |\\operatorname{Im}|\\bigr| \\lt p\\) \\(\\lt |\\operatorname{Re}| + |\\operatorname{Im}|,\\) and those two quantities are, in some order, the absolute values above. Since \\(a \\gt b\\) forces \\((a - b)(p + 4ab) \\gt p,\\) the whole condition reduces to \\((a + b)\\,|p - 4ab| \\lt p.\\)\n\nBecause \\(a+b\\gt\\sqrt{a^2+b^2}=\\sqrt p,\\) this requires \\(\\Delta=|p-4ab|\\lt\\sqrt p.\\) The bound \\(p=a^2+b^2\\lt1000\\) gives \\(1\\le b\\lt a\\le31;\\) moreover \\(b \\le 21,\\) because \\(b \\ge 22\\) would force \\(a \\ge 23\\) and \\(p \\ge 22^2 + 23^2 \\gt 1000.\\) Substituting \\(p=a^2+b^2\\) into \\[ (a^2+b^2-4ab)^2\\lt a^2+b^2 \\] and checking these bounded integers gives the complete list of possible values \\[ \\begin{aligned} p \\in \\{&10,17,53,68,130,153, \\\\ &212,241,272,349,386,520, \\\\ &565,725,778,905,964\\}. \\end{aligned} \\] Only four values in this list are prime, at \\[ \\begin{aligned} (a,b,p,\\Delta)&=(4,1,17,1), \\\\ &\\quad (7,2,53,3), \\\\ &\\quad (15,4,241,1), \\\\ &\\quad (18,5,349,11). \\end{aligned} \\] The corresponding values of \\((a+b)\\Delta\\) are \\(5,27,19,253,\\) respectively, all below \\(p,\\) so all four also pass the full triangle inequality. Thus the largest possible prime is \\(349.\\)\n\nIndeed for \\(z = 18 + 5i\\) we get \\(z^3 = 4482 + 4735i,\\) and the lengths \\(349,\\) \\(4482,\\) \\(4735\\) form a valid triangle. The answer is \\(349.\\)",
+      "hints": [
+        "Write \\(z = a + bi\\) with \\(a^2 + b^2 = p;\\) up to signs and swapping, the triangle needs \\(\\bigl||\\operatorname{Re} z^3| - |\\operatorname{Im} z^3|\\bigr| \\lt p.\\)",
+        "\\(\\operatorname{Re} z^3 - \\operatorname{Im} z^3\\) \\(= (a + b)(a^2 + b^2 - 4ab),\\) so \\(4ab\\) must be within \\(\\sqrt{p}\\) of \\(p.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

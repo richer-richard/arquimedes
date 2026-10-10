@@ -1,0 +1,71 @@
+{
+  "id": "prob.aime-i-2001-p12",
+  "title": "2001 AIME I Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.incircle-incenter-and-inradius",
+      "label": "Incircle, incenter, and inradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vector",
+      "label": "Vector",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.volume",
+      "label": "Volume",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2001,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 50.5,
+    "source": 2560,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "A sphere is inscribed in the tetrahedron whose vertices are \\(A = (6, 0, 0),\\) \\(B = (0, 4, 0),\\) \\(C = (0, 0, 2),\\) and \\(D = (0, 0, 0).\\) The radius of the sphere is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "5",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2001-p12.live",
+      "kind": "proof-sketch",
+      "text": "Connecting the incenter to the four vertices splits the tetrahedron into four pyramids of height \\(r\\) over the faces, so \\(V = \\frac{1}{3} r S,\\) i.e. \\(r = \\frac{3V}{S},\\) where \\(S\\) is the total surface area.\n\nHere \\(V = \\frac{1}{6} \\cdot 6 \\cdot 4 \\cdot 2 = 8.\\) The three faces on the coordinate planes are right triangles with areas \\(\\frac{1}{2} \\cdot 6 \\cdot 4 = 12,\\) \\(\\frac{1}{2} \\cdot 6 \\cdot 2 = 6,\\) and \\(\\frac{1}{2} \\cdot 4 \\cdot 2 = 4.\\) For face \\(ABC,\\) the cross product of \\(\\overrightarrow{AB} = (-6, 4, 0)\\) and \\(\\overrightarrow{AC} = (-6, 0, 2)\\) is \\((8, 12, 24),\\) with length \\(4\\sqrt{2^2 + 3^2 + 6^2} = 28,\\) so that face has area \\(14.\\)\n\nThen \\(S = 12 + 6 + 4 + 14 = 36\\) and \\(r = \\frac{24}{36} = \\frac{2}{3},\\) giving \\(m + n = 2 + 3 = 5.\\)",
+      "hints": [
+        "Decompose the tetrahedron into four pyramids with apex at the insphere center: \\(V = \\frac{1}{3} r S\\) where \\(S\\) is the total surface area",
+        "\\(V = \\frac{1}{6} \\cdot 6 \\cdot 4 \\cdot 2,\\) the three right-angle faces have areas \\(12,\\) \\(6,\\) \\(4,\\) and face \\(ABC\\) has area \\(14\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

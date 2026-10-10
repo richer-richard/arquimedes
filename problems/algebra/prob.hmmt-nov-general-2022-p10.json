@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-general-2022-p10",
+  "title": "2022 HMMT November General Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.logarithmic-functions",
+      "label": "Logarithmic functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.prealgebra-basic-algebra",
+      "label": "Prealgebra / Basic Algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2022,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 60.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the number of distinct pairs of the form\n(first three digits of \\(x\\), first three digits of \\(x^{4}\\) )\nover all integers \\(x>10^{10}\\).\nFor example, one such pair is \\((100,100)\\) when \\(x=10^{10^{10}}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "4495",
+    "value": "4495"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2022-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "Graph these points on an \\(x\\), \\(y\\)-plane. We claim that there are integers \\(100=a_{0}<a_{1}<\\) \\(a_{2}<a_{3}<a_{4}=999\\), for which the locus of these points is entirely contained in four taxicab (up/right movement by 1 unit) paths from \\(\\left(a_{i}, 100\\right)\\) to \\(\\left(a_{i+1}, 999\\right), i=0,1,2,3\\).\nAs we increment \\(x\\) very slowly over all reals in \\([100,1000\\) ), which would produce the same set of tuples as we want (some small details missing here, but for large enough \\(x\\) we can approximate these decimals to arbitrary precision by scaling by some \\(10^{k}\\) ), it is clear that we must either have only one of the values increasing by 1 , or both of them increasing by 1 , where increasing by 1 in this context also includes the looping over from 999 to 100. In particular, this looping over occurs at the first three digits of powers of \\(\\sqrt[4]{10}\\) between 1 and 10 (i.e. \\(177,316,562\\) ), which are precisely the values of \\(a_{1}, a_{2}, a_{3}\\) that we claimed to exist.\nTherefore, our taxicab paths have the same total length as one going from \\((100,100)\\) up to ( \\(999+\\) \\(900+900+900,999\\) ), by stacking our four segments to continue from each other vertically. It remains to compute the number of times both sides of the tuple increased simultaneously, which correspond to fourth powers in the interval \\((1,1000)\\). There are four of these corresponding to \\(2^{4}, 3^{4}, 4^{4}, 5^{4}\\), which are at \\((199,159)\\) to \\((200,160),(299,809)\\) to \\((300,810),(399,255)\\) to \\((400,256)\\), and \\((499,624)\\) to \\((500,625)\\). So, our taxicab path is only missing these four holes.\nOur final count is equal to the total taxidistance of the path, minus 4, and then finally adding back 1 to account for a starting point.\n\n\\[2 \\cdot 899+3 \\cdot 900-4+1=4495\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

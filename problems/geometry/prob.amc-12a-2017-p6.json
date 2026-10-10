@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2017-p6",
+  "title": "2017 AMC 12A Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-inequality",
+      "label": "Triangle inequality",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2017,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 25.6,
+    "source": 1350,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Joy has \\(30\\) thin rods, one each of every integer length from \\(1\\) cm through \\(30\\) cm. She places the rods with lengths \\(3\\) cm, \\(7\\) cm, and \\(15\\) cm on a table. She then wants to choose a fourth rod that she can put with these three to form a quadrilateral with positive area. How many of the remaining rods can she choose as the fourth rod?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(19\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(20\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "17"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2017-p6.live",
+      "kind": "proof-sketch",
+      "text": "Four lengths form a quadrilateral with positive area if and only if the longest is strictly less than the sum of the other three. With a fourth rod of length \\(n,\\) this requires \\(15\\lt 3+7+n\\) and \\(n\\lt 3+7+15,\\) so \\[ 5\\lt n\\lt 25. \\]\n\nThe integers from \\(6\\) to \\(24\\) give \\(19\\) values, but the rods of length \\(7\\) and \\(15\\) are already on the table, leaving \\(19-2=17\\) choices.\n\nThus, the correct answer is B.",
+      "hints": [
+        "Four lengths form a quadrilateral exactly when the longest is less than the sum of the other three",
+        "This gives \\(5\\lt n\\lt 25\\); then remove the rods already on the table"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

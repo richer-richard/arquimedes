@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2021-p5",
+  "title": "2021 AIME I Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2021,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 50.0,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Call a three-term strictly increasing arithmetic sequence of integers special if the sum of the squares of the three terms equals the product of the middle term and the square of the common difference. Find the sum of the third terms of all special sequences.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "31",
+    "value": "31"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2021-p5.live",
+      "kind": "proof-sketch",
+      "text": "Write the terms as \\(a - d,\\) \\(a,\\) \\(a + d\\) with integer \\(d \\ge 1.\\) The condition is \\[ \\begin{aligned} &(a-d)^2 + a^2 \\\\ &\\quad {}+ (a+d)^2 = ad^2 \\\\ &\\quad\\Longleftrightarrow\\quad 3a^2 + 2d^2 = ad^2, \\end{aligned} \\] so \\(d^2(a - 2) = 3a^2\\) and \\(d^2 = \\frac{3a^2}{a - 2}.\\) For \\(d^2\\) to be positive we need \\(a \\gt 2.\\) Indeed, \\(a = 0\\) forces \\(d = 0,\\) while for any nonzero integer \\(a \\lt 2\\) the right side is negative; \\(a = 2\\) makes the original equation impossible.\n\nSubstituting \\(t = a - 2 \\ge 1\\) gives \\[d^2 = \\frac{3(t+2)^2}{t} = 3t + 12 + \\frac{12}{t},\\] so \\(t\\) divides \\(12.\\) Testing \\(t = 1, 2, 3, 4, 6, 12\\) gives \\(d^2 = 27, 24, 25, 27, 32, 49:\\) only \\(t = 3\\) and \\(t = 12\\) yield perfect squares.\n\nThese give \\((a, d) = (5, 5)\\) with sequence \\(0, 5, 10,\\) and \\((a, d) = (14, 7)\\) with sequence \\(7, 14, 21.\\) The sum of the third terms is \\(10 + 21 = 31.\\)",
+      "hints": [
+        "Write the terms as \\(a - d,\\) \\(a,\\) \\(a + d;\\) the condition becomes \\(3a^2 + 2d^2 = ad^2\\)",
+        "So \\(d^2 = \\frac{3a^2}{a - 2}.\\) Substitute \\(t = a - 2\\) to see that \\(t\\) must divide \\(12,\\) and test the six values."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

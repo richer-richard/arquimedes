@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12a-2004-p17",
+  "title": "2004 AMC 12A Problem 17",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functional-equation",
+      "label": "Functional equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2004,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 29.0,
+    "source": 1720,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(f\\) be a function with the following properties:\n\n(i) \\(f(1) = 1,\\) and\n\n(ii) \\(f(2n) = n \\cdot f(n)\\) for any positive integer \\(n.\\)\n\nWhat is the value of \\(f(2^{100})?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2^{99}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2^{100}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2^{4950}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2^{9999}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2004-p17.live",
+      "kind": "proof-sketch",
+      "text": "Applying \\(f(2n) = n \\cdot f(n)\\) with \\(n = 2^{k},\\) we get \\(f(2^{k+1}) = 2^{k} \\cdot f(2^{k}).\\)\n\nUnwinding from \\(f(2^1) = f(2) = 1 \\cdot f(1) = 2^0,\\) the exponents accumulate: \\[ \\begin{aligned} f(2^n) &= 2^{0 + 1 + 2 + \\cdots + (n-1)} \\\\ &= 2^{\\frac{n(n-1)}{2}}. \\end{aligned} \\]\n\nTherefore \\(f(2^{100}) = 2^{\\frac{100 \\cdot 99}{2}} = 2^{4950}.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Apply the rule repeatedly with \\(n = 2^{k}\\) to unwind \\(f(2^{100})\\)",
+        "The exponent accumulates as \\(1 + 2 + \\cdots + 99\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "prob.amc-10a-2007-p18",
+  "title": "2007 AMC 10A 18",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.shoelace-formula",
+      "label": "Shoelace formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2007,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 27.9,
+    "source": 1790,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Consider the \\(12\\)-sided polygon \\(ABCDEFGHIJKL,\\) as shown. Each of its sides has length \\(4,\\) and each two consecutive sides form a right angle. Suppose that \\(\\overline{AG}\\) and \\(\\overline{CH}\\) meet at \\(M.\\) What is the area of quadrilateral \\(ABCM?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{44}{3}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{88}{5}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{62}{3}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "88/5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2007-p18.live",
+      "kind": "proof-sketch",
+      "text": "Put the figure on coordinates with \\(A = (-2, 6),\\) \\(B = (2, 6),\\) \\(C = (2, 2),\\) \\(G = (2, -6),\\) and \\(H = (-2, -6).\\)\n\nLine \\(AG\\) is \\(y = -3x,\\) and line \\(CH\\) is \\(y = 2x - 2.\\)\n\nTheir intersection is \\(M = \\left(\\tfrac25, -\\tfrac65\\right).\\)\n\nApplying the shoelace formula to \\(A, B, C, M\\) gives \\[ \\begin{aligned} [ABCM] &=\\dfrac12\\left|{-8}-\\dfrac{136}{5}\\right|\\\\ &=\\dfrac{88}{5}. \\end{aligned} \\]\n\nThus, the correct answer is C.",
+      "hints": [
+        "Place the cross on coordinates using the side length \\(4\\)",
+        "Find \\(M\\) as the intersection of lines \\(AG\\) and \\(CH,\\) then apply the shoelace formula to \\(ABCM\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "fc4a629bec7e0d83c4b27c5ae833aedf5648f232b0e9407e0065a12bd5a5a4ec"
+    ],
+    "solutions": []
+  }
+}

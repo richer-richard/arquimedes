@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2024-p25",
+  "title": "2024 AMC 12A Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.function",
+      "label": "Function",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2024,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 54.6,
+    "source": 2720,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "A graph is symmetric about a line if the graph remains unchanged after reflection in that line. For how many quadruples of integers \\((a,b,c,d),\\) where \\(|a|,\\) \\(|b|,\\) \\(|c|,\\) \\(|d|\\le5\\) and \\(c\\) and \\(d\\) are not both \\(0,\\) is the graph of \\[ y=\\frac{ax+b}{cx+d} \\] symmetric about the line \\(y=x?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1282\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1292\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1310\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(1320\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(1330\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1292"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2024-p25.live",
+      "kind": "proof-sketch",
+      "text": "Reflecting the graph of \\(y=f(x)\\) over \\(y=x\\) produces the graph of its inverse, so the graph is symmetric about \\(y=x\\) exactly when \\(f\\) equals its own inverse. For \\(f(x)=\\tfrac{ax+b}{cx+d}\\) this happens in two ways: when \\(a+d=0\\) with \\(ad-bc\\ne0\\) (a genuine involution, including the slope\\(-1\\) lines when \\(c=0\\)), or when \\(f\\) is the identity \\(y=x\\) (\\(b=c=0,\\ a=d\\ne0\\)).\n\nFor \\(a+d=0,\\) set \\(d=-a;\\) the determinant \\(-a^2-bc\\) must be nonzero, so we need \\(a^2+bc\\ne0,\\) together with \\((c,d)\\ne(0,0).\\) When \\(a=0,\\) both \\(b\\) and \\(c\\) must be nonzero, giving \\(10^2=100\\) choices. For each nonzero \\(a,\\) start with \\(11^2=121\\) choices of \\((b,c).\\) If \\(|a|=1,3,4,\\) or \\(5,\\) exactly \\(2\\) pairs satisfy \\(bc=-a^2;\\) if \\(|a|=2,\\) exactly \\(6\\) pairs do. Thus the genuine involutions number \\[ \\begin{gathered} 100+8(121-2)+2(121-6)\\\\ {}=1282. \\end{gathered} \\] The identity case adds \\(10\\) more (\\(a=d\\in\\{\\pm1,\\ldots,\\pm5\\}\\)), for a total of \\(1282+10=1292.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Reflecting \\(y=f(x)\\) over \\(y=x\\) gives its inverse, so symmetry means \\(f\\) is its own inverse",
+        "A map \\(\\dfrac{ax+b}{cx+d}\\) is an involution exactly when \\(a+d=0\\) (and it is nondegenerate); also count the identity \\(y=x\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

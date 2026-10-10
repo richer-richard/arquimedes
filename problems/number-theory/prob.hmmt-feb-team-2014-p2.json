@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-feb-team-2014-p2",
+  "title": "2014 HMMT February Team Problem 2",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.number-theory",
+      "label": "Number Theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.euler-s-totient",
+      "label": "Φ (Euler's totient)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2014,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 81.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a_{1}, a_{2}, \\ldots\\) be an infinite sequence of integers such that \\(a_{i}\\) divides \\(a_{i+1}\\) for all \\(i \\geq 1\\), and let \\(b_{i}\\) be the remainder when \\(a_{i}\\) is divided by 210 . What is the maximal number of distinct terms in the sequence \\(b_{1}, b_{2}, \\ldots\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2014-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\quad 127\\) It is clear that the sequence \\(\\left\\{a_{i}\\right\\}\\) will be a concatenation of sequences of the form \\(\\left\\{v_{i}\\right\\}_{i=1}^{N_{0}},\\left\\{w_{i} \\cdot p_{1}\\right\\}_{i=1}^{N_{1}},\\left\\{x_{i} \\cdot p_{1} p_{2}\\right\\}_{i=1}^{N_{2}},\\left\\{y_{i} \\cdot p_{1} p_{2} p_{3}\\right\\}_{i=1}^{N_{3}}\\), and \\(\\left\\{z_{i} \\cdot p_{1} p_{2} p_{3} p_{4}\\right\\}_{i=1}^{N_{4}}\\), for some permutation \\(\\left(p_{1}, p_{2}, p_{3}, p_{4}\\right)\\) of \\((2,3,5,7)\\) and some sequences of integers \\(\\left\\{v_{i}\\right\\} \\cdot\\left\\{w_{i}\\right\\} \\cdot\\left\\{x_{i}\\right\\} \\cdot\\left\\{y_{i}\\right\\} \\cdot\\left\\{z_{i}\\right\\}\\), each coprime with 210.\n\nIn \\(\\left\\{v_{i}\\right\\}_{i=1}^{N_{0}}\\), there are a maximum of \\(\\phi(210)\\) distinct terms \\(\\bmod 210\\). In \\(\\left\\{w_{i} \\cdot p_{1}\\right\\}_{i=1}^{N_{1}}\\), there are a maximum of \\(\\phi\\left(\\frac{210}{p_{1}}\\right)\\) distinct terms mod 210. In \\(\\left\\{x_{i} \\cdot p_{1} p_{2}\\right\\}_{i=1}^{N_{2}}\\), there are a maximum of \\(\\phi\\left(\\frac{210}{p_{1} p_{2}}\\right)\\) distinct terms mod 210. In \\(\\left\\{y_{i} \\cdot p_{1} p_{2} p_{3}\\right\\}_{i=1}^{N_{3}}\\), there are a maximum of \\(\\phi\\left(\\frac{210}{p_{1} p_{2} p_{3}}\\right)\\) distinct terms mod 210. In \\(\\left\\{z_{i} \\cdot p_{1} p_{2} p_{3} p_{4}\\right\\}_{i=1}^{N_{4}}\\), there can only be one distinct term \\(\\bmod 210\\).\nTherefore we wish to maximize \\(\\phi(210)+\\phi\\left(\\frac{210}{p_{1}}\\right)+\\phi\\left(\\frac{210}{p_{1} p_{2}}\\right)+\\phi\\left(\\frac{210}{p_{1} p_{2} p_{3}}\\right)+1\\) over all permutations \\(\\left(p_{1}, p_{2}, p_{3}, p_{4}\\right)\\) of \\((2,3,5,7)\\). It's easy to see that the maximum occurs when we take \\(p_{1}=2, p_{2}=\\) \\(3, p_{3}=5, p_{4}=7\\) for an answer of \\(\\phi(210)+\\phi(105)+\\phi(35)+\\phi(7)+1=127\\). This upper bound is clearly attainable by having the \\(v_{i}\\) 's cycle through the \\(\\phi(210)\\) integers less than 210 coprime to 210 , the \\(w_{i}\\) 's cycle through the \\(\\phi\\left(\\frac{210}{p_{1}}\\right)\\) integers less than \\(\\frac{210}{p_{1}}\\) coprime to \\(\\frac{210}{p_{1}}\\), etc.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

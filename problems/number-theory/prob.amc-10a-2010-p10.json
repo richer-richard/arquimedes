@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2010-p10",
+  "title": "2010 AMC 10A Problem 10",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.date-and-time",
+      "label": "Date and time",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2010,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 23.6,
+    "source": 1480,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Marvin had a birthday on Tuesday, May \\(27\\) in the leap year \\(2008.\\) In what year will his birthday next fall on a Saturday?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2011\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2012\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2013\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2015\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2017\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "2017"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2010-p10.live",
+      "kind": "proof-sketch",
+      "text": "Note that on a normal year, we have that \\[ 365 = 52 \\cdot 7 + 1, \\] which means that for a specific day, it moves to the day after the next year.\n\nOn a leap year, the day of the week moves forward two since there is an extra day.\n\nThen in \\(2009,\\) this day falls on a Wednesday. In \\(2010,\\) it falls on a Thursday.\n\nSimilarly, in \\(2011,\\) it falls on a Friday. In \\(2012,\\) however, since it is a leap year, it falls on a Sunday.\n\nNow, for the next three years, the day moves forward one. Then in \\(2016,\\) it moves forward two, landing on a Friday.\n\nFinally, in \\(2017,\\) the day of the week is a Saturday.\n\nThus, E is the correct answer.",
+      "hints": [
+        "Each non-leap year shifts the weekday forward by \\(1\\)",
+        "Since May \\(27\\) is after leap day, leap years shift it forward by \\(2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

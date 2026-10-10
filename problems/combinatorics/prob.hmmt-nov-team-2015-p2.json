@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-team-2015-p2",
+  "title": "2015 HMMT November Team Problem 2",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.invariants-and-monovariants",
+      "label": "Invariants and monovariants",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2015,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 49.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Bassanio has three red coins, four yellow coins, and five blue coins. At any point, he may give Shylock any two coins of different colors in exchange for one coin of the other color; for example, he may give Shylock one red coin and one blue coin, and receive one yellow coin in return. Bassanio wishes to end with coins that are all the same color, and he wishes to do this while having as many coins as possible. How many coins will he end up with, and what color will they be?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2015-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 7 yellow coins\nLet \\(r, y, b\\) denote the numbers of red, yellow, and blue coins respectively. Note that each of the three possible exchanges do not change the parities of \\(y-r, b-y\\), or \\(b-r\\), and eventually one of these differences becomes zero. Since \\(b-r\\) is the only one of these differences that is originally even, it must be the one that becomes zero, and so Bassanio will end with some number of yellow coins. Furthermore, Bassanio loses a coin in each exchange, and he requires at least five exchanges to rid himself of the blue coins, so he will have at most \\(12-5=7\\) yellow coins at the end of his trading.\nIt remains to construct a sequence of trades that result in seven yellow coins. First, Bassanio will exchange one yellow and one blue coin for one red coin, leaving him with four red coins, three yellow coins, and four blue coins. He then converts the red and blue coins into yellow coins, resulting in 7 yellow coins, as desired.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

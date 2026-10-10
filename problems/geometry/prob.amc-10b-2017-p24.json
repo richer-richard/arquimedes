@@ -1,0 +1,94 @@
+{
+  "id": "prob.amc-10b-2017-p24",
+  "title": "2017 AMC 10B Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.centroid",
+      "label": "Centroid",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.hyperbola",
+      "label": "Hyperbola",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2017,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 35.3,
+    "source": 2380,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The vertices of an equilateral triangle lie on the hyperbola \\(xy=1,\\) and a vertex of this hyperbola is the centroid of the triangle. What is the square of the area of the triangle?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(48 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(60 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(108 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(120 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(169 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "108"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2017-p24.live",
+      "kind": "proof-sketch",
+      "text": "By symmetry, assume that the centroid is the hyperbola vertex \\(G=(1,1).\\) At least two triangle vertices lie on the same branch of the hyperbola. They cannot both lie on the negative branch: if two of their \\(x\\)-coordinates were negative, the third would exceed \\(3,\\) while the sum of the three \\(y\\)-coordinates would be less than \\(\\frac{1}{3},\\) contradicting that their centroid is \\((1,1).\\) Thus two vertices lie on the positive branch.\n\nWrite these vertices as \\(P=(a,\\frac{1}{a})\\) and \\(Q=(b,\\frac{1}{b}),\\) where \\(a,b>0.\\) The centroid of an equilateral triangle is also its circumcenter, so \\(P\\) and \\(Q\\) are equidistant from \\(G.\\) For \\(t>0,\\) the squared distance from \\((t,\\frac{1}{t})\\) to \\(G\\) is \\[\\left(t+\\dfrac1t\\right)\\left(t+\\dfrac1t-2\\right).\\] This is strictly increasing as \\(t+\\frac{1}{t}\\) increases from \\(2,\\) so the distinct points must satisfy \\(b=\\frac{1}{a}.\\) Hence \\(P\\) and \\(Q\\) are reflections across \\(y=x.\\)\n\nThe third vertex lies on the perpendicular bisector \\(y=x.\\) Its coordinates also satisfy \\(xy=1,\\) so it is either \\((1,1)\\) or \\((-1,-1).\\) It cannot equal the centroid, so it is \\((-1,-1).\\) Therefore, the circumradius is the distance from \\((1,1)\\) to \\((-1,-1),\\) namely \\(2\\sqrt2.\\)\n\nDividing the equilateral triangle into three triangles at its center gives its area as \\[3\\cdot\\dfrac12(2\\sqrt2)^2\\sin120^\\circ=6\\sqrt3.\\] The square of the area is \\((6\\sqrt3)^2=108.\\)\n\nThus, the correct answer is C .",
+      "hints": [
+        "Use symmetry of the hyperbola about \\(y=x\\)",
+        "Relate the centroid-to-vertex distance to the circumradius of the equilateral triangle"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

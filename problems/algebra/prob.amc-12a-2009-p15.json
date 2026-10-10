@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2009-p15",
+  "title": "2009 AMC 12A Problem 15",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.pairing-and-grouping",
+      "label": "Pairing and grouping",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2009,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 31.8,
+    "source": 2010,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "For what value of \\(n\\) is \\[ \\begin{aligned} &i + 2i^2 + 3i^3 + \\cdots + ni^n \\\\ &= 48 + 49i? \\end{aligned} \\] Note: here \\(i = \\sqrt{-1}.\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(48\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(49\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(97\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(98\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "97"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2009-p15.live",
+      "kind": "proof-sketch",
+      "text": "For \\(k\\) a multiple of \\(4,\\) \\[ \\begin{aligned} &(k + 1)i^{k+1} + (k + 2)i^{k+2} \\\\ &\\quad {}+ (k + 3)i^{k+3} + (k + 4)i^{k+4} \\\\ &= (k + 1)i - (k + 2) \\\\ &\\quad {}- (k + 3)i + (k + 4) \\\\ &= 2 - 2i. \\end{aligned} \\]\n\nSumming the first \\(96\\) terms (that is \\(24\\) blocks) gives \\(24(2 - 2i) = 48 - 48i.\\)\n\nAdding the next term \\(97i^{97} = 97i\\) yields \\(48 - 48i + 97i = 48 + 49i.\\) So \\(n = 97.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Group the terms in blocks of four consecutive powers of \\(i\\)",
+        "Each block \\((k + 1)i^{k+1} + \\cdots + (k + 4)i^{k+4}\\) with \\(k\\) a multiple of \\(4\\) equals \\(2 - 2i\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

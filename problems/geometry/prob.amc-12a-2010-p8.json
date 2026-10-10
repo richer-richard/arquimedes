@@ -1,0 +1,89 @@
+{
+  "id": "prob.amc-12a-2010-p8",
+  "title": "2010 AMC 12A Problem 8",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.special-right-triangle",
+      "label": "Special right triangle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2010,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 27.5,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Triangle \\(ABC\\) has \\(AB=2 \\cdot AC.\\) Let \\(D\\) and \\(E\\) be on \\(\\overline{AB}\\) and \\(\\overline{BC},\\) respectively, such that \\(\\angle BAE = \\angle ACD.\\) Let \\(F\\) be the intersection of segments \\(AE\\) and \\(CD,\\) and suppose that \\(\\triangle CFE\\) is equilateral. What is \\(\\angle ACB?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(60^\\circ\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(75^\\circ\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(90^\\circ\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(105^\\circ\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(120^\\circ\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "90"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2010-p8.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(\\angle BAE=\\angle ACD=x.\\) Because \\(\\triangle CFE\\) is equilateral, \\(\\angle CFE=60^\\circ.\\) Rays \\(FA\\) and \\(FE\\) are opposite, so \\(\\angle AFC=120^\\circ.\\)\n\nIn \\(\\triangle AFC,\\) we get \\(\\angle FAC=180^\\circ-120^\\circ-x\\) \\(=60^\\circ-x.\\) Since \\(F\\) lies on \\(AE,\\) this is \\(\\angle EAC.\\) Hence \\(\\angle BAC=x+(60^\\circ-x)=60^\\circ.\\)\n\nPut \\(AC=s,\\) so \\(AB=2s.\\) The Law of Cosines gives \\[ \\begin{aligned} BC^2 &= s^2+(2s)^2 \\\\ &\\quad-2(s)(2s)\\cos60^\\circ \\\\ &=3s^2. \\end{aligned} \\] Thus the side lengths are in the ratio \\(1:\\sqrt3:2,\\) with \\(AB\\) the hypotenuse, so \\(\\angle ACB=90^\\circ.\\)\n\nThus, C is the correct answer.",
+      "hints": [
+        "Let \\(\\angle BAE=\\angle ACD=x\\)",
+        "Use \\(\\triangle CFE\\) to find \\(\\angle AFC,\\) then angle-chase \\(\\angle BAC\\)"
+      ],
+      "images": [
+        "73b2287b88653de6c1808179a6b9434ef5a8b1336bb0b6f77938cdbc9728208e"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "73b2287b88653de6c1808179a6b9434ef5a8b1336bb0b6f77938cdbc9728208e"
+    ]
+  }
+}

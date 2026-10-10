@@ -1,0 +1,81 @@
+{
+  "id": "prob.amc-10a-fall-2021-p18",
+  "title": "2021 Fall AMC 10A Problem 18",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2021,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 25.8,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A farmer’s rectangular field is partitioned into a \\(2\\) by \\(2\\) grid of \\(4\\) rectangular sections as shown in the figure. In each section the farmer will plant one crop: corn, wheat, soybeans, or potatoes. The farmer does not want to grow corn and wheat in any two sections that share a border, and the farmer does not want to grow soybeans and potatoes in any two sections that share a border. Given these restrictions, in how many ways can the farmer choose crops to plant in each of the four sections of the field?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(64\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(84\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(90\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(144\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "84"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-fall-2021-p18.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(2\\) cases.\n\nCase \\(1:\\) the top-right and bottom-left sections have the same crop\n\nThere are \\(4\\) options for which crop is in those sections. The other two sections have \\(3\\) options for the crop since each crop has one restriction for crops next to it. This gives us \\[ 4 \\cdot 3 \\cdot 3 = 36 \\] combinations.\n\nCase \\(2:\\) the top-right and bottom-left sections have different crops\n\nThere are \\(4\\) options for the top-right crop and \\(3\\) different options for the bottom-left crop. Each of the other two sections borders both of these crops, leaving \\(2\\) choices for each. This gives us another \\[ 4 \\cdot 3 \\cdot 2 \\cdot 2 = 48 \\] configurations.\n\nIn total, there are \\(36 + 48 = 84\\) combinations.\n\nThus, C is the correct answer.",
+      "hints": [
+        "Case on whether the two diagonal sections are the same crop",
+        "Each shared-border restriction removes one crop choice"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "41a7140b8cc83ad7e0ca8d017f6cb71083e8757110c1974800468f9a868f1408"
+    ],
+    "solutions": []
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-2018-p14",
+  "title": "2018 AMC 10B Problem 14",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.mode",
+      "label": "Mode",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "prob.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2018,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 25.5,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A list of \\(2018\\) positive integers has a unique mode, which occurs exactly \\(10\\) times. What is the least number of distinct values that can occur in the list?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(202\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(223\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(224\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(225\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(234\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "225"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2018-p14.live",
+      "kind": "proof-sketch",
+      "text": "The mode shows up \\(10\\) times. To keep the number of distinct values small, let every other value repeat as much as the rules allow, which is \\(9\\) times each (any more would tie the mode). With \\(d\\) distinct values the list holds at most \\(10 + 9(d-1)\\) entries. We need \\(10 + 9(d-1) \\ge 2018,\\) so \\(d - 1 \\ge 223.1,\\) giving \\(d \\ge 225.\\) Therefore, the answer is D.",
+      "hints": [
+        "Every value other than the mode can appear at most \\(9\\) times, to keep the mode unique",
+        "With \\(d\\) distinct values the list holds at most \\(10 + 9(d-1)\\) entries; make this at least \\(2018\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

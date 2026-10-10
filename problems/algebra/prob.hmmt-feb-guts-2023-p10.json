@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-guts-2023-p10",
+  "title": "2023 HMMT February Guts Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomial-operations",
+      "label": "Polynomial operations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2023,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The number\n\n\\[316990099009901=\\frac{32016000000000001}{101}\\]\n\nis the product of two distinct prime numbers. Compute the smaller of these two primes.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "4002001",
+    "value": "4002001"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2023-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(x=2000\\), so the numerator is\n\n\\[x^{5}+x^{4}+1=\\left(x^{2}+x+1\\right)\\left(x^{3}-x+1\\right) .\\]\n\n(This latter factorization can be noted by the fact that plugging in \\(\\omega\\) or \\(\\omega^{2}\\) into \\(x^{5}+x^{4}+1\\) gives 0 .) Then \\(x^{2}+x+1=4002001\\) divides the numerator. However, it can easily by checked that 101 doesn't divide 4002001 (since, for example, \\(101 \\nmid 1-20+0-4\\) ), so 4002001 is one of the primes. Then the other one is\n\n\\[\\frac{2000^{3}-2000+1}{101} \\approx \\frac{2000^{3}}{101}>2000^{2} \\approx 4002001\\]\n\nso 4002001 is the smaller of the primes.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

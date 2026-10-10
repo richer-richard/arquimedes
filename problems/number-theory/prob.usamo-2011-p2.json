@@ -1,0 +1,69 @@
+{
+  "id": "prob.usamo-2011-p2",
+  "title": "2011 USAMO Problem 2",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.games-and-greedy-algorithms",
+      "label": "Games and greedy algorithms",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.invariants-and-monovariants",
+      "label": "Invariants and monovariants",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular Arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2011,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 89.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "An integer is assigned to each vertex of a regular pentagon so that the sum of the five integers is 2011. A turn of a solitaire game consists of subtracting an integer \\(m\\) from each of the integers at two neighboring vertices and adding 2m to the opposite vertex, which is not adjacent to either of the first two vertices. (The amount \\(m\\) and the vertices chosen can vary from turn to turn.) The game is won at a certain vertex if, after some number of turns, that vertex has the number 2011 and the other four vertices have the number 0. Prove that for any choice of the initial integers, there is exactly one vertex at which the game can be won.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2011-p2.imported",
+      "kind": "proof-sketch",
+      "text": "Let $\\mathbb{F}_5$ be the field of positive residues modulo 5. We label the vertices of the pentagon clockwise with the residues 0, 1, 2, 3 and 4.\nFor each $i \\in \\mathbb{F}_5$ let $n_i$ be the integer at vertex $i$ and let $r_i \\in \\mathbb{F}_5$ be defined as:\n\\[r_i \\equiv 4n_{i+1} + 3n_{i+2} + 2n_{i+3} + n_{i+4} \\equiv \\sum_{k\\in\\mathbb{F}_5}(i-k)n_k \\pmod 5.\\]\nLet $s = \\sum_{i\\in\\mathbb{F}_5} n_i$. A move in the game consists of\n\\[(n_i, n_{i+1}, n_{i+2}, n_{i+3}, n_{i+4}) \\mapsto (n_i + 2m, n_{i+1}, n_{i+2} - m, n_{i+3} - m, n_{i+4})\\]\nfor some vertex $i \\in \\mathbb{F}_5$ and integer $m$. We immediately see that $s$ is an invariant of the game. After our move the new value of $r_i$ is decreased by $3m + 2m \\equiv 0 \\pmod 5$ as a result of the change in the $3n_{i+2}$ and $2n_{i+3}$ terms. So $r_i$ does not change after a move at vertex $i$.\nFor all $i \\in \\mathbb{F}_5$ we have:\n\\[r_{i+1} - r_i \\equiv \\sum_{k\\in\\mathbb{F}_5} ((i+1-k)n_k - (i-k)n_k) \\equiv \\sum_{k\\in\\mathbb{F}_5} n_k \\equiv s \\pmod 5.\\]\nTherefore, the $r_i$ form an arithmetic progression in $\\mathbb{F}_5$ with a difference of $s$. Since $r_k$ is unchanged by a move at vertex $k$, so are all the remaining $r_i$ as the differences are constant.\nProvided $s \\not\\equiv 0 \\pmod 5$, we see that the mapping $i \\mapsto r_i$ is a bijection $\\mathbb{F}_5 \\to \\mathbb{F}_5$ and exactly one vertex will have $r_i \\equiv 0 \\pmod 5$. As $r_i$ is an invariant, a winning vertex must have $r_i \\equiv 0$, since in the final state each $n_k$ with $k \\ne i$ is zero. So, for $s \\not\\equiv 0 \\pmod 5$, if a winning vertex exists, it is the unique vertex with $r_i \\equiv 0$.\nWithout loss of generality, it remains to show that if $r_0 \\equiv 0 \\pmod 5$, then 0 must be a winning vertex. To prove this, we perform the following moves:\n\\begin{align*} (n_0, n_1, n_2, n_3, n_4) &\\mapsto (n_0-n_1, 0, n_2, n_3 + 2n_1, n_4), & (i, m) &= (3, n_1) \\\\ &\\mapsto (n_0-n_1-n_4, 0, n_2+2n_4, n_3 +2n_1, 0) & (i, m) &= (2, n_4) \\end{align*}\nWe designate the new state $(n'_0, 0, n'_2, n'_3, 0)$. Since $r_0 \\equiv 0$ is an invariant, and $n'_1 = n'_4 = 0$, we now have $r_0 \\equiv n'_3 - n'_2 = 5p$, for some integer $p$. Our final set of moves is:\n\\begin{align*} (n'_0, 0, n'_2, n'_3, 0) &\\mapsto (n'_0+p, p, n'_2, n'_3 - 2p, 0), & (i, m) &= (3, -p)\\\\ &\\mapsto (n'_0+p, 0, n'_2-p, n'_3 - 2p, 2p), & (i, m) &= (4, p) \\\\ &\\mapsto (n'_0-p, 0, n'_2+3p, n'_3 - 2p, 0), & (i, m) &= (2, 2p)\\\\ &\\mapsto (n'_0+2n'_2 + 5p, 0, 0, n'_3-n'_2 - 5p = 0, 0) & (i, m) &= (0, n'_2 + 3p) \\end{align*}\nNow our chosen vertex 0 is the only vertex with a non-zero value, and since $s$ is invariant, that value is $s$ as required. Since a vertex $i$ with $r_i \\equiv 0 \\pmod 5$ is winnable, and with $s = 2011 \\not\\equiv 0 \\pmod 5$ we always have a unique such vertex, we are done.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

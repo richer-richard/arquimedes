@@ -1,0 +1,76 @@
+{
+  "id": "prob.aime-ii-2001-p6",
+  "title": "2001 AIME II Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle",
+      "label": "Circle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.square-geometry",
+      "label": "Square (geometry)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2001,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 46.2,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "Square \\(ABCD\\) is inscribed in a circle. Square \\(EFGH\\) has vertices \\(E\\) and \\(F\\) on \\(\\overline{CD}\\) and vertices \\(G\\) and \\(H\\) on the circle. The ratio of the area of square \\(EFGH\\) to the area of square \\(ABCD\\) can be expressed as \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers and \\(m \\lt n.\\) Find \\(10n + m.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "251",
+    "value": "251"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2001-p6.live",
+      "kind": "proof-sketch",
+      "text": "Center the circle at the origin and let \\(ABCD\\) have side \\(s,\\) so the circle is \\(x^2 + y^2 = \\frac{s^2}{2}\\) and side \\(\\overline{CD}\\) lies on the line \\(y = \\frac{s}{2}.\\) The small square sits on \\(\\overline{CD},\\) outside \\(ABCD:\\) if its side is \\(t,\\) then by symmetry \\(G = \\left(\\frac{t}{2}, \\frac{s}{2} + t\\right),\\) which must lie on the circle.\n\nSubstituting, \\(\\frac{t^2}{4} + \\left(\\frac{s}{2} + t\\right)^2 = \\frac{s^2}{2},\\) which expands to \\(5t^2 + 4st - s^2 = 0,\\) or \\((5t - s)(t + s) = 0.\\) Since \\(t \\gt 0,\\) we get \\(t = \\frac{s}{5}.\\)\n\nThe ratio of areas is \\(\\frac{t^2}{s^2} = \\frac{1}{25},\\) so \\(m = 1,\\) \\(n = 25,\\) and \\(10n + m = 251.\\)",
+      "hints": [
+        "Put the circle’s center at the origin; if \\(ABCD\\) has side \\(s,\\) the circle is \\(x^2 + y^2 = \\frac{s^2}{2}\\)",
+        "If \\(EFGH\\) has side \\(t,\\) then \\(G = \\left(\\frac{t}{2}, \\frac{s}{2} + t\\right)\\) lies on the circle, giving \\(5t^2 + 4st - s^2 = 0\\)"
+      ],
+      "images": [
+        "0b669c9aa17589159ae17ddd4d3104e2cd5180e9b4fa42463658e866d8b54a0a"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "0b669c9aa17589159ae17ddd4d3104e2cd5180e9b4fa42463658e866d8b54a0a"
+    ]
+  }
+}

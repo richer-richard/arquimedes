@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-guts-2019-p27",
+  "title": "2019 HMMT November Guts Problem 27",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.euler-s-totient",
+      "label": "Φ (Euler's totient)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2019,
+    "number": 27
+  },
+  "difficulty": {
+    "course": 57.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For a given positive integer \\(n\\), we define \\(\\varphi(n)\\) to be the number of positive integers less than or equal to \\(n\\) which share no common prime factors with \\(n\\). Find all positive integers \\(n\\) for which\n\n\\[\\varphi(2019 n)=\\varphi\\left(n^{2}\\right)\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2019-p27.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 1346, 2016, 2019\nLet \\(p_{1}, p_{2}, \\ldots, p_{k}\\) be the prime divisors of \\(n\\). Then it is known that \\(\\varphi(n)=n \\cdot \\frac{p_{1}-1}{p_{1}} \\ldots \\frac{p_{k}-1}{p_{k}}\\). As \\(n^{2}\\) and \\(n\\) has the same set of prime divisors, it also holds that \\(\\varphi\\left(n^{2}\\right)=n^{2} \\cdot \\frac{p_{1}-1}{p_{1}} \\ldots \\frac{p_{k}-1}{p_{k}}\\). We will examine the equality in four cases.\n\n- \\(\\operatorname{gcd}(n, 2019)=1\\) In this case, \\(2019 \\cdot n\\) has also 3 and 673 as prime divisors, thus \\(\\varphi(2019 \\cdot n)=\\) \\(2019 \\cdot n \\cdot \\frac{p_{1}-1}{p_{1}} \\ldots \\frac{p_{k}-1}{p_{k}} \\cdot \\frac{2}{3} \\cdot \\frac{672}{673}\\), and the equality implies \\(n=1342\\), however \\(\\operatorname{gcd}(1342,3) \\neq 1\\), contradiction. Thus, there is no answer in this case.\n- \\(\\operatorname{gcd}(n, 2019)=3\\) In this case, \\(2019 \\cdot n\\) has also 673 as a prime divisor, thus \\(\\varphi(2019 \\cdot n)=\\) \\(2019 \\cdot n \\cdot \\frac{p_{1}-1}{p_{1}} \\ldots \\frac{p_{k}-1}{p_{k}} \\cdot \\frac{672}{673}\\), and the equality implies \\(n=2016\\), which satisfies the equation. Thus, the only answer in this case is \\(n=2016\\).\n- \\(\\operatorname{gcd}(n, 2019)=673\\) In this case, \\(2019 \\cdot n\\) has also 3 as a prime divisor, thus \\(\\varphi(2019 \\cdot n)=\\) \\(2019 \\cdot n \\cdot \\frac{p_{1}-1}{p_{1}} \\ldots \\frac{p_{k}-1}{p_{k}} \\cdot \\frac{2}{3}\\), and the equality implies \\(n=1346\\), which satisfies the equation. Thus, the only answer in this case is \\(n=1346\\).\n- \\(\\operatorname{gcd}(n, 2019)=2019\\) In this case, \\(2019 \\cdot n\\) has the same set of prime divisors, thus \\(\\varphi(2019 \\cdot n)=\\) \\(2019 \\cdot n \\cdot \\frac{p_{1}-1}{p_{1}} \\ldots \\frac{p_{k}-1}{p_{k}}\\), and the equality implies \\(n=2019\\), which satisfies the equation. Thus, the only answer in this case is \\(n=2019\\).\n\nThus, all the answers are \\(n=1346,2016,2019\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1983-p13",
+  "title": "1983 AIME Problem 13",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.binomial-theorem",
+      "label": "Binomial theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.double-counting",
+      "label": "Double counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.subsets",
+      "label": "Subsets",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1983,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 52.8,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "For \\(\\{1,2,3,\\ldots,n\\}\\) and each of its nonempty subsets a unique alternating sum is defined as follows: Arrange the numbers in the subset in decreasing order and then, beginning with the largest, alternately add and subtract successive numbers. (For example, the alternating sum for \\(\\{1,2,4,6,9\\}\\) is \\(9-6+4-2+1=6\\) and for \\(\\{5\\}\\) it is simply \\(5.\\)) Find the sum of all such alternating sums for \\(n=7.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "448",
+    "value": "448"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1983-p13.live",
+      "kind": "proof-sketch",
+      "text": "Fix \\(k.\\) Once \\(k\\) is included, the \\(k-1\\) smaller elements may be chosen arbitrarily, contributing a factor of \\(2^{k-1}.\\) If exactly \\(j\\) of the \\(7-k\\) larger elements are chosen, the sign of \\(k\\) is \\((-1)^j.\\) Therefore the coefficient of \\(k\\) in the total is \\[ \\begin{aligned} &2^{k-1}\\sum_{j=0}^{7-k} (-1)^j\\binom{7-k}{j}\\\\ &\\qquad=2^{k-1}(1-1)^{7-k}. \\end{aligned} \\] This is \\(0\\) for \\(k<7\\) and \\(2^6\\) for \\(k=7.\\) Hence the total is \\(7\\cdot2^6=448.\\)",
+      "hints": [
+        "Add the contribution of each number separately over all subsets",
+        "The sign of \\(k\\) depends only on whether the subset contains an even or odd number of elements greater than \\(k\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

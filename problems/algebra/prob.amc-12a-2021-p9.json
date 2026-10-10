@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12a-2021-p9",
+  "title": "2021 AMC12A 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.difference-of-squares",
+      "label": "Difference of squares",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.telescoping",
+      "label": "Telescoping",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2021,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 28.0,
+    "source": 1560,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Which of the following is equivalent to \\[ \\begin{aligned} &(2 + 3)(2^2 + 3^2)(2^4 + 3^4) \\\\ &\\quad {}\\cdot (2^8 + 3^8)(2^{16} + 3^{16}) \\\\ &\\quad {}\\cdot (2^{32} + 3^{32})(2^{64} + 3^{64})? \\end{aligned} \\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3^{127} + 2^{127}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3^{127} + 2^{127} + 2 \\cdot 3^{63} + 3 \\cdot 2^{63}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3^{128} - 2^{128}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3^{128} + 2^{128}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5^{127}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2021-p9.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(3 - 2 = 1,\\) multiplying the product by \\(3 - 2\\) does not change it. Then \\[ (3-2)(3+2) = 3^2 - 2^2, \\] and multiplying by the next factor \\((3^2 + 2^2)\\) gives \\(3^4 - 2^4,\\) and so on. Each step doubles the exponent.\n\nAfter using all seven factors, the product telescopes to \\(3^{128} - 2^{128}.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Multiply the whole product by \\(3 - 2 = 1\\) to start a telescoping cascade",
+        "Repeatedly apply \\((3^k - 2^k)(3^k + 2^k) = 3^{2k} - 2^{2k}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

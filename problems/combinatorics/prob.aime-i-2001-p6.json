@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2001-p6",
+  "title": "2001 AIME I Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.bijection",
+      "label": "Bijection",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.stars-and-bars",
+      "label": "Stars and bars",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2001,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 42.1,
+    "source": 2230,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "A fair die is rolled four times. The probability that each of the final three rolls is at least as large as the roll preceding it may be expressed in the form \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "79",
+    "value": "79"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2001-p6.live",
+      "kind": "proof-sketch",
+      "text": "The rolls must form a non-decreasing sequence. Every multiset of four values from \\(\\{1, \\ldots, 6\\}\\) can be arranged in non-decreasing order in exactly one way, so the number of successful outcomes equals the number of such multisets. By stars and bars (4 stars and \\(5\\) dividers), that count is \\(\\binom{9}{4} = 126.\\)\n\nThe probability is \\(\\frac{126}{6^4} = \\frac{126}{1296} = \\frac{7}{72},\\) so \\(m + n = 7 + 72 = 79.\\)",
+      "hints": [
+        "Every collection of four values (with repeats allowed) can be arranged in exactly one non-decreasing order",
+        "Count multisets of size \\(4\\) from \\(\\{1, \\ldots, 6\\}\\) by stars and bars: \\(\\binom{9}{4}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

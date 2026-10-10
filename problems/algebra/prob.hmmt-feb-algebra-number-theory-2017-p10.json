@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2017-p10",
+  "title": "2017 HMMT February Algebra and Number Theory Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recurrences",
+      "label": "Recurrences",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2017,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\mathbb{N}\\) denote the natural numbers. Compute the number of functions \\(f: \\mathbb{N} \\rightarrow\\{0,1, \\ldots, 16\\}\\) such that\n\n\\[f(x+17)=f(x) \\quad \\text { and } \\quad f\\left(x^{2}\\right) \\equiv f(x)^{2}+15 \\quad(\\bmod 17)\\]\n\nfor all integers \\(x \\geq 1\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2017-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 12066\nBy plugging in \\(x=0\\), we get that \\(f(0)\\) can be either \\(-1,2\\). As \\(f(0)\\) is unrelated to all other values, we need to remember to multiply our answer by 2 at the end. Similarly, \\(f(1)=-1\\) or 2 .\n\nConsider the graph \\(x \\rightarrow x^{2}\\). It is a binary tree rooted at -1 , and there is an edge \\(-1 \\rightarrow 1\\), and a loop \\(1 \\rightarrow 1\\). Our first case is \\(f(1)=-1\\). Note that if \\(x, y\\) satisfy \\(x^{2}=y\\), then \\(f(y) \\neq 1\\). Otherwise, we would have \\(f(x)^{2}=3(\\bmod 17)\\), a contradiction as 3 is a nonresidue. So only the 8 leaves can take the value 1 . This contributes \\(2^{8}\\).\n\nFor \\(f(1)=2\\), we can once again propagate down the tree. While it looks like we have 2 choices at each node (for the square roots), this is wrong, as if \\(f(x)=-2\\) and \\(y^{2}=x\\), then \\(f(y)=0\\) is forced.\n\nGiven this intuition, let \\(a_{n}\\) denote the answer for a binary tree of height \\(n\\) where the top is either - 2 or 2 . Therefore, \\(a_{1}=2, a_{2}=5\\). You can show the recurrence \\(a_{n}=a_{n-1}^{2}+2^{2^{n}-4}\\). This is because if the top is 2 , then we get a contribution of \\(a_{n-1}^{2}\\). If the top is -2 , then both entries below it must be 0 . After that, you can show that each of the remaining \\(2^{n}-4\\) vertices can be either of 2 possible square roots. Therefore, we get the recurrence as claimed. One can compute that \\(a_{4}=5777\\), so we get the final answer \\(2(256+5777)=12066\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

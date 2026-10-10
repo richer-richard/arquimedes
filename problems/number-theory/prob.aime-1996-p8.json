@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1996-p8",
+  "title": "1996 AIME Problem 8",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.harmonic-mean",
+      "label": "Harmonic mean",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1996,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 45.9,
+    "source": 2380,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "The harmonic mean of two positive numbers is the reciprocal of the arithmetic mean of their reciprocals. For how many ordered pairs of positive integers \\((x,y),\\) with \\(x<y,\\) is the harmonic mean of \\(x\\) and \\(y\\) equal to \\(6^{20}?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "799",
+    "value": "799"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1996-p8.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(N=6^{20}.\\) Rearranging the harmonic-mean equation gives \\[(2x-N)(2y-N)=N^2.\\] Because \\(x<N<y\\) and \\(N<2x,\\) the two factors are positive, and both must be even. Conversely, each factorization \\(AB=N^2\\) with even \\(A<B\\) gives one valid pair via \\(x=\\frac{A+N}{2}\\) and \\(y=\\frac{B+N}{2}.\\)\n\nNow \\(N^2=2^{40}3^{40}.\\) For both complementary factors to be even, the exponent of \\(2\\) in \\(A\\) can be \\(1,\\ldots,39,\\) while the exponent of \\(3\\) can be \\(0,\\ldots,40.\\) This gives \\(39\\cdot41=1599\\) divisors \\(A,\\) including the central factor \\(A=N.\\) Pairing complementary divisors and excluding that central case gives \\(\\frac{1599-1}{2}=799.\\)",
+      "hints": [
+        "For \\(N=6^{20},\\) rearrange \\(\\frac{2xy}{x+y}=N\\) into a product",
+        "Count complementary factor pairs of \\(N^2\\) in which both factors are even"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

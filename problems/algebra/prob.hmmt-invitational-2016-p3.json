@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-invitational-2016-p3",
+  "title": "2016 HMMT Invitational Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.injectivity-surjectivity",
+      "label": "Injectivity / surjectivity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2016,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Denote by \\(\\mathbb{N}\\) the positive integers. Let \\(f: \\mathbb{N} \\rightarrow \\mathbb{N}\\) be a function such that, for any \\(w, x, y, z \\in \\mathbb{N}\\),\n\n\\[f(f(f(z))) f(w x f(y f(z)))=z^{2} f(x f(y)) f(w)\\]\n\nShow that \\(f(n!) \\geq n\\) ! for every positive integer \\(n\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2016-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "If \\(f\\left(z_{1}\\right)=f\\left(z_{2}\\right)\\), then plugging in \\(\\left(w, x, y, z_{1}\\right)\\) and \\(\\left(w, x, y, z_{2}\\right)\\) yields \\(z_{1}=z_{2}\\). Thus, \\(f\\) is injective. Substitution of \\((z, w)\\) with \\((1, f(f(1)))\\) in the main equation yields\n\n\\[f(f(f(1)) x f(y f(1)))=f(x f(y))\\]\n\nBecause \\(f\\) is injective, we have\n\n\\[f(y f(1)) \\cdot f(f(1))=f(y), \\forall y \\in \\mathbb{N}\\]\n\nWe can easily show by induction that\n\n\\[f(y)=f\\left(y f(1)^{n}\\right) f(f(1))^{n}, \\forall n \\in \\mathbb{N}\\]\n\nThus, \\(f(f(1))^{n} \\mid f(y), \\forall n \\in \\mathbb{N}\\) which implies that \\(f(f(1))=1\\). Using this equality in \\((*)\\) yields \\(f(1)=1\\). Substitution of \\((y, z)\\) with \\((1,1)\\) in the main equation yields \\(f(x y)=f(x) f(y)\\).\nSo,\n\n\\[f(n!)=f\\left(\\prod_{i=1}^{n} i\\right)=\\prod_{i=1}^{n} f(i)\\]\n\nBy injectivity, each \\(f(i)\\) in this product is a distinct positive integer, so their product is at least \\(\\prod_{i=1}^{n} i=n!\\), as desired.\nRemark 1. The equation condition of \\(f\\) in the problem is actually equivalent to the following two conditions combined:\n\n\\[\\begin{aligned}\n& \\text { (C1) } f(x y)=f(x) f(y), \\forall x, y \\in \\mathbb{N} \\text {, and } \\\\\n& \\text { (C2) } f(f(f(x)))=x, \\forall x \\in \\mathbb{N}\n\\end{aligned}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

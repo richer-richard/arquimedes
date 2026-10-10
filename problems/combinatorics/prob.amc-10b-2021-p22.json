@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2021-p22",
+  "title": "2021 AMC 10B Problem 22",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "comb.permutations",
+      "label": "Permutations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2021,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 32.7,
+    "source": 2150,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Ang, Ben, and Jasmin each have \\(5\\) blocks, colored red, blue, yellow, white, and green; and there are \\(5\\) empty boxes. Each of the people randomly and independently of the other two people places one of their blocks into each box. The probability that at least one box receives \\(3\\) blocks all of the same color is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. What is \\(m + n ?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 47 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 94 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 227 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 471 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 542 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "471"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2021-p22.live",
+      "kind": "proof-sketch",
+      "text": "Fix Ang’s placement and label each box by the color Ang put in it. Ben and Jasmin each choose a permutation of the five colors, so there are \\((5!)^2\\) equally likely pairs of placements.\n\nFor a specified set of \\(k\\) boxes to receive three blocks of the same color, both Ben and Jasmin must match Ang in those \\(k\\) boxes. This can happen in \\(((5-k)!)^2\\) ways. By inclusion-exclusion, the number of successful placement pairs is\n\n\\[ \\begin{aligned} &\\binom51(4!)^2-\\binom52(3!)^2 \\\\ &\\quad {}+\\binom53(2!)^2-\\binom54(1!)^2 \\\\ &\\quad {}+\\binom55(0!)^2. \\end{aligned} \\]\n\nThis equals\n\n\\[2880-360+40-5+1=2556.\\]\n\nTherefore the probability is\n\n\\[\\frac{2556}{(5!)^2}=\\frac{2556}{14400}=\\frac{71}{400}.\\]\n\nThus \\(m+n=71+400=471.\\)\n\nThus, the answer is D .",
+      "hints": [
+        "Fix Ang’s placement and count Ben’s and Jasmin’s permutations",
+        "Use inclusion-exclusion on the boxes where both other placements match Ang’s color"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2016-p8",
+  "title": "2016 HMMT February Combinatorics Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2016,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 84.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(X\\) be the collection of all functions \\(f:\\{0,1, \\ldots, 2016\\} \\rightarrow\\{0,1, \\ldots, 2016\\}\\). Compute the number of functions \\(f \\in X\\) such that\n\n\\[\\max _{g \\in X}\\left(\\min _{0 \\leq i \\leq 2016}(\\max (f(i), g(i)))-\\max _{0 \\leq i \\leq 2016}(\\min (f(i), g(i)))\\right)=2015 .\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2016-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(2 \\cdot\\left(3^{2017}-2^{2017}\\right)\\)\nFor each \\(f, g \\in X\\), we define\n\n\\[d(f, g):=\\min _{0 \\leq i \\leq 2016}(\\max (f(i), g(i)))-\\max _{0 \\leq i \\leq 2016}(\\min (f(i), g(i)))\\]\n\nThus we desire \\(\\max _{g \\in X} d(f, g)=2015\\).\nFirst, we count the number of functions \\(f \\in X\\) such that\n\n\\[\\exists g: \\min _{i} \\max \\{f(i), g(i)\\} \\geq 2015 \\text { and } \\exists g: \\min _{i} \\max \\{f(i), g(i)\\}=0 .\\]\n\nThat means for every value of \\(i\\), either \\(f(i)=0\\) (then we pick \\(g(i)=2015\\) ) or \\(f(i) \\geq 2015\\) (then we pick \\(g(i)=0)\\). So there are \\(A=3^{2017}\\) functions in this case.\nSimilarly, the number of functions such that\n\n\\[\\exists g: \\min _{i} \\max \\{f(i), g(i)\\}=2016 \\text { and } \\exists g: \\min _{i} \\max \\{f(i), g(i)\\} \\leq 1\\]\n\nis also \\(B=3^{2017}\\).\nFinally, the number of functions such that\n\n\\[\\exists g: \\min _{i} \\max \\{f(i), g(i)\\}=2016 \\text { and } \\exists g: \\min _{i} \\max \\{f(i), g(i)\\}=0\\]\n\nis \\(C=2^{2017}\\).\nNow \\(A+B-C\\) counts the number of functions with \\(\\max _{g \\in X} d(f, g) \\geq 2015\\) and \\(C\\) counts the number of functions with \\(\\max _{g \\in X} d(f, g) \\geq 2016\\), so the answer is \\(A+B-2 C=2 \\cdot\\left(3^{2017}-2^{2017}\\right)\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

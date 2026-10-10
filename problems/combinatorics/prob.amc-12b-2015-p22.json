@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2015-p22",
+  "title": "2015 AMC 12B Problem 22",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.circular-arrangements",
+      "label": "Circular arrangements",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2015,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 37.6,
+    "source": 2310,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Six chairs are evenly spaced around a circular table. One person is seated in each chair. Each person gets up and sits down in a chair that is not the same chair and is not adjacent to the chair he or she originally occupied, so that again one person is seated in each chair. In how many ways can this be done?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(14\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(24\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "20"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2015-p22.live",
+      "kind": "proof-sketch",
+      "text": "First imagine everyone moves to the chair directly opposite. The condition becomes: each person must sit in the same chair or an adjacent one. The number of people who keep their seat must be even (otherwise an odd-length gap cannot be filled).\n\nIf \\(0\\) keep their seat, everyone shifts left, shifts right, or swaps with a neighbor: \\(4\\) ways. If \\(2\\) keep their seats, those two must be opposite or adjacent, giving \\(3+6=9\\) choices, and the remaining people are forced to swap in adjacent pairs. If \\(4\\) keep their seats, the other two must occupy adjacent seats and swap, giving \\(6\\) choices. If all \\(6\\) stay, there is \\(1\\) way. The total is \\(4+9+6+1=20.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Relabel so that each person must stay put or move to an adjacent chair",
+        "The number of people who keep their (relabeled) seat must be even: \\(0,\\) \\(2,\\) \\(4,\\) or \\(6\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

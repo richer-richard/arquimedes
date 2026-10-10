@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-guts-2015-p22",
+  "title": "2015 HMMT February Guts Problem 22",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.optimization-in-geometry",
+      "label": "Optimization in geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vectors",
+      "label": "Vectors",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2015,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 79.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A_{1}, A_{2}, \\ldots, A_{2015}\\) be distinct points on the unit circle with center \\(O\\). For every two distinct integers \\(i, j\\), let \\(P_{i j}\\) be the midpoint of \\(A_{i}\\) and \\(A_{j}\\). Find the smallest possible value of\n\n\\[\\sum_{1 \\leq i<j \\leq 2015} O P_{i j}^{2}\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2015-p22.hmmt",
+      "kind": "proof-sketch",
+      "text": "5 Clearly we may biject squarely sets with binary representations of perfect squares between 1 and \\(2^{0}+\\cdots+2^{8}=2^{9}-1=511\\), so there are 22 squarely sets, corresponding to \\(n^{2}\\) for \\(n=1,2, \\ldots, 22\\). For convenience, we say \\(N\\) is (super) squarely if and only if the set corresponding to \\(N\\) is (super) squarely.\nThe general strategy is to rule out lots of squares at time, by searching for squares with few missing digits (and ideally most 1's consecutive, for simplicity). We can restrict ourselves (for now) to odds; \\((2 k)^{2}\\) is just \\(k^{2}\\) with two additional zeros at the end. \\(1,9,25,49,81\\) are ineffective, but \\(121=2^{7}-7=\\) \\(2^{6}+2^{5}+2^{4}+2^{3}+2^{0}\\) immediately rules out all odd squares up to \\(9^{2}\\), as they must be \\(1(\\bmod 8)\\).\nFortunately, \\(22^{2}=4 \\cdot 11^{2}\\) is in our range (i.e. less than 512 ), ruling out all even squares up to \\(20^{2}\\) as well.\nThis leaves us with \\(11^{2}, 13^{2}, 15^{2}, 17^{2}, 19^{2}, 21^{2}, 22^{2}\\), with binary representations 001111001,010101001 , \\(011100001,100100001,101101001\\) (kills \\(17^{2}\\) ), 110111001 (kills \\(13^{2}\\) ), 111100100 (kills nothing by parity). Thus \\(11^{2}, 15^{2}, 19^{2}, 21^{2}, 22^{2}\\) are the only super squarely numbers, for a total of 5 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

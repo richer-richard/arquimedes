@@ -1,0 +1,90 @@
+{
+  "id": "prob.amc-10a-2013-p25",
+  "title": "2013 AMC 10A Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.counting-intersections",
+      "label": "Counting intersections",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.regular-polygon",
+      "label": "Regular polygon",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2013,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 32.6,
+    "source": 2180,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "All \\(20\\) diagonals are drawn in a regular octagon. At how many distinct points in the interior of the octagon (not on the boundary) do two or more diagonals intersect?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(49\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(65\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(70\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(96\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(128\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "49"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2013-p25.live",
+      "kind": "proof-sketch",
+      "text": "If no three diagonals were concurrent, each choice of \\(4\\) vertices would determine one interior intersection, giving \\(\\binom84=70\\).\n\nThe \\(4\\) long diagonals through opposite vertices all meet at the center, so the center was counted \\(\\binom42=6\\) times and should be counted once. Subtract \\(5\\).\n\nThere are also \\(8\\) symmetric points where \\(3\\) diagonals meet. Each was counted \\(\\binom32=3\\) times and should be counted once, so subtract \\(8(3-1)=16\\).\n\nThe number of distinct interior intersection points is \\(70-5-16=49\\).\n\nThus, A is the correct answer.",
+      "hints": [
+        "Start with \\(\\binom84\\) intersections from four vertices",
+        "Correct for the center and the eight other triple-concurrence points"
+      ],
+      "images": [
+        "63cf326915a608b1c0c01a6f926299a79487a2911fea7a6b1e82eb5e9d8ba4d4"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "63cf326915a608b1c0c01a6f926299a79487a2911fea7a6b1e82eb5e9d8ba4d4"
+    ]
+  }
+}

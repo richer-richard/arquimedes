@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2020-p3",
+  "title": "2020 IMO Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2020,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 111.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "There are \\(4n\\) pebbles of weights \\(1, 2, 3, \\dots, 4n\\).\nEach pebble is coloured in one of \\(n\\) colours\nand there are four pebbles of each colour.\nShow that we can arrange the pebbles into two piles\nso the total weights of both piles are the same,\nand each pile contains two pebbles of each colour.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2020-p3.evanchen",
+      "kind": "proof-sketch",
+      "text": "The first key idea is the deep fact that\n\\[ 1+4n = 2+(4n-1) = 3+(4n-2) = \\dotsb. \\]\nSo, place all four pebbles of the same colour in a box (hence \\(n\\) boxes).\nFor each \\(k=1,2,\\dots,2n\\)\nwe tape a piece of string between pebble \\(k\\) and \\(4n+1-k\\).\nTo solve the problem, it suffices to paint each string\neither blue or green such that each box has two blue strings\nand two green strings\n(where a string between two pebbles in the same box counts double).\n\n[Diagram omitted from this imported TeX transcription.]\n\nWe can therefore rephrase the problem as follows,\nif we view boxes as vertices and strings as edges:\n\nClaim.\n Given a \\(4\\)-regular multigraph on \\(n\\) vertices\n (where self-loops are allowed and have degree \\(2\\)),\n one can color the edges blue and green\n such that each vertex has two blue and two green edges.\n\nProof.\n Each connected component of the graph can be decomposed\n into an Eulerian circuit, since \\(4\\) is even.\n A connected component with \\(k\\) vertices has \\(2k\\)\n edges in its Eulerian circuit,\n so we may color the edges in this circuit alternating green and blue.\n This may be checked to work.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

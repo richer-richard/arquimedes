@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-2016-p8",
+  "title": "2016 AMC 10B Problem 8",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.chinese-remainder-theorem",
+      "label": "Chinese Remainder Theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2016,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 22.1,
+    "source": 1420,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "What is the tens digit of \\(2015^{2016}-2017?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( \\ 0 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( \\ 1 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( \\ 3 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( \\ 5 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( \\ 8 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "0"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2016-p8.live",
+      "kind": "proof-sketch",
+      "text": "To find the tens digit, we first need to find the number modulo \\(100.\\) First, we can find \\(2015^{2016} \\mod 100.\\) We can do this with the Chinese Remainder Theorem by first getting the number \\(\\mod 4\\) and then \\(\\mod 25.\\)\n\nThe number \\[2015^{2016} \\equiv 0 \\mod 25\\] since it is a multiple of \\(25.\\)\n\nThen, observe that \\[2015^{2016} \\equiv (-1)^{2016}\\]\\[ \\equiv 1 \\mod 4 .\\]\n\nBy the Chinese remainder theorem, we can get that our number is congruent to \\(25 \\mod 100.\\)\n\nTherefore, \\[2015^{2016}-2017 \\]\\[\\equiv 25 - 17 \\mod 100\\]\\[\\equiv 8 \\mod 100 .\\] This means the tens digit is \\(0.\\)\n\nThus, the correct answer is A .",
+      "hints": [
+        "Work modulo \\(100\\) to get the tens digit",
+        "Use congruences modulo \\(4\\) and \\(25\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

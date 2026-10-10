@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-team-2-2012-p4",
+  "title": "2012 HMMT February Team Round 2 Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2012,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 79.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A restaurant has some number of seats, arranged in a line. Its customers are in parties arranged in a queue. To seat its customers, the restaurant takes the next party in the queue and attempts to seat all of the party's member(s) in a contiguous block of unoccupied seats. If one or more such blocks exist, then the restaurant places the party in an arbitrarily selected block; otherwise, the party leaves.\n\nSuppose the queue has parties of sizes \\(6,4,2,5,3,1\\) from front to back, and all seats are initially empty. What is the minimal number of seats the restaurant needs to guarantee that it will seat all of these customers?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2-2012-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "29 First, note that if there are only 28 seats, it is possible for the seating not to be possible, in the following way. The party of six could be seated in such a way that the remaining contiguous regions have sizes 10 and 12 . Then, the party of 4 is seated in the middle of the region of size 12 , and the party of 2 is seated in the middle of the region of size 10 , so that the remaining regions all of size 4 . Now, it is impossible to seat the party of 5 . It is clear that fewer than 28 seats also make it impossible to guarantee that everyone can be seated.\nNow, given 29 seats, clearly, the first party can be seated. Afterward, 23 seats remain in at most 2 contiguous regions, one of which has to have size at least 4 . Next, 19 seats remain in at most 3\ncontiguous regions, one of which has size at least 2. 17 seats in at most 4 contiguous regions remain for the party of 5 , and one region must have size at least 5 . Finally, 12 seats in at most 5 contiguous regions are available for the party of 3 , and the party of 1 can take any remaining seat. Our answer is therefore 29.\nRemark: We can arrive at the answer of 29 by doing the above argument in reverse.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

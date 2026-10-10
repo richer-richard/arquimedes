@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2011-p23",
+  "title": "2011 AMC 10A Problem 23",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.pattern-recognition",
+      "label": "Pattern recognition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.process-simulation",
+      "label": "Process simulation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2011,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 31.3,
+    "source": 2110,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Seven students count from \\(1\\) to \\(1000\\) as follows:\n\n• Alice says all the numbers, except she skips the middle number in each consecutive group of three numbers. That is, Alice says \\(1,\\) \\(3,\\) \\(4,\\) \\(6,\\) \\(7,\\) \\(9,\\) \\(\\ldots,\\) \\(997,\\) \\(999,\\) \\(1000.\\)\n\n• Barbara says all of the numbers that Alice doesn’t say, except she also skips the middle number in each consecutive group of three numbers.\n\n• Candice says all of the numbers that neither Alice nor Barbara says, except she also skips the middle number in each consecutive group of three numbers.\n\n• Debbie, Eliza, and Fatima say all of the numbers that none of the students with the first names beginning before theirs in the alphabet say, except each also skips the middle number in each of her consecutive groups of three numbers.\n\n• Finally, George says the only number that no one else says.\n\nWhat number does George say?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(37\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(242\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(365\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(728\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(998\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "365"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2011-p23.live",
+      "kind": "proof-sketch",
+      "text": "We can walk through all the iterations to find what is left.\n\nAlice does not say the numbers \\[ 2, 5, 8, 11, 14, 17, \\ldots, 998. \\]\n\nAfter Barbara says her numbers, the remaining ones are \\[ 5, 14, 23, 32, 41, \\ldots, 995. \\]\n\nNote that both of these are arithmetic sequences where the common difference is increased by a multiple of \\(3.\\)\n\nThis pattern continues as the numbers remaining after Candice says hers are \\[ 14, 41, 68, 95, \\ldots, 986. \\]\n\nThen after Debbie, they are \\[ 41, 122, 203, \\ldots, 932 \\] and after Eliza, they are \\[ 122, 365, 608, 851. \\]\n\nFinally, the only number left after Fatima goes is \\(365,\\) which is the number that George will have to say.\n\nThus, C is the correct answer.",
+      "hints": [
+        "Track the first remaining term and the common difference",
+        "Each student triples the common difference and shifts to the middle term"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

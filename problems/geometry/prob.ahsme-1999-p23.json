@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1999-p23",
+  "title": "1999 AHSME Problem 23",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-decomposition",
+      "label": "Area decomposition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.equiangular-polygon",
+      "label": "Equiangular polygon",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1999,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 35.7,
+    "source": 1980,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The equiangular convex hexagon \\(ABCDEF\\) has \\(AB = 1,\\) \\(BC = 4,\\) \\(CD = 2,\\) and \\(DE = 4.\\) The area of the hexagon is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{15}{2}\\sqrt{3}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(9\\sqrt{3}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{39}{4}\\sqrt{3}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{43}{4}\\sqrt{3}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1999-p23.live",
+      "kind": "proof-sketch",
+      "text": "Each interior angle is \\(120^\\circ,\\) so extending sides \\(FA\\) and \\(BC,\\) \\(BC\\) and \\(DE,\\) and \\(DE\\) and \\(FA\\) cuts off three equilateral corner triangles and forms a large equilateral triangle.\n\nLet \\(EF=e\\) and \\(FA=f.\\) Resolving the six sides in directions separated by \\(60^\\circ\\) gives \\(f-e=4\\) and \\(e+f=6,\\) so \\(e=1\\) and \\(f=5.\\) The corner triangles built on \\(AB, CD,\\) and \\(EF\\) are therefore equilateral. The large triangle has side \\(1+4+2=7,\\) while the removed triangles have sides \\(1,2,\\) and \\(1.\\) The area is \\[ \\begin{aligned} &\\frac{\\sqrt3}{4}\\left(7^2 - 1^2 - 2^2 - 1^2\\right) \\\\ &\\quad = \\frac{43\\sqrt3}{4}. \\end{aligned} \\]\n\nThus, the correct answer is E.",
+      "hints": [
+        "Extend alternate sides to enclose the hexagon in a large equilateral triangle",
+        "Subtract three small equilateral corner triangles from the large one"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

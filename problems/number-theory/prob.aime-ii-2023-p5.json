@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2023-p5",
+  "title": "2023 AIME II Problem 5",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.fraction",
+      "label": "Fraction",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2023,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 55.1,
+    "source": 2740,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Let \\(S\\) be the set of all positive rational numbers \\(r\\) such that when the two numbers \\(r\\) and \\(55r\\) are written as fractions in lowest terms, the sum of the numerator and denominator of one fraction is the same as the sum of the numerator and denominator of the other fraction. The sum of all the elements of \\(S\\) can be expressed in the form \\(\\frac{p}{q},\\) where \\(p\\) and \\(q\\) are relatively prime positive integers. Find \\(p + q.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "719",
+    "value": "719"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2023-p5.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(r = \\frac{a}{b}\\) in lowest terms and let \\(g = \\gcd(b, 55).\\) Then \\(55r\\) in lowest terms is \\(\\frac{\\frac{55a}{g}}{\\frac{b}{g}}\\) (no further cancellation is possible since \\(\\gcd(a, b) = 1\\) and \\(55\\) is squarefree). The condition is \\[a + b = \\frac{55a}{g} + \\frac{b}{g}.\\] If \\(g = 1\\) this forces \\(a = 55a,\\) impossible; if \\(g = 55\\) it forces \\(b = \\frac{b}{55},\\) impossible.\n\nIf \\(g = 5:\\) \\(a + b = 11a + \\frac{b}{5}\\) gives \\(\\frac{4b}{5} = 10a,\\) so \\(2b = 25a.\\) Since \\(\\gcd(a, b) = 1,\\) we need \\(a = 2\\) and \\(b = 25,\\) so \\(r = \\frac{2}{25}\\) (indeed \\(2 + 25 = 27 = 22 + 5\\) from \\(55r = \\frac{22}{5}\\)). If \\(g = 11:\\) \\(a + b = 5a + \\frac{b}{11}\\) gives \\(\\frac{10b}{11} = 4a,\\) so \\(5b = 22a,\\) forcing \\(a = 5,\\) \\(b = 22\\) and \\(r = \\frac{5}{22}\\) (with \\(5 + 22 = 27 = 25 + 2\\) from \\(55r = \\frac{25}{2}\\)).\n\nHence \\(S = \\left\\{\\frac{2}{25}, \\frac{5}{22}\\right\\}\\) and the sum is \\(\\frac{2}{25} + \\frac{5}{22} = \\frac{44 + 125}{550} = \\frac{169}{550},\\) already in lowest terms. The answer is \\(169 + 550 = 719.\\)",
+      "hints": [
+        "Write \\(r = \\frac{a}{b}\\) in lowest terms; how \\(\\frac{55a}{b}\\) reduces is governed by \\(\\gcd(b, 55),\\) which is \\(1,\\) \\(5,\\) \\(11,\\) or \\(55\\)",
+        "The cases \\(\\gcd = 5\\) and \\(\\gcd = 11\\) give \\(2b = 25a\\) and \\(5b = 22a;\\) coprimality pins down exactly one fraction in each case"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tstst-2019-p6",
+  "title": "USA TSTST 2019 Problem 6",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TSTST",
+    "year": 2019,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 120.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Suppose \\(P\\) is a polynomial with integer coefficients\nsuch that for every positive integer \\(n\\),\nthe sum of the decimal digits of \\(|P(n)|\\) is not a Fibonacci number.\nMust \\(P\\) be constant?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tstst-2019-p6.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is yes, \\(P\\) must be constant.\nBy \\(S(n)\\) we mean the sum of the decimal digits of \\(|n|\\).\n\nWe need two claims.\n\nClaim.\n If \\(P(x) \\in \\mathbb{Z}[x]\\) is nonconstant with positive leading coefficient,\n then there exists an integer polynomial \\(F(x)\\)\n such that all coefficients of \\(P \\circ F\\)\n are positive except for the second one, which is negative.\n\nProof.\n We will actually construct a cubic \\(F\\).\n We call a polynomial good if it has the property.\n\n First, consider \\(T_0(x) = x^3+x+1\\).\n Observe that in \\(T_0^{\\deg P}\\),\n every coefficient is strictly positive,\n except for the second one, which is zero.\n\n Then, let \\(T_1(x) = x^3 - \\frac1D x^2 + x + 1\\).\n Using continuity as \\(D \\to \\infty\\),\n it follows that if \\(D\\) is large enough (in terms of \\(\\deg P\\)),\n then \\(T_1^{\\deg P}\\) is good,\n with \\(-\\frac3D x^{3\\deg P-1}\\) being the only negative coefficient.\n\n Finally, we can let \\(F(x) = CT_1(x)\\)\n where \\(C\\) is a sufficiently large multiple of \\(D\\)\n (in terms of the coefficients of \\(P\\));\n thus the coefficients of \\((CT_1(x))^{\\deg P}\\) dominate\n (and are integers), as needed.\n\nClaim.\n There are infinitely many Fibonacci numbers\n in each residue class modulo \\(9\\).\n\nProof.\n Note the Fibonacci sequence is periodic modulo \\(9\\)\n (indeed it is periodic modulo any integer).\n Moreover (allowing negative indices),\n \\[\\begin{aligned}\n F_{0} = 0 &\\equiv 0 \\pmod 9 \\\\\n F_{1} = 1 &\\equiv 1 \\pmod 9 \\\\\n F_{3} = 2 &\\equiv 2 \\pmod 9 \\\\\n F_{4} = 3 &\\equiv 3 \\pmod 9 \\\\\n F_{7} = 13 &\\equiv 4 \\pmod 9 \\\\\n F_{5} = 5 &\\equiv 5 \\pmod 9 \\\\\n F_{-4} = -3 &\\equiv 6 \\pmod 9 \\\\\n F_{9} = 34 &\\equiv 7 \\pmod 9 \\\\\n F_{6} = 8 &\\equiv 8 \\pmod 9. \\qquad \\square\n \\end{aligned}\\]\n\nWe now show how to solve the problem with the two claims.\nWLOG \\(P\\) satisfies the conditions of the first claim,\nand choose \\(F\\) as above.\nLet\n\\[ P(F(x)) = c_N x^N - c_{N-1} x^{N-1} + c_{N-2} x^{N-2} + \\dots + c_0 \\]\nwhere \\(c_i > 0\\) (and \\(N = 3 \\deg P\\)).\nThen if we select \\(x = 10^e\\) for \\(e\\) large enough\n(say \\(x > 10\\max_i c_i\\)),\nthe decimal representation \\(P(F(10^e))\\) consists of the concatenation of\n\n• the decimal representation of \\(c_N-1\\),\n\n• the decimal representation of \\(10^e-c_{N-1}\\)\n\n• the decimal representation of \\(c_{N-2}\\),\n with several leading zeros,\n\n• the decimal representation of \\(c_{N-3}\\),\n with several leading zeros,\n\n• \\dots\n\n• the decimal representation of \\(c_0\\), with several leading zeros.\n\n(For example,\nif \\(P(F(x)) = 15x^3 - 7x^2 + 4x + 19\\),\nthen \\(P(F(1000)) = 14{,}993{,}004{,}019\\).)\nThus, the sum of the digits of this expression\nis equal to\n\\[ S(P(F(10^e))) = 9e + k \\]\nfor some constant \\(k\\) depending only on \\(P\\) and \\(F\\),\nindependent of \\(e\\).\nBut this will eventually hit a Fibonacci number by the second claim,\ncontradiction.\n\nRemark.\n It is important to control the number of negative coefficients in the created polynomial.\n If one tries to use this approach on a polynomial \\(P\\) with \\(m > 0\\) negative coefficients,\n then one would require that the Fibonacci sequence\n is surjective modulo \\(9m\\) for any \\(m > 1\\), which is not true:\n for example the Fibonacci sequence avoids all numbers\n congruent to \\(4 \\mod{11}\\) (and thus \\(4 \\mod{99}\\)).\n\n In bases \\(b\\) for which surjectivity modulo \\(b-1\\) fails, the problem is false.\n For example, \\(P(x) = 11x+4\\) will avoid all Fibonacci\n numbers if we take sum of digits in base \\(12\\),\n since that base-\\(12\\) sum is necessarily \\(4 \\pmod{11}\\), hence not a Fibonacci number.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

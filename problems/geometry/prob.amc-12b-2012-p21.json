@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12b-2012-p21",
+  "title": "2012 AMC 12B Problem 21",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.congruence-geometry",
+      "label": "Congruence (geometry)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.equiangular-polygon",
+      "label": "Equiangular polygon",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2012,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 37.3,
+    "source": 2170,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Square \\(AXYZ\\) is inscribed in equiangular hexagon \\(ABCDEF\\) with \\(X\\) on \\(\\overline{BC},\\) \\(Y\\) on \\(\\overline{DE},\\) and \\(Z\\) on \\(\\overline{EF}.\\) Suppose that \\(AB = 40\\) and \\(EF = 41(\\sqrt{3} - 1).\\) What is the side-length of the square?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(29\\sqrt{3}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{21}{2}\\sqrt{2} + \\dfrac{41}{2}\\sqrt{3}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(20\\sqrt{3} + 16\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(20\\sqrt{2} + 13\\sqrt{3}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(21\\sqrt{6}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2012-p21.live",
+      "kind": "proof-sketch",
+      "text": "Extend \\(EF\\) and \\(CB\\) to a line through \\(A\\) perpendicular to both, meeting them at \\(H\\) and \\(J.\\) Since \\(\\angle ABJ=60^\\circ,\\) we have \\(BJ=20\\) and \\(AJ=20\\sqrt3.\\) With \\(u=BX,\\) the Pythagorean theorem gives \\(s^2=(20+u)^2+(20\\sqrt3)^2.\\)\n\nThe equiangular angles make the four corner triangles congruent, and chasing the equal segments along \\(EF\\) yields \\[ \\begin{aligned} u+20\\sqrt3 &= 41(\\sqrt3-1) \\\\ &\\quad {}+\\frac{20+u}{\\sqrt3}, \\end{aligned} \\] so \\(u=21\\sqrt3-20.\\)\n\nSince \\(20+u=21\\sqrt3,\\) we get \\[ \\begin{aligned} s^2 &= (21\\sqrt3)^2+(20\\sqrt3)^2 \\\\ &= 3(441+400)=3\\cdot29^2, \\end{aligned} \\] giving \\(s=29\\sqrt3.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "Drop the square’s vertex \\(A\\) onto a line through \\(A\\) perpendicular to the parallel sides \\(EF\\) and \\(CB\\)",
+        "Let \\(u=BX;\\) the equiangular \\(60^\\circ\\) angles give congruent corner triangles, so express \\(EF\\) in terms of \\(u\\) and solve for the side \\(s^2=(20+u)^2+(20\\sqrt3)^2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "6dd5082f279cdc11a894ebd095ace457460d2255d3175cd8d07f1a735e3ebb21"
+    ],
+    "solutions": []
+  }
+}

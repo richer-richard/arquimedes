@@ -1,0 +1,79 @@
+{
+  "id": "prob.hmmt-feb-team-1-2008-p7",
+  "title": "2008 HMMT February Team Round 1 Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pigeonhole-principle",
+      "label": "Pigeonhole principle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2008,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 82.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Show that for positive integers \\(n\\) and \\(d\\),\n\n\\[(n-1) 2^{d}+1 \\leq f(n, d) \\leq(n-1) n^{d}+1 .\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1-2008-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "Note that taking the set of points to be a multiset does not affect \\(f(n, d)\\) as adding multiples of \\(n\\) to any of the coordinate values does not change the result. The lower bound is obtained by considering the multiset consisting of \\(n-1\\) copies of each of the \\(2^{d}\\) 0,1 -vectors of length \\(d\\), as it contains no submultiset of size \\(n\\) whose centroid is also a lattice point. By the pigeonhole principle, any multiset of \\((n-1) n^{d}+1\\) lattice points must contain \\(n\\) points whose coordinates are congruent modulo \\(n\\). The centroid of these \\(n\\) points is also a lattice point, thus proving the upper bound.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

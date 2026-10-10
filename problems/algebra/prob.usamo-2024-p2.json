@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2024-p2",
+  "title": "2024 USAMO Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2024,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 106.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(S_1, S_2, \\ldots, S_{100}\\) be finite sets of integers whose intersection is not empty. For each non-empty \\(T \\subseteq\\left\\{S_1, S_2, \\ldots, S_{100}\\right\\}\\), the size of the intersection of the sets in \\(T\\) is a multiple of the number of sets in \\(T\\). What is the least possible number of elements that are in at least 50 sets?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2024-p2.imported",
+      "kind": "proof-sketch",
+      "text": "Let's determine the smallest possible number of elements that appear in at least 50 of the sets.\n\nFirst, we establish some notation. For any subset \\(T \\subseteq \\{S_1, S_2, \\ldots, S_{100}\\}\\), let \\(\\cap T\\) denote the intersection of all sets in \\(T\\). By the problem statement, \\(|\\cap T|\\) is divisible by \\(|T|\\).\n\nWe'll use a binary encoding approach. For each element \\(x\\) in our universe, define its \"signature\" as a binary string of length 100, where the \\(i\\)-th bit is 1 if \\(x \\in S_i\\) and 0 otherwise.\n\nFor any signature \\(v\\) with exactly \\(k\\) ones, corresponding elements must appear in exactly \\(k\\) sets. The problem condition requires that for any subset of sets corresponding to positions where 1's appear in some signature \\(u\\), the number of elements having signature \\(v\\) that contains all 1's from \\(u\\) must be divisible by \\(|u|\\).\n\nLet's denote by \\(f(v)\\) the number of elements with signature \\(v\\). The problem condition translates to: for any signature \\(u\\), \\(|u|\\) divides \\(\\sum_{v \\supseteq u} f(v)\\).\n\nKey claim: For any signature \\(u\\) with \\(|u| = 50\\), we need \\(f(u) \\geq 50\\).\n\nProof: By the divisibility condition, \\(\\sum_{v \\supseteq u} f(v)\\) must be divisible by 50. For any \\(v\\) strictly containing \\(u\\), if we sum over all such \\(u\\) of size 50, each \\(f(v)\\) with \\(|v| > 50\\) gets counted multiple times. To satisfy the divisibility condition for each individual \\(u\\), we need \\(f(u) \\geq 50\\) for each signature \\(u\\) with exactly 50 ones.\n\nSince there are \\(\\binom{100}{50}\\) different ways to choose 50 positions for ones in the signature, and each such signature must correspond to at least 50 elements, the minimum number of elements appearing in at least 50 sets is \\(50 \\binom{100}{50}\\).\n\nTherefore, the answer is \\(\\boxed{50 \\binom{100}{50}}\\).\n\n~ brandonyee",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

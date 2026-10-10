@@ -1,0 +1,94 @@
+{
+  "id": "prob.amc-12-2000-p14",
+  "title": "2000 AMC12 14",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.mean",
+      "label": "Mean",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.median-data",
+      "label": "Median (data)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.mode",
+      "label": "Mode",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12",
+    "year": 2000,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 32.1,
+    "source": 1840,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "When the mean, median, and mode of the list \\[10, 2, 5, 2, 4, 2, x\\]\n\nare arranged in increasing order, they form a non-constant arithmetic progression. What is the sum of all possible real values of \\(x?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(20\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "20"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12-2000-p14.live",
+      "kind": "proof-sketch",
+      "text": "The six fixed numbers sum to \\(25,\\) so the mean is \\(\\dfrac{25 + x}{7},\\) and the mode is \\(2.\\) If \\(x \\le 2,\\) then \\(2\\) is both median and mode, forcing a constant progression, so \\(x \\gt 2.\\)\n\nCase \\(2 \\lt x \\lt 4\\): the median is \\(x.\\) Requiring \\(2, x, \\dfrac{25 + x}{7}\\) to form an arithmetic progression yields \\(x = 3\\) as the only value in this range.\n\nCase \\(x \\ge 4\\): the median is \\(4,\\) and the progression \\(2, 4, 6\\) forces the mean to be \\(6,\\) so \\(\\dfrac{25 + x}{7} = 6,\\) giving \\(x = 17.\\)\n\nThe sum of all possible values is \\(3 + 17 = 20.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "The mode is \\(2,\\) and the mean is \\(\\dfrac{25 + x}{7}\\)",
+        "Split into cases by where \\(x\\) falls relative to the other numbers, and require a non-constant progression"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2020-p10",
+  "title": "2020 AIME II Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sum-of-first-n-cubes",
+      "label": "Sum of first n cubes",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2020,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 54.4,
+    "source": 2710,
+    "mohs": null
+  },
+  "estimatedMinutes": 12,
+  "statement": "Find the sum of all positive integers \\(n\\) such that when \\(1^3 + 2^3 + 3^3 + \\cdots + n^3\\) is divided by \\(n + 5,\\) the remainder is \\(17.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "239",
+    "value": "239"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2020-p10.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(K = \\frac{n(n+1)}{2},\\) so the sum of cubes is \\(K^2.\\) Modulo \\(n + 5\\) we have \\(n \\equiv -5,\\) hence \\(2K = n(n+1)\\) \\(\\equiv (-5)(-4) = 20\\) and \\(4K^2 \\equiv 400.\\) If \\(K^2 \\equiv 17 \\pmod{n+5},\\) then \\(n + 5\\) divides \\(400 - 4 \\cdot 17 = 332 = 2^2 \\cdot 83.\\) Since a remainder of \\(17\\) also forces \\(n + 5 \\gt 17,\\) the candidates are \\(n + 5 \\in \\{83, 166, 332\\},\\) i.e. \\(n \\in \\{78, 161, 327\\}.\\)\n\nBecause we multiplied by \\(4,\\) each candidate must be checked. For \\(n = 78:\\) \\(K = 3081 \\equiv 10 \\pmod{83},\\) and \\(10^2 = 100 \\equiv 17 \\pmod{83}.\\) For \\(n = 161:\\) \\(K = 13041 \\equiv 93 \\pmod{166},\\) and \\(93^2 = 8649 = 52 \\cdot 166 + 17.\\) For \\(n = 327:\\) \\(K = 53628 \\equiv 176 \\pmod{332},\\) and \\(176^2 = 30976 = 93 \\cdot 332 + 100,\\) remainder \\(100 \\ne 17,\\) so this one fails.\n\nThe valid values are \\(n = 78\\) and \\(n = 161,\\) with sum \\(78 + 161 = 239.\\)",
+      "hints": [
+        "The sum is \\(\\left(\\frac{n(n+1)}{2}\\right)^2.\\) Reduce it modulo \\(n + 5\\) using \\(n \\equiv -5.\\)",
+        "If \\(K = \\frac{n(n+1)}{2},\\) then \\(2K \\equiv 20 \\pmod{n+5},\\) so \\(n + 5\\) must divide \\(332.\\) Multiplying by \\(4\\) can create false solutions, so verify each candidate."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-10a-2019-p17",
+  "title": "2019 AMC 10A Problem 17",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.bijection",
+      "label": "Bijection",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiset-permutations",
+      "label": "Multiset permutations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2019,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 24.1,
+    "source": 1480,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A child builds towers using identically shaped cubes of different colors. How many different towers with a height \\(8\\) cubes can the child build with \\(2\\) red cubes, \\(3\\) blue cubes, and \\(4\\) green cubes? (One cube will be left out.)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(288\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(312\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(1{,}260\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(40{,}320\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "1260"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2019-p17.live",
+      "kind": "proof-sketch",
+      "text": "Given a valid height-\\(8\\) tower, its color counts determine the one unused cube; place that cube on top. Conversely, removing the top cube from any arrangement of all \\(9\\) cubes gives a valid height-\\(8\\) tower. These operations are inverses, so the desired towers are in one-to-one correspondence with arrangements of all \\(9\\) cubes.\n\nThere are \\(9!\\) ways to make a tower of height \\(9,\\) but we are overcounting since there are multiple cubes of the same color.\n\nWe have to divide through by \\(2!\\) ways to arrange the red cubes, \\(3!\\) for the blue cubes, and \\(4!\\) for the green cubes.\n\nTherefore, the number of valid arrangements is \\[ \\dfrac{9!}{2! \\cdot 3! \\cdot 4!} = 1,260. \\]\n\nThus, D is the correct answer.",
+      "hints": [
+        "Count all arrangements of eight cubes after choosing the omitted color",
+        "Correct for repeated colors with factorial denominators"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

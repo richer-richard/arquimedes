@@ -1,0 +1,71 @@
+{
+  "id": "prob.amc-12a-2018-p14",
+  "title": "2018 AMC 12A Problem 14",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2018,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 30.4,
+    "source": 1730,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The solution to the equation \\(\\log_{3x} 4 = \\log_{2x} 8,\\) where \\(x\\) is a positive real number other than \\(\\tfrac13\\) or \\(\\tfrac12,\\) can be written as \\(\\tfrac{p}{q},\\) where \\(p\\) and \\(q\\) are relatively prime positive integers. What is \\(p + q?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(31\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(35\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "31"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2018-p14.live",
+      "kind": "proof-sketch",
+      "text": "Writing both logarithms in base \\(2:\\) \\(\\tfrac{2}{\\log_2 3x} = \\tfrac{3}{\\log_2 2x},\\) so \\(2 \\log_2 2x = 3 \\log_2 3x,\\) i.e. \\((2x)^2 = (3x)^3.\\) Then \\(4x^2 = 27x^3,\\) giving \\(x = \\tfrac{4}{27}.\\) Since \\(\\gcd(4, 27) = 1,\\) we get \\(p + q = 4 + 27 = 31.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Rewrite both sides with a common base: \\(\\log_{3x} 4 = \\tfrac{\\log 4}{\\log 3x},\\) and similarly for \\(\\log_{2x} 8\\)",
+        "Cross-multiplying reduces the equation to \\((2x)^2 = (3x)^3;\\) solve for \\(x\\) as a reduced fraction"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

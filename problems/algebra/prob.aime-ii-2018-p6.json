@@ -1,0 +1,73 @@
+{
+  "id": "prob.aime-ii-2018-p6",
+  "title": "2018 AIME II Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-probability",
+      "label": "Geometric probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2018,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 54.6,
+    "source": 2510,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "A real number \\(a\\) is chosen randomly and uniformly from the interval \\([-20, 18].\\) The probability that the roots of the polynomial \\[ \\begin{aligned} &x^4 + 2ax^3 + (2a - 2)x^2 \\\\ &\\quad {}+ (-4a + 3)x - 2 \\end{aligned} \\] are all real can be written in the form \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "37",
+    "value": "37"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2018-p6.live",
+      "kind": "proof-sketch",
+      "text": "Group the terms by whether they involve \\(a:\\) \\[ \\begin{aligned} &(x^4 - 2x^2 + 3x - 2) \\\\ &\\quad {}+ 2a(x^3 + x^2 - 2x) \\\\ &= (x - 1)(x + 2)(x^2 - x + 1) \\\\ &\\quad {}+ 2ax(x - 1)(x + 2), \\end{aligned} \\] so the polynomial factors as \\((x - 1)(x + 2)\\) \\(\\cdot \\left(x^2 + (2a - 1)x + 1\\right).\\)\n\nAll four roots are real exactly when the quadratic factor has real roots, i.e. when \\((2a - 1)^2 - 4 \\ge 0,\\) which means \\(a \\le -\\frac{1}{2}\\) or \\(a \\ge \\frac{3}{2}.\\) The excluded interval \\(\\left(-\\frac{1}{2}, \\frac{3}{2}\\right)\\) has length \\(2\\) inside \\([-20, 18],\\) which has length \\(38,\\) so the probability is \\(\\frac{36}{38} = \\frac{18}{19}.\\) The requested sum is \\(18 + 19 = 37.\\)",
+      "hints": [
+        "Look for roots that work for every \\(a:\\) both \\(x = 1\\) and \\(x = -2\\) are always roots",
+        "After factoring out \\((x - 1)(x + 2),\\) the quadratic \\(x^2 + (2a - 1)x + 1\\) has real roots exactly when \\((2a - 1)^2 \\ge 4\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

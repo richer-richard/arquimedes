@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2024-p6",
+  "title": "2024 HMMT February Combinatorics Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.coloring-schemes-extremal-arguments",
+      "label": "Coloring schemes, extremal arguments",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.invariants-and-monovariants",
+      "label": "Invariants and monovariants",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2024,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 74.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In each cell of a \\(4 \\times 4\\) grid, one of the two diagonals is drawn uniformly at random. Compute the probability that the resulting 32 triangular regions can be colored red and blue so that any two regions sharing an edge have different colors.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{1}{512}",
+    "value": "\\frac{1}{512}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2024-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "Give each cell coordinates from \\((1,1)\\) to \\((4,4)\\).\nClaim. The grid has a desired coloring if and only if every vertex not on the boundary meets an even number of edges and diagonals.\nProof. If this were not the case, the odd number of regions around the vertex would have to alternate between the two colors, which is clearly impossible. In the event that every vertex has an even number of incident edges, it is not hard to show that the grid is always colorable.\n\nWe claim the diagonals drawn in the cells of form \\((1, a)\\) and \\((a, 1)\\) for \\(1 \\leq a \\leq 4\\) uniquely determine the rest (for a valid coloring to exist). Indeed, given the diagonals for any three cells around a vertex, we can uniquely determine the fourth one using the parity in the claim above. If \\((1,1),(1,2),(2,1)\\) are fixed, so is \\((2,2)\\); likewise so are \\((2,3)\\) and \\((2,4)\\), etc. until the whole grid is fixed.\n\nThe solid lines force the dotted lines as described above.\nThus, once the seven cells along the top row and leftmost column are determined, the remaining nine have a \\(\\frac{1}{2^{9}}=\\frac{1}{512}\\) chance of being selected in a way that admits a coloring.\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

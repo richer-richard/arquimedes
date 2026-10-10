@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2018-p6",
+  "title": "2018 AIME I Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2018,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 56.8,
+    "source": 2720,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "Let \\(N\\) be the number of complex numbers \\(z\\) with the properties that \\(|z| = 1\\) and \\(z^{6!} - z^{5!}\\) is a real number. Find the remainder when \\(N\\) is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "440",
+    "value": "440"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2018-p6.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(z = e^{i\\theta}\\) with \\(\\theta \\in [0, 2\\pi).\\) Then \\(z^{720} - z^{120}\\) is real exactly when \\(\\sin 720\\theta = \\sin 120\\theta,\\) which happens when the angles are equal or supplementary modulo \\(2\\pi:\\) either \\(720\\theta = 120\\theta + 2\\pi k,\\) giving \\(\\theta = \\frac{\\pi k}{300},\\) or \\(720\\theta = \\pi - 120\\theta + 2\\pi k,\\) giving \\(\\theta = \\frac{(2k+1)\\pi}{840}.\\)\n\nThe first family has \\(600\\) values in \\([0, 2\\pi)\\) and the second has \\(840.\\) They cannot coincide: \\(\\frac{\\pi k}{300} = \\frac{(2j+1)\\pi}{840}\\) would give \\(14k = 5(2j + 1),\\) equating an even number with an odd one.\n\nHence \\(N = 600 + 840 = 1440,\\) and the remainder is \\(440.\\)",
+      "hints": [
+        "Write \\(z = e^{i\\theta};\\) the difference is real exactly when \\(\\sin 720\\theta = \\sin 120\\theta\\)",
+        "Equal sines mean the angles are equal or supplementary modulo \\(2\\pi;\\) count \\(\\theta \\in [0, 2\\pi)\\) of each type and check the two families do not overlap"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

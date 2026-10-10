@@ -1,0 +1,48 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2005-p9",
+  "title": "2005 HMMT February Combinatorics Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2005,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 86.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Eight coins are arranged in a circle heads up. A move consists of flipping over two adjacent coins. How many different sequences of six moves leave the coins alternating heads up and tails up?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2005-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "7680\n\nImagine we flip over two adjacent coins by pushing a button halfway between them. Then the outcome depends only on the parities of the number of times that each button is pushed. To flip any coin, we must push the two buttons adjacent to that coin a total of an odd number of times. To flip every other coin, the parities must then progress around the circle as even, even, odd, odd, even, even, odd, odd. There are 4 ways to assign these parities. If we assume each button is pressed either once or not at all, this accounts for only four presses, so some button is also pressed twice more. Suppose this button was already pushed once. There are 4 of these, and the number of possible sequences of presses is then \\(6!/ 3!=120\\). Suppose it has not already been pressed. There are 4 of these as well, and the number of possible sequences is \\(6!/ 2!=360\\). The total number of sequences is then \\(4(4 \\cdot 120+4 \\cdot 360)=7680\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

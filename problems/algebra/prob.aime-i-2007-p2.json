@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2007-p2",
+  "title": "2007 AIME I Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.distance-rate-and-time",
+      "label": "Distance rate and time",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.linear-equation",
+      "label": "Linear equation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2007,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 36.7,
+    "source": 2020,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "A \\(100\\) foot long moving walkway moves at a constant rate of \\(6\\) feet per second. Al steps onto the start of the walkway and stands. Bob steps onto the start of the walkway two seconds later and strolls forward along the walkway at a constant rate of \\(4\\) feet per second. Two seconds after that, Cy reaches the start of the walkway and walks briskly forward beside the walkway at a constant rate of \\(8\\) feet per second. At a certain time, one of these three persons is exactly halfway between the other two. At that time, find the distance in feet between the start of the walkway and the middle person.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "52",
+    "value": "52"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2007-p2.live",
+      "kind": "proof-sketch",
+      "text": "Measure time \\(t\\) in seconds from when Al steps on. Al stands on the walkway, so he is at \\(6t;\\) Bob moves at \\(6 + 4 = 10\\) feet per second, so he is at \\(10(t - 2);\\) Cy walks beside the walkway at \\(8\\) feet per second, so he is at \\(8(t - 4).\\) All three are moving once \\(t \\ge 4.\\)\n\nThe middle person’s position doubled must equal the sum of the other two. If Bob were in the middle, \\(20(t-2) = 6t + 8(t-4)\\) gives \\(t = \\frac{4}{3} \\lt 4,\\) impossible. If Cy were in the middle, \\(16(t-4) = 6t + 10(t-2)\\) reduces to \\(-64 = -20,\\) with no solution. If Al is in the middle, \\(12t = 10(t-2)\\) \\(+ 8(t-4) = 18t - 52,\\) so \\(t = \\frac{26}{3}.\\)\n\nAt that moment Al is at \\(6 \\cdot \\frac{26}{3} = 52\\) feet, while Bob and Cy are at \\(\\frac{200}{3}\\) and \\(\\frac{112}{3},\\) whose average is indeed \\(52.\\) The middle person is \\(52\\) feet from the start.",
+      "hints": [
+        "Measure time \\(t\\) from Al’s step: Al is at \\(6t,\\) Bob at \\(10(t-2),\\) and Cy at \\(8(t-4)\\)",
+        "Try each person as the one in the middle: twice the middle position must equal the sum of the other two. Only one case gives \\(t \\ge 4.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

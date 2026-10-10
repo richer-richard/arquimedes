@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2022-p10",
+  "title": "2022 AIME II Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.pascals-triangle",
+      "label": "Pascal’s Triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2022,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 52.8,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Find the remainder when \\[\\binom{\\binom{3}{2}}{2} + \\binom{\\binom{4}{2}}{2} + \\cdots + \\binom{\\binom{40}{2}}{2}\\] is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "4",
+    "value": "4"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2022-p10.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(\\binom{n}{2} = \\frac{n(n-1)}{2}\\) and \\(\\binom{n}{2} - 1 = \\frac{(n+1)(n-2)}{2},\\) \\[ \\begin{aligned} \\binom{\\binom{n}{2}}{2} \\\\ &= \\frac{1}{2} \\cdot \\frac{n(n-1)}{2} \\\\ &\\quad {}\\cdot \\frac{(n+1)(n-2)}{2} \\\\ &= \\small \\frac{(n+1)n(n-1)(n-2)}{8} \\\\ &= 3\\binom{n+1}{4}. \\end{aligned} \\]\n\nBy the hockey stick identity, \\[ \\begin{aligned} \\sum_{n=3}^{40} 3\\binom{n+1}{4} &= 3\\sum_{k=4}^{41}\\binom{k}{4} \\\\ &= 3\\binom{42}{5} \\\\ &= 3 \\cdot 850668 \\\\ &= 2552004. \\end{aligned} \\]\n\nThe remainder upon division by \\(1000\\) is \\(4.\\)",
+      "hints": [
+        "Expand: \\(\\binom{\\binom{n}{2}}{2}\\) equals \\(\\frac{(n+1)n(n-1)(n-2)}{8},\\) a polynomial in \\(n\\)",
+        "That expression is \\(3\\binom{n+1}{4};\\) sum it with the hockey stick identity"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

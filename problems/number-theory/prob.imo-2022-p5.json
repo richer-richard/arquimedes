@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2022-p5",
+  "title": "2022 IMO Problem 5",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2022,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 93.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find all triples \\((a,b,p)\\) of positive integers with \\(p\\) prime and\n\\[ a^p=b!+p. \\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2022-p5.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is \\((2,2,2)\\) and \\((3,4,3)\\) only, which work.\n\nIn what follows we assume \\(a \\ge 2\\).\n\nClaim.\n We have \\(b \\le 2p-2\\), and hence \\(a < p^2\\).\n\nProof.\n For the first half, assume first for contradiction that \\(b \\ge 2p\\).\n Then \\(b!+p \\equiv p \\pmod{p^2}\\), so \\(\\nu_p(b!+p)=1\\),\n but \\(\\nu_p(a^p)=1\\) never occurs.\n\n We can also rule out \\(b = 2p-1\\) since that would give\n \\[ (2p-1)!+p = p \\left[ (p-1)! (p+1)(p+2)\\dots(2p-1) + 1 \\right] \\]\n By Wilson theorem the inner bracket is \\((-1)^2+1 \\equiv 2 \\pmod p\\)\n exactly, contradiction for \\(p > 2\\).\n And when \\(p=2\\), \\(3!+2=8\\) is not a perfect square.\n\n The second half follows as \\(a^p \\le (2p-2)!+p < p^{2p}\\).\n (Here we used the crude estimate\n \\((2p-2)! = \\prod_{k=1}^{p-1}k \\cdot (2p-1-k) < (p(p-1))^{p-1}\\)).\n\nClaim.\n We have \\(a \\ge p\\), and hence \\(b \\ge p\\).\n\nProof.\n For the first half, assume for contradiction that \\(p > a\\).\n Then\n \\[ b! + p = a^p \\ge a^{p-1} + p \\ge a^a + p > a! + p \\implies b > a. \\]\n Then taking modulo \\(a\\) now gives \\(0 \\equiv 0 + p \\pmod{a}\\),\n which is obviously impossible.\n\n The second half follows from \\(b! = a^p-p \\ge p! - p > (p-1)!\\).\n\nClaim.\n We have \\(a=p\\) exactly.\n\nProof.\n We know \\(p \\le b\\) hence \\(p \\mid b!+p\\), so let \\(a = pk\\) for \\(k < p\\).\n Then \\(k \\mid b!\\) yet \\(k \\nmid a^p-p\\), contradiction.\n\nLet's get the small \\(p\\) out of the way:\n\n• For \\(p=2\\), checking \\(2 \\le b \\le 3\\) gives \\((a,b)=(2,2)\\) only.\n\n• For \\(p=3\\), checking \\(3 \\le b \\le 5\\) gives \\((a,b)=(3,4)\\) only.\n\nOnce \\(p \\ge 5\\), if \\(b! = p^p - p = p(p^{p-1}-1)\\)\nthen applying Zsigmondy gets a prime factor \\(q \\equiv 1 \\pmod{p-1}\\)\nwhich divides \\(p^{p-1}-1\\).\nYet \\(q \\le b \\le 2p-2\\) and \\(q \\neq p\\), contradiction.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "id": "prob.ahsme-1972-p35",
+  "title": "1972 AHSME Problem 35",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.arc",
+      "label": "Arc",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.process-simulation",
+      "label": "Process simulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.transformation",
+      "label": "Transformation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1972,
+    "number": 35
+  },
+  "difficulty": {
+    "course": 47.7,
+    "source": 2450,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Equilateral triangle \\(ABP\\) with side \\(AB\\) of length \\(2\\) inches is placed inside square \\(AXYZ\\) with side of length \\(4\\) inches so that \\(B\\) is on side \\(AX.\\) The triangle is rotated clockwise about \\(B,\\) then \\(P,\\) and so on along the sides of the square until \\(P,\\) \\(A,\\) and \\(B\\) all return to their original positions. The length of the path in inches traversed by vertex \\(P\\) is equal to:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{20\\pi}{3}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{32\\pi}{3}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(12\\pi\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{40\\pi}{3}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(15\\pi\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1972-p35.live",
+      "kind": "proof-sketch",
+      "text": "One circuit of the square uses \\(8\\) pivots and changes the triangle’s orientation by \\(\\frac{2}{3}\\) of a full turn. Therefore \\(3\\) circuits, or \\(24\\) pivots, are required to restore the entire triangle. In \\(8\\) of those pivots the rotation is about \\(P,\\) so \\(P\\) does not move. In the other \\(16,\\) eight arcs subtend \\(120^\\circ\\) and eight subtend \\(30^\\circ,\\) all with radius \\(2.\\) Hence the total path length is \\[ \\begin{aligned} &8\\left(\\frac13\\cdot4\\pi\\right) +8\\left(\\frac1{12}\\cdot4\\pi\\right)\\\\ &\\qquad=\\frac{32\\pi}{3}+\\frac{8\\pi}{3}\\\\ &\\qquad=\\frac{40\\pi}{3}. \\end{aligned} \\]\n\nTherefore, the correct answer is D.",
+      "hints": [
+        "Track the orientation after one eight-pivot circuit of the square",
+        "Three circuits are needed; classify the pivots according to whether \\(P\\) is fixed or moves through a \\(120^\\circ\\) or \\(30^\\circ\\) arc"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "74616362298c43d40508379bfcbb85d41dbee0eaa97f628c8fe330d554c0a1d5"
+    ],
+    "solutions": []
+  }
+}

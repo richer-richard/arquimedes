@@ -1,0 +1,73 @@
+{
+  "id": "prob.aime-ii-2006-p12",
+  "title": "2006 AIME II Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.inscribed-angle",
+      "label": "Inscribed angle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.parallelogram",
+      "label": "Parallelogram",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2006,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 63.3,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Equilateral \\(\\triangle ABC\\) is inscribed in a circle of radius \\(2.\\) Extend \\(\\overline{AB}\\) through \\(B\\) to point \\(D\\) so that \\(AD = 13,\\) and extend \\(\\overline{AC}\\) through \\(C\\) to point \\(E\\) so that \\(AE = 11.\\) Through \\(D,\\) draw a line \\(\\ell_1\\) parallel to \\(\\overline{AE},\\) and through \\(E,\\) draw a line \\(\\ell_2\\) parallel to \\(\\overline{AD}.\\) Let \\(F\\) be the intersection of \\(\\ell_1\\) and \\(\\ell_2.\\) Let \\(G\\) be the point on the circle that is collinear with \\(A\\) and \\(F\\) and distinct from \\(A.\\) Given that the area of \\(\\triangle CBG\\) can be expressed in the form \\(\\frac{p\\sqrt{q}}{r},\\) where \\(p,\\) \\(q,\\) and \\(r\\) are positive integers, \\(p\\) and \\(r\\) are relatively prime, and \\(q\\) is not divisible by the square of any prime, find \\(p + q + r.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "865",
+    "value": "865"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2006-p12.live",
+      "kind": "proof-sketch",
+      "text": "By construction \\(ADFE\\) is a parallelogram with \\(AD = 13,\\) \\(DF = AE = 11,\\) and \\(\\angle ADF = 180^\\circ - \\angle DAE\\) \\(= 120^\\circ.\\) Hence \\([ADF] = \\frac{1}{2} \\cdot 13 \\cdot 11 \\sin 120^\\circ\\) \\(= \\frac{143\\sqrt{3}}{4},\\) and by the law of cosines, \\[ \\begin{aligned} AF^2 &= 13^2 + 11^2 \\\\ &\\quad {}- 2 \\cdot 13 \\cdot 11 \\cos 120^\\circ \\\\ &= 169 + 121 + 143 \\\\ &= 433. \\end{aligned} \\]\n\nSince \\(G\\) lies on the circle, inscribed angles give \\(\\angle GCB = \\angle GAB = \\angle FAD\\) (both subtend arc \\(GB\\)) and \\(\\angle CBG = \\angle CAG\\) (both subtend arc \\(CG\\)); and \\(\\angle CAG = \\angle AFD\\) because \\(\\overline{AE} \\parallel \\overline{DF}.\\) So \\(\\triangle CBG \\sim \\triangle AFD\\) with ratio \\(\\frac{CB}{AF}.\\) The side of an equilateral triangle inscribed in a circle of radius \\(2\\) is \\(BC = 2\\sqrt{3}.\\)\n\nTherefore \\[ \\begin{aligned} [CBG] &= \\left(\\frac{2\\sqrt{3}}{\\sqrt{433}}\\right)^2 \\cdot \\frac{143\\sqrt{3}}{4} \\\\ &= \\frac{12}{433} \\cdot \\frac{143\\sqrt{3}}{4} \\\\ &= \\frac{429\\sqrt{3}}{433}, \\end{aligned} \\] and \\(p + q + r\\) \\(= 429 + 3 + 433\\) \\(= 865.\\)",
+      "hints": [
+        "\\(ADFE\\) is a parallelogram, so \\(\\angle ADF = 120^\\circ;\\) find \\([ADF]\\) and \\(AF\\) by the law of cosines.",
+        "Inscribed angles show \\(\\triangle CBG \\sim \\triangle AFD,\\) with ratio \\(BC : AF\\) where \\(BC = 2\\sqrt{3}.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

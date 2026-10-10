@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-team-2-2008-p3",
+  "title": "2008 HMMT February Team Round 2 Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2008,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 80.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "By a tropical polynomial we mean a function of the form\n\n\\[p(x)=a_{n} \\odot x^{n} \\oplus a_{n-1} \\odot x^{n-1} \\oplus \\cdots \\oplus a_{1} \\odot x \\oplus a_{0}\\]\n\nwhere exponentiation is as defined in the previous problem.\nLet \\(p\\) be a tropical polynomial. Prove that\n\n\\[p\\left(\\frac{x+y}{2}\\right) \\geq \\frac{p(x)+p(y)}{2}\\]\n\nfor all \\(x, y \\in \\mathbb{R} \\cup\\{\\infty\\}\\). (This means that all tropical polynomials are concave.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2-2008-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "First, note that for any \\(x_{1}, \\ldots, x_{n}, y_{1}, \\ldots, y_{n}\\), we have\n\n\\[\\min \\left\\{x_{1}+y_{1}, x_{2}+y_{2}, \\ldots, x_{n}+y_{n}\\right\\} \\geq \\min \\left\\{x_{1}, x_{2}, \\ldots, x_{n}\\right\\}+\\min \\left\\{y_{1}, y_{2}, \\ldots, y_{n}\\right\\} .\\]\n\nIndeed, suppose that \\(x_{m}+y_{m}=\\min _{i}\\left\\{x_{i}+y_{i}\\right\\}\\), then \\(x_{m} \\geq \\min _{i} x_{i}\\) and \\(y_{m} \\geq \\min _{i} y_{i}\\), and so \\(\\min _{i}\\left\\{x_{i}+y_{i}\\right\\}=x_{m}+y_{m} \\geq \\min _{i} x_{i}+\\min _{i} y_{i}\\).\nNow, let us write a tropical polynomial in a more familiar notation. We have\n\n\\[p(x)=\\min _{0 \\leq k \\leq n}\\left\\{a_{k}+k x\\right\\} .\\]\n\nSo\n\n\\[\\begin{aligned}\np\\left(\\frac{x+y}{2}\\right) & =\\min _{0 \\leq k \\leq n}\\left\\{a_{k}+k\\left(\\frac{x+y}{2}\\right)\\right\\} \\\\\n& =\\frac{1}{2} \\min _{0 \\leq k \\leq n}\\left\\{\\left(a_{k}+k x\\right)+\\left(a_{k}+k y\\right)\\right\\} \\\\\n& \\geq \\frac{1}{2}\\left(\\min _{0 \\leq k \\leq n}\\left\\{a_{k}+k x\\right\\}+\\min _{0 \\leq k \\leq n}\\left\\{a_{k}+k y\\right\\}\\right) \\\\\n& =\\frac{1}{2}(p(x)+p(y)) .\n\\end{aligned}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

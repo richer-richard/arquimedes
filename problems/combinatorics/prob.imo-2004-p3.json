@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2004-p3",
+  "title": "2004 IMO Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2004,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 106.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Define a ``hook'' to be a figure made up of six unit squares\nas shown below in the picture,\nor any of the figures obtained by applying rotations\nand reflections to this figure.\n\n[Diagram omitted from this imported TeX transcription.]\n\nWhich \\(m \\times n\\) rectangles can be tiled by hooks?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2004-p3.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is that one requires:\n\n• \\(\\{1,2,5\\} \\notin \\{m,n\\}\\),\n\n• \\(3 \\mid m\\) or \\(3 \\mid n\\),\n\n• \\(4 \\mid m\\) or \\(4 \\mid n\\).\n\nFirst, we check all of these work, in fact we claim:\n\nClaim.\n Any rectangle satisfying these conditions\n can be tiled by \\(3 \\times 4\\) rectangles (and hence by hooks).\n\nProof.\n If \\(3 \\mid m\\) and \\(4 \\mid n\\), this is clear.\n Else suppose \\(12 \\mid m\\) but \\(3 \\nmid n\\), \\(4 \\nmid n\\).\n Then \\(n \\ge 7\\), so it can be written in the form\n \\(3a+4b\\) for nonnegative integers \\(a\\) and \\(b\\), which permits a tiling.\n\nWe now prove these conditions are necessary.\nIt is not hard to see that \\(m,n \\notin \\{1,2,5\\}\\) is necessary.\n\nWe thus turn our attention to divisibility conditions.\nEach hook has a hole, and if we associate each hook with\nthe one that fills its hole, we get a bijective pairing of hooks.\nThus the number of cells is divisible by \\(12\\),\nand the cells come grouped into two possible shapes,\nwhich we will call tiles shown below,\n(rotations and reflections permitted).\n\n[Diagram omitted from this imported TeX transcription.]\n\n\\qquad\n\n[Diagram omitted from this imported TeX transcription.]\n\nIn particular, the total number of cells is divisible by \\(12\\).\nThus the problem is reduced to proving that:\n\nClaim.\n if a \\(6a \\times 2b\\) rectangle is tiled by tiles,\n then at least one of \\(a\\) and \\(b\\) is even.\n\nProof.\n Note that the tiles can be further classified into two types:\n\n• First type: These tiles have exactly four columns,\n each with exactly three cells (an odd number).\n Moreover, all rows have an even number of cells (either \\(2\\) or \\(4\\)).\n\n• Second type: vice-versa.\n These tiles have exactly four rows,\n each with exactly three cells (an odd number).\n Moreover, all rows have an odd number of cells.\n\n We claim that any tiling uses an even number of each type, which is enough.\n\n By symmetry we prove an even number of first-type tiles.\n Color red every fourth column of the rectangle.\n The number of cells colored red is even.\n The tiles of the second type cover an even number of red cells,\n and the tiles of the first type cover an odd number of red cells.\n Hence the number of tiles of the first type must be even.\n\nRemark.\n This shows that a rectangle can be tiled by hooks\n if and only if it can be tiled by \\(3 \\times 4\\) rectangles.\n But there exist tilings which do not decompose into \\(3 \\times 4\\);\n see e.g.\\ .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

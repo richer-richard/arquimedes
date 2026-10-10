@@ -1,0 +1,72 @@
+{
+  "id": "prob.aime-i-2006-p14",
+  "title": "2006 AIME I Problem 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.distance-formula",
+      "label": "Distance formula",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2006,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": 3270,
+    "mohs": null
+  },
+  "estimatedMinutes": 20,
+  "statement": "A tripod has three legs each of length \\(5\\) feet. When the tripod is set up, the angle between any pair of legs is equal to the angle between any other pair, and the top of the tripod is \\(4\\) feet from the ground. In setting up the tripod, the lower \\(1\\) foot of one leg breaks off. Let \\(h\\) be the height in feet of the top of the tripod from the ground when the broken tripod is set up. Then \\(h\\) can be written in the form \\(\\frac{m}{\\sqrt{n}},\\) where \\(m\\) and \\(n\\) are positive integers and \\(n\\) is not divisible by the square of any prime. Find \\(\\lfloor m + \\sqrt{n} \\rfloor.\\) (The notation \\(\\lfloor x \\rfloor\\) denotes the greatest integer that is less than or equal to \\(x.\\))",
+  "answerChoices": [],
+  "answer": {
+    "letter": "183",
+    "value": "183"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2006-p14.live",
+      "kind": "proof-sketch",
+      "text": "Place the top at \\(T = (0, 0, 4).\\) Each leg has length \\(5,\\) so each foot is \\(3\\) from the origin: \\(A = (3, 0, 0),\\) \\(B = \\left(-\\frac{3}{2}, \\frac{3\\sqrt{3}}{2}, 0\\right),\\) \\(C = \\left(-\\frac{3}{2}, -\\frac{3\\sqrt{3}}{2}, 0\\right).\\) The broken leg has length \\(4,\\) so its tip is \\(A' = \\frac{4}{5}(3, 0, 0)\\) \\(+ \\frac{1}{5}(0, 0, 4)\\) \\(= \\left(\\frac{12}{5}, 0, \\frac{4}{5}\\right),\\) and the tripod now stands on the plane \\(A'BC,\\) with \\(h\\) equal to the distance from \\(T\\) to that plane.\n\nThe plane \\(A'BC\\) contains \\(\\overline{BC},\\) which is parallel to the \\(y\\)-axis and passes through the midpoint \\(M = \\left(-\\frac{3}{2}, 0, 0\\right),\\) so its distance from \\(T\\) can be measured in the \\(xz\\)-plane: it is the distance from \\((0, 4)\\) to the line through \\(\\left(-\\frac{3}{2}, 0\\right)\\) and \\(\\left(\\frac{12}{5}, \\frac{4}{5}\\right),\\) whose equation is \\(8x - 39z + 12 = 0.\\) Therefore \\[ \\begin{aligned} h &= \\frac{|8 \\cdot 0 - 39 \\cdot 4 + 12|}{\\sqrt{8^2 + 39^2}} \\\\ &= \\frac{144}{\\sqrt{1585}}. \\end{aligned} \\]\n\nHere \\(m = 144\\) and \\(n = 1585 = 5 \\cdot 317\\) is squarefree. Since \\(39^2 = 1521 \\lt 1585 \\lt 1600,\\) we get \\(\\lfloor 144 + \\sqrt{1585} \\rfloor\\) \\(= 144 + 39 = 183.\\)",
+      "hints": [
+        "Set coordinates: top at \\((0, 0, 4)\\) and feet \\(3\\) from the origin; the broken leg now ends \\(\\frac{4}{5}\\) of the way from top to old foot",
+        "By symmetry \\(h\\) is a 2D distance in the \\(xz\\)-plane: from \\((0, 4)\\) to the line through the broken tip and the midpoint of the other two feet"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

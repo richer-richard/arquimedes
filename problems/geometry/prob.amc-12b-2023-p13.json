@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2023-p13",
+  "title": "2023 AMC 12B Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.algebraic-manipulation",
+      "label": "Algebraic manipulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.rectangular-prism",
+      "label": "Rectangular prism",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2023,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 23.4,
+    "source": 1500,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A rectangular box \\(P\\) has distinct edge lengths \\(a,\\) \\(b,\\) and \\(c.\\) The sum of the lengths of all \\(12\\) edges of \\(P\\) is \\(13,\\) the sum of the areas of all \\(6\\) faces of \\(P\\) is \\(\\tfrac{11}{2},\\) and the volume of \\(P\\) is \\(\\tfrac{1}{2}.\\) What is the length of the longest interior diagonal connecting two vertices of \\(P?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{3}{8}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{9}{8}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{9}{4}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{3}{2}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "9/4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2023-p13.live",
+      "kind": "proof-sketch",
+      "text": "From the edges, \\(4(a+b+c)=13,\\) so \\(a+b+c=\\tfrac{13}{4}.\\) From the faces, \\(2(ab+bc+ca)=\\tfrac{11}{2},\\) so \\(ab+bc+ca=\\tfrac{11}{4}.\\) Then \\[ \\begin{aligned} a^2+b^2+c^2 &=\\left(\\tfrac{13}{4}\\right)^2-2\\cdot\\tfrac{11}{4} \\\\ &=\\tfrac{169}{16}-\\tfrac{88}{16} \\\\ &=\\tfrac{81}{16}, \\end{aligned} \\] so the diagonal is \\(\\sqrt{\\tfrac{81}{16}}=\\tfrac{9}{4}.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "The diagonal is \\(\\sqrt{a^2+b^2+c^2};\\) you are given \\(a+b+c\\) and \\(ab+bc+ca\\)",
+        "Use \\(a^2+b^2+c^2\\) \\(=(a+b+c)^2-2(ab+bc+ca)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

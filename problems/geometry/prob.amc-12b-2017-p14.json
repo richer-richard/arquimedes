@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12b-2017-p14",
+  "title": "2017 AMC 12B Problem 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cone",
+      "label": "Cone",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.volume",
+      "label": "Volume",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2017,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 26.6,
+    "source": 1530,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "An ice-cream novelty item consists of a cup in the shape of a \\(4\\)-inch-tall frustum of a right circular cone, with a \\(2\\)-inch-diameter base at the bottom and a \\(4\\)-inch-diameter base at the top, packed solid with ice cream, together with a solid cone of ice cream of height \\(4\\) inches, whose base, at the bottom, is the top base of the frustum. What is the total volume of the ice cream, in cubic inches?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(8\\pi\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{28\\pi}{3}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(12\\pi\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(14\\pi\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{44\\pi}{3}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2017-p14.live",
+      "kind": "proof-sketch",
+      "text": "Extending the frustum’s sides to a point, similar triangles show the frustum equals a cone of radius \\(2\\) and height \\(8\\) minus a cone of radius \\(1\\) and height \\(4:\\) \\[ \\begin{aligned} &\\tfrac13 \\pi (2^2)(8) \\\\ &\\quad {}- \\tfrac13 \\pi (1^2)(4) \\\\ &\\quad {}= \\tfrac{32}{3}\\pi - \\tfrac{4}{3}\\pi \\\\ &\\quad {}= \\tfrac{28}{3}\\pi. \\end{aligned} \\] The top cone of radius \\(2\\) and height \\(4\\) adds \\(\\tfrac13 \\pi (2^2)(4) = \\tfrac{16}{3}\\pi.\\) The total is \\(\\tfrac{28}{3}\\pi + \\tfrac{16}{3}\\pi = \\tfrac{44}{3}\\pi.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "The frustum is a full cone (radius \\(2,\\) height \\(8\\)) minus a small cone (radius \\(1,\\) height \\(4\\))",
+        "Add the top solid cone of radius \\(2\\) and height \\(4;\\) use \\(V = \\tfrac13 \\pi r^2 h\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

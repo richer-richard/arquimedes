@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2007-p9",
+  "title": "2007 HMMT February Combinatorics Problem 9",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinatorics",
+      "label": "Combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2007,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 86.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(S\\) denote the set of all triples \\((i, j, k)\\) of positive integers where \\(i+j+k=17\\). Compute\n\n\\[\\sum_{(i, j, k) \\in S} i j k .\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2007-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(11628=\\binom{\\mathbf{1 9}}{\\mathbf{5}}\\). We view choosing five objects from a row of 19 objects in an unual way. First, remove two of the chosen objects, the second and fourth, which are not adjacent nor at either end, forming three nonempty groups of consecutive objects. We then have \\(i, j\\), and \\(k\\) choices for the first, third, and fifth objects. Because this is a reversible process taking a triple \\((i, j, k)\\) to \\(i j k\\) choices, the answer is \\(\\binom{19}{5}=11628\\).\nA simple generating functions argument is also possible. Let \\(s_{n}=\\sum_{i+j+k=n} i j k\\). Then\n\n\\[\\sum_{n \\geq 0} s_{n} x^{n}=\\left(\\sum_{n \\geq 0} n x^{n}\\right)^{3}=\\left(\\frac{x}{(1-x)^{2}}\\right)^{3}=\\frac{x^{3}}{(1-x)^{6}}\\]\n\nand so \\(s_{n}=\\left(\\binom{6}{n-3}\\right)=\\binom{n+2}{5}\\), yielding \\(s_{17}=\\binom{19}{5}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

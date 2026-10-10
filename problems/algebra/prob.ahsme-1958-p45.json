@@ -1,0 +1,87 @@
+{
+  "id": "prob.ahsme-1958-p45",
+  "title": "1958 AHSME Problem 45",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.digits",
+      "label": "Digits",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.linear-equation",
+      "label": "Linear equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.money",
+      "label": "Money",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1958,
+    "number": 45
+  },
+  "difficulty": {
+    "course": 30.8,
+    "source": 1790,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A check is written for \\(x\\) dollars and \\(y\\) cents, \\(x\\) and \\(y\\) both two-digit numbers. In error it is cashed for \\(y\\) dollars and \\(x\\) cents, the incorrect amount exceeding the correct amount by \\(\\$17.82.\\) Then:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(x\\) cannot exceed \\(70\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(y\\) can equal \\(2x\\)"
+    },
+    {
+      "label": "C",
+      "text": "the amount of the check cannot be a multiple of \\(5\\)"
+    },
+    {
+      "label": "D",
+      "text": "the incorrect amount can equal twice the correct amount"
+    },
+    {
+      "label": "E",
+      "text": "the sum of the digits of the correct amount is divisible by\n\\(9\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1958-p45.live",
+      "kind": "proof-sketch",
+      "text": "In cents, the incorrect amount minus the correct amount is \\[ \\begin{aligned} &(100y+x)-(100x+y)\\\\ &\\qquad=99(y-x). \\end{aligned} \\] Since \\(\\$17.82\\) is \\(1782\\) cents, \\[ 99(y-x)=1782, \\] so \\(y-x=18.\\) The two-digit values \\(x=18,\\ y=36\\) satisfy this relation and have \\(y=2x.\\) Thus that equality can occur.\n\nTherefore, the correct answer is B.",
+      "hints": [
+        "Write the correct and incorrect amounts in cents",
+        "Their difference simplifies to \\(99(y-x)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

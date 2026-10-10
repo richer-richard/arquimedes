@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2014-p18",
+  "title": "2014 AMC 12B Problem 18",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.circular-arrangements",
+      "label": "Circular arrangements",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2014,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 35.0,
+    "source": 2150,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The numbers \\(1,\\) \\(2,\\) \\(3,\\) \\(4,\\) \\(5\\) are to be arranged in a circle. An arrangement is bad if it is not true that for every \\(n\\) from \\(1\\) to \\(15\\) one can find a subset of the numbers that appear consecutively on the circle that sum to \\(n.\\) Arrangements that differ only by a rotation or a reflection are considered the same. How many different bad arrangements are there?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2014-p18.live",
+      "kind": "proof-sketch",
+      "text": "Any single number covers sums \\(1\\) through \\(5.\\) If a consecutive block sums to \\(n,\\) the remaining numbers form a consecutive block summing to \\(15 - n,\\) so sums \\(10\\) through \\(14\\) are automatically covered as well. Thus an arrangement is bad only if it fails to produce \\(6\\) or \\(7.\\)\n\nIf \\(6\\) cannot be formed, rotate and reflect so the order is \\(1bc5e.\\) The pair \\(\\{b,c\\}\\) cannot be \\(\\{2,3\\}\\) or \\(\\{2,4\\},\\) so \\(e=2;\\) avoiding the block \\(213\\) then forces \\(14352.\\) If \\(7\\) cannot be formed, write the order as \\(2bc5e.\\) Now \\(\\{b,c\\}\\) cannot be \\(\\{3,4\\}\\) or \\(\\{1,4\\},\\) so \\(e=4,\\) and avoiding \\(421\\) forces \\(23154.\\)\n\nThese are the only two bad arrangements up to rotation and reflection.\n\nThus, the correct answer is B.",
+      "hints": [
+        "Sums \\(1\\) through \\(5\\) are always achievable with a single number",
+        "If a consecutive block sums to \\(n,\\) its complement sums to \\(15-n,\\) so only \\(6\\) and \\(7\\) can fail"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

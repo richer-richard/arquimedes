@@ -1,0 +1,71 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2018-p6",
+  "title": "2018 HMMT February Algebra and Number Theory Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.complex-numbers-in-geometry",
+      "label": "Complex numbers in geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-trigonometry",
+      "label": "Triangle trigonometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2018,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\alpha, \\beta\\), and \\(\\gamma\\) be three real numbers. Suppose that\n\n\\[\\begin{aligned}\n\\cos \\alpha+\\cos \\beta+\\cos \\gamma & =1 \\\\\n\\sin \\alpha+\\sin \\beta+\\sin \\gamma & =1\n\\end{aligned}\\]\n\nFind the smallest possible value of \\(\\cos \\alpha\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2018-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\frac{-1-\\sqrt{7}}{4}\\)\nLet \\(a=\\cos \\alpha+i \\sin \\alpha, b=\\cos \\beta+i \\sin \\beta\\), and \\(c=\\cos \\gamma+i \\sin \\gamma\\).\nWe then have\n\n\\[a+b+c=1+i\\]\n\nwhere \\(a, b, c\\) are complex numbers on the unit circle. Now, to minimize \\(\\cos \\alpha=\\operatorname{Re}[a]\\), consider a triangle with vertices \\(a, 1+i\\), and the origin. We want \\(a\\) as far away from \\(1+i\\) as possible while maintaining a nonnegative imaginary part. This is achieved when \\(b\\) and \\(c\\) have the same argument, so \\(|b+c|=|1+i-a|=2\\). Now \\(a, 0\\), and \\(1+i\\) form a \\(1-2-\\sqrt{2}\\) triangle. The value of \\(\\cos \\alpha\\) is now the cosine of the angle between the 1 and \\(\\sqrt{2}\\) sides plus the \\(\\frac{\\pi}{4}\\) angle from \\(1+i\\). Call the first angle \\(\\delta\\). Then\n\n\\[\\begin{aligned}\n\\cos \\delta & =\\frac{1^{2}+(\\sqrt{2})^{2}-2^{2}}{2 \\cdot 1 \\cdot \\sqrt{2}} \\\\\n& =\\frac{-1}{2 \\sqrt{2}}\n\\end{aligned}\\]\n\nand\n\n\\[\\begin{aligned}\n\\cos \\alpha & =\\cos \\left(\\frac{\\pi}{4}+\\delta\\right) \\\\\n& =\\cos \\frac{\\pi}{4} \\cos \\delta-\\sin \\frac{\\pi}{4} \\sin \\delta \\\\\n& =\\frac{\\sqrt{2}}{2} \\cdot \\frac{-1}{2 \\sqrt{2}}-\\frac{\\sqrt{2}}{2} \\cdot \\frac{\\sqrt{7}}{2 \\sqrt{2}} \\\\\n& =\\frac{-1-\\sqrt{7}}{4}\n\\end{aligned}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

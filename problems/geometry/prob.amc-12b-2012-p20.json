@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2012-p20",
+  "title": "2012 AMC 12B Problem 20",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.herons-formula",
+      "label": "Heron’s Formula",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2012,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 35.3,
+    "source": 2150,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "A trapezoid has side lengths \\(3,\\) \\(5,\\) \\(7,\\) and \\(11.\\) The sum of all the possible areas of the trapezoid can be written in the form of \\(r_1\\sqrt{n_1} + r_2\\sqrt{n_2} + r_3,\\) where \\(r_1,\\) \\(r_2,\\) and \\(r_3\\) are rational numbers and \\(n_1\\) and \\(n_2\\) are positive integers not divisible by the square of a prime. What is the greatest integer less than or equal to \\[r_1 + r_2 + r_3 + n_1 + n_2?\\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(57\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(59\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(61\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(63\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(65\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "63"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2012-p20.live",
+      "kind": "proof-sketch",
+      "text": "For a trapezoid with parallel sides \\(a\\lt c\\) and legs \\(b,d,\\) translating a leg forms a triangle with sides \\(b,\\) \\(d,\\) and \\(c-a.\\) The triangle inequality forces the longer parallel side to be \\(c=11.\\)\n\nIf \\(a=3,\\) the triangle has sides \\(5,7,8\\) with area \\(10\\sqrt3,\\) and the trapezoid has area \\(\\tfrac{35}{2}\\sqrt3.\\) If \\(a=5,\\) the triangle has sides \\(3,6,7\\) with area \\(4\\sqrt5,\\) giving trapezoid area \\(\\tfrac{32}{3}\\sqrt5.\\) If \\(a=7,\\) the triangle has sides \\(3,4,5,\\) a right triangle, giving trapezoid area \\(27.\\)\n\nThe total is \\(\\tfrac{35}{2}\\sqrt3+\\tfrac{32}{3}\\sqrt5+27,\\) so \\[ \\begin{gathered} r_1+r_2+r_3+n_1+n_2 \\\\ = \\tfrac{35}{2}+\\tfrac{32}{3}+27+3+5 \\\\ = 63+\\tfrac16. \\end{gathered} \\]\n\nThe greatest integer at most this value is \\(63.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Slide one parallel side over: a trapezoid with parallel sides \\(a\\lt c\\) and legs \\(b,d\\) gives a triangle with sides \\(b,d,c-a\\)",
+        "The triangle inequality forces the longer parallel side to be \\(11;\\) apply Heron’s formula in the cases \\(a=3,5,7\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

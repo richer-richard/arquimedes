@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2002-p25",
+  "title": "2002 AMC 10A Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.pythagorean-triple",
+      "label": "Pythagorean Triple",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2002,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 30.8,
+    "source": 1790,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In trapezoid \\(ABCD\\) with bases \\(\\overline{AB}\\) and \\(\\overline{CD},\\) we have \\(AB=52,\\) \\(BC=12,\\) \\(CD=39,\\) and \\(DA=5.\\) The area of \\(ABCD\\) is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(182\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(195\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(210\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(234\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(260\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "210"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2002-p25.live",
+      "kind": "proof-sketch",
+      "text": "Extend \\(DA\\) and \\(CB\\) to meet at \\(P.\\) Since \\(DC\\parallel AB,\\) \\(\\triangle PDC\\sim\\triangle PAB\\) with ratio \\(\\dfrac{39}{52}=\\dfrac{3}{4}.\\) From \\(\\dfrac{PD}{PD+5}=\\dfrac{3}{4}\\) we get \\(PD=15,\\) and similarly \\(PC=36.\\)\n\nThen \\(PD:PC:DC=15:36:39\\) \\(=3\\cdot(5:12:13),\\) so \\(\\angle P\\) is a right angle. The area of \\(ABCD\\) is \\[ \\begin{gathered} \\dfrac{1}{2}(PA)(PB) \\\\ {}-\\dfrac{1}{2}(PD)(PC) \\\\ = \\dfrac{1}{2}(20)(48) \\\\ {}-\\dfrac{1}{2}(15)(36) \\\\ = 480-270=210. \\end{gathered} \\]\n\nThus, the correct answer is C.",
+      "hints": [
+        "Extend the legs \\(DA\\) and \\(CB\\) until they meet at a point \\(P\\)",
+        "\\(\\triangle PDC\\sim\\triangle PAB\\) with ratio \\(\\dfrac{39}{52}=\\dfrac{3}{4}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "691d688026b60b715de2462895308fe77876171f7d469dab584f401179ce46df"
+    ],
+    "solutions": []
+  }
+}

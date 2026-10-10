@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2021-p20",
+  "title": "2021 AMC 12B Problem 20",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2021,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 32.4,
+    "source": 1990,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(Q(z)\\) and \\(R(z)\\) be the unique polynomials such that \\[ \\begin{aligned} &z^{2021}+1 \\\\ &\\quad = (z^2+z+1)Q(z)+R(z) \\end{aligned} \\] and the degree of \\(R\\) is less than \\(2.\\) What is \\(R(z)?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(-z\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(-1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2021\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(z+1\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2z+1\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2021-p20.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(z^3\\equiv 1\\pmod{z^2+z+1}\\) and \\(2021=3\\cdot 673+2,\\) we have \\(z^{2021}\\equiv z^2.\\)\n\nSo \\(z^{2021}+1\\equiv z^2+1.\\) Reducing further with \\(z^2\\equiv -z-1,\\) this is \\(-z-1+1=-z.\\)\n\nTherefore \\(R(z)=-z.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "Modulo \\(z^2+z+1\\) we have \\(z^3\\equiv 1,\\) since \\(z^3-1=(z-1)(z^2+z+1)\\)",
+        "Reduce the exponent \\(2021\\) modulo \\(3,\\) then reduce \\(z^2\\) using \\(z^2\\equiv -z-1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

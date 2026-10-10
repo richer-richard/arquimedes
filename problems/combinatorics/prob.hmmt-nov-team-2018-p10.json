@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-team-2018-p10",
+  "title": "2018 HMMT November Team Problem 10",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2018,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 64.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "David and Evan are playing a game. Evan thinks of a positive integer \\(N\\) between 1 and 59, inclusive, and David tries to guess it. Each time David makes a guess, Evan will tell him whether the guess is greater than, equal to, or less than \\(N\\). David wants to devise a strategy that will guarantee\nthat he knows \\(N\\) in five guesses. In David's strategy, each guess will be determined only by Evan's responses to any previous guesses (the first guess will always be the same), and David will only guess a number which satisfies each of Evan's responses. How many such strategies are there?\nNote: David need not guess \\(N\\) within his five guesses; he just needs to know what \\(N\\) is after five guesses.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2018-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 36440\nWe can represent each strategy as a binary tree labeled with the integers from 1 to 59, where David starts at the root and moves to the right child if he is too low and to the left child if he is too high. Our tree must have at most 6 layers as David must guess at most 5 times. Once David has been told that he guessed correctly or if the node he is at has no children, he will be sure of Evan's number. Consider the unique strategy for David when 59 is replaced with 63 . This is a tree where every node in the first 5 layers has two children, and it can only be labeled in one way such that the strategy satisfies the given conditions. In order to get a valid strategy for 59, we only need to delete 4 of the vertices from this tree and relabel the vertices as necessary. Conversely, every valid strategy tree for 59 can be completed to the strategy tree for 63 . If we delete a parent we must also delete its children. Thus, we can just count the number of ways to delete four nodes from the tree for 63 so that if a parent is deleted then so are its children. We cannot delete a node in the fourth layer, as that means we delete at least \\(1+2+4=7\\) nodes. If we delete a node in the fifth layer, then we delete its two children as well, so in total we delete three nodes. There are now two cases: if we delete all four nodes from the sixth layer or if we delete one node in the fifth layer along with its children and another node in the sixth layer. There are \\(\\binom{32}{4}\\) ways to pick 4 from the sixth layer and \\(16 \\cdot 30\\) to pick one from the fifth layer along with its children and another node that is from the sixth layer, for a total of 36440 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

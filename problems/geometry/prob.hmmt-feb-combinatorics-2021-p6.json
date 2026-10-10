@@ -1,0 +1,70 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2021-p6",
+  "title": "2021 HMMT February Combinatorics Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cartesian-coordinates",
+      "label": "Cartesian coordinates",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.constructions-and-loci",
+      "label": "Constructions and loci",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.greatest-common-divisors-gcd",
+      "label": "Greatest common divisors (gcd)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2021,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 82.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A light pulse starts at a corner of a reflective square. It bounces around inside the square, reflecting off of the square's perimeter \\(n\\) times before ending in a different corner. The path of the light pulse, when traced, divides the square into exactly 2021 regions. Compute the smallest possible value of \\(n\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "129",
+    "value": "129"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2021-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "The main claim is that if the light pulse reflects vertically (on the left/right edges) \\(a\\) times and horizontally \\(b\\) times, then \\(\\operatorname{gcd}(a+1, b+1)=1\\), and the number of regions is \\(\\frac{(a+2)(b+2)}{2}\\). This claim can be conjectured by looking at small values of \\(a\\) and \\(b\\); we give a full proof at the end.\nAssuming the claim, we are trying to find the least possible value of \\(a+b\\) when \\((a+2)(b+2)=2 \\cdot 2021=\\) \\(2 \\cdot 43 \\cdot 47\\). This happens when \\((a+2, b+2)=(47,86)\\), which also satisfies \\(\\operatorname{gcd}(a+1, b+1)=1\\), and gives \\(a+b=47+86-4=129\\).\nWe now prove the claim. Imagine that at each reflection, it is the square that gets reflected instead. Then the path \\(p\\) of the light pulse becomes a straight segment \\(s\\) from \\((0,0)\\) to \\((a+1, b+1)\\) of slope \\(+m=\\frac{a+1}{b+1}\\).\n\n- The square starts as 1 region; the light pulse hitting a corner at the end creates 1 more region.\n- Each reflection of the light pulse creates a region. These correspond to intersections of \\(s\\) with a line \\(x=n\\) or \\(y=n\\) for \\(x \\in[a], y \\in[b]\\). There are \\(a+b\\) such intersections.\n- Each self-intersection of \\(p\\) creates a region. An intersection on \\(p\\) corresponds to two on \\(s\\), and each intersection of \\(s\\) happens with a line of slope \\(-m\\) passing through an even integral point, i.e. a line of the form \\((b+1) x+(a+1) y=2 k\\). The open segment \\(s\\) intersects these lines for \\(k \\in[a b+a+b]\\). However, the \\(a+b\\) intersections that happens on a gridline \\(x \\in \\mathbb{Z}\\) or \\(y \\in \\mathbb{Z}\\) do not count, so here we have an additional \\(a b / 2\\) regions.\n\nTherefore, the total number of regions is\n\n\\[2+a+b+\\frac{a b}{2}=\\frac{(a+2)(b+2)}{2}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

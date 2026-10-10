@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-guts-2015-p16",
+  "title": "2015 HMMT November Guts Problem 16",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.discrete-mathematics",
+      "label": "Discrete Mathematics",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.integers",
+      "label": "Integers",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.simple-equations",
+      "label": "Simple Equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2015,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 50.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For how many triples \\((x, y, z)\\) of integers between -10 and 10 inclusive do there exist reals \\(a, b, c\\) that satisfy\n\n\\[\\begin{gathered}\na b=x \\\\\na c=y \\\\\nb c=z ?\n\\end{gathered}\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2015-p16.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 4061\nIf none are of \\(x, y, z\\) are zero, then there are \\(4 \\cdot 10^{3}=4000\\) ways, since \\(x y z\\) must be positive. Indeed, \\((a b c)^{2}=x y z\\). So an even number of them are negative, and the ways to choose an even number of 3 variables to be negative is 4 ways. If one of \\(x, y, z\\) is 0 , then one of \\(a, b, c\\) is zero at least. So at least two of \\(x, y, z\\) must be 0 . If all 3 are zero, this gives 1 more solution. If exactly 2 are negative, then this gives \\(3 \\cdot 20\\) more solutions. This comes from choosing one of \\(x, y, z\\) to be nonzero, and choosing its value in 20 ways.\nOur final answer is \\(4000+60+1=4061\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

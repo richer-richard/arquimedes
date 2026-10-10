@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2020-p22",
+  "title": "2020 AMC 10A Problem 22",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2020,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 36.8,
+    "source": 2380,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "For how many positive integers \\(n \\le 1000\\) is\\[\\left\\lfloor \\dfrac{998}{n} \\right\\rfloor+\\left\\lfloor \\dfrac{999}{n} \\right\\rfloor+\\left\\lfloor \\dfrac{1000}{n}\\right \\rfloor\\]not divisible by \\(3?\\) (Recall that \\(\\lfloor x \\rfloor\\) is the greatest integer less than or equal to \\(x.\\))",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(22\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(23\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(25\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(26\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "22"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2020-p22.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(1000=qn+r\\), where \\(0\\le r<n\\). Then \\(\\left\\lfloor\\dfrac{1000}{n}\\right\\rfloor=q\\). The other two floors are usually also \\(q\\), except that subtracting \\(1\\) or \\(2\\) from \\(1000\\) crosses a multiple of \\(n\\) when \\(r\\) is small.\n\nFor \\(n>1\\), the sum is not divisible by \\(3\\) exactly when \\(r=0\\) or \\(r=1\\). The case \\(r=0\\) gives divisors of \\(1000\\), excluding \\(1\\), for \\(15\\) values. The case \\(r=1\\) gives divisors of \\(999\\), excluding \\(1\\), for \\((3+1)(1+1)-1=7\\) values. The total is \\(22\\). Thus, A is the correct answer.",
+      "hints": [
+        "Let \\(1000=qn+r\\)",
+        "The sum of floors fails to be a multiple of \\(3\\) only when subtracting \\(1\\) or \\(2\\) crosses a multiple of \\(n\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

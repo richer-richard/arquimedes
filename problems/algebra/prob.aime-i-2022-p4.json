@@ -1,0 +1,79 @@
+{
+  "id": "prob.aime-i-2022-p4",
+  "title": "2022 AIME I Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.de-moivres-theorem",
+      "label": "De Moivre’s Theorem",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2022,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 51.6,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Let \\(w = \\frac{\\sqrt{3} + \\mathrm{i}}{2}\\) and \\(z = \\frac{-1 + \\mathrm{i}\\sqrt{3}}{2},\\) where \\(\\mathrm{i} = \\sqrt{-1}.\\) Find the number of ordered pairs \\((r, s)\\) of positive integers not exceeding \\(100\\) that satisfy the equation \\(\\mathrm{i} \\cdot w^r = z^s.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "834",
+    "value": "834"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2022-p4.live",
+      "kind": "proof-sketch",
+      "text": "Both \\(w\\) and \\(z\\) have modulus \\(1:\\) in polar form \\(w = \\operatorname{cis} 30^\\circ\\) and \\(z = \\operatorname{cis} 120^\\circ,\\) while \\(\\mathrm{i} = \\operatorname{cis} 90^\\circ.\\) The equation \\(\\mathrm{i} \\cdot w^r = z^s\\) is therefore a statement about arguments: \\[90 + 30r \\equiv 120s \\pmod{360},\\] i.e. \\[r + 3 \\equiv 4s \\pmod{12}.\\]\n\nFor each \\(s,\\) this determines \\(r \\pmod{12}:\\) the residue \\(4s - 3\\) is \\(1,\\) \\(5,\\) or \\(9\\) modulo \\(12\\) according as \\(s \\equiv 1,\\) \\(2,\\) or \\(0 \\pmod 3.\\) Among \\(1 \\le r \\le 100\\) there are \\(9\\) values with \\(r \\equiv 1 \\pmod{12}\\) and \\(8\\) values each with \\(r \\equiv 5\\) or \\(r \\equiv 9 \\pmod{12}.\\) Among \\(1 \\le s \\le 100\\) there are \\(34\\) values with \\(s \\equiv 1 \\pmod 3\\) and \\(33\\) values in each of the other two classes.\n\nThe count is \\(34 \\cdot 9\\) \\(+ 33 \\cdot 8\\) \\(+ 33 \\cdot 8\\) \\(= 306 + 264 + 264 = 834.\\)",
+      "hints": [
+        "Both numbers lie on the unit circle: \\(w\\) has argument \\(30^\\circ\\) and \\(z\\) has argument \\(120^\\circ,\\) while \\(\\mathrm{i}\\) has argument \\(90^\\circ\\)",
+        "Matching arguments gives \\(90 + 30r \\equiv 120s \\pmod{360},\\) i.e. \\(r + 3 \\equiv 4s \\pmod{12};\\) count how many \\(r \\in [1, 100]\\) hit each residue"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

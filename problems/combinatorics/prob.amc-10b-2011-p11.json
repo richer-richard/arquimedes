@@ -1,0 +1,71 @@
+{
+  "id": "prob.amc-10b-2011-p11",
+  "title": "2011 AMC 10B Problem 11",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.pigeonhole-principle",
+      "label": "Pigeonhole principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2011,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 18.7,
+    "source": 1070,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "There are \\(52\\) people in a room. What is the largest value of \\(n\\) such that the statement “At least \\(n\\) people in this room have birthdays falling in the same month” is always true?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(5 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(12 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2011-p11.live",
+      "kind": "proof-sketch",
+      "text": "It isn’t necessarily true for \\(n\\geq 6\\) as we could have \\(5\\) people born in the first \\(4\\) months and \\(4\\) people born in the subsequent months.\n\nHowever, one month must be greater than or equal to \\(5\\) as the average of the number of people born in each month is \\(\\frac{52}{12}\\) which is greater than \\(4,\\) and some month must be above average.\n\nThus, the correct answer is D .",
+      "hints": [
+        "Use the pigeonhole principle with \\(12\\) months",
+        "Try distributing \\(52\\) birthdays as evenly as possible"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

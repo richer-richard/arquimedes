@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2007-p23",
+  "title": "2007 AMC 10A Problem 23",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.difference-of-squares",
+      "label": "Difference of squares",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.parity",
+      "label": "Parity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2007,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 24.4,
+    "source": 1400,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many ordered pairs \\((m, n)\\) of positive integers, with \\(m \\gt n,\\) have the property that their squares differ by \\(96?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(12\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2007-p23.live",
+      "kind": "proof-sketch",
+      "text": "The factors \\(m + n\\) and \\(m - n\\) have the same parity. Since their product is \\(96,\\) they cannot both be odd, so both must be even.\n\nThe even factor pairs are \\((48, 2),\\) \\((24, 4),\\) \\((16, 6),\\) and \\((12, 8),\\) giving \\((m, n) = (25, 23),\\) \\((14, 10),\\) \\((11, 5),\\) and \\((10, 2).\\)\n\nSo there are \\(4\\) ordered pairs.\n\nThus, the correct answer is B.",
+      "hints": [
+        "Write \\(m^2 - n^2 = (m + n)(m - n) = 96\\)",
+        "\\(m + n\\) and \\(m - n\\) have the same parity, so both must be even"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

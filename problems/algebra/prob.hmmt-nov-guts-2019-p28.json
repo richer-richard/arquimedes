@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-guts-2019-p28",
+  "title": "2019 HMMT November Guts Problem 28",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sums-and-products",
+      "label": "Sums and products",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2019,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 59.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A palindrome is a string that does not change when its characters are written in reverse order. Let \\(S\\) be a 40 -digit string consisting only of 0 's and 1 's, chosen uniformly at random out of all such strings. Let \\(E\\) be the expected number of nonempty contiguous substrings of \\(S\\) which are palindromes. Compute the value of \\(\\lfloor E\\rfloor\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2019-p28.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 113\nNote that \\(S\\) has \\(41-n\\) contiguous substrings of length \\(n\\), so we see that the expected number of palindromic substrings of length \\(n\\) is just \\((41-n) \\cdot 2^{-\\lfloor n / 2\\rfloor}\\). By linearity of expectation, \\(E\\) is just the sum of this over all \\(n\\) from 1 to 40 . However, it is much easier to just compute\n\n\\[\\sum_{n=1}^{\\infty}(41-n) \\cdot 2^{-\\lfloor n / 2\\rfloor}\\]\n\nThe only difference here is that we have added some insignificant negative terms in the cases where \\(n>41\\), so \\(E\\) is in fact slightly greater than this value (in fact, the difference between \\(E\\) and this sum is \\(\\frac{7}{1048576}\\) ). To make our infinite sum easier to compute, we can remove the floor function by pairing up consecutive terms. Then our sum becomes\n\n\\[40+\\sum_{n=1}^{\\infty} \\frac{81-4 n}{2^{n}}\\]\n\nwhich is just \\(40+81-8=113\\). \\(E\\) is only slightly larger than this value, so our final answer is \\(\\lfloor E\\rfloor=113\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

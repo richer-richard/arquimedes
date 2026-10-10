@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-2020-p19",
+  "title": "2020 AMC 8 Problem 19",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2020,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 14.4,
+    "source": 1270,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A number is called flippy if its digits alternate between two distinct digits. For example, \\(2020\\) and \\(37373\\) are flippy, but \\(3883\\) and \\(123123\\) are not. How many five-digit flippy numbers are divisible by \\(15?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(8\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2020-p19.live",
+      "kind": "proof-sketch",
+      "text": "A five-digit flippy number has the form \\(ABABA,\\) where \\(A\\ne0\\) and \\(A\\ne B.\\) Divisibility by \\(5\\) requires the last digit \\(A\\) to be \\(0\\) or \\(5.\\) Since \\(A\\ne0,\\) we must have \\(A=5.\\)\n\nThe number therefore has the form \\(5B5B5.\\) Its digit sum is \\(15+2B,\\) so divisibility by \\(3\\) requires \\(B\\) to be a multiple of \\(3.\\) The possibilities are \\(B=0,\\) \\(B=3,\\) \\(B=6,\\) and \\(B=9,\\) giving \\(4\\) numbers.\n\nThus, the correct answer is B.",
+      "hints": [
+        "A five-digit flippy number has form \\(ABABA\\)",
+        "Divisibility by \\(5\\) forces \\(A=5\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

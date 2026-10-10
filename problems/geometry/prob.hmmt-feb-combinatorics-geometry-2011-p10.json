@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-geometry-2011-p10",
+  "title": "2011 HMMT February Combinatorics and Geometry Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.games-and-strategy",
+      "label": "Games and strategy",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Mike and Harry play a game on an \\(8 \\times 8\\) board. For some positive integer \\(k\\), Mike chooses \\(k\\) squares and writes an \\(M\\) in each of them. Harry then chooses \\(k+1\\) squares and writes an \\(H\\) in each of them. After Harry is done, Mike wins if there is a sequence of letters forming \" \\(H M M\\) \" or \" \\(M M H\\),\" when read either horizontally or vertically, and Harry wins otherwise. Determine the smallest value of \\(k\\) for which Mike has a winning strategy.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-geometry-2011-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "16 Suppose Mike writes \\(k M\\) 's. Let \\(a\\) be the number of squares which, if Harry writes an \\(H\\) in, will yield either \\(H M M\\) or \\(M M H\\) horizontally, and let \\(b\\) be the number of squares which, if Harry writes an \\(H\\) in, will yield either \\(H M M\\) or \\(M M H\\) vertically. We will show that \\(a \\leq k\\) and \\(b \\leq k\\). Then, it will follow that there are at most \\(a+b \\leq 2 k\\) squares which Harry cannot write an \\(H\\) in. There will be at least \\(64-k-2 k=64-3 k\\) squares which Harry can write in. If \\(64-3 k \\geq k+1\\), or \\(k \\leq 15\\), then Harry wins.\nWe will show that \\(a \\leq k\\) (that \\(b \\leq k\\) will follow by symmetry). Suppose there are \\(a_{i} M\\) 's in row \\(i\\). In each group of 2 or more consective \\(M\\) 's, Harry cannot write \\(H\\) to the left or right of that group, giving at most 2 forbidden squares. Hence \\(a_{i}\\) is at most the number of \\(M\\) 's in row \\(i\\). Summing over the rows gives the desired result.\n\nMike can win by writing 16 M's according to the following diagram:\n\n| M | M | M | M |\n| :---: | :---: | :---: | :---: |\n| M | M | M | M |\n| . | . | . | . |\n| . | . | . | . |\n| M | M | M | M |\n| M | M | M | M |\n| . | . | . |  |",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

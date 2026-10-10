@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-10b-2013-p20",
+  "title": "2013 AMC 10B Problem 20",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factorial",
+      "label": "Factorial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2013,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 31.2,
+    "source": 2060,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The number \\(2013\\) is expressed in the form \\[2013 = \\frac {a_1!a_2!\\cdots a_m!}{b_1!b_2!\\cdots b_n!},\\] where \\[a_1 \\ge a_2 \\ge \\cdots \\ge a_m\\] and \\[b_1 \\ge b_2 \\ge \\cdots \\ge b_n\\] are positive integers and \\(a_1 + b_1\\) is as small as possible. What is \\(|a_1 - b_1|?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 1 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 2 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 3 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 4 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 5 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2013-p20.live",
+      "kind": "proof-sketch",
+      "text": "The prime factorization is \\(2013=3\\cdot11\\cdot61\\), so the numerator must contain a factor of \\(61\\). Hence \\(a_1\\ge61\\).\n\nBut \\(61!\\) also contains the prime factor \\(59\\), which is not in \\(2013\\), so the denominator must contain a factor of \\(59\\). Hence \\(b_1\\ge59\\).\n\nThe lower bound \\(a_1+b_1\\ge120\\) is attainable because \\(2013=\\frac{61!\\,11!\\,3!}{59!\\,10!\\,5!}\\).\n\nThus \\(|a_1-b_1|=61-59=2\\), and the correct answer is B .",
+      "hints": [
+        "The numerator must include a factor of \\(61\\)",
+        "Any unwanted prime below \\(61\\), especially \\(59\\), must be canceled from the denominator"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

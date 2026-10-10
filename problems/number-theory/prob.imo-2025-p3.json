@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2025-p3",
+  "title": "2025 IMO Problem 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2025,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 97.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A function \\(f \\colon \\mathbb{N} \\to \\mathbb{N}\\) is said to be bonza if\n\\[ f(a)\\quad\\text{divides}\\quad b^a-f(b)^{f(a)} \\]\nfor all positive integers \\(a\\) and \\(b\\).\n\nDetermine the smallest real constant \\(c\\) such that \\(f(n) \\leq cn\\)\nfor all bonza functions \\(f\\) and all positive integers \\(n\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2025-p3.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is \\(c=4\\).\n\nLet \\(P(a,b)\\) denote the given statement \\(f(a) \\mid b^a - f(b)^{f(a)}\\).\n\nClaim.\n We have \\(f(n) \\mid n^n\\) for all \\(n\\).\n\nProof.\n Take \\(P(n,n)\\).\n\nClaim.\n Unless \\(f = \\operatorname{id}\\), we have \\(f(p) = 1\\) for all odd primes \\(p\\).\n\nProof.\n Consider any prime \\(q\\) with \\(f(q) > 1\\).\n Then \\(f(q)\\) is a power of \\(q\\), and for each \\(n\\) we get\n \\[ P(q,n) \\implies q \\mid f(q) \\mid n^q - f(n)^{f(q)}. \\]\n Fermat's little theorem now gives\n \\(n^q \\equiv n \\pmod q\\) and \\(f(n)^{f(q)} \\equiv f(n) \\pmod q\\)\n (since \\(f(q)\\) is a power of \\(q\\)), and therefore \\(q \\mid n - f(n)\\).\n Hence, unless \\(f\\) is the identity function,\n only finitely many \\(q\\) could have \\(f(q) > 1\\).\n\n Now let \\(p\\) be any odd prime,\n and let \\(q\\) be a large prime such that \\(q \\not\\equiv 1 \\pmod p\\)\n (possible for all \\(p > 2\\), say by Dirichlet).\n Then\n \\[ P(p,q) \\implies f(p) \\mid q^p - 1^{f(p)}. \\]\n The RHS is \\(q^p - 1 \\equiv q - 1 \\not\\equiv 0 \\pmod p\\), so \\(f(p) = 1\\).\n\nClaim.\n We have \\(f(n) \\mid 2^\\infty\\) for all \\(n\\).\n\nProof.\n If \\(p \\mid f(n)\\) is odd then \\(P(n,p)\\) gives \\(p \\mid f(n) \\mid p^n-1^n\\),\n contradiction.\n\n(In particular, we now know \\(f(n) = 1\\) for all odd \\(n\\), though we don't use this.)\n\nClaim.\n We have \\(f(n) \\le 2^{\\nu_2(n)+2}\\) for all \\(n\\).\n\nProof.\n Consider \\(P(n,5) \\implies f(n) \\mid 5^n - 1^n\\).\n It's well-known that \\(\\nu_2(5^n-1) = \\nu_2(n)+2\\) for all \\(n\\).\n\nThis immediately shows \\(f(n) \\le 4n\\) for all \\(n\\), hence \\(c=4\\) in the problem statement works.\n\nFor the construction, the simplest one seems to be\n\\[\n f(n) = \\begin{cases}\n 1 & n \\text{ odd} \\\\\n 16 & n = 4 \\\\\n 2 & n \\text{ even}, n \\neq 4\n \\end{cases}\n\\]\nwhich is easily checked to work and has \\(f(4) = 16\\).\n\nRemark.\n With a little more case analysis we can classify all functions \\(f\\).\n The two trivial solutions are \\(f(n) = n\\) and \\(f(n) = 1\\);\n the others are described by writing \\(f(n) = 2^{e(n)}\\) for any function \\(e\\) satisfying\n\n• \\(e(n) = 0\\) for odd \\(n\\);\n\n• \\(1 \\le e(2) \\le 2\\);\n\n• \\(1 \\le e(n) \\le \\nu_2(n)+2\\) for even \\(n > 2\\).\n\n This basically means that there are almost no additional constraints\n beyond what is suggested by the latter two claims.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

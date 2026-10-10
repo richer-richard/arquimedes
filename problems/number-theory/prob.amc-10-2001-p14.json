@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10-2001-p14",
+  "title": "2001 AMC 10 Problem 14",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10",
+    "year": 2001,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 23.1,
+    "source": 1490,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A charity sells \\(140\\) benefit tickets for a total of \\(\\$2001.\\) Some tickets sell for full price (a whole dollar amount), and the rest sell for half price. How much money is raised by the full-price tickets?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\$782\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\$986\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\$1158\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\$1219\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\$1449\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "782"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10-2001-p14.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(n\\) full-price tickets sell at \\(p\\) dollars each. Then \\(np+(140-n)\\dfrac p2=2001,\\) so \\(p(n+140)\\) \\(=4002\\) \\(=2\\cdot3\\cdot23\\cdot29.\\)\n\nSince \\(140\\le n+140\\le280,\\) the only factor of \\(4002\\) in range is \\(174=2\\cdot3\\cdot29.\\) So \\(n+140=174,\\) giving \\(n=34\\) and \\(p=23.\\) The full-price tickets raise \\(34\\cdot23=782\\) dollars.\n\nThus, the correct answer is A.",
+      "hints": [
+        "Let \\(n\\) tickets sell at full price \\(p;\\) then \\(np+(140-n)\\dfrac p2=2001\\)",
+        "This gives \\(p(n+140)\\) \\(=4002\\) \\(=2\\cdot3\\cdot23\\cdot29,\\) with \\(140\\le n+140\\le280\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

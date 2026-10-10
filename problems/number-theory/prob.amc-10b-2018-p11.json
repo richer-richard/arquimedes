@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-10b-2018-p11",
+  "title": "2018 AMC 10B Problem 11",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime",
+      "label": "Prime",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2018,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 23.4,
+    "source": 1500,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Which of the following expressions is never a prime number when \\(p\\) is a prime number?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(p^2 + 16\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(p^2 + 24\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(p^2 + 26\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(p^2 + 46\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(p^2 + 96\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2018-p11.live",
+      "kind": "proof-sketch",
+      "text": "Look at \\(p^2 + 26.\\) When \\(p = 3,\\) it’s \\(35 = 5 \\cdot 7.\\) For any other prime, \\(p\\) isn’t divisible by \\(3,\\) so \\(p^2 \\equiv 1 \\pmod 3\\) and \\(p^2 + 26 \\equiv 1 + 2 \\equiv 0 \\pmod 3.\\) Either way it’s a multiple of \\(3\\) bigger than \\(3,\\) hence composite. So it’s never prime. Thus, C is the correct answer.",
+      "hints": [
+        "Test the expressions modulo \\(3;\\) for a prime \\(p \\ne 3,\\) \\(p^2 \\equiv 1 \\pmod 3\\)",
+        "For the correct choice, also check \\(p = 3\\) separately, then show it is a multiple of \\(3\\) for all other primes"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2005-p19",
+  "title": "2005 AMC 10B Problem 19",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "prob.mean",
+      "label": "Mean",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "prob.median-data",
+      "label": "Median (data)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.percentage",
+      "label": "Percentage",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2005,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 20.1,
+    "source": 1420,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "On a certain math exam, \\(10\\%\\) of the students got \\(70\\) points, \\(25\\%\\) got \\(80\\) points, \\(20\\%\\) got \\(85\\) points, \\(15\\%\\) got \\(90\\) points, and the rest got \\(95\\) points. What is the difference between the mean and the median score on this exam?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2005-p19.live",
+      "kind": "proof-sketch",
+      "text": "The percentage scoring \\(95\\) is \\(100 - 10 - 25 - 20 - 15 = 30.\\)\n\nThe mean is \\[ \\begin{aligned} &0.10(70) + 0.25(80) \\\\ &\\quad {}+ 0.20(85) + 0.15(90) \\\\ &\\quad {}+ 0.30(95) = 86. \\end{aligned} \\]\n\nSince \\(35\\%\\) scored below \\(85\\) and \\(35\\%\\) scored above \\(85,\\) the middle student scored \\(85,\\) so the median is \\(85.\\)\n\nThe difference is \\(86 - 85 = 1.\\)\n\nThus, B is the correct answer.",
+      "hints": [
+        "The remaining percentage scored \\(95;\\) find it first",
+        "For the median, find which score the middle student earned using the cumulative percentages"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

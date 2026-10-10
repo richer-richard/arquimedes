@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-nov-theme-2016-p7",
+  "title": "2016 HMMT November Theme Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.integers",
+      "label": "Integers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.optimization-in-geometry",
+      "label": "Optimization in geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vectors",
+      "label": "Vectors",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2016,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 49.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Seven lattice points form a convex heptagon with all sides having distinct lengths. Find the minimum possible value of the sum of the squares of the sides of the heptagon.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2016-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 42\nConsider the vectors corresponding to the sides of the heptagon, and call them \\(\\left[x_{i}, y_{i}\\right]\\) for \\(i\\) between 1 and 7. Then since \\(\\sum x_{i}=\\sum y_{i}=0\\), and \\(a^{2}\\) has the same parity as \\(a\\), we have that \\(\\sum x_{i}^{2}+y_{i}^{2}\\) must be an even number. A side length of a lattice valued polygon must be expressible as \\(\\sqrt{a^{2}+b^{2}}\\), so the smallest possible values are \\(\\sqrt{1}, \\sqrt{2}, \\sqrt{4}, \\sqrt{5}, \\sqrt{8}, \\sqrt{9}, \\sqrt{10}\\). However, using the seven smallest lengths violates the parity constraint. If we try \\(\\sqrt{13}\\), we indeed can get a heptagon with lengths \\(\\sqrt{1}, \\sqrt{2}, \\sqrt{4}, \\sqrt{5}, \\sqrt{8}, \\sqrt{9}, \\sqrt{13}\\). One example is the heptagon \\((0,0),(3,0),(5,1),(6,2),(3,4),(2,4),(0,2)\\), and its sum of squares of side lengths is \\(1+2+4+5+8+9+13=42\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1984-p11",
+  "title": "1984 AIME Problem 11",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1984,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 40.3,
+    "source": 2160,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A gardener plants three maple trees, four oak trees, and five birch trees in a row. He plants them in random order, each arrangement being equally likely. Let \\(\\frac{m}{n}\\) in lowest terms be the probability that no two birch trees are next to one another. Find \\(m+n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "106",
+    "value": "106"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1984-p11.live",
+      "kind": "proof-sketch",
+      "text": "The five birch positions form a uniformly chosen \\(5\\)-element subset of the \\(12\\) positions, so there are \\(\\binom{12}{5}\\) possibilities. After the seven non-birch trees are placed, there are eight gaps, including the two end gaps. Choosing five distinct gaps gives \\(\\binom85\\) arrangements with no adjacent birches. Therefore \\[ \\frac{m}{n}=\\frac{\\binom85}{\\binom{12}{5}} =\\frac{56}{792}=\\frac7{99}, \\] and \\(m+n=106.\\)",
+      "hints": [
+        "First choose the five positions occupied by birch trees",
+        "Place the seven non-birch trees first and use the eight gaps around them"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

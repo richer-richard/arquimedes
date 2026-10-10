@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-8-2005-p15",
+  "title": "2005 AMC 8 Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.parity",
+      "label": "Parity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-inequality",
+      "label": "Triangle inequality",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2005,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 14.3,
+    "source": 1290,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many different isosceles triangles have integer side lengths and perimeter \\(23?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(11\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2005-p15.live",
+      "kind": "proof-sketch",
+      "text": "Let the equal side length be \\(a\\) and the base be \\(b\\). Then \\(2a+b=23\\), so \\(b\\) must be odd.\n\nThe triangle inequality requires \\(b<2a\\). Since \\(b=23-2a\\), this gives \\(23-2a<2a\\), so \\(a>\\frac{23}{4}\\). Thus \\(a\\ge6\\).\n\nAlso \\(b\\ge1\\), so \\(2a\\le22\\) and \\(a\\le11\\). The possible values \\(a=6,\\) \\(7,\\) \\(8,\\) \\(9,\\) \\(10,\\) and \\(11\\) all work, giving \\(6\\) triangles.\n\nThus, C is the correct answer.",
+      "hints": [
+        "Let the equal side length be \\(a\\) and the base be \\(b\\).",
+        "Use \\(2a+b=23\\) and the triangle inequality."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

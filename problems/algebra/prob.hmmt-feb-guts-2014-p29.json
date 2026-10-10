@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2014-p29",
+  "title": "2014 HMMT February Guts Problem 29",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recurrence-relations",
+      "label": "Recurrence relations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2014,
+    "number": 29
+  },
+  "difficulty": {
+    "course": 85.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Natalie has a copy of the unit interval \\([0,1]\\) that is colored white. She also has a black marker, and she colors the interval in the following manner: at each step, she selects a value \\(x \\in[0,1]\\) uniformly at random, and\n(a) If \\(x \\leq \\frac{1}{2}\\) she colors the interval \\(\\left[x, x+\\frac{1}{2}\\right]\\) with her marker.\n(b) If \\(x>\\frac{1}{2}\\) she colors the intervals \\([x, 1]\\) and \\(\\left[0, x-\\frac{1}{2}\\right]\\) with her marker.\n\nWhat is the expected value of the number of steps Natalie will need to color the entire interval black?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2014-p29.hmmt",
+      "kind": "proof-sketch",
+      "text": "5 The first choice always wipes out half the interval. So we calculate the expected value of the amount of time needed to wipe out the other half.\nSolution 1 (non-calculus):\nWe assume the interval has \\(2 n\\) points and we start with the last \\(n\\) colored black. We let \\(f(k)\\) be the expected value of the number of turns we need if there are \\(k\\) white points left. So we must calculate \\(f(n)\\).\nWe observe that\n\n\\[\\begin{gathered}\nf(k)=1+\\frac{(n-k+1) \\cdot 0+(n-k+1) \\cdot f(k)+2 \\sum_{i=1}^{k-1} f(i)}{2 n} \\\\\nf(k) \\frac{n+k-1}{2 n}=1+\\frac{\\sum_{i=1}^{k-1} f(i)}{n} \\\\\nf(k+1) \\frac{n+k}{2 n}=1+\\frac{\\sum_{i=1}^{k} f(i)}{n} \\\\\nf(k+1)=f(k) \\frac{n+k+1}{n+k} \\\\\nf(k)=f(1) \\frac{n+k}{n+1}\n\\end{gathered}\\]\n\nAnd note that \\(f(1)=2\\) so \\(f(n)=\\frac{4 n}{n+1}\\) and \\(\\lim _{n \\rightarrow \\infty} f(n)=4\\).\nTherefore adding the first turn, the expected value is 5 .\nSolution 2 (calculus):\nWe let \\(f(x)\\) be the expected value with length \\(x\\) uncolored. Like above, \\(\\lim _{x \\rightarrow 0} f(x)=2\\).\n\nSimilarly we have the recursion\n\n\\[\\begin{gathered}\nf(x)=1+\\left(\\frac{1}{2}-x\\right) f(x)+2 \\int_{0}^{x} f(y) d y \\\\\nf^{\\prime}(x)=0+\\frac{1}{2} f^{\\prime}(x)-f(x)-x f^{\\prime}(x)+2 f(x) \\\\\n\\frac{f^{\\prime}(x)}{f(x)}=\\frac{1}{x+\\frac{1}{2}}\n\\end{gathered}\\]\n\nAnd solving yields \\(f(x)=c\\left(\\frac{1}{2}+x\\right)\\) and since \\(\\lim _{x \\rightarrow 0} f(x)=2, c=4\\). So \\(f(x)=2+4 x\\) and \\(f\\left(\\frac{1}{2}\\right)=4\\). Therefore adding the first turn, our expected value is 5 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

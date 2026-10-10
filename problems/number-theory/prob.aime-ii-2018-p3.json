@@ -1,0 +1,73 @@
+{
+  "id": "prob.aime-ii-2018-p3",
+  "title": "2018 AIME II Problem 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.perfect-power",
+      "label": "Perfect power",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2018,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 47.0,
+    "source": 2170,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Find the sum of all positive integers \\(b \\lt 1000\\) such that the base-\\(b\\) integer \\(36_{b}\\) is a perfect square and the base-\\(b\\) integer \\(27_{b}\\) is a perfect cube.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "371",
+    "value": "371"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2018-p3.live",
+      "kind": "proof-sketch",
+      "text": "The conditions say \\(3b + 6\\) is a perfect square and \\(2b + 7\\) is a perfect cube. Since \\(2b + 7\\) is odd and \\(b \\lt 1000\\) forces \\(2b + 7 \\lt 2007,\\) the cube must be one of \\(1,\\) \\(27,\\) \\(125,\\) \\(343,\\) \\(729,\\) \\(1331,\\) giving \\(b = -3,\\) \\(10,\\) \\(59,\\) \\(168,\\) \\(361,\\) \\(662.\\)\n\nThe corresponding values of \\(3b + 6\\) for the positive candidates are \\(36,\\) \\(183,\\) \\(510,\\) \\(1089,\\) \\(1992,\\) and only \\(36 = 6^2\\) (for \\(b = 10\\)) and \\(1089 = 33^2\\) (for \\(b = 361\\)) are perfect squares. The requested sum is \\(10 + 361 = 371.\\)",
+      "hints": [
+        "The conditions say \\(3b + 6\\) is a perfect square and \\(2b + 7\\) is a perfect cube",
+        "\\(2b + 7\\) is odd and less than \\(2007,\\) so only a handful of odd cubes need to be checked"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

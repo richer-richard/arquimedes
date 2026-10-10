@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-2025-p16",
+  "title": "2025 AMC 8 Problem 16",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.bijection",
+      "label": "Bijection",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.pairing-and-grouping",
+      "label": "Pairing and grouping",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2025,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 27.2,
+    "source": 1650,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Five distinct integers from \\(1\\) to \\(10\\) are chosen, and five distinct integers from \\(11\\) to \\(20\\) are chosen. No two numbers differ by exactly \\(10.\\) What is the sum of the ten chosen numbers?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(95\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(100\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(105\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(110\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(115\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "105"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2025-p16.live",
+      "kind": "proof-sketch",
+      "text": "Call the integers from \\(1\\) to \\(10\\) inclusive the lower range, and call the integers from \\(11\\) to \\(20\\) inclusive the higher range.\n\nEach of the \\(5\\) distinct numbers chosen from the lower range blocks out the number in the higher range that is exactly \\(10\\) more than itself. There are only \\(10\\) numbers in the higher range, so there are only \\(10 - 5 = 5\\) numbers not yet blocked.\n\nWe need to choose \\(5\\) distinct numbers from the higher range, so the numbers chosen from the higher range are precisely those which are not yet blocked. They are each exactly \\(10\\) more than a not-chosen number in the lower range.\n\nSo, the sum of the \\(5\\) distinct numbers chosen from the higher range is exactly \\(5 \\times 10 = 50\\) more than the sum of the \\(5\\) not-chosen numbers in the lower range.\n\nThe sum of all \\(10\\) chosen numbers is therefore equal to \\(50\\) plus the sum of all chosen and not-chosen numbers in the lower range \\(1 + 2 + \\dots + 10.\\)\n\nThe sum of the numbers from \\(1\\) to \\(10\\) is \\(\\frac{10 (10+1)}{2} = 55,\\) so the answer is \\(50 + 55 = 105,\\) or choice C.",
+      "hints": [
+        "Pair each number from \\(1\\) to \\(10\\) with the number \\(10\\) larger",
+        "The chosen upper numbers correspond to the unchosen lower numbers"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

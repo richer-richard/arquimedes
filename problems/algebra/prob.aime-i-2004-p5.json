@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2004-p5",
+  "title": "2004 AIME I Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.extremal-argument",
+      "label": "Extremal argument",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequality",
+      "label": "Inequality",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.ratio-and-proportion",
+      "label": "Ratio and proportion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2004,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 48.5,
+    "source": 2480,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Alpha and Beta both took part in a two-day problem-solving competition. At the end of the second day, each had attempted questions worth a total of \\(500\\) points. Alpha scored \\(160\\) points out of \\(300\\) points attempted on the first day, and scored \\(140\\) points out of \\(200\\) points attempted on the second day. Beta, who did not attempt \\(300\\) points on the first day, had a positive integer score on each of the two days, and Beta’s daily success ratio (points scored divided by points attempted) on each day was less than Alpha’s on that day. Alpha’s two-day success ratio was \\(\\frac{300}{500} = \\frac{3}{5}.\\) The largest possible two-day success ratio that Beta could have achieved is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. What is \\(m + n?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "849",
+    "value": "849"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2004-p5.live",
+      "kind": "proof-sketch",
+      "text": "Alpha’s daily ratios were \\(\\frac{160}{300} = \\frac{8}{15}\\) and \\(\\frac{140}{200} = \\frac{7}{10}.\\) Since \\(\\frac{8}{15} \\lt \\frac{7}{10},\\) Beta’s score was less than \\(\\frac{7}{10}\\) of the points attempted on each day, so Beta’s total score was less than \\(\\frac{7}{10} \\cdot 500 = 350,\\) hence at most \\(349.\\)\n\nA total of \\(349\\) is achievable: Beta can score \\(1\\) out of \\(2\\) points attempted on day one (and \\(\\frac{1}{2} \\lt \\frac{8}{15}\\)) and \\(348\\) out of \\(498\\) on day two (and \\(\\frac{348}{498} \\lt \\frac{7}{10}\\) because \\(3480 \\lt 3486\\)).\n\nSo Beta’s largest possible two-day ratio is \\(\\frac{349}{500},\\) which is in lowest terms since \\(349\\) is prime, and \\(m + n = 349 + 500 = 849.\\)",
+      "hints": [
+        "Both of Beta’s daily ratios are below \\(\\frac{7}{10},\\) so Beta’s total score is less than \\(\\frac{7}{10}\\) of \\(500\\)",
+        "Show the bound just below \\(350\\) is attainable: try \\(1\\) point out of \\(2\\) attempted on day one"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-12a-2022-p15",
+  "title": "2022 AMC 12A Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.volume",
+      "label": "Volume",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2022,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 26.7,
+    "source": 1630,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The roots of the polynomial \\(10x^3-39x^2+29x-6\\) are the height, length, and width of a rectangular box (right rectangular prism). A new rectangular box is formed by lengthening each edge of the original box by \\(2\\) units. What is the volume of the new box?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{24}{5}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{42}{5}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{81}{5}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(30\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(48\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "30"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2022-p15.live",
+      "kind": "proof-sketch",
+      "text": "Let the roots be \\(r,s,t.\\) By Vieta’s formulas, \\(r+s+t=\\dfrac{39}{10},\\) \\(rs+rt+st=\\dfrac{29}{10},\\) and \\(rst=\\dfrac{6}{10}=\\dfrac35.\\)\n\nThe new volume is \\[ \\begin{gathered} (r+2)(s+2)(t+2) \\\\ =rst+2(rs+rt+st) \\\\ \\quad {}+4(r+s+t)+8 \\\\ =\\frac35+\\frac{58}{10} \\\\ \\quad {}+\\frac{156}{10}+8 \\\\ =30. \\end{gathered} \\]\n\nThus, the correct answer is D.",
+      "hints": [
+        "By Vieta, \\(r+s+t=\\dfrac{39}{10},\\) \\(rs+rt+st=\\dfrac{29}{10},\\) \\(rst=\\dfrac35\\)",
+        "Expand \\((r+2)(s+2)(t+2)\\) using these symmetric sums"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

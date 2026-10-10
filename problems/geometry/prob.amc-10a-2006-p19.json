@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2006-p19",
+  "title": "2006 AMC 10A 19",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-sum",
+      "label": "Angle sum",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2006,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 27.1,
+    "source": 1630,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many non-similar triangles have angles whose degree measures are distinct positive integers in arithmetic progression?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(59\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(89\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(178\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "59"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2006-p19.live",
+      "kind": "proof-sketch",
+      "text": "Let the angles be \\(n - d,\\) \\(n,\\) \\(n + d.\\) Their sum is \\(3n = 180,\\) so \\(n = 60.\\)\n\nThe measures are distinct positive integers, so \\(d \\ge 1,\\) and \\(n - d \\gt 0\\) forces \\(d \\lt 60.\\) Thus \\(d \\in \\{1, 2, \\ldots, 59\\},\\) giving \\(59\\) non-similar triangles.\n\nThus, the correct answer is C.",
+      "hints": [
+        "If the angles are in arithmetic progression, the middle angle is \\(60^\\circ\\)",
+        "The common difference \\(d\\) satisfies \\(1 \\le d \\le 59\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

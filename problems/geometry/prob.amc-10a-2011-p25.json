@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2011-p25",
+  "title": "2011 AMC 10A Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-decomposition",
+      "label": "Area decomposition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.lattice-point",
+      "label": "Lattice point",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2011,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 38.0,
+    "source": 2490,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Let \\(R\\) be a square region and \\(n \\geq 4\\) an integer. A point \\(X\\) in the interior of \\(R\\) is called \\(n\\)-ray partitional if there are \\(n\\) rays emanating from \\(X\\) that divide \\(R\\) into \\(n\\) triangles of equal area. How many points are \\(100\\)-ray partitional but not \\(60\\)-ray partitional?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1500\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1560\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2320\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2480\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2500\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "2320"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2011-p25.live",
+      "kind": "proof-sketch",
+      "text": "Scale the square to have side length \\(1,\\) and write \\(X=(u,v),\\) where \\(u\\) and \\(v\\) are its distances from the left and bottom sides. Every corner must be joined to \\(X\\); otherwise one of the regions containing that corner would not be a triangle.\n\nEach of the \\(n\\) triangles has area \\(\\frac{1}{n}.\\) A triangle whose base lies on the bottom side has height \\(v,\\) so its base has length \\(\\frac{2}{nv}.\\) Therefore the number of triangles along the bottom side is \\(\\frac{nv}{2},\\) which must be a positive integer. Applying the same argument to all four sides shows that \\[\\begin{gathered} \\dfrac{nu}{2},\\quad\\dfrac{n(1-u)}{2},\\\\ \\dfrac{nv}{2},\\quad\\dfrac{n(1-v)}{2} \\end{gathered}\\] are positive integers. Conversely, whenever these four numbers are integers, subdividing each side into the indicated number of equal bases and joining the division points to \\(X\\) produces the required triangles.\n\nFor \\(n=100,\\) this says \\(u=\\frac{i}{50}\\) and \\(v=\\frac{j}{50}\\) for \\(i,j\\in\\{1,2,\\ldots,49\\}.\\) Hence the \\(100\\)-ray points form a \\(49\\times49\\) grid. Similarly, the \\(60\\)-ray points have coordinates \\(u=\\frac{i}{30}\\) and \\(v=\\frac{j}{30}\\) with \\(i,j\\in\\{1,2,\\ldots,29\\}.\\)\n\nA coordinate belongs to both grids exactly when \\(\\frac{i}{50}=\\frac{j}{30},\\) or \\(3i=5j.\\) Thus the common coordinates are \\(\\frac{1}{10},\\frac{2}{10},\\ldots,\\frac{9}{10},\\) giving a \\(9\\times9\\) overlap. The requested number is \\[49^2-9^2=2401-81=2320.\\]\n\nThus, C is the correct answer.",
+      "hints": [
+        "An \\(n\\)-ray point lies on an \\((\\frac{n}{2}-1)\\times(\\frac{n}{2}-1)\\) grid",
+        "Subtract the overlap of the \\(49\\times49\\) and \\(29\\times29\\) grids"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

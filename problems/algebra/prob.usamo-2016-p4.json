@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2016-p4",
+  "title": "2016 USAMO Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2016,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 94.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find all functions \\(f:\\mathbb{R}\\rightarrow \\mathbb{R}\\) such that for all real numbers \\(x\\) and \\(y\\),\n\n\\[\n(f(x)+xy)\\cdot f(x-3y)+(f(y)+xy)\\cdot f(3x-y)=(f(x+y))^2.\n\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2016-p4.imported",
+      "kind": "proof-sketch",
+      "text": "<b>Step 1:</b> Set $x = y = 0$ to obtain $f(0) = 0.$\n<b>Step 2:</b> Set $x = 0$ to obtain $f(y)f(-y) = f(y)^2.$\n$\\indent$ In particular, if $f(y) \\ne 0$ then $f(y) = f(-y).$\n$\\indent$ In addition, replacing $y \\to -t$, it follows that $f(t) = 0 \\implies f(-t) = 0$ for all $t \\in \\mathbb{R}.$\n<b>Step 3:</b> Set $x = 3y$ to obtain $\\left[f(y) + 3y^2\\right]f(8y) = f(4y)^2.$\n$\\indent$ In particular, replacing $y \\to t/8$, it follows that $f(t) = 0 \\implies f(t/2) = 0$ for all $t \\in \\mathbb{R}.$\n<b>Step 4:</b> Set $y = -x$ to obtain $f(4x)\\left[f(x) + f(-x) - 2x^2\\right] = 0.$\n$\\indent$ In particular, if $f(x) \\ne 0$, then $f(4x) \\ne 0$ by the observation from Step 3, because $f(4x) = 0 \\implies f(2x) = 0 \\implies f(x) = 0.$ Hence, the above equation implies that $2x^2 = f(x) + f(-x) = 2f(x)$, where the last step follows from the first observation from Step 2.\n$\\indent$ Therefore, either $f(x) = 0$ or $f(x) = x^2$ for each $x.$\n$\\indent$ Looking back on the equation from Step 3, it follows that $f(y) + 3y^2 \\ne 0$ for any nonzero $y.$ Therefore, replacing $y \\to t/4$ in this equation, it follows that $f(t) = 0 \\implies f(2t) = 0.$\n<b>Step 5:</b> If $f(a) = f(b) = 0$, then $f(b - a) = 0.$\n$\\indent$ This follows by choosing $x, y$ such that $x - 3y = a$ and $3x - y = b.$ Then $x + y = \\tfrac{b - a}{2}$, so plugging $x, y$ into the given equation, we deduce that $f\\left(\\tfrac{b - a}{2}\\right) = 0.$ Therefore, by the third observation from Step 4, we obtain $f(b - a) = 0$, as desired.\n<b>Step 6:</b> If $f \\not\\equiv 0$, then $f(t) = 0 \\implies t = 0.$\n$\\indent$ Suppose by way of contradiction that there exists an nonzero $t$ with $f(t) = 0.$ Choose $x, y$ such that $f(x) \\ne 0$ and $x + y = t.$ The following three facts are crucial:\n$\\indent$ 1. $f(y) \\ne 0.$ This is because $(x + y) - y = x$, so by Step 5, $f(y) = 0 \\implies f(x) = 0$, impossible.\n$\\indent$ 2. $f(x - 3y) \\ne 0.$ This is because $(x + y) - (x - 3y) = 4y$, so by Step 5 and the observation from Step 3, $f(x - 3y) = 0 \\implies f(4y) = 0 \\implies f(2y) = 0 \\implies f(y) = 0$, impossible.\n$\\indent$ 3. $f(3x - y) \\ne 0.$ This is because by the second observation from Step 2, $f(3x - y) = 0 \\implies f(y - 3x) = 0.$ Then because $(x + y) - (y - 3x) = 4x$, Step 5 together with the observation from Step 3 yield $f(3x - y) = 0 \\implies f(4x) = 0 \\implies f(2x) = 0 \\implies f(x) = 0$, impossible.\n$\\indent$ By the second observation from Step 4, these three facts imply that $f(y) = y^2$ and $f(x - 3y) = \\left(x - 3y\\right)^2$ and $f(3x - y) = \\left(3x - y\\right)^2.$ By plugging into the given equation, it follows that\n\\begin{align*} \\left(x^2 + xy\\right)\\left(x - 3y\\right)^2 + \\left(y^2 + xy\\right)\\left(3x - y\\right)^2 = 0. \\end{align*} But the above expression miraculously factors into $\\left(x + y\\right)^4$! This is clearly a contradiction, since $t = x + y \\ne 0$ by assumption. This completes Step 6.\n<b>Step 7:</b> By Step 6 and the second observation from Step 4, the only possible solutions are $f \\equiv 0$ and $f(x) = x^2$ for all $x \\in \\mathbb{R}.$ It's easy to check that both of these work, so we're done.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

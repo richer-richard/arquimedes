@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-i-2012-p3",
+  "title": "2012 AIME I Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.derangements",
+      "label": "Derangements",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2012,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 52.0,
+    "source": 2400,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "Nine people sit down for dinner where there are three choices of meals. Three people order the beef meal, three order the chicken meal, and three order the fish meal. The waiter serves the nine meals in random order. Find the number of ways in which the waiter could serve the meal types to the nine people so that exactly one person receives the type of meal ordered by that person.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "216",
+    "value": "216"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2012-p3.live",
+      "kind": "proof-sketch",
+      "text": "Choose the one person served correctly (\\(9\\) ways); by symmetry say they ordered beef. The remaining meals — \\(2\\) beef, \\(3\\) chicken, and \\(3\\) fish — must go to the other \\(8\\) people (\\(2\\) beef, \\(3\\) chicken, and \\(3\\) fish orderers) with nobody matched. Track where the \\(2\\) leftover beef meals go: to chicken or fish orderers.\n\nIf both go to the same group, say to two of the three chicken orderers (\\(3 + 3 = 6\\) ways counting both groups), then the third chicken orderer must receive fish, the three fish orderers must take the three chicken meals, and the two beef orderers take the remaining fish: everything is forced. If one goes to a chicken orderer and one to a fish orderer (\\(3 \\cdot 3 = 9\\) ways), the other two chicken orderers must take fish and the other two fish orderers must take chicken, leaving one chicken and one fish meal to split between the two beef orderers (\\(2\\) ways).\n\nThe total is \\(9\\,(6 + 9 \\cdot 2) = 216.\\)",
+      "hints": [
+        "Pick the one correctly served person (\\(9\\) ways), then count servings of the remaining eight people with no matches",
+        "Follow the two leftover meals of the correct person’s type: they go into one other group or into both, and almost everything else is then forced"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

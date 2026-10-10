@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2023-p3",
+  "title": "2023 USAMO Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2023,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 107.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Consider an \\(n\\)-by-\\(n\\) board of unit squares for some odd positive integer \\(n\\). We say that a collection \\(C\\) of identical dominoes is a maximal grid-aligned configuration on the board if \\(C\\) consists of \\((n^2-1)/2\\) dominoes where each domino covers exactly two neighboring squares and the dominoes don't overlap: \\(C\\) then covers all but one square on the board. We are allowed to slide (but not rotate) a domino on the board to cover the uncovered square, resulting in a new maximal grid-aligned configuration with another square uncovered. Let \\(k(C)\\) be the number of distinct maximal grid-aligned configurations obtainable from \\(C\\) by repeatedly sliding dominoes. Find all possible values of \\(k(C)\\) as a function of \\(n\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2023-p3.imported",
+      "kind": "proof-sketch",
+      "text": "We claim the answer is $(\\frac{n+1}{2})^2$.\nFirst, consider a checkerboard tiling of the board with 4 colors: R, G, B, Y. Number each column from $1$ to $n$ from left to right and each row from $1$ to $n$ from top to bottom. We color a tile R if its row and column are odd, a tile G is its row is even but its column is odd, a tile B if its row and column is even, and a tile Y if its row is odd but its column is even.\nLemma 1: Throughout our moves, the color of the uncolored tile stays an invariant.\nConsider that a domino can either only change rows or can only change columns. Therefore, sliding a domino into the hole and creating a new one has two possible colors. Of these, note that the new hole will always trivially be two tiles away from the old hole, meaning that the parity of both the row and column number stays the same. Thus, the lemma holds.\nLemma 2: There are more red tiles than any other color.\nBecause each color is uniquely defined by the parity of a pair of column and row number, it satisfies to show that given an odd integer $n$, there are more odd positive integers less than or equal to $n$ than even ones. Obviously, this is true, and so red will have more tiles than any other color.\nLemma 3: For any starting configuration $C$ and any blank tile $B$ such that the blank tile's color matches the blank tile's color of $C$, there is no more than one unique configuration $C'$ that can be produced from $C$ using valid moves.\nWe will use proof by contradiction. Assume there exists two different $C'$. We can get from one of these $C'$ to another using moves. However, we have to finish off with the same hole as before. Before the last move, the hole must be two tiles away from the starting hole. However, because the domino we used to move into the blank tile's spot is in the way, that hole must be congruent to the hole produced after the first move. We can induct this logic, and because there is a limited amount of tiles with the same color, eventually we will run out of tiles to apply this to. Therefore, having two distinct $C'$ with the same starting hole $B$ is impossible with some $C$.\nWe will now prove that $(\\frac{n+1}{2})^2$ is the answer. There are $\\frac{n+1}{2}$ rows and $\\frac{n+1}{2}$ columns that are odd, and thus there are $(\\frac{n+1}{2})^2$ red tiles. Given lemma 3, this is our upper bound for a maximum. To establish that $(\\frac{n+1}{2})^2$ is indeed possible, we construct such a $C$:\nIn the first column, leave the first tile up blank. Then, continuously fill in vertically oriented dominos in that column until it reaches the bottom.\nIn the next $n-1$ columns, place $\\frac{n-1}{2}$ vertically oriented dominos in a row starting from the top. At the bottom row, starting with the first unfilled tile on the left, place horizontally aligned dominos in a row until you reach the right.\nObviously, the top left tile is red. It suffices to show that any red tile may be uncovered. For the first column, one may slide some dominos on the first column until the desired tile is uncovered. For the bottom row, all the first dominos may be slid up, and then the bottom dominos may be slid to the left until the desired red tile is uncovered. Finally, for the rest of the red tiles, the bottom red tile in the same color may be revealed, and then vertically aligned dominos in the same column may be slid down until the desired tile is revealed. Therefore, this configuration may produce $(\\frac{n+1}{2})^2$ different configurations with moves.\nHence, we have proved that $(\\frac{n+1}{2})^2$ is the maximum, and we are done. $\\blacksquare{}$",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2024-p7",
+  "title": "2024 HMMT February Combinatorics Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.recurrences",
+      "label": "Recurrences",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2024,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 87.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "There is a grid of height 2 stretching infinitely in one direction. Between any two edge-adjacent cells of the grid, there is a door that is locked with probability \\(\\frac{1}{2}\\) independent of all other doors. Philip starts in a corner of the grid (in the starred cell). Compute the expected number of cells that Philip can reach, assuming he can only travel between cells if the door between them is unlocked.\n\n[Diagram omitted from this imported transcription; consult the HMMT archive while reviewing the problem.]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\square",
+    "value": "\\square"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2024-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "For clarity, we will number our grid, with \\((0,0)\\) being the corner that Philip starts in, and the grid stretching in the positive \\(x\\) direction, i.e. all elements of the grid are of the form \\((x, y)\\), with \\(y \\in\\{0,1\\}\\) and \\(x \\in \\mathbb{N}\\).\nWe will use recursion and casework. Let \\(A\\) be the expected number of reachable cells given that the door between \\((0,0)\\) and \\((0,1)\\) is unlocked, and \\(B\\) be the expected number of cells given that door is closed. Since that door is locked \\(\\frac{1}{2}\\) of the time, our answer is \\(\\frac{A+B}{2}\\).\nWe can write recurrence relations by considering the different configurations of the doors in the first 4 cells.\nFor the sake of writing, let \\(W\\) be the \\((0,0)-(0,1)\\) door, \\(X\\) be the \\((0,0)-(1,0)\\) door, \\(Y\\) be the \\((0,1)-(1,1)\\) door, and \\(Z\\) be the \\((1,0)-(1,1)\\) door.\nLet's start with the case where \\(W\\) is unlocked and compute \\(A\\) :\n\nCase 1: W is unlocked. Shaded cells represent inaccessible cells, and the arrows show Philip's movements between cells.\n\n- If \\(X, Y\\) are both locked, then Philip can reach exactly 2 rooms. This occurs with probability \\(\\frac{1}{4}\\).\n- If both of \\(X, Y\\) are unlocked, then we have exactly the same case of \\(A\\), except with the ability to reach two extra cells. This occurs with probability \\(\\frac{1}{4}\\).\n- If exactly one of \\(X, Y\\) are unlocked, we have back to the original case, except with the ability to access two more cells, which occurs with probability \\(\\frac{1}{2}\\).\n\nSo, we get the equation:\n\n\\[A=\\frac{1}{4}(2)+\\frac{1}{4}(A+2)+\\frac{1}{2}\\left(\\frac{A+B}{2}+2\\right)\\]\n\nNow, let's consider when \\(W\\) is locked.\n\nCase 2: W is locked.\n\n- If \\(X\\) is locked, Philip can only reach one cell. This occurs with probability \\(\\frac{1}{2}\\).\n- If \\(X\\) is unlocked and \\(Y\\) is locked, we have exactly the original problem, except with the ability to reach one more cell. This occurs with probability \\(\\frac{1}{4}\\).\n- In the case where \\(X\\) is unlocked and \\(Y\\) is unlocked, this is the same as the original configuration, except with the ability to reach one extra cell (the start) and possibly the cell at ( 0,1 ).\nNow, let's compute the probability that Philip can reach \\((0,1)\\) in this case. This is the probability that Philip can reach \\((1,1)\\) since \\(Y\\) is unlocked. We can compute that the probability that Philip can reach \\((1,1)\\) from \\((1,0)\\) is equal to\n\n\\[\\sum_{n=0}^{\\infty} \\frac{1}{2^{3 n+1}}\\]\n\nby looking at the minimum distance Philip has to go to the right before getting back to \\((1,1)\\). This is a geometric series with sum \\(\\frac{4}{7}\\). So, in this case, on average Philip can reach \\(1+\\frac{4}{7}\\) more cells than the original case. This case occurs with probability \\(\\frac{1}{4}\\).\n\nSo, we can write the equation:\n\n\\[B=\\frac{1}{2}(1)+\\frac{1}{4}\\left(\\frac{A+B}{2}+1\\right)+\\frac{1}{4}\\left(\\frac{A+B}{2}+1+\\frac{4}{7}\\right)\\]\n\nSolving the system of these two linear equations, we get \\(A=\\frac{40}{7}, B=\\frac{24}{7}\\) and \\(\\frac{A+B}{2}=\\frac{32}{7}\\).\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

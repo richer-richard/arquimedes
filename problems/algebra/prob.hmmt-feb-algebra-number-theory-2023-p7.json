@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2023-p7",
+  "title": "2023 HMMT February Algebra and Number Theory Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.fractions",
+      "label": "Fractions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.least-common-multiples-lcm",
+      "label": "Least common multiples (lcm)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2023,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "If \\(a, b, c\\), and \\(d\\) are pairwise distinct positive integers that satisfy \\(\\operatorname{lcm}(a, b, c, d)<1000\\) and \\(a+b=c+d\\), compute the largest possible value of \\(a+b\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "581",
+    "value": "581"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2023-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(a^{\\prime}=\\frac{\\operatorname{lcm}(a, b, c, d)}{a}\\). Define \\(b^{\\prime}, c^{\\prime}\\), and \\(d^{\\prime}\\) similarly. We have that \\(a^{\\prime}, b^{\\prime}, c^{\\prime}\\), and \\(d^{\\prime}\\) are pairwise distinct positive integers that satisfy\n\n\\[\\frac{1}{a^{\\prime}}+\\frac{1}{b^{\\prime}}=\\frac{1}{c^{\\prime}}+\\frac{1}{d^{\\prime}}\\]\n\nLet \\(T\\) be the above quantity. We have\n\n\\[a+b=T \\operatorname{lcm}(a, b, c, d)\\]\n\nso we try to maximize \\(T\\). Note that since \\(\\frac{1}{2}+\\frac{1}{3}<\\frac{1}{1}\\), we cannot have any of \\(a^{\\prime}, b^{\\prime}, c^{\\prime}\\), and \\(d^{\\prime}\\) be 1 . At most one of them can be 2 , so at least one side of the equation must have both denominators at least 3. Hence, the largest possible value of \\(T\\) is\n\n\\[T=\\frac{1}{3}+\\frac{1}{4}=\\frac{1}{2}+\\frac{1}{12}=\\frac{7}{12}\\]\n\nand the second largest possible value of \\(T\\) is\n\n\\[T=\\frac{1}{3}+\\frac{1}{5}=\\frac{1}{2}+\\frac{1}{30}=\\frac{8}{15} .\\]\n\nTaking \\(T=\\frac{7}{12}\\) and \\(\\operatorname{lcm}(a, b, c, d)=996=12 \\cdot 83\\), we get \\(a+b=581\\). Since the next best value of \\(T\\) gives \\(8 / 15 \\cdot 1000<534<581\\), this is optimal.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

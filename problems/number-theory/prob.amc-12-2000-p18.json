@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12-2000-p18",
+  "title": "2000 AMC 12 Problem 18",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.date-and-time",
+      "label": "Date and time",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12",
+    "year": 2000,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 32.8,
+    "source": 1870,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In year \\(N,\\) the \\(300\\)th day of the year is a Tuesday. In year \\(N + 1,\\) the \\(200\\)th day is also a Tuesday. On what day of the week did the \\(100\\)th day of year \\(N - 1\\) occur?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "Thursday"
+    },
+    {
+      "label": "B",
+      "text": "Friday"
+    },
+    {
+      "label": "C",
+      "text": "Saturday"
+    },
+    {
+      "label": "D",
+      "text": "Sunday"
+    },
+    {
+      "label": "E",
+      "text": "Monday"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12-2000-p18.live",
+      "kind": "proof-sketch",
+      "text": "From day \\(300\\) of year \\(N\\) to day \\(200\\) of year \\(N + 1,\\) the number of days is \\(365 - 300 + 200 = 265\\) if \\(N\\) is not a leap year. But \\(265 = 7 \\cdot 37 + 6,\\) which would land on a Monday, not a Tuesday.\n\nSo year \\(N\\) is a leap year, and the gap is \\(266 = 7 \\cdot 38\\) days, giving a Tuesday as stated. It follows that year \\(N - 1\\) is not a leap year.\n\nThe \\(100\\)th day of year \\(N - 1\\) precedes the Tuesday on day \\(300\\) of year \\(N\\) by \\(365 - 100 + 300 = 565\\) days. Since \\(565 = 7 \\cdot 80 + 5,\\) that day is \\(5\\) weekdays before Tuesday, namely Thursday.\n\nThus, the correct answer is A.",
+      "hints": [
+        "Two dates fall on the same weekday exactly when the number of days between them is a multiple of \\(7\\)",
+        "Use the two given Tuesdays to decide which of \\(N - 1, N, N + 1\\) is a leap year"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

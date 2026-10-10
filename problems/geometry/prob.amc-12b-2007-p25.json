@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12b-2007-p25",
+  "title": "2007 AMC 12B Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2007,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 37.2,
+    "source": 2400,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Points \\(A,\\) \\(B,\\) \\(C,\\) \\(D,\\) and \\(E\\) are located in \\(3\\)-dimensional space with \\(AB=BC=CD\\) \\(=DE=EA=2\\) and \\(\\angle ABC=\\angle CDE\\) \\(=\\angle DEA=90^\\circ.\\) The plane of \\(\\triangle ABC\\) is parallel to \\(\\overline{DE}.\\) What is the area of \\(\\triangle BDE?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\sqrt{2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\sqrt{3}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\sqrt{5}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\sqrt{6}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2007-p25.live",
+      "kind": "proof-sketch",
+      "text": "Set \\(D=(-1,0,0)\\) and \\(E=(1,0,0),\\) and let \\(\\triangle ABC\\) lie in the plane \\(z=k\\gt0.\\) Because \\(\\angle CDE\\) and \\(\\angle DEA\\) are right angles, \\(A\\) and \\(C\\) lie on radius-\\(2\\) circles centered at \\(E\\) and \\(D\\) in the planes \\(x=1\\) and \\(x=-1,\\) so \\(A=(1,y_1,k),\\ C=(-1,y_2,k)\\) with \\(y_j=\\pm\\sqrt{4-k^2}.\\)\n\nSince \\(\\angle ABC=90^\\circ,\\) \\(AC=2\\sqrt2,\\) which forces \\(y_1=-y_2.\\) Taking \\(y_1=1,\\) \\(y_2=-1,\\) gives \\(k=\\sqrt3,\\) so \\(A=(1,1,\\sqrt3),\\) \\(C=(-1,-1,\\sqrt3),\\) and \\(B\\) is \\((1,-1,\\sqrt3)\\) or \\((-1,1,\\sqrt3).\\)\n\nIn the first case \\(BE=2\\) with \\(BE\\perp DE;\\) in the second \\(BD=2\\) with \\(BD\\perp DE.\\) Either way \\(\\triangle BDE\\) has legs \\(2\\) and \\(2,\\) so its area is \\(\\tfrac12(2)(2)=2.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Place \\(D=(-1,0,0),\\) \\(E=(1,0,0),\\) and put \\(\\triangle ABC\\) in a horizontal plane \\(z=k\\gt0\\)",
+        "The right angles at \\(D\\) and \\(E\\) put \\(A,C\\) on radius-\\(2\\) circles; use \\(AC=2\\sqrt2\\) to find \\(k\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

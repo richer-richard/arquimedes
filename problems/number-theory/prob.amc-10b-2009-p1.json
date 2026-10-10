@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-2009-p1",
+  "title": "2009 AMC 10B Problem 1",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.money",
+      "label": "Money",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2009,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 11.4,
+    "source": 720,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Each morning of her five-day workweek, Jane bought either a \\(50\\)-cent muffin or a \\(75\\)-cent bagel. Her total cost for the week was a whole number of dollars. How many bagels did she buy?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2009-p1.live",
+      "kind": "proof-sketch",
+      "text": "If Jane buys \\(b\\) bagels, she buys \\(5-b\\) muffins, for a total of \\[ 50(5-b)+75b = 250+25b \\] cents. This is a whole number of dollars when \\(250+25b\\) is a multiple of \\(100,\\) that is, when \\(25b\\equiv50\\pmod{100},\\) or \\(b\\equiv2\\pmod4.\\)\n\nThe only value with \\(0\\le b\\le5\\) is \\(b=2.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "With \\(b\\) bagels the total is \\(50(5-b)+75b\\) cents",
+        "A whole number of dollars means that total is a multiple of \\(100\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

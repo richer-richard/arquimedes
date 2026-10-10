@@ -1,0 +1,48 @@
+{
+  "id": "prob.hmmt-feb-algebra-2016-p6",
+  "title": "2016 HMMT February Algebra Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.greatest-common-divisors-gcd",
+      "label": "Greatest common divisors (gcd)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2016,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 77.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Call a positive integer \\(N \\geq 2\\) \"special\" if for every \\(k\\) such that \\(2 \\leq k \\leq N, N\\) can be expressed as a sum of \\(k\\) positive integers that are relatively prime to \\(N\\) (although not necessarily relatively prime to each other). How many special integers are there less than \\(100 ?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-2016-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 50\nWe claim that all odd numbers are special, and the only special even number is 2 . For any even \\(N>2\\), the numbers relatively prime to \\(N\\) must be odd. When we consider \\(k=3\\), we see that \\(N\\) can't be expressed as a sum of 3 odd numbers.\n\nNow suppose that \\(N\\) is odd, and we look at the binary decomposition of \\(N\\), so write \\(N=2^{a_{1}}+2^{a_{2}}+\\) \\(\\ldots+2^{a_{j}}\\) as a sum of distinct powers of 2 . Note that all these numbers only have factors of 2 and are therefore relatively prime to \\(N\\). We see that \\(j<\\log _{2} N+1\\).\nWe claim that for any \\(k \\geq j\\), we can write \\(N\\) as a sum of \\(k\\) powers of 2 . Suppose that we have \\(N\\) written as \\(N=2^{a_{1}}+2^{a_{2}}+\\ldots+2^{a_{k}}\\). Suppose we have at least one of these powers of 2 even, say \\(2^{a_{1}}\\). We can then write \\(N=2^{a_{1}-1}+2^{a_{1}-1}+2^{a_{2}}+\\ldots+2^{a_{k}}\\), which is \\(k+1\\) powers of 2 . The only way this process cannot be carried out is if we write \\(N\\) as a sum of ones, which corresponds to \\(k=N\\). Therefore, this gives us all \\(k>\\log _{2} N\\).\nNow we consider the case \\(k=2\\). Let \\(2^{a}\\) be the largest power of 2 such that \\(2^{a}<N\\). We can write \\(N=2^{a}+\\left(N-2^{a}\\right)\\). Note that since \\(2^{a}\\) and \\(N\\) are relatively prime, so are \\(N-2^{a}\\) and \\(N\\). Note that \\(a<\\log _{2} N\\). Now similar to the previous argument, we can write \\(2^{a}\\) as a sum of \\(k\\) powers of 2 for \\(1<k<2^{a}\\), and since \\(2^{a}>\\frac{N}{2}\\), we can achieve all \\(k\\) such that \\(2 \\leq k<\\frac{N}{2}+1\\).\nPutting these together, we see that since \\(\\frac{N}{2}+1>\\log _{2} N\\) for \\(N \\geq 3\\), we can achieve all \\(k\\) from 2 through \\(N\\), where \\(N\\) is odd.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

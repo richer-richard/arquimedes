@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12b-2025-p25",
+  "title": "2025 AMC 12B Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle",
+      "label": "Circle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.transformation",
+      "label": "Transformation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2025,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 52.8,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Three concentric circles have radii \\(1,\\) \\(2,\\) \\(3.\\) An equilateral triangle with side length \\(s\\) has one vertex on each circle. What is \\(s^2?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{25}{4}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{13}{2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{27}{4}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(7\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "7"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2025-p25.live",
+      "kind": "proof-sketch",
+      "text": "For the common center at distances \\(1, 2, 3\\) from the vertices of an equilateral triangle of side \\(s,\\) the identity \\(3(1 + 16 + 81 + s^4)\\) \\(= (1 + 4 + 9 + s^2)^2\\) holds. This simplifies to \\(2s^4 - 28s^2 + 98 = 0,\\) i.e. \\((s^2 - 7)^2 = 0,\\) so \\(s^2 = 7.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "For a point at distances \\(p, q, r\\) from the vertices of an equilateral triangle of side \\(a,\\) there is a symmetric relation among \\(p^2, q^2, r^2, a^2\\)",
+        "Use \\(3(p^4 + q^4 + r^4 + a^4)\\) \\(= (p^2 + q^2 + r^2 + a^2)^2\\) with \\(p, q, r = 1, 2, 3\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2024-p9",
+  "title": "2024 AIME II Problem 9",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.extremal-argument",
+      "label": "Extremal argument",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2024,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 59.8,
+    "source": 2920,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "There is a collection of \\(25\\) indistinguishable white chips and \\(25\\) indistinguishable black chips. Find the number of ways to place some of these chips in a \\(5 \\times 5\\) grid such that:\n\n• each cell contains at most one chip\n\n• all chips in the same row and all chips in the same column have the same color, and\n\n• any additional chip placed on the grid would violate one or more of the previous two conditions.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "902",
+    "value": "902"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2024-p9.live",
+      "kind": "proof-sketch",
+      "text": "In a valid placement, each nonempty row has a single color, and likewise each column. If some row were empty, choose any cell of it: a chip of the color of that cell’s column (either color if the column is also empty) could legally be added, contradicting the third condition. So every row and every column is nonempty, and we may speak of its color.\n\nA chip at a cell forces its row and column colors to agree; conversely, if a row and a column share a color but their common cell is empty, a chip of that color could be added. Hence chips occupy exactly the cells whose row color equals the column color. For every row to be nonempty, each row’s color must appear among the column colors, and vice versa — the rows and the columns use the same set of colors. Any such coloring conversely yields a valid maximal placement (at most \\(25\\) cells hold chips of each color, so the supply suffices), and distinct colorings give distinct placements.\n\nCounting the colorings: all rows and columns white, all black, or both colors used by the rows and by the columns: \\(1 + 1 + (2^5 - 2)^2 = 2 + 900\\) \\(= 902.\\)",
+      "hints": [
+        "A maximal placement has no empty row or column: a chip matching the column’s color could always be added inside an empty row",
+        "So every row and column carries a color, chips fill exactly the cells where the two colors agree, and rows and columns must use the same set of colors"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

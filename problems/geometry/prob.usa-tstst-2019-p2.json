@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tstst-2019-p2",
+  "title": "USA TSTST 2019 Problem 2",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TSTST",
+    "year": 2019,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 93.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(ABC\\) be an acute triangle with circumcircle \\(\\Omega\\)\nand orthocenter \\(H\\).\nPoints \\(D\\) and \\(E\\) lie on segments \\(AB\\) and \\(AC\\)\nrespectively, such that \\(AD = AE\\).\nThe lines through \\(B\\) and \\(C\\) parallel to \\(\\overline{DE}\\)\nintersect \\(\\Omega\\) again at \\(P\\) and \\(Q\\), respectively.\nDenote by \\(\\omega\\) the circumcircle of \\(\\triangle ADE\\).\n\n• Show that lines \\(PE\\) and \\(QD\\) meet on \\(\\omega\\).\n\n• Prove that if \\(\\omega\\) passes through \\(H\\),\n then lines \\(PD\\) and \\(QE\\) meet on \\(\\omega\\) as well.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tstst-2019-p2.evanchen",
+      "kind": "proof-sketch",
+      "text": "We will give one solution to (a),\nthen several solutions to (b).\n\nSolution to (a)..\nNote that \\(\\measuredangle AQP = \\measuredangle ABP = \\measuredangle ADE\\)\nand \\(\\measuredangle APQ = \\measuredangle ACQ = \\measuredangle AED\\),\nso we have a spiral similarity \\(\\triangle ADE \\sim \\triangle AQP\\).\nTherefore, lines \\(PE\\) and \\(QD\\) meet at the second\nintersection of \\(\\omega\\) and \\(\\Omega\\) other than \\(A\\).\nCall this point \\(X\\).\n\nSolution to (b) using angle chasing..\nLet \\(L\\) be the reflection of \\(H\\) across \\(\\overline{AB}\\),\nwhich lies on \\(\\Omega\\).\n\nClaim.\n Points \\(L\\), \\(D\\), \\(P\\) are collinear.\n\nProof.\n This is just angle chasing:\n \\[\\begin{aligned}\n \\measuredangle CLD &= \\measuredangle DHL\n = \\measuredangle DHA + \\measuredangle AHL = \\measuredangle DEA + \\measuredangle AHC \\\\\n &= \\measuredangle ADE + \\measuredangle CBA = \\measuredangle ABP + \\measuredangle CBA\n = \\measuredangle CBP = \\measuredangle CLP. \\qquad \\square\n \\end{aligned}\\]\n\n[Diagram omitted from this imported TeX transcription.]\n\nNow let \\(K \\in \\omega\\) such that \\(DHKE\\) is an isosceles trapezoid,\ni.e.\\ \\(\\measuredangle BAH = \\measuredangle KAE\\).\n\nClaim.\n Points \\(D\\), \\(K\\), \\(P\\) are collinear.\n\nProof.\n Using the previous claim,\n \\[ \\measuredangle KDE = \\measuredangle KAE = \\measuredangle BAH = \\measuredangle LAB\n = \\measuredangle LPB = \\measuredangle DPB = \\measuredangle PDE. \\qquad \\square \\]\n\nBy symmetry, \\(\\overline{QE}\\) will then pass through the same \\(K\\), as needed.\n\nRemark.\n These two claims imply each other,\n so guessing one of them allows one to realize the other.\n It is likely the latter is easiest to guess from the diagram,\n since it does not need any additional points.\n\nSolution to (b) by orthogonal circles (found by contestants)..\nWe define \\(K\\) as in the previous solution,\nbut do not claim that \\(K\\) is the desired intersection.\nInstead, we note that:\n\nClaim.\n Point \\(K\\) is the orthocenter of isosceles triangle \\(APQ\\).\n\nProof.\n Notice that \\(AH = AK\\) and \\(BC = PQ\\).\n Moreover from \\(\\overline{AH} \\perp \\overline{BC}\\)\n we deduce \\(\\overline{AK} \\perp \\overline{PQ}\\) by reflection\n across the angle bisector.\n\n In light of the formula ``\\(AH^2 = 4R^2 - a^2\\)'', this implies the conclusion.\n\nLet \\(M\\) be the midpoint of \\(\\overline{PQ}\\).\nSince \\(\\triangle APQ\\) is isosceles,\n\\[ \\overline{AKM} \\perp \\overline{PQ} \\implies MK \\cdot MA = MP^2 \\]\nby orthocenter properties.\n\nSo to summarize\n\n• The circle with diameter \\(\\overline{PQ}\\) is orthogonal to \\(\\omega\\).\n In other words, point \\(P\\) lies on the polar of \\(Q\\) with respect to \\(\\omega\\).\n\n• The point \\(X = \\overline{QD} \\cap \\overline{PE}\\) is on \\(\\omega\\).\n\nOn the other hand, if we let \\(K' = \\overline{QE} \\cap \\omega\\),\nthen by Brocard theorem on \\(XDK'E\\),\nthe polar of \\(Q = \\overline{XD} \\cap \\overline{K'E}\\) pass through \\(\\overline{DK'} \\cap \\overline{XE}\\);\nthis point must therefore be \\(P\\) and \\(K' = K\\) as desired.\n\nSolution to (b) by complex numbers (Yang Liu and Michael Ma)..\nLet \\(M\\) be the arc midpoint of \\(\\widehat{BC}\\).\nWe use the standard arc midpoint configuration.\nWe have that\n\\[ A = a^2, \\; B = b^2, \\; C = c^2, \\; M = -bc, \\;\nH = a^2+b^2+c^2, \\; P = \\frac{a^2c}{b}, \\; Q = \\frac{a^2b}{c}, \\]\nwhere \\(M\\) is the arc midpoint of \\(\\widehat{BC}\\).\nBy direct angle chasing we can verify that \\(\\overline{MB} \\parallel \\overline{DH}\\).\nAlso, \\(D \\in \\overline{AB}\\).\nTherefore, we can compute \\(D\\) as follows.\n\\[ d + a^2b^2 \\bar{d} = a^2+b^2 \\text{ and }\n \\frac{d-h}{\\bar{d} - \\bar{h}} = -mb^2 = b^3c \\implies\n d = \\frac{a^2(a^2c+b^2c+c^3-b^3)}{c(bc+a^2)}. \\]\nBy symmetry, we have that\n\\[ e = \\frac{a^2(a^2b+bc^2+b^3-c^3)}{b(bc+a^2)}. \\]\nTo finish, we want to show that the angle\nbetween \\(\\overline{DP}\\) and \\(\\overline{EQ}\\) is angle \\(A\\).\nTo show this, we compute\n\\(\\frac{d-p}{e-q} \\Big/ \\overline{\\frac{d-p}{e-q}}\\).\nFirst, we compute\n\\[\\begin{aligned}\n d-p &= \\frac{a^2(a^2c+b^2c+c^3-b^3)}{c(bc+a^2)} - \\frac{a^2c}{b} \\\\\n &= a^2 \\left(\\frac{a^2c+b^2c+c^3-b^3}{c(bc+a^2)} - \\frac{c}{b} \\right)\n = \\frac{a^2(a^2c-b^3)(b-c)}{bc(bc+a^2)}.\n\\end{aligned}\\]\nBy symmetry,\n\\[ \\frac{d-p}{e-q} = -\\frac{a^2c-b^3}{a^2b-c^3}\n \\implies \\frac{d-p}{e-q} \\Big/ \\overline{\\frac{d-p}{e-q}}\n = \\frac{a^2b^3c}{a^2bc^3} = \\frac{b^2}{c^2} \\]\nas desired.\n\nSolution to (b) using untethered moving points (Zack Chroman)..\nWe work in the real projective plane \\(\\mathbb{RP}^2\\),\nand animate \\(C\\) linearly on a fixed line through \\(A\\).\n\nRecall:\n\nLemma.\n [Zack's lemma]\n Suppose points \\(A\\), \\(B\\) have degree \\(d_1\\), \\(d_2\\),\n and there are \\(k\\) values of \\(t\\) for which \\(A=B\\).\n Then line \\(AB\\) has degree at most \\(d_1+d_2-k\\).\n Similarly, if lines \\(\\ell_1\\), \\(\\ell_2\\) have degrees \\(d_1\\), \\(d_2\\),\n and there are \\(k\\) values of \\(t\\) for which \\(\\ell_1=\\ell_2\\),\n then the intersection \\(\\ell_1 \\cap \\ell_2\\) has degree at most \\(d_1+d_2-k\\).\n\nNow, note that \\(H\\) moves linearly in \\(C\\) on line \\(BH\\).\nFurthermore, angles \\(\\angle AHE\\), \\(\\angle AHF\\) are fixed,\nwe get that \\(D\\) and \\(E\\) have degree \\(2\\).\nOne way to see this is using the lemma; \\(D\\) lies on line \\(AB\\),\nwhich is fixed, and line \\(HD\\) passes through a point at infinity\nwhich is a constant rotation of the point at infinity on line \\(AH\\),\nand therefore has degree \\(1\\).\nThen \\(D\\), \\(E\\) have degree at most \\(1+1-0=2\\).\n\nNow, note that \\(P,Q\\) move linearly in \\(C\\).\nBoth of these are because the circumcenter \\(O\\) moves linearly in \\(C\\),\nand \\(P\\), \\(Q\\) are reflections of \\(B\\), \\(C\\) in a\nline through \\(O\\) with fixed direction, which also moves linearly.\n\nSo by the lemma, the lines \\(PD\\), \\(QE\\) have degree at most \\(3\\).\nI claim they actually have degree \\(2\\);\nto show this it suffices to give an example of a choice of \\(C\\)\nfor which \\(P=D\\) and one for which \\(Q=E\\).\nBut an easy angle chase shows that in the unique case when \\(P=B\\),\nwe get \\(D=B\\) as well and thus \\(P=D\\). Similarly when \\(Q=C\\), \\(E=C\\).\nIt follows from the lemma that lines \\(PD\\), \\(QE\\) have degree at most \\(2\\).\n\nLet \\(\\ell_\\infty\\) denote the line at infinity.\nI claim that the points \\(P_1=PD \\cap \\ell_\\infty\\),\n\\(P_2=QE \\cap \\ell_\\infty\\) are projective in \\(C\\).\nSince \\(\\ell_\\infty\\) is fixed, it suffices to show by the lemma that there\nexists some value of \\(C\\) for which \\(QE=\\ell_\\infty\\) and \\(PD = \\ell_\\infty\\).\nBut note that as \\(C \\to \\infty\\), all four points \\(P,D,Q,E\\) go to infinity.\nIt follows that \\(P_1\\), \\(P_2\\) are projective in \\(C\\).\n\nThen to finish,\nrecall that we want to show that \\(\\angle (PD, QE)\\) is constant.\nIt suffices then to show that there's a constant rotation\nsending \\(P_1\\) to \\(P_2\\). Since \\(P_1\\), \\(P_2\\) are projective,\nit suffices to verify this for \\(3\\) values of \\(C\\).\n\nWe can take \\(C\\) such that \\(\\angle ABC=90\\), \\(\\angle ACB = 90\\),\nor \\(AB=AC\\), and all three cases are easy to check.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

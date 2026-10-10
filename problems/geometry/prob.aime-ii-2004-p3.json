@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2004-p3",
+  "title": "2004 AIME2 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.rectangular-prism",
+      "label": "Rectangular prism",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2004,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 39.0,
+    "source": 2110,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "A solid rectangular block is formed by gluing together \\(N\\) congruent \\(1\\)-cm cubes face to face. When the block is viewed so that three of its faces are visible, exactly \\(231\\) of the \\(1\\)-cm cubes cannot be seen. Find the smallest possible value of \\(N.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "384",
+    "value": "384"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2004-p3.live",
+      "kind": "proof-sketch",
+      "text": "Let the block measure \\(p \\times q \\times r.\\) A cube is hidden exactly when it touches none of the three visible faces, so the hidden cubes form a \\((p-1) \\times (q-1) \\times (r-1)\\) block, giving \\((p-1)(q-1)(r-1) = 231\\) \\(= 3 \\cdot 7 \\cdot 11.\\)\n\nThe ways to write \\(231\\) as a product of three positive integers are \\(3 \\cdot 7 \\cdot 11,\\) \\(1 \\cdot 3 \\cdot 77,\\) \\(1 \\cdot 7 \\cdot 33,\\) \\(1 \\cdot 11 \\cdot 21,\\) and \\(1 \\cdot 1 \\cdot 231,\\) giving blocks \\(4 \\times 8 \\times 12,\\) \\(2 \\times 4 \\times 78,\\) \\(2 \\times 8 \\times 34,\\) \\(2 \\times 12 \\times 22,\\) and \\(2 \\times 2 \\times 232,\\) with volumes \\(384,\\) \\(624,\\) \\(544,\\) \\(528,\\) and \\(928.\\)\n\nThe smallest is \\(N = 384.\\)",
+      "hints": [
+        "The unseen cubes are exactly those behind the three visible faces: they form a \\((p-1) \\times (q-1) \\times (r-1)\\) block",
+        "Factor \\(231 = 3 \\cdot 7 \\cdot 11\\) as a product of three positive integers in every possible way and compare the resulting volumes"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

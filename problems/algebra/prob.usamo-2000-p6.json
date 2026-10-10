@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2000-p6",
+  "title": "2000 USAMO Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2000,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 118.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a_1, b_1, a_2, b_2, \\dots , a_n, b_n\\) be nonnegative real numbers. Prove that\n\n\\[\n\\sum_{i, j = 1}^{n} \\min\\{a_ia_j, b_ib_j\\} \\le \\sum_{i, j = 1}^{n} \\min\\{a_ib_j, a_jb_i\\}.\n\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2000-p6.imported",
+      "kind": "proof-sketch",
+      "text": "<b>Lemma 1:</b> If $r_1, r_2, \\ldots , r_n$ are non-negative reals and $x_1, x_2, \\ldots x_n$ are reals, then\n\\[\\sum_{i, j}\\min(r_{i}, r_{j}) x_{i}x_{j}\\ge 0.\\]\n<b>Proof:</b> Without loss of generality assume that the sequence $\\{r_i\\}$ is increasing. For convenience, define $r_0=0$. The LHS of our inequality becomes\n\\[\\sum_{i}r_{i}x_{i}^{2}+2\\sum_{i < j}r_{i}x_{i}x_{j}\\, .\\]\nThis expression is equivalent to the sum\n\\[\\sum_{i}(r_{i}-r_{i-1})\\biggl(\\sum_{j=i}^{n}x_{j}\\biggr)^{2}\\, .\\]\nEach term in the summation is non-negative, so the sum itself is non-negative. $\\blacksquare$\nWe now define $r_i=\\frac{\\max(a_i,b_i)}{\\min(a_i,b_i)}-1$. If $\\min(a_i,b_i)=0$, then let $r_i$ be any non-negative number. Define $x_i=\\text{sgn}(a_i-b_i)\\min(a_i,b_i)$.\n<b>Lemma 2:</b> $\\min(a_{i}b_{j}, a_{j}b_{i})-\\min(a_{i}a_{j}, b_{i}b_{j}) =\\min(r_{i}, r_{j}) x_{i}x_{j}$\n<b>Proof:</b> Switching the signs of $a_i$ and $b_i$ preserves inequality, so we may assume that $a_i>b_i$. Similarly, we can assume that $a_j>b_j$. If $b_ib_j=0$, then both sides are zero, so we may assume that $b_i$ and $b_j$ are positive. We then have from the definitions of $r_i$ and $x_i$ that\n\\begin{eqnarray*}r_{i}& = &\\frac{a_{i}}{b_{i}}-1\\\\ r_{j}& = &\\frac{a_{j}}{b_{j}}-1\\\\ x_{i}& = & b_{i}\\\\ x_{j}& = & b_{j}\\, .\\end{eqnarray*}\nThis means that\n\\begin{eqnarray*}\\min(r_{i}, r_{j}) x_{i}x_{j}& = &\\min\\bigl(\\frac{a_{i}}{b_{i}}-1,\\frac{a_{j}}{b_{j}}-1\\bigr) b_{i}b_{j}\\\\ & = &\\min(a_{i}b_{j}, a_{j}b_{i})-b_{i}b_{j}\\\\ & = &\\min(a_{i}b_{j}, a_{j}b_{i})-\\min(a_{i}a_{j}, b_{i}b_{j})\\, .\\end{eqnarray*}\nThis concludes the proof of Lemma 2. $\\blacksquare$\nWe can then apply Lemma 2 and Lemma 1 in order to get that\n\\begin{eqnarray*}\\sum_{i,j}\\min(a_{i}b_{j}, a_{j}b_{i})-\\sum_{i, j}\\min(a_{i}a_{j}, b_{i}b_{j}) & = &\\sum_{i, j}\\left[\\min(a_{i}b_{j}, a_{j}b_{i})-\\min(a_{i}a_{j}, b_{i}b_{j})\\right]\\\\ & = &\\sum_{i, j}\\min(r_{i}, r_{j}) x_{i}x_{j}\\\\ &\\ge & 0\\, .\\end{eqnarray*}\nThis implies the desired inequality.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

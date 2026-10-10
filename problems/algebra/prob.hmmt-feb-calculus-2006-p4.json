@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-calculus-2006-p4",
+  "title": "2006 HMMT February Calculus Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2006,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 76.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute \\(\\sum_{k=1}^{\\infty} \\frac{k^{4}}{k!}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-calculus-2006-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "Define, for non-negative integers \\(n\\),\n\n\\[S_{n}:=\\sum_{k=0}^{\\infty} \\frac{k^{n}}{k!}\\]\n\nwhere \\(0^{0}=1\\) when it occurs. Then \\(S_{0}=e\\), and, for \\(n \\geq 1\\),\n\n\\[S_{n}=\\sum_{k=0}^{\\infty} \\frac{k^{n}}{k!}=\\sum_{k=1}^{\\infty} \\frac{k^{n}}{k!}=\\sum_{k=0}^{\\infty} \\frac{(k+1)^{n}}{(k+1)!}=\\sum_{k=0}^{\\infty} \\frac{(k+1)^{n-1}}{k!}=\\sum_{i=0}^{n-1}\\binom{n-1}{i} S_{i},\\]\n\nso we can compute inductively that \\(S_{1}=e, S_{2}=2 e, S_{3}=5 e\\), and \\(S_{4}=15 e\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

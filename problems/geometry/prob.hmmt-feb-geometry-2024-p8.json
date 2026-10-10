@@ -1,0 +1,68 @@
+{
+  "id": "prob.hmmt-feb-geometry-2024-p8",
+  "title": "2024 HMMT February Geometry Problem 8",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2024,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 92.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A B T C D\\) be a convex pentagon with area 22 such that \\(A B=C D\\) and the circumcircles of triangles \\(T A B\\) and \\(T C D\\) are internally tangent. Given that \\(\\angle A T D=90^{\\circ}, \\angle B T C=120^{\\circ}, B T=4\\), and \\(C T=5\\), compute the area of triangle \\(T A D\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "64(2-\\sqrt{3})",
+    "value": "64(2-\\sqrt{3})"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2024-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "Paste \\(\\triangle T C D\\) outside the pentagon to get \\(\\triangle A B X \\cong \\triangle D C T\\). From the tangent circles condition, we get\n\n\\[\\begin{aligned}\n\\angle X B T & =360^{\\circ}-\\angle X B A-\\angle A B T \\\\\n& =360^{\\circ}-\\angle D C T-\\angle A B T \\\\\n& =360^{\\circ}-270^{\\circ}=90^{\\circ} \\\\\n\\angle X A T & =90^{\\circ}-\\angle B X A-\\angle A T B \\\\\n& =90^{\\circ}-\\angle C T D-\\angle A T B \\\\\n& =90^{\\circ}-\\left(120^{\\circ}-90^{\\circ}\\right)=60^{\\circ} .\n\\end{aligned}\\]\n\nMoreover, if \\(x=A T\\) and \\(y=T D\\), then notice that\n\n\\[\\begin{aligned}\n{[A B T C D] } & =[A B T]+[C D T]+[A T D] \\\\\n& =[X A T]-[X B T]+[A T D] \\\\\n& =\\frac{1}{2} x y \\sin 60^{\\circ}-\\frac{1}{2} \\cdot 4 \\cdot 5+\\frac{1}{2} x y \\\\\n& =\\frac{2+\\sqrt{3}}{4} x y-10\n\\end{aligned}\\]\n\nso we have\n\n\\[x y=32 \\cdot \\frac{4}{2+\\sqrt{3}}=128(2-\\sqrt{3}) \\Longrightarrow[A T D]=\\frac{1}{2} x y=64(2-\\sqrt{3}) .\\]\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

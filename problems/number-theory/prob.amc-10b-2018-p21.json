@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-10b-2018-p21",
+  "title": "2018 AMC 10B 21",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factor",
+      "label": "Factor",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.least-common-multiple",
+      "label": "Least common multiple",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2018,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 31.1,
+    "source": 2100,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Mary chose an even \\(4\\)-digit number \\(n.\\) She wrote down all the divisors of \\(n\\) in increasing order from left to right: \\(1,\\) \\(2,\\) \\(\\ldots,\\) \\(\\frac{n}{2},\\) \\(n.\\) At some moment Mary wrote \\(323\\) as a divisor of \\(n.\\) What is the smallest possible value of the next divisor written to the right of \\(323?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(324\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(330\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(340\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(361\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(646\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "340"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2018-p21.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(d\\) be the next divisor after \\(323.\\) If \\(\\gcd(d,323)=1,\\) then \\(n\\) is a multiple of \\(323d>323^2>9999,\\) impossible for a four-digit number. Thus \\(\\gcd(d,323)>1.\\)\n\nSince \\(323=17\\cdot19,\\) this gcd is at least \\(17.\\) It also divides \\(d-323,\\) so \\(d-323\\ge17\\) and hence \\(d\\ge340.\\)\n\nThis bound is attained: for \\(n=6460=2^2\\cdot5\\cdot17\\cdot19,\\) both \\(323\\) and \\(340\\) are divisors. The lower bound shows there is no divisor between them. Thus the smallest possible next divisor is \\(340,\\) and C is the correct answer.",
+      "hints": [
+        "\\(323 = 17 \\cdot 19,\\) and \\(n\\) is an even \\(4\\)-digit multiple of \\(323\\)",
+        "For a candidate next divisor \\(d,\\) \\(n\\) must be a multiple of \\(\\operatorname{lcm}(323, d);\\) find the smallest \\(d > 323\\) keeping that under \\(10000\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-guts-2010-p22",
+  "title": "2010 HMMT February Guts Problem 22",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2010,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 76.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "You are the general of an army. You and the opposing general both have an equal number of troops to distribute among three battlefields. Whoever has more troops on a battlefield always wins (you win ties). An order is an ordered triple of non-negative real numbers \\((x, y, z)\\) such that \\(x+y+z=1\\), and corresponds to sending a fraction \\(x\\) of the troops to the first field, \\(y\\) to the second, and \\(z\\) to the third. Suppose that you give the order \\(\\left(\\frac{1}{4}, \\frac{1}{4}, \\frac{1}{2}\\right)\\) and that the other general issues an order chosen uniformly at random from all possible orders. What is the probability that you win two out of the three battles?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2010-p22.hmmt",
+      "kind": "proof-sketch",
+      "text": "| \\(\\frac{5}{8}\\) |\n| :---: |\n| Let \\(x\\) | be the portion of soldiers the opposing general sends to the first battlefield, and \\(y\\) the portion he sends to the second. Then \\(1-x-y\\) is the portion he sends to the third. Then \\(x \\geq 0\\), \\(y \\geq 0\\), and \\(x+y \\leq 1\\). Furthermore, you win if one of the three conditions is satisfied: \\(x \\leq \\frac{1}{4}\\) and \\(y \\leq \\frac{1}{4}, x \\leq \\frac{1}{4}\\) and \\(1-x-y \\leq \\frac{1}{2}\\), or \\(y \\leq \\frac{1}{4}\\) and \\(1-x-y \\leq \\frac{1}{2}\\). This is illustrated in the picture below.\n\nGuts Round\n\nThis triangle is a linear projection of the region of feasible orders, so it preserves area and probability ratios. The probability that you win, then is given by the portion of the triangle that satisfies one of the three above constraints - in other words, the area of the shaded region divided by the area of the entire triangle. We can easily calculate this to be \\(\\frac{\\frac{5}{16}}{\\frac{1}{2}}=\\frac{5}{8}\\).\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

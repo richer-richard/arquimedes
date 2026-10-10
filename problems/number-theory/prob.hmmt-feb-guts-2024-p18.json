@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-guts-2024-p18",
+  "title": "2024 HMMT February Guts Problem 18",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.chinese-remainder-theorem",
+      "label": "Chinese remainder theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.greatest-common-divisors-gcd",
+      "label": "Greatest common divisors (gcd)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2024,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 71.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "An ordered pair \\((a, b)\\) of positive integers is called spicy if \\(\\operatorname{gcd}(a+b, a b+1)=1\\). Compute the probability that both \\((99, n)\\) and \\((101, n)\\) are spicy when \\(n\\) is chosen from \\(\\{1,2, \\ldots, 2024\\) ! \\(\\}\\) uniformly at random.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{96}{595}",
+    "value": "\\frac{96}{595}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2024-p18.hmmt",
+      "kind": "proof-sketch",
+      "text": "We claim that \\((a, b)\\) is spicy if and only if both \\(\\operatorname{gcd}(a+1, b-1)=1\\) and \\(\\operatorname{gcd}(a-1, b+1)=1\\).\nTo prove the claim, we note that\n\n\\[\\operatorname{gcd}(a+b, a b+1)=\\operatorname{gcd}(a+b, b(-b)+1)=\\operatorname{gcd}\\left(a+b, b^{2}-1\\right)\\]\n\nHence, we have\n\n\\[\\begin{aligned}\n\\operatorname{gcd}(a+b, a b+1)=1 & \\Longleftrightarrow \\operatorname{gcd}\\left(a+b, b^{2}-1\\right)=1 \\\\\n& \\Longleftrightarrow \\operatorname{gcd}(a+b, b-1)=1 \\text { and } \\operatorname{gcd}(a+b, b+1)=1 \\\\\n& \\Longleftrightarrow \\operatorname{gcd}(a+1, b-1)=1 \\text { and } \\operatorname{gcd}(a-1, b+1)=1,\n\\end{aligned}\\]\n\nproving the claim.\nThus, \\(n\\) works if and only if all following four conditions hold:\n\n- \\(\\operatorname{gcd}(n+1,98)=1\\), or equivalently, \\(n\\) is neither \\(-1(\\bmod 2)\\) nor \\(-1(\\bmod 7)\\);\n- \\(\\operatorname{gcd}(n-1,100)=1\\), or equivalently, \\(n\\) is neither \\(1(\\bmod 2)\\) nor \\(1(\\bmod 5)\\);\n- \\(\\operatorname{gcd}(n+1,100)=1\\), or equivalently, \\(n\\) is neither \\(-1(\\bmod 2)\\) nor \\(-1(\\bmod 5)\\); and\n- \\(\\operatorname{gcd}(n-1,102)=1\\), or equivalently, \\(n\\) is neither \\(1(\\bmod 2), 1(\\bmod 3)\\), nor \\(1(\\bmod 17)\\).\n\nThus, there are \\(1,2,3,6,17\\) possible residues modulo \\(2,3,5,7\\), and 17 , respectively. The residues are uniformly distributed within \\(\\{1,2, \\ldots, 2024!\\}\\). Hence, the answer is \\(\\frac{1}{2} \\cdot \\frac{2}{3} \\cdot \\frac{3}{5} \\cdot \\frac{6}{7} \\cdot \\frac{16}{17}=\\frac{96}{595}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

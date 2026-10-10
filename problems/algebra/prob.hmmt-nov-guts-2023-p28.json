@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-guts-2023-p28",
+  "title": "2023 HMMT November Guts Problem 28",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.symmetric-functions",
+      "label": "Symmetric functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vieta-s-formulas",
+      "label": "Vieta's formulas",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2023,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 53.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "There is a unique quadruple of positive integers \\((a, b, c, k)\\) such that \\(c\\) is not a perfect square and \\(a+\\sqrt{b+\\sqrt{c}}\\) is a root of the polynomial \\(x^{4}-20 x^{3}+108 x^{2}-k x+9\\). Compute \\(c\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "7",
+    "value": "7"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2023-p28.hmmt",
+      "kind": "proof-sketch",
+      "text": "There are many ways to do this, including bashing it out directly.\n\nThe four roots are \\(a \\pm \\sqrt{b \\pm \\sqrt{c}}\\), so the sum of roots is 20 , so \\(a=5\\). Next, we compute the sum of squares of roots:\n\n\\[(a+\\sqrt{b \\pm \\sqrt{c}})^{2}+(a-\\sqrt{b \\pm \\sqrt{c}})^{2}=2 a^{2}+2 b \\pm 2 \\sqrt{c}\\]\n\nso the sum of squares of roots is \\(4 a^{2}+4 b\\). However, from Vieta, it is \\(20^{2}-2 \\cdot 108=184\\), so \\(100+4 b=\\) \\(184 \\Longrightarrow b=21\\). Finally, the product of roots is\n\n\\[\\left(a^{2}-(b+\\sqrt{c})\\right)\\left(a^{2}-(b-\\sqrt{c})\\right)=\\left(a^{2}-b\\right)^{2}-c=16-c,\\]\n\nso we have \\(c=7\\).\n\nRemark. Here we provide a justification that there is a unique quadruple. Let \\(P(x)=x^{4}-20 x^{3}+\\) \\(108 x^{2}-k x+9\\) and \\(r=a+\\sqrt{b+\\sqrt{c}}\\). Then, note that\n\n- \\(r\\) cannot be an integer because if not, then \\(b+\\sqrt{c}\\) must be an integer, so \\(c\\) must be a perfect square.\n- \\(r\\) cannot be a root of an irreducible cubic. One can check this directly because the remaining factor must be linear, so it must be \\(x \\pm 1, x \\pm 3\\), or \\(x \\pm 9\\). We can also argue using the theory of field extensions: \\([\\mathbb{Q}(r): \\mathbb{Q}]=3\\). However, we have the tower,\n\n\\[\\mathbb{Q}(r) \\supset \\mathbb{Q}(b+\\sqrt{c}) \\stackrel{\\operatorname{deg} 2}{\\supset} \\mathbb{Q},\\]\n\nand by multiplicativity of degree of field extensions, this forces \\([\\mathbb{Q}(r): \\mathbb{Q}(b+\\sqrt{c})]\\) to not be an integer.\n\n- \\(r\\) cannot be a root of quadratic. If not, then \\(P\\) factors into two quadratic polynomials \\(\\left(x^{2}-m x+\\right.\\) \\(p)\\left(x^{2}-n x+q\\right)\\). We then have \\(m+n=20, p q=9\\), and \\(m n+p+q=108\\). By AM-GM, we have \\(m n \\leq 100\\), so \\(p+q \\geq 8\\), which forces \\((p, q)=(1,9)\\), but this makes \\(m n=98\\), which is impossible.\n\nThus, the minimal polynomial of \\(r\\) must be the quartic \\(P(x)\\). This means that all roots of \\(P\\) are \\(a \\pm \\sqrt{b \\pm c}\\), and we can proceed as in the solution.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

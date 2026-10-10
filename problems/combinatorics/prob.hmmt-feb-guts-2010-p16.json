@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2010-p16",
+  "title": "2010 HMMT February Guts Problem 16",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.coloring",
+      "label": "Coloring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2010,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 70.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Jessica has three marbles colored red, green, and blue. She randomly selects a non-empty subset of them (such that each subset is equally likely) and puts them in a bag. You then draw three marbles from the bag with replacement. The colors you see are red, blue, red. What is the probability that the only marbles in the bag are red and blue?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2010-p16.hmmt",
+      "kind": "proof-sketch",
+      "text": "| \\(\\frac{27}{35}\\) |\n| :---: |\n| There are two possible sets of marbles in the bag, \\(\\{\\) red,blue\\} and \\{red,blue,green\\}. | Initially, both these sets are equally likely to be in the bag. However, the probability of red, blue, red being drawn from a set \\(S\\) of marbles is proportional to \\(|S|^{-3}\\), as long as red and blue are both in \\(S\\). By Bayes's Rule, we must weight the probability of these two sets by \\(|S|^{-3}\\). The answer is \\(\\frac{(1 / 2)^{3}}{(1 / 2)^{3}+(1 / 3)^{3}}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2005-p25",
+  "title": "2005 AMC 10B Problem 25",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.extremal-argument",
+      "label": "Extremal argument",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.pairing-and-grouping",
+      "label": "Pairing and grouping",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.subsets",
+      "label": "Subsets",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2005,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 25.0,
+    "source": 1720,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A subset \\(B\\) of the set of integers from \\(1\\) to \\(100,\\) inclusive, has the property that no two elements of \\(B\\) sum to \\(125.\\) What is the maximum possible number of elements in \\(B?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(50\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(51\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(62\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(65\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(68\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "62"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2005-p25.live",
+      "kind": "proof-sketch",
+      "text": "The pairs summing to \\(125\\) are \\((25, 100), (26, 99), \\ldots, (62, 63),\\) which is \\(62 - 25 + 1 = 38\\) pairs. From each pair, \\(B\\) may contain at most one element.\n\nThe numbers \\(1\\) through \\(24\\) cannot pair with anything in range to sum to \\(125,\\) so all \\(24\\) of them may be included.\n\nThus \\(B\\) has at most \\(38 + 24 = 62\\) elements, and the set \\(\\{1, 2, \\ldots, 62\\}\\) achieves this.\n\nThus, C is the correct answer.",
+      "hints": [
+        "Which integers can pair with another to sum to \\(125?\\)",
+        "Separate the integers with no possible partner from the disjoint pairs whose members sum to \\(125\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

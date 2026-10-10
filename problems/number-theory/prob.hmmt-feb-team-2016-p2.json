@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-team-2016-p2",
+  "title": "2016 HMMT February Team Problem 2",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.chinese-remainder-theorem",
+      "label": "Chinese remainder theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.multiplicative-order",
+      "label": "Multiplicative order",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2016,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 80.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For positive integers \\(n\\), let \\(c_{n}\\) be the smallest positive integer for which \\(n^{c_{n}}-1\\) is divisible by 210, if such a positive integer exists, and \\(c_{n}=0\\) otherwise. What is \\(c_{1}+c_{2}+\\cdots+c_{210}\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2016-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 329\nIn order for \\(c_{n} \\neq 0\\), we must have \\(\\operatorname{gcd}(n, 210)=1\\), so we need only consider such \\(n\\). The number \\(n^{c_{n}}-1\\) is divisible by 210 iff it is divisible by each of \\(2,3,5\\), and 7 , and we can consider the order of \\(n\\) modulo each modulus separately; \\(c_{n}\\) will simply be the LCM of these orders. We can ignore the modulus 2 because order is always 1 . For the other moduli, the sets of orders are\n\n\\[\\begin{array}{rr}\na \\in\\{1,2\\} & \\bmod 3 \\\\\nb \\in\\{1,2,4,4\\} & \\bmod 5 \\\\\nc \\in\\{1,2,3,3,6,6\\} & \\bmod 7\n\\end{array}\\]\n\nBy the Chinese Remainder Theorem, each triplet of choices from these three multisets occurs for exactly one \\(n\\) in the range \\(\\{1,2, \\ldots, 210\\}\\), so the answer we seek is the sum of \\(\\operatorname{lcm}(a, b, c)\\) over \\(a, b, c\\) in the Cartesian product of these multisets. For \\(a=1\\) this table of LCMs is as follows:\n\n|  | 1 | 2 | 3 | 3 | 6 | 6 |\n| :---: | :---: | :---: | :---: | :---: | :---: | :---: |\n| 1 | 1 | 2 | 3 | 3 | 6 | 6 |\n| 2 | 2 | 2 | 6 | 6 | 6 | 6 |\n| 4 | 4 | 4 | 12 | 12 | 12 | 12 |\n| 4 | 4 | 4 | 12 | 12 | 12 | 12 |\n\nwhich has a sum of \\(21+56+28+56=161\\). The table for \\(a=2\\) is identical except for the top row, where \\(1,3,3\\) are replaced by \\(2,6,6\\), and thus has a total sum of 7 more, or 168 . So our answer is \\(161+168=\\mathbf{3 2 9}\\).\nThis can also be computed by counting how many times each LCM occurs:\n\n- 12 appears 16 times when \\(b=4\\) and \\(c \\in\\{3,6\\}\\), for a contribution of \\(12 \\times 16=192\\);\n- 6 appears 14 times, 8 times when \\(c=6\\) and \\(b \\leq 2\\) and 6 times when \\(c=3\\) and \\((a, b) \\in\\) \\(\\{(1,2),(2,1),(2,2)\\}\\), for a contribution of \\(6 \\times 14=84\\);\n- 4 appears 8 times when \\(b=4\\) and \\(a, c \\in\\{1,2\\}\\), for a contribution of \\(4 \\times 8=32\\);\n- 3 appears 2 times when \\(c=3\\) and \\(a=b=1\\), for a contribution of \\(3 \\times 2=6\\);\n- 2 appears 7 times when \\(a, b, c \\in\\{1,2\\}\\) and \\((a, b, c) \\neq(1,1,1)\\), for a contribution of \\(2 \\times 7=14\\);\n- 1 appears 1 time when \\(a=b=c=1\\), for a contribution of \\(1 \\times 1=1\\).\n\nThe result is again \\(192+84+32+6+14+1=329\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

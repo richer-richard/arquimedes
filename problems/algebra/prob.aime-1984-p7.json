@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-1984-p7",
+  "title": "1984 AIME Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.induction",
+      "label": "Induction",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.parity",
+      "label": "Parity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1984,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 47.5,
+    "source": 2440,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "The function \\(f\\) is defined on the set of integers and satisfies \\(f(n)=n-3\\) if \\(n\\geq1000,\\) and \\[ f(n)=f(f(n+5)) \\] if \\(n<1000.\\) Find \\(f(84).\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "997",
+    "value": "997"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1984-p7.live",
+      "kind": "proof-sketch",
+      "text": "Directly from the definition, \\[ \\begin{aligned} f(999)&=f(f(1004))\\\\ &=f(1001)=998,\\\\ f(998)&=f(f(1003))\\\\ &=f(1000)=997. \\end{aligned} \\] Continuing gives \\(f(997)=998,\\) \\(f(996)=997,\\) and \\(f(995)=998.\\)\n\nWe now use downward induction. If \\(n<995\\) is even, then \\(n+5\\) is odd, so the established pattern above \\(n\\) gives \\(f(n)=f(f(n+5)).\\) Thus \\(f(n)=f(998)=997.\\) If \\(n\\) is odd, the same argument gives \\(f(n)=f(997)=998.\\) Thus every even \\(n<1000\\) has value \\(997.\\) Since \\(84\\) is even, \\(f(84)=997.\\)",
+      "hints": [
+        "Start by evaluating \\(f(995),\\) \\(f(996),\\) \\(\\ldots,\\) \\(f(999)\\)",
+        "Use downward induction to find a parity pattern for every integer below \\(1000\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "id": "prob.ahsme-1993-p7",
+  "title": "1993 AHSME Problem 7",
+  "category": "arithmetic",
+  "subjects": [
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "arith.place-value",
+      "label": "Place value",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1993,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 23.4,
+    "source": 1500,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "The symbol \\(R_k\\) stands for an integer whose base-ten representation is a sequence of \\(k\\) ones. For example, \\(R_3=111,\\) \\(R_5=11111,\\) etc. When \\(R_{24}\\) is divided by \\(R_4,\\) the quotient \\(Q=\\frac{R_{24}}{R_4}\\) is an integer whose base-ten representation is a sequence containing only ones and zeros. The number of zeros in \\(Q\\) is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(15\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "15"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1993-p7.live",
+      "kind": "proof-sketch",
+      "text": "Grouping the \\(24\\) digits into six blocks of four gives \\[ \\begin{aligned} R_{24} &=R_4\\left(1+10^4+10^8\\right.\\\\ &\\qquad\\left.{}+10^{12}+10^{16}\\right.\\\\ &\\qquad\\left.{}+10^{20}\\right). \\end{aligned} \\] Thus \\(Q\\) has six ones, with three zeros between each consecutive pair. It therefore has \\(5\\cdot3=15\\) zeros. Thus the correct answer is E.",
+      "hints": [
+        "Use \\(R_{24}=R_4(1+10^4+10^8+\\cdots)\\)",
+        "The quotient has six ones, each four places apart"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

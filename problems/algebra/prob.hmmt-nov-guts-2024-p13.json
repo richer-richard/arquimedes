@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-guts-2024-p13",
+  "title": "2024 HMMT November Guts Problem 13",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomial-operations",
+      "label": "Polynomial operations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.quadratic-functions",
+      "label": "Quadratic functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2024,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 46.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(f\\) and \\(g\\) be two quadratic polynomials with real coefficients such that the equation \\(f(g(x))=0\\) has four distinct real solutions: \\(112,131,146\\), and \\(a\\). Compute the sum of all possible values of \\(a\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "389",
+    "value": "389"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2024-p13.hmmt",
+      "kind": "proof-sketch",
+      "text": "The key observation is the following.\nClaim 1. If \\(a, b, c, d\\) are roots of \\(f(g(x))\\), then one can permute them so that \\(a+b=c+d\\).\nProof. Let \\(v\\) be the point for which \\(g(v)\\) is the local minimum or maximum. Note that if \\(g(x)=g(y)\\), then \\(x\\) and \\(y\\) are symmetric around \\(v\\), or \\(x+y=2 v\\). Moreover, if \\(a, b, c, d\\) roots of \\(f(g(x))\\), then we can permute them so that \\(g(a)\\) and \\(g(b)\\) are equal to one root of \\(f\\) and \\(g(c)\\) and \\(g(d)\\) are equal to another root of \\(f\\). This means that \\(a+b=c+d=2 v\\).\n\nIn the case of our problem, if three roots are \\(r, s\\), and \\(t\\), then the fourth can be \\(r+s-t, r+t-s\\), or \\(s+t-r\\), with sum \\(r+s+t\\). Using the given values, we get that the answer is \\(112+131+146=389\\). Observe that these are all possible; indeed, if we let \\(g(x)=x^{2}-(r+s) x\\), then \\(g(r)=g(s)\\) and \\(g(t)=g(r+s-t)\\). Now let \\(f(x)=(x-g(r))(x-g(t))\\); then \\(f(g(x))\\) has roots \\(r, s, t\\), and \\(r+s-t\\). The other two values are similarly achievable.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "prob.aime-1999-p6",
+  "title": "1999 AIME Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.annulus",
+      "label": "Annulus",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.sector",
+      "label": "Sector",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.transformation",
+      "label": "Transformation",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1999,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 47.7,
+    "source": 2450,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "A transformation of the first quadrant of the coordinate plane maps each point \\((x, y)\\) to the point \\((\\sqrt{x}, \\sqrt{y}).\\) The vertices of quadrilateral \\(ABCD\\) are \\(A = (900, 300),\\) \\(B = (1800, 600),\\) \\(C = (600, 1800),\\) and \\(D = (300, 900).\\) Let \\(k\\) be the area of the region enclosed by the image of quadrilateral \\(ABCD.\\) Find the greatest integer that does not exceed \\(k.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "314",
+    "value": "314"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1999-p6.live",
+      "kind": "proof-sketch",
+      "text": "Follow the four edges. Sides \\(AB\\) and \\(DC\\) lie on the lines \\(y = \\frac{x}{3}\\) and \\(y = 3x,\\) which map to the lines \\(v = \\frac{u}{\\sqrt{3}}\\) and \\(v = \\sqrt{3}\\,u\\) — rays from the origin at angles \\(30^\\circ\\) and \\(60^\\circ.\\) Sides \\(AD\\) and \\(BC\\) lie on \\(x + y = 1200\\) and \\(x + y = 2400,\\) which map to arcs of the circles \\(u^2 + v^2 = 1200\\) and \\(u^2 + v^2 = 2400.\\)\n\nSo the image is the part of the annulus between radii \\(\\sqrt{1200}\\) and \\(\\sqrt{2400}\\) lying between the \\(30^\\circ\\) and \\(60^\\circ\\) rays, one twelfth of the full annulus: \\[ \\begin{aligned} k &= \\frac{30}{360}\\,\\pi\\,(2400 - 1200) \\\\ &= 100\\pi. \\end{aligned} \\]\n\nSince \\(3.14 < \\pi < 3.15,\\) we have \\(314 < k < 315,\\) so the greatest integer not exceeding \\(k\\) is \\(314.\\)",
+      "hints": [
+        "Instead of tracking the vertices, find what the map does to each of the four boundary lines",
+        "\\(y = 3x\\) and \\(y = \\frac{x}{3}\\) map to lines through the origin, while \\(x + y = c\\) maps to an arc of \\(u^2 + v^2 = c\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

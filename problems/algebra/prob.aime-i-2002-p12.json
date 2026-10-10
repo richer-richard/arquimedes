@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2002-p12",
+  "title": "2002 AIME1 12",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.pattern-recognition",
+      "label": "Pattern recognition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2002,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 51.6,
+    "source": 2600,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "Let \\(F(z) = \\frac{z + i}{z - i}\\) for all complex numbers \\(z \\ne i,\\) and let \\(z_n = F(z_{n-1})\\) for all positive integers \\(n.\\) Given that \\(z_0 = \\frac{1}{137} + i\\) and \\(z_{2002} = a + bi,\\) where \\(a\\) and \\(b\\) are real numbers, find \\(a + b.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "275",
+    "value": "275"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2002-p12.live",
+      "kind": "proof-sketch",
+      "text": "Composing the map with itself, \\[ \\begin{aligned} F(F(z)) &= \\frac{\\frac{z+i}{z-i} + i}{\\frac{z+i}{z-i} - i} \\\\ &= \\frac{(z + i) + i(z - i)}{(z + i) - i(z - i)} \\\\ &= \\frac{(1 + i)(z + 1)}{(1 - i)(z - 1)} \\\\ &= i\\,\\frac{z + 1}{z - 1}, \\end{aligned} \\] and applying \\(F\\) once more gives \\[ \\begin{aligned} F(F(F(z))) &= \\frac{i\\,\\frac{z+1}{z-1} + i}{i\\,\\frac{z+1}{z-1} - i} \\\\ &= \\frac{(z + 1) + (z - 1)}{(z + 1) - (z - 1)} \\\\ &= z, \\end{aligned} \\] so the sequence \\(z_0, z_1, z_2, \\ldots\\) is periodic with period \\(3.\\)\n\nSince \\(2002 = 3 \\cdot 667 + 1,\\) we have \\(z_{2002} = z_1 = F(z_0)\\) \\(= \\frac{z_0 + i}{z_0 - i}\\) \\(= \\frac{\\frac{1}{137} + 2i}{\\frac{1}{137}}\\) \\(= 1 + 274i.\\) Thus \\(a + b = 1 + 274 = 275.\\)",
+      "hints": [
+        "Compose the map with itself: \\(F(F(z))\\) simplifies to \\(i\\,\\frac{z + 1}{z - 1}\\)",
+        "\\(F(F(F(z))) = z,\\) so the sequence has period \\(3;\\) since \\(2002 \\equiv 1 \\pmod{3},\\) just compute \\(z_1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

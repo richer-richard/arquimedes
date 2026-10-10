@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2021-p31",
+  "title": "2021 HMMT February Guts Problem 31",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2021,
+    "number": 31
+  },
+  "difficulty": {
+    "course": 85.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Roger initially has 20 socks in a drawer, each of which is either white or black. He chooses a sock uniformly at random from the drawer and throws it away. He repeats this action until there are equal numbers of white and black socks remaining.\nSuppose that the probability he stops before all socks are gone is \\(p\\). If the sum of all distinct possible values of \\(p\\) over all initial combinations of socks is \\(\\frac{a}{b}\\) for relatively prime positive integers \\(a\\) and \\(b\\), compute \\(100 a+b\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "20738",
+    "value": "20738"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2021-p31.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(b_{i}\\) and \\(w_{i}\\) be the number of black and white socks left after \\(i\\) socks have been thrown out. In particular, \\(b_{0}+w_{0}=20\\).\nThe key observation is that the ratio \\(r_{i}=\\frac{b_{i}}{b_{i}+w_{i}}\\) is a martingale (the expected value of \\(r_{i+1}\\) given \\(r_{i}\\) is just \\(r_{i}\\) ).\nSuppose WLOG that \\(b_{0}<w_{0}\\) (we will deal with the case \\(b_{0}=w_{0}\\) later). Say that we stop at \\(i\\) if \\(b_{i}=0\\) or \\(b_{i}=w_{i}\\). Then the expected value of \\(r_{i}\\) when we stop is\n\n\\[\\frac{1}{2} \\cdot p+0 \\cdot(1-p)=\\frac{b_{0}}{b_{0}+w_{0}}\\]\n\nThis rearranges to \\(p=\\frac{2 b_{0}}{b_{0}+w_{0}}\\).\nMeanwhile, if \\(b_{0}=w_{0}=10\\), we can reduce to the case \\(b_{1}=9<10=w_{1}\\). Hence\n\n\\[\\sum_{b_{0}=0}^{10} p=\\left(\\sum_{b_{0}}^{9} \\frac{2 b_{0}}{20}\\right)+\\frac{18}{19}=\\frac{9}{2}+\\frac{18}{19}=\\frac{207}{38}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

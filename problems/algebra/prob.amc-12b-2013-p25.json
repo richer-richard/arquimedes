@@ -1,0 +1,94 @@
+{
+  "id": "prob.amc-12b-2013-p25",
+  "title": "2013 AMC 12B Problem 25",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2013,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 42.0,
+    "source": 2720,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Let \\(G\\) be the set of polynomials of the form\n\n\\[ \\begin{aligned} &P(z) = z^n + c_{n-1}z^{n-1} + \\cdots \\\\ &\\quad {}+ c_2 z^2 + c_1 z + 50, \\end{aligned} \\]\n\nwhere \\(c_1,\\) \\(c_2,\\) \\(\\ldots,\\) \\(c_{n-1}\\) are integers and \\(P(z)\\) has \\(n\\) distinct roots of the form \\(a + ib\\) with \\(a\\) and \\(b\\) integers. How many polynomials are in \\(G?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(288\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(528\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(576\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(992\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(1056\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "528"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2013-p25.live",
+      "kind": "proof-sketch",
+      "text": "Since the coefficients are real, nonreal roots occur in conjugate pairs, so \\(P(z)\\) factors into distinct linear factors \\((z - c)\\) with \\(c \\in \\mathbb{Z}\\) and quadratics \\((z - (a+ib))(z - (a-ib))\\) \\(= z^2 - 2az + (a^2 + b^2).\\) Each factor’s constant term divides \\(50.\\) For \\(d=1,2,5,10,25,50,\\) the numbers of conjugate pairs with \\(a^2+b^2=d\\) and \\(b\\ne0\\) are \\(1,2,4,4,5,6,\\) respectively. Adding the two linear choices \\(z-d,z+d\\) gives \\(|B_1|=3,\\) \\(|B_2|=4,\\) \\(|B_5|=6,\\) \\(|B_{10}|=6,\\) \\(|B_{25}|=7,\\) and \\(|B_{50}|=8.\\) The factor-magnitude partitions of \\(50\\) using values greater than \\(1\\) are \\(50,25\\cdot2,10\\cdot5,\\) and \\(5\\cdot5\\cdot2.\\) Distinct roots require choosing two different \\(B_5\\) factors in the last case. Finally, account for the free presence of \\(z+1\\) and \\(z^2+1\\) (with \\(z-1\\) forced by the sign of the remaining product), gives \\[ \\begin{aligned} &2^2\\left(8 + 7\\cdot 4 + 6\\cdot 6 + 4\\binom{6}{2}\\right) \\\\ &\\quad = 4(8 + 28 + 36 + 60) = 528. \\end{aligned} \\] Thus, the correct answer is B.",
+      "hints": [
+        "Real coefficients pair nonreal roots as conjugates, so \\(P(z)\\) factors into linear \\((z - c)\\) and quadratic \\(z^2 - 2az + (a^2 + b^2)\\) pieces, each with constant term dividing \\(50\\)",
+        "For each divisor \\(d\\) of \\(50,\\) count the basic factors of magnitude \\(d\\) (solutions of \\(a^2 + b^2 = d,\\) plus \\(z \\pm d\\)), then multiply choices so the constant terms multiply to \\(50\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

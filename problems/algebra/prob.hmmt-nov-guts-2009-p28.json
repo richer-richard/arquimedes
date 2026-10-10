@@ -1,0 +1,70 @@
+{
+  "id": "prob.hmmt-nov-guts-2009-p28",
+  "title": "2009 HMMT November Guts Problem 28",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.pigeonhole-principle",
+      "label": "Pigeonhole principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2009,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 66.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Six men and their wives are sitting at a round table with 12 seats. These men and women are very jealous - no man will allow his wife to sit next to any man except for himself, and no woman will allow her husband to sit next to any woman except for herself. In how many distinct ways can these 12 people be seated such that these conditions are satisfied? (Rotations of a valid seating are considered distinct.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2009-p28.hmmt",
+      "kind": "proof-sketch",
+      "text": "288000 Think of this problem in terms of \"blocks\" of men and women, that is, groups of men and women sitting together. Each block must contain at least two people; otherwise you have a man sitting next to two women (or vice-versa).\nWe will define the notation \\(\\left[a_{1}, b_{1}, a_{2}, b_{2}, \\ldots\\right]\\) to mean a seating arrangement consisting of, going in order, \\(a_{1}\\) men, \\(b_{1}\\) women, \\(a_{2}\\) men, \\(b_{2}\\) women, and so on.\n\nSplit the problem into three cases, each based on the number of blocks of men and women:\nCase 1: One block of each, \\([6,6]\\).\nThere are 12 ways to choose the seats where the men sit, and \\(6!\\) ways to arrange those men. The two women on either side of the men are uniquely determined by the men they sit next to. There are 4 ! ways to arrange the other four women. This gives \\(6!\\cdot 288\\) ways.\nCase 2: Two blocks of each.\n\nThe arrangement is \\([a, b, c, d]\\), where \\(a+c=b+d=6\\). There are five distinct block schematics: \\([2,2,4,4],[2,3,4,3],[2,4,4,2],[3,2,3,4]\\), and \\([3,3,3,3]\\). (The others are rotations of one of the above.) For each of these, there are 6 ! ways to arrange the men. In addition, four women are uniquely determined because they sit next to a man. There are 2 ways to arrange the other two women. Each of the first four possible block schematics gives 12 distinct rotations, while the fifth one gives 6 . This gives \\(6!(2)(12+12+12+12+6)=6!\\cdot 108\\) ways.\nCase 3: Three blocks of each, \\([2,2,2,2,2,2]\\).\nThere are 4 ways to choose where the men sit and 6 ! ways to arrange those men. Each placement of men will uniquely determine the placement of each women. This gives \\(6!\\cdot 4\\) ways.\nThen we have a grand total of \\(6!\\cdot(288+108+4)=6!\\cdot 400=288000\\) seating arrangements.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

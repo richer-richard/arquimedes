@@ -1,0 +1,68 @@
+{
+  "id": "prob.hmmt-feb-guts-2006-p18",
+  "title": "2006 HMMT February Guts Problem 18",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity-and-scaling",
+      "label": "Similarity and scaling",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2006,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 75.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Cyclic quadrilateral \\(A B C D\\) has side lengths \\(A B=1, B C=2, C D=3\\) and \\(D A=4\\). Points \\(P\\) and \\(Q\\) are the midpoints of \\(\\overline{B C}\\) and \\(\\overline{D A}\\). Compute \\(P Q^{2}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2006-p18.hmmt",
+      "kind": "proof-sketch",
+      "text": "Construct \\(\\overline{A C}, \\overline{A Q}, \\overline{B Q}, \\overline{B D}\\), and let \\(R\\) denote the intersection of \\(\\overline{A C}\\) and \\(\\overline{B D}\\). Because \\(A B C D\\) is cyclic, we have that \\(\\triangle A B R \\sim \\triangle D C R\\) and \\(\\triangle A D R \\sim\\) \\(\\triangle B C R\\). Thus, we may write \\(A R=4 x, B R=2 x, C R=6 x, D R=12 x\\). Now, Ptolemy applied to \\(A B C D\\) yields \\(140 x^{2}=1 \\cdot 3+2 \\cdot 4=11\\). Now \\(\\overline{B Q}\\) is a median in triangle \\(A B D\\). Hence, \\(B Q^{2}=\\frac{2 B A^{2}+2 B D^{2}-A D^{2}}{4}\\). Likewise, \\(C Q^{2}=\\frac{2 C A^{2}+2 C D^{2}-D A^{2}}{4}\\). But \\(P Q\\) is a median in triangle \\(B Q C\\), so \\(P Q^{2}=\\frac{2 B Q^{2}+2 C Q^{2}-B C^{2}}{4}=\\frac{A B^{2}+B D^{2}+C D^{2}+C A^{2}-B C^{2}-A D^{2}}{4}=\\) \\(\\frac{(196+100) x^{2}+1^{2}+3^{2}-2^{2}-4^{2}}{4}=\\frac{148 x^{2}-5}{2}=\\frac{148 \\cdot \\frac{11}{140}-5}{2}=\\frac{116}{35}\\).\nAnother solution is possible. Extend \\(\\overline{A D}\\) and \\(\\overline{B C}\\) past \\(A\\) and \\(B\\) to their intersection \\(S\\). Use similar triangles \\(S A B\\) and \\(S C D\\), and similar triangles \\(S A C\\) and \\(S B D\\) to compute \\(S A\\) and \\(S B\\), then apply the Law of Cosines twice, first to compute the cosine of \\(\\angle A\\) and then to compute \\(P Q^{2}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

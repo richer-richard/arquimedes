@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2015-p3",
+  "title": "2015 AIME2 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.systematic-listing",
+      "label": "Systematic listing",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2015,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 44.0,
+    "source": 2070,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Let \\(m\\) be the least positive integer divisible by \\(17\\) whose digits sum to \\(17.\\) Find \\(m.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "476",
+    "value": "476"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2015-p3.live",
+      "kind": "proof-sketch",
+      "text": "Every number is congruent to its digit sum modulo \\(9,\\) so \\(m = 17n\\) must satisfy \\(17n \\equiv 17 \\pmod 9,\\) that is \\(8n \\equiv 8 \\pmod 9,\\) which gives \\(n \\equiv 1 \\pmod 9.\\)\n\nChecking the candidates in increasing order: \\(n = 1,\\) \\(n = 10,\\) and \\(n = 19\\) give \\(17,\\) \\(170,\\) and \\(323,\\) with digit sums \\(8\\) each, but \\(n = 28\\) gives \\(17 \\cdot 28 = 476\\) with digit sum \\(4 + 7 + 6 = 17.\\) So \\(m = 476.\\)",
+      "hints": [
+        "A number is congruent to its digit sum modulo \\(9,\\) so \\(m = 17n\\) requires \\(17n \\equiv 17 \\pmod 9\\)",
+        "That forces \\(n \\equiv 1 \\pmod 9;\\) check the cases \\(n = 1,\\) \\(n = 10,\\) \\(n = 19,\\) \\(n = 28,\\) \\(\\ldots\\) in increasing order"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

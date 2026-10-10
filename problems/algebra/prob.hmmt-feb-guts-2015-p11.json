@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-guts-2015-p11",
+  "title": "2015 HMMT February Guts Problem 11",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.floors-and-ceilings",
+      "label": "Floors and ceilings",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2015,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 73.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find\n\n\\[\\sum_{k=0}^{\\infty}\\left\\lfloor\\frac{1+\\sqrt{\\frac{2000000}{4^{k}}}}{2}\\right\\rfloor\\]\n\nwhere \\(\\lfloor x\\rfloor\\) denotes the largest integer less than or equal to \\(x\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2015-p11.hmmt",
+      "kind": "proof-sketch",
+      "text": "1414 The \\(k\\) th floor (for \\(k \\geq 0\\) ) counts the number of positive integer solutions to \\(4^{k}(2 x-1)^{2} \\leq 2 \\cdot 10^{6}\\). So summing over all \\(k\\), we want the number of integer solutions to \\(4^{k}(2 x-1)^{2} \\leq\\) \\(2 \\cdot 10^{6}\\) with \\(k \\geq 0\\) and \\(x \\geq 1\\). But each positive integer can be uniquely represented as a power of 2 times an odd (positive) integer, so there are simply \\(\\left\\lfloor 10^{3} \\sqrt{2}\\right\\rfloor=1414\\) solutions.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

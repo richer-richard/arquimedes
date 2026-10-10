@@ -1,0 +1,37 @@
+{
+  "id": "prob.hmmt-nov-guts-2011-p28",
+  "title": "2011 HMMT November Guts Problem 28",
+  "category": "uncategorized",
+  "subjects": [],
+  "concepts": [],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2011,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 58.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Determine the value of\n\n\\[\\sum_{k=1}^{2011} \\frac{k-1}{k!(2011-k)!} .\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2011-p28.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{2009\\left(2^{2010}\\right)+1}{2011!}\\) We note that\n\n\\[\\begin{aligned}\n(2011!) \\sum_{k=1}^{2011} \\frac{k-1}{k!(2011-k)!} & =\\sum_{k=1}^{2011} \\frac{(2011!)(k-1)}{k!(2011-k)!} \\\\\n& =\\sum_{k=1}^{2011} \\frac{k(2011)!}{k!(2011-k)!}-\\sum_{k=1}^{2011} \\frac{2011!}{k!(2011-k)!} \\\\\n& =\\sum_{k=1}^{2011} k\\binom{2011}{k}-\\sum_{k=1}^{2011}\\binom{2011}{k} \\\\\n& =(2011)\\left(2^{2010}\\right)-\\left(2^{2011}-1\\right)\n\\end{aligned}\\]\n\nThus, we get an answer of \\(\\left(2009\\left(2^{2010}\\right)+1\\right) /(2011!)\\).\nNote: To compute the last two sums, observe that\n\n\\[\\sum_{k=0}^{2011}\\binom{2011}{k}=(1+1)^{2011}=2^{2011}\\]\n\nby the Binomial Theorem, and that\n\n\\[\\sum_{k=0}^{2011} k\\binom{2011}{k}=\\frac{1}{2}\\left(\\sum_{k=0}^{2011} k\\binom{2011}{k}+\\sum_{k=0}^{2011}(2011-k)\\binom{2011}{2011-k}\\right)=2011\\left(2^{2010}\\right)\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

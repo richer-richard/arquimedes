@@ -1,0 +1,83 @@
+{
+  "id": "prob.hmmt-nov-general-2023-p10",
+  "title": "2023 HMMT November General Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2023,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 58.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A B C D\\) be a convex trapezoid such that \\(\\angle A B C=\\angle B C D=90^{\\circ}, A B=3, B C=6\\), and \\(C D=12\\). Among all points \\(X\\) inside the trapezoid satisfying \\(\\angle X B C=\\angle X D A\\), compute the minimum possible value of \\(C X\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\sqrt{\\sqrt{113}-\\sqrt{65} \\text {. }}",
+    "value": "\\sqrt{\\sqrt{113}-\\sqrt{65} \\text {. }}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2023-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(P=A D \\cap B C\\). Then, the given angle condition \\(\\angle X B C=\\angle X A D\\) implies that \\(\\angle X B D+\\angle X P D=\\) \\(180^{\\circ}\\), so \\(X\\) always lies on circle \\(\\odot(P B D)\\), which is fixed. Thus, we see that the locus if \\(X\\) is the arc \\(\\widehat{B D}\\) of \\(\\odot(P B D)\\). Let \\(O\\) and \\(R\\) be the center and the radius of \\(\\odot(P B D)\\). Then, by triangle inequality, we get that\n\n\\[C X \\geq C O-O X=C O-R\\]\n\nand the equality occurs when \\(X\\) is the intersection of segment \\(C O\\) and \\(\\odot(P B D)\\), as shown in the diagram above. Hence, the maximum value is \\(C O-R\\).\n\nTo compute \\(C O\\) and \\(R\\), we let \\(T\\) be the second intersection of \\(\\odot(P B D)\\) and \\(C D\\). We can compute \\(B P=2\\), so by Power of Point, \\(C T \\cdot C D=C P \\cdot C B=48\\), so \\(C T=4\\), which means that \\(D T=8\\). The projections of \\(O\\) onto \\(C D\\) and \\(C B\\) are midpoints of \\(B P\\) and \\(D T\\). Let those midpoints be \\(M\\) and \\(N\\), respectively. Then, we get by Pythagorean theorem that\n\n\\[\\begin{aligned}\nC O & =\\sqrt{C N^{2}+O N^{2}}=\\sqrt{\\left(4+\\frac{8}{2}\\right)^{2}+\\left(6+\\frac{2}{2}\\right)^{2}}=\\sqrt{8^{2}+7^{2}}=\\sqrt{113} \\\\\nR & =\\sqrt{B M^{2}+M O^{2}}=\\sqrt{1^{2}+\\left(4+\\frac{8}{2}\\right)^{2}}=\\sqrt{1^{2}+8^{2}}=\\sqrt{65},\n\\end{aligned}\\]\n\nso the answer is \\(\\sqrt{113}-\\sqrt{65}\\).\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

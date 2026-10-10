@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-team-2013-p5",
+  "title": "2013 HMMT February Team Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2013,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 81.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Thaddeus is given a \\(2013 \\times 2013\\) array of integers each between 1 and 2013 , inclusive. He is allowed two operations:\n\n- 1. Choose a row, and subtract 1 from each entry.\n- 2. Chooses a column, and add 1 to each entry.\n\nHe would like to get an array where all integers are divisible by 2013. On how many arrays is this possible?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2013-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(2013^{4025}\\) We claim that the set of grids on which it is possible to obtain an array of all zeroes (mod 2013) is indexed by ordered 4025-tuples of residues (mod 2013), corresponding to the starting entries in the first row and first column of the grid, giving the answer of \\(2013^{4025}\\). To do this, we show that given after fixing all of the entries in the first row and column, there is a unique starting grid which can become an array of all zeroes after applying the appropriate operations.\n\nLet \\(a_{i, j}\\) be the entry in the \\(i\\)-th row and the \\(j\\)-th column. Suppose there is a sequence of operations giving all zeroes in the array; let \\(r_{i}\\) be the number of times we operate on row \\(i\\), and let \\(c_{j}\\) be the number of times we operate on column \\(j\\). It is enough to take all of these values to be residues modulo 2013. Clearly, \\(a_{i, j}+r_{i}+c_{j} \\equiv 0(\\bmod 2013)\\) for each \\(i, j\\). In particular, \\(r_{1}+c_{1} \\equiv a_{1,1}\\). Now, for each \\(i, j\\), we have\n\n\\[\\begin{aligned}\na_{i, j} & \\equiv-r_{i}-c_{j} \\\\\n& \\equiv\\left(a_{i, 1}+c_{1}\\right)+\\left(a_{1, j}+r_{1}\\right) \\\\\n& \\equiv a_{i, 1}+a_{1, j}-a_{1,1},\n\\end{aligned}\\]\n\nwhich is fixed. Thus, there rest of the entries in the grid are forced.\nConversely, if we set \\(a_{i, j}\\) to be the appropriate representative of the residue class of \\(a_{i, 1}+a_{1, j}-a_{1,1}\\) modulo 2013, we may take \\(r_{i} \\equiv-a_{i, 1}(\\bmod 2013)\\), and \\(c_{j} \\equiv a_{1,1}-a_{1, j}(\\bmod 2013)\\) for each \\(i, j\\). It is clear that \\(a_{i, j}+r_{i}+c_{j} \\equiv 0(\\bmod 2013)\\) for each \\(i, j\\), so we're done.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

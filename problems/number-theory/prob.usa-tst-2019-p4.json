@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tst-2019-p4",
+  "title": "USA TST 2019 Problem 4",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TST",
+    "year": 2019,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 84.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "We say a function \\(f \\colon \\mathbb{Z}_{\\ge 0} \\times \\mathbb{Z}_{\\ge 0} \\to \\mathbb{Z}\\)\nis great if for any nonnegative integers \\(m\\) and \\(n\\),\n\\[ f(m+1, n+1) f(m,n) - f(m+1,n) f(m,n+1) = 1. \\]\nIf \\(A = (a_0, a_1, \\dots)\\) and \\(B = (b_0, b_1, \\dots)\\)\nare two sequences of integers,\nwe write \\(A \\sim B\\) if there exists a great function \\(f\\)\nsatisfying \\(f(n,0) = a_n\\) and \\(f(0,n) = b_n\\)\nfor every nonnegative integer \\(n\\) (in particular, \\(a_0=b_0\\)).\n\nProve that if \\(A\\), \\(B\\), \\(C\\), and \\(D\\) are four sequences of integers\nsatisfying \\(A \\sim B\\), \\(B \\sim C\\), and \\(C \\sim D\\), then \\(D \\sim A\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tst-2019-p4.evanchen",
+      "kind": "proof-sketch",
+      "text": "We present two solutions.\nIn what follows, we say \\((A, B)\\) form a great pair if \\(A \\sim B\\).\n\nFirst solution (Nikolai Beluhov)..\nLet \\(k = a_0 = b_0 = c_0 = d_0\\).\nWe let \\(f\\), \\(g\\), \\(h\\) be great functions for \\((A,B)\\), \\((B,C)\\), \\((C,D)\\)\nand write the following infinite array:\n\\[\n \\begin{bmatrix}\n & \\vdots & \\vdots & { b_3} & \\vdots & \\vdots & \\\\[5pt]\n \\dotsb & g(2,2) & g(2,1) & {b_2} & f(1,2) & f(2,2) & \\dotsb \\\\[5pt]\n \\dotsb & g(1,2) & g(1,1) & {b_1} & f(1,1) & f(2,1) & \\dotsb \\\\[5pt]\n {c_3} & {c_2} & {c_1} &\n {k} &\n {a_1} & {a_2} & {a_3} \\\\[5pt]\n \\dotsb & h(2,1) & h(1,1) & {d_1} & & & \\\\[5pt]\n \\dotsb & h(2,2) & h(1,2) & {d_2} & & & \\\\[5pt]\n & \\vdots & \\vdots & {d_3} & & & \\ddots \\\\[5pt]\n \\end{bmatrix}\n\\]\nThe greatness condition is then equivalent to saying\nthat any \\(2 \\times 2\\) sub-grid has determinant \\(\\pm1\\)\n(the sign is \\(+1\\) in two quadrants and \\(-1\\) in the other two),\nand we wish to fill in the lower-right quadrant.\nTo this end, it suffices to prove the following.\n\nLemma.\n Suppose we have a \\(3 \\times 3\\) sub-grid\n \\[\n \\begin{bmatrix}\n a & b & c \\\\\n x & y & z \\\\\n p & q &\n \\end{bmatrix}\n \\]\n satisfying the determinant conditions.\n Then we can fill in the ninth entry in the lower right\n with an integer while retaining greatness.\n\nProof.\n We consider only the case where the \\(3 \\times 3\\)\n is completely contained inside the bottom-right quadrant,\n since the other cases are exactly the same\n (or even by flipping the signs of the top row\n or left column appropriately).\n\n If \\(y = 0\\) we have \\(-1 = bz = bx = xq\\), hence \\(qz = -1\\),\n and we can fill in the entry arbitrarily.\n\n Otherwise, we have \\(bx \\equiv xq \\equiv bz \\equiv -1 \\pmod{y}\\).\n This is enough to imply \\(qz \\equiv -1 \\pmod y\\),\n and so we can fill in the integer \\(\\frac{qz+1}{y}\\).\n\nRemark.\n In this case (of all \\(+1\\) determinants),\n I think it turns out the bottom entry is\n exactly equal to \\(qza - cyp - c - p\\),\n which is obviously an integer.\n\nSecond solution (Ankan Bhattacharya)..\nWe will give an explicit classification of great sequences:\n\nLemma.\n The pair \\((A,B)\\) is great if and only if\n \\(a_0 = b_0\\), \\(a_0 \\mid a_1b_1 + 1\\), and\n \\(a_n \\mid a_{n-1} + a_{n+1}\\) and \\(b_n \\mid b_{n-1} + b_{n+1}\\) for all \\(n\\).\n\nProof.\n It is clear that \\(a_0 = b_0\\).\n Then \\(a_0f(1, 1) - a_1b_1 = 1\\), i.e. \\(a_0 \\mid a_1b_1 + 1\\).\n\n Now, focus on six entries \\(f(x, y)\\)\n with \\(x \\in \\{n-1, n, n+1\\}\\) and \\(y \\in \\{0, 1\\}\\).\n Let \\(f(n-1, 1) = u\\), \\(f(n, 1) = v\\), and \\(f(n+1, 1) = w\\), so\n \\[\\begin{aligned}\n v a_{n-1} - u a_n & = 1,\\\\\n w a_n - v a_{n+1} & = 1.\n \\end{aligned}\\]\n Then\n \\[u + w = \\frac{v(a_{n-1} + a_{n+1})}{a_n}\\]\n and from above \\(\\gcd(v, a_n) = 1\\),\n so \\(a_n \\mid a_{n-1} + a_{n+1}\\);\n similarly for \\(b_n\\).\n (If \\(a_n = 0\\),\n we have \\(va_{n-1} = 1\\) and \\(va_{n+1} = -1\\),\n so this is OK.)\n\nProof.\n Now consider two sequences \\(a_0, a_1, \\dots\\)\n and \\(b_0, b_1, \\dots\\) satisfying our criteria.\n We build a great function \\(f\\) by induction on \\((x, y)\\).\n More strongly, we will assume as part of the inductive hypothesis\n that any two adjacent entries of \\(f\\) are relatively prime\n and that for any three consecutive entries horizontally or vertically,\n the middle one divides the sum of the other two.\n\n First we set \\(f(1, 1)\\) so that \\(a_0 f(1, 1) = a_1 b_1 + 1\\),\n which is possible.\n\n Consider an uninitialized \\(f(s, t)\\);\n without loss of generality suppose \\(s \\ge 2\\).\n Then we know five values of \\(f\\)\n and wish to set a sixth one \\(z\\),\n as in the matrix below:\n \\[\n \\begin{matrix}\n u & x\\\\\n v & y\\\\\n w & { z} \\\\\n \\end{matrix}\n \\]\n (We imagine \\(a\\)-indices to increase southwards and \\(b\\)-indices to increase eastwards.)\n If \\(v \\neq 0\\),\n then the choice \\(y \\cdot \\frac{u + w}{v} - x\\) works\n as \\(uy - vx = 1\\).\n If \\(v = 0\\),\n it easily follows that \\(\\{u, w\\} = \\{1, -1\\}\\)\n and \\(y = w\\) as \\(yw = 1\\).\n Then we set the uninitialized entry to anything.\n\n Now we verify that this is compatible with the inductive hypothesis.\n From the determinant 1 condition,\n it easily follows that \\(\\gcd(w, z) = \\gcd(v, z) = 1\\).\n The proof that \\(y \\mid x + z\\)\n is almost identical to a step performed in the ``necessary'' part\n of the lemma and we do not repeat it here.\n By induction, a desired great function \\(f\\) exists.\n\nWe complete the solution.\nLet \\(A\\), \\(B\\), \\(C\\), and \\(D\\) be integer sequences\nfor which \\((A, B)\\), \\((B, C)\\), and \\((C, D)\\) are great.\nThen \\(a_0 = b_0 = c_0 = d_0\\),\nand each term in each sequence (after the zeroth term)\ndivides the sum of its neighbors.\nSince \\(a_0\\) divides all three of \\(a_1b_1 + 1\\), \\(b_1c_1 + 1\\), and \\(c_1d_1 + 1\\),\nit follows \\(a_0\\) divides \\(d_1a_1 + 1\\),\nand thus \\((D, A)\\) is great as desired.\n\nRemark.\n To simplify the problem, we may restrict the codomain of great functions\n and elements in great pairs of sequences to \\(\\mathbb{Z}_{> 0}\\).\n This allows the parts of the solution dealing with zero entries to be ignored.\n\nRemark.\n Of course, this solution also shows that any odd path\n (in the graph induced by the great relation on sequences)\n completes to an even cycle.\n If we stipulate that great functions must have \\(f(0, 0) = \\pm 1\\),\n then even paths complete to cycles as well.\n Alternatively, we could change the great functional equation to\n \\[f(x + 1, y + 1) f(x, y) - f(x + 1, y) f(x, y + 1) = -1.\\]\n\n A quick counterexample to transitivity of \\(\\sim\\) as is\n without the condition \\(f(0,0)=1\\), for concreteness:\n let \\(a_n = c_n = 3+n\\) and \\(b_n = 3+2n\\) for \\(n \\ge 0\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

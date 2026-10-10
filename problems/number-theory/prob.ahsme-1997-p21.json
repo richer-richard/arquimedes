@@ -1,0 +1,71 @@
+{
+  "id": "prob.ahsme-1997-p21",
+  "title": "1997 AHSME Problem 21",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1997,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 32.6,
+    "source": 1860,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "For any positive integer \\(n,\\) let \\[ f(n)= \\begin{cases} \\log_8n, & \\log_8n\\in\\mathbb{Q},\\\\ 0, & \\log_8n\\notin\\mathbb{Q}. \\end{cases} \\] What is \\(\\displaystyle\\sum_{n=1}^{1997}f(n)?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\log_8 2047\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\frac{55}{3}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\frac{58}{3}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(585\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "55/3"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1997-p21.live",
+      "kind": "proof-sketch",
+      "text": "For integer \\(n,\\) \\(\\log_8n\\) is rational exactly when \\(n\\) is a power of \\(2.\\) The relevant values are \\(n=2^k\\) for \\(0\\le k\\le10,\\) and \\(f(2^k)=\\frac{k}{3}.\\) Therefore the sum is \\(\\frac{0+1+\\cdots+10}{3}=\\frac{55}{3},\\) so C is correct.",
+      "hints": [
+        "Determine which integers can be rational powers of \\(8=2^3\\)",
+        "List the powers of \\(2\\) not exceeding \\(1997\\) and sum their base-\\(8\\) logarithms"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

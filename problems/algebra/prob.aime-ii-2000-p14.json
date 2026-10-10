@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2000-p14",
+  "title": "2000 AIME II Problem 14",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factorial",
+      "label": "Factorial",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.telescoping",
+      "label": "Telescoping",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2000,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 63.3,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 20,
+  "statement": "Every positive integer \\(k\\) has a unique factorial base expansion \\((f_1, f_2, f_3, \\ldots, f_m),\\) meaning that \\(k = 1! \\cdot f_1 + 2! \\cdot f_2\\) \\(+ 3! \\cdot f_3 + \\cdots + m! \\cdot f_m,\\) where each \\(f_i\\) is an integer, \\(0 \\le f_i \\le i,\\) and \\(0 \\lt f_m.\\) Given that \\((f_1, f_2, f_3, \\ldots, f_j)\\) is the factorial base expansion of \\[ \\begin{aligned} &16! - 32! + 48! \\\\ &\\quad {}- 64! + \\cdots + 1968! \\\\ &\\quad {}- 1984! + 2000!, \\end{aligned} \\] find the value of \\(f_1 - f_2 + f_3\\) \\(- f_4 + \\cdots + (-1)^{j+1} f_j.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "495",
+    "value": "495"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2000-p14.live",
+      "kind": "proof-sketch",
+      "text": "Since \\((i+1)! - i! = i \\cdot i!,\\) telescoping gives \\(a! - b! = \\sum_{i=b}^{a-1} i \\cdot i!\\) for \\(a \\gt b.\\) Group the given number as \\[ \\begin{aligned} &16! + (48! - 32!) + (80! - 64!) \\\\ &\\quad {}+ \\cdots + (2000! - 1984!), \\end{aligned} \\] with \\(62\\) parenthesized groups \\((32j + 16)! - (32j)!\\) for \\(j = 1, \\ldots, 62.\\)\n\nThe group for \\(j\\) contributes factorial-base digits \\(f_i = i\\) for \\(32j \\le i \\le 32j + 15,\\) and the lone \\(16!\\) contributes \\(f_{16} = 1;\\) all other digits are \\(0.\\) Every digit satisfies \\(0 \\le f_i \\le i,\\) so by uniqueness this is the factorial base expansion.\n\nIn the alternating sum, \\(f_{16} = 1\\) sits at an even index and contributes \\(-1.\\) Each group’s range starts at an even index and has length \\(16,\\) so it splits into \\(8\\) consecutive pairs, each contributing \\(-i + (i + 1) = 1,\\) for \\(+8\\) per group. The total is \\(62 \\cdot 8 - 1 = 495.\\)",
+      "hints": [
+        "Group the number as \\(16! + (48! - 32!) + (80! - 64!)\\) \\(+ \\cdots + (2000! - 1984!)\\)",
+        "Telescoping \\((i+1)! - i! = i \\cdot i!\\) gives \\(a! - b! = \\sum_{i=b}^{a-1} i \\cdot i!,\\) so each group fills in digits \\(f_i = i\\) on its whole range"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

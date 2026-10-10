@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-team-2004-p7",
+  "title": "2004 HMMT February Team Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2004,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 83.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Prove that the number of switch pairs in row \\(n\\) is at most twice the number of switch pairs in row \\(n-1\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2004-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "If we go sufficiently far to the left or right in row \\(n\\), we get to zeroes. Therefore, row \\(n\\) consists of a finite number of \"odd blocks\" of the form\n\n\\[E O O O \\cdots O E\\]\n\n(where \\(E\\) represents an even number and \\(O\\) an odd number), which are separated by even numbers, except that one even number may simultaneously be an endpoint of two odd blocks. Each odd block contributes two switch pairs to row \\(n\\), so it is enough to show that each odd block has a switch pair somewhere above it in row \\(n-1\\). But the odd block consists of at least one \\(O\\) between two \\(E\\) 's, making for at least three terms. If there were no switch pairs above the block, then in particular, the first three terms immediately above it would be all odd or all even, and then the second term in our block would have to be even, contradicting the assumption that it was \\(O\\). This proves the result.\n\n## Written In The Stars\n\nSuppose \\(S\\) is a finite set with a binary operation \\(\\star\\) - that is, for any elements \\(a, b\\) of \\(S\\), there is defined an element \\(a \\star b\\) of \\(S\\). It is given that \\((a \\star b) \\star(a \\star b)=b \\star a\\) for all \\(a, b \\in S\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

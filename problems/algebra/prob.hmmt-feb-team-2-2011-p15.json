@@ -1,0 +1,56 @@
+{
+  "id": "prob.hmmt-feb-team-2-2011-p15",
+  "title": "2011 HMMT February Team Round 2 Problem 15",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.pigeonhole-principle",
+      "label": "Pigeonhole principle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 81.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "On Facebook, there is a group of people that satisfies the following two properties: (i) there exists a positive integers \\(k\\) such that any subset of \\(2 k-1\\) people in the group contains a subset of \\(k\\) people in the group who are all friends with each other, and (ii) every member of the group has 2011 friends or fewer.\n(a) [15] If \\(k=2\\), determine, with proof, the maximum number of people the group may contain.\n(b) [25] If \\(k=776\\), determine, with proof, the maximum number of people the group may contain.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2-2011-p15.hmmt",
+      "kind": "proof-sketch",
+      "text": "(a) Answer: 4024 If \\(k=2\\), then among any three people at least two of them are friends. Clearly if we have 4024 people divided into two sets of 2012 such that everyone is friends with everyone in their set but no one in the other set, then any triple of three people will contain two people from the same set, who will automatically be friends. Therefore, the group may contain 4024 people. We now prove that 4024 is the maximum. Given any set with at least 4025 people, consider any two people who are not friends. Between them them have at most 4022 friends, so by the pigeonhole principle there exists someone who is not friends with either one. Therefore, there exists a triple of three people who are all not friends with each other, so the group may not contain 4025 people or more, so 4024 is the maximum, as we claimed.\n(b) Answer: 4024 The answer remains the same. Considering the construction identical to that in the above solution, we see that the group may still contain 4024 people and satisfy the desired criterion.\nWe now prove that 4024 is the maximum. Consider a group with at least 4025 people. From the previous part, we know there exist three people who are not friends. Pick such a threesome and call them \\(X, Y\\), and \\(Z\\). We now consider the rest of the people and successively pick pairs of persons \\(A_{i}, B_{i}\\) for \\(1 \\leq i \\leq 774\\) as follows: Once we have picked \\(A_{i}, B_{i}\\), of the remaining \\(4019-2 i\\) people, we find two who are not friends, which is always possible since \\(4019-2 i>2013\\), and we name one of those people \\(A_{i+1}\\) and the other \\(B_{i+1}\\). Once we have done this, consider the set containing \\(X, Y\\), and \\(Z\\) as well as \\(A_{i}\\) and \\(B_{i}\\) for all \\(1 \\leq i \\leq 774\\). This is a set of \\(2 k-1=1551\\) people. Any subset where everyone is friends with each other can contain at most 1 of \\(A_{i}, B_{i}\\) for all \\(i\\), and at most 1 of \\(X, Y\\), and \\(Z\\), meaning that any such subset may contain at most 775 people. Hence there exists a subset containing 1551 people that does not have 776 people who are all friends. Thus, the group may not contain 4025 people or more, so the answer is still 4024, as desired.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

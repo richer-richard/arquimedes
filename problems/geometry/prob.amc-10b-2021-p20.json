@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2021-p20",
+  "title": "2021 AMC 10B Problem 20",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-decomposition",
+      "label": "Area decomposition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.special-right-triangle",
+      "label": "Special right triangle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2021,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 34.9,
+    "source": 1950,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The figure below is constructed from \\(11\\) line segments, each of which has length \\(2.\\) The area of pentagon \\(ABCDE\\) can be written as \\(\\sqrt{m} + \\sqrt{n},\\) where \\(m\\) and \\(n\\) are positive integers. What is \\(m + n ?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 20 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 21 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 22 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 23 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 24 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "23"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2021-p20.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(F\\) be the unlabeled point joined to \\(A,B,\\) and \\(C.\\) Because all the drawn segments have length \\(2,\\) triangles \\(ABF\\) and \\(CBF\\) are equilateral and lie on opposite sides of \\(BF.\\) Hence \\(\\angle ABC=120^\\circ,\\) so\n\n\\[[ABC]=\\frac12\\cdot2\\cdot2\\sin120^\\circ=\\sqrt3.\\]\n\nThe same reasoning on the other side gives \\([ADE]=\\sqrt3.\\) Also, the Law of Cosines in \\(\\triangle ABC\\) gives \\(AC^2=12,\\) and similarly \\(AD^2=12.\\) Thus the altitude of isosceles triangle \\(ACD\\) to its base \\(CD=2\\) is\n\n\\[\\sqrt{(\\sqrt{12})^2-1^2}=\\sqrt{11}.\\]\n\nTherefore \\([ACD]=\\frac12\\cdot2\\cdot\\sqrt{11}=\\sqrt{11}.\\) The pentagon’s total area is\n\n\\[\\sqrt{12}+\\sqrt{11},\\]\n\nso \\(m+n=12+11=23.\\)\n\nThus, the answer is D .",
+      "hints": [
+        "Use the equal length segments to identify equilateral-triangle altitudes",
+        "Split the pentagon into two side pieces and the central isosceles triangle"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "58da413e6f50a6873acb9fd113839945e5545962bd3f86e0343645ff663e93e8"
+    ],
+    "solutions": []
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-12a-2016-p24",
+  "title": "2016 AMC 12A Problem 24",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.am-gm-inequality",
+      "label": "AM-GM Inequality",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2016,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 38.6,
+    "source": 2380,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "There is a smallest positive real number \\(a\\) such that there exists a positive real number \\(b\\) such that all the roots of the polynomial \\(x^3-ax^2+bx-a\\) are real. In fact, for this value of \\(a\\) the value of \\(b\\) is unique. What is this value of \\(b?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(12\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "9"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2016-p24.live",
+      "kind": "proof-sketch",
+      "text": "By Vieta’s formulas, the real roots \\(r,s,t\\) satisfy \\(r+s+t=a,\\) \\(rs+st+tr=b,\\) and \\(rst=a,\\) so \\(r+s+t=rst.\\)\n\nThe positive product means either all three roots are positive or two are negative. In the latter case write the roots as \\(-u,-v,w\\) with \\(u,v,w\\gt0.\\) The positive sum forces \\(w\\gt u+v,\\) and then \\(b=uv-w(u+v)\\lt0,\\) a contradiction. Hence all three roots are positive.\n\nBy the AM-GM inequality, \\(27rst\\le(r+s+t)^3=(rst)^3,\\) so \\(a=rst\\ge 3\\sqrt3,\\) with equality if and only if \\(r=s=t=\\sqrt3.\\) At this smallest \\(a,\\) \\[ \\begin{gathered} b=rs+st+tr\\\\ =3r^2=3\\cdot 3=9. \\end{gathered} \\]\n\nThus, the correct answer is B.",
+      "hints": [
+        "If the roots are \\(r,s,t,\\) then \\(r+s+t=a\\) and \\(rst=a\\)",
+        "Apply AM-GM to \\(r,s,t;\\) the minimum \\(a\\) forces \\(r=s=t\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

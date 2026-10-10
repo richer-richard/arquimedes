@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2021-p11",
+  "title": "2021 AMC 10A Problem 11",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2021,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 18.3,
+    "source": 1020,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "For which of the following integers \\(b\\) is the base-\\(b\\) number \\(2021_b - 221_b\\) not divisible by \\(3?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(8\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2021-p11.live",
+      "kind": "proof-sketch",
+      "text": "We can express this expression in base \\(10\\) using the definition of bases: \\[ 2b^3 + 2b + 1 - 2b^2 - 2b - 1 \\]\\[= 2b^3 - 2b^2 = 2b^2(b - 1). \\]\n\nFor this to be divisible by \\(3,\\) either \\(b\\) or \\(b - 1\\) must be divisible by \\(3.\\)\n\nThe only answer choice that satisfies neither of these conditions is \\(8.\\)\n\nThus, E is the correct answer.",
+      "hints": [
+        "Convert \\(2021_b-221_b\\) to base \\(10\\)",
+        "Check when \\(2b^2(b-1)\\) is divisible by \\(3\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "prob.aime-ii-2007-p14",
+  "title": "2007 AIME II Problem 14",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.functional-equation",
+      "label": "Functional equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2007,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 63.3,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 20,
+  "statement": "Let \\(f(x)\\) be a polynomial with real coefficients such that \\(f(0) = 1,\\) \\(f(2) + f(3) = 125,\\) and for all \\(x,\\) \\(f(x)f(2x^2) = f(2x^3 + x).\\) Find \\(f(5).\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "676",
+    "value": "676"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2007-p14.live",
+      "kind": "proof-sketch",
+      "text": "The given values rule out a constant polynomial. If \\(f\\) has degree \\(m\\) and leading coefficient \\(a,\\) the leading coefficients of the two sides of \\(f(x)f(2x^2) = f(2x^3 + x)\\) are \\(a^2 2^m\\) and \\(a 2^m,\\) so \\(a = 1.\\) The equation also shows that whenever \\(\\lambda\\) is a root, \\(2\\lambda^3 + \\lambda\\) is a root as well.\n\nIf some root had \\(|\\lambda| \\gt 1,\\) then \\(|2\\lambda^3 + \\lambda| \\ge 2|\\lambda|^3 - |\\lambda| \\gt |\\lambda|,\\) and iterating would produce infinitely many distinct roots — impossible. Since \\(f\\) is monic with \\(f(0) = 1,\\) the product of the roots has modulus \\(1,\\) so no root can have modulus less than \\(1\\) either: every root satisfies \\(|\\lambda| = 1.\\) Then \\(2\\lambda^3 + \\lambda\\) must also have modulus \\(1,\\) so \\(|2\\lambda^2 + 1| = 1.\\) Writing \\(\\lambda^2 = \\cos\\theta + i\\sin\\theta,\\) we get \\((2\\cos\\theta + 1)^2 + 4\\sin^2\\theta = 1,\\) which simplifies to \\(\\cos\\theta = -1,\\) so \\(\\lambda^2 = -1.\\)\n\nThus every root is \\(\\pm i,\\) and real coefficients pair them up: \\(f(x) = (x^2 + 1)^n.\\) The condition \\(f(2) + f(3) = 5^n + 10^n = 125\\) gives \\(n = 2,\\) so \\(f(5) = 26^2 = 676.\\)",
+      "hints": [
+        "If \\(\\lambda\\) is a root, so is \\(2\\lambda^3 + \\lambda;\\) compare leading coefficients to see \\(f\\) is monic",
+        "No root can have \\(|\\lambda| \\ne 1\\) (moduli would grow forever, or the root product couldn’t be \\(\\pm 1\\)); then \\(|2\\lambda^2 + 1| = 1\\) forces \\(\\lambda^2 = -1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

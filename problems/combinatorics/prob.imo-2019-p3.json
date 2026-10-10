@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2019-p3",
+  "title": "2019 IMO Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2019,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 111.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A social network has \\(2019\\) users, some pairs of which are friends (friendship is symmetric).\nIf \\(A\\), \\(B\\), \\(C\\) are three users such that \\(AB\\) are friends and \\(AC\\) are friends but \\(BC\\) is not,\nthen the administrator may perform the following operation:\nchange the friendships such that \\(BC\\) are friends, but \\(AB\\) and \\(AC\\) are no longer friends.\n\nInitially, \\(1009\\) users have \\(1010\\) friends and \\(1010\\) users have \\(1009\\) friends.\nProve that the administrator can make a sequence of operations\nsuch that all users have at most \\(1\\) friend.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2019-p3.evanchen",
+      "kind": "proof-sketch",
+      "text": "We take the obvious graph formulation\nand call the move a toggle.\n\nClaim.\n Let \\(G\\) be a connected graph.\n Then one can toggle \\(G\\) without disconnecting the graph,\n unless \\(G\\) is a clique, a cycle, or a tree.\n\nProof.\n Assume \\(G\\) is connected and not a tree, so it has a cycle.\n Take the smallest cycle \\(C\\); by hypothesis \\(C \\neq G\\).\n\n If \\(C\\) is not a triangle (equivalently, \\(G\\) is triangle-free),\n then let \\(b \\notin C\\) be a vertex adjacent to \\(C\\), say at \\(a\\).\n Take a vertex \\(c\\) of the cycle adjacent to \\(a\\) (hence not to \\(b\\)).\n Then we can toggle \\(abc\\).\n\n Now assume there exists a triangle; let \\(K\\) be the maximal clique.\n By hypothesis, \\(K \\neq G\\).\n We take an edge \\(e = ab\\) dangling off the clique,\n with \\(a \\in K\\) and \\(b \\notin K\\).\n Note some vertex \\(c\\) of \\(K\\) is not adjacent to \\(b\\); now toggle \\(abc\\).\n\nBack to the original problem;\nlet \\(G_{\\text{imo}}\\) be the given graph.\nThe point is that we can apply toggles (by the claim) repeatedly,\nwithout disconnecting the graph, until we get a tree.\nThis is because\n\n• \\(G_{\\text{imo}}\\) is connected,\n since any two vertices which are not adjacent\n have a common neighbor by pigeonhole\n (\\(1009 + 1009 + 2 > 2019\\)).\n\n• \\(G_{\\text{imo}}\\) cannot become a cycle,\n because it initially has an odd-degree vertex,\n and toggles preserve parity of degree!\n\n• \\(G_{\\text{imo}}\\) is obviously not a clique initially\n (and hence not afterwards).\n\nSo, we can eventually get \\(G_{\\text{imo}}\\) to be a tree.\n\nOnce \\(G_{\\text{imo}}\\) is a tree the problem follows by repeatedly applying\ntoggles arbitrarily until no more are possible;\nthe graph (although now disconnected) remains acyclic\n(in particular having no triangles)\nand therefore can only terminate in the desired situation.\n\nRemark.\n The above proof in fact shows the following better result:\n\n The task is possible if and only if\n \\(G_{\\text{imo}}\\) is a connected graph which is not a clique\n and has any vertex of odd degree.\n\n The ``only if'' follows from the observation\n that toggles preserve parity of degree.\n\n Thus the given condition about the degrees of vertices\n being \\(1009\\) and \\(1010\\) is largely a red herring;\n it's a somewhat strange way of masking the correct and more natural\n both-sufficient-and-necessary condition.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

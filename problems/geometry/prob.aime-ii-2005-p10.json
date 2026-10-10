@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-ii-2005-p10",
+  "title": "2005 AIME II Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.volume",
+      "label": "Volume",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2005,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 47.7,
+    "source": 2450,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "Given that \\(\\mathcal{O}\\) is a regular octahedron, that \\(\\mathcal{C}\\) is the cube whose vertices are the centers of the faces of \\(\\mathcal{O},\\) and that the ratio of the volume of \\(\\mathcal{O}\\) to that of \\(\\mathcal{C}\\) is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers, find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "11",
+    "value": "11"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2005-p10.live",
+      "kind": "proof-sketch",
+      "text": "Place the octahedron’s vertices at \\((\\pm 1, 0, 0),\\) \\((0, \\pm 1, 0),\\) \\((0, 0, \\pm 1).\\) It is two square pyramids glued along the square with vertices \\((\\pm 1, 0, 0)\\) and \\((0, \\pm 1, 0),\\) which has area \\(2,\\) and each pyramid has height \\(1,\\) so \\[V_{\\mathcal{O}} = 2 \\cdot \\frac{1}{3} \\cdot 2 \\cdot 1 = \\frac{4}{3}.\\]\n\nEach face centroid is the average of that face’s three vertices, e.g. \\(\\left(\\frac{1}{3}, \\frac{1}{3}, \\frac{1}{3}\\right),\\) so the cube has vertices \\(\\left(\\pm\\frac{1}{3}, \\pm\\frac{1}{3}, \\pm\\frac{1}{3}\\right).\\) Its edge is \\(\\frac{2}{3}\\) and its volume is \\(\\frac{8}{27}.\\)\n\nThe ratio is \\(\\frac{\\frac{4}{3}}{\\frac{8}{27}} = \\frac{9}{2},\\) so \\(m + n = 9 + 2 = 11.\\)",
+      "hints": [
+        "Place the octahedron’s vertices at \\((\\pm 1, 0, 0),\\) \\((0, \\pm 1, 0),\\) \\((0, 0, \\pm 1)\\) and view it as two square pyramids",
+        "Each face centroid is the average of its three vertices, so the cube’s vertices are \\(\\left(\\pm\\frac{1}{3}, \\pm\\frac{1}{3}, \\pm\\frac{1}{3}\\right)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

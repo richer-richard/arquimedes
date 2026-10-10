@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2008-p24",
+  "title": "2008 AMC 12B Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2008,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 37.5,
+    "source": 2270,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Let \\(A_0 = (0, 0).\\) Distinct points \\(A_1,\\) \\(A_2,\\) \\(\\ldots\\) lie on the \\(x\\)-axis, and distinct points \\(B_1,\\) \\(B_2,\\) \\(\\ldots\\) lie on the graph of \\(y = \\sqrt{x}.\\) For every positive integer \\(n,\\) \\(A_{n-1}B_nA_n\\) is an equilateral triangle. What is the least \\(n\\) for which the length \\(A_0A_n \\ge 100?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(19\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(21\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "17"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2008-p24.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(a_n = A_0A_n\\) and \\(c_n = a_n - a_{n-1}\\) be the base of the \\(n\\)th equilateral triangle. Its apex \\(B_n\\) lies above the midpoint at height \\(\\tfrac{\\sqrt3}{2}c_n,\\) and being on \\(y = \\sqrt{x}\\) gives \\[ \\left(\\tfrac{\\sqrt3}{2}c_n\\right)^2 = a_{n-1} + \\tfrac{c_n}{2}, \\] i.e. \\[ \\tfrac34 c_n^2 = a_{n-1} + \\tfrac{c_n}{2}. \\]\n\nWriting the same relation for the previous triangle and subtracting gives \\(c_n = c_{n-1} + \\tfrac23,\\) and with \\(c_1 = \\tfrac23\\) we get \\(c_n = \\tfrac{2n}{3}.\\) Summing, \\[ a_n = \\sum_{k=1}^n \\frac{2k}{3} = \\frac{n(n + 1)}{3}. \\]\n\nWe need \\(\\tfrac{n(n + 1)}{3} \\ge 100,\\) i.e. \\(n(n + 1) \\ge 300.\\) Since \\(16 \\cdot 17 = 272\\) and \\(17 \\cdot 18 = 306,\\) the least such \\(n\\) is \\(17.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "If \\(c_n = A_{n-1}A_n,\\) the apex \\(B_n\\) sits at height \\(\\tfrac{\\sqrt3}{2}c_n\\) above the midpoint; lying on \\(y = \\sqrt{x}\\) gives \\(\\tfrac34 c_n^2 = a_{n-1} + \\tfrac{c_n}{2}\\)",
+        "Subtracting consecutive relations yields \\(c_n = c_{n-1} + \\tfrac23,\\) so \\(c_n = \\tfrac{2n}{3}\\) and \\(A_0A_n = \\tfrac{n(n+1)}{3}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

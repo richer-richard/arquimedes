@@ -1,0 +1,56 @@
+{
+  "id": "prob.hmmt-feb-guts-2022-p36",
+  "title": "2022 HMMT February Guts Problem 36",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vieta-s-formulas",
+      "label": "Vieta's formulas",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2022,
+    "number": 36
+  },
+  "difficulty": {
+    "course": 82.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For a cubic polynomial \\(P(x)\\) with complex roots \\(z_{1}, z_{2}, z_{3}\\), let\n\n\\[M(P)=\\frac{\\max \\left(\\left|z_{1}-z_{2}\\right|,\\left|z_{1}-z_{3}\\right|,\\left|z_{2}-z_{3}\\right|\\right)}{\\min \\left(\\left|z_{1}-z_{2}\\right|,\\left|z_{1}-z_{3}\\right|,\\left|z_{2}-z_{3}\\right|\\right)}\\]\n\nOver all polynomials \\(P(x)=x^{3}+a x^{2}+b x+c\\), where \\(a, b, c\\) are nonnegative integers at most 100 and \\(P(x)\\) has no repeated roots, the twentieth largest possible value of \\(M(P)\\) is \\(m\\). Estimate \\(A=\\lfloor m\\rfloor\\). An estimate of \\(E\\) earns \\(\\max \\left(0,\\left\\lfloor 20-20|3 \\ln (A / E)|^{1 / 2}\\right\\rfloor\\right)\\) points.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "8097",
+    "value": "8097"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2022-p36.hmmt",
+      "kind": "proof-sketch",
+      "text": "Consider fixing \\(a\\) and \\(b\\). Then, we know that \\(P^{\\prime}(x)=3 x^{2}+2 a x+b\\), which has a root at approximately \\(r \\approx-b / 2 a\\), which is rather small compared to 100 . Then \\(P(r) \\approx-b^{2} / 4 a\\). Assuming that this is greater than about -100 , then the value of \\(c\\) that produces the roots that are closest together is the closest integer to \\(-P(r)\\) (the chance when this creates a double root is pretty rare. Let \\(-P(r)=c+s\\), so that we can now assume that \\(s\\) is uniformly distributed in \\((-1 / 2,1 / 2)\\). One can\nshow that the difference between these roots is about \\(2 \\sqrt{|s| / a}\\). Since these roots are rather small, by Vieta's formulas the other root is near \\(-a\\), so \\(M(P)\\) is about \\(\\frac{1}{2} \\sqrt{a^{3} /|s|}\\).\nIt's clear from this discussion that \\(a\\) needs to be reasonably large for \\(M(P)\\) to be large. Thus the condition \\(P(r)>-100\\) is satisfied close to all the time - we will henceforth ignore it.\nSet some \\(L\\) and let's consider the expected number of \\(P\\) so that \\(M(P)>L\\). Then, for a given \\(a, b\\), we need \\(|s|<a^{3} /(2 L)^{2}\\). Summing over all \\(a\\) and \\(b\\), we find the probability is \\(2 \\cdot 100 \\cdot 100^{4} / 4 \\cdot 1 /(2 L)^{2}\\). Setting this equal to 20 gives us\n\n\\[L^{2}=\\frac{10^{10}}{160} \\Longrightarrow L \\approx 7900\\]\n\nThis is good enough for 14 points.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

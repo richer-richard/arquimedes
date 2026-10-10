@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-feb-geometry-2020-p10",
+  "title": "2020 HMMT February Geometry Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity-and-scaling",
+      "label": "Similarity and scaling",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2020,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 94.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\Gamma\\) be a circle of radius 1 centered at \\(O\\). A circle \\(\\Omega\\) is said to be friendly if there exist distinct circles \\(\\omega_{1}, \\omega_{2}, \\ldots, \\omega_{2020}\\), such that for all \\(1 \\leq i \\leq 2020, \\omega_{i}\\) is tangent to \\(\\Gamma, \\Omega\\), and \\(\\omega_{i+1}\\). (Here, \\(\\omega_{2021}=\\omega_{1}\\).) For each point \\(P\\) in the plane, let \\(f(P)\\) denote the sum of the areas of all friendly circles centered at \\(P\\). If \\(A\\) and \\(B\\) are points such that \\(O A=\\frac{1}{2}\\) and \\(O B=\\frac{1}{3}\\), determine \\(f(A)-f(B)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{1000}{9} \\pi",
+    "value": "\\frac{1000}{9} \\pi"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2020-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(P\\) satisfy \\(O P=x\\). (For now, we focus on \\(f(P)\\) and ignore the \\(A\\) and \\(B\\) from the problem statement.) The key idea is that if we invert at some point along \\(O P\\) such that the images of \\(\\Gamma\\) and \\(\\Omega\\) are concentric, then \\(\\omega_{i}\\) still exist. Suppose that this inversion fixes \\(\\Gamma\\) and takes \\(\\Omega\\) to \\(\\Omega^{\\prime}\\) of radius \\(r\\) (and \\(X\\) to \\(X^{\\prime}\\) in general). If the inversion is centered at a point \\(Q\\) along ray \\(O P\\) such that \\(O Q=d\\), then the radius of inversion is \\(\\sqrt{d^{2}-1}\\). Let the diameter of \\(\\Omega\\) meet \\(O Q\\) at \\(A\\) and \\(B\\) with \\(A\\) closer to \\(Q\\) than \\(B\\). Then, \\(\\left(A B ; P P_{\\infty}\\right)=-1\\) inverts to \\(\\left(A^{\\prime} B^{\\prime} ; P^{\\prime} Q\\right)=-1\\), where \\(P_{\\infty}\\) is the point at infinity along line \\(O P\\), so \\(P^{\\prime}\\) is the inverse of \\(Q\\) in \\(\\Omega^{\\prime}\\). We can compute \\(O P^{\\prime}=\\frac{r^{2}}{d}\\) so \\(P^{\\prime} Q=d-\\frac{r^{2}}{d}\\) and \\(P Q=\\frac{d^{2}-1}{d-\\frac{r^{2}}{d}}\\). Thus, we get the equation \\(\\frac{d^{2}-1}{d-\\frac{r^{2}}{d}}+x=d\\), which rearranges to \\(\\frac{1-r^{2}}{d^{2}-r^{2}} d=x\\), or \\(d^{2}-x^{-1}\\left(1-r^{2}\\right) d-r^{2}=0\\). Now, we note that the radius of \\(\\Omega\\) is\n\n\\[\\frac{1}{2} A B=\\frac{1}{2}\\left(\\frac{d^{2}-1}{d-r}-\\frac{d^{2}-1}{d+r}\\right)=\\frac{r\\left(d^{2}-1\\right)}{d^{2}-r^{2}}=r\\left(1+\\frac{r^{2}-1}{d^{2}-r^{2}}\\right)=r\\left(1-\\frac{x}{d}\\right)\\]\n\nThe quadratic formula gives us that \\(d=\\frac{\\left(1-r^{2}\\right) \\pm \\sqrt{r^{4}-\\left(2-4 x^{2}\\right) r^{2}+1}}{2 x}\\), so \\(\\frac{x}{d}=-\\frac{1-r^{2} \\pm \\sqrt{r^{4}-\\left(2-4 x^{2}\\right) r^{2}+1}}{2 r^{2}}\\), which means that the radius of \\(\\Omega\\) is\n\n\\[\\frac{r^{2}+1 \\pm \\sqrt{r^{4}-\\left(2-4 x^{2}\\right) r^{2}+1}}{2 r}=\\frac{r+\\frac{1}{r} \\pm \\sqrt{r^{2}+\\frac{1}{r^{2}}-2+4 x^{2}}}{2}\\]\n\nNote that if \\(r\\) gives a valid chain of 2020 circles, so will \\(\\frac{1}{r}\\) by homothety/inversion. Thus, we can think of each pair of \\(r, \\frac{1}{r}\\) as giving rise to two possible values of the radius of \\(\\Omega\\), which are \\(\\frac{r+\\frac{1}{r} \\pm \\sqrt{r^{2}+\\frac{1}{r^{2}}-1}}{2}\\). This means that the pairs have the same sum of radii as the circles centered at \\(O\\), and the product of the radii is \\(1-x^{2}\\). (A simpler way to see this is to note that inversion at \\(P\\) with radius \\(\\sqrt{1-x^{2}}\\) swaps the two circles.) From this, it follows that the difference between the sum of the areas for each pair is \\(2 \\pi\\left(\\frac{1}{2^{2}}-\\frac{1}{3^{2}}\\right)=\\frac{5}{18} \\pi\\). There are \\(\\frac{\\varphi(2020)}{2}=400\\) such pairs, which can be explicitly computed as \\(\\frac{1-\\sin \\frac{\\pi k}{2020}}{1+\\sin \\frac{\\pi k}{2020}}, \\frac{1+\\sin \\frac{\\pi k}{2020}}{1-\\sin \\frac{\\pi k}{2020}}\\) for positive integers \\(k<1010\\) relatively prime to 2020 . Thus, the answer is \\(\\frac{1000}{9} \\pi\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

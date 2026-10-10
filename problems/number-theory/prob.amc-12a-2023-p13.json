@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2023-p13",
+  "title": "2023 AMC 12A Problem 13",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2023,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 27.5,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In a table tennis tournament every participant played every other participant exactly once. Although there were twice as many right-handed players as left-handed players, the number of games won by left-handed players was \\(40\\%\\) more than the number of games won by right-handed players. (There were no ties and no ambidextrous players.) What is the total number of games played?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(36\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(45\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(48\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(66\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "36"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2023-p13.live",
+      "kind": "proof-sketch",
+      "text": "Let there be \\(L\\) left-handed and \\(2L\\) right-handed players, for \\(3L\\) players and \\(\\binom{3L}{2}\\) games total.\n\nIf right-handers win \\(R\\) games, left-handers win \\(1.4R,\\) so the total is \\(2.4R=\\tfrac{12}{5}R.\\) For this to be an integer count, the total number of games must be a multiple of \\(12.\\)\n\nThe left-handers can win at most every game involving at least one left-hander, namely \\(\\binom{L}{2}+2L^2=\\tfrac{5L^2-L}{2}.\\) On the other hand, they must win \\(\\tfrac{7}{12}\\binom{3L}{2}=\\tfrac{7L(3L-1)}8\\) games. Comparing these quantities gives \\(21L-7\\le 20L-4,\\) so \\(L\\le 3.\\)\n\nTesting \\(L=1,2,3\\) gives totals \\(3,15,36;\\) only \\(36\\) is a multiple of \\(12.\\) It is achievable: the \\(3\\) left-handers can win all \\(18\\) mixed games and their \\(3\\) internal games, giving \\(21=1.4\\cdot 15\\) wins.\n\nThus, the correct answer is B.",
+      "hints": [
+        "Let there be \\(L\\) left-handed and \\(2L\\) right-handed players, so \\(3L\\) players total",
+        "If right-handers win \\(R\\) games, the total is \\(2.4R,\\) so the total must be a multiple of \\(12\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

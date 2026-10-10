@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-fall-2021-p16",
+  "title": "2021 Fall AMC 10B Problem 16",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.expected-value",
+      "label": "Expected value",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2021,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 23.5,
+    "source": 1420,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Five balls are arranged around a circle. Chris chooses two adjacent balls at random and interchanges them. Then Silva does the same, with her choice of adjacent balls to interchange being independent of Chris’s. What is the expected number of balls that occupy their original positions after these two successive transpositions?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 1.6 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 1.8 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 2.0 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 2.2 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 2.4 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "2.2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-fall-2021-p16.live",
+      "kind": "proof-sketch",
+      "text": "After Chris chooses an adjacent pair, Silva has \\(5\\) equally likely adjacent pairs to choose.\n\nIf Silva chooses the same pair, all \\(5\\) balls return to their original positions. This has probability \\(\\frac15.\\)\n\nIf Silva chooses a pair sharing exactly one ball with Chris’s pair, then \\(2\\) balls are in their original positions. There are \\(2\\) such pairs, so this has probability \\(\\frac25.\\)\n\nIf Silva chooses a disjoint adjacent pair, then \\(1\\) ball is in its original position. This also has probability \\(\\frac25.\\)\n\nThe expected number is \\[ \\begin{aligned} 5\\cdot\\frac15+2\\cdot\\frac25+1\\cdot\\frac25&=\\frac{11}{5}\\\\ &=2.2. \\end{aligned} \\]\n\nThus, the answer is D .",
+      "hints": [
+        "Case on how Silva’s swap overlaps Chris’s swap",
+        "The overlap sizes have probabilities \\(\\frac{1}{5},\\frac{2}{5},\\frac{2}{5}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-1987-p14",
+  "title": "1987 AIME Problem 14",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.algebraic-manipulation",
+      "label": "Algebraic manipulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.telescoping",
+      "label": "Telescoping",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1987,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 45.9,
+    "source": 2380,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Compute \\[\\frac{\\begin{gathered}(10^4+324)(22^4+324)\\\\{}\\cdot(34^4+324)(46^4+324)\\\\{}\\cdot(58^4+324)\\end{gathered}}{\\begin{gathered}(4^4+324)(16^4+324)\\\\{}\\cdot(28^4+324)(40^4+324)\\\\{}\\cdot(52^4+324)\\end{gathered}}.\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "373",
+    "value": "373"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1987-p14.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(g(x)=x^2+6x+18.\\) Sophie Germain’s identity gives \\(x^4+324=g(x-6)g(x).\\) The numerator therefore supplies \\(g(4),g(10),\\ldots,g(58),\\) while the denominator supplies \\(g(-2),g(4),\\ldots,g(52).\\) Everything cancels except \\[\\begin{aligned}\\frac{g(58)}{g(-2)}&=\\frac{58^2+6(58)+18}{4-12+18}\\\\&=\\frac{3730}{10}=373.\\end{aligned}\\]",
+      "hints": [
+        "Use Sophie Germain’s identity with \\(324=4\\cdot3^4\\)",
+        "If \\(g(x)=x^2+6x+18,\\) rewrite \\(x^4+324\\) as \\(g(x-6)g(x)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

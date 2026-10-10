@@ -1,0 +1,75 @@
+{
+  "id": "prob.aime-i-2014-p13",
+  "title": "2014 AIME I Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.square-geometry",
+      "label": "Square (geometry)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2014,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 69.9,
+    "source": 3500,
+    "mohs": null
+  },
+  "estimatedMinutes": 30,
+  "statement": "On square \\(ABCD,\\) points \\(E,\\) \\(F,\\) \\(G,\\) and \\(H\\) lie on sides \\(\\overline{AB},\\) \\(\\overline{BC},\\) \\(\\overline{CD},\\) and \\(\\overline{DA},\\) respectively, so that \\(\\overline{EG} \\perp \\overline{FH}\\) and \\(EG = FH = 34.\\) Segments \\(\\overline{EG}\\) and \\(\\overline{FH}\\) intersect at a point \\(P,\\) and the areas of the quadrilaterals \\(AEPH,\\) \\(BFPE,\\) \\(CGPF,\\) and \\(DHPG\\) are in the ratio \\(269 : 275 : 405 : 411.\\) Find the area of square \\(ABCD.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "850",
+    "value": "850"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2014-p13.live",
+      "kind": "proof-sketch",
+      "text": "Place \\(B = (0,0),\\) \\(C = (s, 0),\\) \\(D = (s, s),\\) \\(A = (0, s),\\) with \\(E = (0, e),\\) \\(F = (f, 0),\\) \\(G = (s, g),\\) \\(H = (h, s).\\) The regions \\(AEPH\\) and \\(DHPG\\) together form the trapezoid \\(AEGD,\\) of area \\(\\frac{s\\,((s - e) + (s - g))}{2};\\) since \\(\\frac{269 + 411}{1360} = \\frac{1}{2},\\) this is half of \\(s^2,\\) forcing \\(e + g = s,\\) i.e. \\(EG\\) passes through the center. Likewise \\(AEPH\\) and \\(BFPE\\) form the trapezoid \\(ABFH\\) of area \\(\\frac{s(f + h)}{2} = \\frac{269 + 275}{1360}\\,s^2 = \\frac{2}{5}s^2,\\) so \\(f + h = \\frac{4s}{5}.\\) Perpendicularity of the directions \\((s, g - e)\\) and \\((h - f, s)\\) gives \\(h - f = e - g.\\) Writing \\(\\delta = g - e,\\) we get \\(E = \\left(0, \\frac{s - \\delta}{2}\\right),\\) \\(G = \\left(s, \\frac{s + \\delta}{2}\\right),\\) \\(F = \\left(\\frac{2s}{5} + \\frac{\\delta}{2}, 0\\right),\\) \\(H = \\left(\\frac{2s}{5} - \\frac{\\delta}{2}, s\\right),\\) and \\(EG = 34\\) gives \\(s^2 + \\delta^2 = 1156.\\)\n\nIntersecting lines \\(EG\\) and \\(FH\\) (and simplifying with \\(s^2 + \\delta^2 = 1156\\)) yields \\[ \\begin{aligned} P &= \\\\ &\\left(\\frac{s}{2} - \\frac{s^3}{11560},\\; \\frac{s}{2} - \\frac{s^2\\delta}{11560}\\right), \\end{aligned} \\] and the shoelace formula on \\(A,\\) \\(E,\\) \\(P,\\) \\(H\\) then gives \\([AEPH] = \\frac{s^2}{5} - \\frac{s^3\\delta}{231200}.\\) Setting this equal to \\(\\frac{269}{1360}s^2\\) leaves \\(\\frac{3s^2}{1360} = \\frac{s^3\\delta}{231200},\\) so \\(s\\delta = 510.\\)\n\nNow \\(s^2 + \\delta^2 = 1156\\) and \\(s^2\\delta^2 = 260100,\\) so \\(s^2\\) and \\(\\delta^2\\) are the roots of \\(t^2 - 1156t + 260100 = 0,\\) which are \\(\\frac{1156 \\pm 544}{2} = 850\\) and \\(306.\\) Since \\(|\\delta| = |g - e| \\lt s,\\) the area is \\(s^2 = 850.\\)",
+      "hints": [
+        "Since \\(269 + 411 = 275 + 405,\\) segment \\(EG\\) passes through the center of the square; treat the trapezoid \\(ABFH\\) the same way to locate \\(FH\\)",
+        "With side \\(s\\) and rise \\(\\delta\\) of \\(EG,\\) the length gives \\(s^2 + \\delta^2 = 1156,\\) and the ratio \\(269 : 1360\\) for \\(AEPH\\) pins down the product \\(s\\delta\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "23564d88c51a690ad06f50deda185bbb4b7a186d8e1e2d66fe60120dbfa84706"
+    ],
+    "solutions": []
+  }
+}

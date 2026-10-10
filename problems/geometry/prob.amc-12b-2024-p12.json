@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-12b-2024-p12",
+  "title": "2024 AMC 12B Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.shoelace-formula",
+      "label": "Shoelace formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2024,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 27.7,
+    "source": 1670,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Suppose \\(z\\) is a complex number with positive imaginary part, with real part greater than \\(1,\\) and with \\(|z| = 2.\\) In the complex plane, the four points \\(0,\\) \\(z,\\) \\(z^2,\\) and \\(z^3\\) are the vertices of a quadrilateral with area \\(15.\\) What is the imaginary part of \\(z?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{3}{4}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{4}{3}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{3}{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{5}{3}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "3/2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2024-p12.live",
+      "kind": "proof-sketch",
+      "text": "For vertices \\(0, z, z^2, z^3\\) the shoelace formula gives area \\[ \\begin{aligned} &\\tfrac12\\,\\bigl|\\operatorname{Im}(\\bar z z^2 + \\overline{z^2}\\,z^3)\\bigr| \\\\ &= \\tfrac12\\,\\bigl|\\operatorname{Im}\\bigl((|z|^2 + |z|^4)z\\bigr)\\bigr| \\\\ &= \\tfrac12(|z|^2 + |z|^4)\\operatorname{Im}(z). \\end{aligned} \\]\n\nWith \\(|z| = 2,\\) this is \\(\\tfrac12(4 + 16)\\operatorname{Im}(z) = 10\\operatorname{Im}(z).\\) Setting \\(10\\operatorname{Im}(z) = 15\\) gives \\(\\operatorname{Im}(z) = \\dfrac32.\\) (Then \\(\\operatorname{Re}(z) = \\sqrt{4 - \\tfrac94} = \\tfrac{\\sqrt7}{2} \\gt 1,\\) as required.)\n\nThus, the correct answer is D.",
+      "hints": [
+        "The signed area of the quadrilateral \\(0 \\to z \\to z^2 \\to z^3\\) is \\(\\tfrac12\\,\\bigl|\\operatorname{Im}(\\bar z z^2 + \\overline{z^2}\\, z^3)\\bigr|\\)",
+        "Since \\(\\bar z z^2 = |z|^2 z\\) and \\(\\overline{z^2} z^3 = |z|^4 z,\\) the area is \\(\\tfrac12(|z|^2 + |z|^4)\\operatorname{Im}(z);\\) plug in \\(|z| = 2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "id": "prob.ahsme-1990-p17",
+  "title": "1990 AHSME Problem 17",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1990,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 28.5,
+    "source": 1700,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many of the numbers \\(100,\\) \\(101,\\) \\(\\ldots,\\) \\(999\\) have three different digits in increasing order or in decreasing order?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(120\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(168\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(204\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(216\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(240\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "204"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1990-p17.live",
+      "kind": "proof-sketch",
+      "text": "An increasing three-digit number cannot use \\(0,\\) so there are \\(\\binom93=84\\) increasing numbers. Any three digits chosen from \\(0\\) through \\(9\\) form a valid decreasing three-digit number, because the largest digit comes first; this gives \\(\\binom{10}{3}=120.\\) The total is \\(84+120=204.\\)\n\nThus the correct answer is C.",
+      "hints": [
+        "Choosing three distinct digits fixes their increasing or decreasing order",
+        "Treat the digit \\(0\\) carefully in the increasing case"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

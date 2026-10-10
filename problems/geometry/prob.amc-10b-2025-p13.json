@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-10b-2025-p13",
+  "title": "2025 AMC 10B Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.altitude",
+      "label": "Altitude",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.median-geometry",
+      "label": "Median (geometry)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.special-right-triangle",
+      "label": "Special right triangle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2025,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 27.5,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The altitude to the hypotenuse of a \\(30\\)-\\(60\\)-\\(90^\\circ\\) right triangle is divided into two segments of lengths \\(x \\lt y\\) by the median to the shortest side of the triangle. What is the ratio \\(\\dfrac{x}{x + y}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{3}{7}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{\\sqrt3}{4}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{4}{9}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{5}{11}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{4\\sqrt3}{15}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "3/7"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2025-p13.live",
+      "kind": "proof-sketch",
+      "text": "Place the right angle at \\(C = (0,0),\\) the short leg \\(CB = 1\\) with \\(B = (1, 0),\\) and the long leg \\(CA = \\sqrt3\\) with \\(A = (0, \\sqrt3).\\) The altitude from \\(C\\) to hypotenuse \\(AB\\) has foot \\(H = \\left(\\tfrac34, \\tfrac{\\sqrt3}{4}\\right)\\) and runs along \\(x = \\sqrt3\\,y.\\) The median from \\(A\\) to the midpoint \\(\\left(\\tfrac12, 0\\right)\\) of \\(CB\\) meets that altitude at \\(\\left(\\tfrac37, \\tfrac{\\sqrt3}{7}\\right).\\) This cuts \\(CH\\) (length \\(\\tfrac{\\sqrt3}{2}\\)) into \\(\\tfrac{4\\sqrt3}{14}\\) and \\(\\tfrac{3\\sqrt3}{14},\\) so \\(x = \\tfrac{3\\sqrt3}{14}\\) and \\(\\dfrac{x}{x + y} = \\dfrac{\\frac{3\\sqrt3}{14}}{\\frac{\\sqrt3}{2}} = \\dfrac{3}{7}.\\) Thus, A is the correct answer.",
+      "hints": [
+        "Set the right angle at the origin with legs along the axes (short leg \\(1,\\) long leg \\(\\sqrt3\\)); find the foot of the altitude and the median line",
+        "Intersect the altitude with the median to the short side, then take the ratio of the near segment to the whole altitude"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

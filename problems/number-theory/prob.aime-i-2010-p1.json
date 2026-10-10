@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2010-p1",
+  "title": "2010 AIME1 1",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "nt.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2010,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 39.0,
+    "source": 2110,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Maya lists all the positive divisors of \\(2010^2.\\) She then randomly selects two distinct divisors from this list. Let \\(p\\) be the probability that exactly one of the selected divisors is a perfect square. The probability \\(p\\) can be expressed in the form \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "107",
+    "value": "107"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2010-p1.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(2010^2 = 2^2 \\cdot 3^2 \\cdot 5^2 \\cdot 67^2,\\) it has \\((2 + 1)^4 = 81\\) positive divisors. A divisor is a perfect square exactly when each of its four exponents is \\(0\\) or \\(2,\\) giving \\(2^4 = 16\\) perfect squares and \\(81 - 16 = 65\\) non-squares.\n\nThe probability of picking one of each is \\[p = \\frac{16 \\cdot 65}{\\binom{81}{2}} = \\frac{1040}{3240} = \\frac{26}{81},\\] so \\(m + n = 26 + 81 = 107.\\)",
+      "hints": [
+        "Factor \\(2010^2 = 2^2 \\cdot 3^2 \\cdot 5^2 \\cdot 67^2:\\) it has \\(3^4 = 81\\) divisors",
+        "A divisor is a perfect square exactly when all four exponents are even, so \\(2^4 = 16\\) of the divisors are squares. Count pairs using one square and one non-square."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

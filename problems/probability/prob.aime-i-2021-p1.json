@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-i-2021-p1",
+  "title": "2021 AIME I Problem 1",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.conditional-probability",
+      "label": "Conditional probability",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2021,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 46.1,
+    "source": 2050,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Zou and Chou are practicing their \\(100\\)-meter sprints by running \\(6\\) races against each other. Zou wins the first race, and after that, the probability that one of them wins a race is \\(\\frac{2}{3}\\) if they won the previous race but only \\(\\frac{1}{3}\\) if they lost the previous race. The probability that Zou will win exactly \\(5\\) of the \\(6\\) races is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "97",
+    "value": "97"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2021-p1.live",
+      "kind": "proof-sketch",
+      "text": "Zou wins race \\(1,\\) so winning exactly \\(5\\) of the \\(6\\) races means he loses exactly one of races \\(2\\) through \\(6.\\) Each race after the first repeats the previous outcome with probability \\(\\frac{2}{3}\\) and switches with probability \\(\\frac{1}{3}.\\)\n\nIf the loss is race \\(6,\\) the five transitions are four repeats followed by one switch: \\(\\left(\\frac{2}{3}\\right)^4 \\cdot \\frac{1}{3} = \\frac{16}{243}.\\) If the loss is race \\(i\\) for some \\(2 \\le i \\le 5,\\) there is a switch into the loss and a switch back to winning, plus three repeats: \\(\\left(\\frac{2}{3}\\right)^3 \\left(\\frac{1}{3}\\right)^2 = \\frac{8}{243}\\) for each of the \\(4\\) positions, contributing \\(\\frac{32}{243}.\\)\n\nThe total is \\[\\frac{16}{243} + \\frac{32}{243} = \\frac{48}{243} = \\frac{16}{81},\\] so \\(m + n = 16 + 81 = 97.\\)",
+      "hints": [
+        "Zou must lose exactly one of races \\(2\\) through \\(6.\\) Treat a loss in race \\(6\\) separately from an earlier loss.",
+        "An earlier loss creates two probability-\\(\\frac{1}{3}\\) switches (into and out of the loss); a final-race loss creates just one"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

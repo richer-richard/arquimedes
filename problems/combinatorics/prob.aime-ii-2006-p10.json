@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-ii-2006-p10",
+  "title": "2006 AIME II Problem 10",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.binomial-probability",
+      "label": "Binomial probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2006,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 52.8,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 9,
+  "statement": "Seven teams play a soccer tournament in which each team plays every other team exactly once. No ties occur, each team has a \\(50\\%\\) chance of winning each game it plays, and the outcomes of the games are independent. In each game, the winner is awarded \\(1\\) point and the loser gets \\(0\\) points. The total points are accumulated to decide the ranks of the teams. In the first game of the tournament, team \\(A\\) beats team \\(B.\\) The probability that team \\(A\\) finishes with more points than team \\(B\\) is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "831",
+    "value": "831"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2006-p10.live",
+      "kind": "proof-sketch",
+      "text": "Teams \\(A\\) and \\(B\\) each have \\(5\\) games left, none against each other, so all \\(2^5 \\cdot 2^5 = 1024\\) outcomes are equally likely. Since \\(A\\) already leads by one point, \\(A\\) finishes with more points exactly when \\(A\\) wins at least as many remaining games as \\(B\\) does.\n\nThe number of outcomes with equal win counts is \\[\\sum_{k=0}^{5} \\binom{5}{k}^2 = \\binom{10}{5} = 252.\\] By symmetry, the other \\(1024 - 252 = 772\\) outcomes split evenly between \\(A\\) winning more and \\(B\\) winning more.\n\nSo the probability is \\(\\frac{252 + 386}{1024} = \\frac{638}{1024} = \\frac{319}{512},\\) and \\(m + n = 319 + 512 = 831.\\)",
+      "hints": [
+        "\\(A\\) starts one point ahead and never plays \\(B\\) again, so \\(A\\) finishes ahead exactly when \\(A\\) wins at least as many of its \\(5\\) remaining games as \\(B\\) does.",
+        "The chance the remaining win counts are equal is \\(\\sum_k \\frac{\\binom{5}{k}^2}{2^{10}};\\) by symmetry the other outcomes split evenly between the teams."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-team-2002-p2",
+  "title": "2002 HMMT February Team Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.integers",
+      "label": "Integers",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2002,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 78.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Determine the number of four-digit integers \\(n\\) such that \\(n\\) and \\(2 n\\) are both palindromes.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2002-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(n=\\underline{a} \\underline{b} \\underline{b} \\underline{a}\\). If \\(a, b \\leq 4\\) then there are no carries in the multiplication \\(n \\times 2\\), and \\(2 n=(2 a)(2 b)(2 b)(2 a)\\) is a palindrome. We shall show conversely that if \\(n\\) and \\(2 n\\) are palindromes, then necessarily \\(a, b \\leq 4\\). Hence the answer to the problem is \\(4 \\times 5=\\mathbf{2 0}\\) (because \\(a\\) cannot be zero).\n\nIf \\(a \\geq 5\\) then \\(2 n\\) is a five-digit number whose most significant digit is 1 , but because \\(2 n\\) is even, its least significant digit is even, contradicting the assumption that \\(2 n\\) is a palindrome. Therefore \\(a \\leq 4\\). Consequently \\(2 n\\) is a four-digit number, and its tens and hundreds digits must be equal. Because \\(a \\leq 4\\), there is no carry out of the ones place in the multiplication \\(n \\times 2\\), and therefore the tens digit of \\(2 n\\) is the ones digit of \\(2 b\\). In particular, the tens digit of \\(2 n\\) is even. But if \\(b \\geq 5\\), the carry out of the tens place makes the hundreds digit of \\(2 n\\) odd, which is impossible. Hence \\(b \\leq 4\\) as well.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

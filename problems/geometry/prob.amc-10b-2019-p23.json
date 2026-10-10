@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2019-p23",
+  "title": "2019 AMC 10B Problem 23",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.perpendicular-bisector",
+      "label": "Perpendicular bisector",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.tangent-line",
+      "label": "Tangent line",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2019,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 32.9,
+    "source": 2150,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Points \\(A=(6,13)\\) and \\(B=(12,11)\\) lie on a circle \\(\\omega\\) in the plane. Suppose that the tangent lines to \\(\\omega\\) at \\(A\\) and \\(B\\) intersect at a point on the \\(x\\)-axis. What is the area of \\(\\omega?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( \\dfrac{83\\pi}{8} \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( \\dfrac{21\\pi}{2} \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( \\dfrac{85\\pi}{8} \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( \\dfrac{43\\pi}{4} \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( \\dfrac{87\\pi}{8} \\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2019-p23.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(P\\) be the intersection point of the two tangents. Since tangent lengths from the same point are equal, \\(PA=PB\\), so \\(P\\) lies on the perpendicular bisector of \\(\\overline{AB}\\).\n\nThe midpoint of \\(A(6,13)\\) and \\(B(12,11)\\) is \\((9,12)\\), and the slope of \\(AB\\) is \\(-\\dfrac13\\), so the perpendicular bisector is \\(y=3x-15\\). Its intersection with the \\(x\\)-axis is \\(P=(5,0)\\).\n\nThe tangent line through \\(P\\) and \\(A\\) has slope \\(13\\), so the radius to \\(A\\) has slope \\(-\\dfrac1{13}\\). Intersecting \\(y-13=-\\dfrac1{13}(x-6)\\) with \\(y=3x-15\\) gives center \\(\\left(\\dfrac{37}{4},\\dfrac{51}{4}\\right)\\).\n\nThus \\(r^2=\\left(\\dfrac{37}{4}-6\\right)^2\\) \\(+\\left(\\dfrac{51}{4}-13\\right)^2\\) \\(=\\dfrac{85}{8}\\), so the area is \\(\\dfrac{85\\pi}{8}\\). Thus, C is the correct answer.",
+      "hints": [
+        "The tangent intersection lies on the perpendicular bisector of \\(AB\\)",
+        "The radius to a tangent point is perpendicular to the tangent line"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

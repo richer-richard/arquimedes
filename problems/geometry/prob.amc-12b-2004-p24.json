@@ -1,0 +1,89 @@
+{
+  "id": "prob.amc-12b-2004-p24",
+  "title": "2004 AMC 12B Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.isosceles-triangle",
+      "label": "Isosceles triangle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2004,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 40.8,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "In \\(\\triangle ABC,\\) \\(AB = BC,\\) and \\(\\overline{BD}\\) is an altitude. Point \\(E\\) is on the extension of \\(\\overline{AC}\\) such that \\(BE = 10.\\) The values of \\(\\tan \\angle CBE,\\) \\(\\tan \\angle DBE,\\) and \\(\\tan \\angle ABE\\) form a geometric progression, and the values of \\(\\cot \\angle DBE,\\) \\(\\cot \\angle CBE,\\) \\(\\cot \\angle DBC\\) form an arithmetic progression. What is the area of \\(\\triangle ABC?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{50}{3}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(10\\sqrt{3}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(8\\sqrt{5}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(18\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "50/3"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2004-p24.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(\\angle DBE = \\alpha\\) and \\(\\angle DBC = \\beta.\\) Since \\(\\overline{BD}\\) is the altitude of the isosceles triangle, \\(\\angle CBE = \\alpha - \\beta\\) and \\(\\angle ABE = \\alpha + \\beta.\\) The geometric progression gives \\(\\tan(\\alpha - \\beta)\\tan(\\alpha + \\beta) = \\tan^2\\alpha,\\) which simplifies to \\(\\tan^2\\beta(\\tan^4\\alpha - 1) = 0,\\) so \\(\\tan\\alpha = 1\\) and \\(\\alpha = 45^\\circ.\\)\n\nWriting \\(DC = a\\) and \\(BD = b,\\) the arithmetic progression \\(\\cot\\angle DBE,\\) \\(\\cot\\angle CBE,\\) \\(\\cot\\angle DBC\\) becomes \\(1, \\dfrac{b + a}{b - a}, \\dfrac{b}{a},\\) forcing \\(b = 3a.\\) With \\(BE = 10\\) and \\(\\angle DBE = 45^\\circ,\\) we get \\(b = \\dfrac{BE}{\\sqrt2} = 5\\sqrt2,\\) so \\(a = \\dfrac{5\\sqrt2}{3}.\\)\n\nThe area of \\(\\triangle ABC\\) is \\(\\tfrac12 (AC)(BD) = ab\\) \\(= 5\\sqrt2 \\cdot \\dfrac{5\\sqrt2}{3}\\) \\(= \\dfrac{50}{3}.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Let \\(\\angle DBE = \\alpha\\) and \\(\\angle DBC = \\beta;\\) then \\(\\angle CBE = \\alpha - \\beta\\) and \\(\\angle ABE = \\alpha + \\beta\\)",
+        "The geometric progression gives \\(\\tan(\\alpha - \\beta)\\tan(\\alpha + \\beta) = \\tan^2\\alpha,\\) which forces \\(\\alpha = 45^\\circ\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "8c0a6d1e0620530b6cc9b6a48bfbd54f5a1e826699ef4d4f610509aa83f98760"
+    ],
+    "solutions": []
+  }
+}

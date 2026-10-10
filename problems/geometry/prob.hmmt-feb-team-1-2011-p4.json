@@ -1,0 +1,91 @@
+{
+  "id": "prob.hmmt-feb-team-1-2011-p4",
+  "title": "2011 HMMT February Team Round 1 Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 83.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a, b\\), and \\(c\\) be complex numbers such that \\(|a|=|b|=|c|=|a+b+c|=1\\). If \\(|a-b|=|a-c|\\) and \\(b \\neq c\\), prove that \\(|a+b||a+c|=2\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1-2011-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "First Solution. Since \\(|a|=1, a\\) cannot be 0 . Let \\(u=\\frac{b}{a}\\) and \\(v=\\frac{c}{a}\\). Dividing the given equations by \\(|a|=1\\) gives \\(|u|=|v|=|1+u+v|=1\\) and \\(|1-u|=|1-v|\\). The goal is to prove that \\(|1+u||1+v|=2\\).\nBy squaring \\(|1-u|=|1-v|\\), we get \\((1-u) \\overline{(1-u)}=(1-v) \\overline{(1-v)}\\), and thus \\(1-u-\\bar{u}+|u|^{2}=\\) \\(1-v-\\bar{v}+|v|^{2}\\), or \\(u+\\bar{u}=v+\\bar{v}\\). This implies \\(\\operatorname{Re}(u)=\\operatorname{Re}(v)\\). Since \\(u\\) and \\(v\\) are on the unit circle in the complex plane, \\(u\\) is equal to either \\(v\\) or \\(\\bar{v}\\). However, \\(b \\neq c\\) implies \\(u \\neq v\\), so \\(u=\\bar{v}\\).\nTherefore, \\(1=|1+u+\\bar{u}|=|1+2 \\operatorname{Re}(u)|\\). Since \\(\\operatorname{Re}(u)\\) is real, we either have \\(\\operatorname{Re}(u)=0\\) or \\(\\operatorname{Re}(u)=-1\\). The first case gives \\(u= \\pm i\\) and \\(|1+u||1+v|=|1+i \\| 1-i|=2\\), as desired. It remains only to note that \\(\\operatorname{Re}(u)=-1\\) is in fact impossible because \\(u\\) is of norm 1 and \\(u=-1\\) would imply \\(u=\\bar{u}=v\\).\n\nRemark: by the rotational symmetry of the circle, it is acceptable to skip the first step of this solution and assume \\(a=1\\) without loss of generality.\nSecond Solution. Let \\(a, b\\), and \\(c\\), be the vertices of a triangle inscribed in the unit circle in the complex plane. Since the complex coordinate of the circumcenter is 0 and the complex coordinate of the centroid is \\(\\frac{a+b+c}{3}\\), it follows from well-known facts about the Euler line that the complex coordinate of the orthocenter is \\(a+b+c\\). Hence the orthocenter lies on the unit circle as well. Is it not possible for the orthocenter not to be among the three vertices of the triangle, for, if it were, two opposite angles of the convex cyclic quadrilateral formed by the three vertices and the orthocenter would each measure greater than 90 degrees. It follows that the triangle is right. However, since \\(|a-b|=|a-c|\\), the right angle cannot occur at \\(b\\) or \\(c\\), so it must occur at \\(a\\), and the desired conclusion follows immediately.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

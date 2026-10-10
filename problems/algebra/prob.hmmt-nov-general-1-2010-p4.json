@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-general-1-2010-p4",
+  "title": "2010 HMMT November General Round 1 Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2010,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "An ant starts at the point \\((1,0)\\). Each minute, it walks from its current position to one of the four adjacent lattice points until it reaches a point \\((x, y)\\) with \\(|x|+|y| \\geq 2\\). What is the probability that the ant ends at the point \\((1,1)\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-1-2010-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{7}{24}\\) From the starting point of \\((1,0)\\), there is a \\(\\frac{1}{4}\\) chance we will go directly to \\((1,1)\\), a \\(\\frac{1}{2}\\) chance we will end at \\((2,0)\\) or \\((1,-1)\\), and a \\(\\frac{1}{4}\\) chance we will go to \\((0,0)\\). Thus, if \\(p\\) is the probability that we will reach \\((1,1)\\) from \\((0,0)\\), then the desired probability is equal to \\(\\frac{1}{4}+\\frac{1}{4} p\\), so we need only calculate \\(p\\). Note that we can replace the condition \\(|x|+|y| \\geq 2\\) by \\(|x|+|y|=2\\), since in each iteration the quantity \\(|x|+|y|\\) can increase by at most 1 . Thus, we only have to consider the eight points \\((2,0),(1,1),(0,2),(-1,1),(-2,0),(-1,-1),(0,-2),(1,-1)\\). Let \\(p_{1}, p_{2}, \\ldots, p_{8}\\) be the probability of\nreaching each of these points from \\((0,0)\\), respectively. By symmetry, we see that \\(p_{1}=p_{3}=p_{5}=p_{7}\\) and \\(p_{2}=p_{4}=p_{6}=p_{8}\\). We also know that there are two paths from \\((0,0)\\) to \\((1,1)\\) and one path from \\((0,0)\\) to \\((2,0)\\), thus \\(p_{2}=2 p_{1}\\). Because the sum of all probabilities is 1 , we have \\(p_{1}+p_{2}+\\ldots+p_{8}=1\\). Combining these equations, we see that \\(4 p_{1}+4 p_{2}=12 p_{1}=1\\), so \\(p_{1}=\\frac{1}{12}\\) and \\(p_{2}=\\frac{1}{6}\\). Since \\(p=p_{2}=\\frac{1}{6}\\), then the final answer is \\(\\frac{1}{4}+\\frac{1}{4} \\cdot \\frac{1}{6}=\\frac{7}{24}\\)",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

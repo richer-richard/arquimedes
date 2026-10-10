@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2024-p24",
+  "title": "2024 AMC 12A Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.herons-formula",
+      "label": "Heron’s Formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2024,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 49.5,
+    "source": 2520,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "A disphenoid is a tetrahedron whose triangular faces are congruent to one another. What is the least total surface area of a disphenoid whose faces are scalene triangles with integer side lengths?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\sqrt3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3\\sqrt{15}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(15\\sqrt7\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(24\\sqrt6\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2024-p24.live",
+      "kind": "proof-sketch",
+      "text": "A disphenoid exists (as the tetrahedron formed by the face-plane midpoints of a box) exactly when the common face triangle is acute, and its total surface area is \\(4\\) times one face’s area. Write the integer side lengths as \\(u\\lt v\\lt w.\\) If \\(u\\le3,\\) then \\(w\\ge v+1\\) and \\(u^2+v^2\\le(v+1)^2\\) (with equality only for \\((u,v,w)=(3,4,5)\\)), so the triangle is not acute. Thus \\(u\\ge4.\\)\n\nThe triangle \\((4,5,6)\\) is acute because \\(4^2+5^2\\gt6^2.\\) It also has the least possible area. The largest angle of any acute triangle is at least \\(60^\\circ,\\) so a candidate with \\((u,v)\\ne(4,5)\\) has area at least \\(\\tfrac12uv\\sin60^\\circ\\) \\(\\ge\\tfrac12(4)(6)\\tfrac{\\sqrt3}{2}=6\\sqrt3,\\) which is greater than \\(\\tfrac{15\\sqrt7}{4},\\) the area of \\((4,5,6).\\)\n\nBy Heron’s formula with \\(s=\\tfrac{15}2,\\) that area is \\(\\sqrt{\\tfrac{15}2\\cdot\\tfrac72\\cdot\\tfrac52\\cdot\\tfrac32}=\\tfrac{15\\sqrt7}{4}.\\) The total surface area is \\(4\\cdot\\tfrac{15\\sqrt7}{4}=15\\sqrt7.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "A disphenoid can be built from a triangle exactly when that triangle is acute; its surface is \\(4\\) faces",
+        "Seek the smallest-area acute scalene integer triangle; \\((3,4,5)\\) is right, so try \\((4,5,6)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

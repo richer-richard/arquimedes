@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-guts-2011-p15",
+  "title": "2011 HMMT November Guts Problem 15",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2011,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 49.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For positive integers \\(n\\), let \\(L(n)\\) be the largest factor of \\(n\\) other than \\(n\\) itself. Determine the number of ordered pairs of composite positive integers \\((m, n)\\) for which \\(L(m) L(n)=80\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2011-p15.hmmt",
+      "kind": "proof-sketch",
+      "text": "12 Let \\(x\\) be an integer, and let \\(p_{x}\\) be the smallest prime factor of \\(x\\). Then, if \\(L(a)=x\\), we note that we must have \\(a=p x\\) for some prime \\(p \\leq p_{x}\\). (Otherwise, if \\(p>p_{x}\\), then \\(\\frac{p x}{p_{x}}>x\\). If \\(p\\) is composite, then \\(k x>x\\) for some factor \\(k\\) of \\(x\\).)\nSo we have:\n\n- \\(L(a)=2,4,8,10,16,20,40 \\Rightarrow 1\\) value for \\(a\\)\n- \\(L(a)=5 \\Rightarrow 3\\) values for \\(a\\)\n\nHence, we note that, since \\(m\\) and \\(n\\) are composite, we cannot have \\(L(m)=1\\) or \\(L(n)=1\\), so the possible pairs \\((L(m), L(n))\\) are \\((2,40),(4,20),(5,16),(8,10)\\) and vice-versa.\nWe add the number of choices for each pair, and double since \\(m\\) and \\(n\\) are interchangeable, to get \\(2(1 \\times 1+1 \\times 1+3 \\times 1+1 \\times 1)=12\\) possible ordered pairs \\((m, n)\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

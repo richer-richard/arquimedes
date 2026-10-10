@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2021-p20",
+  "title": "2021 AMC 10A Problem 20",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.bijection",
+      "label": "Bijection",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2021,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 30.0,
+    "source": 1950,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "In how many ways can the sequence \\(1,\\) \\(2,\\) \\(3,\\) \\(4,\\) \\(5\\) be rearranged so that no three consecutive terms are increasing and no three consecutive terms are decreasing?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(32\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(44\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "32"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2021-p20.live",
+      "kind": "proof-sketch",
+      "text": "A permutation is valid exactly when the four comparison signs between consecutive terms alternate. Thus the signs must be either up-down-up-down or down-up-down-up.\n\nFor the up-down-up-down pattern, the largest entry \\(5\\) must be in position \\(2\\) or position \\(4.\\) If it is in position \\(2,\\) let the entry in position \\(4\\) be \\(r.\\) Its two neighbors must be distinct numbers less than \\(r,\\) which can be ordered in \\((r-1)(r-2)\\) ways. Summing over \\(r=1,2,3,4\\) gives \\[0+0+2+6=8\\] permutations. By symmetry there are another \\(8\\) when \\(5\\) is in position \\(4,\\) for a total of \\(16\\) with this comparison pattern.\n\nReplacing every entry \\(x\\) by \\(6-x\\) gives a bijection to the down-up-down-up permutations, so there are another \\(16.\\)\n\nThe total number of valid rearrangements is \\(16+16=32.\\)\n\nThus, D is the correct answer.",
+      "hints": [
+        "A valid permutation must have comparison signs that alternate",
+        "Count the up-down-up-down permutations and use symmetry for the reverse pattern"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

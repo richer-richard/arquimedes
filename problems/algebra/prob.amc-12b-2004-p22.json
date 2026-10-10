@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2004-p22",
+  "title": "2004 AMC 12B Problem 22",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "logic-foundations"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.magic-square",
+      "label": "Magic square",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2004,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 34.8,
+    "source": 1940,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The square \\[\\begin{array}{|c|c|c|} \\hline 50 & b & c \\\\ \\hline d & e & f \\\\ \\hline g & h & 2 \\\\ \\hline \\end{array}\\] is a multiplicative magic square. That is, the product of the numbers in each row, column, and diagonal is the same. If all the entries are positive integers, what is the sum of the possible values of \\(g?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(25\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(35\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(62\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(136\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "35"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2004-p22.live",
+      "kind": "proof-sketch",
+      "text": "From the equal row, column, and diagonal products, every entry can be written in terms of \\(b:\\) \\(h = \\dfrac{100}{b},\\) \\(g = \\dfrac{100}{c},\\) \\(f = \\dfrac{100}{d}.\\) Comparing rows and columns gives \\(c = \\dfrac{20}{b}\\) and \\(d = \\dfrac{4}{b},\\) hence \\(g = 5b\\) and \\(e = 10.\\)\n\nAll entries are positive integers exactly when \\(b = 1, 2,\\) or \\(4,\\) giving \\(g = 5, 10, 20.\\) Their sum is \\(35.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Express every entry in terms of \\(b\\) using the equal products",
+        "The corner relations force \\(c = \\dfrac{20}{b}\\) and \\(d = \\dfrac{4}{b},\\) so \\(b \\in \\{1, 2, 4\\}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

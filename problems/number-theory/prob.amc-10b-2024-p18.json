@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2024-p18",
+  "title": "2024 AMC 10B Problem 18",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.eulers-totient-function",
+      "label": "Euler’s Totient Function",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-exponentiation",
+      "label": "Modular exponentiation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2024,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 32.1,
+    "source": 1840,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many different remainders can result when the \\(100\\)th power of an integer is divided by \\(125?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(25\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(125\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2024-p18.live",
+      "kind": "proof-sketch",
+      "text": "Here \\(125 = 5^3\\) and \\(\\varphi(125) = 100.\\) If \\(\\gcd(n, 5) = 1,\\) Euler’s theorem gives \\(n^{100} \\equiv 1 \\pmod{125}.\\) And if \\(n\\) is divisible by \\(5,\\) then \\(n^{100}\\) carries a factor of \\(5^{100},\\) hence of \\(125,\\) so \\(n^{100} \\equiv 0 \\pmod{125}.\\) That leaves only two possible remainders, \\(0\\) and \\(1.\\) Therefore, the answer is B.",
+      "hints": [
+        "\\(125 = 5^3\\) and \\(\\varphi(125) = 100;\\) split into \\(n\\) coprime to \\(5\\) and \\(n\\) divisible by \\(5\\)",
+        "If \\(\\gcd(n, 5) = 1,\\) then \\(n^{100} \\equiv 1;\\) if \\(n\\) is divisible by \\(5,\\) then \\(n^{100}\\) is divisible by \\(5^3\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "prob.aime-i-2024-p6",
+  "title": "2024 AIME I Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.lattice-paths",
+      "label": "Lattice paths",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.partitions-and-compositions",
+      "label": "Partitions and compositions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2024,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 44.9,
+    "source": 2340,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Consider the paths of length \\(16\\) that follow the lines from the lower left corner to the upper right corner on an \\(8 \\times 8\\) grid. Find the number of such paths that change direction exactly four times, as in the examples shown below.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "294",
+    "value": "294"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2024-p6.live",
+      "kind": "proof-sketch",
+      "text": "A path that changes direction exactly four times consists of five maximal straight runs, alternating between rightward and upward moves. If the first run is rightward, the pattern is \\(R, U, R, U, R:\\) three rightward runs with positive lengths summing to \\(8,\\) and two upward runs with positive lengths summing to \\(8.\\) The counts of such compositions are \\(\\binom{7}{2} = 21\\) and \\(\\binom{7}{1} = 7,\\) giving \\(21 \\cdot 7 = 147\\) paths.\n\nPaths starting upward are counted symmetrically, another \\(147.\\) The total is \\(147 + 147 = 294.\\)",
+      "hints": [
+        "A path with exactly four turns consists of five straight runs that alternate between rightward and upward",
+        "If the path starts rightward, the three rightward runs and two upward runs are positive integers summing to \\(8\\) each — count the compositions, then double"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "e494e5e6d2fc61453514feac72825a267c07b613df2d540135f241466386ada0"
+    ],
+    "solutions": []
+  }
+}

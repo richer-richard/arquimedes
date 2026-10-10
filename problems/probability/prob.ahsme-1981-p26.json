@@ -1,0 +1,85 @@
+{
+  "id": "prob.ahsme-1981-p26",
+  "title": "1981 AHSME Problem 26",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.dice-probability",
+      "label": "Dice (probability)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.geometric-distribution",
+      "label": "Geometric distribution",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.independent-events",
+      "label": "Independent events",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1981,
+    "number": 26
+  },
+  "difficulty": {
+    "course": 28.0,
+    "source": 1680,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Alice, Bob, and Carol repeatedly take turns tossing a die. Alice begins; Bob always follows Alice; Carol always follows Bob; and Alice always follows Carol. Find the probability that Carol will be the first one to toss a six. (The probability of obtaining a six on any toss is \\(\\frac16,\\) independent of the outcome of any other toss.)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\frac13\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\frac29\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\frac5{18}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\frac{25}{91}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\frac{36}{91}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "25/91"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1981-p26.live",
+      "kind": "proof-sketch",
+      "text": "Carol wins in the first round with probability \\((\\frac{5}{6})^2(\\frac{1}{6})=\\frac{25}{216}.\\) A complete round with no six has probability \\((\\frac{5}{6})^3=\\frac{125}{216}.\\) Therefore the desired geometric series is \\[ \\frac{\\frac{25}{216}}{1-\\frac{125}{216}} =\\frac{25}{91}. \\]\n\nTherefore, the correct answer is D.",
+      "hints": [
+        "For Carol to win in a given round, Alice and Bob must fail before Carol succeeds",
+        "If all three fail, the process restarts with the same probabilities"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

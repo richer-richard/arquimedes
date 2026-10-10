@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2024-p11",
+  "title": "2024 AMC 12B Problem 11",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.mean",
+      "label": "Mean",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2024,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 26.2,
+    "source": 1610,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(x_n = \\sin^2(n^\\circ).\\) What is the mean of \\(x_1,\\) \\(x_2,\\) \\(x_3,\\) \\(\\ldots,\\) \\(x_{90}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{11}{45}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{22}{45}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{89}{180}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{1}{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{91}{180}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "91/180"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2024-p11.live",
+      "kind": "proof-sketch",
+      "text": "Using \\(\\sin^2\\theta = \\dfrac{1 - \\cos 2\\theta}{2},\\) \\[ \\begin{aligned} \\sum_{n=1}^{90} \\sin^2(n^\\circ) &= \\frac{90}{2} \\\\ &\\quad {}- \\frac12 \\sum_{n=1}^{90}\\cos(2n^\\circ). \\end{aligned} \\] In the cosine sum, the terms for \\(n\\) and \\(90 - n\\) satisfy \\(\\cos(2n^\\circ) + \\cos(180^\\circ - 2n^\\circ) = 0,\\) and \\(\\cos 90^\\circ = 0,\\) so everything cancels except \\(\\cos 180^\\circ = -1.\\)\n\nHence the sum is \\(45 - \\tfrac12(-1) = 45.5,\\) and the mean is \\(\\dfrac{45.5}{90} = \\dfrac{91}{180}.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "Use \\(\\sin^2\\theta = \\dfrac{1 - \\cos 2\\theta}{2}\\) to rewrite the sum",
+        "The cosine terms \\(\\cos 2^\\circ, \\cos 4^\\circ, \\ldots, \\cos 180^\\circ\\) cancel in pairs via \\(\\cos(180^\\circ - \\theta) = -\\cos\\theta,\\) leaving only \\(\\cos 180^\\circ = -1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

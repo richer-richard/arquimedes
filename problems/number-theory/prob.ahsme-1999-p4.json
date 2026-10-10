@@ -1,0 +1,85 @@
+{
+  "id": "prob.ahsme-1999-p4",
+  "title": "1999 AHSME Problem 4",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.chinese-remainder-theorem",
+      "label": "Chinese Remainder Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime",
+      "label": "Prime",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1999,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 16.7,
+    "source": 1240,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Find the sum of all prime numbers between \\(1\\) and \\(100\\) that are simultaneously \\(1\\) greater than a multiple of \\(4\\) and \\(1\\) less than a multiple of \\(5.\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(118\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(137\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(158\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(187\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(245\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "118"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1999-p4.live",
+      "kind": "proof-sketch",
+      "text": "A number that is \\(1\\) less than a multiple of \\(5\\) ends in \\(4\\) or \\(9,\\) and one that is \\(1\\) greater than a multiple of \\(4\\) is odd. Together these give numbers \\(\\equiv 9 \\pmod{20},\\) namely \\(9, 29, 49, 69, 89.\\)\n\nAmong these, only \\(29\\) and \\(89\\) are prime, and their sum is \\(29 + 89 = 118.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "A number \\(1\\) less than a multiple of \\(5\\) has units digit \\(4\\) or \\(9\\)",
+        "Being also \\(\\equiv 1 \\pmod 4\\) forces the number to be \\(\\equiv 9 \\pmod{20}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

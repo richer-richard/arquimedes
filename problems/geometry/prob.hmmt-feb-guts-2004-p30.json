@@ -1,0 +1,70 @@
+{
+  "id": "prob.hmmt-feb-guts-2004-p30",
+  "title": "2004 HMMT February Guts Problem 30",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2004,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 84.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "We have an \\(n\\)-gon, and each of its vertices is labeled with a number from the set \\(\\{1, \\ldots, 10\\}\\). We know that for any pair of distinct numbers from this set there is\nat least one side of the polygon whose endpoints have these two numbers. Find the smallest possible value of \\(n\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2004-p30.hmmt",
+      "kind": "proof-sketch",
+      "text": "Each number be paired with each of the 9 other numbers, but each vertex can be used in at most 2 different pairs, so each number must occur on at least \\(\\lceil 9 / 2\\rceil=5\\) different vertices. Thus, we need at least \\(10 \\cdot 5=50\\) vertices, so \\(n \\geq 50\\).\nTo see that \\(n=50\\) is feasible, let the numbers \\(1, \\ldots, 10\\) be the vertices of a complete graph. Then each vertex has degree 9 , and there are \\(\\binom{10}{2}=45\\) edges. If we attach extra copies of the edges \\(1-2,3-4,5-6,7-8\\), and \\(9-10\\), then every vertex will have degree 10 . In particular, the graph has an Eulerian tour, so we can follow this tour, successively numbering vertices of the 50 -gon according to the vertices of the graph we visit. Then, for each edge of the graph, there will be a corresponding edge of the polygon with the same two vertex labels on its endpoints. It follows that every pair of distinct numbers occurs at the endpoints of some edge of the polygon, and so \\(n=50\\) is the answer.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

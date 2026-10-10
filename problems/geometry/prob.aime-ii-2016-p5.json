@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2016-p5",
+  "title": "2016 AIME II Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-triple",
+      "label": "Pythagorean Triple",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2016,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 53.9,
+    "source": 2560,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "Triangle \\(ABC_0\\) has a right angle at \\(C_0.\\) Its side lengths are pairwise relatively prime positive integers, and its perimeter is \\(p.\\) Let \\(C_1\\) be the foot of the altitude to \\(\\overline{AB},\\) and for \\(n \\ge 2,\\) let \\(C_n\\) be the foot of the altitude to \\(\\overline{C_{n-2}B}\\) in \\(\\triangle C_{n-2}C_{n-1}B.\\) The sum \\(\\sum_{n=1}^{\\infty} C_{n-1}C_n = 6p.\\) Find \\(p.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "182",
+    "value": "182"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2016-p5.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(a = BC_0,\\) \\(b = AC_0,\\) and \\(c = AB.\\) The altitude gives \\(C_0C_1 = \\frac{ab}{c},\\) and \\(\\triangle C_0C_1B \\sim \\triangle AC_0B\\) with ratio \\(\\frac{a}{c}.\\) Each later altitude repeats this construction in a triangle scaled by \\(\\frac{a}{c},\\) so the segments \\(C_{n-1}C_n\\) form a geometric series and \\[ \\begin{aligned} &\\sum_{n=1}^{\\infty} C_{n-1}C_n \\\\ &= \\frac{\\frac{ab}{c}}{1 - \\frac{a}{c}} \\\\ &= \\frac{ab}{c - a} \\\\ &= 6p = 6(a + b + c). \\end{aligned} \\]\n\nSince \\(b^2 = c^2 - a^2 = (c - a)(c + a),\\) we get \\[ \\begin{aligned} &(c - a) \\\\ &\\quad {}\\cdot (a + b + c) \\\\ &= (c - a)(c + a) \\\\ &\\quad {}+ (c - a)b \\\\ &= b(b + c - a), \\end{aligned} \\] so \\(ab = 6b(b + c - a),\\) that is \\(7a = 6b + 6c.\\) Squaring \\(6c = 7a - 6b\\) and using \\(36c^2 = 36a^2 + 36b^2\\) gives \\(36a^2 = 49a^2 - 84ab,\\) hence \\(13a = 84b.\\)\n\nBecause the side lengths are pairwise relatively prime, \\(a = 84\\) and \\(b = 13,\\) so \\(c = \\frac{7 \\cdot 84 - 6 \\cdot 13}{6} = 85,\\) and indeed \\(13^2 + 84^2 = 85^2.\\) Then \\(p = 84 + 13 + 85 = 182\\) (and \\(\\frac{ab}{c - a} = \\frac{84 \\cdot 13}{1} = 1092 = 6p\\) checks).",
+      "hints": [
+        "Each new altitude creates a triangle similar to the one before, so the lengths \\(C_{n-1}C_n\\) form a geometric series",
+        "With legs \\(a = BC_0,\\) \\(b = AC_0,\\) hypotenuse \\(c,\\) the series sums to \\(\\frac{ab}{c - a}.\\) Factor \\(b^2 = (c - a)(c + a)\\) to simplify."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

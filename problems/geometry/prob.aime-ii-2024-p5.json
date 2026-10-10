@@ -1,0 +1,57 @@
+{
+  "id": "prob.aime-ii-2024-p5",
+  "title": "2024 AIME II Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.parallel-lines",
+      "label": "Parallel lines",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2024,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 49.2,
+    "source": 2510,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Let \\(ABCDEF\\) be a convex equilateral hexagon in which all pairs of opposite sides are parallel. The triangle whose sides are extensions of segments \\(\\overline{AB},\\) \\(\\overline{CD},\\) and \\(\\overline{EF}\\) has side lengths \\(200,\\) \\(240,\\) and \\(300.\\) Find the side length of the hexagon.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "80",
+    "value": "80"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2024-p5.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(s\\) be the hexagon’s side length, and let the triangle formed by lines \\(AB,\\) \\(CD,\\) \\(EF\\) have sides of lengths \\(P,\\) \\(Q,\\) \\(R\\) along those three lines, respectively. The corner triangle cut off at the vertex \\(X\\) where lines \\(AB\\) and \\(CD\\) meet has third side \\(BC,\\) and since \\(BC \\parallel EF,\\) all three of its sides are parallel to sides of the big triangle. So it is similar to the big triangle with ratio \\(\\frac{BC}{R} = \\frac{s}{R},\\) and its side along line \\(AB\\) has length \\(P \\cdot \\frac{s}{R}.\\) Likewise the corner at \\(AB \\cap EF\\) contains \\(FA \\parallel CD\\) and cuts off \\(P \\cdot \\frac{s}{Q}\\) from the \\(P\\)-side.\n\nThe \\(P\\)-side therefore decomposes as corner piece, \\(AB,\\) corner piece: \\[P = P \\cdot \\frac{s}{R} + s + P \\cdot \\frac{s}{Q},\\] and dividing by \\(P\\) gives \\(1 = s\\left(\\frac{1}{P} + \\frac{1}{Q} + \\frac{1}{R}\\right),\\) symmetric in the three sides.\n\nHence \\(s = \\frac{1}{\\frac{1}{200} + \\frac{1}{240} + \\frac{1}{300}} = \\frac{1200}{6 + 5 + 4} = 80.\\)",
+      "hints": [
+        "Each corner triangle between the hexagon and the big triangle has all three sides parallel to the big triangle’s sides, so it is similar to the big triangle",
+        "Writing the side containing \\(\\overline{AB}\\) as \\(s\\) plus two corner pieces leads to \\(\\frac{s}{200} + \\frac{s}{240} + \\frac{s}{300} = 1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

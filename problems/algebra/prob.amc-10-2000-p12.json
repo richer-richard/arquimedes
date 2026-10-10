@@ -1,0 +1,89 @@
+{
+  "id": "prob.amc-10-2000-p12",
+  "title": "2000 AMC 10 Problem 12",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.pattern-recognition",
+      "label": "Pattern recognition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sum-of-first-n-odd-numbers",
+      "label": "Sum of first n odd numbers",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10",
+    "year": 2000,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 16.7,
+    "source": 1240,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Figures \\(0,\\) \\(1,\\) \\(2,\\) and \\(3\\) consist of \\(1,\\) \\(5,\\) \\(13,\\) and \\(25\\) nonoverlapping unit squares, respectively. If the pattern were continued, how many nonoverlapping unit squares would there be in figure \\(100?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(10401\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(19801\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(20201\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(39801\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(40801\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "20201"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10-2000-p12.live",
+      "kind": "proof-sketch",
+      "text": "Figure \\(n\\) can be split into the sum of the first \\(n\\) odd numbers and the first \\(n+1\\) odd numbers, giving \\(n^2 + (n+1)^2\\) unit squares.\n\nFor figure \\(100,\\) this is \\[ \\begin{aligned} 100^2 + 101^2 &= 10000 + 10201 \\\\ &= 20201. \\end{aligned} \\]\n\nThus, the correct answer is C.",
+      "hints": [
+        "The differences \\(1, 5, 13, 25, \\ldots\\) grow by \\(4, 8, 12, \\ldots\\)",
+        "Figure \\(n\\) has \\(n^2 + (n+1)^2\\) unit squares"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "cd778740fc2ba2a2a599da260459dd23ca497c07f3356b2cd670152c024f7f56"
+    ],
+    "solutions": []
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "prob.hmmt-feb-team-2018-p10",
+  "title": "2018 HMMT February Team Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cartesian-coordinates",
+      "label": "Cartesian coordinates",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.greatest-common-divisors-gcd",
+      "label": "Greatest common divisors (gcd)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pick-s-theorem",
+      "label": "Pick's theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.quadrilaterals",
+      "label": "Quadrilaterals",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2018,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 91.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n\\) and \\(m\\) be positive integers which are at most \\(10^{10}\\). Let \\(R\\) be the rectangle with corners at \\((0,0),(n, 0),(n, m),(0, m)\\) in the coordinate plane. A simple non-self-intersecting quadrilateral with vertices at integer coordinates is called far-reaching if each of its vertices lie on or inside \\(R\\), but each side of \\(R\\) contains at least one vertex of the quadrilateral. Show that there is a far-reaching quadrilateral with area at most \\(10^{6}\\).\n(A side of a rectangle includes the two endpoints.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2018-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(g=\\operatorname{gcd}(n, m)\\), with \\(n=g \\cdot a\\) and \\(m=g \\cdot b\\). Note that the number of points on the diagonal of \\(R\\) connecting \\((0,0)\\) and \\((n, m)\\) is \\(g+1\\). We construct two far-reaching quadrilaterals and show that at least one of them has small area.\nFor our first quadrilateral, let \\(\\left(x_{1}, y_{1}\\right)\\) and \\(\\left(x_{2}, y_{2}\\right)\\) be the points with the shortest nonzero distances to the diagonal between \\((0,0)\\) and \\((n, m)\\) which lie above and below the diagonal, respectively. Now consider the quadrilateral with vertices \\((0,0),\\left(x_{1}, y_{1}\\right),(n, m),\\left(x_{2}, y_{2}\\right)\\). Note that the only lattice points which can lie on or inside this quadrilateral are \\(\\left(x_{1}, y_{1}\\right),\\left(x_{2}, y_{2}\\right)\\), and points on the diagonal of \\(R\\), as otherwise we could find a closer point to the diagonal than \\(\\left(x_{1}, y_{1}\\right)\\) and \\(\\left(x_{2}, y_{2}\\right)\\). Thus by Pick's Theorem, the area of this quadrilateral is at most \\(g\\).\nFor our second quadrilateral, we will take as our vertices the points \\((0,0),(n-1, m),(a, b)\\), and \\((n, m-1)\\). This is a concave quadrilateral which can be split into two triangle of areas \\(\\frac{a}{2}\\) and \\(\\frac{b}{2}\\), so the area of this quadrilateral is at most \\(\\frac{1}{2}(a+b)\\).\nWe have therefore shown that there is always a far-reaching quadrilateral with area at most min \\(\\left(g, \\frac{1}{2}(a+\\right.\\) \\(b)\\) ). Since \\(g \\cdot \\frac{1}{2}(a+b)=\\frac{1}{2}(n+m) \\leq 10^{10}\\), we have that \\(\\min \\left(g, \\frac{1}{2}(a+b)\\right) \\leq 10^{5}\\), so we can always find a far-reaching quadrilateral with area at most \\(10^{5}\\) as desired.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

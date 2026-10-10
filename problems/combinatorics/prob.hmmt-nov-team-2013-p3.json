@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-team-2013-p3",
+  "title": "2013 HMMT November Team Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2013,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 51.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The digits \\(1,2,3,4,5,6\\) are randomly chosen (without replacement) to form the three-digit numbers \\(M=\\overline{A B C}\\) and \\(N=\\overline{D E F}\\). For example, we could have \\(M=413\\) and \\(N=256\\). Find the expected value of \\(M \\cdot N\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2013-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "143745 By linearity of expectation and symmetry,\n\n\\[\\mathbb{E}[M N]=\\mathbb{E}[(100 A+10 B+C)(100 D+10 E+F)]=111^{2} \\cdot \\mathbb{E}[A D]\\]\n\nSince\n\n\\[\\mathbb{E}[A D]=\\frac{(1+2+3+4+5+6)^{2}-\\left(1^{2}+2^{2}+3^{2}+4^{2}+5^{2}+6^{2}\\right)}{6 \\cdot 5}=\\frac{350}{30}\\]\n\nour answer is \\(111 \\cdot 35 \\cdot 37=111 \\cdot 1295=143745\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

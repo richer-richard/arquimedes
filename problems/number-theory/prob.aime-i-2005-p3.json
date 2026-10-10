@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2005-p3",
+  "title": "2005 AIME1 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime",
+      "label": "Prime",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2005,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 38.0,
+    "source": 2070,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "How many positive integers have exactly three proper divisors, each of which is less than \\(50?\\) (A proper divisor of a positive integer \\(n\\) is a positive integer divisor of \\(n\\) other than \\(n\\) itself.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "109",
+    "value": "109"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2005-p3.live",
+      "kind": "proof-sketch",
+      "text": "An integer with exactly three proper divisors has exactly four divisors in total, so it is either \\(n = pq\\) with \\(p\\) and \\(q\\) distinct primes (proper divisors \\(1,\\) \\(p,\\) \\(q\\)) or \\(n = p^3\\) with \\(p\\) prime (proper divisors \\(1,\\) \\(p,\\) \\(p^2\\)).\n\nIn the first case we need \\(p\\) and \\(q\\) both less than \\(50.\\) There are \\(15\\) primes below \\(50,\\) giving \\(\\binom{15}{2} = 105\\) such numbers. In the second case we need \\(p^2 \\lt 50,\\) which holds for \\(p = 2,\\) \\(3,\\) \\(5,\\) \\(7,\\) giving \\(4\\) more.\n\nThe total is \\(105 + 4 = 109.\\)",
+      "hints": [
+        "A number has exactly four divisors in all — hence three proper ones — exactly when it is \\(pq\\) for distinct primes \\(p\\) and \\(q,\\) or a prime cube \\(p^3\\)",
+        "Count pairs of distinct primes less than \\(50,\\) then add the primes \\(p\\) with \\(p^2 \\lt 50\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12b-fall-2021-p18",
+  "title": "2021 Fall AMC 12B Problem 18",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.substitution",
+      "label": "Substitution",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2021,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 42.1,
+    "source": 2230,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Set \\(u_0 = \\dfrac{1}{4},\\) and for \\(k \\ge 0\\) let \\(u_{k+1}\\) be determined by the recurrence \\[u_{k+1} = 2u_k - 2u_k^2.\\] This sequence tends to a limit; call it \\(L.\\) What is the least value of \\(k\\) such that \\[|u_k - L| \\le \\dfrac{1}{2^{1000}}?\\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(87\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(123\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(329\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(401\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "10"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-fall-2021-p18.live",
+      "kind": "proof-sketch",
+      "text": "The limit satisfies \\(L = 2L - 2L^2,\\) giving \\(L = \\tfrac12.\\) Let \\(v_k = 1 - 2u_k.\\) Then \\[ \\begin{aligned} v_{k+1} &= 1 - 2u_{k+1} \\\\ &= 1 - 4u_k + 4u_k^2 \\\\ &= (1 - 2u_k)^2 = v_k^2. \\end{aligned} \\]\n\nSince \\(v_0 = 1 - 2 \\cdot \\tfrac14 = \\tfrac12,\\) we get \\(v_k = \\left(\\tfrac12\\right)^{2^k},\\) so \\(|u_k - L| = \\dfrac{|v_k|}{2} = 2^{-2^k - 1}.\\)\n\nWe need \\(2^k + 1 \\ge 1000,\\) i.e. \\(2^k \\ge 999.\\) The least such \\(k\\) is \\(10,\\) since \\(2^{10} = 1024.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "The limit is \\(L = \\tfrac12\\); substitute \\(v_k = 1 - 2u_k\\)",
+        "The substitution gives \\(v_{k+1} = v_k^2,\\) so \\(v_k\\) squares repeatedly"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

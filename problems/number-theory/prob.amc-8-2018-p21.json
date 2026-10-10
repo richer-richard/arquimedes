@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-8-2018-p21",
+  "title": "2018 AMC 8 Problem 21",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.chinese-remainder-theorem",
+      "label": "Chinese Remainder Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.least-common-multiple",
+      "label": "Least common multiple",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2018,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 18.4,
+    "source": 1490,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many positive three-digit integers have a remainder of \\(2\\) when divided by \\(6,\\) a remainder of \\(5\\) when divided by \\(9,\\) and a remainder of \\(7\\) when divided by \\(11?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 1 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 2 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 3 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 4 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 5 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2018-p21.live",
+      "kind": "proof-sketch",
+      "text": "Each required remainder is \\(4\\) less than its divisor, so \\(x+4\\) must be divisible by \\(6,9,\\) and \\(11\\). Hence \\(x+4\\) is a multiple of \\(\\operatorname{lcm}(6,9,11)=198.\\)\n\nFor a three-digit \\(x\\), we have \\(104\\le x+4\\le1003\\). The multiples of \\(198\\) in this interval are \\(198,396,594,792,990\\), giving \\(5\\) possible integers.\n\nThus, E is the correct answer.",
+      "hints": [
+        "Each remainder condition says the number is \\(4\\) less than a multiple of the divisor.",
+        "Count three-digit numbers of the form \\(198k-4\\)."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "prob.aime-i-2026-p14",
+  "title": "2026 AIME1 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.algebraic-manipulation",
+      "label": "Algebraic manipulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.equiangular-polygon",
+      "label": "Equiangular polygon",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vector",
+      "label": "Vector",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2026,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": 3270,
+    "mohs": null
+  },
+  "estimatedMinutes": 22,
+  "statement": "In an equiangular pentagon, the sum of the squares of the side lengths equals \\(308,\\) and the sum of the squares of the diagonal lengths equals \\(800.\\) The square of the perimeter of the pentagon can be expressed as \\(m\\sqrt{n},\\) where \\(m\\) and \\(n\\) are positive integers and \\(n\\) is not divisible by the square of any prime. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "681",
+    "value": "681"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2026-p14.live",
+      "kind": "proof-sketch",
+      "text": "In an equiangular pentagon each side direction turns by the exterior angle \\(72^\\circ,\\) so the sides are the vectors \\(s_k u_k\\) for \\(k = 1, \\ldots, 5,\\) where \\(u_k = (\\cos 72k^\\circ, \\sin 72k^\\circ)\\) and \\(\\sum_k s_k u_k = 0.\\) Write \\(Q = \\sum s_k^2 = 308,\\) \\(P_1 = \\sum_{k} s_k s_{k+1},\\) and \\(P_2 = \\sum_k s_k s_{k+2}\\) (indices cyclic). Each diagonal is a sum of two consecutive side vectors, so its square is \\(s_{k+1}^2 + s_{k+2}^2 + 2 s_{k+1} s_{k+2} \\cos 72^\\circ,\\) and summing all five gives \\[800 = 2Q + 2\\cos 72^\\circ \\, P_1,\\] so \\[ \\begin{aligned} &2\\cos 72^\\circ \\, P_1 = 800 - 616 \\\\ &= 184. \\end{aligned} \\]\n\nExpanding \\(\\left|\\sum_k s_k u_k\\right|^2 = 0,\\) the angle between \\(u_k\\) and \\(u_{k+1}\\) is \\(72^\\circ\\) and between \\(u_k\\) and \\(u_{k+2}\\) is \\(144^\\circ:\\) \\[ \\begin{aligned} &0 = Q + 2\\cos 72^\\circ \\, P_1 \\\\ &\\quad {}+ 2\\cos 144^\\circ \\, P_2 \\\\ &= 308 + 184 - 2\\cos 36^\\circ \\, P_2, \\end{aligned} \\] so \\(2\\cos 36^\\circ \\, P_2 = 492.\\) Using \\(\\cos 72^\\circ = \\frac{\\sqrt{5} - 1}{4}\\) and \\(\\cos 36^\\circ = \\frac{\\sqrt{5} + 1}{4},\\) we get \\(2P_1 = \\frac{184}{\\cos 72^\\circ} = 184\\left(\\sqrt{5} + 1\\right)\\) and \\(2P_2 = \\frac{492}{\\cos 36^\\circ} = 492\\left(\\sqrt{5} - 1\\right).\\)\n\nThe square of the perimeter is \\[ \\begin{aligned} &\\left(\\sum s_k\\right)^2 = Q + 2P_1 + 2P_2 \\\\ &= 308 + 184\\sqrt{5} + 184 \\\\ &\\quad {}+ 492\\sqrt{5} - 492 \\\\ &= 676\\sqrt{5}. \\end{aligned} \\] Therefore \\(m + n = 676 + 5 = 681.\\)",
+      "hints": [
+        "Write the sides as vectors \\(s_k u_k\\) with \\(u_k = (\\cos 72k^\\circ, \\sin 72k^\\circ)\\) and vanishing sum; each diagonal is the sum of two consecutive side vectors",
+        "The diagonal data gives \\(2\\cos 72^\\circ \\sum s_k s_{k+1} = 184,\\) and expanding \\(\\left|\\sum s_k u_k\\right|^2 = 0\\) then determines \\(\\sum s_k s_{k+2}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

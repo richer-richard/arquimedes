@@ -1,0 +1,71 @@
+{
+  "id": "prob.ahsme-1988-p28",
+  "title": "1988 AHSME Problem 28",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.binomial-probability",
+      "label": "Binomial probability",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1988,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 45.4,
+    "source": 2360,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "An unfair coin has probability \\(p\\) of coming up heads on a single toss. Let \\(w\\) be the probability that, in \\(5\\) independent tosses of this coin, heads come up exactly \\(3\\) times. If \\(w=\\frac{144}{625},\\) then",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(p\\) must be \\(\\frac{2}{5}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(p\\) must be \\(\\frac{3}{5}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(p\\) must be greater than \\(\\frac{3}{5}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(p\\) is not uniquely determined"
+    },
+    {
+      "label": "E",
+      "text": "there is no value of \\(p\\) for which \\(w=\\frac{144}{625}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1988-p28.live",
+      "kind": "proof-sketch",
+      "text": "Here \\(w(p)=10p^3(1-p)^2.\\) At \\(p=\\frac{2}{5},\\) \\[ w=10\\left(\\frac25\\right)^3\\left(\\frac35\\right)^2 =\\frac{144}{625}. \\] Also \\(w(\\frac{3}{5})=\\frac{216}{625}>\\frac{144}{625},\\) while \\(w(1)=0.\\) By continuity there is another solution between \\(\\frac{3}{5}\\) and \\(1.\\) Hence \\(p\\) is not unique.\n\nThus the correct answer is D.",
+      "hints": [
+        "Write \\(w\\) as a function of \\(p\\) using the binomial coefficient",
+        "Check one simple value, then compare the function at \\(p=\\frac{3}{5}\\) and \\(p=1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

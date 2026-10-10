@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-guts-2014-p14",
+  "title": "2014 HMMT November Guts Problem 14",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.coloring-schemes-extremal-arguments",
+      "label": "Coloring schemes, extremal arguments",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2014,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 48.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many ways can the eight vertices of a three-dimensional cube be colored red and blue such that no two points connected by an edge are both red? Rotations and reflections of a given coloring are considered distinct.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2014-p14.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\quad 35\\) We do casework on \\(R\\), the number of red vertices. Let the cube be called \\(A B C D E F G H\\), with opposite faces \\(A B C D\\) and \\(E F G H\\), such that \\(A\\) is directly above \\(E\\).\n\n- \\(\\underline{R=0}\\) : There is one such coloring, which has only blue vertices.\n- \\(\\underline{R=1}\\) : There are 8 ways to choose the red vertex, and all other vertices must be blue. There are 8 colorings in this case.\n- \\(\\underline{R=2}\\) : Any pair not an edge works, so the answer is \\(\\binom{8}{2}-12=16\\).\n- \\(\\underline{R}=3\\) : Each face \\(A B C D\\) and \\(E F G H\\) has at most two red spots. Assume WLOG \\(A B C D\\) has exactly two and \\(E F G H\\) has exactly one (multiply by 2 at the end). There are two ways to pick those in \\(A B C D\\) (two opposite corners), and two ways after that to pick \\(E F G H\\). Hence the grand total for this subcase is \\(2 \\cdot 2 \\cdot 2=8\\).\n- \\(\\underline{R=4}\\) : There are only two ways to do this.\n\nHence, the sum is 35 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

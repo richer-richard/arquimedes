@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-feb-guts-2025-p19",
+  "title": "2025 HMMT February Guts Problem 19",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.greatest-common-divisors-gcd",
+      "label": "Greatest common divisors (gcd)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.induction-smoothing",
+      "label": "Induction / smoothing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.inverses-mod-n",
+      "label": "Inverses mod n",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.sum-of-divisors",
+      "label": "Σ (sum of divisors)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2025,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 73.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A subset \\(S\\) of \\(\\{1,2,3,\\ldots ,2025\\}\\) is called balanced if for all elements \\(a\\) and \\(b\\) both in \\(S\\) , there exists an element \\(c\\) in \\(S\\) such that 2025 divides \\(a + b - 2c\\) . Compute the number of nonempty balanced subsets.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "3751",
+    "value": "3751"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2025-p19.hmmt",
+      "kind": "proof-sketch",
+      "text": "We work mod 2025, so the condition becomes that for any \\(a\\) , \\(b \\in S\\) , we have \\(\\frac{a + b}{2} \\in S\\) .\n\nFirst, we prove that \\(S\\) must be an arithmetic sequence. Observe that if \\(S\\) is balanced, then so is the shift \\(S + k = \\{s + k \\mid s \\in S\\}\\) for all \\(k\\) , so we can assume \\(0 \\in S\\) . Let \\(s\\) be an element of \\(S\\) such that \\(d = \\gcd (s, 2025)\\) is minimal. Observe that for any \\(t \\in S\\) , we have \\(\\frac{t}{2} = \\frac{0 + t}{2} \\in S\\) . Thus, \\(\\frac{s}{2^n}\\) is in \\(S\\) for all \\(n\\) . Because \\(\\gcd (2, 2025) = 1\\) , this implies \\(2^n s \\bmod 2025 \\in S\\) for all \\(n\\) . We prove the following claim.\n\nClaim 1. For all positive integers \\(m\\) , we have \\(m s \\in S\\) .\n\nProof. We proceed with induction on the number of 1's in the binary representation of \\(m\\) .\n\nBase Case: \\(m\\) has one 1 in binary, so \\(m\\) is a power of 2. Then \\(m s \\in S\\) as noted above.\n\nInduction Step: Assume the claim holds for all \\(m\\) which have \\(k\\) 1's in their binary representations. Suppose \\(m\\) has \\(k + 1\\) 1's in its binary representation. Let \\(2^{n}\\) be the largest power of 2 which is at most \\(m\\) . Then \\(m - 2^{n}\\) has \\(k\\) 1's in its binary representation, so \\(2(m - 2^{n})\\) does as well. By the induction hypothesis, \\(2(m - 2^{n})s \\in S\\) . Also, \\(2^{n + 1}s \\in S\\) , so \\(m s = \\frac{2^{n + 1}s + 2(m - 2^{n})s}{2} \\in S\\) , as desired. \\(\\square\\)\n\nIt follows that every multiple of \\(s\\) is in \\(S\\) . The multiples of \\(s\\) are precisely the multiples of \\(d\\) , so \\(S\\) contains every multiple of \\(d\\) . Now assume for sake of contradiction that \\(S\\) contains some element \\(t\\) which is not a multiple of \\(d\\) , so we can write \\(t = cd + r\\) such that \\(0 < r < d\\) . Then \\(2t \\in S\\) , so \\(r = \\frac{2t + (- 2c)d}{2} \\in S\\) . But then \\(\\gcd (r, 2025) \\leq r < d\\) , contradicting the minimality of \\(d\\) . Thus \\(S\\) is precisely the multiples of \\(d\\) .\n\nIt can be verified that for any \\(d \\mid 2025\\) , the set of multiples of \\(d\\) is balanced. Indeed, as \\(d\\) is odd, for any \\(ad\\) , \\(bd \\in S\\) , their average \\(\\frac{(a + b)d}{2}\\) is a multiple of \\(d\\) and hence also in \\(S\\) . Thus, any shift of such a set is also balanced; as seen above, these classify all balanced sets. For each \\(d \\mid 2025\\) , there are \\(d\\) choices for \\(S\\) , so the answer is \\(\\sum_{d \\mid 2025} d = \\frac{3^5 - 1}{2} \\cdot \\frac{5^3 - 1}{4} = \\left\\lceil \\frac{3751}{2} \\right\\rceil\\) .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

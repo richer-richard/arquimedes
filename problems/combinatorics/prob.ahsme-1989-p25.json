@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1989-p25",
+  "title": "1989 AHSME Problem 25",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.extremal-argument",
+      "label": "Extremal argument",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.subsets",
+      "label": "Subsets",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.systematic-listing",
+      "label": "Systematic listing",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1989,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 43.1,
+    "source": 2270,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In a certain cross-country meet between two teams of five runners each, a runner who finishes in the \\(n\\)th position contributes \\(n\\) to his team’s score. The team with the lower score wins. If there are no ties among the runners, how many different winning scores are possible?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(27\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(120\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(126\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "13"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1989-p25.live",
+      "kind": "proof-sketch",
+      "text": "The two scores sum to \\(55,\\) so the winning score is at most \\(27.\\) Its minimum is \\(1+2+3+4+5=15.\\) Every score from \\(15\\) through \\(20\\) is obtained by \\(\\{1,2,3,4,k\\}\\) for \\(k=5,\\ldots,10.\\) Scores \\(21\\) through \\(25\\) use \\(\\{1,2,3,k,10\\}\\) for \\(k=5,\\ldots,9,\\) and \\(26,27\\) use \\(\\{1,2,4,9,10\\}\\) and \\(\\{1,2,5,9,10\\}.\\) Thus all \\(13\\) integers from \\(15\\) through \\(27\\) are possible.\n\nThus the correct answer is B.",
+      "hints": [
+        "The two team scores add to \\(1+2+\\cdots+10\\)",
+        "Determine the minimum winning score and verify that every integer below half the total is attainable"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

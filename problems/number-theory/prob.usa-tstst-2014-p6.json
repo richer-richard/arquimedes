@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tstst-2014-p6",
+  "title": "USA TSTST 2014 Problem 6",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TSTST",
+    "year": 2014,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 97.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a\\), \\(b\\), \\(c\\), \\(d\\) be distinct positive integers\nand \\(p\\) an odd prime \\(p\\) not dividing any of them.\nLet \\(M\\) be an integer.\nSuppose that if one considers the infinite sequence\n\\[\\begin{aligned}\n ca &- db \\\\\n ca^2 &- db^2 \\\\\n ca^3 &- db^3 \\\\\n ca^4 &- db^4 \\\\\n &\\vdots\n\\end{aligned}\\]\nand looks at the highest power of \\(p\\) that divides each of them,\nthese powers are not all zero, and are all at most \\(M\\).\nProve that there exists some \\(T\\) (which may depend on \\(a\\), \\(b\\), \\(c\\), \\(d\\), \\(p\\), \\(M\\))\nsuch that whenever \\(p\\) divides an element of this sequence,\nthe maximum power of \\(p\\) that divides that element is exactly \\(p^T\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tstst-2014-p6.evanchen",
+      "kind": "proof-sketch",
+      "text": "By orders, the indices of terms divisible by \\(p\\)\nis an arithmetic subsequence of \\(\\mathbb{N}\\):\nsay they are \\(\\kappa\\), \\(\\kappa + \\lambda\\), \\(\\kappa + 2\\lambda\\), \\dots,\nwhere \\(\\lambda\\) is the order of \\(a/b\\).\nThat means we want\n\\[ \\nu_p \\left( c a^{\\kappa + n\\lambda} - d b^{\\kappa + n \\lambda} \\right)\n = \\nu_p \\left(\n \\left( \\frac{a^\\lambda}{b^\\lambda} \\right)^n\n - \\frac{d a^\\kappa}{c b^{\\kappa}} \\right)\n\\]\nto be constant.\nThus, we have reduced the problem to the following proposition:\n\nProposition.\n Let \\(p\\) be an odd prime.\n Let \\(x, y \\in \\mathbb{Q}_{>0}\\) such that \\(x \\equiv y \\equiv 1 \\pmod p\\).\n If the sequence \\(\\nu_p\\left( x^n - y \\right)\\) of positive integers\n is nonconstant, then it is unbounded.\n\nFor this it would be sufficient to prove the following claim.\n\nClaim.\n Let \\(p\\) be an odd prime.\n Let \\(x, y \\in \\mathbb{Q}_{>0}\\) such that \\(x \\equiv y \\equiv 1 \\pmod p\\).\n Suppose \\(m\\) and \\(n\\) are positive integers such that\n \\[ d = \\nu_p(x^n-y) < \\nu_p(x^m-y) = e. \\]\n Then there exists \\(\\ell\\) such that \\(\\nu_p(x^\\ell - y) \\ge e + 1\\).\n\nProof.\nFirst, note that\n\\(\\nu_p(x^m - x^n) = \\nu_p\\left( (x^m-y) - (x^n-y) \\right) = d\\)\nand so by exponent lifting we can find some \\(k\\) such that\n\\[ \\nu_p(x^k-1) = e \\]\nnamely \\(k = p^{e-d}|m-n|\\).\n(In fact, one could also choose more carefully\n\\(k = p^{e-d} \\cdot \\gcd(m-n, p^\\infty)\\),\nso that \\(k\\) is a power of \\(p\\).)\n\nSuppose we set \\(x^k = p^e u + 1\\) and \\(x^m = p^e v + y\\)\nwhere \\(u,v \\in \\mathbb{Q}\\) aren't divisible by \\(p\\).\nNow for any integer \\(1 \\le r \\le p-1\\) we consider\n\\[\\begin{aligned}\n x^{kr+m}-y &= (p^e u + 1)^r \\cdot (p^e v + y) - y \\\\\n &= p^e \\left( v + yu \\cdot r \\right) + p^{2e} \\left( \\dots \\right).\n\\end{aligned}\\]\nBy selecting \\(r\\) with \\(r \\equiv -v/u \\pmod p\\),\nwe ensure \\(p^{e+1} \\mid x^{kr+m} - y\\),\nhence \\(\\ell = kr+m\\) is as desired.\n\nRemark.\n One way to motivate the proof of the claim is as follows.\n Suppose we are given \\(\\nu_p(x^m-y) = e\\),\n and we wish to find \\(\\ell\\) such that \\(\\nu_p(x^\\ell - y) > e\\).\n Then, it is necessary (albeit insufficient) that\n \\[ x^{\\ell-m} \\equiv 1 \\pmod{p^e} \\text{ but }\n x^{\\ell-m} \\not\\equiv 1 \\pmod{p^{e+1}}. \\]\n In particular, we need \\(\\nu_p(x^{\\ell-m}-1) = e\\) exactly.\n So the \\(k\\) in the claim must exist if we are going to succeed.\n\n On the other hand, if \\(k\\) is some integer for which\n \\(\\nu_p(x^k-1) = e\\), then by choosing \\(\\ell-m\\) to be some\n multiple of \\(k\\) with no extra factors of \\(p\\),\n we hope that we can get \\(\\nu_p(x^\\ell-y) = e+1\\).\n That's why we write \\(\\ell = kr+m\\) and see what happens when we expand.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

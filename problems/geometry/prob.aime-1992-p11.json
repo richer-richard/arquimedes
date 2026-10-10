@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1992-p11",
+  "title": "1992 AIME Problem 11",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.reflection-geometry",
+      "label": "Reflection (geometry)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.transformation",
+      "label": "Transformation",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1992,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 42.1,
+    "source": 2230,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Lines \\(l_1\\) and \\(l_2\\) both pass through the origin and make first-quadrant angles of \\(\\frac{\\pi}{70}\\) and \\(\\frac{\\pi}{54}\\) radians, respectively, with the positive \\(x\\)-axis. For any line \\(l,\\) the transformation \\(R(l)\\) produces another line as follows: \\(l\\) is reflected in \\(l_1,\\) and the resulting line is reflected in \\(l_2.\\) Let \\(R^{(1)}(l)=R(l)\\) and \\(R^{(n)}(l)=R(R^{(n-1)}(l)).\\) Given that \\(l\\) is the line \\(y=(\\frac{19}{92})x,\\) find the smallest positive integer \\(m\\) for which \\(R^{(m)}(l)=l.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "945",
+    "value": "945"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1992-p11.live",
+      "kind": "proof-sketch",
+      "text": "The composition is rotation through \\[2\\left(\\frac{\\pi}{54}-\\frac{\\pi}{70}\\right)=\\frac{8\\pi}{945}.\\] A line through the origin is unchanged by a rotation exactly when the rotation angle is a multiple of \\(\\pi.\\) Thus \\(m\\) must satisfy \\(\\frac{8m}{945}\\in\\mathbb Z.\\) Since \\(\\gcd(8,945)=1,\\) the least such \\(m\\) is \\(945.\\)",
+      "hints": [
+        "Two reflections in intersecting lines compose to a rotation through twice the angle between the lines",
+        "An unoriented line returns to itself when its accumulated rotation is a multiple of \\(\\pi\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

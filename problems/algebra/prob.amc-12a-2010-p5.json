@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2010-p5",
+  "title": "2010 AMC 12A Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequality",
+      "label": "Inequality",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2010,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 24.4,
+    "source": 1350,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Halfway through a \\(100\\)-shot archery tournament, Chelsea leads by \\(50\\) points. For each shot a bullseye scores \\(10\\) points, with other possible scores being \\(8,\\) \\(4,\\) \\(2,\\) and \\(0\\) points. Chelsea always scores at least \\(4\\) points on each shot. If Chelsea’s next \\(n\\) shots are bullseyes she will be guaranteed victory. What is the minimum value for \\(n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(38\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(40\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(42\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(44\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(46\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "42"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2010-p5.live",
+      "kind": "proof-sketch",
+      "text": "The opponent can score at most \\(50\\cdot10=500\\) on the last \\(50\\) shots. Since Chelsea leads by \\(50,\\) she must score more than \\(500-50=450\\) points on her remaining shots to guarantee victory.\n\nHer \\(n\\) bullseyes give \\(10n\\) points, and her other \\(50-n\\) shots give at least \\(4(50-n)\\) points, so \\[10n+4(50-n)\\gt450.\\] This simplifies to \\(6n\\gt250,\\) i.e. \\(n\\gt41\\tfrac23.\\)\n\nTherefore Chelsea needs at least \\(42\\) bullseyes.\n\nThus, C is the correct answer.",
+      "hints": [
+        "Chelsea’s opponent can score at most \\(10\\) points on each of the remaining \\(50\\) shots",
+        "With \\(n\\) bullseyes and at least \\(4\\) points on the other \\(50-n\\) shots, require \\(10n+4(50-n)\\gt 500-50\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

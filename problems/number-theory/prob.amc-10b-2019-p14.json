@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2019-p14",
+  "title": "2019 AMC 10B 14",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.factorial",
+      "label": "Factorial",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2019,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 25.1,
+    "source": 1610,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The base-ten representation for \\(19!\\) is \\(121,\\) \\(6T5,\\) \\(100,\\) \\(40M,\\) \\(832,\\) \\(H00,\\) where \\(T,\\) \\(M,\\) and \\(H\\) denote digits that are not given. What is \\(T+M+H?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 3 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 8 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 12 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 14 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 17 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "12"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2019-p14.live",
+      "kind": "proof-sketch",
+      "text": "Because \\(19!\\) is divisible by \\(1000\\), its last three digits are zero, so \\(H=0\\).\n\nSince \\(19!\\) is divisible by \\(9\\), its digit sum \\(33+T+M\\) is divisible by \\(9\\). Hence \\(T+M\\equiv3\\pmod9\\), so \\(T+M\\) is either \\(3\\) or \\(12\\).\n\nDivisibility by \\(11\\) says the alternating digit sum \\(T-M-7\\) is divisible by \\(11\\), so \\(T-M\\equiv7\\pmod{11}\\). Checking the digit possibilities from these two congruences gives \\(T=4\\) and \\(M=8\\). Therefore \\(T+M+H=4+8+0=12\\).\n\nThus, the answer is C .",
+      "hints": [
+        "Use divisibility by \\(1000\\), \\(9\\), and \\(11\\)",
+        "The unknown digits are constrained by the digit-sum and alternating-sum tests"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

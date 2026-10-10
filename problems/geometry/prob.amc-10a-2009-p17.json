@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-10a-2009-p17",
+  "title": "2009 AMC 10A Problem 17",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.right-triangle",
+      "label": "Right triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2009,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 26.5,
+    "source": 1580,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Rectangle \\(ABCD\\) has \\(AB = 4\\) and \\(BC = 3.\\) Segment \\(EF\\) is constructed through \\(B\\) so that \\(EF \\perp DB,\\) and \\(A\\) and \\(C\\) lie on \\(DE\\) and \\(DF,\\) respectively. What is \\(EF?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{125}{12}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{103}{9}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(12\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "125/12"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2009-p17.live",
+      "kind": "proof-sketch",
+      "text": "The diagonal is \\(DB = \\sqrt{4^2 + 3^2} = 5.\\)\n\nRight triangles \\(EBA,\\) \\(DBC,\\) and \\(BFC\\) are all similar to \\(\\triangle DBA.\\) From \\(\\triangle EBA,\\) \\[ \\begin{aligned} \\dfrac{EB}{AB} &= \\dfrac{DB}{BC} \\\\ &\\implies \\dfrac{EB}{4} = \\dfrac{5}{3} \\\\ &\\implies EB = \\dfrac{20}{3}. \\end{aligned} \\]\n\nFrom \\(\\triangle BFC,\\) \\[ \\begin{aligned} \\dfrac{BF}{BC} &= \\dfrac{DB}{AB} \\\\ &\\implies \\dfrac{BF}{3} = \\dfrac{5}{4} \\\\ &\\implies BF = \\dfrac{15}{4}. \\end{aligned} \\]\n\nTherefore \\[ \\begin{aligned} EF &= EB + BF \\\\ &= \\dfrac{20}{3} + \\dfrac{15}{4} \\\\ &= \\dfrac{125}{12}. \\end{aligned} \\]\n\nThus, the correct answer is C.",
+      "hints": [
+        "First find \\(DB = \\sqrt{4^2 + 3^2}\\)",
+        "Triangles \\(EBA\\) and \\(BFC\\) are each similar to \\(\\triangle DBA,\\) so find \\(EB\\) and \\(BF\\) from ratios"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

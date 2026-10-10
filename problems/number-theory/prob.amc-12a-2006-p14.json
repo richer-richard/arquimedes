@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12a-2006-p14",
+  "title": "2006 AMC 12A Problem 14",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2006,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 25.4,
+    "source": 1580,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Two farmers agree that pigs are worth \\(\\$300\\) and that goats are worth \\(\\$210.\\) When one farmer owes the other money, he pays the debt in pigs or goats, with “change” received in the form of goats or pigs as necessary. (For example, a \\(\\$390\\) debt could be paid with two pigs, with one goat received in change.) What is the amount of the smallest positive debt that can be resolved in this way?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\$5\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\$10\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\$30\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\$90\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\$210\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "30"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2006-p14.live",
+      "kind": "proof-sketch",
+      "text": "A debt \\(D\\) is resolvable if and only if \\(D = 300p + 210g\\) \\(= 30(10p + 7g)\\) for integers \\(p, g.\\) Thus \\(D\\) is a multiple of \\(\\gcd(300, 210) = 30,\\) so no smaller positive debt works.\n\nA debt of \\(\\$30\\) is achievable since \\(30 = 300(-2) + 210(3),\\) i.e. give \\(3\\) goats and receive \\(2\\) pigs in change.\n\nThus, the correct answer is C.",
+      "hints": [
+        "A resolvable debt has the form \\(300p + 210g\\) for integers \\(p, g\\)",
+        "Every such value is a multiple of \\(\\gcd(300, 210)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

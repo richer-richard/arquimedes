@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1993-p7",
+  "title": "1993 AIME Problem 7",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.catalan-number",
+      "label": "Catalan Number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.sampling-without-replacement",
+      "label": "Sampling without replacement",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1993,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 46.7,
+    "source": 2410,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Three numbers, \\(a_1,\\) \\(a_2,\\) \\(a_3,\\) are drawn randomly and without replacement from the set \\(\\{1,2,3,\\ldots,1000\\}.\\) Three other numbers, \\(b_1,\\) \\(b_2,\\) \\(b_3,\\) are then drawn randomly and without replacement from the remaining set of \\(997\\) numbers. Let \\(p\\) be the probability that, after a suitable rotation, a brick of dimensions \\(a_1\\times a_2\\times a_3\\) can be enclosed in a box of dimensions \\(b_1\\times b_2\\times b_3,\\) with the sides of the brick parallel to the sides of the box. If \\(p\\) is written as a fraction in lowest terms, what is the sum of the numerator and denominator?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "5",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1993-p7.live",
+      "kind": "proof-sketch",
+      "text": "After the six distinct values are fixed and sorted, each of the \\(\\binom63=20\\) assignments of three values to the brick is equally likely. The sorted brick dimensions fit the sorted box dimensions exactly when, in every prefix of the resulting word of three \\(a\\)’s and three \\(b\\)’s, the number of \\(a\\)’s is at least the number of \\(b\\)’s. There are \\(C_3=5\\) such words. Thus \\(p=\\frac{5}{20}=\\frac{1}{4},\\) and the requested sum is \\(1+4=5.\\)",
+      "hints": [
+        "Condition on the six selected values and record only whether each belongs to the brick or the box in increasing order",
+        "The brick fits exactly when every prefix of this six-letter word contains at least as many \\(a\\)’s as \\(b\\)’s"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

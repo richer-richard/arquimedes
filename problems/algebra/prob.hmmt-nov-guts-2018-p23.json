@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-guts-2018-p23",
+  "title": "2018 HMMT November Guts Problem 23",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2018,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 52.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(S\\) be a subset with four elements chosen from \\(\\{1,2, \\ldots, 10\\}\\). Michael notes that there is a way to label the vertices of a square with elements from \\(S\\) such that no two vertices have the same label, and the labels adjacent to any side of the square differ by at least 4 . How many possibilities are there for the subset \\(S\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2018-p23.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 36\nLet the four numbers be \\(a, b, c, d\\) around the square. Assume without loss of generality that \\(a\\) is the largest number, so that \\(a>b\\) and \\(a>d\\). Note that \\(c\\) cannot be simultaneously smaller than one of \\(b, d\\) and larger than the other because, e.g. if \\(b>c>d\\), then \\(a>b>c>d\\) and \\(a \\geq d+12\\). Hence \\(c\\) is either smaller than \\(b\\) and \\(d\\) or larger than \\(b\\) and \\(d\\).\nCase 1: \\(c\\) is smaller than \\(b\\) and \\(d\\). Then we have \\(a-c \\geq 8\\), but when \\(a-c=8\\), we have \\(b=c+4=d\\), so we need \\(a-c=9\\), giving the only set \\(\\{1,5,6,10\\}\\).\nCase 2: \\(c\\) is larger than \\(b\\) and \\(d\\). Since \\(a>c\\) and \\(b, d\\) are both at most \\(c-4\\), the range of possible values for \\(c\\) is \\(\\{6,7,8,9\\}\\). When \\(c=9,8,7,6\\), there are \\(1,2,3,4\\) choices for \\(a\\) respectively and \\(\\binom{5}{2},\\binom{4}{2},\\binom{3}{2},\\binom{2}{2}\\) for \\(b\\) and \\(d\\) respectively (remember that order of \\(b\\) and \\(d\\) does not matter). So there are \\(1 \\cdot 10+2 \\cdot 6+\\) \\(3 \\cdot 3+4 \\cdot 1=35\\) sets in this case.\n\nTherefore we have \\(1+35=36\\) possible sets in total.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

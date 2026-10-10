@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2015-p5",
+  "title": "2015 AMC 12B Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.extremal-argument",
+      "label": "Extremal argument",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequality",
+      "label": "Inequality",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.percentage",
+      "label": "Percentage",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2015,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 21.2,
+    "source": 1270,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "The Tigers beat the Sharks \\(2\\) out of the first \\(3\\) times they played. They then played \\(N\\) more times, and the Sharks ended up winning at least \\(95\\%\\) of all the games played. What is the minimum possible value for \\(N?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(35\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(37\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(39\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(41\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(43\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "37"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2015-p5.live",
+      "kind": "proof-sketch",
+      "text": "The Sharks won \\(1\\) of the first \\(3\\) games. To reach \\(95\\%\\) with the fewest extra games, they should win all \\(N\\) additional games, giving a win fraction \\(\\dfrac{1 + N}{3 + N}.\\)\n\nRequiring \\(\\dfrac{1 + N}{3 + N} \\ge \\dfrac{19}{20}\\) gives \\(20 + 20N \\ge 57 + 19N,\\) so \\(N \\ge 37.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "To minimize \\(N,\\) let the Sharks win all \\(N\\) additional games",
+        "Solve \\(\\dfrac{1 + N}{3 + N} \\ge \\dfrac{95}{100}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

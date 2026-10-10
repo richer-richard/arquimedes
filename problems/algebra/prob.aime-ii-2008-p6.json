@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2008-p6",
+  "title": "2008 AIME II Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factorial",
+      "label": "Factorial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.telescoping",
+      "label": "Telescoping",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2008,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 48.0,
+    "source": 2460,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "The sequence \\(\\{a_n\\}\\) is defined by \\[ \\begin{aligned} a_0 &= 1, \\\\ a_1 &= 1, \\\\ a_n &= a_{n-1} + \\frac{a_{n-1}^2}{a_{n-2}} \\quad (n \\ge 2). \\end{aligned} \\]\n\nThe sequence \\(\\{b_n\\}\\) is defined by \\[ \\begin{aligned} b_0 &= 1, \\\\ b_1 &= 3, \\\\ b_n &= b_{n-1} + \\frac{b_{n-1}^2}{b_{n-2}} \\quad (n \\ge 2). \\end{aligned} \\]\n\nFind \\(\\frac{b_{32}}{a_{32}}.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "561",
+    "value": "561"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2008-p6.live",
+      "kind": "proof-sketch",
+      "text": "Dividing the recurrence by \\(a_{n-1}\\) gives \\[\\frac{a_n}{a_{n-1}} = 1 + \\frac{a_{n-1}}{a_{n-2}},\\] so the consecutive-term ratio increases by exactly \\(1\\) each step. For \\(\\{a_n\\}\\) the first ratio is \\(\\frac{a_1}{a_0} = 1,\\) so \\(\\frac{a_n}{a_{n-1}} = n\\) and \\(a_n = n!.\\) The same computation applies to \\(\\{b_n\\},\\) whose first ratio is \\(\\frac{b_1}{b_0} = 3,\\) so \\(\\frac{b_n}{b_{n-1}} = n + 2\\) and \\(b_n = \\frac{(n+2)!}{2}.\\)\n\nTherefore \\[\\frac{b_{32}}{a_{32}} = \\frac{\\frac{34!}{2}}{32!} = \\frac{34 \\cdot 33}{2} = 561.\\]",
+      "hints": [
+        "Divide the recurrence by \\(a_{n-1}\\) to see that the ratio \\(\\frac{a_n}{a_{n-1}}\\) increases by exactly \\(1\\) at each step",
+        "The ratios give \\(a_n = n!\\) and \\(b_n = \\frac{(n+2)!}{2};\\) form the quotient"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

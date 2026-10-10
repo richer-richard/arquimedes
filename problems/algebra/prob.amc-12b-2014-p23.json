@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2014-p23",
+  "title": "2014 AMC 12B Problem 23",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.telescoping",
+      "label": "Telescoping",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2014,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 39.9,
+    "source": 2560,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "The number \\(2017\\) is prime. Let \\(S = \\sum_{k=0}^{62} \\binom{2014}{k}.\\) What is the remainder when \\(S\\) is divided by \\(2017?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(32\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(684\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1024\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(1576\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2016\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "1024"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2014-p23.live",
+      "kind": "proof-sketch",
+      "text": "Working modulo \\(2017,\\) the identity \\(\\binom{2014}{k} \\cdot k! \\cdot (2014-k)! = 2014!\\) together with \\(2016 \\cdot 2015 \\cdots (2015-k)\\) \\(\\equiv (-1)^k (k+2)!\\) leads to \\[ \\begin{gathered} 2\\binom{2014}{k} \\equiv (-1)^k \\\\ {}\\cdot (k+2)(k+1) \\pmod{2017}, \\end{gathered} \\] so \\(\\binom{2014}{k} \\equiv (-1)^k \\binom{k+2}{2}.\\)\n\nThen \\[ \\begin{gathered} S \\equiv \\sum_{k=0}^{62} (-1)^k \\binom{k+2}{2} \\\\ = 1 \\\\ {}+ \\sum_{k=1}^{31}\\left[\\binom{2k+2}{2} - \\binom{2k+1}{2}\\right] \\\\ = 1 + \\sum_{k=1}^{31}(2k+1). \\end{gathered} \\]\n\nThe remaining sum is \\(3 + 5 + \\cdots + 63 = 1023,\\) so \\(S \\equiv 1 + 1023\\) \\(= 1024 \\pmod{2017}.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Modulo \\(2017,\\) reduce \\(\\binom{2014}{k}\\) using \\(2016 \\equiv -1,\\) \\(2015 \\equiv -2,\\) and so on",
+        "This gives \\(\\binom{2014}{k} \\equiv (-1)^k \\binom{k+2}{2},\\) and the alternating sum telescopes"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

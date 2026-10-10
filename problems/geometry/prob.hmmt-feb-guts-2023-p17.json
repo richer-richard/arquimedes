@@ -1,0 +1,76 @@
+{
+  "id": "prob.hmmt-feb-guts-2023-p17",
+  "title": "2023 HMMT February Guts Problem 17",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cartesian-coordinates",
+      "label": "Cartesian coordinates",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-trigonometry",
+      "label": "Triangle trigonometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vieta-s-formulas",
+      "label": "Vieta's formulas",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2023,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 73.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "An equilateral triangle lies in the Cartesian plane such that the \\(x\\)-coordinates of its vertices are pairwise distinct and all satisfy the equation \\(x^{3}-9 x^{2}+10 x+5=0\\). Compute the side length of the triangle.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\sqrt{68}=2 \\sqrt{17}",
+    "value": "\\sqrt{68}=2 \\sqrt{17}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2023-p17.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let three points be \\(A, B\\), and \\(C\\) with \\(x\\)-coordinates \\(a, b\\), and \\(c\\), respectively. Let the circumcircle of \\(\\triangle A B C\\) meet the line \\(y=b\\) at point \\(P\\). Then, we have \\(\\angle B P C=60^{\\circ} \\Longrightarrow P C=\\)\n\\(\\frac{2}{\\sqrt{3}}(c-b)\\). Similarly, \\(A P=\\frac{2}{\\sqrt{3}}(b-a)\\). Thus, by the Law of Cosines,\n\n\\[\\begin{aligned}\nA C^{2} & =A P^{2}+P C^{2}-2 \\cdot A P \\cdot P C \\cos 120^{\\circ} \\\\\n& =\\frac{4}{3}\\left((c-b)^{2}+(b-a)^{2}+(c-b)(b-a)\\right) \\\\\n& =\\frac{4}{3}\\left(a^{2}+b^{2}+c^{2}-a b-b c-c a\\right) \\\\\n& =\\frac{4}{3}\\left((a+b+c)^{2}-3(a b+b c+c a)\\right)\n\\end{aligned}\\]\n\nBy Vieta's we have \\(a+b+c=9\\) and \\(a b+b c+c a=10\\), so we have \\(A C^{2}=\\frac{4}{3}(81-30)=68\\), implying that the answer is \\(\\sqrt{68}=2 \\sqrt{17}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

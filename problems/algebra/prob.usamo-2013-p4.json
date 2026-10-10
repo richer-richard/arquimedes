@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2013-p4",
+  "title": "2013 USAMO Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2013,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 83.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find all real numbers \\(x,y,z\\geq 1\\) satisfying\n\n\\[\n\\min(\\sqrt{x+xyz},\\sqrt{y+xyz},\\sqrt{z+xyz})=\\sqrt{x-1}+\\sqrt{y-1}+\\sqrt{z-1}.\n\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2013-p4.imported",
+      "kind": "proof-sketch",
+      "text": "The key Lemma is:\n\\[\\sqrt{a-1}+\\sqrt{b-1} \\le \\sqrt{ab}\\] for all $a,b \\ge 1$. Equality holds when $(a-1)(b-1)=1$.\nThis is proven easily.\n\\[\\sqrt{a-1}+\\sqrt{b-1} = \\sqrt{a-1}\\sqrt{1}+\\sqrt{1}\\sqrt{b-1} \\le \\sqrt{(a-1+1)(b-1+1)} = \\sqrt{ab}\\] by Cauchy.\nEquality then holds when $a-1 =\\frac{1}{b-1} \\implies (a-1)(b-1) = 1$.\nNow assume that $x = \\min(x,y,z)$. Now note that, by the Lemma,\n\\[\\sqrt{x-1}+\\sqrt{y-1}+\\sqrt{z-1} \\le \\sqrt{x-1} + \\sqrt{yz} \\le \\sqrt{x(yz+1)} = \\sqrt{xyz+x}\\]. So equality must hold in order for the condition in the problem statement to be met.\nSo $(y-1)(z-1) = 1$ and $(x-1)(yz) = 1$. If we let $z = c$, then we can easily compute that $y = \\frac{c}{c-1}, x = \\frac{c^2+c-1}{c^2}$.\nNow it remains to check that $x \\le y, z$.\nBut by easy computations, $x = \\frac{c^2+c-1}{c^2} \\le c = z \\Longleftrightarrow (c^2-1)(c-1) \\ge 0$, which is obvious.\nAlso $x = \\frac{c^2+c-1}{c^2} \\le \\frac{c}{c-1} = y \\Longleftrightarrow 2c \\ge 1$, which is obvious, since $c \\ge 1$.\nSo all solutions are of the form $\\boxed{\\left(\\frac{c^2+c-1}{c^2}, \\frac{c}{c-1}, c\\right)}$, and all permutations for $c > 1$.\n<b>Remark:</b> An alternative proof of the key Lemma is the following:\nBy AM-GM, \\[(ab-a-b+1)+1 = (a-1)(b-1) + 1 \\ge 2\\sqrt{(a-1)(b-1)}\\]\n\\[ab\\ge (a-1)+(b-1)+2\\sqrt{(a-1)(b-1)}\\]. Now taking the square root of both sides gives the desired. Equality holds when $(a-1)(b-1) = 1$.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

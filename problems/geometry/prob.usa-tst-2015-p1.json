@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tst-2015-p1",
+  "title": "USA TST 2015 Problem 1",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TST",
+    "year": 2015,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 93.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(ABC\\) be a scalene triangle whose incircle is\ntangent to \\(\\overline{BC}\\), \\(\\overline{CA}\\), \\(\\overline{AB}\\) at \\(D\\), \\(E\\), \\(F\\), respectively.\nDenote by \\(M\\) the midpoint of \\(\\overline{BC}\\) and\nlet \\(P\\) be a point in the interior of \\(\\triangle ABC\\)\nso that \\(MD = MP\\) and \\(\\angle PAB = \\angle PAC\\).\nLet \\(Q\\) be a point on the incircle such that \\(\\angle AQD = 90^{\\circ}\\).\nProve that either \\(\\angle PQE = 90^{\\circ}\\) or \\(\\angle PQF = 90^{\\circ}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tst-2015-p1.evanchen",
+      "kind": "proof-sketch",
+      "text": "Let \\(I\\) denote the incenter. We present two solutions.\n\nOfficial solution..\nAssume without loss of generality that \\(AB < AC\\); we show \\(\\angle PQE=90^{\\circ}\\).\n\n[Diagram omitted from this imported TeX transcription.]\n\nFirst, we claim that \\(D\\), \\(P\\), \\(E\\) are collinear.\nLet \\(N\\) be the midpoint of \\(\\overline{AB}\\).\nIt is well-known that the three lines \\(MN\\), \\(DE\\), \\(AI\\) are concurrent at a point\n(see for example problem 6 of USAJMO 2014).\nLet \\(P'\\) be this intersection point, noting that \\(P'\\) actually lies on segment \\(DE\\).\nThen \\(P'\\) lies inside \\(\\triangle ABC\\) and moreover\n\\[ \\triangle DP'M \\sim \\triangle DEC \\]\nso \\(MP' = MD\\).\nHence \\(P'=P\\), proving the claim.\n\nLet \\(S\\) be the point diametrically opposite \\(D\\) on the incircle,\nwhich is also the second intersection of \\(\\overline{AQ}\\) with the incircle.\nLet \\(T = \\overline{AQ} \\cap \\overline{BC}\\).\nThen \\(T\\) is the contact point of the \\(A\\)-excircle;\nconsequently, \\[ MD = MP = MT \\] and we obtain a circle with diameter \\(\\overline{DT}\\).\nSince \\(\\angle DQT = \\angle DQS = 90^{\\circ}\\) we have \\(Q\\) on this circle as well.\n\nAs \\(\\overline{SD}\\) is tangent to the circle with diameter \\(\\overline{DT}\\),\nwe obtain \\[ \\angle PQD = \\angle SDP = \\angle SDE = \\angle SQE. \\]\nSince \\(\\angle DQS = 90^{\\circ}\\), \\(\\angle PQE = 90^{\\circ}\\) too.\n\nSolution using spiral similarity..\nWe will ignore for now the point \\(P\\).\nAs before define \\(S\\), \\(T\\) and note \\(\\overline{AQST}\\) collinear,\nas well as \\(DPQT\\) cyclic on circle \\(\\omega\\) with diameter \\(\\overline{DT}\\).\n\nLet \\(\\tau\\) be the spiral similarity at \\(Q\\)\nsending \\(\\omega\\) to the incircle.\nWe have \\(\\tau(T) = D\\), \\(\\tau(D) = S\\), \\(\\tau(Q) = Q\\).\nNow\n\\[ I = \\overline{DD} \\cap \\overline{QQ} \\implies \\tau(I) = \\overline{SS} \\cap \\overline{QQ} \\]\nand hence we conclude \\(\\tau(I)\\) is the pole of \\(\\overline{ASQT}\\)\nwith respect to the incircle, which lies on line \\(EF\\).\n\nThen since \\(\\overline{AI} \\perp \\overline{EF}\\) too,\nwe deduce \\(\\tau\\) sends line \\(AI\\) to line \\(EF\\),\nhence \\(\\tau(P)\\) must be either \\(E\\) or \\(F\\) as desired.\n\nAuthorship comments..\nWritten April 2014.\nI found this problem while playing with GeoGebra.\nSpecifically, I started by drawing in the points \\(A\\), \\(B\\), \\(C\\),\n\\(I\\), \\(D\\), \\(M\\), \\(T\\), common points.\nI decided to add in the circle with diameter \\(DT\\),\nbecause of the synergy it had with the rest of the picture.\nAfter a while of playing around,\nI intersected ray \\(AI\\) with the circle to get \\(P\\),\nand was surprised to find that \\(D\\), \\(P\\), \\(E\\) were collinear,\nwhich I thought was impossible since the setup should have been symmetric.\nOn further reflection, I realized it was because \\(AI\\)\nintersected the circle twice, and set about trying to prove this.\nI noticed the relation \\(\\angle PQE = 90^\\circ\\) in my attempts\nto prove the result, even though this ended up being a corollary\nrather than a useful lemma.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

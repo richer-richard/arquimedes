@@ -1,0 +1,56 @@
+{
+  "id": "prob.hmmt-feb-guts-2008-p33",
+  "title": "2008 HMMT February Guts Problem 33",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2008,
+    "number": 33
+  },
+  "difficulty": {
+    "course": 83.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a, b, c\\) be nonzero real numbers such that \\(a+b+c=0\\) and \\(a^{3}+b^{3}+c^{3}=a^{5}+b^{5}+c^{5}\\). Find the value of \\(a^{2}+b^{2}+c^{2}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2008-p33.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\quad \\frac{6}{5}\\) Let \\(\\sigma_{1}=a+b+c, \\sigma_{2}=a b+b c+c a\\) and \\(\\sigma_{3}=a b c\\) be the three elementary symmetric polynomials. Since \\(a^{3}+b^{3}+c^{3}\\) is a symmetric polynomial, it can be written as a polynomial in \\(\\sigma_{1}, \\sigma_{2}\\) and \\(\\sigma_{3}\\). Now, observe that \\(\\sigma_{1}=0\\), and so we only need to worry about the terms not containing \\(\\sigma_{1}\\). By considering the degrees of the terms, we see that the only possibility is \\(\\sigma_{3}\\). That is, \\(a^{3}+b^{3}+c^{3}=k \\sigma_{3}\\) for some constant \\(k\\). By setting \\(a=b=1, c=-2\\), we see that \\(k=3\\).\nBy similar reasoning, we find that \\(a^{5}+b^{5}+c^{5}=h \\sigma_{2} \\sigma_{3}\\) for some constant \\(h\\). By setting \\(a=b=1\\) and \\(c=-2\\), we get \\(h=-5\\).\n\nSo, we now know that \\(a+b+c=0\\) implies\n\n\\[a^{3}+b^{3}+c^{3}=3 a b c \\quad \\text { and } \\quad a^{5}+b^{5}+c^{5}=-5 a b c(a b+b c+c a)\\]\n\nThen \\(a^{3}+b^{3}+c^{3}=a^{5}+b^{5}+c^{5}\\) implies that \\(3 a b c=-5 a b c(a b+b c+c a)\\). Given that \\(a, b, c\\) are nonzero, we get \\(a b+b c+c a=-\\frac{3}{5}\\). Then, \\(a^{2}+b^{2}+c^{2}=(a+b+c)^{2}-2(a b+b c+c a)=\\frac{6}{5}\\).\n\n## \\(11^{\\text {th }}\\) HARVARD-MIT MATHEMATICS TOURNAMENT, 23 FEBRUARY 2008 - GUTS ROUND",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

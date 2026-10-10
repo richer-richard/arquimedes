@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2007-p24",
+  "title": "2007 AMC 12A Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.counting-intersections",
+      "label": "Counting intersections",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2007,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 41.1,
+    "source": 2420,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "For each integer \\(n\\gt 1,\\) let \\(F(n)\\) be the number of solutions of the equation \\(\\sin x=\\sin nx\\) on the interval \\([0,\\pi].\\) What is \\(\\displaystyle\\sum_{n=2}^{2007}F(n)?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2{,}014{,}524\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2{,}015{,}028\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2{,}015{,}033\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2{,}016{,}532\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2{,}017{,}033\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "2016532"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2007-p24.live",
+      "kind": "proof-sketch",
+      "text": "On each interval where \\(\\sin nx\\ge 0,\\) the graphs of \\(\\sin x\\) and \\(\\sin nx\\) meet twice, unless they share the value \\(1\\) there, in which case they meet once. Counting the humps and the endpoint at \\((\\pi,0)\\) gives\n\n\\(F(n)=n+1\\) when \\(n\\) is even or \\(n\\equiv 3\\pmod 4,\\) and \\(F(n)=n\\) when \\(n\\equiv 1\\pmod 4.\\)\n\nThus \\[ \\begin{aligned} &\\sum_{n=2}^{2007}F(n) \\\\ &=\\sum_{n=2}^{2007}(n+1) \\\\ &\\quad {}-\\#\\{n\\equiv 1\\!\\!\\pmod 4\\}. \\end{aligned} \\] The first sum is \\(2{,}017{,}033,\\) and there are \\(501\\) values \\(n\\equiv 1\\pmod 4\\) in the range, giving \\(2{,}017{,}033-501=2{,}016{,}532.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "\\(F(n)\\) counts intersections of \\(y=\\sin x\\) and \\(y=\\sin nx\\) on \\([0,\\pi],\\) usually two per hump of \\(\\sin nx\\)",
+        "\\(F(n)=n+1\\) except when \\(n\\equiv 1\\pmod 4,\\) where a shared maximum drops it to \\(n\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

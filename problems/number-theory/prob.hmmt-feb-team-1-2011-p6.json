@@ -1,0 +1,64 @@
+{
+  "id": "prob.hmmt-feb-team-1-2011-p6",
+  "title": "2011 HMMT February Team Round 1 Problem 6",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "nt.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.games-and-strategy",
+      "label": "Games and strategy",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.probability",
+      "label": "Probability",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 83.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Prove that whenever the player must choose the side of a coin, the optimal strategy is to choose heads if more coins have been determined tails than heads and to choose tails if more coins have been determined heads than tails.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1-2011-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(q_{n}(k)\\) be the probability that, with \\(n\\) turns left and \\(|H-T|=k\\), the player wins playing the optimal strategy. Note that \\(k\\) is always even. We prove by induction on \\(n\\) that with \\(n\\) turns left in the game, this is the optimal strategy, and that \\(q_{n}(k) \\geq q_{n}(k+2)\\).\nBase Case: \\(n=1\\), if there is one more turn in the game, then clearly if we flip 3 coins and get \\(|H-T| \\geq 3\\) then our play does not matter. If we get \\(|H-T|=1\\) then the optimal strategy is to pick the side so that \\(|H-T|=0\\). So this is the optimal strategy.\nNow \\(q_{1}(0)=\\frac{3}{4}, q_{1}(2)=\\frac{1}{2}, q_{1}(4)=\\frac{1}{8}\\) and \\(q_{1}(2 k)=0\\) for \\(k \\geq 3\\). So \\(q_{1}(k) \\geq q_{1}(k+2)\\) for all \\(k\\).\nInduction Step: Assume the induction hypothesis for \\(n-1\\) turns left in the game. With \\(n\\) turns left in the game, since \\(q_{n-1}(k)\\) decreases when \\(k=|H-T|\\) increases, a larger value of \\(|H-T|\\) is never more desirable. So picking the side of the coin that minimizes \\(|H-T|\\) is the optimal strategy.\nNow for \\(k \\geq 2, q_{n}(2 k)=\\frac{1}{8} q_{n-1}(2 k-4)+\\frac{3}{8} q_{n-1}(2 k-2)+\\frac{3}{8} q_{n-1}(2 k)+\\frac{1}{8} q_{n-1}(2 k+2)\\), and it is clear, by the induction hypothesis that \\(q_{n}(2 k) \\geq q_{n}(2 k+2)\\) for all \\(k \\geq 2\\). Similar computations make it clear that \\(q_{n}(0) \\geq q_{n}(2) \\geq q_{n}(4)\\). This completes the induction step.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

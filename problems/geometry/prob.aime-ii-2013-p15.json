@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2013-p15",
+  "title": "2013 AIME II Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.law-of-sines",
+      "label": "Law of sines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2013,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 65.3,
+    "source": 3370,
+    "mohs": null
+  },
+  "estimatedMinutes": 20,
+  "statement": "Let \\(A,\\) \\(B,\\) \\(C\\) be angles of a triangle with \\(A\\) and \\(C\\) acute and \\(B\\) greater than a right angle satisfying \\[ \\begin{aligned} &\\cos^2 A + \\cos^2 B \\\\ &\\quad {}+ 2 \\sin A \\sin B \\cos C = \\frac{15}{8} \\end{aligned} \\] and \\[ \\begin{aligned} &\\cos^2 B + \\cos^2 C \\\\ &\\quad {}+ 2 \\sin B \\sin C \\cos A = \\frac{14}{9}. \\end{aligned} \\] There are positive integers \\(p,\\) \\(q,\\) \\(r,\\) and \\(s\\) for which \\[ \\begin{aligned} &\\cos^2 C + \\cos^2 A \\\\ &\\quad {}+ 2 \\sin C \\sin A \\cos B \\\\ &= \\frac{p - q\\sqrt{r}}{s}, \\end{aligned} \\] where \\(p + q\\) and \\(s\\) are relatively prime and \\(r\\) is not divisible by the square of any prime. Find \\(p + q + r + s.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "222",
+    "value": "222"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2013-p15.live",
+      "kind": "proof-sketch",
+      "text": "Replacing each \\(\\cos^2\\) by \\(1 - \\sin^2,\\) the first equation becomes \\(\\sin^2 A + \\sin^2 B\\) \\(- 2 \\sin A \\sin B \\cos C = \\frac{1}{8}.\\) By the law of sines, \\(\\sin A = \\frac{a}{2R}\\) and so on, so the left side equals \\[ \\begin{aligned} \\frac{a^2 + b^2 - 2ab\\cos C}{4R^2} &= \\frac{c^2}{4R^2} \\\\ &= \\sin^2 C \\end{aligned} \\] by the law of cosines. Hence \\(\\sin^2 C = 2 - \\frac{15}{8} = \\frac{1}{8}.\\) The same argument turns the second equation into \\(\\sin^2 A = 2 - \\frac{14}{9} = \\frac{4}{9},\\) and shows the requested expression equals \\(2 - \\sin^2 B.\\)\n\nSince \\(A\\) and \\(C\\) are acute, \\(\\cos A = \\frac{\\sqrt{5}}{3}\\) and \\(\\cos C = \\frac{\\sqrt{14}}{4},\\) with \\(\\sin A = \\frac{2}{3}\\) and \\(\\sin C = \\frac{\\sqrt{2}}{4}.\\) Then \\[ \\begin{aligned} \\sin B &= \\sin(A + C) \\\\ &= \\frac{2}{3} \\cdot \\frac{\\sqrt{14}}{4} + \\frac{\\sqrt{5}}{3} \\cdot \\frac{\\sqrt{2}}{4} \\\\ &= \\frac{2\\sqrt{14} + \\sqrt{10}}{12}, \\end{aligned} \\] so \\(\\sin^2 B = \\frac{66 + 8\\sqrt{35}}{144} = \\frac{33 + 4\\sqrt{35}}{72}.\\)\n\nTherefore \\(2 - \\sin^2 B = \\frac{111 - 4\\sqrt{35}}{72},\\) and \\(p + q + r + s\\) \\(= 111 + 4 + 35 + 72\\) \\(= 222.\\)",
+      "hints": [
+        "Rewrite the first equation as \\(\\sin^2 A + \\sin^2 B\\) \\(- 2\\sin A \\sin B \\cos C = \\frac{1}{8};\\) the laws of sines and cosines turn the left side into \\(\\sin^2 C\\)",
+        "So \\(\\sin^2 C = \\frac{1}{8}\\) and \\(\\sin^2 A = \\frac{4}{9},\\) and the requested quantity is \\(2 - \\sin^2 B\\) with \\(\\sin B = \\sin(A + C)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2013-p6",
+  "title": "2013 HMMT February Combinatorics Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2013,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 78.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Values \\(a_{1}, \\ldots, a_{2013}\\) are chosen independently and at random from the set \\(\\{1, \\ldots, 2013\\}\\). What is expected number of distinct values in the set \\(\\left\\{a_{1}, \\ldots, a_{2013}\\right\\}\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2013-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{2013^{2013}-2012^{2013}}{2013^{2012}}\\) For each \\(n \\in\\{1,2, \\ldots, 2013\\}\\), let \\(X_{n}=1\\) if \\(n\\) appears in \\(\\left\\{a_{1}, a_{2}, \\ldots, a_{2013}\\right\\}\\) and 0 otherwise. Defined this way, \\(\\mathrm{E}\\left[X_{n}\\right]\\) is the probability that \\(n\\) appears in \\(\\left\\{a_{1}, a_{2}, \\ldots, a_{2013}\\right\\}\\). Since each \\(a_{i}(1 \\leq i \\leq 2013)\\) is not \\(n\\) with probability 2012/2013, the probability that \\(n\\) is none of the \\(a_{i}\\) 's is \\(\\left(\\frac{2012}{2013}\\right)^{2013}\\), so \\(\\mathrm{E}\\left[X_{n}\\right]\\), the probability that \\(n\\) is one of the \\(a_{i}\\) 's, is \\(1-\\left(\\frac{2012}{2013}\\right)^{2013}\\). The expected number of distinct values in \\(\\left\\{a_{1}, \\ldots, a_{2013}\\right\\}\\) is the expected number of \\(n \\in\\{1,2, \\ldots, 2013\\}\\) such that \\(X_{n}=1\\), that is, the expected value of \\(X_{1}+X_{2}+\\cdots+X_{2013}\\). By linearity of expectation, \\(\\mathrm{E}\\left[X_{1}+X_{2}+\\cdots+X_{2013}\\right]=\\mathrm{E}\\left[X_{1}\\right]+\\mathrm{E}\\left[X_{2}\\right]+\\cdots+\\mathrm{E}\\left[X_{n}\\right]=2013\\left(1-\\left(\\frac{2012}{2013}\\right)^{2013}\\right)=\\frac{2013^{2013}-2012^{2013}}{2013^{2012}}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "id": "prob.amc-8-2011-p16",
+  "title": "2011 AMC 8 Problem 16",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.isosceles-triangle",
+      "label": "Isosceles triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2011,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 16.4,
+    "source": 1340,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(A\\) be the area of the triangle with sides of length \\(25,\\) \\(25,\\) and \\(30.\\) Let \\(B\\) be the area of the triangle with sides of length \\(25,\\) \\(25,\\) and \\(40.\\) What is the relationship between \\(A\\) and \\(B?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(A = \\dfrac{9}{16}B\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(A = \\dfrac{3}{4}B\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(A = B\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(A = \\dfrac{4}{3}B\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(A = \\dfrac{16}{9}B\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2011-p16.live",
+      "kind": "proof-sketch",
+      "text": "Since these triangles are isosceles, the altitude shown from the apex of each triangle bisects its base and creates two congruent right triangles.\n\nUsing the Pythagorean theorem, we get that the altitude of the triangle with area \\(A\\) equals \\[\\sqrt{25^2 - 15^2} = 20.\\] Similarly, we get that the altitude of the triangle with area \\(B\\) equals \\[\\sqrt{25^2 - 20^2} = 15.\\]\n\nWith these altitudes, we can calculate the areas of the triangles. We get that \\[ A = \\dfrac{1}{2} \\cdot 20 \\cdot 30 = 300. \\] Similarly, \\[ B = \\dfrac{1}{2} \\cdot 15 \\cdot 40 = 300. \\]\n\nTherefore, \\(A = B.\\)\n\nThus, C is the correct answer.",
+      "hints": [
+        "The two right triangles use legs \\(15,20,25\\) in opposite roles.",
+        "Drop an altitude in each isosceles triangle."
+      ],
+      "images": [
+        "5a2f00ff7a0b787c5b0f36d79fcf3110bb6a1ee98743851ef539f4cadf32bd07"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "5a2f00ff7a0b787c5b0f36d79fcf3110bb6a1ee98743851ef539f4cadf32bd07"
+    ]
+  }
+}

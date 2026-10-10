@@ -1,0 +1,95 @@
+{
+  "id": "prob.ahsme-1982-p10",
+  "title": "1982 AHSME Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.herons-formula",
+      "label": "Heron’s Formula",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.incircle-incenter-and-inradius",
+      "label": "Incircle, incenter, and inradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.perimeter",
+      "label": "Perimeter",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1982,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 33.9,
+    "source": 1910,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In the adjoining diagram, \\(BO\\) bisects \\(\\angle CBA,\\) \\(CO\\) bisects \\(\\angle ACB,\\) and \\(MN\\) is parallel to \\(BC.\\) If \\(AB=12,\\) \\(BC=24,\\) and \\(AC=18,\\) then the perimeter of \\(\\triangle AMN\\) is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(30\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(33\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(36\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(39\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(42\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "30"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1982-p10.live",
+      "kind": "proof-sketch",
+      "text": "The sides \\(12,\\) \\(18,\\) \\(24\\) have semiperimeter \\(27\\) and area \\[ \\sqrt{27\\cdot15\\cdot9\\cdot3}=27\\sqrt{15}, \\] so the inradius is \\(r=\\sqrt{15}.\\) Taking \\(BC\\) as base, the altitude is \\(h=\\frac{2(27\\sqrt{15})}{24}=\\frac{9\\sqrt{15}}{4}.\\) Thus the similarity scale from \\(\\triangle ABC\\) to \\(\\triangle AMN\\) is \\(1-\\frac{r}{h}=1-\\frac{4}{9}=\\frac{5}{9}.\\) Its perimeter is \\((\\frac{5}{9})(12+18+24)=30.\\)\n\nTherefore, the correct answer is A.",
+      "hints": [
+        "Because \\(O\\) is the incenter, its distance from \\(BC\\) is the inradius",
+        "Compare the altitude of \\(\\triangle AMN\\) with the altitude of \\(\\triangle ABC\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "8f4f1db462133aa9ca45479338ce748c4e46292af52d842c77e1272080c6636b"
+    ],
+    "solutions": []
+  }
+}

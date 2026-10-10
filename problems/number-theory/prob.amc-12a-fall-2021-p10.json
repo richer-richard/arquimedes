@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-fall-2021-p10",
+  "title": "2021 Fall AMC 12A Problem 10",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2021,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 24.9,
+    "source": 1560,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The base-nine representation of the number \\(N\\) is \\(27{,}006{,}000{,}052_9.\\) What is the remainder when \\(N\\) is divided by \\(5?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "3"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-fall-2021-p10.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(9 \\equiv -1 \\pmod 5,\\) each power \\(9^k \\equiv (-1)^k,\\) so \\(N\\) is congruent to the alternating sum of its base-nine digits.\n\nThe nonzero digits, with their positions from the right, are \\(2\\) (position \\(0\\)), \\(5\\) (position \\(1\\)), \\(6\\) (position \\(6\\)), \\(7\\) (position \\(9\\)), and \\(2\\) (position \\(10\\)). The alternating sum is \\(2 - 5 + 6 - 7 + 2 = -2\\) \\(\\equiv 3 \\pmod 5.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "\\(9 \\equiv -1 \\pmod 5,\\) so \\(9^k \\equiv (-1)^k \\pmod 5\\)",
+        "Take the alternating sum of the base-nine digits (from the right)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

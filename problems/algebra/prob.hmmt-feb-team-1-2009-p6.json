@@ -1,0 +1,85 @@
+{
+  "id": "prob.hmmt-feb-team-1-2009-p6",
+  "title": "2009 HMMT February Team Round 1 Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.coloring",
+      "label": "Coloring",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithms-and-exponentials",
+      "label": "Logarithms and exponentials",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2009,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 83.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For any set of graphs \\(G_{1}, G_{2}, \\ldots, G_{n}\\) all having the same set of vertices \\(V\\), define their overlap, denoted \\(G_{1} \\cup G_{2} \\cup \\cdots \\cup G_{n}\\), to be the graph having vertex set \\(V\\) for which two vertices are adjacent in the overlap if and only if they are adjacent in at least one of the graphs \\(G_{i}\\).\n(a) \\([\\mathbf{1 0}]\\) Let \\(G\\) and \\(H\\) be graphs having the same vertex set and let \\(a\\) be the chromatic number of \\(G\\) and \\(b\\) the chromatic number of \\(H\\). Find, in terms of \\(a\\) and \\(b\\), the largest possible chromatic number of \\(G \\cup H\\). Prove your answer.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1-2009-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "First, we show that we can always color \\(G \\cup H\\) using \\(a b\\) colors. Given a good coloring of \\(G\\) in \\(a\\) colors \\(c_{1}, \\ldots, c_{a}\\) and a good coloring of \\(H\\) using \\(b\\) colors \\(d_{1}, \\ldots, d_{b}\\), define \\(a b\\) new colors to be the ordered pairs \\(\\left(c_{i}, d_{j}\\right)\\). Label a vertex of \\(G \\cup H\\) with the color \\(\\left(c_{i}, d_{j}\\right)\\) if it is colored \\(c_{i}\\) in \\(G\\) and \\(d_{i}\\) in \\(H\\). This gives a good coloring of \\(G \\cup H\\).\nNow, it only remains to find graphs \\(G\\) and \\(H\\) such that \\(G \\cup H\\) has chromatic number \\(a b\\). Consider the complete graph \\(K_{a b}\\) having \\(a b\\) vertices \\(v_{1}, \\ldots, v_{a b}\\) (every pair of vertices is adjacent). Let \\(G\\) be the graph with vertices \\(v_{1}, \\ldots, v_{a b}\\) such that \\(v_{i}\\) is connected to \\(v_{j}\\) if and only if \\(i-j\\) is a multiple of \\(a\\). Also, let \\(H\\) be the graph on \\(v_{1}, \\ldots, v_{a b}\\) such that two vertices are adjacent if and only if they are not adjacent in \\(G\\). Then \\(G \\cup H=K_{a b}\\). Note that \\(G\\) has chromatic number \\(a\\) since it is the disjoint union of \\(b\\) complete graphs on \\(a\\) vertices. Also, \\(H\\) has chromatic number \\(b\\) since we can color each set of vertices \\(v_{i}\\) with a color corresponding to \\(i\\) modulo \\(b\\) to obtain a good coloring. The chromatic number of \\(G \\cup H\\) is clearly \\(a b\\), and so we have found such a pair of graphs.\n(b) \\([\\mathbf{1 0}]\\) Suppose \\(G\\) is a graph with chromatic number \\(n\\). Suppose there exist \\(k\\) graphs \\(G_{1}, G_{2}, \\ldots, G_{k}\\) having the same vertex set as \\(G\\) such that \\(G_{1} \\cup G_{2} \\cup \\cdots \\cup G_{k}=G\\) and each \\(G_{i}\\) has chromatic number at most 2. Show that \\(k \\geq\\left\\lceil\\log _{2}(n)\\right\\rceil\\), and show that one can always find such a decomposition of \\(G\\) into \\(\\left\\lceil\\log _{2}(n)\\right\\rceil\\) graphs.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

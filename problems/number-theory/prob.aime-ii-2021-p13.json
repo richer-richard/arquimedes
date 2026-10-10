@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-ii-2021-p13",
+  "title": "2021 AIME II Problem 13",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.chinese-remainder-theorem",
+      "label": "Chinese Remainder Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-exponentiation",
+      "label": "Modular exponentiation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.multiplicative-order",
+      "label": "Multiplicative order",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2021,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 65.9,
+    "source": 3160,
+    "mohs": null
+  },
+  "estimatedMinutes": 16,
+  "statement": "Find the least positive integer \\(n\\) for which \\(2^n + 5^n - n\\) is a multiple of \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "797",
+    "value": "797"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2021-p13.live",
+      "kind": "proof-sketch",
+      "text": "Work modulo \\(8\\) and \\(125.\\) For \\(n \\ge 3\\) we have \\(2^n \\equiv 0 \\pmod 8,\\) so we need \\(n \\equiv 5^n \\pmod 8.\\) If \\(n\\) is even then \\(5^n \\equiv 1,\\) forcing the even number \\(n\\) to be \\(\\equiv 1 \\pmod 8,\\) impossible; so \\(n\\) is odd, \\(5^n \\equiv 5,\\) and \\(n \\equiv 5 \\pmod 8.\\) Also \\(5^n \\equiv 0 \\pmod{125}\\) for \\(n \\ge 3,\\) so we need \\(n \\equiv 2^n \\pmod{125}.\\)\n\nThe order of \\(2\\) is \\(4\\) modulo \\(5,\\) \\(20\\) modulo \\(25,\\) and \\(100\\) modulo \\(125.\\) Since \\(n \\equiv 5 \\pmod 8\\) gives \\(n \\equiv 1 \\pmod 4,\\) we get \\(2^n \\equiv 2 \\pmod 5,\\) so \\(n \\equiv 2 \\pmod 5\\) and hence \\(n \\equiv 17 \\pmod{20}.\\) Then \\(2^n \\equiv 2^{17} = 2^{10} \\cdot 2^7\\) \\(\\equiv (-1)(3) \\equiv 22 \\pmod{25},\\) so \\(n \\equiv 22 \\pmod{25},\\) which with \\(n \\equiv 1 \\pmod 4\\) gives \\(n \\equiv 97 \\pmod{100}.\\) Finally \\(2^{10} \\equiv 24,\\) \\(2^{20} \\equiv 76,\\) \\(2^{40} \\equiv 26,\\) \\(2^{80} \\equiv 51 \\pmod{125},\\) so \\[ \\begin{aligned} &2^n \\equiv 2^{97} = 2^{80} \\cdot 2^{10} \\cdot 2^7 \\\\ &\\equiv 51 \\cdot 24 \\cdot 3 \\equiv 47 \\pmod{125}, \\end{aligned} \\] giving \\(n \\equiv 47 \\pmod{125}.\\)\n\nCombining \\(n \\equiv 47 \\pmod{125}\\) with \\(n \\equiv 5 \\pmod 8\\) yields \\(n \\equiv 797 \\pmod{1000},\\) and \\(n = 1, 2\\) fail by direct check, so the least such \\(n\\) is \\(797.\\)",
+      "hints": [
+        "Split \\(1000 = 8 \\cdot 125:\\) for \\(n \\ge 3\\) you need \\(n \\equiv 5^n \\pmod 8\\) and \\(n \\equiv 2^n \\pmod{125}\\)",
+        "\\(2^n \\bmod 125\\) depends only on \\(n \\bmod 100.\\) Force consistency modulo \\(5,\\) then \\(25,\\) to pin down \\(n \\bmod 100,\\) and finish with CRT."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

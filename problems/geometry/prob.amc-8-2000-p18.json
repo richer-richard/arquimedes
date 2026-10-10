@@ -1,0 +1,89 @@
+{
+  "id": "prob.amc-8-2000-p18",
+  "title": "2000 AMC 8 Problem 18",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area",
+      "label": "Area",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.lattice-point",
+      "label": "Lattice point",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.perimeter",
+      "label": "Perimeter",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2000,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 22.6,
+    "source": 1470,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Consider these two geoboard quadrilaterals. Which of the following statements is true?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "The area of quadrilateral \\(I\\) is more than the area of\nquadrilateral \\(II.\\)"
+    },
+    {
+      "label": "B",
+      "text": "The area of quadrilateral \\(I\\) is less than the area of\nquadrilateral \\(II.\\)"
+    },
+    {
+      "label": "C",
+      "text": "The quadrilaterals have the same area and the same\nperimeter."
+    },
+    {
+      "label": "D",
+      "text": "The quadrilaterals have the same area, but the perimeter of\n\\(I\\) is more than the perimeter of \\(II.\\)"
+    },
+    {
+      "label": "E",
+      "text": "The quadrilaterals have the same area, but the\nperimeter of \\(I\\) is less than the perimeter of \\(II.\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2000-p18.live",
+      "kind": "proof-sketch",
+      "text": "Assume that the pegs on this grid are separated by \\(1\\) unit.\n\nNote that region \\(I\\) is a parallelogram with base \\(1\\) and height \\(1,\\) making its area \\(1 \\cdot 1 = 1.\\)\n\nWe can split region \\(II\\) into \\(2\\) triangles, both with base \\(1\\) and height \\(1.\\) This makes the sum of the areas \\[ 2 \\cdot \\dfrac{1}{2} \\cdot 1 \\cdot 1 = 1. \\] This shows that both regions have the same area.\n\nNote that each region has \\(2\\) sides that are of length \\(\\sqrt{2}.\\) Region \\(I\\) has \\(2\\) unit sides, whereas region \\(II\\) only has \\(1.\\)\n\nThe other side of region \\(II\\) is clearly greater than \\(1,\\) which shows that region \\(II\\) has the greater perimeter.\n\nThus, E is the correct answer.",
+      "hints": [
+        "Decompose both quadrilaterals into unit right triangles",
+        "Compute all four side lengths of each quadrilateral"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "66f3c25f88220bd239bbab2b9e7a4b0b148047746e53762e6c33d5a48c098617"
+    ],
+    "solutions": []
+  }
+}

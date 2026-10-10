@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-8-2009-p11",
+  "title": "2009 AMC 8 Problem 11",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2009,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 13.7,
+    "source": 1290,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The Amaco Middle School bookstore sells pencils costing a whole number of cents. Some seventh graders each bought a pencil, paying a total of \\(1.43\\) dollars. Some of the \\(30\\) sixth graders each bought a pencil, and they paid a total of \\(1.95\\) dollars. How many more sixth graders than seventh graders bought a pencil?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2009-p11.live",
+      "kind": "proof-sketch",
+      "text": "The number of seventh graders that bought a pencil is \\(143\\) divided by the price of a pencil. Similarly, the number of sixth graders that bought a pencil is \\(195\\) divided by the price of a pencil.\n\nThis means that the price of a pencil divides both \\(143\\) and \\(195.\\) Prime factorizing, we get \\[ 143 = 11 \\cdot 13 \\] and \\[ 195 = 3 \\cdot 5 \\cdot 13. \\] The only numbers that divide both \\(143\\) and \\(195\\) are \\(1\\) and \\(13.\\)\n\nIf \\(1\\) cent was the price of the pencil, that means \\(195\\) sixth graders bought pencils, which is not possible. Therefore, the price of a pencil is \\(13\\) cents.\n\nThis means that \\(143 \\div 13 = 11\\) seventh graders bought a pencil, and \\(195 \\div 13 = 15\\) sixth graders bought a pencil. Therefore, \\(4\\) more sixth graders than seventh graders bought pencils.\n\nThus, D is the correct answer.",
+      "hints": [
+        "The pencil price must divide both total costs in cents.",
+        "Use the fact that at most \\(30\\) sixth graders bought pencils to rule out a \\(1\\)-cent price."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

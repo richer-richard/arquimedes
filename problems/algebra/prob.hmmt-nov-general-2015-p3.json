@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-general-2015-p3",
+  "title": "2015 HMMT November General Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.combinatorial-optimization",
+      "label": "Combinatorial optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.games-and-greedy-algorithms",
+      "label": "Games and greedy algorithms",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.integers",
+      "label": "Integers",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2015,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 42.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Neo has an infinite supply of red pills and blue pills. When he takes a red pill, his weight will double, and when he takes a blue pill, he will lose one pound. If Neo originally weighs one pound, what is the minimum number of pills he must take to make his weight 2015 pounds?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2015-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 13\nSuppose instead Neo started at a weight of 2015 pounds, instead had green pills, which halve his weight, and purple pills, which increase his weight by a pound, and he wished to reduce his weight to one pound. It is clear that, if Neo were able to find such a sequence of pills in the case where he goes from 2015 pounds to 1 pound, he can perform the sequence in reverse (replacing green pills with red pills and purple pills with blue pills) to achieve the desired weight, so this problem is equivalent to the original.\nSuppose at some point, Neo were to take two purple pills followed by a green pill; this changes his weight from \\(2 k\\) to \\(k+1\\). However, the same effect could be achieved using less pills by first taking a green pill and then taking a purple pill, so the optimal sequence will never contain consecutive purple pills. As a result, there is only one optimal sequence for Neo if he is trying to lose weight: take a purple pill when his weight is odd, and a green pill when his weight is even. His weight thus becomes\n\n\\[\\begin{aligned}\n2015 & \\rightarrow 2016 \\rightarrow 1008 \\rightarrow 504 \\rightarrow 252 \\rightarrow 126 \\rightarrow 63 \\\\\n& \\rightarrow 64 \\rightarrow 32 \\rightarrow 16 \\rightarrow 8 \\rightarrow 4 \\rightarrow 2 \\rightarrow 1\n\\end{aligned}\\]\n\nwhich requires a total of 13 pills. Reversing this sequence solves the original problem directly.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

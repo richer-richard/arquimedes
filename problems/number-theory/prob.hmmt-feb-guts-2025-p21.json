@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-guts-2025-p21",
+  "title": "2025 HMMT February Guts Problem 21",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.chinese-remainder-theorem",
+      "label": "Chinese remainder theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.greatest-common-divisors-gcd",
+      "label": "Greatest common divisors (gcd)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2025,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 76.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the unique 5-digit positive integer \\(abcde\\) such that \\(a \\neq 0\\) , \\(c \\neq 0\\) , and\n\n\\[abcde = (ab + cde)^2.\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "88209",
+    "value": "88209"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2025-p21.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(ab = X\\) and \\(cde = Y\\) . The original equation is equivalent to \\(1000X + Y = (X + Y)^2\\) . Taking this modulo 999, we get \\((X + Y)^2 \\equiv X + Y\\) (mod 999). Therefore, \\(27\\cdot 37 = 999\\) divides \\((X + Y)(X + Y - 1)\\) . Since \\(\\gcd (X + Y, X + Y - 1) = 1\\) , each of 27 and 37 can divide at most one of \\(X + Y\\) and \\(X + Y - 1\\) . Therefore, \\(X + Y\\) is either 0 or 1 modulo 27, as well as 0 or 1 modulo 37.\n\nBy the Chinese Remainder Theorem, the four possible residues for \\(X + Y\\) modulo 999 are 0, 1, 297, and 703. Since \\((X + Y)^2 = abcde\\) must be a 5- digit integer, we know \\(100 \\leq X + Y \\leq 316\\) , so the only possible value for \\(X + Y\\) is 297. Thus, the answer is \\((X + Y)^2 = 297^2 = \\boxed {88209}\\) .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

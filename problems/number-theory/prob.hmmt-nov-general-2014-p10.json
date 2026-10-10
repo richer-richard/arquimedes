@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-nov-general-2014-p10",
+  "title": "2014 HMMT November General Problem 10",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.chinese-remainder-theorem",
+      "label": "Chinese remainder theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.quadratic-residues",
+      "label": "Quadratic residues",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2014,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 56.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Suppose that \\(m\\) and \\(n\\) are integers with \\(1 \\leq m \\leq 49\\) and \\(n \\geq 0\\) such that \\(m\\) divides \\(n^{n+1}+1\\). What is the number of possible values of \\(m\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2014-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\quad 29\\) If \\(n\\) is even, \\(n+1 \\mid n^{n+1}+1\\), so we can cover all odd \\(m\\).\nIf \\(m\\) is even and \\(m \\mid n^{n+1}+1\\), then \\(n\\) must be odd, so \\(n+1\\) is even, and \\(m\\) cannot be divisible by 4 or any prime congruent to \\(3(\\bmod 4)\\). Conversely, if \\(m / 2\\) has all factors \\(1(\\bmod 4)\\), then by CRT there exists \\(N \\equiv 1(\\bmod 4)\\) such that \\(m\\left|N^{2}+1\\right| N^{N+1}+1(\\) note \\((N+1) / 2\\) is odd \\()\\).\nSo the only bad numbers take the form \\(2 k\\), where \\(1 \\leq k \\leq 24\\) is divisible by at least one of \\(2,3,7,11,19,23,31, \\ldots\\) We count \\(k=2,4, \\ldots, 24\\) (there are 12 numbers here), \\(k=3,9,15,21\\) (another four), \\(k=7,11,19,23\\) (another four), giving a final answer of \\(49-12-4-4=29\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

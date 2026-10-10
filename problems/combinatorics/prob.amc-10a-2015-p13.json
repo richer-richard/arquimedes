@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2015-p13",
+  "title": "2015 AMC 10A Problem 13",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.money",
+      "label": "Money",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2015,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 22.7,
+    "source": 1480,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Claudia has \\(12\\) coins, each of which is a \\(5\\)-cent coin or a \\(10\\)-cent coin. There are exactly \\(17\\) different values that can be obtained as combinations of one or more of her coins. How many \\(10\\)-cent coins does Claudia have?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(7\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2015-p13.live",
+      "kind": "proof-sketch",
+      "text": "Let the number of \\(5\\)-cent coins be \\(x\\) and the number of \\(10\\)-cent coins be \\(12 - x.\\)\n\nIf \\(x=0,\\) the only possible values are \\(10,20,\\ldots,120\\) cents, giving just \\(12\\) values. Hence \\(x>0.\\) Having at least one \\(5\\)-cent coin then makes every multiple of \\(5\\) from \\(5\\) through the total value \\[5x+10(12-x)=120-5x\\] obtainable.\n\nThere are \\(24 - x\\) such multiples of \\(5,\\) which means that \\(x = 7\\) to get \\(17\\) possible different values.\n\nThe number of \\(10\\)-cent coins is therefore \\(12 - 7 = 5.\\)\n\nThus, C is the correct answer.",
+      "hints": [
+        "Count possible values in units of five cents",
+        "If there are \\(x\\) nickels, the largest value is \\(120-5x\\) cents"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

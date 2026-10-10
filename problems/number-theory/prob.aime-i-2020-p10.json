@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2020-p10",
+  "title": "2020 AIME I Problem 10",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2020,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 58.9,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Let \\(m\\) and \\(n\\) be positive integers satisfying the conditions\n\n• \\(\\gcd(m + n, 210) = 1,\\)\n\n• \\(m^m\\) is a multiple of \\(n^n,\\) and\n\n• \\(m\\) is not a multiple of \\(n.\\)\n\nFind the least possible value of \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "407",
+    "value": "407"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2020-p10.live",
+      "kind": "proof-sketch",
+      "text": "If a prime \\(p\\) divides \\(n,\\) then \\(p\\) divides \\(n^n,\\) which in turn divides \\(m^m,\\) so \\(p\\) divides \\(m\\) and hence \\(p\\) divides \\(m + n.\\) Since \\(\\gcd(m + n, 210) = 1,\\) no prime factor of \\(n\\) is \\(2,\\) \\(3,\\) \\(5,\\) or \\(7:\\) every prime factor of \\(n\\) is at least \\(11.\\) Because \\(m\\) is not a multiple of \\(n,\\) some prime \\(p\\) has \\(b = v_p(m) \\lt a = v_p(n),\\) where \\(v_p\\) denotes the exponent of \\(p.\\) Since \\(n^n\\) divides \\(m^m,\\) comparing exponents of \\(p\\) gives \\(bm \\ge an,\\) so \\(m \\ge \\frac{a}{b}n.\\) In particular \\(a \\ge 2,\\) so \\(p^2\\) divides \\(n\\) and \\(n \\ge 11^2 = 121.\\)\n\nTake \\(n = 121\\) with \\(p = 11,\\) \\(a = 2,\\) \\(b = 1:\\) then \\(m\\) is a multiple of \\(11\\) but not of \\(121,\\) and \\(m \\ge 2 \\cdot 121 = 242.\\) The candidates \\(m = 253, 264, 275\\) give \\(m + n = 374 = 2 \\cdot 11 \\cdot 17,\\) \\(385 = 5 \\cdot 7 \\cdot 11,\\) \\(396 = 2^2 \\cdot 3^2 \\cdot 11,\\) all sharing a factor with \\(210,\\) while \\(m = 242 = 2 \\cdot 11^2\\) is a multiple of \\(121.\\) But \\(m = 286 = 2 \\cdot 11 \\cdot 13\\) works: \\(v_{11}(m^m) = 286\\) \\(\\ge 242 = v_{11}(n^n),\\) so \\(n^n\\) divides \\(m^m,\\) and \\(m + n = 407 = 11 \\cdot 37\\) is coprime to \\(210.\\)\n\nIt remains to prove that nothing smaller works. Suppose \\(m + n \\lt 407.\\) Then \\(n \\lt 407.\\) For the deficient prime above, \\(a \\ge 3\\) would imply \\(n \\ge 11^3 \\gt 407,\\) so \\(a = 2\\) and \\(b = 1.\\) Thus \\(m \\ge 2n,\\) and \\(m + n \\lt 407\\) implies \\(n \\le 135.\\) The only integer in this range divisible by the square of a prime at least \\(11\\), with no prime factors below \\(11,\\) is \\(n = 121.\\) The preceding check exhausts every possible \\(m\\) for this \\(n\\) below \\(286,\\) so the least possible value is \\(407.\\)",
+      "hints": [
+        "Every prime dividing \\(n\\) must divide \\(m,\\) hence divides \\(m + n\\) — so all prime factors of \\(n\\) are at least \\(11.\\)",
+        "Try \\(n = 11^2\\) and \\(m = 11t\\) with \\(t\\) not divisible by \\(11;\\) then \\(n^n\\) dividing \\(m^m\\) needs \\(m \\ge 242.\\) Scan upward for \\(\\gcd(m + n, 210) = 1,\\) then use the resulting upper bound to rule out larger deficient exponents and larger \\(n.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

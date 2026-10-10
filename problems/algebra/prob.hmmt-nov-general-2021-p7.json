@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-general-2021-p7",
+  "title": "2021 HMMT November General Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2021,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 56.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Define the function \\(f: \\mathbb{R} \\rightarrow \\mathbb{R}\\) by\n\n\\[f(x)= \\begin{cases}\\frac{1}{x^{2}+\\sqrt{x^{4}+2 x}} & \\text { if } x \\notin(-\\sqrt[3]{2}, 0] \\\\ 0 & \\text { otherwise }\\end{cases}\\]\n\nThe sum of all real numbers \\(x\\) for which \\(f^{10}(x)=1\\) can be written as \\(\\frac{a+b \\sqrt{c}}{d}\\), where \\(a, b, c, d\\) are integers, \\(d\\) is positive, \\(c\\) is square-free, and \\(\\operatorname{gcd}(a, b, d)=1\\). Find \\(1000 a+100 b+10 c+d\\).\n(Here, \\(f^{n}(x)\\) is the function \\(f(x)\\) iterated \\(n\\) times. For example, \\(f^{3}(x)=f(f(f(x)))\\).)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "932",
+    "value": "932"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2021-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "If \\(x \\in(-\\sqrt[3]{2}, 0]\\), it is evidently not a solution, so let us assume otherwise. Then, we find\n\n\\[f(x)=\\frac{\\sqrt{x^{4}+2 x}-x^{2}}{2 x}\\]\n\nwhich implies that \\(x f(x)^{2}+x^{2} f(x)-1 / 2=0\\), by reverse engineering the quadratic formula. Therefore, if \\(x>0, f(x)\\) is the unique positive real \\(t\\) so that \\(x t^{2}+x^{2} t=1 / 2\\). However, then \\(x\\) is the unique positive real so that \\(x t^{2}+x^{2} t=1 / 2\\), so \\(f(t)=x\\). This implies that if \\(x>0\\), then \\(f(f(x))=x\\).\n\nSuppose that \\(f^{10}(x)=1\\). Then, since \\(f(x)>0\\), we find that \\(f(x)=f^{10}(f(x))=f^{11}(x)=f(1)\\). Conversely, if \\(f(x)=f(1)\\), then \\(f^{10}(x)=f^{9}(f(x))=f^{9}(f(1))=1\\), so we only need to solve \\(f(x)=\\) \\(f(1)\\).\nThis is equivalent to\n\\(x^{2}+\\sqrt{x^{4}+2 x}=1+\\sqrt{3} \\Longleftrightarrow \\sqrt{x^{4}+2 x}=1+\\sqrt{3}-x^{2} \\Longrightarrow x^{4}+2 x=x^{4}-2(1+\\sqrt{3}) x^{2}+(1+\\sqrt{3})^{2}\\),\nwhich is equivalent to\n\n\\[2(1+\\sqrt{3}) x^{2}+2 x-(1+\\sqrt{3})^{2}=0\\]\n\nObviously, if \\(x=1\\) then \\(f(x)=f(1)\\), so we already know 1 is a root. This allows us to easily factor the quadratic and find that the other root is \\(-\\frac{1+\\sqrt{3}}{2}\\). This ends up not being extraneous-perhaps the shortest way to see this is to observe that if \\(x=-\\frac{1+\\sqrt{3}}{2}\\),\n\n\\[1+\\sqrt{3}-x^{2}=(1+\\sqrt{3})\\left(1-\\frac{1+\\sqrt{3}}{4}\\right)>0\\]\n\nso since we already know\n\n\\[x^{4}+2 x=\\left(1+\\sqrt{3}-x^{2}\\right)^{2}\\]\n\nwe have\n\n\\[\\sqrt{x^{4}+2 x}=1+\\sqrt{3}-x^{2} .\\]\n\nTherefore, the sum of solutions is \\(\\frac{1-\\sqrt{3}}{2}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

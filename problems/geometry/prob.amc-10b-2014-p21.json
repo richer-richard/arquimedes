@@ -1,0 +1,82 @@
+{
+  "id": "prob.amc-10b-2014-p21",
+  "title": "2014 AMC 10B Problem 21",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2014,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 27.2,
+    "source": 1790,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Trapezoid \\( ABCD \\) has parallel sides \\( \\overline{AB} \\) of length \\( 33 \\) and \\( \\overline {CD} \\) of length \\( 21 .\\) The other two sides are of lengths \\( 10 \\) and \\( 14 .\\) The angles \\( A \\) and \\( B \\) are acute. What is the length of the shorter diagonal of \\( ABCD ?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 10\\sqrt{6} \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 25 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 8\\sqrt{10} \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 18\\sqrt{2} \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 26\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "25"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2014-p21.live",
+      "kind": "proof-sketch",
+      "text": "Let the feet of the perpendiculars from \\(D\\) and \\(C\\) to \\(AB\\) be \\(E\\) and \\(F\\), respectively. As drawn, take \\(AD=10\\) and \\(BC=14\\); interchanging the two legs only reflects the trapezoid.\n\nLet \\(AE=x\\) and let the altitude be \\(h\\). Since \\(EF=CD=21\\) and \\(AB=33\\), we have \\(FB=12-x\\).\n\nThe two right triangles give \\[10^2=x^2+h^2\\] and \\[14^2=(12-x)^2+h^2.\\] Subtracting yields \\(96=144-24x\\), so \\(x=2\\) and \\(h^2=96\\).\n\nThe shorter diagonal is \\(AC\\), whose horizontal displacement is \\(AE+EF=2+21=23\\). Therefore \\[AC=\\sqrt{23^2+96}=\\sqrt{625}=25.\\]\n\nThus, the correct answer is B .",
+      "hints": [
+        "Drop perpendiculars from the shorter base to the longer base",
+        "Use the two leg lengths to find the horizontal offsets"
+      ],
+      "images": [
+        "b965765faef91caca44bca85763d8a1d9b7dac02c6eefacf67cce1cc65569683"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "b965765faef91caca44bca85763d8a1d9b7dac02c6eefacf67cce1cc65569683"
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2020-p16",
+  "title": "2020 AMC 12B Problem 16",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2020,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 27.5,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "An urn contains one red ball and one blue ball. A box of extra red and blue balls lies nearby. George performs the following operation four times: he draws a ball from the urn at random and then takes a ball of the same color from the box and returns those two matching balls to the urn. After the four iterations the urn contains six balls. What is the probability that the urn contains three balls of each color?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac16\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac15\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac14\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac13\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac12\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1/5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2020-p16.live",
+      "kind": "proof-sketch",
+      "text": "To end with three of each color, exactly two of the four added balls must be red. Consider any sequence of draws. When the urn holds \\(k\\) balls, drawing a particular color with count \\(c\\) has probability \\(\\tfrac{c}{k}.\\)\n\nAny ordering with two red and two blue additions gives the same product \\(\\tfrac{1\\cdot 2\\cdot 1\\cdot 2}{2\\cdot 3\\cdot 4\\cdot 5},\\) and there are \\(\\binom42 = 6\\) such orderings, for probability \\(\\tfrac{6\\cdot 4}{120} = \\tfrac15.\\) (Equivalently, the number of red balls after four steps is uniform on \\(\\{1, 2, 3, 4, 5\\},\\) so \\(3\\) red occurs with probability \\(\\tfrac15.\\))\n\nThus, the correct answer is B.",
+      "hints": [
+        "Reaching three of each color means exactly two of the four added balls are red",
+        "Any specific order of two red and two blue additions has the same probability, so the number of red balls is uniform"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

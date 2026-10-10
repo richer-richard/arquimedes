@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-feb-geometry-2019-p7",
+  "title": "2019 HMMT February Geometry Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2019,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 79.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A B C\\) be a triangle with \\(A B=13, B C=14, C A=15\\). Let \\(H\\) be the orthocenter of \\(A B C\\). Find the radius of the circle with nonzero radius tangent to the circumcircles of \\(A H B, B H C, C H A\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\square",
+    "value": "\\square"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2019-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "We claim that the circle in question is the circumcircle of the anticomplementary triangle of \\(A B C\\), the triangle for which \\(A B C\\) is the medial triangle.\nLet \\(A^{\\prime} B^{\\prime} C^{\\prime}\\) be the anticomplementary triangle of \\(A B C\\), such that \\(A\\) is the midpoint of \\(B^{\\prime} C^{\\prime}, B\\) is the midpoint of \\(A^{\\prime} C^{\\prime}\\), and \\(C\\) is the midpoint of \\(A^{\\prime} B^{\\prime}\\). Denote by \\(\\omega\\) the circumcircle of \\(A^{\\prime} B^{\\prime} C^{\\prime}\\). Denote by \\(\\omega_{A}\\) the circumcircle of \\(B H C\\), and similarly define \\(\\omega_{B}, \\omega_{C}\\).\nSince \\(\\angle B A^{\\prime} C=\\angle B A C=180^{\\circ}-\\angle B H C\\), we have that \\(\\omega_{A}\\) passes through \\(A^{\\prime}\\). Thus, \\(\\omega_{A}\\) can be redefined as the circumcircle of \\(A^{\\prime} B C\\). Since triangle \\(A^{\\prime} B^{\\prime} C^{\\prime}\\) is triangle \\(A^{\\prime} B C\\) dilated by a factor of 2 from point \\(A^{\\prime}, \\omega\\) is \\(\\omega_{A}\\) dilated by a factor of 2 from point \\(A^{\\prime}\\). Thus, circles \\(\\omega\\) and \\(\\omega_{A}\\) are tangent at \\(A^{\\prime}\\).\n\nBy a similar logic, \\(\\omega\\) is also tangent to \\(\\omega_{B}\\) and \\(\\omega_{C}\\). Therefore, the circumcircle of the anticomplementary triangle of \\(A B C\\) is indeed the circle that the question is asking for.\nUsing the formula \\(R=\\frac{a b c}{4 A}\\), we can find that the circumradius of triangle \\(A B C\\) is \\(\\frac{65}{8}\\). The circumradius of the anticomplementary triangle is double of that, so the answer is \\(\\frac{65}{4}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

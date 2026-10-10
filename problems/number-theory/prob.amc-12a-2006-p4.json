@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2006-p4",
+  "title": "2006 AMC 12A Problem 4",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.clock",
+      "label": "Clock",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2006,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 11.8,
+    "source": 1050,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "A digital watch displays hours and minutes with AM and PM. What is the largest possible sum of the digits in the display?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(19\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(22\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(23\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "23"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2006-p4.live",
+      "kind": "proof-sketch",
+      "text": "The two minutes digits sum to at most \\(5 + 9 = 14,\\) at \\(59\\) minutes past the hour. For the hour, a single digit \\(9\\) gives digit sum \\(9,\\) which beats any two-digit hour \\((10, 11, 12\\) give at most \\(1 + 2 = 3).\\)\n\nThe largest total is \\(14 + 9 = 23,\\) occurring at \\(9\\!:\\!59.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "Maximize the minutes digits and the hour digits separately",
+        "The two minutes digits sum to at most \\(5+9;\\) the best hour is the single digit \\(9\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12b-2005-p9",
+  "title": "2005 AMC 12B Problem 9",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.mean",
+      "label": "Mean",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "prob.median-data",
+      "label": "Median (data)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2005,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 21.0,
+    "source": 1410,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "On a certain math exam, \\(10\\%\\) of the students got \\(70\\) points, \\(25\\%\\) got \\(80\\) points, \\(20\\%\\) got \\(85\\) points, \\(15\\%\\) got \\(90\\) points, and the rest got \\(95\\) points. What is the difference between the mean and the median score on this exam?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2005-p9.live",
+      "kind": "proof-sketch",
+      "text": "The percentage scoring \\(95\\) is \\(100 - 10 - 25 - 20 - 15 = 30.\\)\n\nThe mean is \\[ \\begin{aligned} &0.10(70) + 0.25(80) \\\\ &\\quad {}+ 0.20(85) + 0.15(90) \\\\ &\\quad {}+ 0.30(95) = 86. \\end{aligned} \\]\n\nCumulatively, \\(10\\%\\) are below \\(80,\\) \\(35\\%\\) are at or below \\(80,\\) and \\(55\\%\\) are at or below \\(85.\\) The middle scores fall at \\(85,\\) so the median is \\(85.\\)\n\nThe difference is \\(86 - 85 = 1.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "The remaining percentage scored \\(95\\): \\(100 - 10 - 25 - 20 - 15\\)",
+        "For the median, find where the cumulative percentage passes \\(50\\%\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

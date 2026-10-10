@@ -1,0 +1,87 @@
+{
+  "id": "prob.ahsme-1960-p34",
+  "title": "1960 AHSME Problem 34",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "geo.least-common-multiple",
+      "label": "Least common multiple",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.reflection-geometry",
+      "label": "Reflection (geometry)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.relative-speed",
+      "label": "Relative speed",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1960,
+    "number": 34
+  },
+  "difficulty": {
+    "course": 32.8,
+    "source": 1870,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Two swimmers, at opposite ends of a \\(90\\)-foot pool, start to swim the length of the pool, one at the rate of \\(3\\) feet per second, the other at \\(2\\) feet per second. They swim back and forth for \\(12\\) minutes. Allowing no loss of time at the turns, find the number of times they pass each other.",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(19\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(18\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "20"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1960-p34.live",
+      "kind": "proof-sketch",
+      "text": "The faster swimmer’s position repeats every \\(60\\) seconds, and the slower swimmer’s position repeats every \\(90\\) seconds. Thus their joint position pattern repeats every \\(180\\) seconds. During one such cycle, their positions coincide at \\[ t=18,54,90,126,162 \\] seconds. The keyed interpretation counts the simultaneous turn at the endpoint when \\(t=90\\) as one of these encounters. Thus there are \\(5\\) counted encounters per cycle and \\(4\\) cycles in \\(12\\) minutes, giving \\(5\\cdot4=20.\\)\n\nTherefore, the correct answer is C.",
+      "hints": [
+        "Reflect the pool each time a swimmer turns so both paths become straight",
+        "The joint position pattern repeats every \\(180\\) seconds; inspect one full cycle, including endpoint coincidences"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

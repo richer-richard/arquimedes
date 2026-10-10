@@ -1,0 +1,73 @@
+{
+  "id": "prob.aime-ii-2011-p10",
+  "title": "2011 AIME II Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.chord",
+      "label": "Chord",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.cyclic-quadrilateral",
+      "label": "Cyclic quadrilateral",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.law-of-sines",
+      "label": "Law of sines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2011,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 61.6,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 12,
+  "statement": "A circle with center \\(O\\) has radius \\(25.\\) Chord \\(\\overline{AB}\\) of length \\(30\\) and chord \\(\\overline{CD}\\) of length \\(14\\) intersect at point \\(P.\\) The distance between the midpoints of the two chords is \\(12.\\) The quantity \\(OP^2\\) can be represented as \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find the remainder when \\(m + n\\) is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "57",
+    "value": "57"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2011-p10.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(M\\) and \\(N\\) be the midpoints of \\(\\overline{AB}\\) and \\(\\overline{CD}.\\) The segment from the center to a chord’s midpoint is perpendicular to the chord, so \\(OM = \\sqrt{25^2 - 15^2} = 20\\) and \\(ON = \\sqrt{25^2 - 7^2} = 24,\\) with \\(MN = 12.\\)\n\nSince \\(P\\) lies on both chords, \\(\\angle OMP = \\angle ONP = 90^\\circ,\\) so \\(M\\) and \\(N\\) lie on the circle with diameter \\(OP.\\) In triangle \\(OMN,\\) the law of cosines gives \\[ \\begin{aligned} \\cos \\angle MON &= \\frac{20^2 + 24^2 - 12^2}{2 \\cdot 20 \\cdot 24} \\\\ &= \\frac{832}{960} = \\frac{13}{15}, \\end{aligned} \\] so \\(\\sin \\angle MON = \\frac{2\\sqrt{14}}{15}.\\) In the circle through \\(O,\\) \\(M,\\) \\(P,\\) \\(N,\\) the extended law of sines says the chord \\(MN\\) equals the diameter \\(OP\\) times \\(\\sin \\angle MON,\\) so \\[ \\begin{aligned} OP &= \\frac{12}{\\frac{2\\sqrt{14}}{15}} = \\frac{90}{\\sqrt{14}}, \\end{aligned} \\] \\[ \\begin{aligned} OP^2 &= \\frac{8100}{14} = \\frac{4050}{7}. \\end{aligned} \\]\n\nThen \\(m + n = 4050 + 7 = 4057,\\) which leaves remainder \\(57\\) upon division by \\(1000.\\)",
+      "hints": [
+        "Let \\(M\\) and \\(N\\) be the chords’ midpoints; then \\(OM \\perp AB,\\) \\(ON \\perp CD,\\) and \\(OM = 20,\\) \\(ON = 24\\)",
+        "The right angles at \\(M\\) and \\(N\\) put them on the circle with diameter \\(OP;\\) there \\(MN = OP \\sin \\angle MON,\\) with \\(\\angle MON\\) from the law of cosines"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

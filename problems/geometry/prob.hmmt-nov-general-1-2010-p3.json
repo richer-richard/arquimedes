@@ -1,0 +1,75 @@
+{
+  "id": "prob.hmmt-nov-general-1-2010-p3",
+  "title": "2010 HMMT November General Round 1 Problem 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2010,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Triangle \\(A B C\\) has \\(A B=5, B C=7\\), and \\(C A=8\\). New lines not containing but parallel to \\(A B\\), \\(B C\\), and \\(C A\\) are drawn tangent to the incircle of \\(A B C\\). What is the area of the hexagon formed by the sides of the original triangle and the newly drawn lines?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-1-2010-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{31}{5} \\sqrt{3}\\)\n\nFrom the law of cosines we compute \\(\\measuredangle A=\\cos ^{-1}\\left(\\frac{5^{2}+8^{2}-7^{2}}{2(5)(8)}\\right)=60^{\\circ}\\). Using brackets to denote the area of a region, we find that\n\n\\[[A B C]=\\frac{1}{2} A B \\cdot A C \\cdot \\sin 60^{\\circ}=10 \\sqrt{3}\\]\n\nThe radius of the incircle can be computed by the formula\n\n\\[r=\\frac{2[A B C]}{A B+B C+C A}=\\frac{20 \\sqrt{3}}{20}=\\sqrt{3}\\]\n\nNow the height from \\(A\\) to \\(B C\\) is \\(\\frac{2[A B C]}{B C}=\\frac{20 \\sqrt{3}}{7}\\). Then the height from \\(A\\) to \\(D E\\) is \\(\\frac{20 \\sqrt{3}}{7}-2 r=\\frac{6 \\sqrt{3}}{7}\\). Then \\([A D E]=\\left(\\frac{6 \\sqrt{3} / 7}{20 \\sqrt{3} / 7}\\right)^{2}[A B C]=\\frac{9}{100}[A B C]\\). Here, we use the fact that \\(\\triangle A B C\\) and \\(\\triangle A D E\\) are similar.\nSimilarly, we compute that the height from \\(B\\) to \\(C A\\) is \\(\\frac{2[A B C]}{C A}=\\frac{20 \\sqrt{3}}{8}=\\frac{5 \\sqrt{3}}{2}\\). Then the height from \\(B\\) to \\(H J\\) is \\(\\frac{5 \\sqrt{3}}{2}-2 r=\\frac{\\sqrt{3}}{2}\\). Then \\([B H J]=\\left(\\frac{\\sqrt{3} / 2}{5 \\sqrt{3} / 2}\\right)^{2}[A B C]=\\frac{1}{25}[A B C]\\).\nFinally, we compute that the height from \\(C\\) to \\(A B\\) is \\(\\frac{2[A B C]}{5}=\\frac{20 \\sqrt{3}}{5}=4 \\sqrt{3}\\). Then the height from \\(C\\) to \\(F G\\) is \\(4 \\sqrt{3}-2 r=2 \\sqrt{3}\\). Then \\([C F G]=\\left(\\frac{2 \\sqrt{3}}{4 \\sqrt{3}}\\right)^{2}[A B C]=\\frac{1}{4}[A B C]\\).\nFinally we can compute the area of hexagon \\(D E F G H J\\). We have\n\n\\[\\begin{gathered}\n{[D E F G H J]=[A B C]-[A D E]-[B H J]-[C F G]=[A B C]\\left(1-\\frac{9}{100}-\\frac{1}{25}-\\frac{1}{4}\\right)=[A B C]\\left(\\frac{31}{50}\\right)=} \\\\\n10 \\sqrt{3}\\left(\\frac{31}{50}\\right)=\\frac{31}{5} \\sqrt{3} .\n\\end{gathered}\\]\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

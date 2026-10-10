@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-1993-p5",
+  "title": "1993 AIME Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.algebraic-manipulation",
+      "label": "Algebraic manipulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.binomial-theorem",
+      "label": "Binomial theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1993,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 33.9,
+    "source": 1910,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(P_0(x)=x^3+313x^2-77x-8.\\) For integers \\(n\\geq1,\\) define \\(P_n(x)=P_{n-1}(x-n).\\) What is the coefficient of \\(x\\) in \\(P_{20}(x)?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "763",
+    "value": "763"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1993-p5.live",
+      "kind": "proof-sketch",
+      "text": "The accumulated shift is \\(1+2+\\cdots+20=210,\\) so \\(P_{20}(x)=P_0(x-210).\\) The coefficient of \\(x\\) is therefore \\[\\begin{aligned}&3(210)^2-2(313)(210)-77\\\\&\\quad=132300-131460-77\\\\&\\quad=763.\\end{aligned}\\]",
+      "hints": [
+        "Collapse the repeated shifts to write \\(P_{20}\\) directly in terms of \\(P_0\\)",
+        "Only collect the linear terms after substituting \\(x-210\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

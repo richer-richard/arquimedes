@@ -1,0 +1,77 @@
+{
+  "id": "prob.hmmt-nov-team-2019-p9",
+  "title": "2019 HMMT November Team Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2019,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 59.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Will stands at a point \\(P\\) on the edge of a circular room with perfectly reflective walls. He shines two laser pointers into the room, forming angles of \\(n^{\\circ}\\) and \\((n+1)^{\\circ}\\) with the tangent at \\(P\\), where \\(n\\) is a positive integer less than 90 . The lasers reflect off of the walls, illuminating the points they hit on the walls, until they reach \\(P\\) again. ( \\(P\\) is also illuminated at the end.) What is the minimum possible number of illuminated points on the walls of the room?\n\n[Diagram omitted from this imported transcription; consult the HMMT archive while reviewing the problem.]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2019-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 28\nNote that we want the path drawn out by the lasers to come back to \\(P\\) in as few steps as possible. Observe that if a laser is fired with an angle of \\(n\\) degrees from the tangent, then the number of points it creates on the circle is \\(\\frac{180}{\\operatorname{gcd}(180, n)}\\). (Consider the regular polygon created by linking all the points that show up on the circle-if the center of the circle is O , and the vertices are numbered \\(V_{1}, V_{2}, \\ldots, V_{k}\\), the angle \\(\\angle V_{1} O V_{2}\\) is equal to \\(2 \\operatorname{gcd}(180, n)\\), so there are a total of \\(\\frac{360}{2 \\operatorname{gcd}(180, n)}\\) sides).\nNow, we consider the case with both \\(n\\) and \\(n+1\\). Note that we wish to minimize the value \\(\\frac{180}{\\operatorname{gcd}(180, n)}+\\) \\(\\frac{180}{\\operatorname{gcd}(180, n+1)}\\), or maximize both \\(\\operatorname{gcd}(180, n)\\) and \\(\\operatorname{gcd}(180, n+1)\\). Note that since \\(n\\) and \\(n+1\\) are relatively prime and \\(180=(4)(9)(5)\\), the expression is maximized when \\(\\operatorname{gcd}(180, n)=20\\) and \\(\\operatorname{gcd}(180, n+1)=9\\) (or vice versa). This occurs when \\(n=80\\). Plugging this into our expression, we have that the number of points that show up from the laser fired at 80 degrees is \\(\\frac{180}{20}=9\\) and the number of points that appear from the laser fired at 81 degrees is \\(\\frac{180}{9}=20\\). However, since both have a point that shows up at \\(P\\) (and no other overlapping points since \\(\\operatorname{gcd}(9,20)=1\\) ), we see that the answer is \\(20+9-1=28\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

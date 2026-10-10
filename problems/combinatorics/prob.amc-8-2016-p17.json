@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-8-2016-p17",
+  "title": "2016 AMC 8 Problem 17",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2016,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 10.9,
+    "source": 1020,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "An ATM password at Fred’s Bank is composed of four digits from \\(0\\) to \\(9,\\) with repeated digits allowable. If no password may begin with the sequence \\(9,\\) \\(1,\\) \\(1,\\) then how many passwords are possible?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 30 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 7290 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 9000 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 9990 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 9999 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "9990"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2016-p17.live",
+      "kind": "proof-sketch",
+      "text": "The total number of passwords with no conditions is \\(10^4.\\) The condition removes \\(10\\) possible passwords since the first \\(3\\) are determined, and the last one can be anything. Therefore, the number of acceptable passwords is \\[10{,}000 - 10 = 9990.\\]\n\nThus, D is the correct answer.",
+      "hints": [
+        "First count all four-digit passwords when leading zeroes are allowed.",
+        "Then subtract the passwords whose first three digits are forced to be \\(9,\\) \\(1,\\) \\(1\\)."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

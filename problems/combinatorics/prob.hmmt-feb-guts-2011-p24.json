@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-guts-2011-p24",
+  "title": "2011 HMMT February Guts Problem 24",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.coloring",
+      "label": "Coloring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 77.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In how many ways may thirteen beads be placed on a circular necklace if each bead is either blue or yellow and no two yellow beads may be placed in adjacent positions? (Beads of the same color are considered to be identical, and two arrangements are considered to be the same if and only if each can be obtained from the other by rotation).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2011-p24.hmmt",
+      "kind": "proof-sketch",
+      "text": "41\nLet \\(t_{n}\\) be the number of arrangements of \\(n\\) beads in a row such that bead \\(i\\) and \\(i+1\\) are not both yellow for \\(1 \\leq i<n\\). Let \\(a_{n}\\) and \\(b_{n}\\) be the number of arrangements satisfying the additional condition that beads \\(n\\) and 1 are not both yellow, and that beads \\(n\\) and 1 are both yellow, respectively. Clearly \\(t_{n}=a_{n}+b_{n}\\).\nFirst consider \\(t_{n}\\). If bead \\(n\\) is blue, there are \\(t_{n-1}\\) ways to choose the remaining colors. If bead \\(n\\) is yellow, then bead \\(n-1\\) must be blue, and there are \\(t_{n-2}\\) ways to choose the remaining colors. Hence\n\n\\[t_{n}=t_{n-1}+t_{n-2} .\\]\n\nNext consider \\(b_{n}\\). In this case beads 1 and \\(n\\) are both yellow, so beads 2 and \\(n-1\\) must be blue; the remaining colors can be chosen in \\(t_{n-4}\\) ways. Hence\n\n\\[b_{n}=t_{n-4}\\]\n\nFrom \\(t_{0}=1\\) and \\(t_{1}=2\\) we see that \\(t_{n}=F_{n+2}\\) and \\(b_{n}=F_{n-2}\\) and so \\(a_{n}=F_{n+2}-F_{n-2}\\), where \\(F_{n}\\) denotes the \\(n\\)th Fibonacci number.\nNext, since 13 is prime, a circular arrangement corresponds to exactly 13 straight-line arrangements, except for when all beads are the same color. The all-blue's arrangement satisfies our condition, while the all-yellow does not. Hence our answer is\n\n\\[\\frac{a_{13}-1}{13}+1=\\frac{F_{15}-F_{11}+12}{13}=\\frac{610-89+12}{13}=41\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

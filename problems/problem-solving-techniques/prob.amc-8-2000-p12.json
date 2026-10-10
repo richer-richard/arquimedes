@@ -1,0 +1,73 @@
+{
+  "id": "prob.amc-8-2000-p12",
+  "title": "2000 AMC 8 Problem 12",
+  "category": "problem-solving-techniques",
+  "subjects": [
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "strategy.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2000,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 14.4,
+    "source": 1220,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A block wall \\(100\\) feet long and \\(7\\) feet high will be constructed using blocks that are \\(1\\) foot high and either \\(2\\) feet long or \\(1\\) foot long (no blocks may be cut). The vertical joins in the blocks must be staggered as shown, and the wall must be even on the ends. What is the smallest number of blocks needed to build this wall?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(344\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(347\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(350\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(353\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(356\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "353"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2000-p12.live",
+      "kind": "proof-sketch",
+      "text": "The total number of rows in the wall is \\(7,\\) with each row being \\(1\\) foot high.\n\nTo use the minimum number of bricks, rows \\(1,\\) \\(3,\\) \\(5,\\) and \\(7\\) will have the same pattern as the bottom row in the picture, which requires \\(50\\) bricks to construct.\n\nRows \\(2,\\) \\(4,\\) and \\(6\\) will have the same pattern as the upper row in the picture, which has \\(49\\) \\(2\\)-foot bricks in the middle and one \\(1\\)-foot brick on each end, for a total of \\(51\\) bricks.\n\nWhen you add up \\(4\\) rows of \\(50\\) bricks and \\(3\\) rows of \\(51\\) bricks, you get a total of \\[4 \\cdot 50 + 3 \\cdot 51 = 200 + 153 = 353\\] bricks.\n\nThus, D is the correct answer.",
+      "hints": [
+        "Start with all \\(2\\)-foot blocks",
+        "Only every other row needs an extra block to stagger joins"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "cc98314fddf9fd8e99857de42ecc9052afea9cfc0ebf27cb8b0b6b6de87e877d"
+    ],
+    "solutions": []
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-fall-2021-p24",
+  "title": "2021 Fall AMC 12A Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2021,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 49.5,
+    "source": 2520,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Convex quadrilateral \\(ABCD\\) has \\(AB = 18,\\) \\(\\angle A = 60^\\circ,\\) and \\(\\overline{AB} \\parallel \\overline{CD}.\\) In some order, the lengths of the four sides form an arithmetic progression, and side \\(AB\\) is a side of maximum length. The length of another side is \\(a.\\) What is the sum of all possible values of \\(a?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(42\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(60\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(66\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(84\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "84"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-fall-2021-p24.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(AB = 18\\) is the largest, the four sides are \\(18, 18 - d, 18 - 2d, 18 - 3d.\\) Placing \\(A = (0,0),\\) \\(B = (18,0),\\) and \\(D = \\left(\\tfrac{m}{2}, \\tfrac{m\\sqrt3}{2}\\right)\\) with \\(m=DA,\\) let \\(n=CD\\) and \\(\\ell=BC.\\) Then \\(C=(\\tfrac m2+n,\\tfrac{m\\sqrt3}{2}),\\) so \\[ \\begin{aligned} \\ell^2&=m^2+(18-n)^2 \\\\ &\\quad {}-m(18-n). \\end{aligned} \\]\n\nWrite \\(u_j=18-jd\\) for \\(j=1,2,3.\\) Substituting the permutations \\(123,132,213,231,312,321\\) of \\((u_1,u_2,u_3)\\) for \\((m,n,\\ell)\\) gives the nonzero candidates \\(d=18,2,9,5,6,6,\\) respectively. Positivity of \\(u_3\\) requires \\(d<6,\\) leaving only \\(d=2\\) and \\(d=5.\\) The case \\(d=0\\) also gives a valid rhombus.\n\nThus the side sets are \\(\\{18,16,14,12\\},\\) \\(\\{18,13,8,3\\},\\) and \\(\\{18,18,18,18\\}.\\)\n\nThe possible values of a non-\\(AB\\) side length are \\(\\{3, 8, 12, 13, 14, 16, 18\\},\\) whose sum is \\(84.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "With \\(AB = 18\\) the maximum, the four sides are \\(18, 18 - d, 18 - 2d, 18 - 3d;\\) place \\(A = (0,0),\\) \\(B = (18,0),\\) and \\(D\\) at angle \\(60^\\circ\\)",
+        "For each assignment of the three smaller lengths to \\(BC, CD, DA,\\) impose that \\(\\overline{CD}\\) is horizontal and solve for \\(d;\\) also include common difference \\(d = 0\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

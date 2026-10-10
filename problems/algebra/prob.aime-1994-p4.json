@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1994-p4",
+  "title": "1994 AIME Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.power-of-2",
+      "label": "Power of 2",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1994,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 35.7,
+    "source": 1980,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Find the positive integer \\(n\\) for which \\[\\begin{aligned}&\\lfloor\\log_2 1\\rfloor+\\lfloor\\log_2 2\\rfloor+\\lfloor\\log_2 3\\rfloor\\\\&\\quad+\\cdots+\\lfloor\\log_2 n\\rfloor=1994.\\end{aligned}\\] (For real \\(x,\\) \\(\\lfloor x\\rfloor\\) is the greatest integer not exceeding \\(x.\\))",
+  "answerChoices": [],
+  "answer": {
+    "letter": "312",
+    "value": "312"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1994-p4.live",
+      "kind": "proof-sketch",
+      "text": "For \\(2^j\\leq k<2^{j+1},\\) the summand is \\(j.\\) Thus the sum through \\(255=2^8-1\\) is \\[\\sum_{j=0}^7j2^j=(8-2)2^8+2=1538.\\] The remaining \\(1994-1538=456\\) is \\(57\\cdot8,\\) so we include \\(57\\) more integers beginning with \\(256.\\) Hence \\(n=255+57=312.\\)",
+      "hints": [
+        "Group integers having the same value of \\(\\lfloor\\log_2 k\\rfloor\\)",
+        "Compute the sum through \\(255\\), after which every new term initially contributes \\(8\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2005-p2",
+  "title": "2005 HMMT February Combinatorics Problem 2",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinatorics",
+      "label": "Combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2005,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 70.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many nonempty subsets of \\(\\{1,2,3, \\ldots, 12\\}\\) have the property that the sum of the largest element and the smallest element is 13 ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2005-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "1365\nIf \\(a\\) is the smallest element of such a set, then \\(13-a\\) is the largest element, and for the remaining elements we may choose any (or none) of the \\(12-2 a\\) elements \\(a+1, a+2, \\ldots,(13-a)-1\\). Thus there are \\(2^{12-2 a}\\) such sets whose smallest element is \\(a\\). Also, \\(13-a \\geq a\\) clearly implies \\(a<7\\). Summing over all \\(a=1,2, \\ldots, 6\\), we get a total of\n\n\\[2^{10}+2^{8}+2^{6}+\\cdots+2^{0}=4^{5}+4^{4}+\\cdots+4^{0}=\\left(4^{6}-1\\right) /(4-1)=4095 / 3=1365\\]\n\npossible sets.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

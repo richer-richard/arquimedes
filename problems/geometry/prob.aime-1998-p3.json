@@ -1,0 +1,73 @@
+{
+  "id": "prob.aime-1998-p3",
+  "title": "1998 AIME Problem 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.absolute-value",
+      "label": "Absolute value",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.parallelogram",
+      "label": "Parallelogram",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1998,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 44.9,
+    "source": 2340,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "The graph of \\(y^2 + 2xy + 40|x| = 400\\) partitions the plane into several regions. What is the area of the bounded region?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "800",
+    "value": "800"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1998-p3.live",
+      "kind": "proof-sketch",
+      "text": "For \\(x \\ge 0\\) rewrite the equation as \\(2x(y + 20)\\) \\(= 400 - y^2\\) \\(= (20 - y)(20 + y),\\) so either \\(y = -20\\) or \\(y = 20 - 2x.\\) For \\(x \\le 0\\) it becomes \\(2x(y - 20) = -(y - 20)(y + 20),\\) so either \\(y = 20\\) or \\(y = -20 - 2x.\\) The graph therefore consists of two horizontal rays and two rays of slope \\(-2.\\)\n\nThese rays bound a parallelogram: the top edge runs from \\((-20, 20)\\) to \\((0, 20)\\) along \\(y = 20,\\) the bottom edge from \\((0, -20)\\) to \\((20, -20)\\) along \\(y = -20,\\) and the two slanted edges of slope \\(-2\\) connect them.\n\nThe parallelogram has horizontal base \\(20\\) and height \\(40\\) between the lines \\(y = 20\\) and \\(y = -20,\\) so its area is \\(20 \\cdot 40 = 800.\\)",
+      "hints": [
+        "For \\(x \\ge 0\\) the equation rearranges to \\(2x(y + 20) = 400 - y^2,\\) and the right side factors",
+        "Each sign case yields two lines; the four rays bound a parallelogram with horizontal sides on \\(y = 20\\) and \\(y = -20\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2012-p1",
+  "title": "2012 IMO Problem 1",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2012,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 79.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(ABC\\) be a triangle and \\(J\\) the center of the \\(A\\)-excircle.\nThis excircle is tangent to the side \\(BC\\) at \\(M\\),\nand to the lines \\(AB\\) and \\(AC\\) at \\(K\\) and \\(L\\), respectively.\nThe lines \\(LM\\) and \\(BJ\\) meet at \\(F\\), and the lines \\(KM\\) and \\(CJ\\) meet at \\(G\\).\nLet \\(S\\) be the point of intersection of the lines \\(AF\\) and \\(BC\\),\nand let \\(T\\) be the point of intersection of the lines \\(AG\\) and \\(BC\\).\nProve that \\(M\\) is the midpoint of \\(\\overline{ST}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2012-p1.evanchen",
+      "kind": "proof-sketch",
+      "text": "We employ barycentric coordinates with reference \\(\\triangle ABC\\).\nAs usual \\(a = BC\\), \\(b = CA\\), \\(c = AB\\), \\(s = \\frac{1}{2}(a+b+c)\\).\n\nIt's obvious that \\(K = ( -(s-c): s : 0)\\), \\(M = ( 0 : s-b : s-c)\\).\nAlso, \\(J = (-a : b : c)\\).\nWe then obtain\n\\[ G = \\left( -a: b : \\frac{-as + (s-c)b}{s-b} \\right). \\]\nIt follows that\n\\[ T = \\left( 0 : b : \\frac{-as + (s-c)b}{s-b} \\right) = ( 0 : b(s-b) : b(s-c) - as). \\]\nNormalizing, we see that \\(T = \\left( 0, -\\frac{b}{a}, 1 + \\frac{b}{a} \\right)\\),\nfrom which we quickly obtain \\(MT = s\\).\nSimilarly, \\(MS = s\\), so we're done.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

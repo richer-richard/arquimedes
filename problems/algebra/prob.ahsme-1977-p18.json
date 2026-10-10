@@ -1,0 +1,78 @@
+{
+  "id": "prob.ahsme-1977-p18",
+  "title": "1977 AHSME Problem 18",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.telescoping",
+      "label": "Telescoping",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1977,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 32.6,
+    "source": 1860,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "If \\[ \\begin{aligned} y={}&(\\log_2 3)(\\log_3 4)\\cdots\\\\ &(\\log_n[n+1])\\cdots(\\log_{31}32), \\end{aligned} \\] then",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4\\lt y\\lt5\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(y=5\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(5\\lt y\\lt6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(y=6\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(6\\lt y\\lt7\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1977-p18.live",
+      "kind": "proof-sketch",
+      "text": "By change of base, \\[ \\begin{aligned} y&=\\frac{\\log 3}{\\log2}\\cdot \\frac{\\log4}{\\log3}\\cdots \\frac{\\log32}{\\log31}\\\\ &=\\frac{\\log32}{\\log2}\\\\ &=\\log_2 32=5. \\end{aligned} \\]\n\nTherefore, the correct answer is B.",
+      "hints": [
+        "Rewrite every logarithm using the same base",
+        "Adjacent numerators and denominators cancel in the product"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

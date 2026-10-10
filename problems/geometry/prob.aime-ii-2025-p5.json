@@ -1,0 +1,68 @@
+{
+  "id": "prob.aime-ii-2025-p5",
+  "title": "2025 AIME II Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inscribed-angle",
+      "label": "Inscribed angle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.isosceles-triangle",
+      "label": "Isosceles triangle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2025,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 54.6,
+    "source": 2720,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Suppose \\(\\triangle ABC\\) has angles \\(\\angle BAC = 84^\\circ,\\) \\(\\angle ABC = 60^\\circ,\\) and \\(\\angle ACB = 36^\\circ.\\) Let \\(D,\\) \\(E,\\) and \\(F\\) be the midpoints of sides \\(\\overline{BC},\\) \\(\\overline{AC},\\) and \\(\\overline{AB},\\) respectively. The circumcircle of \\(\\triangle DEF\\) intersects \\(\\overline{BD},\\) \\(\\overline{AE},\\) and \\(\\overline{AF}\\) at points \\(G,\\) \\(H,\\) and \\(J,\\) respectively. The points \\(G,\\) \\(D,\\) \\(E,\\) \\(H,\\) \\(J,\\) and \\(F\\) divide the circumcircle of \\(\\triangle DEF\\) into six minor arcs, as shown. Find \\(\\widehat{DE} + 2 \\cdot \\widehat{HJ} + 3 \\cdot \\widehat{FG},\\) where the arcs are measured in degrees.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "336",
+    "value": "336"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2025-p5.live",
+      "kind": "proof-sketch",
+      "text": "The medial triangle \\(DEF\\) has sides parallel to those of \\(ABC,\\) so \\(\\angle FDE = 84^\\circ,\\) \\(\\angle DEF = 60^\\circ,\\) and \\(\\angle DFE = 36^\\circ.\\) Its circumcircle is the nine-point circle, whose second intersections with the sides of \\(ABC\\) are the feet of the altitudes: \\(G\\) is the foot from \\(A,\\) \\(H\\) the foot from \\(B,\\) and \\(J\\) the foot from \\(C.\\) By the inscribed angle theorem, \\(\\widehat{DE} = 2\\angle DFE = 72^\\circ.\\)\n\nFor \\(\\widehat{FG}:\\) since \\(\\overline{DF} \\parallel \\overline{CA}\\) and \\(G\\) lies on ray \\(DB,\\) the angle \\(\\angle FDG\\) equals the angle between lines \\(CA\\) and \\(CB,\\) which is \\(36^\\circ,\\) so \\(\\widehat{FG} = 2 \\cdot 36^\\circ = 72^\\circ.\\) For \\(\\widehat{HJ}:\\) because \\(\\angle BJC = \\angle BHC = 90^\\circ,\\) both \\(H\\) and \\(J\\) lie on the circle with diameter \\(\\overline{BC}\\) centered at \\(D,\\) so \\(DJ = DB\\) and \\(DH = DC.\\) Isosceles triangle \\(BDJ\\) gives \\(\\angle JDB = 180^\\circ - 2 \\cdot 60^\\circ = 60^\\circ,\\) and isosceles triangle \\(CDH\\) gives \\(\\angle HDC = 180^\\circ - 2 \\cdot 36^\\circ = 108^\\circ.\\) Hence \\(\\angle JDH = 180^\\circ - 60^\\circ\\) \\(- 108^\\circ = 12^\\circ\\) and \\(\\widehat{HJ} = 24^\\circ.\\)\n\nTherefore \\(\\widehat{DE} + 2 \\cdot \\widehat{HJ}\\) \\(+ 3 \\cdot \\widehat{FG}\\) \\(= 72 + 48 + 216 = 336.\\)",
+      "hints": [
+        "The circle through the midpoints is the nine-point circle, so \\(G,\\) \\(H,\\) \\(J\\) are the feet of the altitudes, and \\(\\triangle DEF\\) has the same angles as \\(\\triangle ABC\\)",
+        "Since \\(\\angle BJC = \\angle BHC = 90^\\circ,\\) \\(D\\) is equidistant from \\(B,\\) \\(C,\\) \\(H,\\) \\(J;\\) isosceles triangles turn the arcs into angles of \\(\\triangle ABC\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "ff80b32474ab1720f401b9a6b98935abe80e9b7a4733e7107db13ced8bbcd84f"
+    ],
+    "solutions": []
+  }
+}

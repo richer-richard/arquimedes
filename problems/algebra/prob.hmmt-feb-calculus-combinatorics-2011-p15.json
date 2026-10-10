@@ -1,0 +1,48 @@
+{
+  "id": "prob.hmmt-feb-calculus-combinatorics-2011-p15",
+  "title": "2011 HMMT February Calculus and Combinatorics Problem 15",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A=\\{1,2, \\ldots, 2011\\}\\). Find the number of functions \\(f\\) from \\(A\\) to \\(A\\) that satisfy \\(f(n) \\leq n\\) for all \\(n\\) in \\(A\\) and attain exactly 2010 distinct values.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-calculus-combinatorics-2011-p15.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(2^{2011}-2012\\) Let \\(n\\) be the element of \\(A\\) not in the range of \\(f\\). Let \\(m\\) be the element of \\(A\\) that is hit twice.\n\nWe now sum the total number of functions over \\(n, m\\). Clearly \\(f(1)=1\\), and by induction, for \\(x \\leq\\) \\(m, f(x)=x\\). Also unless \\(n=2011, f(2011)=2011\\) because \\(f\\) can take no other number to 2011. It follows from backwards induction that for \\(x>n, f(x)=x\\). Therefore \\(n>m\\), and there are only \\(n-m\\) values of \\(f\\) that are not fixed.\nNow \\(f(m+1)=m\\) or \\(f(m+1)=m+1\\). For \\(m<k<n\\), given the selection of \\(f(1), f(2), \\ldots, f(k-1)\\), \\(k-1\\) of the \\(k+1\\) possible values of \\(f(k+1)(1,2,3, \\ldots, k\\), and counting \\(m\\) twice \\()\\) have been taken, so there are two distinct values that \\(f(k+1)\\) can take (one of them is \\(k+1\\), and the other is not, so they are distinct). For \\(f(n)\\), when the other 2010 values of \\(f\\) have been assigned, there is only one missing, so \\(f(n)\\) is determined.\nFor each integer in \\([m, n)\\), there are two possible values of \\(f\\), so there are \\(2^{n-m-1}\\) different functions \\(f\\) for a given \\(m, n\\). So our answer is\n\n\\[\\begin{aligned}\n\\sum_{m=1}^{2010} \\sum_{n=m+1}^{2011} 2^{n-m-1} & =\\sum_{m=1}^{2010} 2^{-m-1} \\sum_{n=m+1}^{2011} 2^{n} \\\\\n& =\\sum_{m=1}^{2010} 2^{-m-1}\\left(2^{2012}-2^{m+1}\\right) \\\\\n& =\\sum_{m=1}^{2010} 2^{2011-m}-1 \\\\\n& =\\left(\\sum_{m=1}^{2010} 2^{m}\\right)-2010 \\\\\n& =2^{2011}-2012\n\\end{aligned}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

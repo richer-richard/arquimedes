@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-2011-p18",
+  "title": "2011 AMC 8 Problem 18",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.dice-probability",
+      "label": "Dice (probability)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2011,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 14.8,
+    "source": 1310,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A fair six-sided die is rolled twice. What is the probability that the first number that comes up is greater than or equal to the second number?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{6}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{5}{12}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{7}{12}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{5}{6}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "7/12"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2011-p18.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(3\\) possible outcomes when rolling a die twice: the first number is greater than the second, both numbers are equal, or the first number is less than the second number. The first and third outcomes have the same probability since they are symmetric.\n\nThe second outcome has a \\(\\dfrac{1}{6}\\) chance of happening, since the first number can be anything, and the second number must equal the first number. The other two outcomes have a combined probability of \\(1 - \\dfrac{1}{6} = \\dfrac{5}{6}.\\) This means that each outcome has a \\(\\dfrac{5}{6} \\div 2 = \\dfrac{5}{12}\\) chance of happening.\n\nThe desired probability is the first outcome plus the second outcome, for a total probability of \\(\\dfrac{5}{12} + \\dfrac{1}{6} = \\dfrac{7}{12}.\\)\n\nThus, D is the correct answer.",
+      "hints": [
+        "By symmetry, half of the unequal rolls have the first roll larger.",
+        "Separate the equal rolls from the unequal rolls."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2024-p22",
+  "title": "2024 AMC 12B Problem 22",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.law-of-sines",
+      "label": "Law of sines",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-inequality",
+      "label": "Triangle inequality",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2024,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 42.1,
+    "source": 2230,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Let \\(\\triangle ABC\\) be a triangle with integer side lengths and the property that \\(\\angle B = 2\\angle A.\\) What is the least possible perimeter of such a triangle?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(14\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(17\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "15"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2024-p22.live",
+      "kind": "proof-sketch",
+      "text": "When \\(\\angle B = 2\\angle A,\\) the side lengths satisfy \\(b^2 = a(a + c),\\) where \\(a = BC,\\) \\(b = CA,\\) \\(c = AB.\\) So \\(c = \\dfrac{b^2 - a^2}{a}\\) must be a positive integer, and the sides must form a valid triangle.\n\nAlso \\(b\\gt a,\\) because \\(\\angle B=2\\angle A\\gt\\angle A.\\) The perimeter is \\(a+b+c=b+\\dfrac{b^2}{a}\\gt2b.\\) Therefore a perimeter below \\(15\\) would require \\(b\\le6.\\) For \\(b=2,3,4,5,6,\\) the divisors \\(a\\lt b\\) of \\(b^2\\) give the possible pairs \\[ \\begin{gathered} (b,a)=(2,1),(3,1),\\\\ (4,1),(4,2),(5,1),\\\\ (6,1),(6,2),(6,3),(6,4). \\end{gathered} \\] Substitution gives a degenerate or invalid triangle in every case except \\((a,b)=(4,6),\\) which gives \\(c=5.\\) Thus \\((4,5,6)\\) is the first valid triangle, and its perimeter is \\(15.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "With \\(a = BC,\\) \\(b = CA,\\) \\(c = AB,\\) the condition \\(\\angle B = 2\\angle A\\) is equivalent to \\(b^2 = a(a + c)\\)",
+        "Since the perimeter is \\(b+\\dfrac{b^2}{a}\\gt2b,\\) a perimeter below \\(15\\) would require \\(b\\le6\\); check the divisors \\(a\\lt b\\) of \\(b^2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

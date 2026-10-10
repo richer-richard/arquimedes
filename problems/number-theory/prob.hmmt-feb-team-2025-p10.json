@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-team-2025-p10",
+  "title": "2025 HMMT February Team Problem 10",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.chinese-remainder-theorem",
+      "label": "Chinese remainder theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.greatest-common-divisors-gcd",
+      "label": "Greatest common divisors (gcd)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.quadratic-residues",
+      "label": "Quadratic residues",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2025,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 91.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Determine, with proof, all possible values of \\(\\gcd (a^{2} + b^{2} + c^{2}, abc)\\) across all triples of positive integers \\((a, b, c)\\) .",
+  "answerChoices": [],
+  "answer": {
+    "letter": "all positive integers n such that \\nu_{p}(n) \\neq 1 for all prime p \\equiv 3 (mod 4)",
+    "value": "All positive integers n such that \\nu_{p}(n) \\neq 1 for all prime p \\equiv 3 (mod 4)"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2025-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "First, we show that no other \\(n\\) work. If there does exist prime \\(p \\equiv 3\\) (mod 4) such that \\(\\nu_{p}(n) = 1\\) , then \\(p \\mid abc\\) ; without loss of generality, assume \\(p\\) divides \\(a\\) . Then, \\(p^{2} \\mid a^{2}\\) and \\(p \\mid a^{2} + b^{2} + c^{2}\\) , so \\(p \\mid b^{2} + c^{2}\\) . Since \\(p\\) is 3 modulo 4, \\(- 1\\) is not a quadratic residue modulo \\(p\\) , so \\(b^{2} \\equiv - c^{2}\\) (mod \\(p\\) ) only has the trivial solution \\((b, c) = 0\\) . Therefore \\(p \\mid b\\) and \\(p \\mid c\\) , so \\(p^{2} \\mid n\\) . This contradicts \\(\\nu_{p}(n) = 1\\) , so no solutions outside of the claimed solution set exist.\n\nNow, we give the construction. Let \\(n\\) be in the claimed solution set. We proceed in two steps.\n\nStep 1 (Local step). For each prime \\(p\\) dividing \\(n\\) , we will construct \\(a, b\\) , and \\(c\\) modulo \\(p^{\\nu_{p}(n) + 1}\\) such that \\(\\nu_{p}(\\gcd (a^{2} + b^{2} + c^{2}, abc)) = \\nu_{p}(n)\\) .\n\nWe have a couple cases.\n\n- If \\(\\nu_{p}(n) = 2k\\) for some positive integer \\(k\\) , pick \\(a = p^{k}\\) , \\(b = p^{k}\\) , and \\(c = p^{k + 1}\\) for \\(p \\neq 2\\) and pick \\(a = b = c = p^{k}\\) for \\(p = 2\\) .\n\n- If \\(p \\not\\equiv 3\\) (mod 4) and \\(\\nu_{p}(n) = 2k + 1\\) for some nonnegative integer \\(k\\) , then by Fermat's Christmas theorem, there are positive integers \\(x\\) and \\(y\\) for which \\(x^{2} + y^{2} = p\\) . Then pick \\(a = xp^{k}\\) , \\(b = yp^{k}\\) , and \\(c = p^{k + 1}\\) .\n\n- If \\(p \\equiv 3\\) (mod 4) and \\(\\nu_{p}(n) = 2k + 1\\) for some nonnegative integer \\(k\\) , then \\(k \\geq 1\\) by assumption. We let \\(x\\) and \\(y\\) be positive integers for which \\(\\nu_{p}(x^{2} + y^{2} + 1) = 1\\) . (This is fairly standard. To briefly recall the proof, note that \\(x\\) and \\(y\\) satisfying \\(x^{2} + 1 \\equiv - y^{2}\\) (mod \\(p\\) ) exist because some quadratic residue must be adjacent to a nonquadratic residue, and forcing \\(x^{2} + 1 \\not\\equiv - y^{2}\\) (mod \\(p^{2}\\) ) can be done by adding appropriate multiples of \\(p\\) to \\(x\\) or \\(y\\) .) Then, pick \\(a = xp^{k}\\) , \\(b = yp^{k}\\) , and \\(c = p^{k}\\) .\n\nStep 2 (Global step). Given solutions \\((a_{p}, b_{p}, c_{p})\\) modulo \\(p^{\\nu_{p}(n) + 1}\\) for each prime \\(p \\mid n\\) , we construct a working solution \\((a, b, c)\\) over positive integers.\n\nBy Chinese Remainder Theorem, we can pick positive integers \\(a, b\\) , and \\(c\\) such that for all prime \\(p \\mid n\\) , \\((a, b, c) \\equiv (a_{p}, b_{p}, c_{p}) \\pmod {p^{\\nu_{p}(n) + 1}}\\) . Now, we need to modify this construction to ensure that no other primes divide \\(\\gcd (a^{2} + b^{2} + c^{2}, abc)\\) .\n\nFor every prime \\(p \\mid c\\) with \\(p \\nmid n\\) , we modify \\(a\\) and \\(b\\) (by adding additional congruence relations) so that \\(p\\) does not divide \\(a^{2} + b^{2}\\) . Then, \\(p\\) does not divide \\(\\gcd (a^{2} + b^{2} + c^{2}, abc)\\) for any prime \\(p\\) such that \\(p \\mid c\\)\n\nand \\(p \\nmid n\\) . Let\n\n\\[N = \\prod_{p \\mid c n} p^{\\nu_{p}(n) + 1},\\] \\[S = \\{\\mathrm{primes} p \\mathrm{~such~that~} p \\mid a b \\mathrm{~but~} p \\nmid c n\\},\\] \\[P = \\prod_{p \\in S} p^{\\varphi (N)} \\equiv 1 \\pmod {N}.\\]\n\nIn particular, we have only fixed residues of \\(a, b, c\\) modulo \\(N\\) at this point. Now, let \\(a_{1} = a P\\) and \\(b_{1} = b P\\) . This keeps all of our mod \\(N\\) conditions. We now claim that \\((a_{1}, b_{1}, c)\\) works. To prove this, fix a prime \\(p\\) , and note that\n\nif \\(p\\) divides \\(c n\\) , then since \\(a^{\\prime} \\equiv a\\) (mod \\(N\\) ) and \\(b^{\\prime} \\equiv b\\) (mod \\(N\\) ), we have \\(\\nu_{p}(\\gcd (a_{1}^{2} + b_{1}^{2} + c^{2}, a_{1} b_{1} c)) = \\nu_{p}(n)\\) from our construction of \\((a, b, c)\\) .\n\nif \\(p \\in S\\) , then we note that \\(p\\) divides \\(a_{1}^{2} + b_{1}^{2}\\) , but not \\(c^{2}\\) , so \\(p\\) does not divide \\(a_{1}^{2} + b_{1}^{2} + c^{2}\\) .\n\nif \\(p \\notin S\\) and \\(p \\nmid c n\\) , then \\(p\\) does not divide \\(a_{1} b_{1} c\\) .\n\nThis concludes the proof.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

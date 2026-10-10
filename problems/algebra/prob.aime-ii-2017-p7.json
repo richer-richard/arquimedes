@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2017-p7",
+  "title": "2017 AIME II Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2017,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 57.0,
+    "source": 2740,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Find the number of integer values of \\(k\\) in the closed interval \\([-500, 500]\\) for which the equation \\(\\log(kx) = 2\\log(x + 2)\\) has exactly one real solution.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "501",
+    "value": "501"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2017-p7.live",
+      "kind": "proof-sketch",
+      "text": "The equation requires \\(x + 2 \\gt 0\\) and \\(kx \\gt 0,\\) and under those restrictions it is equivalent to \\(kx = (x + 2)^2,\\) that is, \\(x^2 + (4 - k)x + 4 = 0.\\)\n\nFor \\(k \\lt 0\\) the restrictions force \\(-2 \\lt x \\lt 0.\\) On this interval \\(kx\\) decreases from \\(-2k \\gt 0\\) to \\(0\\) while \\((x + 2)^2\\) increases from \\(0\\) to \\(4,\\) so the graphs cross exactly once. Hence every one of the \\(500\\) negative values of \\(k\\) works, while \\(k = 0\\) makes \\(\\log(kx)\\) undefined.\n\nFor \\(k \\gt 0\\) the restrictions force \\(x \\gt 0.\\) The quadratic has root product \\(4,\\) so any real roots have the same sign, and the discriminant \\((4 - k)^2 - 16 = k(k - 8)\\) is negative for \\(0 \\lt k \\lt 8.\\) When \\(k \\gt 8\\) there are two distinct positive roots (root sum \\(k - 4 \\gt 0\\)), giving two solutions; only \\(k = 8\\) gives exactly one solution, the double root \\(x = 2.\\) In total \\(500 + 1 = 501\\) values of \\(k\\) work.",
+      "hints": [
+        "The equation says \\(kx = (x + 2)^2\\) with the domain restrictions \\(kx \\gt 0\\) and \\(x \\gt -2;\\) treat \\(k \\lt 0\\) and \\(k \\gt 0\\) separately",
+        "For every \\(k \\lt 0\\) the two graphs cross exactly once on \\((-2, 0);\\) for \\(k \\gt 0\\) the quadratic \\(x^2 + (4 - k)x + 4\\) needs a repeated positive root"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

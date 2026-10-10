@@ -1,0 +1,90 @@
+{
+  "id": "prob.amc-10b-2012-p21",
+  "title": "2012 AMC 10B Problem 21",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.inscribed-angle",
+      "label": "Inscribed angle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2012,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 27.7,
+    "source": 1930,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Four distinct points are arranged in a plane so that the segments connecting them have lengths \\(a,\\) \\(a,\\) \\(a,\\) \\(a,\\) \\(2a,\\) and \\(b.\\) What is the ratio of \\(b\\) to \\(a?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( \\sqrt{3} \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 2 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( \\sqrt{5} \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 3 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( \\pi \\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2012-p21.live",
+      "kind": "proof-sketch",
+      "text": "Regard the four length-\\(a\\) segments as edges of a graph on the four points. If they contained no triangle, they would form a \\(4\\)-cycle. The length-\\(2a\\) segment would then be one of its diagonals. Each of the other two points gives a two-edge path of total length \\(2a\\) between the diagonal’s endpoints. Equality in the triangle inequality would force both intermediate points to be the midpoint of that diagonal, contradicting that the four points are distinct. Therefore three points do form an equilateral triangle of side \\(a;\\) call them \\(A,B,C.\\)\n\nThe fourth point \\(D\\) is distance \\(a\\) from one of these points, say \\(A,\\) and distance \\(2a\\) from another, say \\(B.\\) Because \\(BA+AD=BD,\\) the points \\(B,A,D\\) are collinear and \\(A\\) is the midpoint of \\(\\overline{BD}.\\) Thus \\(BD\\) is a diameter of the circle through \\(B,C,D\\) centered at \\(A,\\) so \\(\\triangle BCD\\) is right.\n\nThus \\(b^2=(2a)^2-a^2=3a^2\\), so \\(\\frac{b}{a}=\\sqrt3\\).\n\nThus, A is the correct answer.",
+      "hints": [
+        "Three of the four length-\\(a\\) edges form an equilateral triangle",
+        "The remaining point creates a right triangle with hypotenuse \\(2a\\) and one leg \\(a\\)"
+      ],
+      "images": [
+        "2083ba7ae67808ab7fe5498880d882aaecad4f0bd25517275bcb5e6e22f8cac1"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "2083ba7ae67808ab7fe5498880d882aaecad4f0bd25517275bcb5e6e22f8cac1"
+    ]
+  }
+}

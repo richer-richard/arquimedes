@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-team-2008-p3",
+  "title": "2008 HMMT November Team Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2008,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 51.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(p\\) be a prime. Given a sequence of positive integers \\(b_{1}\\) through \\(b_{n}\\), exactly one of which is divisible by \\(p\\), show that when\n\n\\[\\frac{1}{b_{1}}+\\frac{1}{b_{2}}+\\ldots+\\frac{1}{b_{n}}\\]\n\nis written as a fraction in lowest terms, then its denominator is divisible by \\(p\\). Use this fact to explain why no prime \\(p\\) is ever juicy.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2008-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "We can assume that \\(b_{n}\\) is the term divisible by \\(p\\) (i.e. \\(b_{n}=k p\\) ) since the order of addition doesn't matter. We can then write\n\n\\[\\frac{1}{b_{1}}+\\frac{1}{b_{2}}+\\ldots+\\frac{1}{b_{n-1}}=\\frac{a}{b}\\]\n\nwhere \\(b\\) is not divisible by \\(p\\) (since none of the \\(b_{i}\\) are). But then \\(\\frac{a}{b}+\\frac{1}{k p}=\\frac{k p a+b}{k p b}\\). Since \\(b\\) is not divisible by \\(p, k p a+b\\) is not divisible by \\(p\\), so we cannot remove the factor of \\(p\\) from the denominator. In particular, \\(p\\) cannot be juicy as 1 can be written as \\(\\frac{1}{1}\\), which has a denominator not divisible by \\(p\\), whereas being juicy means we have a sum \\(\\frac{1}{b_{1}}+\\ldots+\\frac{1}{b_{n}}=1\\), where \\(b_{1}<b_{2}<\\ldots<b_{n}=p\\), and so in particular none of the \\(b_{i}\\) with \\(i<n\\) are divisible by p.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

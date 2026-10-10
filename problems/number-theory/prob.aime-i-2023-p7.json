@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2023-p7",
+  "title": "2023 AIME I Problem 7",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.chinese-remainder-theorem",
+      "label": "Chinese Remainder Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2023,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 50.5,
+    "source": 2560,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Call a positive integer \\(n\\) extra-distinct if the remainders when \\(n\\) is divided by \\(2,\\) \\(3,\\) \\(4,\\) \\(5,\\) and \\(6\\) are distinct. Find the number of extra-distinct positive integers less than \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "49",
+    "value": "49"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2023-p7.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(r_k\\) for the remainder of \\(n\\) modulo \\(k,\\) and note \\(r_2 \\equiv r_4 \\pmod 2,\\) \\(r_2 \\equiv r_6 \\pmod 2,\\) and \\(r_3 \\equiv r_6 \\pmod 3.\\) If \\(r_2 = 0:\\) then \\(r_4\\) is even and different from \\(r_2,\\) so \\(r_4 = 2;\\) then \\(r_6\\) is even and avoids \\(\\{0, 2\\},\\) so \\(r_6 = 4,\\) which gives \\(r_3 = 1;\\) finally \\(r_5\\) avoids \\(\\{0, 1, 2, 4\\},\\) so \\(r_5 = 3.\\) These say \\(n \\equiv -2\\) modulo each of \\(2, 3, 4, 5, 6,\\) i.e. \\(n \\equiv 58 \\pmod{60}.\\)\n\nIf \\(r_2 = 1:\\) similarly \\(r_4 = 3,\\) then \\(r_6 = 5,\\) giving \\(r_3 = 2,\\) and \\(r_5\\) avoids \\(\\{1, 2, 3, 5\\},\\) so \\(r_5 \\in \\{0, 4\\}.\\) The choice \\(r_5 = 4\\) gives \\(n \\equiv -1 \\pmod{60},\\) i.e. \\(n \\equiv 59;\\) the choice \\(r_5 = 0\\) gives \\(n \\equiv 11 \\pmod{12}\\) with \\(5\\) dividing \\(n,\\) i.e. \\(n \\equiv 35 \\pmod{60}.\\)\n\nBelow \\(1000\\) there are \\(17\\) integers congruent to \\(35,\\) \\(16\\) congruent to \\(58,\\) and \\(16\\) congruent to \\(59\\) modulo \\(60,\\) for a total of \\(17 + 16 + 16 = 49.\\)",
+      "hints": [
+        "The remainder mod \\(2\\) is forced by the remainders mod \\(4\\) and mod \\(6,\\) and the remainder mod \\(3\\) by the one mod \\(6\\) — few patterns survive.",
+        "Everything depends only on \\(n \\bmod 60;\\) exactly three residues work, so count each class below \\(1000.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

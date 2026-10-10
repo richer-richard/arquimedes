@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2014-p8",
+  "title": "2014 AMC 10A Problem 8",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factorial",
+      "label": "Factorial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2014,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 21.3,
+    "source": 1420,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Which of the following numbers is a perfect square?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{14!15!}2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{15!16!}2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{16!17!}2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{17!18!}2\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{18!19!}2\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2014-p8.live",
+      "kind": "proof-sketch",
+      "text": "Note that all of these answer choices are of the form \\[ \\dfrac{n!(n + 1)!}{2} = \\dfrac{(n!)^2(n + 1)}{2}. \\] We have that \\((n!)^2\\) is square, so we need \\(\\dfrac{n + 1}{2}\\) to be square as well.\n\nThis means that \\(n + 1\\) must be twice a perfect square. The only choice we have is \\(n + 1 = 18,\\) which gives us \\(n = 17.\\)\n\nThus, D is the correct answer.",
+      "hints": [
+        "Write each choice as \\(\\frac{n!(n+1)!}{2}\\)",
+        "Only \\(\\frac{n+1}{2}\\) needs to be a square"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

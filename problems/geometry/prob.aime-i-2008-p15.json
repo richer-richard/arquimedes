@@ -1,0 +1,79 @@
+{
+  "id": "prob.aime-i-2008-p15",
+  "title": "2008 AIME I Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.law-of-sines",
+      "label": "Law of sines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.paper-folding",
+      "label": "Paper folding",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2008,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 71.3,
+    "source": 3370,
+    "mohs": null
+  },
+  "estimatedMinutes": 30,
+  "statement": "A square piece of paper has sides of length \\(100.\\) From each corner a wedge is cut in the following manner: at each corner, the two cuts for the wedge each start at distance \\(\\sqrt{17}\\) from the corner, and they meet on the diagonal at an angle of \\(60^\\circ\\) (see the figure below). The paper is then folded up along the lines joining the vertices of adjacent cuts. When the two edges of a cut meet, they are taped together. The result is a paper tray whose sides are not at right angles to the base. The height of the tray, that is, the perpendicular distance between the plane of the base and the plane formed by the upper edges, can be written in the form \\(\\sqrt[n]{m},\\) where \\(m\\) and \\(n\\) are positive integers, \\(m \\lt 1000,\\) and \\(m\\) is not divisible by the \\(n\\)th power of any prime. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "871",
+    "value": "871"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2008-p15.live",
+      "kind": "proof-sketch",
+      "text": "Put the corner at the origin \\(O\\) with the two sides along the positive axes, and write \\(a = \\sqrt{17}.\\) The cut on the bottom edge starts at \\(P = (a, 0),\\) and the two cuts meet at \\(R\\) on the diagonal \\(y = x,\\) each making a \\(30^\\circ\\) angle with the diagonal. In triangle \\(OPR,\\) \\(\\angle ROP = 45^\\circ\\) and \\(\\angle ORP = 30^\\circ,\\) so the Law of Sines gives \\(PR = \\frac{OP\\sin 45^\\circ}{\\sin 30^\\circ} = a\\sqrt{2}.\\) The fold lines are the horizontal and vertical lines through \\(R.\\) Let \\(S\\) be the point of the horizontal fold line directly above \\(P,\\) and \\(T = (a, a)\\) the point where the vertical line through \\(P\\) meets the diagonal. Since \\(\\angle OPR = 105^\\circ,\\) segment \\(PR\\) makes a \\(75^\\circ\\) angle with the bottom edge, so \\[ \\begin{aligned} SP &= PR\\sin 75^\\circ \\\\ &= a\\sqrt{2} \\cdot \\frac{\\sqrt{6} + \\sqrt{2}}{4} \\\\ &= a\\,\\frac{\\sqrt{3} + 1}{2}, \\\\ ST &= SP - PT \\\\ &= a\\,\\frac{\\sqrt{3} + 1}{2} - a \\\\ &= a\\,\\frac{\\sqrt{3} - 1}{2}. \\end{aligned} \\]\n\nWhen the bottom strip folds up along the horizontal line through \\(R,\\) point \\(P\\) stays at distance \\(SP\\) from \\(S,\\) moving in the vertical plane through \\(P\\) perpendicular to that fold line. By symmetry the two taped cut edges meet above the diagonal, so \\(P\\) lands at a point \\(P'\\) directly above \\(T,\\) and \\(P'T\\) is the height of the tray. By the Pythagorean theorem, \\[ \\begin{aligned} P'T^2 &= P'S^2 - ST^2 \\\\ &= a^2\\left(\\frac{\\sqrt{3} + 1}{2}\\right)^2 \\\\ &\\quad {}- a^2\\left(\\frac{\\sqrt{3} - 1}{2}\\right)^2 \\\\ &= a^2\\sqrt{3}. \\end{aligned} \\]\n\nSo the height is \\(a \\cdot 3^{\\frac{1}{4}}\\) \\(= \\sqrt{17} \\cdot \\sqrt[4]{3}\\) \\(= \\sqrt[4]{17^2 \\cdot 3}\\) \\(= \\sqrt[4]{867},\\) and \\(m + n = 867 + 4 = 871.\\)",
+      "hints": [
+        "Set the corner at \\(O\\) with cut start \\(P = (\\sqrt{17}, 0);\\) the cuts meet at \\(R\\) on the diagonal with \\(\\angle ROP = 45^\\circ\\) and \\(\\angle ORP = 30^\\circ\\)",
+        "Folding swings \\(P\\) about the fold line through \\(R\\) to a point above \\(T = (\\sqrt{17}, \\sqrt{17});\\) the height is \\(\\sqrt{SP^2 - ST^2},\\) with \\(S\\) on the fold line above \\(P\\)"
+      ],
+      "images": [
+        "f8dcf9cee3e8a464202e1bb5589c77de65898a037365029ed2a723a4cda5c906"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [
+      "6789c0cb0e7fce9e22b3fe094b2160d23844dbd5cd467dd5e134b1708bd49630"
+    ],
+    "solutions": [
+      "f8dcf9cee3e8a464202e1bb5589c77de65898a037365029ed2a723a4cda5c906"
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2022-p6",
+  "title": "2022 AMC 12B Problem 6",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.multiple",
+      "label": "Multiple",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2022,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 19.5,
+    "source": 1350,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Consider the following \\(100\\) sets of \\(10\\) elements each:\n\n\\[\\{1,2,3,\\ldots,10\\},\\] \\[\\{11,12,13,\\ldots,20\\},\\] \\[\\{21,22,23,\\ldots,30\\},\\] \\[\\vdots\\] \\[\\{991,992,993,\\ldots,1000\\}.\\]\n\nHow many of these sets contain exactly two multiples of \\(7?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(40\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(42\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(43\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(49\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(50\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "42"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2022-p6.live",
+      "kind": "proof-sketch",
+      "text": "Among \\(1\\) to \\(1000\\) there are \\(\\left\\lfloor \\tfrac{1000}{7} \\right\\rfloor = 142\\) multiples of \\(7.\\) Because \\(10 \\gt 7,\\) each block of \\(10\\) consecutive integers contains one or two multiples of \\(7.\\)\n\nIf \\(x\\) blocks contain two and the remaining \\(100 - x\\) contain one, then \\(2x + (100 - x) = 142,\\) so \\(x = 42.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "A block of \\(10\\) consecutive integers contains either one or two multiples of \\(7\\)",
+        "Count the total multiples of \\(7\\) in \\(\\{1,\\ldots,1000\\},\\) then let \\(x\\) blocks have two and \\(100-x\\) have one"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

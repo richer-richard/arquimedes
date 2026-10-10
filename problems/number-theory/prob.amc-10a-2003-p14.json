@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2003-p14",
+  "title": "2003 AMC 10A Problem 14",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.prime",
+      "label": "Prime",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.systematic-listing",
+      "label": "Systematic listing",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2003,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 24.9,
+    "source": 1500,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(n\\) be the largest integer that is the product of exactly \\(3\\) distinct prime numbers, \\(d,\\) \\(e,\\) and \\(10d + e,\\) where \\(d\\) and \\(e\\) are single digits. What is the sum of the digits of \\(n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(24\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "12"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2003-p14.live",
+      "kind": "proof-sketch",
+      "text": "Both \\(d\\) and \\(e\\) are distinct members of \\(\\{2,3,5,7\\},\\) and \\(10d+e\\) must also be prime.\n\nStart with the largest possible tens digit. For \\(d=7,\\) the choices \\(e=5\\) and \\(e=2\\) give the composite numbers \\(75\\) and \\(72,\\) while \\(e=3\\) gives the prime \\(73.\\) This produces \\(n=7\\cdot3\\cdot73=1533.\\)\n\nFor \\(d=5,\\) the choices \\(e=7\\) and \\(e=2\\) give the composite numbers \\(57\\) and \\(52,\\) while \\(e=3\\) gives only \\(5\\cdot3\\cdot53=795.\\) Every case with \\(d\\le3\\) is at most \\(3\\cdot7\\cdot37=777.\\) Hence \\(1533\\) is the largest valid value.\n\nThe sum of its digits is \\(1 + 5 + 3 + 3 = 12.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "The single-digit primes are \\(2,\\) \\(3,\\) \\(5,\\) \\(7,\\) and \\(10d + e\\) must also be prime",
+        "Test candidate pairs in descending order of \\(d,\\) discarding any pair for which \\(10d+e\\) is composite"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

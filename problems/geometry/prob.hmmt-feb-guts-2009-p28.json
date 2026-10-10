@@ -1,0 +1,85 @@
+{
+  "id": "prob.hmmt-feb-guts-2009-p28",
+  "title": "2009 HMMT February Guts Problem 28",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2009,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 81.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The vertices of a regular hexagon are labeled \\(\\cos (\\theta), \\cos (2 \\theta), \\ldots, \\cos (6 \\theta)\\). For every pair of vertices, Bob draws a blue line through the vertices if one of these functions can be expressed as a polynomial function of the other (that holds for all real \\(\\theta\\) ), and otherwise Roberta draws a red line through the\nvertices. In the resulting graph, how many triangles whose vertices lie on the hexagon have at least one red and at least one blue edge?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2009-p28.hmmt",
+      "kind": "proof-sketch",
+      "text": "14 Solution: The existence of the Chebyshev polynomials, which express \\(\\cos (n \\theta)\\) as a polynomial in \\(\\cos (\\theta)\\), imply that Bob draws a blue line between \\(\\cos (\\theta)\\) and each other vertex, and also between \\(\\cos (2 \\theta)\\) and \\(\\cos (4 \\theta)\\), between \\(\\cos (2 \\theta)\\) and \\(\\cos (6 \\theta)\\), and between \\(\\cos (3 \\theta)\\) and \\(\\cos (6 \\theta)\\) (by substituting \\(\\theta^{\\prime}=2 \\theta\\) or \\(3 \\theta\\) as necessary). We now show that Roberta draws a red line through each other pair of vertices.\nLet \\(m\\) and \\(n\\) be positive integers. Notice that \\(\\cos (n \\theta)\\) is a periodic function with period \\(\\frac{2 \\pi}{n}\\), and \\(\\cos (m \\theta)\\) is periodic with period \\(\\frac{2 \\pi}{m}\\). Thus, any polynomial in \\(\\cos (m \\theta)\\) is also periodic of period \\(\\frac{2 \\pi}{m}\\). This may not be the minimum period of the polynomial, however, so the minimum period is \\(\\frac{2 \\pi}{m k}\\) for some \\(k\\). Therefore, if \\(\\cos (n \\theta)\\) can be expressed as a polynomial in \\(\\cos (m \\theta)\\) then \\(\\frac{2 \\pi}{n}=\\frac{2 \\pi}{m k}\\) for some \\(k\\), so \\(m \\mid n\\). This shows that there is a blue line between two vertices \\(\\cos (a \\theta)\\) and \\(\\cos (b \\theta)\\) if and only if one of \\(a\\) or \\(b\\) divides the other.\nDrawing the graph, one can easily count that there are 3 triangles with all blue edges, 3 triangles with all red edges, and \\(\\binom{6}{3}=20\\) triangles total. Thus there are \\(20-3-3=14\\) triangles having at least one red and at least one blue edge.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

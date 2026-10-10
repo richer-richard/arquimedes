@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-team-1-2010-p3",
+  "title": "2010 HMMT February Team Round 1 Problem 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2010,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 83.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Call a positive integer in base \\(10 k\\)-good if we can split it into two integers y and z , such that y is all digits on the left and z is all digits on the right, and such that \\(y=k \\cdot z\\). For example, 2010 is 2 -good because we can split it into 20 and 10 and \\(20=2 \\cdot 10.20010\\) is also 2 -good, because we can split it into 20 and 010 . In addition, it is 20 -good, because we can split it into 200 and 10 .\nShow that there exists a 48 -good perfect square.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1-2010-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "We wish to find integers \\(a, z\\) such that \\(48 z \\cdot 10^{a}+z=z\\left(48 \\cdot 10^{a}+1\\right)\\) a perfect square, where \\(z<10^{a}\\). This would prove that there exists a 48 -good perfect square because we are pulling off the last \\(a\\) digits of the number and get two integers \\(48 z\\) and \\(z\\). To make \\(z\\) small by keeping the product a perfect square, we'd like \\(48 \\cdot 10^{a}+1\\) to be divisible by some reasonably large square. Take \\(a=42=\\varphi(49)\\). By Euler's theorem, \\(10^{42} \\equiv 1(\\bmod 49)\\), so \\(48 \\cdot 10^{a}+1\\) is a multiple of 49 . Then we can take \\(z=\\frac{48 \\cdot 10^{a}+1}{49}\\). (Clearly \\(z<10^{a}\\), so we're fine.) Then we have \\(z\\left(48 \\cdot 10^{a}+1\\right)=\\left(\\frac{48 \\cdot 10^{42}+1}{7}\\right)^{2}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

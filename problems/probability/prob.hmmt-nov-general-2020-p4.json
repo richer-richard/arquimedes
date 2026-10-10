@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-general-2020-p4",
+  "title": "2020 HMMT November General Problem 4",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2020,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 45.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Nine fair coins are flipped independently and placed in the cells of a 3 by 3 square grid. Let \\(p\\) be the probability that no row has all its coins showing heads and no column has all its coins showing tails. If \\(p=\\frac{a}{b}\\) for relatively prime positive integers \\(a\\) and \\(b\\), compute \\(100 a+b\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "8956",
+    "value": "8956"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2020-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "Consider the probability of the complement. It is impossible for some row to have all heads and some column to have tails, since every row intersects every column. Let \\(q\\) be the probability that some row has all heads. By symmetry, \\(q\\) is also the probability that some column has all tails. We can then conclude that \\(p=1-2 q\\).\nThe probability that a given row does not have all heads is \\(\\frac{7}{8}\\). So, the probability that none of the three rows have all heads is \\(\\left(\\frac{7}{8}\\right)^{3}\\), implying that \\(q=1-\\frac{343}{512}=\\frac{169}{512}\\). Thus \\(p=1-\\frac{169}{256}=\\frac{87}{256}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

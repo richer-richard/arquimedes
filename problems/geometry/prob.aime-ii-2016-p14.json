@@ -1,0 +1,72 @@
+{
+  "id": "prob.aime-ii-2016-p14",
+  "title": "2016 AIME II Problem 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inscribed-angle",
+      "label": "Inscribed angle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2016,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 64.5,
+    "source": 3370,
+    "mohs": null
+  },
+  "estimatedMinutes": 20,
+  "statement": "Equilateral \\(\\triangle ABC\\) has side length \\(600.\\) Points \\(P\\) and \\(Q\\) lie outside the plane of \\(\\triangle ABC\\) and are on opposite sides of the plane. Furthermore, \\(PA = PB = PC,\\) and \\(QA = QB = QC,\\) and the planes of \\(\\triangle PAB\\) and \\(\\triangle QAB\\) form a \\(120^\\circ\\) dihedral angle (the angle between the two planes). There is a point \\(O\\) whose distance from each of \\(A,\\) \\(B,\\) \\(C,\\) \\(P,\\) and \\(Q\\) is \\(d.\\) Find \\(d.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "450",
+    "value": "450"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2016-p14.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(PA = PB = PC\\) and \\(QA = QB = QC,\\) both \\(P\\) and \\(Q\\) lie on the line through the center \\(H\\) of \\(\\triangle ABC\\) perpendicular to its plane, on opposite sides. Any point equidistant from \\(A,\\) \\(B,\\) \\(C\\) also lies on that line, so \\(O\\) is on it, and \\(OP = OQ = d\\) makes \\(O\\) the midpoint of \\(\\overline{PQ},\\) with \\(PQ = 2d.\\) Let \\(D\\) be the midpoint of \\(\\overline{AB}\\) and \\(a = 600;\\) then \\(DH = \\frac{a\\sqrt{3}}{6}\\) and \\(CH = \\frac{a\\sqrt{3}}{3}.\\) Since \\(\\overline{PD} \\perp \\overline{AB}\\) and \\(\\overline{QD} \\perp \\overline{AB},\\) the dihedral angle is \\(\\angle PDQ = 120^\\circ;\\) write \\(x = \\angle PDH\\) and \\(y = \\angle QDH,\\) so \\(x + y = 120^\\circ.\\)\n\nRight triangles \\(PDH\\) and \\(QDH\\) give \\(PH = DH \\tan x\\) and \\(QH = DH \\tan y,\\) so \\[ \\begin{aligned} 2d = PQ &= PH \\\\ &\\quad {}+ QH \\\\ &= \\frac{a\\sqrt{3}}{6} \\\\ &\\quad {}\\cdot (\\tan x + \\tan y). \\end{aligned} \\] Since \\(OC = OP = OQ = d,\\) point \\(C\\) lies on the circle with diameter \\(\\overline{PQ},\\) so \\(\\angle PCQ = 90^\\circ,\\) and \\(H\\) is the foot of the altitude from \\(C\\) to the hypotenuse \\(\\overline{PQ}.\\) Thus \\(CH^2 = PH \\cdot QH,\\) which gives \\(\\tan x \\tan y = \\frac{CH^2}{DH^2} = 4.\\)\n\nBy the tangent addition formula, \\(-\\sqrt{3} = \\tan 120^\\circ\\) \\(= \\frac{\\tan x + \\tan y}{1 - \\tan x \\tan y}\\) \\(= \\frac{\\tan x + \\tan y}{-3},\\) so \\(\\tan x + \\tan y = 3\\sqrt{3}.\\) Then \\(2d = \\frac{a\\sqrt{3}}{6} \\cdot 3\\sqrt{3} = \\frac{3a}{2},\\) so \\(d = \\frac{3a}{4} = 450.\\)",
+      "hints": [
+        "\\(P,\\) \\(Q,\\) and \\(O\\) all lie on the line through the center of \\(\\triangle ABC\\) perpendicular to its plane, and \\(O\\) is the midpoint of \\(\\overline{PQ}\\)",
+        "Since \\(OC = OP = OQ,\\) \\(\\angle PCQ = 90^\\circ,\\) so \\(CH^2 = PH \\cdot QH.\\) Combine with the tangent addition formula at the midpoint of \\(\\overline{AB}.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

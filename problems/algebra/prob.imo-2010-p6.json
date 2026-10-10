@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2010-p6",
+  "title": "2010 IMO Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2010,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 111.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a_1, a_2, a_3, \\dots\\) be a sequence of positive real numbers, and \\(s\\) be a positive integer, such that\n\\[ a_n = \\max \\{ a_k + a_{n-k} \\mid 1 \\leq k \\leq n-1 \\} \\text{ for all } n > s. \\]\nProve there exist positive integers \\(\\ell \\leq s\\) and \\(N\\), such that\n\\[ a_n = a_{\\ell} + a_{n - \\ell} \\text{ for all } n \\ge N. \\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2010-p6.evanchen",
+      "kind": "proof-sketch",
+      "text": "Let \\[ w_1 = \\frac{a_1}{1}, \\quad w_2 = \\frac{a_2}{2},\n \\quad \\dots, \\quad w_s = \\frac{a_s}{s}. \\]\n(The choice of the letter \\(w\\) is for ``weight''.)\nWe claim the right choice of \\(\\ell\\) is the one maximizing \\(w_\\ell\\).\n\nOur plan is to view each \\(a_n\\) as a linear combination\nof the weights \\(w_1, \\dots, w_s\\) and track their coefficients.\n\nTo this end, let's define an \\(n\\)-type\nto be a vector \\(T = \\left< t_1, \\dots, t_s\\right>\\) of nonnegative integers such that\n\n• \\(n = t_1 + \\dots + t_s\\); and\n\n• \\(t_i\\) is divisible by \\(i\\) for every \\(i\\).\n\nWe then define its valuation as \\(v(T) = \\sum_{i=1}^s w_i t_i\\).\n\nNow we define a \\(n\\)-type to be valid\naccording to the following recursive rule.\nFor \\(1 \\le n \\le s\\) the only valid \\(n\\)-types are\n\\[\\begin{aligned}\n T_1 &= \\left< 1, 0, 0, \\dots, 0 \\right> \\\\\n T_2 &= \\left< 0, 2, 0, \\dots, 0 \\right> \\\\\n T_3 &= \\left< 0, 0, 3, \\dots, 0 \\right> \\\\\n &\\vdots \\\\\n T_s &= \\left< 0, 0, 0, \\dots, s \\right>\n\\end{aligned}\\]\nfor \\(n = 1, \\dots, s\\), respectively.\nThen for any \\(n > s\\), an \\(n\\)-type is valid\nif it can be written as the sum of a valid \\(k\\)-type\nand a valid \\((n-k)\\)-type, componentwise.\nThese represent the linear combinations possible in the recursion;\nin other words the recursion in the problem is phrased as\n\\[ a_n = \\max_{T \\text{ is a valid \\(n\\)-type}} v(T). \\]\n\nIn fact, we have the following description of valid \\(n\\)-types:\n\nClaim.\n Assume \\(n > s\\).\n Then an \\(n\\)-type \\(\\left< t_1, \\dots, t_s \\right>\\) is valid\n if and only if either\n\n• there exist indices \\(i < j\\) with \\(i+j > s\\), \\(t_i \\ge i\\) and \\(t_j \\ge j\\); or\n\n• there exists an index \\(i > s/2\\) with \\(t_i \\ge 2i\\).\n\nProof.\n Immediate by forwards induction on \\(n > s\\) that all \\(n\\)-types have this property.\n\n The reverse direction is by downwards induction on \\(n\\).\n Indeed if \\(\\sum_i \\frac{t_i}{i} > 2\\),\n then we may subtract off on of \\(\\{T_1, \\dots, T_s\\}\\)\n while preserving the condition;\n and the case \\(\\sum_i \\frac{t_i}{i} = 2\\) is essentially by definition.\n\nRemark.\n The claim is a bit confusingly stated in its two cases;\n really the latter case should be thought of as the situation\n \\(i=j\\) but requiring that \\(t_i/i\\) is counted with multiplicity.\n\nNow, for each \\(n > s\\) we pick a valid \\(n\\)-type \\(T_n\\) with \\(a_n = v(T_n)\\);\nif there are ties, we pick one for which the \\(\\ell\\)th\nentry is as large as possible.\n\nClaim.\n For any \\(n > s\\) and index \\(i \\neq \\ell\\), the \\(i\\)th entry of \\(T_n\\)\n is at most \\(2s + \\ell i\\).\n\nProof.\n If not, we can go back \\(i\\ell\\) steps to get\n a valid \\((n-i\\ell)\\)-type \\(T\\)\n achieved by decreasing the \\(i\\)th entry of \\(T_n\\) by \\(i \\ell\\).\n But then we can add \\(\\ell\\) to the \\(\\ell\\)th entry \\(i\\)\n times to get another \\(n\\)-type \\(T'\\) which obviously\n has valuation at least as large,\n but with larger \\(\\ell\\)th entry.\n\nNow since all other entries in \\(T_n\\) are bounded, eventually the sequence \\((T_n)_{n > s}\\)\njust consists of repeatedly adding \\(1\\) to the \\(\\ell\\)th entry, as required.\n\nRemark.\n One big step is to consider \\(w_k = a_k / k\\).\n You can get this using wishful thinking\n or by examining small cases.\n (In addition this normalization makes it easier\n to see why the largest \\(w\\) plays an important role,\n since then in the definition of type,\n the \\(n\\)-types all have a sum of \\(n\\).\n Unfortunately, it makes the characterization of valid \\(n\\)-types somewhat clumsier too.)",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "prob.hmmt-feb-general-2-2005-p10",
+  "title": "2005 HMMT February General Round 2 Problem 10",
+  "category": "uncategorized",
+  "subjects": [],
+  "concepts": [],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2005,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\lfloor x\\rfloor\\) denote the greatest integer less than or equal to \\(x\\). How many positive integers less than 2005 can be expressed in the form \\(\\lfloor x\\lfloor x\\rfloor\\rfloor\\) for some positive real \\(x\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-general-2-2005-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "990\nLet \\(\\{x\\}=x-\\lfloor x\\rfloor\\) be the fractional part of \\(x\\). Note that\n\n\\[\\lfloor x\\lfloor x\\rfloor\\rfloor=\\lfloor(\\lfloor x\\rfloor+\\{x\\})\\lfloor x\\rfloor\\rfloor=\\lfloor x\\rfloor^{2}+\\lfloor\\{x\\}\\lfloor x\\rfloor\\rfloor .\\]\n\nBecause \\(\\{x\\}\\) may take on any value in the half-open interval \\([0,1)\\), the quantity \\(\\lfloor\\{x\\}\\lfloor x\\rfloor\\rfloor\\) can take on any integer value between 0 and \\(\\lfloor x\\rfloor-1\\), inclusive.\nIf \\(\\lfloor x\\rfloor=n\\), then \\(\\lfloor x\\lfloor x\\rfloor\\rfloor\\) can be any of the numbers \\(n^{2}, n^{2}+1, \\ldots, n^{2}+n-1\\). In other words, there are precisely \\(n\\) possible values that \\(\\lfloor x\\lfloor x\\rfloor\\rfloor\\) can take, and moreover, all of them are less than \\((n+1)^{2}\\). Because \\(44^{2}+43=1979<2005\\) and \\(45^{2}=2025>2005\\), \\(n\\) can range between 1 and 44, inclusive. Therefore, the answer is\n\n\\[\\sum_{n=1}^{44} n=\\frac{44 \\cdot 45}{2}=990\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

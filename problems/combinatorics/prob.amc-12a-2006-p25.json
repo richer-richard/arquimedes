@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12a-2006-p25",
+  "title": "2006 AMC 12A Problem 25",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.bijection",
+      "label": "Bijection",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.subsets",
+      "label": "Subsets",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2006,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 43.2,
+    "source": 2550,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "How many non-empty subsets \\(S\\) of \\(\\{1, 2, 3, \\ldots, 15\\}\\) have the following two properties?\n\n\\((1)\\) No two consecutive integers belong to \\(S.\\)\n\n\\((2)\\) If \\(S\\) contains \\(k\\) elements, then \\(S\\) contains no number less than \\(k.\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(277\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(311\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(376\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(377\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(405\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "405"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2006-p25.live",
+      "kind": "proof-sketch",
+      "text": "By property \\((2),\\) a valid \\(k\\)-element set is a \\(k\\)-subset of \\(\\{k, k+1, \\ldots, 15\\}\\) with no two consecutive elements.\n\nCollapsing the gaps between chosen elements, these correspond bijectively to \\(k\\)-subsets of a \\((17 - 2k)\\)-element set, counted by \\(\\binom{17 - 2k}{k}.\\) This is nonzero only for \\(k \\le 5,\\) so the total is \\[ \\begin{gathered} \\binom{15}{1} + \\binom{13}{2} \\\\ {}+ \\binom{11}{3} + \\binom{9}{4} \\\\ {}+ \\binom{7}{5} \\\\ = 15 + 78 + 165 + 126 + 21 \\\\ = 405. \\end{gathered} \\]\n\nThus, the correct answer is E.",
+      "hints": [
+        "A \\(k\\)-element valid set is a \\(k\\)-subset of \\(\\{k, k+1, \\ldots, 15\\}\\) with no two consecutive",
+        "Such sets biject with \\(k\\)-subsets of a \\((17 - 2k)\\)-element set, counted by \\(\\binom{17 - 2k}{k}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

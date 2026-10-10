@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-feb-guts-2015-p21",
+  "title": "2015 HMMT February Guts Problem 21",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.algebraic-properties-of-binomial-coefficients",
+      "label": "Algebraic properties of binomial coefficients",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.fermat-euler-wilson-theorems",
+      "label": "Fermat / Euler / Wilson theorems",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.induction-smoothing",
+      "label": "Induction / smoothing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2015,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 75.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Define a sequence \\(a_{i, j}\\) of integers such that \\(a_{1, n}=n^{n}\\) for \\(n \\geq 1\\) and \\(a_{i, j}=a_{i-1, j}+a_{i-1, j+1}\\) for all \\(i, j \\geq 1\\). Find the last (decimal) digit of \\(a_{128,1}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2015-p21.hmmt",
+      "kind": "proof-sketch",
+      "text": "4 By applying the recursion multiple times, we find that \\(a_{1,1}=1, a_{2, n}=n^{n}+(n+1)^{n+1}\\), and \\(a_{3, n}=n^{n}+2(n+1)^{n+1}+(n+2)^{n+2}\\). At this point, we can conjecture and prove by induction that\n\n\\[a_{m, n}=\\sum_{k=0}^{m-1}\\binom{m-1}{k}(n+k)^{n+k}=\\sum_{k \\geq 0}\\binom{m-1}{k}(n+k)^{n+k}\\]\n\n(The second expression is convenient for dealing with boundary cases. The induction relies on \\(\\binom{m}{0}=\\) \\(\\binom{m-1}{0}\\) on the \\(k=0\\) boundary, as well as \\(\\binom{m}{k}=\\binom{m-1}{k}+\\binom{m-1}{k-1}\\) for \\(k \\geq 1\\).) We fix \\(m=128\\). Note that \\(\\binom{127}{k} \\equiv 1(\\bmod 2)\\) for all \\(1 \\leq k \\leq 127\\) and \\(\\binom{127}{k} \\equiv 0(\\bmod 5)\\) for \\(3 \\leq k \\leq 124\\), by Lucas' theorem on binomial coefficients. Therefore, we find that\n\n\\[a_{128,1}=\\sum_{k=0}^{127}\\binom{127}{k}(k+1)^{k+1} \\equiv \\sum_{k=0}^{127}(k+1)^{k+1} \\equiv 0\\]\n\nand\n\n\\[a_{128,1} \\equiv \\sum_{k \\in[0,2] \\cup[125,127]}\\binom{127}{k}(k+1)^{k+1} \\equiv 4 \\quad(\\bmod 5) .\\]\n\nTherefore, \\(a_{128,1} \\equiv 4(\\bmod 10)\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

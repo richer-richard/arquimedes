@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2002-p60",
+  "title": "2002 HMMT February Guts Problem 60",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2002,
+    "number": 60
+  },
+  "difficulty": {
+    "course": 75.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A \\(5 \\times 5\\) square grid has the number -3 written in the upper-left square and the number 3 written in the lower-right square. In how many ways can the remaining squares be filled in with integers so that any two adjacent numbers differ by 1 , where two squares are adjacent if they share a common edge (but not if they share only a corner)?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2002-p60.hmmt",
+      "kind": "proof-sketch",
+      "text": "250 If the square in row \\(i\\), column \\(j\\) contains the number \\(k\\), let its \"index\" be \\(i+j-k\\). The constraint on adjacent squares now says that if a square has index \\(r\\), the squares to its right and below it each have index \\(r\\) or \\(r+2\\). The upper-left square has index 5 , and the lower-right square has index 7 , so every square must have index 5 or 7 . The boundary separating the two types of squares is a path consisting of upward and rightward steps; it can be extended along the grid's border so as to obtain a path between the lower-left and upper-right corners. Conversely, any such path uniquely determines each square's index and hence the entire array of numbers - except that the two paths lying entirely along the border of the grid fail to separate the upper-left from the lower-right square and thus do not create valid arrays (since these two squares should have different indices). Each path consists of 5 upward and 5 rightward steps, so there are \\(\\binom{10}{5}=252\\) paths, but two are impossible, so the answer is 250 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

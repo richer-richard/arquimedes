@@ -1,0 +1,79 @@
+{
+  "id": "prob.aime-i-2022-p10",
+  "title": "2022 AIME I Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.distance-chasing",
+      "label": "Distance chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.other-3d-problems",
+      "label": "Other 3D problems",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.sphere",
+      "label": "Sphere",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2022,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 56.3,
+    "source": 2560,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Three spheres with radii \\(11,\\) \\(13,\\) and \\(19\\) are mutually externally tangent. A plane intersects the spheres in three congruent circles centered at \\(A,\\) \\(B,\\) and \\(C,\\) respectively, and the centers of the spheres all lie on the same side of this plane. Suppose that \\(AB^2 = 560.\\) Find \\(AC^2.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "756",
+    "value": "756"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2022-p10.live",
+      "kind": "proof-sketch",
+      "text": "Let the sphere centers be at heights \\(h_1, h_2, h_3\\) above the plane. Each circle’s center is the foot of the perpendicular from the sphere’s center, and the common circle radius \\(\\rho\\) satisfies \\(\\rho^2 = 11^2 - h_1^2\\) \\(= 13^2 - h_2^2\\) \\(= 19^2 - h_3^2.\\)\n\nThe first two spheres are tangent, so their centers are \\(11 + 13 = 24\\) apart, and projecting onto the plane, \\(AB^2 = 24^2 - (h_2 - h_1)^2.\\) Thus \\((h_2 - h_1)^2 = 576 - 560 = 16.\\) Congruence gives \\(h_2^2 - h_1^2 = 169 - 121 = 48,\\) so \\(h_2 - h_1 = 4\\) and \\(h_2 + h_1 = 12\\) (the other sign gives a negative sum), yielding \\(h_1 = 4,\\) \\(h_2 = 8,\\) and \\(\\rho^2 = 121 - 16 = 105.\\) Then \\(h_3^2 = 361 - 105 = 256,\\) so \\(h_3 = 16.\\)\n\nThe first and third centers are \\(11 + 19 = 30\\) apart, so \\[ \\begin{aligned} AC^2 &= 30^2 - (h_3 - h_1)^2 \\\\ &= 900 - 144 = 756. \\end{aligned} \\]",
+      "hints": [
+        "If a sphere’s center sits at height \\(h\\) above the plane, its circle has radius squared \\(r^2 - h^2;\\) congruence ties the three heights together",
+        "\\(A\\) and \\(B\\) are the feet of the centers, so \\(AB^2 = 24^2 - (h_2 - h_1)^2;\\) combine with \\(h_2^2 - h_1^2 = 13^2 - 11^2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

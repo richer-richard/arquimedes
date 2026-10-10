@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-ii-2021-p5",
+  "title": "2021 AIME II Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2021,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 54.6,
+    "source": 2720,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "For positive real numbers \\(s,\\) let \\(\\tau(s)\\) denote the set of all obtuse triangles that have area \\(s\\) and two sides with lengths \\(4\\) and \\(10.\\) The set of all \\(s\\) for which \\(\\tau(s)\\) is nonempty, but all triangles in \\(\\tau(s)\\) are congruent, is an interval \\([a, b).\\) Find \\(a^2 + b^2.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "736",
+    "value": "736"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2021-p5.live",
+      "kind": "proof-sketch",
+      "text": "A triangle with sides \\(4\\) and \\(10\\) is determined by the included angle \\(\\theta,\\) and its area is \\(\\frac{1}{2} \\cdot 4 \\cdot 10 \\sin\\theta = 20\\sin\\theta.\\) When \\(\\theta \\gt 90^\\circ\\) the triangle is obtuse, and this case produces exactly one triangle for each area \\(s \\in (0, 20).\\)\n\nWhen \\(\\theta \\lt 90^\\circ,\\) the third side satisfies \\(c^2 = 116 - 80\\cos\\theta,\\) and the triangle is obtuse only if the angle opposite the side of length \\(10\\) is obtuse (if \\(c\\) were the longest side, its opposite angle \\(\\theta\\) would be acute, making the triangle acute). That requires \\(4^2 + c^2 \\lt 10^2,\\) i.e. \\(116 - 80\\cos\\theta \\lt 84,\\) i.e. \\(\\cos\\theta \\gt \\frac{2}{5}.\\) Then \\(\\sin\\theta \\lt \\frac{\\sqrt{21}}{5},\\) so this second family exists exactly for \\(s \\lt 4\\sqrt{21}.\\)\n\nFor \\(s \\lt 4\\sqrt{21}\\) there are two non-congruent obtuse triangles (their third sides differ), while for \\(4\\sqrt{21} \\le s \\lt 20\\) only the obtuse-\\(\\theta\\) triangle exists: at \\(s = 4\\sqrt{21}\\) the acute-\\(\\theta\\) candidate becomes a right triangle. For \\(s \\ge 20\\) there are none. Hence \\([a, b) = [4\\sqrt{21}, 20)\\) and \\(a^2 + b^2 = 336 + 400 = 736.\\)",
+      "hints": [
+        "With included angle \\(\\theta\\) between the sides of lengths \\(4\\) and \\(10,\\) the area is \\(20\\sin\\theta,\\) and each \\(\\theta\\) gives one triangle",
+        "Obtuse happens when \\(\\theta \\gt 90^\\circ,\\) or when \\(\\theta\\) is acute with \\(\\cos\\theta \\gt \\frac{2}{5}\\) (angle opposite the side \\(10\\) obtuse). Find where exactly one case occurs."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

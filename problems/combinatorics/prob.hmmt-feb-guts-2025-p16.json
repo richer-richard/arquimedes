@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2025-p16",
+  "title": "2025 HMMT February Guts Problem 16",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2025,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 72.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The Cantor set is defined as the set of real numbers \\(x\\) such that \\(0 \\leq x < 1\\) and the digit 1 does not appear in the base-3 expansion of \\(x\\) . Two numbers are uniformly and independently selected at random from the Cantor set. Compute the expected value of their absolute difference.\n\n(Formally, one can pick a number \\(x\\) uniformly at random from the Cantor set by first picking a real number \\(y\\) uniformly at random from the interval \\([0,1)\\) , writing it out in binary, reading its digits as if they were in base- 3, and setting \\(x\\) to 2 times the result.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\boxed{\\frac{2}{5}}",
+    "value": "\\boxed{\\frac{2}{5}}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2025-p16.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(d\\) be the expected value of the absolute difference. Observe that the Cantor set is made up of two smaller copies of itself, each scaled down by a factor of 3. There is a \\(\\frac{1}{2}\\) chance that the two selected numbers are in the same copy, in which case the expected value of their absolute difference is \\(\\frac{1}{3} d\\) . Otherwise, we can write them as \\(\\frac{2 + x}{3}\\) and \\(\\frac{y}{3}\\) for independently and uniformly randomly selected \\(x\\) and \\(y\\) in the Cantor set. Their difference is \\(\\frac{2 + (x - y)}{3}\\) , which by symmetry has expected value \\(\\frac{2}{3}\\) . Thus\n\n\\[d = \\frac{1}{2}\\cdot \\frac{1}{3} d + \\frac{1}{2}\\cdot \\frac{2}{3}\\Rightarrow d = \\left[\\frac{2}{5}\\right].\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

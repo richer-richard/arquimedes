@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2024-p8",
+  "title": "2024 AMC 12A Problem 8",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2024,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 22.8,
+    "source": 1480,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many angles \\(\\theta\\) with \\(0\\le\\theta\\le2\\pi\\) satisfy \\(\\log(\\sin(3\\theta))+\\log(\\cos(2\\theta))=0?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "0"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2024-p8.live",
+      "kind": "proof-sketch",
+      "text": "The equation means \\(\\sin(3\\theta)\\cos(2\\theta)=1\\) with both factors positive (for the logs to be defined). Since \\(\\sin(3\\theta)\\le1\\) and \\(\\cos(2\\theta)\\le1,\\) their product is \\(1\\) only if \\(\\sin(3\\theta)=1\\) and \\(\\cos(2\\theta)=1\\) simultaneously. But \\(\\cos(2\\theta)=1\\) forces \\(\\theta\\in\\{0,\\pi,2\\pi\\},\\) where \\(\\sin(3\\theta)=0\\ne1.\\) No angle works. Thus, the correct answer is A.",
+      "hints": [
+        "\\(\\log(\\sin3\\theta)+\\log(\\cos2\\theta)\\) \\(=\\log(\\sin3\\theta\\cos2\\theta),\\) which must equal \\(0\\)",
+        "A product of two numbers each at most \\(1\\) equals \\(1\\) only when both equal \\(1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

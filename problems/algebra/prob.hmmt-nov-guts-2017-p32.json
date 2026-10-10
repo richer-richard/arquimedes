@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-guts-2017-p32",
+  "title": "2017 HMMT November Guts Problem 32",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.chinese-remainder-theorem",
+      "label": "Chinese remainder theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial-operations",
+      "label": "Polynomial operations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomials-mod-p",
+      "label": "Polynomials mod p",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2017,
+    "number": 32
+  },
+  "difficulty": {
+    "course": 60.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(P\\) be a polynomial with integer coefficients such that \\(P(0)+P(90)=2018\\). Find the least possible value for \\(|P(20)+P(70)|\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2017-p32.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 782\n\nFirst, note that \\(P(x)=x^{2}-3041\\) satisfy the condition and gives \\(|P(70)+P(20)|=|4900+400-6082|=\\) 782. To show that 782 is the minimum, we show \\(2800 \\mid P(90)-P(70)-P(20)+P(0)\\) for every \\(P\\), since -782 is the only number in the range \\([-782,782]\\) that is congruent to 2018 modulo 2800.\nProof: It suffices to show that \\(2800 \\mid 90^{n}-70^{n}-20^{n}+0^{n}\\) for every \\(n \\geq 0\\) (having \\(0^{0}=1\\) ).\nLet \\(Q(n)=90^{n}-70^{n}-20^{n}+0^{n}\\), then we note that \\(Q(0)=Q(1)=0, Q(2)=2800\\), and \\(Q(3)=\\left(9^{3}-\\right.\\) \\(\\left.7^{3}-2^{3}\\right) \\cdot 10^{3}=378000=135 \\cdot 2800\\). For \\(n \\geq 4\\), we note that 400 divides \\(10^{4}\\), and \\(90^{n}+0^{n} \\equiv 70^{n}+20^{n}\\) \\((\\bmod 7)\\). Therefore \\(2800 \\mid Q(n)\\) for all \\(n\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

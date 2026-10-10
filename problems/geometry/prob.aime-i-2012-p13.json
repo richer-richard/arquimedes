@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2012-p13",
+  "title": "2012 AIME I Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.transformation",
+      "label": "Transformation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2012,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 65.2,
+    "source": 3160,
+    "mohs": null
+  },
+  "estimatedMinutes": 20,
+  "statement": "Three concentric circles have radii \\(3,\\) \\(4,\\) and \\(5.\\) An equilateral triangle with one vertex on each circle has side length \\(s.\\) The largest possible area of the triangle can be written as \\(a + \\frac{b}{c}\\sqrt{d},\\) where \\(a,\\) \\(b,\\) \\(c,\\) and \\(d\\) are positive integers, \\(b\\) and \\(c\\) are relatively prime, and \\(d\\) is not divisible by the square of any prime. Find \\(a + b + c + d.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "41",
+    "value": "41"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2012-p13.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(O\\) be the common center and label the triangle \\(ABC\\) with \\(OA = 3,\\) \\(OB = 4,\\) \\(OC = 5.\\) Rotate the plane by \\(60^\\circ\\) about \\(A\\) so that \\(B\\) maps to \\(C,\\) and let \\(P\\) be the image of \\(O.\\) Then triangle \\(AOP\\) is equilateral, so \\(OP = OA = 3,\\) and \\(PC,\\) the image of \\(OB,\\) has length \\(4.\\)\n\nTriangle \\(OPC\\) has sides \\(3,\\) \\(4,\\) \\(5,\\) so \\(\\angle OPC = 90^\\circ.\\) In the configuration giving the largest triangle, \\(O\\) lies inside \\(ABC\\) and \\(\\angle APC\\) \\(= \\angle APO + \\angle OPC\\) \\(= 60^\\circ + 90^\\circ\\) \\(= 150^\\circ,\\) so by the Law of Cosines \\[ \\begin{aligned} s^2 &= AC^2 = 3^2 + 4^2 \\\\ &\\quad {}- 2 \\cdot 3 \\cdot 4\\cos 150^\\circ \\\\ &= 25 + 12\\sqrt{3}. \\end{aligned} \\] (If \\(O\\) lies outside the triangle, the triangle fits in a half-disk of radius \\(5,\\) so its altitude is at most \\(5\\) and \\(s^2 \\le \\frac{100}{3},\\) which is smaller.)\n\nThe area is \\(\\frac{\\sqrt{3}}{4}\\,s^2 = \\frac{\\sqrt{3}}{4}\\left(25 + 12\\sqrt{3}\\right)\\) \\(= 9 + \\frac{25}{4}\\sqrt{3},\\) so \\(a + b + c + d\\) \\(= 9 + 25 + 4 + 3\\) \\(= 41.\\)",
+      "hints": [
+        "Say \\(OA = 3,\\) \\(OB = 4,\\) \\(OC = 5.\\) Rotate the plane by \\(60^\\circ\\) about \\(A\\) so that \\(B\\) lands on \\(C,\\) and follow the center \\(O.\\)",
+        "If \\(P\\) is the image of \\(O,\\) triangle \\(OPC\\) has sides \\(3,\\) \\(4,\\) and \\(5,\\) and the largest triangle comes from \\(\\angle APC = 60^\\circ + 90^\\circ\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

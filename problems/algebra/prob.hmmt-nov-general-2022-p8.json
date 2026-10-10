@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-general-2022-p8",
+  "title": "2022 HMMT November General Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recurrences",
+      "label": "Recurrences",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2022,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 52.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the number of sets \\(S\\) such that every element of \\(S\\) is a nonnegative integer less than 16 , and if \\(x \\in S\\) then \\((2 x \\bmod 16) \\in S\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "678",
+    "value": "678"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2022-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "For any nonempty \\(S\\) we must have \\(0 \\in S\\). Now if we draw a directed graph of dependencies among the non-zero elements, it creates a balanced binary tree where every leaf has depth 3 . In the diagram, if \\(a\\) is a parent of \\(b\\) it means that if \\(b \\in S\\), then \\(a\\) must also be in \\(S\\).\nWe wish to find the number of subsets of nodes such that every node in the set also has its parent in the set. We do this with recursion. Let \\(f(n)\\) denote the number of such sets on a balanced binary tree of depth \\(n\\). If the root vertex is not in the set, then the set must be empty. Otherwise, we can consider each subtree separately. This gives the recurrence \\(f(n)=f(n-1)^{2}+1\\). We know \\(f(0)=2\\), so we can calculate \\(f(1)=5, f(2)=26, f(3)=677\\). We add 1 at the end for the empty set. Hence our answer is \\(f(3)+1=678\\).\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

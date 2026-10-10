@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2005-p24",
+  "title": "2005 AMC 12A Problem 24",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2005,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 42.6,
+    "source": 2520,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(P(x) = (x - 1)(x - 2)(x - 3).\\) For how many polynomials \\(Q(x)\\) does there exist a polynomial \\(R(x)\\) of degree \\(3\\) such that \\(P(Q(x)) = P(x) \\cdot R(x)?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(19\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(22\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(27\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(32\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "22"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2005-p24.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(P(x)R(x)\\) has degree \\(6\\) and \\(P(Q(x))\\) has degree \\(3\\deg Q,\\) we need \\(\\deg Q = 2.\\) A quadratic \\(Q\\) is determined by the ordered triple \\((Q(1), Q(2), Q(3)).\\)\n\nAt \\(x = 1, 2, 3\\) the right side vanishes, so \\(P(Q(x)) = 0,\\) forcing each of \\(Q(1), Q(2), Q(3)\\) into \\(\\{1, 2, 3\\}.\\) That gives \\(27\\) triples.\n\nFive of them give a polynomial of degree less than \\(2:\\) the constants from \\((1,1,1), (2,2,2), (3,3,3)\\) and the linear \\(Q(x) = x\\) from \\((1,2,3)\\) and \\(Q(x) = 4 - x\\) from \\((3,2,1).\\) The other \\(27 - 5 = 22\\) triples are non-collinear and yield genuine quadratics.\n\nThus, the correct answer is B.",
+      "hints": [
+        "Compare degrees: \\(P(Q(x))\\) has degree \\(3\\deg Q\\) and \\(P(x)R(x)\\) has degree \\(6,\\) so \\(\\deg Q = 2\\)",
+        "For \\(x = 1, 2, 3,\\) the right side is \\(0,\\) so each of \\(Q(1), Q(2), Q(3)\\) lies in \\(\\{1, 2, 3\\};\\) discard the triples giving degree less than \\(2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

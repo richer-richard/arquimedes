@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2020-p20",
+  "title": "2020 AMC 12B Problem 20",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.burnsides-lemma",
+      "label": "Burnside’s Lemma",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2020,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 34.3,
+    "source": 2040,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Two different cubes of the same size are to be painted, with the color of each face being chosen independently and at random to be either black or white. What is the probability that after they are painted, the cubes can be rotated to be identical in appearance?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{9}{64}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{289}{2048}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{73}{512}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{147}{1024}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{589}{4096}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "147/1024"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2020-p20.live",
+      "kind": "proof-sketch",
+      "text": "For a fixed first cube, the number of second cubes matching it (up to rotation) equals the size of its rotation orbit. So the desired probability is \\(\\tfrac{1}{64^2}\\sum_{\\mathcal O} |\\mathcal O|^2.\\)\n\nGrouping by black-face count, the orbit sizes are: \\(0\\) or \\(6\\) black \\(\\to 1;\\) \\(1\\) or \\(5\\) black \\(\\to 6;\\) \\(2\\) or \\(4\\) black \\(\\to 3\\) (opposite) and \\(12\\) (adjacent); \\(3\\) black \\(\\to 8\\) (corner) and \\(12\\) (band). Then \\[ \\begin{gathered} \\sum_{\\mathcal O} |\\mathcal O|^2 \\\\ {}= 1 + 36 + (9 + 144) \\\\ \\quad {}+ (64 + 144) + (9 + 144) \\\\ \\quad {}+ 36 + 1 = 588. \\end{gathered} \\]\n\nThe probability is \\(\\tfrac{588}{4096} = \\tfrac{147}{1024}.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "The probability equals \\(\\dfrac{1}{64^2}\\sum_{\\mathcal O} |\\mathcal O|^2\\), where the sum is over rotation-equivalence classes \\(\\mathcal O\\) of colorings",
+        "Group colorings by number of black faces and find each class’s orbit size (e.g. two black faces: opposite gives size \\(3,\\) adjacent gives size \\(12\\))"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

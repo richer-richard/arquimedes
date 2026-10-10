@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-guts-2006-p27",
+  "title": "2006 HMMT February Guts Problem 27",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2006,
+    "number": 27
+  },
+  "difficulty": {
+    "course": 80.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(N\\) denote the number of subsets of \\(\\{1,2,3, \\ldots, 100\\}\\) that contain more prime numbers than multiples of 4 . Compute the largest integer \\(k\\) such that \\(2^{k}\\) divides \\(N\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2006-p27.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(S\\) denote a subset with the said property. Note that there are 25 multiples of 4 and 25 primes in the set \\(\\{1,2,3, \\ldots, 100\\}\\), with no overlap between the two. Let \\(T\\) denote the subset of 50 numbers that are neither prime nor a multiple of 4 , and let \\(U\\) denote the 50 other numbers. Elements of \\(T\\) can be arbitrarily included in or excluded by \\(S\\). Consider \\(S \\cap U=S_{1}\\) and \\(U-S=S_{2}\\) (the set difference is defined to be all elements of \\(U\\) that are not in \\(S\\).) \\(S_{1}\\) and \\(S_{2}\\) are two disjoint sets such that \\(U=S_{1} \\cap S_{2}\\). If \\(S_{1}\\) contains more multiples of 4 than primes, then \\(S_{2}\\) contains more primes than multiples of 4 , and conversely. Furthermore, \\(S_{1}\\) contains an equal number of primes and multiples of 4 if and only if \\(S_{2}\\) contains equal numbers as well. Let \\(V\\) denote an arbitrary subset of \\(T\\). It follows from examining pairs of sets \\(V \\cup S_{1}\\) and \\(V \\cup S_{2}\\) that\n\n\\[\\begin{aligned}\nN & =2^{50} \\cdot \\frac{1}{2}\\left(2^{50}-\\sum_{k=0}^{25}\\binom{25}{k}^{2}\\right) \\\\\n& =2^{49} \\cdot\\left(2^{50}-\\binom{50}{25}\\right)\n\\end{aligned}\\]\n\nSince 50 ! is divisible by 2 exactly \\(25+12+6+3+1=47\\) times while 25 ! is divisible by 2 exactly \\(12+6+3+1=22\\) times, it follows that \\(\\binom{50}{25}\\) is divisible by 2 exactly 3 times, so the answer is \\(49+3=52\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

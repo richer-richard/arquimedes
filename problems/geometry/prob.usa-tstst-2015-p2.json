@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tstst-2015-p2",
+  "title": "USA TSTST 2015 Problem 2",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TSTST",
+    "year": 2015,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 93.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(ABC\\) be a scalene triangle. Let \\(K_a\\), \\(L_a\\), and\n\\(M_a\\) be the respective intersections with \\(BC\\) of the internal\nangle bisector, external angle bisector, and the median from\n\\(A\\). The circumcircle of \\(AK_aL_a\\) intersects \\(AM_a\\) a second time\nat a point \\(X_a\\) different from \\(A\\). Define \\(X_b\\) and \\(X_c\\)\nanalogously. Prove that the circumcenter of \\(X_aX_bX_c\\) lies on\nthe Euler line of \\(ABC\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tstst-2015-p2.evanchen",
+      "kind": "proof-sketch",
+      "text": "The main content of the problem:\n\nClaim.\n \\(\\angle H X_a G = 90^\\circ\\).\n\nThis implies the result,\nsince then the desired circumcenter is the midpoint of \\(\\overline{GH}\\).\n(This is the main difficulty; the Euler line is a red herring.)\n\nIn what follows, we abbreviate \\(K_a\\) \\(L_a\\), \\(M_a\\), \\(X_a\\)\nto \\(K\\), \\(L\\), \\(M\\), \\(X\\).\n\nProof.\n [First proof by Brocard]\n To do this, it suffices to show that \\(M\\) has the\n same power with respect to the circle\n with diameter \\(\\overline{AH}\\) and the circle with diameter \\(\\overline{K L}\\).\n In fact I claim both circles are orthogonal\n to the circle with diameter \\(\\overline{BC}\\)!\n The former follows from Brocard's theorem, noting that \\(A\\)\n is on the polar of \\(H\\),\n and the latter follows from the harmonic bundle.\n\n[Diagram omitted from this imported TeX transcription.]\n\n Then \\(\\overline{AM}\\) is the radical axis, so \\(X\\) lies on both circles.\n\nProof.\n [Second proof by orthocenter reflection, Bendit Chan]\n As before, we know \\(MX \\cdot MA = MK \\cdot ML = MB \\cdot MC\\),\n but \\(X\\) lies inside segment \\(AM\\).\n Construct parallelogram \\(ABA'C\\).\n Then \\(MX \\cdot MA' = MB \\cdot MC\\),\n so \\(XBA'C\\) is concyclic.\n\n However, it is well-known the circumcircle of \\(\\triangle BA'C\\)\n (which is the reflection of \\((ABC)\\) across \\(\\overline{BC}\\))\n passes through \\(H\\) and in fact has diameter \\(\\overline{A'H}\\).\n So this gives \\(\\angle HXA' = 90^\\circ\\) as needed.\n\nProof.\n [Third proof by barycentric coordinates]\n Alternatively we may just compute \\(X = (a^2:2S_A:2S_A)\\).\n Let \\(F = (0 : S_C : S_B)\\) be the foot from \\(H\\).\n Then we check that \\(X H F M\\) is cyclic,\n which is power of a point from \\(A\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

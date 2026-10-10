@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2019-p24",
+  "title": "2019 AMC 10A Problem 24",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.partial-fractions",
+      "label": "Partial fractions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2019,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 36.8,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(p,\\) \\(q,\\) and \\(r\\) be the distinct roots of the polynomial \\[x^3 - 22x^2 + 80x - 67.\\] There exist real numbers \\(A,\\) \\(B,\\) and \\(C\\) such that \\[ \\begin{gathered} \\frac{1}{s^3-22s^2+80s-67}\\\\ =\\frac{A}{s-p}+\\frac{B}{s-q}\\\\ \\quad+\\frac{C}{s-r} \\end{gathered} \\] for all real numbers \\(s\\) with \\(s\\notin\\{p,q,r\\}.\\) What is \\[\\dfrac1A+\\dfrac1B+\\dfrac1C?\\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(243\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(244\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(245\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(246\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(247\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "244"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2019-p24.live",
+      "kind": "proof-sketch",
+      "text": "Multiplying the identity by \\((s-p)(s-q)(s-r)\\) gives \\[ \\begin{aligned} 1={}&A(s-q)(s-r)\\\\ &+B(s-p)(s-r)\\\\ &+C(s-p)(s-q). \\end{aligned} \\] Setting \\(s=p,q,r\\), in turn, yields \\[ \\begin{aligned} \\frac1A&=(p-q)(p-r),\\\\ \\frac1B&=(q-p)(q-r),\\\\ \\frac1C&=(r-p)(r-q). \\end{aligned} \\]\n\nAdding and expanding gives \\[ \\begin{aligned} \\frac1A+\\frac1B+\\frac1C &=p^2+q^2+r^2\\\\ &\\quad-pq-pr-qr. \\end{aligned} \\] By Vieta’s formulas, \\(p+q+r=22\\) and \\(pq+pr+qr=80\\), so \\[ \\begin{aligned} p^2+q^2+r^2&=22^2-2(80)\\\\ &=324. \\end{aligned} \\] Therefore the requested value is \\(324-80=244.\\)\n\nThus, B is the correct answer.",
+      "hints": [
+        "Multiply by \\((s-p)(s-q)(s-r)\\)",
+        "Substitute each root, then use Vieta’s formulas"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

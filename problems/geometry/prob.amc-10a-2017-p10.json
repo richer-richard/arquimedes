@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2017-p10",
+  "title": "2017 AMC 10A Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-inequality",
+      "label": "Triangle inequality",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2017,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 21.3,
+    "source": 1140,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Joy has \\(30\\) thin rods, one each of every integer length from \\(1\\) cm through \\(30\\) cm. She places the rods with lengths \\(3\\) cm, \\(7\\) cm, and \\(15\\) cm on a table. She then wants to choose a fourth rod that she can put with these three to form a quadrilateral with positive area. How many of the remaining rods can she choose as the fourth rod?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(19\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(20\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "17"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2017-p10.live",
+      "kind": "proof-sketch",
+      "text": "Note that no one side can be greater than or equal to the sum of the other side lengths.\n\nLet \\(x\\) be the length fourth rod. Then we have that \\[ x \\lt 3 + 7 + 15\\] and \\[ x + 3 + 7 \\gt 15\\] Simplifying, we know that \\[5\\lt x\\lt 25.\\] Counting the number of integers in this range, we are left with \\(25 - 5 - 1 = 19\\) values for \\(x.\\)\n\nThe rods with length \\(7\\) and \\(15\\) are already being used, however, so \\(x\\) cannot equal these.\n\nThis leaves \\(19 - 2 = 17\\) viable solutions for \\(x.\\)\n\nThus, B is the correct answer.",
+      "hints": [
+        "Use the quadrilateral inequality for the longest side",
+        "After finding the possible integer lengths, remove rods already on the table"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

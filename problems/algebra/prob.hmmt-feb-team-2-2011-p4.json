@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-team-2-2011-p4",
+  "title": "2011 HMMT February Team Round 2 Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 90.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a, b\\), and \\(c\\) be complex numbers such that \\(|a|=|b|=|c|=1\\). If\n\n\\[\\frac{a^{2}}{b c}+\\frac{b^{2}}{c a}+\\frac{c^{2}}{a b}=1\\]\n\nas well, determine the product of all possible values of \\(|a+b+c|\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2-2011-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "2 Let \\(s=a+b+c\\). Then\n\n\\[\\begin{aligned}\ns^{3} & =a^{3}+b^{3}+c^{3}+3\\left(a^{2} b+a b^{2}+b^{2} c+b c^{2}+c^{2} a+c a^{2}\\right)+6 a b c \\\\\n& =a b c\\left(\\frac{a^{2}}{b c}+\\frac{b^{2}}{c a}+\\frac{c^{2}}{a b}+3\\left(\\frac{a}{b}+\\frac{b}{a}+\\frac{b}{c}+\\frac{c}{b}+\\frac{c}{a}+\\frac{a}{c}\\right)+6\\right) \\\\\n& =a b c\\left(1+\\left(3(a+b+c)\\left(\\frac{1}{a}+\\frac{1}{b}+\\frac{1}{c}\\right)-9\\right)+6\\right) \\\\\n& =a b c\\left(3 s\\left(\\frac{1}{a}+\\frac{1}{b}+\\frac{1}{c}\\right)-2\\right) \\\\\n& =a b c(3 s \\bar{s}-2) \\quad(\\text { because } \\bar{s}=\\bar{a}+\\bar{b}+\\bar{c}=1 / a+1 / b+1 / c) \\\\\n& =a b c\\left(3|s|^{2}-2\\right)\n\\end{aligned}\\]\n\nTaking absolute values, we find \\(|s|^{3}=\\left.|3| s\\right|^{2}-2 \\mid\\). It follows that \\(|s|\\) must be a positive real root of \\(x^{3}-3 x^{2}+2=0\\) or \\(x^{3}+3 x^{2}-2=0\\). However, since the negative real roots of \\(x^{3}-3 x^{2}+2=0\\) are exactly the additive inverses of the positive real roots of \\(x^{3}-3 x^{2}+2=0\\), and all three roots of \\(x^{3}-3 x^{2}+2=0\\) are real \\(\\left(x^{3}-3 x^{2}+2=0\\right.\\) may be factored as \\((x-1)\\left(x^{2}-2 x-2\\right)=0\\), and the discriminant of \\(x^{2}-2 x-2\\) is positive), the product of all possible values of \\(|s|\\) is \\((-2) \\cdot(-1)^{n}\\), where \\(n\\) denotes the number of negative real roots of \\(x^{3}-3 x^{2}+2=0\\). By Descartes's Rule of Signs, we see that \\(n\\) is odd, so the answer is 2 , as desired.\n\n## Warm Up Your Proof Skills! [40]\n\nThe problems in this section require complete proofs.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

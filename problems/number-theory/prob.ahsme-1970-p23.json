@@ -1,0 +1,93 @@
+{
+  "id": "prob.ahsme-1970-p23",
+  "title": "1970 AHSME Problem 23",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factorial",
+      "label": "Factorial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.trailing-zeros",
+      "label": "Trailing zeros",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1970,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 31.8,
+    "source": 1830,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "The number \\(10!\\) (\\(10\\) is written in base \\(10\\)), when written in the base \\(12\\) system, ends in exactly \\(k\\) zeros. The value of \\(k\\) is:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "4"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1970-p23.live",
+      "kind": "proof-sketch",
+      "text": "The prime exponents in \\(10!\\) are \\[ \\begin{gathered} v_2(10!)=5+2+1=8,\\\\ v_3(10!)=3+1=4. \\end{gathered} \\] Each factor of \\(12=2^2\\cdot3\\) uses two factors of \\(2\\) and one of \\(3.\\) Hence the number of trailing base-\\(12\\) zeros is \\[ \\min\\left(\\left\\lfloor\\frac82\\right\\rfloor,4\\right)=4. \\]\n\nTherefore, the correct answer is D.",
+      "hints": [
+        "A trailing base-\\(12\\) zero contributes one factor of \\(12=2^2\\cdot3\\)",
+        "Compare the exponents of \\(2\\) and \\(3\\) in \\(10!\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

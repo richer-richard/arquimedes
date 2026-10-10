@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-guts-2018-p17",
+  "title": "2018 HMMT November Guts Problem 17",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2018,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 50.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Pascal has a triangle. In the \\(n\\)th row, there are \\(n+1\\) numbers \\(a_{n, 0}, a_{n, 1}, a_{n, 2}, \\ldots, a_{n, n}\\) where \\(a_{n, 0}=a_{n, n}=1\\). For all \\(1 \\leq k \\leq n-1, a_{n, k}=a_{n-1, k}-a_{n-1, k-1}\\). What is the sum of the absolute values of all numbers in the 2018th row?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2018-p17.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\frac{2^{2018}+2}{3}\\)\nLet \\(s_{n}\\) be the sum of the absolute values of numbers in the \\(n\\)th row. For odd \\(n\\), we have that \\(a_{n, 1}, \\ldots, a_{n, n-1}\\) alternate in sign as \\(-,+,-,+, \\ldots,+\\), with the last term being \\(a_{n, n-1}=1\\). For even\n\\(n\\), we have that \\(a_{n, 1}, \\ldots, a_{n, n-2}\\) alternate in sign as \\(-,+,-,+, \\ldots,+\\), and \\(a_{n, n-1}=0\\). These facts can be proven by induction. Thus, \\(s_{n}=1-a_{n, 1}+a_{n, 2}-\\cdots+(-1)^{n-1} a_{n, n-1}+1\\). Applying the recursion, for \\(n>0\\) this becomes \\(s_{n}=1-\\left(a_{n-1,1}-a_{n-1,0}\\right)+\\left(a_{n-1,2}-a_{n-1,1}\\right)-\\cdots+(-1)^{n-1}\\left(a_{n-1, n-1}-\\right.\\) \\(\\left.a_{n-1, n-2}\\right)+1=2\\left(1-a_{n-1,1}+a_{n-1,2}-\\cdots+(-1)^{n-2} a_{n-1, n-2}+1\\right)-1+(-1)^{n-1}\\). In other words, if \\(n\\) is even then \\(s_{n}=2 s_{n-1}-2\\) and if \\(n\\) is odd then \\(s_{n}=2 s_{n-1}\\). This means that \\(s_{2 n}=4 s_{2 n-2}-2\\). Since 2018 is even, we can write \\(s_{2018}=4 s_{2016}-2=2^{2018}-2^{2017}-2^{2015}-\\cdots-2\\). Applying the formula for the sum of a geometric series, we get \\(s_{2018}=2^{2018}-\\frac{2^{2019}-2}{4-1}=\\frac{2^{2018}+2}{3}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

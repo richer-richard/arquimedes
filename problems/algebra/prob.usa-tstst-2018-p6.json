@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tstst-2018-p6",
+  "title": "USA TSTST 2018 Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TSTST",
+    "year": 2018,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 102.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(S = \\left\\{ 1, \\dots, 100 \\right\\}\\),\nand for every positive integer \\(n\\) define\n\\[\n T_n = \\left\\{ (a_1, \\dots, a_n) \\in S^n\n \\mid a_1 + \\dots + a_n \\equiv 0 \\pmod{100} \\right\\}.\n\\]\nDetermine which \\(n\\) have the following property:\nif we color any \\(75\\) elements of \\(S\\) red,\nthen at least half of the \\(n\\)-tuples in \\(T_n\\)\nhave an even number of coordinates with red elements.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tstst-2018-p6.evanchen",
+      "kind": "proof-sketch",
+      "text": "We claim this holds exactly for \\(n\\) even.\n\nFirst solution by generating functions..\nDefine\n\\[\n R(x) = \\sum_{s \\text{ red}} x^s, \\qquad\n B(x) = \\sum_{s \\text{ blue}} x^s.\n\\]\n(Here ``blue'' means ``not-red'', as always.)\nThen, the number of tuples in \\(T_n\\) with exactly\n\\(k\\) red coordinates is exactly equal to\n\\[ \\binom nk \\cdot \\frac 1{100} \\sum_{\\omega} R(\\omega)^k B(\\omega)^{n-k} \\]\nwhere the sum is over all \\(100\\)th roots of unity.\nSo, we conclude the number of tuples in \\(T_n\\)\nwith an even (resp odd) number of red elements is exactly\n\\[\\begin{aligned}\n X &= \\frac1{100} \\sum_{\\omega} \\sum_{k \\text{ even}}\n \\binom nk R(\\omega)^k B(\\omega)^{n-k} \\\\\n Y &= \\frac1{100} \\sum_{\\omega} \\sum_{k \\text{ odd}}\n \\binom nk R(\\omega)^k B(\\omega)^{n-k} \\\\\n \\implies X-Y &= \\frac 1{100} \\sum_{\\omega}\n \\left( B(\\omega)-R(\\omega) \\right)^n \\\\\n &= \\frac 1{100} \\left[\n \\left( B(1)-R(1) \\right)^n\n + \\sum_{\\omega \\neq 1} (2B(\\omega))^n \\right] \\\\\n &= \\frac 1{100} \\left[ \\left( B(1)-R(1) \\right)^n - (2B(1))^n\n + 2^n \\sum_{\\omega} B(\\omega)^n \\right] \\\\\n &= \\frac 1{100} \\left[ \\left( B(1)-R(1) \\right)^n - (2B(1))^n \\right]\n + 2^n Z \\\\\n &= \\frac 1{100} \\left[ \\left( -50 \\right)^n - 50^n \\right] + 2^n Z.\n\\end{aligned}\\]\nwhere\n\\[ Z \\coloneq \\frac 1{100} \\sum_{\\omega} B(\\omega)^n \\ge 0 \\]\ncounts the number of tuples in \\(T_n\\) which are all blue.\nHere we have used the fact that \\(B(\\omega)+R(\\omega)=0\\)\nfor \\(\\omega \\neq 1\\).\n\nWe wish to show \\(X-Y \\ge 0\\) holds for \\(n\\) even,\nbut may fail when \\(n\\) is odd.\nThis follows from two remarks:\n\n• If \\(n\\) is even, then \\(X-Y = 2^n Z \\ge 0\\).\n\n• If \\(n\\) is odd,\n then if we choose the coloring for which\n \\(s\\) is red if and only if \\(s \\not\\equiv 2 \\pmod 4\\);\n we thus get \\(Z = 0\\).\n Then \\(X-Y = -\\frac 2{100} \\cdot 50^n < 0\\).\n\nSecond solution by strengthened induction and random coloring..\nWe again prove that \\(n\\) even work.\nLet us define\n\\[\n T_n(a) = \\left\\{ (a_1, \\dots, a_n) \\in S^n\n \\mid a_1 + \\dots + a_n \\equiv a \\pmod{100} \\right\\}.\n\\]\nAlso, call an \\(n\\)-tuple good if it has an even number of red elements.\nWe claim that \\(T_n(a)\\) also has at least 50\\% good tuples, by induction.\n\nThis follows by induction on \\(n \\ge 2\\).\nIndeed, the base case \\(n = 2\\) can be checked by hand,\nsince \\(T_2(a) = \\{ (x, a-x) \\mid x \\in S \\}\\).\nWith the stronger claim, one can check the case \\(n=2\\) manually\nand proceed by induction to go from \\(n-2\\) to \\(n\\), noting that\n\\[ T_{n}(a) =\n \\bigsqcup_{b+c=a} T_{n-2}(b) \\oplus T_2(c) \\]\nwhere \\(\\oplus\\) denotes concatenation of tuples, applied set-wise.\nThe concatenation of an \\((n-2)\\)-tuple and \\(2\\)-tuple is good\nif and only if both or neither are good.\nThus for each \\(b\\) and \\(c\\),\nif the proportion of \\(T_{n-2}(b)\\) which is good is \\(p \\ge \\frac{1}{2}\\)\nand the proportion of \\(T_2(c)\\) which is good is \\(q \\ge \\frac{1}{2}\\),\nthen the proportion of \\(T_{n-2}(b) \\oplus T_2(c)\\) which is good\nis \\(pq + (1-p)(1-q) \\ge \\frac{1}{2}\\), as desired.\nSince each term in the union has at least half the tuples good,\nall of \\(T_n(a)\\) has at least half the tuples good, as desired.\n\nIt remains to fail all odd \\(n\\).\nWe proceed by a suggestion of Yang Liu and Ankan Bhattacharya\nby showing that if we pick the \\(75\\) elements randomly,\nthen any particular tuple in \\(S^n\\) has strictly less than 50\\% chance of being good.\nThis will imply (by linearity of expectation)\nthat \\(T_n\\) (or indeed any subset of \\(S^n\\)) will, for some coloring,\nhave less than half good tuples.\n\nLet \\((a_1, \\dots, a_n)\\) be such an \\(n\\)-tuple.\nIf any element appears in the tuple more than once,\nkeep discarding pairs of that element until there are zero or one;\nthis has no effect on the good-ness of the tuple.\nIf we do this, we obtain an \\(m\\)-tuple \\((b_1, \\dots, b_m)\\)\nwith no duplicated elements where \\(m \\equiv n \\equiv 1 \\pmod 2\\).\nNow, the probability that any element is red is \\(\\frac34\\),\nso the probability of being good is\n\\[\\begin{aligned}\n \\sum_{k \\text{ even}}^m \\binom{m}{k} \\left( \\frac 34 \\right)^k\n \\left( -\\frac 14 \\right)^{m-k}\n &= \\frac{1}{2}\\left[ \\left( \\frac34 + \\frac 14 \\right)^m\n - \\left( \\frac 34 - \\frac 14 \\right)^m \\right] \\\\\n &= \\frac{1}{2} \\left[ 1 - \\left( \\frac12 \\right)^m \\right] < \\frac{1}{2}.\n\\end{aligned}\\]\n\nRemark.\n [Adam Hesterberg]\n Here is yet another proof that \\(n\\) even works.\n Group elements of \\(T_n\\) into equivalence classes\n according to the \\(n/2\\) sums of pairs of consecutive elements\n (first and second, third and fourth, \\dots).\n For each such pair sum, there are at least as many monochrome pairs\n with that sum as nonmonochrome ones, since every nonmonochrome pair uses one of the 25 non-reds.\n The monochromaticity of the pairs is independent.\n\n If \\(p_i \\le \\frac12\\) is the probability that the \\(i\\)th pair is nonmonochrome,\n then the probability that \\(k\\) pairs are nonmonochrome\n is the coefficient of \\(x^k\\) in \\(f(x) = \\prod_i(xp_i+(1-p_i))\\).\n Then the probability that evenly many pairs are nonmonochrome\n (and hence that evenly many coordinates are red)\n is the sum of the coefficients of even powers of \\(x\\) in \\(f\\),\n which is \\((f(1) + f(-1))/2 = (1 + \\prod_i(1-2p_i))/2 \\ge \\frac12\\),\n as desired.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

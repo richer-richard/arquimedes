@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2005-p31",
+  "title": "2005 HMMT February Guts Problem 31",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2005,
+    "number": 31
+  },
+  "difficulty": {
+    "course": 92.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The L shape made by adjoining three congruent squares can be subdivided into four smaller L shapes.\n\nEach of these can in turn be subdivided, and so forth. If we perform 2005 successive subdivisions, how many of the \\(4^{2005} L\\) 's left at the end will be in the same orientation as the original one?\n\n[Diagram omitted from this imported transcription; consult the HMMT archive while reviewing the problem.]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2005-p31.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(4^{2004}+2^{2004}\\)\nAfter \\(n\\) successive subdivisions, let \\(a_{n}\\) be the number of small L's in the same orientation as the original one; let \\(b_{n}\\) be the number of small L's that have this orientation rotated counterclockwise \\(90^{\\circ}\\); let \\(c_{n}\\) be the number of small L's that are rotated \\(180^{\\circ}\\); and let \\(d_{n}\\) be the number of small L's that are rotated \\(270^{\\circ}\\). When an L is subdivided, it produces two smaller L's of the same orientation, one of each of the neighboring orientations, and none of the opposite orientation. Therefore,\n\\(\\left(a_{n+1}, b_{n+1}, c_{n+1}, d_{n+1}\\right)=\\left(d_{n}+2 a_{n}+b_{n}, a_{n}+2 b_{n}+c_{n}, b_{n}+2 c_{n}+d_{n}, c_{n}+2 d_{n}+a_{n}\\right)\\).\nIt is now straightforward to show by induction that\n\n\\[\\left(a_{n}, b_{n}, c_{n}, d_{n}\\right)=\\left(4^{n-1}+2^{n-1}, 4^{n-1}, 4^{n-1}-2^{n-1}, 4^{n-1}\\right)\\]\n\nfor each \\(n \\geq 1\\). In particular, our desired answer is \\(a_{2005}=4^{2004}+2^{2004}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

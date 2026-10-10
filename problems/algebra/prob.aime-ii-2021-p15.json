@@ -1,0 +1,68 @@
+{
+  "id": "prob.aime-ii-2021-p15",
+  "title": "2021 AIME II Problem 15",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.function",
+      "label": "Function",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.parity",
+      "label": "Parity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2021,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 65.9,
+    "source": 3160,
+    "mohs": null
+  },
+  "estimatedMinutes": 18,
+  "statement": "Let \\(f(n)\\) and \\(g(n)\\) be functions satisfying \\[ \\begin{aligned} &f(n) = \\\\ &\\quad \\begin{cases} \\sqrt{n} & \\substack{\\text{if } \\sqrt{n} \\text{ is} \\\\ \\text{an integer}} \\\\ 1 + f(n+1) & \\text{otherwise} \\end{cases} \\end{aligned} \\] and \\[ \\begin{aligned} &g(n) = \\\\ &\\quad \\begin{cases} \\sqrt{n} & \\substack{\\text{if } \\sqrt{n} \\text{ is} \\\\ \\text{an integer}} \\\\ 2 + g(n+2) & \\text{otherwise} \\end{cases} \\end{aligned} \\] for positive integers \\(n.\\) Find the least positive integer \\(n\\) such that \\(\\frac{f(n)}{g(n)} = \\frac{4}{7}.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "258",
+    "value": "258"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2021-p15.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(k\\) be the least integer with \\(k^2 \\ge n.\\) The function \\(f\\) climbs one step at a time to the next perfect square, so \\(f(n) = k + (k^2 - n).\\) The function \\(g\\) climbs by \\(2\\)s, preserving the parity of its argument, and \\(j^2 \\equiv j \\pmod 2,\\) so \\(g(n) = j + (j^2 - n)\\) where \\(j\\) is the least integer with \\(j^2 \\ge n\\) and \\(j \\equiv n \\pmod 2.\\) If \\(k \\equiv n \\pmod 2\\) then \\(j = k\\) and the ratio is \\(1;\\) so we need \\(k \\not\\equiv n \\pmod 2,\\) in which case \\(j = k + 1\\) and \\(g(n) - f(n) = (k+1)^2 - k^2 + 1\\) \\(= 2k + 2.\\)\n\nThen \\(7f = 4g = 4f + 4(2k + 2)\\) gives \\(f = \\frac{8(k+1)}{3},\\) so \\(k \\equiv 2 \\pmod 3\\) and \\[n = k^2 + k - \\frac{8(k+1)}{3},\\] subject to \\((k-1)^2 \\lt n \\le k^2\\) and \\(n \\not\\equiv k \\pmod 2.\\)\n\nFor \\(k = 2, 5, 8, 11\\) the formula gives \\(n = -2, 14, 48, 100,\\) each failing \\(n \\gt (k-1)^2;\\) for \\(k = 14,\\) \\(n = 170\\) is in range but has the same parity as \\(k.\\) For \\(k = 17,\\) \\(n = 289 + 17 - 48 = 258,\\) which satisfies \\(256 \\lt 258 \\le 289\\) and is even while \\(k\\) is odd. Indeed \\(f(258) = 17 + 31 = 48\\) and \\(g(258) = 18 + 66 = 84,\\) with \\(\\frac{48}{84} = \\frac{4}{7},\\) so the least \\(n\\) is \\(258.\\)",
+      "hints": [
+        "If \\(k\\) is the least integer with \\(k^2 \\ge n,\\) then \\(f(n) = k + k^2 - n,\\) and \\(g\\) climbs by \\(2\\)s to the least square of the same parity as \\(n\\)",
+        "The ratio differs from \\(1\\) only when \\(k\\) and \\(n\\) have opposite parity; then \\(g - f = 2k + 2,\\) so \\(7f = 4g\\) forces \\(3f = 8(k + 1)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-team-1-2007-p14",
+  "title": "2007 HMMT February Team Round 1 Problem 14",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2007,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 83.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find an explicit, closed form formula for\n\n\\[\\sum_{k=1}^{n} \\frac{k \\cdot(-1)^{k} \\cdot\\binom{n}{k}}{n+k+1}\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1-2007-p14.hmmt",
+      "kind": "proof-sketch",
+      "text": "Consider the interpolation of the polynomial \\(P(x)=x \\cdot n!\\) at \\(x=0,1, \\ldots, n\\). We obtain the identity\n\n\\[\\begin{aligned}\nP(x) & =x \\cdot n!=\\sum_{k=0}^{n} k \\cdot n!\\prod_{j \\neq k} \\frac{x-j}{k-j} \\\\\n& =\\sum_{k=0}^{n} k \\cdot n!\\cdot \\frac{x(x-1) \\cdots(x-k+1)(x-k-1) \\cdots(x-n)}{k!(n-k)!(-1)^{n-k}} \\\\\n& =\\sum_{k=1}^{n} k \\cdot(-1)^{n-k} \\cdot\\binom{n}{k} \\cdot x(x-1) \\cdots(x-k+1)(x-k-1) \\cdots(x-n)\n\\end{aligned}\\]\n\nThis identity is valid for all complex numbers \\(x\\), but, to extract a factor \\(\\frac{1}{n+k+1}\\) from the valid product of each summand, we set \\(x=-n-1\\), so that\n\\(-(n+1)!=\\sum_{k=1}^{n} k(-1)^{n-k}\\binom{n}{k}(-n-1) \\cdots(-n-k)(-n-k-2) \\cdots(-2 n-1)=\\sum_{k=1}^{n} \\frac{k(-1)^{k}\\binom{n}{k}(2 n+1)!}{n!(n+k+1)}\\).\nFinally,\n\n\\[\\sum_{k=1}^{n} \\frac{k \\cdot(-1)^{k} \\cdot\\binom{n}{k}}{n+k+1}=\\frac{-n!(n+1)!}{(2 n+1)!}=\\frac{-1}{\\binom{2 n+1}{n}} \\cdot \\square\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

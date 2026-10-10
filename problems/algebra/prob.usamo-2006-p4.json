@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2006-p4",
+  "title": "2006 USAMO Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2006,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 83.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find all positive integers \\(n\\) such that there are \\(k\\ge 2\\) positive rational numbers \\(a_1, a_2, \\ldots, a_k\\) satisfying \\(a_1 + a_2 + \\cdots + a_k = a_1\\cdot a_2\\cdots a_k = n\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2006-p4.imported",
+      "kind": "proof-sketch",
+      "text": "First, consider composite numbers. We can then factor $n$ into $p_1p_2.$ It is easy to see that $p_1+p_2\\le n$, and thus, we can add $(n-p_1-p_2)$ 1s in order to achieve a sum and product of $n$. For $p_1+p_2=n$, which is only possible in one case, $n=4$, we consider $p_1=p_2=2$.\nSecondly, let $n$ be a prime. Then we can find the following procedure: Let $a_1=\\frac{n}{2}, a_2=4, a_3=\\frac{1}{2}$ and let the rest of the $a_k$ be 1. The only numbers we now need to check are those such that $\\frac{n}{2}+4+\\frac{1}{2}>n\\Longrightarrow n<9$. Thus, we need to check for $n=1,2,3,5,7$. One is included because it is neither prime nor composite.\nFor $n=1$, consider $a_1a_2\\hdots a_k=1$. Then by AM-GM, $a_1+a_2+\\hdots+a_k\\ge k\\sqrt[k]{1}>1$ for $k\\ge 2$. Thus, $n=1$ is impossible.\nIf $n=2$, once again consider $a_1a_2\\hdots a_k=2$. Similar to the above, $a_1+a_2+\\hdots\\ge k\\sqrt[k]{2}>2$ for $k\\ge 2$ since $\\sqrt[k]{2}>1$ and $k>2$. Obviously, $n=2$ is then impossible.\nIf $n=3$, let $a_1a_2\\hdots a_k=3$. Again, $a_1+a_2+\\hdots\\ge k\\sqrt[k]{3}>3$. This is obvious for $k\\ge 3$. Now consider $k=2$. Then $2\\sqrt{3}\\approx 3.4$ is obviously greater than $3$. Thus, $n=3$ is impossible.\nIf $n=5$, proceed as above and consider $k=2$. Then $a_1+a_2=5$ and $a_1a_2=5$. However, we then come to the quadratic $a_1^2-5a_1+5=0 \\Longrightarrow a_1=\\frac{5\\pm\\sqrt{5}}{2}$, which is not rational. For $k=3$ and $k=4$ we note that $\\sqrt[3]{5}>\\frac{5}{3}$ and $\\sqrt[4]{5}>\\frac{5}{4}$. This is trivial to prove. If $k\\ge 5$, it is obviously impossible, and thus $n=5$ does not work.\nThe last case, where $n=7$, is possible using the following three numbers. $a_1=\\frac{9}{2}, a_2=\\frac{4}{3}, a_3=\\frac{7}{6}$ shows that $n=7$ is possible.\nHence, $n$ can be any positive integer greater than $3$ with the exclusion of $5$.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

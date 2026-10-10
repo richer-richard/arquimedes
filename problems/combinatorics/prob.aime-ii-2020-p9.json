@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2020-p9",
+  "title": "2020 AIME II Problem 9",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "comb.permutations",
+      "label": "Permutations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2020,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 57.7,
+    "source": 2840,
+    "mohs": null
+  },
+  "estimatedMinutes": 12,
+  "statement": "While watching a show, Ayako, Billy, Carlos, Dahlia, Ehuang, and Frank sat in that order in a row of six chairs. During the break, they went to the kitchen for a snack. When they came back, they sat on those six chairs in such a way that if two of them sat next to each other before the break, then they did not sit next to each other after the break. Find the number of possible seating orders they could have chosen after the break.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "90",
+    "value": "90"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2020-p9.live",
+      "kind": "proof-sketch",
+      "text": "Number the friends \\(1\\) through \\(6\\) in original seating order; we count orderings of \\(1, \\ldots, 6\\) in which no two consecutive integers are adjacent. Apply inclusion-exclusion over which of the five pairs \\(\\{i, i+1\\}\\) are forced to sit together. If a chosen set of \\(k\\) pairs forms \\(r\\) maximal runs of consecutive integers, gluing each run into a block (orderable ascending or descending) gives \\(2^r (6 - k)!\\) seatings containing all chosen adjacencies.\n\nTallying by \\(k:\\) for \\(k = 0,\\) \\(720.\\) For \\(k = 1,\\) five sets, each \\(2 \\cdot 120,\\) total \\(1200.\\) For \\(k = 2,\\) four sets form one run \\((2 \\cdot 24)\\) and six form two runs \\((4 \\cdot 24),\\) total \\(768.\\) For \\(k = 3,\\) three sets form one run \\((2 \\cdot 6),\\) six form two runs \\((4 \\cdot 6),\\) one forms three runs \\((8 \\cdot 6),\\) total \\(228.\\) For \\(k = 4,\\) two sets form one run \\((2 \\cdot 2)\\) and three form two runs \\((4 \\cdot 2),\\) total \\(32.\\) For \\(k = 5,\\) one set, total \\(2.\\)\n\nThe count is \\(720 - 1200 + 768\\) \\(- 228 + 32 - 2 = 90.\\)",
+      "hints": [
+        "Number the friends \\(1\\) through \\(6\\) by original seat; you need orderings in which no two consecutive numbers stand next to each other",
+        "Use inclusion-exclusion on which of the five pairs \\(\\{i, i+1\\}\\) sit together, gluing each run of consecutive numbers into a block that can face two ways"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

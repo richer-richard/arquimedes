@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12b-2008-p11",
+  "title": "2008 AMC 12B Problem 11",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cone",
+      "label": "Cone",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.power-scaling-of-length-area-and-volume",
+      "label": "Power scaling of length, area, and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2008,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 27.7,
+    "source": 1570,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A cone-shaped mountain has its base on the ocean floor and has a height of \\(8000\\) feet. The top \\(\\tfrac{1}{8}\\) of the volume of the mountain is above water. What is the depth of the ocean at the base of the mountain, in feet?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4000\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2000(4 - \\sqrt{2})\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6000\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6400\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(7000\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "4000"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2008-p11.live",
+      "kind": "proof-sketch",
+      "text": "The part above the water is a cone similar to the whole mountain, with volume \\(\\tfrac{1}{8}\\) of the total. Since volume scales as the cube of length, the above-water cone’s height is \\(\\sqrt[3]{\\tfrac{1}{8}} = \\tfrac{1}{2}\\) of the full height.\n\nSo the above-water height is \\(8000 \\cdot \\tfrac{1}{2} = 4000\\) feet.\n\nThe ocean depth at the base is the submerged height, \\(8000 - 4000 = 4000\\) feet.\n\nThus, the correct answer is A.",
+      "hints": [
+        "The above-water part is a smaller cone similar to the whole mountain",
+        "The volume ratio \\(\\tfrac{1}{8}\\) is the cube of the height ratio; the depth is the total height minus the above-water cone’s height"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

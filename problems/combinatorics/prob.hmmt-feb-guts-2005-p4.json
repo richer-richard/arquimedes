@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2005-p4",
+  "title": "2005 HMMT February Guts Problem 4",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2005,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 67.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "What is the probability that in a randomly chosen arrangement of the numbers and letters in \"HMMT2005,\" one can read either \"HMMT\" or \" 2005 \" from left to right? (For example, in \"5HM0M20T,\" one can read \"HMMT.\")",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2005-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(23 / 144\\)\n\nTo read \"HMMT,\" there are \\(\\binom{8}{4}\\) ways to place the letters, and \\(\\frac{4!}{2}\\) ways to place the numbers. Similarly, there are \\(\\binom{8}{4} \\frac{4!}{2}\\) arrangements where one can read \" 2005 .\" The number of arrangements in which one can read both is just \\(\\binom{8}{4}\\). The total number of arrangements is \\(\\frac{8!}{4}\\), thus the answer is\n\n\\[\\frac{\\binom{8}{4} \\frac{4!}{2}+\\binom{8}{4} \\frac{4!}{2}-\\binom{8}{4}}{\\frac{8!}{4}}=\\binom{8}{4} \\frac{4}{8!} \\cdot 23=\\frac{23}{144} .\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

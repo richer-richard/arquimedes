@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2014-p12",
+  "title": "2014 AIME II Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2014,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 61.1,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 14,
+  "statement": "Suppose that the angles of \\(\\triangle ABC\\) satisfy \\(\\cos(3A) + \\cos(3B)\\) \\(+ \\cos(3C) = 1.\\) Two sides of the triangle have lengths \\(10\\) and \\(13.\\) There is a positive integer \\(m\\) so that the maximum possible length for the remaining side of \\(\\triangle ABC\\) is \\(\\sqrt{m}.\\) Find \\(m.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "399",
+    "value": "399"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2014-p12.live",
+      "kind": "proof-sketch",
+      "text": "Using \\(1 - \\cos 3A = 2\\sin^2\\frac{3A}{2}\\) and \\(\\cos 3B + \\cos 3C =\\) \\(2\\cos\\frac{3(B+C)}{2}\\cos\\frac{3(B-C)}{2},\\) together with \\(\\frac{3(B+C)}{2} = 270^\\circ - \\frac{3A}{2}\\) so that \\(\\cos\\frac{3(B+C)}{2} = -\\sin\\frac{3A}{2},\\) the condition becomes \\[ \\begin{aligned} 0 &= 2\\sin\\tfrac{3A}{2} \\\\ &\\quad {}\\cdot \\left(\\sin\\tfrac{3A}{2} + \\cos\\tfrac{3(B-C)}{2}\\right) \\\\ &= 2\\sin\\tfrac{3A}{2} \\\\ &\\quad {}\\cdot \\left(\\cos\\tfrac{3(B-C)}{2} - \\cos\\tfrac{3(B+C)}{2}\\right) \\\\ &= 4\\sin\\tfrac{3A}{2}\\sin\\tfrac{3B}{2}\\sin\\tfrac{3C}{2}. \\end{aligned} \\]\n\nFor an angle \\(X\\) of a triangle, \\(\\frac{3X}{2}\\) lies strictly between \\(0^\\circ\\) and \\(270^\\circ,\\) so \\(\\sin\\frac{3X}{2} = 0\\) exactly when \\(X = 120^\\circ.\\) Hence one angle of the triangle is \\(120^\\circ.\\)\n\nThe remaining side is longest when the \\(120^\\circ\\) angle sits between the sides of lengths \\(10\\) and \\(13\\) (if \\(120^\\circ\\) were opposite one of them, the remaining side would be shorter than that side). By the law of cosines its length is \\(\\sqrt{10^2 + 13^2 + 10 \\cdot 13} = \\sqrt{399},\\) so \\(m = 399.\\)",
+      "hints": [
+        "Write \\(1 - \\cos 3A = 2\\sin^2 \\frac{3A}{2}\\) and combine \\(\\cos 3B + \\cos 3C\\) by sum-to-product; the whole condition factors",
+        "One angle must equal \\(120^\\circ.\\) The remaining side is longest when that angle lies between the sides of lengths \\(10\\) and \\(13.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

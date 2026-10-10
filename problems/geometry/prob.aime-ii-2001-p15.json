@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-ii-2001-p15",
+  "title": "2001 AIME II Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cube-geometry",
+      "label": "Cube geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.surface-area",
+      "label": "Surface area",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2001,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 71.3,
+    "source": 3370,
+    "mohs": null
+  },
+  "estimatedMinutes": 30,
+  "statement": "Let \\(EFGH,\\) \\(EFDC,\\) and \\(EHBC\\) be three adjacent square faces of a cube, for which \\(EC = 8,\\) and let \\(A\\) be the eighth vertex of the cube. Let \\(I,\\) \\(J,\\) and \\(K\\) be points on \\(\\overline{EF},\\) \\(\\overline{EH},\\) and \\(\\overline{EC},\\) respectively, so that \\(EI = EJ = EK = 2.\\) A solid \\(S\\) is obtained by drilling a tunnel through the cube. The sides of the tunnel are planes parallel to \\(\\overline{AE},\\) and containing the edges \\(\\overline{IJ},\\) \\(\\overline{JK},\\) and \\(\\overline{KI}.\\) The surface area of \\(S,\\) including the walls of the tunnel, is \\(m + n\\sqrt{p},\\) where \\(m,\\) \\(n,\\) and \\(p\\) are positive integers and \\(p\\) is not divisible by the square of any prime. Find \\(m + n + p.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "417",
+    "value": "417"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2001-p15.live",
+      "kind": "proof-sketch",
+      "text": "Place \\(A = (0,0,0)\\) and \\(E = (8,8,8),\\) so that \\(I = (6,8,8),\\) \\(J = (8,6,8),\\) \\(K = (8,8,6),\\) and \\(\\overline{AE}\\) has direction \\((1,1,1).\\) The line through \\(I\\) in that direction leaves the cube at \\(L = (0,2,2);\\) similarly \\(J\\) and \\(K\\) lead to \\(M = (2,0,2)\\) and \\(N = (2,2,0).\\) The tunnel wall through \\(I\\) and \\(J\\) is the plane \\(2z = x + y + 2,\\) which also contains \\(L\\) and \\(M\\) and crosses the \\(z\\)-axis at \\(O = (0,0,1);\\) the other two walls behave symmetrically, crossing the \\(y\\)- and \\(x\\)-axes at \\((0,1,0)\\) and \\((1,0,0).\\)\n\nNow add up the surface. Each of the three cube faces at \\(E\\) loses a right triangle with legs \\(2\\) (such as \\(IEJ\\)), leaving area \\(64 - 2 = 62.\\) Each of the three faces at \\(A\\) loses a quadrilateral of area \\(2:\\) on the face \\(z = 0\\) its vertices are \\((0,0,0),\\) \\((1,0,0),\\) \\((2,2,0),\\) \\((0,1,0).\\) Each tunnel wall is a pentagon like \\(ILOMJ:\\) the rectangle \\(ILMJ\\) with \\(IJ = 2\\sqrt{2}\\) and \\(IL = 6\\sqrt{3}\\) has area \\(12\\sqrt{6},\\) and the isosceles triangle \\(LOM\\) with base \\(LM = 2\\sqrt{2}\\) and height \\(\\sqrt{3}\\) adds \\(\\sqrt{6},\\) for \\(13\\sqrt{6}\\) per wall.\n\nThe total surface area is \\(6 \\cdot 62 + 3 \\cdot 13\\sqrt{6} = 372 + 39\\sqrt{6},\\) so \\(m + n + p = 372 + 39 + 6\\) \\(= 417.\\)",
+      "hints": [
+        "Take \\(A = (0,0,0)\\) and \\(E = (8,8,8);\\) each tunnel wall is a plane through one edge of triangle \\(IJK\\) in the direction \\((1,1,1)\\)",
+        "The tunnel cuts area \\(2\\) from each of the six cube faces, and each of the three walls is a \\(2\\sqrt{2} \\times 6\\sqrt{3}\\) rectangle plus a small triangle"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

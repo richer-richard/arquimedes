@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2022-p8",
+  "title": "2022 HMMT February Algebra and Number Theory Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.diophantine-equations",
+      "label": "Diophantine equations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2022,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Positive integers \\(a_{1}, a_{2}, \\ldots, a_{7}, b_{1}, b_{2}, \\ldots, b_{7}\\) satisfy \\(2 \\leq a_{i} \\leq 166\\) and \\(a_{i}^{b_{i}} \\equiv a_{i+1}^{2}(\\bmod 167)\\) for each \\(1 \\leq i \\leq 7\\) (where \\(a_{8}=a_{1}\\) ). Compute the minimum possible value of \\(b_{1} b_{2} \\cdots b_{7}\\left(b_{1}+b_{2}+\\cdots+b_{7}\\right)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "675",
+    "value": "675"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2022-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(B=b_{1} b_{2} \\cdots b_{7}-128\\). Since\n\n\\[a_{1}^{b_{1} b_{2} \\cdots b_{7}} \\equiv a_{2}^{2 b_{2} b_{3} \\cdots b_{7}} \\equiv a_{3}^{4 b_{3} b_{4} \\cdots b_{7}} \\equiv \\cdots \\equiv a_{1}^{128} \\quad(\\bmod 167)\\]\n\nwe find that \\(a_{1}^{B} \\equiv 1(\\bmod 167)\\). Similarly, \\(a_{i}^{B} \\equiv 1(\\bmod 167)\\) for all \\(i\\). Since 167 is a prime and \\(167-1=2 \\cdot 83\\), we know that the order of each individual \\(a_{i}\\) (since \\(a_{i} \\neq 1\\) ) must be either 2 of a multiple of 83 . If \\(B\\) is not a multiple of 83 , then it follows that all the \\(a_{i}\\) must be -1 , which implies that all the \\(b_{i}\\) must be even, meaning that the minimum possible value of \\(b_{1} b_{2} \\cdots b_{7}\\left(b_{1}+b_{2}+\\cdots b_{7}\\right)\\) is \\(2^{7} \\cdot 14>1000\\).\n\nOh the other hand, if \\(B\\) is a multiple of 83 , then the smallest possible values for \\(b_{1} b_{2} \\cdots b_{7}\\) are 45 and 128. If \\(b_{1} b_{2} \\cdots b_{7}=45\\), then the smallest possible value for \\(b_{1}+b_{2}+\\cdots+b_{7}\\) is \\(5+3+3+1+1+1+1=15\\), so the minimum possible value for \\(b_{1} b_{2} \\cdots b_{7}\\left(b_{1}+b_{2}+\\cdots b_{7}\\right)\\) is \\(45 \\cdot 15=675\\). This can be achieved by letting \\(g\\) be an element of order 83 and setting \\(a_{1}=g, a_{2}=g^{1 / 2}, a_{3}=g^{1 / 4}, a_{4}=g^{1 / 8}, a_{5}=g^{1 / 16}, a_{6}=\\) \\(g^{3 / 32}, a_{7}=g^{9 / 64}(\\) all exponents are taken mod 83).\nIf \\(b_{1} b_{2} \\cdots b_{7} \\geq 128\\), then by the AM-GM inequality we have\n\n\\[b_{1} b_{2} \\cdots b_{7}\\left(b_{1}+b_{2}+\\cdots b_{7}\\right) \\geq 7\\left(b_{1} b_{2} \\cdots b_{7}\\right)^{8 / 7} \\geq 7 \\cdot 2^{8}>1000\\]\n\nTherefore 675 is optimal.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

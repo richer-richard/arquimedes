@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-12b-2016-p12",
+  "title": "2016 AMC 12B Problem 12",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "logic-foundations"
+  ],
+  "concepts": [
+    {
+      "id": "nt.logical-deduction",
+      "label": "Logical deduction",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.parity",
+      "label": "Parity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2016,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 25.7,
+    "source": 1590,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "All the numbers \\(1,\\) \\(2,\\) \\(3,\\) \\(4,\\) \\(5,\\) \\(6,\\) \\(7,\\) \\(8,\\) \\(9\\) are written in a \\(3\\times3\\) array of squares, one number in each square, in such a way that if two numbers are consecutive then they occupy squares that share an edge. The numbers in the four corners add up to \\(18.\\) What number is in the center?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(9\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "7"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2016-p12.live",
+      "kind": "proof-sketch",
+      "text": "Color the grid like a checkerboard so the four corners and the center share one color. Since consecutive numbers occupy adjacent (opposite colored) squares, the numbers alternate parity along the chain, so the five same-colored cells contain the five odd numbers \\(1,3,5,7,9,\\) which sum to \\(25.\\) The four corners add to \\(18,\\) so the center is \\(25-18=7.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Color the grid like a checkerboard; consecutive numbers must lie on opposite colors, so they alternate",
+        "The five same-colored cells (four corners plus center) must hold the five odd numbers, which sum to \\(25\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2022-p5",
+  "title": "2022 AIME II Problem 5",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.parity",
+      "label": "Parity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime",
+      "label": "Prime",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2022,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 46.4,
+    "source": 2400,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "Twenty distinct points are marked on a circle and labeled \\(1\\) through \\(20\\) in clockwise order. A line segment is drawn between every pair of points whose labels differ by a prime number. Find the number of triangles formed whose vertices are among the original \\(20\\) points.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "72",
+    "value": "72"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2022-p5.live",
+      "kind": "proof-sketch",
+      "text": "A triangle has vertices \\(i \\lt j \\lt k\\) where \\(j - i,\\) \\(k - j,\\) and \\(k - i\\) are all prime. Since \\(k - i = (j - i) + (k - j)\\) is a prime that is a sum of two primes, and the sum of two odd primes is even, one of the two smaller differences must equal \\(2.\\) So the differences are \\(\\{2, p\\}\\) in some order with \\(p\\) and \\(p + 2\\) both prime: the twin prime pairs with \\(p + 2 \\le 19\\) are \\((3, 5),\\) \\((5, 7),\\) \\((11, 13),\\) and \\((17, 19).\\)\n\nFor each pair, the middle vertex can be at distance \\(2\\) or at distance \\(p\\) from the smallest, and the total span is \\(p + 2,\\) so there are \\(2\\bigl(20 - (p + 2)\\bigr)\\) triangles. This gives \\(2 \\cdot 15 = 30,\\) \\(2 \\cdot 13 = 26,\\) \\(2 \\cdot 7 = 14,\\) and \\(2 \\cdot 1 = 2\\) for the four pairs.\n\nThe total is \\(30 + 26 + 14 + 2 = 72.\\)",
+      "hints": [
+        "For labels \\(i \\lt j \\lt k,\\) all three differences must be prime, and \\(k - i\\) is the sum of the other two",
+        "Two odd primes sum to an even number, so one difference must be \\(2:\\) the differences are \\(2, p, p + 2\\) with \\(p\\) and \\(p + 2\\) both prime"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

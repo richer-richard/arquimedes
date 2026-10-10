@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-general-1-2010-p5",
+  "title": "2010 HMMT February General Round 1 Problem 5",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2010,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Manya has a stack of \\(85=1+4+16+64\\) blocks comprised of 4 layers (the \\(k\\) th layer from the top has \\(4^{k-1}\\) blocks; see the diagram below). Each block rests on 4 smaller blocks, each with dimensions half those of the larger block. Laura removes blocks one at a time from this stack, removing only blocks that currently have no blocks on top of them. Find the number of ways Laura can remove precisely 5 blocks from Manya's stack (the order in which they are removed matters).\n\n[Diagram omitted from this imported transcription; consult the HMMT archive while reviewing the problem.]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-general-1-2010-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "3384 Each time Laura removes a block, 4 additional blocks are exposed, increasing the total number of exposed blocks by 3 . She removes 5 blocks, for a total of \\(1 \\cdot 4 \\cdot 7 \\cdot 10 \\cdot 13\\) ways. However, the stack originally only has 4 layers, so we must subtract the cases where removing a block on the bottom layer does not expose any new blocks. There are \\(1 \\cdot 4 \\cdot 4 \\cdot 4 \\cdot 4=256\\) of these (the last factor of 4 is from the 4 blocks that we counted as being exposed, but were not actually). So our final answer is \\(1 \\cdot 4 \\cdot 7 \\cdot 10 \\cdot 13-1 \\cdot 4 \\cdot 4 \\cdot 4 \\cdot 4=3384\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

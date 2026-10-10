@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-1997-p9",
+  "title": "1997 AIME Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.algebraic-manipulation",
+      "label": "Algebraic manipulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1997,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 50.5,
+    "source": 2560,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Given a nonnegative real number \\(x,\\) let \\(\\langle x\\rangle\\) denote the fractional part of \\(x;\\) that is, \\(\\langle x\\rangle = x - \\lfloor x\\rfloor,\\) where \\(\\lfloor x\\rfloor\\) denotes the greatest integer less than or equal to \\(x.\\) Suppose that \\(a\\) is positive, \\(\\langle a^{-1}\\rangle = \\langle a^2\\rangle,\\) and \\(2 \\lt a^2 \\lt 3.\\) Find the value of \\(a^{12} - 144a^{-1}.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "233",
+    "value": "233"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1997-p9.live",
+      "kind": "proof-sketch",
+      "text": "From \\(2 \\lt a^2 \\lt 3\\) we get \\(\\sqrt{2} \\lt a \\lt \\sqrt{3},\\) so \\(0 \\lt a^{-1} \\lt 1\\) and \\(\\langle a^{-1}\\rangle = a^{-1},\\) while \\(\\langle a^2\\rangle = a^2 - 2.\\) The condition becomes \\(a^{-1} = a^2 - 2,\\) i.e. \\(a^3 - 2a - 1 = 0,\\) which factors as \\[(a + 1)(a^2 - a - 1) = 0.\\] Since \\(a \\gt 0,\\) we get \\(a = \\frac{1 + \\sqrt{5}}{2},\\) the golden ratio, and indeed \\(a^2 = a + 1 \\approx 2.618\\) lies in \\((2, 3).\\)\n\nUsing \\(a^2 = a + 1\\) repeatedly: \\(a^4 = (a+1)^2 = 3a + 2,\\) \\(a^8 = (3a+2)^2\\) \\(= 9(a+1) + 12a + 4\\) \\(= 21a + 13,\\) and \\(a^{12} = a^8 a^4\\) \\(= (21a + 13)(3a + 2)\\) \\(= 63(a+1) + 81a + 26\\) \\(= 144a + 89.\\) Also \\(a^{-1} = a - 1\\) from \\(a^2 = a + 1.\\)\n\nTherefore \\(a^{12} - 144a^{-1}\\) \\(= 144a + 89 - 144(a - 1)\\) \\(= 89 + 144 = 233.\\)",
+      "hints": [
+        "Since \\(2 \\lt a^2 \\lt 3\\) and \\(0 \\lt a^{-1} \\lt 1,\\) the condition says \\(a^{-1} = a^2 - 2\\)",
+        "The cubic \\(a^3 - 2a - 1 = 0\\) factors with root \\(a = \\frac{1 + \\sqrt{5}}{2};\\) use \\(a^2 = a + 1\\) repeatedly to reduce \\(a^{12}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

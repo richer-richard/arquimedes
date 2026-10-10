@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2007-p11",
+  "title": "2007 AIME II Problem 11",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.arc",
+      "label": "Arc",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.circumference",
+      "label": "Circumference",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.special-right-triangle",
+      "label": "Special right triangle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2007,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 63.3,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 17,
+  "statement": "Two long cylindrical tubes of the same length but different diameters lie parallel to each other on a flat surface. The larger tube has radius \\(72\\) and rolls along the surface toward the smaller tube, which has radius \\(24.\\) It rolls over the smaller tube and continues rolling along the flat surface until it comes to rest on the same point of its circumference as it started, having made one complete revolution. If the smaller tube never moves, and the rolling occurs with no slipping, the larger tube ends up a distance \\(x\\) from where it starts. The distance \\(x\\) can be expressed in the form \\(a\\pi + b\\sqrt{c},\\) where \\(a,\\) \\(b,\\) and \\(c\\) are integers and \\(c\\) is not divisible by the square of any prime. Find \\(a + b + c.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "179",
+    "value": "179"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2007-p11.live",
+      "kind": "proof-sketch",
+      "text": "When the rolling tube touches both the ground and the small tube, the segment between centers has length \\(72 + 24 = 96\\) and vertical component \\(72 - 24 = 48,\\) so it makes a \\(30^\\circ\\) angle with the horizontal. As the big tube rolls over the small one, its center swings along an arc of radius \\(96\\) about the small tube’s center, from \\(30^\\circ\\) above the horizontal on one side to \\(30^\\circ\\) on the other: a sweep of \\(120^\\circ,\\) advancing the center horizontally by \\(2 \\cdot 96\\cos 30^\\circ = 96\\sqrt{3}.\\)\n\nDuring that sweep, the contact arc on the small tube is \\(120^\\circ \\cdot \\frac{24}{72} = 40^\\circ\\) worth of the big tube’s circumference, and the sweep itself also rotates the big tube by \\(120^\\circ,\\) so crossing the small tube turns the big tube by \\(160^\\circ\\) in all. To complete exactly one revolution, the remaining \\(360^\\circ - 160^\\circ = 200^\\circ\\) of turning happens rolling on flat ground, where the center advances the rolled distance \\(\\frac{200}{360} \\cdot 2\\pi \\cdot 72 = 80\\pi.\\)\n\nHence \\(x = 80\\pi + 96\\sqrt{3},\\) and \\(a + b + c = 80 + 96 + 3 = 179.\\)",
+      "hints": [
+        "When the tubes touch while both rest on the ground, the segment joining their centers has length \\(96\\) and vertical component \\(48\\)",
+        "Total turning is \\(360^\\circ:\\) while crossing the small tube, the big tube’s rotation equals the center’s \\(120^\\circ\\) sweep plus the angular contribution from the contact arc; the rest is flat rolling"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

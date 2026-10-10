@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-8-2025-p19",
+  "title": "2025 AMC 8 Problem 19",
+  "category": "arithmetic",
+  "subjects": [
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "arith.distance-rate-and-time",
+      "label": "Distance rate and time",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "arith.relative-speed",
+      "label": "Relative speed",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2025,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 27.2,
+    "source": 1650,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Two towns, \\(A\\) and \\(B,\\) are connected by a straight road, \\(15\\) miles long. Traveling from town \\(A\\) to town \\(B,\\) the speed limit changes every \\(5\\) miles: from \\(25\\) to \\(40\\) to \\(20\\) miles per hour (mph). Two cars, one at town \\(A\\) and one at town \\(B,\\) start moving toward each other at the same time. They drive at exactly the speed limit in each portion of the road. How far from town \\(A,\\) in miles, will the two cars meet?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(7.75\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(8.25\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(8.5\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(8.75\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "8.5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2025-p19.live",
+      "kind": "proof-sketch",
+      "text": "Think of the road as having three sections: left, middle, and right. Each section is \\(5\\) miles long.\n\nThe car from \\(A\\) reaches the middle section in \\[ \\frac{5}{25} = \\frac{1}{5} \\] hours.\n\nThe car from \\(B\\) reaches the middle section in \\[ \\frac{5}{20} = \\frac{1}{4} \\] hours. By that time, the car from \\(A\\) has already driven in the middle section for \\[ \\frac{1}{4} - \\frac{1}{5} = \\frac{1}{20} \\] hours. During this time, that car from \\(A\\) has traveled \\[ 40 \\times \\frac{1}{20} = 2 \\] miles in the middle section.\n\nThat leaves \\(5 - 2 = 3\\) miles between the two cars in the middle section.\n\nAt that moment, the car from \\(A\\) is \\(5 + 2 = 7\\) miles from \\(A.\\)\n\nSince the cars drive at the same speed of \\(40\\) mph in the middle section, they meet after each driving \\(1.5\\) more miles. This takes the car from \\(A\\) a total distance of \\(7 + 1.5 = 8.5\\) miles, which is choice D.",
+      "hints": [
+        "Find when each car reaches the middle \\(5\\)-mile section",
+        "Once both cars are in the middle section, their speeds are equal"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "bbb99eb2a058aa4c8bc48e8d58aa57bc12b4ef40cc94c098da2b4b63691a758c"
+    ],
+    "solutions": []
+  }
+}

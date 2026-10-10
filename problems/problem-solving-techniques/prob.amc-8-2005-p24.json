@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-8-2005-p24",
+  "title": "2005 AMC 8 Problem 24",
+  "category": "problem-solving-techniques",
+  "subjects": [
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "strategy.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "strategy.work-backwards",
+      "label": "Work backwards",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2005,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 18.8,
+    "source": 1610,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A certain calculator has only two keys [\\(+1\\)] and [\\(\\times 2\\)]. When you press one of the keys, the calculator automatically displays the result. For instance, if the calculator originally displayed “\\(9\\)” and you pressed [\\(+1\\)], it would display “\\(10.\\)” If you then pressed [\\(\\times 2\\)], it would display “\\(20.\\)” Starting with the display “\\(1,\\)” what is the fewest number of keystrokes you would need to reach “\\(200\\)”?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(12\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "9"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2005-p24.live",
+      "kind": "proof-sketch",
+      "text": "Work backward from \\(200\\). When the number is even, undo \\(\\times2\\) by dividing by \\(2\\); when it is odd, undo \\(+1\\) by subtracting \\(1\\).\n\n\\[200,100,50,25,24,12,6,3,2,1\\] uses \\(9\\) reverse steps, so \\(9\\) keystrokes are enough.\n\nEight keystrokes are not enough: the largest value below \\(200\\) reachable in \\(8\\) keystrokes is obtained by \\(\\times2,+1\\) followed by six doublings, giving \\(3\\cdot2^6=192\\). The next larger possibilities overshoot to at least \\(256\\), so \\(200\\) cannot be reached in \\(8\\) keystrokes.\n\nThus, B is the correct answer.",
+      "hints": [
+        "Work backward from \\(200\\) to \\(1\\).",
+        "For a lower bound, note what eight keystrokes can and cannot reach near \\(200\\)."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

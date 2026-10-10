@@ -1,0 +1,107 @@
+{
+  "id": "prob.amc-12a-2024-p21",
+  "title": "2024 AMC 12A Problem 21",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.recurrence-relations",
+      "label": "Recurrence relations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sums-and-products",
+      "label": "Sums and products",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.telescoping-series",
+      "label": "Telescoping series",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sum-of-first-n-squares",
+      "label": "Sum of first n squares",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2024,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 39.5,
+    "source": 2130,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Suppose that \\(a_1=2\\) and the sequence \\((a_n)\\) satisfies the recurrence relation \\[ \\frac{a_n-1}{n-1}=\\frac{a_{n-1}+1}{(n-1)+1} \\] for all \\(n\\ge2.\\) What is the greatest integer less than or equal to \\[ \\sum_{n=1}^{100}a_n^2? \\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(338{,}550\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(338{,}551\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(338{,}552\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(338{,}553\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(338{,}554\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "338551"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2024-p21.live",
+      "kind": "proof-sketch",
+      "text": "The recurrence rearranges to \\(a_n=1+\\tfrac{n-1}{n}(a_{n-1}+1).\\) Computing early terms \\(2,\\tfrac52,\\tfrac{10}3,\\tfrac{17}4,\\ldots\\) suggests \\(a_n=n+\\tfrac1n.\\) This follows by induction: substituting \\(a_{n-1}=n-1+\\tfrac1{n-1}\\) into the recurrence gives \\(a_n=1+\\tfrac{n-1}{n}(n+\\tfrac1{n-1})\\) \\(=n+\\tfrac1n.\\) Then \\(a_n^2=n^2+2+\\tfrac1{n^2},\\) so \\[ \\begin{aligned} &\\sum_{n=1}^{100}a_n^2 \\\\ &=\\sum_{n=1}^{100}n^2+200 \\\\ &\\quad {}+\\sum_{n=1}^{100}\\frac1{n^2} \\\\ &=338350+200+S, \\end{aligned} \\] where \\(S\\gt1\\) and \\(S\\lt1+\\int_1^\\infty x^{-2}\\,dx=2.\\) Hence the sum is between \\(338551\\) and \\(338552,\\) and its floor is \\(338551.\\) Thus, the correct answer is B.",
+      "hints": [
+        "Compute a few terms and conjecture the closed form \\(a_n=n+\\dfrac1n\\)",
+        "Then \\(a_n^2=n^2+2+\\dfrac1{n^2},\\) and \\(\\displaystyle\\sum_{n=1}^{100}\\dfrac1{n^2}\\) lies strictly between \\(1\\) and \\(2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

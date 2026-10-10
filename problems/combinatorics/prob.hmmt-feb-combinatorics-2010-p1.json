@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2010-p1",
+  "title": "2010 HMMT February Combinatorics Problem 1",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinatorics",
+      "label": "Combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2010,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 70.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(S=\\{1,2,3,4,5,6,7,8,9,10\\}\\). How many (potentially empty) subsets \\(T\\) of \\(S\\) are there such that, for all \\(x\\), if \\(x\\) is in \\(T\\) and \\(2 x\\) is in \\(S\\) then \\(2 x\\) is also in \\(T\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2010-p1.hmmt",
+      "kind": "proof-sketch",
+      "text": "180 We partition the elements of \\(S\\) into the following subsets: \\(\\{1,2,4,8\\},\\{3,6\\},\\{5,10\\}\\), \\(\\{7\\},\\{9\\}\\). Consider the first subset, \\(\\{1,2,4,8\\}\\). Say 2 is an element of \\(T\\). Because \\(2 \\cdot 2=4\\) is in \\(S, 4\\) must also be in \\(T\\). Furthermore, since \\(4 \\cdot 2=8\\) is in \\(S, 8\\) must also be in \\(T\\). So if \\(T\\) contains 2 , it must also contain 4 and 8 . Similarly, if \\(T\\) contains 1 , it must also contain 2,4 , and 8 . So \\(T\\) can contain the following subsets of the subset \\(\\{1,2,4,8\\}\\) : the empty set, \\(\\{8\\},\\{4,8\\},\\{2,4,8\\}\\), or \\(\\{1,2,4,8\\}\\). This gives 5 possibilities for the first subset. In general, we see that if \\(T\\) contains an element \\(q\\) of one of these subsets, it must also contain the elements in that subset that are larger than \\(q\\), because we created the subsets for this to be true. So there are 3 possibilities for \\(\\{3,6\\}, 3\\) for \\(\\{5,10\\}, 2\\) for \\(\\{7\\}\\), and 2 for \\(\\{9\\}\\). This gives a total of \\(5 \\cdot 3 \\cdot 3 \\cdot 2 \\cdot 2=180\\) possible subsets \\(T\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

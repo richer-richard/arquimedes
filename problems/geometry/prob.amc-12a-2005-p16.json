@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2005-p16",
+  "title": "2005 AMC 12A Problem 16",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangent-circles",
+      "label": "Tangent circles",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2005,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 34.5,
+    "source": 2000,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Three circles of radius \\(s\\) are drawn in the first quadrant of the \\(xy\\)-plane. The first circle is tangent to both axes, the second is tangent to the first circle and the \\(x\\)-axis, and the third is tangent to the first circle and the \\(y\\)-axis. A circle of radius \\(r \\gt s\\) is tangent to both axes and to the second and third circles. What is \\(\\frac{r}{s}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(10\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "9"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2005-p16.live",
+      "kind": "proof-sketch",
+      "text": "Put the big circle’s center at \\((r, r)\\) and the second small circle’s center at \\((3s, s).\\) They are externally tangent, so the distance between centers is \\(r + s.\\)\n\nThe horizontal and vertical gaps are \\(r - 3s\\) and \\(r - s,\\) so \\[ (r + s)^2 = (r - 3s)^2 + (r - s)^2. \\]\n\nExpanding gives \\(0 = r^2 - 10rs + 9s^2\\) \\(= (r - 9s)(r - s).\\) Since \\(r \\ne s,\\) we get \\(r = 9s,\\) so \\(\\frac{r}{s} = 9.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Place the centers by their radii: the big circle is at \\((r, r)\\) and the second small circle at \\((3s, s)\\)",
+        "The distance between the big center and a tangent small center equals \\(r + s;\\) apply the Pythagorean theorem to the horizontal and vertical gaps"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "35bd6417018d6906dd602e4c1e0f39b92776922d15f071781dcaa48ac982aacf"
+    ],
+    "solutions": []
+  }
+}

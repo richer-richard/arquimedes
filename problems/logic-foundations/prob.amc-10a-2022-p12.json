@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-10a-2022-p12",
+  "title": "2022 AMC 10A Problem 12",
+  "category": "logic-foundations",
+  "subjects": [
+    "logic-foundations"
+  ],
+  "concepts": [
+    {
+      "id": "logic.logical-deduction",
+      "label": "Logical deduction",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "logic.truth-tellers-and-liars",
+      "label": "Truth-tellers and liars",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2022,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 34.9,
+    "source": 1950,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "On Halloween \\(31\\) children walked into the principal’s office asking for candy. They can be classified into three types: Some always lie; some always tell the truth; and some alternately lie and tell the truth. The alternaters arbitrarily choose their first response, either a lie or the truth, but each subsequent statement has the opposite truth value from its predecessor. The principal asked everyone the same three questions in this order.\n\n“Are you a truth-teller?” The principal gave a piece of candy to each of the \\(22\\) children who answered yes.\n\n“Are you an alternater?” The principal gave a piece of candy to each of the \\(15\\) children who answered yes.\n\n“Are you a liar?” The principal gave a piece of candy to each of the \\(9\\) children who answered yes.\n\nHow many pieces of candy in all did the principal give to the children who always tell the truth?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(27\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(31\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "7"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2022-p12.live",
+      "kind": "proof-sketch",
+      "text": "For the first question, the truth-tellers will respond yes, the liars will respond yes, and the alternaters who decided to lie first will say yes. The alternaters who decide to tell the truth first will say no. Denote this as \\[ 22 = t + l + a_l. \\]\n\nFor the second questions, the liars will respond yes, and the alternaters who decided to lie first will say yes (they are forced to tell the truth for this question). The truth-tellers will respond no, and the alternaters who told the truth first would lie this round, responding no. Denote this as \\[ 15 = l + a_l. \\]\n\nFrom this, we get that \\(t = 7.\\) The principal only gives candy to children who always tell the truth in the first round, therefore only giving them \\(7\\) candies total.\n\nThus, A is the correct answer.",
+      "hints": [
+        "Separate alternaters by whether they start with truth or lie",
+        "The first two yes-counts are enough to determine the number of truth-tellers"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

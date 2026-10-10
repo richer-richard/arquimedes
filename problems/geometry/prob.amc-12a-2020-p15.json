@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2020-p15",
+  "title": "2020 AMC 12A Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.distance-formula",
+      "label": "Distance formula",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.factoring",
+      "label": "Factoring",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2020,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 30.2,
+    "source": 1690,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In the complex plane, let \\(A\\) be the set of solutions to \\(z^3 - 8 = 0\\) and let \\(B\\) be the set of solutions to \\(z^3 - 8z^2 - 8z + 64 = 0.\\) What is the greatest distance between a point of \\(A\\) and a point of \\(B?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\sqrt{3}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2\\sqrt{21}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(9 + \\sqrt{3}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2020-p15.live",
+      "kind": "proof-sketch",
+      "text": "The set \\(A\\) consists of the cube roots of \\(8:\\) \\(2,\\) \\(-1 + i\\sqrt3,\\) and \\(-1 - i\\sqrt3.\\)\n\nFactoring by grouping, \\(z^3 - 8z^2 - 8z + 64\\) \\(= z^2(z - 8) - 8(z - 8)\\) \\(= (z - 8)(z^2 - 8),\\) so \\(B = \\{8, 2\\sqrt2, -2\\sqrt2\\},\\) all real.\n\nThe greatest distance is from \\(-1 \\pm i\\sqrt3\\) to \\(8:\\) \\(\\sqrt{(8 - (-1))^2 + (\\sqrt3)^2}\\) \\(= \\sqrt{81 + 3}\\) \\(= \\sqrt{84} = 2\\sqrt{21}.\\)\n\nThus, D is the correct answer.",
+      "hints": [
+        "\\(A\\) is the three cube roots of \\(8;\\) factor the second cubic by grouping",
+        "The largest distance pairs a nonreal cube root of \\(8\\) with the farthest real root of the second equation"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

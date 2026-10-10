@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2003-p13",
+  "title": "2003 AMC 10B Problem 13",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.systematic-listing",
+      "label": "Systematic listing",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2003,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 22.8,
+    "source": 1310,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(\\clubsuit(x)\\) denote the sum of the digits of the positive integer \\(x.\\) For example, \\(\\clubsuit(8)=8\\) and \\(\\clubsuit(123)=1+2+3=6.\\) For how many two-digit values of \\(x\\) is \\(\\clubsuit(\\clubsuit(x))=3?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(10\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "10"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2003-p13.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(y=\\clubsuit(x).\\) Since \\(x\\le 99,\\) we have \\(y\\le 18,\\) so \\(\\clubsuit(y)=3\\) forces \\(y=3\\) or \\(y=12.\\)\n\nThe two-digit numbers with digit sum \\(3\\) are \\(12,\\) \\(21,\\) and \\(30\\) (\\(3\\) of them). Those with digit sum \\(12\\) are \\(39,\\) \\(48,\\) \\(57,\\) \\(66,\\) \\(75,\\) \\(84,\\) and \\(93\\) (\\(7\\) of them). In all there are \\(10.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "When \\(x\\) has two digits, the digit sum \\(\\clubsuit(x)\\) is at most \\(18\\)",
+        "\\(\\clubsuit(y)=3\\) with \\(y\\le 18\\) forces \\(y=3\\) or \\(y=12;\\) count \\(x\\) for each"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

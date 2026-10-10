@@ -1,0 +1,79 @@
+{
+  "id": "prob.ahsme-1999-p24",
+  "title": "1999 AHSME Problem 24",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1999,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 33.1,
+    "source": 1880,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Six points on a circle are given. Four of the chords joining pairs of the six points are selected at random. What is the probability that the four chords form a convex quadrilateral?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{15}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1}{91}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{273}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{1}{455}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{1}{1365}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1/91"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1999-p24.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(\\binom{6}{2} = 15\\) chords, so \\(\\binom{15}{4} = 1365\\) ways to select four of them. A convex quadrilateral arises exactly when the four chords are the sides of a quadrilateral on four of the six points, and each choice of \\(4\\) points gives exactly one such quadrilateral.\n\nHence there are \\(\\binom{6}{4} = 15\\) favorable outcomes, and the probability is \\(\\dfrac{15}{1365} = \\dfrac{1}{91}.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Any \\(4\\) of the \\(6\\) points determine exactly one convex quadrilateral",
+        "Count all ways to choose \\(4\\) chords from the \\(\\binom{6}{2}\\) chords"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

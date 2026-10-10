@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2023-p11",
+  "title": "2023 AMC 12B Problem 11",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2023,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 25.1,
+    "source": 1570,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "What is the maximum area of an isosceles trapezoid that has legs of length \\(1\\) and one base twice as long as the other?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{5}{4}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{8}{7}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{5\\sqrt{2}}{4}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{3}{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{3\\sqrt{3}}{4}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "3/2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2023-p11.live",
+      "kind": "proof-sketch",
+      "text": "Let the bases be \\(a\\) and \\(2a.\\) Each leg has horizontal offset \\(\\tfrac{a}{2},\\) so the height is \\(\\sqrt{1-\\tfrac{a^2}{4}}\\) and the area is \\(A=\\tfrac{3a}{2}\\sqrt{1-\\tfrac{a^2}{4}}.\\) Then \\(A^2=\\tfrac94\\left(a^2-\\tfrac{a^4}{4}\\right),\\) maximized when \\(a^2=2.\\) There the height is \\(\\tfrac{1}{\\sqrt2}\\) and \\(A=\\tfrac{3\\sqrt2}{2}\\cdot\\tfrac{1}{\\sqrt2}=\\tfrac{3}{2}.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Drop the two heights; each leg spans a horizontal distance of \\(\\frac{\\text{long base}-\\text{short base}}{2}\\)",
+        "With shorter base \\(a,\\) the area is \\(\\tfrac{3a}{2}\\sqrt{1-\\tfrac{a^2}{4}};\\) maximize its square"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

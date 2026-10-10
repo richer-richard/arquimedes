@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-2018-p3",
+  "title": "2018 AMC 10B Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-counting",
+      "label": "Basic counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.systematic-listing",
+      "label": "Systematic listing",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2018,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 14.2,
+    "source": 950,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "In the expression \\((\\underline{\\phantom{x}} \\times \\underline{\\phantom{x}}) + (\\underline{\\phantom{x}} \\times \\underline{\\phantom{x}})\\) each blank is to be filled in with one of the digits \\(1,\\) \\(2,\\) \\(3,\\) or \\(4,\\) with each digit being used once. How many different values can be obtained?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(24\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "3"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2018-p3.live",
+      "kind": "proof-sketch",
+      "text": "Order inside a product doesn’t matter, and neither does the order we add the two products. So all that matters is how the four digits split into two pairs. There are three splits: \\(1\\cdot2 + 3\\cdot4 = 14,\\) \\(1\\cdot3 + 2\\cdot4 = 11,\\) and \\(1\\cdot4 + 2\\cdot3 = 10.\\) That’s \\(3\\) different values. Thus, B is the correct answer.",
+      "hints": [
+        "Neither multiplication nor the final addition depends on order, so only the way the four digits are split into two pairs matters",
+        "List the three ways to split \\(\\{1,2,3,4\\}\\) into two pairs"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

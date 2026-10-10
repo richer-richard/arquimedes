@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-10b-2018-p12",
+  "title": "2018 AMC 10B Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.centroid",
+      "label": "Centroid",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.circle-area",
+      "label": "Circle area",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.homothety",
+      "label": "Homothety",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2018,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 25.4,
+    "source": 1530,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Line segment \\(AB\\) is a diameter of a circle with \\(AB = 24.\\) Point \\(C,\\) not equal to \\(A\\) or \\(B,\\) lies on the circle. As point \\(C\\) moves around the circle, the centroid (center of mass) of \\(\\triangle ABC\\) traces out a closed curve missing two points. To the nearest positive integer, what is the area of the region bounded by this curve?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(25\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(38\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(50\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(63\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(75\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "50"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2018-p12.live",
+      "kind": "proof-sketch",
+      "text": "Put the center \\(O\\) at the origin, so \\(A = (-12, 0)\\) and \\(B = (12, 0),\\) while \\(C\\) runs over the circle of radius \\(12.\\) Then \\(A + B = 0,\\) so the centroid is \\(\\tfrac13(A + B + C) = \\tfrac13 C.\\) As \\(C\\) circles, \\(\\tfrac13 C\\) traces a circle of radius \\(\\tfrac{12}{3} = 4\\) (minus the two points where \\(C = A\\) or \\(B\\)). Its area is \\(\\pi \\cdot 4^2 = 16\\pi \\approx 50.\\) Therefore, the answer is C.",
+      "hints": [
+        "The centroid of \\(\\triangle ABC\\) is \\(\\tfrac13(A + B + C),\\) and \\(A + B\\) is twice the center",
+        "As \\(C\\) moves on a circle of radius \\(12,\\) the centroid moves on a circle of one third the radius"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

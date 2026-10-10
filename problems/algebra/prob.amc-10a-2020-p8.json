@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2020-p8",
+  "title": "2020 AMC 10A Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.pairing-and-grouping",
+      "label": "Pairing and grouping",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2020,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 18.4,
+    "source": 1060,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "What is the value of \\[ \\begin{aligned} &1+2+3-4+5+6+7-8\\\\ &\\quad+\\cdots\\\\ &\\quad+197+198+199-200? \\end{aligned} \\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(9{,}800\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(9{,}900\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(10{,}000\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(10{,}100\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(10{,}200\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "9900"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2020-p8.live",
+      "kind": "proof-sketch",
+      "text": "Group the terms in blocks of four: \\((1+2+3-4)\\) \\(+(5+6+7-8)\\) \\(+\\cdots\\) \\(+(197+198+199-200)\\). The \\(j\\)th block is \\((4j-3)+(4j-2)\\) \\(+(4j-1)-4j=8j-6\\).\n\nThere are \\(50\\) blocks, so the sum is \\(\\sum_{j=1}^{50}(8j-6)=8\\cdot\\dfrac{50\\cdot51}{2}\\) \\(-6\\cdot50=9900\\). Thus, B is the correct answer.",
+      "hints": [
+        "Group the expression into blocks of four terms",
+        "Find a formula for the \\(j\\)th block and sum over \\(50\\) blocks"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

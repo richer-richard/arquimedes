@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-general-2011-p8",
+  "title": "2011 HMMT November General Problem 8",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2011,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 53.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find the number of integers \\(x\\) such that the following three conditions all hold:\n\n- \\(x\\) is a multiple of 5\n- \\(121<x<1331\\)\n- When \\(x\\) is written as an integer in base 11 with no leading 0s (i.e. no 0s at the very left), its rightmost digit is strictly greater than its leftmost digit.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2011-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "99 We will work in base 11, so let \\(x=\\overline{\\operatorname{def}}_{11}\\) such that \\(d>0\\). Then, based on the first two conditions, we aim to find multiples of 5 between \\(100_{11}\\) and \\(1000_{11}\\). We note that\n\n\\[\\overline{d e f}_{11} \\equiv 11^{2} \\cdot d+11 \\cdot e+f \\equiv d+e+f \\quad(\\bmod 5)\\]\n\nHence, \\(x\\) a multiple of 5 if and only if the sum of its digits is a multiple of 5 . Thus, we wish to find triples \\((d, e, f)\\) with elements in \\(0,1,2, \\cdots, 9,10\\) such that \\(d+e+f \\equiv 0(\\bmod 5)\\) and \\(0<d<f\\).\nNote that if we choose \\(d\\) and \\(f\\) such that \\(d<f\\), there is exactly one value of \\(e\\) modulo 5 that would make \\(d+e+f \\equiv 0(\\bmod 5)\\). Once the this value of \\(e\\) is fixed, then there are two possibilities for \\(e\\) unless \\(e \\equiv 0(\\bmod 5)\\), in which case there are three possibilities. Thus, our answer is twice the number of ways to choose \\(d\\) and \\(f\\) such that \\(0<d<f\\) plus the number of ways to choose \\(d\\) and \\(f\\) such that\n\\(d+f \\equiv 0(\\bmod 5)\\) and \\(0<d<f\\) (to account for the extra choice for the value of \\(e)\\). Note that the number of ways to choose \\(0<d<f\\) is just \\(\\binom{10}{2}\\) since any any choice of two digits yields exactly one way to order them. The number of ways to choose \\(d+f \\equiv 0(\\bmod 5)\\) and \\(0<d<f\\) can be found by listing: \\((d, f)=(1,4),(1,9),(2,3),(2,8),(3,7),(4,6),(5,10),(6,9),(7,8)\\), for 9 such pairings.\nHence, the total is \\(2\\binom{10}{2}+9=99\\) possibilities for \\(x\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

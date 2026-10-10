@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-ii-2011-p2",
+  "title": "2011 AIME II Problem 2",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.square-geometry",
+      "label": "Square (geometry)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2011,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 35.4,
+    "source": 1970,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "On square \\(ABCD,\\) point \\(E\\) lies on side \\(\\overline{AD}\\) and point \\(F\\) lies on side \\(\\overline{BC},\\) so that \\(BE = EF = FD = 30.\\) Find the area of square \\(ABCD.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "810",
+    "value": "810"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2011-p2.live",
+      "kind": "proof-sketch",
+      "text": "Let the side length be \\(s,\\) and place \\(B = (0, 0),\\) \\(C = (s, 0),\\) \\(A = (0, s),\\) \\(D = (s, s).\\) Write \\(E = (a, s)\\) and \\(F = (b, 0).\\) Then \\(BE^2 = a^2 + s^2,\\) \\(FD^2 = (s - b)^2 + s^2,\\) and \\(EF^2 = (a - b)^2 + s^2.\\)\n\nFrom \\(BE = FD\\) we get \\(a = s - b,\\) so \\(a - b = 2a - s.\\) Then \\(EF = BE\\) gives \\((2a - s)^2 = a^2,\\) whose solutions are \\(a = \\frac{s}{3}\\) and \\(a = s\\) (the latter identifies the separately named points \\(E\\) and \\(F\\) with corners \\(D\\) and \\(B,\\) making all three segments the same diagonal). So \\(a = \\frac{s}{3}.\\)\n\nNow \\(900 = BE^2 = \\frac{s^2}{9} + s^2 = \\frac{10s^2}{9},\\) so the area is \\(s^2 = \\frac{9}{10} \\cdot 900 = 810.\\)",
+      "hints": [
+        "Put \\(B = (0, 0),\\) \\(C = (s, 0),\\) \\(A = (0, s),\\) \\(D = (s, s),\\) and write \\(E = (a, s),\\) \\(F = (b, 0)\\)",
+        "\\(BE = FD\\) forces \\(b = s - a,\\) and then \\(EF = BE\\) forces \\(a = \\frac{s}{3};\\) finish with \\(a^2 + s^2 = 900\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "prob.ahsme-1976-p23",
+  "title": "1976 AHSME Problem 23",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.algebraic-manipulation",
+      "label": "Algebraic manipulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1976,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 38.2,
+    "source": 2080,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "For integers \\(k\\) and \\(n\\) such that \\(1\\le k\\lt n,\\) let \\[ \\binom nk=\\frac{n!}{k!(n-k)!}. \\] Then \\(\\left(\\frac{n-2k-1}{k+1}\\right)\\binom nk\\) is an integer",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "for all \\(k\\) and \\(n\\)"
+    },
+    {
+      "label": "B",
+      "text": "for all even values of \\(k\\) and \\(n,\\) but not for all \\(k\\)\nand \\(n\\)"
+    },
+    {
+      "label": "C",
+      "text": "for all odd values of \\(k\\) and \\(n,\\) but not for all \\(k\\)\nand \\(n\\)"
+    },
+    {
+      "label": "D",
+      "text": "if \\(k=1\\) or \\(n-1,\\) but not for all odd values of \\(k\\) and\n\\(n\\)"
+    },
+    {
+      "label": "E",
+      "text": "if \\(n\\) is divisible by \\(k,\\) but not for all even values of\n\\(k\\) and \\(n\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1976-p23.live",
+      "kind": "proof-sketch",
+      "text": "Using \\[ \\binom n{k+1}=\\frac{n-k}{k+1}\\binom nk, \\] and writing \\[ \\frac{n-2k-1}{k+1}=\\frac{n-k}{k+1}-1, \\] the given expression becomes \\[ \\binom n{k+1}-\\binom nk. \\] This is an integer for every permitted \\(k\\) and \\(n.\\)\n\nTherefore, the correct answer is A.",
+      "hints": [
+        "Split \\(n-2k-1\\) into \\((n-k)-(k+1)\\)",
+        "Try rewriting the expression as a difference of two adjacent binomial coefficients"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

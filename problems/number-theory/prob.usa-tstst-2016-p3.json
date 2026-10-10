@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tstst-2016-p3",
+  "title": "USA TSTST 2016 Problem 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TSTST",
+    "year": 2016,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 111.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Decide whether or not there exists a nonconstant polynomial \\(Q(x)\\)\nwith integer coefficients with the following property:\nfor every positive integer \\(n > 2\\), the numbers\n\\[ Q(0), \\; Q(1), Q(2), \\; \\dots, \\; Q(n-1) \\]\nproduce at most \\(0.499n\\) distinct residues when taken modulo \\(n\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tstst-2016-p3.evanchen",
+      "kind": "proof-sketch",
+      "text": "We claim that\n\\[ Q(x) = 420(x^2-1)^2 \\]\nworks.\nClearly, it suffices to prove the result when \\(n=4\\) and when \\(n\\) is an odd prime \\(p\\).\nThe case \\(n=4\\) is trivial, so assume now \\(n=p\\) is an odd prime.\n\nFirst, we prove the following easy claim.\n\nClaim.\n For any odd prime \\(p\\), there are at least \\(\\frac12(p-3)\\)\n values of \\(a\\) for which \\(\\left( \\frac{1-a^2}{p} \\right) = +1\\).\n\nProof.\n Note that if \\(k \\neq 0\\) and \\(k^2 \\neq -1\\), then \\(a = \\frac{1-k^2}{k^2+1}\\) works.\n\nRemark.\n The above identity comes from starting with the equation \\(1-a^2=b^2\\),\n and writing it as \\(\\left( \\frac 1b \\right)^2 - \\left( \\frac ab \\right)^2 = 1\\).\n Then solve \\(\\frac 1b - \\frac ab = k\\) and \\(\\frac 1b + \\frac ab = 1/k\\) for \\(a\\).\n\nLet \\(F(x) = (x^2-1)^2\\).\nThe range of \\(F\\) modulo \\(p\\) is contained within the \\(\\frac{1}{2}(p+1)\\) quadratic residues modulo \\(p\\).\nOn the other hand, if for some \\(t\\) neither of \\(1 \\pm t\\) is a quadratic residue,\nthen \\(t^2\\) is omitted from the range of \\(F\\) as well.\nCall such a value of \\(t\\) useful, and let \\(N\\) be the number of useful residues.\nWe aim to show \\(N \\ge \\frac14 p - 2\\).\n\nWe compute a lower bound on the number \\(N\\) of useful \\(t\\) by writing\n\\[\\begin{aligned}\n N &= \\frac{1}{4} \\left( \\sum_t \\left[ \\left(1 - \\left(\\frac{1-t}{p} \\right) \\right)\n \\left(1 - \\left(\\frac{1+t}{p} \\right) \\right) \\right]\n - 2 \\left( 1- \\left( \\frac2p \\right) \\right)\n \\right) \\\\\n &\\ge \\frac{1}{4} \\sum_t \\left[ \\left(1 - \\left(\\frac{1-t}{p} \\right) \\right)\n \\left(1 - \\left(\\frac{1+t}{p} \\right) \\right) \\right] -1 \\\\\n &= \\frac{1}{4} \\left(p + \\sum_t \\left(\\frac{1-t^2}{p} \\right) \\right) -1 \\\\\n &\\ge \\frac14 \\left( p + (+1) \\cdot \\tfrac12(p-3) + 0 \\cdot 2\n + (-1) \\cdot ( (p-2) - \\tfrac12(p-3)) \\right) - 1 \\\\\n &\\ge \\frac14 \\left( p - 5 \\right).\n\\end{aligned}\\]\n\nThus, the range of \\(F\\) has size at most\n\\[ \\frac{1}{2}(p+1) - \\frac{1}{2} N \\le \\frac38(p+3). \\]\nThis is less than \\(0.499p\\) for any \\(p \\ge 11\\).\n\nRemark.\n In fact, the computation above is essentially an equality.\n There are only two points where terms are dropped:\n one, when \\(p \\equiv 3 \\pmod 4\\) there are no \\(k^2 = -1\\) in the lemma,\n and secondly, the terms \\(1-\\left( 2/p \\right)\\)\n are dropped in the initial estimate for \\(N\\).\n With suitable modifications, one can show that in fact,\n the range of \\(F\\) is exactly equal to\n \\[\n \\frac{1}{2}(p+1) - \\frac{1}{2} N =\n \\begin{cases}\n \\frac18(3p+5) & p \\equiv 1 \\pmod 8 \\\\\n \\frac18(3p+7) & p \\equiv 3 \\pmod 8 \\\\\n \\frac18(3p+9) & p \\equiv 5 \\pmod 8 \\\\\n \\frac18(3p+3) & p \\equiv 7 \\pmod 8.\n \\end{cases}\n \\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

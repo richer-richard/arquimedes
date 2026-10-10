@@ -1,0 +1,70 @@
+{
+  "id": "prob.hmmt-feb-guts-2006-p36",
+  "title": "2006 HMMT February Guts Problem 36",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.solid-geometry",
+      "label": "Solid geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2006,
+    "number": 36
+  },
+  "difficulty": {
+    "course": 83.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Four points are independently chosen uniformly at random from the interior of a regular dodecahedron. What is the probability that they form a tetrahedron whose interior contains the dodecahedron's center?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2006-p36.hmmt",
+      "kind": "proof-sketch",
+      "text": "Situate the origin \\(O\\) at the dodecahedron's center, and call the four random points \\(P_{i}\\), where \\(1 \\leq i \\leq 4\\).\nTo any tetrahedron \\(P_{1} P_{2} P_{3} P_{4}\\) we can associate a quadruple \\(\\left(\\epsilon_{(i j k)}\\right)\\), where \\((i j k)\\) ranges over all conjugates of the cycle (123) in the alternating group \\(A_{4}: \\epsilon_{i j k}\\) is the sign of the directed volume \\(\\left[O P_{i} P_{j} P_{k}\\right]\\). Assume that, for a given tetrahedron \\(P_{1} P_{2} P_{3} P_{4}\\), all members of its quadruple are nonzero (this happens with probability 1). For \\(1 \\leq i \\leq\\) 4 , if we replace \\(P_{i}\\) with its reflection through the origin, the three members of the tetrahedron's quadruple that involve \\(P_{i}\\) all flip sign, because each \\(\\left[O P_{i} P_{j} P_{k}\\right]\\) is a linear\nfunction of the vector \\(\\overrightarrow{O P}\\). Thus, if we consider the 16 sister tetrahedra obtained by choosing independently whether to flip each \\(P_{i}\\) through the origin, the quadruples range through all 16 possibilities (namely, all the quadruples consisting of \\(\\pm 1 \\mathrm{~s}\\) ). Two of these 16 tetrahedra, namely those with quadruples \\((1,1,1,1)\\) and \\((-1,-1,-1,-1)\\), will contain the origin.\nSo the answer is \\(2 / 16=1 / 8\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

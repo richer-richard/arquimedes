@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2009-p5",
+  "title": "2009 AMC 12B Problem 5",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.power-of-2",
+      "label": "Power of 2",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2009,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 12.6,
+    "source": 1080,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Kiana has two older twin brothers. The product of their three ages is \\(128.\\) What is the sum of their three ages?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(24\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "18"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2009-p5.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(128 = 2^7,\\) each age is a power of \\(2.\\) The twins share an age \\(t,\\) so Kiana’s age is \\(\\dfrac{128}{t^2}.\\)\n\nTaking \\(t = 8\\) gives Kiana \\(\\dfrac{128}{64} = 2,\\) who is younger than the twins. (Smaller twins would make Kiana older, which is not allowed.) The sum is \\(8 + 8 + 2 = 18.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "\\(128 = 2^7,\\) so every age is a power of \\(2\\)",
+        "If each twin is \\(t\\) years old, then \\(t^2\\) times Kiana’s age is \\(128,\\) and Kiana is younger"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

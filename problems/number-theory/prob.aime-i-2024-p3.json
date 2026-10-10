@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2024-p3",
+  "title": "2024 AIME I Problem 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.combinatorial-game",
+      "label": "Combinatorial game",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.small-cases",
+      "label": "Small cases",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2024,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 39.0,
+    "source": 2110,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Alice and Bob play the following game. A stack of \\(n\\) tokens lies before them. The players take turns with Alice going first. On each turn, the player removes \\(1\\) token or \\(4\\) tokens from the stack. The player who removes the last token wins. Find the number of positive integers \\(n\\) less than or equal to \\(2024\\) such that there is a strategy that guarantees that Bob wins, regardless of Alice’s moves.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "809",
+    "value": "809"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2024-p3.live",
+      "kind": "proof-sketch",
+      "text": "Call \\(n\\) a losing position if the player about to move loses with best play. We claim the losing positions are exactly \\(n \\equiv 0\\) or \\(2 \\pmod 5.\\) From such an \\(n,\\) removing \\(1\\) or \\(4\\) tokens leaves \\(n \\equiv 4, 1, 3 \\pmod 5\\) — never again \\(0\\) or \\(2\\) — while from any \\(n \\equiv 1, 3, 4 \\pmod 5\\) one move reaches a position \\(\\equiv 0\\) or \\(2 \\pmod 5\\) (remove \\(1,\\) \\(1,\\) \\(4\\) tokens respectively). Since \\(n = 0\\) is a loss for the player to move, induction confirms the pattern.\n\nBob wins exactly when \\(n\\) is a losing position for Alice. Among \\(1 \\le n \\le 2024\\) there are \\(404\\) multiples of \\(5\\) and \\(405\\) values \\(n \\equiv 2 \\pmod 5\\) (from \\(2\\) to \\(2022\\)), for a total of \\(404 + 405 = 809.\\)",
+      "hints": [
+        "Work out which small \\(n\\) are losses for the player about to move: \\(n\\) is a loss exactly when both \\(n - 1\\) and \\(n - 4\\) are wins",
+        "The losing positions repeat with period \\(5:\\) they are \\(n \\equiv 0\\) or \\(2 \\pmod 5.\\) Bob wins exactly for those \\(n.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

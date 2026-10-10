@@ -1,0 +1,83 @@
+{
+  "id": "prob.hmmt-invitational-2024-p3",
+  "title": "2024 HMMT Invitational Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithms-and-exponentials",
+      "label": "Logarithms and exponentials",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2024,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(S\\) be a set of nonnegative integers such that\n\n- there exist two elements \\(a\\) and \\(b\\) in \\(S\\) such that \\(a, b>1\\) and \\(\\operatorname{gcd}(a, b)=1\\); and\n- for any (not necessarily distinct) element \\(x\\) and nonzero element \\(y\\) in \\(S\\), both \\(x y\\) and the remainder when \\(x\\) is divided by \\(y\\) are in \\(S\\).\n\nProve that \\(S\\) contains every nonnegative integer.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2024-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "Solution: Assume \\(a<b\\). Note that we can get \\(1 \\in S\\) via the Euclidean algorithm, and \\(0 \\in S\\) from \\(a \\bmod 1\\). Suppose \\((a, b) \\neq(2,3)\\). We will show that there exists \\(c, d \\in S\\) with \\(1<c \\leq a\\) and \\(1<d \\leq b\\), with \\(\\operatorname{gcd}(c, d)=1\\) and at least one of \\(c \\neq a\\) and \\(d \\neq b\\) is true. This will show that \\(2,3 \\in S\\) by repeatedly applying this sequence of operations. Assume \\(a>2\\).\nUnless \\(b \\bmod a=1,(b \\bmod a, a)\\) works. Thus, assume \\(b \\equiv 1(\\bmod a)\\). If we can construct any integer \\(x\\) such that \\(x \\not \\equiv 0,1 \\bmod a\\), then we can take \\((x \\bmod a, a)\\); this will be our new goal. Suppose that such an \\(x\\) is not constructable.\nSuppose \\(a^{k}=q b^{\\ell}+r\\), with \\(r<a^{k}\\). We must have \\(r \\equiv 0,1(\\bmod a)\\). Taking both sides mod \\(a\\), this means that \\(0 \\equiv q+r(\\bmod a)\\), so \\(q \\equiv 0,-1(\\bmod a)\\). Thus, \\(\\left\\lfloor\\frac{a^{k}}{b^{\\ell}}\\right\\rfloor \\equiv 0,-1(\\bmod a)\\), for all \\(k, \\ell \\in \\mathbb{N}\\). Take \\(\\ell=\\left\\lfloor k \\log _{b} a\\right\\rfloor\\), so \\(\\left\\lfloor\\frac{a^{k}}{b^{\\ell}}\\right\\rfloor\\) is the first digit in the base \\(b\\) representation of \\(a^{k}\\). We can take \\(k\\) such that \\(0 \\leq\\left\\{k \\log _{b} a\\right\\}<\\log _{b} 2\\), where \\(\\{\\cdot\\}\\) represents the fractional part operation, since \\(\\log _{b} a\\) is irrational. Taking such a \\(k\\), we get the first digit of \\(a^{k}\\) in base \\(b\\) is 1 , which contradicts \\(\\left\\lfloor\\frac{a^{k}}{b^{\\varepsilon}}\\right\\rfloor \\equiv 0,-1(\\bmod a)\\).\nThus, if \\(a>2\\) then we have shown what we wanted. Suppose \\(a=2\\). Let \\(2^{k}<b<2^{k+1}\\) for some \\(k\\). If \\(b \\neq 3\\), then either \\(b \\bmod 2^{k} \\neq 1\\) or \\(2^{k+1} \\bmod b \\neq 1\\), and both numbers are less than \\(b\\), so either \\((2, b\\) \\(\\left.\\bmod 2^{k}\\right)\\) or \\(\\left(2,2^{k+1} \\bmod b\\right)\\) works.\nWe have shown \\(2,3 \\in S\\). Then \\(4 \\in S\\), and \\(5=32 \\bmod 27 \\in S\\). Suppose \\(n \\geq 6\\) is the smallest integer that isn't in \\(S\\). Then \\(n-4, n-2, n-1 \\in S\\), so \\(n^{2}-5 n+4, n^{2}-4 n+4\\) are both in \\(S\\). A computation shows that \\(n^{2}-4 n+4<2\\left(n^{2}-5 n+4\\right)\\), and so\n\n\\[n^{2}-4 n+4 \\quad \\bmod \\left(n^{2}-5 n+4\\right)=n \\in S\\]\n\na contradiction. Thus, every single nonnegative integer is in \\(S\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

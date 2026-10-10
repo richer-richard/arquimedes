@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2005-p6",
+  "title": "2005 IMO Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2005,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 106.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In a mathematical competition \\(6\\) problems were posed to the contestants.\nEach pair of problems was solved by more than \\(\\frac{2}{5}\\) of the contestants.\nNobody solved all 6 problems.\nShow that there were at least \\(2\\) contestants\nwho each solved exactly \\(5\\) problems.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2005-p6.evanchen",
+      "kind": "proof-sketch",
+      "text": "Assume not and at most one contestant solved five problems.\nBy adding in solves,\nwe can assume WLOG that one contestant solved problems one through five,\nand every other contestant solved four of the six problems.\n\nWe split the remaining contestants based on whether they solved P6.\nLet \\(a_i\\) denote the number of contestants who solved\n\\(\\{1,2,\\dots,5\\} \\setminus \\{i\\}\\) (and missed P6).\nLet \\(b_{ij}\\) denote the number of contestants who solved\n\\(\\{1,2,\\dots,5,6\\} \\setminus \\{i,j\\}\\), for \\(1 \\le i < j \\le 5\\)\n(thus in particular they solved P6).\nThus\n\\[ n = 1 + \\sum_{1 \\le i \\le 5} a_i + \\sum_{1 \\le i < j \\le 5} b_{ij} \\]\ndenotes the total number of contestants.\n\nConsidering contestants who solved P1/P6 we have\n\\[ t_1 \\coloneq b_{23} + b_{24} + b_{25} + b_{34} + b_{35} + b_{45} \\ge \\frac25n + \\frac15 \\]\nand we similarly define \\(t_2\\), \\(t_3\\), \\(t_4\\), \\(t_5\\).\n(We have written \\(\\frac25n+\\frac15\\) since we know\nthe left-hand side is an integer strictly larger than \\(\\frac25n\\).)\nAlso, by considering contestants who solved P1/P2 we have\n\\[ t_{12} = 1 + a_{3} + a_{4} + a_{5} + b_{34} + b_{35} + b_{45}\n \\ge \\frac25n + \\frac15 \\]\nand we similarly define \\(t_{ij}\\) for \\(1 \\le i < j \\le 5\\).\n\nClaim.\n The number \\(\\frac{2n+1}{5}\\) is equal to some integer \\(k\\),\n fourteen of the \\(t\\)'s are equal to \\(k\\),\n and the last one is equal to \\(k+1\\).\n\nProof.\nFirst, summing all fifteen equations gives\n \\[\\begin{aligned}\n 6n+4 = 10 + 6(n-1) &= 10\n + \\sum_{1 \\le i \\le 5} 6a_i + \\sum_{1 \\le i < j \\le 5} 6b_{ij} \\\\\n &= \\sum_{1 \\le i \\le 5} t_i + \\sum_{1 \\le i < j \\le 5} t_{ij}.\n \\end{aligned}\\]\n Thus the sum of the \\(15\\) \\(t\\)'s is \\(6n+4\\).\n But since all the \\(t\\)'s are integers at least\n \\(\\frac{2n+1}{5} = \\frac{6n+3}{15}\\), the conclusion follows.\n\nHowever, we will also manipulate the equations to get the following.\n\nClaim.\n We have\n \\[ t_{45} \\equiv 1 + t_1 + t_2 + t_3 + t_{12} + t_{23} + t_{31} \\pmod 3. \\]\n\nProof.\n This follows directly by computing the coefficient of the \\(a\\)'s and \\(b\\)'s.\n We will nonetheless write out a derivation of this equation, to\n motivate it, but the proof stands without it.\n\n Let \\(B = \\sum_{1 \\le i < j \\le 5} b_{ij}\\) be the sum of all \\(b\\)'s.\n First, note that\n \\[\\begin{aligned}\n t_1 + t_2 &= B + b_{34} + b_{45} + b_{35} - b_{12} \\\\\n &= B + \\left( t_{12}-1-a_3-a_4-a_5 \\right) - b_{12} \\\\\n \\implies b_{12} &= B - (t_1 + t_2) + t_{12} - 1 - (a_3+a_4+a_5).\n \\end{aligned}\\]\n This means we have more or less solved for each \\(b_{ij}\\)\n in terms of only \\(t\\) and \\(a\\) variables.\n Now\n \\[\\begin{aligned}\n t_{45} &= 1 + a_1 + a_2 + a_3 + b_{12} + b_{23} + b_{31} \\\\\n &= 1 + a_1 + a_2 + a_3 \\\\\n &+ [B - (t_1 + t_2) + t_{12} - 1 - (a_3+a_4+a_5)] \\\\\n &+ [B - (t_2 + t_3) + t_{23} - 1 - (a_1+a_4+a_5)] \\\\\n &+ [B - (t_3 + t_1) + t_{13} - 1 - (a_2+a_4+a_5)] \\\\\n &\\equiv 1 + t_1 + t_2 + t_3 + t_{12} + t_{23} + t_{31} \\pmod 3\n \\end{aligned}\\]\n as desired.\n\nHowever, we now show the two claims are incompatible\n(and this is easy, many ways to do this).\nThere are two cases.\n\n• Say \\(t_5 = k+1\\) and the others are \\(k\\).\n Then the equation for \\(t_{45}\\) gives that \\(k \\equiv 6k+1 \\pmod 3\\).\n But now the equation for \\(t_{12}\\) give \\(k \\equiv 6k \\pmod 3\\).\n\n• Say \\(t_{45} = k+1\\) and the others are \\(k\\).\n Then the equation for \\(t_{45}\\) gives that \\(k+1 \\equiv 6k \\pmod 3\\).\n But now the equation for \\(t_{12}\\) give \\(k \\equiv 6k+1 \\pmod 3\\).\n\nRemark.\n It is significantly easier to prove that there\n is at least one contestant who solved five problems.\n One can see it by dropping the \\(+10\\) in the proof of the claim,\n and arrives at a contradiction.\n In this situation it is not even necessary to set up\n the many \\(a\\) and \\(b\\) variables;\n just note that the expected number of contestants\n solving any particular pair of problems is\n \\(\\frac{\\binom42n}{\\binom62} = \\frac25n\\).\n\n The fact that \\(\\frac{2n+1}{5}\\)\n should be an integer also follows quickly,\n since if not one can improve the bound to \\(\\frac{2n+2}{5}\\)\n and quickly run into a contradiction.\n Again one can get here without setting up \\(a\\) and \\(b\\).\n\n The main difficulty seems to be the precision required\n in order to nail down the second \\(5\\)-problem solve.\n\nRemark.\n The second claim may look miraculous,\n but the proof shows that it is not too unnatural\n to consider \\(t_1 + t_2 - t_{12}\\) to isolate \\(b_{12}\\)\n in terms of \\(a\\)'s and \\(t\\)'s.\n The main trick is: why mod \\(3\\)?\n\n The reason is that if one looks closely, for a\n fixed \\(k\\) we have a system of \\(15\\) equations in \\(15\\) variables.\n Unless the determinant \\(D\\) of that system happens to be zero,\n this means there will be a rational solution in \\(a\\) and \\(b\\),\n whose denominators are bounded by \\(D\\).\n However if \\(p \\mid D\\) then we may conceivably run into mod \\(p\\)\n issues.\n\n This motivates the choice \\(p = 3\\),\n since it is easy to see the determinant is divisible by \\(3\\),\n since constant shifts of \\(\\vec a\\) and \\(\\vec b\\) are also solutions mod \\(3\\).\n (The choice \\(p = 2\\) is a possible guess as well for this reason,\n but the problem seems to have better \\(3\\)-symmetry.)",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

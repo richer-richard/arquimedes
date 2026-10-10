@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-guts-2003-p41",
+  "title": "2003 HMMT February Guts Problem 41",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.coloring",
+      "label": "Coloring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.recurrences",
+      "label": "Recurrences",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2003,
+    "number": 41
+  },
+  "difficulty": {
+    "course": 75.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A hotel consists of a \\(2 \\times 8\\) square grid of rooms, each occupied by one guest. All the guests are uncomfortable, so each guest would like to move to one of the adjoining rooms (horizontally or vertically). Of course, they should do this simultaneously, in such a way that each room will again have one guest. In how many different ways can they collectively move?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2003-p41.hmmt",
+      "kind": "proof-sketch",
+      "text": "1156\nImagine that the rooms are colored black and white, checkerboard-style. Each guest in a black room moves to an adjacent white room (and vice versa). If, for each such guest, we place a domino over the original room and the new room, we obtain a covering of the \\(2 \\times n\\) grid by \\(n\\) dominoes, since each black square is used once and each white square is used once. Applying a similar procedure to each guest who begins in a white room and moves to a black room, we obtain a second domino tiling. Conversely, it is readily verified that any pair of such tilings uniquely determines a movement pattern. Also, it is easy to prove by induction that the number of domino tilings of a \\(2 \\times n\\) grid is the \\((n+1)\\) th Fibonacci number (this holds for the base cases \\(n=1,2\\), and for a \\(2 \\times n\\) rectangle, the two rightmost squares either belong to one vertical domino, leaving a \\(2 \\times(n-1)\\) rectangle to be covered arbitrarily, or to two horizontal dominoes which also occupy the adjoining squares, leaving a \\(2 \\times(n-2)\\) rectangle to be covered freely; hence, the numbers of tilings satisfy the Fibonacci recurrence). So the number of domino tilings of a \\(2 \\times 8\\) grid is 34 , and the number of pairs of such tilings is \\(34^{2}=1156\\), the answer.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

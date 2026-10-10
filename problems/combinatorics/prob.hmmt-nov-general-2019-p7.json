@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-general-2019-p7",
+  "title": "2019 HMMT November General Problem 7",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.coloring-schemes-extremal-arguments",
+      "label": "Coloring schemes, extremal arguments",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2019,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 48.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In Middle-Earth, nine cities form a 3 by 3 grid. The top left city is the capital of Gondor and the bottom right city is the capital of Mordor. How many ways can the remaining cities be divided among the two nations such that all cities in a country can be reached from its capital via the grid-lines without passing through a city of the other country?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2019-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 30\nFor convenience, we will center the grid on the origin of the coordinate plane and align the outer corners of the grid with the points \\(( \\pm 1, \\pm 1)\\), so that \\((-1,1)\\) is the capital of Gondor and \\((1,-1)\\) is the capital of Mordor.\nWe will use casework on which nation the city at \\((0,0)\\) is part of. Assume that is belongs to Gondor. Then consider the sequence of cities at \\((1,0),(1,1),(0,1)\\). If one of these belongs to Mordor, then all of the previous cities belong to Mordor, since Mordor must be connected. So we have 4 choices for which cities belong to Mordor. Note that this also makes all the other cities in the sequence connected to Gondor. Similarly, we have 4 (independent) choices for the sequence of cities \\((0,-1),(-1-1),(-1,0)\\). All of these choices keep \\((0,0)\\) connected to Gondor except the choice that assigns all cities in both sequences to Mordor. Putting this together, the answer is \\(2(4 \\cdot 4-1)=30\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

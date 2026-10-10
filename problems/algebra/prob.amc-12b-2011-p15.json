@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2011-p15",
+  "title": "2011 AMC 12B 15",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.difference-of-squares",
+      "label": "Difference of squares",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factor",
+      "label": "Factor",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2011,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 29.5,
+    "source": 1740,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many positive two-digit integers are factors of \\(2^{24}-1?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(14\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "12"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2011-p15.live",
+      "kind": "proof-sketch",
+      "text": "Factoring, \\[ \\begin{aligned} 2^{24}-1 &=(2^{12}-1)(2^{12}+1) \\\\ &=(2^6-1)(2^6+1) \\\\ &\\quad {}\\cdot(2^4+1)(2^8-2^4+1), \\end{aligned} \\] which equals \\(63\\cdot65\\cdot17\\cdot241\\) \\(=3^2\\cdot5\\cdot7\\cdot13\\cdot17\\cdot241.\\)\n\nSince \\(241\\) is a three-digit prime, the two-digit factors come from \\(3^2\\cdot5\\cdot7\\cdot13\\cdot17.\\) They are \\[ \\begin{gathered} 13,15,17,21,35,39,45,51, \\\\ 63,65,85,91, \\end{gathered} \\] for a total of \\(12.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Repeatedly apply the difference of squares to factor \\(2^{24}-1\\)",
+        "The prime factorization is \\(3^2\\cdot5\\cdot7\\cdot13\\cdot17\\cdot241;\\) list two-digit products"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-ii-2022-p4",
+  "title": "2022 AIME II Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.algebraic-manipulation",
+      "label": "Algebraic manipulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2022,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 45.1,
+    "source": 2350,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "There is a positive real number \\(x\\) not equal to either \\(\\frac{1}{20}\\) or \\(\\frac{1}{2}\\) such that \\[\\log_{20x}(22x) = \\log_{2x}(202x).\\] The value \\(\\log_{20x}(22x)\\) can be written as \\(\\log_{10}\\left(\\frac{m}{n}\\right),\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "112",
+    "value": "112"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2022-p4.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(y\\) be the common value. In natural logarithms, \\[y = \\frac{\\ln 22x}{\\ln 20x} = \\frac{\\ln 202x}{\\ln 2x}.\\] When two fractions are equal, each also equals the quotient of the differences of numerators and denominators: \\[ \\begin{aligned} y &= \\frac{\\ln 202x - \\ln 22x}{\\ln 2x - \\ln 20x} \\\\ &= \\frac{\\ln \\frac{101}{11}}{\\ln \\frac{1}{10}} \\\\ &= -\\log_{10}\\frac{101}{11} \\\\ &= \\log_{10}\\frac{11}{101}. \\end{aligned} \\]\n\nTo check existence rather than merely use the promised \\(x,\\) note that \\(y \\ne 1.\\) Setting \\[ \\ln x=\\frac{y\\ln 20-\\ln 22}{1-y} \\] makes \\(\\ln(22x)=y\\ln(20x).\\) Also \\[ \\begin{aligned} \\ln(202x)-\\ln(22x) &= \\ln\\frac{101}{11} \\\\ &= y\\ln\\frac{1}{10}, \\end{aligned} \\] so \\(\\ln(202x)=y\\ln(2x)\\) as well. This positive \\(x\\) is neither excluded value (neither one satisfies the displayed linear equation), so both logarithm bases are valid. Since \\(\\gcd(11,101)=1,\\) we get \\(m+n=11+101=112.\\)",
+      "hints": [
+        "Change both sides to a common base: \\(\\frac{\\ln 22x}{\\ln 20x} = \\frac{\\ln 202x}{\\ln 2x}\\)",
+        "If \\(\\frac{p}{q} = \\frac{r}{s},\\) then both fractions also equal \\(\\frac{r - p}{s - q}.\\) Apply this and simplify the resulting quotient."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

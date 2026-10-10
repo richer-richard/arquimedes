@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-feb-guts-2013-p33",
+  "title": "2013 HMMT February Guts Problem 33",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.exponential-functions",
+      "label": "Exponential functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithmic-functions",
+      "label": "Logarithmic functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sums-and-products",
+      "label": "Sums and products",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2013,
+    "number": 33
+  },
+  "difficulty": {
+    "course": 81.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the value of \\(1^{25}+2^{24}+3^{23}+\\ldots+24^{2}+25^{1}\\). If your answer is \\(A\\) and the correct answer is \\(C\\), then your score on this problem will be \\(\\left\\lfloor 25 \\min \\left(\\left(\\frac{A}{C}\\right)^{2},\\left(\\frac{C}{A}\\right)^{2}\\right)\\right\\rfloor\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2013-p33.hmmt",
+      "kind": "proof-sketch",
+      "text": "66071772829247409 The sum is extremely unimodal, so we want to approximate it using its largest term. Taking logs of each term, we see that the max occurs when \\((26-n) \\log n\\) peaks, and taking derivatives gives\n\\(x+x \\log x=26\\)\nFrom here it's easy to see that the answer is around 10 , and slightly less (it's actually about 8.3 , but in any case it's hard to find powers of anything except 10). Thus the largest term will be something like \\(10^{16}\\), which is already an order of magnitude within the desired answer \\(6.6 \\times 10^{16}\\).\nTo do better we'd really need to understand the behavior of the function \\(x^{26-x}\\), but what approximately happens is that only the four or five largest terms in the sum are of any substantial size; thus it is reasonable here to pick some constant from 4 to 20 to multiply our guess \\(10^{16}\\); any guess between \\(4.0 \\times 10^{16}\\) and \\(2.0 \\times 10^{17}\\) is reasonable.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

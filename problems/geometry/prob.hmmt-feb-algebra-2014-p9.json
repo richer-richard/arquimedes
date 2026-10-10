@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-algebra-2014-p9",
+  "title": "2014 HMMT February Algebra Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.symmetric-functions",
+      "label": "Symmetric functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-trigonometry",
+      "label": "Triangle trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2014,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 88.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Given that \\(a, b\\), and \\(c\\) are complex numbers satisfying\n\n\\[\\begin{aligned}\na^{2}+a b+b^{2} & =1+i \\\\\nb^{2}+b c+c^{2} & =-2 \\\\\nc^{2}+c a+a^{2} & =1,\n\\end{aligned}\\]\n\ncompute \\((a b+b c+c a)^{2}\\). (Here, \\(i=\\sqrt{-1}\\).)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-2014-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(s=a+b+c\\). We have \\(x-y=b^{2}+b c-c a-a^{2}=(b-a) s\\) and cyclic, so \\(x+a s=y+b s=z+c s\\) (they all equal \\(\\sum a^{2}+\\sum b c\\) ). Now add all equations to get\n\n\\[x+y+z=2 \\sum a^{2}+\\sum b c=s^{2}+\\frac{1}{2} \\sum(b-c)^{2}\\]\n\nmultiplying both sides by \\(4 s^{2}\\) yields \\(4 s^{2}(x+y+z)=4 s^{4}+2 \\sum(z-y)^{2}\\), so \\(\\left[2 s^{2}-(x+y+z)\\right]^{2}=\\) \\((x+y+z)^{2}-2 \\sum(z-y)^{2}=6 \\sum y z-3 \\sum x^{2}\\). But \\(2 s^{2}-(x+y+z)=s^{2}-\\frac{1}{2} \\sum(b-c)^{2}=(a+b+\\) \\(c)^{2}-\\frac{1}{2} \\sum(b-c)^{2}=3(a b+b c+c a)\\), so\n\n\\[9(a b+b c+c a)^{2}=6 \\sum y z-3 \\sum x^{2}=3\\left[(x+y+z)^{2}-2\\left(x^{2}+y^{2}+z^{2}\\right)\\right]\\]\n\nwhich easily rearranges to the desired.\nComment: Solution 2 can be done with less cleverness. Let \\(u=x+a s=y+b s=z+c s\\), so \\(a=\\frac{u-x}{s}\\), etc. Then \\(s=\\sum \\frac{u-x}{s}\\), or \\(s^{2}=3 u-s(x+y+z)\\). But we get another equation in \\(s, u\\) by just plugging in directly to \\(a^{2}+a b+b^{2}=z\\) (and after everything is in terms of \\(s\\), we can finish without too much trouble).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

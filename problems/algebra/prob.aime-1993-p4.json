@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-1993-p4",
+  "title": "1993 AIME Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1993,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 44.1,
+    "source": 2310,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "How many ordered four-tuples of integers \\((a,b,c,d)\\) with \\(0<a<b<c<d<500\\) satisfy \\(a+d=b+c\\) and \\(bc-ad=93?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "870",
+    "value": "870"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1993-p4.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(x=b-a=d-c>0\\) and \\(y=c-a.\\) Then \\[\\begin{aligned}bc-ad&=(a+x)c-a(c+x)\\\\&=x(c-a)=xy=93.\\end{aligned}\\] Since \\(b<c,\\) we need \\(x<y.\\) The positive factor pairs are \\((x,y)=(1,93)\\) and \\((3,31).\\) For the first, \\(d=a+94<500\\) gives \\(405\\) choices for \\(a.\\) For the second, \\(d=a+34<500\\) gives \\(465\\) choices. The total is \\(405+465=870.\\)",
+      "hints": [
+        "The first equation implies that \\(b-a=d-c\\)",
+        "Set \\(x=b-a=d-c\\) and factor \\(bc-ad\\) in terms of \\(x\\) and \\(c-a\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

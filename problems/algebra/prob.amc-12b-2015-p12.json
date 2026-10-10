@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-12b-2015-p12",
+  "title": "2015 AMC 12B 12",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2015,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 26.3,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(a,\\) \\(b,\\) and \\(c\\) be three distinct one-digit numbers. What is the maximum value of the sum of the roots of the equation \\((x - a)(x - b)\\) \\(+ (x - b)(x - c) = 0?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(15.5\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(16.5\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(17\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "16.5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2015-p12.live",
+      "kind": "proof-sketch",
+      "text": "Factoring gives \\((x - b)\\bigl(2x - (a + c)\\bigr) = 0,\\) so the roots are \\(b\\) and \\(\\dfrac{a + c}{2}.\\) Their sum is \\(b + \\dfrac{a + c}{2}.\\)\n\nUsing distinct digits, take \\(b = 9\\) and \\(a + c = 8 + 7 = 15,\\) giving \\(9 + 7.5 = 16.5.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Factor out the common \\((x - b)\\)",
+        "The roots are \\(b\\) and \\(\\dfrac{a + c}{2};\\) maximize \\(b + \\dfrac{a + c}{2}\\) over distinct digits"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

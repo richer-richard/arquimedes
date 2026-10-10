@@ -1,0 +1,87 @@
+{
+  "id": "prob.aime-i-2022-p7",
+  "title": "2022 AIME I Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.coloring-schemes-extremal-arguments",
+      "label": "Coloring schemes, extremal arguments",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.combinatorial-optimization",
+      "label": "Combinatorial optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.integers",
+      "label": "Integers",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.extremal-argument",
+      "label": "Extremal argument",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2022,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 52.9,
+    "source": 2560,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Let \\(a,\\) \\(b,\\) \\(c,\\) \\(d,\\) \\(e,\\) \\(f,\\) \\(g,\\) \\(h,\\) \\(i\\) be distinct integers from \\(1\\) to \\(9.\\) The minimum possible positive value of \\[\\frac{a \\cdot b \\cdot c - d \\cdot e \\cdot f}{g \\cdot h \\cdot i}\\] can be written as \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "289",
+    "value": "289"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2022-p7.live",
+      "kind": "proof-sketch",
+      "text": "Try to make the numerator equal to \\(1\\) while keeping large digits in the denominator. The products \\(2 \\cdot 3 \\cdot 6 = 36\\) and \\(1 \\cdot 5 \\cdot 7 = 35\\) differ by \\(1\\) and leave \\(4, 8, 9\\) for the denominator, giving the value \\[\\frac{36 - 35}{4 \\cdot 8 \\cdot 9} = \\frac{1}{288}.\\]\n\nTo beat this, a fraction would need numerator \\(1\\) with denominator greater than \\(288.\\) The denominators exceeding \\(288\\) are \\(504,\\) \\(432,\\) \\(360,\\) \\(378,\\) \\(315,\\) and \\(336,\\) coming respectively from \\(\\{7,8,9\\},\\) \\(\\{6,8,9\\},\\) \\(\\{5,8,9\\},\\) \\(\\{6,7,9\\},\\) \\(\\{5,7,9\\},\\) and \\(\\{6,7,8\\}.\\) Splitting the remaining six digits into two triples, the smallest positive numerator differences are respectively \\(6,\\) \\(2,\\) \\(8,\\) \\(2,\\) \\(4,\\) and \\(6.\\) The resulting lower bounds \\[\\begin{aligned}&\\frac{6}{504},\\quad \\frac{2}{432},\\quad \\frac{8}{360},\\\\&\\frac{2}{378},\\quad \\frac{4}{315},\\quad \\frac{6}{336}\\end{aligned}\\] all exceed \\(\\frac{1}{288}.\\)\n\nSo the minimum positive value is \\(\\frac{1}{288},\\) and \\(m + n = 1 + 288 = 289.\\)",
+      "hints": [
+        "Aim for a numerator of \\(1:\\) look for two triples of distinct digits whose products differ by exactly \\(1\\)",
+        "Save the three largest leftover digits for the denominator, then rule out bigger denominators by showing they force a numerator difference of at least \\(2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

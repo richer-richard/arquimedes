@@ -1,0 +1,77 @@
+{
+  "id": "prob.hmmt-feb-algebra-2013-p10",
+  "title": "2013 HMMT February Algebra Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.fermat-euler-wilson-theorems",
+      "label": "Fermat / Euler / Wilson theorems",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.generating-functions",
+      "label": "Generating functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.greatest-common-divisors-gcd",
+      "label": "Greatest common divisors (gcd)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.multiplicative-order",
+      "label": "Multiplicative order",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.number-theory",
+      "label": "Number Theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2013,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 93.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(N\\) be a positive integer whose decimal representation contains 11235 as a contiguous substring, and let \\(k\\) be a positive integer such that \\(10^{k}>N\\). Find the minimum possible value of\n\n\\[\\frac{10^{k}-1}{\\operatorname{gcd}\\left(N, 10^{k}-1\\right)}\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-2013-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "89 Set \\(m=\\frac{10^{k}-1}{\\operatorname{gcd}\\left(N, 10^{k}-1\\right)}\\). Then, in lowest terms, \\(\\frac{N}{10^{k}-1}=\\frac{a}{m}\\) for some integer \\(a\\). On the other hand, the decimal expansion of \\(\\frac{N}{10^{k}-1}\\) simply consists of the decimal expansion of \\(N\\), possibly with some padded zeros, repeating. Since \\(N\\) contains 11235 as a contiguous substring, the decimal representation of \\(\\frac{a}{m}\\) must as well.\nConversely, if \\(m\\) is relatively prime to 10 and if there exists an \\(a\\) such that the decimal representation of \\(\\frac{a}{m}\\) contains the substring 11235 , we claim that \\(m\\) is an attainable value for \\(\\frac{10^{k}-1}{\\operatorname{gcd}\\left(N, 10^{k}-1\\right)}\\). To see this, note that since \\(m\\) is relatively prime to 10 , there exists a value of \\(k\\) such that \\(m\\) divides \\(10^{k}-1\\) (for example, \\(k=\\phi(m)\\) ). Letting \\(m s=10^{k}-1\\) and \\(N=a s\\), it follows that \\(\\frac{a}{m}=\\frac{a s}{m s}=\\frac{N}{10^{k}-1}\\). Since the decimal expansion of this fraction contains the substring 11235 , it follows that \\(N\\) must also, and therefore \\(m\\) is an attainable value.\nWe are therefore looking for a fraction \\(\\frac{a}{m}\\) which contains the substring 11235 in its decimal expansion. Since \\(1,1,2,3\\), and 5 are the first five Fibonacci numbers, it makes sense to look at the value of the infinite series\n\n\\[\\sum_{i=1}^{\\infty} \\frac{F_{i}}{10^{i}}\\]\n\nA simple generating function argument shows that \\(\\sum_{i=1}^{\\infty} F_{i} x^{i}=\\frac{x}{1-x-x^{2}}\\), so substituting \\(x=1 / 10\\) leads us to the fraction 10/89 (which indeed begins \\(0.11235 \\ldots\\) ).\nHow do we know no smaller values of \\(m\\) are possible? Well, if \\(a^{\\prime} / m^{\\prime}\\) contains the substring 11235 somewhere in its infinitely repeating decimal expansion, then note that there is an \\(i\\) such that the decimal expansion of the fractional part of \\(10^{i}\\left(a^{\\prime} / m^{\\prime}\\right)\\) begins with \\(0.11235 \\ldots\\) We can therefore, without loss of generality, assume that the decimal representation of \\(a^{\\prime} / m^{\\prime}\\) begins \\(0.11235 \\ldots\\) But since the decimal representation of \\(10 / 89\\) begins \\(0.11235 \\ldots\\), it follows that\n\n\\[\\left|\\frac{10}{89}-\\frac{a^{\\prime}}{m^{\\prime}}\\right| \\leq 10^{-5}\\]\n\nOn the other hand, this absolute difference, if non-zero, is at least \\(\\frac{1}{89 m^{\\prime}}\\). If \\(m^{\\prime}<89\\), this is at least \\(\\frac{1}{89^{2}}>10^{-5}\\), and therefore no smaller values of \\(m^{\\prime}\\) are possible.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

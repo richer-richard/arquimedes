@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-8-2020-p17",
+  "title": "2020 AMC 8 Problem 17",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2020,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 13.8,
+    "source": 1190,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many factors of \\(2020\\) have more than \\(3\\) factors? (As an example, \\(12\\) has \\(6\\) factors, namely \\(1,\\) \\(2,\\) \\(3,\\) \\(4,\\) \\(6,\\) and \\(12.\\))",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(10\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "7"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2020-p17.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(2020=2^2\\cdot5\\cdot101,\\) it has \\[ (2+1)(1+1)(1+1)=12 \\] positive factors.\n\nAmong those factors, only \\(1\\) and the primes \\(2,\\) \\(5,\\) and \\(101\\) have fewer than three factors, while \\(4\\) has exactly three. The other \\(12-5=7\\) factors therefore have more than three factors.\n\nThus, the correct answer is B.",
+      "hints": [
+        "List or factor the divisors of \\(2020\\)",
+        "Only \\(1\\), primes, and \\(4\\) have at most \\(3\\) factors"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

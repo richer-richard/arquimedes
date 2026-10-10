@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-12a-2020-p13",
+  "title": "2020 AMC 12A Problem 13",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.exponent",
+      "label": "Exponent",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.radical",
+      "label": "Radical",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2020,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 27.4,
+    "source": 1590,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "There are integers \\(a,\\) \\(b,\\) and \\(c,\\) each greater than \\(1,\\) such that \\[\\sqrt[a]{N \\sqrt[b]{N \\sqrt[c]{N}}} = \\sqrt[36]{N^{25}}\\] for all \\(N \\gt 1.\\) What is \\(b?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(6\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "3"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2020-p13.live",
+      "kind": "proof-sketch",
+      "text": "The left side equals \\(N\\) raised to the exponent \\(\\dfrac{1}{a} + \\dfrac{1}{ab} + \\dfrac{1}{abc},\\) which must equal \\(\\dfrac{25}{36}.\\)\n\nBecause \\(b,c\\ge2,\\) this exponent is at most \\(\\dfrac{7}{4a}.\\) If \\(a\\ge3,\\) it is at most \\(\\dfrac{7}{12}\\lt\\dfrac{25}{36},\\) so \\(a=2.\\) The equation becomes \\(\\dfrac{1}{2b}+\\dfrac{1}{2bc}=\\dfrac{7}{36}.\\)\n\nClearing denominators gives \\(c(7b-18)=18.\\) Set \\(d=7b-18,\\) so \\(d\\) is a positive divisor of \\(18.\\) Among \\(1,2,3,6,9,18,\\) only \\(d=3\\) makes \\(b=\\dfrac{d+18}{7}\\) an integer. Hence \\(b=3\\) and \\(c=6.\\)\n\nThus, B is the correct answer.",
+      "hints": [
+        "Write the left side as \\(N\\) to the power \\(\\dfrac{1}{a} + \\dfrac{1}{ab} + \\dfrac{1}{abc}\\)",
+        "Set that exponent equal to \\(\\dfrac{25}{36}\\) and peel off one nested variable at a time starting with \\(a = 2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

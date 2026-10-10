@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-1984-p12",
+  "title": "1984 AIME Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.functional-equation",
+      "label": "Functional equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.reflection-geometry",
+      "label": "Reflection (geometry)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1984,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 39.0,
+    "source": 2110,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A function \\(f\\) is defined for all real numbers and satisfies \\[ \\begin{aligned} f(2+x)&=f(2-x),\\\\ f(7+x)&=f(7-x) \\end{aligned} \\] for all real \\(x.\\) If \\(x=0\\) is a root of \\(f(x)=0,\\) what is the least number of roots \\(f(x)=0\\) must have in the interval \\(-1000\\leq x\\leq1000?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "401",
+    "value": "401"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1984-p12.live",
+      "kind": "proof-sketch",
+      "text": "The identities make the root set invariant under reflection about \\(2\\) and about \\(7.\\) Their composition is translation by \\(10.\\) Starting from the root \\(0,\\) these operations force every number in \\[ \\begin{gathered} \\{10k:k\\in\\mathbb Z\\}\\\\ {}\\cup\\{4+10k:k\\in\\mathbb Z\\} \\end{gathered} \\] to be a root. In the interval, the first set contributes \\(201\\) roots and the second contributes \\(200,\\) for a total of \\(401.\\)\n\nThis bound is attainable: define \\(f\\) to be \\(0\\) on this invariant set and \\(1\\) elsewhere. It has both required reflection symmetries. Hence the least possible number is \\(401.\\)",
+      "hints": [
+        "Interpret the two identities as reflection symmetries about \\(2\\) and \\(7\\)",
+        "Composing the two reflections produces a translation by \\(10\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

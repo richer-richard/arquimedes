@@ -1,0 +1,69 @@
+{
+  "id": "prob.aime-i-2010-p13",
+  "title": "2010 AIME I Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-decomposition",
+      "label": "Area decomposition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.sector",
+      "label": "Sector",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2010,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": 3270,
+    "mohs": null
+  },
+  "estimatedMinutes": 20,
+  "statement": "Rectangle \\(ABCD\\) and a semicircle with diameter \\(\\overline{AB}\\) are coplanar and have nonoverlapping interiors. Let \\(\\mathcal{R}\\) denote the region enclosed by the semicircle and the rectangle. Line \\(\\ell\\) meets the semicircle, segment \\(\\overline{AB},\\) and segment \\(\\overline{CD}\\) at distinct points \\(N,\\) \\(U,\\) and \\(T,\\) respectively. Line \\(\\ell\\) divides region \\(\\mathcal{R}\\) into two regions with areas in the ratio \\(1 : 2.\\) Suppose that \\(AU = 84,\\) \\(AN = 126,\\) and \\(UB = 168.\\) Then \\(DA\\) can be represented as \\(m\\sqrt{n},\\) where \\(m\\) and \\(n\\) are positive integers and \\(n\\) is not divisible by the square of any prime. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "69",
+    "value": "69"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2010-p13.live",
+      "kind": "proof-sketch",
+      "text": "Here \\(AB = 84 + 168 = 252,\\) so the semicircle has center \\(O\\) (the midpoint of \\(\\overline{AB}\\)) and radius \\(126.\\) Since \\(AN = AO = ON = 126,\\) triangle \\(AON\\) is equilateral, so \\(\\angle AON = 60^\\circ\\) and sector \\(AON\\) is exactly one third of the semicircle. Likewise, if \\(Q\\) is the foot of the perpendicular from \\(U\\) to \\(\\overline{DC},\\) then \\(AU : UB = 1 : 2\\) makes rectangle \\(AUQD\\) one third of rectangle \\(ABCD.\\)\n\nThe part of \\(\\mathcal{R}\\) on the \\(A\\)-side of \\(\\ell\\) equals (sector \\(AON\\)) \\(-\\) \\([NUO]\\) \\(+\\) (rectangle \\(AUQD\\)) \\(+\\) \\([UQT].\\) Since this must be one third of \\(\\mathcal{R},\\) we need \\([NUO] = [UQT].\\) Let \\(P\\) be the foot of the perpendicular from \\(N\\) to \\(\\overline{AB}.\\) In the \\(30\\)-\\(60\\)-\\(90\\) triangle \\(NOP,\\) \\(OP = 63\\) and \\(NP = 63\\sqrt{3},\\) so \\(UP = 84 - 63 = 21\\) and \\(UO = 126 - 84 = 42.\\) Triangles \\(NUP\\) and \\(TUQ\\) are similar right triangles (vertical angles at \\(U\\)), so \\[ \\begin{aligned} \\frac{[UQT]}{[NUP]} &= \\left(\\frac{UQ}{NP}\\right)^2, \\\\ \\frac{[NUO]}{[NUP]} &= \\frac{UO}{UP} = 2, \\end{aligned} \\] the latter because both triangles have height \\(NP\\) over bases \\(UO\\) and \\(UP.\\)\n\nSetting the two triangle areas equal gives \\(\\left(\\frac{UQ}{NP}\\right)^2 = 2,\\) so \\[ \\begin{aligned} DA = UQ &= NP\\sqrt{2} \\\\ &= 63\\sqrt{3} \\cdot \\sqrt{2} \\\\ &= 63\\sqrt{6}, \\end{aligned} \\] and \\(m + n = 63 + 6 = 69.\\)",
+      "hints": [
+        "With \\(AB = 252,\\) the center \\(O\\) satisfies \\(AO = ON = AN = 126,\\) so triangle \\(AON\\) is equilateral and sector \\(AON\\) is one third of the semicircle",
+        "Since \\(AU:UB = 1:2\\) splits the rectangle in ratio \\(1:2\\) as well, the two small triangles that \\(\\ell\\) cuts off on either side of \\(\\overline{AB}\\) must have equal areas"
+      ],
+      "images": [
+        "7efb92c6232440ed39e88cea0c5c67638b7e7b5955e627e4894f353b626641ee"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "7efb92c6232440ed39e88cea0c5c67638b7e7b5955e627e4894f353b626641ee"
+    ]
+  }
+}

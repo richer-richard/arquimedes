@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-algebra-2013-p8",
+  "title": "2013 HMMT February Algebra Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.symmetric-functions",
+      "label": "Symmetric functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2013,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 86.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(x, y\\) be complex numbers such that \\(\\frac{x^{2}+y^{2}}{x+y}=4\\) and \\(\\frac{x^{4}+y^{4}}{x^{3}+y^{3}}=2\\). Find all possible values of \\(\\frac{x^{6}+y^{6}}{x^{5}+y^{5}}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-2013-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(10 \\pm 2 \\sqrt{17}\\) Let \\(A=\\frac{1}{x}+\\frac{1}{y}\\) and let \\(B=\\frac{x}{y}+\\frac{y}{x}\\). Then\n\n\\[\\frac{B}{A}=\\frac{x^{2}+y^{2}}{x+y}=4\\]\n\nso \\(B=4 A\\). Next, note that\n\n\\[B^{2}-2=\\frac{x^{4}+y^{4}}{x^{2} y^{2}} \\text { and } A B-A=\\frac{x^{3}+y^{3}}{x^{2} y^{2}}\\]\n\nso\n\n\\[\\frac{B^{2}-2}{A B-A}=2\\]\n\nSubstituting \\(B=4 A\\) and simplifying, we find that \\(4 A^{2}+A-1=0\\), so \\(A=\\frac{-1 \\pm \\sqrt{17}}{8}\\). Finally, note that\n\n\\[64 A^{3}-12 A=B^{3}-3 B=\\frac{x^{6}+y^{6}}{x^{3} y^{3}} \\text { and } 16 A^{3}-4 A^{2}-A=A\\left(B^{2}-2\\right)-(A B-A)=\\frac{x^{5}+y^{5}}{x^{3} y^{3}}\\]\n\nso\n\n\\[\\frac{x^{6}+y^{6}}{x^{5}+y^{5}}=\\frac{64 A^{2}-12}{16 A^{2}-4 A-1}=\\frac{4-16 A}{3-8 A}\\]\n\nwhere the last inequality follows from the fact that \\(4 A^{2}=1-A\\). If \\(A=\\frac{-1+\\sqrt{17}}{8}\\), then this value equals \\(10+2 \\sqrt{17}\\). Similarly, if \\(A=\\frac{-1-\\sqrt{17}}{8}\\), then this value equals \\(10-2 \\sqrt{17}\\).\n(It is not hard to see that these values are achievable by noting that with the values of \\(A\\) and \\(B\\) we can solve for \\(x+y\\) and \\(x y\\), and thus for \\(x\\) and \\(y\\).)",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

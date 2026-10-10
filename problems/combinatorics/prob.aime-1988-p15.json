@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-1988-p15",
+  "title": "1988 AIME Problem 15",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.subsets",
+      "label": "Subsets",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1988,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 49.5,
+    "source": 2520,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "In an office at various times during the day, the boss gives the secretary a letter to type, each time putting the letter on top of the pile in the secretary’s in-box. When there is time, the secretary takes the top letter off the pile and types it. There are nine letters to be typed during the day, and the boss delivers them in the order \\(1,\\) \\(2,\\) \\(3,\\) \\(4,\\) \\(5,\\) \\(6,\\) \\(7,\\) \\(8,\\) \\(9.\\)\n\nWhile leaving for lunch, the secretary tells a colleague that letter \\(8\\) has already been typed, but says nothing else about the morning’s typing. The colleague wonders which of the nine letters remain to be typed after lunch and in what order they will be typed. Based upon the above information, how many such after-lunch typing orders are possible? (That there are no letters left to be typed is one of the possibilities.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "704",
+    "value": "704"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1988-p15.live",
+      "kind": "proof-sketch",
+      "text": "Any subset of \\(1,\\ldots,7\\) can remain in the stack after \\(8\\) has been typed, and those remaining letters must later be typed in decreasing order. If \\(9\\) was already typed, choosing that subset gives \\(2^7=128\\) possible orders.\n\nIf \\(9\\) remains, choose \\(k\\) of the seven smaller letters and insert \\(9\\) into any of the \\(k+1\\) positions in their decreasing order. This gives \\[\\begin{aligned}\\sum_{k=0}^7\\binom7k(k+1)&=7\\cdot2^6+2^7\\\\&=576.\\end{aligned}\\] Every such order can be realized by suitable morning choices, so the total is \\(128+576=704.\\)",
+      "hints": [
+        "After \\(8\\) has been typed, any remaining letters among \\(1,\\ldots,7\\) must later be typed in decreasing order",
+        "Separate the cases according to whether \\(9\\) was typed before lunch or remains to be inserted into the later order"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

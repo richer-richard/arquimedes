@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2015-p23",
+  "title": "2015 AMC 10B Problem 23",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factorial",
+      "label": "Factorial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.legendres-formula",
+      "label": "Legendre’s Formula",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.trailing-zeros",
+      "label": "Trailing zeros",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2015,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 28.5,
+    "source": 1790,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(n\\) be a positive integer greater than \\(4\\) such that the decimal representation of \\(n!\\) ends in \\(k\\) zeros and the decimal representation of \\((2n)!\\) ends in \\(3k\\) zeros. Let \\(s\\) denote the sum of the four least possible values of \\(n.\\) What is the sum of the digits of \\(s?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 7 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 8 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 9 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 10 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 11 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "8"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2015-p23.live",
+      "kind": "proof-sketch",
+      "text": "The number of trailing zeros is the number of factors of \\(5\\). For \\(5\\le n\\le9\\), \\(n!\\) has \\(k=1\\) zero. We need \\((2n)!\\) to have \\(3\\) zeros, which happens when \\(15\\le2n\\le19\\). Thus \\(n=8,9\\).\n\nFor \\(10\\le n\\le14\\), \\(n!\\) has \\(k=2\\) zeros. We need \\((2n)!\\) to have \\(6\\) zeros, which happens when \\(25\\le2n\\le29\\). Thus \\(n=13,14\\).\n\nThese are the four least possible values, so \\(s=8+9+13+14=44\\). The sum of the digits of \\(s\\) is \\(8\\).\n\nThus, the correct answer is B.",
+      "hints": [
+        "Count factors of \\(5\\) in \\(n!\\) and \\((2n)!\\)",
+        "Test the first ranges where \\(k=1\\) and \\(k=2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

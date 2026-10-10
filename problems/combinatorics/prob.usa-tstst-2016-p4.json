@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tstst-2016-p4",
+  "title": "USA TSTST 2016 Problem 4",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TSTST",
+    "year": 2016,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 93.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Prove that if \\(n\\) and \\(k\\) are positive integers\nsatisfying \\(\\varphi^k(n) = 1\\), then \\(n \\le 3^k\\).\n(Here \\(\\varphi^k\\) denotes \\(k\\) applications of the Euler phi function.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tstst-2016-p4.evanchen",
+      "kind": "proof-sketch",
+      "text": "The main observation is that the exponent of \\(2\\) decreases\nby at most \\(1\\) with each application of \\(\\varphi\\).\nThis will give us the desired estimate.\n\nDefine the weight function \\(w\\) on positive integers as follows: it satisfies\n\\[\\begin{aligned}\n w(ab) &= w(a)+w(b); \\\\\n w(2) &= 1; \\quad\\text{and} \\\\\n w(p) &= w(p-1) \\quad \\text{for any prime \\(p > 2\\)}.\n\\end{aligned}\\]\nBy induction, we see that \\(w(n)\\) counts the powers of \\(2\\)\nthat are produced as \\(\\varphi\\) is repeatedly applied to \\(n\\).\nIn particular, \\(k \\ge w(n)\\).\n\nFrom \\(w(2) = 1\\), it suffices to prove that \\(w(p) \\ge \\log_3 p\\) for every \\(p > 2\\).\nWe use strong induction and note that\n\\[\n w(p) = w(2) + w\\left( \\frac{p-1}{2} \\right)\n \\ge 1 + \\log_3(p-1) - \\log_3 2 \\ge \\log_3 p\n\\]\nfor any \\(p > 2\\). This solves the problem.\n\nRemark.\nOne can motivate this solution through small cases \\(2^x 3^y\\)\nlike \\(2^x 17^w\\), \\(2^x 3^y 7^z\\), \\(2^x 11^t\\).\n\nMoreover, the stronger bound \\[ n \\le 2 \\cdot 3^{k-1} \\] is true and best possible.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

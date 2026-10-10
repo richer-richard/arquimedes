@@ -1,0 +1,95 @@
+{
+  "id": "prob.ahsme-1970-p31",
+  "title": "1970 AHSME Problem 31",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "nt.basic-counting",
+      "label": "Basic counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1970,
+    "number": 31
+  },
+  "difficulty": {
+    "course": 43.9,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "If a number is selected at random from the set of all five-digit numbers in which the sum of the digits is equal to \\(43,\\) what is the probability that this number will be divisible by \\(11?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\frac{2}{5}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\frac{1}{5}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\frac{1}{6}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\frac{1}{11}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\frac{1}{15}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1/5"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1970-p31.live",
+      "kind": "proof-sketch",
+      "text": "The maximum five-digit digit sum is \\(45,\\) so a sum of \\(43\\) has total deficit \\(2\\) from \\(99999.\\) Either one digit is \\(7\\) and the others are \\(9\\), giving \\(5\\) numbers, or two digits are \\(8\\) and the others are \\(9\\), giving \\(\\binom52=10\\) numbers. Thus there are \\(15\\) numbers total.\n\nUsing the divisibility-by-\\(11\\) test, exactly \\[ 97999,\\qquad 99979,\\qquad 98989 \\] are divisible by \\(11.\\) The probability is therefore \\(\\frac{3}{15}=\\frac{1}{5}.\\)\n\nTherefore, the correct answer is B.",
+      "hints": [
+        "Start from \\(99999\\); a digit sum of \\(43\\) means a total deficit of \\(2\\)",
+        "The possibilities are one \\(7\\) or two \\(8\\)s; apply the divisibility-by-\\(11\\) alternating-sum test"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

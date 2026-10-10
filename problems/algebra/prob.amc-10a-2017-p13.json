@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2017-p13",
+  "title": "2017 AMC 10A Problem 13",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.fibonacci",
+      "label": "Fibonacci",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.pattern-recognition",
+      "label": "Pattern recognition",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2017,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 20.1,
+    "source": 1140,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Define a sequence recursively by \\(F_{0}=0,\\) \\(~F_{1}=1,\\) and \\(F_{n}=\\) the remainder when \\(F_{n-1}+F_{n-2}\\) is divided by \\(3,\\) for all \\(n\\geq 2.\\) Thus the sequence starts \\(0,\\) \\(1,\\) \\(1,\\) \\(2,\\) \\(0,\\) \\(2,\\) \\(\\ldots.\\) What is \\[F_{2017}+F_{2018}+F_{2019}+F_{2020}+\\]\\[F_{2021}+F_{2022}+F_{2023}+F_{2024}?\\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(10\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "9"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2017-p13.live",
+      "kind": "proof-sketch",
+      "text": "Let us list out the first few values to see if we can find a pattern in this sequence.\n\n\\[ 0, 1, 1, 2, 0, 2, 2, 1, 0, 1, \\cdots \\]\n\nThe pair \\((F_8,F_9)=(0,1)=(F_0,F_1).\\) Because each later term is determined by the preceding two terms, the sequence therefore repeats every \\(8\\) terms.\n\nThe desired answer is the sum of \\(8\\) consecutive numbers, which is fixed. This sum is \\[ 0 + 1 + 1 + 2 + 0 + 2\\]\\[ + 2 + 1 = 9. \\] Thus, D is the correct answer.",
+      "hints": [
+        "Write out enough terms to see the period modulo \\(3\\)",
+        "The requested eight terms cover one complete period"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

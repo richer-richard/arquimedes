@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-1983-p8",
+  "title": "1983 AIME Problem 8",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.legendres-formula",
+      "label": "Legendre’s Formula",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime",
+      "label": "Prime",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1983,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 47.5,
+    "source": 2440,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "What is the largest \\(2\\)-digit prime factor of the integer \\(n=\\binom{200}{100}?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "61",
+    "value": "61"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1983-p8.live",
+      "kind": "proof-sketch",
+      "text": "For a prime \\(p>50,\\) we have \\(p^2>200,\\) so \\[ \\begin{aligned} v_p\\left(\\binom{200}{100}\\right) &=\\left\\lfloor\\frac{200}{p}\\right\\rfloor\\\\ &\\quad-2\\left\\lfloor\\frac{100}{p}\\right\\rfloor. \\end{aligned} \\] If \\(67\\leq p<100,\\) this is \\(2-2=0.\\) If \\(50<p\\leq66,\\) it is \\(3-2=1.\\) Hence no prime greater than \\(66\\) divides the binomial coefficient, while every prime between \\(50\\) and \\(66\\) does. The largest such prime is \\(61.\\)",
+      "hints": [
+        "For a prime \\(p>50,\\) compare the exponent of \\(p\\) in \\(200!\\) with twice its exponent in \\(100!\\)",
+        "Primes from \\(67\\) through \\(99\\) cancel; primes from \\(51\\) through \\(66\\) do not"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

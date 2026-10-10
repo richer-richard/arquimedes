@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12b-2002-p12",
+  "title": "2002 AMC 12B Problem 12",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2002,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 23.1,
+    "source": 1490,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "For how many integers \\(n\\) is \\[\\dfrac{n}{20-n}\\] the square of an integer?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(10\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2002-p12.live",
+      "kind": "proof-sketch",
+      "text": "Set \\(\\dfrac{n}{20-n}=k^2.\\) Solving, \\(n=\\dfrac{20k^2}{k^2+1}.\\) Since \\(k^2\\) and \\(k^2+1\\) are coprime, \\(k^2+1\\) must divide \\(20,\\) which happens only for \\(|k|=0,1,2,3.\\)\n\nThe signs of \\(k\\) do not change \\(n;\\) these give \\(n=0,\\) \\(10,\\) \\(16,\\) and \\(18,\\) which is four values.\n\nThus, the correct answer is D.",
+      "hints": [
+        "Set \\(\\dfrac{n}{20-n}=k^2\\) and solve for \\(n\\) in terms of \\(k\\)",
+        "\\(n=\\dfrac{20k^2}{k^2+1}\\); since \\(\\gcd(k^2,k^2+1)=1,\\) \\(k^2+1\\) must divide \\(20\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

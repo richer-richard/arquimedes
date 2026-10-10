@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-2003-p21",
+  "title": "2003 AMC 10B Problem 21",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2003,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 27.6,
+    "source": 1600,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A bag contains two red beads and two green beads. You reach into the bag and pull out a bead, replacing it with a red bead regardless of the color you pulled out. What is the probability that all beads in the bag are red after three such replacements?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{8}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{5}{32}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{9}{32}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{3}{8}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{7}{16}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "9/32"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2003-p21.live",
+      "kind": "proof-sketch",
+      "text": "The bag always holds \\(4\\) beads. All are red at the end precisely when both greens are drawn.\n\nDrawing green then green has probability \\(\\dfrac24 \\cdot \\dfrac14 = \\dfrac18.\\) Green, red, green has probability \\(\\dfrac24 \\cdot \\dfrac34 \\cdot \\dfrac14 = \\dfrac{3}{32}.\\) Red, green, green has probability \\(\\dfrac24 \\cdot \\dfrac24 \\cdot \\dfrac14 = \\dfrac{1}{16}.\\)\n\nThe total is \\[\\dfrac18 + \\dfrac{3}{32} + \\dfrac{1}{16} = \\dfrac{9}{32}.\\]\n\nThus, the correct answer is C.",
+      "hints": [
+        "All beads are red exactly when both green beads are drawn during the three draws",
+        "Add the probabilities of the draw sequences GG, GRG, and RGG, tracking how the counts change"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

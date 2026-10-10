@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-10b-2016-p4",
+  "title": "2016 AMC 10B Problem 4",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.triangular-number",
+      "label": "Triangular number",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2016,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 14.3,
+    "source": 1020,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Zoey read \\(15\\) books, one at a time. The first book took her \\(1\\) day to read, the second book took her \\(2\\) days to read, the third book took her \\(3\\) days to read, and so on, with each book taking her \\(1\\) more day to read than the previous book. Zoey finished the first book on a Monday, and the second on a Wednesday. On what day of the week did she finish her \\(15\\)th book?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "Sunday"
+    },
+    {
+      "label": "B",
+      "text": "Monday"
+    },
+    {
+      "label": "C",
+      "text": "Wednesday"
+    },
+    {
+      "label": "D",
+      "text": "Friday"
+    },
+    {
+      "label": "E",
+      "text": "Saturday"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2016-p4.live",
+      "kind": "proof-sketch",
+      "text": "The number of days it takes to read \\(15\\) books is \\(\\dfrac{ 15\\cdot 16}{2} =120.\\) Therefore, it is \\(120-1=119 \\) days after the first book is read. This is a multiple of \\(7,\\) so the \\(15\\)th book was finished on the same day as the \\(1\\)st book. Therefore, it was finished on a Monday.\n\nThus, the correct answer is B .",
+      "hints": [
+        "The total reading time is \\(1+2+\\cdots+15\\)",
+        "Compare the finish day of book \\(15\\) with the finish day of book \\(1\\) modulo \\(7\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

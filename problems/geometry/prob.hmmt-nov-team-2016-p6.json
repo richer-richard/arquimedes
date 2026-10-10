@@ -1,0 +1,68 @@
+{
+  "id": "prob.hmmt-nov-team-2016-p6",
+  "title": "2016 HMMT November Team Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2016,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 58.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A B C\\) be a triangle with \\(A B=5, B C=6\\), and \\(A C=7\\). Let its orthocenter be \\(H\\) and the feet of the altitudes from \\(A, B, C\\) to the opposite sides be \\(D, E, F\\) respectively. Let the line \\(D F\\) intersect the circumcircle of \\(A H F\\) again at \\(X\\). Find the length of \\(E X\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2016-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "## Answer: \\(\\frac{190}{49}\\)\n\nSince \\(\\angle A F H=\\angle A E H=90^{\\circ}, E\\) is on the circumcircle of \\(A H F\\). So \\(\\angle X E H=\\angle H F D=\\angle H B D\\), which implies that \\(X E \\| B D\\). Hence \\(\\frac{E X}{B D}=\\frac{E Y}{Y B}\\). Let \\(D F\\) and \\(B E\\) intersect at \\(Y\\). Note that \\(\\angle E D Y=180^{\\circ}-\\angle B D F-\\angle C D E=180^{\\circ}-2 \\angle A\\), and \\(\\angle B D Y=\\angle A\\). Applying the sine rule to \\(E Y D\\) and \\(B Y D\\), we get\n\n\\[\\frac{E Y}{Y B}=\\frac{E D}{B D} \\cdot \\frac{\\sin \\angle E D Y}{\\sin \\angle B D Y}=\\frac{E D}{B D} \\cdot \\frac{\\sin 2 \\angle A}{\\sin \\angle A}=\\frac{E D}{B D} \\cdot 2 \\cos \\angle A\\]\n\nNext, letting \\(x=C D\\) and \\(y=A E\\), by Pythagoras we have\n\n\\[\\begin{aligned}\n& A B^{2}-(6-x)^{2}=A D^{2}=A C^{2}-x^{2} \\\\\n& B C^{2}-(7-y)^{2}=B E^{2}=B A^{2}-y^{2}\n\\end{aligned}\\]\n\nSolving, we get \\(x=5, y=\\frac{19}{7}\\). Drop the perpendicular from \\(E\\) to \\(D C\\) at \\(Z\\). Then \\(E D \\cos \\angle A=\\) \\(E D \\cos \\angle E D Z=D Z\\). But \\(A D \\| E Z\\), so \\(D Z=\\frac{A E}{A C} \\cdot D C=\\frac{95}{49}\\). Therefore\n\n\\[E X=\\frac{E Y}{Y B} \\cdot B D=2 E D \\cos \\angle A=2 D Z=\\frac{190}{49}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2024-p3",
+  "title": "2024 IMO Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2024,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 115.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a_1\\), \\(a_2\\), \\(a_3\\), \\dots\\ be an infinite sequence of positive integers,\nand let \\(N\\) be a positive integer.\nSuppose that, for each \\(n > N\\),\nthe number \\(a_n\\) is equal to the number of times \\(a_{n-1}\\) appears\nin the list \\((a_1, a_2, \\dots, a_{n-1})\\).\nProve that at least one of the sequences \\(a_1\\), \\(a_3\\), \\(a_5\\), \\dots\\\nand \\(a_2\\), \\(a_4\\), \\(a_6\\), \\dots\\ is eventually periodic.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2024-p3.evanchen",
+      "kind": "proof-sketch",
+      "text": "We present the solution from ``gigamilkmen'tgeg''\nin ,\nwith some adaptation from the first shortlist official solution as well.\nSet \\(M \\coloneq \\max(a_1, \\dots, a_N)\\).\n\nSetup..\nWe will visualize the entire process as follows.\nWe draw a stack of towers labeled \\(1\\), \\(2\\), \\dots, each initially empty.\nFor \\(i=1,2,\\dots\\), we imagine the term \\(a_i\\) as adding a block \\(B_i\\) to tower \\(a_i\\).\n\nThen there are \\(N\\) initial blocks placed, colored red.\nThe rest of the blocks are colored yellow:\nif the last block \\(B_i\\) was added to a tower that then reaches height \\(a_{i+1}\\),\nthe next block \\(B_{i+1}\\) is added to tower \\(a_{i+1}\\).\nWe'll say \\(B_i\\) contributes to the tower containing \\(B_{i+1}\\).\n\nIn other words, the yellow blocks \\(B_i\\) for \\(i > N\\)\nare given coordinates \\(B_i = (a_i, a_{i+1})\\) for \\(i>N\\).\nNote in particular that in towers \\(M+1\\), \\(M+2\\), \\dots, the blocks are all yellow.\n\n[Diagram omitted from this imported TeX transcription.]\n\nWe let \\(h_\\ell\\) denote the height of the \\(\\ell\\)\\text{th} tower at a given time \\(n\\).\n(This is an abuse of notation and we should write \\(h_\\ell(n)\\) at time \\(n\\),\nbut \\(n\\) will always be clear from context.)\n\nUp to alternating up and down..\nWe start with two independent easy observations:\nthe set of numbers that occur infinitely often is downwards closed,\nand consecutive terms cannot both be huge.\n\n[Diagram omitted from this imported TeX transcription.]\n\nClaim.\n If the \\((k+1)\\)\\text{st} tower grows arbitrarily high, so does tower \\(k\\).\n In fact, there exists a constant \\(C\\) such that \\(h_{k} \\ge h_{k+1} - C\\) at all times.\n\nProof.\n Suppose \\(B_n\\) is a yellow block in tower \\(k+1\\).\n Then with at most finitely many exceptions, \\(B_{n-1}\\) is a yellow block at height \\(k+1\\),\n and the block \\(B_r\\) right below \\(B_{n-1}\\) is also yellow;\n then \\(B_{r+1}\\) is in tower \\(k\\).\n Hence, with at most finitely many exceptions, the map\n \\[ B_n \\mapsto B_{n-1} \\mapsto B_r \\mapsto B_{r+1} \\]\n provides an injective map taking each yellow block in tower \\(k+1\\)\n to a yellow block in tower \\(k\\).\n (The figure above shows \\(B_{32} \\to B_{31} \\to B_{19} \\to B_{20}\\) as an example.)\n\nClaim.\n If \\(a_n > M\\) then \\(a_{n+1} \\le M\\).\n\nProof.\n Assume for contradiction there's a first moment where \\(a_n > M\\) and \\(a_{n+1} > M\\),\n meaning the block \\(B_n\\) was added to an all-yellow tower past \\(M\\)\n that has height exceeding \\(M\\).\n (This is the X'ed out region in the figure above.)\n In \\(B_n\\)'s tower, every (yellow) block (including \\(B_n\\))\n was contributed by a block placed in different towers at height \\(a_n > M\\).\n So before \\(B_n\\), there were already \\(a_{n+1} > M\\) towers of height more than \\(M\\).\n This contradicts minimality of \\(n\\).\n\nIt follows that the set of indices with \\(a_n \\le M\\)\nhas arithmetic density at least half, so certainly\nat least some of the numbers must occur infinitely often.\nOf the numbers in \\(\\{1,2,\\dots,M\\}\\),\ndefine \\(L\\) such that towers \\(1\\) through \\(L\\) grow unbounded\nbut towers \\(L+1\\) through \\(M\\) do not.\nThen we can pick a larger threshold \\(N' > N\\) such that\n\n• Towers \\(1\\) through \\(L\\) have height greater than \\((M,N)\\);\n\n• Towers \\(L+1\\) through \\(M\\) will receive no further blocks;\n\n• \\(a_{N'} \\le L\\).\n\nAfter this threshold, the following statement is true:\n\nClaim.\n [Alternating small and big]\n The terms \\(a_{N'}\\), \\(a_{N' + 2}\\), \\(a_{N' + 4}\\), \\dots\\ are all at most \\(L\\) while\n the terms \\(a_{N' + 1}\\), \\(a_{N' + 3}\\), \\(a_{N' + 5}\\), \\dots\\ are all greater than \\(M\\).\n\nAutomaton for \\(n \\equiv N' \\pmod 2\\)..\nFrom now on we always assume \\(n > N'\\).\nWhen \\(n \\equiv N' \\pmod 2\\), i.e., when \\(a_n\\) is small, we define the state\n\\[ S(n) = (h_1, h_2, \\dots, h_L; a_n). \\]\nFor example, in the figure below, we illustrate how\n\\[ S(34) = (9,11;a_{34}=1) \\longrightarrow S(36) = (9,12;a_{36}=2) \\]\n\n[Diagram omitted from this imported TeX transcription.]\n\nThe final element \\(a_n\\) simply reminds us which tower was most recently incremented.\nAt this point we can give a complete description of how to move from \\(S(n)\\) to \\(S(n+2)\\):\n\n• The intermediate block \\(B_{n+1}\\) is placed in the tower\n corresponding to the height \\(a_{n+1}\\) of \\(B_n\\);\n\n• That tower will have height \\(a_{n+2}\\) equal to the number of towers\n with height at least \\(a_{n+1}\\); that is, it equals the cardinality of the set\n \\[ \\{ i \\colon h_i \\ge h_{a_n} \\} \\]\n\n• We increment \\(h_{a_{n+2}}\\) by \\(1\\) and update \\(a_n\\).\n\nFor example, the illustrated \\(S(34) \\to S(36)\\)\ncorresponds to the block \\(B_{34}\\) at height \\(h_1\\) in tower \\(1\\)\ngiving the block \\(B_{35}\\) at height \\(2\\) in tower \\(h_1\\),\nthen block \\(B_{36}\\) at height \\(h_2 + 1\\) being placed in tower \\(2\\).\n\nPigeonhole periodicity argument..\nBecause only the relative heights matter in the automata above,\nif we instead define\n\\[ T(n) = (h_1-h_2, h_2-h_3, \\dots, h_{L-1}-h_L; a_n). \\]\nthen \\(T(n+2)\\) can be determined from just \\(T(n)\\).\n\nSo it would be sufficient to show \\(T(n)\\) only takes on finitely many values\nto show that \\(T(n)\\) (and hence \\(a_n\\)) is eventually periodic.\n\nSince we have the bound \\(h_{k+1} \\le h_k + C\\),\nwe are done upon proving the following lower bound:\n\nClaim.\n For every \\(1 \\le \\ell < L\\) and \\(n > N'\\),\n we have \\(h_\\ell \\le h_{\\ell+1} + C \\cdot (L-1)\\).\n\nProof.\n Assume for contradiction that there is some moment \\(n > N'\\) such that\n \\[ h_\\ell > h_{\\ell+1} + C \\cdot (L-1) \\]\n and WLOG assume that \\(h_\\ell\\) was just updated at the moment \\(n\\).\n Together with \\(h_{k+1} \\le h_k + C\\) for all \\(k\\) and triangle inequality, we conclude\n \\[ \\min(h_1, \\dots, h_\\ell) > q \\coloneq \\max(h_{\\ell+1}, \\dots, h_L). \\]\n We find that the blocks now in fact alternate between being placed\n among the first \\(\\ell\\) towers and in towers with indices greater than \\(q\\) thereafter.\n Hence the heights \\(h_{\\ell+1}\\), \\dots, \\(h_L\\) never grow after this moment.\n This contradicts the definition of \\(L\\).\n\nRemark.\n In fact, it can be shown that the period is actually exactly \\(L\\),\n meaning the periodic part will be exactly a permutation of \\((1,2,\\dots,L)\\).\n For any \\(L\\), it turns out there is indeed a permutation achieving that periodic part.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

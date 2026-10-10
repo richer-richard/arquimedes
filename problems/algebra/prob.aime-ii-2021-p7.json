@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-ii-2021-p7",
+  "title": "2021 AIME II Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.symmetry-algebra",
+      "label": "Symmetry (algebra)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2021,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 52.8,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Let \\(a,\\) \\(b,\\) \\(c,\\) and \\(d\\) be real numbers that satisfy the system of equations \\[ \\begin{aligned} a + b &= -3, \\\\ ab + bc + ca &= -4, \\end{aligned} \\] \\[ \\begin{aligned} abc + bcd + cda + dab &= 14, \\\\ abcd &= 30. \\end{aligned} \\] There exist relatively prime positive integers \\(m\\) and \\(n\\) such that \\[a^2 + b^2 + c^2 + d^2 = \\frac{m}{n}.\\] Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "145",
+    "value": "145"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2021-p7.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(a + b = -3,\\) the second equation reads \\(ab + c(a + b) = ab - 3c = -4,\\) so \\(ab = 3c - 4.\\) Grouping the third equation as \\(ab(c + d) + cd(a + b) = 14\\) gives \\((3c - 4)(c + d) - 3cd = 14,\\) which simplifies to \\(3c^2 - 4c - 4d = 14,\\) so \\(d = \\frac{3c^2 - 4c - 14}{4}.\\) The fourth equation becomes \\((3c - 4)\\,cd = 30.\\)\n\nSubstituting for \\(d\\) yields \\(c(3c - 4)(3c^2 - 4c - 14) = 120,\\) i.e. \\[ \\begin{aligned} &9c^4 - 24c^3 - 26c^2 \\\\ &\\quad {}+ 56c - 120 \\\\ &= (c + 2)(3c - 10) \\\\ &\\quad {}\\cdot (3c^2 - 4c + 6) \\\\ &= 0. \\end{aligned} \\] The quadratic factor has negative discriminant, so \\(c = -2\\) or \\(c = \\frac{10}{3}.\\) If \\(c = \\frac{10}{3},\\) then \\(ab = 6\\) with \\(a + b = -3,\\) impossible for real \\(a, b\\) since \\(9 - 24 \\lt 0.\\) So \\(c = -2,\\) giving \\(ab = -10\\) and \\(d = \\frac{12 + 8 - 14}{4} = \\frac{3}{2}.\\)\n\nThen \\(a^2 + b^2\\) \\(= (a + b)^2 - 2ab\\) \\(= 9 + 20 = 29\\) and \\(c^2 + d^2 = 4 + \\frac{9}{4} = \\frac{25}{4},\\) so \\(a^2 + b^2 + c^2 + d^2 = \\frac{141}{4}\\) and \\(m + n = 141 + 4 = 145.\\)",
+      "hints": [
+        "The second equation is \\(ab + c(a + b) = -4,\\) giving \\(ab = 3c - 4;\\) group the third as \\(ab(c + d) + cd(a + b) = 14\\)",
+        "Eliminating \\(d\\) and \\(cd\\) leaves a quartic in \\(c\\) whose real roots are \\(-2\\) and \\(\\frac{10}{3};\\) one of them makes \\(a\\) and \\(b\\) non-real"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

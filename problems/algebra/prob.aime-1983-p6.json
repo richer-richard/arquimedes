@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1983-p6",
+  "title": "1983 AIME 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.binomial-theorem",
+      "label": "Binomial theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-exponentiation",
+      "label": "Modular exponentiation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1983,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 39.0,
+    "source": 2110,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(a_n=6^n+8^n.\\) Determine the remainder on dividing \\(a_{83}\\) by \\(49.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "35",
+    "value": "35"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1983-p6.live",
+      "kind": "proof-sketch",
+      "text": "Modulo \\(49,\\) every binomial term containing \\(7^2\\) vanishes. Since \\(83\\) is odd, \\[ 6^{83}=(7-1)^{83}\\equiv -1+83\\cdot7 \\] and \\[ 8^{83}=(7+1)^{83}\\equiv 1+83\\cdot7. \\] Their sum is congruent to \\(166\\cdot7=1162\\equiv35\\pmod{49}.\\)",
+      "hints": [
+        "Write \\(6=7-1\\) and \\(8=7+1\\)",
+        "Modulo \\(49,\\) only the constant and linear terms of each binomial expansion survive"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "prob.aime-ii-2026-p2",
+  "title": "2026 AIME2 2",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.lattice-paths",
+      "label": "Lattice paths",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2026,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 42.1,
+    "source": 2230,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "The figure below shows a grid of \\(10\\) squares in a row. Each square has a diagonal connecting its lower left vertex to its upper right vertex. A bug moves along the line segments from vertex to vertex, never traversing the same segment twice and never moving from right to left along a horizontal or diagonal segment. Let \\(N\\) be the number of paths the bug can take from the lower left corner \\((A)\\) to the upper right corner \\((B).\\) One such path from \\(A\\) to \\(B\\) is shown by the thick line segments in the figure. Find \\(\\sqrt{N}.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "243",
+    "value": "243"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2026-p2.live",
+      "kind": "proof-sketch",
+      "text": "Put \\(A = (0, 0)\\) and \\(B = (10, 1).\\) Every horizontal and diagonal move goes rightward, so the bug’s \\(x\\)-coordinate never decreases, and it crosses each of the \\(10\\) vertical strips exactly once, using exactly one of that square’s three rightward segments: the bottom edge, the top edge, or the diagonal.\n\nThese ten choices determine the whole path. Each crossing arrives at a definite height (bottom edge: low; top edge or diagonal: high) and departs at a definite height (bottom edge or diagonal: low; top edge: high), so at each vertical line the bug traverses the vertical segment exactly when the arrival and departure heights differ — and each vertical segment is needed at most once, so no segment repeats. The same applies at the ends: the bug starts low at \\(A\\) and finishes high at \\(B,\\) using the end verticals if necessary. Conversely, every sequence of choices yields a valid path.\n\nTherefore \\(N = 3^{10},\\) and \\(\\sqrt{N} = 3^5 = 243.\\)",
+      "hints": [
+        "Since the bug never moves left, it crosses the strip between \\(x = i\\) and \\(x = i + 1\\) exactly once, along the bottom edge, the top edge, or the diagonal.",
+        "The vertical segments are completely determined by the ten crossing choices, so each square independently contributes \\(3\\) options."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "4b401e1a6b66cb2c24da8d38a9df5ba9837ec399b4e5d4f2b434aac2bc4f5c41"
+    ],
+    "solutions": []
+  }
+}

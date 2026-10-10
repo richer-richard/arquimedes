@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2004-p38",
+  "title": "2004 HMMT February Guts Problem 38",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2004,
+    "number": 38
+  },
+  "difficulty": {
+    "course": 75.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(S=\\left\\{p_{1} p_{2} \\cdots p_{n} \\mid p_{1}, p_{2}, \\ldots, p_{n}\\right.\\) are distinct primes and \\(\\left.p_{1}, \\ldots, p_{n}<30\\right\\}\\). Assume 1 is in \\(S\\). Let \\(a_{1}\\) be an element of \\(S\\). We define, for all positive integers \\(n\\) :\n\n\\[\\begin{gathered}\na_{n+1}=a_{n} /(n+1) \\quad \\text { if } a_{n} \\text { is divisible by } n+1 \\\\\na_{n+1}=(n+2) a_{n} \\\\\n\\text { if } a_{n} \\text { is not divisible by } n+1\n\\end{gathered}\\]\n\nHow many distinct possible values of \\(a_{1}\\) are there such that \\(a_{j}=a_{1}\\) for infinitely many \\(j\\) 's?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2004-p38.hmmt",
+      "kind": "proof-sketch",
+      "text": "512\n\nIf \\(a_{1}\\) is odd, then we can see by induction that \\(a_{j}=(j+1) a_{1}\\) when \\(j\\) is even and \\(a_{j}=a_{1}\\) when \\(j\\) is odd (using the fact that no even \\(j\\) can divide \\(a_{1}\\) ). So we have infinitely many \\(j\\) 's for which \\(a_{j}=a_{1}\\).\nIf \\(a_{1}>2\\) is even, then \\(a_{2}\\) is odd, since \\(a_{2}=a_{1} / 2\\), and \\(a_{1}\\) may have only one factor of 2. Now, in general, let \\(p=\\min \\left(\\left\\{p_{1}, \\ldots, p_{n}\\right\\} \\backslash\\{2\\}\\right)\\). Suppose \\(1<j<p\\). By induction, we have \\(a_{j}=(j+1) a_{1} / 2\\) when \\(j\\) is odd, and \\(a_{j}=a_{1} / 2\\) when \\(j\\) is even. So \\(a_{i} \\neq a_{1}\\) for all \\(1<j<p\\). It follows that \\(a_{p}=a_{1} / 2 p\\). Then, again using induction, we get for all nonnegative integers \\(k\\) that \\(a_{p+k}=a_{p}\\) if \\(k\\) is even, and \\(a_{p+k}=(p+k+1) a_{p}\\) if \\(k\\) is odd. Clearly, \\(a_{p} \\neq a_{1}\\) and \\(p+k+1 \\neq 2 p\\) when \\(k\\) is odd (the left side is odd, and the right side even). It follows that \\(a_{j}=a_{1}\\) for no \\(j>1\\). Finally, when \\(a_{1}=2\\), we can check inductively that \\(a_{j}=j+1\\) for \\(j\\) odd and \\(a_{j}=1\\) for \\(j\\) even.\nSo our answer is just the number of odd elements in \\(S\\). There are 9 odd prime numbers smaller than 30 , so the answer is \\(2^{9}=512\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

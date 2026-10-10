@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2004-p5",
+  "title": "2004 USAMO Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2004,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 97.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a\\), \\(b\\), and \\(c\\) be positive real numbers. Prove that\n\n\\[\n(a^5 - a^2 + 3)(b^5 - b^2 + 3)(c^5 - c^2 + 3) \\ge (a+b+c)^3\n\\]\n\n.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2004-p5.imported",
+      "kind": "proof-sketch",
+      "text": "We first note that for positive $x$, $x^5 + 1 \\ge x^3 + x^2$. We may prove this in the following ways:\n* Since $x^2$ and $x^3$ must be both lesser than, both equal to, or both greater than 1, by the rearrangement inequality, $x^2 \\cdot x^3 + 1 \\cdot 1 \\ge x^2 \\cdot 1 + 1 \\cdot x^3$.\n* Since $x^2 - 1$ and $x^3 - 1$ have the same sign, $0 \\le (x^2 - 1)(x^3 - 1) = x^5 - x^3 - x^2 + 1$, with equality when $x = 1$.\n* By weighted AM-GM, $\\frac{2}{5}x^5 + \\frac{3}{5} \\ge x^2$ and $\\frac{3}{5}x^5 + \\frac{2}{5} \\ge x^3$. Adding these gives the desired inequality. Equivalently, the desired inequality is a case of Muirhead's Inequality.\nIt thus becomes sufficient to prove that\n$(a^3 + 2)(b^3 + 2)(c^3 + 2) \\ge (a+b+c)^3$.\nWe present two proofs of this inequality:\n* By Hölder's Inequality,\n$\\begin{matrix}(m_{1,1} + m_{1,2} + m_{1,3})(m_{2,1} + m_{2,2} + m_{2,3})(m_{3,1} + m_{3,2} + m_{3,3}) \\ge \\\\ \\qquad \\qquad \\qquad\\left[ (m_{1,1}m_{2,1}m_{3,1})^{1/3} + (m_{2,1}m_{2,2}m_{2,3})^{1/3} + (m_{3,1}m_{3,2}m_{3,3})^{1/3} \\right] ^3.\\end{matrix}$\nWe get the desired inequality by taking $m_{1,1} = a^3$, $m_{2,2} = b^3$, $m_{3,3} = c^3$, and $m_{x,y} = 1$ when $x \\neq y$. We have equality if and only if $a = b = c = 1$.\n* Take $x = \\sqrt{a}$, $y = \\sqrt{b}$, and $z = \\sqrt{c}$. Then some two of $x$, $y$, and $z$ are both at least $1$ or both at most $1$. Without loss of generality, say these are $x$ and $y$. Then the sequences $(x, 1, 1)$ and $(1, 1, y)$ are oppositely sorted, yielding\n$(x^6 + 1 + 1)(1 + 1 + y^6) \\ge 3(x^6 + 1 + y^6)$\nby Chebyshev's Inequality. By the Cauchy-Schwarz Inequality we have\n$(x^6 + 1 + y^6)(1 + z^6 + 1) \\ge (x^3 + y^3 + z^3)^2.$\nApplying Chebyshev's and the Cauchy-Schwarz Inequalities each once more, we get\n$3(x^3 + y^3 + z^3) \\ge (x^2 + y^2 + z^2)(x+y+z),$\nand\n$(x^3 + y^3 + z^3)(x+y+z) \\ge (x^2 + y^2 + z^2)^2.$\nMultiplying the above four inequalities together yields\n$(x^6 + 2)(y^6 + 2)(z^6 + 2) \\ge (x^2 + y^2 + z^2)^3,$\nas desired, with equality if and only if $x = y = z = 1$.\n* First, expand the left side of the inequality to get\n$a^3b^3c^3 + 4(a^3 + b^3 + c^3) + 2(a^3b^3 + a^3c^3 + b^3c^3) + 8.$\nBy the AM-GM inequality, it is true that $a^3 + a^3b^3 + 1 \\ge 3a^2b$, and so it is clear that\n$a^3b^3c^3 + 4(a^3 + b^3 + c^3) + 2(a^3b^3 + a^3c^3 + b^3c^3) + 8 \\ge a^3b^3c^3 + 2(a^3 + b^3 + c^3) + 2 + 3a^2b + 3ab^2 + 3bc^2 + 3b^2c + 3c^2a + 3ca^2.$\nAdditionally, again by AM-GM, it is true that $a^3b^3c^3 + a^3 + b^3 + c^3 + 1 + 1 \\ge 6abc$, and so\n$a^3b^3c^3 + 2(a^3 + b^3 + c^3) + 2 + 3a^2b + 3ab^2 + 3bc^2 + 3b^2c + 3c^2a + 3ca^2$\n$\\ge a^3 + b^3 + c^3 + 3a^2b + 3ab^2 + 3bc^2 + 3b^2c + 3c^2a + 3ca^2 + 6abc = {(a + b + c)}^3,$\n as desired.\n<i>It is also possible to solve this inequality by expanding terms and applying brute force, either before or after proving that $x^5 - x^2 + 3 \\ge x^3 + 2$.</i>",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

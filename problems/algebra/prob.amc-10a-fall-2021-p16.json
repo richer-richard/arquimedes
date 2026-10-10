@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-10a-fall-2021-p16",
+  "title": "2021 Fall AMC 10A Problem 16",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.symmetry-algebra",
+      "label": "Symmetry (algebra)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2021,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 25.5,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Consider the function\n\n\\[f(x) = |\\lfloor x \\rfloor| - |\\lfloor 1 - x \\rfloor|\\]\n\nIts graph is symmetric about which of the following? (Here \\(\\lfloor x \\rfloor\\) is the greatest integer not exceeding \\(x.\\))",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "the \\(y\\)-axis"
+    },
+    {
+      "label": "B",
+      "text": "the line \\(x=1\\)"
+    },
+    {
+      "label": "C",
+      "text": "the origin"
+    },
+    {
+      "label": "D",
+      "text": "the point \\(\\left(\\dfrac{1}{2},0\\right)\\)"
+    },
+    {
+      "label": "E",
+      "text": "the point \\((1,0)\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-fall-2021-p16.live",
+      "kind": "proof-sketch",
+      "text": "For every real \\(x,\\) \\[ \\begin{aligned} &f(1-x)=|\\lfloor 1-x\\rfloor| \\\\ &\\quad {}-|\\lfloor x\\rfloor|=-f(x). \\end{aligned} \\]\n\nEquivalently, replacing \\(x\\) by \\(\\frac{1}{2}+t\\) gives \\(f\\!\\left(\\frac{1}{2}-t\\right)=-f\\!\\left(\\frac{1}{2}+t\\right).\\) This is point symmetry about \\(\\left(\\frac{1}{2},0\\right).\\)\n\nThus, D is the correct answer.",
+      "hints": [
+        "Compare \\(f(1-x)\\) with \\(f(x)\\)",
+        "The relation is point symmetry, not line symmetry"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

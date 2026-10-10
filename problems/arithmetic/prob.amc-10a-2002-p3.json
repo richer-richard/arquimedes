@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2002-p3",
+  "title": "2002 AMC 10A Problem 3",
+  "category": "arithmetic",
+  "subjects": [
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "arith.exponent",
+      "label": "Exponent",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "arith.order-of-operations",
+      "label": "Order of operations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "arith.systematic-listing",
+      "label": "Systematic listing",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2002,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 15.4,
+    "source": 1190,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "According to the standard convention for exponentiation, \\[2^{2^{2^{2}}}=2^{\\left(2^{\\left(2^{2}\\right)}\\right)}=2^{16}=65{,}536.\\] If the order in which the exponentiations are performed is changed, how many other values are possible?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2002-p3.live",
+      "kind": "proof-sketch",
+      "text": "There are five ways to parenthesize the tower. Three of them, \\((2^2)^{\\left(2^2\\right)},\\) \\(\\left(2^{\\left(2^2\\right)}\\right)^2,\\) and \\(\\left(\\left(2^2\\right)^2\\right)^2,\\) all equal \\(2^{8}=256.\\) The other two both give the standard value \\(2^{16}=65{,}536.\\)\n\nSo exactly one other value, \\(256,\\) is possible.\n\nThus, the correct answer is B.",
+      "hints": [
+        "List the five ways to parenthesize a tower of four \\(2\\)’s",
+        "Every grouping evaluates to either \\(2^{16}\\) or \\(2^{8}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

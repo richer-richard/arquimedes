@@ -1,0 +1,91 @@
+{
+  "id": "prob.hmmt-feb-guts-2016-p14",
+  "title": "2016 HMMT February Guts Problem 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity-and-scaling",
+      "label": "Similarity and scaling",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2016,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 77.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A B C\\) be a triangle such that \\(A B=13, B C=14, C A=15\\) and let \\(E, F\\) be the feet of the altitudes from \\(B\\) and \\(C\\), respectively. Let the circumcircle of triangle \\(A E F\\) be \\(\\omega\\). We draw three lines, tangent to the circumcircle of triangle \\(A E F\\) at \\(A, E\\), and \\(F\\). Compute the area of the triangle these three lines determine.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2016-p14.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\square\\)\nNote that \\(A E F \\sim A B C\\). Let the vertices of the triangle whose area we wish to compute be \\(P, Q, R\\), opposite \\(A, E, F\\) respectively. Since \\(H, O\\) are isogonal conjugates, line \\(A H\\) passes through the circumcenter of \\(A E F\\), so \\(Q R \\| B C\\).\nLet \\(M\\) be the midpoint of \\(B C\\). We claim that \\(M=P\\). This can be seen by angle chasing at \\(E, F\\) to find that \\(\\angle P F B=\\angle A B C, \\angle P E C=\\angle A C B\\), and noting that \\(M\\) is the circumcenter of \\(B F E C\\). So, the height from \\(P\\) to \\(Q R\\) is the height from \\(A\\) to \\(B C\\), and thus if \\(K\\) is the area of \\(A B C\\), the area we want is \\(\\frac{Q R}{B C} K\\).\nHeron's formula gives \\(K=84\\), and similar triangles \\(Q A F, M B F\\) and \\(R A E, M C E\\) give \\(Q A=\\frac{B C}{2} \\frac{\\tan B}{\\tan A}\\), \\(R A=\\frac{B C}{2} \\frac{\\tan C}{\\tan A}\\), so that \\(\\frac{Q R}{B C}=\\frac{\\tan B+\\tan C}{2 \\tan A}=\\frac{\\tan B \\tan C-1}{2}=\\frac{11}{10}\\),\nsince the height from \\(A\\) to \\(B C\\) is 12 . So our answer is \\(\\frac{462}{5}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

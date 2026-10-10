@@ -1,0 +1,57 @@
+{
+  "id": "prob.aime-i-2016-p2",
+  "title": "2016 AIME I Problem 2",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.dice-probability",
+      "label": "Dice (probability)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2016,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 45.9,
+    "source": 2080,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Two dice appear to be standard dice with their faces numbered from \\(1\\) to \\(6,\\) but each die is weighted so that the probability of rolling the number \\(k\\) is directly proportional to \\(k.\\) The probability of rolling a \\(7\\) with this pair of dice is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "71",
+    "value": "71"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2016-p2.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(1 + 2 + \\cdots + 6 = 21,\\) each die rolls \\(k\\) with probability \\(\\frac{k}{21}.\\) A total of \\(7\\) arises from the pairs \\((k, 7-k)\\) for \\(k = 1, \\ldots, 6,\\) so its probability is \\[ \\begin{aligned} &\\scriptsize \\frac{1 \\cdot 6 + 2 \\cdot 5 + 3 \\cdot 4 + 4 \\cdot 3 + 5 \\cdot 2 + 6 \\cdot 1}{21^2} \\\\ &= \\frac{56}{441} = \\frac{8}{63}. \\end{aligned} \\]\n\nThus \\(m + n = 8 + 63 = 71.\\)",
+      "hints": [
+        "On each die the probability of rolling \\(k\\) is \\(\\frac{k}{21},\\) since \\(1 + 2 + \\cdots + 6 = 21\\)",
+        "The probability of a total of \\(7\\) is \\(\\sum_{k=1}^{6} \\frac{k}{21} \\cdot \\frac{7 - k}{21}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

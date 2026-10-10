@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2025-p24",
+  "title": "2025 AMC 10B Problem 24",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.random-walk",
+      "label": "Random walk",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursive-probability",
+      "label": "Recursive probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2025,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 40.5,
+    "source": 2170,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A frog hops along the number line according to the following rules. It starts at \\(0.\\) If it is at \\(0,\\) then it moves to \\(1\\) with probability \\(\\tfrac12\\) and it disappears with probability \\(\\tfrac12.\\) For \\(n = 1,\\) \\(2,\\) or \\(3,\\) if it is at \\(n,\\) then it moves to \\(n + 1\\) with probability \\(\\tfrac14,\\) it moves to \\(n - 1\\) with probability \\(\\tfrac14,\\) and it disappears with probability \\(\\tfrac12.\\)\n\nWhat is the probability that the frog reaches \\(4?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{101}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1}{100}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{99}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{1}{98}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{1}{97}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "1/97"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2025-p24.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(p_n\\) be the probability of reaching \\(4\\) from position \\(n,\\) with \\(p_4 = 1.\\) The rules give \\(p_0 = \\tfrac12 p_1,\\) \\(p_1 = \\tfrac14 p_0 + \\tfrac14 p_2,\\) \\(p_2 = \\tfrac14 p_1 + \\tfrac14 p_3,\\) and \\(p_3 = \\tfrac14 p_2 + \\tfrac14.\\) Work upward: \\(p_1 = \\tfrac27 p_2\\) and \\(p_2 = \\tfrac{7}{26} p_3.\\) These unwind to \\(p_3 = \\tfrac{26}{97},\\) \\(p_2 = \\tfrac{7}{97},\\) \\(p_1 = \\tfrac{2}{97},\\) and finally \\(p_0 = \\tfrac{1}{97}.\\) Therefore, the answer is E.",
+      "hints": [
+        "Let \\(p_n\\) be the probability of ever reaching \\(4\\) starting from \\(n,\\) with \\(p_4 = 1;\\) set up one equation per state",
+        "Use \\(p_0 = \\tfrac12 p_1\\) and \\(p_n = \\tfrac14 p_{n-1} + \\tfrac14 p_{n+1}\\) for \\(n = 1, 2, 3,\\) then solve the system"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

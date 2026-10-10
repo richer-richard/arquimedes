@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2008-p25",
+  "title": "2008 AMC 12A Problem 25",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.de-moivres-theorem",
+      "label": "De Moivre’s Theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2008,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 39.5,
+    "source": 2440,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A sequence \\((a_1, b_1),\\) \\((a_2, b_2),\\) \\((a_3, b_3),\\) \\(\\ldots\\) of points in the coordinate plane satisfies \\[ \\begin{aligned} &(a_{n+1}, b_{n+1}) \\\\ &= \\left(\\sqrt{3}\\,a_n - b_n,\\; \\sqrt{3}\\,b_n + a_n\\right) \\\\ &\\quad (n = 1, 2, 3, \\ldots) \\end{aligned} \\] Suppose that \\((a_{100}, b_{100}) = (2, 4).\\) What is \\(a_1 + b_1?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(-\\dfrac{1}{2^{97}}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(-\\dfrac{1}{2^{99}}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{1}{2^{98}}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{1}{2^{96}}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2008-p25.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(z_n = a_n + b_n i.\\) Then \\[ \\begin{aligned} z_{n+1} &= (\\sqrt{3}\\,a_n - b_n) \\\\ &\\quad {}+ (\\sqrt{3}\\,b_n + a_n)i \\\\ &= (a_n + b_n i)(\\sqrt{3} + i), \\end{aligned} \\] so \\(z_{n+1} = z_n(\\sqrt{3} + i)\\) and \\(z_{100} = z_1(\\sqrt{3} + i)^{99}.\\)\n\nSince \\(\\sqrt{3} + i = 2(\\cos 30^\\circ + i\\sin 30^\\circ),\\) De Moivre’s theorem gives \\((\\sqrt{3} + i)^{99}\\) \\(= 2^{99}(\\cos 2970^\\circ + i\\sin 2970^\\circ).\\) As \\(2970^\\circ\\) is coterminal with \\(90^\\circ,\\) this equals \\(2^{99} i.\\)\n\nThus \\(2 + 4i = z_1 \\cdot 2^{99} i,\\) so \\[ z_1 = \\dfrac{2 + 4i}{2^{99} i} = \\dfrac{4 - 2i}{2^{99}}. \\]\n\nThen \\(a_1 = \\tfrac{4}{2^{99}}\\) and \\(b_1 = -\\tfrac{2}{2^{99}},\\) so \\[ a_1 + b_1 = \\dfrac{2}{2^{99}} = \\dfrac{1}{2^{98}}. \\]\n\nThus, D is the correct answer.",
+      "hints": [
+        "Write \\(z_n = a_n + b_n i;\\) the recurrence becomes \\(z_{n+1} = z_n(\\sqrt{3} + i)\\)",
+        "Since \\(\\sqrt{3} + i = 2(\\cos 30^\\circ + i\\sin 30^\\circ),\\) apply De Moivre’s theorem to \\((\\sqrt{3} + i)^{99}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

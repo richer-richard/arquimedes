@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2012-p4",
+  "title": "2012 IMO Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2012,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 88.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find all functions \\(f \\colon \\mathbb{Z} \\to \\mathbb{Z}\\) such that,\nfor all integers \\(a\\), \\(b\\), \\(c\\) that satisfy \\(a+b+c=0\\),\nthe following equality holds:\n\\[ f(a)^2+f(b)^2+f(c)^2 = 2f(a)f(b)+2f(b)f(c)+2f(c)f(a). \\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2012-p4.evanchen",
+      "kind": "proof-sketch",
+      "text": "Answer: for arbitrary \\(k \\in \\mathbb{Z}\\), we have\n\n• \\(f(x) = kx^2\\),\n\n• \\(f(x) = 0\\) for even \\(x\\), and \\(f(x) = k\\) for odd \\(x\\), and\n\n• \\(f(x) = 0\\) for \\(x \\equiv 0 \\pmod 4\\),\n \\(f(x) = k\\) for odd \\(x\\), and \\(f(x) = 4k\\) for \\(x \\equiv 2 \\pmod 4\\).\n\nThese can be painfully seen to work.\n(It's more natural to think of these as\n\\(f(x) = x^2\\), \\(f(x) = x^2 \\pmod 4\\), \\(f(x) = x^2 \\pmod 8\\),\nand multiples thereof.)\n\nSet \\(a=b=c=0\\) to get \\(f(0)=0\\).\nThen set \\(c=0\\) to get \\(f(a) = f(-a)\\), so \\(f\\) is even.\nNow \\[ f(a)^2 + f(b)^2 + f(a+b)^2\n= 2f(a+b)\\left( f(a)+f(b) \\right) + 2f(a)f(b) \\]\nor\n\\[ \\left( f(a+b) - \\left( f(a)+f(b) \\right) \\right)^2\n = 4f(a)f(b). \\]\nHence \\(f(a)f(b)\\) is a perfect square for all \\(a,b \\in \\mathbb{Z}\\).\nSo there exists a \\(\\lambda\\) such that \\(f(n) = \\lambda g(n)^2\\), where \\(g(n) \\ge 0\\).\nFrom here we recover\n\\[ \\boxed{g(a+b) = \\pm g(a) \\pm g(b)}. \\]\nAlso \\(g(0) = 0\\).\n\nLet \\(k = g(1) \\neq 0\\).\nWe now split into cases on \\(g(2)\\):\n\n• \\(g(2) = 0\\). Put \\(b = 2\\) in original to get\n \\(g(a+2) = \\pm g(a) = +g(a)\\).\n\n• \\(g(2) = 2k\\). Cases on \\(g(4)\\):\n\n• \\(g(4) = 0\\), then we get\n \\((g(n))_{n\\ge0} = (0,1,2,1,0,1,2,1,\\dots)\\). This works.\n\n• \\(g(4) = 4k\\). This only happens when\n \\(g(1) = k\\), \\(g(2) = 2k\\), \\(g(3) = 3k\\), \\(g(4) = 4k\\).\n Then\n\n• \\(g(5) = \\pm 3k \\pm 2k = \\pm 4k \\pm k\\).\n\n• \\(g(6) = \\pm4k \\pm 2k = \\pm5k \\pm k\\).\n\n• \\dots\n\n and so by induction \\(g(n) = nk\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

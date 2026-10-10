@@ -1,0 +1,93 @@
+{
+  "id": "prob.amc-10a-2017-p17",
+  "title": "2017 AMC 10A Problem 17",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle",
+      "label": "Circle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.distance-formula",
+      "label": "Distance formula",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.lattice-point",
+      "label": "Lattice point",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2017,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 29.4,
+    "source": 1790,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Distinct points \\(P,\\) \\(Q,\\) \\(R,\\) \\(S\\) lie on the circle \\(x^{2}+y^{2}=25\\) and have integer coordinates. The distances \\(PQ\\) and \\(RS\\) are irrational numbers.\n\nWhat is the greatest possible value of the ratio \\(\\dfrac{PQ}{RS}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\sqrt{5}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5\\sqrt{2}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "7"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2017-p17.live",
+      "kind": "proof-sketch",
+      "text": "The integer-coordinate points on \\(x^2+y^2=25\\) are \\((\\pm5,0)\\), \\((0,\\pm5)\\), \\((\\pm3,\\pm4)\\), and \\((\\pm4,\\pm3)\\).\n\nFor \\(PQ\\) and \\(RS\\) to be irrational, the squared distance must not be a perfect square. To maximize the ratio, make \\(PQ\\) as large as possible and \\(RS\\) as small as possible under that condition.\n\nThe largest possible irrational distance is between \\((-4,3)\\) and \\((3,-4)\\), giving \\(PQ=\\sqrt{7^2+7^2}=\\sqrt{98}\\). The smallest possible irrational distance is between \\((3,4)\\) and \\((4,3)\\), giving \\(RS=\\sqrt{1^2+1^2}=\\sqrt2\\).\n\nThe greatest possible ratio is \\(\\dfrac{\\sqrt{98}}{\\sqrt2}=7\\). Thus, D is the correct answer.",
+      "hints": [
+        "List the lattice points on the circle",
+        "Maximize one irrational distance and minimize another irrational distance"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-general-1-2010-p1",
+  "title": "2010 HMMT November General Round 1 Problem 1",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2010,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Jacob flips five coins, exactly three of which land heads. What is the probability that the first two are both heads?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-1-2010-p1.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{3}{10}\\) We can associate with each sequence of coin flips a unique word where \\(H\\) represents heads, and T represents tails. For example, the word HHTTH would correspond to the coin flip sequence where the first two flips were heads, the next two were tails, and the last was heads. We are given that exactly three of the five coin flips came up heads, so our word must be some rearrangement of HHHTT. To calculate the total number of possibilities, any rearrangement corresponds to a choice of three spots to place the H flips, so there are \\(\\binom{5}{3}=10\\) possibilities. If the first two flips are both heads, then we can only rearrange the last three HTT flips, which corresponds to choosing one spot for the remaining \\(H\\). This can be done in \\(\\binom{3}{1}=3\\) ways. Finally, the probability is the quotient of these two, so we get the answer of \\(\\frac{3}{10}\\). Alternatively, since the total number of possiblities is small, we can write out all rearrangements: HHHTT, HHTHT, HHTTH, HTHHT, HTHTH, HTTHH, THHHT, THHTH, THTHH, TTHHH. Of these ten, only in the first three do we flip heads the first two times, so we get the same answer of \\(\\frac{3}{10}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

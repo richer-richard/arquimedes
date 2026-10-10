@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2018-p5",
+  "title": "2018 HMMT February Algebra and Number Theory Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inverses-mod-n",
+      "label": "Inverses mod n",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.primitive-roots-mod-p-p-n",
+      "label": "Primitive roots mod p / p^n",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2018,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\omega_{1}, \\omega_{2}, \\ldots, \\omega_{100}\\) be the roots of \\(\\frac{x^{101}-1}{x-1}\\) (in some order). Consider the set\n\n\\[S=\\left\\{\\omega_{1}^{1}, \\omega_{2}^{2}, \\omega_{3}^{3}, \\ldots, \\omega_{100}^{100}\\right\\}\\]\n\nLet \\(M\\) be the maximum possible number of unique values in \\(S\\), and let \\(N\\) be the minimum possible number of unique values in \\(S\\). Find \\(M-N\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2018-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 98\nThroughout this solution, assume we're working modulo 101.\nFirst, \\(N=1\\). Let \\(\\omega\\) be a primitive 101st root of unity. We then let \\(\\omega_{n}=\\omega^{1 / n}\\), which we can do because 101 is prime, so \\(1 / n\\) exists for all nonzero \\(n\\) and \\(1 / n=1 / m \\Longrightarrow m=n\\). Thus the set contains only one distinct element, \\(\\omega\\).\n\\(M=100\\) is impossible. Fix \\(\\zeta\\), a primitive 101st root of unity, and let \\(\\omega_{n}=\\zeta^{\\pi(n)}\\) for each \\(n\\). Suppose that there are 100 distinct such \\(n \\pi(n)\\) exponents; then \\(\\pi\\) permutes the set \\(\\{1,2, \\cdots, 100\\}\\). Fix \\(g\\), a primitive root of 101; write \\(n=g^{e_{n}}\\) and \\(\\pi(n)=g^{\\tau\\left(e_{n}\\right)}\\). Then \\(\\left\\{e_{n}\\right\\}=\\{0,1,2, \\ldots, 100\\}\\) and \\(\\tau\\) is a permutation of this set, as is \\(e_{n}+\\tau\\left(e_{n}\\right)\\). However, this is impossible: \\(\\sum_{n=1}^{100} e_{n}+\\tau\\left(e_{n}\\right)=5050+5050 \\equiv\\) \\(5050(\\bmod 100)\\), which is a contradiction. Thus there cannot be 100 distinct exponents.\n\\(M=99\\) is possible. Again, let \\(\\zeta\\) be a primitive root of unity and let \\(\\omega_{n}=\\zeta^{1 /(n+1)}\\), except when \\(n=100\\), in which case let \\(\\omega_{100}\\) be the last possible root. Notice that \\(\\frac{n}{n+1}=\\frac{m}{m+1}\\) if and only if \\(n=m\\), so this will produce 99 different elements in the set.\nThus \\(M-N=99-1=98\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

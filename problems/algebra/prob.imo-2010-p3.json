@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2010-p3",
+  "title": "2010 IMO Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2010,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 111.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find all functions \\(g \\colon \\mathbb{Z}_{>0} \\to \\mathbb{Z}_{>0}\\) such that\n\\[ \\left( g(m)+n \\right)\\left( g(n)+m \\right) \\]\nis always a perfect square.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2010-p3.evanchen",
+      "kind": "proof-sketch",
+      "text": "For \\(c \\ge 0\\), the function \\(g(n) = n+c\\) works; we prove this is the only possibility.\n\nFirst, the main point of the problem is that:\n\nClaim.\n We have \\(g(n) \\equiv g(n') \\pmod p \\implies n \\equiv n' \\pmod p\\).\n\nProof.\n Pick a large integer \\(M\\) such that\n \\[ \\nu_p(M+g(n)), \\quad \\nu_p(M+g(n')) \\quad \\text{are both odd}. \\]\n (It's not hard to see this is always possible.)\n Now, since each of\n \\[\\begin{aligned}\n \\left( M + g(n) \\right)&\\left( n + g(M) \\right) \\\\\n \\left( M + g(n') \\right)&\\left( n' + g(M) \\right)\n \\end{aligned}\\]\n is a square, we get \\(n \\equiv n' \\equiv -g(M) \\pmod p\\).\n\nThis claim implies that\n\n• The numbers \\(g(n)\\) and \\(g(n+1)\\) differ by \\(\\pm 1\\) for any \\(n\\), and\n\n• The function \\(g\\) is injective.\n\nIt follows \\(g\\) is a linear function with slope \\(\\pm 1\\), hence done.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

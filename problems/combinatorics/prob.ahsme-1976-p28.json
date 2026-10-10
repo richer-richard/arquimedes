@@ -1,0 +1,85 @@
+{
+  "id": "prob.ahsme-1976-p28",
+  "title": "1976 AHSME Problem 28",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.counting-intersections",
+      "label": "Counting intersections",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.double-counting",
+      "label": "Double counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1976,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 44.4,
+    "source": 2320,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Lines \\(L_1,\\) \\(L_2,\\) \\(\\ldots,\\) \\(L_{100}\\) are distinct. All lines \\(L_{4n},\\) \\(n\\) a positive integer, are parallel to each other. All lines \\(L_{4n-3},\\) \\(n\\) a positive integer, pass through a given point \\(A.\\) The maximum number of points of intersection of pairs of lines from the complete set \\(\\{L_1,L_2,\\ldots,L_{100}\\}\\) is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4350\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4351\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4900\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4901\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(9851\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "4351"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1976-p28.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(25\\) indices divisible by \\(4\\) and \\(25\\) congruent to \\(1\\pmod4.\\) Starting from \\(\\binom{100}{2}=4950,\\) the parallel group contributes no intersections, removing \\(\\binom{25}{2}=300.\\) The concurrent group’s \\(300\\) pairs all give one point rather than \\(300\\) distinct points, removing another \\(299.\\) All remaining intersections can be chosen distinct, so the maximum is \\[ 4950-300-299=4351. \\]\n\nTherefore, the correct answer is B.",
+      "hints": [
+        "Start with \\(\\binom{100}{2}\\) intersections in general position",
+        "Remove the pairs among the \\(25\\) parallel lines and collapse the pairs among the \\(25\\) concurrent lines to one point"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

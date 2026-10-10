@@ -1,0 +1,87 @@
+{
+  "id": "prob.ahsme-1981-p18",
+  "title": "1981 AHSME Problem 18",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.counting-intersections",
+      "label": "Counting intersections",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1981,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 39.5,
+    "source": 2130,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The number of real solutions to the equation \\[ \\frac{x}{100}=\\sin x \\] is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(61\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(62\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(63\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(64\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(65\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "63"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1981-p18.live",
+      "kind": "proof-sketch",
+      "text": "The equation is odd-symmetric and has the solution \\(x=0.\\) On \\((0,\\pi)\\) there is one further positive solution. For each \\(k=1,2,\\ldots,15,\\) the positive sine hump on \\((2k\\pi,(2k+1)\\pi)\\) rises above \\(\\frac{x}{100}\\) and then falls below it, giving two solutions. There are no positive solutions beyond \\(31\\pi\\), because the next positive hump begins above \\(100\\) while \\(|\\sin x|\\le1.\\) Thus there are \\(1+2(15)=31\\) positive solutions, the same number negative, and zero itself: \\(31+31+1=63.\\)\n\nTherefore, the correct answer is C.",
+      "hints": [
+        "Use odd symmetry and first count the positive solutions",
+        "Only positive sine humps below \\(x=100\\) can meet the line, with special care for the first hump"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

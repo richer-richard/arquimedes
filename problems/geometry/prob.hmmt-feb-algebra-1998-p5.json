@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-algebra-1998-p5",
+  "title": "1998 HMMT February Algebra Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-shapes",
+      "label": "3D Shapes",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.surface-area",
+      "label": "Surface Area",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.volume",
+      "label": "Volume",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 1998,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 78.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A man named Juan has three rectangular solids, each having volume 128. Two of the faces of one solid have areas 4 and 32 . Two faces of another solid have areas 64 and 16 . Finally, two faces of the last solid have areas 8 and 32 . What is the minimum possible exposed surface area of the tallest tower Juan can construct by stacking his solids one on top of the other, face to face? (Assume that the base of the tower is not exposed).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-1998-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "Suppose that \\(x, y, z\\) are the sides of the following solids. Then Volume \\(=x y z=128\\). For the first solid, without loss of generality (with respect to assigning lengths to \\(x, y, z\\) ), \\(x y=4\\) and \\(y z=32\\). Then \\(x y^{2} z=128\\). Then \\(y=1\\). Solving the remaining equations yields \\(x=4\\) and \\(z=32\\). Then the first solid has dimensions \\(4 \\times 1 \\times 32\\).\n\nFor the second solid, without loss of generality, \\(x y=64\\) and \\(y z=16\\). Then \\(x y^{2} z=1024\\). Then \\(y=8\\). Solving the remaining equations yields \\(x=8\\) and \\(z=2\\). Then the second solid has dimensions \\(8 \\times 8 \\times 2\\).\n\nFor the third solid, without loss of generality, \\(x y=8\\) and \\(y z=32\\). Then \\(y=2\\). Solving the remaining equations yields \\(x=4\\) and \\(z=16\\). Then the third solid has dimensions \\(4 \\times 2 \\times 16\\).\n\nTo obtain the tallest structure, Juan must stack the boxes such that the longest side of each solid is oriented vertically. Then for the first solid, the base must be \\(1 \\times 4\\), so that the side of length 32 can\ncontribute to the height of the structure. Similarly, for the second solid, the base must be \\(8 \\times 2\\), so that the side of length 8 can contribute to the height. Finally, for the third solid, the base must be \\(4 \\times 2\\). Thus the structure is stacked, from bottom to top: second solid, third solid, first solid. This order is necessary, so that the base of each solid will fit entirely on the top of the solid directly beneath it.\n\nAll the side faces of the solids contribute to the surface area of the final solid. The side faces of the bottom solid have area \\(8 \\cdot(8+2+8+2)=160\\). The side faces of the middle solid have area \\(16 \\cdot(4+2+4+2)=192\\). The sides faces of the top solid have area \\(32 \\cdot(4+1+4+1)=320\\).\n\nFurthermore, the top faces of each of the solids are exposed. The top face of the bottom solid is partially obscured by the middle solid. Thus the total exposed area of the top face of the bottom solid is \\(8 \\cdot 2-4 \\cdot 2=8\\). The top face of the middle solid is partially obscured by the top solid. Thus the total exposed area of the top face of the middle solid is \\(4 \\cdot 2-4 \\cdot 1=4\\). The top face of the top solid is fully exposed. Thus the total exposed area of the top face of the top solid is \\(4 \\cdot 1=4\\).\n\nThen the total surface area of the entire structure is \\(160+192+320+8+4+4=688\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-general-2024-p4",
+  "title": "2024 HMMT November General Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.number-theory",
+      "label": "Number Theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial-operations",
+      "label": "Polynomial operations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2024,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 45.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the number of ways to pick a 3 -element subset of\n\n\\[\\left\\{10^{1}+1,10^{2}+1,10^{3}+1,10^{4}+1,10^{5}+1,10^{6}+1,10^{7}+1\\right\\}\\]\n\nsuch that the product of the 3 numbers in the subset has no digits besides 0 and 1 when written in base 10 .",
+  "answerChoices": [],
+  "answer": {
+    "letter": "26",
+    "value": "26"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2024-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "Given a subset \\(\\left\\{10^{a}+1,10^{b}+1,10^{c}+1\\right\\}\\), we can directly expand the product of its elements:\n\n\\[\\left(10^{a}+1\\right)\\left(10^{b}+1\\right)\\left(10^{c}+1\\right)=10^{a+b+c}+10^{b+c}+10^{a+c}+10^{a+b}+10^{a}+10^{b}+10^{c}+1 .\\]\n\nIn order for all digits to be 0 or 1 , all 7 numbers \\(a+b+c, b+c, a+c, a+b, a, b, c\\) should be distinct and nonzero, with the latter being guaranteed.\nWithout loss of generality, we can assume \\(c>b>a\\). Then,\n\n\\[a+b+c>b+c>a+c>\\max (a+b, c)\\]\n\nand\n\n\\[\\min (a+b, c)>b>a\\]\n\nso the only two numbers that could be the same are \\(a+b\\) and \\(c\\).\nThere are 9 triples \\((a, b, c)\\) where \\(1 \\leq a<b<c \\leq 7\\) and \\(a+b=c\\), namely \\((1,2,3),(1,3,4),(1,4,5)\\), \\((1,5,6),(1,6,7),(2,3,5),(2,4,6),(2,5,7)\\), and \\((3,4,7)\\). The remaining triples \\((a, b, c)\\) all work, so the answer is \\(\\binom{7}{3}-9=26\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

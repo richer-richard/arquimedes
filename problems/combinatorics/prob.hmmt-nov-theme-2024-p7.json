@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-theme-2024-p7",
+  "title": "2024 HMMT November Theme Problem 7",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.games-and-greedy-algorithms",
+      "label": "Games and greedy algorithms",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.invariants-and-monovariants",
+      "label": "Invariants and monovariants",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2024,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 49.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Jasper and Rose are playing a game. Twenty-six 32 -ounce jugs are in a line, labeled Quart A through Quart Z from left to right. All twenty-six jugs are initially full. Jasper and Rose take turns making one of the following two moves:\n\n- Remove a positive integer number of ounces from the leftmost nonempty jug, possibly emptying it\n- Remove an equal positive integer number of ounces from the two leftmost nonempty jugs, possibly emptying one or both of them. (Attempting to remove more ounces from a jug than it currently contains is not allowed.)\n\nJasper plays first. A player's score is the number of ounces they take from Quart Z. If both players play to maximize their score, compute the maximum score that Jasper can guarantee.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "31",
+    "value": "31"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2024-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "Notice that after any sequence of moves, the leftmost nonempty jug has at most as many ounces as the second leftmost nonempty jug.\nAlice's strategy for 31 is as follows: as long as at least two jugs are nonempty, remove all but one ounce from the first jug. This will ensure Bob only ever gets to take one ounce from one or two jugs at a time, so on Alice's turn the first jug will always have more than one ounce. Eventually, Bob will be forced to take one ounce from jug Y and at most one from jug Z, leaving at least 31 for Alice.\n\nIt remains to show 32 is not attainable. If all but jugs Y and Z are empty on Bob's turn, then Bob can guarantee at least one ounce. Thus, the only way Alice could guarantee all 32 ounces in Quart Z is by making Bob empty jug X without touching jugs Y or Z , so that Alice can then take all 32 from Z in one move. This can only happen if Bob is forced to empty jugs W and X simultaneously; otherwise, Bob would have the option to empty part of Y as well. But then Bob could just empty W only, contradiction.\n\nThus 31 is maximal.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

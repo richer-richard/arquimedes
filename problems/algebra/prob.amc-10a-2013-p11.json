@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2013-p11",
+  "title": "2013 AMC 10A Problem 11",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2013,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 17.7,
+    "source": 1020,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "A student council must select a two-person welcoming committee and a three-person planning committee from among its members. There are exactly \\(10\\) ways to select a two-person team for the welcoming committee. It is possible for students to serve on both committees. In how many different ways can a three-person planning committee be selected?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(25\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "10"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2013-p11.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(x\\) be the number of students. Then the number of ways to pick a two-person committee is \\[ \\binom{x}{2} = \\dfrac{x(x - 1)}{2}. \\] We know that this equals \\(10,\\) so \\[ x^2 - x = 20 \\]\\[ x^2 - x - 20 = 0. \\] Factoring yields \\[ (x - 5)(x + 4) = 0 \\]\\[ x = 5, \\] since there cannot be a negative number of students.\n\nThen, the number of ways to pick a \\(3\\)-person committee is \\[ \\binom{5}{3} = \\binom{5}{2} = 10. \\]\n\nThus, A is the correct answer.",
+      "hints": [
+        "Let \\(n\\) be the number of council members and use \\(\\binom n2=10\\)",
+        "After finding \\(n\\), count \\(\\binom n3\\) planning committees"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

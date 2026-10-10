@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2015-p11",
+  "title": "2015 AMC 10B Problem 11",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime",
+      "label": "Prime",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.systematic-listing",
+      "label": "Systematic listing",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2015,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 22.1,
+    "source": 1420,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Among the positive integers less than \\(100,\\) each of whose digits is a prime number, one is selected at random. What is the probability that the selected number is prime?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( \\dfrac{8}{99} \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( \\dfrac{2}{5} \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( \\dfrac{9}{20} \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( \\dfrac{1}{2} \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( \\dfrac{9}{16} \\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "2/5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2015-p11.live",
+      "kind": "proof-sketch",
+      "text": "The available digits are \\(2,3,5,7\\). There are \\(4\\) one-digit numbers and \\(4^2=16\\) two-digit numbers, for \\(20\\) total choices.\n\nAll \\(4\\) one-digit choices are prime. A two-digit prime cannot end in \\(2\\) or \\(5\\), so checking endings \\(3\\) and \\(7\\) gives the two-digit primes \\(23,37,53,73\\).\n\nThus \\(8\\) of the \\(20\\) choices are prime, and the probability is \\(\\frac{8}{20}=\\frac25\\).\n\nThus, the correct answer is B.",
+      "hints": [
+        "List one-digit primes and two-digit numbers using only \\(2,3,5,7\\)",
+        "Two-digit primes ending in \\(3\\) or \\(7\\) must still pass divisibility tests"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

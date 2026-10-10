@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2013-p23",
+  "title": "2013 AMC 12B Problem 23",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2013,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 49.2,
+    "source": 2510,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Bernardo chooses a three-digit positive integer \\(N\\) and writes both its base-\\(5\\) and base-\\(6\\) representations on a blackboard. Later LeRoy sees the two numbers Bernardo has written. Treating the two numbers as base-\\(10\\) integers, he adds them to obtain an integer \\(S.\\) For example, if \\(N = 749,\\) Bernardo writes the numbers \\(10{,}444\\) and \\(3{,}245,\\) and LeRoy obtains the sum \\(S = 13{,}689.\\) For how many choices of \\(N\\) are the two rightmost digits of \\(S,\\) in order, the same as those of \\(2N?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(25\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "25"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2013-p23.live",
+      "kind": "proof-sketch",
+      "text": "Because \\(\\mathrm{lcm}(25, 36, 100) = 900,\\) the condition on \\(N\\) depends only on \\(N \\bmod 900,\\) so consider \\(0 \\le N \\le 899.\\) Let the last two base-\\(5\\) digits be \\(a_1, a_0\\) and the last two base-\\(6\\) digits be \\(b_1,b_0.\\) Modulo \\(10,\\) the desired equality and \\(N\\equiv a_0\\pmod5\\) force \\(a_0=b_0.\\) The Chinese Remainder Theorem applied modulo \\(25\\) and \\(36\\) then gives \\[ \\begin{aligned} N&\\equiv180a_1+150b_1 \\\\ &\\quad {}+a_0\\pmod{900}. \\end{aligned} \\] Comparing twice this residue modulo \\(100\\) with the decimal number \\(10(a_1+b_1)+a_0+b_0\\) reduces to \\(5a_1\\equiv b_1\\pmod{10}.\\) Hence the valid pairs are exactly \\((0,0),(2,0),(4,0),(1,5),(3,5).\\) Each combines with \\(5\\) choices of \\(a_0\\) \\((0 \\le a_0 \\le 4),\\) giving \\(25\\) values of \\(N.\\) Thus, the correct answer is E.",
+      "hints": [
+        "Since \\(\\mathrm{lcm}(5^2, 6^2, 10^2) = 900,\\) the condition depends only on \\(N \\bmod 900,\\) so let \\(N\\) range from \\(0\\) to \\(899\\)",
+        "Matching last digits forces the base-\\(5\\) and base-\\(6\\) units digits equal; working modulo \\(100\\) pins down the allowed last-two-digit pairs"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

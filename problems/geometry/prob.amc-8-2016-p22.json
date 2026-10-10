@@ -1,0 +1,84 @@
+{
+  "id": "prob.amc-8-2016-p22",
+  "title": "2016 AMC 8 Problem 22",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2016,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 18.0,
+    "source": 1640,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Rectangle \\(DEFA\\) below is a \\(3 \\times 4\\) rectangle with \\(DC=CB=BA=1.\\) The area of the “bat wings” (shaded area) is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 2 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 2 \\dfrac{1}{2} \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 3 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 3 \\dfrac{1}{2} \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 4 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "3"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2016-p22.live",
+      "kind": "proof-sketch",
+      "text": "Define \\(I\\) to be the midpoint of \\(\\overline{AD}\\) and \\(G\\) to be the midpoint of \\(\\overline{EF}.\\) Also define \\(H\\) to be the intersection of \\(\\overline{CF}\\) and \\(\\overline{BE}.\\)\n\nThe area of \\(\\triangle BCE\\) is \\(\\dfrac12\\cdot1\\cdot4=2.\\) By symmetry, we can see that \\(\\triangle BCH\\) and \\(\\triangle EFH\\) are similar. Since their bases are in a \\(1 : 3\\) ratio, so are their altitudes. This means that \\(3IH = HG,\\) which implies that \\(IH = 1.\\)\n\nTherefore, \\([\\triangle BCH]=\\dfrac12\\cdot1\\cdot1=\\dfrac12.\\) It follows that \\([\\triangle ECH]=2-\\dfrac12=\\dfrac32.\\) Since the figure is symmetric, the total area of the bat wings is \\(2\\cdot\\dfrac32=3.\\)\n\nThus, C is the correct answer.",
+      "hints": [
+        "Use the intersection point of the two diagonals that form the bat wings.",
+        "Similar triangles give the height of the small triangle cut off at the top."
+      ],
+      "images": [
+        "b0ba190848c4690dccaf33fe416a8a6ec0b725253795c4f9550c506b84cc94b4"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [
+      "41898759c6d7c1b993ca206d6526750322de0abf7e78291ba13c76695d3e29ee"
+    ],
+    "solutions": [
+      "b0ba190848c4690dccaf33fe416a8a6ec0b725253795c4f9550c506b84cc94b4"
+    ]
+  }
+}

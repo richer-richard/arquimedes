@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-2020-p17",
+  "title": "2020 AMC 10B Problem 17",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2020,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 28.3,
+    "source": 1820,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "There are \\(10\\) people standing equally spaced around a circle. Each person knows exactly \\(3\\) of the other \\(9\\) people: the \\(2\\) people standing next to her or him, as well as the person directly across the circle. How many ways are there for the \\(10\\) people to split up into \\(5\\) pairs so that the members of each pair know each other?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(14\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(15\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "13"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2020-p17.live",
+      "kind": "proof-sketch",
+      "text": "Label the people around the circle. Count by the number of pairs of opposite people.\n\nWith no opposite pairs, everyone must be paired with a neighbor around the \\(10\\)-cycle. There are exactly \\(2\\) alternating neighbor matchings.\n\nWith one opposite pair, choose that pair in \\(5\\) ways. The remaining people form two paths of four vertices, and each path has only one perfect matching by neighbor pairs, so this gives \\(5\\) matchings.\n\nWith two or four opposite pairs, the remaining neighbor-pairing paths have odd length somewhere, so no perfect matching is possible.\n\nWith three opposite pairs, the two opposite pairs not chosen must be adjacent around the five opposite-pair positions; otherwise the remaining people cannot be matched by neighbor pairs. There are \\(5\\) adjacent choices for the two unchosen opposite pairs, so there are \\(5\\) matchings.\n\nWith all five opposite pairs, there is \\(1\\) matching. The total is \\[2+5+5+1=13.\\]\n\nThus, the correct answer is C .",
+      "hints": [
+        "Classify pairings by how many opposite pairs are used",
+        "Once the opposite pairs are chosen, the remaining people must be matched along arcs of the circle"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

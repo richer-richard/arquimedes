@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-2023-p14",
+  "title": "2023 AMC 8 Problem 14",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2023,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 22.8,
+    "source": 1480,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Nicolas is planning to send a package to his friend Anton, who is a stamp collector. To pay for the postage, Nicolas would like to cover the package with a large number of stamps. Suppose he has a collection of \\(5\\)-cent, \\(10\\)-cent, and \\(25\\)-cent stamps, with exactly \\(20\\) of each type. What is the greatest number of stamps Nicolas can use to make exactly \\(\\$7.10\\) in postage?\n\n(Note: The amount \\(\\$7.10\\) corresponds to \\(7\\) dollars and \\(10\\) cents. One dollar is worth \\(100\\) cents.)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(45\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(46\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(51\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(54\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(55\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "55"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2023-p14.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(a,\\) \\(b,\\) \\(c\\) be the numbers of \\(5\\)-, \\(10\\)-, and \\(25\\)-cent stamps, and let \\(n=a+b+c.\\) Dividing the value equation by \\(5\\) gives \\[ a+2b+5c=142, \\] so \\(n+b+4c=142.\\)\n\nSuppose \\(n\\ge56.\\) Then \\(b+4c\\le86.\\) Also \\[ a=142-2b-5c\\le20, \\] so \\(2b+5c\\ge122.\\) Combining these inequalities gives \\(c\\le16,\\) but then \\(2b+5c\\le2(20)+5(16)=120,\\) a contradiction. Thus at most \\(55\\) stamps can be used.\n\nThe bound is attainable with \\(a=19,\\) \\(b=19,\\) \\(c=17:\\) \\[ 19(5)+19(10)+17(25)=710. \\] Hence the greatest possible number of stamps is \\(19+19+17=55.\\)\n\nThus, E is the correct answer.",
+      "hints": [
+        "Use as many low-value stamps as possible",
+        "All \\(5\\)- and \\(10\\)-cent stamps total \\(300\\) cents, leaving a nonmultiple of \\(25\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

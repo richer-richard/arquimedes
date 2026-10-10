@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2003-p14",
+  "title": "2003 AIME II Problem 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vector",
+      "label": "Vector",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2003,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 63.3,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 20,
+  "statement": "Let \\(A = (0, 0)\\) and \\(B = (b, 2)\\) be points on the coordinate plane. Let \\(ABCDEF\\) be a convex equilateral hexagon such that \\(\\angle FAB = 120^\\circ,\\) \\(\\overline{AB} \\parallel \\overline{DE},\\) \\(\\overline{BC} \\parallel \\overline{EF},\\) \\(\\overline{CD} \\parallel \\overline{FA},\\) and the \\(y\\)-coordinates of its vertices are distinct elements of the set \\(\\{0, 2, 4, 6, 8, 10\\}.\\) The area of the hexagon can be written in the form \\(m\\sqrt{n},\\) where \\(m\\) and \\(n\\) are positive integers and \\(n\\) is not divisible by the square of any prime. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "51",
+    "value": "51"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2003-p14.live",
+      "kind": "proof-sketch",
+      "text": "Opposite sides are parallel, equal in length, and traversed in opposite directions, so \\(\\overrightarrow{AB} = \\overrightarrow{ED},\\) \\(\\overrightarrow{BC} = \\overrightarrow{FE},\\) \\(\\overrightarrow{CD} = \\overrightarrow{AF}:\\) the hexagon is centrally symmetric, and opposite vertices’ \\(y\\)-coordinates share a common sum, namely \\(\\frac{0 + 2 + \\cdots + 10}{3} = 10.\\) From \\(y_A = 0\\) and \\(y_B = 2\\) we get \\(y_D = 10,\\) \\(y_E = 8,\\) and convexity puts \\(y_C = 6,\\) \\(y_F = 4.\\) Write \\(\\overrightarrow{AB} = (b, 2),\\) \\(\\overrightarrow{BC} = (p, 4),\\) \\(\\overrightarrow{CD} = (q, 4).\\) Equal side lengths give \\(s^2 = b^2 + 4\\) \\(= p^2 + 16\\) \\(= q^2 + 16,\\) so \\(p = \\pm q;\\) since \\(p = q\\) would make \\(B,\\) \\(C,\\) \\(D\\) collinear, \\(p = -q.\\)\n\nSince \\(\\overrightarrow{AF} = \\overrightarrow{CD},\\) we have \\(F = (q, 4),\\) and \\(\\angle FAB = 120^\\circ\\) gives \\[ \\begin{aligned} \\overrightarrow{AB} \\cdot \\overrightarrow{AF} &= bq + 8 \\\\ &= -\\frac{s^2}{2} = -\\frac{b^2 + 4}{2}. \\end{aligned} \\] Taking \\(b \\gt 0\\) forces \\(q \\lt 0,\\) so \\(q = -\\sqrt{b^2 - 12},\\) and the equation becomes \\(b\\sqrt{b^2 - 12} = \\frac{b^2 + 20}{2}.\\) Squaring yields \\(3b^4 - 88b^2 - 400 = 0,\\) so \\(b^2 = \\frac{100}{3},\\) giving \\(b = \\frac{10}{\\sqrt{3}},\\) \\(q = -\\frac{8}{\\sqrt{3}},\\) \\(p = \\frac{8}{\\sqrt{3}}.\\)\n\nThe vertices are \\(A = (0, 0),\\) \\(B = \\left(\\frac{10}{\\sqrt{3}}, 2\\right),\\) \\(C = (6\\sqrt{3}, 6),\\) \\(D = \\left(\\frac{10}{\\sqrt{3}}, 10\\right),\\) \\(E = (0, 8),\\) \\(F = \\left(-\\frac{8}{\\sqrt{3}}, 4\\right).\\) The hexagon splits into the parallelogram \\(ABDE,\\) with vertical side \\(AE = 8\\) and horizontal offset \\(b\\) (area \\(8b\\)), plus the two congruent triangles \\(BCD\\) and \\(EFA,\\) each with vertical base \\(8\\) and horizontal height \\(\\frac{8}{\\sqrt{3}}.\\) The total area is \\[ \\begin{aligned} &8 \\cdot \\frac{10}{\\sqrt{3}} + 2 \\cdot \\frac{1}{2} \\cdot 8 \\cdot \\frac{8}{\\sqrt{3}} \\\\ &= \\frac{144}{\\sqrt{3}} = 48\\sqrt{3}, \\end{aligned} \\] so \\(m + n = 48 + 3 = 51.\\)",
+      "hints": [
+        "Equal, parallel opposite sides make the hexagon centrally symmetric, so the \\(y\\)-coordinates of opposite vertices all have the same sum",
+        "The \\(y\\)-coordinates in order are \\(0,\\) \\(2,\\) \\(6,\\) \\(10,\\) \\(8,\\) \\(4.\\) Express \\(\\angle FAB = 120^\\circ\\) as a dot product and solve for the side length"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

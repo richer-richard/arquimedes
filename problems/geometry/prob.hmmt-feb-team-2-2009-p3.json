@@ -1,0 +1,85 @@
+{
+  "id": "prob.hmmt-feb-team-2-2009-p3",
+  "title": "2009 HMMT February Team Round 2 Problem 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coloring",
+      "label": "Coloring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pigeonhole-principle",
+      "label": "Pigeonhole principle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2009,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 80.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n \\geq 3\\) be a positive integer. A triangulation of a convex \\(n\\)-gon is a set of \\(n-3\\) of its diagonals which do not intersect in the interior of the polygon. Along with the \\(n\\) sides, these diagonals separate the polygon into \\(n-2\\) disjoint triangles. Any triangulation can be viewed as a graph: the vertices of the graph are the corners of the polygon, and the \\(n\\) sides and \\(n-3\\) diagonals are the edges.\nFor a fixed \\(n\\)-gon, different triangulations correspond to different graphs. Prove that all of these graphs have the same chromatic number.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2-2009-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "We will show that all triangulations have chromatic number 3, by induction on \\(n\\). As a base case, if \\(n=3\\), a triangle has chromatic number 3 . Now, given a triangulation of an \\(n\\)-gon for \\(n>3\\), every edge is either a side or a diagonal of the polygon. There are \\(n\\) sides and only \\(n-3\\) diagonals in the edge-set, so the Pigeonhole Principle guarentees a triangle with two side edges. These two sides must be adjacent, so we can remove this triangle to leave a triangulation of an \\(n-1\\)-gon, which has chromatic number 3 by the inductive hypothesis. Adding the last triangle adds only one new vertex with two neighbors, so we can color this vertex with one of the three colors not used on its neighbors.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

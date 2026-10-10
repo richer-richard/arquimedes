@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2022-p13",
+  "title": "2022 AIME II Problem 13",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.generating-functions",
+      "label": "Generating functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.stars-and-bars",
+      "label": "Stars and bars",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2022,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": 3270,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "There is a polynomial \\(P(x)\\) with integer coefficients such that \\[ \\begin{aligned} P(x) &= (x^{2310}-1)^6 \\\\ &\\quad {}\\cdot \\frac{1}{(x^{105}-1)(x^{70}-1)} \\\\ &\\quad {}\\cdot \\frac{1}{(x^{42}-1)(x^{30}-1)} \\end{aligned} \\] holds for every \\(0 \\lt x \\lt 1.\\) Find the coefficient of \\(x^{2022}\\) in \\(P(x).\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "220",
+    "value": "220"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2022-p13.live",
+      "kind": "proof-sketch",
+      "text": "For \\(0 \\lt x \\lt 1,\\) \\[ \\begin{aligned} P(x) &= (1-x^{2310})^6 \\\\ &\\quad {}\\cdot \\frac{1}{(1-x^{105})(1-x^{70})} \\\\ &\\quad {}\\cdot \\frac{1}{(1-x^{42})(1-x^{30})}, \\end{aligned} \\] and each factor \\(\\frac{1}{1 - x^k}\\) expands as a geometric series. Since \\(2022 \\lt 2310,\\) the factor \\((1 - x^{2310})^6\\) contributes only its constant term \\(1,\\) so the coefficient of \\(x^{2022}\\) is the number of nonnegative integer solutions of \\(105a + 70b + 42c + 30d = 2022.\\)\n\nReducing modulo \\(2\\) gives \\(105a \\equiv 2022,\\) so \\(a\\) is even; modulo \\(3\\) gives \\(70b \\equiv 2022 \\equiv 0,\\) so \\(3\\) divides \\(b;\\) modulo \\(5\\) gives \\(2c \\equiv 2022 \\equiv 2,\\) so \\(c \\equiv 1 \\pmod 5;\\) modulo \\(7\\) gives \\(2d \\equiv 2022 \\equiv 6,\\) so \\(d \\equiv 3 \\pmod 7.\\) Writing \\(a = 2a',\\) \\(b = 3b',\\) \\(c = 5c' + 1,\\) \\(d = 7d' + 3\\) turns the equation into \\[ \\begin{aligned} &210(a' + b' + c' + d') + 42 \\\\ &\\quad {}+ 90 = 2022, \\end{aligned} \\] so \\[a' + b' + c' + d' = 9.\\]\n\nBy stars and bars there are \\(\\binom{12}{3} = 220\\) solutions, so the coefficient is \\(220.\\)",
+      "hints": [
+        "Write \\(P(x) = (1 - x^{2310})^6 \\prod \\frac{1}{1 - x^k}\\) for \\(k = 105, 70, 42, 30;\\) since \\(2022 \\lt 2310,\\) the numerator contributes only its constant term",
+        "Count solutions of \\(105a + 70b + 42c + 30d = 2022\\) by reducing modulo \\(2, 3, 5, 7\\) to pin down \\(a, b, c, d\\) modulo \\(2, 3, 5, 7\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

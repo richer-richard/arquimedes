@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2004-p15",
+  "title": "2004 AIME I Problem 15",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.recursive-counting",
+      "label": "Recursive counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.tree-diagram",
+      "label": "Tree diagram",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.work-backwards",
+      "label": "Work backwards",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2004,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 71.3,
+    "source": 3370,
+    "mohs": null
+  },
+  "estimatedMinutes": 30,
+  "statement": "For all positive integers \\(x,\\) let \\[f(x) = \\scriptsize\\begin{cases} 1 & \\text{if } x = 1, \\\\ \\frac{x}{10} & \\text{if } x \\text{ is divisible by } 10, \\\\ x + 1 & \\text{otherwise,} \\end{cases}\\] and define a sequence as follows: \\(x_1 = x\\) and \\(x_{n+1} = f(x_n)\\) for all positive integers \\(n.\\) Let \\(d(x)\\) be the smallest \\(n\\) such that \\(x_n = 1.\\) (For example, \\(d(100) = 3\\) and \\(d(87) = 7.\\)) Let \\(m\\) be the number of positive integers \\(x\\) such that \\(d(x) = 20.\\) Find the sum of the distinct prime factors of \\(m.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "511",
+    "value": "511"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2004-p15.live",
+      "kind": "proof-sketch",
+      "text": "Work backwards: \\(f(z') = z\\) for \\(z' = 10z\\) (always) and for \\(z' = z - 1\\) (provided \\(z - 1\\) is not a multiple of \\(10\\) and \\(z - 1 \\ne 1,\\) i.e. \\(z\\) does not end in \\(1\\) and \\(z \\ne 2\\)). So the integers with \\(d(x) = n\\) form column \\(n\\) of a tree rooted at \\(1:\\) the columns begin \\(\\{1\\},\\) \\(\\{10\\},\\) \\(\\{9, 100\\},\\) \\(\\{8, 90, 99, 1000\\},\\) and every vertex has two children except \\(2\\) and the vertices ending in \\(1,\\) which have only the child \\(10z.\\)\n\nLocate those one-child vertices. Since \\(2 \\to 3 \\to \\cdots \\to 10 \\to 1,\\) the vertex \\(2\\) sits in column \\(10.\\) A vertex ending in \\(1\\) is reached by subtracting \\(1\\) nine times from a vertex ending in \\(0,\\) so such vertices sit \\(9\\) columns after the multiples of \\(10\\) in the tree. Columns \\(2\\) through \\(10\\) double perfectly (no one-child vertices occur that early), so column \\(j\\) has \\(2^{j-2}\\) vertices, of which the multiples of \\(10\\) — the children \\(10z\\) of column \\(j - 1\\) — number \\(2^{j-3}.\\) Hence for \\(12 \\le k \\le 19,\\) column \\(k\\) contains \\(2^{k-12}\\) vertices ending in \\(1\\) (column \\(11\\) has none, because the multiple of \\(10\\) in column \\(2\\) is \\(10\\) itself, whose descendant \\(1\\) is excluded — that exclusion is exactly the missing child of \\(2\\)).\n\nA one-child vertex in column \\(k\\) removes \\(2^{19-k}\\) of the potential \\(2^{18}\\) vertices from column \\(20.\\) Therefore \\[ \\begin{aligned} m &= 2^{18} - 2^{9} \\\\ &\\quad {}- \\sum_{k=12}^{19} 2^{k-12} \\cdot 2^{19-k} \\\\ &= 2^{18} - 2^9 - 8 \\cdot 2^7 \\\\ &= 2^9(2^9 - 1 - 2) \\\\ &= 2^9 \\cdot 509. \\end{aligned} \\] Since \\(509\\) is prime, the sum of the distinct prime factors of \\(m\\) is \\(2 + 509 = 511.\\)",
+      "hints": [
+        "Work backwards from \\(1:\\) each \\(z\\) has preimages \\(10z,\\) and \\(z - 1\\) unless \\(z\\) ends in \\(1\\) or \\(z = 2\\)",
+        "Column \\(20\\) of the preimage tree would have \\(2^{18}\\) numbers if every vertex had two children; subtract \\(2^{19-k}\\) for each one-child vertex in column \\(k\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

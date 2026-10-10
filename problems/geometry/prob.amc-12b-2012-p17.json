@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2012-p17",
+  "title": "2012 AMC 12B Problem 17",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.slope",
+      "label": "Slope",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2012,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 31.7,
+    "source": 1910,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Square \\(PQRS\\) lies in the first quadrant. Points \\((3, 0),\\) \\((5, 0),\\) \\((7, 0),\\) and \\((13, 0)\\) lie on lines \\(SP,\\) \\(RQ,\\) \\(PQ,\\) and \\(SR,\\) respectively. What is the sum of the coordinates of the center of the square \\(PQRS?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6.2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6.4\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6.6\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(6.8\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "6.4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2012-p17.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(\\theta\\) be the acute angle line \\(PQ\\) makes with the \\(x\\)-axis. Sides \\(SR=PQ\\) span the segment from \\((3,0)\\) to \\((5,0)\\) as \\(2\\cos\\theta,\\) while \\(SP=QR\\) span the segment from \\((7,0)\\) to \\((13,0)\\) as \\(6\\sin\\theta.\\)\n\nSince the square has equal sides, \\(2\\cos\\theta=6\\sin\\theta,\\) so \\(\\tan\\theta=\\tfrac13.\\) Thus lines \\(SP,RQ\\) have slope \\(3\\) and lines \\(SR,PQ\\) have slope \\(-\\tfrac13.\\)\n\nThe center lies on the line through \\((4,0)\\) with slope \\(3\\) and the line through \\((10,0)\\) with slope \\(-\\tfrac13:\\) \\[y=3(x-4),\\] \\[y=-\\tfrac13(x-10).\\] These meet at \\((4.6,1.8).\\)\n\nThe sum of the coordinates is \\(4.6+1.8=6.4.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Let \\(\\theta\\) be the angle line \\(PQ\\) makes with the \\(x\\)-axis; the square condition relates the projections of the given segments",
+        "From \\(2\\cos\\theta=6\\sin\\theta\\) get \\(\\tan\\theta=\\tfrac13,\\) then intersect the two lines through the midpoints \\((4,0)\\) and \\((10,0)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2024-p17",
+  "title": "2024 AMC 10B Problem 17",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.permutations",
+      "label": "Permutations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2024,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 29.3,
+    "source": 1730,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In a race among \\(5\\) snails, there is at most one tie, but that tie can involve any number of snails. For example, the result of the race might be that Dazzler is first; Abby, Cyrus, and Elroy are tied for second; and Bruna is fifth. How many different results of the race are possible?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(180\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(361\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(420\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(431\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(720\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "431"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2024-p17.live",
+      "kind": "proof-sketch",
+      "text": "If nobody ties, the \\(5\\) snails finish in \\(5! = 120\\) orders. Now allow exactly one tied group of size \\(k\\) with \\(2 \\le k \\le 5.\\) Choose the group in \\(\\binom{5}{k}\\) ways, then treat it as one block, leaving \\(6 - k\\) blocks to arrange in \\((6 - k)!\\) ways. Summing over \\(k:\\) \\(\\binom{5}{2}4!\\) \\(+ \\binom{5}{3}3!\\) \\(+ \\binom{5}{4}2!\\) \\(+ \\binom{5}{5}1!\\) \\(= 240 + 60 + 10 + 1\\) \\(= 311.\\) Add the no-tie count: \\(120 + 311 = 431.\\) Thus, D is the correct answer.",
+      "hints": [
+        "Count results with no tie separately from results with exactly one tied group",
+        "For a tied group of \\(k\\) snails, choose them in \\(\\binom{5}{k}\\) ways and order the \\(6 - k\\) resulting blocks in \\((6-k)!\\) ways"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-i-2024-p1",
+  "title": "2024 AIME I Problem 1",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.distance-rate-and-time",
+      "label": "Distance rate and time",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2024,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 33.4,
+    "source": 1890,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Every morning Aya goes for a \\(9\\)-kilometer-long walk and stops at a coffee shop afterwards. When she walks at a constant speed of \\(s\\) kilometers per hour, the walk takes her \\(4\\) hours, including \\(t\\) minutes spent in the coffee shop. When she walks \\(s + 2\\) kilometers per hour, the walk takes her \\(2\\) hours and \\(24\\) minutes, including \\(t\\) minutes spent in the coffee shop. Suppose Aya walks at \\(s + \\frac{1}{2}\\) kilometers per hour. Find the number of minutes the walk takes her, including the \\(t\\) minutes spent in the coffee shop.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "204",
+    "value": "204"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2024-p1.live",
+      "kind": "proof-sketch",
+      "text": "Measuring time in hours, the two scenarios say \\[ \\frac{9}{s} + \\frac{t}{60} = 4 \\] and \\[ \\frac{9}{s+2} + \\frac{t}{60} = \\frac{12}{5}. \\] Subtracting, \\(\\frac{9}{s} - \\frac{9}{s+2} = \\frac{8}{5},\\) so \\(\\frac{18}{s(s+2)} = \\frac{8}{5},\\) giving \\(s(s+2) = \\frac{45}{4}.\\) The positive root of \\(s^2 + 2s - \\frac{45}{4} = 0\\) is \\(s = \\frac{5}{2}.\\)\n\nThen \\(\\frac{t}{60} = 4 - \\frac{9}{\\frac{5}{2}} = \\frac{2}{5},\\) so \\(t = 24\\) minutes. Walking at \\(s + \\frac{1}{2} = 3\\) kilometers per hour takes \\(\\frac{9}{3} = 3\\) hours, so the total is \\(180 + 24 = 204\\) minutes.",
+      "hints": [
+        "Convert both trips into equations: \\(\\frac{9}{s} + \\frac{t}{60} = 4\\) and \\(\\frac{9}{s+2} + \\frac{t}{60} = \\frac{12}{5}\\)",
+        "Subtracting the two equations eliminates \\(t\\) and gives \\(s(s+2) = \\frac{45}{4}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-2016-p18",
+  "title": "2016 AMC 10B Problem 18",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2016,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 27.3,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In how many ways can \\(345\\) be written as the sum of an increasing sequence of two or more consecutive positive integers?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( \\ 1 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( \\ 3 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( \\ 5 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( \\ 6 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( \\ 7 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "7"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2016-p18.live",
+      "kind": "proof-sketch",
+      "text": "Suppose the sequence has length \\(s\\) and first term \\(x\\). Then \\[345=s\\left(x+\\frac{s-1}{2}\\right),\\] or \\[s(2x+s-1)=690.\\]\n\nThus \\(s\\) must be a divisor of \\(690\\), with \\(x=\\frac{\\frac{690}{s}-s+1}{2}\\) a positive integer. Checking the possible divisor lengths gives \\[s=2,3,5,6,10,15,23.\\] These are the only lengths that keep \\(x\\) positive and integral.\n\nTherefore there are \\(7\\) representations.\n\nThus, the correct answer is E.",
+      "hints": [
+        "If the length is \\(s\\), then \\(s(2x+s-1)=690\\)",
+        "Check factor lengths that give positive integer \\(x\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

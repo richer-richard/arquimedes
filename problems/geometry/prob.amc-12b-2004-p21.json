@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2004-p21",
+  "title": "2004 AMC 12B Problem 21",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.ellipse",
+      "label": "Ellipse",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.tangent-line",
+      "label": "Tangent line",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2004,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 36.9,
+    "source": 2080,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The graph of \\(2x^2 + xy + 3y^2\\) \\(- 11x - 20y + 40 = 0\\) is an ellipse in the first quadrant of the \\(xy\\)-plane. Let \\(a\\) and \\(b\\) be the maximum and minimum values of \\(\\dfrac{y}{x}\\) over all points \\((x, y)\\) on the ellipse. What is the value of \\(a + b?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\sqrt{10}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{7}{2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{9}{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2\\sqrt{14}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "7/2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2004-p21.live",
+      "kind": "proof-sketch",
+      "text": "The slopes \\(a\\) and \\(b\\) are the values of \\(m\\) for which \\(y = mx\\) meets the ellipse in exactly one point. Substituting gives \\[ \\begin{aligned} &(3m^2 + m + 2)x^2 \\\\ &\\quad {}- (20m + 11)x + 40 = 0. \\end{aligned} \\] Setting its discriminant to zero yields \\(-80m^2 + 280m - 199 = 0.\\) By Vieta’s formulas, \\(a + b = \\dfrac{280}{80} = \\dfrac{7}{2}.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "The extreme values of \\(\\dfrac{y}{x}\\) come from lines \\(y = mx\\) tangent to the ellipse",
+        "Substitute \\(y = mx\\) and set the discriminant of the resulting quadratic in \\(x\\) to zero"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

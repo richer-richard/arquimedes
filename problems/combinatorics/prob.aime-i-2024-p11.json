@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2024-p11",
+  "title": "2024 AIME I Problem 11",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.double-counting",
+      "label": "Double counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2024,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 61.6,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Each vertex of a regular octagon is independently colored either red or blue with equal probability. The probability that the octagon can then be rotated so that all of the blue vertices end up at positions where there had been red vertices is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "371",
+    "value": "371"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2024-p11.live",
+      "kind": "proof-sketch",
+      "text": "Label the vertices \\(0, \\ldots, 7\\) and let \\(B\\) be the blue set, \\(b = |B|.\\) Rotation by \\(k\\) works exactly when \\((B + k) \\cap B = \\varnothing.\\) Since \\(B + k\\) must fit inside the \\(8 - b\\) red positions, \\(b \\le 4.\\) Summing \\(|B \\cap (B + k)|\\) over all eight rotations counts all pairs \\((i, j) \\in B \\times B\\) once (via \\(k = i - j\\)), a total of \\(b^2,\\) and the \\(k = 0\\) term contributes \\(b.\\) So for \\(b \\le 3\\) the seven nonzero rotations share only \\(b^2 - b \\le 6\\) overlaps, and some rotation has none: all \\(1 + 8 + 28 + 56 = 93\\) colorings with \\(b \\le 3\\) succeed.\n\nFor \\(b = 4,\\) disjointness forces \\(B + k\\) to be exactly the complement of \\(B.\\) If \\(k\\) is odd, the cycle \\(0, k, 2k, \\ldots\\) visits all vertices and must alternate between \\(B\\) and its complement, so \\(B\\) is the evens or the odds: \\(2\\) sets. If \\(k \\equiv 2 \\pmod 4,\\) then \\(B\\) meets each of the \\(4\\)-cycles \\(\\{0, 2, 4, 6\\}\\) and \\(\\{1, 3, 5, 7\\}\\) in an antipodal pair: \\(2 \\cdot 2 = 4\\) sets, such as \\(\\{0, 1, 4, 5\\}.\\) If \\(k = 4,\\) then \\(B\\) contains exactly one of each pair \\(\\{i, i + 4\\}:\\) \\(2^4 = 16\\) sets. The first two families contain both members of some antipodal pair while the third never does, and the evens/odds take both their antipodal pairs from one \\(4\\)-cycle, so the three families are disjoint: \\(2 + 4 + 16 = 22\\) sets.\n\nIn total \\(93 + 22 = 115\\) of the \\(2^8 = 256\\) colorings work, so the probability is \\(\\frac{115}{256}\\) and \\(m + n = 115 + 256 = 371.\\)",
+      "hints": [
+        "With \\(b\\) blue vertices, the overlaps \\(|B \\cap (B + k)|\\) summed over the seven nonzero rotations equal \\(b^2 - b,\\) so every coloring with \\(b \\le 3\\) works",
+        "For \\(b = 4\\) a rotation must carry the blue set exactly onto its complement; count those sets separately for \\(k\\) odd, \\(k \\equiv 2 \\pmod 4,\\) and \\(k = 4\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

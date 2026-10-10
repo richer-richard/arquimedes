@@ -1,0 +1,73 @@
+{
+  "id": "prob.aime-ii-2003-p6",
+  "title": "2003 AIME II Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.centroid",
+      "label": "Centroid",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.herons-formula",
+      "label": "Heron’s Formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.transformation",
+      "label": "Transformation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2003,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 49.2,
+    "source": 2510,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "In \\(\\triangle ABC,\\) \\(AB = 13,\\) \\(BC = 14,\\) \\(AC = 15,\\) and point \\(G\\) is the intersection of the medians. Points \\(A',\\) \\(B',\\) and \\(C'\\) are the images of \\(A,\\) \\(B,\\) and \\(C,\\) respectively, after a \\(180^\\circ\\) rotation about \\(G.\\) What is the area of the union of the two regions enclosed by the triangles \\(ABC\\) and \\(A'B'C'?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "112",
+    "value": "112"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2003-p6.live",
+      "kind": "proof-sketch",
+      "text": "A \\(180^\\circ\\) rotation takes each line to a parallel line, so \\(\\triangle A'B'C'\\) is congruent to \\(\\triangle ABC\\) with parallel sides. View \\(BC\\) as horizontal and let \\(h\\) be the height of \\(A\\) above it. The centroid \\(G\\) is at height \\(\\frac{h}{3},\\) so \\(A',\\) the reflection of \\(A\\) through \\(G,\\) is at height \\(2 \\cdot \\frac{h}{3} - h = -\\frac{h}{3},\\) on the far side of line \\(BC,\\) while \\(B'\\) and \\(C'\\) are at height \\(\\frac{2h}{3}.\\)\n\nLine \\(BC\\) therefore slices off the corner of \\(\\triangle A'B'C'\\) at \\(A':\\) the cut is parallel to \\(B'C',\\) and the corner’s height \\(\\frac{h}{3}\\) is one third of the triangle’s full height \\(h,\\) so the corner is similar with ratio \\(\\frac{1}{3}\\) and has area \\(\\frac{1}{9}[ABC].\\) The same happens at each side of \\(\\triangle ABC,\\) and these three corners are exactly the part of \\(\\triangle A'B'C'\\) outside \\(\\triangle ABC.\\) Hence the union has area \\[ \\begin{aligned} &[ABC] + 3 \\cdot \\tfrac{1}{9}[ABC] \\\\ &= \\tfrac{4}{3}[ABC]. \\end{aligned} \\]\n\nBy Heron’s formula with \\(s = 21,\\) \\([ABC] = \\sqrt{21 \\cdot 8 \\cdot 7 \\cdot 6} = 84,\\) so the union has area \\(\\frac{4}{3} \\cdot 84 = 112.\\)",
+      "hints": [
+        "The \\(180^\\circ\\) rotation takes each line to a parallel line, so the two triangles overlap in a central hexagon",
+        "The centroid sits at \\(\\frac{1}{3}\\) of each height, so \\(A'\\) lands at height \\(\\frac{h}{3}\\) beyond line \\(BC;\\) each protruding corner is similar to the triangle with ratio \\(\\frac{1}{3}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

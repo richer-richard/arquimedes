@@ -1,0 +1,76 @@
+{
+  "id": "prob.hmmt-nov-guts-2021-p17",
+  "title": "2021 HMMT November Guts Problem 17",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2021,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 45.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A B C D E F G H\\) be an equilateral octagon with \\(\\angle A \\cong \\angle C \\cong \\angle E \\cong \\angle G\\) and \\(\\angle B \\cong \\angle D \\cong \\angle F \\cong\\) \\(\\angle H\\). If the area of \\(A B C D E F G H\\) is three times the area of \\(A C E G\\), then \\(\\sin B\\) can be written as \\(\\frac{m}{n}\\), where \\(m, n\\) are positive integers and \\(\\operatorname{gcd}(m, n)=1\\). Find \\(100 m+n\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "405",
+    "value": "405"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2021-p17.hmmt",
+      "kind": "proof-sketch",
+      "text": "Assume \\(A C=1\\). Note that from symmetry, it can be seen that all angles in \\(A C E G\\) must be equal. Further, by similar logic all sides must be equal which means that \\(A C E G\\) is a square. Additionally, as \\(A B=B C, A B C\\) is an isosceles triangle, which means the octagon consists of a unit square with four isosceles triangles of area \\(1 / 2\\) attached.\nNow, if the side length of the octagon is \\(s\\), and \\(\\angle B=2 \\theta\\), then we obtain that\n\n\\[\\frac{1}{2} s^{2} \\sin (2 \\theta)=\\frac{1}{2} \\Longrightarrow 2 s^{2} \\cos (\\theta) \\sin (\\theta)=1\\]\n\nFurther, since the length \\(A C\\) is equal to 1 , this means that \\(s \\sin (\\theta)=\\frac{1}{2}\\). From this, we compute\n\n\\[2 s \\cos (\\theta)=\\frac{2 s^{2} \\sin (\\theta) \\cos (\\theta)}{s \\sin (\\theta)}=\\frac{1}{\\frac{1}{2}}=2\\]\n\nSo \\(\\tan (\\theta)=\\frac{s \\sin (\\theta)}{s \\cos (\\theta)}=\\frac{1}{2}\\). From this, \\(\\sin (\\theta)=\\frac{1}{\\sqrt{5}}\\) and \\(\\cos (\\theta)=\\frac{2}{\\sqrt{5}}\\), which means \\(\\sin (B)=\\sin (2 \\theta)=\\) \\(2 \\cdot \\frac{1}{\\sqrt{5}} \\cdot \\frac{2}{\\sqrt{5}}=\\frac{4}{5}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

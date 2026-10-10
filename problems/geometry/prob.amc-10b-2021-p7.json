@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2021-p7",
+  "title": "2021 AMC 10B Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle-area",
+      "label": "Circle area",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangent-circles",
+      "label": "Tangent circles",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2021,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 20.7,
+    "source": 1240,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In a plane, four circles with radii \\(1,\\) \\(3,\\) \\(5,\\) and \\(7\\) are tangent to line \\(\\ell\\) at the same point \\(A,\\) but they may be on either side of \\(\\ell.\\) Region \\(S\\) consists of all the points that lie inside exactly one of the four circles. What is the maximum possible area of region \\(S?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 24\\pi \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 32\\pi \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 64\\pi \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 65\\pi \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 84\\pi \\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2021-p7.live",
+      "kind": "proof-sketch",
+      "text": "On one side of \\(\\ell,\\) circles tangent at \\(A\\) are nested. For nested circles with radii \\(r_1>r_2>\\cdots,\\) the points inside exactly one of those circles have area \\(\\pi(r_1^2-r_2^2)\\) if there are at least two circles; a third smaller nested circle does not count because its points are inside three circles, not exactly one.\n\nTo maximize the area, put the circle of radius \\(7\\) alone on one side, and put the circles of radii \\(5,3,1\\) on the other side. This gives\n\n\\[ \\begin{aligned} &7^2\\pi+(5^2-3^2)\\pi \\\\ &=49\\pi+16\\pi=65\\pi. \\end{aligned} \\]\n\nThus, the answer is D .",
+      "hints": [
+        "Circles on the same side of the line are nested",
+        "Inside exactly one nested circle means outside the next smaller circle"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

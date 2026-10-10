@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2005-p2",
+  "title": "2005 IMO Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2005,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 84.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a_1\\), \\(a_2\\), \\dots\\ be a sequence of integers\nwith infinitely many positive and negative terms.\nSuppose that for every positive integer \\(n\\)\nthe numbers \\(a_1\\), \\(a_2\\), \\dots, \\(a_n\\)\nleave \\(n\\) different remainders upon division by \\(n\\).\nProve that every integer occurs exactly once in the sequence.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2005-p2.evanchen",
+      "kind": "proof-sketch",
+      "text": "Obviously every integer appears at most once\n(otherwise take \\(n\\) much larger).\nSo we will prove every integer appears at least once.\n\nClaim.\n For any \\(i < j\\) we have \\(\\left\\lvert a_i-a_j \\right\\rvert < j\\).\n\nProof.\n Otherwise, let \\(n = \\left\\lvert a_i-a_j \\right\\rvert \\neq 0\\).\n Then \\(i,j \\in [1,n]\\) and \\(a_i \\equiv a_j \\pmod n\\),\n contradiction.\n\nClaim.\n For any \\(n\\), the set \\(\\{a_1, \\dots, a_n\\}\\)\n is of the form \\(\\{k+1, \\dots, k+n\\}\\) for some integer \\(k\\).\n\nProof.\n By induction, with the base case \\(n=1\\) being vacuous.\n For the inductive step,\n suppose \\(\\{a_1, \\dots, a_n\\} = \\{k+1, \\dots, k+n\\}\\) are determined.\n Then\n \\[ a_{n+1} \\equiv k \\pmod{n+1}. \\]\n Moreover by the earlier claim we have\n \\[ \\left\\lvert a_{n+1}-a_1 \\right\\rvert < n+1. \\]\n From this we deduce \\(a_{n+1} \\in \\{k, k+n+1\\}\\) as desired.\n\nThis gives us actually a complete description\nof all possible sequences satisfying the hypothesis:\nchoose any value of \\(a_1\\) to start.\nThen, for the \\(n\\)th term,\nthe set \\(S = \\{a_1, \\dots, a_{n-1}\\}\\)\nis (in some order) a set of \\(n-1\\) consecutive integers.\nWe then let \\(a_n = \\max S + 1\\) or \\(a_n = \\min S - 1\\).\nA picture of six possible starting terms is shown below.\n\n[Diagram omitted from this imported TeX transcription.]\n\nFinally, we observe that the condition that\nthe sequence has infinitely many positive and negative terms\n(which we have not used until now)\nimplies it is unbounded above and below.\nThus it must contain every integer.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

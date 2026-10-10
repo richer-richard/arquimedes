@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2019-p21",
+  "title": "2019 AMC 12A Problem 21",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2019,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 36.4,
+    "source": 2160,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\[ z = \\dfrac{1 + i}{\\sqrt{2}}. \\] What is\n\n\\[ \\begin{aligned} &\\left(z^{1^2} + z^{2^2} + z^{3^2} + \\cdots + z^{12^2}\\right) \\\\ &\\quad {}\\cdot \\scriptsize \\left(\\dfrac{1}{z^{1^2}} + \\dfrac{1}{z^{2^2}} + \\dfrac{1}{z^{3^2}} + \\cdots + \\dfrac{1}{z^{12^2}}\\right)? \\end{aligned} \\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(72 - 36\\sqrt{2}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(36\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(72\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(72 + 36\\sqrt{2}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "36"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2019-p21.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(z = e^{\\frac{i\\pi}{4}},\\) we have \\(z^{k^2} = e^{\\frac{i\\pi k^2}{4}},\\) depending only on \\(k^2 \\bmod 8.\\)\n\nFor \\(k = 1\\) to \\(12,\\) the residue \\(k^2 \\bmod 8\\) is \\(1\\) (giving \\(z\\)) six times, \\(4\\) (giving \\(-1\\)) three times, and \\(0\\) (giving \\(1\\)) three times. So the first sum is \\(6z - 3 + 3 = 6z.\\)\n\nThe second sum is likewise \\(\\dfrac{6}{z} - 3 + 3 = \\dfrac{6}{z}.\\) Their product is \\(6z \\cdot \\dfrac{6}{z} = 36.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "\\(z = e^{\\frac{i\\pi}{4}},\\) so \\(z^{k^2}\\) depends only on \\(k^2 \\bmod 8\\)",
+        "Over \\(k = 1, \\ldots, 12,\\) the exponent \\(k^2 \\bmod 8\\) is \\(1\\) six times, \\(4\\) three times, and \\(0\\) three times"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

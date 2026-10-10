@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2023-p3",
+  "title": "2023 HMMT February Algebra and Number Theory Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.trigonometric-functions",
+      "label": "Trigonometric functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2023,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Suppose \\(x\\) is a real number such that \\(\\sin \\left(1+\\cos ^{2} x+\\sin ^{4} x\\right)=\\frac{13}{14}\\). Compute \\(\\cos \\left(1+\\sin ^{2} x+\\cos ^{4} x\\right)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "-\\frac{3 \\sqrt{3}}{14}",
+    "value": "-\\frac{3 \\sqrt{3}}{14}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2023-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "We first claim that \\(\\alpha:=1+\\cos ^{2} x+\\sin ^{4} x=1+\\sin ^{2} x+\\cos ^{4} x\\). Indeed, note that\n\n\\[\\sin ^{4} x-\\cos ^{4} x=\\left(\\sin ^{2} x+\\cos ^{2} x\\right)\\left(\\sin ^{2} x-\\cos ^{2} x\\right)=\\sin ^{2} x-\\cos ^{2} x\\]\n\nwhich is the desired after adding \\(1+\\cos ^{2} x+\\cos ^{4} x\\) to both sides.\n\nHence, since \\(\\sin \\alpha=\\frac{13}{14}\\), we have \\(\\cos \\alpha= \\pm \\frac{3 \\sqrt{3}}{14}\\). It remains to determine the sign. Note that \\(\\alpha=t^{2}-t+2\\) where \\(t=\\sin ^{2} x\\). We have that \\(t\\) is between 0 and 1 . In this interval, the quantity \\(t^{2}-t+2\\) is maximized at \\(t \\in\\{0,1\\}\\) and minimized at \\(t=1 / 2\\), so \\(\\alpha\\) is between \\(7 / 4\\) and 2 . In particular, \\(\\alpha \\in(\\pi / 2,3 \\pi / 2)\\), so \\(\\cos \\alpha\\) is negative. It follows that our final answer is \\(-\\frac{3 \\sqrt{3}}{14}\\).\nRemark. During the official contest, 258 contestants put the (incorrect) positive version of the answer and 105 contestants answered correctly. This makes \\(\\frac{3 \\sqrt{3}}{14}\\) the second most submitted answer to an Algebra/Number Theory problem, beat only by the correct answer to question 1.\n\nFigure: Milan.\nHere is how the problem was written:\n\n- Luke wanted a precalculus/trigonometry problem on the test and enlisted the help of the other problem authors, much to Sean's dismay.\n- Maxim proposed \"given \\(\\sin x+\\cos ^{2} x\\), find \\(\\sin ^{2} x+\\cos ^{4} x\\).\"\n- Ankit observed that \\(\\sin ^{2} x+\\cos ^{4} x=\\cos ^{2} x+\\sin ^{4} x\\) and proposed \"given \\(\\cos ^{2} x+\\sin ^{4} x\\), find \\(\\sin ^{2} x+\\cos ^{4} x\\).\"\n- Luke suggested wrapping both expressions with an additional trig function and proposed \"given \\(\\sin \\left(\\cos ^{2} x+\\sin ^{4} x\\right)=\\frac{\\sqrt{3}}{2}\\), find \\(\\cos \\left(\\sin ^{2} x+\\cos ^{4} x\\right)\\).\"\n- Milan suggested using the fact that fixing \\(\\sin \\alpha\\) only determines \\(\\cos \\alpha\\) up to sign and proposed \"given \\(\\sin \\left(1+\\cos ^{2} x+\\sin ^{4} x\\right)=\\frac{\\sqrt{3}}{2}\\), find \\(\\cos \\left(1+\\sin ^{2} x+\\cos ^{4} x\\right)\\).\"\n- Sean noted that the function \\(\\sin \\left(1+\\cos ^{2} x+\\sin ^{4} x\\right)\\) only achieves values in the range \\([\\sin 2, \\sin 7 / 4]\\) and suggested to make the answer contain radicals, and proposed \"given \\(\\sin \\left(1+\\cos ^{2} x+\\sin ^{4} x\\right)=\\) \\(\\frac{13}{14}\\), find \\(\\cos \\left(1+\\sin ^{2} x+\\cos ^{4} x\\right)\\).\"\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

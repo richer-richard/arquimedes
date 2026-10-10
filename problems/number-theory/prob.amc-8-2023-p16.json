@@ -1,0 +1,81 @@
+{
+  "id": "prob.amc-8-2023-p16",
+  "title": "2023 AMC 8 Problem 16",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.pattern-recognition",
+      "label": "Pattern recognition",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2023,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 24.4,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The letters \\(P,\\) \\(Q,\\) and \\(R\\) are entered into a \\(20 \\times 20\\) table according to the pattern shown below. How many \\(P\\)s, \\(Q\\)s, and \\(R\\)s will appear in the completed table?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(132\\) \\(P\\)s, \\(134\\) \\(Q\\)s, \\(134\\) \\(R\\)s"
+    },
+    {
+      "label": "B",
+      "text": "\\(133\\) \\(P\\)s, \\(133\\) \\(Q\\)s, \\(134\\) \\(R\\)s"
+    },
+    {
+      "label": "C",
+      "text": "\\(133\\) \\(P\\)s, \\(134\\) \\(Q\\)s, \\(133\\)\n\\(R\\)s"
+    },
+    {
+      "label": "D",
+      "text": "\\(134\\) \\(P\\)s, \\(132\\) \\(Q\\)s, \\(134\\) \\(R\\)s"
+    },
+    {
+      "label": "E",
+      "text": "\\(134\\) \\(P\\)s, \\(133\\) \\(Q\\)s, \\(133\\) \\(R\\)s"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2023-p16.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(20 = 3 \\cdot 6 + 2,\\) the bottom \\(2\\) letters in each column will occur one more time than the third letter.\n\nThis means that the third letter in each column will occur \\(6\\) times, whereas the other \\(2\\) will appear \\(7\\) times.\n\nAcross the \\(20\\) columns, \\(P\\) is the letter that appears \\(6\\) times in \\(7\\) columns and appears \\(7\\) times in the other \\(13\\) columns. The same is true of \\(R.\\)\n\nThus \\(P\\) and \\(R\\) each appear \\(7\\cdot6+13\\cdot7=42+91=133\\) times.\n\n\\(Q\\) will therefore appear \\[\\begin{align*} 20 \\cdot 20 - 2 \\cdot 133 &=400 - 266 \\\\ &= 134 \\end{align*}\\] times.\n\nThus, C is the correct answer.",
+      "hints": [
+        "The pattern repeats every \\(3\\) entries along each row and column",
+        "Since \\(20=3\\cdot6+2\\), two letters get one extra appearance in each line"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "9ee59f43ee42e4ebfac691ae8a745a5ed977995c51667aa4340e7ab38315becd"
+    ],
+    "solutions": []
+  }
+}

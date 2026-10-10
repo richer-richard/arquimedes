@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-guts-2017-p22",
+  "title": "2017 HMMT February Guts Problem 22",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2017,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 79.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Kelvin the Frog and 10 of his relatives are at a party. Every pair of frogs is either friendly or unfriendly. When 3 pairwise friendly frogs meet up, they will gossip about one another and end up in a fight (but stay friendly anyway). When 3 pairwise unfriendly frogs meet up, they will also end up in a fight. In all other cases, common ground is found and there is no fight. If all \\(\\binom{11}{3}\\) triples of frogs meet up exactly once, what is the minimum possible number of fights?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2017-p22.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 28\nConsider a graph \\(G\\) with 11 vertices - one for each of the frogs at the party - where two vertices are connected by an edge if and only if they are friendly. Denote by \\(d(v)\\) the number of edges emanating from \\(v\\); i.e. the number of friends frog \\(v\\) has. Note that \\(d(1)+d(2)+\\ldots+d(11)=2 e\\), where \\(e\\) is the number of edges in this graph.\nFocus on a single vertex \\(v\\), and choose two other vertices \\(u, w\\) such that \\(u v\\) is an edge but \\(w v\\) is not. There are then \\(d(v)\\) choices for \\(u\\) and \\(10-d(v)\\) choices for \\(w\\), so there are \\(d(v)(10-d(v))\\) sets of three frogs that include \\(v\\) and do not result in a fight. Each set, however, is counted twice - if \\(u w\\) is an edge, then we count this set both when we focus on \\(v\\) and when we focus on \\(w\\), and otherwise we count it when we focus on \\(v\\) and when we focus on \\(u\\). As such, there are a total of\n\n\\[\\frac{1}{2} \\sum_{v} d(v)(10-d(v))\\]\n\nsets of 3 frogs that do not result in a fight.\nNote that \\(\\frac{d(v)+10-d(v)}{2}=5 \\geq \\sqrt{d(v)(10-d(v))} \\Longrightarrow d(v)(10-d(v)) \\leq 25\\) by AM-GM. Thus there are a maximum of\n\n\\[\\frac{1}{2} \\sum_{v} d(v)(10-d(v)) \\leq \\frac{1}{2}(25 \\cdot 11)=\\frac{275}{2}\\]\n\nsets of three frogs that do not result in a fight; since this number must be an integer, there are a maximum of 137 such sets. As there are a total of \\(\\binom{11}{3}=165\\) sets of 3 frogs, this results in a minimum \\(165-137=28\\) number of fights.\nIt remains to show that such an arrangement can be constructed. Set \\(d(1)=d(2)=\\ldots=d(10)=5\\) and \\(d(11)=4\\). Arrange these in a circle, and connect each to the nearest two clockwise neighbors; this gives each vertex 4 edges. To get the final edge for the first ten vertices, connect 1 to 10,2 to 9,3 to 8,4 to 7 , and 5 to 6 . Thus 28 is constructable, and is thus the true minimum.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

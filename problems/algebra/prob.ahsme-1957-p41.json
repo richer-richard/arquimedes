@@ -1,0 +1,79 @@
+{
+  "id": "prob.ahsme-1957-p41",
+  "title": "1957 AHSME Problem 41",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.determinant",
+      "label": "Determinant",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1957,
+    "number": 41
+  },
+  "difficulty": {
+    "course": 25.7,
+    "source": 1590,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Given the system of equations\n\n\\[ \\begin{aligned} ax+(a-1)y&=1,\\\\ (a+1)x-ay&=1. \\end{aligned} \\]\n\nFor which one of the following values of \\(a\\) is there no solution for \\(x\\) and \\(y?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(-1\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\pm\\dfrac{\\sqrt2}{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\pm\\sqrt2\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1957-p41.live",
+      "kind": "proof-sketch",
+      "text": "The coefficient determinant is \\[ \\begin{aligned} &a(-a)-(a-1)(a+1)\\\\ &\\quad=1-2a^2. \\end{aligned} \\] It vanishes when \\(a=\\pm\\frac{\\sqrt2}{2}.\\) For either value, the two coefficient rows are proportional but the two right sides are not in the same ratio, so the system is inconsistent.\n\nThus, the correct answer is D.",
+      "hints": [
+        "A \\(2\\times2\\) system can fail to have a unique solution when its coefficient determinant is zero",
+        "Compute \\(a(-a)-(a-1)(a+1)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

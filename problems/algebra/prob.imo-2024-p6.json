@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2024-p6",
+  "title": "2024 IMO Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2024,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 111.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A function \\(f \\colon \\mathbb{Q} \\to \\mathbb{Q}\\) is called aquaesulian\nif the following property holds: for every \\(x,y \\in \\mathbb{Q}\\),\n\\[ f(x+f(y)) = f(x) + y \\quad \\text{or} \\quad f(f(x)+y) = x + f(y). \\]\nShow that there exists an integer \\(c\\) such that for any aquaesulian function \\(f\\)\nthere are at most \\(c\\) different rational numbers of the\nform \\(f(r) + f(-r)\\) for some rational number \\(r\\),\nand find the smallest possible value of \\(c\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2024-p6.evanchen",
+      "kind": "proof-sketch",
+      "text": "We will prove that\n\\[ \\left\\{ f(x) + f(-x) \\mid x \\in \\mathbb{Q} \\right\\} \\]\ncontains at most \\(2\\) elements\nand give an example where there are indeed \\(2\\) elements.\n\nWe fix the notation \\(x \\to y\\) to mean that \\(f(x+f(y)) = f(x)+y\\).\nSo the problem statement means that either \\(x \\to y\\) or \\(y \\to x\\) for all \\(x\\), \\(y\\).\nIn particular, we always have \\(x \\to x\\), and hence\n\\[ f(x+f(x)) = x+f(x) \\]\nfor every \\(x\\).\n\nConstruction..\nThe function\n\\[ f(x) = \\left\\lfloor 2x \\right\\rfloor - x \\]\ncan be seen to satisfy the problem conditions.\nMoreover, \\(f(0)+f(0) = 0\\) but \\(f(1/3)+f(-1/3) = -1\\).\n\nRemark.\n Here is how I (Evan) found the construction.\n Let \\(h(x) \\coloneq x+f(x)\\), and let \\(S \\coloneq h(\\mathbb{Q}) = \\{h(x) \\mid x \\in \\mathbb{Q}\\}\\).\n Hence \\(f\\) is the identity on all of \\(S\\).\n If we rewrite the problem condition in terms of \\(h\\) instead of \\(f\\),\n it asserts that at least one of the equations\n \\[\\begin{aligned}\n h(x+h(y)-y) &= h(x)+h(y) \\\\\n h(y+h(x)-x) &= h(x)+h(y)\n \\end{aligned}\\]\n is true.\n In particular, \\(S\\) is closed under addition.\n\n Now, the two trivial solutions for \\(h\\) are \\(h(x) = 2x\\) and \\(h(x) = 0\\).\n To get a nontrivial construction, we must also have \\(S \\neq \\{0\\}\\) and \\(S \\neq \\mathbb{Q}\\).\n So a natural guess is to take \\(S = \\mathbb{Z}\\).\n And indeed \\(h(x) = \\left\\lfloor 2x \\right\\rfloor\\) works fine.\n\nRemark.\n This construction is far from unique. For example,\n \\(f(x) = 2\\left\\lfloor x \\right\\rfloor - x = \\left\\lfloor x \\right\\rfloor - \\{x\\}\\)\n seems to have been more popular to find.\n\nProof (communicated by Abel George Mathew)..\nWe start by proving:\n\nClaim.\n \\(f\\) is injective.\n\nProof.\n Suppose \\(f(a) = f(b)\\). WLOG \\(a \\to b\\). Then\n \\[ f(a)+a = f(a+f(a)) = f(a+f(b)) = f(a)+b \\implies a=b. \\qedhere. \\]\n\nClaim.\n Suppose \\(s \\to r\\).\n Then either \\(f(r) + f(-r) = 0\\) or \\(f(f(s)) = s+f(r)+f(-r)\\).\n\nProof.\n Take the given statement with \\(x = s+f(r)\\) and \\(y = -r\\); then\n \\[\\begin{aligned}\n x + f(y) &= s + f(r) + f(-r) \\\\\n y + f(x) &= f(s+f(r)) - r = f(s).\n \\end{aligned}\\]\n Because \\(f\\) is injective, if \\(x \\to y\\) then \\(f(r) + f(-r) = 0\\).\n Meanwhile, if \\(y \\to x\\) then indeed \\(f(f(s)) = s + f(r) + f(-r)\\).\n\nFinally, suppose \\(a\\) and \\(b\\) are different numbers for which\n\\(f(a)+f(-a)\\) and \\(f(b)+f(-b)\\) are both nonzero.\nAgain, WLOG \\(a \\to b\\).\nThen\n\\[ f(a) + f(-a) \\overset{a \\to a}{=} f(f(a))-a \\overset{a \\to b}{=} f(b) + f(-b). \\]\nThis shows at most two values can occur.\n\nRemark.\n The above solution works equally well for \\(f \\colon \\mathbb{R} \\to \\mathbb{R}\\).\n But the choice of \\(\\mathbb{Q}\\) permits some additional alternate solutions.\n\nRemark.\n After showing \\(f\\) injective,\n a common lemma proved is that \\(-f(-f(x)) = x\\), i.e.\\ \\(f\\) is an involution.\n This provides some alternative paths for solutions.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "prob.aime-ii-2014-p14",
+  "title": "2014 AIME II Problem 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-bisector",
+      "label": "Angle bisector",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circumcircle-circumcenter-and-circumradius",
+      "label": "Circumcircle, circumcenter, and circumradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.law-of-sines",
+      "label": "Law of sines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.midpoint",
+      "label": "Midpoint",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2014,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 60.9,
+    "source": 3160,
+    "mohs": null
+  },
+  "estimatedMinutes": 19,
+  "statement": "In \\(\\triangle ABC,\\) \\(AB = 10,\\) \\(\\angle A = 30^\\circ,\\) and \\(\\angle C = 45^\\circ.\\) Let \\(H,\\) \\(D,\\) and \\(M\\) be points on line \\(\\overline{BC}\\) such that \\(\\overline{AH} \\perp \\overline{BC},\\) \\(\\angle BAD = \\angle CAD,\\) and \\(BM = CM.\\) Point \\(N\\) is the midpoint of segment \\(\\overline{HM},\\) and point \\(P\\) is on ray \\(AD\\) such that \\(\\overline{PN} \\perp \\overline{BC}.\\) Then \\(AP^2 = \\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "77",
+    "value": "77"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2014-p14.live",
+      "kind": "proof-sketch",
+      "text": "Let ray \\(AD\\) meet the circumcircle of \\(\\triangle ABC\\) again at \\(E.\\) Since \\(AD\\) bisects angle \\(A,\\) the point \\(E\\) is the midpoint of arc \\(BC,\\) so \\(E\\) lies on the perpendicular bisector of \\(\\overline{BC}\\) and projects onto line \\(BC\\) at \\(M.\\) The projections of the collinear points \\(A,\\) \\(P,\\) \\(E\\) onto line \\(BC\\) are \\(H,\\) \\(N,\\) \\(M,\\) and projection preserves ratios along a line; since \\(N\\) is the midpoint of \\(\\overline{HM},\\) point \\(P\\) is the midpoint of \\(\\overline{AE}.\\)\n\nHere \\(\\angle B = 105^\\circ,\\) and \\(\\angle CBE = \\angle CAE = 15^\\circ\\) (both subtend arc \\(CE\\)), so \\(\\angle ABE = 120^\\circ.\\) Also \\(\\angle AEB = \\angle ACB = 45^\\circ\\) (both subtend arc \\(AB\\)). The law of sines in \\(\\triangle ABE\\) gives \\[ \\begin{aligned} AE &= AB \\cdot \\frac{\\sin \\angle ABE}{\\sin \\angle AEB} \\\\ &= 10 \\cdot \\frac{\\sin 120^\\circ}{\\sin 45^\\circ} \\\\ &= 5\\sqrt{6}. \\end{aligned} \\]\n\nTherefore \\(AP = \\frac{1}{2} AE = \\frac{5\\sqrt{6}}{2},\\) so \\(AP^2 = \\frac{75}{2}\\) and \\(m + n = 75 + 2 = 77.\\)",
+      "hints": [
+        "Extend ray \\(AD\\) to the circumcircle: it meets it at the midpoint \\(E\\) of arc \\(BC,\\) whose projection onto line \\(BC\\) is exactly \\(M\\)",
+        "Since \\(N\\) is the midpoint of \\(\\overline{HM},\\) \\(P\\) is the midpoint of \\(\\overline{AE}.\\) Find \\(AE\\) from triangle \\(ABE\\) with the law of sines."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

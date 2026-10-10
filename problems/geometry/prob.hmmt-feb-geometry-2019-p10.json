@@ -1,0 +1,106 @@
+{
+  "id": "prob.hmmt-feb-geometry-2019-p10",
+  "title": "2019 HMMT February Geometry Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity-and-scaling",
+      "label": "Similarity and scaling",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2019,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 93.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In triangle \\(A B C, A B=13, B C=14, C A=15\\). Squares \\(A B B_{1} A_{2}, B C C_{1} B_{2}, C A A_{1} C_{2}\\) are constructed outside the triangle. Squares \\(A_{1} A_{2} A_{3} A_{4}, B_{1} B_{2} B_{3} B_{4}, C_{1} C_{2} C_{3} C_{4}\\) are constructed outside the hexagon \\(A_{1} A_{2} B_{1} B_{2} C_{1} C_{2}\\). Squares \\(A_{3} B_{4} B_{5} A_{6}, B_{3} C_{4} C_{5} B_{6}, C_{3} A_{4} A_{5} C_{6}\\) are constructed outside the hexagon \\(A_{4} A_{3} B_{4} B_{3} C_{4} C_{3}\\). Find the area of the hexagon \\(A_{5} A_{6} B_{5} B_{6} C_{5} C_{6}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "19444",
+    "value": "19444"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2019-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "We can use complex numbers to find synthetic observations. Let \\(A=a, B=b, C=c\\). Notice that \\(B_{2}\\) is a rotation by \\(-90^{\\circ}\\) (counter-clockwise) of \\(C\\) about \\(B\\), and similarly \\(C_{1}\\) is a rotation by \\(90^{\\circ}\\) of \\(B\\) about \\(C\\). Since rotation by \\(90^{\\circ}\\) corresponds to multiplication by \\(i\\), we have \\(B_{2}=(c-b) \\cdot(-i)+b=b(1+i)-c i\\) and \\(C_{1}=(b-c) \\cdot i+c=b i+c(1-i)\\). Similarly, we get \\(C_{2}=c(1+i)-a i, A_{1}=c i+a(1-i)\\), \\(A_{2}=a(1+i)-b i, B_{1}=a i+b(1-i)\\). Repeating the same trick on \\(B_{1} B_{2} B_{3} B_{4}\\) et. al, we get \\(C_{4}=-a+b(-1+i)+c(3-i), C_{3}=a(-1-i)-b+c(3+i), A_{4}=-b+c(-1+i)+a(3-i)\\), \\(A_{3}=b(-1-i)-c+a(3+i), B_{4}=-c+a(-1+i)+b(3-i), B_{3}=c(-1-i)-a+b(3+i)\\). Finally, repeating the same trick on the outermost squares, we get \\(B_{6}=-a+b(3+5 i)+c(-3-3 i), C_{5}=\\) \\(-a+b(-3+3 i)+c(3-5 i), C_{6}=-b+c(3+5 i)+a(-3-3 i), A_{5}=-b+c(-3+3 i)+a(3-5 i), A_{6}=\\) \\(-c+a(3+5 i)+b(-3-3 i), B_{5}=-c+a(-3+3 i)+b(3-5 i)\\).\nFrom here, we observe the following synthetic observations.\nS1. \\(B_{2} C_{1} C_{4} B_{3}, C_{2} A_{1} A_{4} C_{3}, A_{2} B_{1} B_{4} A_{3}\\) are trapezoids with bases of lengths \\(B C, 4 B C ; A C, 4 A C ; A B, 4 A B\\) and heights \\(h_{a}, h_{b}, h_{c}\\) respectively (where \\(h_{a}\\) is the length of the altitude from \\(A\\) to \\(B C\\), and likewise for \\(h_{b}, h_{c}\\) )\nS2. If we extend \\(B_{5} B_{4}\\) and \\(B_{6} B_{3}\\) to intersect at \\(B_{7}\\), then \\(B_{7} B_{4} B_{3} \\cong B B_{1} B_{2} \\sim B_{7} B_{5} B_{6}\\) with scale factor 1:5. Likewise when we replace all \\(B\\) 's with \\(A\\) 's or \\(C\\) 's.\n\nProof of S1. Observe \\(C_{1}-B_{2}=c-b\\) and \\(C_{4}-B_{3}=4(c-b)\\), hence \\(B_{2} C_{1} \\| B_{3} C_{4}\\) and \\(B_{3} C_{4}=4 B_{2} C_{1}\\). Furthermore, since translation preserves properties of trapezoids, we can translate \\(B_{2} C_{1} C_{4} B_{3}\\) such that \\(B_{2}\\) coincides with \\(A\\). Being a translation of \\(a-B_{2}\\), we see that \\(B_{3}\\) maps to \\(B_{3}^{\\prime}=2 b-c\\) and \\(C_{4}\\) maps to \\(C_{4}^{\\prime}=-2 b+3 c\\). Both \\(2 b-c\\) and \\(-2 b+3 c\\) lie on the line determined by \\(b\\) and \\(c\\) (since \\(-2+3=2-1=1\\) ), so the altitude from \\(A\\) to \\(B C\\) is also the altitude from \\(A\\) to \\(B_{3}^{\\prime} C_{4}^{\\prime}\\). Thus \\(h_{a}\\) equals the length of the altitude from \\(B_{2}\\) to \\(B_{3} C_{4}\\), which is the height of the trapezoid \\(B_{2} C_{1} C_{4} B_{3}\\). This proves S 1 for \\(B_{2} C_{1} C_{4} B_{3}\\); the other trapezoids follow similarly.\nProof of S2. Notice a translation of \\(-a+2 b-c\\) maps \\(B_{1}\\) to \\(B_{4}, B_{2}\\) to \\(B_{3}\\), and \\(B\\) to a point \\(B_{8}=-a+3 b-c\\). This means \\(B_{8} B_{3} B_{4} \\cong B B_{1} B_{2}\\). We can also verify that \\(4 B_{8}+B_{6}=5 B_{3}\\) and \\(4 B_{8}+B_{5}=5 B_{4}\\), showing that \\(B_{8} B_{5} B_{6}\\) is a dilation of \\(B_{8} B_{4} B_{3}\\) with scale factor 5 . We also get \\(B_{8}\\) lies on \\(B_{3} B_{6}\\) and \\(B_{5} B_{4}\\), so \\(B_{8}=B_{7}\\). This proves S 2 for \\(B_{3} B_{4} B_{5} B_{6}\\), and similar arguments prove the likewise part.\nNow we are ready to attack the final computation. By S2, \\(\\left[B_{3} B_{4} B_{5} B_{6}\\right]+\\left[B B_{1} B_{2}\\right]=\\left[B_{7} B_{5} B_{6}\\right]=\\) \\(\\left[B B_{1} B_{2}\\right]\\). But by the \\(\\frac{1}{2} a c \\sin B\\) formula, \\(\\left[B B_{1} B_{2}\\right]=[A B C]\\) (since \\(\\left.\\angle B_{1} B B_{2}=180^{\\circ}-\\angle A B C\\right)\\). Hence,\n\\(\\left[B_{3} B_{4} B_{5} B_{6}\\right]+\\left[B B_{1} B_{2}\\right]=25[A B C]\\). Similarly, \\(\\left[C_{3} C_{4} C_{5} C_{6}\\right]+\\left[C C_{1} C_{2}\\right]=25[A B C]\\) and \\(\\left[A_{3} A_{4} A_{5} A_{6}\\right]+\\) \\(\\left[A A_{1} A_{2}\\right]=25[A B C]\\). Finally, the formula for area of a trapezoid shows \\(\\left[B_{2} C_{1} C_{4} B_{3}\\right]=\\frac{5 B C}{2} \\cdot h_{a}=\\) \\(5[A B C]\\), and similarly the other small trapezoids have area \\(5[A B C]\\). The trapezoids thus contribute area \\((75+3 \\cdot 5)=90[A B C]\\). Finally, \\(A B C\\) contributes area \\([A B C]=84\\).\nBy S1, the outside squares have side lengths \\(4 B C, 4 C A, 4 A B\\), so the sum of areas of the outside squares is \\(16\\left(A B^{2}+A C^{2}+B C^{2}\\right)\\). Furthermore, a Law of Cosines computation shows \\(A_{1} A_{2}^{2}=A B^{2}+A C^{2}+\\) \\(2 \\cdot A B \\cdot A C \\cdot \\cos \\angle B A C=2 A B^{2}+2 A C^{2}-B C^{2}\\), and similarly \\(B_{1} B_{2}^{2}=2 A B^{2}+2 B C^{2}-A C^{2}\\) and \\(C_{1} C_{2}^{2}=2 B C^{2}+2 A C^{2}-A B^{2}\\). Thus the sum of the areas of \\(A_{1} A_{2} A_{3} A_{4}\\) et. al is \\(3\\left(A B^{2}+A C^{2}+B C^{2}\\right)\\). Finally, the small squares have area add up to \\(A B^{2}+A C^{2}+B C^{2}\\). Aggregating all contributions from trapezoids, squares, and triangle, we get\n\n\\[\\left[A_{5} A_{6} B_{5} B_{6} C_{5} C_{6}\\right]=91[A B C]+20\\left(A B^{2}+A C^{2}+B C^{2}\\right)=7644+11800=19444\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

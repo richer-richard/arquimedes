@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2015-p20",
+  "title": "2015 AMC 10A Problem 20",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area",
+      "label": "Area",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.perimeter",
+      "label": "Perimeter",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.simons-favorite-factoring-trick",
+      "label": "Simon’s Favorite Factoring Trick",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2015,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 24.4,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A rectangle with positive integer side lengths in \\(\\mathrm{cm}\\) has area \\(A\\) \\(\\mathrm{cm}^2\\) and perimeter \\(P\\) \\(\\mathrm{cm}.\\) Which of the following numbers cannot equal \\(A+P?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(100\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(102\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(104\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(106\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(108\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2015-p20.live",
+      "kind": "proof-sketch",
+      "text": "Let the side lengths be positive integers \\(x\\) and \\(y\\). Then \\[ \\begin{aligned} &A+P=xy+2x+2y \\\\ &=(x+2)(y+2)-4. \\end{aligned} \\] Hence \\(A+P+4\\) must factor into two integers both at least \\(3\\).\n\nThe answer choices plus \\(4\\) are \\(104,106,108,110,112\\). All except \\(106\\) have a factorization with both factors at least \\(3\\): \\[104=4\\cdot26,\\] \\[108=9\\cdot12,\\] \\[110=10\\cdot11,\\] \\[112=7\\cdot16.\\] But \\(106=2\\cdot53\\), so it cannot equal \\((x+2)(y+2)\\).\n\nThus, B is the correct answer.",
+      "hints": [
+        "Factor \\(A+P+4\\) as \\((x+2)(y+2)\\)",
+        "Test the choices after adding \\(4\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

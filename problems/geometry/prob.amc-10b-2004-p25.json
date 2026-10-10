@@ -1,0 +1,96 @@
+{
+  "id": "prob.amc-10b-2004-p25",
+  "title": "2004 AMC 10B Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-decomposition",
+      "label": "Area decomposition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.sector",
+      "label": "Sector",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.special-right-triangle",
+      "label": "Special right triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2004,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 38.7,
+    "source": 2270,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A circle of radius \\(1\\) is internally tangent to two circles of radius \\(2\\) at points \\(A\\) and \\(B,\\) where \\(AB\\) is a diameter of the smaller circle. What is the area of the region, shaded in the figure, that is outside the smaller circle and inside each of the two larger circles?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{5}{3}\\pi - 3\\sqrt{2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{5}{3}\\pi - 2\\sqrt{3}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{8}{3}\\pi - 3\\sqrt{3}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{8}{3}\\pi - 3\\sqrt{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{8}{3}\\pi - 2\\sqrt{3}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2004-p25.live",
+      "kind": "proof-sketch",
+      "text": "Let the large circles have centers \\(A\\) and \\(B,\\) let \\(C\\) be the center of the small circle, and let \\(D\\) be a point where the two large circles meet.\n\nThen \\(\\triangle ACD\\) is right with \\(AC = 1\\) and \\(AD = 2,\\) so \\(CD = \\sqrt3,\\) \\(\\angle CAD = 60^\\circ,\\) and its area is \\(\\dfrac{\\sqrt3}{2}.\\)\n\nOne quarter of the shaded region equals the \\(60^\\circ\\) sector of the radius-\\(2\\) circle (area \\(\\dfrac{2\\pi}{3}\\)) minus \\(\\triangle ACD\\) (area \\(\\dfrac{\\sqrt3}{2}\\)) minus a quarter of the small circle (area \\(\\dfrac{\\pi}{4}\\)), giving \\(\\dfrac{2\\pi}{3} - \\dfrac{\\sqrt3}{2} - \\dfrac{\\pi}{4} = \\dfrac{5\\pi}{12} - \\dfrac{\\sqrt3}{2}.\\)\n\nMultiplying by \\(4,\\) the shaded area is \\(\\dfrac{5\\pi}{3} - 2\\sqrt3.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "By symmetry the shaded region splits into four congruent pieces; compute one quarter",
+        "One quarter is a \\(60^\\circ\\) sector of a large circle minus a right triangle minus a quarter of the small circle"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "373054985f9ab6e2d984488947267a47939c382ee876f69af4e0b578d5820738"
+    ],
+    "solutions": []
+  }
+}

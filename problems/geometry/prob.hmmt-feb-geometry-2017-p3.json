@@ -1,0 +1,68 @@
+{
+  "id": "prob.hmmt-feb-geometry-2017-p3",
+  "title": "2017 HMMT February Geometry Problem 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2017,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 73.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(S\\) be a set of 2017 distinct points in the plane. Let \\(R\\) be the radius of the smallest circle containing all points in \\(S\\) on either the interior or boundary. Also, let \\(D\\) be the longest distance between two of the points in \\(S\\). Let \\(a, b\\) are real numbers such that \\(a \\leq \\frac{D}{R} \\leq b\\) for all possible sets \\(S\\), where \\(a\\) is as large as possible and \\(b\\) is as small as possible. Find the pair \\((a, b)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2017-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\((\\sqrt{3}, 2)\\)\nIt is easy to verify that the smallest circle enclosing all the points will either have some 2 points in \\(S\\) as its diameter, or will be the circumcircle of some 3 points in \\(S\\) who form an acute triangle.\n\nNow, clearly \\(\\frac{D}{R} \\leq 2\\). Indeed consider the two farthest pair of points \\(S_{1}, S_{2}\\). Then \\(D=\\left|S_{1} S_{2}\\right| \\leq 2 R\\), as both points \\(S_{1}, S_{2}\\) are inside a circle of radius \\(R\\). We can achieve this upper bound by taking \\(S\\) to have essentially only 2 points, and the remaining 2015 points in \\(S\\) are at the same place as these 2 points.\n\nFor the other direction, I claim \\(\\frac{D}{R} \\geq \\sqrt{3}\\). Recall that the smallest circle is either the circumcircle of 3 points, or has some 2 points as the diameter. In the latter case, say the diameter is \\(S_{1} S_{2}\\). Then \\(D \\geq\\left|S_{1} S_{2}\\right|=2 R\\), so \\(\\frac{D}{R} \\geq 2\\) in that case. Now say the points \\(S_{1}, S_{2}, S_{3}\\) are the circumcircle. WLOG, say that \\(S_{1} S_{2}\\) is the longest side of the triangle. As remarked above, we can assume this triangle is acute. Therefore, \\(\\frac{\\pi}{3} \\leq \\angle S_{1} S_{3} S_{2} \\leq \\frac{\\pi}{2}\\). By the Law of Sines we have that\n\n\\[D \\geq\\left|S_{1} S_{2}\\right|=2 R \\sin \\angle S_{1} S_{3} S_{2} \\geq 2 R \\sin \\frac{\\pi}{3}=R \\sqrt{3}\\]\n\nThis completes the proof. To achieve equality, we can take \\(S\\) to have 3 points in the shape of an equilateral triangle.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

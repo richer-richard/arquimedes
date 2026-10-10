@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-guts-2012-p31",
+  "title": "2012 HMMT February Guts Problem 31",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.recurrences",
+      "label": "Recurrences",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2012,
+    "number": 31
+  },
+  "difficulty": {
+    "course": 92.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(S_{7}\\) denote all the permutations of \\(1,2, \\ldots, 7\\). For any \\(\\pi \\in S_{7}\\), let \\(f(\\pi)\\) be the smallest positive integer \\(i\\) such that \\(\\pi(1), \\pi(2), \\ldots, \\pi(i)\\) is a permutation of \\(1,2, \\ldots, i\\). Compute \\(\\sum_{\\pi \\in S_{7}} f(\\pi)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2012-p31.hmmt",
+      "kind": "proof-sketch",
+      "text": "29093 Extend the definition of \\(f\\) to apply for any permutation of \\(1,2, \\ldots, n\\), for any positive integer \\(n\\). For positive integer \\(n\\), let \\(g(n)\\) denote the number of permutations \\(\\pi\\) of \\(1,2, \\ldots, n\\) such that \\(f(\\pi)=n\\). We have \\(g(1)=1\\). For fixed \\(n, k\\) (with \\(k \\leq n\\) ), the number of permutations \\(\\pi\\) of \\(1,2, \\ldots, n\\) such that \\(f(\\pi)=k\\) is \\(g(k)(n-k)\\) !. This gives us the recursive formula \\(g(n)=\\) \\(n!-\\sum_{k=1}^{n-1} g(k)(n-k)\\) !. Using this formula, we find that the first 7 values of \\(g\\) are \\(1,1,3,13,71,461,3447\\). Our sum is then equal to \\(\\sum_{k=1}^{7} k \\cdot g(k)(7-k)\\) !. Using our computed values of \\(g\\), we get that the sum evaluates to 29093.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

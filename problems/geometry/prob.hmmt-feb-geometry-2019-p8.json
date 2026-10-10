@@ -1,0 +1,82 @@
+{
+  "id": "prob.hmmt-feb-geometry-2019-p8",
+  "title": "2019 HMMT February Geometry Problem 8",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2019,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 84.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In triangle \\(A B C\\) with \\(A B<A C\\), let \\(H\\) be the orthocenter and \\(O\\) be the circumcenter. Given that the midpoint of \\(O H\\) lies on \\(B C, B C=1\\), and the perimeter of \\(A B C\\) is 6 , find the area of \\(A B C\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{6}{7}",
+    "value": "\\frac{6}{7}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2019-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(A^{\\prime} B^{\\prime} C^{\\prime}\\) be the medial triangle of \\(A B C\\), where \\(A^{\\prime}\\) is the midpoint of \\(B C\\) and so on. Notice that the midpoint of \\(O H\\), which is the nine-point-center \\(N\\) of triangle \\(A B C\\), is also the circumcircle of \\(A^{\\prime} B^{\\prime} C^{\\prime}\\) (since the midpoints of the sides of \\(A B C\\) are on the nine-point circle). Thus, if \\(N\\) is on \\(B C\\), then \\(N A^{\\prime}\\) is parallel to \\(B^{\\prime} C^{\\prime}\\), so by similarity, we also know that \\(O A\\) is parallel to \\(B C\\).\nNext, \\(A B<A C\\), so \\(B\\) is on the minor arc \\(A C\\). This means that \\(\\angle O A C=\\angle O C A=\\angle C\\), so \\(\\angle A O C=\\) \\(180-2 \\angle C\\). This gives us the other two angles of the triangle in terms of angle \\(C: \\angle B=90+\\angle C\\) and \\(\\angle A=90-2 \\angle C\\). To find the area, we now need to find the height of the triangle from \\(A\\) to \\(B C\\), and this is easiest by finding the circumradius \\(R\\) of the triangle.\nWe do this by the Extended Law of Sines. Letting \\(A C=x\\) and \\(A B=5-x\\),\n\n\\[\\frac{1}{\\sin (90-2 C)}=\\frac{x}{\\sin (90+C)}=\\frac{5-x}{\\sin C}=2 R\\]\n\nwhich can be simplified to\n\n\\[\\frac{1}{\\cos 2 C}=\\frac{x}{\\cos C}=\\frac{5-x}{\\sin C}=2 R .\\]\n\nThis means that\n\n\\[\\frac{1}{\\cos 2 C}=\\frac{(x)+(5-x)}{(\\cos C)+(\\sin C)}=\\frac{5}{\\cos C+\\sin C}\\]\n\nand the rest is an easy computation:\n\n\\[\\cos C+\\sin C=5 \\cos 2 C=5\\left(\\cos ^{2} C-\\sin ^{2} C\\right)\\]\n\n\\[\\frac{1}{5}=\\cos C-\\sin C\\]\n\nSquaring both sides,\n\n\\[\\frac{1}{25}=\\cos ^{2} C-2 \\sin C \\cos C+\\sin ^{2} C=1-\\sin 2 C\\]\n\nso \\(\\sin 2 C=\\frac{24}{25}\\), implying that \\(\\cos 2 C=\\frac{7}{25}\\). Therefore, since \\(\\frac{1}{\\cos 2 C}=2 R\\) from above, \\(R=\\frac{25}{14}\\). Finally, viewing triangle \\(A B C\\) with \\(B C=1\\) as the base, the height is\n\n\\[\\sqrt{R^{2}-\\left(\\frac{B C}{2}\\right)^{2}}=\\frac{12}{7}\\]\n\nby the Pythagorean Theorem, yielding an area of \\(\\frac{1}{2} \\cdot 1 \\cdot \\frac{12}{7}=\\frac{6}{7}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

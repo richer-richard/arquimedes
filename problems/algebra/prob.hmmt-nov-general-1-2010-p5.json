@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-general-1-2010-p5",
+  "title": "2010 HMMT November General Round 1 Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2010,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A polynomial \\(P\\) is of the form \\(\\pm x^{6} \\pm x^{5} \\pm x^{4} \\pm x^{3} \\pm x^{2} \\pm x \\pm 1\\). Given that \\(P(2)=27\\), what is \\(P(3)\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-1-2010-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "439 We use the following lemma:\nLemma. The sign of \\(\\pm 2^{n} \\pm 2^{n-1} \\pm \\cdots \\pm 2 \\pm 1\\) is the same as the sign of the \\(2^{n}\\) term.\nProof. Without loss of generality, let \\(2^{n}\\) be positive. (We can flip all signs.) Notice that \\(2^{n} \\pm 2^{n-1} \\pm\\) \\(2^{n-2} \\pm \\cdots 2 \\pm 1 \\geq 2^{n}-2^{n-1}-2^{n-2}-\\cdots-2-1=1\\), which is positive.\nWe can use this lemma to uniquely determine the signs of \\(P\\). Since our desired sum, 27, is positive, the coefficient of \\(x^{6}\\) must be positive. Subtracting 64 , we now have that \\(\\pm 2^{5} \\pm 2^{4} \\pm \\ldots \\pm 2 \\pm 1=-37\\), so the sign of \\(2^{5}\\) must be negative. Continuing in this manner, we find that \\(P(x)=x^{6}-x^{5}-x^{4}+x^{3}+x^{2}-x+1\\), so \\(P(3)=3^{6}-3^{5}-3^{4}+3^{3}+3^{2}-3+1=439\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

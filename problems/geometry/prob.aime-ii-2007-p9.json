@@ -1,0 +1,57 @@
+{
+  "id": "prob.aime-ii-2007-p9",
+  "title": "2007 AIME II Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.incircle-incenter-and-inradius",
+      "label": "Incircle, incenter, and inradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2007,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 52.8,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Rectangle \\(ABCD\\) is given with \\(AB = 63\\) and \\(BC = 448.\\) Points \\(E\\) and \\(F\\) lie on \\(\\overline{AD}\\) and \\(\\overline{BC}\\) respectively, such that \\(AE = CF = 84.\\) The inscribed circle of triangle \\(BEF\\) is tangent to \\(\\overline{EF}\\) at point \\(P,\\) and the inscribed circle of triangle \\(DEF\\) is tangent to \\(\\overline{EF}\\) at point \\(Q.\\) Find \\(PQ.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "259",
+    "value": "259"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2007-p9.live",
+      "kind": "proof-sketch",
+      "text": "Place \\(A = (0, 0),\\) \\(B = (63, 0),\\) \\(C = (63, 448),\\) \\(D = (0, 448),\\) so \\(E = (0, 84)\\) and \\(F = (63, 364).\\) Then \\(BE = DF = \\sqrt{63^2 + 84^2}\\) \\(= 21\\sqrt{3^2 + 4^2} = 105,\\) \\(BF = DE = 448 - 84 = 364,\\) and \\(EF = \\sqrt{63^2 + 280^2}\\) \\(= 7\\sqrt{9^2 + 40^2} = 287.\\) In particular triangles \\(BEF\\) and \\(DFE\\) are congruent, with common semiperimeter \\(s = \\frac{105 + 364 + 287}{2} = 378.\\)\n\nIn any triangle, the distance from a vertex to the incircle’s tangency points on its two sides is the semiperimeter minus the opposite side. In triangle \\(BEF,\\) \\(EP = s - BF\\) \\(= 378 - 364 = 14;\\) in triangle \\(DEF,\\) \\(FQ = s - DE\\) \\(= 378 - 364 = 14.\\)\n\nTherefore \\(PQ = EF - EP - FQ\\) \\(= 287 - 14 - 14 = 259.\\)",
+      "hints": [
+        "Compute \\(BE,\\) \\(BF,\\) and \\(EF\\) with the Pythagorean theorem; triangles \\(BEF\\) and \\(DFE\\) turn out congruent",
+        "The tangency point splits \\(EF\\) by tangent lengths: \\(EP = s - BF\\) and \\(FQ = s - DE,\\) where \\(s\\) is the common semiperimeter. Then \\(PQ = EF - EP - FQ.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

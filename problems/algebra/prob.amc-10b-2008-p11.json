@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-10b-2008-p11",
+  "title": "2008 AMC 10B Problem 11",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2008,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 19.8,
+    "source": 1140,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Suppose that \\((u_n)\\) is a sequence of real numbers satisfying \\(u_{n+2}=2u_{n+1}+u_n,\\) and that \\(u_3=9\\) and \\(u_6=128.\\) What is \\(u_5?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(40\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(53\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(68\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(88\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(104\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "53"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2008-p11.live",
+      "kind": "proof-sketch",
+      "text": "Using the recurrence, \\(u_5=2u_4+u_3=2u_4+9\\) and \\(u_6=2u_5+u_4\\) \\(=2(2u_4+9)+u_4\\) \\(=5u_4+18.\\)\n\nSetting \\(5u_4+18=128\\) gives \\(u_4=22,\\) so \\(u_5=2\\cdot 22+9=53.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Write \\(u_5\\) and \\(u_6\\) in terms of \\(u_4\\) and \\(u_3\\)",
+        "\\(u_5=2u_4+9\\) and \\(u_6=2u_5+u_4,\\) so \\(128=5u_4+18\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

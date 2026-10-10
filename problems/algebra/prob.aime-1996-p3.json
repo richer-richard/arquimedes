@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1996-p3",
+  "title": "1996 AIME Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.binomial-theorem",
+      "label": "Binomial theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.counting-pairs",
+      "label": "Counting pairs",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1996,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 28.2,
+    "source": 1690,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Find the smallest positive integer \\(n\\) for which the expansion of \\((xy-3x+7y-21)^n,\\) after like terms have been collected, has at least \\(1996\\) terms.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "44",
+    "value": "44"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1996-p3.live",
+      "kind": "proof-sketch",
+      "text": "The base factors as \\[\\begin{gathered}xy-3x+7y-21\\\\=(x+7)(y-3).\\end{gathered}\\] Hence its \\(n\\)th power is \\((x+7)^n(y-3)^n.\\) Each exponent of \\(x\\) from \\(0\\) through \\(n\\) can occur with each exponent of \\(y\\) from \\(0\\) through \\(n,\\) and every resulting coefficient is nonzero. Thus there are \\((n+1)^2\\) terms. Since \\(44^2<1996\\leq45^2,\\) the least possible \\(n+1\\) is \\(45,\\) so \\(n=44.\\)",
+      "hints": [
+        "Factor the expression before raising it to the \\(n\\)th power",
+        "Count the distinct choices of the exponents of \\(x\\) and \\(y\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

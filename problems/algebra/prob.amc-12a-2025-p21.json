@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2025-p21",
+  "title": "2025 AMC 12A Problem 21",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.exponent",
+      "label": "Exponent",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2025,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 39.5,
+    "source": 2130,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "There is a unique ordered triple \\((a, k, m)\\) of nonnegative integers such that\n\n\\[ \\begin{aligned} &\\small \\frac{4^a + 4^{a+k} + 4^{a+2k} + \\cdots + 4^{a+mk}}{2^a + 2^{a+k} + 2^{a+2k} + \\cdots + 2^{a+mk}} \\\\ &= 964. \\end{aligned} \\]\n\nWhat is \\(a + k + m?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(12\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "8"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2025-p21.live",
+      "kind": "proof-sketch",
+      "text": "If \\(k=0\\) or \\(m=0,\\) the original ratio is just \\(2^a,\\) which cannot equal \\(964.\\) Hence \\(k,m\\gt0.\\)\n\nSumming the geometric series, the numerator is \\(4^a\\dfrac{4^{k(m+1)} - 1}{4^k - 1}\\) and the denominator is \\(2^a\\dfrac{2^{k(m+1)} - 1}{2^k - 1}.\\) Using \\(4^N - 1 = (2^N - 1)(2^N + 1),\\) the ratio simplifies to \\[2^a \\cdot \\frac{2^{k(m+1)} + 1}{2^k + 1} = 964.\\]\n\nThe fraction on the left is odd over odd, so its power of \\(2\\) is \\(0.\\) Since \\(964=2^2\\cdot241,\\) we must have \\(a=2,\\) and \\[ 2^{k(m+1)}+1=241(2^k+1). \\] Reducing this equation modulo \\(2^k\\) shows that \\(240\\) is divisible by \\(2^k,\\) so \\(k\\le4.\\) For \\(k=1,2,3,\\) the required powers of \\(2\\) would be \\(722,1204,2168,\\) none of which is a power of \\(2.\\) For \\(k=4,\\) however, \\(241(2^4+1)=4097=2^{12}+1,\\) so \\(k(m+1)=12\\) and \\(m=2.\\) This also proves uniqueness.\n\nThen \\(a + k + m = 2 + 4 + 2 = 8.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "Sum both geometric series and use \\(4^N - 1 = (2^N - 1)(2^N + 1)\\)",
+        "The remaining fraction is odd over odd, so comparing powers of \\(2\\) with \\(964=2^2\\cdot241\\) forces \\(a=2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

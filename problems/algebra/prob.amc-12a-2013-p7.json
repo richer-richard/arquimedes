@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2013-p7",
+  "title": "2013 AMC 12A Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.work-backwards",
+      "label": "Work backwards",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2013,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 20.1,
+    "source": 1270,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "The sequence \\(S_1,\\) \\(S_2,\\) \\(S_3,\\) \\(\\ldots,\\) \\(S_{10}\\) has the property that every term beginning with the third is the sum of the previous two. That is, \\[S_n = S_{n-2} + S_{n-1} \\text{ for } n \\ge 3.\\] Suppose that \\(S_9 = 110\\) and \\(S_7 = 42.\\) What is \\(S_4?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(16\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "10"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2013-p7.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(S_9 = S_7 + S_8,\\) we get \\(S_8 = 110 - 42 = 68.\\) Then \\(S_6 = S_8 - S_7 = 68 - 42 = 26,\\) \\(S_5 = S_7 - S_6 = 42 - 26 = 16,\\) and \\(S_4 = S_6 - S_5 = 26 - 16 = 10.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Rearrange the rule to \\(S_{n-2} = S_n - S_{n-1}\\) and step downward",
+        "From \\(S_9 = S_7 + S_8\\) find \\(S_8,\\) then work down to \\(S_4\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

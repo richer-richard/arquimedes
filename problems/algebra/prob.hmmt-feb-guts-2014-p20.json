@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2014-p20",
+  "title": "2014 HMMT February Guts Problem 20",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.algebraic-properties-of-binomial-coefficients",
+      "label": "Algebraic properties of binomial coefficients",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sums-and-products",
+      "label": "Sums and products",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2014,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 73.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A deck of 8056 cards has 2014 ranks numbered 1-2014. Each rank has four suits-hearts, diamonds, clubs, and spades. Each card has a rank and a suit, and no two cards have the same rank and the same suit. How many subsets of the set of cards in this deck have cards from an odd number of distinct ranks?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2014-p20.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{1}{2}\\left(16^{2014}-14^{2014}\\right)\\) There are \\(\\binom{2014}{k}\\) ways to pick \\(k\\) ranks, and 15 ways to pick the suits in each rank (because there are 16 subsets of suits, and we must exclude the empty one). We therefore want to evaluate the sum \\(\\binom{2014}{1} 15^{1}+\\binom{2014}{3} 15^{3}+\\cdots+\\binom{2014}{2013} 15^{2013}\\).\nNote that \\((1+15)^{2014}=1+\\binom{2014}{1} 15^{1}+\\binom{2014}{2} 15^{2}+\\ldots+\\binom{2014}{2013} 15^{2013}+15^{2014}\\) and \\((1-15)^{2014}=\\) \\(1-\\binom{2014}{1} 15^{1}+\\binom{2014}{2} 15^{2}-\\ldots-\\binom{2014}{2013} 15^{2013}+15^{2014}\\), so our sum is simply \\(\\frac{(1+15)^{2014}-(1-15)^{2014}}{2}=\\) \\(\\frac{1}{2}\\left(16^{2014}-14^{2014}\\right)\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-i-2005-p6",
+  "title": "2005 AIME I Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.binomial-theorem",
+      "label": "Binomial theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2005,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 43.6,
+    "source": 2290,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Let \\(P\\) be the product of the nonreal roots of \\(x^4 - 4x^3 + 6x^2 - 4x = 2005.\\) Find \\(\\lfloor P\\rfloor.\\) (The notation \\(\\lfloor P\\rfloor\\) denotes the greatest integer that is less than or equal to \\(P.\\))",
+  "answerChoices": [],
+  "answer": {
+    "letter": "45",
+    "value": "45"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2005-p6.live",
+      "kind": "proof-sketch",
+      "text": "Adding \\(1\\) to both sides turns the left side into a perfect fourth power: \\[ \\begin{aligned} &(x - 1)^4 = x^4 - 4x^3 + 6x^2 \\\\ &\\quad {}- 4x + 1 = 2006. \\end{aligned} \\] So \\(x - 1\\) is a fourth root of \\(2006:\\) the four roots are \\(x = 1 \\pm \\sqrt[4]{2006}\\) (real) and \\(x = 1 \\pm i\\sqrt[4]{2006}\\) (nonreal).\n\nThe product of the conjugate pair of nonreal roots is \\[ \\begin{aligned} &\\left(1 + i\\sqrt[4]{2006}\\right) \\\\ &\\quad {}\\cdot \\left(1 - i\\sqrt[4]{2006}\\right) \\\\ &= 1 + \\sqrt{2006}. \\end{aligned} \\] Since \\(44^2 = 1936\\) \\(\\lt 2006\\) \\(\\lt 2025 = 45^2,\\) we have \\(45 \\lt P \\lt 46,\\) so \\(\\lfloor P\\rfloor = 45.\\)",
+      "hints": [
+        "The left side is one term short of the binomial expansion of \\((x - 1)^4;\\) add \\(1\\) to both sides",
+        "From \\((x-1)^4 = 2006,\\) the nonreal roots are \\(1 \\pm i\\sqrt[4]{2006};\\) multiply this conjugate pair"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

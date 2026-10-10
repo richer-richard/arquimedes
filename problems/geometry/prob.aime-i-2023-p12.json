@@ -1,0 +1,72 @@
+{
+  "id": "prob.aime-i-2023-p12",
+  "title": "2023 AIME I Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vector",
+      "label": "Vector",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vivianis-theorem",
+      "label": "Viviani’s Theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2023,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": 3270,
+    "mohs": null
+  },
+  "estimatedMinutes": 25,
+  "statement": "Let \\(\\triangle ABC\\) be an equilateral triangle with side length \\(55.\\) Points \\(D,\\) \\(E,\\) and \\(F\\) lie on \\(\\overline{BC},\\) \\(\\overline{CA},\\) and \\(\\overline{AB},\\) respectively, with \\(BD = 7,\\) \\(CE = 30,\\) and \\(AF = 40.\\) Point \\(P\\) inside \\(\\triangle ABC\\) has the property that \\[\\angle AEP = \\angle BFP = \\angle CDP.\\] Find \\(\\tan^2(\\angle AEP).\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "75",
+    "value": "75"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2023-p12.live",
+      "kind": "proof-sketch",
+      "text": "Place \\(B = (0, 0),\\) \\(C = (55, 0),\\) \\(A = \\left(\\frac{55}{2}, \\frac{55\\sqrt{3}}{2}\\right),\\) so that \\(D = (7, 0),\\) \\(E = (40, 15\\sqrt{3}),\\) and \\(F = \\left(\\frac{15}{2}, \\frac{15\\sqrt{3}}{2}\\right).\\) Let \\(\\theta\\) be the common angle and let \\(\\mathbf{u}_1, \\mathbf{u}_2, \\mathbf{u}_3\\) be the unit vectors in the directions \\(C \\to A,\\) \\(A \\to B,\\) \\(B \\to C\\) — the directions from \\(E\\) toward \\(A,\\) from \\(F\\) toward \\(B,\\) and from \\(D\\) toward \\(C.\\) Splitting \\(P - E\\) into its component along \\(\\mathbf{u}_1\\) and its component perpendicular to side \\(CA,\\) whose length is the distance \\(d_1\\) from \\(P\\) to line \\(CA,\\) the angle condition gives \\((P - E)\\cdot\\mathbf{u}_1 = d_1\\cot\\theta;\\) similarly \\((P - F)\\cdot\\mathbf{u}_2 = d_2\\cot\\theta\\) and \\((P - D)\\cdot\\mathbf{u}_3 = d_3\\cot\\theta.\\)\n\nNow add all three relations. Since \\(\\mathbf{u}_1 + \\mathbf{u}_2 + \\mathbf{u}_3 = \\mathbf{0}\\) (the directed sides of a triangle close up), \\(P\\) drops out, and by Viviani’s theorem \\(d_1 + d_2 + d_3\\) equals the height \\(\\frac{55\\sqrt{3}}{2}.\\) With \\(\\mathbf{u}_1 = \\left(-\\frac{1}{2}, \\frac{\\sqrt{3}}{2}\\right),\\) \\(\\mathbf{u}_2 = \\left(-\\frac{1}{2}, -\\frac{\\sqrt{3}}{2}\\right),\\) and \\(\\mathbf{u}_3 = (1, 0),\\) we get \\(E \\cdot \\mathbf{u}_1 = \\frac{5}{2},\\) \\(F \\cdot \\mathbf{u}_2 = -15,\\) and \\(D \\cdot \\mathbf{u}_3 = 7,\\) so \\[ \\begin{aligned} \\frac{55\\sqrt{3}}{2}\\,\\cot\\theta &= -\\left(\\frac{5}{2} - 15 + 7\\right) \\\\ &= \\frac{11}{2}. \\end{aligned} \\]\n\nHence \\(\\cot\\theta = \\frac{11}{55\\sqrt{3}} = \\frac{1}{5\\sqrt{3}},\\) so \\(\\tan^2(\\angle AEP) = \\left(5\\sqrt{3}\\right)^2 = 75.\\)",
+      "hints": [
+        "Decompose each vector from \\(E,\\) \\(F,\\) \\(D\\) to \\(P\\) into a part along the side and the distance to that side; the along-part equals the distance times \\(\\cot\\theta.\\)",
+        "Add the three relations: the unit directions \\(C \\to A,\\) \\(A \\to B,\\) \\(B \\to C\\) sum to zero, and the three distances sum to the height (Viviani)."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

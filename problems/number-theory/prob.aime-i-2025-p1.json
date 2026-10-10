@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2025-p1",
+  "title": "2025 AIME I Problem 1",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2025,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 33.4,
+    "source": 1890,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Find the sum of all integer bases \\(b \\gt 9\\) for which \\(17_b\\) is a divisor of \\(97_b.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "70",
+    "value": "70"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2025-p1.live",
+      "kind": "proof-sketch",
+      "text": "In base \\(b\\) the two numbers are \\(17_b = b + 7\\) and \\(97_b = 9b + 7.\\) We need \\(9b + 7\\) to be divisible by \\(b + 7,\\) and since \\(b + 7\\) certainly divides \\(9(b + 7) = 9b + 63,\\) this is equivalent to \\[ \\begin{gathered} (9b + 63) - (9b + 7) \\\\ = 56 \\end{gathered} \\] being divisible by \\(b + 7.\\)\n\nFor \\(b \\gt 9\\) we have \\(b + 7 \\gt 16,\\) so \\(b + 7\\) must be \\(28\\) or \\(56,\\) giving \\(b = 21\\) or \\(b = 49.\\) The sum is \\(21 + 49 = 70.\\)",
+      "hints": [
+        "Write the two numbers in base \\(b:\\) they are \\(b + 7\\) and \\(9b + 7\\)",
+        "Since \\(9(b + 7) - (9b + 7) = 56,\\) the condition is that \\(b + 7\\) divides \\(56\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

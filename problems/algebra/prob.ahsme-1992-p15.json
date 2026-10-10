@@ -1,0 +1,71 @@
+{
+  "id": "prob.ahsme-1992-p15",
+  "title": "1992 AHSME Problem 15",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1992,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 35.1,
+    "source": 1960,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(i=\\sqrt{-1}.\\) For \\(n\\ge1,\\) define a sequence of complex numbers by \\[ \\begin{aligned} z_1&=0,\\\\ z_{n+1}&=z_n^2+i. \\end{aligned} \\] In the complex plane, how far from the origin is \\(z_{111}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\sqrt2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\sqrt3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\sqrt{110}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\sqrt{2^{55}}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1992-p15.live",
+      "kind": "proof-sketch",
+      "text": "The first terms are \\[ \\begin{aligned} z_1&=0,\\quad z_2=i,\\quad z_3=-1+i,\\\\ z_4&=-i,\\quad z_5=-1+i. \\end{aligned} \\] Hence the sequence alternates between \\(-1+i\\) at odd indices and \\(-i\\) at even indices from \\(z_3\\) onward. Therefore \\(z_{111}=-1+i,\\) whose distance from the origin is \\(\\sqrt{(-1)^2+1^2}=\\sqrt2.\\)\n\nThus the correct answer is B.",
+      "hints": [
+        "Compute the first few terms rather than trying to expand \\(z_{111}\\)",
+        "Look for a cycle beginning with \\(z_3\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

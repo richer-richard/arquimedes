@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-general-2015-p10",
+  "title": "2015 HMMT November General Problem 10",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.enumeration-with-symmetry",
+      "label": "Enumeration with symmetry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.fermat-euler-wilson-theorems",
+      "label": "Fermat / Euler / Wilson theorems",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2015,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 61.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(N\\) be the number of functions \\(f\\) from \\(\\{1,2, \\ldots, 101\\} \\rightarrow\\{1,2, \\ldots, 101\\}\\) such that \\(f^{101}(1)=2\\). Find the remainder when \\(N\\) is divided by 103.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2015-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 43\nFor convenience, let \\(n=101\\). Compute the number of functions such that \\(f^{n}(1)=1\\). Since \\(n\\) is a prime, there are 2 cases: the order of 1 is either 1 or \\(n\\). The first case gives \\(n^{n-1}\\) functions, and the second case gives \\((n-1)\\) ! functions. By symmetry, the number of ways for \\(f^{n}(1)=2\\) is\n\n\\[\\frac{1}{n-1} \\cdot\\left(n^{n}-n^{n-1}-(n-1)!\\right)=n^{n-1}-(n-2)!\\]\n\nPlugging in \\(n=101\\), we need to find\n\n\\[\\begin{gathered}\n101^{100}-99!\\equiv(-2)^{-2}-\\frac{101!}{6} \\\\\n=1 / 4-1 / 6=1 / 12=43 \\quad(\\bmod 103) .\n\\end{gathered}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

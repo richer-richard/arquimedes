@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-general-2022-p2",
+  "title": "2022 HMMT November General Problem 2",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.enumeration-with-symmetry",
+      "label": "Enumeration with symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2022,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 43.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many ways are there to arrange the numbers \\(1,2,3,4,5,6\\) on the vertices of a regular hexagon such that exactly 3 of the numbers are larger than both of their neighbors? Rotations and reflections are considered the same.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "8",
+    "value": "8"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2022-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "Label the vertices of the hexagon \\(a b c d e f\\).\nThe numbers that are larger than both of their neighbors can't be adjacent, so assume (by rotation) that these numbers take up slots ace. We also have that 6 and 5 cannot be smaller than both of their neighbors, so assume (by rotation and reflection) that \\(a=6\\) and \\(c=5\\).\nNow, we need to insert \\(1,2,3,4\\) into \\(b, d, e, f\\) such that \\(e\\) is the largest among \\(d, e, f\\). There are 4 ways to choose \\(b\\), which uniquely determines \\(e\\), and 2 ways to choose the ordering of \\(d\\), \\(f\\), giving \\(4 \\cdot 2=8\\) total ways.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

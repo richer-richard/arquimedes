@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2017-p1",
+  "title": "2017 USAMO Problem 1",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2017,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 79.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Prove that there are infinitely many distinct pairs \\((a,b)\\) of relatively prime positive integers \\(a>1\\) and \\(b>1\\) such that \\(a^b+b^a\\) is divisible by \\(a+b\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2017-p1.imported",
+      "kind": "proof-sketch",
+      "text": "Let $n=a+b$. Since $gcd(a,b)=1$, we know $gcd(a,n)=1$. We can rewrite the condition as\n\\[a^{n-a}+(n-a)^a \\equiv 0 \\mod{n}\\]\n\\[a^{n-a}\\equiv-(-a)^a \\mod{n}\\]\nAssume $a$ is odd. Since we need to prove an infinite number of pairs exist, it suffices to show that infinitely many pairs with $a$ odd exist.\nThen we have\n\\[a^{n-a}\\equiv a^a \\mod{n}\\]\n\\[1 \\equiv a^{2a-n} \\mod{n}\\]\nWe know by Euler's theorem that $a^{\\varphi(n)} \\equiv 1 \\mod{n}$, so if $2a-n=\\varphi(n)$ we will have the required condition.\nThis means $a=\\frac{n+\\varphi(n)}{2}$. Let $n=2p$ where $p$ is a prime, $p\\equiv 1\\mod{4}$. Then $\\varphi(n) = 2p*\\left(1-\\frac{1}{2}\\right)\\left(1-\\frac{1}{p}\\right) = p-1$, so \\[a = \\frac{2p+p-1}{2} = \\frac{3p-1}{2}\\]\nNote the condition that $p\\equiv 1\\mod{4}$ guarantees that $a$ is odd, since $3p-1 \\equiv 2\\mod{4}$\nThis makes $b = \\frac{p+1}{2}$. Now we need to show that $a$ and $b$ are relatively prime. We see that\n\\[gcd\\left(\\frac{3p-1}{2},\\frac{p+1}2\\right)=\\frac{gcd(3p-1,p+1)}{2}\\]\n\\[=\\frac{gcd(p-3,4)}{2}=\\frac22=1\\]\nBy the Euclidean Algorithm.\nTherefore, for all primes $p \\equiv 1\\mod{4}$, the pair $\\left(\\frac{3p-1}{2},\\frac{p+1}{2}\\right)$ satisfies the criteria, so infinitely many such pairs exist.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

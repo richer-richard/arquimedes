@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2021-p16",
+  "title": "2021 AMC 12A Problem 16",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "nt.median-data",
+      "label": "Median (data)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.triangular-number",
+      "label": "Triangular number",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2021,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 29.7,
+    "source": 1730,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In the following list of numbers, the integer \\(n\\) appears \\(n\\) times in the list for \\(1 \\le n \\le 200.\\) \\(1,\\) \\(2,\\) \\(2,\\) \\(3,\\) \\(3,\\) \\(3,\\) \\(4,\\) \\(4,\\) \\(4,\\) \\(4,\\) \\(\\ldots,\\) \\(200,\\) \\(200,\\) \\(\\ldots,\\) \\(200\\)\n\nWhat is the median of the numbers in this list?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(100.5\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(134\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(142\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(150.5\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(167\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "142"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2021-p16.live",
+      "kind": "proof-sketch",
+      "text": "The list has \\(1 + 2 + \\cdots + 200\\) \\(= \\dfrac{200\\cdot 201}{2}\\) \\(= 20100\\) terms, so the median is the average of the \\(10050\\)th and \\(10051\\)st terms.\n\nThe value \\(n\\) occupies positions up to \\(\\dfrac{n(n+1)}{2}.\\) Since \\(\\dfrac{141\\cdot 142}{2} = 10011\\) and \\(\\dfrac{142\\cdot 143}{2} = 10153,\\) positions \\(10012\\) through \\(10153\\) all equal \\(142.\\) Both middle positions fall in this block, so the median is \\(142.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "The list has \\(1 + 2 + \\cdots + 200 = 20100\\) terms, so the median averages the \\(10050\\)th and \\(10051\\)st",
+        "The numbers through \\(n\\) fill positions up to \\(\\dfrac{n(n+1)}{2};\\) find the \\(n\\) containing position \\(10050\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

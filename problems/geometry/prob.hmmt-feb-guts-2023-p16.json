@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-guts-2023-p16",
+  "title": "2023 HMMT February Guts Problem 16",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cartesian-coordinates",
+      "label": "Cartesian coordinates",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cauchy-schwarz",
+      "label": "Cauchy-Schwarz",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2023,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 72.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The graph of the equation \\(x+y=\\left\\lfloor x^{2}+y^{2}\\right\\rfloor\\) consists of several line segments. Compute the sum of their lengths.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "4+\\sqrt{6}-\\sqrt{2}",
+    "value": "4+\\sqrt{6}-\\sqrt{2}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2023-p16.hmmt",
+      "kind": "proof-sketch",
+      "text": "We split into cases on the integer \\(k=\\left\\lfloor x^{2}+y^{2}\\right\\rfloor\\). Note that \\(x+y=k\\) but \\(x^{2}+y^{2} \\geq\\) \\(\\frac{1}{2}(x+y)^{2}=\\frac{1}{2} k^{2}\\) and \\(x^{2}+y^{2}<k+1\\), which forces \\(k \\leq 2\\).\nIf \\(k=0\\), the region defined by \\(0 \\leq x^{2}+y^{2}<1\\) and \\(x+y=0\\) is the diameter from \\(\\left(\\frac{\\sqrt{2}}{2},-\\frac{\\sqrt{2}}{2}\\right)\\) to \\(\\left(-\\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{2}}{2}\\right)\\), which has length 2 .\nIf \\(k=1\\), the region \\(1 \\leq x^{2}+y^{2}<2\\) and \\(x+y=1\\) consists of two segments, which is the chord on \\(x^{2}+y^{2}=2\\) minus the chord on \\(x^{2}+y^{2}=1\\). The former has length \\(2 \\sqrt{(\\sqrt{2})^{2}-\\left(\\frac{\\sqrt{2}}{2}\\right)^{2}}=\\sqrt{6}\\), and the latter has length \\(2 \\sqrt{1^{2}-\\left(\\frac{\\sqrt{2}}{2}\\right)^{2}}=\\sqrt{2}\\). So the total length here is \\(\\sqrt{6}-\\sqrt{2}\\).\nIf \\(k=2\\), the region \\(2 \\leq x^{2}+y^{2}<3\\) and \\(x+y=1\\) is the chord on \\(x^{2}+y^{2}=3\\), which has length \\(2 \\sqrt{(\\sqrt{3})^{2}-(\\sqrt{2})^{2}}=2\\).\nOur final answer is \\(2+(\\sqrt{6}-\\sqrt{2})+2=4+\\sqrt{6}-\\sqrt{2}\\).\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

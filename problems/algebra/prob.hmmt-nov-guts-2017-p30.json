@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-guts-2017-p30",
+  "title": "2017 HMMT November Guts Problem 30",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recurrence-relations",
+      "label": "Recurrence relations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2017,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 66.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Given complex number \\(z\\), define sequence \\(z_{0}, z_{1}, z_{2}, \\ldots\\) as \\(z_{0}=z\\) and \\(z_{n+1}=2 z_{n}^{2}+2 z_{n}\\) for \\(n \\geq 0\\). Given that \\(z_{10}=2017\\), find the minimum possible value of \\(|z|\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2017-p30.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\frac{\\sqrt[1024]{4035-1}}{2}\\)\nDefine \\(w_{n}=z_{n}+\\frac{1}{2}\\), so \\(z_{n}=w_{n}-\\frac{1}{2}\\), and the original equation becomes\n\n\\[w_{n+1}-\\frac{1}{2}=2\\left(w_{n}-\\frac{1}{2}\\right)^{2}+2\\left(w_{n}-\\frac{1}{2}\\right)=2 w_{n}^{2}-\\frac{1}{2}\\]\n\nwhich reduces to \\(w_{n+1}=2 w_{n}^{2}\\). it is not difficult to show that\n\n\\[z_{10}+\\frac{1}{2}=2017+\\frac{1}{2}=\\frac{4035}{2}=w_{10}=2^{1023} w_{0}^{1024}\\]\n\nand thus \\(w_{0}=\\frac{\\sqrt[1024]{4035}}{2} \\omega_{1024}\\), where \\(\\omega_{1024}\\) is one of the \\(1024^{\\text {th }}\\) roots of unity. Since \\(\\left|w_{0}\\right|=\\frac{\\sqrt[1024]{4035}}{2}>\\frac{1}{2}\\), to minimize the magnitude of \\(z=w_{0}-\\frac{1}{2}\\), we need \\(\\omega_{1024}=-1\\), which gives \\(|z|=\\frac{\\sqrt[1024]{4035}-1}{2}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

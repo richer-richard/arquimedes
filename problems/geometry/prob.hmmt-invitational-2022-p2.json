@@ -1,0 +1,77 @@
+{
+  "id": "prob.hmmt-invitational-2022-p2",
+  "title": "2022 HMMT Invitational Problem 2",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pigeonhole-principle",
+      "label": "Pigeonhole principle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.solid-geometry",
+      "label": "Solid geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2022,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Does there exist a regular pentagon whose vertices lie on edges of a cube?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "no",
+    "value": "No"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2022-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "If two of the sides of the pentagon lie on the same face of the cube, then we have that we have that all sides of the pentagon lie on this face, which would mean that one could choose five points on the boundary of the unit square that forms a pentagon. This is impossible by the following argument. By pigeonhole, there must be a pair of points that are on the same side of the square (WLOG, say it's the bottom side of the square). If this is the only such pair of points, then the other three points must be on the other three sides in such a way that the pentagon is symmetric with respect to the vertical line passing through the top vertex. But this implies that the height of the pentagon (which is also the height of the square) is equal to the length of one of the diagonals of the pentagon (because it is the width of the square), which is false. The other case is that there is another pair of points that are on the same side of the square. This is impossible because it would imply that two of the sides of the pentagon are parallel or perpendicular (which is false because all angles are multiples of \\(2 \\pi / 5\\) ). Thus, no two sides of the pentagon lie on the same face.\nNote that if each side of the pentagon lies on a face, then because there are four pairs of parallel faces, we know that two sides of the pentagon must be on parallel faces, which mean they are parallel, which can't happen.\n\nThus, some side of the pentagon must not lie on a face of the cube. The endpoints of this side must have a difference of 1 in one of their coordinates, so the side length of the pentagon must be greater than 1 (and its diagonal has length greater than \\(\\frac{1+\\sqrt{5}}{2}\\). This tells us that no three vertices of the pentagon can lie on the same face of the cube because a pair of these vertices must be a diagonal of the pentagon, and the greatest distance between two points on a unit square is \\(\\sqrt{2}<\\frac{1+\\sqrt{5}}{2}\\). Further, if two vertices of the pentagon lie on the same face of the cube, the line segment connecting them must be a side of the pentagon.\nEach vertex of the pentagon lies on at least two faces, so by pigeonhole (the vertices get counted a total of 10 times across 6 faces), there must be at least four faces with two vertices on them. These correspond to four edges of the pentagon on distinct faces of the cube. But this must include a pair of faces that are parallel to each other, so two of the edges of the pentagon are parallel. This is impossible, so we are done.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

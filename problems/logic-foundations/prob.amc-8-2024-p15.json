@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-8-2024-p15",
+  "title": "2024 AMC 8 Problem 15",
+  "category": "logic-foundations",
+  "subjects": [
+    "logic-foundations",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "logic.cryptarithm",
+      "label": "Cryptarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "logic.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "logic.place-value",
+      "label": "Place value",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2024,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 24.4,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let the letters \\(F,\\) \\(L,\\) \\(Y,\\) \\(B,\\) \\(U,\\) \\(G\\) represent distinct digits. Suppose \\(\\text{FLYFLY}\\) is the greatest number that satisfies the equation \\[ 8 \\cdot \\text{FLYFLY} = \\text{BUGBUG}. \\] What is the value of \\(\\text{FLY} + \\text{BUG}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1089\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1098\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1107\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(1116\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(1125\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "1107"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2024-p15.live",
+      "kind": "proof-sketch",
+      "text": "Firstly, note that \\[\\text{FLYFLY} = 1001(\\text{FLY})\\] and, similarly, \\[\\text{BUGBUG}=1001(\\text{BUG})\\] so the equation can be simplified to \\(8 \\cdot \\text{FLY} = \\text{BUG}.\\)\n\nBecause \\(\\text{BUG}\\) has three digits, \\(\\text{FLY}\\le124.\\) The largest possible three-digit number at most \\(124\\) with distinct digits is \\(124,\\) but \\(8\\cdot124=992\\) repeats a digit and also reuses the digit \\(2.\\)\n\nThe next candidate is \\(123,\\) and \\(8\\cdot123=984.\\) The six digits \\(1,\\) \\(2,\\) \\(3,\\) \\(9,\\) \\(8,\\) and \\(4\\) are all distinct, so \\(123\\) is the greatest possible value of \\(\\text{FLY}.\\)\n\nHence, \\[ \\begin{gathered} \\text{FLY} + \\text{BUG} = 123 + 984 \\\\ = 1107. \\end{gathered} \\]\n\nThus, C is the correct answer.",
+      "hints": [
+        "\\(\\text{FLYFLY}=1001\\cdot\\text{FLY}\\)",
+        "The equation reduces to \\(8\\cdot\\text{FLY}=\\text{BUG}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

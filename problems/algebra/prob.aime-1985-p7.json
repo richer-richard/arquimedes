@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1985-p7",
+  "title": "1985 AIME Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.difference-of-squares",
+      "label": "Difference of squares",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.perfect-power",
+      "label": "Perfect power",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1985,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 44.9,
+    "source": 2340,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Assume that \\(a,\\) \\(b,\\) \\(c,\\) and \\(d\\) are positive integers such that \\(a^5=b^4,\\) \\(c^3=d^2,\\) and \\(c-a=19.\\) Determine \\(d-b.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "757",
+    "value": "757"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1985-p7.live",
+      "kind": "proof-sketch",
+      "text": "Comparing prime exponents, write \\[ \\begin{aligned} a&=t^4,\\quad b=t^5,\\\\ c&=s^2,\\quad d=s^3 \\end{aligned} \\] for positive integers \\(s,\\) \\(t.\\) Then \\[ (s-t^2)(s+t^2)=s^2-t^4=19. \\] Since \\(19\\) is prime, the factors are \\(1\\) and \\(19,\\) giving \\(s=10\\) and \\(t^2=9.\\) Thus \\(t=3,\\) and \\[ \\begin{aligned} d-b&=10^3-3^5\\\\ &=1000-243=757. \\end{aligned} \\]",
+      "hints": [
+        "Parametrize the solutions of \\(a^5=b^4\\) and \\(c^3=d^2\\)",
+        "Factor the resulting difference \\(s^2-t^4\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

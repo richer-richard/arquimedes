@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2026-p6",
+  "title": "2026 AIME2 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.parabola",
+      "label": "Parabola",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.tangent-line",
+      "label": "Tangent line",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2026,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 52.8,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Find the sum of all real numbers \\(r\\) such that there is at least one point where the circle with radius \\(r\\) centered at \\((4, 39)\\) is tangent to the parabola with equation \\(2y = x^2 - 8x + 12.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "50",
+    "value": "50"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2026-p6.live",
+      "kind": "proof-sketch",
+      "text": "Completing the square, \\(2y = (x - 4)^2 - 4,\\) so with \\(u = x - 4\\) the parabola is the set of points \\(\\left(4 + u,\\ \\frac{u^2}{2} - 2\\right)\\) and the center \\((4, 39)\\) lies on its axis. The circle is tangent to the parabola at a point exactly when the two curves share a tangent line there, i.e. when the radius to that point is normal to the parabola — which happens exactly at critical points of the squared distance \\[ \\begin{aligned} &D(u) = u^2 + \\left(\\frac{u^2}{2} - 41\\right)^2, \\\\ &D'(u) = 2u + u\\left(u^2 - 82\\right) \\\\ &\\quad {}= u\\left(u^2 - 80\\right). \\end{aligned} \\]\n\nAt \\(u = \\pm\\sqrt{80}:\\) \\(D = 80 + (40 - 41)^2 = 81,\\) so \\(r = 9\\) (the circle touches the parabola at two symmetric points). At \\(u = 0,\\) the point is the vertex \\((4, -2)\\) at distance \\(41,\\) where the parabola and the circle of radius \\(41\\) both have horizontal tangent lines, so \\(r = 41\\) also works.\n\nThe sum is \\(9 + 41 = 50.\\)",
+      "hints": [
+        "The center \\((4, 39)\\) lies on the parabola’s axis. Write points of the parabola as \\((4 + u,\\ \\frac{u^2}{2} - 2)\\) and study the squared distance to the center as a function of \\(u.\\)",
+        "Tangency happens exactly where the radius is normal to the parabola, i.e. at critical points of the distance; don’t forget the vertex, where both curves have horizontal tangents."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

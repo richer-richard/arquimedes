@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-ii-2009-p10",
+  "title": "2009 AIME2 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-bisector",
+      "label": "Angle bisector",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2009,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 61.6,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Four lighthouses are located at points \\(A,\\) \\(B,\\) \\(C,\\) and \\(D.\\) The lighthouse at \\(A\\) is \\(5\\) kilometers from the lighthouse at \\(B,\\) the lighthouse at \\(B\\) is \\(12\\) kilometers from the lighthouse at \\(C,\\) and the lighthouse at \\(A\\) is \\(13\\) kilometers from the lighthouse at \\(C.\\) To an observer at \\(A,\\) the angle determined by the lights at \\(B\\) and \\(D\\) and the angle determined by the lights at \\(C\\) and \\(D\\) are equal. To an observer at \\(C,\\) the angle determined by the lights at \\(A\\) and \\(B\\) and the angle determined by the lights at \\(D\\) and \\(B\\) are equal. The number of kilometers from \\(A\\) to \\(D\\) is given by \\(\\frac{p\\sqrt{r}}{q},\\) where \\(p,\\) \\(q,\\) and \\(r\\) are relatively prime positive integers, and \\(r\\) is not divisible by the square of any prime. Find \\(p + q + r.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "96",
+    "value": "96"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2009-p10.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(5^2 + 12^2 = 13^2,\\) angle \\(B\\) is right. Place \\(A = (0, 0),\\) \\(B = (5, 0),\\) \\(C = (5, 12).\\) The condition at \\(A\\) says \\(\\angle BAD = \\angle CAD,\\) so \\(D\\) lies on the bisector of angle \\(BAC.\\) Using the half-angle formula with \\(\\tan \\angle BAC = \\frac{12}{5},\\) \\[ \\begin{aligned} \\tan \\frac{\\angle BAC}{2} &= \\frac{\\sin \\angle BAC}{1 + \\cos \\angle BAC} \\\\ &= \\frac{\\frac{12}{13}}{1 + \\frac{5}{13}} = \\frac{2}{3}, \\end{aligned} \\] so \\(D\\) lies on the line \\(y = \\frac{2}{3}x.\\)\n\nThe condition at \\(C\\) says \\(CB\\) bisects angle \\(ACD,\\) so ray \\(CD\\) is the reflection of ray \\(CA\\) over line \\(CB,\\) which is the vertical line \\(x = 5.\\) The reflection of \\(A\\) is \\((10, 0),\\) so \\(D\\) lies on the line through \\(C = (5, 12)\\) and \\((10, 0),\\) namely \\(5y = 120 - 12x.\\)\n\nSolving \\(y = \\frac{2}{3}x\\) and \\(5y = 120 - 12x\\) gives \\(x = \\frac{180}{23},\\) \\(y = \\frac{120}{23}.\\) Then \\[AD = \\frac{60}{23}\\sqrt{3^2 + 2^2} = \\frac{60\\sqrt{13}}{23},\\] so \\(p + q + r = 60 + 23 + 13 = 96.\\)",
+      "hints": [
+        "The triangle is right-angled at \\(B.\\) The conditions say \\(AD\\) bisects angle \\(BAC\\) and \\(CB\\) bisects angle \\(ACD.\\)",
+        "With \\(A = (0,0),\\) \\(B = (5,0),\\) \\(C = (5,12):\\) ray \\(CD\\) is the mirror of ray \\(CA\\) over the vertical line \\(CB,\\) so it hits \\((10, 0),\\) and \\(\\tan\\frac{\\angle BAC}{2} = \\frac{2}{3}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

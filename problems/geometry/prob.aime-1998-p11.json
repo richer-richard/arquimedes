@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1998-p11",
+  "title": "1998 AIME Problem 11",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cube-geometry",
+      "label": "Cube geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.shoelace-formula",
+      "label": "Shoelace formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1998,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 57.7,
+    "source": 2840,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Three of the edges of a cube are \\(\\overline{AB},\\) \\(\\overline{BC},\\) and \\(\\overline{CD},\\) and \\(\\overline{AD}\\) is an interior diagonal. Points \\(P,\\) \\(Q,\\) and \\(R\\) are on \\(\\overline{AB},\\) \\(\\overline{BC},\\) and \\(\\overline{CD},\\) respectively, so that \\(AP = 5,\\) \\(PB = 15,\\) \\(BQ = 15,\\) and \\(CR = 10.\\) What is the area of the polygon that is the intersection of plane \\(PQR\\) and the cube?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "525",
+    "value": "525"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1998-p11.live",
+      "kind": "proof-sketch",
+      "text": "The cube has side \\(20.\\) Take \\(B = (0,0,0),\\) \\(A = (20,0,0),\\) \\(C = (0,20,0),\\) and \\(D = (0,20,20),\\) so \\(\\overline{AD}\\) is an interior diagonal. Then \\(P = (15, 0, 0),\\) \\(Q = (0, 15, 0),\\) \\(R = (0, 20, 10),\\) and the plane through them is \\(2x + 2y - z = 30.\\)\n\nEvaluating \\(2x + 2y - z\\) at the cube’s vertices and checking all twelve edges, the plane also crosses the edges at \\((5, 20, 20),\\) \\((20, 5, 20),\\) and \\((20, 0, 10),\\) so the cross-section is the hexagon with vertices \\((15,0,0),\\) \\((0,15,0),\\) \\((0,20,10),\\) \\((5,20,20),\\) \\((20,5,20),\\) \\((20,0,10)\\) in order. Its projection onto the \\(xy\\)-plane is the hexagon \\((15,0),\\) \\((0,15),\\) \\((0,20),\\) \\((5,20),\\) \\((20,5),\\) \\((20,0),\\) whose area by the shoelace formula is \\(175.\\)\n\nThe plane’s unit normal \\(\\frac{1}{3}(2, 2, -1)\\) has vertical component of magnitude \\(\\frac{1}{3},\\) so projecting onto the \\(xy\\)-plane multiplies area by \\(\\frac{1}{3}.\\) The cross-section therefore has area \\(3 \\cdot 175 = 525.\\)",
+      "hints": [
+        "Set \\(B = (0,0,0),\\) \\(A = (20,0,0),\\) \\(C = (0,20,0),\\) \\(D = (0,20,20),\\) and find the plane through \\(P,\\) \\(Q,\\) \\(R\\)",
+        "The plane \\(2x + 2y - z = 30\\) cuts a hexagon. Projecting to the \\(xy\\)-plane scales area by \\(\\frac{1}{3},\\) the vertical component of the unit normal."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

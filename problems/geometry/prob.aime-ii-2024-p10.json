@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-ii-2024-p10",
+  "title": "2024 AIME II Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circumcircle-circumcenter-and-circumradius",
+      "label": "Circumcircle, circumcenter, and circumradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.incircle-incenter-and-inradius",
+      "label": "Incircle, incenter, and inradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2024,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 63.3,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Let \\(\\triangle ABC\\) have incenter \\(I,\\) circumcenter \\(O,\\) inradius \\(6,\\) and circumradius \\(13.\\) Suppose that \\(\\overline{IA} \\perp \\overline{OI}.\\) Find \\(AB \\cdot AC.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "468",
+    "value": "468"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2024-p10.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(\\angle OIA = 90^\\circ,\\) the Pythagorean theorem in triangle \\(OIA\\) gives \\(IA^2 = OA^2 - OI^2 = R^2 - OI^2,\\) and Euler’s formula \\(OI^2 = R^2 - 2Rr\\) yields \\[IA^2 = 2Rr = 2 \\cdot 13 \\cdot 6 = 156.\\] Combining with \\(IA = \\frac{r}{\\sin(\\frac{A}{2})}\\) gives \\(\\sin^2\\frac{A}{2} = \\frac{36}{156} = \\frac{3}{13},\\) so \\(\\cos^2\\frac{A}{2} = \\frac{10}{13}.\\)\n\nThen \\(\\sin A = 2 \\sin\\frac{A}{2}\\cos\\frac{A}{2} = \\frac{2\\sqrt{30}}{13},\\) so \\(a = BC = 2R \\sin A = 4\\sqrt{30},\\) while \\(s - a = r \\cot\\frac{A}{2} = 6\\sqrt{\\frac{10}{3}}\\) \\(= 2\\sqrt{30}.\\) Hence the semiperimeter is \\(s = 6\\sqrt{30}.\\)\n\nEquating the two area formulas \\([ABC] = rs = \\frac{1}{2}\\, bc \\sin A,\\) \\[ \\begin{aligned} bc = \\frac{2rs}{\\sin A} &= \\frac{2 \\cdot 6 \\cdot 6\\sqrt{30}}{\\frac{2\\sqrt{30}}{13}} \\\\ &= 36 \\cdot 13 = 468. \\end{aligned} \\]",
+      "hints": [
+        "The right angle gives \\(IA^2 = R^2 - OI^2,\\) and Euler’s formula \\(OI^2 = R^2 - 2Rr\\) turns this into \\(IA^2 = 2Rr\\)",
+        "Combine \\(IA = \\frac{r}{\\sin(\\frac{A}{2})}\\) with \\(s - a = r \\cot\\frac{A}{2},\\) \\(a = 2R \\sin A,\\) and \\(rs = \\frac{1}{2} bc \\sin A\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

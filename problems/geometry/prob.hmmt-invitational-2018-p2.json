@@ -1,0 +1,64 @@
+{
+  "id": "prob.hmmt-invitational-2018-p2",
+  "title": "2018 HMMT Invitational Problem 2",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.probability",
+      "label": "Probability",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2018,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Consider a finite set of points \\(T \\in \\mathbb{R}^{n}\\) contained in the \\(n\\)-dimensional unit ball centered at the origin, and let \\(X\\) be the convex hull of \\(T\\). Prove that for all positive integers \\(k\\) and all points \\(x \\in X\\), there exist points \\(t_{1}, t_{2}, \\ldots, t_{k} \\in T\\), not necessarily distinct, such that their centroid\n\n\\[\\frac{t_{1}+t_{2}+\\cdots+t_{k}}{k}\\]\n\nhas Euclidean distance at most \\(\\frac{1}{\\sqrt{k}}\\) from \\(x\\).\n(The \\(n\\)-dimensional unit ball centered at the origin is the set of points in \\(\\mathbb{R}^{n}\\) with Euclidean distance at most 1 from the origin. The convex hull of a set of points \\(T \\in \\mathbb{R}^{n}\\) is the smallest set of points \\(X\\) containing \\(T\\) such that each line segment between two points in \\(X\\) lies completely inside \\(X\\).)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2018-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "By the definition of convex hull, we can write \\(x=\\sum_{i=1}^{m} \\lambda_{i} z_{i}\\), where each \\(z_{i} \\in T\\), each \\(\\lambda_{i} \\geq 0\\) and \\(\\sum_{i=1}^{m} \\lambda_{i}=1\\). Consider then a random variable \\(Z\\) that takes on value \\(z_{i}\\) with probability \\(\\lambda_{i}\\). We have \\(\\mathbb{E}[Z]=x\\). Let \\(\\bar{Z}=\\frac{1}{k} \\sum_{i=1}^{k} Z_{i}\\), where each \\(Z_{i}\\) is an independent copy of \\(Z\\). Then we wish to compute\n\n\\[\\operatorname{Var}[\\bar{Z}]=\\frac{1}{k^{2}} \\sum_{i=1}^{k} \\operatorname{Var}\\left[Z_{i}\\right]\\]\n\nFinally, we have\n\n\\[\\operatorname{Var}\\left[Z_{i}\\right]=\\mathbb{E}\\left[\\left\\|Z_{i}-x\\right\\|^{2}\\right]=\\mathbb{E}\\left[\\left\\|Z_{i}\\right\\|^{2}\\right]-x^{2} \\leq \\mathbb{E}\\left[\\left\\|Z_{i}\\right\\|^{2}\\right] \\leq 1\\]\n\nThe second equality follows from the identity \\(\\operatorname{Var}[X]=\\mathbb{E}\\left[X^{2}\\right]-\\mathbb{E}[X]^{2}\\). Now, we know that\n\n\\[\\mathbb{E}\\left[\\left\\|x-\\frac{1}{k} \\sum_{i=1}^{k} Z_{i}\\right\\|^{2}\\right]=\\operatorname{Var}[\\bar{Z}] \\leq \\frac{1}{k}\\]\n\nThus, there must exist some realization of \\(x_{i}\\) of the \\(Z_{i}\\) such that\n\n\\[\\left\\|x-\\frac{1}{k} \\sum_{i=1}^{k} x_{i}\\right\\|^{2} \\leq \\frac{1}{k}\\]\n\nand we are done.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

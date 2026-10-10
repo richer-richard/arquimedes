@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1996-p6",
+  "title": "1996 AIME Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1996,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 40.5,
+    "source": 2170,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "In a five-team tournament, each team plays one game with every other team. Each team has a \\(50\\%\\) chance of winning any game it plays. There are no ties. Let \\(\\frac{m}{n}\\) be the probability that the tournament will produce neither an undefeated team nor a winless team, where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m+n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "49",
+    "value": "49"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1996-p6.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(2^{10}=1024\\) outcomes. A specified undefeated team forces its four games and leaves the other six arbitrary, so there are \\(5\\cdot2^6=320\\) outcomes with an undefeated team. The same count holds for a winless team. If distinct specified teams are undefeated and winless, seven games are forced and the three games among the other teams are arbitrary. Thus the intersection count is \\(5\\cdot4\\cdot2^3=160.\\) By inclusion-exclusion, the desired count is \\[1024-320-320+160=544.\\] The probability is \\(\\frac{544}{1024}=\\frac{17}{32},\\) so \\(m+n=49.\\)",
+      "hints": [
+        "There are \\(2^{\\binom52}\\) equally likely tournament outcomes",
+        "Use inclusion-exclusion on the events that an undefeated or a winless team exists"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

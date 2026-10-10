@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2006-p3",
+  "title": "2006 IMO Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2006,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 106.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Determine the least real number \\(M\\) such that the inequality\n\\[ \\left\\lvert ab(a^2-b^2)+bc(b^2-c^2)+ca(c^2-a^2) \\right\\rvert\n \\leq M\\left( a^2+b^2+c^2 \\right)^2 \\]\nholds for all real numbers \\(a\\), \\(b\\) and \\(c\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2006-p3.evanchen",
+      "kind": "proof-sketch",
+      "text": "It's the same as\n\\[ \\left\\lvert (a-b)(b-c)(c-a)(a+b+c) \\right\\rvert\n\\le M \\left( a^2+b^2+c^2 \\right)^2. \\]\nLet \\(x=a-b\\), \\(y=b-c\\), \\(z=c-a\\), \\(s=a+b+c\\).\nThen we want to have\n\\[\n \\left\\lvert xyzs \\right\\rvert\n \\le \\frac{M}{9} (x^2+y^2+z^2+s^2)^2.\n\\]\nHere \\(x+y+z=0\\).\n\nNow if \\(x\\) and \\(y\\) have the same sign,\nwe can replace them with the average\n(this increases the LHS and decreases RHS).\nSo we can have \\(x=y\\), \\(z=-2x\\).\nNow WLOG \\(x > 0\\) to get\n\\[ 2x^3 \\cdot s \\le \\frac{M}{9} \\left( 6x^2+s^2 \\right)^2. \\]\nAfter this routine calculation gives\n\\(M = \\frac{9}{32}\\sqrt2\\) works and is optimal\n(by \\(6x^2+s^2 = 2x^2 + 2x^2 + 2x^2 + s^2\\) and AM-GM).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

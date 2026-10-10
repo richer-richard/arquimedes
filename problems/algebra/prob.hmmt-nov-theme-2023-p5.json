@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-theme-2023-p5",
+  "title": "2023 HMMT November Theme Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.diophantine-equations-techniques",
+      "label": "Diophantine Equations techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.linear-and-quadratic-inequalities",
+      "label": "Linear and quadratic inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2023,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 39.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the unique positive integer \\(n\\) such that \\(\\frac{n^{3}-1989}{n}\\) is a perfect square.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "13",
+    "value": "13"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2023-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "We need \\(n^{2}-\\frac{1989}{n}\\) to be a perfect square, so \\(n \\mid 1989\\). Also, this perfect square would be less than \\(n^{2}\\), so it would be at most \\((n-1)^{2}=n^{2}-2 n+1\\). Thus,\n\n\\[\\frac{1989}{n} \\geq 2 n-1 \\Longrightarrow 1989 \\geq 2 n^{2}-n\\]\n\nso \\(n \\leq 31\\). Moreover, we need\n\n\\[n^{2} \\geq \\frac{1989}{n} \\Longrightarrow n^{3} \\geq 1989\\]\n\nso \\(n \\geq 13\\). Factoring gives \\(1989=3^{2} \\cdot 13 \\cdot 17\\), which means the only possible values of \\(n\\) are 13 and 17 . Checking both gives that only \\(n=13\\) works. (In fact, \\(\\frac{13^{3}-1989}{13}=4^{2}\\).)",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2020-p6",
+  "title": "2020 USAMO Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2020,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 115.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n \\ge 2\\)  be an integer. Let \\(x_1 \\ge x_2 \\ge \\cdots \\ge x_n\\) and \\(y_1 \\ge y_2 \\ge \\cdots \\ge y_n\\) be \\(2n\\) real numbers such that\n\n\\begin{align*} 0 &= x_1 + x_2 + \\cdots + x_n = y_1 + y_2 + \\cdots + y_n \\\\ \\text{and  }1 &= x_1^2+x_2^2+\\cdots+x_n^2=y_1^2+y_2^2+\\cdots+y_n^2. \\end{align*}\n\nProve that\n\n\\[\n\\sum_{i=1}^n(x_iy_i-x_iy_{n+1-i})\\ge\\frac{2}{\\sqrt{n-1}}.\n\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2020-p6.imported",
+      "kind": "proof-sketch",
+      "text": "§2.3 USAMO 2020/6, proposed by David Speyer, Kiran Kedlaya\n\n   Video at https://youtu.be/r7j0oRtpErA?t=6165.\n\n  Problem statement\n\n  Let n ≥ 2 be an integer. Let x1 ≥ x2 ≥ · · · ≥ xn and y1 ≥ y2 ≥ · · · ≥ yn be 2n real\n  numbers such that\n\n                           0 = x1 + x2 + · · · + xn = y1 + y2 + · · · + yn ,\n                   and     1 = x21 + x22 + · · · + x2n = y12 + y22 + · · · + yn2 .\n\n  Prove that\n                                  n\n                                 X                             2\n                                     (xi yi − xi yn+1−i ) ≥ √     .\n                                 i=1\n                                                              n−1\n\nWe present two approaches. In both approaches, it’s helpful motivation that for even n,\nequality occurs at\n                           \u0010 1           1     1           1 \u0011\n                 (xi ) =    √ , . . . , √ , −√ , . . . , −√\n                              n           n     n           n\n                            |    {z        } |    {z        }\n                                   n/2                 n/2\n                           n−1\n                           \u0010             1                    1      \u0011\n                 (yi ) = p         , −p         , . . . , −p\n                          n(n − 1)     n(n − 1)             n(n − 1)\n                                     |             {z              }\n                                                               n−1\n\n¶ First approach (expected value).          For a permutation σ on {1, 2, . . . , n} we define\n                                                n\n                                                X\n                                         Sσ =         xi yσ(i) .\n                                                i=1\n\n  Claim — For random permutations σ, E[Sσ ] = 0 and E[Sσ2 ] = n−1\n                                                               1\n                                                                  .\n\nProof. The\n        P first one is clear.\n  Since i<j 2xi xj = −1, it follows that (for fixed i and j), E[yσ(i) yσ(j) ] = − n(n−1)\n                                                                                     1\n                                                                                         ,\nThus\n                               X           h      i 1\n                                    x2i · E yσ(i)\n                                             2\n                                                    =\n                                                      n\n                                 i\n                        X              \u0002          \u0003           1\n                      2     xi xj · E yσ(i) yσ(j) = (−1) ·\n                                                           n(n − 1)\n                           i<j\n\nthe conclusion follows.\n\n  Claim (A random variable in [0, 1] has variance at most 1/4) — If A is a random\n\n                                                 13\n\nUSAMO 2020 Solution Notes                                   web.evanchen.cc, updated 7 June 2026\n\n  variable with mean µ taking values in the closed interval [m, M ] then\n                                               1\n                                 E[(A − µ)2 ] ≤ (M − m)2 .\n                                               4\n\nProof. By shifting and scaling, we may assume m = 0 and M = 1, so A ∈ [0, 1] and\nhence A2 ≤ A. Then\n                                                                   1\n                  E[(A − µ)2 ] = E[A2 ] − µ2 ≤ E[A] − µ2 = µ − µ2 ≤ .\n                                                                   4\nThis concludes the proof.\n\nThus the previous two claims together give\n                                               r\n                                                    4     2\n                          max Sσ − min Sσ ≥            =√    .\n                            σ         σ            n−1   n−1\n\nBut i xi yi = maxσ Sσ and         i xi yn+1−i = minσ Sσ by rearrangement inequality and\n     P                          P\ntherefore we are done.\n\n¶ Outline of second approach (by convexity, due to Alex Zhai).               We will instead\nprove a converse result: given the hypotheses\n\n   • x1 ≥ · · · ≥ xn\n\n   • y1 ≥ · · · ≥ yn\n\n   •\n     P          P\n        i xi =    i yi = 0\n\n   •                             √2\n     P            P\n        i xi yi −   i xi yn+1−i = n−1\n\nwe will prove that\n                         P 2P 2\n                             xi   yi ≤ 1.\n   Fix the choice of y’s. We see that we are trying to maximize a convex function in n\nvariables (x1 , . . . , xn ) over a convex domain (actually the intersection of two planes with\nseveral half planes). So a maximum can only happen at the boundaries: when at most\ntwo of the x’s are different.\n   An analogous argument applies to y. In this way we find that it suffices to consider\nsituations where x• takes on at most two different values. The same argument applies to\ny• .\n   At this point the problem can be checked directly.\n\n                                              14",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

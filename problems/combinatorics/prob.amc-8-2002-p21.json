@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-2002-p21",
+  "title": "2002 AMC 8 Problem 21",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.binomial-probability",
+      "label": "Binomial probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2002,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 24.6,
+    "source": 1550,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Harold tosses a nickel four times. The probability that he gets at least as many heads as tails is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{5}{16}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{3}{8}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{5}{8}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{11}{16}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "11/16"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2002-p21.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(2^4=16\\) equally likely outcomes for four coin tosses.\n\nAt least as many heads as tails means getting \\(2,\\) \\(3,\\) or \\(4\\) heads. The number of such outcomes is \\[ \\begin{aligned} &\\binom{4}{2}+\\binom{4}{3}+\\binom{4}{4} \\\\ &\\quad {}=6+4+1=11. \\end{aligned} \\]\n\nThus the probability is \\(\\dfrac{11}{16}.\\)\n\nThus, E is the correct answer.",
+      "hints": [
+        "At least as many heads as tails means \\(2,\\) \\(3,\\) or \\(4\\) heads.",
+        "Count outcomes by choosing which tosses are heads."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-guts-2024-p26",
+  "title": "2024 HMMT November Guts Problem 26",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.invariants-and-monovariants",
+      "label": "Invariants and monovariants",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2024,
+    "number": 26
+  },
+  "difficulty": {
+    "course": 54.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A right rectangular prism of silly powder has dimensions \\(20 \\times 24 \\times 25\\). Jerry the wizard applies 10 bouts of highdroxylation to the box, each of which increases one dimension of the silly powder by 1 and decreases a different dimension of the silly powder by 1 , with every possible choice of dimensions equally likely to be chosen and independent of all previous choices. Compute the expected volume of the silly powder after Jerry's routine.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "11770",
+    "value": "11770"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2024-p26.hmmt",
+      "kind": "proof-sketch",
+      "text": "Consider the expected change in volume by one bout of highdroxylation. Let the initial dimensions of the silly powder be \\(a, b\\), and \\(c\\).\nShould \\(a\\) increase to \\(a+1\\) and \\(b\\) decrease to \\(b-1\\), the volume of the silly powder will change from \\(a b c\\) to\n\n\\[(a+1)(b-1) c=a b c+b c-a c-c\\]\n\nIf \\(a\\) decreases to \\(a-1\\) and \\(b\\) increases to \\(b+1\\) instead, the new volume is\n\n\\[(a-1)(b+1) c=a b c-b c+a c-c\\]\n\nThus, the average change in volume between these two cases is \\(-c\\). By symmetry, the expected change in volume from one bout is \\(\\delta=-\\frac{a+b+c}{3}\\).\nInitially, the dimensions sum to 69 , and this sum can never change. Hence, for each bout of hydroxylation, the expected change in volume is \\(\\delta=-\\frac{69}{3}=-23\\). By linearity of expectation, the expected volume after 10 bouts is \\(20 \\cdot 24 \\cdot 25-10 \\cdot 23=11770\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2009-p25",
+  "title": "2009 AMC 10B Problem 25",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.independent-events",
+      "label": "Independent events",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2009,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 30.6,
+    "source": 2090,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Each face of a cube is given a single narrow stripe painted from the center of one edge to the center of its opposite edge. The choice of the edge pairing is made at random and independently for each face. What is the probability that there is a continuous stripe encircling the cube?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac18\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{3}{16}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac14\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac38\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac12\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "3/16"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2009-p25.live",
+      "kind": "proof-sketch",
+      "text": "Each face’s stripe has \\(2\\) orientations, giving \\(2^6=64\\) equally likely configurations.\n\nAn encircling stripe runs around one of the \\(3\\) pairs of opposite faces. For a given band, the \\(4\\) faces it crosses must each be oriented to continue it, a probability of \\(\\left(\\dfrac12\\right)^4=\\dfrac{1}{16}.\\)\n\nThe three bands are mutually exclusive, so the probability is \\(3\\cdot\\dfrac{1}{16}=\\dfrac{3}{16}.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Each face has \\(2\\) equally likely stripe orientations, so \\(2^6\\) total configurations",
+        "There are \\(3\\) possible encircling bands, each fixing the orientation of \\(4\\) faces"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

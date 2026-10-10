@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-ii-2004-p5",
+  "title": "2004 AIME II Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequality",
+      "label": "Inequality",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.rate",
+      "label": "Rate",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2004,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 46.2,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "In order to complete a large job, \\(1000\\) workers were hired, just enough to complete the job on schedule. All the workers stayed on the job while the first quarter of the work was done, so the first quarter of the work was completed on schedule. Then \\(100\\) workers were laid off, so the second quarter of the work was completed behind schedule. Then an additional \\(100\\) workers were laid off, so the third quarter of the work was completed still further behind schedule. Given that all workers work at the same rate, what is the minimum number of additional workers, beyond the \\(800\\) workers still on the job at the end of the third quarter, that must be hired after three-quarters of the work has been completed so that the entire project can be completed on schedule or before?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "766",
+    "value": "766"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2004-p5.live",
+      "kind": "proof-sketch",
+      "text": "Measure time so that \\(1000\\) workers complete a quarter of the job in \\(1\\) unit; the schedule allows \\(4\\) units in all. With \\(900\\) workers the second quarter takes \\(\\frac{10}{9}\\) units, and with \\(800\\) workers the third quarter takes \\(\\frac{10}{8} = \\frac{5}{4}\\) units. The time used so far is \\[1 + \\frac{10}{9} + \\frac{5}{4} = \\frac{121}{36},\\] leaving \\(4 - \\frac{121}{36} = \\frac{23}{36}\\) of a unit for the last quarter.\n\nThe last quarter requires \\(1000\\) worker-units of labor, so the workforce \\(w\\) must satisfy \\(w \\cdot \\frac{23}{36} \\ge 1000,\\) that is \\(w \\ge \\frac{36000}{23} \\approx 1565.2,\\) so at least \\(1566\\) workers are needed.\n\nSince \\(800\\) remain on the job, at least \\(1566 - 800 = 766\\) additional workers must be hired.",
+      "hints": [
+        "Choose the time unit so the whole job is scheduled for \\(4\\) units; the first quarter then takes exactly \\(1\\) unit",
+        "The first three quarters take \\(1 + \\frac{10}{9} + \\frac{5}{4}\\) units, leaving \\(\\frac{23}{36}\\) of a unit for the final quarter"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

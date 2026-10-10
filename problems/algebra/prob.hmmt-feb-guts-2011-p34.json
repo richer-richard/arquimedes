@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-guts-2011-p34",
+  "title": "2011 HMMT February Guts Problem 34",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 34
+  },
+  "difficulty": {
+    "course": 92.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(w=w_{1}, w_{2}, \\ldots, w_{6}\\) be a permutation of the integers \\(\\{1,2, \\ldots, 6\\}\\). If there do not exist indices \\(i<j<k\\) such that \\(w_{i}<w_{j}<w_{k}\\) or indices \\(i<j<k<l\\) such that \\(w_{i}>w_{j}>w_{k}>w_{l}\\), then \\(w\\) is said to be exquisite. Find the number of exquisite permutations.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2011-p34.hmmt",
+      "kind": "proof-sketch",
+      "text": "25\nGiven a permutation \\(w=w_{1}, \\ldots, w_{n}\\) for some \\(n\\), call a sequence \\(w_{i_{1}}, w_{i_{2}}, \\ldots, w_{i_{m}}\\) an increasing subsequence if \\(i_{1}<\\cdots<i_{m}\\) and \\(w_{i_{1}}<\\cdots<w_{i_{m}}\\). Define decreasing subsequences similarly. Let \\(i s(w)\\) denote the length of the longest increasing sequence and \\(d s(w)\\) denote the length of the longest decreasing sequence. We wish to find the number of permutations for \\(n=6\\) such that \\(i s(w) \\leq 2\\) and \\(d s(w) \\leq 3\\). We note here that \\(6=2 \\times 3\\) is not a coincidence.\n\nErdos and Szekeres first studied problems on the longest increasing and decreasing subsequences. In 1935, they showed that for any permutation \\(w\\) of \\(\\{1,2, \\ldots, p q+1\\}\\), either \\(i s(w)>p\\) or \\(d s(w)>q\\), which later appeared on the Russian Math Olympiad.\nIn 1961, Schensted proved that the bound \\(p q+1\\) is sharp, and he enumerated the number of permutations for \\(n=p q\\) such that \\(i s(w) \\leq p\\) and \\(d s(w) \\leq q\\) (exquisite permutations for simplicity), with an elegant combinatorial proof based on the RSK-algorithm relating Young Tableux and permutations.\nThe main idea of his proof is as follows. Consider a \\(p \\times q\\) rectangle. A Young Tableau is an assignment of \\(1,2, \\ldots, p q\\), one to each unit square of the rectangle, such that every row and column is in increasing order. There is a bijection between set of exquisite permutations and pairs of Young Tableaux. Since the number of ways to write \\(1,2, \\ldots, 6\\) on a \\(2 \\times 3\\) rectangle with every row and column in increasing order is 5 , there are exactly 25 exquisite permutations.\n\nFor a thorough exposition of increasing and decreasing subsequences and a collection of interesting open questions, see Richard Stanley's note for his undergraduate research students at MIT, \"Increasing and decreasing subsequences and their variants\" available at\nhttp://www.math.mit.edu/~rstan/papers/ids.pdf.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

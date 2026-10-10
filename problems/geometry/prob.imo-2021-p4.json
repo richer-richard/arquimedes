@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2021-p4",
+  "title": "2021 IMO Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2021,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 88.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\Gamma\\) be a circle with center \\(I\\), and \\(ABCD\\) a convex quadrilateral\nsuch that each of the segments \\(AB\\), \\(BC\\), \\(CD\\) and \\(DA\\) is tangent to \\(\\Gamma\\).\nLet \\(\\Omega\\) be the circumcircle of the triangle \\(AIC\\).\nThe extension of \\(BA\\) beyond \\(A\\) meets \\(\\Omega\\) at \\(X\\),\nand the extension of \\(BC\\) beyond \\(C\\) meets \\(\\Omega\\) at \\(Z\\).\nThe extensions of \\(AD\\) and \\(CD\\) beyond \\(D\\) meet \\(\\Omega\\) at \\(Y\\) and \\(T\\), respectively.\nProve that\n\\[ AD + DT + TX + XA = CD + DY + YZ + ZC. \\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2021-p4.evanchen",
+      "kind": "proof-sketch",
+      "text": "Let \\(PQRS\\) be the contact points of \\(\\Gamma\\) an \\(\\overline{AB}\\), \\(\\overline{BC}\\),\n\\(\\overline{CD}\\), \\(\\overline{DA}\\).\n\n[Diagram omitted from this imported TeX transcription.]\n\nClaim.\n We have \\(\\triangle IQZ \\cong \\triangle IRT\\).\n Similarly, \\(\\triangle IPX \\cong \\triangle ISY\\).\n\nProof.\n By considering \\((CQIR)\\) and \\((CITZ)\\),\n there is a spiral similarity similarity\n mapping \\(\\triangle IQZ\\) to \\(\\triangle IRT\\).\n Since \\(IQ = IR\\), it is in fact a congruence.\n\nThis congruence essentially solves the problem.\nFirst, it implies:\n\nClaim.\n \\(TX = YZ\\).\n\nProof.\n Because we saw \\(IX = IY\\) and \\(IT = IZ\\).\n\nThen, we can compute\n\\[\\begin{aligned}\n AD + DT + XA\n &= AD + (RT - RD) + (XP-AP) \\\\\n &= (AD-RD-AP) + RT + XP = RT + XP\n\\end{aligned}\\]\nand\n\\[\\begin{aligned}\n CD + DY + ZC &= CD + (SY-SD) + (ZQ-QC) \\\\\n &= (CD-SD-QC) + SY + ZQ = SY + ZQ\n\\end{aligned}\\]\nbut \\(ZQ = RT\\) and \\(XP = SY\\), as needed.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

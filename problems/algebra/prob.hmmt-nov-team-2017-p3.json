@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-team-2017-p3",
+  "title": "2017 HMMT November Team Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.integers",
+      "label": "Integers",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.number-theory",
+      "label": "Number Theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sums-and-products",
+      "label": "Sums and products",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2017,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 50.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Michael writes down all the integers between 1 and \\(N\\) inclusive on a piece of paper and discovers that exactly \\(40 \\%\\) of them have leftmost digit 1 . Given that \\(N>2017\\), find the smallest possible value of \\(N\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2017-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(1,481,480\\)\nLet \\(d\\) be the number of digits of \\(N\\). Suppose that \\(N\\) does not itself have leftmost digit 1 . Then the number of integers \\(1,2, \\ldots, N\\) which have leftmost digit 1 is\n\n\\[1+10+10^{2}+\\ldots+10^{d-1}=\\frac{10^{d}-1}{9}\\]\n\nso we must have \\(\\frac{10^{d}-1}{9}=\\frac{2 N}{5}\\), or \\(5\\left(10^{d}-1\\right)=18 N\\). But the left-hand side is odd, so this is impossible.\n\nThus \\(N\\) must have leftmost digit 1 . In this case, the number of integers \\(1,2, \\ldots, N\\) which have leftmost digit 1 is\n\n\\[\\begin{aligned}\n& 1+10+10^{2}+\\ldots+10^{d-2}+\\left(N-10^{d-1}+1\\right) \\\\\n= & \\frac{10^{d-1}-1}{9}+N-10^{d-1}+1 \\\\\n= & N-8\\left(\\frac{10^{d-1}-1}{9}\\right) .\n\\end{aligned}\\]\n\nTherefore we need \\(N-8\\left(\\frac{10^{d-1}-1}{9}\\right)=\\frac{2}{5} N\\), or \\(N=\\frac{40}{3}\\left(\\frac{10^{d-1}-1}{9}\\right)\\). Then, \\(\\frac{10^{d-1}-1}{9}\\) must be divisible by 3. The base-ten representation of \\(\\frac{10^{d-1}-1}{9}\\) has \\(d-1\\) ones, so \\(d-1\\) must be divisible by 3 . Both \\(d=1\\) and \\(d=4\\) make \\(N\\) less than 2017, but \\(d=7\\) gives the answer \\(N=\\frac{40}{3}(111111)=1481480\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

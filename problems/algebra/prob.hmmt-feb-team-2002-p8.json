@@ -1,0 +1,56 @@
+{
+  "id": "prob.hmmt-feb-team-2002-p8",
+  "title": "2002 HMMT February Team Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.probability",
+      "label": "Probability",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2002,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 87.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In this problem only, assume that \\(s_{1}=4\\) and that exactly one board square, say square number \\(n\\), is marked with an arrow. Determine all choices of \\(n\\) that maximize the average distance in squares the first player will travel in his first two turns.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2002-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "Because expectation is linear, the average distance the first player travels in his first two turns is the average sum of two rolls of his die (which does not depend on the board configuration) plus four times the probability that he lands on the arrow on one of his first two turns. Thus we just need to maximize the probability that player 1 lands on the arrow in his first two turns. If \\(n \\geq 5\\), player 1 cannot land on the arrow in his first turn, so he encounters the arrow with probability at most \\(1 / 4\\). If instead \\(n \\leq 4\\), player 1 has a \\(1 / 4\\) chance of landing on the arrow on his first turn. If he misses, then he has a \\(1 / 4\\) chance of hitting the arrow on his second turn provided that he is not beyond square \\(n\\) already. The chance that player 1's first roll left him on square \\(n-1\\) or farther left is \\((n-1) / 4\\). Hence his probability of benefiting from the arrow in his first two turns is \\(1 / 4+(1 / 4)(n-1) / 4\\), which is maximized for \\(n=4\\), where it is greater than the value of \\(1 / 4\\) that we get from \\(n \\geq 5\\). Hence the answer is \\(n=4\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2005-p22",
+  "title": "2005 AMC 10A Problem 22",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.least-common-multiple",
+      "label": "Least common multiple",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.multiple",
+      "label": "Multiple",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2005,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 26.0,
+    "source": 1690,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(S\\) be the set of the \\(2005\\) smallest positive multiples of \\(4,\\) and let \\(T\\) be the set of the \\(2005\\) smallest positive multiples of \\(6.\\) How many elements are common to \\(S\\) and \\(T?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(166\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(333\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(500\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(668\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(1001\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "668"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2005-p22.live",
+      "kind": "proof-sketch",
+      "text": "The elements common to \\(S\\) and \\(T\\) are the multiples of \\(\\operatorname{lcm}(4,6) = 12.\\) Now \\(S\\) contains multiples of \\(4\\) up to \\(4 \\cdot 2005 = 8020,\\) while \\(T\\) reaches up to \\(6 \\cdot 2005 = 12{,}030,\\) so the common elements are the multiples of \\(12\\) not exceeding \\(8020.\\) There are \\(\\left\\lfloor \\dfrac{8020}{12} \\right\\rfloor = 668\\) of them.\n\nThus, the correct answer is D.",
+      "hints": [
+        "A number common to both sets must be a multiple of \\(\\operatorname{lcm}(4, 6) = 12\\)",
+        "The set \\(S\\) reaches up to \\(4 \\cdot 2005 = 8020;\\) count the multiples of \\(12\\) that do not exceed that"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

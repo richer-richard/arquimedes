@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2018-p32",
+  "title": "2018 HMMT February Guts Problem 32",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2018,
+    "number": 32
+  },
+  "difficulty": {
+    "course": 92.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many 48-tuples of positive integers \\(\\left(a_{1}, a_{2}, \\ldots, a_{48}\\right)\\) between 0 and 100 inclusive have the property that for all \\(1 \\leq i<j \\leq 48, a_{i} \\notin\\left\\{a_{j}, a_{j}+1\\right\\}\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2018-p32.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(54^{48}\\)\n(With Ashwin Sah) The key idea is write the elements of the sequence in increasing order. These sets are in bijection with solutions to \\(d_{1}+\\ldots+d_{k}=48\\) and \\(a_{1}+\\ldots+a_{k+1}=53\\) with \\(d_{i} \\geq 1, a_{i} \\geq 1\\) for\n\\(2 \\leq I \\leq k\\), and \\(a_{1}, a_{k+1} \\geq 0\\). Notice that there are \\(\\binom{54}{k}\\) solutions to the second equation and then there are \\(\\frac{48!}{d_{1}!\\cdots d_{k}!}\\) solutions for each \\(\\left\\{d_{i}\\right\\}\\) set. Then this gives that the answer is\n\n\\[\\begin{gathered}\n\\sum_{1 \\leq k \\leq 48}\\binom{54}{k} \\sum_{d_{1}+\\ldots+d_{k}=48} \\frac{48!}{\\prod_{i=1}^{k} d_{i}!} \\\\\n=48!\\left[x^{48}\\right] \\sum_{1 \\leq k \\leq 48}\\left(e^{x}-1\\right)^{k}\\binom{54}{k} \\\\\n=48!\\left[x^{48}\\right] \\sum_{0 \\leq k \\leq 54}\\left(e^{x}-1\\right)^{k}\\binom{54}{k} \\\\\n=48!\\left[x^{48}\\right]\\left(e^{x}\\right)^{54} \\\\\n=54^{48} .\n\\end{gathered}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

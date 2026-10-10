@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12a-2019-p9",
+  "title": "2019 AMC 12A Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.substitution",
+      "label": "Substitution",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2019,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 23.4,
+    "source": 1500,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A sequence of numbers is defined recursively by \\(a_1 = 1,\\) \\(a_2 = \\dfrac{3}{7},\\) and\n\n\\[ a_n = \\dfrac{a_{n-2} \\cdot a_{n-1}}{2a_{n-2} - a_{n-1}} \\]\n\nfor all \\(n \\ge 3.\\) Then \\(a_{2019}\\) can be written as \\(\\dfrac{p}{q},\\) where \\(p\\) and \\(q\\) are relatively prime positive integers. What is \\(p + q?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2020\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4039\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6057\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6061\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(8078\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "8078"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2019-p9.live",
+      "kind": "proof-sketch",
+      "text": "Taking reciprocals, \\[ \\begin{aligned} \\dfrac{1}{a_n} &= \\dfrac{2a_{n-2} - a_{n-1}}{a_{n-2}a_{n-1}} \\\\ &= \\dfrac{2}{a_{n-1}} - \\dfrac{1}{a_{n-2}}. \\end{aligned} \\]\n\nLet \\(b_n = \\dfrac{1}{a_n}.\\) Then \\(b_n = 2b_{n-1} - b_{n-2},\\) so \\(b_n\\) is arithmetic with \\(b_1 = 1,\\) \\(b_2 = \\dfrac{7}{3},\\) and common difference \\(\\dfrac{4}{3}.\\)\n\nThus \\(b_{2019} = 1 + 2018 \\cdot \\dfrac{4}{3} = \\dfrac{8075}{3},\\) so \\(a_{2019} = \\dfrac{3}{8075}.\\) Since these are relatively prime, \\(p + q = 8078.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "Take reciprocals of both sides",
+        "Setting \\(b_n = \\dfrac{1}{a_n}\\) gives \\(b_n = 2b_{n-1} - b_{n-2},\\) an arithmetic sequence"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

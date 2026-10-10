@@ -1,0 +1,81 @@
+{
+  "id": "prob.amc-10a-2025-p13",
+  "title": "2025 AMC 10A Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2025,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 24.9,
+    "source": 1560,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In the figure below, the outside square contains infinitely many squares, each of them with the same center and sides parallel to the outside square. The ratio of the side length of a square to the side length of the next inner square is \\(k,\\) where \\(0 \\lt k \\lt 1.\\) The spaces between squares are alternately shaded, as shown in the figure (which is not necessarily drawn to scale).\n\nThe area of the shaded portion of the figure is \\(64\\%\\) of the area of the original square. What is \\(k?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{3}{5}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{16}{25}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{2}{3}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{3}{4}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{4}{5}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "3/4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2025-p13.live",
+      "kind": "proof-sketch",
+      "text": "Let the outer side be \\(1.\\) The squares have sides \\(1, k, k^2, \\ldots,\\) and the shaded rings alternate, so the shaded area is \\(1 - k^2 + k^4 - k^6 + \\cdots = \\frac{1}{1 + k^2}.\\) We’re told this equals \\(64\\% = \\frac{16}{25},\\) so \\(1 + k^2 = \\frac{25}{16}.\\) Then \\(k^2 = \\frac{9}{16},\\) giving \\(k = \\frac{3}{4}.\\) Thus, D is the correct answer.",
+      "hints": [
+        "Take the outer side to be \\(1;\\) the square sides are \\(1, k, k^2, \\ldots\\) and the shaded area is \\(1 - k^2 + k^4 - \\cdots\\)",
+        "Sum this geometric series with ratio \\(-k^2\\) and set it equal to \\(\\tfrac{16}{25}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "5b82929dd32931071e2c1bc92c7bac809fe58f56a1bee0dcde15aa4e00b6186f"
+    ],
+    "solutions": []
+  }
+}

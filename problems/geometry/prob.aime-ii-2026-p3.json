@@ -1,0 +1,74 @@
+{
+  "id": "prob.aime-ii-2026-p3",
+  "title": "2026 AIME2 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.shoelace-formula",
+      "label": "Shoelace formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2026,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 49.2,
+    "source": 2510,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "Let \\(ABCDE\\) be a nonconvex pentagon with internal angles \\(\\angle A = \\angle E = 90^\\circ\\) and \\(\\angle B = \\angle D = 45^\\circ.\\) Suppose that \\(DE \\lt AB,\\) \\(AE = 20,\\) \\(BC = 14\\sqrt{2},\\) and points \\(B,\\) \\(C,\\) and \\(D\\) lie on the same side of line \\(AE.\\) Suppose further that \\(AB\\) is an integer with \\(AB \\lt 2026\\) and the area of pentagon \\(ABCDE\\) is an integer multiple of \\(16.\\) Find the number of possible values of \\(AB.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "503",
+    "value": "503"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2026-p3.live",
+      "kind": "proof-sketch",
+      "text": "Place \\(A = (0, 0)\\) and \\(E = (20, 0)\\) with the pentagon above line \\(AE,\\) and write \\(h = AB.\\) The right angles at \\(A\\) and \\(E\\) make \\(AB\\) and \\(ED\\) vertical: \\(B = (0, h)\\) and \\(D = (20, k)\\) with \\(k = DE.\\) At \\(B\\) the side \\(BC = 14\\sqrt{2}\\) makes a \\(45^\\circ\\) angle with the downward ray \\(BA,\\) heading into the pentagon, so \\(C = (14, h - 14).\\) Similarly at \\(D,\\) the side \\(DC\\) makes a \\(45^\\circ\\) angle with the downward ray \\(DE,\\) so \\(C = (20 - s, k - s)\\) where \\(s = \\frac{DC}{\\sqrt{2}}.\\) Matching coordinates gives \\(s = 6\\) and \\(k = h - 8.\\) The interior angle at \\(C\\) is then the reflex angle \\(270^\\circ\\) (angle sum \\(90 + 45 + 270 + 45 + 90 = 540\\)), and \\(DE = h - 8 \\lt AB\\) automatically.\n\nThe shoelace formula on \\(A(0,0),\\) \\(B(0,h),\\) \\(C(14, h-14),\\) \\(D(20, h-8),\\) \\(E(20, 0)\\) gives area \\[ \\begin{aligned} [ABCDE] &= \\frac{1}{2}\\big|{-14h} + (-6h + 168) \\\\ &\\qquad {}+ (-20h + 160)\\big| \\\\ &= 20h - 164. \\end{aligned} \\] The condition that \\(20h - 164\\) be divisible by \\(16\\) reduces to \\(4h \\equiv 4 \\pmod{16},\\) that is, \\(h \\equiv 1 \\pmod 4.\\) For \\(C\\) to lie strictly on the same side of line \\(AE\\) as \\(B\\) and \\(D,\\) we need \\(h \\gt 14.\\)\n\nSo \\(h\\) runs over \\(17, 21, 25, \\ldots, 2025,\\) which is \\(\\frac{2025 - 17}{4} + 1 = 503\\) values.",
+      "hints": [
+        "Put \\(A\\) at the origin and \\(E = (20, 0);\\) the right angles at \\(A\\) and \\(E\\) make \\(AB\\) and \\(ED\\) vertical.",
+        "The \\(45^\\circ\\) angles at \\(B\\) and \\(D\\) force \\(C = (14, AB - 14)\\) and \\(DE = AB - 8;\\) the shoelace formula turns the area condition into a congruence for \\(AB.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

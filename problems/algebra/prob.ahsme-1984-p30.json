@@ -1,0 +1,85 @@
+{
+  "id": "prob.ahsme-1984-p30",
+  "title": "1984 AHSME Problem 30",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetico-geometric-series",
+      "label": "Arithmetico-geometric series",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1984,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 48.0,
+    "source": 2460,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "For any complex number \\(w=a+bi,\\) \\(|w|\\) is defined to be the real number \\(\\sqrt{a^2+b^2}.\\) If \\(w=\\cos40^\\circ+i\\sin40^\\circ,\\) then \\[ |w+2w^2+3w^3+\\cdots+9w^9|^{-1} \\] equals",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\frac19\\sin40^\\circ\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\frac29\\sin20^\\circ\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\frac19\\cos40^\\circ\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\frac1{18}\\cos20^\\circ\\)"
+    },
+    {
+      "label": "E",
+      "text": "none of these"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1984-p30.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(S=\\sum_{k=1}^9kw^k.\\) Since \\(w^9=1\\) and \\(w^{10}=w,\\) \\[ \\begin{aligned} (1-w)S &=(w+w^2+\\cdots+w^9)\\\\ &\\quad-9w^{10}\\\\ &=-9w. \\end{aligned} \\] Therefore \\(|S|=\\frac{9}{|1-w|},\\) because \\(|w|=1.\\) Thus \\[ |S|^{-1}=\\frac{|1-w|}{9} =\\frac{2}{9}\\sin20^\\circ. \\] Therefore, the correct answer is B.",
+      "hints": [
+        "Let \\(S=w+2w^2+\\cdots+9w^9\\) and subtract \\(wS\\) from \\(S\\)",
+        "Use \\(w^9=1\\) and \\(|1-e^{i\\theta}|=2\\sin(\\frac{\\theta}{2})\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2021-p23",
+  "title": "2021 AMC 12B Problem 23",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2021,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 46.2,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Three balls are randomly and independently tossed into bins numbered with the positive integers so that for each ball, the probability that it is tossed into bin \\(i\\) is \\(2^{-i}\\) for \\(i=1,\\) \\(2,\\) \\(3,\\) \\(\\ldots.\\) More than one ball is allowed in each bin. The probability that the balls end up evenly spaced in distinct bins is \\(\\dfrac{p}{q},\\) where \\(p\\) and \\(q\\) are relatively prime positive integers. (For example, the balls are evenly spaced if they are tossed into bins \\(3,\\) \\(17,\\) and \\(10.\\)) What is \\(p+q?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(55\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(56\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(57\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(58\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(59\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "55"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2021-p23.live",
+      "kind": "proof-sketch",
+      "text": "Evenly spaced distinct bins form an arithmetic progression \\(n,n+d,n+2d\\) with \\(n,d\\ge 1.\\) The three labels sum to \\(3(n+d),\\) so a fixed assignment of balls to these bins has probability \\(2^{-3(n+d)}.\\)\n\nThe three balls can be ordered in \\(3!=6\\) ways, so the total probability is \\(6\\sum_{n\\ge 1}\\sum_{d\\ge 1}2^{-3(n+d)}\\) \\(=6\\left(\\sum_{n\\ge 1}\\tfrac{1}{8^n}\\right)^2\\) \\(=6\\cdot\\tfrac17\\cdot\\tfrac17=\\tfrac{6}{49}.\\)\n\nSince \\(\\gcd(6,49)=1,\\) we get \\(p+q=6+49=55.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "Evenly spaced means the bins are \\(n, n+d, n+2d\\) for some \\(n,d\\ge 1;\\) their labels sum to \\(3(n+d)\\)",
+        "Each such ordered assignment has probability \\(2^{-3(n+d)},\\) and there are \\(3!\\) orderings of the three balls"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

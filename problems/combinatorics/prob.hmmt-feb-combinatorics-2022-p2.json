@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2022-p2",
+  "title": "2022 HMMT February Combinatorics Problem 2",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.coloring-schemes-extremal-arguments",
+      "label": "Coloring schemes, extremal arguments",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2022,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 70.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the number of ways to color 3 cells in a \\(3 \\times 3\\) grid so that no two colored cells share an edge.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "22",
+    "value": "22"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2022-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "If the middle square is colored, then two of the four corner squares must be colored, and there are \\(\\binom{4}{2}=6\\) ways to do this. If the middle square is not colored, then after coloring one of the 8 other squares, there are always 6 ways to place the other two squares. However, the number of possibilities is overcounted by a factor of 3 , so there are 16 ways where the middle square is not colored. This leads to a total of 22 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

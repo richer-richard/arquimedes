@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-general-1-2006-p10",
+  "title": "2006 HMMT February General Round 1 Problem 10",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2006,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A positive integer \\(n\\) is called \"flippant\" if \\(n\\) does not end in 0 (when written in decimal notation) and, moreover, \\(n\\) and the number obtained by reversing the digits of \\(n\\) are both divisible by 7 . How many flippant integers are there between 10 and 1000 ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-general-1-2006-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "We use the notation \"|\" to mean \"divides.\"\nThere is only one flippant 2-digit number, namely 77. Indeed, if \\(10 a+b\\) is flippant (where \\(a, b\\) are integers \\(1-9\\) ), then \\(7 \\mid 10 a+b\\) and \\(7 \\mid 10 b+a\\). Thus,\n\n\\[7 \\mid 3(10 a+b)-(10 b+a)=29 a-7 b=a+7(4 a-b)\\]\n\nso that \\(7 \\mid a\\), and similarly \\(7 \\mid b\\), so we'd better have \\(a=b=7\\).\n\nThere are 16 flippant 3 -digit numbers. First consider the 12 palindromic ones (ones where the hundreds and units digits are the same): \\(161,252,343,434,525,595,616\\), \\(686,707,777,868\\), and 959 . Now consider the general case: suppose \\(100 a+10 b+c\\) is flippant, where \\(a, b, c\\) are integers 1-9. Then \\(7 \\mid 100 a+10 b+c\\) and \\(7 \\mid 100 c+10 b+a\\), so \\(7 \\mid(100 a+10 b+c)-(100 c+10 b+a)=99(a-c)\\), and so \\(7 \\mid a-c\\). In order for this not to result in a palindromic integer, we must have \\(a-c= \\pm 7\\) and, moreover, both \\(100 a+10 b+a\\) and \\(100 c+10 b+c\\) must be palindromic flippant integers. Consulting our list above, we find 4 more flippant integers: 168, 259, 861, and 952.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1986-p9",
+  "title": "1986 AIME Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.algebraic-manipulation",
+      "label": "Algebraic manipulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1986,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 45.1,
+    "source": 2350,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "In \\(\\triangle ABC,\\) \\(AB=425,\\) \\(BC=450,\\) and \\(AC=510.\\) An interior point \\(P\\) is drawn, and segments are drawn through \\(P\\) parallel to the sides of the triangle. If these three segments have equal length \\(d,\\) find \\(d.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "306",
+    "value": "306"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1986-p9.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(a=BC=450,\\) \\(b=CA=510,\\) and \\(c=AB=425.\\) Let \\(x,\\) \\(y,\\) and \\(z\\) be the distances from \\(P\\) to \\(BC,\\) \\(CA,\\) and \\(AB,\\) respectively, each divided by the corresponding altitude. Area decomposition gives \\(x+y+z=1.\\)\n\nBy similar triangles, the segment through \\(P\\) parallel to \\(BC\\) has length \\(a(1-x),\\) and similarly the other two lengths are \\(b(1-y)\\) and \\(c(1-z).\\) Since all three equal \\(d,\\) \\[ \\begin{aligned} x&=1-\\frac da,\\\\ y&=1-\\frac db,\\\\ z&=1-\\frac dc. \\end{aligned} \\] Their sum is \\(1,\\) so \\[ d=\\frac{2abc}{ab+bc+ca}. \\] Substituting the three side lengths gives \\[ \\begin{aligned} d&=\\frac{195075000}{637500}\\\\ &=306. \\end{aligned} \\]",
+      "hints": [
+        "Normalize the perpendicular distances from \\(P\\) to the three sides",
+        "A cross-section parallel to a side has length equal to that side times one minus the corresponding normalized distance"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

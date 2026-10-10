@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-theme-2012-p10",
+  "title": "2012 HMMT November Theme Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recurrence-relations",
+      "label": "Recurrence relations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2012,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 57.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In a game of rock-paper-scissors with \\(n\\) people, the following rules are used to determine a champion:\n(a) In a round, each person who has not been eliminated randomly chooses one of rock, paper, or scissors to play.\n(b) If at least one person plays rock, at least one person plays paper, and at least one person plays scissors, then the round is declared a tie and no one is eliminated. If everyone makes the same move, then the round is also declared a tie.\n(c) If exactly two moves are represented, then everyone who made the losing move is eliminated from playing in all further rounds (for example, in a game with 8 people, if 5 people play rock and 3 people play scissors, then the 3 who played scissors are eliminated).\n(d) The rounds continue until only one person has not been eliminated. That person is declared the champion and the game ends.\n\nIf a game begins with 4 people, what is the expected value of the number of rounds required for a champion to be determined?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2012-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\sqrt[\\frac{45}{14}]{ }\\) For each positive integer \\(n\\), let \\(E_{n}\\) denote the expected number of rounds required to determine a winner among \\(n\\) people. Clearly, \\(E_{1}=0\\). When \\(n=2\\), on the first move, there is a \\(\\frac{1}{3}\\) probability that there is a tie, and a \\(\\frac{2}{3}\\) probability that a winner is determined. In the first case, the expected number of additional rounds needed is exactly \\(E_{2}\\); in the second, it is \\(E_{1}\\). Therefore, we get the relation\n\n\\[E_{2}=\\frac{1}{3}\\left(E_{2}+1\\right)+\\frac{2}{3}\\left(E_{1}+1\\right),\\]\n\nfrom which it follows that \\(E_{2}=\\frac{3}{2}\\).\nNext, if \\(n=3\\), with probability \\(\\frac{1}{9}\\) there is only one distinct play among the three players, and with probability \\(\\frac{6}{27}=\\frac{2}{9}\\) all three players make different plays. In both of these cases, no players are eliminated. In all remaining situations, which occur with total probability \\(\\frac{2}{3}\\), two players make one play and the third makes a distinct play; with probability \\(\\frac{1}{3}\\) two players are eliminated and with probability \\(\\frac{1}{3}\\) one player is eliminated. This gives the relation\n\n\\[E_{3}=\\frac{1}{3}\\left(E_{3}+1\\right)+\\frac{1}{3}\\left(E_{2}+1\\right)+\\frac{1}{3}\\left(E_{1}+1\\right),\\]\n\nfrom which we find that \\(E_{3}=\\frac{9}{4}\\).\nFinally, suppose \\(n=4\\). With probability \\(\\frac{1}{27}\\), all four players make the same play, and with probability \\(\\frac{3 \\cdot 6 \\cdot 2}{81}=\\frac{4}{9}\\), two players make one play, and the other two players make the other two plays; in both cases no players are eliminated, with total probability \\(\\frac{1}{27}+\\frac{4}{9}=\\frac{13}{27}\\) over the two cases. With probability \\(\\frac{6 \\cdot 4}{81}=\\frac{8}{27}\\), three players make one play and the fourth makes another; thus, there is a probability of \\(\\frac{4}{27}\\) for exactly one player being eliminated and a probability of \\(\\frac{4}{27}\\) of three players being eliminated.\n\nThen, there is a remaining probability of \\(\\frac{6 \\cdot 3}{81}=\\frac{2}{9}\\), two players make one play and the other two players make another. Similar analysis from before yields\n\n\\[E_{4}=\\frac{13}{27}\\left(E_{4}+1\\right)+\\frac{4}{27}\\left(E_{3}+1\\right)+\\frac{2}{9}\\left(E_{2}+1\\right)+\\frac{4}{27}\\left(E_{1}+1\\right)\\]\n\nso it follows that \\(E_{4}=\\frac{45}{14}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

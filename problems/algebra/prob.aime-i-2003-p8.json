@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2003-p8",
+  "title": "2003 AIME I Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2003,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 41.6,
+    "source": 2210,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "In an increasing sequence of four positive integers, the first three terms form an arithmetic progression, the last three terms form a geometric progression, and the first and fourth terms differ by \\(30.\\) Find the sum of the four terms.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "129",
+    "value": "129"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2003-p8.live",
+      "kind": "proof-sketch",
+      "text": "Write the terms as \\(a,\\) \\(a + d,\\) \\(a + 2d,\\) and \\(a + 30,\\) where \\(a\\) and \\(d\\) are positive integers. The geometric condition on the last three terms says \\((a + 30)(a + d) = (a + 2d)^2.\\) Expanding both sides and simplifying, \\[30a + 30d = 3ad + 4d^2,\\] that is \\[3a(10 - d) = 2d(2d - 15).\\]\n\nSince \\(a, d \\gt 0,\\) the factors \\(10 - d\\) and \\(2d - 15\\) must have the same sign, forcing \\(7.5 \\lt d \\lt 10,\\) so \\(d = 8\\) or \\(d = 9.\\) For \\(d = 8,\\) we get \\(6a = 16,\\) which has no integer solution. For \\(d = 9,\\) we get \\(3a = 54,\\) so \\(a = 18.\\)\n\nThe sequence is \\(18, 27, 36, 48\\) (indeed \\(27, 36, 48\\) has ratio \\(\\frac{4}{3}\\)), and the sum is \\(18 + 27 + 36 + 48 = 129.\\)",
+      "hints": [
+        "Write the terms as \\(a,\\) \\(a + d,\\) \\(a + 2d,\\) and \\(a + 30\\)",
+        "The geometric condition becomes \\(3a(10 - d) = 2d(2d - 15),\\) so \\(10 - d\\) and \\(2d - 15\\) must have the same sign"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

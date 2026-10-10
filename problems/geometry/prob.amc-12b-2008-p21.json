@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2008-p21",
+  "title": "2008 AMC 12B Problem 21",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.distance-formula",
+      "label": "Distance formula",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.geometric-probability",
+      "label": "Geometric probability",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2008,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 35.5,
+    "source": 2040,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Two circles of radius \\(1\\) are to be constructed as follows. The center of circle \\(A\\) is chosen uniformly and at random from the line segment joining \\((0, 0)\\) to \\((2, 0).\\) The center of circle \\(B\\) is chosen uniformly and at random, and independently of the first choice, from the line segment joining \\((0, 1)\\) to \\((2, 1).\\) What is the probability that circles \\(A\\) and \\(B\\) intersect?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{2 + \\sqrt{2}}{4}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{3\\sqrt{3} + 2}{8}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{2\\sqrt{2} - 1}{2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{2 + \\sqrt{3}}{4}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{4\\sqrt{3} - 3}{4}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2008-p21.live",
+      "kind": "proof-sketch",
+      "text": "Let the centers be \\((a, 0)\\) and \\((b, 1)\\) with \\(a, b \\in [0, 2].\\) The circles (radius \\(1\\) each) intersect iff the distance between centers is at most \\(2:\\) \\[ \\begin{aligned} &\\sqrt{(a - b)^2 + 1} \\le 2 \\\\ &\\iff |a - b| \\le \\sqrt{3}. \\end{aligned} \\]\n\nThe pairs \\((a, b)\\) fill the square \\([0, 2]^2\\) of area \\(4.\\) The failing region \\(|a - b| \\gt \\sqrt3\\) is two right triangles, each with legs \\(2 - \\sqrt3,\\) of total area \\((2 - \\sqrt3)^2 = 7 - 4\\sqrt3.\\)\n\nSo the favorable area is \\(4 - (7 - 4\\sqrt3) = 4\\sqrt3 - 3,\\) and the probability is \\[ \\frac{4\\sqrt3 - 3}{4}. \\]\n\nThus, the correct answer is E.",
+      "hints": [
+        "With centers \\((a, 0)\\) and \\((b, 1),\\) the circles intersect iff \\(\\sqrt{(a - b)^2 + 1} \\le 2,\\) i.e. \\(|a - b| \\le \\sqrt{3}\\)",
+        "In the square \\([0, 2]^2\\) of area \\(4,\\) find the area with \\(|a - b| \\le \\sqrt{3}\\) by removing the two corner triangles where \\(|a - b| \\gt \\sqrt{3}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

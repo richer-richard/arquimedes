@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-invitational-2025-p1",
+  "title": "2025 HMMT Invitational Problem 1",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2025,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A B C D\\) be a convex quadrilateral. Define parabolas \\(\\mathcal{P}_{A}\\) \\(\\mathcal{P}_{B}\\) \\(\\mathcal{P}_{C}\\) , and \\(\\mathcal{P}_{D}\\) to have directrices \\(B D\\) \\(C A\\) \\(D B\\) , and \\(A C\\) , and foci \\(A\\) \\(B\\) \\(C\\) , and \\(D\\) , respectively. Prove that no two of these parabolas intersect more than once.\n\n(A parabola with directrix \\(\\ell\\) and focus \\(P\\) consists of all points \\(X\\) for which \\(P X\\) equals the distance from \\(P\\) to \\(\\ell\\) .)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2025-p1.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(d(P, X Y)\\) be the distance from \\(P\\) to line \\(X Y\\) . We will first prove \\(\\mathcal{P}_{A}\\) and \\(\\mathcal{P}_{B}\\) intersect at most once.\n\nClaim 1. Let \\(\\ell_{A B}\\) be the perpendicular bisector of \\(A B\\) . Then, \\(\\mathcal{P}_{A}\\) is tangent to \\(\\ell_{A B}\\) .\n\nProof. Consider any point \\(X\\) on \\(\\mathcal{P}_{A}\\) . Then,\n\n\\[X A = d(X,B D)\\leq X B,\\]\n\nwith equality only holding at the unique point \\(X\\) for which \\(X B\\perp B D\\) . Thus, \\(\\mathcal{P}_{A}\\) lies entirely on one side of \\(\\ell_{A B}\\) , touching it once at this point \\(X\\) . \\(\\square\\)\n\nIt follows that \\(\\mathcal{P}_{A}\\) and \\(\\mathcal{P}_{B}\\) are on different sides of \\(\\ell_{A B}\\) and hence can intersect at most once (possibly at a common tangency point to \\(\\ell_{A B}\\) ).\n\nSince \\(A B C D\\) is convex, \\(A\\) and \\(C\\) lie on opposite sides of line \\(B D\\) , the common directrix of \\(\\mathcal{P}_{A}\\) and \\(\\mathcal{P}_{C}\\) . Thus, \\(\\mathcal{P}_{A}\\) and \\(\\mathcal{P}_{C}\\) lie on opposite sides of line \\(B D\\) and cannot intersect at all.\n\nThe remaining pairs of parabolas are handled similarly.\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

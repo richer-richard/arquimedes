@@ -1,0 +1,73 @@
+{
+  "id": "prob.aime-ii-2007-p15",
+  "title": "2007 AIME2 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circumcircle-circumcenter-and-circumradius",
+      "label": "Circumcircle, circumcenter, and circumradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.herons-formula",
+      "label": "Heron’s Formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.homothety",
+      "label": "Homothety",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.incircle-incenter-and-inradius",
+      "label": "Incircle, incenter, and inradius",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2007,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": 3270,
+    "mohs": null
+  },
+  "estimatedMinutes": 25,
+  "statement": "Four circles \\(\\omega,\\) \\(\\omega_A,\\) \\(\\omega_B,\\) and \\(\\omega_C\\) with the same radius are drawn in the interior of triangle \\(ABC\\) such that \\(\\omega_A\\) is tangent to sides \\(AB\\) and \\(AC,\\) \\(\\omega_B\\) to \\(BC\\) and \\(BA,\\) \\(\\omega_C\\) to \\(CA\\) and \\(CB,\\) and \\(\\omega\\) is externally tangent to \\(\\omega_A,\\) \\(\\omega_B,\\) and \\(\\omega_C.\\) If the sides of triangle \\(ABC\\) are \\(13,\\) \\(14,\\) and \\(15,\\) the radius of \\(\\omega\\) can be represented in the form \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "389",
+    "value": "389"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2007-p15.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(x\\) be the common radius, and let \\(O_A,\\) \\(O_B,\\) \\(O_C\\) be the centers of \\(\\omega_A,\\) \\(\\omega_B,\\) \\(\\omega_C.\\) Each is at distance \\(x\\) from two sides of the triangle, so each lies on an angle bisector, and the sides of triangle \\(O_A O_B O_C\\) are parallel to those of \\(ABC\\) at distance \\(x.\\) Hence \\(O_A O_B O_C\\) is the image of \\(ABC\\) under the homothety centered at the incenter \\(I\\) with ratio \\(\\frac{r - x}{r},\\) where \\(r\\) is the inradius; in particular its circumradius is \\(R \\cdot \\frac{r - x}{r},\\) where \\(R\\) is the circumradius of \\(ABC.\\)\n\nThe center of \\(\\omega\\) is at distance \\(2x\\) from each of \\(O_A,\\) \\(O_B,\\) \\(O_C\\) (externally tangent equal circles), so it is the circumcenter of \\(O_A O_B O_C\\) and \\[2x = R \\cdot \\frac{r - x}{r}.\\] For the \\(13\\)-\\(14\\)-\\(15\\) triangle, \\(s = 21\\) and Heron’s formula gives area \\(\\sqrt{21 \\cdot 8 \\cdot 7 \\cdot 6} = 84,\\) so \\(r = \\frac{84}{21} = 4\\) and \\(R = \\frac{13 \\cdot 14 \\cdot 15}{4 \\cdot 84} = \\frac{65}{8}.\\)\n\nThen \\(2x = \\frac{65}{8} \\cdot \\frac{4 - x}{4}\\) gives \\(64x = 260 - 65x,\\) so \\(x = \\frac{260}{129}.\\) Since \\(129 = 3 \\cdot 43\\) shares no factor with \\(260,\\) the answer is \\(m + n = 260 + 129 = 389.\\)",
+      "hints": [
+        "The centers of \\(\\omega_A,\\) \\(\\omega_B,\\) \\(\\omega_C\\) lie on the angle bisectors, forming a triangle similar to \\(ABC\\) shrunk toward the incenter by factor \\(\\frac{r - x}{r}\\)",
+        "The center of \\(\\omega\\) is equidistant from those three centers, so \\(2x\\) equals the circumradius of the shrunken triangle, namely \\(R \\cdot \\frac{r - x}{r}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

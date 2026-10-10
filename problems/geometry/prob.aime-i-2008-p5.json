@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2008-p5",
+  "title": "2008 AIME I Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circumference",
+      "label": "Circumference",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.cone",
+      "label": "Cone",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2008,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 43.9,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "A right circular cone has base radius \\(r\\) and height \\(h.\\) The cone lies on its side on a flat table. As the cone rolls on the surface of the table without slipping, the point where the cone’s base meets the table traces a circular arc centered at the point where the vertex touches the table. The cone first returns to its original position on the table after making \\(17\\) complete rotations. The value of \\(\\frac{h}{r}\\) can be written in the form \\(m\\sqrt{n},\\) where \\(m\\) and \\(n\\) are positive integers and \\(n\\) is not divisible by the square of any prime. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "14",
+    "value": "14"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2008-p5.live",
+      "kind": "proof-sketch",
+      "text": "The contact point of the base stays at distance \\(\\ell = \\sqrt{r^2 + h^2}\\) (the slant height) from the fixed vertex, so it traces a circle of radius \\(\\ell.\\) Rolling without slipping, the cone makes one rotation for each base circumference of arc, so returning after exactly \\(17\\) rotations means \\[2\\pi\\sqrt{r^2 + h^2} = 17 \\cdot 2\\pi r,\\] i.e. \\[\\sqrt{r^2 + h^2} = 17r.\\]\n\nSquaring gives \\(h^2 = 288r^2,\\) so \\(\\frac{h}{r} = \\sqrt{288} = 12\\sqrt{2},\\) and \\(m + n = 12 + 2 = 14.\\)",
+      "hints": [
+        "The vertex stays fixed, so the point of contact traces a circle whose radius is the slant height \\(\\sqrt{r^2 + h^2}\\)",
+        "Seventeen rotations means \\(2\\pi\\sqrt{r^2 + h^2} = 17 \\cdot 2\\pi r;\\) square \\(\\sqrt{r^2 + h^2} = 17r\\) and simplify \\(\\frac{h}{r}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-guts-2013-p10",
+  "title": "2013 HMMT February Guts Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.optimization-in-geometry",
+      "label": "Optimization in geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-trigonometry",
+      "label": "Triangle trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2013,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 70.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Wesyu is a farmer, and she's building a cao (a relative of the cow) pasture. She starts with a triangle \\(A_{0} A_{1} A_{2}\\) where angle \\(A_{0}\\) is \\(90^{\\circ}\\), angle \\(A_{1}\\) is \\(60^{\\circ}\\), and \\(A_{0} A_{1}\\) is 1 . She then extends the pasture. First, she extends \\(A_{2} A_{0}\\) to \\(A_{3}\\) such that \\(A_{3} A_{0}=\\frac{1}{2} A_{2} A_{0}\\) and the new pasture is triangle \\(A_{1} A_{2} A_{3}\\). Next, she extends \\(A_{3} A_{1}\\) to \\(A_{4}\\) such that \\(A_{4} A_{1}=\\frac{1}{6} A_{3} A_{1}\\). She continues, each time extending \\(A_{n} A_{n-2}\\) to \\(A_{n+1}\\) such that \\(A_{n+1} A_{n-2}=\\frac{1}{2^{n}-2} A_{n} A_{n-2}\\). What is the smallest \\(K\\) such that her pasture never exceeds an area of \\(K\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2013-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\sqrt{3}\\) First, note that for any \\(i\\), after performing the operation on triangle \\(A_{i} A_{i+1} A_{i+2}\\), the resulting pasture is triangle \\(A_{i+1} A_{i+2} A_{i+3}\\). Let \\(K_{i}\\) be the area of triangle \\(A_{i} A_{i+1} A_{i+2}\\). From\n\\(A_{n+1} A_{n-2}=\\frac{1}{2^{n}-2} A_{n} A_{n-2}\\) and \\(A_{n} A_{n+1}=A_{n} A_{n-2}+A_{n-2} A_{n+1}\\), we have \\(A_{n} A_{n+1}=\\left(1+\\frac{1}{2^{n}-2}\\right) A_{n} A_{n-2}\\). We also know that the area of a triangle is half the product of its base and height, so if we let the base of triangle \\(A_{n-2} A_{n-1} A_{n}\\) be \\(A_{n} A_{n-2}\\), its area is \\(K_{n-2}=\\frac{1}{2} h A_{n} A_{n-2}\\). The area of triangle \\(A_{n-1} A_{n} A_{n+1}\\) is \\(K_{n-1}=\\frac{1}{2} h A_{n} A_{n+1}\\). The \\(h\\) 's are equal because the distance from \\(A_{n-1}\\) to the base does not change.\n\nWe now have \\(\\frac{K_{n-1}}{K_{n-2}}=\\frac{A_{n} A_{n+1}}{A_{n} A_{n-2}}=1+\\frac{1}{2^{n}-2}=\\frac{2^{n}-1}{2^{n}-2}\\). Therefore, \\(\\frac{K_{1}}{K_{0}}=\\frac{3}{2}, \\frac{K_{2}}{K_{0}}=\\frac{K_{2}}{K_{1}} \\frac{K_{1}}{K_{0}}=\\frac{7}{6} \\cdot \\frac{3}{2}=\\frac{7}{4}\\), \\(\\frac{K_{3}}{K_{0}}=\\frac{K_{3}}{K_{2}} \\frac{K_{2}}{K_{0}}=\\frac{15}{14} \\cdot \\frac{7}{4}=\\frac{15}{8}\\). We see the pattern \\(\\frac{K_{n}}{K_{0}}=\\frac{2^{n+1}-1}{2^{n}}\\), which can be easily proven by induction. As \\(n\\) approaches infinity, \\(\\frac{K_{n}}{K_{0}}\\) grows arbitrarily close to 2 , so the smallest \\(K\\) such that the pasture never exceeds an area of \\(K\\) is \\(2 K_{0}=\\sqrt{3}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2022-p18",
+  "title": "2022 AMC 10A Problem 18",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.pattern-recognition",
+      "label": "Pattern recognition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.transformation",
+      "label": "Transformation",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2022,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 34.9,
+    "source": 1950,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(T_k\\) be the transformation of the coordinate plane that first rotates the plane \\(k\\) degrees counterclockwise around the origin and then reflects the plane across the \\(y\\)-axis. What is the least positive integer \\(n\\) such that performing the sequence of transformations \\(T_1,\\) \\(T_2,\\) \\(T_3,\\) \\(\\cdots,\\) \\(T_n\\) returns the point \\((1,0)\\) back to itself?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(359\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(360\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(719\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(720\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(721\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "359"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2022-p18.live",
+      "kind": "proof-sketch",
+      "text": "Since we are working with angles and reflections, working with polar coordinates would make this problem easier to deal with.\n\nLet \\((r, \\theta)\\) be a polar coordinate. Rotating this by \\(k\\) degrees counterclockwise maps the point to \\((r, \\theta + k^{\\circ})\\) and then reflecting it maps it to \\((r, 180^{\\circ} - \\theta - k^{\\circ}).\\)\n\nTherefore, we have that \\[ T_k(r, \\theta) = (r, 180^{\\circ} - \\theta - k^{\\circ}). \\]\n\nFrom this, we can see that \\[ T_{k + 1}(T_k(r, \\theta)) = \\]\\[T_{k + 1}(r, 180^{\\circ} - \\theta - k^{\\circ}) = \\]\\[(r, \\theta - 1^{\\circ}). \\]\n\nNow, let’s analyze what happens to the point \\((1, 0^{\\circ}).\\)\n\nAfter \\(T_1,\\) we get \\((1, 179^{\\circ}).\\)\n\nAfter \\(T_2,\\) we get \\((1, -1^{\\circ}).\\)\n\nAfter \\(T_3,\\) we get \\((1, 178^{\\circ}).\\)\n\nAfter \\(T_4,\\) we get \\((1, -2^{\\circ}).\\)\n\n\\[\\vdots\\]\n\nAfter \\(T_{2m - 1},\\) we get \\((1, 180^{\\circ} - m^{\\circ}).\\)\n\nAfter \\(T_{2m},\\) we get \\((1, -m^{\\circ}).\\)\n\nFrom this, we can see that the first time the angle is back to \\(0^{\\circ}\\) is after \\(T_{2(180)-1}=T_{359}.\\) Therefore \\(n=359.\\)\n\nThus, A is the correct answer.",
+      "hints": [
+        "Track only the angle in polar coordinates",
+        "Two consecutive transformations simplify to a one-degree rotation"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

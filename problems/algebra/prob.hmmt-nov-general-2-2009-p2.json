@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-general-2-2009-p2",
+  "title": "2009 HMMT November General Round 2 Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2009,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "You start with a number. Every second, you can add or subtract any number of the form \\(n\\) ! to your current number to get a new number. In how many ways can you get from 0 to 100 in 4 seconds? ( \\(n!\\) is defined as \\(n \\times(n-1) \\times(n-2) \\times \\cdots \\times 2 \\times 1\\), so \\(1!=1,2!=2,3!=6,4!=24\\), etc.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2-2009-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "36 To get to 100 , you have to use one number which is at least \\(5!=120\\), because \\(24 \\times 4=96\\), which is less than 100 . If you use \\(6!=720\\) or anything larger, you need to get back from 720 to 100 (or further) in three seconds. Since \\(3 \\cdot 5!<620\\), there is no way to do this in 3 seconds. This means you have to use 5 ! at least once. The remaining numbers must get you from 120 to 100 . If you use three numbers all at most 3 !, you can move by at most \\(3 \\cdot 3!=18<120-100\\). This means you have to use 4 !. From \\(120-24=96\\), there are two ways to get to 100: adding 6 then subtracting 2 , or adding 2 twice. So, to get to 100 from 0 in four seconds, you must either add 120 , subtract 24 , add 6 , and subtract 2 , or add 120 , subtract 24 , and add 2 twice. You can do these steps in any order, so the first sequence yields 24 paths and the second sequence yields 12 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

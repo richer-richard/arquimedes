@@ -1,0 +1,70 @@
+{
+  "id": "prob.hmmt-nov-theme-2021-p8",
+  "title": "2021 HMMT November Theme Problem 8",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2021,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 49.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n\\) be the answer to this problem. Given \\(n>0\\), find the number of distinct (i.e. non-congruent), non-degenerate triangles with integer side lengths and perimeter \\(n\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "48",
+    "value": "48"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2021-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "We explicitly compute the number of triangles satisfying the problem conditions for any \\(n\\). There are three kinds of triangles: isosceles and scalene. (Equilateral triangles are isosceles.)\n\n- Case 1: Isosceles. A triangle with side lengths \\(a, a, b\\) must satisfy \\(2 a>b\\) and \\(2 a+b=n\\). So \\(2 a\\) can be any even integer in the interval \\((n / 2, n)\\). There are thus \\(\\lfloor(n-1) / 2\\rfloor-\\lfloor n / 4\\rfloor\\) triangles here.\n- Case 2: Scalene. A triangle with side lengths \\(a, b, c\\) must satisfy \\(a, b, c<n / 2\\) and \\(a+b+c=n\\). There are \\(\\binom{n-1}{2}\\) triples satisfying the second condition, \\(3\\binom{\\lfloor n / 2\\rfloor}{ 2}\\) of which violate condition 1 (since at most one side is at least \\(n / 2\\), we can do casework on which side). We then remove the isosceles triangles and divide by 6 to account for ordering the sides. If there are no equilateral triangles (i.e. if \\(3 \\nmid n\\) ), our answer here is\n\n\\[\\frac{1}{6}\\left(\\binom{n-1}{2}-3\\binom{\\lfloor n / 2\\rfloor}{ 2}-3(\\lfloor(n-1) / 2\\rfloor-\\lfloor n / 4\\rfloor)\\right) .\\]\n\nOtherwise, the answer is\n\n\\[\\frac{1}{6}\\left(\\binom{n-1}{2}-3\\binom{\\lfloor n / 2\\rfloor}{ 2}-3(\\lfloor(n-1) / 2\\rfloor-\\lfloor n / 4\\rfloor-1)-1\\right)\\]\n\nThe key observation is that almost all triangles are scalene, and there are are roughly \\(\\frac{1}{6}\\left(n^{2} / 2-3 n^{2} / 8\\right)=\\) \\(n^{2} / 48\\) scalene triangles. Hence, \\(n \\approx 48\\). Checking \\(n=48\\) yields\n\n\\[(23-12)+\\frac{1}{6}\\left(\\binom{47}{2}-3\\binom{24}{2}-3 \\cdot(23-12-1)-1\\right)=48\\]\n\nHence, the answer is 48.\nRemark 1. In fact, the number of distinct triangles with perimeter \\(n\\) and integer sides is \\(\\left[n^{2} / 48\\right]\\) when \\(n\\) is even and \\(\\left[(n+3)^{2} / 48\\right]\\) when \\(n\\) is odd, where [•] is the nearest integer function. This follows by analyzing \\(n\\) modulo 12 .\nRemark 2. The problem statement originally omitted the condition \\(n>0\\), so an answer of 0 was also counted as correct.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

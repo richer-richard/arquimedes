@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-team-2008-p6",
+  "title": "2008 HMMT November Team Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2008,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 54.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Now, using information from problems 4 and 5 , prove that the following method to decompose any positive rational number will always terminate:\nStep 1. Start with the fraction \\(\\frac{a}{b}\\). Let \\(t_{1}\\) be the largest unit fraction \\(\\frac{1}{n}\\) which is less than or equal to \\(\\frac{a}{b}\\).\nStep 2. If we have already chosen \\(t_{1}\\) through \\(t_{k}\\), and if \\(t_{1}+t_{2}+\\ldots+t_{k}\\) is still less than \\(\\frac{a}{b}\\), then let \\(t_{k+1}\\) be the largest unit fraction less than both \\(t_{k}\\) and \\(\\frac{a}{b}\\).\nStep 3. If \\(t_{1}+\\ldots+t_{k+1}\\) equals \\(\\frac{a}{b}\\), the decomposition is found. Otherwise, repeat step 2 .\nWhy does this method never result in an infinite sequence of \\(t_{i}\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2008-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(\\frac{a_{k}}{b_{k}}=\\frac{a}{b}-t_{1}-\\ldots-t_{k}\\), where \\(\\frac{a_{k}}{b_{k}}\\) is a fraction in simplest terms. Initially, this algorithm will have \\(t_{1}=1, t_{2}=\\frac{1}{2}, t_{3}=\\frac{1}{3}\\), etc. until \\(\\frac{a_{k}}{b_{k}}<\\frac{1}{k+1}\\). This will eventually happen by problem 5 , since there exists a \\(k\\) such that \\(\\frac{1}{1}+\\ldots+\\frac{1}{k+1}>\\frac{a_{k}}{b_{k}}\\). At that point, there is some \\(n\\) with \\(\\frac{1}{n}<t_{k}\\) such that \\(\\frac{1}{n}>\\frac{a_{k}}{b_{k}}>\\frac{1}{n+1}\\). In this case, \\(t_{k+1}=\\frac{1}{n+1}\\).\nSuppose that there exists \\(n_{k}\\) such that \\(\\frac{1}{n_{k}}>\\frac{a_{k}}{b_{k}}>\\frac{1}{n_{k}+1}\\) for some \\(k\\). Then we have \\(t_{k+1}=\\frac{1}{n_{k}+1}\\) and \\(\\frac{a_{k+1}}{b_{k+1}}<\\frac{1}{n_{k}\\left(n_{k}+1\\right)}\\). This shows that once we have found \\(n_{k}\\) such that \\(\\frac{1}{n_{k}}>\\frac{a_{k}}{b_{k}}>\\frac{1}{n_{k}+1}\\) and \\(\\frac{1}{n_{k}} \\leq t_{k}\\), we no longer have to worry about \\(t_{k+1}\\) being less than \\(t_{k}\\), since \\(t_{k+1}=\\frac{1}{n_{k}+1}<\\frac{1}{n_{k}}<\\) \\(t_{k}\\), and also \\(n_{k+1} \\geq n_{k}\\left(n_{k}+1\\right)\\) while \\(\\frac{1}{n_{k}\\left(n_{k}+1\\right)} \\leq \\frac{1}{n_{k}+1}=t_{k+1}\\).\nOn the other hand, once we have found such an \\(n_{k}\\), the sequence \\(\\left\\{a_{k}\\right\\}\\) must be decreasing by problem 4. Since the \\(a_{k}\\) are all integers, we eventually have to get to 0 (as there is no infinite decreasing sequence of positive integers). Therefore, after some finite number of steps the algorithm terminates with \\(a_{k+1}=0\\), so \\(0=\\frac{a_{k}}{b_{k}}=\\frac{a}{b}-t_{1}-\\ldots-t_{k}\\), so \\(\\frac{a}{b}=t_{1}+\\ldots+t_{k}\\), which is what we wanted.\n\n## Juicy Numbers [100]\n\nA juicy number is an integer \\(j>1\\) for which there is a sequence \\(a_{1}<a_{2}<\\ldots<a_{k}\\) of positive integers such that \\(a_{k}=j\\) and such that the sum of the reciprocals of all the \\(a_{i}\\) is 1 . For example, 6 is a juicy number because \\(\\frac{1}{2}+\\frac{1}{3}+\\frac{1}{6}=1\\), but 2 is not juicy.\n\nIn this part, you will investigate some of the properties of juicy numbers. Remember that if you do not solve a question, you can still use its result on later questions.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

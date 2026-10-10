@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12b-2003-p24",
+  "title": "2003 AMC 12B Problem 24",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.absolute-value",
+      "label": "Absolute value",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2003,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 36.3,
+    "source": 2160,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Positive integers \\(a,\\) \\(b,\\) and \\(c\\) are chosen so that \\(a \\lt b \\lt c,\\) and the system of equations \\[2x + y = 2003\\] and \\[ \\begin{aligned} &y = |x - a| + |x - b| \\\\ &\\quad {}+ |x - c| \\end{aligned} \\] has exactly one solution. What is the minimum value of \\(c?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(668\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(669\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1002\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2003\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2004\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "1002"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2003-p24.live",
+      "kind": "proof-sketch",
+      "text": "The function \\(y = |x-a| + |x-b| + |x-c|\\) is piecewise linear with slopes \\(-3, -1, 1, 3\\) and corners at \\(x = a, b, c.\\) The line \\(2x + y = 2003\\) has slope \\(-2.\\)\n\nA line of slope \\(-2\\) meets this graph exactly once only if it passes through the leftmost corner \\((a,\\, b + c - 2a),\\) where the graph’s slope jumps from \\(-3\\) to \\(-1.\\) Substituting, \\[ 2a + (b + c - 2a) = 2003, \\] so \\(b + c = 2003.\\)\n\nSince \\(b \\lt c,\\) we need \\(c \\gt \\dfrac{2003}{2},\\) so \\(c \\ge 1002.\\) This bound is attained: take \\(a = 1,\\) \\(b = 1001,\\) and \\(c = 1002.\\) Therefore the minimum is \\(1002.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "The graph of \\(y = |x-a| + |x-b| + |x-c|\\) is piecewise linear with slopes \\(-3, -1, 1, 3\\)",
+        "The line has slope \\(-2;\\) a single intersection forces it to touch the corner at \\(x = a,\\) where \\(y = b + c - 2a\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

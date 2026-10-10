@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2024-p25",
+  "title": "2024 AMC 12B Problem 25",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.independent-events",
+      "label": "Independent events",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2024,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 49.2,
+    "source": 2510,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Pablo will decorate each of \\(6\\) identical white balls with either a striped or a dotted pattern, using either red or blue paint. He will decide on the color and pattern for each ball by flipping a fair coin for each of the \\(12\\) decisions he must make. After the paint dries, he will place the \\(6\\) balls in an urn. Frida will randomly select one ball from the urn and note its color and pattern. The events “the ball Frida selects is red” and “the ball Frida selects is striped” may or may not be independent, depending on the outcome of Pablo’s coin flips. The probability that these two events are independent can be written as \\(\\dfrac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. What is \\(m?\\) (Recall that two events \\(A\\) and \\(B\\) are independent if \\(P(A \\text{ and } B) = P(A)\\cdot P(B).\\))",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(243\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(245\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(247\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(249\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(251\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "243"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2024-p25.live",
+      "kind": "proof-sketch",
+      "text": "Each ball is independently one of four equally likely types: red-striped, red-dotted, blue-striped, blue-dotted. Suppose among the \\(6\\) balls there are \\(k\\) red-striped, with \\(R\\) red and \\(S\\) striped in total. For Frida’s uniform pick, \\(P(\\text{red}) = \\tfrac{R}{6},\\) \\(P(\\text{striped}) = \\tfrac{S}{6},\\) and \\(P(\\text{red and striped}) = \\tfrac{k}{6}.\\) Independence means \\(\\dfrac{k}{6} = \\dfrac{R}{6}\\cdot\\dfrac{S}{6},\\) i.e. \\(6k = RS.\\)\n\nFirst count assignments with \\(R\\in\\{0,6\\}\\) or \\(S\\in\\{0,6\\}.\\) Each of these four conditions leaves \\(2^6=64\\) choices for the other attribute, and the four assignments at their pairwise intersections have been counted twice. Their union therefore contributes \\(4\\cdot64-4=252.\\)\n\nFor \\(1\\le R,S\\le5,\\) the condition that \\(RS\\) be divisible by \\(6\\) leaves only \\((R,S)=(2,3),(3,2)\\) or \\((3,4),(4,3).\\) In each case \\(k=\\frac{RS}{6},\\) and the four type counts are a permutation of \\((1,1,2,2).\\) Thus each pair contributes \\(\\dfrac{6!}{1!1!2!2!}=180\\) assignments. The favorable count is therefore \\(252+4\\cdot180=972.\\) Out of \\(4^6=4096\\) equally likely assignments, the probability is \\(\\dfrac{972}{4096}=\\dfrac{243}{1024},\\) so \\(m=243.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "Let the six balls include \\(k\\) that are red-and-striped, with \\(R\\) red and \\(S\\) striped total. Independence for Frida’s uniform pick means \\(\\dfrac{k}{6} = \\dfrac{R}{6}\\cdot\\dfrac{S}{6}\\)",
+        "So the condition is \\(6k = RS.\\) Count assignments of \\(6\\) balls to the \\(4\\) equally likely types satisfying this, over \\(4^6\\) total, using multinomial coefficients"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

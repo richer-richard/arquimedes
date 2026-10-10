@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2025-p2",
+  "title": "2025 AMC 12B Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.pattern-recognition",
+      "label": "Pattern recognition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.units-digit",
+      "label": "Units digit",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2025,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 11.0,
+    "source": 1020,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Jerry wrote down the ones digit of each of the first \\(2025\\) positive squares: \\(1,\\) \\(4,\\) \\(9,\\) \\(6,\\) \\(5,\\) \\(6,\\) \\(\\ldots.\\) What is the sum of all the numbers Jerry wrote down?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(9025\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(9070\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(9090\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(9115\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(9160\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "9115"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2025-p2.live",
+      "kind": "proof-sketch",
+      "text": "The ones digits of \\(1^2, 2^2, \\ldots, 10^2\\) are \\(1, 4, 9, 6, 5, 6, 9, 4, 1, 0,\\) which sum to \\(45.\\) The \\(2025\\) terms contain \\(202\\) full blocks (\\(2020\\) terms) plus \\(5\\) more with digits \\(1, 4, 9, 6, 5\\) summing to \\(25.\\) The total is \\(202 \\cdot 45 + 25 = 9090 + 25\\) \\(= 9115.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "The ones digit of \\(n^2\\) depends only on the ones digit of \\(n,\\) so the list repeats every \\(10\\) terms",
+        "Sum one full block of \\(10,\\) multiply by the number of blocks, then add the leftover terms"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

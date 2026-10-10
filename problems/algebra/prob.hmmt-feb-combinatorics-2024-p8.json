@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2024-p8",
+  "title": "2024 HMMT February Combinatorics Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recurrence-relations",
+      "label": "Recurrence relations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2024,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 82.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Rishabh has 2024 pairs of socks in a drawer. He draws socks from the drawer uniformly at random, without replacement, until he has drawn a pair of identical socks. Compute the expected number of unpaired socks he has drawn when he stops.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{4^{2024}}{\\binom{4048}{2024}}-2",
+    "value": "\\frac{4^{2024}}{\\binom{4048}{2024}}-2"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2024-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(P(k)\\) denote the probability that Rishabh draws more than \\(k\\) socks. We compute \\(P(k)\\) for all \\(0 \\leq k \\leq 2024\\) (and note \\(P(k)=0\\) for larger \\(k\\) ).\nThe number of ways to draw \\(k\\) socks, none identical to each other, is\n\n\\[4048 \\cdot 4046 \\cdots(4050-2 k)=2^{k} \\cdot \\frac{2024!}{(2024-k)!}\\]\n\nwhile the total number of ways to draw \\(k\\) socks is\n\n\\[4048 \\cdot 4047 \\cdots(4049-k)=\\frac{4048!}{(4048-k)!}\\]\n\nThus,\n\n\\[P(k)=\\frac{2^{k} \\cdot \\frac{2024!}{(2024-k)!}}{\\frac{4048!}{(4048-k)!}}=\\frac{2024!}{4048!} \\cdot \\frac{2^{k}(4048-k)!}{(2024-k)!}=\\frac{1}{\\binom{4048}{2024}} \\cdot 2^{k}\\binom{4048-k}{2024}\\]\n\nThe expected number of socks drawn is\n\n\\[P(0)+P(1)+\\cdots+P(2024)=\\frac{1}{\\binom{4048}{2024}} \\sum_{k=0}^{2024} 2^{k}\\binom{4048-k}{2024}\\]\n\nThis sum is equivalent to Putnam 2020 A2. We claim that it is equal to \\(4^{2024}\\). We do this via a counting argument: we count how many ways there are to choose at least half of the elements from the set \\(\\{1,2, \\ldots, 4049\\}\\). On the one hand that is \\(\\frac{2^{4049}}{2}=4^{2024}\\). On the other hand, letting \\(k+1\\) be the 2025th largest element chosen, there are \\(\\binom{4048-k}{2024}\\) ways to choose the elements larger than it, and \\(2^{k}\\) ways to choose the elements smaller than it. Varying \\(k\\), we get\n\n\\[\\sum_{k=0}^{2024} 2^{k}\\binom{4048-k}{2024}=4^{2024}\\]\n\nThis means the expected number of socks is\n\n\\[\\frac{4^{2024}}{\\binom{4048}{2024}}\\]\n\nand subtracting two for the matching pair gives \\(\\frac{4^{2024}}{\\binom{4048}{2024}}-2\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

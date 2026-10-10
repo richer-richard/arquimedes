@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2006-p4",
+  "title": "2006 AIME I Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factorial",
+      "label": "Factorial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.trailing-zeros",
+      "label": "Trailing zeros",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2006,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 46.4,
+    "source": 2400,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "Let \\(N\\) be the number of consecutive \\(0\\)’s at the right end of the decimal representation of the product \\(1!\\,2!\\,3!\\,4! \\cdots 99!\\,100!.\\) Find the remainder when \\(N\\) is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "124",
+    "value": "124"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2006-p4.live",
+      "kind": "proof-sketch",
+      "text": "Factors of \\(2\\) are plentiful, so \\(N\\) is the exponent of \\(5\\) in the product. Each integer \\(j\\) with \\(1 \\le j \\le 100\\) appears as a factor in exactly \\(101 - j\\) of the factorials, namely \\(j!, (j+1)!, \\ldots, 100!.\\)\n\nEvery multiple of \\(5\\) contributes one factor of \\(5\\) per appearance, and every multiple of \\(25\\) contributes one more. Over \\(j = 5, 10, \\ldots, 100\\) the appearances total \\(96 + 91 + \\cdots + 1 = \\frac{20 \\cdot 97}{2} = 970,\\) and over \\(j = 25, 50, 75, 100\\) they total \\(76 + 51 + 26 + 1 = 154.\\)\n\nHence \\(N = 970 + 154 = 1124,\\) and the remainder upon division by \\(1000\\) is \\(124.\\)",
+      "hints": [
+        "Count factors of \\(5:\\) the integer \\(j\\) appears as a factor in exactly \\(101 - j\\) of the factorials",
+        "Sum \\(101 - j\\) over all multiples of \\(5,\\) then add the same sum over multiples of \\(25\\) for their second factor of \\(5\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

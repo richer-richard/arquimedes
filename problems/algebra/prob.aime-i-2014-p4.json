@@ -1,0 +1,59 @@
+{
+  "id": "prob.aime-i-2014-p4",
+  "title": "2014 AIME I Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.relative-speed",
+      "label": "Relative speed",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2014,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 50.3,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Jon and Steve ride their bicycles on a path that parallels two side-by-side train tracks running in the east/west direction. Jon rides east at \\(20\\) miles per hour, and Steve rides west at \\(20\\) miles per hour. Two trains of equal length, traveling in opposite directions at constant but different speeds, each pass the two riders. Each train takes exactly \\(1\\) minute to go past Jon. The westbound train takes \\(10\\) times as long as the eastbound train to go past Steve. The length of each train is \\(\\frac{m}{n}\\) miles, where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "49",
+    "value": "49"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2014-p4.live",
+      "kind": "proof-sketch",
+      "text": "Let the eastbound and westbound trains have speeds \\(v_1\\) and \\(v_2\\) miles per hour and common length \\(L\\) miles. A train passes a rider in time \\(L\\) divided by their relative speed. Passing Jon (riding east at \\(20\\)) in \\(\\frac{1}{60}\\) hour gives \\[\\frac{L}{v_1 - 20} = \\frac{L}{v_2 + 20} = \\frac{1}{60},\\] so \\(v_1 = 60L + 20\\) and \\(v_2 = 60L - 20.\\)\n\nRelative to Steve (riding west at \\(20\\)), the speeds are \\(v_1 + 20\\) and \\(v_2 - 20,\\) and the westbound train takes \\(10\\) times as long: \\(\\frac{L}{v_2 - 20} = \\frac{10L}{v_1 + 20},\\) so \\(v_1 + 20 = 10(v_2 - 20).\\) Substituting, \\(60L + 40 = 600L - 400,\\) so \\(540L = 440\\) and \\(L = \\frac{22}{27}.\\)\n\nSince \\(\\gcd(22, 27) = 1,\\) the answer is \\(22 + 27 = 49.\\)",
+      "hints": [
+        "Passing Jon in one minute forces both train speeds: \\(v_1 - 20 = v_2 + 20 = 60L\\) with \\(L\\) in miles",
+        "Passing Steve, the westbound time is \\(10\\) times the eastbound: \\(v_1 + 20 = 10(v_2 - 20)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

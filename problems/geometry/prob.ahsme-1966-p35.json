@@ -1,0 +1,79 @@
+{
+  "id": "prob.ahsme-1966-p35",
+  "title": "1966 AHSME Problem 35",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-inequality",
+      "label": "Triangle inequality",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1966,
+    "number": 35
+  },
+  "difficulty": {
+    "course": 33.1,
+    "source": 1880,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Let \\(O\\) be an interior point of triangle \\(ABC,\\) and let \\(s_1=OA+OB+OC.\\) If \\(s_2=AB+BC+CA,\\) then:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "for every triangle \\(s_1\\gt\\dfrac12s_2,\\) and \\(s_1\\leq\ns_2\\)"
+    },
+    {
+      "label": "B",
+      "text": "for every triangle \\(s_1\\geq\\dfrac12s_2,\\) and \\(s_1\\lt\ns_2\\)"
+    },
+    {
+      "label": "C",
+      "text": "for every triangle \\(s_1\\gt\\dfrac12s_2,\\) and\n\\(s_1\\lt s_2\\)"
+    },
+    {
+      "label": "D",
+      "text": "for every triangle \\(s_1\\geq\\dfrac12s_2,\\) and \\(s_1\\leq\ns_2\\)"
+    },
+    {
+      "label": "E",
+      "text": "neither \\((A)\\) nor \\((B)\\) nor \\((C)\\) nor \\((D)\\) applies to\nevery triangle"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1966-p35.live",
+      "kind": "proof-sketch",
+      "text": "Adding the three strict triangle inequalities \\[ \\begin{gathered} AB\\lt OA+OB,\\\\ BC\\lt OB+OC,\\\\ CA\\lt OC+OA \\end{gathered} \\] gives \\(s_2\\lt2s_1.\\)\n\nFor the upper bound, extend \\(AO\\) to \\(D\\) on \\(BC.\\) Then \\(AO+OD\\lt AC+CD\\) and \\(OB\\lt OD+DB,\\) so cancellation gives \\(OA+OB\\lt AC+CB.\\) Cycling and adding yields \\(2s_1\\lt2s_2.\\) Therefore \\(s_1\\gt \\frac{s_2}{2}\\) and \\(s_1\\lt s_2.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Add \\(AB\\lt OA+OB,\\) \\(BC\\lt OB+OC,\\) and \\(CA\\lt OC+OA\\)",
+        "Extend \\(AO\\) to side \\(BC\\) to prove \\(OA+OB\\lt AC+CB,\\) and cycle"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

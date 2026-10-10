@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2006-p22",
+  "title": "2006 AMC 12A Problem 22",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.geometric-probability",
+      "label": "Geometric probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.regular-polygon",
+      "label": "Regular polygon",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2006,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 40.8,
+    "source": 2340,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "A circle of radius \\(r\\) is concentric with and outside a regular hexagon of side length \\(2.\\) The probability that three entire sides of the hexagon are visible from a randomly chosen point on the circle is \\(\\frac{1}{2}.\\) What is \\(r?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\sqrt{2} + 2\\sqrt{3}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3\\sqrt{3} + \\sqrt{2}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\sqrt{6} + \\sqrt{3}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\sqrt{2} + \\sqrt{6}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(6\\sqrt{2} - \\sqrt{3}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2006-p22.live",
+      "kind": "proof-sketch",
+      "text": "Place the hexagon at the center of the circle. Corresponding to each vertex is an arc from which only the two sides meeting there are entirely visible. These six congruent arcs make up the complementary probability \\(\\tfrac{1}{2},\\) so each arc measures \\(30^\\circ.\\)\n\nTake the arc centered on the ray from the center \\(O\\) through a vertex \\(A,\\) and let \\(P\\) be its upper endpoint. Then \\(\\angle POA = 15^\\circ,\\) and at \\(P\\) a third side is just becoming visible, so \\(P\\) lies on that side’s supporting line. Its distance from \\(O\\) is the apothem \\(\\sqrt{3}.\\)\n\nHence \\(\\sqrt{3} = r\\sin 15^\\circ = r \\cdot \\dfrac{\\sqrt{6} - \\sqrt{2}}{4},\\) giving \\[ r = \\frac{4\\sqrt{3}}{\\sqrt{6} - \\sqrt{2}} = 3\\sqrt{2} + \\sqrt{6}. \\]\n\nThus, the correct answer is D.",
+      "hints": [
+        "The complementary arcs, from which only two whole sides are visible, total half the circle; by symmetry each measures \\(30^\\circ\\)",
+        "The distance from the center to a side (the apothem) is \\(\\sqrt{3},\\) and \\(\\sqrt{3} = r\\sin 15^\\circ\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

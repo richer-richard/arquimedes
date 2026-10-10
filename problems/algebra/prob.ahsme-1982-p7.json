@@ -1,0 +1,87 @@
+{
+  "id": "prob.ahsme-1982-p7",
+  "title": "1982 AHSME Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "logic-foundations",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counterexample",
+      "label": "Counterexample",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.custom-operation",
+      "label": "Custom operation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.distributive-property",
+      "label": "Distributive property",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1982,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 20.5,
+    "source": 1390,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "If the operation \\(x*y\\) is defined by \\(x*y=(x+1)(y+1)-1,\\) then which one of the following is false?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(x*y=y*x\\) for all real \\(x\\) and \\(y.\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(x*(y+z)\\) equals \\((x*y)+(x*z)\\) for all real\n\\(x,\\) \\(y,\\) and \\(z.\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\((x-1)*(x+1)\\) equals \\((x*x)-1\\) for all real \\(x.\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(x*0=x\\) for all real \\(x.\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(x*(y*z)=(x*y)*z\\) for all real \\(x,\\) \\(y,\\) and \\(z.\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1982-p7.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(x*y=x+y+xy,\\) the operation is commutative, has identity \\(0,\\) and becomes ordinary multiplication after adding \\(1.\\) Thus it is associative, and direct expansion also verifies C. Statement B fails when \\(x=1\\) and \\(y=z=0:\\) its left side is \\(1*0=1,\\) but its right side is \\((1*0)+(1*0)=2.\\) Hence B is false.\n\nTherefore, the correct answer is B.",
+      "hints": [
+        "First simplify the operation to \\(x+y+xy\\)",
+        "Test the proposed distributive law with \\(x=1\\) and \\(y=z=0\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

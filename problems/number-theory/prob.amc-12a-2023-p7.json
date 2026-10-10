@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2023-p7",
+  "title": "2023 AMC 12A Problem 7",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.parity",
+      "label": "Parity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2023,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 20.3,
+    "source": 1380,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A digital display shows the current date as an \\(8\\)-digit integer consisting of a \\(4\\)-digit year, followed by a \\(2\\)-digit month, followed by a \\(2\\)-digit date within the month. For example, Arbor Day this year is displayed as \\(20230428.\\) For how many dates in \\(2023\\) will each digit appear an even number of times in the \\(8\\)-digit display for that date?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(9\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "9"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2023-p7.live",
+      "kind": "proof-sketch",
+      "text": "The year contributes the digits \\(2,0,2,3,\\) so \\(2\\) appears twice while \\(0\\) and \\(3\\) each appear once. For every digit to end up with an even count, the four digits of the month and day must supply an odd number of \\(0\\)’s, an odd number of \\(3\\)’s, and an even number of every other digit.\n\nWith only four digits available, the month-day string must use exactly one \\(0,\\) one \\(3,\\) and a repeated pair of some digit. Checking valid months and days leaves nine dates: \\(01\\text{-}13,\\) \\(01\\text{-}31,\\) \\(02\\text{-}23,\\) \\(03\\text{-}11,\\) \\(03\\text{-}22,\\) \\(10\\text{-}13,\\) \\(10\\text{-}31,\\) \\(11\\text{-}03,\\) and \\(11\\text{-}30.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "The fixed year \\(2023\\) already contributes two \\(2\\)’s, one \\(0,\\) and one \\(3\\)",
+        "The four month-day digits must make the counts of \\(0\\) and \\(3\\) odd, the count of \\(2\\) even, and every other digit even"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

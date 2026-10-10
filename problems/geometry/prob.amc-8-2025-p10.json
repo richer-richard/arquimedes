@@ -1,0 +1,89 @@
+{
+  "id": "prob.amc-8-2025-p10",
+  "title": "2025 AMC 8 Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area",
+      "label": "Area",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.transformation",
+      "label": "Transformation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2025,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 16.2,
+    "source": 1220,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In the figure below, \\(ABCD\\) is a rectangle with sides of length \\(AB = 5\\) inches and \\(AD = 3\\) inches. Rectangle \\(ABCD\\) is rotated \\(90^\\circ\\) clockwise around the midpoint of side \\(DC\\) to give a second rectangle. What is the total area, in square inches, covered by the two overlapping rectangles?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(22.25\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(23\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(23.75\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(25\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "23.75"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2025-p10.live",
+      "kind": "proof-sketch",
+      "text": "The easiest way to solve this problem is using the Inclusion-Exclusion formula. That is: add the areas of the two rectangles, and then subtract the overlapping (square) area.\n\nEach rectangle has area \\(5 \\times 3 = 15.\\)\n\nTheir overlap is a square that has side length \\(2.5,\\) and so its area is \\(2.5^2 = 6.25.\\)\n\nTherefore, the total area is \\(15 + 15 - 6.25 = 23.75,\\) which is choice D.",
+      "hints": [
+        "Add the two rectangle areas and subtract the overlap",
+        "The overlap is a square whose side is half of the \\(5\\)-inch side"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "c05c1a2813c67d2ce888aeccae1d3ddace61944dd0c3e9a5829e46dbf80db98f"
+    ],
+    "solutions": []
+  }
+}

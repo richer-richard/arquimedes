@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2018-p11",
+  "title": "2018 HMMT February Guts Problem 11",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.sums-and-products",
+      "label": "Sums and products",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2018,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 72.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "FInd the value of\n\n\\[\\sum_{k=1}^{60} \\sum_{n=1}^{k} \\frac{n^{2}}{61-2 n}\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2018-p11.hmmt",
+      "kind": "proof-sketch",
+      "text": "## Answer: -18910\n\nChange the order of summation and simplify the inner sum:\n\n\\[\\begin{aligned}\n\\sum_{k=1}^{60} \\sum_{n=1}^{k} \\frac{n^{2}}{61-2 n} & =\\sum_{n=1}^{60} \\sum_{k=n}^{60} \\frac{n^{2}}{61-2 n} \\\\\n& =\\sum_{n=1}^{60} \\frac{n^{2}(61-n)}{61-2 n}\n\\end{aligned}\\]\n\nThen, we rearrange the sum to add the terms corresponding to \\(n\\) and \\(61-n\\) :\n\n\\[\\begin{aligned}\n\\sum_{n=1}^{60} \\frac{n^{2}(61-n)}{61-2 n} & =\\sum_{n=1}^{30}\\left(\\frac{n^{2}(61-n)}{61-2 n}+\\frac{(61-n)^{2}(61-(61-n))}{61-2(61-n)}\\right) \\\\\n& =\\sum_{n=1}^{30} \\frac{n^{2}(61-n)-n(61-n)^{2}}{61-2 n} \\\\\n& =\\sum_{n=1}^{30} \\frac{n(61-n)(n-(61-n))}{61-2 n} \\\\\n& =\\sum_{n=1}^{30}-n(61-n) \\\\\n& =\\sum_{n=1}^{30} n^{2}-61 n\n\\end{aligned}\\]\n\nFinally, using the formulas for the sum of the first \\(k\\) squares and sum of the first \\(k\\) positive integers, we conclude that this last sum is\n\n\\[\\frac{30(31)(61)}{6}-61 \\frac{30(31)}{2}=-18910\\]\n\nSo, the original sum evaluates to -18910 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

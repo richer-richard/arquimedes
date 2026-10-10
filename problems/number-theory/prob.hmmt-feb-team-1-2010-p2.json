@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-team-1-2010-p2",
+  "title": "2010 HMMT February Team Round 1 Problem 2",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.games-and-strategy",
+      "label": "Games and strategy",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2010,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 83.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Consider the following two-player game. Player 1 starts with a number, \\(N\\). He then subtracts a proper divisor of \\(N\\) from \\(N\\) and gives the result to player 2 (a proper divisor of \\(N\\) is a positive divisor of \\(N\\) that is not equal to 1 or \\(N)\\). Player 2 does the same thing with the number she gets from player 1 , and gives the result back to player 1. The two players continue until a player is given a prime number or 1 , at which point that player loses. For which values of \\(N\\) does player 1 have a winning strategy?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1-2010-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "All even numbers except for odd powers of 2 . First we show that if you are stuck with an odd number, then you are guaranteed to lose. Suppose you have an odd number \\(a b\\), where \\(a\\) and \\(b\\) are odd numbers, and you choose to subtract \\(a\\). You pass your opponent the number \\(a(b-1)\\). This cannot be a power of 2 (otherwise \\(a\\) is a power of 2 and hence \\(a=1\\), which is not allowed), so your opponent can find an odd proper divisor of \\(a(b-1)\\), and you will have a smaller odd number. Eventually you will get to an odd prime and lose.\nNow consider even numbers that aren't powers of 2. As with before, you can find an odd proper divisor of \\(N\\) and pass your opponent an odd number, so you are guaranteed to win.\nFinally consider powers of 2 . If you have the number \\(N=2^{k}\\), it would be unwise to choose a proper divisor other than \\(2^{k-1}\\); otherwise you would give your opponent an even number that isn't a power of 2 . Therefore if \\(k\\) is odd, you will end up with 2 and lose. If \\(k\\) is even, though, your opponent will end up with 2 and you will win.\nTherefore player 1 has a winning strategy for all even numbers except for odd powers of 2.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

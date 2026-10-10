@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2014-p19",
+  "title": "2014 AMC 10A Problem 19",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.distance-formula",
+      "label": "Distance formula",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2014,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 28.0,
+    "source": 1790,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Four cubes with edge lengths \\(1,\\) \\(2,\\) \\(3,\\) and \\(4\\) are stacked as shown. What is the length of the portion of \\(\\overline{XY}\\) contained in the cube with edge length \\(3?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{3\\sqrt{33}}5\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\sqrt3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{2\\sqrt{33}}3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(3\\sqrt2\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2014-p19.live",
+      "kind": "proof-sketch",
+      "text": "The distance between \\(X\\) and \\(Y\\) with respect to the \\(z\\)-axis is \\[ 1 + 2 + 3 + 4 = 10. \\]\n\nBoth the distances along the \\(x\\) and \\(y\\)-axes are \\(4.\\)\n\nThen \\[ XY = \\sqrt{4^2 + 4^2 + 10^2} = 2\\sqrt{33}. \\]\n\nUsing coordinates \\(X=(0,0,10)\\) and \\(Y=(4,4,0)\\), the line meets the top and bottom of the side-\\(3\\) cube at \\((\\frac65,\\frac65,7)\\) and \\((\\frac{12}5,\\frac{12}5,4)\\). Both points lie inside those square faces, so the portion inside this cube really does have vertical change \\(3\\).\n\nLet the desired length be \\(x.\\) Then using similar triangles, we have that \\[ \\dfrac{x}{3} = \\dfrac{2\\sqrt{33}}{10} \\]\\[ x = \\dfrac{3\\sqrt{33}}{5}. \\]\n\nThus, A is the correct answer.",
+      "hints": [
+        "The whole segment \\(XY\\) has vertical change \\(10\\)",
+        "The part inside the side-\\(3\\) cube is the same fraction of the full segment as its vertical change"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "2fe8542cee4243fc7cd7f722ba779940e1bd851a1aa11d1a1c3f91d889d917f8"
+    ],
+    "solutions": []
+  }
+}

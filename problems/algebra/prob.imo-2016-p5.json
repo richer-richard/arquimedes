@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2016-p5",
+  "title": "2016 IMO Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2016,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 97.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The equation\n\\[ (x-1)(x-2)\\dots(x-2016)=(x-1)(x-2)\\dots (x-2016) \\]\nis written on the board, with \\(2016\\) linear factors on each side.\nWhat is the least possible value of \\(k\\) for which it is possible to\nerase exactly \\(k\\) of these \\(4032\\) linear factors so that at least\none factor remains on each side and the resulting equation\nhas no real solutions?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2016-p5.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is \\(2016\\).\nObviously this is necessary in order to delete duplicated factors.\nWe now prove it suffices to deleted \\(2 \\pmod 4\\) and \\(3 \\pmod 4\\)\nguys from the left-hand side, and \\(0 \\pmod 4\\),\n\\(1 \\pmod 4\\) from the right-hand side.\n\nConsider the \\(1008\\) inequalities\n\\[\\begin{aligned}\n (x-1)(x-4) &< (x-2)(x-3) \\\\\n (x-5)(x-8) &< (x-6)(x-7) \\\\\n (x-9)(x-12) &< (x-10)(x-11) \\\\\n &\\vdots \\\\\n (x-2013)(x-2016) &< (x-2014)(x-2015).\n\\end{aligned}\\]\nNotice that in all these inequalities, at most one of them\nhas non-positive numbers in it, and we never have both zero.\nIf there is exactly one negative term among the \\(1008 \\cdot 2 = 2016\\) sides,\nit is on the left and we can multiply all together.\nThus the only case that remains is if \\(x \\in (4m-2, 4m-1)\\) for some \\(m\\),\nsay the \\(m\\)th inequality.\nIn that case, the two sides of that inequality differ by a factor of at least \\(9\\).\n\nClaim.\n We have \\[ \\prod_{k \\ge 0} \\frac{(4k+2)(4k+3)}{(4k+1)(4k+4)} < e. \\]\n\nProof.\n [Proof of claim using logarithms]\n It's equivalent to prove\n \\[ \\sum_{k \\ge 0} \\log \\left( 1 + \\frac{2}{(4k+1)(4k+4)} \\right) < 1. \\]\n To this end, we use the deep fact that \\(\\log(1+t) \\le t\\),\n and thus it follows from\n \\(\\sum_{k \\ge 0} \\frac{1}{(4k+1)(4k+4)} < \\frac{1}{2}\\),\n which one can obtain for example by noticing\n it's less than \\(\\frac14\\frac{\\pi^2}{6}\\).\n\nRemark.\n [Elementary proof of claim, given by Espen Slettnes]\n To avoid calculus as above, for each \\(N \\ge 0\\), note the partial product is bounded by\n \\[\\begin{aligned}\n \\prod_{k=0}^N \\frac{(4k+2)(4k+3)}{(4k+1)(4k+4)}\n &=\n \\frac 21 \\cdot \\left( \\frac 34 \\cdot \\frac 65 \\right)\n \\cdot \\left( \\frac 78 \\cdot \\frac{10}{9} \\right) \\cdot \\dots\n \\cdot \\frac{4N+3}{4N+4} \\\\\n &< 2 \\cdot 1 \\cdot 1 \\cdot \\dots \\cdot \\frac{4N+3}{4N+4}\n < 2 < e. \\qedhere\n \\end{aligned}\\]\n\nThis solves the problem, because then the factors being multiplied\non by the positive inequalities before the\n\\(m\\)th one are both less than \\(e\\), and \\(e^2 < 9\\).\nIn symbols, for \\(4m-2 < x < 4m-1\\) we should have\n\\[ \\frac{(x-(4m-6))(x-(4m-5))}{(x-(4m-7))(x-(4m-4))}\n \\times \\dots \\times \\frac{(x-2)(x-3)}{(x-1)(x-4)} < e \\]\nand\n\\[ \\frac{(x-(4m+2))(x-(4m+3))}{(x-(4m+1))(x-(4m+4))}\n \\times \\dots \\times \\frac{(x-2014)(x-2015)}{(x-2013)(x-2016)} < e \\]\nbecause the \\((k+1)\\)st term of each left-hand side\nis at most \\(\\frac{(4k+2)(4k+3)}{(4k+1)(4k+4)}\\), for \\(k \\ge 0\\).\nAs \\(e^2 < 9\\), we're okay.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

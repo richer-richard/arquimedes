@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-general-2023-p9",
+  "title": "2023 HMMT November General Problem 9",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.enumeration-with-symmetry",
+      "label": "Enumeration with symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2023,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 53.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "An entry in a grid is called a saddle point if it is the largest number in its row and the smallest number in its column. Suppose that each cell in a \\(3 \\times 3\\) grid is filled with a real number, each chosen independently and uniformly at random from the interval \\([0,1]\\). Compute the probability that this grid has at least one saddle point.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{3}{10}",
+    "value": "\\frac{3}{10}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2023-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "With probability 1, all entries of the matrix are unique. If this is the case, we claim there can only be one saddle point. To see this, suppose \\(A_{i j}\\) and \\(A_{k l}\\) are both saddle points. They cannot be in the same row, since they cannot both be the greatest number in the same row, and similarly they cannot be in the same column, since they cannot both be the least number in the same column. If they are in different rows and different columns, then \\(A_{i j}<A_{i l}\\) and \\(A_{k l}>A_{i l}\\), so \\(A_{i j}<A_{k l}\\). However, we also have \\(A_{i j}>A_{k j}\\) and \\(A_{k l}<A_{k j}\\), so \\(A_{i j}>A_{k l}\\). This is a contradiction, so there is only one saddle point.\nEach entry of the matrix is equally likely to be a saddle point by symmetry, so we can just multiply the probability that \\(A_{11}\\) is a saddle point by 9 to find the answer. For \\(A_{11}\\) to be a saddle point, it must be greater than \\(A_{21}\\) and \\(A_{31}\\), but less than \\(A_{12}\\) and \\(A_{13}\\). There are \\(5!=120\\) equally likely ways that the numbers \\(A_{11}, A_{12}, A_{13}, A_{21}, A_{31}\\) could be arranged in increasing order, and 4 of them work, so the probability that \\(A_{11}\\) is a saddle point is \\(\\frac{1}{30}\\). Therefore, the probability that \\(A\\) has a saddle point is \\(9 \\cdot \\frac{1}{30}=\\frac{3}{10}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

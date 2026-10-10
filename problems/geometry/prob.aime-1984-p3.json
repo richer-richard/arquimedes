@@ -1,0 +1,59 @@
+{
+  "id": "prob.aime-1984-p3",
+  "title": "1984 AIME Problem 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1984,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 42.8,
+    "source": 2260,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A point \\(P\\) is chosen in the interior of \\(\\triangle ABC\\) so that when lines are drawn through \\(P\\) parallel to the sides of \\(\\triangle ABC,\\) the resulting smaller triangles, \\(t_1,\\) \\(t_2,\\) and \\(t_3\\) in the figure, have areas \\(4,\\) \\(9,\\) and \\(49,\\) respectively. Find the area of \\(\\triangle ABC.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "144",
+    "value": "144"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1984-p3.live",
+      "kind": "proof-sketch",
+      "text": "Let the area of \\(\\triangle ABC\\) be \\(K.\\) The three small triangles are similar to \\(\\triangle ABC,\\) so their corresponding linear ratios are \\[ \\frac{2}{\\sqrt K},\\qquad \\frac{3}{\\sqrt K},\\qquad \\frac{7}{\\sqrt K}. \\] Each such scale factor is also the perpendicular distance from \\(P\\) to one side divided by the altitude to that side. These are the three barycentric area ratios \\(\\frac{[PBC]}{K},\\) \\(\\frac{[PCA]}{K},\\) and \\(\\frac{[PAB]}{K},\\) which add to \\(1.\\) Hence \\[ \\frac{2+3+7}{\\sqrt K}=1. \\] Therefore \\(\\sqrt K=12\\) and \\(K=144.\\)",
+      "hints": [
+        "Each of the three smaller triangles is similar to \\(\\triangle ABC\\)",
+        "Convert each area ratio into a linear ratio and add the three linear ratios"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "806ccef24ae8999c545a004fd358cb00ab6167fb680e9e722d1766082f8c43ee"
+    ],
+    "solutions": []
+  }
+}

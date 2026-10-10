@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-2004-p6",
+  "title": "2004 AMC 10B Problem 6",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factorial",
+      "label": "Factorial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2004,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 18.0,
+    "source": 1290,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Which of the following numbers is a perfect square?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(98! \\cdot 99!\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(98! \\cdot 100!\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(99! \\cdot 100!\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(99! \\cdot 101!\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(100! \\cdot 101!\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2004-p6.live",
+      "kind": "proof-sketch",
+      "text": "For \\(m \\lt n,\\) \\(m! \\cdot n!\\) equals \\((m!)^2 \\cdot (m+1)(m+2)\\cdots n,\\) which is a perfect square precisely when \\((m+1)\\cdots n\\) is a perfect square.\n\nFor the five choices this leftover factor is \\(99,\\) \\(99 \\cdot 100,\\) \\(100,\\) \\(100 \\cdot 101,\\) and \\(101.\\) Only \\(100 = 10^2\\) is a perfect square.\n\nTherefore \\(99! \\cdot 100! = (99! \\cdot 10)^2\\) is the perfect square.\n\nThus, the correct answer is C.",
+      "hints": [
+        "For \\(m \\lt n,\\) write \\(m! \\cdot n!\\) as \\((m!)^2 \\cdot (m+1)(m+2)\\cdots n\\)",
+        "The product is a perfect square exactly when \\((m+1)(m+2)\\cdots n\\) is"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

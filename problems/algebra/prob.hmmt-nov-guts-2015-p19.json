@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-guts-2015-p19",
+  "title": "2015 HMMT November Guts Problem 19",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.recurrence-relations",
+      "label": "Recurrence relations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2015,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 53.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Each cell of a \\(2 \\times 5\\) grid of unit squares is to be colored white or black. Compute the number of such colorings for which no \\(2 \\times 2\\) square is a single color.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2015-p19.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 634\nLet \\(a_{n}\\) denote the number of ways to color a \\(2 \\times n\\) grid subject only to the given constraint, and \\(b_{n}\\) denote the number of ways to color a \\(2 \\times n\\) grid subject to the given constraint, but with the added restriction that the first column cannot be colored black-black.\nConsider the first column of a \\(2 \\times n\\) grid that is not subject to the additional constraint. It can be colored black-white or white-black, in which case the leftmost 2 x 2 square is guaranteed not to be monochromatic, and so the remaining \\(2 \\times(n-1)\\) subgrid can be colored in \\(a_{n-1}\\) ways. Otherwise, it is colored white-white or black-black; WLOG, assume that it's colored black-black. Then the remaining \\(2 \\times(n-1)\\) subgrid is subject to both constraints, so there are \\(b_{n-1}\\) ways to color the remaining subgrid. Hence \\(a_{n}=2 a_{n-1}+2 b_{n-1}\\).\nNow consider the first column of a \\(2 \\times n\\) grid that is subject to the additional constraint. The first column cannot be colored black-black, and if it is colored white-black or black-white, there are \\(a_{n-1}\\) ways to color the remaining subgrid by similar logic to the previous case. If it is colored white-white, then there are \\(b_{n-1}\\) ways to color the remaining subgrid, again by similar logic to the previous case. Hence \\(b_{n}=2 a_{n-1}+b_{n-1}\\).\nTherefore, we have \\(b_{n}=2 a_{n-1}+\\frac{1}{2}\\left(a_{n}-2 a_{n-1}\\right)\\), and so \\(a_{n}=2 a_{n-1}+2 b_{n-1}=2 a_{n-1}+2\\left(2 a_{n-2}+\\right.\\) \\(\\left.\\frac{1}{2}\\left(a_{n-1}-2 a_{n-2}\\right)\\right)=3 a_{n-1}+2 a_{n-2}\\). Finally, we have \\(a_{0}=1\\) (as the only possibility is to, well, do nothing) and \\(a_{1}=4\\) (as any \\(2 \\times 1\\) coloring is admissible), so \\(a_{2}=14, a_{3}=50, a_{4}=178, a_{5}=634\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

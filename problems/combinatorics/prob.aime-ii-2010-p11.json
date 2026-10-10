@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-ii-2010-p11",
+  "title": "2010 AIME II Problem 11",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2010,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 63.3,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Define a T-grid to be a \\(3 \\times 3\\) matrix which satisfies the following two properties:\n\n\\((1)\\) Exactly five of the entries are \\(1\\)’s, and the remaining four entries are \\(0\\)’s.\n\n\\((2)\\) Among the eight rows, columns, and long diagonals (the long diagonals are \\(\\{a_{13}, a_{22}, a_{31}\\}\\) and \\(\\{a_{11}, a_{22}, a_{33}\\}\\)), no more than one of the eight has all three entries equal.\n\nFind the number of distinct T-grids.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "68",
+    "value": "68"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2010-p11.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(\\binom{9}{5} = 126\\) matrices satisfying \\((1);\\) we subtract those with two or more constant lines. Two lines of \\(0\\)’s are impossible (they would need at least \\(5\\) zeros), and a line of \\(1\\)’s and a line of \\(0\\)’s cannot cross, so they must be parallel rows or parallel columns; likewise two lines of \\(1\\)’s cannot be parallel (\\(6\\) ones), so they must cross, using exactly \\(3 + 3 - 1 = 5\\) ones.\n\nCase \\(1:\\) a line of \\(1\\)’s and a parallel line of \\(0\\)’s. There are \\(6\\) choices for the all-\\(1\\) row or column, \\(2\\) for the parallel all-\\(0\\) line, and \\(3\\) ways to fill the remaining parallel line with two \\(1\\)’s and one \\(0:\\) \\(6 \\cdot 2 \\cdot 3 = 36\\) matrices. Every perpendicular line then contains both a \\(1\\) and a \\(0,\\) so no third constant line appears and nothing is double-counted.\n\nCase \\(2:\\) two crossing lines of \\(1\\)’s and \\(0\\)’s elsewhere. The pair can be a row and a column (\\(3 \\cdot 3 = 9\\)), a row or column with a diagonal (\\(6 \\cdot 2 = 12\\)), or the two diagonals (\\(1\\)), for \\(22\\) matrices; one checks the four remaining \\(0\\)’s never form a constant line. So \\(126 - 36 - 22 = 68.\\)",
+      "hints": [
+        "There are \\(\\binom{9}{5} = 126\\) placements of the \\(1\\)’s; subtract those where two or more of the eight lines are constant",
+        "Two constant lines must be either a row/column of \\(1\\)’s with a parallel line of \\(0\\)’s, or two crossing lines of \\(1\\)’s, which use exactly five \\(1\\)’s"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

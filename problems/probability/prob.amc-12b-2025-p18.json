@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12b-2025-p18",
+  "title": "2025 AMC 12B Problem 18",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.expected-value",
+      "label": "Expected value",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "prob.geometric-distribution",
+      "label": "Geometric distribution",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2025,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 30.3,
+    "source": 1770,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Awnik repeatedly plays a game that has a probability of winning of \\(\\dfrac{1}{3}.\\) The outcomes of the games are independent. What is the expected value of the number of games he will play until he has both won and lost at least once?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{5}{2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{16}{5}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{7}{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{15}{4}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "7/2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2025-p18.live",
+      "kind": "proof-sketch",
+      "text": "The first game produces one outcome. If it was a win (probability \\(\\tfrac{1}{3}\\)), the expected wait for a loss is \\(\\tfrac{1}{\\frac{2}{3}} = \\tfrac{3}{2};\\) if it was a loss (probability \\(\\tfrac{2}{3}\\)), the expected wait for a win is \\(\\tfrac{1}{\\frac{1}{3}} = 3.\\) So the expected total is \\(1 + \\tfrac{1}{3}\\cdot\\tfrac{3}{2} + \\tfrac{2}{3}\\cdot 3 = 1 + \\tfrac{1}{2} + 2\\) \\(= \\tfrac{7}{2}.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "After the first game you already have one outcome; you then wait only for the opposite outcome",
+        "The expected number of games to get an outcome of probability \\(p\\) is \\(\\dfrac{1}{p};\\) condition on whether the first game is a win or a loss"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

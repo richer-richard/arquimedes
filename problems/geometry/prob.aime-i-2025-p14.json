@@ -1,0 +1,102 @@
+{
+  "id": "prob.aime-i-2025-p14",
+  "title": "2025 AIME I Problem 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.optimization-in-geometry",
+      "label": "Optimization in geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.rotation",
+      "label": "Rotation",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.triangle-inequalities",
+      "label": "Triangle inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cyclic-quadrilateral",
+      "label": "Cyclic quadrilateral",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.transformation",
+      "label": "Transformation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2025,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 74.6,
+    "source": 3500,
+    "mohs": null
+  },
+  "estimatedMinutes": 30,
+  "statement": "Let \\(ABCDE\\) be a convex pentagon with \\(AB = 14,\\) \\(BC = 7,\\) \\(CD = 24,\\) \\(DE = 13,\\) \\(EA = 26,\\) and \\(\\angle B = \\angle E = 60^\\circ.\\) For each point \\(X\\) in the plane, define \\(f(X) = AX + BX + CX\\) \\(+ DX + EX.\\) The least possible value of \\(f(X)\\) can be expressed as \\(m + n\\sqrt{p},\\) where \\(m\\) and \\(n\\) are positive integers and \\(p\\) is not divisible by the square of any prime. Find \\(m + n + p.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "60",
+    "value": "60"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2025-p14.live",
+      "kind": "proof-sketch",
+      "text": "In triangle \\(ABC,\\) the law of cosines with \\(\\angle B = 60^\\circ\\) gives \\(AC^2 = 14^2 + 7^2 - 14 \\cdot 7 = 147,\\) so \\(AC = 7\\sqrt{3};\\) since \\(7^2 + 147 = 14^2,\\) the angle at \\(C\\) is right and \\(\\angle BAC = 30^\\circ.\\) Likewise \\(AD = 13\\sqrt{3},\\) with a right angle at \\(D\\) and \\(\\angle DAE = 30^\\circ.\\) In triangle \\(ACD\\) with \\(CD = 24,\\) \\[ \\begin{aligned} \\cos \\angle CAD &= \\frac{147 + 507 - 576}{2 \\cdot 7\\sqrt{3} \\cdot 13\\sqrt{3}} \\\\ &= \\frac{1}{7}, \\\\ \\sin \\angle CAD &= \\frac{4\\sqrt{3}}{7}. \\end{aligned} \\]\n\nSplit \\(f(X) = (BX + EX)\\) \\(+ (AX + CX + DX) \\ge BE + T,\\) where \\(T\\) is the minimum of \\(AX + CX + DX.\\) Since \\(\\angle BAE = 30^\\circ + \\angle CAD + 30^\\circ,\\) we get \\(\\cos \\angle BAE = \\frac{1}{2} \\cdot \\frac{1}{7}\\) \\(- \\frac{\\sqrt{3}}{2} \\cdot \\frac{4\\sqrt{3}}{7}\\) \\(= -\\frac{11}{14},\\) so \\(BE^2 = 14^2 + 26^2\\) \\(+ 2 \\cdot 14 \\cdot 26 \\cdot \\frac{11}{14} = 1444\\) and \\(BE = 38.\\) All angles of triangle \\(ACD\\) are less than \\(120^\\circ,\\) so \\(T\\) is attained at its Fermat point; erecting an equilateral triangle \\(ACP\\) on side \\(AC\\) away from \\(D,\\) the standard rotation argument gives \\(T = PD,\\) and since \\(\\angle PAD = 60^\\circ + \\angle CAD\\) also has cosine \\(-\\frac{11}{14},\\) \\[ \\begin{gathered} T^2 \\\\ = 147 + 507 \\\\ {}+ 2 \\cdot 7\\sqrt{3} \\cdot 13\\sqrt{3} \\cdot \\frac{11}{14} \\\\ = 1083, \\\\ T = 19\\sqrt{3}. \\end{gathered} \\]\n\nBoth bounds are tight simultaneously: let \\(F\\) be the Fermat point of \\(ACD,\\) so \\(\\angle AFC = \\angle AFD = 120^\\circ.\\) Since \\(\\angle AFC + \\angle ABC = 180^\\circ,\\) point \\(F\\) lies on the circumcircle of \\(ABC,\\) whence \\(\\angle AFB = \\angle ACB = 90^\\circ;\\) similarly \\(F\\) lies on the circumcircle of \\(AED\\) and \\(\\angle AFE = \\angle ADE = 90^\\circ.\\) Thus \\(\\angle BFE = 180^\\circ,\\) so \\(F\\) lies on segment \\(BE\\) and \\(f(F) = BE + T = 38 + 19\\sqrt{3}.\\) The answer is \\(m + n + p = 38 + 19 + 3 = 60.\\)",
+      "hints": [
+        "Compute \\(AC = 7\\sqrt{3}\\) and \\(AD = 13\\sqrt{3};\\) triangles \\(ABC\\) and \\(AED\\) turn out to have right angles at \\(C\\) and \\(D\\)",
+        "Split \\(f(X) = (BX + EX)\\) \\(+ (AX + CX + DX)\\) and show that the Fermat point of triangle \\(ACD\\) lies on segment \\(BE\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

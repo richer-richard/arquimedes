@@ -1,0 +1,61 @@
+{
+  "id": "prob.usa-tstst-2019-p3",
+  "title": "USA TSTST 2019 Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.coloring-schemes-extremal-arguments",
+      "label": "Coloring schemes, extremal arguments",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.games-and-greedy-algorithms",
+      "label": "Games and greedy algorithms",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TSTST",
+    "year": 2019,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 115.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "On an infinite square grid we place finitely many cars,\nwhich each occupy a single cell and face in one of the four cardinal directions.\nCars may never occupy the same cell.\nIt is given that the cell immediately in front of each car is empty,\nand moreover no two cars face towards each other\n(no right-facing car is to the left of a left-facing car within a row, etc.).\nIn a move, one chooses a car and shifts it one cell forward to a vacant cell.\nProve that there exists an infinite sequence of valid moves\nusing each car infinitely many times.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tstst-2019-p3.evanchen",
+      "kind": "proof-sketch",
+      "text": "Let \\(S\\) be any rectangle containing all the cars.\nPartition \\(S\\) into horizontal strips of height \\(1\\),\nand color them red and green in an alternating fashion.\nIt is enough to prove all the cars may exit \\(S\\).\n\n[Diagram omitted from this imported TeX transcription.]\n\nTo do so, we outline a five-stage plan for the cars.\n\n• All vertical cars in a green cell may advance one cell into a red cell\n (or exit \\(S\\) altogether),\n by the given condition.\n (This is the only place where the hypothesis about empty space is used!)\n\n• All horizontal cars on green cells may exit \\(S\\),\n as no vertical cars occupy green cells.\n\n• All vertical cars in a red cell\n may advance one cell into a green cell\n (or exit \\(S\\) altogether),\n as all green cells are empty.\n\n• All horizontal cars within red cells may exit \\(S\\),\n as no vertical car occupy red cells.\n\n• The remaining cars exit \\(S\\), as they are all vertical.\n The solution is complete.\n\nRemark (Author's comments).\n The solution I've given for this problem is so short\n and simple that it might appear at first\n to be about IMO 1 difficulty. I don't believe that's true!\n There are very many approaches that look perfectly plausible at first,\n and then fall apart in this or that twisted special case.\n\nRemark (Higher-dimensional generalization by author).\n The natural higher-dimensional generalization\n is true, and can be proved in largely the same fashion.\n For example, in three dimensions,\n one may let \\(S\\) be a rectangular prism\n and partition \\(S\\) into horizontal slabs\n and color them red and green in an alternating fashion.\n Stages 1, 3, and 5 generalize immediately,\n and stages 2 and 4 reduce to an application of the two-dimensional problem.\n In the same way, the general problem is handled by induction on the dimension.\n\nRemark.\n [Historical comments]\n For \\(k > 1\\), we could consider a variant of the problem\n where cars are \\(1 \\times k\\) rectangles (moving parallel to the longer edge)\n instead of occupying single cells.\n In that case, if there are \\(2k-1\\) empty spaces in front of each car,\n the above proof works\n (with the red and green strips having height \\(k\\) instead).\n On the other hand, at least \\(k\\) empty spaces are necessary.\n We don't know the best constant in this case.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

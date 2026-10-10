@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2020-p7",
+  "title": "2020 HMMT February Combinatorics Problem 7",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.pigeonhole-principle",
+      "label": "Pigeonhole principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2020,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 85.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Anne-Marie has a deck of 16 cards, each with a distinct positive factor of 2002 written on it. She shuffles the deck and begins to draw cards from the deck without replacement. She stops when there exists a nonempty subset of the cards in her hand whose numbers multiply to a perfect square. What is the expected number of cards in her hand when she stops?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{837}{208}",
+    "value": "\\frac{837}{208}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2020-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "Note that \\(2002=2 \\cdot 7 \\cdot 11 \\cdot 13\\), so that each positive factor of 2002 is included on exactly one card. Each card can identified simply by whether or not it is divisible by each of the 4 primes, and we can uniquely achieve all of the \\(2^{4}\\) possibilities. Also, when considering the product of the values on many cards, we only care about the values of the exponents in the prime factorization modulo 2 , as we have a perfect square exactly when each exponent is even.\nNow suppose Anne-Marie has already drawn \\(k\\) cards. Then there are \\(2^{k}\\) possible subsets of cards from those she has already drawn. Note that if any two of these subsets have products with the same four exponents modulo 2, then taking the symmetric difference yields a subset of cards in her hand where all four exponents are \\(0(\\bmod 2)\\), which would cause her to stop. Now when she draws the \\((k+1)\\) th card, she achieves a perfect square subset exactly when the the exponents modulo 2 match those from a subset of the cards she already has. Thus if she has already drawn \\(k\\) cards, she will not stop if she draws one of \\(16-2^{k}\\) cards that don't match a subset she already has.\n\nLet \\(p_{k}\\) be the probability that Anne-Marie draws at least \\(k\\) cards. We have the recurrence\n\n\\[p_{k+2}=\\frac{16-2^{k}}{16-k} p_{k+1}\\]\n\nbecause in order to draw \\(k+2\\) cards, the \\((k+1)\\) th card, which is drawn from the remaining \\(16-k\\) cards, must not be one of the \\(16-2^{k}\\) cards that match a subset of Anne-Marie's first \\(k\\) cards. We now compute\n\n\\[\\begin{aligned}\n& p_{1}=1 \\\\\n& p_{2}=\\frac{15}{16} \\\\\n& p_{3}=\\frac{14}{15} p_{2}=\\frac{7}{8} \\\\\n& p_{4}=\\frac{12}{14} p_{3}=\\frac{3}{4} \\\\\n& p_{5}=\\frac{8}{13} p_{4}=\\frac{6}{13}, \\\\\n& p_{6}=0\n\\end{aligned}\\]\n\nThe expected number of cards that Anne-Marie draws is\n\n\\[p_{1}+p_{2}+p_{3}+p_{4}+p_{5}=1+\\frac{15}{16}+\\frac{7}{8}+\\frac{3}{4}+\\frac{6}{13}=\\frac{837}{208}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

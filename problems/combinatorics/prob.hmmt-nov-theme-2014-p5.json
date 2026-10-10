@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-theme-2014-p5",
+  "title": "2014 HMMT November Theme Problem 5",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2014,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 47.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Suppose that there are initially eight townspeople and one goon. One of the eight townspeople is named Jester. If Jester is sent to jail during some morning, then the game ends immediately in his sole victory. (However, the Jester does not win if he is sent to jail during some night.)\nFind the probability that only the Jester wins.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2014-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{1}{3}\\) Let \\(a_{n}\\) denote the answer when there are \\(2 n-1\\) regular townies, one Jester, and one goon. It is not hard to see that \\(a_{1}=\\frac{1}{3}\\). Moreover, we have a recursion\n\n\\[a_{n}=\\frac{1}{2 n+1} \\cdot 1+\\frac{1}{2 n+1} \\cdot 0+\\frac{2 n-1}{2 n+1}\\left(\\frac{1}{2 n-1} \\cdot 0+\\frac{2 n-2}{2 n-1} \\cdot a_{n-1}\\right)\\]\n\nThe recursion follows from the following consideration: during the day, there is a \\(\\frac{1}{2 n+1}\\) chance the Jester is sent to jail and a \\(\\frac{1}{2 n+1}\\) chance the goon is sent to jail, at which point the game ends. Otherwise, there is a \\(\\frac{1}{2 n-1}\\) chance that the Jester is selected to be jailed from among the townies during the evening. If none of these events occur, then we arrive at the situation of \\(a_{n-1}\\).\nSince \\(a_{1}=\\frac{1}{3}\\), we find that \\(a_{n}=\\frac{1}{3}\\) for all values of \\(n\\). This gives the answer.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

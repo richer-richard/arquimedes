@@ -1,0 +1,70 @@
+{
+  "id": "prob.hmmt-feb-team-1-2006-p9",
+  "title": "2006 HMMT February Team Round 1 Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2006,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 83.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n \\geq 3\\) be a positive integer. Prove that given any \\(n\\) angles \\(0<\\theta_{1}, \\theta_{2}, \\ldots, \\theta_{n}<\\) \\(180^{\\circ}\\), such that their sum is \\(180(n-2)\\) degrees, there exists a convex \\(n\\)-gon having exactly those angles, in that order.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1-2006-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "We induct on \\(n\\). The statement holds trivially for \\(n=3\\), as all triangles are convex. Now, suppose that the statement is true for \\(n-1\\), where \\(n \\geq 4\\). Let \\(\\theta_{1}, \\theta_{2}, \\ldots, \\theta_{n}\\) be \\(n\\) angles less than \\(180^{\\circ}\\) whose sum equals \\(180(n-2)\\) degrees. The statement is clearly true if \\(n=4\\) and \\(\\theta_{1}=\\theta_{3}=180^{\\circ}-\\theta_{2}=180^{\\circ}-\\theta_{4}\\) since we can easily form a parallelogram, so assume otherwise.\n\nI claim that there exist two adjacent angles whose sum is greater than \\(180^{\\circ}\\). Assume otherwise. Then, we have \\(\\theta_{i}+\\theta_{i+1} \\leq 180\\) for \\(i=1,2, \\ldots, n\\), where \\(\\theta_{n+1}=\\theta_{1}\\). Summing these inequalities over all \\(i\\) yields \\(2 \\cdot 180(n-2) \\leq 180 n\\), which is equivalent to \\(n \\leq 4\\). Of course, we can have \\(n=4\\) if and only if we have equality in each of the above inequalities, forcing us to have a parallelogram contrary to our assumption.\nHence, we have two adjacent angles with sum greater than \\(180^{\\circ}\\). Without loss of generality, let these angles be \\(\\theta_{n-1}\\) and \\(\\theta_{n}\\), relabeling if necessary. By the inductive hypothesis, we may construct an \\((n-1)\\)-gon with angles \\(\\theta_{1}, \\theta_{2}, \\ldots, \\theta_{n-2}, \\theta_{n-1}+\\theta_{n}-180^{\\circ}\\), as these angles are each less than \\(180^{\\circ}\\) and their sum equals \\(180(n-3)\\) degrees. Consider the vertex with angle \\(\\theta_{n-1}+\\theta_{n}-180^{\\circ}\\). Note that we can \"clip off\" a triangle with angles \\(\\theta_{n-1}+\\theta_{n}-180^{\\circ}, 180^{\\circ}-\\theta_{n-1}\\), and \\(180^{\\circ}-\\theta_{n}\\) at this vertex, yielding an \\(n\\)-gon with the desired angles, completing the inductive step.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

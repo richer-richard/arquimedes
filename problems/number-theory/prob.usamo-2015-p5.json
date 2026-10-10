@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2015-p5",
+  "title": "2015 USAMO Problem 5",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2015,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 101.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a, b, c, d, e\\) be distinct positive integers such that \\(a^4 + b^4 = c^4 + d^4 = e^5\\). Show that \\(ac + bd\\) is a composite number.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2015-p5.imported",
+      "kind": "proof-sketch",
+      "text": "Note: This solution is definitely not what the folks at MAA intended, but it works!\nLook at the statement $a^4+b^4=e^5$. This can be viewed as a special case of Beal's Conjecture (http://en.wikipedia.org/wiki/Beal%27s_conjecture), stating that the equation $A^x+B^y=C^z$ has no solutions over positive integers for $gcd(a, b, c) = 1$ and $x, y, z > 2$. This special case was proven in 2009 by Michael Bennet, Jordan Ellenberg, and Nathan Ng, as $(x, y, z) = (2, 4, n)$. This case $a^4+b^4=e^5$ is obviously contained under that special case, so $a$ and $b$ must have a common factor greater than $1$.\nCall the greatest common factor of $a$ and $b$ $f$. Then $a = f \\cdot a_1$ for some $a_1$ and likewise $b = f \\cdot b_1$ for some $b_1$. Then consider the quantity $ac+bd$.\n$ac+bd = f \\cdot a_1 \\cdot c + f \\cdot b_1 \\cdot d = f\\cdot(a_1 \\cdot c + b_1 \\cdot d)$.\nBecause $c$ and $d$ are both positive, $(a_1 \\cdot c + b_1 \\cdot d) > 1$, and by definition $f > 1$, so $ac+bd$ is composite.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

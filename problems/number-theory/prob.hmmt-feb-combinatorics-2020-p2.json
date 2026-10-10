@@ -1,0 +1,49 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2020-p2",
+  "title": "2020 HMMT February Combinatorics Problem 2",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.chinese-remainder-theorem",
+      "label": "Chinese remainder theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2020,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 72.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many positive integers at most 420 leave different remainders when divided by each of 5,6 , and 7 ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "250",
+    "value": "250"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2020-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "Note that \\(210=5 \\cdot 6 \\cdot 7\\) and \\(5,6,7\\) are pairwise relatively prime. So, by the Chinese Remainder Theorem, we can just consider the remainders \\(n\\) leaves when divided by each of \\(5,6,7\\). To construct an \\(n\\) that leaves distinct remainders, first choose its remainder modulo 5 , then modulo 6 , then modulo 7 . We have \\(5=6-1=7-2\\) choices for each remainder. Finally, we multiply by 2 because \\(420=2 \\cdot 210\\). The answer is \\(2 \\cdot 5^{3}=250\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

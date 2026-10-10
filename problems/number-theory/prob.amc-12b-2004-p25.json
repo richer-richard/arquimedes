@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2004-p25",
+  "title": "2004 AMC 12B Problem 25",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.pattern-recognition",
+      "label": "Pattern recognition",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2004,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 39.2,
+    "source": 2360,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Given that \\(2^{2004}\\) is a \\(604\\)-digit number whose first digit is \\(1,\\) how many elements of the set \\(S = \\{2^0, 2^1, 2^2, \\ldots, 2^{2003}\\}\\) have a first digit of \\(4?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(194\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(195\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(196\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(197\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(198\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "195"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2004-p25.live",
+      "kind": "proof-sketch",
+      "text": "The smallest power of \\(2\\) with any given digit-count lies between \\(10^k\\) and \\(2\\cdot10^k,\\) so it has leading digit \\(1.\\) Because \\(2^{2004}\\) is a \\(604\\)-digit number beginning with \\(1,\\) it is the first \\(604\\)-digit power. Thus the powers in \\(S\\) contain exactly one leading-\\(1\\) number for each digit-count from \\(1\\) through \\(603,\\) or \\(603\\) in all.\n\nAfter each leading-\\(1\\) power, the next power leads with \\(2\\) or \\(3,\\) and the following power leads with \\(4, 5, 6,\\) or \\(7.\\) Hence \\(603\\) elements lead with \\(2\\) or \\(3,\\) another \\(603\\) lead with \\(4\\) through \\(7,\\) and the remaining \\(2004 - 3(603) = 195\\) lead with \\(8\\) or \\(9.\\)\n\nFinally, halving a power that leads with \\(8\\) or \\(9\\) produces the preceding power with leading digit \\(4,\\) and doubling any leading-\\(4\\) power reverses this. This is a bijection, so there are \\(195\\) elements with first digit \\(4.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "The number of digits of \\(2^k\\) increases by \\(1\\) exactly when its leading digit forces a carry",
+        "A power of \\(2\\) has leading digit \\(8\\) or \\(9\\) precisely when the previous power has leading digit \\(4\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

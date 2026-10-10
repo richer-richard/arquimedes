@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-i-2020-p12",
+  "title": "2020 AIME1 12",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.multiplicative-order",
+      "label": "Multiplicative order",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2020,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 62.2,
+    "source": 2920,
+    "mohs": null
+  },
+  "estimatedMinutes": 12,
+  "statement": "Let \\(n\\) be the least positive integer for which \\(149^n - 2^n\\) is divisible by \\(3^3 \\cdot 5^5 \\cdot 7^7.\\) Find the number of positive divisors of \\(n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "270",
+    "value": "270"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2020-p12.live",
+      "kind": "proof-sketch",
+      "text": "Work prime by prime. Since \\(149 - 2 = 147 = 3 \\cdot 7^2,\\) the lifting-the-exponent lemma gives \\(v_3(149^n - 2^n)\\) \\(= v_3(147) + v_3(n)\\) \\(= 1 + v_3(n)\\) and \\(v_7(149^n - 2^n) = 2 + v_7(n)\\) for every positive integer \\(n.\\) Requiring at least \\(3\\) and \\(7\\) forces \\(n\\) to be divisible by \\(3^2\\) and by \\(7^5.\\)\n\nFor \\(5\\) we first need \\(149^n \\equiv 2^n \\pmod 5,\\) i.e. \\(4^n \\equiv 2^n,\\) i.e. \\(2^n \\equiv 1 \\pmod 5,\\) which requires \\(4\\) to divide \\(n.\\) Write \\(n = 4k.\\) In \\(149^4 - 2^4\\) \\(= (149 - 2)(149 + 2)(149^2 + 4),\\) only the last factor is divisible by \\(5,\\) and only once, since \\(149^2 + 4 = 22205 = 5 \\cdot 4441.\\) Lifting the exponent from the base \\(149^4, 2^4\\) gives \\(v_5(149^n - 2^n) = 1 + v_5(k),\\) so \\(5^4\\) divides \\(k,\\) i.e. \\(4 \\cdot 5^4\\) divides \\(n.\\)\n\nThe least valid \\(n\\) is \\(2^2 \\cdot 3^2 \\cdot 5^4 \\cdot 7^5,\\) which has \\((2+1)(2+1)(4+1)(5+1)\\) \\(= 270\\) positive divisors.",
+      "hints": [
+        "Handle \\(3^3,\\) \\(5^5,\\) \\(7^7\\) separately. Since \\(149 - 2 = 147 = 3 \\cdot 7^2,\\) lifting the exponent applies directly at \\(3\\) and \\(7.\\)",
+        "At \\(5,\\) first \\(4^n \\equiv 2^n \\pmod 5\\) requires \\(4\\) to divide \\(n.\\) Then \\(v_5(149^4 - 2^4) = 1,\\) so lifting the exponent forces \\(5^4\\) to divide \\(\\frac{n}{4}.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

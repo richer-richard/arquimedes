@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2015-p20",
+  "title": "2015 AMC 12A Problem 20",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.isosceles-triangle",
+      "label": "Isosceles triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2015,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 39.0,
+    "source": 2110,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Isosceles triangles \\(T\\) and \\(T'\\) are not congruent but have the same area and the same perimeter. The sides of \\(T\\) have lengths \\(5,\\) \\(5,\\) and \\(8,\\) while those of \\(T'\\) have lengths \\(a,\\) \\(a,\\) and \\(b.\\) Which of the following numbers is closest to \\(b?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(8\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2015-p20.live",
+      "kind": "proof-sketch",
+      "text": "The altitude of \\(T\\) to its base of length \\(8\\) is \\(\\sqrt{5^2 - 4^2} = 3,\\) so \\(T\\) has area \\(\\dfrac{1}{2}\\cdot 8\\cdot 3 = 12\\) and perimeter \\(18.\\)\n\nFor \\(T'\\) we need \\(2a + b = 18\\) and area \\(\\dfrac{1}{4}b\\sqrt{4a^2 - b^2} = 12.\\) Substituting \\(a = \\dfrac{18 - b}{2}\\) and squaring leads to \\[(b - 8)(b^2 - b - 8) = 0.\\]\n\nSince \\(T\\) and \\(T'\\) are not congruent, \\(b \\ne 8,\\) so \\(b^2 - b - 8 = 0\\) and \\(b = \\dfrac{1 + \\sqrt{33}}{2}.\\) Because \\(25 \\lt 33 \\lt 36,\\) this is between \\(3\\) and \\(3.5,\\) so the closest integer is \\(3.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "\\(T\\) has perimeter \\(18\\) and area \\(12;\\) write those same two conditions for \\(T'\\)",
+        "Eliminate \\(a\\) using \\(2a + b = 18;\\) you reach a cubic with the extraneous root \\(b = 8\\) to factor out"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

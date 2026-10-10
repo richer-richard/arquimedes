@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-nov-general-2023-p7",
+  "title": "2023 HMMT November General Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.determinants",
+      "label": "Determinants",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.simple-equations",
+      "label": "Simple Equations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vieta-s-formulas",
+      "label": "Vieta's formulas",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2023,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 45.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute all ordered triples \\((x, y, z)\\) of real numbers satisfying the following system of equations:\n\n\\[\\begin{array}{r}\nx y+z=40 \\\\\nx z+y=51 \\\\\nx+y+z=19 .\n\\end{array}\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "(12,3,4),(6,5.4,7.6)",
+    "value": "(12,3,4),(6,5.4,7.6)"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2023-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "By adding the first two equations, we can get\n\n\\[x y+z+x z+y=(x+1)(y+z)=91\\]\n\nFrom the third equation we have\n\n\\[(x+1)+(y+z)=19+1=20\\]\n\nso \\(x+1\\) and \\(y+z\\) are the two roots of \\(t^{2}-20 t+91=0\\) by Vieta's theorem. As the quadratic equation can be decomposed into\n\n\\[(t-7)(t-13)=0\\]\n\nwe know that either \\(x=6, y+z=13\\) or \\(x=12, y+z=7\\).\n\n- If \\(x=12\\), by the first equation we have \\(12 y+z=40\\), and substituting \\(y+z=7\\) we have \\(11 y=33\\), \\(y=3\\) and \\(z=4\\).\n- If \\(x=6\\), by the first equation we have \\(6 y+z=40\\), and substituting \\(y+z=13\\) we have \\(5 y=27\\), \\(y=5.4\\) and \\(z=7.6\\).\n\nHence, the two solutions are \\((12,3,4)\\) and \\((6,5.4,7.6)\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

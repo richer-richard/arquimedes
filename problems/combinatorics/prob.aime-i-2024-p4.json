@@ -1,0 +1,59 @@
+{
+  "id": "prob.aime-i-2024-p4",
+  "title": "2024 AIME I Problem 4",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.conditional-probability",
+      "label": "Conditional probability",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2024,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 42.1,
+    "source": 2230,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Jen enters a lottery by selecting \\(4\\) distinct elements of \\(S = \\{1, 2, 3, \\ldots, 9, 10\\}.\\) Then four elements of \\(S\\) are drawn at random. Jen wins a prize if at least two of her numbers were drawn, and wins the grand prize if all four of her numbers were drawn. The probability that Jen wins the grand prize given that Jen wins a prize is \\(\\frac{m}{n}\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "116",
+    "value": "116"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2024-p4.live",
+      "kind": "proof-sketch",
+      "text": "All \\(\\binom{10}{4} = 210\\) draws are equally likely. The number of draws sharing exactly \\(k\\) numbers with Jen’s ticket is \\(\\binom{4}{k}\\binom{6}{4-k},\\) so the number winning a prize is \\[ \\begin{aligned} &\\binom{4}{2}\\binom{6}{2} + \\binom{4}{3}\\binom{6}{1} \\\\ &\\quad {}+ \\binom{4}{4}\\binom{6}{0} \\\\ &= 90 + 24 + 1 = 115, \\end{aligned} \\] and exactly \\(1\\) of these wins the grand prize.\n\nSince the grand prize implies a prize, the conditional probability is \\(\\frac{\\frac{1}{210}}{\\frac{115}{210}} = \\frac{1}{115},\\) so \\(m + n = 1 + 115 = 116.\\)",
+      "hints": [
+        "Winning the grand prize forces winning a prize, so the conditional probability is \\(\\frac{P(\\text{grand})}{P(\\text{prize})}\\)",
+        "Count draws that share exactly \\(2,\\) \\(3,\\) or \\(4\\) numbers with Jen’s ticket — every draw of \\(4\\) numbers is equally likely"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

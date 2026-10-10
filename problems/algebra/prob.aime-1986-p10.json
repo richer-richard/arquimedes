@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-1986-p10",
+  "title": "1986 AIME Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.place-value",
+      "label": "Place value",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1986,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 31.8,
+    "source": 1830,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "In a parlor game, the magician asks one of the participants to think of a three-digit number \\((abc),\\) where \\(a,\\) \\(b,\\) and \\(c\\) represent base-\\(10\\) digits in the indicated order. The magician then asks this person to form the numbers \\((acb),\\) \\((bca),\\) \\((bac),\\) \\((cab),\\) and \\((cba),\\) to add these five numbers, and to reveal their sum \\(N.\\) If told \\(N,\\) the magician can identify the original number \\((abc).\\) Play the role of the magician and determine \\((abc)\\) if \\(N=3194.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "358",
+    "value": "358"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1986-p10.live",
+      "kind": "proof-sketch",
+      "text": "Across all six permutations, each digit occurs twice in each place, so their total is \\(222(a+b+c).\\) Put \\(s=a+b+c\\) and let the original number be \\(M.\\) Since the other five sum to \\(3194,\\) \\[ M=222s-3194. \\] Because \\(100\\leq M\\leq999,\\) we need \\(15\\leq s\\leq18.\\) Testing these four values gives \\(M=136,\\) \\(M=358,\\) \\(M=580,\\) and \\(M=802,\\) respectively. Only \\(358\\) has digit sum equal to its assumed value, namely \\(16.\\) Therefore the original number is \\(358.\\)",
+      "hints": [
+        "First include the original number and sum all six permutations",
+        "If \\(s=a+b+c,\\) express the original number in terms of \\(s\\) and \\(N\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

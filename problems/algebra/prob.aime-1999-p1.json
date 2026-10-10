@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1999-p1",
+  "title": "1999 AIME Problem 1",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.prime",
+      "label": "Prime",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1999,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 33.4,
+    "source": 1890,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Find the smallest prime that is the fifth term of an increasing arithmetic sequence, all four preceding terms also being prime.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "29",
+    "value": "29"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1999-p1.live",
+      "kind": "proof-sketch",
+      "text": "Let the terms be \\(p,\\) \\(p + d,\\) \\(\\ldots,\\) \\(p + 4d.\\) The even prime cannot be the first term: an even difference makes the second term even, while an odd difference makes the third term even. If \\(d\\) were odd, consecutive terms would have opposite parity, so some term other than the first would be even and greater than \\(2\\) — impossible. If \\(d\\) were not a multiple of \\(3,\\) then \\(p,\\) \\(p + d,\\) \\(p + 2d\\) would cover all residues mod \\(3,\\) so some term would be divisible by \\(3;\\) that term would have to be \\(3\\) itself, forcing \\(p = 3,\\) but then \\(p + 3d = 3(1 + d)\\) is composite. Hence \\(d\\) is divisible by \\(6.\\)\n\nWith \\(d \\ge 6\\) the fifth term is at least \\(p + 24.\\) Trying \\(p = 5\\) and \\(d = 6\\) gives \\(5, 11, 17, 23, 29,\\) all prime, and no smaller fifth term is possible since \\(p \\ge 5\\) (the starts \\(p = 2\\) and \\(p = 3\\) fail as above). The answer is \\(29.\\)",
+      "hints": [
+        "If the common difference is not a multiple of \\(3,\\) one of the first three terms is divisible by \\(3\\)",
+        "The difference must be a multiple of \\(6,\\) so try five-term progressions with difference \\(6\\) starting from small primes"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

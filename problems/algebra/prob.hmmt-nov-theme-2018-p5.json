@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-theme-2018-p5",
+  "title": "2018 HMMT November Theme Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.recurrence-relations",
+      "label": "Recurrence relations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2018,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 44.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Lil Wayne, the rain god, determines the weather. If Lil Wayne makes it rain on any given day, the probability that he makes it rain the next day is \\(75 \\%\\). If Lil Wayne doesn't make it rain on one day, the probability that he makes it rain the next day is \\(25 \\%\\). He decides not to make it rain today. Find the smallest positive integer \\(n\\) such that the probability that Lil Wayne makes it rain \\(n\\) days from today is greater than \\(49.9 \\%\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2018-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 9\nLet \\(p_{n}\\) denote the probability that Lil Wayne makes it rain \\(n\\) days from today. We have \\(p_{0}=0\\) and\n\n\\[p_{n+1}=\\frac{3}{4} p_{n}+\\frac{1}{4}\\left(1-p_{n}\\right)=\\frac{1}{4}+\\frac{1}{2} p_{n} .\\]\n\nThis can be written as\n\n\\[p_{n+1}-\\frac{1}{2}=\\frac{1}{2}\\left(p_{n}-\\frac{1}{2}\\right)\\]\n\nand we can check that the solution of this recurrence is\n\n\\[p_{n}=\\frac{1}{2}-\\frac{1}{2^{n+1}}\\]\n\nWe want \\(\\frac{1}{2^{n+1}}<\\frac{1}{1000}\\), which first occurs when \\(n=9\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

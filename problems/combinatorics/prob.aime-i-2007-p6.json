@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-i-2007-p6",
+  "title": "2007 AIME I Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2007,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 47.2,
+    "source": 2430,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "A frog is placed at the origin on the number line, and moves according to the following rule: in a given move, the frog advances to either the closest point with a greater integer coordinate that is a multiple of \\(3,\\) or to the closest point with a greater integer coordinate that is a multiple of \\(13.\\) A move sequence is a sequence of coordinates which correspond to valid moves, beginning with \\(0,\\) and ending with \\(39.\\) For example, \\(0,\\) \\(3,\\) \\(6,\\) \\(13,\\) \\(15,\\) \\(26,\\) \\(39\\) is a move sequence. How many move sequences are possible for the frog?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "169",
+    "value": "169"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2007-p6.live",
+      "kind": "proof-sketch",
+      "text": "Split the journey at the landmarks \\(13\\) and \\(26.\\) From \\(0\\) the frog climbs the multiples of \\(3\\) and may jump to \\(13\\) from any of \\(0,\\) \\(3,\\) \\(6,\\) \\(9,\\) \\(12,\\) giving \\(5\\) routes from \\(0\\) to \\(13;\\) likewise there are \\(5\\) routes from \\(13\\) to \\(26\\) (jump to \\(26\\) from \\(13,\\) \\(15,\\) \\(18,\\) \\(21,\\) \\(24\\)) and \\(5\\) from \\(26\\) to \\(39.\\) To skip \\(13\\) entirely the frog must take the multiple-of-\\(3\\) option every time through \\(12 \\to 15,\\) then jump to \\(26\\) from one of \\(15,\\) \\(18,\\) \\(21,\\) \\(24:\\) \\(4\\) routes from \\(0\\) to \\(26\\) avoiding \\(13.\\) Similarly there are \\(4\\) routes from \\(13\\) to \\(39\\) avoiding \\(26,\\) and \\(4\\) from \\(0\\) to \\(39\\) avoiding both.\n\nCombining the segments: through both landmarks, \\(5 \\cdot 5 \\cdot 5 = 125;\\) through \\(13\\) only, \\(5 \\cdot 4 = 20;\\) through \\(26\\) only, \\(4 \\cdot 5 = 20;\\) through neither, \\(4.\\) The total is \\(125 + 20 + 20 + 4 = 169.\\)",
+      "hints": [
+        "Split the journey at the landmarks \\(13\\) and \\(26:\\) count routes for each segment and multiply",
+        "There are \\(5\\) routes between consecutive multiples of \\(13,\\) and \\(4\\) routes across a stretch that skips the multiple of \\(13\\) in the middle"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

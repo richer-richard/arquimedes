@@ -1,0 +1,68 @@
+{
+  "id": "prob.hmmt-feb-guts-2021-p18",
+  "title": "2021 HMMT February Guts Problem 18",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.tangents",
+      "label": "Tangents",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-centers",
+      "label": "Triangle centers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-centers-centroid-incenter-circumcenter-orthocenter-euler-line-nine-point-circle",
+      "label": "Triangle centers: centroid, incenter, circumcenter, orthocenter, Euler line, nine-point circle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-trigonometry",
+      "label": "Triangle trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2021,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 74.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Triangle \\(A B C\\) has side lengths \\(A B=19, B C=20\\), and \\(C A=21\\). Points \\(X\\) and \\(Y\\) are selected on sides \\(A B\\) and \\(A C\\), respectively, such that \\(A Y=X Y\\) and \\(X Y\\) is tangent to the incircle of \\(\\triangle A B C\\). If the length of segment \\(A X\\) can be written as \\(\\frac{a}{b}\\), where \\(a\\) and \\(b\\) are relatively prime positive integers, compute \\(100 a+b\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "6710",
+    "value": "6710"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2021-p18.hmmt",
+      "kind": "proof-sketch",
+      "text": "Note that the incircle of \\(\\triangle A B C\\) is the \\(A\\)-excenter of \\(\\triangle A X Y\\). Let \\(r\\) be the radius of this circle. We can compute the area of \\(\\triangle A X Y\\) in two ways:\n\n\\[\\begin{aligned}\nK_{A X Y} & =\\frac{1}{2} \\cdot A X \\cdot A Y \\sin A \\\\\n& =r \\cdot(A X+A Y-X Y) / 2 \\\\\n\\Longrightarrow A Y & =\\frac{r}{\\sin A}\n\\end{aligned}\\]\n\nWe also know that\n\n\\[\\begin{aligned}\nK_{A B C} & =\\frac{1}{2} \\cdot 19 \\cdot 21 \\sin A \\\\\n& =r \\cdot(19+20+21) / 2 \\\\\n\\Longrightarrow \\frac{r}{\\sin A} & =\\frac{19 \\cdot 21}{60}=\\frac{133}{20}\n\\end{aligned}\\]\n\nso \\(A Y=133 / 20\\).\nLet the incircle of \\(\\triangle A B C\\) be tangent to \\(A B\\) and \\(A C\\) at \\(D\\) and \\(E\\), respectively. We know that \\(A X+A Y+X Y=A D+A E=19+21-20\\), so \\(A X=20-\\frac{133}{10}=\\frac{67}{10}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

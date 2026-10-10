@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-guts-2020-p20",
+  "title": "2020 HMMT February Guts Problem 20",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2020,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 75.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "There exist several solutions to the equation\n\n\\[1+\\frac{\\sin x}{\\sin 4 x}=\\frac{\\sin 3 x}{\\sin 2 x}\\]\n\nwhere \\(x\\) is expressed in degrees and \\(0^{\\circ}<x<180^{\\circ}\\). Find the sum of all such solutions.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "320^{\\circ}",
+    "value": "320^{\\circ}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2020-p20.hmmt",
+      "kind": "proof-sketch",
+      "text": "We first apply sum-to-product and product-to-sum:\n\n\\[\\frac{\\sin 4 x+\\sin x}{\\sin 4 x}=\\frac{\\sin 3 x}{\\sin 2 x}\\]\n\n\\[2 \\sin (2.5 x) \\cos (1.5 x) \\sin (2 x)=\\sin (4 x) \\sin (3 x)\\]\n\nFactoring out \\(\\sin (2 x)=0\\),\n\n\\[\\sin (2.5 x) \\cos (1.5 x)=\\cos (2 x) \\sin (3 x)\\]\n\nFactoring out \\(\\cos (1.5 x)=0\\) (which gives us \\(60^{\\circ}\\) as a solution),\n\n\\[\\begin{gathered}\n\\sin (2.5 x)=2 \\cos (2 x) \\sin (1.5 x) \\\\\n\\sin (2.5 x)=\\sin (3.5 x)-\\sin (0.5 x)\n\\end{gathered}\\]\n\nConvert into complex numbers, we get\n\n\\[\\begin{gathered}\n\\left(x^{3.5}-x^{-3.5}\\right)-\\left(x^{0.5}-x^{-0.5}\\right)=\\left(x^{2.5}-x^{-2.5}\\right) \\\\\nx^{7}-x^{6}-x^{4}+x^{3}+x-1=0 \\\\\n(x-1)\\left(x^{6}-x^{3}+1\\right)=0\n\\end{gathered}\\]\n\nWe recognize the latter expression as \\(\\frac{x^{9}+1}{x^{3}+1}\\), giving us\n\n\\[x=0^{\\circ}, 20^{\\circ}, 100^{\\circ}, 140^{\\circ}, 220^{\\circ}, 260^{\\circ}, 340^{\\circ} .\\]\n\nThe sum of the solutions is\n\n\\[20^{\\circ}+60^{\\circ}+100^{\\circ}+140^{\\circ}=320^{\\circ} .\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

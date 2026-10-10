@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-10a-2009-p23",
+  "title": "2009 AMC 10A Problem 23",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.parallel-lines",
+      "label": "Parallel lines",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2009,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 27.4,
+    "source": 1690,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Convex quadrilateral \\(ABCD\\) has \\(AB = 9\\) and \\(CD = 12.\\) Diagonals \\(AC\\) and \\(BD\\) intersect at \\(E,\\) \\(AC = 14,\\) and \\(\\triangle AED\\) and \\(\\triangle BEC\\) have equal areas. What is \\(AE?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{9}{2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{50}{11}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{21}{4}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{17}{3}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(6\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2009-p23.live",
+      "kind": "proof-sketch",
+      "text": "Since \\([AED] = [BEC],\\) adding \\([CED]\\) to both gives \\([ACD] = [BCD].\\) These share base \\(CD,\\) so \\(A\\) and \\(B\\) are equidistant from line \\(CD,\\) meaning \\(AB \\parallel CD.\\)\n\nThen \\(\\triangle ABE \\sim \\triangle CDE\\) with ratio \\(\\dfrac{AB}{CD} = \\dfrac{9}{12} = \\dfrac34,\\) so \\(\\dfrac{AE}{EC} = \\dfrac34.\\)\n\nWith \\(AE + EC = AC = 14,\\) we get \\(AE = \\dfrac{3}{7} \\cdot 14 = 6.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "Adding \\(\\triangle CED\\) to each equal-area triangle shows \\(\\triangle ACD\\) and \\(\\triangle BCD\\) have equal areas",
+        "Equal areas over the shared base \\(CD\\) force \\(AB \\parallel CD,\\) making \\(\\triangle ABE \\sim \\triangle CDE\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

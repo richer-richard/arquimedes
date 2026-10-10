@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2020-p15",
+  "title": "2020 HMMT February Guts Problem 15",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2020,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 72.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "You have six blocks in a row, labeled 1 through 6 , each with weight 1 . Call two blocks \\(x \\leq y\\) connected when, for all \\(x \\leq z \\leq y\\), block \\(z\\) has not been removed. While there is still at least one block remaining, you choose a remaining block uniformly at random and remove it. The cost of this operation is the sum of the weights of the blocks that are connected to the block being removed, including itself. Compute the expected total cost of removing all the blocks.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{163}{10}",
+    "value": "\\frac{163}{10}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2020-p15.hmmt",
+      "kind": "proof-sketch",
+      "text": "Note that the total cost is the total number of ordered pairs \\((x, y)\\) with \\(1 \\leq x, y \\leq 6\\) such that \\(x\\) and \\(y\\) are connected right before \\(x\\) gets removed.\n\nThe probability that blocks \\(x\\) and \\(y\\) are connected just before block \\(x\\) is removed is simply \\(\\frac{1}{|x-y|+1}\\), since all of the \\(|x-y|+1\\) relevant blocks are equally likely to be removed first. Summing over \\(1 \\leq x, y \\leq 6\\), combining terms with the same value of \\(|x-y|\\), we get\n\n\\[\\frac{2}{6}+\\frac{4}{5}+\\frac{6}{4}+\\frac{8}{3}+\\frac{10}{2}+6=\\frac{163}{10}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

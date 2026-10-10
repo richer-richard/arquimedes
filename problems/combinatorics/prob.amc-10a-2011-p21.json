@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2011-p21",
+  "title": "2011 AMC 10A Problem 21",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.conditional-probability",
+      "label": "Conditional probability",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2011,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 31.8,
+    "source": 1990,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Two counterfeit coins of equal weight are mixed with \\(8\\) identical genuine coins. The weight of each of the counterfeit coins is different from the weight of each of the genuine coins. A pair of coins is selected at random without replacement from the \\(10\\) coins. A second pair is selected at random without replacement from the remaining \\(8\\) coins. The combined weight of the first pair is equal to the combined weight of the second pair. What is the probability that all \\(4\\) selected coins are genuine?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{7}{11}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{9}{13}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{11}{15}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{15}{19}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{15}{16}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "15/19"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2011-p21.live",
+      "kind": "proof-sketch",
+      "text": "There are two cases: either both selected pairs contain only genuine coins or each selected pair has one counterfeit coin.\n\nFor the first case, there are \\(\\binom{8}{2} = 28\\) ways to choose the coins for the first pair and \\(\\binom{6}{2} = 15\\) choices for the second pair.\n\nWe also have to divide by \\(2\\) since we can swap the pairs. This gives us \\[ 28 \\cdot 15 \\div 2 = 210 \\] configurations for this case.\n\nFor the second case, there are \\(\\binom{8}{2} = 28\\) ways to choose the non-counterfeit coins. There is only one choice for the counterfeit coins.\n\nThere are two ways to create the two pairs, two choices for which counterfeit coin goes with a genuine coin.\n\nThis means that there are \\(28 \\cdot 2 = 56\\) configurations for this case.\n\nThe desired probability is then \\[ \\dfrac{210}{210 + 56} = \\dfrac{210}{266} = \\dfrac{15}{19}. \\]\n\nThus, D is the correct answer.",
+      "hints": [
+        "Equal pair weights require the same number of counterfeit coins in each pair",
+        "Count the all-genuine case and the one-counterfeit-in-each-pair case"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

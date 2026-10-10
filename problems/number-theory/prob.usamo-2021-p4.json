@@ -1,0 +1,70 @@
+{
+  "id": "prob.usamo-2021-p4",
+  "title": "2021 USAMO Problem 4",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.greatest-common-divisors-gcd",
+      "label": "Greatest common divisors (gcd)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.number-of-divisors",
+      "label": "τ (number of divisors)",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2021,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 84.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A finite set \\(S\\) of positive integers has the property that, for each \\(s\\in S\\), and each positive integer divisor \\(d\\) of \\(s\\), there exists a unique element \\(t \\in S\\) satisfying \\(\\gcd(s,t)=d\\) (the elements \\(s\\) and \\(t\\) could be equal).\n\nGiven this information, find all possible values for the number of elements of \\(S\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2021-p4.imported",
+      "kind": "proof-sketch",
+      "text": "§2.1 USAMO 2021/4, proposed by Carl Schildkraut\n\n    Video at https://youtu.be/9WNgDETHOlI?t=1008.\n\n  Problem statement\n\n  A finite set S of positive integers has the property that, for each s ∈ S, and\n  each positive integer divisor d of s, there exists a unique element t ∈ S satisfying\n  gcd(s, t) = d. (The elements s and t could be equal.)\n    Given this information, find all possible values for the number of elements of S.\n\nThe answer is that |S| must be a power of 2 (including 1), or |S| = 0 (a trivial case we\ndo not discuss further).\n\n¶ Construction.         For any nonnegative integer k, a construction for |S| = 2k is given by\n\n                          S = {(p1 or q1 ) × (p2 or q2 ) × · · · × (pk or qk )}\n\nfor 2k distinct primes p1 , . . . , pk , q1 , . . . , qk .\n\n¶ Converse.        The main claim is as follows.\n\n   Claim — In any valid set S, for any prime p and x ∈ S, νp (x) ≤ 1.\n\nProof. Assume for contradiction e = νp (x) ≥ 2.\n\n    • On the one hand, let s = x in the statement. Vary t ∈ S across all the elements in\n      S to get each divisor of x once. Since e+1\n                                              e\n                                                 of the divisors of x are divisible by p, it\n      thus follows that e+1 of the elements are divisible by p.\n                         e\n\n    • On the other hand, consider a y ∈ S such that νp (y) = 1, which must exist (say if\n      gcd(x, y) = p). Taking s = y in the statement and repeating the same argument,\n      we see 12 of the elements of S are divisible by p.\n\nSo e = 1, contradiction.\n\nNow since |S| equals the number of divisors of any element of S, we are done.\n\n                                                       10\n\nUSAMO 2021 Solution Notes                                            web.evanchen.cc, updated 4 May 2026",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

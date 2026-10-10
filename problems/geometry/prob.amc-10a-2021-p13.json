@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-10a-2021-p13",
+  "title": "2021 AMC 10A Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.volume",
+      "label": "Volume",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2021,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 22.2,
+    "source": 1370,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "What is the volume of tetrahedron \\(ABCD\\) with edge lengths \\(AB = 2,\\) \\(AC = 3,\\) \\(AD = 4,\\) \\(BC = \\sqrt{13},\\) \\(BD = 2\\sqrt{5},\\) and \\(CD = 5?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\sqrt{3}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\sqrt{3}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(6\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2021-p13.live",
+      "kind": "proof-sketch",
+      "text": "Place \\(A=(0,0,0),\\) \\(B=(2,0,0),\\) \\(C=(0,3,0),\\) and \\(D=(0,0,4).\\) Then\n\n\\[ \\begin{aligned} BC &= \\sqrt{2^2+3^2}=\\sqrt{13}, \\\\ BD &= \\sqrt{2^2+4^2}=2\\sqrt5, \\\\ CD &= \\sqrt{3^2+4^2}=5, \\end{aligned} \\]\n\nso this coordinate model matches all the given edge lengths. The tetrahedron is a rectangular-corner tetrahedron with perpendicular edge lengths \\(2,3,4\\) from \\(A,\\) so its volume is\n\n\\[\\frac16(2)(3)(4)=4.\\]\n\nThus, C is the correct answer.",
+      "hints": [
+        "Try placing \\(A\\) at the origin with \\(AB,AC,AD\\) along perpendicular axes",
+        "Check that the given opposite edge lengths match this rectangular-corner model"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

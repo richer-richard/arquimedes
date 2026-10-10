@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1994-p7",
+  "title": "1994 AIME Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.chord",
+      "label": "Chord",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.lattice-point",
+      "label": "Lattice point",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.tangent-line",
+      "label": "Tangent line",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1994,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 45.1,
+    "source": 2350,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "For certain ordered pairs \\((a,b)\\) of real numbers, the system of equations \\[\\begin{aligned}ax+by&=1,\\\\x^2+y^2&=50\\end{aligned}\\] has at least one solution, and each solution is an ordered pair \\((x,y)\\) of integers. How many such ordered pairs \\((a,b)\\) are there?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "72",
+    "value": "72"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1994-p7.live",
+      "kind": "proof-sketch",
+      "text": "The circle has the \\(12\\) lattice points obtained from \\((\\pm1,\\pm7),\\) \\((\\pm5,\\pm5),\\) and \\((\\pm7,\\pm1).\\) A secant satisfying the condition is determined by any two non-antipodal lattice points. This gives \\(\\binom{12}{2}-6=60\\) lines; antipodal pairs are excluded because their line passes through the origin and cannot have equation \\(ax+by=1.\\) There are also \\(12\\) tangents, one at each lattice point. Each line has a unique normalization \\(ax+by=1,\\) so the total is \\(60+12=72.\\)",
+      "hints": [
+        "List all integer points on \\(x^2+y^2=50\\)",
+        "Count both chords through two non-antipodal lattice points and tangents at one lattice point"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

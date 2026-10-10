@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2020-p9",
+  "title": "2020 HMMT February Algebra and Number Theory Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomial-operations",
+      "label": "Polynomial operations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.symmetric-functions",
+      "label": "Symmetric functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vieta-s-formulas",
+      "label": "Vieta's formulas",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2020,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(P(x)=x^{2020}+x+2\\), which has 2020 distinct roots. Let \\(Q(x)\\) be the monic polynomial of degree \\(\\binom{2020}{2}\\) whose roots are the pairwise products of the roots of \\(P(x)\\). Let \\(\\alpha\\) satisfy \\(P(\\alpha)=4\\). Compute the sum of all possible values of \\(Q\\left(\\alpha^{2}\\right)^{2}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "2020 \\cdot 2^{2019}",
+    "value": "2020 \\cdot 2^{2019}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2020-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(P(x)\\) have degree \\(n=2020\\) with roots \\(r_{1}, \\ldots, r_{n}\\). Let \\(R(x)=\\prod_{i}\\left(x-r_{i}^{2}\\right)\\). Then\n\n\\[\\prod_{i} r_{i}^{n} P\\left(\\frac{x}{r_{i}}\\right)=\\prod_{i} \\prod_{j}\\left(x-r_{i} r_{j}\\right)=Q(x)^{2} R(x)\\]\n\nUsing \\(R\\left(x^{2}\\right)=(-1)^{n} P(x) P(-x)\\) and Vieta, we obtain\n\n\\[P(x) P(-x) Q\\left(x^{2}\\right)^{2}=P(0)^{n} \\prod_{i} P\\left(\\frac{x^{2}}{r_{i}}\\right)\\]\n\nPlugging in \\(x=\\alpha\\), we use the facts that \\(P(\\alpha)=4, P(-\\alpha)=4-2 \\alpha\\), and also\n\n\\[P\\left(\\frac{\\alpha^{2}}{r_{i}}\\right)=\\frac{\\alpha^{4040}}{r_{i}^{2020}}+\\frac{\\alpha^{2}}{r_{i}}+2=-\\frac{(\\alpha-2)^{2}}{r_{i}+2}+\\frac{\\alpha^{2}}{r_{i}}+2=\\frac{2\\left(-\\alpha-r_{i}\\right)^{2}}{r_{i}\\left(r_{i}+2\\right)} .\\]\n\nThis will give us\n\n\\[P(\\alpha) P(-\\alpha) Q\\left(\\alpha^{2}\\right)^{2}=2^{n} \\prod_{i} \\frac{2\\left(-\\alpha-r_{i}\\right)^{2}}{r_{i}\\left(r_{i}+2\\right)}=2^{n} \\cdot \\frac{2^{n} P(-\\alpha)^{2}}{P(0) P(-2)}\\]\n\nTherefore,\n\n\\[\\begin{aligned}\nQ\\left(\\alpha^{2}\\right)^{2} & =\\frac{4^{n} P(-\\alpha)}{P(0) P(-2) P(\\alpha)} \\\\\n& =\\frac{4^{n}(4-2 \\alpha)}{2 \\cdot 2^{2020} \\cdot 4} \\\\\n& =\\frac{2^{4041}(2-\\alpha)}{2^{2023}} \\\\\n& =2^{2018}(2-\\alpha)\n\\end{aligned}\\]\n\nWe can check that \\(P(x)-4\\) has no double roots (e.g. by checking that it shares no roots with its derivative), which means that all possible \\(\\alpha\\) are distinct. Therefore, adding over all \\(\\alpha\\) gives \\(2020 \\cdot 2^{2019}\\), because the sum of the roots of \\(P(x)-4\\) is 0 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

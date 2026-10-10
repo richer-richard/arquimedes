@@ -1,0 +1,71 @@
+{
+  "id": "prob.amc-10a-2017-p1",
+  "title": "2017 AMC 10A Problem 1",
+  "category": "arithmetic",
+  "subjects": [
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "arith.whole-number-operations",
+      "label": "Whole number operations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2017,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 9.2,
+    "source": 560,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "What is the value of the following expression?\n\n\\[ \\begin{aligned} &2(2(2(2(2(2+1)+1)\\\\ &\\qquad{}+1)+1)+1)+1 \\end{aligned} \\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(70\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(97\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(127\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(159\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(729\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "127"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2017-p1.live",
+      "kind": "proof-sketch",
+      "text": "Starting with the innermost \\(2+1,\\) each new layer doubles the current value and adds \\(1.\\) The successive values are \\[3,7,15,31,63,127.\\]\n\nThus, C is the correct answer.",
+      "hints": [
+        "Work from the innermost parentheses outward",
+        "Notice the intermediate values are one less than powers of two"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

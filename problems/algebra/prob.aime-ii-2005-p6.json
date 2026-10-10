@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2005-p6",
+  "title": "2005 AIME II Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.linear-equation",
+      "label": "Linear equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.parity",
+      "label": "Parity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.permutations",
+      "label": "Permutations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2005,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 50.5,
+    "source": 2560,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "The cards in a stack of \\(2n\\) cards are numbered consecutively from \\(1\\) through \\(2n\\) from top to bottom. The top \\(n\\) cards are removed, kept in order, and form pile \\(A.\\) The remaining cards form pile \\(B.\\) The cards are now restacked into a single stack by taking cards alternately from the tops of pile \\(B\\) and pile \\(A,\\) respectively. In this process, card number \\((n + 1)\\) is the bottom card of the new stack, card number \\(1\\) is on top of this card, and so on, until piles \\(A\\) and \\(B\\) are exhausted. If, after the restacking process, at least one card from each pile occupies the same position that it occupied in the original stack, the stack is called magical. For example, eight cards form a magical stack because cards number \\(3\\) and number \\(6\\) retain their original positions. Find the number of cards in the magical stack in which card number \\(131\\) retains its original position.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "392",
+    "value": "392"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2005-p6.live",
+      "kind": "proof-sketch",
+      "text": "The new stack, read from the bottom up, is \\(n+1,\\ 1,\\ n+2,\\ 2,\\ \\ldots,\\ 2n,\\ n.\\) So pile \\(B\\)’s cards occupy the even positions from the top in reverse order, and pile \\(A\\)’s cards occupy the odd positions in reverse order: a card at original position \\(i \\le n\\) (pile \\(A\\)) moves to position \\(2(n - i) + 1,\\) while a card at position \\(i \\gt n\\) (pile \\(B\\)) moves to position \\(2(2n - i) + 2.\\)\n\nSince \\(131\\) is odd, card \\(131\\) can keep its position only if it comes from pile \\(A,\\) so \\(131 = 2(n - 131) + 1,\\) which gives \\(n = 196.\\) Indeed \\(131 \\le 196,\\) and the stack is magical because card \\(262\\) from pile \\(B\\) also stays fixed: \\(2(2n - 262) + 2 = 262.\\) The stack has \\(2n = 392\\) cards.",
+      "hints": [
+        "After restacking, pile \\(A\\)’s cards fill the odd positions from the top in reverse order, and pile \\(B\\)’s fill the even positions",
+        "Card \\(131\\) must come from pile \\(A,\\) and a pile-\\(A\\) card at position \\(i\\) lands at position \\(2(n-i)+1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

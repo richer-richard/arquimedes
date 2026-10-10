@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2018-p7",
+  "title": "2018 AIME II Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2018,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 55.4,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "Triangle \\(ABC\\) has side lengths \\(AB = 9,\\) \\(BC = 5\\sqrt{3},\\) and \\(AC = 12.\\) Points \\(A = P_0,\\) \\(P_1,\\) \\(P_2,\\) \\(\\ldots,\\) \\(P_{2450} = B\\) are on segment \\(\\overline{AB}\\) with \\(P_k\\) between \\(P_{k-1}\\) and \\(P_{k+1}\\) for \\(k = 1,\\) \\(2,\\) \\(\\ldots,\\) \\(2449,\\) and points \\(A = Q_0,\\) \\(Q_1,\\) \\(Q_2,\\) \\(\\ldots,\\) \\(Q_{2450} = C\\) are on segment \\(\\overline{AC}\\) with \\(Q_k\\) between \\(Q_{k-1}\\) and \\(Q_{k+1}\\) for \\(k = 1,\\) \\(2,\\) \\(\\ldots,\\) \\(2449.\\) Furthermore, each segment \\(\\overline{P_kQ_k},\\) \\(k = 1,\\) \\(2,\\) \\(\\ldots,\\) \\(2449,\\) is parallel to \\(\\overline{BC}.\\) The segments cut the triangle into \\(2450\\) regions, consisting of \\(2449\\) trapezoids and \\(1\\) triangle. Each of the \\(2450\\) regions has the same area. Find the number of segments \\(\\overline{P_kQ_k},\\) \\(k = 1,\\) \\(2,\\) \\(\\ldots,\\) \\(2450,\\) that have rational length.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "20",
+    "value": "20"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2018-p7.live",
+      "kind": "proof-sketch",
+      "text": "Since the \\(2450\\) regions have equal areas, triangle \\(AP_kQ_k\\) (the union of the first \\(k\\) regions) has area \\(\\frac{k}{2450}\\) of triangle \\(ABC.\\) Each triangle \\(AP_kQ_k\\) is similar to \\(ABC,\\) and lengths scale as the square root of areas, so \\[ \\begin{aligned} P_kQ_k &= 5\\sqrt{3}\\,\\sqrt{\\frac{k}{2450}} \\\\ &= 5\\sqrt{3} \\cdot \\frac{\\sqrt{k}}{35\\sqrt{2}} \\\\ &= \\frac{\\sqrt{6k}}{14}. \\end{aligned} \\]\n\nThis is rational exactly when \\(6k\\) is a perfect square, which happens exactly when \\(k = 6j^2\\) for a positive integer \\(j.\\) The condition \\(6j^2 \\le 2450\\) gives \\(j^2 \\le 408,\\) so \\(j = 1, 2, \\ldots, 20.\\) There are \\(20\\) such segments.",
+      "hints": [
+        "The regions have equal areas, so triangle \\(AP_kQ_k\\) has area \\(\\frac{k}{2450}\\) of the whole, and lengths scale as the square root of the area ratio",
+        "\\(P_kQ_k = 5\\sqrt{3}\\,\\sqrt{\\frac{k}{2450}} = \\frac{\\sqrt{6k}}{14},\\) which is rational exactly when \\(6k\\) is a perfect square"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

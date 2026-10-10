@@ -1,0 +1,63 @@
+{
+  "id": "prob.ahsme-1993-p22",
+  "title": "1993 AHSME Problem 22",
+  "category": "uncategorized",
+  "subjects": [],
+  "concepts": [],
+  "source": {
+    "collection": "AHSME",
+    "year": 1993,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 35.1,
+    "source": 1960,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Twenty cubical blocks are arranged as shown. First, \\(10\\) are arranged in a triangular pattern; then a layer of \\(6,\\) arranged in a triangular pattern, is centered on the \\(10;\\) then a layer of \\(3,\\) arranged in a triangular pattern, is centered on the \\(6;\\) and finally one block is centered on top of the third layer. The blocks in the bottom layer are numbered \\(1\\) through \\(10\\) in some order. Each block in layers \\(2,\\) \\(3\\) and \\(4\\) is assigned the number which is the sum of the numbers assigned to the three blocks on which it rests. Find the smallest possible number which could be assigned to the top block.",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(55\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(83\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(114\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(137\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(144\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "114"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1993-p22.live",
+      "kind": "proof-sketch",
+      "text": "Expanding the sums layer by layer, the top value is \\(6c+3(e_1+e_2+e_3\\)\\({}+e_4+e_5+e_6)\\)\\({}+(v_1+v_2+v_3),\\) where \\(c\\) is the center bottom block, the \\(e_i\\) are the six non-corner boundary blocks, and the \\(v_i\\) are the three corner blocks. To minimize this weighted sum, assign \\(1\\) to the coefficient-\\(6\\) position, \\(2,\\) \\(\\ldots,\\) \\(7\\) to the coefficient-\\(3\\) positions, and \\(8,\\) \\(9,\\) \\(10\\) to the coefficient-\\(1\\) positions. The minimum is \\(6+3(2+3+4\\)\\({}+5+6+7)\\)\\({}+(8+9+10)=114.\\) Thus the correct answer is C.",
+      "hints": [
+        "Determine how many times each bottom block contributes to the top",
+        "The center, six edge positions, and three corner positions have coefficients \\(6,\\) \\(3,\\) and \\(1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "26c469304a462a00a56011b024e7c211f372742029cd5cbc19b7693c4a0d413d"
+    ],
+    "solutions": []
+  }
+}

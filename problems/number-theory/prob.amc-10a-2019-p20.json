@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2019-p20",
+  "title": "2019 AMC 10A Problem 20",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "nt.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.parity",
+      "label": "Parity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2019,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 29.9,
+    "source": 1820,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The numbers \\(1,\\) \\(2,\\) \\(\\dots,\\) \\(9\\) are randomly placed into the \\(9\\) squares of a \\(3 \\times 3\\) grid. Each square gets one number, and each of the numbers is used once. What is the probability that the sum of the numbers in each row and each column is odd?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{21}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1}{14}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{5}{63}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{2}{21}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{1}{7}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1/14"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2019-p20.live",
+      "kind": "proof-sketch",
+      "text": "Note that the only way to get an odd sum is if there are either \\(0\\) or \\(2\\) even numbers in the row or column.\n\nThe only way for this to happen is if the \\(4\\) even numbers form a rectangle with sides parallel to the large square.\n\nThe way to see this is we choose a spot for the first even number. Then we need to choose another square in the same row, \\(x,\\) and column, \\(y,\\) to be even.\n\nThe final even has to be in same column as \\(x\\) and the same row as \\(y.\\) This forms the aforementioned rectangle.\n\nThere are four \\(2 \\times 2\\) rectangles, two \\(3 \\times 2\\) rectangles, two \\(2 \\times 3\\) rectangles, and one \\(3 \\times 3\\) rectangle.\n\nThis gives a total of \\[4+2+2+1=9\\] possible sets of positions for the even numbers.\n\nThere are \\(4!\\) ways to arrange the even numbers and \\(5!\\) ways to arrange the odd numbers.\n\nThis means that there are a total of \\[ 9 \\cdot 4! \\cdot 5! \\] configurations of squares that satisfy the condition.\n\nThere are a total of \\(9!\\) arrangements with no restrictions. The probability is therefore \\[ \\dfrac{9 \\cdot 4! \\cdot 5!}{9!} = \\dfrac{1}{14}. \\]\n\nThus, B is the correct answer.",
+      "hints": [
+        "An odd row or column sum has either zero or two even entries",
+        "Count placements by where the even numbers go"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2023-p9",
+  "title": "2023 HMMT February Combinatorics Problem 9",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.invariants-and-monovariants",
+      "label": "Invariants and monovariants",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2023,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 86.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "There are 100 people standing in a line from left to right. Half of them are randomly chosen to face right (with all \\(\\binom{100}{50}\\) possible choices being equally likely), and the others face left. Then, while there is a pair of people who are facing each other and have no one between them, the leftmost such pair leaves the line. Compute the expected number of people remaining once this process terminates.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{2^{100}}{\\binom{100}{50}}-1",
+    "value": "\\frac{2^{100}}{\\binom{100}{50}}-1"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2023-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "Notice that the order in which the people leave the line is irrelevant. Give each right-facing person a weight of 1 , and each left-facing person a weight of -1 . We claim the answer for some arrangement of these \\(2 n\\) people is -2 times the minimum prefix sum. For instance:\n\n\\[\\begin{gathered}\n\\text { LRRLRLLLRRRRL } \\rightarrow(-2)(-2) \\rightarrow 4 \\\\\n\\text { RRRLLRLLLRRL } \\rightarrow(-2)(-1) \\rightarrow 2\n\\end{gathered}\\]\n\nProof. he final configuration is always of the form\n\nand the minimum prefix sum is invariant. As the final configuration has minimum prefix sum is \\(k\\), we are done.\n\nSo, we want to find the expected value of the minimum prefix sum across all such strings of 1 s and -1 s . To find this, we will instead compute the equivalent value\n\n\\[\\sum_{k=1}^{\\infty} \\operatorname{Pr}[\\text { maximum prefix sum is } \\geq k]\\]\n\nConsider the \\(k\\) th term of this sum, and the corresponding walk from \\((0,0)\\) to \\((2 n, 0)\\) with L corresponding to a step of \\((1,-1)\\) and R corresponding to a step of \\((1,1)\\). Consider the point \\(P\\) at \\(y=k\\) with minimal \\(x\\)-coordinate, and reflect the remainder of the walk across \\(y=k\\). This gives a path that ends at \\((2 n, 2 k)\\). Noting that this is a bijection between walks from \\((0,0)\\) to \\((2 n, 2 k)\\) and walks that reach \\(y=k\\), we have\n\n\\[\\begin{aligned}\n\\sum_{k=1}^{\\infty} \\operatorname{Pr}[\\text { maximum prefix sum is } \\geq k] & =\\sum_{k=1}^{\\infty} \\frac{\\binom{2 n}{n-k}}{\\binom{2 n}{n}} \\\\\n& =\\frac{1}{2}\\left[\\left(\\sum_{k=-\\infty}^{\\infty} \\frac{\\binom{2 n}{n-k}}{\\binom{n}{n}}\\right)-1\\right] \\\\\n& =\\frac{1}{2}\\left(\\frac{2^{2 n}}{\\binom{2 n}{n}}-1\\right)\n\\end{aligned}\\]\n\nAdjusting for the factor of 2 we saved at the beginning, our final answer for \\(n=50\\) is \\(\\frac{2^{100}}{\\binom{100}{50}}-1\\).\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

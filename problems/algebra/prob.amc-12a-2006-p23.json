@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12a-2006-p23",
+  "title": "2006 AMC 12A Problem 23",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.binomial-theorem",
+      "label": "Binomial theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2006,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 41.5,
+    "source": 2400,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Given a finite sequence \\(S = (a_1, a_2, \\ldots, a_n)\\) of \\(n\\) real numbers, let \\(A(S)\\) be the sequence \\[ \\small \\left(\\frac{a_1 + a_2}{2}, \\frac{a_2 + a_3}{2}, \\ldots, \\frac{a_{n-1} + a_n}{2}\\right) \\] of \\(n - 1\\) real numbers. Define \\(A^1(S) = A(S)\\) and, for each integer \\(m,\\) \\(2 \\le m \\le n - 1,\\) define \\(A^m(S) = A(A^{m-1}(S)).\\) Suppose \\(x \\gt 0,\\) and let \\(S = (1, x, x^2, \\ldots, x^{100}).\\) If \\(A^{100}(S) = (\\frac{1}{2^{50}}),\\) then what is \\(x?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1 - \\dfrac{\\sqrt{2}}{2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\sqrt{2} - 1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2 - \\sqrt{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{\\sqrt{2}}{2}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2006-p23.live",
+      "kind": "proof-sketch",
+      "text": "Each application of \\(A\\) averages adjacent terms, so after \\(100\\) steps the single remaining term is \\[ \\begin{gathered} \\frac{1}{2^{100}} \\sum_{m=0}^{100} \\binom{100}{m} x^m \\\\ = \\frac{(1 + x)^{100}}{2^{100}}. \\end{gathered} \\]\n\nSetting this equal to \\(\\dfrac{1}{2^{50}}\\) gives \\((1 + x)^{100} = 2^{50},\\) so \\(1 + x = 2^{\\frac{1}{2}} = \\sqrt{2}.\\) Since \\(x \\gt 0,\\) we get \\(x = \\sqrt{2} - 1.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Applying \\(A\\) repeatedly introduces binomial coefficients; \\(A^{100}(S)\\) has a single term",
+        "That term is \\(\\dfrac{(1 + x)^{100}}{2^{100}}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

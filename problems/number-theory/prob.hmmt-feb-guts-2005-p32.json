@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2005-p32",
+  "title": "2005 HMMT February Guts Problem 32",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2005,
+    "number": 32
+  },
+  "difficulty": {
+    "course": 92.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a_{1}=3\\), and for \\(n \\geq 1\\), let \\(a_{n+1}=(n+1) a_{n}-n\\). Find the smallest \\(m \\geq 2005\\) such that \\(a_{m+1}-1 \\mid a_{m}^{2}-1\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2005-p32.hmmt",
+      "kind": "proof-sketch",
+      "text": "2010\nWe will show that \\(a_{n}=2 \\cdot n!+1\\) by induction. Indeed, the claim is obvious for \\(n=1\\), and \\((n+1)(2 \\cdot n!+1)-n=2 \\cdot(n+1)!+1\\). Then we wish to find \\(m \\geq 2005\\) such that \\(2(m+1)!\\mid 4(m!)^{2}+4 m!\\), or dividing by \\(2 \\cdot m!\\), we want \\(m+1 \\mid 2(m!+1)\\). Suppose \\(m+1\\) is composite. Then it has a proper divisor \\(d>2\\), and since \\(d \\mid m\\) !, we must have \\(d \\mid 2\\), which is impossible. Therefore, \\(m+1\\) must be prime, and if this is the case, then \\(m+1 \\mid m!+1\\) by Wilson's Theorem. Therefore, since the smallest prime greater than 2005 is 2011, the smallest possible value of \\(m\\) is 2010 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

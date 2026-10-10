@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-team-1-2006-p1",
+  "title": "2006 HMMT February Team Round 1 Problem 1",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2006,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 83.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For this problem, our lawn consists of a row of \\(n\\) clumps of grass. This row runs in an east-west direction. In our formation, each mobot may be oriented toward the north, south, east, or west. One example of an allowable formation if \\(n=6\\) is symbolized below:\n\n\\[\\cdot \\quad \\longleftarrow \\uparrow^{\\downarrow}\\]\n\n(The mobot on the third clump will move westward, mowing the first three clumps. Each of the last three clumps is mowed by a different mobot.) Here's another allowable formation for \\(n=6\\), considered different from the first:\n\nCompute the number of different allowable formations for any given \\(n\\).\n\n[Diagram omitted from this imported transcription; consult the HMMT archive while reviewing the problem.]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1-2006-p1.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(a\\) be the number of clumps mowed by a mobot oriented to go west, and let \\(b\\) be the number of clumps mowed by a mobot oriented to go east. (So in the two examples given, \\((a, b)\\) would be \\((3,0)\\) and \\((3,1)\\), respectively.) We may ask how many allowable formations with a given ordered pair \\((a, b)\\) there are, and then sum our answers up over all possible ordered pairs \\((a, b)\\).\n\nGiven any particular \\((a, b)\\), first of all, \\(a\\) and \\(b\\) had better be non-negative integers summing to at most \\(n\\). As long as that's true, there will be \\(n-a-b\\) clumps of grass which are each mowed by a single mobot oriented to go either north or south: there\nare thus \\(2^{n-a-b}\\) possibilities. So our answer is\n\n\\[\\begin{aligned}\n& \\sum_{a=0}^{n} \\sum_{b=0}^{n-a} 2^{n-a-b}=\\sum_{a=0}^{n}\\left(2^{n-a}+2^{n-a-1}+\\cdots+2^{0}\\right)=\\sum_{a=0}^{n}\\left(2^{n-a+1}-1\\right) \\\\\n& =-(n+1)+\\sum_{a=0}^{n} 2^{n-a+1}=-(n+1)+\\left(2^{n+1}+2^{n}+2^{n-1}+\\cdots+2^{1}\\right) \\\\\n& =-(n+1)+\\left(2^{n+2}-2\\right)=2^{n+2}-n-3 .\n\\end{aligned}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

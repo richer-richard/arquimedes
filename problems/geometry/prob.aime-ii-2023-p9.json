@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2023-p9",
+  "title": "2023 AIME II Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.power-of-a-point",
+      "label": "Power of a point",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.radical-axis",
+      "label": "Radical axis",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2023,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 59.8,
+    "source": 2920,
+    "mohs": null
+  },
+  "estimatedMinutes": 12,
+  "statement": "Circles \\(\\omega_1\\) and \\(\\omega_2\\) intersect at two points \\(P\\) and \\(Q,\\) and their common tangent line closer to \\(P\\) intersects \\(\\omega_1\\) and \\(\\omega_2\\) at points \\(A\\) and \\(B,\\) respectively. The line parallel to \\(\\overline{AB}\\) that passes through \\(P\\) intersects \\(\\omega_1\\) and \\(\\omega_2\\) for the second time at points \\(X\\) and \\(Y,\\) respectively. Suppose \\(PX = 10,\\) \\(PY = 14,\\) and \\(PQ = 5.\\) Then the area of trapezoid \\(XABY\\) is \\(m\\sqrt{n},\\) where \\(m\\) and \\(n\\) are positive integers and \\(n\\) is not divisible by the square of any prime. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "33",
+    "value": "33"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2023-p9.live",
+      "kind": "proof-sketch",
+      "text": "Since the tangent to \\(\\omega_1\\) at \\(A\\) is parallel to the chord \\(XP,\\) the point \\(A\\) is the midpoint of arc \\(XP,\\) so the perpendicular from \\(A\\) to line \\(XY\\) lands at the midpoint of \\(\\overline{XP};\\) similarly the perpendicular from \\(B\\) lands at the midpoint of \\(\\overline{PY}.\\) As \\(X\\) and \\(Y\\) are on opposite sides of \\(P,\\) the parallel sides of the trapezoid are \\(XY = 10 + 14 = 24\\) and \\(AB = \\frac{10}{2} + \\frac{14}{2} = 12.\\)\n\nLine \\(PQ\\) is the radical axis, so its intersection \\(M\\) with the tangent line satisfies \\(MA^2 = MP \\cdot MQ = MB^2:\\) \\(M\\) is the midpoint of \\(\\overline{AB},\\) and with \\(MA = 6\\) and \\(MQ = MP + 5,\\) \\[ \\begin{gathered} 36 = MP(MP + 5), \\\\ MP = 4. \\end{gathered} \\]\n\nSet up coordinates along \\(AB:\\) the feet of \\(A\\) and \\(B\\) are the midpoints of \\(XP\\) and \\(PY,\\) so \\(P\\) lies \\(5\\) units from the first foot, while the distance from \\(M\\) to \\(A\\) is \\(6.\\) Hence the horizontal offset between \\(M\\) and \\(P\\) is \\(6 - 5 = 1,\\) and the height \\(h\\) of the trapezoid satisfies \\(h^2 = MP^2 - 1 = 15.\\) The area is \\[\\frac{24 + 12}{2}\\sqrt{15} = 18\\sqrt{15},\\] so \\(m + n = 18 + 15 = 33.\\)",
+      "hints": [
+        "The tangent at \\(A\\) is parallel to chord \\(XP,\\) so the foot of the perpendicular from \\(A\\) to line \\(XY\\) is the midpoint of \\(XP;\\) the same holds at \\(B\\)",
+        "Line \\(QP\\) meets \\(AB\\) at its midpoint \\(M,\\) and \\(MA^2 = MP(MP + 5)\\) determines \\(MP,\\) hence the height of the trapezoid"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

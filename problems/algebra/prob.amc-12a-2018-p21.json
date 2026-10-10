@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2018-p21",
+  "title": "2018 AMC 12A Problem 21",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequality",
+      "label": "Inequality",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2018,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 41.6,
+    "source": 2210,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Which of the following polynomials has the greatest real root?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(x^{19} + 2018x^{11} + 1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(x^{17} + 2018x^{11} + 1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(x^{19} + 2018x^{13} + 1\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(x^{17} + 2018x^{13} + 1\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2019x + 2018\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2018-p21.live",
+      "kind": "proof-sketch",
+      "text": "Each polynomial in choices A–D has no positive root and exactly one negative root, which lies in \\((-1, 0)\\) (it is positive at \\(0\\) and negative at \\(-1\\)) and is increasing there. On the interval \\((-1, 0),\\) \\(x^{19} \\gt x^{17}\\) and \\(x^{13} \\gt x^{11}.\\) Thus each of A, C, and D has a larger value than B at every point of this interval, so each crosses \\(0\\) to the left of B. Therefore B has the greatest root among A–D.\n\nThe linear choice E has root \\(e=-\\tfrac{2018}{2019}.\\) Since \\(\\tfrac{2018}{2019}\\gt\\tfrac9{10},\\) we have \\(e^{17}+2018e^{11}+1\\) \\(\\lt-2018\\left(\\tfrac9{10}\\right)^{11}+1\\) \\(\\lt0.\\) Because B is increasing and is negative at \\(e,\\) its root lies to the right of E’s. Hence B has the greatest real root.\n\nThus, the correct answer is B.",
+      "hints": [
+        "By Descartes’ Rule of Signs each polynomial has exactly one real root, and it lies in \\((-1, 0)\\)",
+        "On \\((-1, 0)\\) a polynomial with larger values has a smaller root; note \\(x^{19} \\gt x^{17}\\) and \\(x^{13} \\gt x^{11}\\) there"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

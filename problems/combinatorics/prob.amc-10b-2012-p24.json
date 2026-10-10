@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2012-p24",
+  "title": "2012 AMC 10B Problem 24",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-counting",
+      "label": "Basic counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2012,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 30.8,
+    "source": 2100,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Amy, Beth, and Jo listen to four different songs and discuss which ones they like. No song is liked by all three. Furthermore, for each of the three pairs of the girls, there is at least one song liked by those two girls but disliked by the third. In how many different ways is this possible?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 108 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 132 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 671 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 846 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 1105 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "132"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2012-p24.live",
+      "kind": "proof-sketch",
+      "text": "There are two cases: Each pair has exactly one liked song in common, or some pair has \\(2\\) liked songs in common. This is because each pair must have at least \\(1\\) liked song in common, and any more pairs than in the cases would result in \\(5\\) songs.\n\nCase \\(1:\\) Each pair has exactly one liked song in common\n\nThere are \\(4\\) ways to choose the song that one pair likes, \\(3\\) ways to choose the song that the second pair likes, and \\(2\\) ways to choose the song the third pair likes if we choose some order for them. Then, for the last song, one of them could like it which has \\(3\\) cases or none of them likes it which is another case. Thus, the number of solutions in this case is \\[4\\cdot 3\\cdot 2\\cdot (3+1)=96.\\]\n\nCase \\(2:\\) Some pair has \\(2\\) liked songs in common\n\nThere are \\(3\\) ways to choose the pair that has \\(2\\) liked songs in common. Then, there are \\(\\binom 42 = 6\\) ways to choose which two songs they like. Finally, there are \\(2! =2 \\) ways to assign the two remaining songs to the other two pairs. Thus, the number of solutions in this case is \\[3\\cdot 6\\cdot 2=36\\]\n\nThe total amount is then \\(96+36 = 132.\\)\n\nThus, the correct answer is B .",
+      "hints": [
+        "Case on whether one pair of girls shares two songs",
+        "The fourth song in the first case can be liked by one girl or by none"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

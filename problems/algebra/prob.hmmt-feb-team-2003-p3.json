@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-team-2003-p3",
+  "title": "2003 HMMT February Team Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recurrences",
+      "label": "Recurrences",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2003,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 80.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "(a) Let \\(A_{n}=\\left\\{a_{1}, a_{2}, a_{3}, \\ldots, a_{n}, b\\right\\}\\), for \\(n \\geq 3\\), and let \\(C_{n}\\) be the 2-configuration consisting of \\(\\left\\{a_{i}, a_{i+1}\\right\\}\\) for all \\(1 \\leq i \\leq n-1,\\left\\{a_{1}, a_{n}\\right\\}\\), and \\(\\left\\{a_{i}, b\\right\\}\\) for \\(1 \\leq i \\leq n\\). Let \\(S_{e}(n)\\) be the number of subsets of \\(C_{n}\\) that are consistent of order \\(e\\). Find \\(S_{e}(101)\\) for \\(e=1,2\\), and 3 .",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2003-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "For convenience, we assume the \\(a_{i}\\) are indexed modulo 101, so that \\(a_{i+1}=a_{1}\\) when \\(a_{i}=a_{101}\\).\n\nIn any consistent subset of \\(C_{101}\\) of order \\(1, b\\) must be paired with exactly one \\(a_{i}\\), say \\(a_{1}\\). Then, \\(a_{2}\\) cannot be paired with \\(a_{1}\\), so it must be paired with \\(a_{3}\\), and likewise we find we use the pairs \\(\\left\\{a_{4}, a_{5}\\right\\},\\left\\{a_{6}, a_{7}\\right\\}, \\ldots,\\left\\{a_{100}, a_{101}\\right\\}\\) - and this does give us a consistent subset of order 1. Similarly, pairing \\(b\\) with any other \\(a_{i}\\) would give us a unique extension to a consistent configuration of order 1 . Thus, we have one such 2-configuration for each \\(i\\), giving \\(S_{1}(101)=101\\) altogether.\n\nIn a consistent subset of order \\(2, b\\) must be paired with two other elements. Suppose one of them is \\(a_{i}\\). Then \\(a_{i}\\) is also paired with either \\(a_{i-1}\\) or \\(a_{i+1}\\), say \\(a_{i+1}\\). But then \\(a_{i-1}\\) needs to be paired up with two other elements, and \\(a_{i}\\) is not available, so it must be paired with \\(a_{i-2}\\) and \\(b\\). Now \\(b\\) has its two pairs determined, so nothing else can be paired with \\(b\\). Thus, for \\(j \\neq i-1, i\\), we have that \\(a_{j}\\) must be paired with \\(a_{j-1}\\) and \\(a_{j+1}\\). So our subset must be of the form\n\n\\[\\left\\{\\left\\{b, a_{i}\\right\\},\\left\\{a_{i}, a_{i+1}\\right\\},\\left\\{a_{i+1}, a_{i+2}\\right\\}, \\ldots,\\left\\{a_{101}, a_{1}\\right\\}, \\ldots,\\left\\{a_{i-2}, a_{i-1}\\right\\},\\left\\{a_{i-1}, b\\right\\}\\right\\}\\]\n\nfor some \\(i\\). On the other hand, for any \\(i=1, \\ldots, 101\\), this gives a subset meeting our requirements. So, we have 101 possibilities, and \\(S_{2}(101)=101\\).\n\nFinally, in a consistent subset of order 3 , each \\(a_{i}\\) must be paired with \\(a_{i-1}, a_{i+1}\\), and \\(b\\). But then \\(b\\) occurs in 101 pairs, not just 3 , so we have a contradiction. Thus, no such subset exists, so \\(S_{3}(101)=0\\).\n(b) Let \\(A=\\{V, W, X, Y, Z, v, w, x, y, z\\}\\). Find the number of subsets of the 2 configuration\n\n\\[\\begin{gathered}\n\\{\\{V, W\\},\\{W, X\\},\\{X, Y\\},\\{Y, Z\\},\\{Z, V\\},\\{v, x\\},\\{v, y\\},\\{w, y\\},\\{w, z\\},\\{x, z\\}, \\\\\n\\{V, v\\},\\{W, w\\},\\{X, x\\},\\{Y, y\\},\\{Z, z\\}\\}\n\\end{gathered}\\]\n\nthat are consistent of order 1.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

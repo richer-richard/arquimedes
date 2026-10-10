@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2009-p1",
+  "title": "2009 AMC 12B Problem 1",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.money",
+      "label": "Money",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.parity",
+      "label": "Parity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2009,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 5.9,
+    "source": 820,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Each morning of her five-day workweek, Jane bought either a \\(50\\)-cent muffin or a \\(75\\)-cent bagel. Her total cost for the week was a whole number of dollars. How many bagels did she buy?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2009-p1.live",
+      "kind": "proof-sketch",
+      "text": "With \\(b\\) bagels she buys \\(5 - b\\) muffins, costing \\(50(5-b) + 75b = 250 + 25b\\) cents. For a whole number of dollars this must be a multiple of \\(100.\\) Thus \\(25b\\equiv50\\pmod{100},\\) or \\(b\\equiv2\\pmod4.\\) Since \\(0\\le b\\le5,\\) only \\(b=2\\) works, giving \\(300\\) cents \\(= \\$3.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "She buys \\(5\\) items total, so muffins and bagels together number \\(5\\)",
+        "The total \\(50m + 75b\\) cents must be a multiple of \\(100;\\) reduce the cost modulo \\(100\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

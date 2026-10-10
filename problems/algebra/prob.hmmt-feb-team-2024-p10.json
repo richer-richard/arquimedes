@@ -1,0 +1,84 @@
+{
+  "id": "prob.hmmt-feb-team-2024-p10",
+  "title": "2024 HMMT February Team Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.greatest-common-divisors-gcd",
+      "label": "Greatest common divisors (gcd)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial-interpolation-newton-lagrange",
+      "label": "Polynomial interpolation: Newton, Lagrange",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.quadratic-fields",
+      "label": "Quadratic fields",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.quadratic-residues",
+      "label": "Quadratic residues",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.unique-factorization",
+      "label": "Unique factorization",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2024,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 91.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Across all polynomials \\(P\\) such that \\(P(n)\\) is an integer for all integers \\(n\\), determine, with proof, all possible values of \\(P(i)\\), where \\(i^{2}=-1\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2024-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "We claim the answer is every complex number \\(a+b i\\) where \\(a\\) and \\(b\\) are rationals whose simplified denominators are not multiples of any prime congruent to 1 modulo 4 . The proof consists of two main steps: proving that powers of \\(p \\equiv 1 \\bmod 4\\) can't appear in the denominator, and showing all possible values are attainable. We show three different methods of the former part.\n\n## Impossibility via elementary number theory\n\nWe first show that no other values are possible. Indeed, it is well known that any polynomial that maps \\(\\mathbb{Z}\\) into itself must be of the form \\(P(n)=\\sum_{k=0}^{m} a_{k}\\binom{n}{k}\\) for integers \\(a_{k}\\) and where we treat the binomials as formal polynomials. This may be proved via finite differences.\n\nIt is therefore sufficient to show that for any \\(k,\\binom{i}{k}\\) can be simplified to a fraction of the form \\(\\frac{a+b i}{c}\\), where \\(a, b, c\\) are integers and \\(c\\) is not divisible by any prime that is 1 modulo 4 . We have that\n\n\\[\\binom{i}{k}=\\frac{i \\cdot(i-1) \\cdot \\ldots \\cdot(i-(k-1))}{k \\cdot(k-1) \\cdot \\ldots \\cdot 1}\\]\n\nPick any prime \\(p\\) that is 1 modulo 4 . Since \\(p\\) is 1 modulo 4 , there exist distinct residue classes \\(x, y\\) modulo \\(p\\) so that \\(x^{2} \\equiv y^{2} \\equiv-1 \\bmod p\\). We will show that for every integer, \\(r \\leq k\\) divisible by \\(p\\) in the denominator, we can pair it with a disjoint set, \\(\\left\\{r_{x}, r_{y}\\right\\}\\), of two positive integers less than \\(k\\) in these two residue classes so that \\(\\left(i-r_{x}\\right)\\left(i-r_{y}\\right)\\) has real and complex parts divisible by the highest power of \\(p\\) dividing \\(r\\). Thus any factor of \\(p\\) that is 1 modulo 4 in the denominator, exists in the numerator as well, which suffices. Start with \\(u=1\\) and repeat the following process for increasing \\(u\\) until there is nothing left to do.\n\nFor every positive integer \\(j \\leq k\\) such that \\(p^{u} \\mid j\\), there exist unique \\(j_{x}^{\\prime}, j_{y}^{\\prime} \\in\\left[j-p^{u}, j\\right)\\) satisfying \\(j_{x}^{\\prime} \\equiv x \\bmod p, j_{y}^{\\prime} \\equiv y \\bmod p\\) and \\(p^{u} \\mid j_{x}^{\\prime 2}+1, j_{y}^{\\prime 2}+1\\). So pair \\(j\\) with the set \\(\\left\\{j_{x}^{\\prime}, j_{y}^{\\prime}\\right\\}\\), and pair its old partners if any to the old partners of \\(j_{x}^{\\prime}\\) and \\(j_{y}^{\\prime}\\).\n\nThe important feature of this assignment process is that we always have at step \\(u, p^{\\min \\left(u, v_{p}(r)\\right)} \\mid r_{x}+\\) \\(r_{y}, r_{x}^{2}+1, r_{y}^{2}+1\\). Thus at the end of the process, \\(\\left(i-r_{x}\\right)\\left(i-r_{y}\\right)=\\frac{1}{2}\\left(\\left(r_{x}+r_{y}\\right)^{2}-\\left(r_{x}^{2}+1\\right)-\\left(r_{y}^{2}+1\\right)\\right)-\\) \\(\\left(r_{x}+r_{y}\\right) i\\) has real and complex parts divisible by \\(p^{v_{p}(r)}\\) as claimed.\nImpossibility via Gaussian Integers\nWe work in the ring of Gaussian Integers \\(\\mathbb{Z}[i]=\\{a+b i: a, b \\in \\mathbb{Z}\\}\\), which is sitting inside number field \\(\\mathbb{Q}[i]=\\{a+b i: a, b \\in \\mathbb{Q}\\}\\). It's well-known that \\(\\mathbb{Z}[i]\\) is a unique factorization domain. For any Gaussian prime \\(\\pi\\), let \\(\\nu_{p i}(z)\\) denote the exponent of \\(\\pi\\) in the factorization of \\(z\\).\nLet \\(p \\equiv 1(\\bmod 4)\\) be a prime. It's well known that \\(p\\) splits into two Gaussian primes, \\(p=\\pi \\bar{\\pi}\\). Note that it suffices to show\n\n\\[\\nu_{\\pi}(i(i-1)(i-2) \\ldots(i-k+1)) \\geq \\nu_{\\pi}(k!)=\\left\\lfloor\\frac{k}{p}\\right\\rfloor+\\left\\lfloor\\frac{k}{p^{2}}\\right\\rfloor+\\ldots\\]\n\nbecause the similar statement for \\(\\bar{\\pi}\\) will follow. The key claim is the following:\nClaim. For any integer \\(t \\geq 1\\) and \\(n\\), at least one of numbers \\(i-n-1, i-n-2, \\ldots, i-n-p^{t}\\) is divisible by \\(\\pi^{t}\\).\n\nProof. First, we show that there exists integer \\(r\\) such that \\(\\pi^{t} \\mid i-r\\). To that end, by Hensel's lemma, there exists an integer \\(s\\) for which \\(p^{t} \\mid s^{2}+1\\). Thus,\n\n\\[\\pi^{t} \\bar{\\pi}^{t} \\mid(s-i)(s+i)\\]\n\nHowever, \\(\\operatorname{gcd}(s-i, s+i) \\mid 2\\), so \\(\\pi^{t}\\) must divide either \\(s-i\\) or \\(s+i\\). In particular, \\(r=s\\) or \\(r=-s\\) work.\nTo complete the problem, pick the unique \\(x \\in\\left\\{1,2, \\ldots, p^{t}\\right\\}\\) such that \\(n+x \\equiv r(\\bmod p)^{t}\\), so \\(i-(n+x) \\equiv\\) \\(i-r\\left(\\bmod p^{t}\\right)\\) and hence divisible by \\(\\pi^{t}\\).\n\nUsing the claim repeatedly, we find that among numbers \\(i, i-1, i-2, \\ldots, i-k+1\\),\n\n- at least \\(\\left\\lfloor\\frac{k}{p}\\right\\rfloor\\) are divisible by \\(\\pi\\) (this is by selecting \\(\\left\\lfloor\\frac{k}{p}\\right\\rfloor\\) disjoint contiguous block of size \\(p\\) ),\n- at least \\(\\left\\lfloor\\frac{k}{p^{2}}\\right\\rfloor\\) are divisible by \\(\\pi^{2}\\),\n- at least \\(\\left\\lfloor\\frac{k}{p^{3}}\\right\\rfloor\\) are divisible by \\(\\pi^{3}\\),\n- \\(\\quad \\vdots\\)\n\nUsing these altogether suffices to prove (*).\n\n## Impossibility via \\(\\boldsymbol{p}\\)-adics\n\nLet \\(P(i)=a+b i\\), and note that \\(P(-i)=a-b i\\). Fix some \\(p \\equiv 1 \\bmod 4\\), and consider the \\(p\\)-adic integers \\(\\mathbb{Z}_{p}\\) lying in \\(\\mathbb{Q}_{p}\\). Note that \\(x^{2}+1=0\\) has a solution in \\(\\mathbb{Z}_{p}\\), and hence \\(\\pm i \\in \\mathbb{Z}_{p}\\). Now take a sequence of integers \\(m_{k}\\) converging to \\(i\\) in \\(\\mathbb{Z}_{p}\\), so \\(-m_{k}\\) converges to \\(-i\\). Then since polynomials are continuous, \\(P\\left(m_{k}\\right)\\) converges to \\(P(i)\\) and \\(P\\left(-m_{k}\\right)\\) converges to \\(P(-i)\\), so \\(P\\left(m_{k}\\right)+P\\left(-m_{k}\\right)\\) and \\(P\\left(m_{k}\\right)-P\\left(-m_{k}\\right)\\) converge to \\(2 x\\) and \\(2 y i\\) respectively. Finally, since \\(P\\left(m_{k}\\right)\\) and \\(P\\left(-m_{k}\\right)\\) are integers, they have nonnegative \\(p\\)-adic valuation, and so by continuity, \\(2 x\\) and \\(2 y\\) have nonegative \\(p\\)-adic valuation. Thus, when written as simplified fractions, \\(a\\) and \\(b\\) cannot have any powers of \\(p\\) in their denominator, as desired.\n\n## Construction\n\nWe now show that all of the claimed values are possible. The set of polynomials, \\(P\\), taking \\(\\mathbb{Z}\\) to itself is closed under addition and multiplication, and therefore so is the set of possible values of \\(P(i)\\). It clearly contains \\(\\mathbb{Z}[i]\\) by taking linear polynomials. Thus it suffices to show that \\(p^{-1}\\) is attainable for every prime \\(p\\) that is not 1 modulo 4. \\(2^{-1}\\) is achieved by taking \\(P(x)=\\frac{1}{4} x(x-1)(x-2)(x-3)+3\\), so we may\nfocus our attention only on the case where \\(p\\) is 3 modulo 4 . It is then further sufficient to show that some \\((a+b i) p^{-1}\\) is attainable for \\(a, b \\in \\mathbb{Z}\\) not both divisible by \\(p\\) because then \\((a-b i) \\cdot(a+b i) p^{-1}=\\left(a^{2}+b^{2}\\right) p^{-1}\\) is also obtainable and cannot be an integer since -1 is not a quadratic residue modulo \\(p\\), so Bézout's Theorem shows that \\(p^{-1}\\) is attainable. Now with this goal in mind, observe that\n\n\\[\\left|\\binom{i}{p}\\right|=\\frac{1^{2} \\cdot\\left(1^{2}+1^{2}\\right) \\cdot \\ldots \\cdot\\left(1^{2}+(p-1)^{2}\\right)}{p \\cdot(2 p-1) \\cdot \\ldots \\cdot 1}\\]\n\nhas denominator divisible by \\(p\\), but numerator not divisible by \\(p\\) since again, -1 is not a quadratic residue modulo \\(p\\). Hence we can find some integer \\(m\\) so that \\(m\\binom{i}{p}=(a+b i) p^{-1}\\) where \\(a\\) and \\(b\\) that aren't both divisible by \\(p\\) as desired.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

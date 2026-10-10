@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2007-p17",
+  "title": "2007 HMMT February Guts Problem 17",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2007,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 73.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "During the regular season, Washington Redskins achieve a record of 10 wins and 6 losses. Compute the probability that their wins came in three streaks of consecutive wins, assuming that all possible arrangements of wins and losses are equally likely. (For example, the record LLWWWWWLWWLWWWLL contains three winning streaks, while WWWWWWWLLLLLLWWW has just two.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2007-p17.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\( \\frac{45}{286} \\). Suppose the winning streaks consist of \\( w_1, w_2, \\) and \\( w_3 \\) wins, in chronological order, where the first winning streak is preceded by \\(l_{0}\\) consecutive losses and the \\(i\\) winning streak is immediately succeeded by \\(l_{i}\\) losses. Then \\(w_{1}, w_{2}, w_{3}, l_{1}, l_{2}>0\\) are positive and \\(l_{0}, l_{3} \\geq 0\\) are nonnegative. The equations\n\n\\[w_{1}+w_{2}+w_{3}=10 \\quad \\text { and } \\quad\\left(l_{0}+1\\right)+l_{1}+l_{2}+\\left(l_{3}+1\\right)=8\\]\n\nare independent, and have \\(\\binom{9}{2}\\) and \\(\\binom{7}{3}\\) solutions, respectively. It follows that the answer is\n\n\\[\\frac{\\binom{9}{2}\\binom{7}{3}}{\\binom{16}{6}}=\\frac{315}{2002}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

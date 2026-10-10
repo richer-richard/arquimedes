@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1982-p9",
+  "title": "1982 AHSME Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area",
+      "label": "Area",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1982,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 26.7,
+    "source": 1630,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A vertical line divides the triangle with vertices \\((0,0),\\) \\((1,1)\\) and \\((9,1)\\) in the \\(xy\\)-plane into two regions of equal area. The equation of the line is \\(x=\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2.5\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3.0\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3.5\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4.0\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4.5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "3"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1982-p9.live",
+      "kind": "proof-sketch",
+      "text": "The triangle has area \\(4.\\) The portion with \\(0\\le x\\le1\\) has area \\[ \\int_0^1\\left(x-\\frac x9\\right)\\,dx=\\frac49. \\] For a cut \\(x=t\\ge1,\\) the area to its left is therefore \\(\\frac49+\\int_1^t(1-\\frac{x}{9})\\,dx.\\) Setting this equal to \\(2\\) gives \\(t-\\frac{t^2}{18}=\\frac{5}{2},\\) whose relevant solution is \\(t=3.\\)\n\nTherefore, the correct answer is B.",
+      "hints": [
+        "For \\(1\\le x\\le9,\\) the triangle lies between \\(y=\\frac{x}{9}\\) and \\(y=1\\)",
+        "Set the accumulated area to one half of the triangle’s total area"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

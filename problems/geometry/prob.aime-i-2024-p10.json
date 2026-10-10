@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2024-p10",
+  "title": "2024 AIME1 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.power-of-a-point",
+      "label": "Power of a point",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangent-line",
+      "label": "Tangent line",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2024,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 59.8,
+    "source": 2920,
+    "mohs": null
+  },
+  "estimatedMinutes": 12,
+  "statement": "Let \\(\\triangle ABC\\) have side lengths \\(AB = 5,\\) \\(BC = 9,\\) and \\(CA = 10.\\) The tangents to the circumcircle of \\(\\triangle ABC\\) at \\(B\\) and \\(C\\) intersect at point \\(D,\\) and \\(\\overline{AD}\\) intersects the circumcircle at \\(P \\ne A.\\) The length of \\(AP\\) is equal to \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "113",
+    "value": "113"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2024-p10.live",
+      "kind": "proof-sketch",
+      "text": "By the tangent-chord angle, \\(\\angle DBC = \\angle DCB = \\angle A,\\) so triangle \\(DBC\\) is isosceles with \\(DB = \\frac{\\frac{BC}{2}}{\\cos A}.\\) The law of cosines gives \\(\\cos A = \\frac{10^2 + 5^2 - 9^2}{2 \\cdot 10 \\cdot 5} = \\frac{11}{25}\\) and \\(\\cos B = \\frac{9^2 + 5^2 - 10^2}{2 \\cdot 9 \\cdot 5} = \\frac{1}{15},\\) so \\(DB = \\frac{\\frac{9}{2}}{\\frac{11}{25}} = \\frac{225}{22}.\\)\n\nSince \\(D\\) lies on the opposite side of \\(BC\\) from \\(A,\\) \\(\\angle ABD = A + B,\\) and \\[ \\begin{aligned} &\\cos(A + B) \\\\ &= \\frac{11}{25} \\cdot \\frac{1}{15} \\\\ &\\quad {}- \\frac{6\\sqrt{14}}{25} \\cdot \\frac{4\\sqrt{14}}{15} \\\\ &= \\frac{11 - 336}{375} \\\\ &= -\\frac{13}{15}. \\end{aligned} \\] The law of cosines in triangle \\(ABD\\) then gives \\[ \\begin{aligned} &DA^2 = 5^2 + \\left(\\tfrac{225}{22}\\right)^2 \\\\ &\\quad {}+ 2 \\cdot 5 \\cdot \\tfrac{225}{22} \\cdot \\tfrac{13}{15} \\\\ &= \\frac{105625}{484}, \\end{aligned} \\] \\[ DA = \\frac{325}{22}. \\]\n\nThe power of \\(D\\) gives \\(DP \\cdot DA = DB^2,\\) so \\[ \\begin{aligned} &AP = DA - \\frac{DB^2}{DA} \\\\ &= \\frac{DA^2 - DB^2}{DA} \\\\ &= \\frac{\\frac{105625 - 50625}{484}}{\\frac{325}{22}} \\\\ &= \\frac{55000}{22 \\cdot 325} \\\\ &= \\frac{100}{13}, \\end{aligned} \\] and \\(m + n = 100 + 13 = 113.\\)",
+      "hints": [
+        "By the tangent-chord angle, \\(\\angle DBC = \\angle DCB = \\angle A,\\) so \\(DB = \\frac{\\frac{BC}{2}}{\\cos A}\\)",
+        "Power of the point gives \\(DP \\cdot DA = DB^2,\\) so \\(AP = DA - \\frac{DB^2}{DA};\\) compute \\(DA\\) from the law of cosines in triangle \\(ABD\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

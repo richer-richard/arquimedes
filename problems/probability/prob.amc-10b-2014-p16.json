@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-2014-p16",
+  "title": "2014 AMC 10B Problem 16",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.dice-probability",
+      "label": "Dice (probability)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2014,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 23.3,
+    "source": 1420,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Four fair six-sided dice are rolled. What is the probability that at least three of the four dice show the same value?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( \\dfrac{1}{36} \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( \\dfrac{7}{72} \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( \\dfrac{1}{9} \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( \\dfrac{5}{36} \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( \\dfrac{1}{6} \\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "7/72"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2014-p16.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(6^4\\) equally likely ordered outcomes.\n\nIf exactly three dice show the same value, choose the repeated value in \\(6\\) ways, the different value in \\(5\\) ways, and the position of the different die in \\(4\\) ways. This gives \\(6\\cdot5\\cdot4=120\\) outcomes.\n\nIf all four dice match, there are \\(6\\) outcomes.\n\nThe probability is \\(\\frac{120+6}{6^4}=\\frac{126}{1296}=\\frac7{72}\\).\n\nThus, the correct answer is B .",
+      "hints": [
+        "Count exactly three equal dice and four equal dice separately",
+        "For exactly three equal dice, choose the odd die position"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

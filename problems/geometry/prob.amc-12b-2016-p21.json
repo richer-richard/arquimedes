@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2016-p21",
+  "title": "2016 AMC 12B Problem 21",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.telescoping",
+      "label": "Telescoping",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2016,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 35.8,
+    "source": 2210,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(ABCD\\) be a unit square. Let \\(Q_1\\) be the midpoint of \\(\\overline{CD}.\\) For \\(i=1,\\) \\(2,\\) \\(\\ldots,\\) let \\(P_i\\) be the intersection of \\(\\overline{AQ_i}\\) and \\(\\overline{BD},\\) and let \\(Q_{i+1}\\) be the foot of the perpendicular from \\(P_i\\) to \\(\\overline{CD}.\\) What is\n\n\\[ \\sum_{i=1}^{\\infty}\\text{Area of }\\triangle DQ_iP_i? \\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac16\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac14\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac13\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac12\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(1\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1/4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2016-p21.live",
+      "kind": "proof-sketch",
+      "text": "Place \\(D=(0,0),\\) \\(C=(1,0),\\) \\(B=(1,1),\\) \\(A=(0,1),\\) and let \\(q_i=DQ_i.\\) Intersecting line \\(AQ_i\\) with \\(\\overline{BD}\\) (the line \\(y=x\\)) gives \\(P_i\\) with both coordinates \\(\\dfrac{q_i}{1+q_i},\\) so \\(q_{i+1}=\\dfrac{q_i}{1+q_i}.\\) From \\(q_1=\\tfrac12\\) this yields \\(q_i=\\dfrac{1}{i+1}.\\) The base of \\(\\triangle DQ_iP_i\\) is \\(DQ_i=\\dfrac{1}{i+1}\\) and its height is the \\(y\\)-coordinate of \\(P_i,\\) which is \\(q_{i+1}=\\dfrac{1}{i+2}.\\) Then \\[ \\begin{gathered} \\text{Area of }\\triangle DQ_iP_i=\\tfrac12\\cdot\\dfrac{1}{i+1} \\\\ \\quad{}\\cdot\\dfrac{1}{i+2} \\\\ {}=\\tfrac12\\left(\\dfrac{1}{i+1}-\\dfrac{1}{i+2}\\right). \\end{gathered} \\] Summing telescopes to \\(\\tfrac12\\cdot\\tfrac12=\\tfrac14.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Similar triangles give the recursion \\(DQ_{i+1}=\\dfrac{DQ_i}{1+DQ_i},\\) and \\(DQ_1=\\tfrac12\\) leads to \\(DQ_i=\\dfrac{1}{i+1}\\)",
+        "The area of \\(\\triangle DQ_iP_i\\) is \\(\\tfrac12\\cdot\\dfrac{1}{i+1}\\) \\(\\cdot\\dfrac{1}{i+2}\\) \\(=\\tfrac12\\left(\\dfrac{1}{i+1}-\\dfrac{1}{i+2}\\right);\\) the sum telescopes"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

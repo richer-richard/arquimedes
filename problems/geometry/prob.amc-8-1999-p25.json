@@ -1,0 +1,81 @@
+{
+  "id": "prob.amc-8-1999-p25",
+  "title": "1999 AMC 8 Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1999,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 18.6,
+    "source": 1620,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Points \\(B,\\) \\(D,\\) and \\(J\\) are midpoints of the sides of right triangle \\(ACG.\\) Points \\(K,\\) \\(E,\\) \\(I\\) are midpoints of the sides of triangle \\(JDG,\\) etc. If the dividing and shading process is done \\(100\\) times (the first three are shown) and \\(AC = CG = 6,\\) then the total area of the shaded triangles is nearest",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(10\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1999-p25.live",
+      "kind": "proof-sketch",
+      "text": "The first shaded triangle has legs \\(3\\) and \\(3\\), so its area is \\(\\dfrac12\\cdot3\\cdot3=\\dfrac92\\).\n\nAt each later step, the relevant triangle has half the leg length, so the shaded area is multiplied by \\(\\left(\\dfrac12\\right)^2=\\dfrac14\\).\n\nThe total shaded area after many steps is therefore very close to the geometric sum \\[ \\begin{gathered} \\frac92\\left(1+\\frac14+\\frac1{16}+\\cdots\\right) \\\\ {}= \\frac92\\cdot\\frac1{1-\\frac{1}{4}} \\\\ {}= 6. \\end{gathered} \\]\n\nAfter \\(100\\) steps the omitted tail is tiny, so the total area is nearest \\(6\\).\n\nThus, A is the correct answer.",
+      "hints": [
+        "The shaded triangles form a geometric area pattern",
+        "Each new shaded triangle has one-fourth the previous shaded area"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "08adddad301030b5ee2b5de9e80338c0b9d34d181720fb1249522097103dce03"
+    ],
+    "solutions": []
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-feb-guts-2004-p41",
+  "title": "2004 HMMT February Guts Problem 41",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.solid-geometry",
+      "label": "Solid geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2004,
+    "number": 41
+  },
+  "difficulty": {
+    "course": 75.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A tetrahedron has all its faces triangles with sides \\(13,14,15\\). What is its volume?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2004-p41.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(42 \\sqrt{55}\\)\nLet \\(A B C\\) be a triangle with \\(A B=13, B C=14, C A=15\\). Let \\(A D, B E\\) be altitudes. Then \\(B D=5, C D=9\\). (If you don't already know this, it can be deduced from the Pythagorean Theorem: \\(C D^{2}-B D^{2}=\\left(C D^{2}+A D^{2}\\right)-\\left(B D^{2}+A D^{2}\\right)=A C^{2}-A B^{2}=56\\), while \\(C D+B D=B C=14\\), giving \\(C D-B D=56 / 14=4\\), and now solve the linear system.) Also, \\(A D=\\sqrt{A B^{2}-B D^{2}}=12\\). Similar reasoning gives \\(A E=33 / 5\\), \\(E C=42 / 5\\).\n\nNow let \\(F\\) be the point on \\(B C\\) such that \\(C F=B D=5\\), and let \\(G\\) be on \\(A C\\) such that \\(C G=A E=33 / 5\\). Imagine placing face \\(A B C\\) flat on the table, and letting \\(X\\) be a point in space with \\(C X=13, B X=14\\). By mentally rotating triangle \\(B C X\\)\nabout line \\(B C\\), we can see that \\(X\\) lies on the plane perpendicular to \\(B C\\) through \\(F\\). In particular, this holds if \\(X\\) is the fourth vertex of our tetrahedron \\(A B C X\\). Similarly, \\(X\\) lies on the plane perpendicular to \\(A C\\) through \\(G\\). Let the mutual intersection of these two planes and plane \\(A B C\\) be \\(H\\). Then \\(X H\\) is the altitude of the tetrahedron.\nTo find \\(X H\\), extend \\(F H\\) to meet \\(A C\\) at \\(I\\). Then \\(\\triangle C F I \\sim \\triangle C D A\\), a 3-4-5 triangle, so \\(F I=C F \\cdot 4 / 3=20 / 3\\), and \\(C I=C F \\cdot 5 / 3=25 / 3\\). Then \\(I G=C I-C G=26 / 15\\), and \\(H I=I G \\cdot 5 / 4=13 / 6\\). This leads to \\(H F=F I-H I=9 / 2\\), and finally \\(X H=\\sqrt{X F^{2}-H F^{2}}=\\sqrt{A D^{2}-H F^{2}}=3 \\sqrt{55} / 2\\).\nNow \\(X A B C\\) is a tetrahedron whose base \\(\\triangle A B C\\) has area \\(A D \\cdot B C / 2=12 \\cdot 14 / 2=84\\), and whose height \\(X H\\) is \\(3 \\sqrt{55} / 2\\), so its volume is \\((84)(3 \\sqrt{55} / 2) / 3=42 \\sqrt{55}\\).\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

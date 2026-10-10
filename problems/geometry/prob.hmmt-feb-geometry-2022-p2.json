@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-geometry-2022-p2",
+  "title": "2022 HMMT February Geometry Problem 2",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2022,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Rectangle \\(R_{0}\\) has sides of lengths 3 and 4. Rectangles \\(R_{1}, R_{2}\\), and \\(R_{3}\\) are formed such that:\n\n- all four rectangles share a common vertex \\(P\\),\n- for each \\(n=1,2,3\\), one side of \\(R_{n}\\) is a diagonal of \\(R_{n-1}\\),\n- for each \\(n=1,2,3\\), the opposite side of \\(R_{n}\\) passes through a vertex of \\(R_{n-1}\\) such that the center of \\(R_{n}\\) is located counterclockwise of the center of \\(R_{n-1}\\) with respect to \\(P\\).\n\nCompute the total area covered by the union of the four rectangles.\n\n[Diagram omitted from this imported transcription; consult the HMMT archive while reviewing the problem.]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "30",
+    "value": "30"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2022-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(A B C D\\) be \\(R_{0}\\) such that \\(\\overline{A B}=3\\) and \\(\\overline{B C}=4\\). Then, let \\(\\overline{A C}\\) be a side length of \\(R_{1}\\) and let the other two vertices be \\(E\\) and \\(F\\) such that \\(B\\) lies on segment \\(E F\\). Notice that the area of \\(\\triangle A B C\\) is both half of the area of \\(R_{0}\\) and half of the area of \\(R_{1}\\). This means forming \\(R_{1}\\) adds half of the area of \\(R_{0}\\) to the union of rectangles. Similarly, forming \\(R_{2}\\) adds half of the area of \\(R_{1}\\) to the union of all rectangles, and the same for \\(R_{3}\\). This means the total area of the union of rectangles is given by\n\n\\[\\left[R_{0}\\right]+\\frac{1}{2}\\left[R_{1}\\right]+\\frac{1}{2}\\left[R_{2}\\right]+\\frac{1}{2}\\left[R_{3}\\right]=\\left[R_{0}\\right]+\\frac{1}{2}\\left[R_{0}\\right]+\\frac{1}{2}\\left[R_{0}\\right]+\\frac{1}{2}\\left[R_{0}\\right]=\\frac{5}{2}\\left[R_{0}\\right]=\\frac{5}{2}(3 \\cdot 4)=30\\]\n\nNote that in the above equation, \\([X]\\) denotes the area of shape \\(X\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

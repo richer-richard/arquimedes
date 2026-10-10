@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2009-p26",
+  "title": "2009 HMMT February Guts Problem 26",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2009,
+    "number": 26
+  },
+  "difficulty": {
+    "course": 84.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Define the sequence \\(\\left\\{x_{i}\\right\\}_{i \\geq 0}\\) by \\(x_{0}=2009\\) and \\(x_{n}=-\\frac{2009}{n} \\sum_{k=0}^{n-1} x_{k}\\) for all \\(n \\geq 1\\). Compute the value of \\(\\sum_{n=0}^{2009} 2^{n} x_{n}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2009-p26.hmmt",
+      "kind": "proof-sketch",
+      "text": "We have\n\n\\[-\\frac{n x_{n}}{2009}=x_{n-1}+x_{n-2}+\\ldots+x_{0}=x_{n-1}+\\frac{(n-1) x_{n-1}}{2009}\\]\n\n, which yields the recursion \\(x_{n}=\\frac{n-2010}{n} x_{n-1}\\). Unwinding this recursion, we find \\(x_{n}=(-1)^{n} \\cdot 2009\\). \\(\\binom{2008}{n}\\). Thus\n\n\\[\\begin{aligned}\n\\sum_{k=0}^{2009} 2^{n} x_{n} & =\\sum_{k=0}^{2009}(-2)^{n} \\cdot 2009 \\cdot\\binom{2008}{n} \\\\\n& =2009 \\sum_{k=0}^{2008}(-2)^{n}\\binom{2008}{n} \\\\\n& =2009(-2+1)^{2008}\n\\end{aligned}\\]\n\nas desired.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

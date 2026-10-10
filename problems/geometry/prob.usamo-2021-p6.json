@@ -1,0 +1,75 @@
+{
+  "id": "prob.usamo-2021-p6",
+  "title": "2021 USAMO Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.radical-axis-theorem",
+      "label": "Radical axis theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-centers",
+      "label": "Triangle centers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vectors",
+      "label": "Vectors",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2021,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 110.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(ABCDEF\\) be a convex hexagon satisfying \\(\\overline{AB} \\parallel \\overline{DE}\\), \\(\\overline{BC} \\parallel \\overline{EF}\\), \\(\\overline{CD} \\parallel \\overline{FA}\\), and\n\n\\[\nAB \\cdot DE = BC \\cdot EF = CD \\cdot FA.\n\\]\n\nLet \\(X\\), \\(Y\\), and \\(Z\\) be the midpoints of \\(\\overline{AD}\\), \\(\\overline{BE}\\), and \\(\\overline{CF}\\). Prove that the circumcenter of \\(\\triangle ACE\\), the circumcenter of \\(\\triangle BDF\\), and the orthocenter of \\(\\triangle XYZ\\) are collinear.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2021-p6.imported",
+      "kind": "proof-sketch",
+      "text": "Let $M_1$, $M_2$, and $M_3$ be the midpoints of $CE$, $AE$, $AC$ and $N_1$, $N_2$, and $N_3$ be the midpoints of $DF$, $BF$, and $BD$. Also, let $H$ be the orthocenter of $XYZ$. Note that we can use parallel sides to see that $X$, $Z$, and $M_3$ are collinear. Thus we have \\[\\text{Pow}(M_3,(XYZ)) = M_3Z \\cdot M_3X = \\frac 14 AB \\cdot DE\\] by midlines. Applying this argument cyclically, and noting the condition $AB \\cdot DE = BC \\cdot EF = CD \\cdot FA$, $M_1$, $M_2$, $M_3$, $N_1$, $N_2$, $N_3$ all lie on a circle concentric with $(XYZ)$.\nNext, realize that basic orthocenter properties imply that the circumcenter $O_1$ of $(ACE)$ is the orthocenter of $\\triangle M_1M_2M_3$, and likewise the circumcenter $O_2$ of $(BDF)$ is the orthocenter of $\\triangle N_1N_2N_3$.\nThe rest is just complex numbers; toss on the complex plane so that the circumcenter of $\\triangle XYZ$ is the origin. Then we have \\[o_1 = m_1+m_2+m_3 = (c+e)/2+(a+e)/2+(a+c)/2=a+c+e\\] \\[o_2 = n_1+n_2+n_3 = (b+d)/2+(d+f)/2+(b+f)/2=b+d+f\\] \\[h = x+y+z = (a+d)/2+(b+e)/2+(c+f)/2=(a+b+c+d+e+f)/2.\\]\nNote that from the above we have $h=\\frac{o_1+o_2}{2}$, so $H$ is the midpoint of segment $O_1O_2$. In particular, $H$, $O_1$, and $O_2$ are collinear, as required.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

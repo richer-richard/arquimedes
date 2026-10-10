@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-algebra-calculus-2011-p8",
+  "title": "2011 HMMT February Algebra and Calculus Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find all integers \\(x\\) such that \\(2 x^{2}+x-6\\) is a positive integral power of a prime positive integer.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-calculus-2011-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(-3,2,5\\) Let \\(f(x)=2 x^{2}+x-6=(2 x-3)(x+2)\\). Suppose a positive integer \\(a\\) divides both \\(2 x-3\\) and \\(x+2\\). Then \\(a\\) must also divide \\(2(x+2)-(2 x-3)=7\\). Hence, \\(a\\) can either be 1 or 7. As a result, \\(2 x-3=7^{n}\\) or \\(-7^{n}\\) for some positive integer \\(n\\), or either \\(x+2\\) or \\(2 x-3\\) is \\(\\pm 1\\). We consider the following cases:\n\n- \\((2 x-3)=1\\). Then \\(x=2\\), which yields \\(f(x)=4\\), a prime power.\n- \\((2 x-3)=-1\\). Then \\(x=1\\), which yields \\(f(x)=-3\\), not a prime power.\n- \\((x+2)=1)\\). Then \\(x=-1\\), which yields \\(f(x)=-5\\) not a prime power.\n- \\((x+2)=-1\\). Then \\(x=-3\\), which yields \\(f(x)=9\\), a prime power.\n- \\((2 x-3)=7\\). Then \\(x=5\\), which yields \\(f(x)=49\\), a prime power.\n- \\((2 x-3)=-7\\). Then \\(x=-2\\), which yields \\(f(x)=0\\), not a prime power.\n- \\((2 x-3)= \\pm 7^{n}\\), for \\(n \\geq 2\\). Then, since \\(x+2=\\frac{(2 x-3)+7}{2}\\), we have that \\(x+2\\) is divisible by 7 but not by 49. Hence \\(x+2= \\pm 7\\), yielding \\(x=5,-9\\). The former has already been considered, while the latter yields \\(f(x)=147\\).\n\nSo \\(x\\) can be either \\(-3,2\\) or 5 .\n(Note: In the official solutions packet we did not list the answer - 3 . This oversight was quickly noticed on the day of the test, and only the answer \\(-3,2,5\\) was marked as correct.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

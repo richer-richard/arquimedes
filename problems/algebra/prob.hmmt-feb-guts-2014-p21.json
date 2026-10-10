@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2014-p21",
+  "title": "2014 HMMT February Guts Problem 21",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2014,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 75.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the number of ordered quintuples of nonnegative integers ( \\(a_{1}, a_{2}, a_{3}, a_{4}, a_{5}\\) ) such that \\(0 \\leq a_{1}, a_{2}, a_{3}, a_{4}, a_{5} \\leq 7\\) and 5 divides \\(2^{a_{1}}+2^{a_{2}}+2^{a_{3}}+2^{a_{4}}+2^{a_{5}}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2014-p21.hmmt",
+      "kind": "proof-sketch",
+      "text": "6528 Let \\(f(n)\\) denote the number of \\(n\\)-tuples \\(\\left(a_{1}, \\ldots, a_{n}\\right)\\) such that \\(0 \\leq a_{1}, \\ldots, a_{n} \\leq 7\\) and \\(5 \\mid 2^{a_{1}}+\\ldots+2^{a_{n}}\\). To compute \\(f(n+1)\\) from \\(f(n)\\), we note that given any \\(n\\)-tuple \\(\\left(a_{1}, \\ldots, a_{n}\\right)\\) such that \\(0 \\leq a_{1}, \\ldots, a_{n} \\leq 7\\) and \\(5 \\nmid 2^{a_{1}}+\\ldots+2^{a_{n}}\\), there are exactly two possible values for \\(a_{n+1}\\) such that \\(0 \\leq a_{n+1} \\leq 7\\) and \\(5 \\mid 2^{a_{1}}+\\ldots+2^{a_{n+1}}\\), because \\(2^{n} \\equiv 1,2,4,3,1,2,4,3(\\bmod 5)\\) for \\(n=0,1,2,3,4,5,6,7\\) respectively.\n\nAlso, given any valid \\((n+1)\\)-tuple \\(\\left(a_{1}, \\ldots, a_{n+1}\\right)\\), we can remove \\(a_{n+1}\\) to get an \\(n\\)-tuple \\(\\left(a_{1}, \\ldots, a_{n}\\right)\\) such that \\(0 \\leq a_{1}, \\ldots, a_{n} \\leq 7\\) and \\(5 \\nmid 2^{a_{1}}+\\ldots+2^{a_{n}}\\), so these are in bijection. There are a total of \\(8^{n}\\) \\(n\\)-tuples, \\(f(n)\\) of which satisfy \\(5 \\mid 2^{a_{1}}+\\ldots+2^{a_{n}}\\), so there are \\(8^{n}-f(n)\\) for which \\(5 \\nmid 2^{a_{1}}+\\ldots+2^{a_{n}}\\). Therefore, \\(f(n+1)=2\\left(8^{n}-f(n)\\right)\\).\nWe now have \\(f(1)=0, f(2)=2(8-0)=16, f(3)=2(64-16)=96, f(4)=2(512-96)=832\\), \\(f(5)=2(4096-832)=6528\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

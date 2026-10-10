@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-nov-theme-2024-p10",
+  "title": "2024 HMMT November Theme Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2024,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 57.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Isabella the geologist discovers a diamond deep underground via an X-ray machine. The diamond has the shape of a convex cyclic pentagon \\(P A B C D\\) with \\(A D \\| B C\\). Soon after the discovery, her X-ray breaks, and she only recovers partial information about its dimensions. She knows that \\(A D=70\\), \\(B C=55, P A: P D=3: 4\\), and \\(P B: P C=5: 6\\). Compute \\(P B\\).\n\n[Diagram omitted from this imported transcription; consult the HMMT archive while reviewing the problem.]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "25 \\sqrt{6}",
+    "value": "25 \\sqrt{6}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2024-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(A B=C D=a, A C=B D=b, \\frac{A P}{3}=\\frac{D P}{4}=x\\), and \\(\\frac{B P}{5}=\\frac{C P}{6}=y\\). Applying Ptolemy's theorem for the quadrilaterals \\(A B C P, B C D P\\), and \\(A B C D\\) yields:\n\n\\[\\begin{aligned}\nb \\cdot 5 y & =55 \\cdot 3 x+a \\cdot 6 y \\\\\nb \\cdot 6 y & =55 \\cdot 4 x+a \\cdot 5 y \\\\\nb^{2} & =55 \\cdot 70+a^{2}\n\\end{aligned}\\]\n\nEquating the left-hand sides of (1) and (2) leads to\n\n\\[6 \\cdot(165 x+6 a y)=5 \\cdot(220 x+5 a y) \\Longrightarrow 110 x=11 a y \\Longrightarrow 10 x=a y\\]\n\nSubstituting \\(220 x=22 a y\\) into (2) implies \\(27 a y=6 b y\\), or \\(b=\\frac{9}{2} a\\). Plugging this into (3), we find \\(a^{2}=200\\), so \\(a=10 \\sqrt{2}\\), and therefore \\(b=45 \\sqrt{2}\\). Furthermore, \\(x=y \\sqrt{2}\\) after replacing \\(a\\) with \\(10 \\sqrt{2}\\) in (4). We now apply Law of Cosines for \\(\\triangle A B C\\) and \\(\\triangle A P C\\) :\n\n\\[\\begin{aligned}\n55^{2}+(10 \\sqrt{2})^{2}-2 \\cdot(10 \\sqrt{2}) \\cdot 55 \\cos \\theta & =(45 \\sqrt{2})^{2} \\\\\n(3 \\sqrt{2} y)^{2}+(6 y)^{2}+2 \\cdot(3 \\sqrt{2} y) \\cdot(6 y) \\cos \\theta & =(45 \\sqrt{2})^{2}\n\\end{aligned}\\]\n\nwhere \\(\\theta=\\angle A B C\\). Solving (5) yields\n\n\\[\\cos \\theta=\\frac{55^{2}+(10 \\sqrt{2})^{2}-(45 \\sqrt{2})^{2}}{2 \\cdot(10 \\sqrt{2}) \\cdot 55}=-\\frac{3 \\sqrt{2}}{8}\\]\n\nPlugging this into (6), we can compute:\n\n\\[y^{2}=\\frac{(45 \\sqrt{2})^{2}}{(3 \\sqrt{2})^{2}+6^{2}-27}=\\frac{4050}{27}=150\\]\n\nTherefore, \\(B P=5 y=5 \\sqrt{150}=25 \\sqrt{6}\\).\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

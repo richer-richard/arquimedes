@@ -1,0 +1,56 @@
+{
+  "id": "prob.hmmt-feb-team-1-2011-p3",
+  "title": "2011 HMMT February Team Round 1 Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 83.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n\\) be a positive integer, and let \\(a_{1}, a_{2}, \\ldots, a_{n}\\) be a set of positive integers such that \\(a_{1}=2\\) and \\(a_{m}=\\varphi\\left(a_{m+1}\\right)\\) for all \\(1 \\leq m \\leq n-1\\), where, for all positive integers \\(k, \\varphi(k)\\) denotes the number of positive integers less than or equal to \\(k\\) that are relatively prime to \\(k\\). Prove that \\(a_{n} \\geq 2^{n-1}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1-2011-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "We first note that \\(\\varphi(s)<s\\) for all positive integers \\(s \\geq 2\\), so \\(a_{m}>2\\) for all \\(m>1\\).\nFor integers \\(s>2\\), let \\(A_{s}\\) be the set of all positive integers \\(x \\leq s\\) such that \\(\\operatorname{gcd}(s, x)=1\\). Since \\(\\operatorname{gcd}(s, x)=\\operatorname{gcd}(s, s-x)\\) for all \\(x\\), if \\(a\\) is a positive integer in \\(A_{s}\\), so is \\(s-a\\). Moreover, if \\(a\\) is in \\(A_{s}\\), \\(a\\) and \\(s-a\\) are different since \\(\\operatorname{gcd}\\left(s, \\frac{s}{2}\\right)=\\frac{s}{2}>1\\), meaning \\(\\frac{s}{2}\\) is not in \\(A_{s}\\). Hence we may evenly pair\nup the elements of \\(A_{s}\\) that sum to \\(s\\), so \\(\\varphi(s)\\), the number of elements of \\(A_{s}\\), must be even. It follows that \\(a_{m}\\) is even for all \\(m \\leq n-1\\).\nIf \\(t>2\\) is even, \\(A_{t}\\) will not contain any even number, so \\(\\varphi(t) \\leq \\frac{t}{2}\\). We may conclude that \\(a_{m} \\geq 2 a_{m-1}\\) for all \\(m \\leq n-1\\), so \\(a_{n} \\geq a_{n-1} \\geq 2^{n-2} a_{1}=2^{n-1}\\), as desired.\nFinally, note that such a set exists for all \\(n\\) by letting \\(a_{i}=2^{i}\\) for all \\(i\\).\n\n## Complex Numbers [35]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

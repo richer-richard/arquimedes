@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2023-p2",
+  "title": "2023 AIME II Problem 2",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.palindrome",
+      "label": "Palindrome",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.systematic-listing",
+      "label": "Systematic listing",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2023,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 39.0,
+    "source": 2110,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Recall that a palindrome is a number that reads the same forward and backward. Find the greatest integer less than \\(1000\\) that is a palindrome both when written in base ten and when written in base eight, such as \\(292 = 444_8.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "585",
+    "value": "585"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2023-p2.live",
+      "kind": "proof-sketch",
+      "text": "A four-digit base-eight number lies between \\(512\\) and \\(4095,\\) so a base-eight palindrome less than \\(1000\\) with four digits must have leading (and trailing) digit \\(1:\\) it has the form \\(\\overline{1bb1}_8 = 512 + 64b\\) \\({}+ 8b + 1\\) \\(= 513 + 72b.\\) Keeping this below \\(1000\\) requires \\(b \\le 6,\\) giving the candidates \\(513, 585, 657, 729, 801, 873, 945.\\)\n\nChecking from the top, the only one of these that is also a palindrome in base ten is \\(585 = 1111_8.\\) Every base-eight palindrome with at most three digits is at most \\(777_8 = 511 \\lt 585,\\) so the answer is \\(585.\\)",
+      "hints": [
+        "Any base-eight palindrome between \\(512\\) and \\(999\\) has four base-eight digits and looks like \\(\\overline{1bb1}_8 = 513 + 72b\\)",
+        "Three-digit base-eight numbers are at most \\(511,\\) so just test \\(b = 6, 5, 4, \\ldots\\) for a base-ten palindrome"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2022-p6",
+  "title": "2022 IMO Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2022,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 111.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n\\) be a positive integer.\nA Nordic square is an \\(n \\times n\\) board\ncontaining all the integers from \\(1\\) to \\(n^2\\)\nso that each cell contains exactly one number.\nAn uphill path is a sequence of one or more cells such that:\n\n• the first cell in the sequence is a valley,\n meaning the number written is less than all its orthogonal neighbors,\n\n• each subsequent cell in the sequence is orthogonally\n adjacent to the previous cell, and\n\n• the numbers written in the cells in the sequence are in increasing order.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2022-p6.evanchen",
+      "kind": "proof-sketch",
+      "text": "(SRB)}\n\nAnswer: \\(2n^2-2n+1\\).\n\nBound..\nThe lower bound is the ``obvious'' one:\n\n• For any pair of adjacent cells, say \\(a > b\\),\n one can extend it to a downhill path (the reverse of an uphill path)\n by walking downwards until one reaches a valley.\n This gives \\(2n(n-1)=2n^2-2n\\) uphill paths of length \\(\\ge 2\\).\n\n• There is always at least one uphill path of length \\(1\\),\n namely the single cell \\(\\{1\\}\\) (or indeed any valley).\n\nConstruction..\nFor the construction, the ideas it build a tree \\(T\\) on the grid\nsuch that no two cells not in \\(T\\) are adjacent.\n\nAn example of such a grid is shown below for \\(n=15\\) with \\(T\\) in yellow\nand cells not in \\(T\\) in black; it generalizes to any \\(3 \\mid n\\),\nand then to any \\(n\\) by deleting the last \\(n \\bmod 3\\) rows\nand either/both of the leftmost/rightmost column.\n\n[Diagram omitted from this imported TeX transcription.]\n\nPlace \\(1\\) anywhere in \\(T\\) and then place all the small numbers at most \\(|T|\\)\nadjacent to previously placed numbers (example above).\nThen place the remaining numbers outside \\(T\\) arbitrarily.\n\nBy construction, as \\(1\\) is the only valley, any uphill path must start from \\(1\\).\nAnd by construction, it may only reach a given pair of terminal cells in one\nway, i.e.\\ the downhill paths we mentioned are the only one.\nEnd proof.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

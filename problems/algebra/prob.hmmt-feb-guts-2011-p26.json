@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-guts-2011-p26",
+  "title": "2011 HMMT February Guts Problem 26",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.coloring",
+      "label": "Coloring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 26
+  },
+  "difficulty": {
+    "course": 92.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In how many ways can 13 bishops be placed on an \\(8 \\times 8\\) chessboard such that (i) a bishop is placed on the second square in the second row, (ii) at most one bishop is placed on each square, (iii) no bishop is placed on the same diagonal as another bishop, and (iv) every diagonal contains a bishop? (For the purposes of this problem, consider all diagonals of the chessboard to be diagonals, not just the main diagonals).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2011-p26.hmmt",
+      "kind": "proof-sketch",
+      "text": "1152\nWe color the squares of the chessboard white and black such that B2 (the second square in the second row) is black. Note that at most 7 bishops can go on the white squares, and if there is a bishop on b2, at most 5 more can be on the white squares. So of the other 12 bishops, 7 go on white squares and 5 go on black squares.\nConsider the long diagonal on the white squares, and the 6 white diagonals parallel to it. Of the 7 bishops placed on the white squares, exactly one must go on each of these diagonals (this also proves\nthat at most 7 can go on the white squares). Of these diagonals there is 1 of length 8 , and 2 of length 2,4 , and 6 . There are 2 ways to place 2 bishops on the diagonals of length 2 , then 2 ways to place 2 bishops on the diagonals of length 4 , then 2 ways to place 2 bishops on the diagonals of length 2 , then the long diagonal bishop can go on either corner. So there are 16 ways to place 7 bishops on the white squares.\nNow we can divide the black squares of the board into the 6 diagonals parallel to the long white diagonal, and the long black diagonal. The bishop on b2 accounts for two of these diagonals. We are left with a diagonal of length 3 , and two diagonals of length 5,7 . There are 3 ways to pick the bishop on the diagonal of length 3,6 ways to pick two bishop for the diagonals of length 5 , and 6 ways to pick the bishop on the diagonals of length 7 . So there are 72 ways to pick 5 other bishops for the black squares. So the answer is \\(72 \\cdot 16=1152\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

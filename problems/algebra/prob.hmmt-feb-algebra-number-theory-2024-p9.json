@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2024-p9",
+  "title": "2024 HMMT February Algebra and Number Theory Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2024,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Suppose \\(a, b\\), and \\(c\\) are complex numbers satisfying\n\n\\[\\begin{aligned}\na^{2} & =b-c, \\\\\nb^{2} & =c-a, \\text { and } \\\\\nc^{2} & =a-b .\n\\end{aligned}\\]\n\nCompute all possible values of \\(a+b+c\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "0, \\pm i \\sqrt{6}",
+    "value": "0, \\pm i \\sqrt{6}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2024-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "Summing the equations gives \\(a^{2}+b^{2}+c^{2}=0\\) and summing \\(a\\) times the first equation and etc. gives \\(a^{3}+b^{3}+c^{3}=0\\). Let \\(a+b+c=k\\). Then \\(a^{2}+b^{2}+c^{2}=0\\) means \\(a b+b c+c a=k^{2} / 2\\), and \\(a^{3}+b^{3}+c^{3}=0 \\Longrightarrow-3 a b c=a^{3}+b^{3}+c^{3}-3 a b c=(a+b+c)\\left(a^{2}+b^{2}+c^{2}-a b-b c-c a\\right)=-k^{3} / 2\\), so \\(a b c=k^{3} / 6\\).\nThis means \\(a, b\\), and \\(c\\) are roots of the cubic\n\n\\[x^{3}-k x^{2}+\\left(k^{2} / 2\\right) x-\\left(k^{3} / 6\\right)=0\\]\n\nfor some \\(k\\).\nNext, note that\n\n\\[\\begin{aligned}\na^{4}+b^{4}+c^{4} & =\\sum_{\\mathrm{cyc}} a\\left(k a^{2}-\\left(k^{2} / 2\\right) a+\\left(k^{3} / 6\\right)\\right) \\\\\n& =\\sum_{\\mathrm{cyc}} k\\left(k a^{2}-\\left(k^{2} / 2\\right) a+\\left(k^{3} / 6\\right)\\right)-\\left(k^{2} / 2\\right) a^{2}+\\left(k^{3} / 6\\right) a \\\\\n& =\\sum_{\\text {cyc }}\\left(k^{2} / 2\\right) a^{2}-\\left(k^{3} / 3\\right) a+\\left(k^{4} / 6\\right) \\\\\n& =-k^{4} / 3+k^{4} / 2 \\\\\n& =k^{4} / 6\n\\end{aligned}\\]\n\nAfter this, there are two ways to extract the values of \\(k\\).\n\n- Summing squares of each equation gives\n\n\\[a^{4}+b^{4}+c^{4}=\\sum_{\\mathrm{cyc}}(a-b)^{2}=2\\left(a^{2}+b^{2}+c^{2}\\right)-2(a b+b c+c a)=-k^{2}\\]\n\nso\n\n\\[\\frac{k^{4}}{6}=-k^{2} \\Longrightarrow k=0, \\pm i \\sqrt{6} .\\]\n\n- Summing \\(a^{2}\\) times the first equation, etc. gives\n\n\\[a^{4}+b^{4}+c^{4}=\\sum_{\\mathrm{cyc}} a^{2}(b-c)=-(a-b)(b-c)(c-a)=-a^{2} b^{2} c^{2}=-\\frac{k^{6}}{36}\\]\n\nso\n\n\\[\\frac{k^{4}}{6}=-\\frac{k^{6}}{36} \\Longrightarrow k=0, \\pm i \\sqrt{6} .\\]\n\nWe can achieve \\(k=0\\) with \\(a=b=c=0\\). Letting \\(a, b\\), and \\(c\\) be the roots of \\(x^{3}-(i \\sqrt{6}) x^{2}-3 x+(i \\sqrt{6})\\) will force one of \\(a^{2}=b-c\\) and all other equalities or \\(a^{2}-c-b\\) and all other equalities to hold, if the latter happens, swap \\(b\\) and \\(c\\). Finally, for these \\((a, b, c)\\), take \\((-a,-c,-b)\\) to get \\(-i \\sqrt{6}\\). Thus, all of these are achievable.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

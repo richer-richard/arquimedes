@@ -1,0 +1,80 @@
+{
+  "id": "prob.ahsme-1983-p26",
+  "title": "1983 AHSME Problem 26",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.inequality",
+      "label": "Inequality",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1983,
+    "number": 26
+  },
+  "difficulty": {
+    "course": 37.5,
+    "source": 2050,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The probability that event \\(A\\) occurs is \\(\\frac34;\\) the probability that event \\(B\\) occurs is \\(\\frac23.\\) Let \\(p\\) be the probability that both \\(A\\) and \\(B\\) occur. The smallest interval necessarily containing \\(p\\) is the interval",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\([\\frac1{12},\\frac12]\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\([\\frac5{12},\\frac12]\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\([\\frac12,\\frac23]\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\([\\frac5{12},\\frac23]\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\([\\frac1{12},\\frac23]\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1983-p26.live",
+      "kind": "proof-sketch",
+      "text": "Inclusion-exclusion gives \\[ \\begin{aligned} p&=P(A\\cap B)\\\\ &=\\frac34+\\frac23-P(A\\cup B). \\end{aligned} \\] Since \\(\\frac{3}{4}\\le P(A\\cup B)\\le1,\\) it follows that \\[ \\frac5{12}\\le p\\le\\frac23. \\] Both endpoints can occur, so this is the smallest necessary interval.\n\nTherefore, the correct answer is D.",
+      "hints": [
+        "Apply inclusion-exclusion to events \\(A\\) and \\(B\\)",
+        "Bound \\(P(A\\cup B)\\) between \\(\\max(P(A),P(B))\\) and \\(1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

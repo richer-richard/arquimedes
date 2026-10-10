@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-guts-2010-p25",
+  "title": "2010 HMMT February Guts Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2010,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 77.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many functions \\(f:\\{1,2,3,4,5\\} \\rightarrow\\{1,2,3,4,5\\}\\) have the property that \\(f(\\{1,2,3\\})\\) and \\(f(f(\\{1,2,3\\}))\\) are disjoint?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2010-p25.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(1-\\frac{\\sin ^{2}\\left(2^{2011} x\\right)}{4^{2011} \\sin ^{2}(x)}\\) Note that\n\\[\\begin{aligned}\n& \\sin ^{2}(x)+\\sin ^{2}(2 x) \\cos ^{2}(x)+\\cdots+\\sin ^{2}\\left(2^{2010} x\\right) \\cos ^{2}\\left(2^{2009} x\\right) \\cdots \\cos ^{2}(2 x) \\cos ^{2}(x) \\\\\n& \\quad=\\left(1-\\cos ^{2}(x)\\right)+\\left(1-\\cos ^{2}(2 x)\\right) \\cos ^{2}(x)+\\cdots+\\left(1-\\cos ^{2}\\left(2^{2010} x\\right)\\right) \\cos ^{2}\\left(2^{2009} x\\right) \\cdots \\cos ^{2}(x)\n\\end{aligned}\\]\n\nwhich telescopes to \\(1-\\cos ^{2}(x) \\cos ^{2}(2 x) \\cos ^{2}(4 x) \\cdots \\cos ^{2}\\left(2^{2010} x\\right)\\). To evaluate \\(\\cos ^{2}(x) \\cos ^{2}(2 x) \\cdots \\cos ^{2}\\left(2^{2010} x\\right)\\), multiply and divide by \\(\\sin ^{2}(x)\\). We then get\n\n\\[1-\\frac{\\sin ^{2}(x) \\cos ^{2}(x) \\cos ^{2}(2 x) \\cdots \\cos ^{2}\\left(2^{2010} x\\right)}{\\sin ^{2}(x)}\\]\n\nUsing the double-angle formula for sin, we get that \\(\\sin ^{2}(y) \\cos ^{2}(y)=\\frac{\\sin ^{2}(2 y)}{4}\\). Applying this 2011 times makes the above expression\n\n\\[1-\\frac{\\sin ^{2}\\left(2^{2011} x\\right)}{4^{2011} \\sin ^{2}(x)}\\]\n\nwhich is in closed form.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

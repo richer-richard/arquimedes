@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2006-p9",
+  "title": "2006 AIME1 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2006,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 47.7,
+    "source": 2450,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "The sequence \\(a_1,\\) \\(a_2,\\) \\(\\ldots\\) is geometric with \\(a_1 = a\\) and common ratio \\(r,\\) where \\(a\\) and \\(r\\) are positive integers. Given that \\(\\log_8 a_1 + \\log_8 a_2 + \\cdots + \\log_8 a_{12}\\) \\(= 2006,\\) find the number of possible ordered pairs \\((a, r).\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "46",
+    "value": "46"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2006-p9.live",
+      "kind": "proof-sketch",
+      "text": "The sum of the logarithms is \\(\\log_8 (a_1 a_2 \\cdots a_{12}) = \\log_8\\!\\left(a^{12} r^{66}\\right),\\) so \\(a^{12} r^{66} = 8^{2006} = 2^{6018},\\) which gives \\(a^2 r^{11} = 2^{1003}.\\)\n\nThus \\(a\\) and \\(r\\) are powers of \\(2:\\) write \\(a = 2^x\\) and \\(r = 2^y\\) with integers \\(x, y \\ge 0\\) and \\(2x + 11y = 1003.\\) Since \\(2x\\) is even and \\(1003\\) is odd, \\(y\\) must be odd, say \\(y = 2k - 1\\) for \\(k \\ge 1.\\) Then \\(x = 507 - 11k \\ge 0\\) exactly when \\(k \\le \\lfloor \\frac{507}{11} \\rfloor = 46.\\)\n\nEach \\(k = 1, 2, \\ldots, 46\\) gives one pair, so there are \\(46\\) ordered pairs \\((a, r).\\)",
+      "hints": [
+        "Combine the logs: the product of the twelve terms is \\(a^{12} r^{66},\\) which must equal \\(8^{2006}\\)",
+        "Write \\(a = 2^x,\\) \\(r = 2^y\\) and count nonnegative solutions of \\(2x + 11y = 1003;\\) parity forces \\(y\\) odd"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

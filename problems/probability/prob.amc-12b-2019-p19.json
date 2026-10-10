@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2019-p19",
+  "title": "2019 AMC 12B Problem 19",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.invariant",
+      "label": "Invariant",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.recursive-probability",
+      "label": "Recursive probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2019,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 35.7,
+    "source": 1980,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Raashan, Sylvia, and Ted play the following game. Each starts with \\(\\$1.\\) A bell rings every \\(15\\) seconds, at which time each of the players who currently have money simultaneously chooses one of the other two players independently and at random and gives \\(\\$1\\) to that player. What is the probability that after the bell has rung \\(2019\\) times, each player will have \\(\\$1?\\) (For example, Raashan and Ted may each decide to give \\(\\$1\\) to Sylvia, and Sylvia may decide to give her dollar to Ted, at which point Raashan will have \\(\\$0,\\) Sylvia will have \\(\\$2,\\) and Ted will have \\(\\$1,\\) and that is the end of the first round of play. In the second round Raashan has no money to give, but Sylvia and Ted might choose each other to give their \\(\\$1\\) to, and the holdings will be the same at the end of the second round.)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{7}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1}{4}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{3}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{1}{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{2}{3}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1/4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2019-p19.live",
+      "kind": "proof-sketch",
+      "text": "From \\((1,1,1),\\) each of the three players gives to one of two others, so there are \\(8\\) equally likely outcomes; only the \\(2\\) cyclic gift patterns return to \\((1,1,1),\\) a probability of \\(\\dfrac14.\\)\n\nFrom a \\((2,1,0)\\) state the broke player gives nothing, and checking the \\(4\\) equally likely choices of the other two shows exactly one yields \\((1,1,1),\\) again probability \\(\\dfrac14.\\)\n\nSo after any ring the probability of \\((1,1,1)\\) is \\(\\dfrac14,\\) including after \\(2019\\) rings.\n\nThus, B is the correct answer.",
+      "hints": [
+        "The only states are \\((1,1,1)\\) and permutations of \\((2,1,0)\\)",
+        "Show that from either kind of state the next state is \\((1,1,1)\\) with probability \\(\\dfrac14\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

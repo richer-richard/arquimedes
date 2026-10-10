@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2007-p1",
+  "title": "2007 IMO Problem 1",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2007,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 79.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Real numbers \\(a_1\\), \\(a_2\\), \\dots, \\(a_n\\) are fixed.\nFor each \\(1 \\le i \\le n\\) we let\n\\(d_i = \\max\\{a_j : 1 \\le j \\le i\\} - \\min\\{a_j : i \\le j \\le n\\}\\)\nand let \\(d = \\max \\{d_i : 1 \\le i \\le n\\}\\).\n\n• Prove that for any real numbers \\(x_1 \\le \\dots \\le x_n\\) we have\n \\[\n \\max \\left\\{ \\left\\lvert x_i - a_i \\right\\rvert :\n 1 \\le i \\le n \\right\\}\n \\ge \\frac{1}{2} d.\n \\]\n\n• Moreover, show that there exists some\n choice of \\(x_1 \\le \\dots \\le x_n\\) which achieves equality.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2007-p1.evanchen",
+      "kind": "proof-sketch",
+      "text": "Note that we can dispense of \\(d_i\\) immediately\nby realizing that the definition of \\(d\\) just says\n\\[ d = \\max_{1 \\le i \\le j \\le n} \\left( a_i - a_j \\right). \\]\n\nIf \\(a_1 \\le \\dots \\le a_n\\) are already nondecreasing\nthen \\(d = 0\\) and there is nothing to prove\n(for the equality case, just let \\(x_i = a_i\\)),\nso we will no longer consider this case.\n\nOtherwise, consider any indices \\(i < j\\) with \\(a_i > a_j\\).\nWe first prove (a) by applying the following claim\nwith \\(p = a_i\\) and \\(q = a_j\\):\n\nClaim.\n For any \\(p \\le q\\), we have\n either \\(|p - a_i| \\ge \\frac{1}{2}(a_i-a_j)\\)\n or \\(|q - a_j| \\ge \\frac{1}{2}(a_i-a_j)\\).\n\nProof.\n Assume for contradiction both are false.\n Then \\(p > a_i - \\frac{1}{2}(a_i-a_j)\n = a_j + \\frac{1}{2}(a_i-a_j) > q\\), contradiction.\n\nAs for (b), we let \\(i < j\\) be any indices for which\n\\(a_i - a_j = d > 0\\) achieves the maximal difference.\nWe then define \\(x_\\bullet\\) in three steps:\n\n• We set \\(x_k = \\frac{a_i + a_j}{2}\\) for \\(k = i, \\dots, j\\).\n\n• We recursively set \\(x_{k} = \\max(x_{k-1}, a_k)\\)\n for \\(k = j+1, j+2, \\dots\\).\n\n• We recursively set \\(x_{k} = \\min(x_{k+1}, a_k)\\)\n for \\(k = i-1, i-2, \\dots\\).\n\nBy definition, these \\(x_\\bullet\\) are weakly increasing.\nTo prove this satisfies (b) we only need to check that\n\\[ \\left\\lvert x_k - a_k \\right\\rvert \\le \\frac{a_i-a_j}{2} \\qquad\n (\\star) \\]\nfor any index \\(k\\) (as equality holds for \\(k = i\\) or \\(k = j\\)).\n\nWe note \\((\\star)\\) holds for \\(i < k < j\\) by construction.\nFor \\(k > j\\), note that \\(x_k \\in \\{a_j, a_{j+1}, \\dots, a_k\\}\\)\nby construction, so \\((\\star)\\) follows from our choice of \\(i\\) and \\(j\\)\ngiving the largest possible difference; the case \\(k < i\\) is similar.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

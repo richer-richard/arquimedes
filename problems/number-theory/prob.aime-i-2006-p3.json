@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2006-p3",
+  "title": "2006 AIME I Problem 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.place-value",
+      "label": "Place value",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2006,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 36.7,
+    "source": 2020,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Find the least positive integer such that when its leftmost digit is deleted, the resulting integer is \\(\\frac{1}{29}\\) of the original integer.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "725",
+    "value": "725"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2006-p3.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(d\\) be the leftmost digit and \\(n\\) the integer that remains after deleting it, so the original integer is \\(d \\cdot 10^p + n\\) for some positive integer \\(p.\\) The condition says \\(d \\cdot 10^p + n = 29n,\\) so \\(d \\cdot 10^p = 28n.\\)\n\nSince \\(28n\\) is divisible by \\(7\\) but \\(10^p\\) is not, the digit \\(d\\) must be a multiple of \\(7,\\) so \\(d = 7.\\) Then \\(10^p = 4n,\\) giving \\(n = 25 \\cdot 10^{p-2},\\) which requires \\(p \\ge 2.\\) The smallest case is \\(p = 2,\\) \\(n = 25.\\)\n\nThe least such integer is \\(725,\\) and indeed \\(725 = 29 \\cdot 25.\\)",
+      "hints": [
+        "If the leftmost digit \\(d\\) sits in the \\(10^p\\) place and \\(n\\) remains after deleting it, then \\(d \\cdot 10^p + n = 29n\\)",
+        "\\(d \\cdot 10^p = 28n\\) forces \\(d\\) to be divisible by \\(7,\\) so \\(d = 7\\) and \\(10^p = 4n\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

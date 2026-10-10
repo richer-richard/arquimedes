@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-guts-2017-p18",
+  "title": "2017 HMMT November Guts Problem 18",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.combinatorial-optimization",
+      "label": "Combinatorial optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2017,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 47.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Mr. Taf takes his 12 students on a road trip. Since it takes two hours to walk from the school to the destination, he plans to use his car to expedite the journey. His car can take at most 4 students at a time, and travels 15 times as fast as traveling on foot. If they plan their trip optimally, what is the shortest amount of time it takes for them to all reach the destination, in minutes?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2017-p18.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 30.4 OR \\(\\frac{152}{5}\\)\nA way to plan the trip is to have Mr. Taf drive 4 students to the \\(80 \\%\\) mark, then drive back to the \\(10 \\%\\) mark to pick up another 4 students to the \\(90 \\%\\) mark, and finally drive back to the \\(20 \\%\\) mark to pick up the last 4 students to the destination. All students will reach the destination at the same time, and Mr. Taf would have driven for \\((0.8+0.7+0.8+0.7+0.8) \\cdot \\frac{120}{15}=30.4\\) minutes.\nNow we show that 30.4 minutes is necessary. First of all, for a trip to be optimal, Mr. Taf must not carry students when he was driving away from the destination, and all student not on the car must keep walking towards the destination. Suppose that among all the students, the student that walked for the longest walked for \\(15 m\\) minutes, where \\(0 \\leq m \\leq 8\\), then he spent \\(\\frac{120-15 m}{15}=8-m\\) minutes on the car, so it took them exactly \\(14 m+8\\) minutes to get to the destination. Moreover, all students must have spent at least \\(12(8-m)\\) minutes on the car total, and Mr. Taf would need to spend at least \\(3(8-m)=24-3 m\\) minutes driving students towards the destination. Since it takes Mr. Taf 8 minutes to drive the entire trip, he would need to drive \\(3(8-m)-8=16-3 m\\) minutes away from the destination, so Mr. Fat drove for at least \\(40-6 m\\) minutes. From this we derive the inequality \\(40-6 m \\geq 14 m+8\\), which comes out to \\(m \\geq 1.6\\), so the journey is at least \\(14(1.6)+8=30.4\\) minutes.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-nov-guts-2021-p33",
+  "title": "2021 HMMT November Guts Problem 33",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2021,
+    "number": 33
+  },
+  "difficulty": {
+    "course": 66.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Point \\(P\\) lies inside equilateral triangle \\(A B C\\) so that \\(\\angle B P C=120^{\\circ}\\) and \\(A P \\sqrt{2}=B P+C P\\). \\(\\frac{A P}{A B}\\) can be written as \\(\\frac{a \\sqrt{b}}{c}\\), where \\(a, b, c\\) are integers, \\(c\\) is positive, \\(b\\) is square-free, and \\(\\operatorname{gcd}(a, c)=1\\). Find \\(100 a+10 b+c\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "255",
+    "value": "255"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2021-p33.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(O\\) be the center of \\(A B C\\). First, we draw in the circumcircle of \\(A B C\\) and the circumcircle of \\(B O C\\), labeled \\(\\omega_{1}\\) and \\(\\omega_{2}\\), respectively. Note that \\(\\omega_{1}\\) is the reflection of \\(\\omega_{2}\\) over \\(B C\\) and that \\(P\\) lies on \\(\\omega_{2}\\). Now, let \\(P_{C}\\) be the second intersection of ray \\(C P\\) with \\(\\omega_{1}\\). Additionally, label the second intersections of ray \\(A P\\) with \\(\\omega_{1}\\) and \\(\\omega_{2}\\) be \\(M\\) and \\(X\\), respectively. Lastly, let \\(A^{\\prime}\\) be the diametrically opposite point from \\(A\\) on \\(\\omega_{1}\\).\n\nWe first note that \\(A^{\\prime}\\) is the center of \\(\\omega_{2}\\). Thus, \\(A^{\\prime}\\) lies on the perpendicular bisector of segment \\(P X\\). But since \\(A A^{\\prime}\\) is a diameter of \\(\\omega_{1}\\), this also means that the midpoint of \\(P X\\) lies on \\(\\omega_{1}\\). This implies that \\(M\\) is the midpoint of \\(P X\\).\nFrom a simple angle chase, we have \\(\\angle P_{C} P B=180-\\angle B P C=60^{\\circ}\\). Also, \\(\\angle B P_{C} C=\\angle B A C=60^{\\circ}\\). Therefore, we find that triangle \\(B P P_{C}\\) is equilateral with side length \\(B P\\).\nNow we begin computations. By Law of Cosines in triangle \\(B P C\\), we see that \\(B P^{2}+C P^{2}+B P \\cdot C P=\\) \\(B C^{2}=A B^{2}\\). However, we can rewrite this as\n\n\\[A B^{2}=B P^{2}+C P^{2}+B P \\cdot C P=(B P+C P)^{2}-B P \\cdot C P=2 \\cdot A P^{2}-B P \\cdot C P\\]\n\nTo find an equation for \\(\\frac{A P}{A B}\\), it suffices to simplify the expression \\(B P \\cdot C P\\). Since \\(B P P_{C}\\) is equilateral, we can proceed through Power of a Point. By looking at \\(\\omega_{1}\\), we see that\n\n\\[B P \\cdot C P=P P_{C} \\cdot C P=A P \\cdot P M=\\frac{1}{2} \\cdot A P \\cdot A X\\]\n\nThen, from Power of a Point on \\(\\omega_{2}\\), we see that\n\n\\[\\frac{1}{2} \\cdot A P \\cdot A X=\\frac{1}{2} \\cdot A P \\cdot(A X-A P)=\\frac{1}{2} \\cdot A P \\cdot A X-\\frac{1}{2} \\cdot A P^{2}=\\frac{1}{2}\\left(A B^{2}-A P^{2}\\right)\\]\n\nCombining everything, we find that \\(B P \\cdot C P=\\frac{1}{2}\\left(A B^{2}-A P^{2}\\right)\\) which means that\n\n\\[A B^{2}=2 \\cdot A P^{2}-\\frac{1}{2}\\left(A B^{2}-A P^{2}\\right) \\Longrightarrow \\frac{5}{2} A B^{2}=\\frac{3}{2} A P^{2} \\Longrightarrow \\frac{A P}{A B}=\\frac{\\sqrt{15}}{5} .\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

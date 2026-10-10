@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-feb-guts-2017-p16",
+  "title": "2017 HMMT February Guts Problem 16",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2017,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 74.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a\\) and \\(b\\) be complex numbers satisfying the two equations\n\n\\[\\begin{aligned}\na^{3}-3 a b^{2} & =36 \\\\\nb^{3}-3 b a^{2} & =28 i\n\\end{aligned}\\]\n\nLet \\(M\\) be the maximum possible magnitude of \\(a\\). Find all \\(a\\) such that \\(|a|=M\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2017-p16.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(3,-\\frac{3}{2}+\\frac{3 i \\sqrt{3}}{2},-\\frac{3}{2}-\\frac{3 i \\sqrt{3}}{2}\\)\nNotice that\n\n\\[\\begin{aligned}\n(a-b i)^{3} & =a^{3}-3 a^{2} b i-3 a b^{2}+b^{3} i \\\\\n& =\\left(a^{3}-3 a b^{2}\\right)+\\left(b^{3}-3 b a^{2}\\right) i \\\\\n& =36+i(28 i) \\\\\n& =8\n\\end{aligned}\\]\n\nso that \\(a-b i=2+i\\). Additionally\n\n\\[\\begin{aligned}\n(a+b i)^{3} & =a^{3}+3 a^{2} b i-3 a b^{2}-b^{3} i \\\\\n& =\\left(a^{3}-3 a b^{2}\\right)-\\left(b^{3}-3 b a^{2}\\right) i \\\\\n& =36-i(28 i) \\\\\n& =64\n\\end{aligned}\\]\n\nIt follows that \\(a-b i=2 \\omega\\) and \\(a+b i=4 \\omega^{\\prime}\\) where \\(\\omega, \\omega^{\\prime}\\) are third roots of unity. So \\(a=\\omega+2 \\omega^{\\prime}\\). From the triangle inequality \\(|a| \\leq|\\omega|+\\left|2 \\omega^{\\prime}\\right|=3\\), with equality when \\(\\omega\\) and \\(\\omega^{\\prime}\\) point in the same direction (and thus \\(\\omega=\\omega^{\\prime}\\) ). It follows that \\(a=3,3 \\omega, 3 \\omega^{2}\\), and so\n\n\\[a=3,-\\frac{3}{2}+\\frac{3 i \\sqrt{3}}{2},-\\frac{3}{2}-\\frac{3 i \\sqrt{3}}{2}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

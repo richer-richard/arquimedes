@@ -1,0 +1,70 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2009-p8",
+  "title": "2009 HMMT February Combinatorics Problem 8",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2009,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 82.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "There are 5 students on a team for a math competition. The math competition has 5 subject tests. Each student on the team must choose 2 distinct tests, and each test must be taken by exactly two people. In how many ways can this be done?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2009-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "We can model the situation as a bipartite graph on 10 vertices, with 5 nodes representing the students and the other 5 representing the tests. We now simply want to count the number of bipartite graphs on these two sets such that there are two edges incident on each vertex.\nNotice that in such a graph, we can start at any vertex and follow one of the edges eminating from it, then follow the other edge eminating from the second vertex, etc, and in this manner we must eventually end up back at the starting vertex, so the graph is partitioned into even cycles. Since each vertex has degree two, we cannot have a 2 -cycle, so we must have either a 10 -cycle or a 4 -cycle and a 6 -cycle.\nIn the former case, starting with Person \\(A\\), there are 5 ways to choose one of his tests. This test can be taken by one of 4 other people, who can take one of 4 other tests, which can be taken by one of 3 other people, etc, so the number of 10 -cycles we obtain in this way is \\(5!\\cdot 4!\\). However, it does not matter which of the first person's tests we choose first in a given 10 -cycle, so we overcounted by a factor of 2 . Thus there are \\(5!\\cdot 4!/ 2=1440\\) possibilities in this case.\nIn the latter case, there are \\(\\binom{5}{3}^{2}=100\\) ways to choose which three people and which three tests are in the 6 -cycle. After choosing this, a similar argument to that above shows there are \\(2!\\cdot 1!/ 2\\) possible 4 -cycles and \\(3!\\cdot 2!/ 2\\) possible 6 -cycles, for a total of \\(100 \\cdot 1 \\cdot 6=600\\) possibilities in this case.\nThus there are a total of 2040 ways they can take the tests.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12a-2018-p13",
+  "title": "2018 AMC 12A Problem 13",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.bijection",
+      "label": "Bijection",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "comb.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2018,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 27.5,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many nonnegative integers can be written in the form\n\n\\[ \\begin{aligned} &a_7 \\cdot 3^7 + a_6 \\cdot 3^6 + a_5 \\cdot 3^5 \\\\ &\\quad {}+ a_4 \\cdot 3^4 + a_3 \\cdot 3^3 + a_2 \\cdot 3^2 \\\\ &\\quad {}+ a_1 \\cdot 3^1 + a_0 \\cdot 3^0, \\end{aligned} \\]\n\nwhere \\(a_i \\in \\{-1, 0, 1\\}\\) for \\(0 \\le i \\le 7?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(512\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(729\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1094\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3281\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(59{,}048\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "3281"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2018-p13.live",
+      "kind": "proof-sketch",
+      "text": "Adding \\(1\\) to every \\(a_i\\) gives a bijection between these expressions and the base-\\(3\\) numerals for \\(0\\) through \\(3^8 - 1,\\) so exactly \\(3^8 = 6561\\) distinct integers occur. They are symmetric about \\(0\\) (negating all \\(a_i\\) negates the value), so besides \\(0\\) itself, half are positive: \\[ 1 + \\tfrac12(6561 - 1) = 3281 \\] nonnegative integers, namely \\(0\\) through \\(3280.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Shifting each \\(a_i\\) from \\(\\{-1, 0, 1\\}\\) to \\(\\{0, 1, 2\\}\\) makes an ordinary base-\\(3\\) numeral",
+        "The \\(3^8\\) representable integers are symmetric about \\(0;\\) count \\(0\\) together with half of the remaining values"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

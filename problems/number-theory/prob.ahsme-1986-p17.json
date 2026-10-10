@@ -1,0 +1,79 @@
+{
+  "id": "prob.ahsme-1986-p17",
+  "title": "1986 AHSME Problem 17",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.parity",
+      "label": "Parity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.pigeonhole-principle",
+      "label": "Pigeonhole principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1986,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 32.3,
+    "source": 1850,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A drawer in a darkened room contains \\(100\\) red socks, \\(80\\) green socks, \\(60\\) blue socks and \\(40\\) black socks. A youngster selects socks one at a time from the drawer but is unable to see the color of the socks drawn. What is the smallest number of socks that must be selected to guarantee that the selection contains at least \\(10\\) pairs? (A pair of socks is two socks of the same color. No sock may be counted in more than one pair.)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(23\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(30\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(50\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "23"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1986-p17.live",
+      "kind": "proof-sketch",
+      "text": "With \\(23\\) selected socks, the number of colors having an odd count must itself be odd, so it is at most \\(3.\\) Thus at most \\(3\\) socks are unpaired, leaving at least \\(20\\) socks in \\(10\\) pairs. But \\(22\\) socks do not suffice: color counts \\(7,5,5,5\\) produce only \\(3+2+2+2=9\\) pairs. Therefore the minimum is \\(23.\\)\n\nThus the correct answer is B.",
+      "hints": [
+        "For each color, at most one selected sock can remain unpaired",
+        "Use the parity of the total to sharpen the four-unpaired bound, then construct a near-miss"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

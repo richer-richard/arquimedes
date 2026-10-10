@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-algebra-2002-p9",
+  "title": "2002 HMMT February Algebra Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2002,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 88.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For any positive integer \\(n\\), let \\(f(n)\\) denote the number of 1 's in the base- 2 representation of \\(n\\). For how many values of \\(n\\) with \\(1 \\leq n \\leq 2002\\) do we have \\(f(n)=f(n+1)\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-2002-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "501. If \\(n\\) is even, then \\(n+1\\) is obtained from \\(n\\) in binary by changing the final 0 to a 1 ; thus \\(f(n+1)=f(n)+1\\). If \\(n\\) is odd, then \\(n+1\\) is obtained by changing the last 0 to a 1 , the ensuing string of 1 s to 0 s , and then changing the next rightmost 0 to a 1. This produces no net change in the number of 1 's iff \\(n\\) ends in 01 in base 2. Thus,\n\\(f(n+1)=f(n)\\) if and only if \\(n\\) is congruent to \\(1 \\bmod 4\\), and there are 501 such numbers in the specified range.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

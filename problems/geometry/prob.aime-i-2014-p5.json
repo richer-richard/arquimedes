@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2014-p5",
+  "title": "2014 AIME I Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.basic-counting",
+      "label": "Basic counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.regular-polygon",
+      "label": "Regular polygon",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.subsets",
+      "label": "Subsets",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2014,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 51.0,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Let the set \\(S = \\{P_1, P_2, \\ldots, P_{12}\\}\\) consist of the twelve vertices of a regular \\(12\\)-gon. A subset \\(Q\\) of \\(S\\) is called communal if there is a circle such that all points of \\(Q\\) are inside the circle, and all points of \\(S\\) not in \\(Q\\) are outside of the circle. How many communal subsets are there? (Note that the empty set is a communal subset.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "134",
+    "value": "134"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2014-p5.live",
+      "kind": "proof-sketch",
+      "text": "A subset \\(Q\\) is communal exactly when its vertices are consecutive around the \\(12\\)-gon. Indeed, a separating circle meets the circumcircle of the \\(12\\)-gon in at most two points, so the vertices inside it form a contiguous arc. Conversely, any run of consecutive vertices can be separated from the remaining vertices by a line, and a sufficiently large circle on the proper side of that line contains exactly that run.\n\nFor each size \\(k\\) with \\(1 \\le k \\le 11\\) there are \\(12\\) runs of \\(k\\) consecutive vertices (one starting at each vertex), giving \\(12 \\cdot 11 = 132\\) subsets, and the empty set and all of \\(S\\) are also communal. The total is \\(132 + 2 = 134.\\)",
+      "hints": [
+        "A subset can be cut off by a circle exactly when its vertices are consecutive on the \\(12\\)-gon",
+        "For each size from \\(1\\) to \\(11\\) there are \\(12\\) runs of consecutive vertices; don’t forget the empty set and all of \\(S\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-team-2018-p9",
+  "title": "2018 HMMT February Team Problem 9",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.graph-theory",
+      "label": "Graph Theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.induction-smoothing",
+      "label": "Induction / smoothing",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2018,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 89.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Evan has a simple graph with \\(v\\) vertices and \\(e\\) edges. Show that he can delete at least \\(\\frac{e-v+1}{2}\\) edges so that each vertex still has at least half of its original degree.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2018-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "Fix \\(v\\). We use strong induction on the number of edges \\(e\\). If \\(e \\leq v-1\\), the result trivially holds by removing 0 edges. Now take \\(e>v-1\\) and assume the result has been shown for all smaller values of \\(e\\). Consider a graph \\(G\\) with \\(v\\) vertices and \\(e\\) edges.\n\nSuppose \\(G\\) contains a cycle \\(C\\) of even length \\(2 k\\), where vertices (but not edges) may be repeated in the cycle. Let \\(G^{\\prime}\\) be the subgraph of \\(G\\) with the edges of \\(C\\) removed. Then \\(G^{\\prime}\\) has \\(v\\) vertices and \\(e-2 k\\) edges. By the inductive hypothesis, it is possible to remove \\(\\frac{e-2 k-v+1}{2}\\) edges from \\(G^{\\prime}\\) so that each vertex still has at least half its original degree. In the original graph \\(G\\), remove these same edges,\nand also remove every other edge of \\(C\\) (so, if the vertices of \\(C\\) are \\(v_{1}, \\cdots, v_{2 k}\\) in order, we remove the edges between \\(v_{2 i-1}\\) and \\(v_{2 i}\\) for \\(1 \\leq i \\leq k\\) ). In total, we have removed \\(\\frac{e-2 k-v+1}{2}+k=\\frac{e-v+1}{2}\\) edges. Furthermore, all vertices in \\(G\\) still have at least half their original degrees, as desired.\n\nThe remaining case to consider is if \\(G\\) has no cycles of even length. Then no two cycles in \\(G\\) can have any vertices or edges in common. Suppose the contrary; then two odd cycles overlap, so their union is connected and has an even number of edges. This union has an Eulerian tour, which is a cycle with an even number of edges, contradicting our assumption.\n\nThe number of edges in \\(G\\) is at most \\(v+c-1\\), where \\(c\\) is the number of cycles. So, we must remove at least \\(\\frac{e-v+1}{2}=\\frac{c}{2}\\) edges from \\(G\\). But we can remove \\(c\\) edges from \\(G\\), one from each cycle. No vertex has its degree decreased by more than 1 , and each vertex whose degree is decreased is in a cycle and so has degree at least 2. Therefore each vertex still has at least half of its original degree, and we have removed at least \\(\\frac{e-v+1}{2}\\) edges, as desired.\n\nThus our claim holds for a graph with \\(e\\) edges, and thus by induction holds for any number of edges, as needed.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

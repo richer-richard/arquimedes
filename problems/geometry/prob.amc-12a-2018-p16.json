@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2018-p16",
+  "title": "2018 AMC 12A Problem 16",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle",
+      "label": "Circle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.parabola",
+      "label": "Parabola",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2018,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 32.1,
+    "source": 1840,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Which of the following describes the set of values of \\(a\\) for which the curves \\(x^2 + y^2 = a^2\\) and \\(y = x^2 - a\\) in the real \\(xy\\)-plane intersect at exactly \\(3\\) points?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(a = \\tfrac14\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\tfrac14 \\lt a \\lt \\tfrac12\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(a \\gt \\tfrac14\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(a = \\tfrac12\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(a \\gt \\tfrac12\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2018-p16.live",
+      "kind": "proof-sketch",
+      "text": "Substituting \\(x^2 = y + a\\) into \\(x^2 + y^2 = a^2\\) gives \\(y^2 + y + (a - a^2) = 0,\\) which factors as \\((y + 1 - a)(y + a) = 0,\\) so \\(y = a - 1\\) or \\(y = -a.\\) These correspond to \\(x^2 = 2a - 1\\) and \\(x^2 = 0.\\)\n\nThe equation \\(x^2 = 0\\) always gives the single point \\((0, -a),\\) the vertex of the parabola. The equation \\(x^2 = 2a - 1\\) gives two more points exactly when \\(2a - 1 \\gt 0,\\) i.e. \\(a \\gt \\tfrac12.\\) So there are \\(3\\) intersection points precisely when \\(a \\gt \\tfrac12.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "From \\(y = x^2 - a\\) substitute \\(x^2 = y + a\\) into the circle equation to get a quadratic in \\(y\\)",
+        "One intersection is the vertex tangency at \\(x = 0;\\) two more require \\(x^2 = 2a - 1\\) to have real nonzero solutions"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

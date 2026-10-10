@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2019-p25",
+  "title": "2019 HMMT February Guts Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2019,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 75.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A 5 by 5 grid of unit squares is partitioned into 5 pairwise incongruent rectangles with sides lying on the gridlines. Find the maximum possible value of the product of their areas.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2019-p25.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 2304\nThe greatest possible value for the product is \\(3 \\cdot 4 \\cdot 4 \\cdot 6 \\cdot 8=2304\\), achieved when the rectangles are \\(3 \\times 1,1 \\times 4,2 \\times 2,2 \\times 3,4 \\times 2\\). To see that this is possible, orient these rectangles so that the first number is the horizontal dimension and the second number is the vertical dimension. Then, place the bottom-left corners of these rectangles at \\((2,4),(4,0),(2,2),(0,2),(0,0)\\) respectively on the grid.\nWe will now prove that no larger product can be achieved. Suppose that there is at least one rectangle of area at most 2 . Then the product is at most \\(2 \\cdot 5.75^{4}=2 \\cdot 33.0625^{2}<2 \\cdot 1100=2200\\) by AM-GM. Now suppose that there is at least one rectangle of area at least 9 . Then the product is at most \\(9 \\cdot 4^{4}=2304\\) by AM-GM. (Neither of these is tight, since you cannot have non-integer areas, nor can you have four rectangles all of area 4.)\nNow consider the last possibility that is not covered by any of the above: that there are no rectangles of size at most 2 and no rectangles of area at least 9 . There can be at most one rectangle of area \\(3,5,6,8\\) each, at most two rectangles of area 4 , and no rectangles of area 7 . The only way to achieve a sum of 25 with these constraints is \\(3,4,4,6,8\\), which produces a product of 2304 . We have shown through the earlier cases that a larger product cannot be achieved, so this is indeed the maximum.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

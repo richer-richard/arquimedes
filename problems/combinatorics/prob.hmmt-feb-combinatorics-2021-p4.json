@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2021-p4",
+  "title": "2021 HMMT February Combinatorics Problem 4",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.coloring-schemes-extremal-arguments",
+      "label": "Coloring schemes, extremal arguments",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.enumeration-with-symmetry",
+      "label": "Enumeration with symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2021,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 74.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(S=\\{1,2, \\ldots, 9\\}\\). Compute the number of functions \\(f: S \\rightarrow S\\) such that, for all \\(s \\in S, f(f(f(s)))=\\) \\(s\\) and \\(f(s)-s\\) is not divisible by 3.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "288",
+    "value": "288"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2021-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "Since \\(f(f(f(s)))=s\\) for all \\(s \\in S\\), each cycle in the cycle decomposition of \\(f\\) must have length 1 or 3 . Also, since \\(f(s) \\not \\equiv s \\bmod 3\\) for all \\(s \\in S\\), each cycle cannot contain two elements \\(a, b\\) such that \\(a=b \\bmod 3\\). Hence each cycle has exactly three elements, one from each of residue classes mod 3 .\nIn particular, \\(1,4,7\\) belong to distinct cycles. There are \\(6 \\cdot 3\\) ways to choose two other numbers in the cycle containing 1 . Then, there are \\(4 \\cdot 2\\) ways to choose two other numbers in the cycle containing 4 . Finally, there are \\(2 \\cdot 1\\) ways to choose two other numbers in the cycle containing 7 . Hence the desired number of functions \\(f\\) is \\(6 \\cdot 3 \\cdot 4 \\cdot 2 \\cdot 2 \\cdot 1=288\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

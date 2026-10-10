@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-calculus-2004-p9",
+  "title": "2004 HMMT February Calculus Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2004,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 94.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find the positive constant \\(c_{0}\\) such that the series\n\n\\[\\sum_{n=0}^{\\infty} \\frac{n!}{(c n)^{n}}\\]\n\nconverges for \\(c>c_{0}\\) and diverges for \\(0<c<c_{0}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-calculus-2004-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(1 / e\\)\nThe ratio test tells us that the series converges if\n\n\\[\\lim _{n \\rightarrow \\infty} \\frac{(n+1)!/(c(n+1))^{n+1}}{n!/(c n)^{n}}=\\frac{1}{c} \\cdot \\lim _{n \\rightarrow \\infty}\\left(\\frac{n}{n+1}\\right)^{n}\\]\n\nis less than one and diverges if it is greater than one. But\n\n\\[\\lim _{n \\rightarrow \\infty}\\left(\\frac{n}{n+1}\\right)^{n}=\\lim _{n \\rightarrow \\infty}\\left(1+\\frac{1}{n}\\right)^{-n}=\\frac{1}{e} .\\]\n\nThen the limit above is just \\(1 / c e\\), so the series converges for \\(c>1 / e\\) and diverges for \\(0<c<1 / e\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

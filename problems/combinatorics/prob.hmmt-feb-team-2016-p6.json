@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-team-2016-p6",
+  "title": "2016 HMMT February Team Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.catalan-numbers-partitions",
+      "label": "Catalan numbers, partitions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2016,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 81.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A nonempty set \\(S\\) is called well-filled if for every \\(m \\in S\\), there are fewer than \\(\\frac{1}{2} m\\) elements of \\(S\\) which are less than \\(m\\). Determine the number of well-filled subsets of \\(\\{1,2, \\ldots, 42\\}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2016-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\binom{43}{21}-1\\)\nLet \\(a_{n}\\) be the number of well-filled subsets whose maximum element is \\(n\\) (setting \\(a_{0}=1\\) ). Then it's easy to see that\n\n\\[\\begin{aligned}\n& a_{2 k+1}=a_{2 k}+a_{2 k-1}+\\cdots+a_{0} \\\\\n& a_{2 k+2}=\\left(a_{2 k+1}-C_{k}\\right)+a_{2 k}+\\cdots+a_{0}\n\\end{aligned}\\]\n\nwhere \\(C_{k}\\) is the number of well-filled subsets of size \\(k+1\\) with maximal element \\(2 k+1\\).\nWe proceed to compute \\(C_{k}\\). One can think of such a subset as a sequence of numbers \\(1 \\leq s_{1}<\\cdots<\\) \\(s_{k+1} \\leq 2 k+1\\) such that \\(s_{i} \\geq 2 i-1\\) for every \\(1 \\leq i \\leq k+1\\). Equivalently, letting \\(s_{i}=i+1+t_{i}\\) it's the number of sequences \\(0 \\leq t_{1} \\leq \\cdots \\leq t_{k+1} \\leq k+1\\) such that \\(t_{i} \\geq i\\) for every \\(i\\). This gives the list of \\(x\\)-coordinates of steps up in a Catalan path from \\((0,0)\\) to \\((k+1, k+1)\\), so\n\n\\[C_{k}=\\frac{1}{k+2}\\binom{2(k+1)}{(k+1)}\\]\n\nis equal to the \\((k+1)\\) th Catalan number.\nFrom this we can solve the above recursion to derive that\n\n\\[a_{n}=\\binom{n}{\\lfloor(n-1) / 2\\rfloor}\\]\n\nConsequently, for even \\(n\\),\n\n\\[a_{0}+\\cdots+a_{n}=a_{n+1}=\\binom{n+1}{\\lfloor n / 2\\rfloor}\\]\n\nPutting \\(n=42\\) gives the answer, after subtracting off the empty set (counted in \\(a_{0}\\) ).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

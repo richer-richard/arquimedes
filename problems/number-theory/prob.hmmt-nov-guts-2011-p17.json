@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-guts-2011-p17",
+  "title": "2011 HMMT November Guts Problem 17",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2011,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 50.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For a positive integer \\(n\\), let \\(p(n)\\) denote the product of the positive integer factors of \\(n\\). Determine the number of factors \\(n\\) of 2310 for which \\(p(n)\\) is a perfect square.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2011-p17.hmmt",
+      "kind": "proof-sketch",
+      "text": "27 Note that \\(2310=2 \\times 3 \\times 5 \\times 7 \\times 11\\). In general, we see that if \\(n\\) has \\(d(n)\\) positive integer factors, then \\(p(n)=n^{\\frac{d}{2}}\\) since we can pair factors \\(\\left(d, \\frac{n}{d}\\right)\\) which multiply to \\(n\\). As a result, \\(p(n)\\) is a square if and only if \\(n\\) is a square or \\(d\\) is a multiple of 4 .\nThus, because 2310 is not divisible by the square of any prime, we claim that for integers \\(n\\) dividing 2310, \\(p(n)\\) is even if and only if \\(n\\) is not prime. Clearly, \\(p(n)\\) is simply equal to \\(n\\) when \\(n\\) is prime, and \\(p(1)=1\\), so it suffices to check the case when \\(n\\) is composite. Suppose that \\(n=p_{1} p_{2} \\cdots p_{k}\\), where \\(k>1\\) and \\(\\left\\{p_{1}, \\ldots, p_{k}\\right\\}\\) is some subset of \\(\\{2,3,5,7,11\\}\\). Then, we see that \\(n\\) has \\(2^{k}\\) factors, and that \\(4 \\mid 2^{k}\\), so \\(p(n)\\) is a square.\n\nSince 2310 has \\(2^{5}=32\\) factors, five of which are prime, 27 of them have \\(p(n)\\) even.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2009-p20",
+  "title": "2009 AMC 12B Problem 20",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.double-counting",
+      "label": "Double counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polyhedron",
+      "label": "Polyhedron",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2009,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 34.7,
+    "source": 2040,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A convex polyhedron \\(Q\\) has vertices \\(V_1,\\) \\(V_2,\\) \\(\\ldots,\\) \\(V_n,\\) and \\(100\\) edges. The polyhedron is cut by planes \\(P_1,\\) \\(P_2,\\) \\(\\ldots,\\) \\(P_n\\) in such a way that plane \\(P_k\\) cuts only those edges that meet at vertex \\(V_k.\\) In addition, no two planes intersect inside or on \\(Q.\\) The cuts produce \\(n\\) pyramids and a new polyhedron \\(R.\\) How many edges does \\(R\\) have?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(200\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2n\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(300\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(400\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4n\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "300"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2009-p20.live",
+      "kind": "proof-sketch",
+      "text": "Each of the \\(100\\) edges is cut once near each endpoint, so \\(R\\) has \\(2 \\cdot 100 = 200\\) vertices.\n\nThe cut at vertex \\(V_k\\) creates a small polygon whose number of edges equals the degree of \\(V_k\\); summed over all vertices this is \\(200,\\) the total number of edge-endpoints. The middle portion of each original edge also survives, adding \\(100\\) edges. So \\(R\\) has \\(200 + 100 = 300\\) edges.\n\nThus, the correct answer is C.",
+      "hints": [
+        "Each original edge is cut once near each of its two endpoints, creating new vertices",
+        "Count the new edges (one per edge-endpoint) plus the surviving middle portion of each original edge"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12b-2008-p16",
+  "title": "2008 AMC 12B Problem 16",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area",
+      "label": "Area",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.factor",
+      "label": "Factor",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.simons-favorite-factoring-trick",
+      "label": "Simon’s Favorite Factoring Trick",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2008,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 28.9,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A rectangular floor measures \\(a\\) feet by \\(b\\) feet, where \\(a\\) and \\(b\\) are positive integers with \\(b \\gt a.\\) An artist paints a rectangle on the floor with the sides of the rectangle parallel to the sides of the floor. The unpainted part of the floor forms a border of width \\(1\\) foot around the painted rectangle and occupies half the area of the entire floor. How many possibilities are there for the ordered pair \\((a, b)?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2008-p16.live",
+      "kind": "proof-sketch",
+      "text": "The painted rectangle measures \\((a - 2)\\) by \\((b - 2)\\) and has half the area of the floor, so \\[ ab = 2(a - 2)(b - 2). \\]\n\nExpanding gives \\(0 = ab - 4a - 4b + 8,\\) and adding \\(8\\) yields \\((a - 4)(b - 4) = 8.\\)\n\nWith \\(b \\gt a \\gt 0,\\) the only valid factor pairs of \\(8\\) are \\((a - 4, b - 4) = (1, 8)\\) and \\((2, 4),\\) giving \\((a, b) = (5, 12)\\) and \\((6, 8).\\)\n\nThere are \\(2\\) possibilities.\n\nThus, the correct answer is B.",
+      "hints": [
+        "The painted rectangle is \\((a - 2) \\times (b - 2)\\) and equals half the floor, so \\(ab = 2(a - 2)(b - 2)\\)",
+        "Rearrange to \\((a - 4)(b - 4) = 8\\) and count factor pairs with \\(b \\gt a \\gt 0\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

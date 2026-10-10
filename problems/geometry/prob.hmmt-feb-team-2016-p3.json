@@ -1,0 +1,100 @@
+{
+  "id": "prob.hmmt-feb-team-2016-p3",
+  "title": "2016 HMMT February Team Problem 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2016,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 80.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A B C\\) be an acute triangle with incenter \\(I\\) and circumcenter \\(O\\). Assume that \\(\\angle O I A=90^{\\circ}\\). Given that \\(A I=97\\) and \\(B C=144\\), compute the area of \\(\\triangle A B C\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2016-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 14040\nWe present five different solutions and outline a sixth and seventh one. In what follows, let \\(a=B C\\), \\(b=C A, c=A B\\) as usual, and denote by \\(r\\) and \\(R\\) the inradius and circumradius. Let \\(s=\\frac{1}{2}(a+b+c)\\). In the first five solutions we will only prove that\n\n\\[\\angle A I O=90^{\\circ} \\Longrightarrow b+c=2 a\\]\n\nLet us see how this solves the problem. This lemma implies that \\(s=216\\). If we let \\(E\\) be the foot of \\(I\\) on \\(A B\\), then \\(A E=s-B C=72\\), consequently the inradius is \\(r=\\sqrt{97^{2}-72^{2}}=65\\). Finally, the area is \\(s r=216 \\cdot 65=14040\\).\n\nFirst Solution. Since \\(O I \\perp D A, A I=D I\\). Now, it is a well-known fact that \\(D I=D B=D C\\) (this is occasionally called \"Fact 5\"). Then by Ptolemy's Theorem,\n\n\\[D B \\cdot A C+D C \\cdot A B=D A \\cdot B C \\Longrightarrow A C+A B=2 B C\\]\n\nSecond Solution. As before note that \\(I\\) is the midpoint of \\(A D\\). Let \\(M\\) and \\(N\\) be the midpoints of \\(A B\\) and \\(A C\\), and let the reflection of \\(M\\) across \\(B I\\) be \\(P\\); thus \\(B M=B P\\). Also, \\(M I=P I\\), but we know \\(M I=N I\\) as \\(I\\) lies on the circumcircle of triangle \\(A M N\\). Consequently, we get \\(P I=N I\\); moreover by angle chasing we have\n\n\\[\\angle I N C=\\angle A M I=180^{\\circ}-\\angle B P I=\\angle I P C\\]\n\nThus triangles \\(I N C\\) and \\(P I C\\) are congruent ( \\(C I\\) is a bisector) so we deduce \\(P C=N C\\). Thus,\n\n\\[B C=B P+P C=B M+C N=\\frac{1}{2}(A B+A C)\\]\n\nThird Solution. We appeal to Euler's Theorem, which states that \\(I O^{2}=R(R-2 r)\\).\nThus by the Pythagorean Theorem on \\(\\triangle A I O\\) (or by Power of a Point) we may write\n\n\\[(s-a)^{2}+r^{2}=A I^{2}=R^{2}-I O^{2}=2 R r=\\frac{a b c}{2 s}\\]\n\nwith the same notations as before. Thus, we derive that\n\n\\[\\begin{aligned}\na b c & =2 s\\left((s-a)^{2}+r^{2}\\right) \\\\\n& =2(s-a)(s(s-a)+(s-b)(s-c)) \\\\\n& =\\frac{1}{2}(s-a)\\left((b+c)^{2}-a^{2}+a^{2}-(b-c)^{2}\\right) \\\\\n& =2 b c(s-a)\n\\end{aligned}\\]\n\nFrom this we deduce that \\(2 a=b+c\\), and we can proceed as in the previous solution.\nFourth Solution. From Fact 5 again \\((D B=D I=D C)\\), drop perpendicular from \\(I\\) to \\(A B\\) at \\(E\\); call \\(M\\) the midpoint of \\(B C\\). Then, by \\(A A S\\) congruency on \\(A I E\\) and \\(C D M\\), we immediately get that \\(C M=A E\\). As \\(A E=\\frac{1}{2}(A B+A C-B C)\\), this gives the desired conclusion.\n\nFifth Solution. This solution avoids angle-chasing and using the fact that \\(B I\\) and \\(C I\\) are anglebisectors. Recall the perpendicularity lemma, where\n\n\\[W X \\perp Y Z \\Longleftrightarrow W Y^{2}-W Z^{2}=X Y^{2}-X Z^{2}\\]\n\nLet \\(B^{\\prime}\\) be on the extension of ray \\(C A\\) such that \\(A B^{\\prime}=A B\\). Of course, as in the proof of the angle bisector theorem, \\(B B^{\\prime} \\| A I\\), meaning that \\(B B^{\\prime} \\perp I O\\). Let \\(I^{\\prime}\\) be the reflection of \\(I\\) across \\(A\\); of course, \\(I^{\\prime}\\) is then the incenter of triangle \\(A B^{\\prime} C^{\\prime}\\). Now, we have \\(B^{\\prime} I^{2}-B I^{2}=B^{\\prime} O^{2}-B O^{2}\\) by the perpendicularity and by power of a point \\(B^{\\prime} O^{2}-B O^{2}=B^{\\prime} A \\cdot B^{\\prime} C\\). Moreover \\(B I^{2}+B^{\\prime} I^{2}=B I^{2}+B I^{\\prime 2}=2 B A^{2}+2 A I^{2}\\) by the median formula. Subtracting, we get \\(B I^{2}=A I^{2}+\\frac{1}{2}(A B)(A B-A C)\\). We have a similar expression for \\(C I\\), and subtracting the two results in \\(B I^{2}-C I^{2}=\\frac{1}{2}\\left(A B^{2}-A C^{2}\\right)\\). Finally,\n\n\\[B I^{2}-C I^{2}=\\frac{1}{4}\\left[(B C+A B-A C)^{2}-(B C-A B+A C)^{2}\\right]\\]\n\nfrom which again, the result \\(2 B C=A B+A C\\) follows.\nSixth Solution, outline. Use complex numbers, setting \\(I=a b+b c+c a, A=-a^{2}\\), etc. on the unit circle (scale the picture to fit in a unit circle; we calculate scaling factor later). Set \\(a=1\\), and let \\(u=b+c\\) and \\(v=b c\\). Write every condition in terms of \\(u\\) and \\(v\\), and the area in terms of \\(u\\) and \\(v\\) too. There should be two equations relating \\(u\\) and \\(v: 2 u+v+1=0\\) and \\(u^{2}=\\frac{130}{97}^{2} v\\) from the right angle and the 144 to 97 ratio, respectively. The square area can be computed in terms of \\(u\\) and \\(v\\), because the area itself is antisymmetric so squaring it suffices. Use the first condition to homogenize (not coincidentally the factor \\(\\left(1-b^{2}\\right)\\left(1-c^{2}\\right)=(1+b c)^{2}-(b+c)^{2}=(1+v)^{2}-u^{2}\\) from the area homogenizes perfectly... because \\(A B \\cdot A C=A I \\cdot A I_{A}\\), where \\(I_{A}\\) is the \\(A\\)-excenter, and of course the way the problem is set up \\(A I_{A}=3 A I\\). .), and then we find the area of the scaled down version. To find the scaling factor simply determine \\(|b-c|\\) by squaring it, writing in terms again of \\(u\\) and \\(v\\), and comparing this to the value of 144.\n\nSeventh Solution, outline. Trigonometric solutions are also possible. One can you write everything in terms of the angles and solve the equations; for instance, the \\(\\angle A I O=90^{\\circ}\\) condition can be rewritten as \\(\\frac{1}{2} \\cos \\frac{B-C}{2}=2 \\sin \\frac{B}{2} \\sin \\frac{C}{2}\\) and the 97 to 144 ratio condition can be rewritten as \\(\\frac{2 \\sin \\frac{B}{2} 2 \\sin \\frac{C}{2}}{\\sin A}=\\frac{97}{144}\\). The first equation implies \\(\\sin \\frac{A}{2}=2 \\sin \\frac{B}{2} \\sin \\frac{C}{2}\\), which we can plug into the second equation to get \\(\\cos \\frac{A}{2}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

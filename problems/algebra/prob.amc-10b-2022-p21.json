@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-10b-2022-p21",
+  "title": "2022 AMC 10B Problem 21",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2022,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 40.0,
+    "source": 2150,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(P(x)\\) be a polynomial with rational coefficients such that when \\(P(x)\\) is divided by the polynomial \\(x^2 + x + 1,\\) the remainder is \\(x+2,\\) and when \\(P(x)\\) is divided by the polynomial \\(x^2+1,\\) the remainder is \\(2x+1.\\) There is a unique polynomial of least degree with these two properties. What is the sum of the squares of the coefficients of that polynomial?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( \\ 10 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( \\ 13 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( \\ 19 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( \\ 20 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( \\ 23 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "23"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2022-p21.live",
+      "kind": "proof-sketch",
+      "text": "The first remainder condition gives \\[\\begin{aligned}P(x)&=(x^2+x+1)Q(x)\\\\&\\quad+x+2.\\end{aligned}\\] for some polynomial \\(Q.\\) Modulo \\(x^2+1,\\) we have \\(x^2\\equiv-1,\\) so \\[P(x)\\equiv xQ(x)+x+2.\\]\n\nIf \\(Q(x)=c\\) is constant, this remainder is \\((c+1)x+2,\\) which cannot equal \\(2x+1.\\) Thus \\(Q\\) must have degree at least \\(1.\\)\n\nNow let \\(Q(x)=ax+b.\\) Reducing modulo \\(x^2+1\\) gives \\[P(x)\\equiv(b+1)x+(2-a).\\] Matching this with \\(2x+1\\) yields \\(a=b=1.\\) This constructs a degree-\\(3\\) polynomial, and the failed constant case proves that degree \\(3\\) is minimal.\n\nTherefore, \\[\\begin{aligned}P(x)&=(x+1)(x^2+x+1)\\\\&\\quad+x+2\\\\&=x^3+2x^2+3x+3.\\end{aligned}\\] The sum of the squares of its coefficients is \\(1^2+2^2+3^2+3^2=23.\\)\n\nThus, the answer is E .",
+      "hints": [
+        "First check whether \\(Q\\) can be constant, and then try a linear polynomial",
+        "Write \\(P=(x^2+x+1)Q+x+2,\\) then reduce this expression modulo \\(x^2+1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

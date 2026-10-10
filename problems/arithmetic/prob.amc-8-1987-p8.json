@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-1987-p8",
+  "title": "1987 AMC 8 Problem 8",
+  "category": "arithmetic",
+  "subjects": [
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "arith.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "arith.place-value",
+      "label": "Place value",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1987,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 8.7,
+    "source": 930,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "In the addition problem below, \\(A\\) and \\(B\\) are nonzero digits:\n\n\\[\\begin{array}{r} 9876 \\\\ A32 \\\\ +B1 \\\\ \\hline \\end{array}\\]\n\nHow many digits (not necessarily different) are in the sum of the three whole numbers?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "E",
+      "text": "depends on the values of \\(A\\) and \\(B\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1987-p8.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(A\\) and \\(B\\) are at least \\(1,\\) the sum is at least \\(9876 + 132 + 11 = 10{,}019,\\) which has \\(5\\) digits.\n\nAt the other extreme, with \\(A = B = 9\\) the sum is \\(9876 + 932 + 91 = 10{,}899,\\) still \\(5\\) digits. So the sum always has exactly \\(5\\) digits.\n\nThus, the correct answer is B .",
+      "hints": [
+        "The number \\(9876\\) is already close to \\(10{,}000,\\) so adding anything pushes the sum past it",
+        "Check the largest possible sum too, using \\(A = B = 9\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

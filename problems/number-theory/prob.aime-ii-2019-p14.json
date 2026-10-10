@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2019-p14",
+  "title": "2019 AIME II Problem 14",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.chicken-mcnugget-theorem",
+      "label": "Chicken McNugget Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2019,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 61.2,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 20,
+  "statement": "Find the sum of all positive integers \\(n\\) such that, given an unlimited supply of stamps of denominations \\(5,\\) \\(n,\\) and \\(n + 1\\) cents, \\(91\\) cents is the greatest postage that cannot be formed.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "71",
+    "value": "71"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2019-p14.live",
+      "kind": "proof-sketch",
+      "text": "Using \\(k\\) stamps of the denominations \\(n\\) and \\(n + 1\\) produces exactly the amounts \\(kn + c\\) for \\(0 \\le c \\le k,\\) and adding \\(5\\)-cent stamps then covers everything above in the same residue class mod \\(5.\\) So in each class \\(r\\) every amount at least \\(m(r)\\) is formable and nothing smaller is, where \\(m(r)\\) is the least value of \\(kn + c\\) \\((0 \\le c \\le k)\\) congruent to \\(r\\) mod \\(5.\\) The greatest non-formable amount is \\(\\max_r m(r) - 5,\\) so we need \\(\\max_r m(r) = 96:\\) the class of \\(96\\) (which is \\(1\\) mod \\(5\\)) must be covered first exactly at \\(96,\\) and every other class no later.\n\nCase on \\(n \\bmod 5,\\) noting \\(kn + c \\equiv kn + c.\\) If \\(n \\equiv 4:\\) class \\(1\\) needs \\(4k + c \\equiv 1\\) with \\(c \\le k,\\) first possible at \\(k = 4,\\) \\(c = 0,\\) so \\(4n = 96\\) and \\(n = 24;\\) the other classes are covered at \\(24,\\) \\(48,\\) \\(72,\\) all less than \\(96,\\) so \\(n = 24\\) works. If \\(n \\equiv 2:\\) class \\(1\\) is first covered at \\(k = 2,\\) \\(c = 2,\\) so \\(2n + 2 = 96\\) and \\(n = 47;\\) the other classes are covered at \\(47,\\) \\(48,\\) \\(94 \\le 96,\\) so \\(n = 47\\) works.\n\nIf \\(n \\equiv 3:\\) class \\(1\\) first at \\(2n = 96,\\) so \\(n = 48,\\) but then class \\(2\\) is first covered at \\(2n + 1 = 97 \\gt 96\\) — fails. If \\(n \\equiv 1:\\) class \\(1\\) first at \\(n = 96,\\) but then class \\(3\\) is first covered at \\(2n + 1 = 193\\) — fails. If \\(n \\equiv 0:\\) class \\(1\\) first at \\(n + 1 = 96,\\) so \\(n = 95,\\) but class \\(4\\) needs \\(c = 4,\\) \\(k \\ge 4,\\) giving \\(4n + 4 \\gt 96\\) — fails. The answer is \\(24 + 47 = 71.\\)",
+      "hints": [
+        "With unlimited \\(5\\)-cent stamps, work modulo \\(5:\\) using \\(k\\) stamps of values \\(n\\) and \\(n + 1\\) you can make exactly the amounts \\(kn, kn + 1, \\ldots, kn + k\\)",
+        "You need \\(96\\) to be the smallest formable amount in its residue class mod \\(5,\\) with every other class covered even earlier; case on \\(n \\bmod 5\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

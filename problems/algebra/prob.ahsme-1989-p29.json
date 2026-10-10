@@ -1,0 +1,85 @@
+{
+  "id": "prob.ahsme-1989-p29",
+  "title": "1989 AHSME Problem 29",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.binomial-theorem",
+      "label": "Binomial theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1989,
+    "number": 29
+  },
+  "difficulty": {
+    "course": 55.7,
+    "source": 2760,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Find \\[ \\sum_{k=0}^{49}(-1)^k\\binom{99}{2k}, \\] where \\[ \\binom{n}{j}=\\frac{n!}{j!(n-j)!}. \\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(-2^{50}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(-2^{49}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2^{49}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2^{50}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1989-p29.live",
+      "kind": "proof-sketch",
+      "text": "The sum is the real part of \\[ (1+i)^{99}=2^{\\frac{99}{2}}e^{\\frac{99\\pi i}{4}}. \\] Since \\(99\\equiv3\\pmod8,\\) its real part is \\[ \\begin{aligned} 2^{\\frac{99}{2}}\\cos\\frac{3\\pi}{4} &=2^{\\frac{99}{2}}\\left(-\\frac{\\sqrt2}{2}\\right)\\\\ &=-2^{49}. \\end{aligned} \\]\n\nThus the correct answer is B.",
+      "hints": [
+        "Recognize \\((-1)^k\\) as \\(i^{2k}\\)",
+        "Take the real part of the binomial expansion of \\((1+i)^{99}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

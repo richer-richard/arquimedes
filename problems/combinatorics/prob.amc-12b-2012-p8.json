@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12b-2012-p8",
+  "title": "2012 AMC 12B Problem 8",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2012,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 20.3,
+    "source": 1380,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A dessert chef prepares the dessert for every day of a week starting with Sunday. The dessert each day is either cake, pie, ice cream, or pudding. The same dessert may not be served two days in a row. There must be cake on Friday because of a birthday. How many different dessert menus for the week are possible?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(729\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(972\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1024\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2187\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2304\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "729"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2012-p8.live",
+      "kind": "proof-sketch",
+      "text": "Friday is fixed as cake. Work outward from Friday.\n\nEach of the other six days (Saturday, then Thursday, Wednesday, Tuesday, Monday, Sunday) can be any dessert except the one served on the neighboring already-chosen day, giving \\(3\\) choices each.\n\nThe number of menus is \\(3^6=729.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "Fix Friday as cake, then count the other six days",
+        "Each remaining day has \\(3\\) choices, anything except the dessert served the following day"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

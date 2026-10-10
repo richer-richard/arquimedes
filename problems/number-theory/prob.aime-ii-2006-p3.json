@@ -1,0 +1,57 @@
+{
+  "id": "prob.aime-ii-2006-p3",
+  "title": "2006 AIME II Problem 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2006,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 40.0,
+    "source": 2150,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Let \\(P\\) be the product of the first \\(100\\) positive odd integers. Find the largest integer \\(k\\) such that \\(P\\) is divisible by \\(3^k.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "49",
+    "value": "49"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2006-p3.live",
+      "kind": "proof-sketch",
+      "text": "\\(P = 1 \\cdot 3 \\cdot 5 \\cdots 199,\\) so \\(k\\) is the total number of factors of \\(3\\) among the odd numbers up to \\(199.\\) The odd multiples of \\(3\\) are \\(3 \\cdot 1, 3 \\cdot 3, \\ldots, 3 \\cdot 65,\\) and there are \\(33\\) of them. The odd multiples of \\(9\\) are \\(9 \\cdot 1, \\ldots, 9 \\cdot 21:\\) \\(11\\) of them. The odd multiples of \\(27\\) are \\(27, 81, 135, 189:\\) \\(4\\) of them. The only odd multiple of \\(81\\) at most \\(199\\) is \\(81\\) itself, and there are no multiples of \\(243.\\)\n\nEach layer contributes one additional factor of \\(3,\\) so \\(k = 33 + 11 + 4 + 1 = 49.\\)",
+      "hints": [
+        "Count how many of \\(1, 3, 5, \\ldots, 199\\) are divisible by \\(3,\\) then by \\(9,\\) by \\(27,\\) and by \\(81.\\)",
+        "Each divisibility layer adds one more factor of \\(3\\) per surviving term, so \\(k\\) is the sum of the four counts."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

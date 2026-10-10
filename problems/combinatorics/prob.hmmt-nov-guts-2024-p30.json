@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-guts-2024-p30",
+  "title": "2024 HMMT November Guts Problem 30",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.enumeration-with-symmetry",
+      "label": "Enumeration with symmetry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2024,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 60.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the number of ways to shade exactly 4 distinct cells of a \\(4 \\times 4\\) grid such that no two shaded cells share one or more vertices.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "79",
+    "value": "79"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2024-p30.hmmt",
+      "kind": "proof-sketch",
+      "text": "Assign coordinates to the cells of the grid so that the bottom-left, bottom-right, and topright corners are \\((0,0),(3,0)\\), and \\((3,3)\\) respectively.\nObserve that for each quadrant of the grid, all four cells of that quadrant share a vertex. Thus, any valid coloring must have exactly one shaded cell in each quadrant. Let \\(A=\\left(a_{1}, a_{2}\\right), B=\\left(b_{1}, b_{2}\\right)\\), \\(C=\\left(c_{1}, c_{2}\\right)\\) and \\(D=\\left(d_{1}, d_{2}\\right)\\) denote the shaded cells in the bottom-left, bottom-right, top-left, and top-right quadrants, respectively, so that \\(0 \\leq a_{1}, a_{2}, b_{2}, c_{1} \\leq 1\\) and \\(2 \\leq b_{1}, c_{2}, d_{1}, d_{2} \\leq 3\\).\nObserve that \\(A\\) and \\(B\\) share a vertex if and only if \\(\\left|b_{1}-a_{1}\\right| \\leq 1\\) and \\(\\left|b_{2}-a_{2}\\right| \\leq 1\\). The latter is always true, and the former holds precisely when \\(a_{1}=1\\) and \\(b_{1}=2\\). We conclude that in a valid coloring, \\(\\left(a_{1}, b_{1}\\right)\\) must be one of \\((0,2),(0,3)\\), or \\((1,3)\\). We can similarly deduce the same holds for \\(\\left(c_{1}, d_{1}\\right)\\), \\(\\left(a_{2}, c_{2}\\right)\\), and \\(\\left(b_{2}, d_{2}\\right)\\).\n\nSuppose the coordinates are chosen according to those constraints. Then, we are guaranteed the pairs of cells \\((A, B),(C, D),(A, C)\\), and \\((B, D)\\) do not share any vertices. The only way we get an invalid coloring is if \\(A\\) and \\(D\\) share a vertex, or \\(B\\) and \\(C\\) share a vertex.\n\nSuppose \\(A\\) and \\(D\\) share a vertex. Then we must have \\(a_{1}=a_{2}=1\\) and \\(d_{1}=d_{2}=2\\), which implies \\(b_{1}=c_{2}=3\\) and \\(b_{2}=c_{1}=0\\). Thus, there is exactly one way to choose coordinates in the manner above so that \\(A\\) and \\(D\\) share a vertex (as depicted in the figure on the right). Likewise, there is exactly one way for \\(B\\) and \\(C\\) to share a vertex.\nThere are \\(3^{4}=81\\) ways to choose the coordinates, so the answer is \\(81-2=79\\).\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

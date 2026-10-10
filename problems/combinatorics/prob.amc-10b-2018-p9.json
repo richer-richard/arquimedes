@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2018-p9",
+  "title": "2018 AMC 10B Problem 9",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.bijection",
+      "label": "Bijection",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.dice-probability",
+      "label": "Dice (probability)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2018,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 21.5,
+    "source": 1370,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "The faces of each of \\(7\\) standard dice are labeled with the integers from \\(1\\) to \\(6.\\) Let \\(p\\) be the probability that when all \\(7\\) dice are rolled, the sum of the numbers on the top faces is \\(10.\\) What other sum occurs with the same probability \\(p?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(26\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(32\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(39\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(42\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "39"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2018-p9.live",
+      "kind": "proof-sketch",
+      "text": "Replace each die’s value \\(k\\) by \\(7 - k.\\) This pairs up outcomes one-to-one and keeps their probabilities, and it sends a total of \\(s\\) to \\(7 \\cdot 7 - s = 49 - s.\\) So the sums \\(s\\) and \\(49 - s\\) are equally likely. The partner of \\(10\\) is \\(49 - 10 = 39.\\) Thus, D is the correct answer.",
+      "hints": [
+        "Replacing each die value \\(k\\) by \\(7 - k\\) pairs up equally likely outcomes",
+        "This replacement sends a total of \\(s\\) to a total of \\(49 - s\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

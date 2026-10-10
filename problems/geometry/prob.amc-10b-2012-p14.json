@@ -1,0 +1,90 @@
+{
+  "id": "prob.amc-10b-2012-p14",
+  "title": "2012 AMC 10B Problem 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.rhombus",
+      "label": "Rhombus",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.special-right-triangle",
+      "label": "Special right triangle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2012,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 24.5,
+    "source": 1670,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Two equilateral triangles are contained in a square whose side length is \\(2\\sqrt 3.\\) The bases of these triangles are opposite sides of the square, and their intersection is a rhombus. What is the area of the rhombus?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( \\dfrac{3}{2} \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( \\sqrt 3 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 2\\sqrt 2 - 1 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 8\\sqrt 3 - 12 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( \\dfrac{4\\sqrt 3}{3} \\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2012-p14.live",
+      "kind": "proof-sketch",
+      "text": "This rhombus is created by placing two congruent equilateral triangles. Let the side length of it be \\(s.\\) Then, the area of one of them is \\(\\dfrac{s^2 \\sqrt 3}4,\\) making the total area \\(\\dfrac{s^2 \\sqrt 3}2.\\)\n\nThe side length of the larger equilateral triangle is \\(2 \\sqrt 3.\\) The height of it is \\(3\\) since the height is equal to \\(2 \\sqrt 3 \\sin(60^\\circ) .\\)\n\nHalf of the square is \\(\\sqrt 3,\\) so the height of the smaller triangle is \\(3 - \\sqrt 3 .\\) Thus, the ratio between \\(s\\) and \\(2 \\sqrt 3\\) is \\(\\dfrac {3-\\sqrt 3}3 .\\)\n\nAs such, \\[s = \\dfrac{2 \\sqrt 3(3-\\sqrt 3)}3 = 2\\sqrt 3-2 .\\]\n\nTherefore, the combined area is \\[\\begin{aligned} \\dfrac{s^2 \\sqrt 3}2 &= \\dfrac{(2\\sqrt 3-2)^2 \\sqrt 3 }2 \\\\&= \\dfrac{(16-8\\sqrt 3) \\sqrt 3 }2 \\\\&= 8 \\sqrt 3 - 12 \\end{aligned}\\]\n\nThus, the correct answer is D .",
+      "hints": [
+        "Use a \\(30\\)-\\(60\\)-\\(90\\) triangle near one corner of the square",
+        "Find one small triangle outside the rhombus and multiply its area by \\(4\\)"
+      ],
+      "images": [
+        "f22b2c506784138ee920e68a15c69def21338a82fb5726e6c88290505874dde1"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "f22b2c506784138ee920e68a15c69def21338a82fb5726e6c88290505874dde1"
+    ]
+  }
+}

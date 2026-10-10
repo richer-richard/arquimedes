@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-2003-p18",
+  "title": "2003 AMC 10B Problem 18",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2003,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 24.1,
+    "source": 1480,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "What is the largest integer that is a divisor of\n\n\\[ \\begin{aligned} &(n+1)(n+3)(n+5) \\\\ &\\quad {}\\cdot (n+7)(n+9) \\end{aligned} \\]\n\nfor all positive even integers \\(n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(165\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "15"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2003-p18.live",
+      "kind": "proof-sketch",
+      "text": "When \\(n\\) is even, the factors are five consecutive odd numbers. Among any five consecutive odd numbers, at least one is divisible by \\(3\\) and exactly one by \\(5,\\) so the product is always divisible by \\(15.\\)\n\nTo prove that no larger fixed divisor is forced, compare three cases: \\[ \\begin{aligned} n=2 &: 3\\cdot5\\cdot7\\cdot9\\cdot11,\\\\ n=10 &: 11\\cdot13\\cdot15\\cdot17\\cdot19,\\\\ n=12 &: 13\\cdot15\\cdot17\\cdot19\\cdot21. \\end{aligned} \\] The greatest common divisor of these three products is exactly \\(15,\\) so a divisor common to every case cannot be any larger.\n\nThus, the correct answer is D.",
+      "hints": [
+        "When \\(n\\) is even, the five factors are consecutive odd numbers",
+        "Among five consecutive odd numbers one is a multiple of \\(3\\) and one of \\(5;\\) check no larger factor always works"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

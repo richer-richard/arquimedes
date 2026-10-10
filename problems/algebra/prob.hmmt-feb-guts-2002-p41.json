@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2002-p41",
+  "title": "2002 HMMT February Guts Problem 41",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2002,
+    "number": 41
+  },
+  "difficulty": {
+    "course": 75.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For any integer \\(n\\), define \\(\\lfloor n\\rfloor\\) as the greatest integer less than or equal to \\(n\\). For any positive integer \\(n\\), let\n\n\\[f(n)=\\lfloor n\\rfloor+\\left\\lfloor\\frac{n}{2}\\right\\rfloor+\\left\\lfloor\\frac{n}{3}\\right\\rfloor+\\cdots+\\left\\lfloor\\frac{n}{n}\\right\\rfloor .\\]\n\nFor how many values of \\(n, 1 \\leq n \\leq 100\\), is \\(f(n)\\) odd?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2002-p41.hmmt",
+      "kind": "proof-sketch",
+      "text": "55 Notice that, for fixed \\(a,\\lfloor n / a\\rfloor\\) counts the number of integers \\(b \\in\\) \\(\\{1,2, \\ldots, n\\}\\) which are divisible by \\(a\\); hence, \\(f(n)\\) counts the number of pairs \\((a, b), a, b \\in\\) \\(\\{1,2, \\ldots, n\\}\\) with \\(b\\) divisible by \\(a\\). For any fixed \\(b\\), the number of such pairs is \\(d(b)\\) (the number of divisors of \\(b\\) ), so the total number of pairs \\(f(n)\\) equals \\(d(1)+d(2)+\\cdots+d(n)\\). But \\(d(b)\\) is odd precisely when \\(b\\) is a square, so \\(f(n)\\) is odd precisely when there are an odd number of squares in \\(\\{1,2, \\ldots, n\\}\\). This happens for \\(1 \\leq n<4 ; 9 \\leq n<16 ; \\ldots ; 81 \\leq n<100\\). Adding these up gives 55 values of \\(n\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

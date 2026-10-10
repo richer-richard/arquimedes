@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-guts-2004-p9",
+  "title": "2004 HMMT February Guts Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2004,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 70.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A positive integer \\(n\\) is picante if \\(n\\) ! ends in the same number of zeroes whether written in base 7 or in base 8 . How many of the numbers \\(1,2, \\ldots, 2004\\) are picante?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2004-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "4\n\nThe number of zeroes in base 7 is the total number of factors of 7 in \\(1 \\cdot 2 \\cdots n\\), which is\n\n\\[\\lfloor n / 7\\rfloor+\\left\\lfloor n / 7^{2}\\right\\rfloor+\\left\\lfloor n / 7^{3}\\right\\rfloor+\\cdots .\\]\n\nThe number of zeroes in base 8 is \\(\\lfloor a\\rfloor\\), where\n\n\\[a=\\left(\\lfloor n / 2\\rfloor+\\left\\lfloor n / 2^{2}\\right\\rfloor+\\left\\lfloor n / 2^{3}\\right\\rfloor+\\cdots\\right) / 3\\]\n\nis one-third the number of factors of 2 in the product \\(n\\) !. Now \\(\\left\\lfloor n / 2^{k}\\right\\rfloor / 3 \\geq\\left\\lfloor n / 7^{k}\\right\\rfloor\\) for all \\(k\\), since \\(\\left(n / 2^{k}\\right) / 3 \\geq n / 7^{k}\\). But \\(n\\) can only be picante if the two sums differ by at most \\(2 / 3\\), so in particular this requires \\(\\left(\\left\\lfloor n / 2^{2}\\right\\rfloor\\right) / 3 \\leq\\left\\lfloor n / 7^{2}\\right\\rfloor+2 / 3 \\Leftrightarrow\\lfloor n / 4\\rfloor \\leq 3\\lfloor n / 49\\rfloor+2\\). This cannot happen for \\(n \\geq 12\\); checking the remaining few cases by hand, we find \\(n=1,2,3,7\\) are picante, for a total of 4 values.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

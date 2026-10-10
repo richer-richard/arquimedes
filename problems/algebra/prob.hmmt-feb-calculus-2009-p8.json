@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-calculus-2009-p8",
+  "title": "2009 HMMT February Calculus Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2009,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 80.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute\n\n\\[\\int_{1}^{\\sqrt{3}} x^{2 x^{2}+1}+\\ln \\left(x^{2 x^{2 x^{2}+1}}\\right) d x\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-calculus-2009-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "Using the fact that \\(x=e^{\\ln (x)}\\), we evaluate the integral as follows:\n\n\\[\\begin{aligned}\n\\int x^{2 x^{2}+1}+\\ln \\left(x^{2 x^{2 x^{2}+1}}\\right) d x & =\\int x^{2 x^{2}+1}+x^{2 x^{2}+1} \\ln \\left(x^{2}\\right) d x \\\\\n& =\\int e^{\\ln (x)\\left(2 x^{2}+1\\right)}\\left(1+\\ln \\left(x^{2}\\right)\\right) d x \\\\\n& =\\int x e^{x^{2} \\ln \\left(x^{2}\\right)}\\left(1+\\ln \\left(x^{2}\\right)\\right) d x\n\\end{aligned}\\]\n\nNoticing that the derivative of \\(x^{2} \\ln \\left(x^{2}\\right)\\) is \\(2 x\\left(1+\\ln \\left(x^{2}\\right)\\right)\\), it follows that the integral evaluates to\n\n\\[\\frac{1}{2} e^{x^{2} \\ln \\left(x^{2}\\right)}=\\frac{1}{2} x^{2 x^{2}}\\]\n\nEvaluating this from 1 to \\(\\sqrt{3}\\) we obtain the answer.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "prob.ahsme-1965-p36",
+  "title": "1965 AHSME Problem 36",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1965,
+    "number": 36
+  },
+  "difficulty": {
+    "course": 41.0,
+    "source": 2190,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Given distinct straight lines \\(OA\\) and \\(OB.\\) From a point in \\(OA\\) a perpendicular is drawn to \\(OB;\\) from the foot of this perpendicular a line is drawn perpendicular to \\(OA.\\) From the foot of this second perpendicular a line is drawn perpendicular to \\(OB;\\) and so on indefinitely. The lengths of the first and second perpendiculars are \\(a\\) and \\(b,\\) respectively. Then the sum of the lengths of the perpendiculars approaches a limit as the number of perpendiculars grows beyond all bounds. This limit is:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac b{a-b}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac a{a-b}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{ab}{a-b}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{b^2}{a-b}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{a^2}{a-b}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1965-p36.live",
+      "kind": "proof-sketch",
+      "text": "Each new right triangle has the same acute angle, so the perpendicular lengths form a geometric sequence. Since the first two lengths are \\(a,b,\\) the common ratio is \\(\\frac{b}{a}.\\) Convergence implies \\(0\\lt \\frac{b}{a}\\lt1,\\) and the sum is \\[\\frac{a}{1-\\frac{b}{a}}=\\frac{a^2}{a-b}.\\]\n\nTherefore, the correct answer is E.",
+      "hints": [
+        "Successive right triangles formed by the two fixed lines are similar",
+        "The perpendicular lengths form a geometric sequence with first term \\(a\\) and ratio \\(\\frac{b}{a}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

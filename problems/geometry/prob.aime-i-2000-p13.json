@@ -1,0 +1,77 @@
+{
+  "id": "prob.aime-i-2000-p13",
+  "title": "2000 AIME I Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area",
+      "label": "Area",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangent-line",
+      "label": "Tangent line",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2000,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 65.9,
+    "source": 3160,
+    "mohs": null
+  },
+  "estimatedMinutes": 20,
+  "statement": "In the middle of a vast prairie, a firetruck is stationed at the intersection of two perpendicular straight highways. The truck travels at \\(50\\) miles per hour along the highways and at \\(14\\) miles per hour across the prairie. Consider the set of points that can be reached by the firetruck within six minutes. The area of this region is \\(\\frac{m}{n}\\) square miles, where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "731",
+    "value": "731"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2000-p13.live",
+      "kind": "proof-sketch",
+      "text": "In six minutes the truck can drive \\(5\\) miles on a highway or \\(1.4\\) miles across the prairie, and an optimal route is a highway stretch followed by a straight prairie segment. Work in the first quadrant with the highways as axes. Driving to \\((d, 0)\\) takes \\(\\frac{d}{50}\\) hours, leaving a prairie range of \\(14\\left(\\frac{1}{10} - \\frac{d}{50}\\right) = 1.4\\left(1 - \\frac{d}{5}\\right)\\) miles. As \\(d\\) runs from \\(0\\) to \\(5,\\) these disks shrink linearly to a point, so their union is the “cone”: the convex hull of the disk of radius \\(1.4\\) about the origin and the point \\((5, 0),\\) bounded by the tangent line from \\((5, 0).\\) The tangent length is \\(\\sqrt{5^2 - 1.4^2} = 4.8,\\) so the ratios are \\(7\\)–\\(24\\)–\\(25\\) and the tangent line is \\(7x + 24y = 35.\\) The \\(y\\)-axis gives the mirror-image region bounded by \\(24x + 7y = 35.\\)\n\nThe two tangent lines meet at \\(P = \\left(\\frac{35}{31}, \\frac{35}{31}\\right),\\) which lies at distance \\(\\frac{35\\sqrt{2}}{31} \\gt 1.4\\) from the origin — outside the circle — so in the first quadrant the reachable set is exactly the (non-convex) quadrilateral with vertices \\((0, 0),\\) \\((5, 0),\\) \\(P,\\) \\((0, 5).\\) Splitting it along the diagonal from the origin to \\(P\\) gives two triangles, each with area \\(\\frac{1}{2} \\cdot 5 \\cdot \\frac{35}{31},\\) for a quadrant area of \\(\\frac{175}{31}.\\)\n\nThe full region is four copies, with area \\(\\frac{700}{31}\\) square miles. Since \\(\\gcd(700, 31) = 1,\\) the answer is \\(700 + 31 = 731.\\)",
+      "hints": [
+        "In six minutes the truck covers \\(5\\) miles on highway or \\(1.4\\) miles across the prairie. Work in one quadrant.",
+        "Leaving the highway at \\((d, 0)\\) reaches a disk of radius \\(1.4\\left(1 - \\frac{d}{5}\\right);\\) the union of these disks is bounded by the tangent line from \\((5, 0)\\) to the circle of radius \\(1.4\\)"
+      ],
+      "images": [
+        "2bad85dc8a33e544bc524744fa670eee07d4fe1c7fc04d13f5f2e231a1926714"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "2bad85dc8a33e544bc524744fa670eee07d4fe1c7fc04d13f5f2e231a1926714"
+    ]
+  }
+}

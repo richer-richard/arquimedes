@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2014-p15",
+  "title": "2014 AMC 12A Problem 15",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.palindrome",
+      "label": "Palindrome",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.place-value",
+      "label": "Place value",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2014,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 30.6,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A five-digit palindrome is a positive integer with respective digits \\(abcba,\\) where \\(a\\) is not zero. Let \\(S\\) be the sum of all five-digit palindromes. What is the sum of the digits of \\(S?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(27\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(36\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(45\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "18"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2014-p15.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(\\overline{abcba}=10001a+1010b+100c.\\) Summing over all palindromes, each value of \\(a\\in\\{1,\\dots,9\\}\\) occurs with \\(10\\cdot10=100\\) choices of \\(b,c,\\) and each value of \\(b\\) or \\(c\\) occurs with \\(9\\cdot10=90\\) choices of the other two digits.\n\nUsing \\(\\sum a=\\sum b=\\sum c=45,\\) \\[ \\begin{gathered} \\scriptsize S=45\\big(10001\\cdot100+1010\\cdot90+100\\cdot90\\big)\\\\ =45\\cdot1{,}100{,}000\\\\ =49{,}500{,}000. \\end{gathered} \\]\n\nThe sum of the digits of \\(S\\) is \\(4+9+5=18.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "A palindrome \\(\\overline{abcba}\\) equals \\(10001a+1010b+100c\\)",
+        "Each \\(a\\) appears in \\(10\\cdot10\\) palindromes, each \\(b\\) in \\(9\\cdot10\\), each \\(c\\) in \\(9\\cdot10\\); combine with the digit sum \\(45\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

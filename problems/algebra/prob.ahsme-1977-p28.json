@@ -1,0 +1,78 @@
+{
+  "id": "prob.ahsme-1977-p28",
+  "title": "1977 AHSME Problem 28",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1977,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 43.9,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(g(x)=x^5+x^4+x^3\\) \\({}+x^2+x+1.\\) What is the remainder when the polynomial \\(g(x^{12})\\) is divided by the polynomial \\(g(x)?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(5-x\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4-x+x^2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3-x+x^2-x^3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2-x+x^2-x^3+x^4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1977-p28.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(R(x)\\) be the remainder, so \\(\\deg R\\le4.\\) The five roots \\(\\alpha\\) of \\(g\\) satisfy \\(\\alpha^6=1\\) and \\(\\alpha\\ne1.\\) Hence \\(\\alpha^{12}=1\\) and \\[ R(\\alpha)=g(\\alpha^{12})=g(1)=6. \\] Therefore \\(R(x)-6,\\) a polynomial of degree at most \\(4,\\) has five distinct roots. It must be identically zero, so \\(R(x)=6.\\)\n\nTherefore, the correct answer is A.",
+      "hints": [
+        "Use \\((x-1)g(x)=x^6-1\\)",
+        "Evaluate the remainder at the five roots of \\(g\\) and use its degree bound"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

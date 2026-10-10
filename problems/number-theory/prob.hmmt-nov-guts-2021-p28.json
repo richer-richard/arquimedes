@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-guts-2021-p28",
+  "title": "2021 HMMT November Guts Problem 28",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.sum-of-divisors",
+      "label": "Σ (sum of divisors)",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2021,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 54.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find the smallest positive integer \\(n\\) such that the divisors of \\(n\\) can be partitioned into three sets with equal sums.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "120",
+    "value": "120"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2021-p28.hmmt",
+      "kind": "proof-sketch",
+      "text": "I claim the answer is 120 . First, note that \\(120=2^{3} \\cdot 3 \\cdot 5\\), so the sum of divisors is \\((1+2+4+8)(1+3)(1+5)=15 \\cdot 4 \\cdot 6=360\\). Thus, we need to split the divisors into groups summing to 120 . But then we can just take \\(\\{120\\},\\{20,40,60\\},\\{1,2,3,4,5,6,8,10,12,15,24,30\\}\\). Thus, 120 works.\nNow we need to show 120 is the lowest. Let \\(s(n)\\) be the sum of divisors. Since \\(n\\) will be in one of the piles, we need \\(s(n) \\geq 3 n\\). First, we claim that \\(n\\) must have at least 3 distinct prime divisors. Surely, if it had 2 distinct prime divisors, say \\(p\\) and \\(q\\), so that \\(n=p^{a} q^{b}\\), then the sum of divisors is\n\n\\[\\left(1+p+p^{2}+\\ldots+p^{a}\\right)\\left(1+q+q^{2}+\\ldots+q^{b}\\right)=p^{a} q^{b}\\left(1+\\frac{1}{p}+\\ldots+\\frac{1}{p^{a}}\\right)\\left(1+\\frac{1}{q}+\\ldots+\\frac{1}{q^{b}}\\right)\\]\n\nHowever, the expression \\(1+\\frac{1}{p}+\\ldots+\\frac{1}{p^{a}}\\) is maximized when \\(p\\) is minimized, and further, as \\(a\\) is finite must be at most \\(\\frac{1}{1-\\frac{1}{p}}=\\frac{p}{p-1}\\). Thus, the sum of divisors is less than\n\n\\[p^{a} q^{b} \\frac{p}{p-1} \\frac{q}{q-1} \\leq n \\cdot 2 \\cdot \\frac{3}{2}=3 n\\]\n\nThus, \\(n\\) can't have 2 distinct prime divisors and must have at least 3 distinct prime divisors.\nAs we already discovered 120 works, we need not worry about 4 distinct prime divisors, as the value of \\(n\\) would be at least \\(2 \\cdot 3 \\cdot 5 \\cdot 7=210\\). We now work through the numbers with 3 distinct divisors. If 2 is not one of them, then the only number that works is \\(105=3 \\cdot 5 \\cdot 7\\), which has a sum of divisors that is not large enough. Therefore, 2 must be a prime divisor of \\(n\\). Additionally, if 3 is not a divisor, then our options are \\(2 \\cdot 5 \\cdot 7\\) and \\(2 \\cdot 5 \\cdot 11\\), which also do not work. Therefore, 3 must also be a prime divisor. Then, if 5 is not a prime divisor, then if \\(n\\) is \\(2 \\cdot 3 \\cdot p\\), it has a sum of divisors of \\((1+2)(1+3)(1+p)=n \\cdot \\frac{3}{2} \\cdot \\frac{4}{3} \\cdot \\frac{p+1}{p}\\), which is only at least \\(3 n\\) if \\(p\\) is exactly 2 , which is not feasible. Additionally, if we use \\(2^{2}\\), then the sum of divisors is \\((1+2+4)(1+3)(1+p)=n \\cdot \\frac{7}{4} \\cdot \\frac{4}{3} \\cdot \\frac{p}{p+1}\\), so \\(\\frac{p+1}{p}>\\frac{9}{7} \\Longrightarrow p<4.5\\), which also can't happen. Further, we can't have \\(3^{2}\\) be a divisor of \\(n\\) as \\(2 \\cdot 3^{2} \\cdot 5\\) is the only value less than 120 with this, and that also does not work. Lastly, we just need to check \\(2^{3} \\cdot 3 \\cdot p\\), which has a sum of divisors of \\((1+2+4+8)(1+3)(1+p)=n \\cdot \\frac{15}{8} \\cdot \\frac{4}{3} \\cdot \\frac{p+1}{p}=n \\cdot \\frac{5}{2} \\cdot \\frac{p}{p+1}\\), so \\(p=5\\) and that works. This means that \\(n=120\\) is the smallest value for which \\(s(n) \\geq 3 n\\), and thus is our answer.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

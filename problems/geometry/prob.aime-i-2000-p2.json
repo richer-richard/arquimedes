@@ -1,0 +1,72 @@
+{
+  "id": "prob.aime-i-2000-p2",
+  "title": "2000 AIME I Problem 2",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-decomposition",
+      "label": "Area decomposition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.transformation",
+      "label": "Transformation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2000,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 43.9,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Let \\(u\\) and \\(v\\) be integers satisfying \\(0 \\lt v \\lt u.\\) Let \\(A = (u, v),\\) let \\(B\\) be the reflection of \\(A\\) across the line \\(y = x,\\) let \\(C\\) be the reflection of \\(B\\) across the \\(y\\)-axis, let \\(D\\) be the reflection of \\(C\\) across the \\(x\\)-axis, and let \\(E\\) be the reflection of \\(D\\) across the \\(y\\)-axis. The area of pentagon \\(ABCDE\\) is \\(451.\\) Find \\(u + v.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "21",
+    "value": "21"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2000-p2.live",
+      "kind": "proof-sketch",
+      "text": "Carrying out the reflections, \\(B = (v, u),\\) \\(C = (-v, u),\\) \\(D = (-v, -u),\\) and \\(E = (v, -u).\\) The points \\(B, C, D, E\\) form a rectangle of width \\(2v\\) and height \\(2u,\\) with area \\(4uv,\\) and \\(A = (u, v)\\) sticks out to its right. Triangle \\(ABE\\) has vertical base \\(BE\\) of length \\(2u\\) and horizontal height \\(u - v,\\) so its area is \\(u(u - v).\\)\n\nThe pentagon’s area is therefore \\[ \\begin{aligned} 4uv + u(u - v) &= u^2 + 3uv \\\\ &= u(u + 3v) \\\\ &= 451 = 11 \\cdot 41. \\end{aligned} \\] Since \\(0 \\lt v \\lt u,\\) we have \\(u \\lt u + 3v \\lt 4u,\\) which rules out the factorization \\(1 \\cdot 451.\\) So \\(u = 11\\) and \\(u + 3v = 41,\\) giving \\(v = 10,\\) which indeed satisfies \\(v \\lt u.\\)\n\nThus \\(u + v = 11 + 10 = 21.\\)",
+      "hints": [
+        "Compute the vertices: \\(B = (v, u),\\) \\(C = (-v, u),\\) \\(D = (-v, -u),\\) \\(E = (v, -u)\\)",
+        "The pentagon is a \\(2v \\times 2u\\) rectangle plus a triangle; its area factors as \\(u(u + 3v),\\) and \\(451 = 11 \\cdot 41\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

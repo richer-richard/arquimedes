@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2004-p22",
+  "title": "2004 AMC 12A Problem 22",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.centroid",
+      "label": "Centroid",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.sphere",
+      "label": "Sphere",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2004,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 40.0,
+    "source": 2150,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Three mutually tangent spheres of radius \\(1\\) rest on a horizontal plane. A sphere of radius \\(2\\) rests on them. What is the distance from the plane to the top of the larger sphere?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3 + \\dfrac{\\sqrt{30}}{2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3 + \\dfrac{\\sqrt{69}}{3}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3 + \\dfrac{\\sqrt{123}}{4}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{52}{9}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(3 + 2\\sqrt{2}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2004-p22.live",
+      "kind": "proof-sketch",
+      "text": "Let the centers of the three unit spheres be \\(A,\\) \\(B,\\) \\(C,\\) forming an equilateral triangle of side \\(2\\) at height \\(1\\) above the plane, and let \\(E\\) be the center of the large sphere directly above the centroid \\(D\\) of \\(\\triangle ABC.\\)\n\nThe distance from a vertex to the centroid is \\(AD = \\tfrac{2\\sqrt3}{3},\\) and \\(AE = 1 + 2 = 3,\\) so \\[ \\begin{aligned} DE &= \\sqrt{3^2 - \\left(\\tfrac{2\\sqrt3}{3}\\right)^2} \\\\ &= \\sqrt{9 - \\tfrac{4}{3}} \\\\ &= \\dfrac{\\sqrt{69}}{3}. \\end{aligned} \\]\n\nSince \\(D\\) is \\(1\\) unit above the plane and the top of the large sphere is \\(2\\) units above \\(E,\\) the total height is \\[ 1 + \\dfrac{\\sqrt{69}}{3} + 2 = 3 + \\dfrac{\\sqrt{69}}{3}. \\]\n\nThus, the correct answer is B.",
+      "hints": [
+        "The three small centers form an equilateral triangle of side \\(2\\) at height \\(1\\)",
+        "The big center lies above the triangle’s centroid; use the distance between centers \\(1 + 2 = 3\\) to find its height"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

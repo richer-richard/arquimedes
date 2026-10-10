@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-ii-2017-p1",
+  "title": "2017 AIME II Problem 1",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "comb.subsets",
+      "label": "Subsets",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2017,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 44.3,
+    "source": 1890,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Find the number of subsets of \\(\\{1, 2, 3, 4, 5, 6, 7, 8\\}\\) that are subsets of neither \\(\\{1, 2, 3, 4, 5\\}\\) nor \\(\\{4, 5, 6, 7, 8\\}.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "196",
+    "value": "196"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2017-p1.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(2^8 = 256\\) subsets in all. The ones to exclude are those contained in \\(\\{1,2,3,4,5\\}\\) (there are \\(2^5 = 32\\)) or contained in \\(\\{4,5,6,7,8\\}\\) (another \\(32\\)). A subset of both is exactly a subset of the intersection \\(\\{4, 5\\},\\) and there are \\(2^2 = 4\\) of those.\n\nBy inclusion-exclusion, \\(32 + 32 - 4 = 60\\) subsets fail, so \\(256 - 60 = 196\\) subsets have the required property.",
+      "hints": [
+        "Count the complement: subsets that lie entirely inside \\(\\{1,2,3,4,5\\}\\) or entirely inside \\(\\{4,5,6,7,8\\}\\)",
+        "By inclusion-exclusion, the overlap consists of the subsets of \\(\\{4, 5\\},\\) so subtract \\(2^5 + 2^5 - 2^2\\) from \\(2^8\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

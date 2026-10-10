@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-general-2014-p3",
+  "title": "2014 HMMT November General Problem 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.greatest-common-divisors-gcd",
+      "label": "Greatest common divisors (gcd)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2014,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 45.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the greatest common divisor of \\(4^{8}-1\\) and \\(8^{12}-1\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2014-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "15 Let \\(d=\\operatorname{gcd}(a, b)\\) for some \\(a, b \\in \\mathbb{Z}^{+}\\).\nThen, we can write \\(d=a x-b y\\), where \\(x, y \\in \\mathbb{Z}^{+}\\), and\n\n\\[\\begin{aligned}\n& 2^{a}-1 \\mid 2^{a x}-1 \\\\\n& 2^{b}-1 \\mid 2^{b y}-1\n\\end{aligned}\\]\n\nMultiplying the right-hand side of (2) by \\(2^{d}\\), we get,\n\n\\[2^{b}-1 \\mid 2^{a x}-2^{d}\\]\n\nThus, \\(\\operatorname{gcd}\\left(2^{a}-1,2^{b}-1\\right)=2^{d}-1=2^{\\operatorname{gcd}(a, b)}-1\\).\n\nUsing \\(a=16\\) and \\(b=36\\), we get\n\n\\[\\operatorname{gcd}\\left(2^{16}-1,2^{36}-1\\right)=2^{\\operatorname{gcd}(16,36)}-1=2^{4}-1=15\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

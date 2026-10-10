@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2019-p18",
+  "title": "2019 HMMT February Guts Problem 18",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.counting-methods",
+      "label": "Counting Methods",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2019,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 75.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "2019 points are chosen independently and uniformly at random on the interval \\([0,1]\\). Tairitsu picks 1000 of them randomly and colors them black, leaving the remaining ones white. Hikari then computes the sum of the positions of the leftmost white point and the rightmost black point. What is the probability that this sum is at most 1?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2019-p18.hmmt",
+      "kind": "proof-sketch",
+      "text": "## Answer: \\(\\frac{1019}{2019}\\)\n\nNote that each point is chosen uniformly and independently from 0 to 1 , so we can apply symmetry. Given any coloring, suppose that we flip all the positions of the black points: then the problem becomes computing the probability that the leftmost white point is to the left of the leftmost black point, which is a necessary and sufficient condition for the sum of the original leftmost white point and the original rightmost black point being at most 1. This condition, however, is equivalent to the leftmost point of all 2019 points being white. Since there are 1019 white points and 1000 black points and each point is equally likely to be the leftmost, this happens with probability \\(\\frac{1019}{2019}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

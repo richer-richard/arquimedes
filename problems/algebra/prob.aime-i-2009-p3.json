@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-i-2009-p3",
+  "title": "2009 AIME I Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.algebraic-manipulation",
+      "label": "Algebraic manipulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.binomial-probability",
+      "label": "Binomial probability",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2009,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 40.0,
+    "source": 2150,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A coin that comes up heads with probability \\(p \\gt 0\\) and tails with probability \\(1 - p \\gt 0\\) independently on each flip is flipped eight times. Suppose the probability of three heads and five tails is equal to \\(\\frac{1}{25}\\) of the probability of five heads and three tails. Let \\(p = \\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "11",
+    "value": "11"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2009-p3.live",
+      "kind": "proof-sketch",
+      "text": "The condition says \\[ \\begin{aligned} &\\binom{8}{3} p^3 (1-p)^5 \\\\ &= \\frac{1}{25} \\binom{8}{5} p^5 (1-p)^3. \\end{aligned} \\] Since \\(\\binom{8}{3} = \\binom{8}{5}\\) and both \\(p\\) and \\(1 - p\\) are positive, dividing by \\(p^3(1-p)^3\\) leaves \\((1-p)^2 = \\frac{p^2}{25},\\) so \\(1 - p = \\frac{p}{5}.\\)\n\nHence \\(p = \\frac{5}{6},\\) and \\(m + n = 5 + 6 = 11.\\)",
+      "hints": [
+        "Set up \\(\\binom{8}{3}p^3(1-p)^5 = \\frac{1}{25}\\binom{8}{5}p^5(1-p)^3\\)",
+        "The binomial coefficients cancel, leaving \\((1-p)^2 = \\frac{p^2}{25};\\) both sides are positive, so take square roots"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

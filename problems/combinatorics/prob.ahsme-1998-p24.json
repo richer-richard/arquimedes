@@ -1,0 +1,72 @@
+{
+  "id": "prob.ahsme-1998-p24",
+  "title": "1998 AHSME Problem 24",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1998,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 31.0,
+    "source": 1800,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Call a \\(7\\)-digit telephone number \\(d_1d_2d_3\\)-\\(d_4d_5d_6d_7\\) memorable if the prefix sequence \\(d_1d_2d_3\\) is exactly the same as either of the sequences \\(d_4d_5d_6\\) or \\(d_5d_6d_7\\) (possibly both). Assuming that each \\(d_i\\) can be any of the ten decimal digits \\(0,\\) \\(1,\\) \\(2,\\) \\(\\ldots,\\) \\(9,\\) the number of different memorable telephone numbers is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(19{,}810\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(19{,}910\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(19{,}990\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(20{,}000\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(20{,}100\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "19990"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1998-p24.live",
+      "kind": "proof-sketch",
+      "text": "Each matching condition gives \\(10^4=10,000\\) numbers: choose the three prefix digits and the one unconstrained remaining digit. If both hold, then \\(d_1d_2d_3=d_4d_5d_6=d_5d_6d_7,\\) forcing all digits equal, so there are \\(10\\) overlaps. Inclusion-exclusion gives \\(10,000+10,000-10=19,990,\\) so C is correct.",
+      "hints": [
+        "Count numbers satisfying each of the two matching conditions separately",
+        "If both matches hold, all seven digits are forced by one repeated digit"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

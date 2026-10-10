@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-geometry-2018-p3",
+  "title": "2018 HMMT February Geometry Problem 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.triangle-trigonometry",
+      "label": "Triangle trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2018,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 74.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many noncongruent triangles are there with one side of length 20 , one side of length 17 , and one \\(60^{\\circ}\\) angle?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2018-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 2\nThere are 3 possible vertices that can have an angle of \\(60^{\\circ}\\), we will name them. Call the vertex where the sides of length 20 and 17 meet \\(\\alpha\\), denote the vertex where 17 doesn't meet 20 by \\(\\beta\\), and the final vertex, which meets 20 but not 17 , we denote by \\(\\gamma\\).\nThe law of cosines states that if we have a triangle, then we have the equation \\(c^{2}=a^{2}+b^{2}-2 a b \\cos C\\) where \\(C\\) is the angle between \\(a\\) and \\(b\\). But \\(\\cos 60^{\\circ}=\\frac{1}{2}\\) so this becomes \\(c^{2}=a^{2}+b^{2}-a b\\). We then try satisfying this equation for the 3 possible vertices and find that, for \\(\\alpha\\) the equation reads \\(c^{2}=400+289-340=349\\) so that \\(c=\\sqrt{349}\\). For \\(\\beta\\) we find that \\(400=289+b^{2}-17 b\\) or rather \\(b^{2}-17 b-111=0\\) this is a quadratic, solving we find that it has two roots \\(b=\\frac{17 \\pm \\sqrt{289+444}}{2}\\), but since \\(\\sqrt{733}>17\\) only one of these roots is positive. We can also see that this isn't congruent to the other triangle we had, as for both the triangles the shortest side has length 17 , and so if they were congruent the lengths of all sides would need to be equal, but \\(18<\\sqrt{349}<19\\) and since \\(23^{2}<733\\) clearly \\(\\frac{17 \\pm \\sqrt{289+444}}{2}>\\frac{17+23}{2}=20\\) and so the triangles aren't congruent. If we try applying the law of cosines to \\(\\gamma\\) however, we get the equation \\(289=a^{2}+400-20 a\\) which we can rewrite as \\(a^{2}-20 a+111=0\\) which has no real solutions, as the discriminant \\(400-4 * 111=-44\\) is negative. Thus, \\(\\gamma\\) cannot be \\(60^{\\circ}\\), and there are exactly two non congruent triangles with side lengths 20 and 17 with an angle being \\(60^{\\circ}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

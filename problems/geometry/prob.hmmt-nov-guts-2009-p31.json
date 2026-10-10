@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-guts-2009-p31",
+  "title": "2009 HMMT November Guts Problem 31",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2009,
+    "number": 31
+  },
+  "difficulty": {
+    "course": 66.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "There are two buildings facing each other, each 5 stories high. How many ways can Kevin string ziplines between the buildings so that:\n(a) each zipline starts and ends in the middle of a floor.\n(b) ziplines can go up, stay flat, or go down, but can't touch each other (this includes touching at their endpoints).\n\nNote that you can't string a zipline between two floors of the same building.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2009-p31.hmmt",
+      "kind": "proof-sketch",
+      "text": "252 Associate with each configuration of ziplines a path in the plane as follows: Suppose there are \\(k\\) ziplines. Let \\(a_{0}, \\ldots, a_{k}\\) be the distances between consecutive ziplines on the left building\n( \\(a_{0}\\) is the floor on which the first zipline starts, and \\(a_{k}\\) is the distance from the last zipline to the top of the building). Define \\(b_{0}, \\ldots, b_{k}\\) analogously for the right building. The path in the plane consists of starting at \\((0,0)\\) and going a distance \\(a_{0}\\) to the right, \\(b_{0}\\) up, \\(a_{1}\\) to the right, \\(b_{1}\\) up, etc. We thus go from \\((0,0)\\) to \\((5,5)\\) while traveling only up and to the right between integer coordinates. We can check that there is exactly one configuration of ziplines for each such path, so the answer is the number of paths from \\((0,0)\\) to \\((5,5)\\) where you only travel up and to the right. This is equal to \\(\\binom{10}{5}=252\\), since there are 10 total steps to make, and we must choose which 5 of them go to the right.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-2021-p19",
+  "title": "2021 AMC 10B Problem 19",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.mean",
+      "label": "Mean",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2021,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 24.1,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Suppose that \\(S\\) is a finite set of positive integers.\n\nIf the greatest integer in \\(S\\) is removed from \\(S,\\) then the average value (arithmetic mean) of the integers remaining is \\(32.\\) If the least integer in \\(S\\) is also removed, then the average value of the integers remaining is \\(35.\\) If the greatest integer is then returned to the set, the average value of the integers rises to \\(40.\\) The greatest integer in the original set \\(S\\) is \\(72\\) greater than the least integer in \\(S.\\)\n\nWhat is the average value of all the integers in the set \\(S?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 36.2 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 36.4 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 36.6 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 36.8 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 37 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "36.8"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2021-p19.live",
+      "kind": "proof-sketch",
+      "text": "Let the sum of all the integers be \\(s,\\) the greatest number be \\(g,\\) the least number be \\(l,\\) and the size of \\(S\\) be \\(n.\\)\n\nThe two averages of sets with \\(n-1\\) elements give \\[ \\begin{aligned} s-l&=40(n-1),\\\\ s-g&=32(n-1). \\end{aligned} \\] Subtracting and using \\(g-l=72\\) gives \\(72=8(n-1),\\) so \\(n=10.\\)\n\nRemoving both extremes leaves \\(8\\) numbers with sum \\(8\\cdot35=280.\\) On the other hand, removing only the least number leaves a sum of \\(9\\cdot40=360,\\) so \\(g=360-280=80.\\) Hence \\(l=80-72=8,\\) and the original sum is \\(s=280+80+8=368.\\)\n\nThe required average is \\(\\frac{s}{n}=\\frac{368}{10}=36.8.\\)\n\nThus, the answer is D .",
+      "hints": [
+        "Write equations for the three averages using the total sum, least value, greatest value, and set size",
+        "Subtract the two averages with denominator \\(n-1\\) to use the difference \\(72\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

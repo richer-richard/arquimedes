@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-1997-p25",
+  "title": "1997 AMC 8 Problem 25",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.pairing-and-grouping",
+      "label": "Pairing and grouping",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.units-digit",
+      "label": "Units digit",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1997,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 25.4,
+    "source": 1580,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "All of the even numbers from \\(2\\) to \\(98\\) inclusive, excluding those ending in \\(0,\\) are multiplied together. What is the rightmost digit (the units digit) of the product?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(8\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1997-p25.live",
+      "kind": "proof-sketch",
+      "text": "We only care about the units digit, which means that the tens digits don’t matter.\n\nThen we have \\(10\\) groups of \\[ 2 \\cdot 4 \\cdot 6 \\cdot 8 = 384. \\]\n\nThe units digit of each group is \\(4.\\) We now need to find the units digit of \\(4^{10}.\\)\n\nThe units digit of \\(4^2 = 16\\) is \\(6.\\) This means we only need to find the units digit of \\(6^5.\\)\n\nNote that every power of \\(6\\) always ends in a \\(6\\) (e.g. \\(6,\\) \\(36,\\) \\(216,\\) \\(\\ldots\\)).\n\nThus, D is the correct answer.",
+      "hints": [
+        "Group the factors by their units digit pattern",
+        "Only the units digits matter"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

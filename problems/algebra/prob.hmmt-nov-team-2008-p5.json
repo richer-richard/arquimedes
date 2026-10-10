@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-team-2008-p5",
+  "title": "2008 HMMT November Team Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2008,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 54.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "An aside: the sum of all the unit fractions\n\nIt is possible to show that, given any real M , there exists a positive integer \\(k\\) large enough that:\n\n\\[\\sum_{n=1}^{k} \\frac{1}{n}=\\frac{1}{1}+\\frac{1}{2}+\\frac{1}{3} \\ldots>M\\]\n\nNote that this statement means that the infinite harmonic series, \\(\\sum_{n=1}^{\\infty} \\frac{1}{n}\\), grows without bound, or diverges. For the specific example \\(\\mathrm{M}=5\\), find a value of \\(k\\), not necessarily the smallest, such that the inequality holds. Justify your answer.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2008-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "Note that \\(\\frac{1}{n+1}+\\frac{1}{n+2}+\\ldots+\\frac{1}{2 n}>\\frac{1}{2 n}+\\ldots+\\frac{1}{2 n}=\\frac{1}{2}\\). Therefore, if we apply this to \\(n=1,2,4,8,16,32,64,128\\), we get\n\n\\[\\left(\\frac{1}{2}\\right)+\\left(\\frac{1}{3}+\\frac{1}{4}\\right)+\\left(\\frac{1}{5}+\\frac{1}{6}+\\frac{1}{7}+\\frac{1}{8}\\right)+\\ldots+\\left(\\frac{1}{129}+\\ldots+\\frac{1}{256}\\right)>\\frac{1}{2}+\\ldots+\\frac{1}{2}=4\\]\n\nso, adding in \\(\\frac{1}{1}\\), we get\n\n\\[\\sum_{n=1}^{256} \\frac{1}{n}>5\\]\n\nso \\(k=256\\) will suffice.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

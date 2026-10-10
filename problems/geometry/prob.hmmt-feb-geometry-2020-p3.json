@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-geometry-2020-p3",
+  "title": "2020 HMMT February Geometry Problem 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2020,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 71.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Consider the L-shaped tromino below with 3 attached unit squares. It is cut into exactly two pieces of equal area by a line segment whose endpoints lie on the perimeter of the tromino. What is the longest possible length of the line segment?\n\n[Diagram omitted from this imported transcription; consult the HMMT archive while reviewing the problem.]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{5}{2}",
+    "value": "\\frac{5}{2}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2020-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let the line segment have endpoints \\(A\\) and \\(B\\). Without loss of generality, let \\(A\\) lie below the lines \\(x+y=\\sqrt{3}\\) (as this will cause \\(B\\) to be above the line \\(x+y=\\sqrt{3}\\) ) and \\(y=x\\) (we can reflect about \\(y=x\\) to get the rest of the cases):\n\nNow, note that as \\(A\\) ranges from \\((0,0)\\) to \\((1.5,0), B\\) will range from \\((1,1)\\) to \\((1,2)\\) to \\((0,2)\\), as indicated by the red line segments. Note that these line segments are contained in a rectangle bounded by \\(x=0\\), \\(y=0, x=1.5\\), and \\(y=2\\), and so the longest line segment in this case has length \\(\\sqrt{2^{2}+1.5^{2}}=\\frac{5}{2}\\).\nAs for the rest of the cases, as \\(A=(x, 0)\\) ranges from \\((1.5,0)\\) to \\((\\sqrt{3}, 0), B\\) will be the point \\(\\left(0, \\frac{3}{x}\\right)\\), so it suffices to maximize \\(\\sqrt{x^{2}+\\frac{9}{x^{2}}}\\) given \\(1.5 \\leq x \\leq \\sqrt{3}\\). Note that the further away \\(x^{2}\\) is from 3 , the larger \\(x^{2}+\\frac{9}{x^{2}}\\) gets, and so the maximum is achieved when \\(x=1.5\\), which gives us the same length as before.\n\nThus, the maximum length is \\(\\frac{5}{2}\\).\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

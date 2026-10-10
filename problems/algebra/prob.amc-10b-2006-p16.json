@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-10b-2006-p16",
+  "title": "2006 AMC 10B 16",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.date-and-time",
+      "label": "Date and time",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2006,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 19.3,
+    "source": 1340,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Leap Day, February \\(29,\\) \\(2004,\\) occurred on a Sunday. On what day of the week will Leap Day, February \\(29,\\) \\(2020,\\) occur?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "Tuesday"
+    },
+    {
+      "label": "B",
+      "text": "Wednesday"
+    },
+    {
+      "label": "C",
+      "text": "Thursday"
+    },
+    {
+      "label": "D",
+      "text": "Friday"
+    },
+    {
+      "label": "E",
+      "text": "Saturday"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2006-p16.live",
+      "kind": "proof-sketch",
+      "text": "From one Leap Day to the next is \\(3\\cdot365+366=1461\\) days, and \\(1461\\equiv 5\\pmod 7.\\)\n\nOver the four cycles from \\(2004\\) to \\(2020,\\) the weekday advances \\(4\\cdot5=20\\equiv 6\\pmod 7,\\) that is, \\(6\\) days forward, which is one day back from Sunday.\n\nSo Leap Day \\(2020\\) falls on a Saturday.\n\nThus, the correct answer is E.",
+      "hints": [
+        "Count the days from one Leap Day to the next: \\(3\\cdot365+366\\)",
+        "That total is \\(1461\\equiv 5\\pmod 7,\\) so each \\(4\\)-year cycle advances the weekday by \\(5\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

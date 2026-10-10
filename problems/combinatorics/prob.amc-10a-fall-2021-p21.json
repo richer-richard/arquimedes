@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-fall-2021-p21",
+  "title": "2021 Fall AMC 10A Problem 21",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2021,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 24.4,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Each of \\(20\\) balls is tossed independently and at random into one of the \\(5\\) bins. Let \\(p\\) be the probability that some bin ends up with \\(3\\) balls, another with \\(5\\) balls, and the other three with \\(4\\) balls each. Let \\(q\\) be the probability that every bin ends up with \\(4\\) balls. What is \\(\\dfrac{p}{q}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(16\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "16"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-fall-2021-p21.live",
+      "kind": "proof-sketch",
+      "text": "All \\(5^{20}\\) assignments of the distinguishable balls to the labeled bins are equally likely. For \\(q,\\) the number of assignments is \\[\\frac{20!}{(4!)^5}.\\]\n\nFor \\(p,\\) choose the bin with \\(3\\) balls and the bin with \\(5\\) balls in \\(5\\cdot4\\) ways. The number of assignments is then \\[5\\cdot4\\cdot\\frac{20!}{3!5!(4!)^3}.\\]\n\nThe common probability denominator cancels, so \\[\\frac pq=20\\cdot\\frac{(4!)^2}{3!5!}=20\\cdot\\frac45=16.\\]\n\nThus, E is the correct answer.",
+      "hints": [
+        "Balls and bins can be treated as distinguishable",
+        "Most factorial factors cancel in the ratio \\(\\frac{p}{q}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

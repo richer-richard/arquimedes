@@ -1,0 +1,57 @@
+{
+  "id": "prob.aime-ii-2001-p8",
+  "title": "2001 AIME II Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.absolute-value",
+      "label": "Absolute value",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.functional-equation",
+      "label": "Functional equation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2001,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 50.5,
+    "source": 2560,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "A certain function \\(f\\) has the properties that \\(f(3x) = 3f(x)\\) for all positive real values of \\(x,\\) and that \\(f(x) = 1 - |x - 2|\\) for \\(1 \\le x \\le 3.\\) Find the smallest \\(x\\) for which \\(f(x) = f(2001).\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "429",
+    "value": "429"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2001-p8.live",
+      "kind": "proof-sketch",
+      "text": "Applying \\(f(3x) = 3f(x)\\) six times gives \\(f(2001) = 3^6 f\\left(\\frac{2001}{729}\\right),\\) and \\(\\frac{2001}{729}\\) lies in \\([1, 3],\\) so \\[ \\begin{aligned} f(2001) &= 729\\left(1 - \\left|\\tfrac{2001}{729} - 2\\right|\\right) \\\\ &= 729 - |2001 - 1458| \\\\ &= 729 - 543 = 186. \\end{aligned} \\]\n\nFor \\(x \\in [3^k, 3^{k+1}],\\) we have \\(f(x) = 3^k f\\left(\\frac{x}{3^k}\\right)\\) \\(= 3^k\\left(1 - \\left|\\frac{x}{3^k} - 2\\right|\\right),\\) a tent whose maximum value is \\(3^k.\\) To achieve \\(186\\) we need \\(3^k \\ge 186,\\) so \\(k \\ge 5,\\) and the smallest solutions lie in \\([243, 729],\\) where \\(f(x) = 243 - |x - 486|.\\)\n\nSetting \\(243 - |x - 486| = 186\\) gives \\(|x - 486| = 57,\\) so \\(x = 429\\) or \\(x = 543.\\) The smallest \\(x\\) is \\(429.\\)",
+      "hints": [
+        "Use \\(f(x) = 3^6 f\\left(\\frac{x}{3^6}\\right)\\) to compute \\(f(2001),\\) since \\(\\frac{2001}{729}\\) lies in \\([1, 3]\\)",
+        "On \\([3^k, 3^{k+1}]\\) the graph is a tent peaking at height \\(3^k,\\) so look in the first interval whose peak reaches \\(f(2001)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

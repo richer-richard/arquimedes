@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-guts-2017-p17",
+  "title": "2017 HMMT February Guts Problem 17",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2017,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 71.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Sean is a biologist, and is looking at a string of length 66 composed of the letters \\(A, T, C, G\\). A substring of a string is a contiguous sequence of letters in the string. For example, the string \\(A G T C\\) has 10 substrings: \\(A, G, T, C, A G, G T, T C, A G T, G T C, A G T C\\). What is the maximum number of distinct substrings of the string Sean is looking at?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2017-p17.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 2100\nLet's consider the number of distinct substrings of length \\(\\ell\\). On one hand, there are obviously at most \\(4^{\\ell}\\) distinct substrings. On the other hand, there are \\(67-\\ell\\) substrings of length \\(\\ell\\) in a length 66 string. Therefore, the number of distinct substrings is at most\n\n\\[\\sum_{\\ell=1}^{66} \\min \\left(4^{\\ell}, 67-\\ell\\right)=2100\\]\n\nTo show that this bound is achievable, one can do a construction using deBrujin sequences that we won't elaborate on here.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

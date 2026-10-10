@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2015-p18",
+  "title": "2015 AMC 10A Problem 18",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.basic-counting",
+      "label": "Basic counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2015,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 27.9,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Hexadecimal (base-\\(16\\)) numbers are written using numeric digits \\(0\\) through \\(9\\) as well as the letters \\(A\\) through \\(F\\) to represent \\(10\\) through \\(15.\\) Among the first \\(1000\\) positive integers, there are \\(n\\) whose hexadecimal representation contains only numeric digits. What is the sum of the digits of \\(n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(19\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(21\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "21"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2015-p18.live",
+      "kind": "proof-sketch",
+      "text": "In hexadecimal, \\(1000=3E8_{16}.\\) Pad each shorter representation to three digits with leading zeros. Every numeric-only string from \\(000_{16}\\) through \\(399_{16}\\) is at most \\(3E8_{16},\\) and these are all the possibilities.\n\nThe first digit has \\(4\\) choices, and each of the other two digits has \\(10\\) choices. This gives \\[4\\cdot10\\cdot10=400\\] strings, including \\(000_{16}.\\) Excluding zero leaves \\(n=399.\\)\n\nThe sum of the digits in \\(399\\) is \\(21.\\)\n\nThus, E is the correct answer.",
+      "hints": [
+        "Count valid hexadecimal strings up to \\(3E8_{16}\\)",
+        "Pad shorter hexadecimal representations with leading zeros before counting digit choices"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

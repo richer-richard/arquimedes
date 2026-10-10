@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2024-p12",
+  "title": "2024 AIME I Problem 12",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.absolute-value",
+      "label": "Absolute value",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.counting-intersections",
+      "label": "Counting intersections",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.function",
+      "label": "Function",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2024,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 65.9,
+    "source": 3160,
+    "mohs": null
+  },
+  "estimatedMinutes": 20,
+  "statement": "Define \\(f(x) = \\left||x| - \\tfrac{1}{2}\\right|\\) and \\(g(x) = \\left||x| - \\tfrac{1}{4}\\right|.\\) Find the number of intersections of the graphs of \\[ y = 4g(f(\\sin(2\\pi x))) \\] and \\[ x = 4g(f(\\cos(3\\pi y))). \\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "385",
+    "value": "385"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2024-p12.live",
+      "kind": "proof-sketch",
+      "text": "Both right-hand sides take values in \\([0, 1],\\) so every intersection lies in the unit square, and there we may write both curves using \\(\\varphi(u) = 4\\left||u - \\tfrac{1}{2}| - \\tfrac{1}{4}\\right|:\\) the first is \\(y = \\varphi(|\\sin 2\\pi x|)\\) and the second is \\(x = \\varphi(|\\cos 3\\pi y|).\\) As \\(u\\) increases from \\(0\\) to \\(1,\\) \\(\\varphi(u)\\) runs linearly \\(1 \\to 0 \\to 1 \\to 0 \\to 1\\) with corners at \\(u = \\frac{1}{4}, \\frac{1}{2}, \\frac{3}{4}.\\) For \\(x \\in [0, 1],\\) \\(|\\sin 2\\pi x|\\) sweeps \\([0, 1]\\) monotonically \\(4\\) times, so the first graph consists of \\(4 \\cdot 4 = 16\\) monotone arcs, each climbing or descending through the full range \\(0 \\le y \\le 1\\) within a narrow vertical strip. Likewise \\(|\\cos 3\\pi y|\\) sweeps \\([0, 1]\\) monotonically \\(6\\) times for \\(y \\in [0, 1],\\) so the second graph consists of \\(24\\) monotone arcs, each crossing the full range \\(0 \\le x \\le 1\\) within a narrow horizontal strip.\n\nTake one arc of each graph, living in the vertical strip \\([a, b]\\) and the horizontal strip \\([c, d].\\) Inside the rectangle \\([a, b] \\times [c, d],\\) the first arc joins the bottom edge to the top edge and the second joins the left edge to the right edge, and each is monotone, so the two arcs cross exactly once. This yields \\(16 \\cdot 24 = 384\\) intersection points.\n\nOne further point hides at the corner \\((1, 1),\\) which lies on both graphs: \\(\\varphi(|\\sin 2\\pi|) = \\varphi(0) = 1\\) and \\(\\varphi(|\\cos 3\\pi|) = \\varphi(1) = 1.\\) Near it the first graph is \\(y \\approx 1 - 8\\pi(1 - x)\\) while the second satisfies \\(x \\approx 1 - 18\\pi^2(1 - y)^2,\\) so the two final arcs meet at their shared endpoint \\((1, 1)\\) in addition to the transversal crossing already counted. The total is \\(384 + 1 = 385.\\)",
+      "hints": [
+        "As \\(u = |\\sin 2\\pi x|\\) runs from \\(0\\) to \\(1,\\) the value \\(4||u - \\frac{1}{2}| - \\frac{1}{4}|\\) zigzags between \\(1\\) and \\(0\\) four times; count the monotone arcs of each graph",
+        "Each bottom-to-top arc of one graph crosses each left-to-right arc of the other exactly once — then examine the corner \\((1, 1),\\) which both graphs pass through"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

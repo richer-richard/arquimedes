@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-guts-2022-p16",
+  "title": "2022 HMMT February Guts Problem 16",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2022,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 77.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A B C\\) be an acute triangle with \\(A\\)-excircle \\(\\Gamma\\). Let the line through \\(A\\) perpendicular to \\(B C\\) intersect \\(B C\\) at \\(D\\) and intersect \\(\\Gamma\\) at \\(E\\) and \\(F\\). Suppose that \\(A D=D E=E F\\). If the maximum value of \\(\\sin B\\) can be expressed as \\(\\frac{\\sqrt{a}+\\sqrt{b}}{c}\\) for positive integers \\(a, b\\), and \\(c\\), compute the minimum possible value of \\(a+b+c\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "705",
+    "value": "705"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2022-p16.hmmt",
+      "kind": "proof-sketch",
+      "text": "First note that we can assume \\(A B<A C\\). Suppose \\(\\Gamma\\) is tangent to \\(B C\\) at \\(T\\). Let \\(A D=\\) \\(D E=E F=x\\). Then, by Power of a Point, we have \\(D T^{2}=D E \\cdot D F=x \\cdot 2 x=2 x^{2} \\Longrightarrow D T=x \\sqrt{2}\\). Note that \\(C T=s-b\\), and since the length of the tangent from \\(A\\) to \\(\\Gamma\\) is \\(s\\), we have \\(s^{2}=A E \\cdot A F=6 x^{2}\\), so \\(C T=x \\sqrt{6}-b\\). Since \\(B C=B D+D T+T C\\), we have \\(B D=B C-x \\sqrt{2}-(x \\sqrt{6}-b)=a+b-x(\\sqrt{2}+\\sqrt{6})\\). Since \\(a+b=2 s-c=2 x \\sqrt{6}-c\\), we have \\(B D=x(\\sqrt{6}-\\sqrt{2})-c\\). Now, by Pythagorean Theorem, we have \\(c^{2}=A B^{2}=A D^{2}+B D^{2}=x^{2}+[x(\\sqrt{6}-\\sqrt{2})-c]^{2}\\). Simplifying gives \\(x^{2}(9-4 \\sqrt{3})=x c(2 \\sqrt{6}-2 \\sqrt{2})\\). This yields\n\n\\[\\frac{x}{c}=\\frac{2 \\sqrt{6}-2 \\sqrt{2}}{9-4 \\sqrt{3}}=\\frac{6 \\sqrt{2}+10 \\sqrt{6}}{33}=\\frac{\\sqrt{72}+\\sqrt{600}}{33}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

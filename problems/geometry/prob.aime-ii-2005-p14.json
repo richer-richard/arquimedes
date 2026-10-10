@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2005-p14",
+  "title": "2005 AIME2 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.ratio-and-proportion",
+      "label": "Ratio and proportion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2005,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 63.3,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "In triangle \\(ABC,\\) \\(AB = 13,\\) \\(BC = 15,\\) and \\(CA = 14.\\) Point \\(D\\) is on \\(\\overline{BC}\\) with \\(CD = 6.\\) Point \\(E\\) is on \\(\\overline{BC}\\) such that \\(\\angle BAE \\cong \\angle CAD.\\) Given that \\(BE = \\frac{p}{q},\\) where \\(p\\) and \\(q\\) are relatively prime positive integers, find \\(q.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "463",
+    "value": "463"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2005-p14.live",
+      "kind": "proof-sketch",
+      "text": "A cevian \\(AD\\) splits the opposite side in the ratio \\[ \\begin{aligned} \\frac{BD}{DC} &= \\frac{[ABD]}{[ACD]} \\\\ &= \\small \\frac{\\frac{1}{2} AB \\cdot AD \\sin\\angle BAD}{\\frac{1}{2} AC \\cdot AD \\sin\\angle CAD} \\\\ &= \\frac{AB \\sin\\angle BAD}{AC \\sin\\angle CAD}, \\end{aligned} \\] and similarly \\(\\frac{BE}{EC} = \\frac{AB \\sin\\angle BAE}{AC \\sin\\angle CAE}.\\)\n\nSince \\(\\angle BAE = \\angle CAD,\\) we also have \\(\\angle BAD = \\angle CAE\\) (each is that common angle plus \\(\\angle EAD\\)), so multiplying the two ratios cancels all the sines: \\(\\frac{BD}{DC} \\cdot \\frac{BE}{EC} = \\frac{AB^2}{AC^2}.\\) With \\(BD = 9,\\) \\(DC = 6,\\) \\(AB = 13,\\) and \\(AC = 14,\\) this gives \\[\\frac{BE}{EC} = \\frac{13^2}{14^2} \\cdot \\frac{6}{9} = \\frac{169}{294}.\\]\n\nHence \\(BE = 15 \\cdot \\frac{169}{169 + 294} = \\frac{2535}{463}.\\) Since \\(463\\) is prime and does not divide \\(2535 = 3 \\cdot 5 \\cdot 13^2,\\) the fraction is in lowest terms, and \\(q = 463.\\)",
+      "hints": [
+        "Compare \\(\\frac{BD}{DC}\\) and \\(\\frac{BE}{EC}\\) by writing each as a ratio of triangle areas \\(\\frac{1}{2}xy\\sin\\theta\\) at vertex \\(A\\)",
+        "The equal angles pair up: multiplying the two ratios gives \\(\\frac{BD}{DC} \\cdot \\frac{BE}{EC} = \\frac{AB^2}{AC^2}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

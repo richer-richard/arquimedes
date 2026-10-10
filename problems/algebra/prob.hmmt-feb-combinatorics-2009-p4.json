@@ -1,0 +1,48 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2009-p4",
+  "title": "2009 HMMT February Combinatorics Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2009,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 74.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many functions \\(f:\\{1,2,3,4,5\\} \\rightarrow\\{1,2,3,4,5\\}\\) satisfy \\(f(f(x))=f(x)\\) for all \\(x \\in\\{1,2,3,4,5\\}\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2009-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "A fixed point of a function \\(f\\) is an element \\(a\\) such that \\(f(a)=a\\). The condition is equivalent to the property that \\(f\\) maps every number to a fixed point. Counting by the number of fixed points of \\(f\\), the total number of such functions is\n\n\\[\\begin{aligned}\n\\sum_{k=1}^{5}\\binom{5}{k} k^{5-k} & =1 \\cdot\\left(5^{0}\\right)+5 \\cdot\\left(1^{4}+4^{1}\\right)+10 \\cdot\\left(2^{3}+3^{2}\\right) \\\\\n& =1+25+10 \\cdot 17 \\\\\n& =196\n\\end{aligned}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

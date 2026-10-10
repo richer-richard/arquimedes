@@ -1,0 +1,71 @@
+{
+  "id": "prob.ahsme-1997-p30",
+  "title": "1997 AHSME Problem 30",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1997,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 43.6,
+    "source": 2290,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "For positive integers \\(n,\\) denote by \\(D(n)\\) the number of pairs of different adjacent digits in the binary (base two) representation of \\(n.\\) For example, \\(D(3)=D(11_2)=0,\\) \\(D(21)=D(10101_2)=4,\\) and \\(D(97)=D(1100001_2)=2.\\) For how many positive integers \\(n\\) less than or equal to \\(97\\) does \\(D(n)=2?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(26\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(30\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(35\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "26"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1997-p30.live",
+      "kind": "proof-sketch",
+      "text": "A \\(d\\)-bit numeral with exactly two changes has form \\(1^a0^b1^c\\) with positive \\(a,\\) \\(b,\\) \\(c,\\) giving \\(\\binom{d-1}{2}\\) choices. For \\(d=3,\\) \\(d=4,\\) \\(d=5,\\) \\(d=6,\\) the total is \\(1+3+6+10=20.\\) Among seven-bit numbers at most \\(1100001_2=97,\\) the five forms beginning with one \\(1\\) all work, and the only form beginning with at least two \\(1\\)s is \\(1100001_2\\) itself. Thus there are \\(20+6=26,\\) and C is correct.",
+      "hints": [
+        "A valid binary numeral consists of a block of \\(1\\)s, then \\(0\\)s, then \\(1\\)s",
+        "Count by bit length through six bits, then handle the seven-bit cutoff \\(97=1100001_2\\) separately"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

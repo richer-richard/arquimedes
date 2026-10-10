@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-2020-p18",
+  "title": "2020 AMC 10B 18",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.conditional-probability",
+      "label": "Conditional probability",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2020,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 24.1,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "An urn contains one red ball and one blue ball. A box of extra red and blue balls lies nearby. George performs the following operation four times: he draws a ball from the urn at random and then takes a ball of the same color from the box and returns those two matching balls to the urn. After the four iterations the urn contains six balls. What is the probability that the urn contains three balls of each color?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac16\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac15\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac14\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac13\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac12\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1/5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2020-p18.live",
+      "kind": "proof-sketch",
+      "text": "The urn ends with three red and three blue balls exactly when the four draws contain two red draws and two blue draws. There are \\(\\binom42=6\\) possible color orders of this type.\n\nFor any fixed order with two red draws and two blue draws, the probability is \\[\\frac{1\\cdot 2\\cdot 1\\cdot 2}{2\\cdot 3\\cdot 4\\cdot 5}=\\frac{4}{120}=\\frac{1}{30},\\] because the first and second draws of each color have numerators \\(1\\) and \\(2,\\) while the total number of balls before the four draws is \\(2,3,4,5.\\)\n\nThus the desired probability is \\(6\\cdot\\frac{1}{30}=\\frac15.\\)\n\nThus, the correct answer is B .",
+      "hints": [
+        "The final urn has three of each color exactly when the four draws contain two red and two blue",
+        "Each fixed color order with two red draws and two blue draws has the same probability"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

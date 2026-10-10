@@ -1,0 +1,74 @@
+{
+  "id": "prob.aime-i-2013-p13",
+  "title": "2013 AIME I Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.herons-formula",
+      "label": "Heron’s Formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2013,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 64.2,
+    "source": 3160,
+    "mohs": null
+  },
+  "estimatedMinutes": 22,
+  "statement": "Triangle \\(AB_0C_0\\) has side lengths \\(AB_0 = 12,\\) \\(B_0C_0 = 17,\\) and \\(C_0A = 25.\\) For each positive integer \\(n,\\) points \\(B_n\\) and \\(C_n\\) are located on \\(\\overline{AB_{n-1}}\\) and \\(\\overline{AC_{n-1}},\\) respectively, creating three similar triangles \\(\\triangle AB_nC_n \\sim \\triangle B_{n-1}C_nC_{n-1}\\) \\(\\sim \\triangle AB_{n-1}C_{n-1}.\\) The area of the union of all triangles \\(B_{n-1}C_nB_n\\) for \\(n \\ge 1\\) can be expressed as \\(\\frac{p}{q},\\) where \\(p\\) and \\(q\\) are relatively prime positive integers. Find \\(q.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "961",
+    "value": "961"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2013-p13.live",
+      "kind": "proof-sketch",
+      "text": "By Heron’s formula with \\(s = 27,\\) the area of \\(\\triangle AB_0C_0\\) is \\(\\sqrt{27 \\cdot 15 \\cdot 10 \\cdot 2} = 90.\\) In the similarity \\(\\triangle B_0C_1C_0 \\sim \\triangle AB_0C_0,\\) side \\(B_0C_0\\) corresponds to \\(AC_0,\\) so the ratio is \\(r = \\frac{17}{25},\\) and \\(C_1C_0\\) (corresponding to \\(B_0C_0\\)) equals \\(17r.\\) Hence \\[\\frac{AC_1}{AC_0} = \\frac{25 - 17r}{25} = 1 - r^2,\\] which is the similarity ratio of \\(\\triangle AB_1C_1\\) to \\(\\triangle AB_0C_0.\\)\n\nSegments \\(\\overline{B_1C_1}\\) and \\(\\overline{B_0C_1}\\) split \\(\\triangle AB_0C_0\\) into the three pieces, so \\[ \\begin{aligned} [B_0C_1B_1] &= 90\\left(1 - r^2 - (1 - r^2)^2\\right) \\\\ &= 90\\,r^2(1 - r^2). \\end{aligned} \\] Each successive stage repeats the construction inside \\(\\triangle AB_nC_n,\\) scaling all areas by \\((1 - r^2)^2,\\) and the triangles \\(B_{n-1}C_nB_n\\) have disjoint interiors.\n\nThe union’s area is the geometric series \\[ \\begin{aligned} \\frac{90\\,r^2(1 - r^2)}{1 - (1 - r^2)^2} &= \\frac{90(1 - r^2)}{2 - r^2} \\\\ &= 90 \\cdot \\frac{\\frac{336}{625}}{\\frac{961}{625}} \\\\ &= \\frac{90 \\cdot 336}{961}. \\end{aligned} \\] Since \\(961 = 31^2\\) shares no factor with \\(90 \\cdot 336 = 30240,\\) the answer is \\(q = 961.\\)",
+      "hints": [
+        "Match up corresponding sides: \\(\\triangle B_0C_1C_0 \\sim \\triangle AB_0C_0\\) has ratio \\(\\frac{B_0C_0}{AC_0} = \\frac{17}{25}\\)",
+        "With \\(r = \\frac{17}{25},\\) triangle \\(AB_1C_1\\) has ratio \\(1 - r^2,\\) so the disjoint triangles’ areas form a geometric series with first term \\(90r^2(1 - r^2)\\) and ratio \\((1 - r^2)^2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

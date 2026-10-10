@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-guts-2006-p39",
+  "title": "2006 HMMT February Guts Problem 39",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.recurrences",
+      "label": "Recurrences",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2006,
+    "number": 39
+  },
+  "difficulty": {
+    "course": 75.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A fat coin is one which, when tossed, has a \\(2 / 5\\) probability of being heads, \\(2 / 5\\) of being tails, and \\(1 / 5\\) of landing on its edge. Mr. Fat starts at 0 on the real line. Every minute, he tosses a fat coin. If it's heads, he moves left, decreasing his coordinate by 1 ; if it's tails, he moves right, increasing his coordinate by 1 . If the coin lands on its edge, he moves back to 0 . If Mr. Fat does this ad infinitum, what fraction of his time will he spend at 0 ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2006-p39.hmmt",
+      "kind": "proof-sketch",
+      "text": "For \\(n \\in \\mathbb{Z}\\), let \\(a_{n}\\) be the fraction of the time Mr. Fat spends at \\(n\\). By symmetry, \\(a_{n}=a_{-n}\\) for all \\(n\\).\nFor \\(n>0\\), we have \\(a_{n}=\\frac{2}{5} a_{n-1}+\\frac{2}{5} a_{n+1}\\), or \\(a_{n+1}=\\frac{5}{2} a_{n}-a_{n-1}\\). This Fibonacci-like recurrence can be solved explicitly to obtain\n\n\\[a_{n}=\\alpha \\cdot 2^{|n|}+\\beta \\cdot 2^{-|n|}\\]\n\nfor all \\(n \\in \\mathbb{Z}\\). Now we also have\n\n\\[\\sum_{n \\in \\mathbb{Z}} a_{n}=1,\\]\n\nso we better have \\(\\alpha=0\\), so that \\(a_{0}=\\beta\\) and \\(a_{ \\pm 1}=\\frac{\\beta}{2}\\). Now we also have \\(a_{0}=\\) \\(\\frac{2}{5} a_{-1}+\\frac{2}{5} a_{1}+\\frac{1}{5}\\), so \\(\\beta=\\frac{1}{3}\\). This matches perfectly with \\(\\sum_{n \\in \\mathbb{Z}} a_{n}=1\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

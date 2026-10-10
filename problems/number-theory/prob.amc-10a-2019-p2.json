@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2019-p2",
+  "title": "2019 AMC 10A Problem 2",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.factorial",
+      "label": "Factorial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.trailing-zeros",
+      "label": "Trailing zeros",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2019,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 15.3,
+    "source": 770,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "What is the hundreds digit of \\((20!-15!)?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "0"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2019-p2.live",
+      "kind": "proof-sketch",
+      "text": "Both \\(20!\\) and \\(15!\\) contain at least three factors of \\(5\\) and three factors of \\(2\\), so both are divisible by \\(2^3\\cdot5^3=1000.\\)\n\nTheir difference is therefore also divisible by \\(1000.\\)\n\nBeing a multiple of \\(1000\\) makes the last three digits \\(0,\\) which shows that the hundreds digit is also \\(0.\\)\n\nThus, A is the correct answer.",
+      "hints": [
+        "Look only at divisibility by \\(1000\\)",
+        "Both factorials contain at least three factors of \\(5\\) and three factors of \\(2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

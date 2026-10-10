@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2014-p13",
+  "title": "2014 HMMT February Guts Problem 13",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2014,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 71.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "An auditorium has two rows of seats, with 50 seats in each row. 100 indistinguishable people sit in the seats one at a time, subject to the condition that each person, except for the first person to sit in each row, must sit to the left or right of an occupied seat, and no two people can sit in the same seat. In how many ways can this process occur?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2014-p13.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\boxed{\\binom{100}{50} 2^{49}}\\) First, note that there are \\(2^{49}\\) ways a single row can be filled, because each of the 49 people after the first in a row must sit to the left or to the right of the current group of people in the row, so there are 2 possibilities for each of these 49 people.\nNow, there are \\(\\binom{100}{50}\\) ways to choose the order in which people are added to the rows, and \\(2^{49}\\) ways to fill up each row separately, for a total of \\(\\binom{100}{50} 2^{98}\\) ways to fill up the auditorium.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

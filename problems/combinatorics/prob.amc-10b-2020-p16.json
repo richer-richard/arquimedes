@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-2020-p16",
+  "title": "2020 AMC 10B Problem 16",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinatorial-game",
+      "label": "Combinatorial game",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2020,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 22.8,
+    "source": 1480,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Bela and Jenn play the following game on the closed interval \\([0, n]\\) of the real number line, where \\(n\\) is a fixed integer greater than \\(4.\\) They take turns playing, with Bela going first. At his first turn, Bela chooses any real number in the interval \\([0, n].\\) Thereafter, the player whose turn it is chooses a real number that is more than one unit away from all numbers previously chosen by either player. A player unable to choose such a number loses. Using optimal strategy, which player will win the game?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "Bela will always win."
+    },
+    {
+      "label": "B",
+      "text": "Jenn will always win."
+    },
+    {
+      "label": "C",
+      "text": "Bela will win if and only if \\(n\\) is odd."
+    },
+    {
+      "label": "D",
+      "text": "Jenn will win if and only if \\(n\\) is odd."
+    },
+    {
+      "label": "E",
+      "text": "Jenn will win if and only if \\(n>8.\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2020-p16.live",
+      "kind": "proof-sketch",
+      "text": "Bela can first choose the midpoint \\(\\frac{n}{2}.\\) After that, whenever Jenn chooses a number \\(x,\\) Bela chooses the reflected number \\(n-x.\\)\n\nThis reflected number is legal whenever Jenn’s move is legal: distances from previously chosen numbers are preserved by the reflection about \\(\\frac{n}{2},\\) and Jenn cannot choose \\(\\frac{n}{2}\\) because it was Bela’s first move. Therefore every Jenn move has a matching Bela response, so Jenn is the first player who can run out of legal moves.\n\nThus, A is the correct answer.",
+      "hints": [
+        "Look for a first move that leaves the interval symmetric",
+        "After Jenn moves to \\(x,\\) Bela can respond at \\(n-x\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

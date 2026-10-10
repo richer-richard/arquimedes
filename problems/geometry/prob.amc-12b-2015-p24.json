@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2015-p24",
+  "title": "2015 AMC 12B Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.perpendicular-bisector",
+      "label": "Perpendicular bisector",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.radical-axis",
+      "label": "Radical axis",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2015,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 40.4,
+    "source": 2560,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Four circles, no two of which are congruent, have centers at \\(A,\\) \\(B,\\) \\(C,\\) and \\(D,\\) and points \\(P\\) and \\(Q\\) lie on all four circles. The radius of circle \\(A\\) is \\(\\dfrac58\\) times the radius of circle \\(B,\\) and the radius of circle \\(C\\) is \\(\\dfrac58\\) times the radius of circle \\(D.\\) Furthermore, \\(AB = CD = 39\\) and \\(PQ = 48.\\) Let \\(R\\) be the midpoint of \\(\\overline{PQ}.\\) What is \\(AR + BR + CR + DR?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(180\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(184\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(188\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(192\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(196\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "192"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2015-p24.live",
+      "kind": "proof-sketch",
+      "text": "Since every center is equidistant from \\(P\\) and \\(Q,\\) all four centers and \\(R\\) lie on the perpendicular bisector of \\(PQ,\\) with \\(PR=24.\\) First consider two centers whose radii are in the ratio \\(5{:}8\\) and whose distance apart is \\(39.\\) If \\(R\\) lies between them, let \\(y = AR\\) and \\(x = \\tfrac15\\) of circle \\(A\\)’s radius. Then \\(y^2 + 24^2 = 25x^2\\) and \\((39 - y)^2 + 24^2 = 64x^2.\\) Subtracting gives \\(x^2 = 39 - 2y,\\) so \\(y^2 + 50y - 399 = 0\\) and \\(y=7.\\) Here \\(x=5,\\) so the two center distances from \\(R\\) are \\(7\\) and \\(32,\\) and the radii are \\(25\\) and \\(40.\\)\n\nIf instead the two centers lie on the same side of \\(R,\\) their distances are \\(w\\) and \\(w+39.\\) The analogous equations give \\(w^2-50w-399=0,\\) hence \\(w=57,\\) and the distances are \\(57\\) and \\(96.\\) In this case the radii are \\(5\\sqrt{153}\\) and \\(8\\sqrt{153}.\\) Using the same placement for both pairs \\((A,B)\\) and \\((C,D)\\) would give two congruent circles of each radius, contrary to the hypothesis. Thus one pair uses each placement. Their distance sums are \\(7+32=39\\) and \\(57+96=153,\\) so the requested total is \\(39+153=192.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "All of \\(A, B, C, D, R\\) lie on the perpendicular bisector of \\(PQ,\\) and \\(PR = 24\\)",
+        "With \\(AR = y\\) and radius ratio \\(5{:}8,\\) use \\(y^2 + 24^2 = 25x^2\\) and \\((39 - y)^2 + 24^2 = 64x^2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

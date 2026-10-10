@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-1996-p20",
+  "title": "1996 AMC 8 Problem 20",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.function",
+      "label": "Function",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1996,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 17.7,
+    "source": 1280,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Suppose there is a special key on a calculator that replaces the number \\(x\\) currently displayed with the number given by the formula \\(\\frac{1}{1 - x}.\\) For example, if the calculator is displaying \\(2\\) and the special key is pressed, then the calculator will display \\(-1\\) since \\(\\frac{1}{1 - 2} = -1.\\) Now suppose that the calculator is displaying \\(5.\\) After the special key is pressed \\(100\\) times in a row, the calculator will display",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(-0.25\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(0.8\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(1.25\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "-0.25"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1996-p20.live",
+      "kind": "proof-sketch",
+      "text": "Starting from \\(5:\\) \\(\\frac{1}{1 - 5} = -0.25,\\) then \\(\\frac{1}{1 + 0.25} = 0.8,\\) then \\(\\frac{1}{1 - 0.8} = 5.\\) The values repeat with period \\(3.\\)\n\nSince \\(100 = 3 \\cdot 33 + 1,\\) the \\(100\\)th press gives the same result as the first press, \\(-0.25.\\)\n\nThus, the correct answer is A .",
+      "hints": [
+        "Apply the key a few times starting from \\(5\\) and watch for a repeating cycle",
+        "The values cycle with period \\(3;\\) find where \\(100\\) lands in the cycle"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

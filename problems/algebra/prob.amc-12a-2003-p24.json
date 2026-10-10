@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12a-2003-p24",
+  "title": "2003 AMC 12A Problem 24",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.am-gm-inequality",
+      "label": "AM-GM Inequality",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2003,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 34.4,
+    "source": 2170,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "If \\(a \\ge b \\gt 1,\\) what is the largest possible value of \\(\\log_a(\\frac{a}{b}) + \\log_b(\\frac{b}{a})?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(-2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "0"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2003-p24.live",
+      "kind": "proof-sketch",
+      "text": "Expand: \\[ \\begin{aligned} &\\log_a\\dfrac ab+\\log_b\\dfrac ba \\\\ &\\quad {}=(1-\\log_a b)+(1-\\log_b a) \\\\ &\\quad {}=2-\\left(\\log_a b+\\log_b a\\right). \\end{aligned} \\]\n\nLet \\(c=\\log_a b\\gt0.\\) Since \\(c+\\dfrac1c\\ge2\\) by AM-GM, the expression is at most \\(0.\\)\n\nEquality holds when \\(c=1,\\) that is, when \\(a=b,\\) so the largest value is \\(0.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Simplify to \\(2-\\log_a b-\\log_b a\\)",
+        "With \\(c=\\log_a b\\gt0,\\) use \\(c+\\dfrac1c\\ge2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

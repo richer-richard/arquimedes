@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2015-p14",
+  "title": "2015 AMC 10B Problem 14",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2015,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 21.8,
+    "source": 1280,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(a,\\) \\(b,\\) and \\(c\\) be three distinct one-digit numbers. What is the maximum value of the sum of the roots of the equation \\[ \\begin{aligned} &(x-a)(x-b) \\\\ &\\quad +(x-b)(x-c)=0? \\end{aligned} \\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 15 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 15.5 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 16 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 16.5 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 17 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "16.5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2015-p14.live",
+      "kind": "proof-sketch",
+      "text": "Factoring the left-hand side gives \\[(x-b)(2x-a-c)=0.\\] Thus the roots are \\(b\\) and \\(\\frac{a+c}{2},\\) whose sum is \\[b+\\frac{a+c}{2}.\\]\n\nThe coefficient of \\(b\\) in this sum is twice the coefficient of either \\(a\\) or \\(c,\\) so assign the largest digit to \\(b.\\) The next two largest distinct digits should be \\(a\\) and \\(c.\\)\n\nTaking \\(b=9\\) and \\(\\{a,c\\}=\\{7,8\\}\\) gives \\[9+\\frac{7+8}{2}=16.5.\\]\n\nThus, the correct answer is D .",
+      "hints": [
+        "Factor out \\(x-b\\)",
+        "Maximize \\(b+\\frac{a+c}{2}\\) using distinct one-digit numbers"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2019-p30",
+  "title": "2019 HMMT February Guts Problem 30",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.other-3d-problems",
+      "label": "Other 3D problems",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2019,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 78.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Three points are chosen inside a unit cube uniformly and independently at random. What is the probability that there exists a cube with side length \\(\\frac{1}{2}\\) and edges parallel to those of the unit cube that contains all three points?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2019-p30.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\frac{1}{8}\\)\nLet the unit cube be placed on a \\(x y z\\)-coordinate system, with edges parallel to the \\(x, y, z\\) axes. Suppose the three points are labeled \\(A, B, C\\). If there exists a cube with side length \\(\\frac{1}{2}\\) and edges parallel to the edges of the unit cube that contain all three points, then there must exist a segment of length \\(\\frac{1}{2}\\) that contains all three projections of \\(A, B, C\\) onto the \\(x\\)-axis. The same is true for the \\(y\\) - and \\(z\\) - axes. Likewise, if there exists segments of length \\(\\frac{1}{2}\\) that contains each of the projections of \\(A, B, C\\) onto the \\(x, y\\), and \\(z\\) axes, then there must exist a unit cube of side length \\(\\frac{1}{2}\\) that contains \\(A, B, C\\). It is easy to see that the projection of a point onto the \\(x\\)-axis is uniform across a segment of length 1 , and that each of the dimensions are independent. The problem is therefore equivalent to finding the cube of the probability that a segment of length \\(\\frac{1}{2}\\) can cover three points chosen randomly on a segment of length 1.\n\nNote that selecting three numbers \\(p<q<r\\) uniformly and independently at random from 0 to 1 splits the number line into four intervals. That is, we can equivalently sample four positive numbers \\(a, b, c, d\\)\nuniformly satisfying \\(a+b+c+d=1\\) (here, we set \\(a=p, b=q-p, c=r-q, d=1-r\\) ). The probability that the points \\(p, q, r\\) all lie on a segment of length \\(\\frac{1}{2}\\) is the probability that \\(r-q \\leq \\frac{1}{2}\\), or \\(b+c \\leq \\frac{1}{2}\\). Since \\(a+d\\) and \\(b+c\\) are symmetric, we have that this probability is \\(\\frac{1}{2}\\) and our final answer is \\(\\left(\\frac{1}{2}\\right)^{3}=\\frac{1}{8}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

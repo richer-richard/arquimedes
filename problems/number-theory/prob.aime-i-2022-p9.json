@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-i-2022-p9",
+  "title": "2022 AIME I Problem 9",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "nt.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.multiset-permutations",
+      "label": "Multiset permutations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.parity",
+      "label": "Parity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2022,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 54.2,
+    "source": 2450,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "Ellina has twelve blocks, two each of red (\\(\\textbf{R}\\)), blue (\\(\\textbf{B}\\)), yellow (\\(\\textbf{Y}\\)), green (\\(\\textbf{G}\\)), orange (\\(\\textbf{O}\\)), and purple (\\(\\textbf{P}\\)). Call an arrangement of blocks even if there is an even number of blocks between each pair of blocks of the same color. For example, the arrangement \\[\\textbf{R B B Y G G Y R O P P O}\\] is even. Ellina arranges her blocks in a row in random order. The probability that her arrangement is even is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "247",
+    "value": "247"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2022-p9.live",
+      "kind": "proof-sketch",
+      "text": "If a color occupies positions \\(i \\lt j,\\) the number of blocks between them is \\(j - i - 1,\\) which is even exactly when \\(i\\) and \\(j\\) have opposite parity. So an arrangement is even precisely when every color occupies one odd position and one even position — that is, the six odd slots contain each color exactly once, and so do the six even slots.\n\nCounting arrangements of the twelve blocks (blocks of the same color identical), there are \\(\\frac{12!}{2^6}\\) in total, and \\(6! \\cdot 6!\\) even ones (a permutation of the six colors in the odd slots and another in the even slots). The probability is \\[\\frac{6! \\cdot 6! \\cdot 2^6}{12!} = \\frac{16}{231}.\\]\n\nSince \\(\\gcd(16, 231) = 1,\\) the answer is \\(m + n = 16 + 231 = 247.\\)",
+      "hints": [
+        "There is an even number of blocks between positions \\(i\\) and \\(j\\) exactly when \\(i\\) and \\(j\\) have opposite parity",
+        "So each color must occupy one odd and one even position: the six odd slots hold all six colors once, as do the six even slots"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

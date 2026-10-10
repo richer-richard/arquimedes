@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-2017-p24",
+  "title": "2017 AMC 8 Problem 24",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.least-common-multiple",
+      "label": "Least common multiple",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2017,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 20.6,
+    "source": 1800,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Mrs. Sanders has three grandchildren, who call her regularly. One calls her every three days, one calls her every four days, and one calls her every five days. All three called her on December \\(31,\\) \\(2016.\\) On how many days during the next year did she not receive a phone call from any of her grandchildren?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 78 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 80 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 144 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 146 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 152 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "146"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2017-p24.live",
+      "kind": "proof-sketch",
+      "text": "In a \\(60\\)-day period, the first child calls \\(20\\) times, the second child calls \\(15\\) times, and the third child calls \\(12\\) times. \\(20 + 15 + 12 = 47\\) overcounts, however. The first and second children call on the same day \\(\\frac{60}{12} = 5\\) times. The first and third children call on the same day \\(\\frac{60}{15} = 4\\) times. The second and third children call on the same day \\(\\frac{60}{20} = 3\\) times. Subtracting these from \\(47\\) yields \\(47 - 5 - 4 - 3 = 35.\\)\n\nThe \\(60\\)th day is added in thrice and subtracted out thrice, so we need to add it back in. This means that for every \\(60\\) days, Mrs. Sanders receives a call \\(36\\) days, which means that she does not receive a call on \\(24\\) days. There are \\(6\\) \\(60\\)-day periods, and there are no calls on the \\(361\\)st or \\(362\\)nd day, which results in \\(24 \\cdot 6 + 2 = 146\\) total days with no phone calls.\n\nThus, D is the correct answer.",
+      "hints": [
+        "Calls repeat every \\(\\operatorname{lcm}(3,4,5)\\) days.",
+        "Count days with at least one call in each \\(60\\)-day cycle, then handle the last few days of \\(2017.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

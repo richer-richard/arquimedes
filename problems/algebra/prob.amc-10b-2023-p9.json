@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2023-p9",
+  "title": "2023 AMC 10B Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.difference-of-squares",
+      "label": "Difference of squares",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2023,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 18.5,
+    "source": 1310,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "The numbers \\(16\\) and \\(25\\) are a pair of consecutive positive perfect squares whose difference is \\(9.\\) How many pairs of consecutive positive perfect squares have a difference of less than or equal to \\(2023?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(674\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1011\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1010\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2019\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2017\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1011"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2023-p9.live",
+      "kind": "proof-sketch",
+      "text": "Consecutive squares \\(k^2\\) and \\((k+1)^2\\) differ by \\((k+1)^2 - k^2 = 2k + 1.\\) We need \\(2k + 1 \\le 2023,\\) which gives \\(k \\le 1011.\\) So \\(k\\) runs \\(1, 2, \\ldots, 1011,\\) for \\(1011\\) pairs. Thus, B is the correct answer.",
+      "hints": [
+        "Consecutive squares \\(k^2\\) and \\((k+1)^2\\) differ by \\(2k+1\\)",
+        "Solve \\(2k + 1 \\le 2023\\) for positive integers \\(k\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

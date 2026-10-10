@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2018-p10",
+  "title": "2018 AMC 12B Problem 10",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.mode",
+      "label": "Mode",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "comb.pigeonhole-principle",
+      "label": "Pigeonhole principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2018,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 28.5,
+    "source": 1700,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A list of \\(2018\\) positive integers has a unique mode, which occurs exactly \\(10\\) times. What is the least number of distinct values that can occur in the list?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(202\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(223\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(224\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(225\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(234\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "225"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2018-p10.live",
+      "kind": "proof-sketch",
+      "text": "The mode uses \\(10\\) of the entries, leaving \\(2008.\\) Because the mode is unique, every other value appears at most \\(9\\) times, so at least \\(\\left\\lceil\\tfrac{2008}{9}\\right\\rceil=224\\) distinct non-mode values are needed.\n\nAdding the mode gives \\(224+1=225.\\) This is achievable: use \\(9\\) copies each of \\(1\\) through \\(223,\\) ten copies of \\(224,\\) and one copy of \\(225.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "The \\(2018-10=2008\\) non-mode entries can each appear at most \\(9\\) times",
+        "Find the fewest distinct non-mode values needed, then add \\(1\\) for the mode"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

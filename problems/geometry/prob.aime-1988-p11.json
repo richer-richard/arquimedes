@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-1988-p11",
+  "title": "1988 AIME Problem 11",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.centroid",
+      "label": "Centroid",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.slope",
+      "label": "Slope",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1988,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 35.4,
+    "source": 1970,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Let \\(w_1,\\) \\(w_2,\\) \\(\\ldots,\\) \\(w_n\\) be complex numbers. A line \\(L\\) in the complex plane is called a mean line for the points \\(w_1,\\) \\(w_2,\\) \\(\\ldots,\\) \\(w_n\\) if \\(L\\) contains points (complex numbers) \\(z_1,\\) \\(z_2,\\) \\(\\ldots,\\) \\(z_n\\) such that\n\n\\[\\sum_{k=1}^n(z_k-w_k)=0.\\]\n\nFor the numbers \\(w_1=32+170i,\\) \\(w_2=-7+64i,\\) \\(w_3=-9+200i,\\) \\(w_4=1+27i,\\) and \\(w_5=-14+43i,\\) there is a unique mean line with \\(y\\)-intercept \\(3.\\) Find the slope of this mean line.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "163",
+    "value": "163"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1988-p11.live",
+      "kind": "proof-sketch",
+      "text": "The condition says that the average of the \\(z_k\\) equals the average of the \\(w_k.\\) Since all \\(z_k\\) lie on \\(L,\\) their average lies on \\(L;\\) conversely, any line through the average works by taking all \\(z_k\\) equal to that point. The centroid satisfies \\[\\begin{aligned}\\bar x&=\\frac{32-7-9+1-14}{5}=\\frac35,\\\\\\bar y&=\\frac{170+64+200+27+43}{5}\\\\&=\\frac{504}{5}.\\end{aligned}\\] The line through this point and \\((0,3)\\) has slope \\(\\frac{\\bigl(\\frac{504}{5}-3\\bigr)}{\\frac35}=163.\\)",
+      "hints": [
+        "Average the equation \\(\\sum(z_k-w_k)=0\\)",
+        "A mean line is exactly a line through the centroid of the given points"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

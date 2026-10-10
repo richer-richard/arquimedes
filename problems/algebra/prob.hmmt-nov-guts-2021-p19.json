@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-guts-2021-p19",
+  "title": "2021 HMMT November Guts Problem 19",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2021,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 42.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Integers \\(0 \\leq a, b, c, d \\leq 9\\) satisfy\n\n\\[\\begin{gathered}\n6 a+9 b+3 c+d=88 \\\\\na-b+c-d=-6 \\\\\na-9 b+3 c-d=-46\n\\end{gathered}\\]\n\nFind \\(1000 a+100 b+10 c+d\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "6507",
+    "value": "6507"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2021-p19.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(N=\\overline{a b c d}\\) be an at most-four digit number. Note that the first equation gives us \\(N \\equiv 4(\\bmod 7)\\). The second equation gives us \\(N \\equiv 6(\\bmod 11)\\). The third equation gives us \\(N \\equiv 7\\) \\((\\bmod 13)\\). Using CRT, we get \\(N \\equiv \\frac{1}{2} \\equiv 501(\\bmod 1001)\\). Thus, we have \\(N=501+1001 k\\) for some integer \\(0 \\leq k \\leq 9\\). The only value of \\(k\\) that satisfies the first equation is \\(k=6\\), which yields \\(N=6507\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

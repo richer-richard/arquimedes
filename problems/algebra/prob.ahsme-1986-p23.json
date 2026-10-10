@@ -1,0 +1,80 @@
+{
+  "id": "prob.ahsme-1986-p23",
+  "title": "1986 AHSME Problem 23",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.binomial-theorem",
+      "label": "Binomial theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1986,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 33.4,
+    "source": 1890,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\[ \\begin{aligned} N={}&69^5+5\\cdot69^4+10\\cdot69^3\\\\ &{}+10\\cdot69^2+5\\cdot69+1. \\end{aligned} \\] How many positive integers are factors of \\(N?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(69\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(125\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(216\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "216"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1986-p23.live",
+      "kind": "proof-sketch",
+      "text": "By the binomial theorem, \\[ \\begin{aligned} N&=(69+1)^5=70^5\\\\ &=2^5\\cdot5^5\\cdot7^5. \\end{aligned} \\] A divisor independently chooses an exponent from \\(0\\) through \\(5\\) for each of the three primes. Thus \\(N\\) has \\(6^3=216\\) positive divisors.\n\nTherefore the correct answer is E.",
+      "hints": [
+        "Recognize the coefficients \\(1,5,10,10,5,1\\)",
+        "After using the binomial theorem, factor the resulting base into primes"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

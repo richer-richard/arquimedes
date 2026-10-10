@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12b-2020-p11",
+  "title": "2020 AMC 12B Problem 11",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-decomposition",
+      "label": "Area decomposition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.regular-polygon",
+      "label": "Regular polygon",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2020,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 25.7,
+    "source": 1590,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "As shown in the figure below, six semicircles lie in the interior of a regular hexagon with side length \\(2\\) so that the diameters of the semicircles coincide with the sides of the hexagon. What is the area of the shaded region—inside the hexagon but outside all of the semicircles?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(6\\sqrt{3} - 3\\pi\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{9\\sqrt{3}}{2} - 2\\pi\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{3\\sqrt{3}}{2} - \\dfrac{\\pi}{3}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\sqrt{3} - \\pi\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{9\\sqrt{3}}{2} - \\pi\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2020-p11.live",
+      "kind": "proof-sketch",
+      "text": "The hexagon has area \\(\\tfrac{3\\sqrt3}{2}\\cdot 2^2 = 6\\sqrt3.\\) Each semicircle has radius \\(1\\) and area \\(\\tfrac{\\pi}{2},\\) totaling \\(3\\pi.\\)\n\nAdjacent semicircle centers (side midpoints) are a distance \\(\\sqrt3\\) apart, so each adjacent pair overlaps in a lens of area \\(2\\cos^{-1}\\!\\left(\\tfrac{\\sqrt3}{2}\\right) - \\tfrac{\\sqrt3}{2} = \\tfrac{\\pi}{3} - \\tfrac{\\sqrt3}{2}.\\) There are six such lenses.\n\nThe union of the semicircles is \\[3\\pi - 6\\left(\\frac{\\pi}{3} - \\frac{\\sqrt3}{2}\\right) = \\pi + 3\\sqrt3.\\] Subtracting from the hexagon gives the shaded area \\(6\\sqrt3 - (\\pi + 3\\sqrt3) = 3\\sqrt3 - \\pi.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "The hexagon area is \\(\\dfrac{3\\sqrt3}{2}s^2\\) with \\(s = 2,\\) and each semicircle has radius \\(1\\)",
+        "Adjacent semicircles overlap; subtract the union, accounting for the six overlapping lenses"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "7d36ea2c5f95c07b7cd3eb4e0988fd9949605c0c6966bec971edd2e6d72abf64"
+    ],
+    "solutions": []
+  }
+}

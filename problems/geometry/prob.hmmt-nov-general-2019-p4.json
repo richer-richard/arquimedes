@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-general-2019-p4",
+  "title": "2019 HMMT November General Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2019,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 44.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In \\(\\triangle A B C, A B=2019, B C=2020\\), and \\(C A=2021\\). Yannick draws three regular \\(n\\)-gons in the plane of \\(\\triangle A B C\\) so that each \\(n\\)-gon shares a side with a distinct side of \\(\\triangle A B C\\) and no two of the \\(n\\)-gons overlap. What is the maximum possible value of \\(n\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2019-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 11\nIf any \\(n\\)-gon is drawn on the same side of one side of \\(\\triangle A B C\\) as \\(\\triangle A B C\\) itself, it will necessarily overlap with another triangle whenever \\(n>3\\). Thus either \\(n=3\\) or the triangles are all outside \\(A B C\\). The interior angle of a regular \\(n\\)-gon is \\(180^{\\circ} \\cdot \\frac{n-2}{n}\\), so we require\n\n\\[360^{\\circ} \\cdot \\frac{n-2}{n}+\\max (\\angle A, \\angle B, \\angle C)<360^{\\circ} .\\]\n\nAs \\(\\triangle A B C\\) is almost equilateral (in fact the largest angle is less than \\(60.1^{\\circ}\\) ), each angle is approximately \\(60^{\\circ}\\), so we require\n\n\\[360 \\cdot \\frac{n-2}{n}<300 \\Longrightarrow n<12\\]\n\nHence the answer is \\(n=11\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

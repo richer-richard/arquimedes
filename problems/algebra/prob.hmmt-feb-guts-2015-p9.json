@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2015-p9",
+  "title": "2015 HMMT February Guts Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vieta-s-formulas",
+      "label": "Vieta's formulas",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2015,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 73.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a, b, c\\) be integers. Define \\(f(x)=a x^{2}+b x+c\\). Suppose there exist pairwise distinct integers \\(u, v, w\\) such that \\(f(u)=0, f(v)=0\\), and \\(f(w)=2\\). Find the maximum possible value of the discriminant \\(b^{2}-4 a c\\) of \\(f\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2015-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "16 By the factor theorem, \\(f(x)=a(x-u)(x-v)\\), so the constraints essentially boil down to \\(2=f(w)=a(w-u)(w-v)\\). (It's not so important that \\(u \\neq v\\); we merely specified it for a shorter problem statement.)\nWe want to maximize the discriminant \\(b^{2}-4 a c=a^{2}\\left[(u+v)^{2}-4 u v\\right]=a^{2}(u-v)^{2}=a^{2}[(w-v)-(w-u)]^{2}\\). Clearly \\(a \\mid 2\\). If \\(a>0\\), then \\((w-u)(w-v)=2 / a>0\\) means the difference \\(|u-v|\\) is less than \\(2 / a\\), whereas if \\(a<0\\), since at least one of \\(|w-u|\\) and \\(|w-v|\\) equals 1 , the difference \\(|u-v|\\) of factors is greater than \\(2 /|a|\\).\nSo the optimal choice occurs either for \\(a=-1\\) and \\(|u-v|=3\\), or \\(a=-2\\) and \\(|u-v|=2\\). The latter wins, giving a discriminant of \\((-2)^{2} \\cdot 2^{2}=16\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

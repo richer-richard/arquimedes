@@ -1,0 +1,57 @@
+{
+  "id": "prob.aime-i-2000-p10",
+  "title": "2000 AIME I Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2000,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 44.6,
+    "source": 2330,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "A sequence of numbers \\(x_1,\\) \\(x_2,\\) \\(x_3,\\) \\(\\ldots,\\) \\(x_{100}\\) has the property that, for every integer \\(k\\) between \\(1\\) and \\(100,\\) inclusive, the number \\(x_k\\) is \\(k\\) less than the sum of the other \\(99\\) numbers. Given that \\(x_{50} = \\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers, find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "173",
+    "value": "173"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2000-p10.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(S = x_1 + x_2 + \\cdots + x_{100}.\\) The condition says \\(x_k = (S - x_k) - k,\\) so \\(x_k = \\frac{S - k}{2}\\) for every \\(k.\\) Summing over \\(k = 1, \\ldots, 100,\\) \\[ \\begin{aligned} S &= \\frac{100S - (1 + 2 + \\cdots + 100)}{2} \\\\ &= \\frac{100S - 5050}{2}, \\end{aligned} \\] so \\(98S = 5050\\) and \\(S = \\frac{2525}{49}.\\)\n\nThen \\[ \\begin{aligned} x_{50} &= \\frac{S - 50}{2} \\\\ &= \\frac{2525 - 2450}{98} = \\frac{75}{98}, \\end{aligned} \\] which is in lowest terms, so \\(m + n = 75 + 98 = 173.\\)",
+      "hints": [
+        "If \\(S\\) is the sum of all \\(100\\) numbers, the condition says \\(x_k = S - x_k - k\\)",
+        "Solve for \\(x_k\\) in terms of \\(S\\) and \\(k,\\) then add up all \\(100\\) equations to find \\(S\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

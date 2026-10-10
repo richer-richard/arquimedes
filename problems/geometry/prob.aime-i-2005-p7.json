@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-i-2005-p7",
+  "title": "2005 AIME I Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2005,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 47.7,
+    "source": 2450,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "In quadrilateral \\(ABCD,\\) \\(BC = 8,\\) \\(CD = 12,\\) \\(AD = 10,\\) and \\(m\\angle A = m\\angle B = 60^\\circ.\\) Given that \\(AB = p + \\sqrt{q},\\) where \\(p\\) and \\(q\\) are positive integers, find \\(p + q.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "150",
+    "value": "150"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2005-p7.live",
+      "kind": "proof-sketch",
+      "text": "Extend rays \\(AD\\) and \\(BC\\) until they meet at \\(P.\\) Triangle \\(ABP\\) has \\(60^\\circ\\) angles at \\(A\\) and \\(B,\\) so it is equilateral: \\(PA = PB = AB.\\) Writing \\(x = AB,\\) we get \\(PD = PA - AD = x - 10\\) and \\(PC = PB - BC = x - 8.\\)\n\nThe Law of Cosines in triangle \\(PDC,\\) with \\(\\angle P = 60^\\circ\\) and \\(DC = 12,\\) gives \\[ \\begin{aligned} 144 &= (x-10)^2 + (x-8)^2 \\\\ &\\quad {}- (x-10)(x-8) \\\\ &= x^2 - 18x + 84, \\end{aligned} \\] so \\(x^2 - 18x - 60 = 0\\) and \\(x = 9 + \\sqrt{81 + 60} = 9 + \\sqrt{141}.\\)\n\nThus \\(p + q = 9 + 141 = 150.\\)",
+      "hints": [
+        "Extend \\(\\overline{AD}\\) and \\(\\overline{BC}\\) to meet at \\(P;\\) the two \\(60^\\circ\\) angles make triangle \\(ABP\\) equilateral",
+        "Apply the Law of Cosines in triangle \\(PDC,\\) where \\(PD = AB - 10,\\) \\(PC = AB - 8,\\) and \\(\\angle P = 60^\\circ\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

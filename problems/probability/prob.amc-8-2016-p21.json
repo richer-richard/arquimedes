@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-2016-p21",
+  "title": "2016 AMC 8 Problem 21",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2016,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 17.6,
+    "source": 1490,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A box contains \\(3\\) red chips and \\(2\\) green chips. Chips are drawn randomly, one at a time without replacement, until all \\(3\\) of the reds are drawn or until both green chips are drawn. What is the probability that the \\(3\\) reds are drawn?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( \\dfrac{3}{10} \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( \\dfrac{2}{5} \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( \\dfrac{1}{2} \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( \\dfrac{3}{5} \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( \\dfrac{2}{3} \\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "2/5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2016-p21.live",
+      "kind": "proof-sketch",
+      "text": "The \\(3\\) reds are drawn before both green chips exactly when a green chip is the last chip in the full ordering. There are \\(10\\) equally likely ways to choose the two positions of the green chips, and \\(4\\) of them have a green chip in the last position.\n\nTherefore, the desired probability is \\[\\dfrac{4}{10} = \\dfrac{2}{5}.\\]\n\nThus, B is the correct answer.",
+      "hints": [
+        "The stopping result is determined by which color appears last in the full ordering of the chips.",
+        "Count equally likely positions for the two green chips among the five total chip positions."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

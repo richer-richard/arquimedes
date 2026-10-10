@@ -1,0 +1,87 @@
+{
+  "id": "prob.ahsme-1984-p28",
+  "title": "1984 AHSME Problem 28",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counting-pairs",
+      "label": "Counting pairs",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.radical",
+      "label": "Radical",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1984,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 45.9,
+    "source": 2380,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The number of distinct pairs of integers \\((x,y)\\) such that \\[ \\begin{aligned} 0&\\lt x\\lt y,\\\\ \\sqrt{1984}&=\\sqrt{x}+\\sqrt{y} \\end{aligned} \\] is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(7\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "3"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1984-p28.live",
+      "kind": "proof-sketch",
+      "text": "Because \\(\\sqrt{x}+\\sqrt{y}=8\\sqrt{31},\\) the two radicals must have common squarefree part \\(31.\\) Write \\(x=31u^2\\) and \\(y=31v^2\\) for positive integers \\(u,v.\\) Then \\[ u+v=8,\\qquad u\\lt v. \\] The possibilities are \\((u,v)=(1,7),\\) \\((2,6),\\) and \\((3,5),\\) producing three distinct pairs \\((x,y).\\)\n\nTherefore, the correct answer is D.",
+      "hints": [
+        "Use \\(1984=31\\cdot8^2\\) and write both radicands with a common squarefree part",
+        "Set \\(x=31u^2,\\ y=31v^2\\) and count positive integers \\(u\\lt v\\) with \\(u+v=8\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

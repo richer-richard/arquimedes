@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-team-2012-p3",
+  "title": "2012 HMMT November Team Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.integers",
+      "label": "Integers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2012,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 50.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find the largest integer less than 2012 all of whose divisors have at most two 1 's in their binary representations.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2012-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "1536 Call a number good if all of its positive divisors have at most two 1's in their binary representations. Then, if \\(p\\) is an odd prime divisor of a good number, \\(p\\) must be of the form \\(2^{k}+1\\). The only such primes less than 2012 are \\(3,5,17\\), and 257 , so the only possible prime divisors of \\(n\\) are \\(2,3,5,17\\), and 257 .\nNext, note that since \\(\\left(2^{i}+1\\right)\\left(2^{j}+1\\right)=2^{i+j}+2^{i}+2^{j}+1\\), if either \\(i\\) or \\(j\\) is greater than 1 , then there will be at least 3 's in the binary representation of \\(\\left(2^{i}+1\\right)\\left(2^{j}+1\\right)\\), so \\(\\left(2^{i}+1\\right)\\left(2^{j}+1\\right)\\) cannot divide a good number. On the other hand, if \\(i=j=1\\), then \\(\\left(2^{1}+1\\right)\\left(2^{1}+1\\right)=9=2^{3}+1\\), so 9 is a good number and can divide a good number. Finally, note that since multiplication by 2 in binary just appends additional 0 s, so if \\(n\\) is a good number, then \\(2 n\\) is also a good number.\nIt therefore follows that any good number less than 2012 must be of the form \\(c \\cdot 2^{k}\\), where \\(c\\) belongs to \\(\\{1,3,5,9,17,257\\}\\) (and moreover, all such numbers are good). It is then straightforward to check that the largest such number is \\(1536=3 \\cdot 2^{9}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

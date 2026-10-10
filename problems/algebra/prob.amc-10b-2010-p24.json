@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2010-p24",
+  "title": "2010 AMC 10B Problem 24",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2010,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 33.8,
+    "source": 2180,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A high school basketball game between the Raiders and Wildcats was tied at the end of the first quarter. The number of points scored by the Raiders in each of the four quarters formed an increasing geometric sequence, and the number of points scored by the Wildcats in each of the four quarters formed an increasing arithmetic sequence. At the end of the fourth quarter, the Raiders had won by one point. Neither team scored more than \\(100\\) points. What was the total number of points scored by the two teams in the first half?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(30\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(31\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(32\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(33\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(34\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "34"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2010-p24.live",
+      "kind": "proof-sketch",
+      "text": "Let the first-quarter score for each team be \\(a.\\) Let the Raiders have common ratio \\(r\\) and let the Wildcats have common difference \\(d.\\)\n\nWrite \\(r=\\frac{m}{n}\\) in lowest terms. Since the Raiders’ four quarter scores are integers, \\(a=n^3A\\) for some positive integer \\(A\\), and their total is \\(A(n^3+n^2m+nm^2+m^3)\\le100\\). Thus the only possible ratios are \\(\\dfrac{3}{2},2,3,4\\).\n\nFor \\(r=\\dfrac{3}{2}\\) or \\(r=4\\), the only possible Raiders totals give Wildcats totals that are not of the form \\(4a+6d\\). For \\(r=3\\), the equation \\(40a=4a+6d+1\\) is impossible modulo \\(6\\).\n\nFor \\(r=2\\), the equation is \\(15a=4a+6d+1\\), so \\(11a=6d+1\\). The only positive solution with total at most \\(100\\) is \\(a=5,d=9\\).\n\nThe first-half total is \\(5+10+5+14=34.\\)\n\nThus, E is the correct answer.",
+      "hints": [
+        "Let the tied first-quarter score be \\(a\\)",
+        "Use the geometric and arithmetic total scores and the one-point final margin"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

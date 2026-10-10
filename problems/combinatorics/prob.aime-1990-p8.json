@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-1990-p8",
+  "title": "1990 AIME Problem 8",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiset-permutations",
+      "label": "Multiset permutations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1990,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 31.0,
+    "source": 1800,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "In a shooting match, eight clay targets are arranged in two hanging columns of three targets each and one column of two targets. A marksman is to break all the targets according to the following rules:\n\n\\((1)\\) The marksman first chooses a column from which a target is to be broken.\n\n\\((2)\\) The marksman must then break the lowest remaining target in the chosen column.\n\nIf the rules are followed, in how many different orders can the eight targets be broken?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "560",
+    "value": "560"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1990-p8.live",
+      "kind": "proof-sketch",
+      "text": "Once the chosen column is known at each shot, the target within that column is forced. Thus every valid order corresponds to an arrangement of three symbols from the first column, three from the second, and two from the third. The number of such arrangements is \\[\\frac{8!}{3!\\,3!\\,2!}=560.\\]",
+      "hints": [
+        "Within each column, the bottom-to-top order is forced",
+        "Encode an order only by the sequence of chosen columns, with multiplicities \\(3,\\) \\(3,\\) and \\(2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

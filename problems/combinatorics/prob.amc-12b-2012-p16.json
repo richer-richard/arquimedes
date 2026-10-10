@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2012-p16",
+  "title": "2012 AMC 12B Problem 16",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2012,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 32.1,
+    "source": 1840,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Amy, Beth, and Jo listen to four different songs and discuss which ones they like. No song is liked by all three. Furthermore, for each of the three pairs of the girls, there is at least one song liked by those two girls but disliked by the third. In how many different ways is this possible?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(108\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(132\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(671\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(846\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(1105\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "132"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2012-p16.live",
+      "kind": "proof-sketch",
+      "text": "Each song is liked by exactly one of the three pairs, by a single girl, or by no one. Every pair must be represented.\n\nCase \\(1:\\) every song is liked by a pair. One pair gets two of the four songs (\\(\\binom42=6\\) ways, and \\(3\\) choices for which pair), and the other two pairs get one song each (\\(2\\) ways). This gives \\(3\\cdot6\\cdot2=36.\\)\n\nCase \\(2:\\) three songs go to the three pairs (one each) and the fourth song is liked by a single girl or no one. Assigning the four songs to these four roles gives \\(4!=24\\) ways, and the leftover role has \\(4\\) options (Amy, Beth, Jo, or no one): \\(24\\cdot4=96.\\)\n\nThe total is \\(36+96=132.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Each song is liked by one of the pairs \\(\\{AB\\},\\{AC\\},\\{BC\\},\\) by a single girl, or by no one; all three pairs must appear",
+        "Split into the case where all four songs go to pairs and the case where exactly three songs cover the three pairs"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

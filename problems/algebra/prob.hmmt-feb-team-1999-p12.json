@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-team-1999-p12",
+  "title": "1999 HMMT February Team Problem 12",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 1999,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 81.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A fair coin is flipped every second and the results are recorded with 1 meaning heads and 0 meaning tails. What is the probability that the sequence 10101 occurs before the first occurance of the sequence 010101?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1999-p12.hmmt",
+      "kind": "proof-sketch",
+      "text": "Call it a win if we reach 10101, a loss if we reach 010101. Let \\(x\\) be the probability of winning if the first flip is a 1 , let \\(y\\) be the probability of winning if the first flip is a 0 . Then the probability of winning is \\((x+y) / 2\\) since the first flip is 1 or 0 , each with probability \\(1 / 2\\). If we ever get two 1's in a row, that is the same as starting with a 1 as far as the probability is concerned. Similarly, if we get two 0's in a row, then we might as well have started with a single 0 .\n\n|\n |\n| :---: |\n\nFrom the tree of all possible sequences, shown above, in which the probability of moving along any particular line is \\(1 / 2\\), we see that \\(x=x(1 / 2+1 / 8)+y(1 / 4+1 / 16)+1 / 16\\), and \\(y=x(1 / 4+1 / 16)+\\) \\(y(1 / 2+1 / 8+1 / 32)\\). Solving these two equations in two unknowns we get \\(x=11 / 16\\) and \\(y=5 / 8\\). Therefore the probablity that the sequence 10101 occurs before the first occurance of the sequence 010101 is \\(\\mathbf{2 1} / \\mathbf{3 2}\\).\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2018-p3",
+  "title": "2018 HMMT February Algebra and Number Theory Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2018,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "There are two prime numbers \\(p\\) so that \\(5 p\\) can be expressed in the form \\(\\left\\lfloor\\frac{n^{2}}{5}\\right\\rfloor\\) for some positive integer \\(n\\). What is the sum of these two prime numbers?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2018-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 52\nNote that the remainder when \\(n^{2}\\) is divided by 5 must be 0,1 , or 4 . Then we have that \\(25 p=n^{2}\\) or \\(25 p=n^{2}-1\\) or \\(25 p=n^{2}-4\\). In the first case there are no solutions. In the second case, if \\(25 p=(n-1)(n+1)\\), then we must have \\(n-1=25\\) or \\(n+1=25\\) as \\(n-1\\) and \\(n+1\\) cannot both be divisible by 5 , and also cannot both have a factor besides 25 . Similarly, in the third case, \\(25 p=(n-2)(n+2)\\), so we must have \\(n-2=25\\) or \\(n+2=25\\).\nTherefore the \\(n\\) we have to check are \\(23,24,26,27\\). These give values of \\(p=21, p=23, p=27\\), and \\(p=29\\), of which only 23 and 29 are prime, so the answer is \\(23+29=52\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

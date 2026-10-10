@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2012-p10",
+  "title": "2012 AIME1 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.chinese-remainder-theorem",
+      "label": "Chinese Remainder Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.difference-of-squares",
+      "label": "Difference of squares",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2012,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 59.1,
+    "source": 2840,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "Let \\(\\mathcal{S}\\) be the set of all perfect squares whose rightmost three digits in base \\(10\\) are \\(256.\\) Let \\(\\mathcal{T}\\) be the set of all numbers of the form \\(\\frac{x - 256}{1000},\\) where \\(x\\) is in \\(\\mathcal{S}.\\) In other words, \\(\\mathcal{T}\\) is the set of numbers that result when the last three digits of each number in \\(\\mathcal{S}\\) are truncated. Find the remainder when the tenth smallest element of \\(\\mathcal{T}\\) is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "170",
+    "value": "170"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2012-p10.live",
+      "kind": "proof-sketch",
+      "text": "A square \\(n^2\\) ends in \\(256\\) exactly when \\(n^2 - 256\\) \\(= (n - 16)(n + 16)\\) is divisible by \\(1000.\\) Modulo \\(8:\\) \\(n^2 \\equiv 0 \\pmod 8\\) forces \\(n\\) to be divisible by \\(4.\\) Modulo \\(125:\\) the factors \\(n \\pm 16\\) differ by \\(32,\\) so \\(5\\) divides at most one of them, and hence \\(125\\) must divide a single factor: \\(n \\equiv \\pm 16 \\pmod{125}.\\) Because \\(16\\) is a multiple of \\(4,\\) the two conditions combine to \\(n \\equiv \\pm 16 \\pmod{500}.\\)\n\nSo \\(\\mathcal{S}\\) consists of the numbers \\((500m \\pm 16)^2,\\) whose square roots in increasing order are \\(16,\\) \\(484,\\) \\(516,\\) \\(984,\\) \\(1016,\\) \\(\\ldots.\\) The tenth smallest element of \\(\\mathcal{S}\\) is \\((500 \\cdot 5 - 16)^2 = 2484^2.\\)\n\nThe corresponding element of \\(\\mathcal{T}\\) is \\(\\frac{2484^2 - 256}{1000} = \\frac{2468 \\cdot 2500}{1000} = 6170,\\) whose remainder upon division by \\(1000\\) is \\(170.\\)",
+      "hints": [
+        "\\(n^2 - 256\\) \\(= (n - 16)(n + 16)\\) is divisible by \\(1000;\\) handle the prime powers \\(8\\) and \\(125\\) separately",
+        "\\(125\\) must divide one of the two factors, and \\(n\\) is divisible by \\(4;\\) these combine to \\(n \\equiv \\pm 16 \\pmod{500}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

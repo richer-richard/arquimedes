@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-guts-2022-p10",
+  "title": "2022 HMMT November Guts Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.floors-and-ceilings",
+      "label": "Floors and ceilings",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2022,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 45.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A real number \\(x\\) is chosen uniformly at random from the interval [0,1000]. Find the probability that\n\n\\[\\left\\lfloor\\frac{\\left\\lfloor\\frac{x}{2.5}\\right\\rfloor}{2.5}\\right\\rfloor=\\left\\lfloor\\frac{x}{6.25}\\right\\rfloor .\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{9}{10}",
+    "value": "\\frac{9}{10}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2022-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(y=\\frac{x}{2.5}\\), so \\(y\\) is chosen uniformly at random from \\([0,400]\\). Then we need\n\n\\[\\left\\lfloor\\frac{\\lfloor y\\rfloor}{2.5}\\right\\rfloor=\\left\\lfloor\\frac{y}{2.5}\\right\\rfloor .\\]\n\nLet \\(y=5 a+b\\), where \\(0 \\leq b<5\\) and \\(a\\) is an integer. Then\n\n\\[\\left\\lfloor\\frac{\\lfloor y\\rfloor}{2.5}\\right\\rfloor=\\left\\lfloor\\frac{5 a+\\lfloor b\\rfloor}{2.5}\\right\\rfloor=2 a+\\left\\lfloor\\frac{\\lfloor b\\rfloor}{2.5}\\right\\rfloor\\]\n\nwhile\n\n\\[\\left\\lfloor\\frac{y}{2.5}\\right\\rfloor=\\left\\lfloor\\frac{5 a+b}{2.5}\\right\\rfloor=2 a+\\left\\lfloor\\frac{b}{2.5}\\right\\rfloor,\\]\n\nso we need \\(\\left\\lfloor\\frac{\\lfloor b\\rfloor}{2.5}\\right\\rfloor=\\left\\lfloor\\frac{b}{2.5}\\right\\rfloor\\), where \\(b\\) is selected uniformly at random from \\([0,5]\\). This can be shown to always hold except for \\(b \\in[2.5,3)\\), so the answer is \\(1-\\frac{0.5}{5}=\\frac{9}{10}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

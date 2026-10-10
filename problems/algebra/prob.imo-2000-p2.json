@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2000-p2",
+  "title": "2000 IMO Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2000,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 79.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a\\), \\(b\\), \\(c\\) be positive real numbers with \\(abc = 1\\).\nShow that\n\\[\n \\left( a - 1 + \\frac 1b \\right)\n \\left( b - 1 + \\frac 1c \\right)\n \\left( c - 1 + \\frac 1a \\right)\n \\le 1.\n\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2000-p2.evanchen",
+      "kind": "proof-sketch",
+      "text": "Let \\(a = x/y\\), \\(b = y/z\\), \\(c = z/x\\) for \\(x,y,z > 0\\).\nThen the inequality rewrites as\n\\[ (-x+y+z)(x-y+z)(x+y-z) \\le xyz \\]\nwhich when expanded is equivalent to Schur's inequality.\nAlternatively, if one wants to avoid appealing to Schur,\nthen the following argument works:\n\n• At most one term on the left-hand side is negative;\n if that occurs we are done from \\(xyz > 0 > (-x+y+z)(x-y+z)(x+y-z)\\).\n\n• If all terms in the left-hand side are nonnegative,\n let us denote \\(m = -x+y+z \\ge 0\\), \\(n = x-y+z \\ge 0\\), \\(p = x+y-z \\ge 0\\).\n Then it becomes\n \\[ mnp \\le \\frac{(m+n)(n+p)(p+m)}{8} \\]\n which follows by AM-GM.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

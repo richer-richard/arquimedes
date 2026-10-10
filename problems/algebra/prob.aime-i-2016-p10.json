@@ -1,0 +1,74 @@
+{
+  "id": "prob.aime-i-2016-p10",
+  "title": "2016 AIME I Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.induction",
+      "label": "Induction",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2016,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 59.5,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "A strictly increasing sequence of positive integers \\(a_1,\\) \\(a_2,\\) \\(a_3,\\) \\(\\ldots\\) has the property that for every positive integer \\(k,\\) the subsequence \\(a_{2k-1},\\) \\(a_{2k},\\) \\(a_{2k+1}\\) is geometric and the subsequence \\(a_{2k},\\) \\(a_{2k+1},\\) \\(a_{2k+2}\\) is arithmetic. Suppose that \\(a_{13} = 2016.\\) Find \\(a_1.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "504",
+    "value": "504"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2016-p10.live",
+      "kind": "proof-sketch",
+      "text": "Write the common ratio of \\(a_1, a_2, a_3\\) as \\(\\frac{b}{a}\\) in lowest terms, with \\(b \\gt a \\ge 1\\) since the sequence increases. Because \\(a_3 = a_1 \\left(\\frac{b}{a}\\right)^2\\) is an integer and \\(\\gcd(a, b) = 1,\\) we get that \\(a^2\\) divides \\(a_1;\\) set \\(c = \\frac{a_1}{a^2}.\\) Then \\(a_1 = ca^2,\\) \\(a_2 = cab,\\) \\(a_3 = cb^2,\\) and the arithmetic condition gives \\(a_4 = 2cb^2 - cab = cb(2b - a).\\) Continuing, induction shows for every \\(k\\) that \\[ \\begin{aligned} a_{2k+1} &= c\\,\\bigl(kb - (k-1)a\\bigr)^2, \\\\ a_{2k+2} &= c\\,\\bigl(kb - (k-1)a\\bigr) \\\\ &\\quad {}\\cdot \\bigl((k+1)b - ka\\bigr). \\end{aligned} \\]\n\nIn particular \\(a_{13} = c\\,(6b - 5a)^2\\) \\(= 2016 = 2^5 \\cdot 3^2 \\cdot 7.\\) Let \\(N = 6b - 5a;\\) then \\(N^2\\) divides \\(2016,\\) so \\(N \\le 12.\\) But \\(N = a + 6(b - a) \\ge a + 6 \\ge 7,\\) and the only value in range for which \\(N^2\\) divides \\(2016\\) is \\(N = 12,\\) giving \\(c = \\frac{2016}{144} = 14.\\) From \\(6(b - a) = 12 - a\\) we need \\(a\\) to be a multiple of \\(6\\) with \\(a \\le 6,\\) so \\(a = 6\\) and \\(b = 7,\\) which are coprime.\n\nTherefore \\(a_1 = ca^2 = 14 \\cdot 36 = 504.\\) (Indeed the sequence begins \\(504, 588, 686, 784, 896, \\ldots\\) and reaches \\(a_{13} = 14 \\cdot 12^2 = 2016.\\))",
+      "hints": [
+        "Write \\(\\frac{a_2}{a_1} = \\frac{b}{a}\\) in lowest terms; then \\(a_1 = ca^2\\) and \\(a_2 = cab\\) for some positive integer \\(c\\)",
+        "Induction gives \\(a_{2k+1} = c\\,(kb - (k-1)a)^2,\\) so \\(c\\,(6b - 5a)^2 = 2016;\\) note \\(6b - 5a \\ge a + 6\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

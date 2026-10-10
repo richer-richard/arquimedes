@@ -1,0 +1,78 @@
+{
+  "id": "prob.ahsme-1990-p16",
+  "title": "1990 AHSME Problem 16",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1990,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 21.8,
+    "source": 1440,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "At one of George Washington’s parties, each man shook hands with everyone except his spouse, and no handshakes took place between women. If \\(13\\) married couples attended, how many handshakes were there among these \\(26\\) people?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(78\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(185\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(234\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(312\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(325\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "234"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1990-p16.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(\\binom{26}{2}=325\\) possible pairs. Exclude the \\(13\\) married pairs and the \\(\\binom{13}{2}=78\\) pairs of women. The number of handshakes is \\[ 325-13-78=234. \\]\n\nThus the correct answer is C.",
+      "hints": [
+        "Begin with all unordered pairs of the \\(26\\) guests",
+        "Remove spouse pairs and pairs consisting of two women"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

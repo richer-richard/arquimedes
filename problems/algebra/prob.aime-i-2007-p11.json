@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2007-p11",
+  "title": "2007 AIME I Problem 11",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sum-of-first-n-squares",
+      "label": "Sum of first n squares",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2007,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 51.8,
+    "source": 2610,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "For each positive integer \\(p,\\) let \\(b(p)\\) denote the unique positive integer \\(k\\) such that \\(|k - \\sqrt{p}| \\lt \\frac{1}{2}.\\) For example, \\(b(6) = 2\\) and \\(b(23) = 5.\\) If \\(S = \\sum_{p=1}^{2007} b(p),\\) find the remainder when \\(S\\) is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "955",
+    "value": "955"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2007-p11.live",
+      "kind": "proof-sketch",
+      "text": "For a positive integer \\(k,\\) the condition \\(|k - \\sqrt{p}| \\lt \\frac{1}{2}\\) means \\(\\left(k - \\frac{1}{2}\\right)^2 \\lt p \\lt \\left(k + \\frac{1}{2}\\right)^2,\\) which for integers \\(p\\) is exactly \\(k^2 - k + 1 \\le p \\le k^2 + k.\\) So \\(b(p) = k\\) for precisely \\(2k\\) values of \\(p.\\)\n\nSince \\(44^2 + 44 = 1980,\\) the blocks \\(k = 1, \\ldots, 44\\) exactly cover \\(p \\le 1980\\) and contribute \\[\\begin{aligned} \\sum_{k=1}^{44} k \\cdot 2k &= 2 \\cdot \\frac{44 \\cdot 45 \\cdot 89}{6} \\\\ &= 58740. \\end{aligned}\\] The remaining \\(27\\) values \\(p = 1981, \\ldots, 2007\\) each have \\(b(p) = 45,\\) adding \\(27 \\cdot 45 = 1215.\\)\n\nThus \\(S = 58740 + 1215 = 59955,\\) and the remainder is \\(955.\\)",
+      "hints": [
+        "\\(b(p) = k\\) exactly when \\(k^2 - k + 1 \\le p \\le k^2 + k,\\) a block of \\(2k\\) values of \\(p\\)",
+        "Complete blocks for \\(k \\le 44\\) cover \\(p \\le 1980;\\) every remaining \\(p\\) up to \\(2007\\) has \\(b(p) = 45\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

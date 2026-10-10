@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12b-2022-p25",
+  "title": "2022 AMC 12B Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.regular-polygon",
+      "label": "Regular polygon",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.shoelace-formula",
+      "label": "Shoelace formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2022,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 49.5,
+    "source": 2520,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Four regular hexagons surround a square with a side length \\(1,\\) each one sharing an edge with the square, as shown in the figure below. The area of the resulting \\(12\\)-sided outer nonconvex polygon can be written as \\(m\\sqrt n + p,\\) where \\(m,\\) \\(n,\\) and \\(p\\) are integers and \\(n\\) is not divisible by the square of any prime. What is \\(m + n + p?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(-12\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(-4\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(32\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "-4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2022-p25.live",
+      "kind": "proof-sketch",
+      "text": "Center the square at the origin with vertices \\(\\left(\\pm\\tfrac12, \\pm\\tfrac12\\right).\\) Each hexagon shares one edge with the square and extends across to the opposite side; the hexagon on the bottom edge, for instance, has its far (top) edge from \\(\\left(-\\tfrac12, \\sqrt3 - \\tfrac12\\right)\\) to \\(\\left(\\tfrac12, \\sqrt3 - \\tfrac12\\right).\\)\n\nThe outer boundary is a \\(12\\)-gon with flat edges at distance \\(\\sqrt3 - \\tfrac12\\) from the center, convex vertices such as \\(\\left(\\sqrt3 - \\tfrac12, \\tfrac12\\right),\\) and four reflex notches where adjacent hexagons’ slanted edges meet, at \\(\\left(\\tfrac52 - \\sqrt3, \\tfrac52 - \\sqrt3\\right)\\) and its symmetric images.\n\nApplying the shoelace formula to these \\(12\\) vertices gives area \\(16\\sqrt3 - 23,\\) so \\(m = 16,\\) \\(n = 3,\\) \\(p = -23,\\) and \\(m + n + p = -4.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Each hexagon shares an edge with the square and reaches across to the far side; set up coordinates with the square centered at the origin",
+        "The outer boundary has flat edges at distance \\(\\sqrt3 - \\tfrac12\\) and reflex notches where adjacent hexagons’ edges cross, at \\(\\left(\\tfrac52 - \\sqrt3,\\ \\tfrac52 - \\sqrt3\\right)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "58fe5635065f6e85cd3779a437ab36ac0d31642b621886958c71d495032231d1"
+    ],
+    "solutions": []
+  }
+}

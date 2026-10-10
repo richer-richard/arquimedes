@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-10a-2010-p15",
+  "title": "2010 AMC 10A Problem 15",
+  "category": "logic-foundations",
+  "subjects": [
+    "logic-foundations"
+  ],
+  "concepts": [
+    {
+      "id": "logic.logical-deduction",
+      "label": "Logical deduction",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "logic.truth-tellers-and-liars",
+      "label": "Truth-tellers and liars",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2010,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 22.8,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In a magical swamp there are two species of talking amphibians: toads, whose statements are always true, and frogs, whose statements are always false. Four amphibians, Brian, Chris, LeRoy, and Mike live together in this swamp, and they make the following statements.\n\nBrian: “Mike and I are different species.”\n\nChris: “LeRoy is a frog.”\n\nLeRoy: “Chris is a frog.”\n\nMike: “Of the four of us, at least two are toads.”\n\nHow many of these four amphibians are frogs?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "3"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2010-p15.live",
+      "kind": "proof-sketch",
+      "text": "Chris and LeRoy cannot both be frogs, because then both of their statements would be true. They cannot both be toads either, because then both statements would be false. Thus exactly one of them is a toad.\n\nIf Brian were a toad, his statement would make Mike a frog. Brian and the one toad among Chris and LeRoy would then make Mike’s statement true, which is impossible for a frog. Therefore Brian is a frog. His statement is false, so Mike is also a frog. Along with the one frog among Chris and LeRoy, there are \\(3\\) frogs.\n\nThus, D is the correct answer.",
+      "hints": [
+        "Chris and LeRoy cannot have the same species",
+        "If Brian were a toad, Mike’s statement would create a contradiction"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

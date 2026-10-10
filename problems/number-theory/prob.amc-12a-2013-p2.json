@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2013-p2",
+  "title": "2013 AMC 12A Problem 2",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.parity",
+      "label": "Parity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2013,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 18.4,
+    "source": 1010,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "A softball team played ten games, scoring \\(1,\\) \\(2,\\) \\(3,\\) \\(4,\\) \\(5,\\) \\(6,\\) \\(7,\\) \\(8,\\) \\(9,\\) and \\(10\\) runs. They lost by one run in exactly five games. In each of their other games, they scored twice as many runs as their opponent. How many total runs did their opponents score?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(35\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(40\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(45\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(50\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(55\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "45"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2013-p2.live",
+      "kind": "proof-sketch",
+      "text": "The team can only score twice as many runs as its opponent when its own score is even. Those games have scores \\(2, 4, 6, 8, 10,\\) so their opponents scored \\(1 + 2 + 3 + 4 + 5 = 15.\\)\n\nThe other five games had scores \\(1, 3, 5, 7, 9\\) and were one-run losses, so their opponents scored \\(2 + 4 + 6 + 8 + 10 = 30.\\) The total is \\(15 + 30 = 45.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Scoring twice the opponent is only possible when the team’s own score is even",
+        "The five one-run losses are the odd-scored games; each opponent scored one more"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

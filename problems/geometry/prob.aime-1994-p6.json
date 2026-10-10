@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1994-p6",
+  "title": "1994 AIME Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.counting-pairs",
+      "label": "Counting pairs",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.counting-regions",
+      "label": "Counting regions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1994,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 45.1,
+    "source": 2350,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "The graphs of the equations \\[\\begin{aligned}y&=k,\\\\y&=\\sqrt3x+2k,\\\\y&=-\\sqrt3x+2k,\\end{aligned}\\] are drawn in the coordinate plane for \\(k=-10,\\) \\(-9,\\) \\(-8,\\) \\(\\ldots,\\) \\(9,\\) \\(10.\\) These \\(63\\) lines cut part of the plane into equilateral triangles of side \\(\\frac{2}{\\sqrt3}.\\) How many such triangles are formed?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "660",
+    "value": "660"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1994-p6.live",
+      "kind": "proof-sketch",
+      "text": "A unit triangular cell is determined by indices \\(i,j,k\\in[-10,10]\\) satisfying \\(i=j+k\\pm1.\\) For the plus sign, \\(-11\\leq j+k\\leq9.\\) There are \\(21-|s|\\) ordered pairs \\((j,k)\\) with sum \\(s,\\) so this orientation contributes \\[\\sum_{s=-11}^{9}(21-|s|)=330.\\] By symmetry the other orientation also contributes \\(330,\\) for a total of \\(660.\\)",
+      "hints": [
+        "Index one line from each family by \\(i,j,k\\) in \\([-10,10]\\)",
+        "A smallest triangular cell occurs precisely when \\(i=j+k+1\\) or \\(i=j+k-1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

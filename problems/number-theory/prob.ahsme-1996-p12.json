@@ -1,0 +1,71 @@
+{
+  "id": "prob.ahsme-1996-p12",
+  "title": "1996 AHSME Problem 12",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.parity",
+      "label": "Parity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1996,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 25.1,
+    "source": 1570,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "A function \\(f\\) from the integers to the integers is defined as follows: \\[ f(n)= \\begin{cases} n+3 & \\text{if \\(n\\) is odd},\\\\ \\frac{n}{2} & \\text{if \\(n\\) is even}. \\end{cases} \\] Suppose \\(k\\) is odd and \\(f(f(f(k)))=27.\\) What is the sum of the digits of \\(k?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(15\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1996-p12.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(k\\) is odd, \\(f(k)=k+3\\) is even, so \\(f(f(k))=\\frac{k+3}{2}.\\) If this value were odd, adding \\(3\\) could not produce \\(27\\) because that would require the value \\(24.\\) Therefore it is even and is halved to \\(27,\\) so \\(\\frac{k+3}{2}=54.\\) Hence \\(k=105,\\) whose digits sum to \\(6.\\) The correct answer is B.",
+      "hints": [
+        "Because \\(k\\) is odd, the first iterate is \\(k+3\\), which is even",
+        "Work backward from \\(27\\), checking the parity required by each inverse branch"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

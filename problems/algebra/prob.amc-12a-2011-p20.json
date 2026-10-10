@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2011-p20",
+  "title": "2011 AMC 12A Problem 20",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2011,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 35.0,
+    "source": 2030,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(f(x) = ax^2 + bx + c,\\) where \\(a,\\) \\(b,\\) and \\(c\\) are integers. Suppose that \\(f(1) = 0,\\) \\(50 \\lt f(7) \\lt 60,\\) \\(70 \\lt f(8) \\lt 80,\\) and \\(5000k \\lt f(100) \\lt 5000(k+1)\\) for some integer \\(k.\\) What is \\(k?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "3"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2011-p20.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(f(1) = a + b + c = 0,\\) we have \\(c = -a - b.\\) Then \\[ f(7) = 48a + 6b = 6(8a + b), \\] \\[ f(8) = 63a + 7b = 7(9a + b). \\]\n\nFrom \\(50 \\lt 6(8a + b) \\lt 60\\) we get \\(8a + b = 9,\\) and from \\(70 \\lt 7(9a + b) \\lt 80\\) we get \\(9a + b = 11.\\) Subtracting, \\(a = 2,\\) then \\(b = -7\\) and \\(c = 5.\\)\n\nSo \\(f(100) = 20000 - 700 + 5\\) \\(= 19305,\\) which lies in \\(5000 \\cdot 3 \\lt 19305 \\lt 5000 \\cdot 4,\\) giving \\(k = 3.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "From \\(f(1) = 0,\\) \\(c = -a - b,\\) so \\(f(7) = 6(8a + b)\\) and \\(f(8) = 7(9a + b)\\)",
+        "The bounds force \\(8a + b = 9\\) and \\(9a + b = 11\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

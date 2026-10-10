@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2025-p2",
+  "title": "2025 IMO Problem 2",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2025,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 93.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\Omega\\) and \\(\\Gamma\\) be circles with centers \\(M\\) and \\(N\\), respectively,\nsuch that the radius of \\(\\Omega\\) is less than the radius of \\(\\Gamma\\).\nSuppose \\(\\Omega\\) and \\(\\Gamma\\) intersect at two distinct points \\(A\\) and \\(B\\).\nLine \\(MN\\) intersects \\(\\Omega\\) at \\(C\\) and \\(\\Gamma\\) at \\(D\\),\nso that \\(C\\), \\(M\\), \\(N\\), \\(D\\) lie on \\(MN\\) in that order.\nLet \\(P\\) be the circumcenter of triangle \\(ACD\\).\nLine \\(AP\\) meets \\(\\Omega\\) again at \\(E \\neq A\\) and meets \\(\\Gamma\\) again at \\(F \\neq A\\).\nLet \\(H\\) be the orthocenter of triangle \\(PMN\\).\n\nProve that the line through \\(H\\) parallel to \\(AP\\) is tangent\nto the circumcircle of triangle \\(BEF\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2025-p2.evanchen",
+      "kind": "proof-sketch",
+      "text": "Throughout the solution, we define\n\\[\\begin{aligned}\n \\alpha &\\coloneq \\measuredangle DCA = \\measuredangle BCD \\implies \\measuredangle PAD = \\measuredangle CAB = 90^\\circ - \\alpha \\\\\n \\beta &\\coloneq \\measuredangle ADC = \\measuredangle CDB \\implies \\measuredangle CAP = \\measuredangle BAD = 90^\\circ - \\beta.\n\\end{aligned}\\]\nIgnore the points \\(H\\), \\(M\\), \\(N\\) for now and focus on the remaining ones.\n\nClaim.\n We have \\(\\overline{CE} \\parallel \\overline{AD}\\) and \\(\\overline{DF} \\parallel \\overline{AC}\\).\n\nProof.\n \\(\\measuredangle AEC = \\measuredangle ABC = \\measuredangle CAB = 90^\\circ - \\alpha\\).\n\nHence, if we let \\(A' \\coloneq \\overline{CE} \\cap \\overline{DF}\\), we have a parallelogram \\(ACA'D\\).\nNote in particular that \\(\\overline{BA'} \\parallel \\overline{CD}\\).\n\n[Diagram omitted from this imported TeX transcription.]\n\nNext, let \\(T\\) denote the circumcenter of \\(\\triangle A'EF\\).\n(This will be the tangency point later in the problem.)\n\nClaim.\n Point \\(T\\) also lies on \\(\\overline{BA'}\\) and is also the arc midpoint of \\(\\widehat{EF}\\) on \\((BEF)\\).\n\nProof.\n We compute the angles of \\(\\triangle A'EF\\):\n \\[\\begin{aligned}\n \\measuredangle FEA' &= \\measuredangle AEC = \\measuredangle ABC = \\measuredangle CAB = 90^\\circ - \\alpha \\\\\n \\measuredangle A'FE &= \\measuredangle DFA = \\measuredangle DBA = \\measuredangle BAD = 90^\\circ - \\beta \\\\\n \\measuredangle EA'F &= \\alpha + \\beta.\n \\end{aligned}\\]\n Then, since \\(T\\) is the circumcenter, it follows that:\n \\[ \\measuredangle EA'T = \\measuredangle 90^\\circ - \\measuredangle A'FE = \\beta = \\measuredangle A'CD = \\measuredangle CA'B. \\]\n This shows that \\(T\\) lies on \\(\\overline{BA'}\\).\n\n Also, we have \\(\\measuredangle ETF = 2 \\measuredangle EA'F = 2(\\alpha+\\beta)\\) and\n \\[\\begin{aligned}\n \\measuredangle EBF &= \\measuredangle EBA + \\measuredangle ABF = \\measuredangle ECA + \\measuredangle ADF \\\\\n &= \\measuredangle A'CA + \\measuredangle ADA' = (\\alpha+\\beta) + (\\alpha+\\beta) = 2(\\alpha+\\beta)\n \\end{aligned}\\]\n which proves that \\(T\\) also lies on \\(\\overline{AB'}\\).\n\nWe then bring \\(M\\) and \\(N\\) into the picture as follows:\n\nClaim.\n Point \\(T\\) lies on both lines \\(ME\\) and \\(NF\\).\n\nProof.\n To show that \\(F\\), \\(T\\), \\(N\\) are collinear,\n note that \\(\\triangle FEA' \\sim \\triangle FAD\\) via a homothety at \\(F\\).\n This homothety maps \\(T\\) to \\(N\\).\n\nWe now deal with point \\(H\\) using two claims.\n\nClaim.\n We have \\(\\overline{MH} \\parallel \\overline{AD}\\) and \\(\\overline{NH} \\parallel \\overline{AC}\\).\n\nProof.\n Note that \\(\\overline{MH} \\perp \\overline{PN}\\),\n but \\(\\overline{PN}\\) is the perpendicular bisector of \\(\\overline{AD}\\),\n so in fact \\(\\overline{MH} \\parallel \\overline{AD}\\).\n Similarly, \\(\\overline{NH} \\parallel \\overline{AC}\\).\n\nClaim.\n Lines \\(\\overline{MH}\\) and \\(\\overline{NH}\\) bisect \\(\\angle NMT\\) and \\(\\angle MNT\\).\n In fact, point \\(H\\) is the incenter of \\(\\triangle TMN\\),\n and \\(\\measuredangle NTH = \\measuredangle HTM = 90^\\circ-(\\alpha+\\beta)\\).\n\nProof.\n Hence, \\(\\measuredangle HMN = \\measuredangle A'CD = \\measuredangle ADC = \\beta\\).\n But \\(\\measuredangle TMN = \\measuredangle CME = 2 \\measuredangle CAE = -2(90^\\circ-2\\beta) = 2\\beta\\).\n That proves \\(\\overline{MH}\\) bisects \\(\\angle NMT\\); the other one is similar.\n\n To show that \\(H\\) is an incenter (rather than an excenter)\n and get the last angle equality, we need to temporarily undirect our angles.\n Assume WLOG that \\(\\triangle ACD\\) is directed counterclockwise.\n The problem condition that \\(C\\) and \\(D\\) are the farther intersections of line \\(MN\\)\n mean that \\(\\angle NHM = \\angle CAD > 90^\\circ\\).\n We are also promised \\(C\\), \\(M\\), \\(N\\), \\(D\\) are collinear in that order.\n Hence the reflections of line \\(MN\\) over lines \\(MH\\) and \\(NH\\), which meet at \\(T\\),\n should meet at a point for which \\(T\\) lies on the same side as \\(H\\).\n In other words, \\(\\triangle MTN\\) is oriented counterclockwise and contains \\(H\\).\n\n Working with undirected \\(\\alpha = \\angle DCA\\) and \\(\\beta = \\angle ADC\\) with \\(\\alpha + \\beta < 90^\\circ\\),\n \\[ \\angle NTH = \\angle HTM = \\frac{1}{2} \\angle NTM = \\frac{1}{2}(180^\\circ-2(\\alpha+\\beta))\n = 90^\\circ - (\\alpha + \\beta). \\]\n This matches the claim and finishes the result.\n\nNow\n\\[ \\measuredangle NFA = 90^\\circ - \\measuredangle ADF = 90^\\circ-(\\alpha+\\beta) = \\measuredangle NTH \\]\nso \\(\\overline{HT} \\parallel \\overline{AP}\\).\nAnd since \\(TE = TF\\), we have the tangency requested too now, as desired.\n\nRemark.\n There are many other ways to describe the point \\(T\\).\n For example, \\(AMTN\\) is a parallelogram and \\(MBTN\\) is an isosceles trapezoid.\n In coordination, we joked that it was impossible to write a false conjecture.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

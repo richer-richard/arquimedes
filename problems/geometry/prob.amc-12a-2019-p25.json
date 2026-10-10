@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2019-p25",
+  "title": "2019 AMC 12A Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.altitude",
+      "label": "Altitude",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2019,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 41.8,
+    "source": 2520,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(\\triangle A_0 B_0 C_0\\) be a triangle whose angle measures are exactly \\(59.999^\\circ,\\) \\(60^\\circ,\\) and \\(60.001^\\circ.\\) For each positive integer \\(n\\) define \\(A_n\\) to be the foot of the altitude from \\(A_{n-1}\\) to line \\(B_{n-1}C_{n-1}.\\) Likewise, define \\(B_n\\) to be the foot of the altitude from \\(B_{n-1}\\) to line \\(A_{n-1}C_{n-1},\\) and \\(C_n\\) to be the foot of the altitude from \\(C_{n-1}\\) to line \\(A_{n-1}B_{n-1}.\\) What is the least positive integer \\(n\\) for which \\(\\triangle A_n B_n C_n\\) is obtuse?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(14\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(15\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "15"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2019-p25.live",
+      "kind": "proof-sketch",
+      "text": "For an acute triangle, the orthic triangle (feet of the altitudes) has angles \\(180^\\circ - 2\\alpha\\) for each original angle \\(\\alpha.\\)\n\nWriting an angle as \\(60^\\circ + x,\\) the new angle is \\(60^\\circ - 2x,\\) so each deviation from \\(60^\\circ\\) is multiplied by \\(-2.\\) The initial deviations are \\(\\pm 0.001^\\circ.\\)\n\nAfter \\(n\\) steps a deviation has magnitude \\(0.001 \\cdot 2^n\\) degrees. The triangle first becomes obtuse when this exceeds \\(30^\\circ,\\) i.e. \\(2^n \\gt 30000.\\) Since \\(2^{14} = 16384\\) and \\(2^{15} = 32768,\\) the least such \\(n\\) is \\(15.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "For an acute triangle, the orthic triangle has angles \\(180^\\circ - 2\\alpha\\)",
+        "Track the deviation from \\(60^\\circ:\\) each step multiplies it by \\(-2,\\) and the triangle turns obtuse when a deviation exceeds \\(30^\\circ\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

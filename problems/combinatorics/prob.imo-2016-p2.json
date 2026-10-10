@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2016-p2",
+  "title": "2016 IMO Problem 2",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2016,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 102.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find all integers \\(n\\) for which each cell of \\(n \\times n\\) table\ncan be filled with one of the letters \\(I\\), \\(M\\) and \\(O\\) in such a way that:\n\n• In each row and column, one third of the entries are \\(I\\),\none third are \\(M\\) and one third are \\(O\\); and\n\n• in any diagonal, if the number of entries on the diagonal is a multiple of three,\nthen one third of the entries are \\(I\\), one third are \\(M\\) and one third are \\(O\\).\n\nNote that an \\(n \\times n\\) table has \\(4n-2\\) diagonals.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2016-p2.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is \\(n\\) divisible by \\(9\\).\n\nFirst we construct \\(n=9\\) and by extension every multiple of \\(9\\).\n\\[\n \\begin{array}{|ccc|ccc|ccc|} \\hline\n I & I & I & M & M & M & O & O & O \\\\\n M & M & M & O & O & O & I & I & I \\\\\n O & O & O & I & I & I & M & M & M \\\\\\hline\n I & I & I & M & M & M & O & O & O \\\\\n M & M & M & O & O & O & I & I & I \\\\\n O & O & O & I & I & I & M & M & M \\\\\\hline\n I & I & I & M & M & M & O & O & O \\\\\n M & M & M & O & O & O & I & I & I \\\\\n O & O & O & I & I & I & M & M & M \\\\\\hline\n \\end{array}\n\\]\n\nWe now prove \\(9 \\mid n\\) is necessary.\n\nLet \\(n = 3k\\), which divides the given grid into \\(k^2\\) sub-boxes\n(of size \\(3 \\times 3\\) each).\nWe say a multiset of squares \\(S\\) is clean if\nthe letters distribute equally among them;\nnote that unions of clean multisets are clean.\n\nConsider the following clean sets (given to us by problem statement):\n\n• All columns indexed \\(2 \\pmod 3\\),\n\n• All rows indexed \\(2 \\pmod 3\\), and\n\n• All \\(4k-2\\) diagonals mentioned in the problem.\n\nTake their union.\nThis covers the center of each box four times,\nand every other cell exactly once.\nWe conclude the set of \\(k^2\\) center squares\nare clean, hence \\(3 \\mid k^2\\) and so \\(9 \\mid n\\),\nas desired.\n\nShown below is the sums over all diagonals only,\nand of the entire union.\n\\[\n \\begin{array}{|ccc|ccc|ccc|} \\hline\n 1 & & 1 & 1 & & 1 & 1 & & 1 \\\\\n & 2 & & & 2 & & & 2 & \\\\\n 1 & & 1 & 1 & & 1 & 1 & & 1 \\\\\\hline\n 1 & & 1 & 1 & & 1 & 1 & & 1 \\\\\n & 2 & & & 2 & & & 2 & \\\\\n 1 & & 1 & 1 & & 1 & 1 & & 1 \\\\\\hline\n 1 & & 1 & 1 & & 1 & 1 & & 1 \\\\\n & 2 & & & 2 & & & 2 & \\\\\n 1 & & 1 & 1 & & 1 & 1 & & 1 \\\\\\hline\n \\end{array}\n \\qquad\n \\begin{array}{|ccc|ccc|ccc|} \\hline\n 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\\\\n 1 & 4 & 1 & 1 & 4 & 1 & 1 & 4 & 1 \\\\\n 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\\\\\hline\n 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\\\\n 1 & 4 & 1 & 1 & 4 & 1 & 1 & 4 & 1 \\\\\n 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\\\\\hline\n 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\\\\n 1 & 4 & 1 & 1 & 4 & 1 & 1 & 4 & 1 \\\\\n 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\\\\\hline\n \\end{array}\n\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

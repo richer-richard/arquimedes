@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-ii-2001-p13",
+  "title": "2001 AIME II Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.isosceles-triangle",
+      "label": "Isosceles triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2001,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 61.6,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 12,
+  "statement": "In quadrilateral \\(ABCD,\\) \\(\\angle BAD \\cong \\angle ADC\\) and \\(\\angle ABD \\cong \\angle BCD,\\) \\(AB = 8,\\) \\(BD = 10,\\) and \\(BC = 6.\\) The length \\(CD\\) may be written in the form \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "69",
+    "value": "69"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2001-p13.live",
+      "kind": "proof-sketch",
+      "text": "Extend \\(\\overline{AB}\\) beyond \\(B\\) and \\(\\overline{DC}\\) beyond \\(C\\) to meet at \\(P.\\) Since \\(\\angle PAD = \\angle PDA,\\) triangle \\(APD\\) is isosceles with \\(PA = PD.\\) Also \\(\\angle PBD = 180^\\circ - \\angle ABD\\) and \\(\\angle PCB = 180^\\circ - \\angle BCD,\\) so \\(\\angle PBD = \\angle PCB.\\)\n\nTriangles \\(PCB\\) and \\(PBD\\) share angle \\(P\\) and have \\(\\angle PCB = \\angle PBD,\\) so they are similar, giving \\[\\frac{PC}{PB} = \\frac{PB}{PD} = \\frac{CB}{BD} = \\frac{3}{5}.\\] Since \\(PB = PA - 8 = PD - 8,\\) the middle ratio reads \\(\\frac{PD - 8}{PD} = \\frac{3}{5},\\) so \\(PD = 20\\) and \\(PB = 12.\\) Then \\(PC = \\frac{3}{5} \\cdot 12 = \\frac{36}{5}.\\)\n\nFinally \\(CD = PD - PC\\) \\(= 20 - \\frac{36}{5}\\) \\(= \\frac{64}{5},\\) which is in lowest terms, so \\(m + n = 64 + 5 = 69.\\)",
+      "hints": [
+        "Extend \\(\\overline{AB}\\) and \\(\\overline{DC}\\) to meet at \\(P;\\) the equal angles at \\(A\\) and \\(D\\) force \\(PA = PD\\)",
+        "Angles \\(PBD\\) and \\(PCB\\) are supplements of the given equal angles, so triangles \\(PCB\\) and \\(PBD\\) are similar"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

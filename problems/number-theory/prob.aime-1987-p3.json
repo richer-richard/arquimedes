@@ -1,0 +1,57 @@
+{
+  "id": "prob.aime-1987-p3",
+  "title": "1987 AIME Problem 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1987,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 31.8,
+    "source": 1830,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A proper divisor of a natural number is a positive integral divisor other than \\(1\\) and the number itself. A natural number greater than \\(1\\) is called “nice” if it equals the product of its distinct proper divisors. What is the sum of the first ten nice numbers?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "182",
+    "value": "182"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1987-p3.live",
+      "kind": "proof-sketch",
+      "text": "If \\(N\\) has \\(d\\) positive divisors, their product is \\(N^{\\frac{d}{2}}.\\) Removing \\(1\\) and \\(N\\) leaves product \\(N^{\\frac{d}{2}-1},\\) which equals \\(N\\) exactly when \\(d=4.\\) Thus nice numbers are precisely \\(p^3\\) and \\(pq\\) for distinct primes. The first ten are \\(6,\\) \\(8,\\) \\(10,\\) \\(14,\\) \\(15,\\) \\(21,\\) \\(22,\\) \\(26,\\) \\(27,\\) \\(33,\\) whose sum is \\(182.\\)",
+      "hints": [
+        "Express the product of all positive divisors in terms of the number and its divisor count",
+        "The nice numbers are exactly those having four positive divisors"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2006-p8",
+  "title": "2006 HMMT February Combinatorics Problem 8",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2006,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 82.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In how many ways can we enter numbers from the set \\(\\{1,2,3,4\\}\\) into a \\(4 \\times 4\\) array so that all of the following conditions hold?\n(a) Each row contains all four numbers.\n(b) Each column contains all four numbers.\n(c) Each \"quadrant\" contains all four numbers. (The quadrants are the four corner \\(2 \\times 2\\) squares.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2006-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "Call a filled \\(4 \\times 4\\) array satisfying the given conditions cool. There are 4 ! possibilities for the first row; WLOG, let it be 1234 . Since each quadrant has to contain all four numbers, we have exactly four possibilities for the second row, namely:\n(i) 3412\n(ii) 3421\n(iii) 4312\n(iv) 4321\n\nI claim that the number of cool arrays with (i) is equal to those with (iv), and that the number of cool arrays with (ii) is equal to those with (iii). Let's first consider (i) and (iv). Now, (i) is\n\n1234\n3412\nwhile (iv) is\n\nIn (iv), switch 3 and 4 (relabeling doesn't affect the coolness of the array); then, it becomes\n\n3421\nNow, interchange the last two columns, which also does not affect the coolness. This gives us (i). Hence, the cool arrays with (i) and the cool arrays with (iv) have a 1:1 correspondence. Using the exact same argument, we can show that the number of cool arrays with (ii) equals those with (iii).\nSo we only need consider cases (i) and (ii). It is easy to verify that there are four cool arrays with (i), determined precisely by, say, the first two entries of the third row; and two with (ii), determined precisely by, say the first entry of the third row. Hence, the answer is \\(4!\\times(4+2) \\times 2=288\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-team-2003-p5",
+  "title": "2003 HMMT February Team Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2003,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 82.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(B_{k}(n)\\) be the largest possible number of elements in a 2 -separable \\(k\\)-configuration of a set with \\(2 n\\) elements \\((2 \\leq k \\leq n)\\). Find a closed-form expression (i.e. an expression not involving any sums or products with a variable number of terms) for \\(B_{k}(n)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2003-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "First, a lemma: For any \\(a\\) with \\(0 \\leq a \\leq 2 n,\\binom{a}{k}+\\binom{2 n-a}{k} \\geq 2\\binom{n}{k}\\). (By convention, we set \\(\\binom{a}{k}=0\\) when \\(a<k\\).) Proof: We may assume \\(a \\geq n\\), since otherwise we can replace \\(a\\) with \\(2 n-a\\). Now we prove the result by induction on \\(a\\). For the base case, if \\(a=n\\), then the lemma states that \\(2\\binom{n}{k} \\geq 2\\binom{n}{k}\\), which is trivial. If the lemma holds for some \\(a>0\\), then by the familiar identity,\n\n\\[\\begin{aligned}\n& {\\left[\\binom{a+1}{k}+\\binom{2 n-a-1}{k}\\right]-\\left[\\binom{a}{k}+\\binom{2 n-a}{k}\\right] } \\\\\n= & {\\left[\\binom{a+1}{k}-\\binom{a}{k}\\right]-\\left[\\binom{2 n-a}{k}+\\binom{2 n-a-1}{k}\\right] } \\\\\n= & \\binom{a}{k-1}-\\binom{2 n-a-1}{k-1}>0\n\\end{aligned}\\]\n\n(since \\(a>2 n-a-1\\) ), so \\(\\binom{a+1}{k}+\\binom{2 n-a-1}{k}>\\binom{a}{k}+\\binom{2 n-a}{k} \\geq 2\\binom{n}{k}\\), giving the induction step. The lemma follows.\n\nNow suppose that the elements of \\(A\\) are labeled such that \\(a\\) elements of the set \\(A\\) receive the number 1 and \\(2 n-a\\) elements receive the number 2 . Then the \\(k\\) configuration can include all \\(k\\)-element subsets of \\(A\\) except those contained among the \\(a\\) elements numbered 1 or the \\(2 n-a\\) elements numbered 2 . Thus, we have at most \\(\\binom{2 n}{k}-\\binom{a}{k}-\\binom{2 n-a}{k}\\) elements in the \\(k\\)-configuration, and by the lemma, this is at most\n\n\\[\\binom{2 n}{k}-2\\binom{n}{k}\\]\n\nOn the other hand, we can achieve \\(\\binom{2 n}{k}-2\\binom{n}{k}\\) via the recipe above - take all the \\(k\\)-element subsets of \\(A\\), except those contained entirely within the first \\(n\\) elements or entirely within the last \\(n\\) elements. Then, labeling the first \\(n\\) elements with the number 1 and the last \\(n\\) elements with the number 2 shows that the configuration is 2-separable. So, \\(B_{k}(n)=\\binom{2 n}{k}-2\\binom{n}{k}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

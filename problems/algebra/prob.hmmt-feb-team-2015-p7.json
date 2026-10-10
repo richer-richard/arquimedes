@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-team-2015-p7",
+  "title": "2015 HMMT February Team Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2015,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 83.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(f:[0,1] \\rightarrow \\mathbb{C}\\) be a nonconstant complex-valued function on the real interval \\([0,1]\\). Prove that there exists \\(\\epsilon>0\\) (possibly depending on \\(f\\) ) such that for any polynomial \\(P\\) with complex coefficients, there exists a complex number \\(z\\) with \\(|z| \\leq 1\\) such that \\(|f(|z|)-P(z)| \\geq \\epsilon\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2015-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "N/A Here's a brief summary of how we'll proceed: Use a suitably-centered high-degree roots of unity filter, or alternatively integrate over suitably-centered circles (\"continuous roots of unity filter\").\nWe claim we can choose \\(\\epsilon(f)=\\max \\left(\\left|f\\left(x_{1}\\right)-f\\left(x_{2}\\right)\\right|\\right) / 2\\). Fix \\(P\\) and suppose for the sake of contradiction that for all \\(z\\) with \\(|z| \\leq 1\\) it is the case that \\(|f(z)-P(z)|<\\epsilon\\). We can write \\(z=r e^{i \\theta}\\) so that\n\n\\[\\left|f(r)-P\\left(r e^{i \\theta}\\right)\\right|<\\epsilon\\]\n\nLet \\(p\\) be a prime larger than \\(\\operatorname{deg}(P)\\) and set \\(\\theta=0,2 \\pi / p, 4 \\pi / p, \\ldots\\) in the above. Averaging, and using triangle inequality,\n\n\\[\\left|f(r)-\\frac{1}{p} \\sum_{k=0}^{p-1} P\\left(r e^{2 \\pi i k / p}\\right)\\right|<\\epsilon\\]\n\nThe sum inside the absolute value is a roots of unity filter; since \\(p>\\operatorname{deg}(P)\\) it is simply the constant term of \\(P\\) - denote this value by \\(p_{0}\\). Thus for all \\(r\\),\n\n\\[\\left|f(r)-p_{0}\\right|<\\epsilon\\]\n\nSetting \\(r=x_{1}, x_{2}\\) and applying triangle inequality gives the desired contradiction.\nRemark. This is more or less a concrete instance of Runge's approximation theorem from complex analysis. However, do not be intimidated by the fancy names here: in fact, the key ingredient behind this more general theorem (namely, or simila, \\({ }^{3}\\) ) uses the same core idea of the \"continuous roots of unity filter\".",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

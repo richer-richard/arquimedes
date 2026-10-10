@@ -1,0 +1,80 @@
+{
+  "id": "prob.ahsme-1966-p21",
+  "title": "1966 AHSME Problem 21",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.angle-sum",
+      "label": "Angle sum",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1966,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 33.1,
+    "source": 1880,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "An “\\(n\\)-pointed star” is formed as follows: the sides of a convex polygon are numbered consecutively \\(1,\\) \\(2,\\) \\(\\ldots,\\) \\(k,\\) \\(\\ldots,\\) \\(n,\\) \\(n\\geq5;\\) for all \\(n\\) values of \\(k,\\) sides \\(k\\) and \\(k+2\\) are non-parallel, sides \\(n+1\\) and \\(n+2\\) being respectively identical with sides \\(1\\) and \\(2;\\) prolong the \\(n\\) pairs of sides numbered \\(k\\) and \\(k+2\\) until they meet. (A figure is shown for the case \\(n=5.\\))\n\nLet \\(S\\) be the degree-sum of the interior angles at the \\(n\\) points of the star; then \\(S\\) equals:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(180\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(360\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(180(n+2)\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(180(n-2)\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(180(n-4)\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1966-p21.live",
+      "kind": "proof-sketch",
+      "text": "Let the original polygon’s interior angles be \\(a_1,\\ldots,a_n.\\) The star angle made from sides \\(k\\) and \\(k+2\\) equals \\[ a_k+a_{k+1}-180^\\circ. \\] Summing cyclically counts each \\(a_k\\) twice. Hence \\[ \\begin{aligned} S&=2\\sum_{k=1}^n a_k-180n\\\\ &=2\\cdot180(n-2)-180n\\\\ &=180(n-4). \\end{aligned} \\]\n\nTherefore, the correct answer is E.",
+      "hints": [
+        "Relate each star-tip angle to two adjacent interior angles of the original polygon",
+        "The original polygon’s interior-angle sum is \\(180(n-2)\\) degrees"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "c6d257eaa3d8ece973e644248026bbcc26fec1281074300d84a3939648a9d761"
+    ],
+    "solutions": []
+  }
+}

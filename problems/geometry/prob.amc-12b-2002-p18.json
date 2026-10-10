@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12b-2002-p18",
+  "title": "2002 AMC 12B Problem 18",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.geometric-probability",
+      "label": "Geometric probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.perpendicular-bisector",
+      "label": "Perpendicular bisector",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2002,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 26.2,
+    "source": 1610,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A point \\(P\\) is randomly selected from the rectangular region with vertices \\((0,0),\\) \\((2,0),\\) \\((2,1),\\) \\((0,1).\\) What is the probability that \\(P\\) is closer to the origin than it is to the point \\((3,1)?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{2}{3}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{3}{4}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{4}{5}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(1\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "3/4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2002-p18.live",
+      "kind": "proof-sketch",
+      "text": "The points closer to \\((0,0)\\) than to \\((3,1)\\) lie on the origin side of the perpendicular bisector of that segment, the line \\(3x+y=5.\\)\n\nWithin the rectangle, this region is a trapezoid whose parallel sides have lengths \\(\\dfrac53\\) (at \\(y=0\\)) and \\(\\dfrac43\\) (at \\(y=1\\)), so its area is \\(\\dfrac12\\left(\\dfrac53+\\dfrac43\\right)=\\dfrac32.\\) The rectangle has area \\(2,\\) so the probability is \\(\\dfrac{\\frac{3}{2}}{2}=\\dfrac34.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "\\(P\\) is closer to the origin on one side of the perpendicular bisector of the segment from \\((0,0)\\) to \\((3,1)\\)",
+        "That bisector is the line \\(3x+y=5\\); find the area of the rectangle on the origin side and divide by the total area"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

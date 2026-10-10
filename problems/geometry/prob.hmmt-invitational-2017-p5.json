@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-invitational-2017-p5",
+  "title": "2017 HMMT Invitational Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2017,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(S\\) be the set \\(\\{-1,1\\}^{n}\\), that is, \\(n\\)-tuples such that each coordinate is either -1 or 1 . For\n\n\\[s=\\left(s_{1}, s_{2}, \\ldots, s_{n}\\right), t=\\left(t_{1}, t_{2}, \\ldots, t_{n}\\right) \\in\\{-1,1\\}^{n}\\]\n\ndefine \\(s \\odot t=\\left(s_{1} t_{1}, s_{2} t_{2}, \\ldots, s_{n} t_{n}\\right)\\).\nLet \\(c\\) be a positive constant, and let \\(f: S \\rightarrow\\{-1,1\\}\\) be a function such that there are at least \\((1-c) \\cdot 2^{2 n}\\) pairs \\((s, t)\\) with \\(s, t \\in S\\) such that \\(f(s \\odot t)=f(s) f(t)\\). Show that there exists a function \\(f^{\\prime}\\) such that \\(f^{\\prime}(s \\odot t)=f^{\\prime}(s) f^{\\prime}(t)\\) for all \\(s, t \\in S\\) and \\(f(s)=f^{\\prime}(s)\\) for at least \\((1-10 c) \\cdot 2^{n}\\) values of \\(s \\in S\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2017-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "We use finite fourier analysis, which we explain the setup for below. For a subset \\(T \\subseteq S\\), define the function \\(\\chi_{T}: S \\rightarrow\\{-1,1\\}\\) to satisfy \\(\\chi_{T}(s)=\\prod_{t \\in T} s_{t}\\). Note that \\(\\chi_{T}(s \\odot t)=\\chi_{T}(s) \\chi_{T}(t)\\) for all \\(s, t \\in S\\). Therefore, we should show that there exists a subset \\(T\\) such that taking \\(f^{\\prime}=\\chi_{T}\\) satisfies the constraint. This subset \\(T\\) also has to exist, as the \\(\\chi_{T}\\) are all the multiplicative functions from \\(S \\rightarrow\\{-1,1\\}\\). Also, for two functions \\(f, g: S \\rightarrow \\mathbb{R}\\) define\n\n\\[\\langle f, g\\rangle=\\frac{1}{2^{n}} \\sum_{s \\in S} f(s) g(s)\\]\n\nNow we claim a few facts below that are easy to verify. One, for any subsets \\(T_{1}, T_{2} \\in S\\) we have that\n\n\\[\\left\\langle\\chi_{T_{1}}, \\chi_{T_{2}}\\right\\rangle=\\left\\{\\begin{array}{l}\n0 \\text { if } T_{1} \\neq T_{2} \\\\\n1 \\text { if } T_{1}=T_{2}\n\\end{array}\\right.\\]\n\nWe will refer to this claim as orthogonality. Also, note that for any function \\(f: S \\rightarrow \\mathbb{R}\\), we can write\n\n\\[f=\\sum_{T \\subseteq S}\\left\\langle f, \\chi_{T}\\right\\rangle \\chi_{T}\\]\n\nThis is called expressing \\(f\\) by its Fourier basis. By the given condition, we have that\n\n\\[\\sum_{s, t \\in S} f(s \\odot t) f(s) f(t)=1-2 c\\]\n\nExpanding the left-hand side in terms of the Fourier basis, we get that\n\n\\[\\begin{gathered}\n1-2 c=\\frac{1}{2^{2 n}} \\sum_{s, t \\in S} f(s \\odot t) f(s) f(t)=\\frac{1}{2^{2 n}} \\sum_{T_{1}, T_{2}, T_{3} \\subseteq S} \\sum_{s, t \\in S}\\left\\langle f, \\chi_{T_{1}}\\right\\rangle\\left\\langle f, \\chi_{T_{2}}\\right\\rangle\\left\\langle f, \\chi_{T_{3}}\\right\\rangle_{\\chi_{1}}(s) \\chi_{T_{1}}(t) \\chi_{T_{2}}(s) \\chi_{T_{3}}(t) \\\\\n=\\sum_{T_{1}, T_{2}, T_{3} \\subseteq S}\\left\\langle f, \\chi_{T_{1}}\\right\\rangle\\left\\langle f, \\chi_{T_{2}}\\right\\rangle\\left\\langle f, \\chi_{T_{3}}\\right\\rangle\\left\\langle\\chi_{T_{1}}, \\chi_{T_{2}}\\right\\rangle\\left\\langle\\chi_{T_{1}}, \\chi_{T_{3}}\\right\\rangle=\\sum_{T \\subseteq S}\\left\\langle f, \\chi_{T}\\right\\rangle^{3}\n\\end{gathered}\\]\n\nby orthogonality. Also note by orthogonality that\n\n\\[1=\\langle f, f\\rangle=\\left\\langle\\sum_{T_{1} \\subseteq S}\\left\\langle f, T_{1}\\right\\rangle \\chi_{T_{1}}(s), \\sum_{T_{2} \\subseteq S}\\left\\langle f, T_{2}\\right\\rangle \\chi_{T_{2}}(s)\\right\\rangle=\\sum_{T \\subseteq S}\\left\\langle f, \\chi_{T}\\right\\rangle^{2}\\]\n\nFinally, from above we have that\n\n\\[1-2 c=\\sum_{T \\subseteq S}\\left\\langle f, \\chi_{T}\\right\\rangle^{3} \\leq\\left(\\max _{T \\subseteq S}\\left\\langle f, \\chi_{T}\\right\\rangle\\right) \\sum_{T \\subseteq S}\\left\\langle f, \\chi_{T}\\right\\rangle^{2}=\\max _{T \\subseteq S}\\left\\langle f, \\chi_{T}\\right\\rangle\\]\n\nThis last equation implies that some \\(\\chi_{T}\\) and \\(f\\) agree on \\((1-c) \\cdot 2^{n}\\) values, as desired.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

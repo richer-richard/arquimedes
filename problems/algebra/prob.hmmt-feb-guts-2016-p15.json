@@ -1,0 +1,68 @@
+{
+  "id": "prob.hmmt-feb-guts-2016-p15",
+  "title": "2016 HMMT February Guts Problem 15",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.chebyshev-polynomials",
+      "label": "Chebyshev polynomials",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vieta-s-formulas",
+      "label": "Vieta's formulas",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2016,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 75.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute \\(\\tan \\left(\\frac{\\pi}{7}\\right) \\tan \\left(\\frac{2 \\pi}{7}\\right) \\tan \\left(\\frac{3 \\pi}{7}\\right)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2016-p15.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\sqrt{7}\\)\nConsider the polynomial \\(P(z)=z^{7}-1\\). Let \\(z=e^{i x}=\\cos x+i \\sin x\\). Then\n\n\\[\\begin{aligned}\nz^{7}-1= & \\left(\\cos ^{7} x-\\binom{7}{2} \\cos ^{5} x \\sin ^{2} x+\\binom{7}{4} \\cos ^{3} x \\sin ^{4} x-\\binom{7}{6} \\cos x \\sin ^{6} x-1\\right) \\\\\n& +i\\left(-\\sin ^{7} x+\\binom{7}{2} \\sin ^{5} x \\cos ^{2} x-\\binom{7}{4} \\sin ^{3} x \\cos ^{4} x+\\binom{7}{6} \\sin x \\cos 6 x\\right)\n\\end{aligned}\\]\n\nConsider the real part of this equation. We may simplify it to \\(64 \\cos ^{7} x-\\ldots-1\\), where the middle terms are irrelevant. The roots of \\(P\\) are \\(x=\\frac{2 \\pi}{7}, \\frac{4 \\pi}{7}, \\ldots\\), so \\(\\prod_{k=1}^{7} \\cos \\left(\\frac{2 \\pi k}{7}\\right)=\\frac{1}{64}\\). But\n\n\\[\\prod_{k=1}^{7} \\cos \\left(\\frac{2 \\pi k}{7}\\right)=\\left(\\prod_{k=1}^{3} \\cos \\left(\\frac{k \\pi}{7}\\right)\\right)^{2}\\]\n\nso \\(\\prod_{k=1}^{3} \\cos \\left(\\frac{k \\pi}{7}\\right)=\\frac{1}{8}\\).\nNow consider the imaginary part of this equation. We may simplify it to \\(-64 \\sin ^{11} x+\\ldots+7 \\sin x\\), where again the middle terms are irrelevant. We can factor out \\(\\sin x\\) to get \\(-64 \\sin ^{10} x+\\ldots+7\\), and this polynomial has roots \\(x=\\frac{2 \\pi}{7}, \\ldots, \\frac{12 \\pi}{7}\\) (but not 0 ). Hence \\(\\prod_{k=1}^{6} \\sin \\left(\\frac{2 \\pi k}{7}\\right)=-\\frac{7}{64}\\). But, like before, we have\n\n\\[\\prod_{k=1}^{6} \\sin \\left(\\frac{2 \\pi k}{7}\\right)=-\\left(\\prod_{k=1}^{3} \\sin \\left(\\frac{2 \\pi k}{7}\\right)\\right)^{2}\\]\n\nhence \\(\\prod_{k=1}^{3} \\sin \\left(\\frac{k \\pi}{7}\\right)=\\frac{\\sqrt{7}}{8}\\). As a result, our final answer is \\(\\frac{\\frac{\\sqrt{7}}{8}}{\\frac{1}{8}}=\\sqrt{7}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

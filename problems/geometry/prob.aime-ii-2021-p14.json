@@ -1,0 +1,71 @@
+{
+  "id": "prob.aime-ii-2021-p14",
+  "title": "2021 AIME II Problem 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.centroid",
+      "label": "Centroid",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.circumcircle-circumcenter-and-circumradius",
+      "label": "Circumcircle, circumcenter, and circumradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cyclic-quadrilateral",
+      "label": "Cyclic quadrilateral",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2021,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 71.3,
+    "source": 3370,
+    "mohs": null
+  },
+  "estimatedMinutes": 25,
+  "statement": "Let \\(\\triangle ABC\\) be an acute triangle with circumcenter \\(O\\) and centroid \\(G.\\) Let \\(X\\) be the intersection of the line tangent to the circumcircle of \\(\\triangle ABC\\) at \\(A\\) and the line perpendicular to \\(GO\\) at \\(G.\\) Let \\(Y\\) be the intersection of lines \\(XG\\) and \\(BC.\\) Given that the measures of \\(\\angle ABC,\\) \\(\\angle BCA,\\) and \\(\\angle XOY\\) are in the ratio \\(13 : 2 : 17,\\) the degree measure of \\(\\angle BAC\\) can be written as \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "592",
+    "value": "592"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2021-p14.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(M\\) be the midpoint of \\(\\overline{BC},\\) so \\(A,\\) \\(G,\\) \\(M\\) are collinear along the median, while \\(X,\\) \\(G,\\) \\(Y\\) are collinear by definition. Since \\(OA \\perp AX\\) (tangent and radius) and \\(OG \\perp GX,\\) quadrilateral \\(OAXG\\) is cyclic with diameter \\(\\overline{OX}.\\) Since \\(OG \\perp GY\\) and \\(OM \\perp MY\\) (the segment from the center to the midpoint of a chord is perpendicular to it), quadrilateral \\(OGYM\\) is cyclic with diameter \\(\\overline{OY}.\\)\n\nIn each circle the chord \\(\\overline{OG}\\) subtends equal angles, so \\(\\angle OXY = \\angle OXG\\) \\(= \\angle OAG = \\angle OAM\\) and \\(\\angle OYX = \\angle OYG\\) \\(= \\angle OMG = \\angle OMA.\\) Triangles \\(OXY\\) and \\(OAM\\) therefore have the same angle sums at their bases, giving \\[ \\begin{aligned} \\angle XOY &= 180^\\circ - \\angle OXY \\\\ &\\quad {}- \\angle OYX \\\\ &= 180^\\circ - \\angle OAM \\\\ &\\quad {}- \\angle OMA \\\\ &= \\angle AOM. \\end{aligned} \\]\n\nWrite \\(\\angle ABC = 13k\\) and \\(\\angle BCA = 2k,\\) so \\(\\angle BAC = 180^\\circ - 15k.\\) Central angles give \\(\\angle AOB = 2\\angle BCA = 4k,\\) and \\(\\overline{OM}\\) bisects \\(\\angle BOC = 2\\angle BAC,\\) so on the side of \\(B\\) (nearer to \\(A\\)’s arc since \\(\\angle ABC \\gt \\angle BCA\\)), \\[ \\begin{aligned} \\angle AOM &= \\angle AOB + \\angle BOM \\\\ &= 4k + (180^\\circ - 15k) \\\\ &= 180^\\circ - 11k. \\end{aligned} \\] Setting \\(180^\\circ - 11k = \\angle XOY = 17k\\) gives \\(k = \\frac{45}{7},\\) so \\(\\angle BAC = 180^\\circ - 15 \\cdot \\frac{45}{7} = \\frac{585}{7}\\) degrees, and all three angles are acute as required. Then \\(m + n = 585 + 7 = 592.\\)",
+      "hints": [
+        "Right angles at \\(A\\) and \\(G\\) make \\(OAXG\\) cyclic; right angles at \\(G\\) and \\(M\\) (the midpoint of \\(\\overline{BC}\\)) make \\(OGYM\\) cyclic",
+        "Equal angles on chord \\(OG\\) in those circles give \\(\\angle XOY = \\angle AOM,\\) which central angles express in terms of the triangle’s angles"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

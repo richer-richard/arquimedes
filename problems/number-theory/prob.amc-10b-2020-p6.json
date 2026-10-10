@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-2020-p6",
+  "title": "2020 AMC 10B Problem 6",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.distance-rate-and-time",
+      "label": "Distance rate and time",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.palindrome",
+      "label": "Palindrome",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2020,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 12.5,
+    "source": 960,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Driving along a highway, Megan noticed that her odometer showed \\(15951\\) (miles). This number is a palindrome—it reads the same forward and backward. Then \\(2\\) hours later, the odometer displayed the next higher palindrome. What was her average speed, in miles per hour, during this \\(2\\)-hour period?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(50\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(55\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(60\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(65\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(70\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "55"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2020-p6.live",
+      "kind": "proof-sketch",
+      "text": "A five-digit palindrome is determined by its first three digits. The first half of \\(15951\\) is \\(159\\); increasing this to \\(160\\) and reflecting the first two digits gives the next palindrome, \\(16061.\\)\n\nMegan traveled \\(16061-15951=110\\) miles in \\(2\\) hours, so her average speed was \\(\\frac{110}{2}=55\\) miles per hour. Thus, B is the correct answer.",
+      "hints": [
+        "Find the next palindrome after \\(15951\\) before computing the speed",
+        "Increasing the middle digit forces a carry to the next palindrome"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

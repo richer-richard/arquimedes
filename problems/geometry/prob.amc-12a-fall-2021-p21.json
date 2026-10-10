@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12a-fall-2021-p21",
+  "title": "2021 Fall AMC 12A Problem 21",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.shoelace-formula",
+      "label": "Shoelace formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2021,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 40.5,
+    "source": 2170,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Let \\(ABCD\\) be an isosceles trapezoid with \\(\\overline{BC} \\parallel \\overline{AD}\\) and \\(AB = CD.\\) Points \\(X\\) and \\(Y\\) lie on diagonal \\(\\overline{AC}\\) with \\(X\\) between \\(A\\) and \\(Y,\\) as shown in the figure. Suppose \\(\\angle AXD = \\angle BYC = 90^\\circ,\\) \\(AX = 3,\\) \\(XY = 1,\\) and \\(YC = 2.\\) What is the area of \\(ABCD?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(5\\sqrt{11}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\sqrt{35}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(7\\sqrt{7}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-fall-2021-p21.live",
+      "kind": "proof-sketch",
+      "text": "Put \\(A = (0,0),\\) \\(X = (3,0),\\) \\(Y = (4,0),\\) \\(C = (6,0).\\) The right angles give \\(D = (3, t)\\) and \\(B = (4, s)\\) on opposite sides of \\(AC.\\)\n\nParallelism \\(\\overline{AD}\\parallel\\overline{BC}\\) forces \\(t = -\\tfrac{3}{2}s,\\) and \\(AB = CD\\) gives \\(16 + s^2 = 9 + t^2,\\) so \\(t^2 - s^2 = 7.\\) Substituting yields \\(s^2 = \\tfrac{28}{5}.\\)\n\nThe shoelace formula gives area \\(= 3\\,|t - s|\\) \\(= 3\\cdot\\tfrac{5}{2}s\\) \\(= \\tfrac{15}{2}s\\) \\(= \\tfrac{15}{2}\\sqrt{\\tfrac{28}{5}}\\) \\(= 3\\sqrt{35}.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Place \\(A, X, Y, C\\) on a horizontal line with \\(AX = 3,\\) \\(XY = 1,\\) \\(YC = 2.\\) Then \\(D\\) is vertically below \\(X\\) and \\(B\\) vertically above \\(Y\\)",
+        "Use \\(\\overline{BC}\\parallel\\overline{AD}\\) and \\(AB = CD\\) to relate the heights of \\(B\\) and \\(D,\\) then apply the shoelace formula"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "18edb2da379e59878455e19e61bff3549fa375fb713e8718c67a5c37c3353e19"
+    ],
+    "solutions": []
+  }
+}

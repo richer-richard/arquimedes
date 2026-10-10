@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-i-2017-p6",
+  "title": "2017 AIME I Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.geometric-probability",
+      "label": "Geometric probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inscribed-angle",
+      "label": "Inscribed angle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2017,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 53.5,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "A circle is circumscribed around an isosceles triangle whose two congruent angles have degree measure \\(x.\\) Two points are chosen independently and uniformly at random on the circle, and a chord is drawn between them. The probability that the chord intersects the triangle is \\(\\frac{14}{25}.\\) Find the difference between the largest and smallest possible values of \\(x.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "48",
+    "value": "48"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2017-p6.live",
+      "kind": "proof-sketch",
+      "text": "Each inscribed angle of the triangle subtends an arc of twice its measure, so the vertices split the circle into arcs of \\(2x,\\) \\(2x,\\) and \\(360 - 4x\\) degrees. The chord fails to intersect the triangle exactly when both random points fall in the same arc, which has probability \\[ \\begin{aligned} &\\left(\\frac{2x}{360}\\right)^2 + \\left(\\frac{2x}{360}\\right)^2 \\\\ &\\quad {}+ \\left(\\frac{360 - 4x}{360}\\right)^2 \\\\ &= 1 - \\frac{14}{25} = \\frac{11}{25}. \\end{aligned} \\]\n\nSetting \\(y = \\frac{x}{180},\\) this reads \\(2y^2 + (1 - 2y)^2 = \\frac{11}{25},\\) which simplifies to \\(75y^2 - 50y + 7 = 0,\\) with roots \\(y = \\frac{1}{5}\\) and \\(y = \\frac{7}{15}.\\) These give \\(x = 36\\) and \\(x = 84,\\) both legitimate base angles of an isosceles triangle.\n\nThe requested difference is \\(84 - 36 = 48.\\)",
+      "hints": [
+        "The vertices cut the circle into arcs of \\(2x,\\) \\(2x,\\) and \\(360 - 4x\\) degrees, and the chord misses the triangle exactly when both points land in the same arc",
+        "With \\(y = \\frac{x}{180},\\) the miss probability gives \\(2y^2 + (1 - 2y)^2 = \\frac{11}{25},\\) a quadratic with two valid roots"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

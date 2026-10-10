@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2008-p7",
+  "title": "2008 AIME II Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sum-and-difference-of-cubes",
+      "label": "Sum and difference of cubes",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2008,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 46.7,
+    "source": 2410,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Let \\(r,\\) \\(s,\\) and \\(t\\) be the three roots of the equation \\[8x^3 + 1001x + 2008 = 0.\\] Find \\((r + s)^3 + (s + t)^3 + (t + r)^3.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "753",
+    "value": "753"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2008-p7.live",
+      "kind": "proof-sketch",
+      "text": "The cubic has no \\(x^2\\) term, so \\(r + s + t = 0\\) by Vieta’s formulas. Hence \\(r + s = -t,\\) \\(s + t = -r,\\) and \\(t + r = -s,\\) and the desired sum is \\[ \\begin{aligned} &(-t)^3 + (-r)^3 \\\\ &\\quad {}+ (-s)^3 \\\\ &= -(r^3 + s^3 + t^3). \\end{aligned} \\]\n\nWhenever \\(r + s + t = 0,\\) the identity \\(r^3 + s^3 + t^3 - 3rst\\) \\(= (r + s + t)\\) \\((r^2 + s^2 + t^2 - rs - st - tr)\\) gives \\(r^3 + s^3 + t^3 = 3rst.\\) By Vieta’s formulas, \\(rst = -\\frac{2008}{8} = -251,\\) so \\(r^3 + s^3 + t^3 = -753,\\) and the answer is \\(-(-753) = 753.\\)",
+      "hints": [
+        "There is no \\(x^2\\) term, so \\(r + s + t = 0\\) and each of \\(r + s,\\) \\(s + t,\\) \\(t + r\\) is the negative of a root",
+        "When \\(x + y + z = 0,\\) the identity \\(x^3 + y^3 + z^3 = 3xyz\\) applies; Vieta gives the product of the roots from the constant term"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tstst-2016-p5",
+  "title": "USA TSTST 2016 Problem 5",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TSTST",
+    "year": 2016,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 97.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In the coordinate plane are finitely many walls,\nwhich are disjoint line segments, none of which are parallel to either axis.\nA bulldozer starts at an arbitrary point and moves in the \\(+x\\) direction.\nEvery time it hits a wall, it turns at a right angle to its path,\naway from the wall, and continues moving.\n(Thus the bulldozer always moves parallel to the axes.)\n\nProve that it is impossible for the bulldozer\nto hit both sides of every wall.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tstst-2016-p5.evanchen",
+      "kind": "proof-sketch",
+      "text": "We say a wall \\(v\\) is above another wall \\(w\\) if some point on\n\\(v\\) is directly above a point on \\(w\\).\n(This relation is anti-symmetric, as walls do not intersect).\n\nThe critical claim is as follows:\n\nClaim.\n There exists a lowest wall,\n i.e.\\ a wall not above any other walls.\n\nProof.\n Assume not.\n Then we get a directed cycle of some length \\(n \\ge 3\\):\n it's possible to construct a series of points \\(P_i\\), \\(Q_i\\),\n for \\(i = 1, \\dots, n\\) (indices modulo \\(n\\)), such that\n the point \\(Q_i\\) is directly above \\(P_{i+1}\\) for each \\(i\\),\n the segment \\(\\overline{Q_i P_{i+1}}\\) does not intersect any wall in its interior,\n and finally each segment \\(\\overline{P_i Q_i}\\) is contained inside a wall.\n This gives us a broken line on \\(2n\\) vertices which is not self-intersecting.\n\n Now consider the leftmost vertical segment \\(\\overline{Q_i P_{i+1}}\\)\n and the rightmost vertical segment \\(\\overline{Q_j P_{j+1}}\\).\n The broken line gives a path from \\(P_{i+1}\\) to \\(Q_j\\),\n as well as a path from \\(P_{j+1}\\) to \\(Q_i\\).\n These clearly must intersect, contradiction.\n\nRemark.\n This claim is Iran TST 2010.\n\nThus if the bulldozer eventually moves upwards indefinitely,\nit may never hit the bottom side of the lowest wall.\nSimilarly, if the bulldozer eventually moves downwards indefinitely,\nit may never hit the upper side of the highest wall.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

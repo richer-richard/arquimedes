@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2018-p5",
+  "title": "2018 AMC 10B Problem 5",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime",
+      "label": "Prime",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.subsets",
+      "label": "Subsets",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2018,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 21.0,
+    "source": 1200,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "How many subsets of \\(\\{2, 3, 4, 5, 6, 7, 8, 9\\}\\) contain at least one prime number?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(128\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(192\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(224\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(240\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(256\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "240"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2018-p5.live",
+      "kind": "proof-sketch",
+      "text": "Count the complement. The set has \\(2^8 = 256\\) subsets total. A subset avoids every prime exactly when it sticks to the non-primes \\(\\{4, 6, 8, 9\\},\\) and there are \\(2^4 = 16\\) of those. So \\(256 - 16 = 240\\) subsets contain at least one prime. Thus, D is the correct answer.",
+      "hints": [
+        "Count the subsets with no prime and subtract from the total number of subsets",
+        "The non-prime elements are \\(4, 6, 8, 9;\\) any subset of just those contains no prime"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

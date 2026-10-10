@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-fall-2021-p3",
+  "title": "2021 Fall AMC 10A Problem 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "geo.estimation",
+      "label": "Estimation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.sphere",
+      "label": "Sphere",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.volume",
+      "label": "Volume",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2021,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 7.2,
+    "source": 870,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "What is the maximum number of balls of clay with radius \\(2\\) that can completely fit inside a cube of side length \\(6\\) assuming that the balls can be reshaped but not compressed before they are packed in the cube?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(7\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-fall-2021-p3.live",
+      "kind": "proof-sketch",
+      "text": "The cube has volume \\(6^3=216.\\) One ball of clay has volume \\(\\frac{4}{3}\\pi\\cdot 2^3=\\frac{32\\pi}{3}.\\)\n\nBecause the clay may be reshaped but not compressed, the maximum number of balls is \\[\\left\\lfloor \\frac{216}{\\frac{32\\pi}{3}}\\right\\rfloor=\\left\\lfloor\\frac{81}{4\\pi}\\right\\rfloor.\\]\n\nSince \\(12\\lt 4\\pi\\lt 13,\\) we have \\(6\\lt \\frac{81}{4\\pi}\\lt \\frac{81}{12}\\lt 7.\\) Therefore the floor is \\(6.\\)\n\nThus, D is the correct answer.",
+      "hints": [
+        "Compare volumes because the clay can be reshaped",
+        "The count is \\(\\left\\lfloor \\frac{216}{\\frac{32\\pi}{3}}\\right\\rfloor\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

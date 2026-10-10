@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-i-2008-p13",
+  "title": "2008 AIME I Problem 13",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2008,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 65.9,
+    "source": 3160,
+    "mohs": null
+  },
+  "estimatedMinutes": 20,
+  "statement": "Let \\[ \\begin{aligned} p(x, y) &= a_0 + a_1x + a_2y \\\\ &\\quad {}+ a_3x^2 + a_4xy + a_5y^2 \\\\ &\\quad {}+ a_6x^3 + a_7x^2y \\\\ &\\quad {}+ a_8xy^2 + a_9y^3. \\end{aligned} \\] Suppose that \\[ \\begin{aligned} p(0, 0) &= p(1, 0) = p(-1, 0) \\\\ &= p(0, 1) = p(0, -1) \\\\ &= p(1, 1) = p(1, -1) \\\\ &= p(2, 2) = 0. \\end{aligned} \\]\n\nThere is a point \\(\\left(\\frac{a}{c}, \\frac{b}{c}\\right)\\) for which \\(p\\left(\\frac{a}{c}, \\frac{b}{c}\\right) = 0\\) for all such polynomials, where \\(a,\\) \\(b,\\) and \\(c\\) are positive integers, \\(a\\) and \\(c\\) are relatively prime, and \\(c \\gt 1.\\) Find \\(a + b + c.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "40",
+    "value": "40"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2008-p13.live",
+      "kind": "proof-sketch",
+      "text": "From \\(p(0,0) = 0\\) we get \\(a_0 = 0.\\) Adding and subtracting \\(p(1,0) = p(-1,0) = 0\\) gives \\(a_3 = 0\\) and \\(a_6 = -a_1;\\) similarly \\(p(0,\\pm 1) = 0\\) give \\(a_5 = 0\\) and \\(a_9 = -a_2.\\) Then \\(p(1,1) = 0\\) and \\(p(1,-1) = 0\\) reduce to \\(a_4 + a_7 + a_8 = 0\\) and \\(-a_4 - a_7 + a_8 = 0,\\) so \\(a_8 = 0\\) and \\(a_7 = -a_4.\\) Now \\(p = a_1(x - x^3)\\) \\(+ a_2(y - y^3)\\) \\(+ a_4(xy - x^2y),\\) and \\(p(2,2) = 0\\) gives \\(-6a_1 - 6a_2 - 4a_4 = 0,\\) i.e. \\(a_4 = -\\frac{3}{2}(a_1 + a_2).\\)\n\nTherefore \\[ \\begin{aligned} p &= a_1\\left[x - x^3 - \\tfrac{3}{2}xy(1 - x)\\right] \\\\ &\\quad {}+ a_2\\left[y - y^3 - \\tfrac{3}{2}xy(1 - x)\\right], \\end{aligned} \\] and a point \\((r, s)\\) that is a zero for every choice of \\(a_1, a_2\\) must kill both brackets. The first bracket factors as \\(r(1 - r)\\left(1 + r - \\tfrac{3}{2}s\\right),\\) so for a new point (with \\(r \\ne 0, 1\\)) we need \\(s = \\tfrac{2}{3}(r + 1).\\) The second bracket is \\(\\tfrac{1}{2}s(2 - 2s^2 - 3r + 3r^2);\\) substituting \\(s^2 = \\tfrac{4}{9}(r + 1)^2\\) turns \\(2 - 2s^2 - 3r + 3r^2 = 0\\) into \\[\\frac{19r^2 - 43r + 10}{9} = 0,\\] whose roots are \\(r = 2\\) and \\(r = \\frac{5}{19}.\\)\n\nThe root \\(r = 2\\) reproduces the given point \\((2, 2),\\) so the new point has \\(r = \\frac{5}{19}\\) and \\(s = \\frac{2}{3} \\cdot \\frac{24}{19} = \\frac{16}{19}.\\) Thus \\((a, b, c) = (5, 16, 19)\\) and \\(a + b + c = 40.\\)",
+      "hints": [
+        "Apply the conditions in order: the first five force \\(a_0 = a_3 = a_5 = 0,\\) \\(a_6 = -a_1,\\) \\(a_9 = -a_2\\)",
+        "Eventually \\(p = a_1 f(x, y) + a_2 g(x, y);\\) a point that works for every choice of \\(a_1\\) and \\(a_2\\) must be a common zero of \\(f\\) and \\(g,\\) which factor nicely"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

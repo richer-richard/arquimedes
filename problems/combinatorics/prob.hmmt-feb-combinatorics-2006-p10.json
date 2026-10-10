@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2006-p10",
+  "title": "2006 HMMT February Combinatorics Problem 10",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinatorics",
+      "label": "Combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2006,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 90.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Somewhere in the universe, \\(n\\) students are taking a 10 -question math competition. Their collective performance is called laughable if, for some pair of questions, there exist 57 students such that either all of them answered both questions correctly or none of them answered both questions correctly. Compute the smallest \\(n\\) such that the performance is necessarily laughable.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2006-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(c_{i, j}\\) denote the number of students correctly answering questions \\(i\\) and \\(j(1 \\leq i<j \\leq 10)\\), and let \\(w_{i, j}\\) denote the number of students getting both questions\nwrong. An individual student answers \\(k\\) questions correctly and \\(10-k\\) questions incorrectly. This student answers \\(\\binom{k}{2}\\) pairs of questions correctly and \\(\\binom{10-k}{2}\\) pairs of questions incorrectly. Now observe that\n\n\\[\\binom{k}{2}+\\binom{10-k}{2}=k^{2}-10 k+45=(k-5)^{2}+20 \\geq 20\\]\n\nTherefore,\n\n\\[\\sum_{1 \\leq i<j \\leq 10} c_{i, j}+w_{i, j} \\geq 20 n\\]\n\nNow if the performance is not laughable, then \\(c_{i, j} \\leq 56\\) and \\(w_{i, j} \\leq 56\\) for all \\(1 \\leq\\) \\(i<j \\leq 10\\). Observe that there are \\(2\\binom{10}{2}=90\\) of these variables. Hence, in a boring performance,\n\n\\[20 n \\leq \\sum_{1 \\leq i<j \\leq 10} c_{i, j}+w_{i, j} \\leq 90 \\cdot 56=5040\\]\n\nor \\(n \\leq 252\\). In particular this implies that if \\(n \\geq 253\\), the performance is laughable. This is the best bound because \\(\\binom{10}{5}=252\\), and if each of 252 students correctly answers a different 5 element subset of the 10 questions, then \\(c_{i, j}=w_{i, j}=56\\) for all \\(1 \\leq i<j \\leq 10\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

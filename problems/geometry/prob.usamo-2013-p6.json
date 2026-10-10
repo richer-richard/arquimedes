@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2013-p6",
+  "title": "2013 USAMO Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2013,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 99.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(ABC\\) be a triangle. Find all points \\(P\\) on segment \\(BC\\) satisfying the following property: If \\(X\\) and \\(Y\\) are the intersections of line \\(PA\\) with the common external tangent lines of the circumcircles of triangles \\(PAB\\) and \\(PAC\\), then\n\n\\[\n\\left(\\frac{PA}{XY}\\right)^2+\\frac{PB\\cdot PC}{AB\\cdot AC}=1.\n\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2013-p6.imported",
+      "kind": "proof-sketch",
+      "text": "Let circle $PAB$ (i.e. the circumcircle of $PAB$), $PAC$ be $\\omega_1, \\omega_2$ with radii $r_1$, $r_2$ and centers $O_1, O_2$, respectively, and $d$ be the distance between their centers.\n<b>Lemma.</b> $XY = \\frac{r_1 + r_2}{d} \\sqrt{d^2 - (r_1 - r_2)^2}.$\nProof. Let the external tangent containing $X$ meet $\\omega_1$ at $X_1$ and $\\omega_2$ at $X_2$, and let the external tangent containing $Y$ meet $\\omega_1$ at $Y_1$ and $\\omega_2$ at $Y_2$. Then clearly $X_1 Y_1$ and $X_2 Y_2$ are parallel (for they are both perpendicular $O_1 O_2$), and so $X_1 Y_1 Y_2 X_2$ is a trapezoid.\nNow, $X_1 X^2 = XA \\cdot XP = X_2 X^2$ by Power of a Point, and so $X$ is the midpoint of $X_1 X_2$. Similarly, $Y$ is the midpoint of $Y_1 Y_2$. Hence, $XY = \\frac{1}{2} (X_1 Y_1 + X_2 Y_2).$ Let $X_1 Y_1$, $X_2 Y_2$ meet $O_1 O_2$ s at $Z_1, Z_2$, respectively. Then by similar triangles and the Pythagorean Theorem we deduce that $X_1 Z_1 = \\frac{r_1 \\sqrt{d^2 - (r_1 - r_2)^2}}{d}$ and $\\frac{r_2 \\sqrt{d^2 - (r_1 - r_2)^2}}{d}$. But it is clear that $Z_1$, $Z_2$ is the midpoint of $X_1 Y_1$, $X_2 Y_2$, respectively, so $XY = \\frac{(r_1 + r_2)}{d} \\sqrt{d^2 - (r_1 - r_2)^2},$ as desired.\nLemma 2. Triangles $O_1 A O_2$ and $BAC$ are similar.\nProof. $\\angle{AO_1 O_2} = \\frac{\\angle{PO_1 A}}{2} = \\angle{ABC}$ and similarly $\\angle{AO_2 O_1} = \\angle{ACB}$, so the triangles are similar by AA Similarity.\nAlso, let $O_1 O_2$ intersect $AP$ at $Z$. Then obviously $Z$ is the midpoint of $AP$ and $AZ$ is an altitude of triangle $A O_1 O_2$.Thus, we can simplify our expression of $XY$:\n\\[XY = \\frac{AB + AC}{BC} \\cdot \\frac{AP}{2 h_a} \\sqrt{BC^2 - (AB - AC)^2},\\]\nwhere $h_a$ is the length of the altitude from $A$ in triangle $ABC$. Hence, substituting into our condition and using $AB = c, BC = a, CA = b$ gives\n\\[\\left( \\frac{2a h_a}{(b+c) \\sqrt{a^2 - (b-c)^2}} \\right)^2 + \\frac{PB \\cdot PC}{bc} = 1.\\]\nUsing $2 a h_a = 4[ABC] = \\sqrt{(a + b + c)(a + b - c)(a - b + c)(-a + b + c)}$ by Heron's Formula (where $[ABC]$ is the area of triangle $ABC$, our condition becomes\n\\[\\frac{(a + b + c)(-a + b + c)}{(b + c)^2} + \\frac{PB \\cdot PC}{bc} = 1,\\]\nwhich by $(a + b + c)(-a + b + c) = (b + c)^2 - a^2$ becomes\n\\[\\frac{PB \\cdot PC}{bc} = \\frac{a^2 bc}{(b+c)^2}.\\]\nLet $PB = x$; then $PC = a - x$. The quadratic in $x$ is\n\\[x^2 - ax + \\frac{a^2 bc}{(b+c)^2} = 0,\\]\nwhich factors as\n\\[\\left(x - \\frac{ab}{b+c}\\right)\\left(x - \\frac{ac}{b+c}\\right) = 0.\\]\nHence, $PB = \\frac{ab}{b+c}$ or $\\frac{ac}{b+c}$, and so the $P$ corresponding to these lengths are our answer.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

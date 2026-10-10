@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-i-2011-p6",
+  "title": "2011 AIME I Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.parabola",
+      "label": "Parabola",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2011,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 43.9,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Suppose that a parabola has vertex \\(\\left(\\frac{1}{4}, -\\frac{9}{8}\\right)\\) and equation \\(y = ax^2 + bx + c,\\) where \\(a \\gt 0\\) and \\(a + b + c\\) is an integer. The minimum possible value of \\(a\\) can be written in the form \\(\\frac{p}{q},\\) where \\(p\\) and \\(q\\) are relatively prime positive integers. Find \\(p + q.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "11",
+    "value": "11"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2011-p6.live",
+      "kind": "proof-sketch",
+      "text": "In vertex form the parabola is \\(y = a\\left(x - \\frac{1}{4}\\right)^2 - \\frac{9}{8}.\\) Since \\(a + b + c\\) equals the value of \\(y\\) at \\(x = 1,\\) \\[ \\begin{aligned} a + b + c &= a\\left(\\frac{3}{4}\\right)^2 - \\frac{9}{8} \\\\ &= \\frac{9(a - 2)}{16}. \\end{aligned} \\]\n\nIf this equals the integer \\(n,\\) then \\(a = 2 + \\frac{16n}{9}.\\) The condition \\(a \\gt 0\\) requires \\(16n \\gt -18,\\) that is \\(n \\ge -1,\\) and \\(a\\) is smallest when \\(n = -1,\\) giving \\(a = 2 - \\frac{16}{9} = \\frac{2}{9}.\\)\n\nThus \\(p + q = 2 + 9 = 11.\\)",
+      "hints": [
+        "Write the parabola in vertex form and note that \\(a + b + c\\) is the value of \\(y\\) at \\(x = 1\\)",
+        "So \\(\\frac{9(a-2)}{16}\\) must be an integer; choose the integer that makes \\(a\\) as small as possible while keeping \\(a \\gt 0\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

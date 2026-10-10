@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-general-2023-p3",
+  "title": "2023 HMMT November General Problem 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular Arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2023,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 44.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the number of positive four-digit multiples of 11 whose sum of digits (in base ten) is divisible by 11 .",
+  "answerChoices": [],
+  "answer": {
+    "letter": "72",
+    "value": "72"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2023-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let an arbitrary such number be \\(\\overline{a b c d}\\). Then, we desire \\(11 \\mid a+b+c+d\\) and \\(11 \\mid a-b+c-d\\), where the latter comes from the well-known divisibility trick for 11 . Sums and differences of multiples of 11 must also be multiples of 11 , so this is equivalent to desiring \\(11 \\mid a+c\\) and \\(11 \\mid b+d\\).\nAs \\(a \\in[1,9]\\) and \\(b, c, d \\in[0,9], a+c\\) and \\(b+d\\) must be either 0 or 11 (no larger multiple is achievable). There are 8 choices for such \\((a, c)\\) and 9 choices for such \\((b, d)\\), so the answer is \\(8 \\cdot 9=72\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

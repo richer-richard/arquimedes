@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-i-2016-p4",
+  "title": "2016 AIME I Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.regular-polygon",
+      "label": "Regular polygon",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2016,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 48.6,
+    "source": 2340,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "A right prism with height \\(h\\) has bases that are regular hexagons with sides of length \\(12.\\) A vertex \\(A\\) of the prism and its three adjacent vertices are the vertices of a triangular pyramid. The dihedral angle (the angle between the two planes) formed by the face of the pyramid that lies in a base of the prism and the face of the pyramid that does not contain \\(A\\) measures \\(60^\\circ.\\) Find \\(h^2.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "108",
+    "value": "108"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2016-p4.live",
+      "kind": "proof-sketch",
+      "text": "The three vertices adjacent to \\(A\\) are its two neighbors \\(B\\) and \\(C\\) in the same hexagonal base and the vertex \\(D\\) directly above \\(A,\\) with \\(DA = h\\) perpendicular to the base. The face in the base is \\(ABC,\\) and the face avoiding \\(A\\) is \\(BCD;\\) they meet along \\(\\overline{BC}.\\)\n\nLet \\(E\\) be the midpoint of \\(\\overline{BC}.\\) Since \\(AB = AC = 12\\) and \\(\\angle BAC = 120^\\circ\\) (the interior angle of a regular hexagon), \\(\\overline{AE} \\perp \\overline{BC}\\) and \\(AE = 12\\cos 60^\\circ = 6.\\) Because \\(\\overline{DA}\\) is perpendicular to the base, \\(\\overline{DE} \\perp \\overline{BC}\\) as well, so the dihedral angle is \\(\\angle DEA = 60^\\circ.\\)\n\nIn right triangle \\(DAE,\\) \\(h = AE\\tan 60^\\circ = 6\\sqrt{3},\\) so \\(h^2 = 108.\\)",
+      "hints": [
+        "The pyramid uses \\(A,\\) its two base neighbors \\(B\\) and \\(C,\\) and the vertex \\(D\\) directly above \\(A;\\) the dihedral angle sits along \\(\\overline{BC}\\)",
+        "If \\(E\\) is the midpoint of \\(\\overline{BC},\\) the dihedral angle is \\(\\angle DEA;\\) use \\(\\angle BAC = 120^\\circ\\) to find \\(AE\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

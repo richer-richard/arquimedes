@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-i-2008-p6",
+  "title": "2008 AIME I Problem 6",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.induction",
+      "label": "Induction",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.parity",
+      "label": "Parity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2008,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 51.6,
+    "source": 2600,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "A triangular array of numbers has a first row consisting of the odd integers \\(1,\\) \\(3,\\) \\(5,\\) \\(\\ldots,\\) \\(99\\) in increasing order. Each row below the first has one fewer entry than the row above it, and the bottom row has a single entry. Each entry in any row after the top row equals the sum of the two entries diagonally above it in the row immediately above it. How many entries in the array are multiples of \\(67?\\) \\[\\scriptsize\\begin{array}{ccccccccccc} 1 & & 3 & & 5 & & \\cdots & & 97 & & 99 \\\\ & 4 & & 8 & & 12 & & \\cdots & & 196 & \\\\ & & & & & \\vdots & & & & & \\end{array}\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "17",
+    "value": "17"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2008-p6.live",
+      "kind": "proof-sketch",
+      "text": "By induction, the \\(n\\)th entry of row \\(r\\) is \\(2^{r-1}(r + 2n - 2):\\) row \\(1\\) gives \\(2^0(2n - 1),\\) and summing two adjacent entries of row \\(r\\) gives \\(2^{r-1}(r + 2n - 2)\\) \\(+ 2^{r-1}(r + 2n)\\) \\(= 2^r\\bigl((r + 1) + 2n - 2\\bigr),\\) the formula for row \\(r + 1.\\) Row \\(r\\) has \\(51 - r\\) entries, so \\(1 \\le n \\le 51 - r.\\)\n\nSince \\(67\\) is odd, an entry is a multiple of \\(67\\) exactly when \\(r + 2n - 2\\) is divisible by \\(67.\\) As \\(n\\) runs through row \\(r,\\) the quantity \\(r + 2n - 2\\) takes the values \\(r, r + 2, \\ldots, 100 - r,\\) all with the same parity as \\(r\\) and all less than \\(134.\\) So the only possible multiple of \\(67\\) is \\(67\\) itself, which requires \\(r\\) odd and \\(r \\le 67 \\le 100 - r,\\) that is, \\(r \\le 33.\\)\n\nEach odd row \\(r = 1, 3, \\ldots, 33\\) contains exactly one such entry, for a total of \\(17.\\)",
+      "hints": [
+        "Show the \\(n\\)th entry of row \\(r\\) is \\(2^{r-1}(r + 2n - 2),\\) so only the odd factor matters for divisibility by \\(67\\)",
+        "Across row \\(r,\\) the factor \\(r + 2n - 2\\) takes every value of \\(r\\)’s parity from \\(r\\) to \\(100 - r,\\) so the only multiple of \\(67\\) it can hit is \\(67\\) itself"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

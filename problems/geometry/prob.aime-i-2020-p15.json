@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2020-p15",
+  "title": "2020 AIME I Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circumcircle-circumcenter-and-circumradius",
+      "label": "Circumcircle, circumcenter, and circumradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.transformation",
+      "label": "Transformation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vector",
+      "label": "Vector",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2020,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 70.3,
+    "source": 3500,
+    "mohs": null
+  },
+  "estimatedMinutes": 30,
+  "statement": "Let \\(\\triangle ABC\\) be an acute triangle with circumcircle \\(\\omega\\) and orthocenter \\(H.\\) Suppose the tangent to the circumcircle of \\(\\triangle HBC\\) at \\(H\\) intersects \\(\\omega\\) at points \\(X\\) and \\(Y\\) with \\(HA = 3,\\) \\(HX = 2,\\) and \\(HY = 6.\\) The area of \\(\\triangle ABC\\) can be written as \\(m\\sqrt{n},\\) where \\(m\\) and \\(n\\) are positive integers, and \\(n\\) is not divisible by the square of any prime. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "58",
+    "value": "58"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2020-p15.live",
+      "kind": "proof-sketch",
+      "text": "Reflecting \\(H\\) over line \\(BC\\) lands on \\(\\omega,\\) so the circumcircle of \\(HBC\\) is the reflection of \\(\\omega\\) over \\(BC.\\) Take the circumcenter \\(O\\) as the origin, so that \\(H = A + B + C\\) as vectors. If \\(M\\) is the midpoint of \\(\\overline{BC},\\) then \\(OM \\perp BC,\\) so the reflected center is \\(2M - O = B + C = H - A.\\) Tangency at \\(H\\) means \\(XY\\) is perpendicular to the radius from \\(B + C\\) to \\(H,\\) which is the vector \\(A:\\) the chord \\(XY\\) is perpendicular to \\(OA.\\)\n\nPlace \\(A = (0, R)\\) so that \\(XY\\) is horizontal at height \\(h,\\) with \\(H = (x_0, h).\\) The half-chord length is \\(\\sqrt{R^2 - h^2},\\) and \\(HX = 2,\\) \\(HY = 6\\) give \\(\\sqrt{R^2 - h^2} = 4\\) with \\(|x_0| = 2.\\) From \\(HA = 3:\\) \\(4 + (R - h)^2 = 9,\\) so \\(R - h = \\sqrt{5}.\\) Then \\[ \\begin{aligned} 16 &= R^2 - h^2 \\\\ &= (R - h)(R + h) \\\\ &= \\sqrt{5}\\left(2R - \\sqrt{5}\\right), \\end{aligned} \\] giving \\(R = \\frac{21}{2\\sqrt{5}}.\\)\n\nNow \\(B + C = H - A = (\\pm 2, -\\sqrt{5}),\\) so \\(M = \\left(\\pm 1, -\\frac{\\sqrt{5}}{2}\\right)\\) and \\(OM = \\frac{3}{2},\\) whence \\(BC = 2\\sqrt{R^2 - \\frac{9}{4}} = 2\\sqrt{\\frac{99}{5}}.\\) The distance from \\(A\\) to line \\(BC\\) (through \\(M,\\) perpendicular to \\(OM\\)) is \\(\\frac{|A \\cdot M - OM^2|}{OM} = \\frac{\\frac{21}{4} + \\frac{9}{4}}{\\frac{3}{2}} = 5,\\) using \\(A \\cdot M = -\\frac{\\sqrt{5}R}{2} = -\\frac{21}{4}.\\) Hence \\[ \\begin{aligned} [ABC] &= \\frac{1}{2} \\cdot 2\\sqrt{\\frac{99}{5}} \\cdot 5 \\\\ &= \\sqrt{495} \\\\ &= 3\\sqrt{55}, \\end{aligned} \\] and \\(m + n = 3 + 55 = 58.\\)",
+      "hints": [
+        "The circumcircle of \\(HBC\\) is the reflection of \\(\\omega\\) over \\(BC.\\) With circumcenter \\(O\\) at the origin its center is \\(B + C = H - A,\\) so line \\(XY\\) is perpendicular to \\(OA.\\)",
+        "Put \\(A = (0, R)\\) so \\(XY\\) is horizontal. Then the half-chord is \\(4,\\) \\(H\\) is \\(2\\) from the chord’s midpoint, and \\(HA = 3\\) gives \\(R - h = \\sqrt{5},\\) determining \\(R.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2010-p2",
+  "title": "2010 USAMO Problem 2",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2010,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 93.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "There are \\(n\\) students standing in a circle, one behind the other. The students have heights \\(h_1 < h_2 < \\ldots < h_n\\). If a student with height \\(h_k\\) is standing directly behind a student with height \\(h_{k-2}\\) or less, the two students are permitted to switch places. Prove that it is not possible to make more than \\(\\binom{n}{3}\\) such switches before reaching a position in which no further switches are possible.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2010-p2.imported",
+      "kind": "proof-sketch",
+      "text": "We adopt the usual convention that $\\binom{i}{j} = 0$ unless $0 \\le j \\le i$.\nWith this, the binomial coefficients are defined for all integers via the\nrecursion:\n\\[\\binom{0}{0} = 1, \\quad \\binom{n}{k} = \\binom{n-1}{k} + \\binom{n-1}{k-1}\\]\nIt is clear that the circle is oriented and all the students are facing in same direction (clockwise or counterclockwise). We'll call this direction <i>forward</i>.\nIn any switch consider the taller student to have moved <i>forward</i> and the shorter student to have remained <i>stationary</i>. No backward motion is allowed. With this definition of forward motion, the first two students with heights $h_1$ and $h_2$ are always stationary, while other students potentially move past them.\nFor $k > 2$, the student with height $h_k$ can never switch places with the student with height $h_{k-1}$, and the former can make at most $k-2$ more forward moves than the latter (when all the students of heights $h_1, \\ldots h_{k-2}$ are between $h_k$ and $h_{k-1}$ in the forward direction).\nTherefore, if the $(k-1)^{\\mathrm{st}}$ student can make $s_{k-1}$ forward steps, the $k^{\\mathrm{th}}$ student can make at most $s_{k-1} + k - 2$ steps. With $s_1 = s_2 = 0$ and $s_3 = 0 + (3-2) = 1$, and a constant second difference of $1$, we quickly see that $s_k = \\binom{k-1}{2}$.\nWith $n$ students in all, the total number of steps is therefore at most $\\sum_{i=3}^{n}\\binom{i-1}{2} = \\binom{n}{3}$, by the Hockey Stick Theorem",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

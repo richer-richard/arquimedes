@@ -1,0 +1,89 @@
+{
+  "id": "prob.amc-12b-2012-p19",
+  "title": "2012 AMC 12B Problem 19",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cube-geometry",
+      "label": "Cube geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2012,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 34.7,
+    "source": 2110,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A unit cube has vertices \\(P_1,\\) \\(P_2,\\) \\(P_3,\\) \\(P_4,\\) \\(P_1',\\) \\(P_2',\\) \\(P_3',\\) and \\(P_4'.\\) Vertices \\(P_2,\\) \\(P_3,\\) and \\(P_4\\) are adjacent to \\(P_1,\\) and for \\(1 \\le i \\le 4,\\) vertices \\(P_i\\) and \\(P_i'\\) are opposite to each other. A regular octahedron has one vertex in each of the segments \\(P_1P_2,\\) \\(P_1P_3,\\) \\(P_1P_4,\\) \\(P_1'P_2',\\) \\(P_1'P_3',\\) and \\(P_1'P_4'.\\) What is the octahedron’s side length?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{3\\sqrt{2}}{4}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{7\\sqrt{6}}{16}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{\\sqrt{5}}{2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{2\\sqrt{3}}{3}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{\\sqrt{6}}{2}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2012-p19.live",
+      "kind": "proof-sketch",
+      "text": "Place \\(P_1\\) at the origin with edges along the axes, and let each of the three octahedron vertices near \\(P_1\\) be a distance \\(t\\) from \\(P_1;\\) by symmetry the three near \\(P_1'\\) are also a distance \\(t\\) from \\(P_1'.\\)\n\nTwo vertices sharing \\(P_1,\\) such as \\((t,0,0)\\) and \\((0,t,0),\\) are a distance \\(t\\sqrt2\\) apart. A vertex near \\(P_1,\\) say \\((t,0,0),\\) and the appropriate vertex near \\(P_1',\\) say \\((1,1-t,1),\\) must be the same distance apart.\n\nSetting the two squared side lengths equal and using the cube’s unit edges yields \\(t=\\tfrac34,\\) so the side length is \\(t\\sqrt2=\\dfrac{3\\sqrt2}{4}.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "By symmetry each octahedron vertex is the same distance \\(t\\) from \\(P_1\\) (or \\(P_1'\\)) along its edge",
+        "Set the squared distance between two vertices sharing \\(P_1\\) equal to the squared distance across, and solve for \\(t\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "c9878e138ec18c6bc9ca3dc510f636d2ff4a9b51b70f41142c6e3f6ffa25607f"
+    ],
+    "solutions": []
+  }
+}

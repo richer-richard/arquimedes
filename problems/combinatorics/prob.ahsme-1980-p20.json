@@ -1,0 +1,87 @@
+{
+  "id": "prob.ahsme-1980-p20",
+  "title": "1980 AHSME Problem 20",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.sampling-without-replacement",
+      "label": "Sampling without replacement",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1980,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 38.7,
+    "source": 2100,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A box contains \\(2\\) pennies, \\(4\\) nickels and \\(6\\) dimes. Six coins are drawn without replacement, with each coin having an equal probability of being chosen. What is the probability that the value of the coins drawn is at least \\(50\\) cents?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\frac{37}{924}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\frac{91}{924}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\frac{127}{924}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\frac{132}{924}\\)"
+    },
+    {
+      "label": "E",
+      "text": "none of these"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "127/924"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1980-p20.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(\\binom{12}{6}=924\\) selections. A value of at least \\(50\\) cents occurs with six dimes; with five dimes and any one other coin; or with four dimes and two nickels. The favorable count is \\[ \\begin{aligned} &\\binom66\\\\ &\\quad+\\binom65\\binom61\\\\ &\\quad+\\binom64\\binom42\\\\ &=1+36+90\\\\ &=127. \\end{aligned} \\] Thus the probability is \\(\\frac{127}{924}.\\)\n\nTherefore, the correct answer is C.",
+      "hints": [
+        "There are \\(\\binom{12}{6}\\) equally likely sets of six coins",
+        "Classify favorable selections by whether they contain six, five, or four dimes"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

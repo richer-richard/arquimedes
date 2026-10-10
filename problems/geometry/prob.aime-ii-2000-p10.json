@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2000-p10",
+  "title": "2000 AIME II Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-bisector",
+      "label": "Angle bisector",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.incircle-incenter-and-inradius",
+      "label": "Incircle, incenter, and inradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2000,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 61.6,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "A circle is inscribed in quadrilateral \\(ABCD,\\) tangent to \\(\\overline{AB}\\) at \\(P\\) and to \\(\\overline{CD}\\) at \\(Q.\\) Given that \\(AP = 19,\\) \\(PB = 26,\\) \\(CQ = 37,\\) and \\(QD = 23,\\) find the square of the radius of the circle.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "647",
+    "value": "647"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2000-p10.live",
+      "kind": "proof-sketch",
+      "text": "Let the incircle have center \\(I\\) and radius \\(r.\\) The tangent lengths from \\(A,\\) \\(B,\\) \\(C,\\) \\(D\\) are \\(19,\\) \\(26,\\) \\(37,\\) \\(23,\\) and \\(I\\) lies on each angle bisector, so the half-angles \\(\\alpha, \\beta, \\gamma, \\delta\\) at the four vertices satisfy \\(\\tan\\alpha = \\frac{r}{19},\\) \\(\\tan\\beta = \\frac{r}{26},\\) \\(\\tan\\gamma = \\frac{r}{37},\\) \\(\\tan\\delta = \\frac{r}{23},\\) with \\(\\alpha + \\beta + \\gamma + \\delta = 180^\\circ.\\)\n\nThen \\(\\tan(\\alpha + \\gamma) = -\\tan(\\beta + \\delta),\\) and the tangent addition formula turns this into \\[ \\begin{aligned} &\\frac{\\frac{r}{19} + \\frac{r}{37}}{1 - \\frac{r^2}{19 \\cdot 37}} \\\\ &= -\\frac{\\frac{r}{26} + \\frac{r}{23}}{1 - \\frac{r^2}{26 \\cdot 23}}, \\end{aligned} \\] i.e. \\[\\frac{56r}{703 - r^2} = \\frac{49r}{r^2 - 598}.\\]\n\nCross-multiplying gives \\(56r^2 - 56 \\cdot 598\\) \\(= 49 \\cdot 703 - 49r^2,\\) so \\(105r^2 = 33488 + 34447 = 67935\\) and \\(r^2 = 647.\\)",
+      "hints": [
+        "The center lies on all four angle bisectors, so the half-angle at \\(A\\) satisfies \\(\\tan\\frac{A}{2} = \\frac{r}{19},\\) and similarly at the other vertices",
+        "The four half-angles sum to \\(180^\\circ,\\) so \\(\\tan(\\alpha + \\gamma) = -\\tan(\\beta + \\delta);\\) the addition formula gives a linear equation in \\(r^2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

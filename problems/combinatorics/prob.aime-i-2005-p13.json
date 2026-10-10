@@ -1,0 +1,57 @@
+{
+  "id": "prob.aime-i-2005-p13",
+  "title": "2005 AIME I Problem 13",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.lattice-paths",
+      "label": "Lattice paths",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.recursive-counting",
+      "label": "Recursive counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2005,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 63.3,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 20,
+  "statement": "A particle moves in the Cartesian plane from one lattice point to another according to the following rules:\n\n• From any lattice point \\((a, b),\\) the particle may move only to \\((a+1, b),\\) \\((a, b+1),\\) or \\((a+1, b+1).\\)\n\n• There are no right angle turns in the particle’s path. That is, the sequence of points visited contains neither a subsequence of the form \\((a, b),\\) \\((a+1, b),\\) \\((a+1, b+1)\\) nor a subsequence of the form \\((a, b),\\) \\((a, b+1),\\) \\((a+1, b+1).\\)\n\nHow many different paths can the particle take from \\((0, 0)\\) to \\((5, 5)?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "83",
+    "value": "83"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2005-p13.live",
+      "kind": "proof-sketch",
+      "text": "The forbidden right-angle turns say exactly that a rightward step may never immediately follow an upward step, and vice versa; a diagonal step may follow or precede anything. So at each lattice point \\((x, y)\\) track three counts \\(D(x,y),\\) \\(R(x,y),\\) \\(U(x,y):\\) the numbers of legal paths from \\((0,0)\\) arriving there by a diagonal, rightward, or upward step. The rules give \\[ \\begin{aligned} D(x,y) &= D(x-1,y-1) \\\\ &\\quad {}+ R(x-1,y-1) \\\\ &\\quad {}+ U(x-1,y-1), \\\\ R(x,y) &= D(x-1,y) \\\\ &\\quad {}+ R(x-1,y), \\\\ U(x,y) &= D(x,y-1) \\\\ &\\quad {}+ U(x,y-1). \\end{aligned} \\]\n\nStarting from the single empty path at \\((0,0)\\) (which may begin with any step), fill in the grid up to \\((5,5).\\) Along the axes only all-rightward or all-upward paths survive, and the interior builds up quickly; at \\((5, 5)\\) the three counts come out to \\(27,\\) \\(28,\\) and \\(28.\\)\n\nThe total number of paths is \\(27 + 28 + 28 = 83.\\)",
+      "hints": [
+        "Classify each partial path by its last step; a rightward step may not immediately follow an upward one, and vice versa",
+        "At each lattice point keep three counts — paths arriving by a diagonal, rightward, or upward step — and fill in the \\(6 \\times 6\\) grid from \\((0,0)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

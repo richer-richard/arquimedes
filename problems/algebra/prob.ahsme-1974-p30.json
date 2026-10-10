@@ -1,0 +1,87 @@
+{
+  "id": "prob.ahsme-1974-p30",
+  "title": "1974 AHSME Problem 30",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.exponent",
+      "label": "Exponent",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.substitution",
+      "label": "Substitution",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1974,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 38.7,
+    "source": 2100,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A line segment is divided so that the lesser part is to the greater part as the greater part is to the whole. If \\(R\\) is the ratio of the lesser part to the greater part, then the value of \\[ R^{\\left[R^{\\left(R^2+R^{-1}\\right)}+R^{-1}\\right]}+R^{-1} \\] is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2R\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(R^{-1}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2+R^{-1}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2+R\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "2"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1974-p30.live",
+      "kind": "proof-sketch",
+      "text": "Scale the greater part to \\(1,\\) making the lesser part \\(R.\\) The condition gives \\(R=\\frac{1}{1+R},\\) so \\[ R^2+R=1,\\qquad R^{-1}=R+1. \\] Consequently \\[ R^2+R^{-1}=R^2+R+1=2. \\] Working outward, the exponent of the outer \\(R\\) becomes \\[ \\begin{aligned} R^{\\,R^2+R^{-1}}+R^{-1} &=R^2+R^{-1}\\\\ &=2. \\end{aligned} \\] The whole expression is therefore \\(R^2+R^{-1}=2.\\)\n\nTherefore, the correct answer is A.",
+      "hints": [
+        "Translate the division condition into \\(R=\\frac{1}{1+R}\\)",
+        "From \\(R^2+R=1,\\) derive \\(R^{-1}=R+1\\) and simplify from the innermost exponent outward"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

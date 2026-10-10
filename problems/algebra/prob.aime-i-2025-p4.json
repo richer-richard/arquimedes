@@ -1,0 +1,87 @@
+{
+  "id": "prob.aime-i-2025-p4",
+  "title": "2025 AIME I Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.diophantine-equations-techniques",
+      "label": "Diophantine Equations techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.integers",
+      "label": "Integers",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.polynomial-operations",
+      "label": "Polynomial operations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2025,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 39.0,
+    "source": 2110,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Find the number of ordered pairs \\((x, y),\\) where both \\(x\\) and \\(y\\) are integers between \\(-100\\) and \\(100,\\) inclusive, such that \\(12x^2 - xy - 6y^2 = 0.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "117",
+    "value": "117"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2025-p4.live",
+      "kind": "proof-sketch",
+      "text": "The equation factors as \\[ \\begin{gathered} 12x^2 - xy - 6y^2 \\\\ = (3x + 2y)(4x - 3y) \\\\ = 0, \\end{gathered} \\] so every solution has \\(4x = 3y\\) or \\(3x = -2y.\\)\n\nInteger solutions of \\(4x = 3y\\) are \\((x, y) = (3t, 4t);\\) the constraint \\(|4t| \\le 100\\) gives \\(-25 \\le t \\le 25,\\) or \\(51\\) pairs. Integer solutions of \\(3x = -2y\\) are \\((x, y) = (2t, -3t);\\) the constraint \\(|3t| \\le 100\\) gives \\(-33 \\le t \\le 33,\\) or \\(67\\) pairs. The families overlap only at \\((0, 0),\\) so the count is \\(51 + 67 - 1 = 117.\\)",
+      "hints": [
+        "The left side factors as \\((3x + 2y)(4x - 3y)\\)",
+        "One line gives \\((x, y) = (3t, 4t)\\) with \\(|t| \\le 25;\\) the other gives \\((2t, -3t)\\) with \\(|t| \\le 33.\\) Don’t count the origin twice."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

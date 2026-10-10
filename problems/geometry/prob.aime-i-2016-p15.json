@@ -1,0 +1,76 @@
+{
+  "id": "prob.aime-i-2016-p15",
+  "title": "2016 AIME I Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.power-of-a-point",
+      "label": "Power of a point",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.radical-axis",
+      "label": "Radical axis",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2016,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 71.6,
+    "source": 3700,
+    "mohs": null
+  },
+  "estimatedMinutes": 35,
+  "statement": "Circles \\(\\omega_1\\) and \\(\\omega_2\\) intersect at points \\(X\\) and \\(Y.\\) Line \\(\\ell\\) is tangent to \\(\\omega_1\\) and \\(\\omega_2\\) at \\(A\\) and \\(B,\\) respectively, with line \\(AB\\) closer to point \\(X\\) than to \\(Y.\\) Circle \\(\\omega\\) passes through \\(A\\) and \\(B\\) intersecting \\(\\omega_1\\) again at \\(D \\ne A\\) and intersecting \\(\\omega_2\\) again at \\(C \\ne B.\\) The three points \\(C,\\) \\(Y,\\) \\(D\\) are collinear, \\(XC = 67,\\) \\(XY = 47,\\) and \\(XD = 37.\\) Find \\(AB^2.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "270",
+    "value": "270"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2016-p15.live",
+      "kind": "proof-sketch",
+      "text": "Line \\(AD\\) is the radical axis of \\(\\omega\\) and \\(\\omega_1,\\) line \\(BC\\) that of \\(\\omega\\) and \\(\\omega_2,\\) and line \\(XY\\) that of \\(\\omega_1\\) and \\(\\omega_2,\\) so the three lines meet at the radical center \\(Z.\\) (They cannot be parallel: that would force a symmetric configuration with \\(XC = XD.\\)) Let \\(M = XY \\cap AB.\\) The power of \\(M\\) with respect to each circle gives \\(MA^2 = MX \\cdot MY = MB^2,\\) so \\(M\\) is the midpoint of \\(\\overline{AB},\\) with \\(X\\) between \\(M\\) and \\(Y.\\)\n\nSince \\(ADYX\\) is cyclic, \\(\\angle XAZ = \\angle XYD,\\) and since \\(BCYX\\) is cyclic, \\(\\angle XBZ = \\angle XYC;\\) as \\(C,\\) \\(Y,\\) \\(D\\) are collinear these add to \\(180^\\circ,\\) so \\(ZAXB\\) is cyclic. The tangent-chord angle at \\(B\\) gives \\(\\angle XYB = \\angle ABX = \\angle AZX,\\) so \\(BY \\parallel ZA,\\) and symmetrically \\(AY \\parallel ZB.\\) Hence \\(AYBZ\\) is a parallelogram, and since \\(M\\) is the midpoint of diagonal \\(\\overline{AB},\\) it is also the midpoint of \\(\\overline{ZY}:\\) therefore \\(XZ = XM + MZ\\) \\(= MX + MY.\\) Moreover \\(\\angle XCZ = \\angle XYB = \\angle XZD\\) and (by the tangent-chord angle at \\(A\\)) \\(\\angle XZC = \\angle XAB = \\angle XYA\\) \\(= \\angle XDZ,\\) so triangles \\(XZC\\) and \\(XDZ\\) are similar, giving \\(XZ^2 = XC \\cdot XD.\\)\n\nPutting it together, \\[ \\begin{aligned} AB^2 &= 4MA^2 = 4\\,MX \\cdot MY \\\\ &= (MX + MY)^2 \\\\ &\\quad {}- (MY - MX)^2 \\\\ &= XZ^2 - XY^2 \\\\ &= XC \\cdot XD - XY^2, \\end{aligned} \\] which equals \\(67 \\cdot 37 - 47^2 = 2479 - 2209\\) \\(= 270.\\)",
+      "hints": [
+        "Lines \\(AD,\\) \\(BC,\\) and \\(XY\\) are radical axes of pairs of the circles, so they meet at a point \\(Z\\)",
+        "If \\(M = XY \\cap AB,\\) then \\(MA^2 = MX \\cdot MY = MB^2;\\) show \\(AYBZ\\) is a parallelogram and \\(XZ^2 = XC \\cdot XD\\)"
+      ],
+      "images": [
+        "ed6779677a5e22bed4c0f0588b1325d303e3603ed92eb2c4d0d752e8a44be305"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "ed6779677a5e22bed4c0f0588b1325d303e3603ed92eb2c4d0d752e8a44be305"
+    ]
+  }
+}

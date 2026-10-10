@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tst-2016-p5",
+  "title": "USA TST 2016 Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TST",
+    "year": 2016,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 97.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n \\ge 4\\) be an integer.\nFind all functions \\(W \\colon \\{1, \\dots, n\\}^2 \\to \\mathbb{R}\\) such that\nfor every partition \\([n] = A \\cup B \\cup C\\) into disjoint sets,\n\\[ \\sum_{a \\in A} \\sum_{b \\in B} \\sum_{c \\in C} W(a,b) W(b,c)\n= |A| |B| |C|. \\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tst-2016-p5.evanchen",
+      "kind": "proof-sketch",
+      "text": "Of course, \\(W(k,k)\\) is arbitrary for \\(k \\in [n]\\).\nWe claim that \\(W(a,b) = \\pm 1\\) for any \\(a \\neq b\\), with the sign fixed.\n(These evidently work.)\n\nFirst, let \\(X_{abc} = W(a,b)W(b,c)\\) for all distinct \\(a\\), \\(b\\), \\(c\\),\nso the given condition is\n\\[ \\sum_{a,b,c \\in A \\times B \\times C} X_{abc} = |A| |B| |C|. \\]\nConsider the given equation with the particular choices\n\n• \\(A = \\{1\\}\\), \\(B = \\{2\\}\\), \\(C = \\{3,4,\\dots,n\\}\\).\n\n• \\(A = \\{1\\}\\), \\(B = \\{3\\}\\), \\(C = \\{2,4,\\dots,n\\}\\).\n\n• \\(A = \\{1\\}\\), \\(B = \\{2,3\\}\\), \\(C = \\{4,\\dots,n\\}\\).\n\nThis gives\n\\[\\begin{aligned}\n X_{123} + X_{124} + \\dots + X_{12n} &= n-2 \\\\\n X_{132} + X_{134} + \\dots + X_{13n} &= n-2 \\\\\n (X_{124} + \\dots + X_{12n})\n + (X_{134} + \\dots + X_{13n}) &= 2(n-3).\n\\end{aligned}\\]\nAdding the first two and\nsubtracting the last one gives \\(X_{123} + X_{132} = 2\\).\nSimilarly, \\(X_{123} + X_{321} = 2\\),\nand in this way we have \\(X_{321} = X_{132}\\).\nThus \\(W(3,2)W(2,1) = W(1,3)W(3,2)\\),\nand since \\(W(3,2) \\neq 0\\) (clearly) we get \\(W(2,1) = W(3,2)\\).\n\nAnalogously, for any distinct \\(a\\), \\(b\\), \\(c\\) we have \\(W(a,b) = W(b,c)\\).\nFor \\(n \\ge 4\\) this is enough to imply \\(W(a,b) = \\pm 1\\) for \\(a \\neq b\\)\nwhere the choice of sign is the same for all \\(a\\) and \\(b\\).\n\nRemark.\nSurprisingly, the \\(n = 3\\) case has ``extra'' solutions for\n\\(W(1,2) = W(2,3) = W(3,1) = \\pm1\\),\n\\(W(2,1) = W(3,2) = W(1,3) = \\mp1\\).\n\nRemark.\n[Intuition]\nIt should still be possible to solve the problem\nwith \\(X_{abc}\\) in place of \\(W(a,b) W(b,c)\\),\nbecause we have about far more equations than variables \\(X_{a,b,c}\\)\nso linear algebra assures us we almost certainly have a unique solution.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

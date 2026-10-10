@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-team-2-2011-p3",
+  "title": "2011 HMMT February Team Round 2 Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-numbers",
+      "label": "Complex numbers",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 80.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(x\\) and \\(y\\) be complex numbers such that \\(|x|=|y|=1\\).\n(a) [15] Determine the maximum value of \\(|1+x|+|1+y|-|1+x y|\\).\n(b) [15] Determine the maximum value of \\(|1+x|+|1+x y|+\\left|1+x y^{2}\\right|+\\ldots+\\left|1+x y^{2011}\\right|-1006|1+y|\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2-2011-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "(a) Answer: \\(2 \\sqrt{2}\\)\n(b) Answer: \\(2012 \\sqrt{2}\\) We divide the terms into 1006 sums of the form\n\n\\[\\left|1+x y^{2 k}\\right|+\\left|1+x y^{2 k+1}\\right|-|1+y|\\]\n\nFor each of these, we obtain, as in part a,\n\n\\[\\begin{aligned}\n\\left|1+x y^{2 k}\\right|+\\left|1+x y^{2 k+1}\\right|-|1+y| & \\leq\\left|1+x y^{2 k}\\right|+\\left|x y^{2 k+1}-y\\right| \\\\\n& =\\left|1+x y^{2 k}\\right|+|y|\\left|1-x y^{2 k}\\right| \\\\\n& =\\left|1+x y^{2 k}\\right|+\\left|1-x y^{2 k}\\right| \\\\\n& \\leq 2 \\sqrt{\\left|1-x^{2} y^{4 k}\\right|}\n\\end{aligned}\\]\n\nAgain, this is maximized when \\(x^{2} y^{4}=-1\\), which leaves a total sum of at most \\(2012 \\sqrt{2}\\). If we let \\(x=i\\) and \\(y=-1\\), every sum of three terms will be \\(2 \\sqrt{2}\\), for a total of \\(2012 \\sqrt{2}\\), as desired.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

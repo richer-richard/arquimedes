@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-guts-2010-p23",
+  "title": "2010 HMMT November Guts Problem 23",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recurrences",
+      "label": "Recurrences",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2010,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 66.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a_{1}, a_{2}, \\ldots\\) be an infinite sequence of positive integers such that for integers \\(n>2, a_{n}=\\) \\(3 a_{n-1}-2 a_{n-2}\\). How many such sequences \\(\\left\\{a_{n}\\right\\}\\) are there such that \\(a_{2010} \\leq 2^{2012}\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2010-p23.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(36 \\cdot 2^{2009}+36\\) Consider the characteristic polynomial for the recurrence \\(a_{n+2}-3 a_{n+1}+\\) \\(2 a_{n}=0\\), which is \\(x^{2}-3 x+2\\). The roots are at 2 and 1 , so we know that numbers \\(a_{i}\\) must be of the form \\(a_{i}=a 2^{i-1}+b\\) for integers \\(a\\) and \\(b\\). Therefore \\(a_{2010}\\) must equal to \\(a 2^{2009}+b\\), where \\(a\\) and \\(b\\) are both integers. If the expression is always positive, it is sufficient to say \\(a_{1}\\) is positive and \\(a\\) is nonnegative, or \\(a+b>0\\), and \\(a \\geq 0\\).\nFor a given value of \\(a, 1-a \\leq b \\leq 2^{2012}-a 2^{2009}\\), so there are \\(2^{2012}-a 2^{2009}+a\\) possible values of \\(b\\) for each \\(a\\) (where the quantity is positive). \\(a\\) can take any value between 0 and \\(2^{3}\\), we sum over all such a in this range, to attain \\(9 \\cdot 2^{2012}-(1+2+3+4+5+6+7+8) 2^{2009}+(1+2+3+4+5+6+7+8)\\), or \\(36\\left(2^{2009}\\right)+36\\), which is our answer.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2025-p14",
+  "title": "2025 AMC 12B Problem 14",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.mean",
+      "label": "Mean",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2025,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 29.3,
+    "source": 1730,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Consider a decreasing sequence of \\(n\\) positive integers \\(x_1 \\gt x_2 \\gt \\cdots \\gt x_n\\) that satisfies the following two conditions:\n\n• The average (arithmetic mean) of the first \\(3\\) terms in the sequence is \\(2025.\\)\n\n• For all \\(4 \\le k \\le n,\\) the average of the first \\(k\\) terms in the sequence is \\(1\\) less than the average of the first \\(k-1\\) terms in the sequence.\n\nWhat is the greatest possible value of \\(n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1013\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1014\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1016\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2016\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2025\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1014"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2025-p14.live",
+      "kind": "proof-sketch",
+      "text": "The average of the first \\(k\\) terms is \\(A_k = 2028 - k\\) for \\(k \\ge 3,\\) so the partial sum is \\(S_k = k(2028 - k).\\) For \\(k \\ge 4,\\) \\(x_k = S_k - S_{k-1} = 2029 - 2k,\\) which is positive exactly when \\(k \\le 1014.\\) A valid start such as \\(x_1, x_2, x_3 = 2030, 2023, 2022\\) keeps the whole sequence strictly decreasing, so the greatest possible \\(n\\) is \\(1014.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Let \\(A_k\\) be the average of the first \\(k\\) terms; the second condition gives \\(A_k = 2028 - k\\) for \\(k \\ge 3\\)",
+        "From \\(S_k = k A_k\\) recover \\(x_k = 2029 - 2k\\) for \\(k \\ge 4,\\) then require every term to stay positive"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

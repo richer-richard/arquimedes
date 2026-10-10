@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-1998-p14",
+  "title": "1998 AIME Problem 14",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.simons-favorite-factoring-trick",
+      "label": "Simon’s Favorite Factoring Trick",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1998,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 55.1,
+    "source": 2740,
+    "mohs": null
+  },
+  "estimatedMinutes": 14,
+  "statement": "An \\(m \\times n \\times p\\) rectangular box has half the volume of an \\((m + 2) \\times (n + 2) \\times (p + 2)\\) rectangular box, where \\(m,\\) \\(n,\\) and \\(p\\) are integers, and \\(m \\le n \\le p.\\) What is the largest possible value of \\(p?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "130",
+    "value": "130"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1998-p14.live",
+      "kind": "proof-sketch",
+      "text": "The condition \\(2mnp = (m + 2)(n + 2)(p + 2)\\) rewrites as \\[ \\begin{aligned} &\\left(1 + \\frac{2}{m}\\right)\\left(1 + \\frac{2}{n}\\right)\\left(1 + \\frac{2}{p}\\right) \\\\ &= 2. \\end{aligned} \\] If \\(m = 1\\) the first factor alone is \\(3 \\gt 2,\\) and if \\(m = 2\\) it equals \\(2\\) while the other factors exceed \\(1;\\) both are impossible. If \\(m \\ge 5,\\) then since \\(n \\ge m\\) the first two factors are at most \\(\\left(\\frac{7}{5}\\right)^2 = \\frac{49}{25},\\) forcing \\(1 + \\frac{2}{p} \\ge \\frac{50}{49},\\) i.e. \\(p \\le 98.\\)\n\nFor \\(m = 4\\) the equation becomes \\(4np = 3(n + 2)(p + 2),\\) i.e. \\((n - 6)(p - 6) = 48,\\) so \\(p \\le 54.\\) For \\(m = 3\\) it becomes \\(6np = 5(n + 2)(p + 2),\\) i.e. \\(np - 10n - 10p - 20 = 0,\\) or \\((n - 10)(p - 10) = 120.\\) Both factors must be positive (if \\(n, p \\lt 10\\) the product \\((10 - n)(10 - p)\\) is at most \\(49\\)), so the largest \\(p\\) comes from \\(n - 10 = 1:\\) \\(n = 11\\) and \\(p = 130.\\) Indeed \\(2 \\cdot 3 \\cdot 11 \\cdot 130 = 8580\\) \\(= 5 \\cdot 13 \\cdot 132.\\)\n\nSince every other case yields \\(p \\le 98,\\) the largest possible value is \\(p = 130.\\)",
+      "hints": [
+        "Rewrite the volume condition as \\(\\left(1 + \\frac{2}{m}\\right)\\left(1 + \\frac{2}{n}\\right)\\left(1 + \\frac{2}{p}\\right) = 2\\) and test small \\(m\\)",
+        "\\(m = 1, 2\\) are impossible and \\(m \\ge 4\\) caps \\(p\\) low; for \\(m = 3\\) the equation factors as \\((n - 10)(p - 10) = 120\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

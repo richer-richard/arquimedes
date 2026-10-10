@@ -1,0 +1,71 @@
+{
+  "id": "prob.amc-12a-2020-p9",
+  "title": "2020 AMC 12A Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2020,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 28.6,
+    "source": 1560,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many solutions does the equation \\(\\tan(2x) = \\cos\\left(\\dfrac{x}{2}\\right)\\) have on the interval \\([0, 2\\pi]?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2020-p9.live",
+      "kind": "proof-sketch",
+      "text": "On \\([0, 2\\pi],\\) the graph of \\(\\cos\\left(\\tfrac{x}{2}\\right)\\) is a single arc decreasing from \\(1\\) down to \\(-1.\\)\n\nThe function \\(\\tan(2x)\\) has period \\(\\tfrac{\\pi}{2}\\) with vertical asymptotes at \\(x = \\tfrac{\\pi}{4}, \\tfrac{3\\pi}{4}, \\tfrac{5\\pi}{4}, \\tfrac{7\\pi}{4}.\\) These split the interval into five branches. On every branch \\(\\tan(2x)\\) is strictly increasing, while \\(\\cos(\\tfrac{x}{2})\\) is decreasing, so there is at most one intersection per branch.\n\nEach of the three interior branches runs from \\(-\\infty\\) to \\(+\\infty,\\) so each has one intersection. On the first branch, \\(\\tan(0)=0\\lt1=\\cos(0)\\) and the tangent tends to \\(+\\infty.\\) On the last, the tangent starts at \\(-\\infty\\) and ends at \\(0\\gt-1=\\cos\\pi.\\) Thus the two outer branches also have one intersection each, for \\(5\\) total.\n\nThus, E is the correct answer.",
+      "hints": [
+        "On \\([0, 2\\pi],\\) \\(\\cos\\left(\\tfrac{x}{2}\\right)\\) decreases steadily from \\(1\\) to \\(-1\\)",
+        "\\(\\tan(2x)\\) has period \\(\\tfrac{\\pi}{2};\\) count how many of its branches cross that decreasing curve"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

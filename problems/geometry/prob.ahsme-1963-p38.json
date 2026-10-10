@@ -1,0 +1,88 @@
+{
+  "id": "prob.ahsme-1963-p38",
+  "title": "1963 AHSME Problem 38",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "geo.parallelogram",
+      "label": "Parallelogram",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.ratio-and-proportion",
+      "label": "Ratio and proportion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vector",
+      "label": "Vector",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1963,
+    "number": 38
+  },
+  "difficulty": {
+    "course": 40.0,
+    "source": 2150,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Point \\(F\\) is taken on the extension of side \\(AD\\) of parallelogram \\(ABCD.\\) \\(BF\\) intersects diagonal \\(AC\\) at \\(E\\) and side \\(DC\\) at \\(G.\\) If \\(EF=32\\) and \\(GF=24,\\) then \\(BE\\) equals:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(16\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "16"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1963-p38.live",
+      "kind": "proof-sketch",
+      "text": "Use affine coordinates \\(A=0,\\) \\(B=u,\\) \\(D=v,\\) \\(C=u+v,\\) and \\(F=tv.\\) A point on \\(FB\\) is \\(su+t(1-s)v.\\) Intersecting \\(DC\\) gives \\(s_G=\\frac{t-1}{t},\\) while intersecting \\(AC\\) gives \\(s_E=\\frac{t}{t+1}.\\) Therefore \\[ \\begin{aligned} \\frac{GF}{EF} &=\\frac{s_G}{s_E} =\\frac{t^2-1}{t^2}\\\\ &=\\frac{24}{32}=\\frac34, \\end{aligned} \\] so \\(t=2\\) and \\(s_E=\\frac{2}{3}.\\) Thus \\(EF=(\\frac{2}{3})FB=32,\\) making \\(FB=48\\) and \\(BE=16.\\)\n\nTherefore, the correct answer is E.",
+      "hints": [
+        "Parameterize points on \\(FB\\) by their fraction of the distance from \\(F\\) to \\(B\\)",
+        "If \\(F=tD\\) in affine coordinates based at \\(A,\\) the parameters of \\(G\\) and \\(E\\) are \\(\\frac{t-1}{t}\\) and \\(\\frac{t}{t+1}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "f10b8535d0f149d788ceb53838c3fefa3f988e08872ad6fcf29758e2c6f20150"
+    ],
+    "solutions": []
+  }
+}

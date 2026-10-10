@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2019-p15",
+  "title": "2019 AMC 12B Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-decomposition",
+      "label": "Area decomposition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-area",
+      "label": "Circle area",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2019,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 31.8,
+    "source": 1830,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "As shown in the figure, line segment \\(\\overline{AD}\\) is trisected by points \\(B\\) and \\(C\\) so that \\(AB=BC=CD=2.\\) Three semicircles of radius \\(1,\\) \\(AEB,\\) \\(BFC,\\) and \\(CGD,\\) have their diameters on \\(\\overline{AD},\\) and are tangent to line \\(EG\\) at \\(E,\\) \\(F,\\) and \\(G,\\) respectively. A circle of radius \\(2\\) has its center on \\(F.\\) The area of the region inside the circle but outside the three semicircles, shaded in the figure, can be expressed in the form\n\n\\[ \\dfrac{a}{b}\\cdot\\pi-\\sqrt{c}+d, \\]\n\nwhere \\(a,\\) \\(b,\\) \\(c,\\) and \\(d\\) are positive integers and \\(a\\) and \\(b\\) are relatively prime. What is \\(a+b+c+d?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(14\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(17\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "17"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2019-p15.live",
+      "kind": "proof-sketch",
+      "text": "Put \\(A=(0,0),\\) \\(\\ B=(2,0),\\) \\(\\ C=(4,0),\\) \\(\\ D=(6,0),\\) so the semicircles are centered at \\((1,0),(3,0),(5,0)\\) and their tops are \\(E=(1,1),\\) \\(\\ F=(3,1),\\) \\(\\ G=(5,1).\\) The circle has center \\(F=(3,1)\\) and radius \\(2,\\) so it passes through \\(E\\) and \\(G,\\) and has area \\(4\\pi.\\)\n\nThe middle semicircle \\(BFC\\) lies entirely inside the circle, removing area \\(\\dfrac{\\pi}{2}.\\) For the left semicircle, the overlap starts at \\(E\\) and includes its right-hand quarter-circle, except for the region below the large circle. The large circle meets the \\(x\\)-axis at \\(x=3-\\sqrt3.\\) The excluded area is \\[ \\begin{aligned} I &=\\int_1^{3-\\sqrt3}1\\,dx\\\\ &\\quad-\\int_1^{3-\\sqrt3} \\sqrt{4-(x-3)^2}\\,dx\\\\ &=2-\\dfrac{\\sqrt3}{2}-\\dfrac{\\pi}{3}. \\end{aligned} \\] Therefore the overlap has area \\[ \\begin{aligned} R&=\\dfrac{\\pi}{4}-I\\\\ &=\\dfrac{7\\pi}{12}-2+\\dfrac{\\sqrt3}{2}. \\end{aligned} \\] By symmetry, the right semicircle contributes the same overlap.\n\nThe shaded area is \\[ 4\\pi-\\dfrac{\\pi}{2}-2R=\\dfrac{7}{3}\\pi-\\sqrt3+4. \\] Hence \\(a=7,\\ b=3,\\ c=3,\\ d=4,\\) so \\(a+b+c+d=17.\\)\n\nThus, E is the correct answer.",
+      "hints": [
+        "Place \\(F=(3,1);\\) the circle of radius \\(2\\) then passes through \\(E\\) and \\(G,\\) and the middle semicircle lies entirely inside it",
+        "Subtract from the circle’s area the parts of the three semicircles that fall inside it"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "92196072fabd02825c79d0098d274f59fb335d12a19d73f389e0b18aa740a9a8"
+    ],
+    "solutions": []
+  }
+}

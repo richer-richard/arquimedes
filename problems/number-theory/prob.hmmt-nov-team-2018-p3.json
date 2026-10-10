@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-team-2018-p3",
+  "title": "2018 HMMT November Team Problem 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.number-of-divisors",
+      "label": "Τ (number of divisors)",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2018,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 52.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For how many positive integers \\(n \\leq 100\\) is it true that \\(10 n\\) has exactly three times as many positive divisors as \\(n\\) has?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2018-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 28\nLet \\(n=2^{a} 5^{b} c\\), where \\(2,5 \\nmid c\\). Then, the ratio of the number of divisors of \\(10 n\\) to the number of divisors of \\(n\\) is \\(\\frac{a+2}{a+1} \\frac{b+2}{b+1}=3\\). Solving for \\(b\\), we find that \\(b=\\frac{1-a}{2 a+1}\\). This forces \\((a, b)=(0,1),(1,0)\\). Therefore, the answers are of the form \\(2 k\\) and \\(5 k\\) whenever \\(\\operatorname{gcd}(k, 10)=1\\). There are 50 positive numbers of the form \\(2 k\\) and 20 positive numbers of the form \\(5 k\\) less than or equal to 100 . Of those 70 numbers, only \\(\\frac{1}{2} \\cdot \\frac{4}{5}\\) have \\(k\\) relatively prime to 10 , so the answer is \\(70 \\cdot \\frac{1}{2} \\cdot \\frac{4}{5}=28\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

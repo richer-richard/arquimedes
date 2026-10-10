@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2025-p4",
+  "title": "2025 HMMT February Combinatorics Problem 4",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.invariants-and-monovariants",
+      "label": "Invariants and monovariants",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2025,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 74.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Sophie is at \\((0,0)\\) on a coordinate grid and would like to get to \\((3,3)\\) . If Sophie is at \\((x,y)\\) , in a single step she can move to one of \\((x + 1,y)\\) , \\((x,y + 1)\\) , \\((x - 1,y + 1)\\) , or \\((x + 1,y - 1)\\) . She cannot revisit any points along her path, and neither her \\(x\\) - coordinate nor her \\(y\\) - coordinate can ever be less than 0 or greater than 3. Compute the number of ways for Sophie to reach \\((3,3)\\) .",
+  "answerChoices": [],
+  "answer": {
+    "letter": "2304",
+    "value": "2304"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2025-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let a lateral move refer to one which is either up or right. Then the lateral moves are the only ones which increase Kelvin's sum of coordinates by 1, while all other moves do not change the sum, so Kelvin must make 6 of them, one to increase this sum from \\(i\\) to \\(i + 1\\) for each \\(i \\in [0, 5]\\) .\n\nWe claim there exists a unique path corresponding to each set of 6 lateral moves chosen in this way. Indeed, the diagonal moves allow Kelvin to get from any point on \\(x + y = i\\) to any second point on \\(x + y = i\\) in exactly one way.\n\nObserve that when \\(i \\leq 2\\) , the number of lateral moves that increase the sum of coordinates from \\(i\\) to \\(i + 1\\) is \\(2i\\) , as is the number that increase it from \\(5 - i\\) to \\(6 - i\\) . Thus the answer is \\(2 \\cdot 4 \\cdot 6 \\cdot 6 \\cdot 4 \\cdot 2 = \\lfloor 2304 \\rfloor\\) .\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

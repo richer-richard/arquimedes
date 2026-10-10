@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2017-p24",
+  "title": "2017 AMC 12A Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.power-of-a-point",
+      "label": "Power of a point",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2017,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 42.4,
+    "source": 2520,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Quadrilateral \\(ABCD\\) is inscribed in circle \\(O\\) and has sides \\(AB=3,\\) \\(BC=2,\\) \\(CD=6,\\) and \\(DA=8.\\) Let \\(X\\) and \\(Y\\) be points on \\(BD\\) such that \\(\\dfrac{DX}{BD}=\\dfrac{1}{4}\\) and \\(\\dfrac{BY}{BD}=\\dfrac{11}{36}.\\) Let \\(E\\) be the intersection of line \\(AX\\) and the line through \\(Y\\) parallel to \\(AD.\\) Let \\(F\\) be the intersection of line \\(CX\\) and the line through \\(E\\) parallel to \\(AC.\\) Let \\(G\\) be the point on circle \\(O\\) other than \\(C\\) that lies on line \\(CX.\\) What is \\(XF\\cdot XG?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{59-5\\sqrt2}{3}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{91-12\\sqrt3}{4}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{67-10\\sqrt2}{3}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(18\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "17"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2017-p24.live",
+      "kind": "proof-sketch",
+      "text": "Because \\(YE\\parallel AD\\) and \\(EF\\parallel AC,\\) we get \\(\\triangle XEY\\sim\\triangle XAD\\) and \\(\\triangle XEF\\sim\\triangle XAC,\\) giving \\(\\dfrac{XY}{XE}=\\dfrac{XD}{XA}\\) and \\(\\dfrac{XF}{XE}=\\dfrac{XC}{XA}.\\) Hence \\(\\dfrac{XC}{XD}=\\dfrac{XF}{XY},\\) so \\(XF\\cdot XD=XC\\cdot XY.\\)\n\nPower of a Point at \\(X\\) gives \\(XC\\cdot XG=XD\\cdot XB,\\) and combining yields \\(XF\\cdot XG=XB\\cdot XY.\\) With \\(d=BD,\\) \\(DX=\\dfrac14 d\\) and \\(BY=\\dfrac{11}{36}d,\\) so \\[ \\begin{aligned} XF\\cdot XG &=\\left(d-\\tfrac14 d\\right) \\\\ &\\quad {}\\cdot\\left(d-\\tfrac14 d-\\tfrac{11}{36}d\\right) \\\\ &=\\dfrac34 d\\cdot\\dfrac49 d=\\dfrac{d^2}{3}. \\end{aligned} \\]\n\nSince \\(ABCD\\) is cyclic, \\(\\angle BAD\\) and \\(\\angle BCD\\) are supplementary. The Law of Cosines on \\(\\triangle ABD\\) and \\(\\triangle CBD\\) gives \\(\\dfrac{73-d^2}{48}=\\dfrac{d^2-40}{24},\\) so \\(d^2=51.\\) Therefore \\(XF\\cdot XG=\\dfrac{51}{3}=17.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "The parallels give \\(\\triangle XEY\\sim\\triangle XAD\\) and \\(\\triangle XEF\\sim\\triangle XAC\\)",
+        "Combine those ratios with Power of a Point to get \\(XF\\cdot XG=XB\\cdot XY;\\) find \\(BD^2\\) via Law of Cosines"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-2021-p11",
+  "title": "2021 AMC 10B Problem 11",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.simons-favorite-factoring-trick",
+      "label": "Simon’s Favorite Factoring Trick",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2021,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 21.8,
+    "source": 1420,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Grandma has just finished baking a large rectangular pan of brownies. She is planning to make rectangular pieces of equal size and shape, with straight cuts parallel to the sides of the pan. Each cut must be made entirely across the pan. Grandma wants to make the same number of interior pieces as pieces along the perimeter of the pan. What is the greatest possible number of brownies she can produce?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 24 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 30 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 48 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 60 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 64 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "60"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2021-p11.live",
+      "kind": "proof-sketch",
+      "text": "Suppose the cuts make an \\(l\\times w\\) grid of pieces. The number of interior pieces is \\((l-2)(w-2),\\) and the total number of pieces is \\(lw.\\) Since the number of interior pieces equals the number of perimeter pieces, the interior pieces make up half the total:\n\n\\[(l-2)(w-2)=\\frac{lw}{2}.\\]\n\nMultiplying out gives \\(lw-4l-4w+8=0,\\) or\n\n\\[(l-4)(w-4)=8.\\]\n\nThe positive factor pairs of \\(8\\) give \\((l,w)=(5,12)\\) or \\((6,8),\\) up to order. These produce \\(60\\) or \\(48\\) pieces, respectively, so the greatest possible number is \\(60.\\)\n\nThus, the answer is D .",
+      "hints": [
+        "Let the pan be cut into an \\(l\\times w\\) grid of pieces",
+        "Set the number of interior pieces equal to the number of perimeter pieces"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

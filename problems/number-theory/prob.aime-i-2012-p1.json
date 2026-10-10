@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2012-p1",
+  "title": "2012 AIME I Problem 1",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2012,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 44.9,
+    "source": 1950,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Find the number of positive integers with three not necessarily distinct digits, \\(abc,\\) with \\(a \\ne 0\\) and \\(c \\ne 0\\) such that both \\(abc\\) and \\(cba\\) are multiples of \\(4.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "40",
+    "value": "40"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2012-p1.live",
+      "kind": "proof-sketch",
+      "text": "An integer is a multiple of \\(4\\) exactly when its last two digits form a multiple of \\(4,\\) so we need \\(10b + c\\) and \\(10b + a\\) to be divisible by \\(4.\\) In particular \\(a\\) and \\(c\\) are even, and subtracting the two conditions shows \\(a - c\\) is divisible by \\(4.\\) The even nonzero digits split by remainder mod \\(4\\) into \\(\\{2, 6\\}\\) and \\(\\{4, 8\\},\\) so \\(a\\) and \\(c\\) must both come from the same one of these sets: \\(4\\) ordered pairs \\((a, c)\\) from each.\n\nIf \\(c \\equiv 2 \\pmod 4,\\) then \\(10b + c \\equiv 2b + 2 \\pmod 4\\) requires \\(b\\) odd (\\(5\\) choices), and the condition on \\(10b + a\\) holds automatically since \\(a \\equiv c \\pmod 4.\\) If \\(c \\equiv 0 \\pmod 4,\\) then \\(b\\) must be even (\\(5\\) choices).\n\nThe count is \\(4 \\cdot 5 + 4 \\cdot 5 = 40.\\)",
+      "hints": [
+        "Divisibility by \\(4\\) depends only on the last two digits, so \\(4\\) must divide both \\(10b + c\\) and \\(10b + a\\)",
+        "Subtracting shows \\(a - c\\) is divisible by \\(4\\) with \\(a\\) and \\(c\\) even, so both lie in \\(\\{2, 6\\}\\) or both in \\(\\{4, 8\\};\\) then \\(c\\) forces the parity of \\(b\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

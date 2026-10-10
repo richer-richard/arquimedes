@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-1987-p6",
+  "title": "1987 AIME Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.rectangle",
+      "label": "Rectangle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1987,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 43.1,
+    "source": 2270,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Rectangle \\(ABCD\\) is divided into four parts of equal area by five segments as shown, where \\(XY=YB+BC+CZ,\\) \\(YB+BC+CZ=ZW,\\) \\(ZW=WD+DA+AX,\\) and \\(PQ\\parallel AB.\\) Find \\(AB\\) (in cm) if \\(BC=19\\) cm and \\(PQ=87\\) cm.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "193",
+    "value": "193"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1987-p6.live",
+      "kind": "proof-sketch",
+      "text": "Put \\(AB=L\\) and let the four equal boundary lengths be \\(t.\\) Writing \\(AX=x\\) and \\(DW=w,\\) the left boundary condition gives \\(x+w=t-19.\\) Substituting \\(XY=ZW=t\\) into the right condition gives \\(2L+38=4t,\\) so \\(t=\\frac{L+19}{2}.\\)\n\nThe upper and lower central regions are trapezoids with the same bases \\(t\\) and \\(87.\\) Since their areas are equal, \\(PQ\\) lies halfway up the \\(19\\)-cm rectangle. Each central region therefore has area \\(\\frac{19(t+87)}{4}.\\) This is one quarter of the rectangle, \\(\\frac{19L}{4},\\) so \\(t+87=L.\\) Combining with \\(t=\\frac{L+19}{2}\\) yields \\(L=193.\\)",
+      "hints": [
+        "Call the common boundary length \\(t\\) and the rectangle width \\(L\\)",
+        "Equal areas above and below \\(PQ\\) place \\(PQ\\) halfway up the rectangle"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "1756516ea26efbf1130dd0a80b1dea45eafb1d3abb26f2b29666fe5de24c93ed"
+    ],
+    "solutions": []
+  }
+}

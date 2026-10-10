@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2013-p16",
+  "title": "2013 AMC 12B Problem 16",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.equiangular-polygon",
+      "label": "Equiangular polygon",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.invariant",
+      "label": "Invariant",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.isosceles-triangle",
+      "label": "Isosceles triangle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2013,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 31.0,
+    "source": 1890,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(ABCDE\\) be an equiangular convex pentagon of perimeter \\(1.\\) The pairwise intersections of the lines that extend the sides of the pentagon determine a five-pointed star polygon. Let \\(s\\) be the perimeter of this star. What is the difference between the maximum and the minimum possible values of \\(s?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1}{2}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{\\sqrt5 - 1}{2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{\\sqrt5 + 1}{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\sqrt5\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "0"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2013-p16.live",
+      "kind": "proof-sketch",
+      "text": "An equiangular pentagon has all interior angles \\(108^\\circ,\\) so each point of the star is an isosceles triangle with base angles \\(72^\\circ\\) and apex \\(36^\\circ.\\) By the equal base angles, each point contributes two sides that are the same fixed multiple \\(c\\) of the pentagon side it rests on. Summing over the five points, the star perimeter equals \\(2c\\cdot(\\text{pentagon perimeter}) = 2c,\\) independent of the individual side lengths. So \\(s\\) is constant, and the difference between its maximum and minimum values is \\(0.\\) Thus, the correct answer is A.",
+      "hints": [
+        "Each interior angle of an equiangular pentagon is \\(108^\\circ,\\) so every point of the star is an isosceles triangle with a \\(36^\\circ\\) apex",
+        "Each star point’s two equal sides are the same fixed multiple \\(c\\) of the pentagon side it sits on, so the star perimeter is \\(2c\\) times the pentagon perimeter"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

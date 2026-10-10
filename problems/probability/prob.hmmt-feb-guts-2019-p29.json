@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2019-p29",
+  "title": "2019 HMMT February Guts Problem 29",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2019,
+    "number": 29
+  },
+  "difficulty": {
+    "course": 80.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Yannick picks a number \\(N\\) randomly from the set of positive integers such that the probability that \\(n\\) is selected is \\(2^{-n}\\) for each positive integer \\(n\\). He then puts \\(N\\) identical slips of paper numbered 1 through \\(N\\) into a hat and gives the hat to Annie. Annie does not know the value of \\(N\\), but she draws one of the slips uniformly at random and discovers that it is the number 2 . What is the expected value of \\(N\\) given Annie's information?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2019-p29.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\frac{1}{2 \\ln 2-1}\\)\nLet \\(S\\) denote the value drawn from the hat. The probability that 2 is picked is \\(\\frac{1}{n}\\) if \\(n \\geq 2\\) and 0 if \\(n=1\\). Thus, the total probability \\(X\\) that 2 is picked is\n\n\\[P(S=2)=\\sum_{k=2}^{\\infty} \\frac{2^{-k}}{k}\\]\n\nBy the definition of conditional probability, \\(P(N=n \\mid S=2)=\\frac{P(N=n, S=2)}{P(S=2)}=\\frac{2^{-n} / n}{X}\\) if \\(n \\geq 2\\) and 0 if \\(n=1\\). Thus the conditional expectation of \\(N\\) is\n\n\\[\\mathbb{E}[N \\mid S=2]=\\sum_{n=1}^{\\infty} n \\cdot P(N=n \\mid S=2)=\\sum_{n=2}^{\\infty} n \\cdot \\frac{2^{-n} / n}{X}=\\frac{1}{X} \\sum_{n=2}^{\\infty} 2^{-n}=\\frac{1}{2 X}\\]\n\nIt remains to compute \\(X\\). Note that \\(\\sum_{k=0}^{\\infty} x^{k}=\\frac{1}{1-x}\\) for \\(|x|<1\\). Integrating both sides with respect to \\(x\\) yields\n\n\\[\\sum_{k=1}^{\\infty} \\frac{x^{k}}{k}=-\\ln (1-x)+C\\]\n\nfor some constant \\(C\\), and plugging in \\(x=0\\) shows that \\(C=0\\). Plugging in \\(x=\\frac{1}{2}\\) shows that \\(\\sum_{k=1}^{\\infty} \\frac{2^{-k}}{k}=\\ln 2\\). Note that \\(X\\) is exactly this summation but without the first term. Thus, \\(X=\\ln 2-\\frac{1}{2}\\), so \\(\\frac{1}{2 X}=\\frac{1}{2 \\ln 2-1}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

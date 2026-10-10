@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2011-p25",
+  "title": "2011 AMC 12B Problem 25",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2011,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 41.5,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "For every \\(m\\) and \\(k\\) integers with \\(k\\) odd, denote by \\(\\left[\\dfrac{m}{k}\\right]\\) the integer closest to \\(\\dfrac{m}{k}.\\) For every odd integer \\(k,\\) let \\(P(k)\\) be the probability that \\[\\left[\\dfrac{n}{k}\\right]+\\left[\\dfrac{100-n}{k}\\right]=\\left[\\dfrac{100}{k}\\right]\\] for an integer \\(n\\) randomly chosen from the interval \\(1\\le n\\le99!.\\) What is the minimum possible value of \\(P(k)\\) over the odd integers \\(k\\) in the interval \\(1\\le k\\le99?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{50}{99}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{44}{87}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{34}{67}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{7}{13}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "34/67"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2011-p25.live",
+      "kind": "proof-sketch",
+      "text": "Because \\(\\left[\\dfrac{n+mk}{k}\\right]=\\left[\\dfrac{n}{k}\\right]+m,\\) whether \\(n\\) satisfies the identity depends only on \\(n\\bmod k.\\) Since \\(99!\\) is divisible by \\(k\\) for \\(1\\le k\\le99,\\) every residue class is equally likely.\n\nWrite \\(100=qk+r\\) and \\(n=q_1k+r_1,\\) choosing both remainders in \\([-\\frac{(k-1)}{2},\\frac{k-1}{2}].\\) If \\(r\\ge0,\\) no carry occurs precisely when \\(r-\\frac{k-1}{2}\\le r_1\\le\\frac{k-1}{2};\\) this gives \\(k-r\\) residue classes. The case \\(r<0\\) similarly gives \\(k+r\\) classes. Hence in both cases \\[ P(k)=1-\\dfrac{|r|}{k}. \\]\n\nTo minimize \\(P(k)\\) we maximize \\(|r|/k.\\) If \\(r=\\frac{k-1}{2},\\) then \\(201=k(2q+1),\\) and the largest possible \\(k\\le99\\) is the divisor \\(67\\) of \\(201.\\) If \\(r=-\\frac{(k-1)}{2},\\) then \\(199=k(2q-1);\\) because \\(199\\) is prime, only \\(k=1\\) is possible. In every remaining case \\(|r|\\le\\frac{k-3}{2},\\) so \\[ \\begin{aligned} P(k)&\\ge\\dfrac12+\\dfrac{3}{2k} \\\\ &\\ge\\dfrac12+\\dfrac{3}{198} \\\\ &>\\dfrac{34}{67}. \\end{aligned} \\] For \\(k=67,\\) \\[ P(67)=\\dfrac12+\\dfrac{1}{2\\cdot67}=\\dfrac{34}{67}. \\]\n\nThus, the correct answer is D.",
+      "hints": [
+        "Whether \\(n\\) works depends only on \\(n\\bmod k,\\) and each residue class is equally likely",
+        "Write \\(100=qk+r\\) with \\(|r|\\le\\tfrac{k-1}{2};\\) then \\(P(k)=1-\\dfrac{|r|}{k}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

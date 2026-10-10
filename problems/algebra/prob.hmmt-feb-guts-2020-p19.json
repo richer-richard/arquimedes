@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-feb-guts-2020-p19",
+  "title": "2020 HMMT February Guts Problem 19",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.induction-smoothing",
+      "label": "Induction / smoothing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recurrence-relations",
+      "label": "Recurrence relations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sums-and-products",
+      "label": "Sums and products",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.telescoping-series",
+      "label": "Telescoping series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2020,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 75.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The Fibonacci numbers are defined by \\(F_{0}=0, F_{1}=1\\), and \\(F_{n}=F_{n-1}+F_{n-2}\\) for \\(n \\geq 2\\). There exist unique positive integers \\(n_{1}, n_{2}, n_{3}, n_{4}, n_{5}, n_{6}\\) such that\n\n\\[\\sum_{i_{1}=0}^{100} \\sum_{i_{2}=0}^{100} \\sum_{i_{3}=0}^{100} \\sum_{i_{4}=0}^{100} \\sum_{i_{5}=0}^{100} F_{i_{1}+i_{2}+i_{3}+i_{4}+i_{5}}=F_{n_{1}}-5 F_{n_{2}}+10 F_{n_{3}}-10 F_{n_{4}}+5 F_{n_{5}}-F_{n_{6}}\\]\n\nFind \\(n_{1}+n_{2}+n_{3}+n_{4}+n_{5}+n_{6}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "1545",
+    "value": "1545"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2020-p19.hmmt",
+      "kind": "proof-sketch",
+      "text": "We make use of the identity\n\n\\[\\sum_{i=0}^{\\ell} F_{i}=F_{\\ell+2}-1\\]\n\n(easily proven by induction) which implies\n\n\\[\\sum_{i=k}^{\\ell} F_{i}=F_{\\ell+2}-F_{k+1}\\]\n\nApplying this several times yields\n\n\\[\\begin{aligned}\n& \\sum_{i_{1}=0}^{100} \\sum_{i_{2}=0}^{100} \\sum_{i_{3}=0}^{100} \\sum_{i_{4}=0}^{100} \\sum_{i_{5}=0}^{100} F_{i_{1}+i_{2}+i_{3}+i_{4}+i_{5}} \\\\\n= & \\sum_{i_{1}=0}^{100} \\sum_{i_{2}=0}^{100} \\sum_{i_{3}=0}^{100} \\sum_{i_{4}=0}^{100}\\left(F_{i_{1}+i_{2}+i_{3}+i_{4}+102}-F_{i_{1}+i_{2}+i_{3}+i_{4}+1}\\right) \\\\\n= & \\sum_{i_{1}=0}^{100} \\sum_{i_{2}=0}^{100} \\sum_{i_{3}=0}^{100}\\left(F_{i_{1}+i_{2}+i_{3}+204}-2 F_{i_{1}+i_{2}+i_{3}+103}+F_{i_{1}+i_{2}+i_{3}+2}\\right) \\\\\n= & \\sum_{i_{1}=0}^{100} \\sum_{i_{2}=0}^{100}\\left(F_{i_{1}+i_{2}+306}-3 F_{i_{1}+i_{2}+205}+3 F_{i_{1}+i_{2}+104}-F_{i_{1}+i_{2}+3}\\right) \\\\\n= & \\sum_{i_{1}=0}^{100}\\left(F_{i_{1}+408}-4 F_{i_{1}+307}+6 F_{i_{1}+206}-4 F_{i_{1}+105}+F_{i_{1}+4}\\right) \\\\\n= & F_{510}-5 F_{409}+10 F_{308}-10 F_{207}+5 F_{106}-F_{5} .\n\\end{aligned}\\]\n\nThis representation is unique because the Fibonacci terms grow exponentially quickly, so e.g. the \\(F_{510}\\) term dominates, forcing \\(n_{1}=510\\) and similarly for the other terms. The final answer is\n\n\\[510+409+308+207+106+5=1545\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

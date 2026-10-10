@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-8-2014-p23",
+  "title": "2014 AMC 8 Problem 23",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "logic-foundations",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.logical-deduction",
+      "label": "Logical deduction",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime",
+      "label": "Prime",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2014,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 18.2,
+    "source": 1610,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Three members of the Euclid Middle School girls’ softball team had the following conversation.\n\nAshley: I just realized that our uniform numbers are all \\(2\\)-digit primes.\n\nBethany: And the sum of your two uniform numbers is the date of my birthday earlier this month.\n\nCaitlin: That’s funny. The sum of your two uniform numbers is the date of my birthday later this month.\n\nAshley: And the sum of your two uniform numbers is today’s date.\n\nWhat number does Caitlin wear?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 11 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 13 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 17 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 19 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 23 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "11"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2014-p23.live",
+      "kind": "proof-sketch",
+      "text": "Any pair-sum must be a date in the month, so it is at most \\(31\\). The possible sums of two two-digit primes that are at most \\(31\\) are \\(11+13=24\\), \\(11+17=28\\), \\(11+19=30\\), and \\(13+17=30\\).\n\nThe three dates are earlier, today, and later, so they must be distinct and increasing. The only possible set of three distinct dates is \\(24,28,30\\), coming from the numbers \\(11\\), \\(13\\), and \\(17\\).\n\nBethany’s date is Ashley plus Caitlin, Ashley’s date is Bethany plus Caitlin, and Caitlin’s later date is Ashley plus Bethany. This means Caitlin’s number is the smallest of the three, namely \\(11\\).\n\nThus, A is the correct answer.",
+      "hints": [
+        "Pair sums of two two-digit primes must be dates in a month.",
+        "Use the earlier-today-later order to determine which uniform number is smallest."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

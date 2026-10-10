@@ -1,0 +1,89 @@
+{
+  "id": "prob.amc-10b-2017-p18",
+  "title": "2017 AMC 10B Problem 18",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2017,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 28.9,
+    "source": 2010,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In the figure below, \\(3\\) of the \\(6\\) disks are to be painted blue, \\(2\\) are to be painted red, and \\(1\\) is to be painted green. Two paintings that can be obtained from one another by a rotation or a reflection of the entire figure are considered the same. How many different paintings are possible?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(6 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(8 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(9 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(12 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(15 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "12"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2017-p18.live",
+      "kind": "proof-sketch",
+      "text": "By symmetry, the green disk has two possible types of position: a corner or a side midpoint. Fix one representative of either type. There are \\(\\binom52=10\\) ways to choose the two red disks.\n\nThe reflection that fixes the green position fixes one of the other disks and exchanges the other four disks in two pairs. Exactly \\(2\\) red-disk choices are unchanged by this reflection: choosing either exchanged pair. The other \\(8\\) choices form \\(4\\) mirror-image pairs. Hence there are \\(2+4=6\\) paintings for each type of green position.\n\nThe two types therefore give \\(6+6=12\\) paintings.\n\nThus, the correct answer is D .",
+      "hints": [
+        "Use symmetry to reduce the green disk to two cases",
+        "For each green position, count possible red-disk placements up to symmetry"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "c9508a14d83d8b76465d57df628b6f4f113fa45293d3f0fec8b5c43036f3b31f"
+    ],
+    "solutions": []
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-team-1-2008-p4",
+  "title": "2008 HMMT February Team Round 1 Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2008,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 83.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n>6\\) be a positive integer. Determine the number of ways to walk from \\((0,0)\\) to \\((n, 3)\\) using only up and right unit steps such that the path does not meet the lines \\(y=x\\) or \\(y=x-n+3\\) except at the start and at the end.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1-2008-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\quad \\frac{1}{6}(n-6)(n-1)(n+1)\\) Consider the first point of the path that lies on \\(x=3\\). There are two possibilities for this point: \\((3,0)\\) and \\((3,1)\\), and there is exactly one valid way of getting to each point from the origin. Similarly, consider the last point of the path that lies on \\(x=n-3\\). There are two possibilities: \\((n-3,2)\\) and \\((n-3,3)\\), and there is exactly one valid way of getting to the destination from each of the two points. Now we count the number of valid paths from each of \\((3,0)\\) and \\((3,1)\\), to each of \\((n-3,2)\\) and \\((n-3,3)\\), and the answer will be the sum.\n\n- From \\((3,1)\\) to \\((n-3,2)\\) : there are no forbidden points along the way, so there are \\(n-5\\) ways.\n- From \\((3,0)\\) to \\((n-3,2)\\) : the path must not pass through \\((n-3,0)\\), and there is exactly one invalid path. So there are \\(\\binom{n-4}{2}-1\\) ways.\n- From \\((3,1)\\) to \\((n-3,3)\\) : the path must not pass through \\((3,3)\\), and there is exactly one invalid path. So there are \\(\\binom{n-4}{2}-1\\) ways.\n- From \\((3,0)\\) to \\((n-3,3)\\) : the path must not pass through \\((n-3,0)\\) and \\((3,3)\\), and there are exactly two invalid paths. So there are \\(\\binom{n-3}{3}-2\\) ways.\n\nSumming, we obtain the answer:\n\\(n-5+\\binom{n-4}{2}-1+\\binom{n-4}{2}-1+\\binom{n-3}{3}-2=\\frac{n^{3}-6 n^{2}-n+6}{6}=\\frac{(n-6)(n-1)(n+1)}{6}\\).\n\n## Lattice and Centroids [130]\n\nA d-dimensional lattice point is a point of the form \\(\\left(x_{1}, x_{2}, \\ldots, x_{d}\\right)\\) where \\(x_{1}, x_{2}, \\ldots, x_{d}\\) are all integers. For a set of \\(d\\)-dimensional points, their centroid is the point found by taking the coordinatewise average of the given set of points.\nLet \\(f(n, d)\\) denote the minimal number \\(f\\) such that any set of \\(f\\) lattice points in the \\(d\\)-dimensional Euclidean space contains a subset of size \\(n\\) whose centroid is also a lattice point.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

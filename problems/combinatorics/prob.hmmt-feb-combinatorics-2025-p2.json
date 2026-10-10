@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2025-p2",
+  "title": "2025 HMMT February Combinatorics Problem 2",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2025,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 70.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Kelvin the frog is on the bottom-left lily pad of a \\(3\\times 3\\) grid of lily pads, and his home is at the topright lily pad. He can only jump between two lily pads which are horizontally or vertically adjacent. Compute the number of ways to remove 4 of the lily pads so that the bottom-left and top-right lily pads both remain, but Kelvin cannot get home.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "29",
+    "value": "29"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2025-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "We instead count the arrangements for which Kelvin can get home. Note that at minimum, Kelvin must use 5 lilypads to get home, leaving 4 lily pads that are not on the path. This means that if we were to remove 4 lilypads and Kelvin can still get home, the non- removed lilypads form a shortest path from the bottom- left to the top- right. As there are \\(\\binom{4}{2} = 6\\) of these shortest paths, our answer is \\(\\binom{7}{4} - 6 = \\boxed{29}\\) .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

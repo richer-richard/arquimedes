@@ -1,0 +1,71 @@
+{
+  "id": "prob.ahsme-1988-p29",
+  "title": "1988 AHSME Problem 29",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.slope",
+      "label": "Slope",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1988,
+    "number": 29
+  },
+  "difficulty": {
+    "course": 48.5,
+    "source": 2480,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "You plot weight \\((y)\\) against height \\((x)\\) for three of your friends and obtain the points \\((x_1,y_1),\\) \\((x_2,y_2),\\) \\((x_3,y_3).\\) If \\[ \\begin{aligned} x_1&\\lt x_2\\lt x_3,\\\\ x_3-x_2&=x_2-x_1, \\end{aligned} \\] which of the following is necessarily the slope of the line which best fits the data? “Best fits” means that the sum of the squares of the vertical distances from the data points to the line is smaller than for any other line.",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\frac{y_3-y_1}{x_3-x_1}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\frac{(y_2-y_1)-(y_3-y_2)}{x_3-x_1}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\frac{2y_3-y_1-y_2}{2x_3-x_1-x_2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\frac{y_2-y_1}{x_2-x_1}+\\frac{y_3-y_2}{x_3-x_2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "none of these"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1988-p29.live",
+      "kind": "proof-sketch",
+      "text": "Translate and scale so the \\(x\\)-coordinates are \\(-d,0,d.\\) Their mean is \\(0,\\) so the least-squares slope is \\[ \\begin{aligned} \\frac{(-d)y_1+0y_2+dy_3}{d^2+0+d^2} &=\\frac{y_3-y_1}{2d}\\\\ &=\\frac{y_3-y_1}{x_3-x_1}. \\end{aligned} \\]\n\nThus the correct answer is A.",
+      "hints": [
+        "Translate and scale the \\(x\\)-coordinates to \\(-1,0,1\\)",
+        "For a least-squares line through symmetric \\(x\\)-values, compute the slope from the covariance numerator"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": "prob.amc-10a-2003-p19",
+  "title": "2003 AMC 10A Problem 19",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-decomposition",
+      "label": "Area decomposition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.sector",
+      "label": "Sector",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2003,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 28.8,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A semicircle of diameter \\(1\\) sits at the top of a semicircle of diameter \\(2,\\) as shown. The shaded area inside the smaller semicircle and outside the larger semicircle is called a lune. Determine the area of this lune.",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{6}\\pi - \\dfrac{\\sqrt{3}}{4}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{\\sqrt{3}}{4} - \\dfrac{1}{12}\\pi\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{\\sqrt{3}}{4} - \\dfrac{1}{24}\\pi\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{\\sqrt{3}}{4} + \\dfrac{1}{24}\\pi\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{\\sqrt{3}}{4} + \\dfrac{1}{12}\\pi\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2003-p19.live",
+      "kind": "proof-sketch",
+      "text": "The small semicircle’s diameter is a chord of length \\(1\\) in the large circle. Joining its endpoints to the large circle’s center gives an equilateral triangle of side \\(1\\) and area \\(\\dfrac{\\sqrt{3}}{4}.\\)\n\nThe region between the chord and the small arc, taken together with that triangle, has area \\(\\dfrac{\\sqrt{3}}{4} + \\dfrac{1}{2}\\pi\\left(\\dfrac{1}{2}\\right)^2 = \\dfrac{\\sqrt{3}}{4} + \\dfrac{\\pi}{8}.\\)\n\nSubtracting the \\(60^\\circ\\) sector of the large circle, of area \\(\\dfrac{1}{6}\\pi(1)^2 = \\dfrac{\\pi}{6},\\) leaves the lune: \\(\\dfrac{\\sqrt{3}}{4} + \\dfrac{\\pi}{8} - \\dfrac{\\pi}{6} = \\dfrac{\\sqrt{3}}{4} - \\dfrac{\\pi}{24}.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "The lune equals a triangle plus the small semicircle, minus a sector of the large circle",
+        "The chord of length \\(1\\) subtends a \\(60^\\circ\\) arc of the large semicircle"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "77e12eda93772768bf6786d61f16d2bf0740287529f5fb342569d2723f38386a"
+    ],
+    "solutions": []
+  }
+}

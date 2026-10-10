@@ -1,0 +1,92 @@
+{
+  "id": "prob.amc-10a-fall-2021-p22",
+  "title": "2021 Fall AMC 10A Problem 22",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-geometry",
+      "label": "3D geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cone",
+      "label": "Cone",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.sphere",
+      "label": "Sphere",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2021,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 43.9,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Inside a right circular cone with base radius \\(5\\) and height \\(12\\) are three congruent spheres each with radius \\(r.\\) Each sphere is tangent to the other two spheres and also tangent to the base and side of the cone. What is \\(r?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{3}{2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{90-40\\sqrt{3}}{11}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{144-25\\sqrt{3}}{44}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{5}{2}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-fall-2021-p22.live",
+      "kind": "proof-sketch",
+      "text": "Let the cone have base in the plane \\(z=0,\\) center at the origin, and vertex on the \\(z\\)-axis. The centers of the three spheres form an equilateral triangle of side \\(2r,\\) so one sphere center may be taken at horizontal distance \\(\\frac{2r}{\\sqrt3}\\) from the cone axis and height \\(r\\) above the base.\n\nIn the axial cross-section through that center and the cone axis, the side of the cone is the line \\(12\\rho+5z=60,\\) where \\(\\rho\\) is horizontal distance from the axis. The distance from \\(\\left(\\frac{2r}{\\sqrt3},r\\right)\\) to this line must be \\(r\\): \\[r=\\frac{60-12\\cdot\\frac{2r}{\\sqrt3}-5r}{13}.\\]\n\nThus \\((18+8\\sqrt3)r=60,\\) so \\[r=\\frac{60}{18+8\\sqrt3}=\\frac{90-40\\sqrt3}{11}.\\]\n\nThus, B is the correct answer.",
+      "hints": [
+        "The sphere centers form an equilateral triangle above the base",
+        "In an axial cross-section, the cone side is \\(12\\rho+5z=60\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2015-p1",
+  "title": "2015 AIME I Problem 1",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.pairing-and-grouping",
+      "label": "Pairing and grouping",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2015,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 43.9,
+    "source": 1890,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The expressions \\(A = 1 \\times 2\\) \\(+ 3 \\times 4\\) \\(+ 5 \\times 6\\) \\(+ \\cdots\\) \\(+ 37 \\times 38 + 39\\) and \\(B = 1\\) \\(+ 2 \\times 3\\) \\(+ 4 \\times 5\\) \\(+ \\cdots\\) \\(+ 36 \\times 37\\) \\(+ 38 \\times 39\\) are obtained by writing multiplication and addition operators in an alternating pattern between successive integers. Find the positive difference between integers \\(A\\) and \\(B.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "722",
+    "value": "722"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2015-p1.live",
+      "kind": "proof-sketch",
+      "text": "Subtract term by term: \\[ \\begin{aligned} &B - A = (1 - 39) \\\\ &\\quad {}+ (2 \\times 3 - 1 \\times 2) \\\\ &\\quad {}+ (4 \\times 5 - 3 \\times 4) + \\cdots \\\\ &\\quad {}+ (38 \\times 39 - 37 \\times 38). \\end{aligned} \\] Each parenthesized difference has the form \\((2k+1)(2k)\\) \\(- (2k-1)(2k) = 4k\\) for \\(k = 1, 2, \\ldots, 19.\\)\n\nTherefore \\[ \\begin{aligned} B - A &= -38 \\\\ &\\quad {}+ 4(1 + 2 + \\cdots + 19) \\\\ &= -38 + 4 \\cdot 190 = 722. \\end{aligned} \\]",
+      "hints": [
+        "Compute \\(B - A\\) by pairing each product in \\(B\\) with the product in \\(A\\) that shares its even factor",
+        "Each pair contributes \\((2k+1)(2k)\\) \\(- (2k-1)(2k) = 4k,\\) and the leftover terms are \\(1\\) and \\(-39\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

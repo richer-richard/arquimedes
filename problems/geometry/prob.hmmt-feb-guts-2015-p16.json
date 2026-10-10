@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-feb-guts-2015-p16",
+  "title": "2015 HMMT February Guts Problem 16",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cartesian-coordinates",
+      "label": "Cartesian coordinates",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.enumeration-with-symmetry",
+      "label": "Enumeration with symmetry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.other-3d-problems",
+      "label": "Other 3D problems",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2015,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 77.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Determine the number of unordered triples of distinct points in the \\(4 \\times 4 \\times 4\\) lattice grid \\(\\{0,1,2,3\\}^{3}\\) that are collinear in \\(\\mathbb{R}^{3}\\) (i.e. there exists a line passing through the three points).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2015-p16.hmmt",
+      "kind": "proof-sketch",
+      "text": "376 Define a main plane to be one of the \\(x y, y z, z x\\) planes. Define a space diagonal to be a set of collinear points not parallel to a main plane. We classify the lines as follows:\n(a) Lines parallel to two axes (i.e. orthogonal to a main plane). Notice that given a plane of the form \\(v=k\\), where \\(v \\in\\{x, y, z\\}, k \\in\\{0,1,2,3\\}\\), there are 8 such lines, four in one direction and four in a perpendicular direction. There are \\(4 \\times 3=12\\) such planes. However, each line lies in two of these \\((v, k)\\) planes, so there are \\(\\frac{8 \\times 4 \\times 3}{2}=48\\) such lines. Each of these lines has 4 points, so there are 4 possible ways to choose 3 collinear points, giving \\(4 \\times 48=192\\) triplets.\n(b) Diagonal lines containing four points parallel to some main plane. Consider a plane of the form \\((v, k)\\), as defined above. These each have 2 diagonals that contain 4 collinear points. Each of these diagonals uniquely determines \\(v, k\\) so these diagonals are each counted once. There are 12 possible ( \\(v, k\\) ) pairs, yielding \\(12 \\times 2 \\times 4=96\\) triplets.\n(c) Diagonal lines containing three points parallel to some main plane. Again, consider a plane \\((v, k)\\). By inspection, there are four such lines and one way to choose the triplet of points for each of these lines. This yields \\(4 \\times 12=48\\) triplets.\n(d) Main diagonals. There are four main diagonals, each with 4 collinear points, yielding \\(4 \\times 4=16\\) triplets.\n(e) Space diagonals containing three points. Choose one of the points in the set \\(\\{1,2\\}^{3}\\) to be the midpoint of the line. Since these 8 possibilities are symmetric, say we take the point \\((1,1,1)\\). There are four space diagonals passing through this point, but one is a main diagonal. So each of the 8 points has 3 such diagonals with 3 points each, yielding \\(8 \\times 3=24\\) ways.\n\nAdding all these yields \\(192+96+48+16+24=376\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

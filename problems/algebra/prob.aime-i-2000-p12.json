@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-i-2000-p12",
+  "title": "2000 AIME I Problem 12",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functional-equation",
+      "label": "Functional equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2000,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 59.8,
+    "source": 2920,
+    "mohs": null
+  },
+  "estimatedMinutes": 13,
+  "statement": "Given a function \\(f\\) for which \\[ \\begin{aligned} f(x) &= f(398 - x) \\\\ &= f(2158 - x) \\\\ &= f(3214 - x) \\end{aligned} \\] holds for all real \\(x,\\) what is the largest number of different values that can appear in the list \\(f(0),\\) \\(f(1),\\) \\(f(2),\\) \\(\\ldots,\\) \\(f(999)?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "177",
+    "value": "177"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2000-p12.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(f(398 - x) = f(2158 - x)\\) for all \\(x,\\) substituting \\(t = 398 - x\\) gives \\(f(t) = f(t + 1760);\\) likewise \\(f(2158 - x) = f(3214 - x)\\) gives period \\(1056.\\) Combining, \\(f\\) has period \\(\\gcd(1760, 1056) = 352.\\) Reducing \\(398\\) mod \\(352,\\) the symmetry \\(f(x) = f(398 - x)\\) becomes \\(f(x) = f(46 - x).\\)\n\nSo \\(f\\) is determined by residues mod \\(352,\\) with residues \\(r\\) and \\(46 - r\\) forced to share a value. This pairing has exactly two fixed points, from \\(2r \\equiv 46 \\pmod{352}:\\) \\(r = 23\\) and \\(r = 199.\\) Hence there are at most \\(\\frac{352 - 2}{2} + 2 = 177\\) classes, and since \\(0, 1, \\ldots, 999\\) covers every residue mod \\(352,\\) the list contains at most \\(177\\) different values.\n\nThis is achievable: \\(f(x) = \\cos\\frac{2\\pi(x - 23)}{352}\\) satisfies all three given symmetries (each of \\(398,\\) \\(2158,\\) \\(3214\\) is \\(\\equiv 46\\) mod \\(352\\)), and two integers get equal values only when their residues are paired. So the answer is \\(177.\\)",
+      "hints": [
+        "Two reflection symmetries compose to a translation: \\(f(398 - x) = f(2158 - x)\\) forces \\(f(t) = f(t + 1760),\\) and similarly \\(f(t) = f(t + 1056)\\)",
+        "So \\(f\\) has period \\(\\gcd(1760, 1056) = 352,\\) plus the symmetry \\(f(x) = f(46 - x);\\) count residues mod \\(352\\) up to that pairing"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

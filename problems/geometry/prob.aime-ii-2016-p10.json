@@ -1,0 +1,76 @@
+{
+  "id": "prob.aime-ii-2016-p10",
+  "title": "2016 AIME2 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cyclic-quadrilateral",
+      "label": "Cyclic quadrilateral",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.power-of-a-point",
+      "label": "Power of a point",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2016,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 62.9,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Triangle \\(ABC\\) is inscribed in circle \\(\\omega.\\) Points \\(P\\) and \\(Q\\) are on side \\(\\overline{AB}\\) with \\(AP \\lt AQ.\\) Rays \\(CP\\) and \\(CQ\\) meet \\(\\omega\\) again at \\(S\\) and \\(T\\) (other than \\(C\\)), respectively. If \\(AP = 4,\\) \\(PQ = 3,\\) \\(QB = 6,\\) \\(BT = 5,\\) and \\(AS = 7,\\) then \\(ST = \\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "43",
+    "value": "43"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2016-p10.live",
+      "kind": "proof-sketch",
+      "text": "By Power of a Point at \\(Q\\) in \\(\\omega,\\) \\(QC \\cdot QT = QA \\cdot QB\\) \\(= 7 \\cdot 6 = 42.\\) Extend \\(\\overline{AB}\\) beyond \\(B\\) to the point \\(R\\) with \\(BR = 8,\\) so that \\(QR = QB + BR = 14\\) and \\(QP \\cdot QR = 3 \\cdot 14\\) \\(= 42 = QC \\cdot QT.\\) By the converse of Power of a Point, \\(C,\\) \\(P,\\) \\(T,\\) and \\(R\\) are concyclic.\n\nIn circle \\(CPTR,\\) \\(\\angle BRT = \\angle PRT = \\angle PCT,\\) and in \\(\\omega,\\) \\(\\angle PCT = \\angle SCT = \\angle SAT\\) (both subtend arc \\(ST\\)). Also \\(ASTB\\) is cyclic, so the exterior angle of the quadrilateral at \\(B\\) equals the opposite interior angle: \\(\\angle RBT = \\angle AST.\\) Hence \\(\\triangle AST \\sim \\triangle RBT.\\)\n\nTherefore \\(\\frac{ST}{BT} = \\frac{AS}{RB},\\) so \\(ST = 5 \\cdot \\frac{7}{8} = \\frac{35}{8},\\) and \\(m + n = 35 + 8 = 43.\\)",
+      "hints": [
+        "Extend \\(AB\\) past \\(B\\) to \\(R\\) with \\(BR = 8.\\) Then \\(QP \\cdot QR = 42 = QC \\cdot QT,\\) so \\(C,\\) \\(P,\\) \\(T,\\) \\(R\\) lie on a circle.",
+        "Chase angles through both circles to get \\(\\triangle AST \\sim \\triangle RBT,\\) so \\(ST = AS \\cdot \\frac{BT}{RB}\\)"
+      ],
+      "images": [
+        "e775bc60b101a3444ea79289b74969b615ab13041cbc070f38a3c662c5957a71"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "e775bc60b101a3444ea79289b74969b615ab13041cbc070f38a3c662c5957a71"
+    ]
+  }
+}

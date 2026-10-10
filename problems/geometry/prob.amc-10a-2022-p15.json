@@ -1,0 +1,89 @@
+{
+  "id": "prob.amc-10a-2022-p15",
+  "title": "2022 AMC 10A 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle-area",
+      "label": "Circle area",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cyclic-quadrilateral",
+      "label": "Cyclic quadrilateral",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-triple",
+      "label": "Pythagorean Triple",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2022,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 34.9,
+    "source": 1950,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Quadrilateral \\(ABCD\\) with side lengths \\(AB = 7,\\) \\(BC = 24,\\) \\(CD = 20,\\) \\(DA = 15\\) is inscribed in a circle. The area interior to the circle but exterior to the quadrilateral can be written in the form \\(\\dfrac{a \\pi - b}{c},\\) where \\(a,\\) \\(b,\\) and \\(c\\) are positive integers such that \\(a\\) and \\(c\\) have no common prime factor. What is \\(a + b + c?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(260\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(855\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1235\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(1565\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(1997\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "1565"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2022-p15.live",
+      "kind": "proof-sketch",
+      "text": "Notice that \\(7^2 + 24^2\\) and \\(15^2 + 20^2\\) are both the same. This forces \\(AC = 25\\) since otherwise \\(\\angle B\\) and \\(\\angle D\\) would both be acute or obtuse, violating the fact that their sum is \\(180^{\\circ}.\\)\n\nAlso since \\(\\angle B\\) is right, we know that \\(AC\\) is the diameter of the circle. The area of the circle is then \\(\\dfrac{625}{4} \\pi.\\)\n\nTo find the area of the quadrilateral, we can find the area of each of the triangles, which is \\[ \\dfrac{1}{2}(7 \\cdot 24 + 20 \\cdot 15) = \\] \\[ 84 + 150 = 234. \\]\n\nTo find the area outside the quadrilateral, we subtract to get \\[ \\dfrac{625}{4} \\pi - 234 = \\dfrac{625 \\pi - 936}{4}. \\]\n\nTherefore, \\[ a + b + c = 625 + 936 + 4 \\] \\[ = 1565. \\]\n\nThus, D is the correct answer.",
+      "hints": [
+        "Check whether the two triangles formed by a diagonal are right triangles",
+        "Use the common hypotenuse as the circle diameter"
+      ],
+      "images": [
+        "f2ad59bb1b3bed9f07d3d9f81386960814cc48f4814936fbeb29fa2f0c5bb770"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "f2ad59bb1b3bed9f07d3d9f81386960814cc48f4814936fbeb29fa2f0c5bb770"
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-10b-2002-p16",
+  "title": "2002 AMC 10B Problem 16",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2002,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 25.4,
+    "source": 1580,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "For how many integers \\(n\\) is \\(\\dfrac{n}{20 - n}\\) the square of an integer?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(10\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "4"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2002-p16.live",
+      "kind": "proof-sketch",
+      "text": "Suppose \\(\\dfrac{n}{20 - n} = k^2\\) for some integer \\(k \\ge 0.\\) Solving, \\[n = \\dfrac{20k^2}{k^2 + 1}.\\]\n\nSince \\(k^2\\) and \\(k^2 + 1\\) share no common factor, \\(k^2 + 1\\) must divide \\(20.\\) This happens only for \\(k = 0,\\) \\(1,\\) \\(2,\\) \\(3,\\) giving \\(k^2 + 1 = 1,\\) \\(2,\\) \\(5,\\) \\(10.\\)\n\nThe corresponding values \\(n = 0,\\) \\(10,\\) \\(16,\\) \\(18\\) are all integers, so there are \\(4\\) such \\(n.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Set \\(\\dfrac{n}{20 - n} = k^2\\) and solve for \\(n\\) in terms of \\(k\\)",
+        "\\(n = \\dfrac{20k^2}{k^2 + 1}\\); since \\(k^2\\) and \\(k^2 + 1\\) are coprime, \\(20\\) is divisible by \\(k^2 + 1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

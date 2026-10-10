@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-1983-p5",
+  "title": "1983 AIME Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.symmetry-algebra",
+      "label": "Symmetry (algebra)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1983,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 46.2,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Suppose that the sum of the squares of two complex numbers \\(x\\) and \\(y\\) is \\(7\\) and the sum of the cubes is \\(10.\\) What is the largest real value that \\(x+y\\) can have?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "4",
+    "value": "4"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1983-p5.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(s=x+y\\) and \\(p=xy.\\) From \\(x^2+y^2=s^2-2p=7,\\) we get \\(p=\\frac{s^2-7}{2}.\\) Also, \\[ \\begin{aligned} 10&=x^3+y^3\\\\ &=s^3-3ps\\\\ &=s^3-\\frac{3s(s^2-7)}2. \\end{aligned} \\] Hence \\[ \\begin{aligned} s^3-21s+20&=0,\\\\ (s-1)(s-4)(s+5)&=0. \\end{aligned} \\] Each root gives a possible pair of complex roots of \\(t^2-st+p=0,\\) so the largest real possible value of \\(s=x+y\\) is \\(4.\\)",
+      "hints": [
+        "Let \\(s=x+y\\) and \\(p=xy\\)",
+        "Use \\(x^2+y^2=s^2-2p\\) to eliminate \\(p\\) from \\(x^3+y^3=s^3-3ps\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

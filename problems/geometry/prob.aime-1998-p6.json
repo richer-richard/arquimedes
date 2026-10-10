@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1998-p6",
+  "title": "1998 AIME Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.parallelogram",
+      "label": "Parallelogram",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1998,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 49.2,
+    "source": 2510,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "Let \\(ABCD\\) be a parallelogram. Extend \\(\\overline{DA}\\) through \\(A\\) to a point \\(P,\\) and let \\(\\overline{PC}\\) meet \\(\\overline{AB}\\) at \\(Q\\) and \\(\\overline{DB}\\) at \\(R.\\) Given that \\(PQ = 735\\) and \\(QR = 112,\\) find \\(RC.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "308",
+    "value": "308"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1998-p6.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(a = \\frac{PA}{AD}.\\) Since \\(AQ \\parallel DC,\\) triangles \\(PAQ\\) and \\(PDC\\) are similar, so \\(\\frac{PQ}{PC} = \\frac{PA}{PD} = \\frac{a}{a+1}.\\) Since \\(BC \\parallel AD,\\) i.e. \\(BC \\parallel PD,\\) triangles \\(RBC\\) and \\(RDP\\) are similar, so \\(\\frac{RC}{RP} = \\frac{BC}{PD} = \\frac{1}{a+1},\\) which gives \\(\\frac{RC}{PC} = \\frac{1}{a+2}.\\)\n\nWriting \\(PC = L,\\) we get \\(PQ = \\frac{a}{a+1}L,\\) \\(RC = \\frac{L}{a+2},\\) and \\[ \\begin{aligned} QR &= L - PQ - RC \\\\ &= \\frac{L}{(a+1)(a+2)}. \\end{aligned} \\] Hence \\(\\frac{PQ}{QR} = a(a+2) = \\frac{735}{112} = \\frac{105}{16},\\) so \\(16a^2 + 32a - 105 = 0,\\) which factors as \\((4a - 7)(4a + 15) = 0,\\) giving \\(a = \\frac{7}{4}.\\)\n\nFinally \\(RC = (a + 1)\\,QR\\) \\(= \\frac{11}{4} \\cdot 112\\) \\(= 308.\\)",
+      "hints": [
+        "Two pairs of similar triangles: \\(AQ \\parallel DC\\) gives \\(\\frac{PQ}{PC} = \\frac{PA}{PD},\\) and \\(BC \\parallel PD\\) gives \\(\\frac{RC}{RP} = \\frac{BC}{PD}\\)",
+        "With \\(a = \\frac{PA}{AD},\\) the ratios give \\(PQ : QR : RC\\) \\(= a(a+2) : 1 : (a+1);\\) use \\(\\frac{PQ}{QR} = \\frac{735}{112}\\) to find \\(a\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "prob.aime-ii-2016-p9",
+  "title": "2016 AIME II Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2016,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 57.2,
+    "source": 2920,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "The sequences of positive integers \\(1,\\) \\(a_2,\\) \\(a_3,\\) \\(\\ldots\\) and \\(1,\\) \\(b_2,\\) \\(b_3,\\) \\(\\ldots\\) are an increasing arithmetic sequence and an increasing geometric sequence, respectively. Let \\(c_n = a_n + b_n.\\) There is an integer \\(k\\) such that \\(c_{k-1} = 100\\) and \\(c_{k+1} = 1000.\\) Find \\(c_k.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "262",
+    "value": "262"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2016-p9.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(a_n = 1 + (n-1)d\\) and \\(b_n = r^{n-1}\\) with integers \\(d \\ge 1\\) and \\(r \\ge 2.\\) Since \\(c_1 = 2 \\lt 100,\\) we have \\(k \\ge 3,\\) and the two conditions read \\[(k-2)d + r^{k-2} = 99,\\] \\[kd + r^k = 999.\\]\n\nSubtracting, \\(2d + r^{k-3}(r-1)r(r+1) = 900.\\) The product of three consecutive integers is divisible by \\(3,\\) so \\(3\\) divides \\(2d,\\) hence \\(3\\) divides \\(d.\\) Then \\((k-2)d + r^{k-2} = 99\\) forces \\(3\\) to divide \\(r^{k-2},\\) so \\(3\\) divides \\(r.\\) The bounds \\(r^{k-2} \\le 98\\) and \\(r^k \\le 998\\) leave only \\((r, k) = (3, 3),\\) \\((3, 4),\\) \\((3, 5),\\) \\((3, 6),\\) \\((6, 3),\\) \\((9, 3).\\)\n\nTesting each against \\((k-2)d = 99 - r^{k-2}\\) and \\(kd = 999 - r^k,\\) only \\((r, k) = (9, 3)\\) gives a consistent value, \\(d = 90.\\) Then \\(c_3 = 1 + 2 \\cdot 90 + 9^2 = 262.\\)",
+      "hints": [
+        "Write \\(a_n = 1 + (n-1)d\\) and \\(b_n = r^{n-1}\\) with integers \\(d \\ge 1,\\) \\(r \\ge 2,\\) and turn the two given values into equations",
+        "Show \\(d\\) and then \\(r\\) must be multiples of \\(3;\\) with \\(r^k \\lt 999\\) only six pairs \\((r, k)\\) remain to test"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

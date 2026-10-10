@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2016-p4",
+  "title": "2016 HMMT February Combinatorics Problem 4",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2016,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 77.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(R\\) be the rectangle in the Cartesian plane with vertices at \\((0,0),(2,0),(2,1)\\), and \\((0,1)\\). \\(R\\) can be divided into two unit squares, as shown; the resulting figure has seven edges.\n\nHow many subsets of these seven edges form a connected figure?\n\n[Diagram omitted from this imported transcription; consult the HMMT archive while reviewing the problem.]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2016-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 81\nWe break this into cases. First, if the middle edge is not included, then there are \\(6 * 5=30\\) ways to choose two distinct points for the figure to begin and end at. We could also allow the figure to include all or none of the six remaining edges, for a total of 32 connected figures not including the middle edge. Now let's assume we are including the middle edge. Of the three edges to the left of the middle edge, there are 7 possible subsets we can include ( 8 total subsets, but we subtract off the subset consisting of only the edge parallel to the middle edge since it's not connected). Similarly, of the three edges to the right of the middle edge, there are 7 possible subsets we can include. In total, there are 49 possible connected figures that include the middle edge. Therefore, there are \\(32+49=81\\) possible connected figures.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

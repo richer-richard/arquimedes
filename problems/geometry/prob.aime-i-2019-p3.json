@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-i-2019-p3",
+  "title": "2019 AIME1 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-decomposition",
+      "label": "Area decomposition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.right-triangle",
+      "label": "Right triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2019,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 45.0,
+    "source": 2150,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "In \\(\\triangle PQR,\\) \\(PR = 15,\\) \\(QR = 20,\\) and \\(PQ = 25.\\) Points \\(A\\) and \\(B\\) lie on \\(\\overline{PQ},\\) points \\(C\\) and \\(D\\) lie on \\(\\overline{QR},\\) and points \\(E\\) and \\(F\\) lie on \\(\\overline{PR},\\) with \\(PA = QB = QC\\) \\(= RD = RE = PF = 5.\\) Find the area of hexagon \\(ABCDEF.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "120",
+    "value": "120"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2019-p3.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(15^2 + 20^2 = 25^2,\\) the triangle is right-angled at \\(R,\\) and its area is \\(\\frac{1}{2} \\cdot 15 \\cdot 20 = 150.\\) Also \\(\\sin P = \\frac{20}{25} = \\frac{4}{5}\\) and \\(\\sin Q = \\frac{15}{25} = \\frac{3}{5}.\\)\n\nThe hexagon is the triangle minus three corner triangles, each with two sides of length \\(5:\\) at \\(P,\\) area \\(\\frac{1}{2} \\cdot 5 \\cdot 5 \\cdot \\frac{4}{5} = 10;\\) at \\(Q,\\) area \\(\\frac{1}{2} \\cdot 5 \\cdot 5 \\cdot \\frac{3}{5} = \\frac{15}{2};\\) at \\(R,\\) area \\(\\frac{1}{2} \\cdot 5 \\cdot 5 = \\frac{25}{2}.\\)\n\nTherefore the hexagon has area \\(150 - 10 - \\frac{15}{2} - \\frac{25}{2} = 120.\\)",
+      "hints": [
+        "Since \\(15^2 + 20^2 = 25^2,\\) the triangle has a right angle at \\(R\\)",
+        "Subtract the three corner triangles from \\(\\triangle PQR;\\) each corner triangle has two sides of length \\(5\\) around a known angle, so its area is \\(\\frac{1}{2} \\cdot 25 \\cdot \\sin(\\text{angle})\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

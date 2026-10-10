@@ -1,0 +1,74 @@
+{
+  "id": "prob.aime-i-2015-p14",
+  "title": "2015 AIME I Problem 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pattern-recognition",
+      "label": "Pattern recognition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2015,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 68.4,
+    "source": 3500,
+    "mohs": null
+  },
+  "estimatedMinutes": 30,
+  "statement": "For each integer \\(n \\ge 2,\\) let \\(A(n)\\) be the area of the region in the coordinate plane defined by the inequalities \\(1 \\le x \\lt n\\) and \\(0 \\le y \\le x\\lfloor\\sqrt{x}\\rfloor,\\) where \\(\\lfloor\\sqrt{x}\\rfloor\\) is the greatest integer not exceeding \\(\\sqrt{x}.\\) Find the number of values of \\(n\\) with \\(2 \\le n \\le 1000\\) for which \\(A(n)\\) is an integer.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "483",
+    "value": "483"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2015-p14.live",
+      "kind": "proof-sketch",
+      "text": "On the strip \\(m \\le x \\lt m + 1\\) we have \\(\\lfloor\\sqrt{x}\\rfloor = k = \\lfloor\\sqrt{m}\\rfloor,\\) so the region above it is a trapezoid under \\(y = kx\\) with area \\(A(m+1) - A(m) = \\frac{(2m+1)k}{2}:\\) an integer when \\(k\\) is even, a half-integer when \\(k\\) is odd. Hence as \\(n\\) grows by \\(1,\\) the integrality of \\(A(n)\\) is unchanged while \\(k\\) is even and flips at every step while \\(k\\) is odd.\n\nConsider the block of \\(2k + 1\\) values \\(k^2 \\lt n \\le (k+1)^2.\\) Starting from \\(A(1) = 0,\\) the statuses of \\(A(k^2)\\) cycle with period \\(4:\\) integer for \\(k \\equiv 0, 1\\) and non-integer for \\(k \\equiv 2, 3 \\pmod 4\\) (an odd block flips the status an odd number of times, an even block preserves it). Counting integer values of \\(A(n)\\) inside each block: for \\(k = 4j - 3\\) the block alternates, beginning and ending with non-integers, giving \\(4j - 3;\\) for \\(k = 4j - 2\\) every value is a non-integer, giving \\(0;\\) for \\(k = 4j - 1\\) it alternates, beginning and ending with integers, giving \\(4j;\\) for \\(k = 4j\\) all \\(8j + 1\\) values are integers.\n\nFor \\(j = 1, \\ldots, 7,\\) covering \\(2 \\le n \\le 29^2,\\) the four blocks contribute \\((4j - 3) + 0 + 4j\\) \\(+ (8j + 1) = 16j - 2\\) integers, totaling \\(\\sum_{j=1}^{7}(16j - 2) = 434.\\) Then the block \\(k = 29\\) contributes \\(29\\) integers for \\(841 \\lt n \\le 900,\\) the block \\(k = 30\\) contributes none, and for \\(k = 31\\) the alternation over \\(961 \\lt n \\le 1000\\) begins with an integer at \\(n = 962\\) and gives \\(20\\) more. The total is \\(434 + 29 + 20 = 483.\\)",
+      "hints": [
+        "Over \\(m \\le x \\lt m+1\\) with \\(k = \\lfloor\\sqrt{m}\\rfloor,\\) the strip is a trapezoid of area \\(\\frac{(2m+1)k}{2}\\) — an integer exactly when \\(k\\) is even",
+        "So integrality of \\(A(n)\\) persists while \\(k\\) is even and alternates while \\(k\\) is odd; track the blocks \\(k^2 \\lt n \\le (k+1)^2\\) according to \\(k \\bmod 4\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

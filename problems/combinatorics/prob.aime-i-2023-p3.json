@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-i-2023-p3",
+  "title": "2023 AIME I Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.counting-intersections",
+      "label": "Counting intersections",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.double-counting",
+      "label": "Double counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2023,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 38.5,
+    "source": 2090,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "A plane contains \\(40\\) lines, no \\(2\\) of which are parallel. Suppose that there are \\(3\\) points where exactly \\(3\\) lines intersect, \\(4\\) points where exactly \\(4\\) lines intersect, \\(5\\) points where exactly \\(5\\) lines intersect, \\(6\\) points where exactly \\(6\\) lines intersect, and no points where more than \\(6\\) lines intersect. Find the number of points where exactly \\(2\\) lines intersect.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "607",
+    "value": "607"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2023-p3.live",
+      "kind": "proof-sketch",
+      "text": "Since no two of the \\(40\\) lines are parallel, every two lines cross, giving \\(\\binom{40}{2} = 780\\) pairs of lines, and each pair meets at exactly one point. A point where exactly \\(k\\) lines meet accounts for exactly \\(\\binom{k}{2}\\) of these pairs.\n\nThe given points account for \\(3\\binom{3}{2} + 4\\binom{4}{2}\\) \\(+ 5\\binom{5}{2} + 6\\binom{6}{2}\\) \\(= 9 + 24 + 50 + 90 = 173\\) pairs of lines. Each remaining pair meets at a point where exactly \\(2\\) lines intersect, one point per pair, so there are \\(780 - 173 = 607\\) such points.",
+      "hints": [
+        "Since no two lines are parallel, every pair of lines meets at exactly one intersection point.",
+        "A point where exactly \\(k\\) lines cross accounts for \\(\\binom{k}{2}\\) of the \\(\\binom{40}{2}\\) pairs of lines."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

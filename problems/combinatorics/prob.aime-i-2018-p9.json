@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2018-p9",
+  "title": "2018 AIME I Problem 9",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.counting-pairs",
+      "label": "Counting pairs",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.subsets",
+      "label": "Subsets",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2018,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 61.1,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 12,
+  "statement": "Find the number of four-element subsets of \\(\\{1, 2, 3, 4, \\ldots, 20\\}\\) with the property that two distinct elements of the subset have a sum of \\(16,\\) and two distinct elements of the subset have a sum of \\(24.\\) For example, \\(\\{3, 5, 13, 19\\}\\) and \\(\\{6, 10, 20, 18\\}\\) are two such subsets.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "210",
+    "value": "210"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2018-p9.live",
+      "kind": "proof-sketch",
+      "text": "The pairs of distinct elements summing to \\(16\\) are \\(\\{1,15\\}, \\{2,14\\}, \\ldots, \\{7,9\\}\\) (seven pairs), and those summing to \\(24\\) are \\(\\{4,20\\}, \\{5,19\\}, \\ldots, \\{11,13\\}\\) (eight pairs). First count subsets containing a \\(16\\)-pair and a \\(24\\)-pair that are disjoint. Of the \\(7 \\cdot 8 = 56\\) combinations, the ones sharing an element \\(x\\) require \\(16 - x,\\) \\(x,\\) and \\(24 - x\\) all to be valid, which happens for the \\(10\\) values \\(x \\in \\{4, \\ldots, 15\\}\\) other than \\(8\\) and \\(12.\\) No four-element set arises from two different disjoint combinations (a second decomposition would force a \\(16\\)-pair to coincide with a \\(24\\)-pair), so this case gives \\(56 - 10 = 46\\) subsets.\n\nIn the remaining subsets every \\(16\\)-pair meets every \\(24\\)-pair, so some center \\(a\\) has both \\(b = 16 - a\\) and \\(c = 24 - a\\) in the subset. There are \\(10\\) possible centers (\\(a \\in \\{4, \\ldots, 15\\}\\) with \\(a \\ne 8, 12\\)), and the fourth element can be any of the \\(17\\) remaining numbers, giving \\(170\\) center–subset counts. Exactly \\(6\\) subsets admit two centers and are counted twice: \\(\\{1,7,9,15\\},\\) \\(\\{2,6,10,14\\},\\) \\(\\{3,5,11,13\\},\\) \\(\\{5,11,13,19\\},\\) \\(\\{6,10,14,18\\},\\) and \\(\\{7,9,15,17\\}.\\) This case gives \\(170 - 6 = 164\\) subsets, none of which contain disjoint pairs.\n\nThe total is \\(46 + 164 = 210.\\)",
+      "hints": [
+        "There are \\(7\\) pairs summing to \\(16\\) and \\(8\\) pairs summing to \\(24;\\) split by whether the two pairs can be chosen disjoint",
+        "If the pairs must overlap, some element \\(a\\) has both \\(16 - a\\) and \\(24 - a\\) in the subset plus a free fourth element; subtract the subsets that have two such centers"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

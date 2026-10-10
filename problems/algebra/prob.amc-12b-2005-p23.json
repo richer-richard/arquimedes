@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12b-2005-p23",
+  "title": "2005 AMC 12B Problem 23",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sum-and-difference-of-cubes",
+      "label": "Sum and difference of cubes",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.symmetry-algebra",
+      "label": "Symmetry (algebra)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2005,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 36.7,
+    "source": 2110,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(S\\) be the set of ordered triples \\((x, y, z)\\) of real numbers for which \\[ \\log_{10}(x + y) = z \\] and \\[ \\log_{10}(x^2 + y^2) = z + 1. \\] There are real numbers \\(a\\) and \\(b\\) such that for all ordered triples \\((x, y, z)\\) in \\(S\\) we have \\(x^3 + y^3 = a \\cdot 10^{3z} + b \\cdot 10^{2z}.\\) What is the value of \\(a + b?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{15}{2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{29}{2}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{39}{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(24\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "29/2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2005-p23.live",
+      "kind": "proof-sketch",
+      "text": "The conditions give \\(x + y = 10^z\\) and \\(x^2 + y^2 = 10 \\cdot 10^z.\\) Then \\[ \\begin{aligned} &2xy = (x+y)^2 - (x^2+y^2) \\\\ &= 10^{2z} - 10 \\cdot 10^z, \\end{aligned} \\] so \\(xy = \\dfrac12\\left(10^{2z} - 10 \\cdot 10^z\\right).\\)\n\nUsing \\(x^3 + y^3\\) \\(= (x+y)^3 - 3xy(x+y),\\) \\[ \\begin{aligned} &x^3 + y^3 = 10^{3z} \\\\ &\\quad {}- \\dfrac32\\left(10^{2z} - 10 \\cdot 10^z\\right)10^z \\\\ &= -\\dfrac12 \\cdot 10^{3z} + 15 \\cdot 10^{2z}. \\end{aligned} \\]\n\nSo \\(a = -\\dfrac12\\) and \\(b = 15,\\) giving \\(a + b = \\dfrac{29}{2}.\\) These coefficients are determined: setting \\(z=0\\) gives real solutions \\(x,y=\\dfrac{1\\pm\\sqrt{19}}{2},\\) and their equation forces this same value of \\(a+b.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Rewrite the conditions as \\(x + y = 10^z\\) and \\(x^2 + y^2 = 10 \\cdot 10^z\\)",
+        "Use \\(x^3 + y^3 = (x+y)^3 - 3xy(x+y)\\) with \\(xy = \\tfrac12\\left[(x+y)^2 - (x^2+y^2)\\right]\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

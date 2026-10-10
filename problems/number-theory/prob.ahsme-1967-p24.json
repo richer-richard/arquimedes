@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1967-p24",
+  "title": "1967 AHSME Problem 24",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1967,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 23.4,
+    "source": 1500,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "The number of solution-pairs in positive integers of the equation \\(3x+5y=501\\) is:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(33\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(34\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(35\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(100\\)"
+    },
+    {
+      "label": "E",
+      "text": "none of these"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "33"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1967-p24.live",
+      "kind": "proof-sketch",
+      "text": "Modulo \\(5,\\) the equation gives \\(3x\\equiv1,\\) so \\(x\\equiv2\\pmod5.\\) Write \\(x=2+5k.\\) Then \\[ y=\\frac{501-3x}{5}=99-3k. \\] Positivity requires \\(k=0,1,\\ldots,32,\\) giving \\(33\\) pairs.\n\nTherefore, the correct answer is A.",
+      "hints": [
+        "Reduce the equation modulo \\(5\\) to find the form of \\(x\\)",
+        "Count the positive values \\(x=2+5k\\) that leave \\(y\\gt0\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

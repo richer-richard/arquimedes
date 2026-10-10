@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-12a-fall-2021-p14",
+  "title": "2021 Fall AMC 12A Problem 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-decomposition",
+      "label": "Area decomposition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2021,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 29.3,
+    "source": 1730,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "In the figure, equilateral hexagon \\(ABCDEF\\) has three nonadjacent acute interior angles that each measure \\(30^\\circ.\\) The enclosed area of the hexagon is \\(6\\sqrt{3}.\\) What is the perimeter of the hexagon?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4\\sqrt{3}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(12\\sqrt{3}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-fall-2021-p14.live",
+      "kind": "proof-sketch",
+      "text": "Let the common side length be \\(s.\\) The three acute vertices are the tips of isosceles triangles with two sides \\(s\\) and apex \\(30^\\circ;\\) each has area \\(\\tfrac12 s^2 \\sin 30^\\circ = \\tfrac{s^2}{4}.\\)\n\nThe three reflex vertices form an inner equilateral triangle with side \\(2s\\sin 15^\\circ,\\) whose area is \\(\\sqrt3\\,s^2\\sin^2 15^\\circ.\\) Using \\(\\sin^2 15^\\circ = \\tfrac{2 - \\sqrt3}{4},\\) the total area is \\[ \\frac{3s^2}{4} + \\sqrt3\\,s^2\\cdot\\frac{2 - \\sqrt3}{4} = \\frac{s^2\\sqrt3}{2}. \\]\n\nSetting \\(\\tfrac{s^2\\sqrt3}{2} = 6\\sqrt3\\) gives \\(s^2 = 12,\\) so \\(s = 2\\sqrt3\\) and the perimeter is \\(6s = 12\\sqrt3.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "Let the side be \\(s.\\) The three \\(30^\\circ\\) tips are isosceles triangles with legs \\(s;\\) they sit on the sides of the inner triangle formed by the three reflex vertices",
+        "Each tip has area \\(\\tfrac12 s^2 \\sin 30^\\circ,\\) and the inner equilateral triangle has side \\(2s\\sin 15^\\circ\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "bd3391e364ccd9d7315796bbec3fc676fc5684888da1d1d1b9568619511de73b"
+    ],
+    "solutions": []
+  }
+}

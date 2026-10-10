@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-1992-p6",
+  "title": "1992 AIME Problem 6",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.whole-number-operations",
+      "label": "Whole number operations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1992,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 30.5,
+    "source": 1780,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "For how many pairs of consecutive integers in \\(\\{1000,1001,1002,\\ldots,2000\\}\\) is no carrying required when the two integers are added?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "156",
+    "value": "156"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1992-p6.live",
+      "kind": "proof-sketch",
+      "text": "Write the smaller number as \\(1abc.\\) If \\(c\\neq9,\\) then \\(c\\leq4\\) and the unchanged digits \\(a\\) and \\(b\\) are each at most \\(4,\\) giving \\(5^3=125\\) pairs. If \\(c=9\\) but \\(b\\neq9,\\) then \\(a\\leq4\\) and \\(b\\leq4,\\) giving \\(25\\) pairs. If \\(b=c=9\\) but \\(a\\neq9,\\) there are \\(5\\) choices for \\(a.\\) Finally, \\(1999+2000\\) also needs no carry. The total is \\(125+25+5+1=156.\\)",
+      "hints": [
+        "Write the smaller integer as \\(1abc\\) and separate cases by the number of trailing \\(9\\)s",
+        "A digit that is unchanged must be at most \\(4\\), and the digit increased by \\(1\\) must also pair without a carry"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

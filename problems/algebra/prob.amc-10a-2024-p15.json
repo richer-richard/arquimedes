@@ -1,0 +1,95 @@
+{
+  "id": "prob.amc-10a-2024-p15",
+  "title": "2024 AMC 10A Problem 15",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.difference-of-squares",
+      "label": "Difference of squares",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.parity",
+      "label": "Parity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2024,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 25.9,
+    "source": 1600,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(M\\) be the greatest integer such that both \\(M + 1213\\) and \\(M + 3773\\) are perfect squares. What is the units digit of \\(M?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(8\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "8"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2024-p15.live",
+      "kind": "proof-sketch",
+      "text": "Set \\(M + 1213 = y^2\\) and \\(M + 3773 = x^2.\\) Subtracting, \\(x^2 - y^2 = 2560,\\) so \\((x - y)(x + y) = 2560.\\) The two factors share a parity, and their product is even, so both are even: write \\(x - y = 2s,\\) \\(x + y = 2t,\\) with \\(st = 640.\\) To make \\(M\\) as large as possible we want \\(y = t - s\\) as large as possible, so \\(s\\) as small as possible. Take \\(s = 1, t = 640,\\) giving \\(y = 639.\\) Then \\(M = 639^2 - 1213 = 407108,\\) whose units digit is \\(8.\\) Thus, E is the correct answer.",
+      "hints": [
+        "Set \\(M + 1213 = y^2\\) and \\(M + 3773 = x^2;\\) subtract to get \\((x - y)(x + y) = 2560\\)",
+        "Both factors are even; the greatest \\(M\\) comes from the smallest \\(x - y,\\) making \\(y\\) as large as possible"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

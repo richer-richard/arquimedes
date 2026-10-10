@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2016-p6",
+  "title": "2016 AMC 12A Problem 6",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.estimation",
+      "label": "Estimation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.triangular-number",
+      "label": "Triangular number",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2016,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 17.5,
+    "source": 1270,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "A triangular array of \\(2016\\) coins has \\(1\\) coin in the first row, \\(2\\) coins in the second row, \\(3\\) coins in the third row, and so on up to \\(N\\) coins in the \\(N\\)th row. What is the sum of the digits of \\(N?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(10\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "9"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2016-p6.live",
+      "kind": "proof-sketch",
+      "text": "The total number of coins is \\[ \\begin{gathered} 1+2+\\cdots+N\\\\ =\\dfrac{N(N+1)}{2}\\\\ =2016, \\end{gathered} \\] so \\(N(N+1)=4032.\\) Since \\(63\\cdot 64=4032,\\) we have \\(N=63,\\) and the sum of its digits is \\(6+3=9.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "\\(1+2+\\cdots+N=\\dfrac{N(N+1)}{2}\\)",
+        "Solve \\(N(N+1)=4032\\) by noting \\(N\\approx\\sqrt{4032}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

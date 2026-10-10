@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2021-p10",
+  "title": "2021 AIME I Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.invariant",
+      "label": "Invariant",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2021,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 59.0,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Consider the sequence \\((a_k)_{k \\ge 1}\\) of positive rational numbers defined by \\(a_1 = \\frac{2020}{2021}\\) and for \\(k \\ge 1,\\) if \\(a_k = \\frac{m}{n}\\) for relatively prime positive integers \\(m\\) and \\(n,\\) then \\[a_{k+1} = \\frac{m + 18}{n + 19}.\\] Determine the sum of all positive integers \\(j\\) such that the rational number \\(a_j\\) can be written in the form \\(\\frac{t}{t+1}\\) for some positive integer \\(t.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "59",
+    "value": "59"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2021-p10.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(a_k = \\frac{m}{n}\\) in lowest terms and let \\(d = n - m,\\) so \\(a_j\\) has the form \\(\\frac{t}{t+1}\\) exactly when \\(d = 1.\\) One step sends \\((m, n)\\) to \\((m + 18,\\, n + 19)\\) and then cancels \\(g = \\gcd(m + 18, n + 19).\\) Two facts control everything. First, \\(I = 19m - 18n\\) satisfies \\(19(m + 18) - 18(n + 19) = I,\\) so \\(I\\) is unchanged by the shift and divided by \\(g\\) upon cancellation. Second, since \\(I = 19(m + 18) - 18(n + 19)\\) \\(= (m + 18) - 18(d + 1),\\) a number divides both \\(m + 18\\) and \\(n + 19\\) exactly when it divides both \\(d + 1\\) and \\(I;\\) hence \\(g = \\gcd(d + 1,\\, I),\\) and after cancelling, the new difference is \\(\\frac{d + 1}{g}.\\)\n\nInitially \\(I = 19 \\cdot 2020 - 18 \\cdot 2021 = 2002\\) \\(= 2 \\cdot 7 \\cdot 11 \\cdot 13\\) and \\(d = 1,\\) so \\(j = 1\\) works. The next step has \\(d + 1 = 2,\\) \\(g = 2:\\) \\(a_2 = \\frac{2038}{2040} = \\frac{1019}{1020},\\) so \\(j = 2\\) works and \\(I = 1001 = 7 \\cdot 11 \\cdot 13.\\) From there \\(d\\) climbs \\(1, 2, 3, \\ldots\\) until \\(d + 1\\) shares a factor with \\(I:\\) at \\(d + 1 = 7\\) we get \\(a_8 = \\frac{161}{162}\\) (cancel \\(7,\\) now \\(I = 143\\)); then at \\(d + 1 = 11,\\) \\(a_{18} = \\frac{31}{32}\\) (cancel \\(11,\\) now \\(I = 13\\)); then at \\(d + 1 = 13,\\) \\(a_{30} = \\frac{19}{20}\\) (cancel \\(13,\\) now \\(I = 1\\)). Each cancellation used \\(g = d + 1,\\) so \\(d\\) returned to \\(1\\) at \\(j = 8,\\) \\(18,\\) and \\(30.\\)\n\nOnce \\(I = 1,\\) no further cancellation is possible, so \\(d\\) increases forever and never equals \\(1\\) again. The valid indices are \\(j = 1, 2, 8, 18, 30,\\) with sum \\(1 + 2 + 8 + 18 + 30 = 59.\\)",
+      "hints": [
+        "The form \\(\\frac{t}{t+1}\\) means denominator minus numerator equals \\(1\\) in lowest terms. Track how that difference evolves step by step.",
+        "The quantity \\(19m - 18n\\) is unchanged by adding \\(18\\) and \\(19,\\) and is divided by any factor you cancel; it starts at \\(2002 = 2 \\cdot 7 \\cdot 11 \\cdot 13\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

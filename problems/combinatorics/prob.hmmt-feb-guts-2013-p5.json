@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2013-p5",
+  "title": "2013 HMMT February Guts Problem 5",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.games-and-greedy-algorithms",
+      "label": "Games and greedy algorithms",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.pigeonhole-principle",
+      "label": "Pigeonhole principle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2013,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 67.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Rahul has ten cards face-down, which consist of five distinct pairs of matching cards. During each move of his game, Rahul chooses one card to turn face-up, looks at it, and then chooses another to turn face-up and looks at it. If the two face-up cards match, the game ends. If not, Rahul flips both cards face-down and keeps repeating this process. Initially, Rahul doesn't know which cards are which. Assuming that he has perfect memory, find the smallest number of moves after which he can guarantee that the game has ended.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2013-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "4 Label the 10 cards \\(a_{1}, a_{2}, \\ldots, a_{5}, b_{1}, b_{2}, \\ldots, b_{5}\\) such that \\(a_{i}\\) and \\(b_{i}\\) match for \\(1 \\leq i \\leq 5\\).\n\nFirst, we'll show that Rahul cannot always end the game in less than 4 moves, in particular, when he turns up his fifth card (during the third move), it is possible that the card he flips over is not one which he has yet encountered; consequently, he will not guarantee being able to match it, so he cannot guarantee that the game can end in three moves.\nHowever, Rahul can always end the game in 4 moves. To do this, he can turn over 6 distinct cards in his first 3 moves. If we consider the 5 sets of cards \\(\\left\\{a_{1}, b_{1}\\right\\},\\left\\{a_{2}, b_{2}\\right\\},\\left\\{a_{3}, b_{3}\\right\\},\\left\\{a_{4}, b_{4}\\right\\},\\left\\{a_{5}, b_{5}\\right\\}\\), then by the pigeonhole principle, at least 2 of the 6 revealed cards must be from the same set. Rahul can then turn over those 2 cards on the fourth move, ending the game.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

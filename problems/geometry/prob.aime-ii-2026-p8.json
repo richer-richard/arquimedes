@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2026-p8",
+  "title": "2026 AIME2 8",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.herons-formula",
+      "label": "Heron’s Formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.incircle-incenter-and-inradius",
+      "label": "Incircle, incenter, and inradius",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2026,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 61.6,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Isosceles triangle \\(\\triangle ABC\\) has \\(AB = BC.\\) Let \\(I\\) be the incenter of \\(\\triangle ABC.\\) The perimeters of \\(\\triangle ABC\\) and \\(\\triangle AIC\\) are in the ratio \\(125 : 6,\\) and all the sides of both triangles have integer lengths. Find the minimum possible value of \\(AB.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "245",
+    "value": "245"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2026-p8.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(a = AB = BC\\) and \\(b = AC,\\) so \\(s = a + \\frac{b}{2}.\\) The incircle touches \\(AC\\) at its midpoint (tangent length from \\(A\\) is \\(s - a = \\frac{b}{2}\\)), so \\(AI^2 = CI^2 = r^2 + \\frac{b^2}{4}.\\) By Heron’s formula, \\(r^2 = \\frac{(s-a)^2(s-b)}{s} = \\frac{b^2}{4} \\cdot \\frac{2a - b}{2a + b},\\) and therefore \\[ \\begin{aligned} AI^2 &= \\frac{b^2}{4}\\left(\\frac{2a - b}{2a + b} + 1\\right) \\\\ &= \\frac{ab^2}{2a + b}. \\end{aligned} \\] The perimeter condition is \\(125\\,(2\\,AI + b) = 6\\,(2a + b).\\)\n\nSince \\(AI\\) is rational, write \\(\\sqrt{\\frac{a}{2a + b}} = \\frac{p}{q}\\) in lowest terms. Then \\(aq^2 = p^2(2a + b)\\) forces \\(a\\) to be divisible by \\(p^2;\\) writing \\(a = mp^2\\) gives \\(b = m(q^2 - 2p^2),\\) \\(2a + b = mq^2,\\) and \\(AI = \\frac{mp(q^2 - 2p^2)}{q}.\\) The perimeter condition then loses \\(m\\) entirely: \\[125\\,(q^2 - 2p^2)(2p + q) = 6q^3.\\] Since \\(\\gcd(125, 6) = 1\\) we get that \\(q\\) is divisible by \\(5;\\) and \\(q\\) must be even, since for odd \\(q\\) both factors on the left are odd while the right side is even. Writing \\(q = 10w\\) and simplifying, \\((50w^2 - p^2)(p + 5w) = 12w^3.\\) Both factors on the left are coprime to \\(w\\) (as \\(\\gcd(p, q) = 1\\)). If a prime divided \\(w,\\) the right side would make it divide their product, a contradiction; hence \\(w = 1.\\) Now \\((50 - p^2)(p + 5) = 12\\) has the unique positive solution \\(p = 7.\\)\n\nSo \\(a = 49m,\\) \\(b = 2m,\\) and \\(AI = \\frac{7m}{5},\\) which is an integer exactly when \\(m\\) is divisible by \\(5.\\) Taking \\(m = 5\\) gives \\(\\triangle ABC\\) with sides \\(245, 245, 10\\) and \\(\\triangle AIC\\) with sides \\(7, 7, 10,\\) whose perimeters \\(500\\) and \\(24\\) are indeed in ratio \\(125 : 6.\\) The minimum possible \\(AB\\) is \\(245.\\)",
+      "hints": [
+        "With \\(AB = BC = a\\) and \\(AC = b,\\) the incircle touches \\(AC\\) at its midpoint, so \\(AI^2 = r^2 + \\frac{b^2}{4};\\) Heron’s formula simplifies this to \\(AI^2 = \\frac{ab^2}{2a + b}.\\)",
+        "Set \\(\\sqrt{\\frac{a}{2a + b}} = \\frac{p}{q}\\) in lowest terms; the perimeter ratio becomes \\(125(q^2 - 2p^2)(q + 2p) = 6q^3,\\) and divisibility pins down \\(q.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

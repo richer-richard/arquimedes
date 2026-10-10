@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1999-p8",
+  "title": "1999 AIME Problem 8",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1999,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 47.7,
+    "source": 2450,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Let \\(T\\) be the set of ordered triples \\((x, y, z)\\) of nonnegative real numbers that lie in the plane \\(x + y + z = 1.\\) Let us say that \\((x, y, z)\\) supports \\((a, b, c)\\) when exactly two of the following are true: \\(x \\ge a,\\) \\(y \\ge b,\\) \\(z \\ge c.\\) Let \\(S\\) consist of those triples in \\(T\\) that support \\(\\left(\\frac{1}{2}, \\frac{1}{3}, \\frac{1}{6}\\right).\\) The area of \\(S\\) divided by the area of \\(T\\) is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "25",
+    "value": "25"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1999-p8.live",
+      "kind": "proof-sketch",
+      "text": "\\(T\\) is the triangle with vertices \\((1,0,0),\\) \\((0,1,0),\\) \\((0,0,1).\\) Because \\(\\frac{1}{2} + \\frac{1}{3} + \\frac{1}{6} = 1 = x + y + z,\\) whenever two of the inequalities \\(x \\ge \\frac{1}{2},\\) \\(y \\ge \\frac{1}{3},\\) \\(z \\ge \\frac{1}{6}\\) hold, the third can hold only at a boundary point of zero area. So \\(S\\) is, up to measure zero, the union of the three regions where a specific pair of inequalities holds.\n\nThe region with \\(x \\ge \\frac{1}{2}\\) and \\(y \\ge \\frac{1}{3}\\) becomes, after substituting \\(x = \\frac{1}{2} + x'\\) and \\(y = \\frac{1}{3} + y',\\) a copy of \\(T\\) with coordinate sum \\(1 - \\frac{1}{2} - \\frac{1}{3} = \\frac{1}{6},\\) i.e. a triangle similar to \\(T\\) with ratio \\(\\frac{1}{6}\\) and area \\(\\left(\\frac{1}{6}\\right)^2\\) of \\(T.\\) Likewise the pairs \\(\\{x, z\\}\\) and \\(\\{y, z\\}\\) give similar triangles with ratios \\(\\frac{1}{3}\\) and \\(\\frac{1}{2}.\\)\n\nThe ratio of areas is \\[ \\begin{aligned} &\\frac{1}{36} + \\frac{1}{9} + \\frac{1}{4} = \\frac{1 + 4 + 9}{36} \\\\ &= \\frac{7}{18}, \\end{aligned} \\] so \\(m + n = 7 + 18 = 25.\\)",
+      "hints": [
+        "\\(T\\) is a triangle, and each condition like \\(x \\ge \\frac{1}{2}\\) cuts off a corner with a line parallel to a side",
+        "Since \\(\\frac{1}{2} + \\frac{1}{3} + \\frac{1}{6} = 1,\\) all three inequalities hold only at one boundary point; apart from that point, each two-inequality region is a triangle similar to \\(T\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

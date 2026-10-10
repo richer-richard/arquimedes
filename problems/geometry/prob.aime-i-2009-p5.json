@@ -1,0 +1,70 @@
+{
+  "id": "prob.aime-i-2009-p5",
+  "title": "2009 AIME I Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-bisector-theorem",
+      "label": "Angle bisector theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.parallelogram",
+      "label": "Parallelogram",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2009,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 49.2,
+    "source": 2510,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "Triangle \\(ABC\\) has \\(AC = 450\\) and \\(BC = 300.\\) Points \\(K\\) and \\(L\\) are located on \\(\\overline{AC}\\) and \\(\\overline{AB}\\) respectively so that \\(AK = CK,\\) and \\(\\overline{CL}\\) is the angle bisector of angle \\(C.\\) Let \\(P\\) be the point of intersection of \\(\\overline{BK}\\) and \\(\\overline{CL},\\) and let \\(M\\) be the point on line \\(BK\\) for which \\(K\\) is the midpoint of \\(\\overline{PM}.\\) If \\(AM = 180,\\) find \\(LP.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "72",
+    "value": "72"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2009-p5.live",
+      "kind": "proof-sketch",
+      "text": "Because \\(AK = CK\\) and \\(K\\) is the midpoint of \\(\\overline{PM},\\) the diagonals of quadrilateral \\(APCM\\) bisect each other, so \\(APCM\\) is a parallelogram and \\(AM \\parallel CP.\\) Since \\(P\\) lies on line \\(CL\\) and \\(B,\\) \\(P,\\) \\(M\\) all lie on line \\(BK,\\) triangles \\(BLP\\) and \\(BAM\\) are similar.\n\nThus \\(\\frac{LP}{AM} = \\frac{BL}{BA}.\\) The angle bisector theorem gives \\(\\frac{AL}{LB} = \\frac{AC}{BC} = \\frac{450}{300} = \\frac{3}{2},\\) so \\(\\frac{BL}{BA} = \\frac{2}{2 + 3} = \\frac{2}{5}.\\)\n\nTherefore \\(LP = \\frac{2}{5} \\cdot AM = \\frac{2}{5} \\cdot 180 = 72.\\)",
+      "hints": [
+        "\\(AK = CK\\) and \\(K\\) the midpoint of \\(\\overline{PM}\\) mean the diagonals of quadrilateral \\(APCM\\) bisect each other, so \\(APCM\\) is a parallelogram",
+        "\\(AM \\parallel CP\\) makes triangles \\(BLP\\) and \\(BAM\\) similar; get \\(\\frac{BL}{BA}\\) from the angle bisector theorem"
+      ],
+      "images": [
+        "2d8aaf96b640f18358223a5790aa848580bc1f498d1df80455dcf1faf7429cad"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "2d8aaf96b640f18358223a5790aa848580bc1f498d1df80455dcf1faf7429cad"
+    ]
+  }
+}

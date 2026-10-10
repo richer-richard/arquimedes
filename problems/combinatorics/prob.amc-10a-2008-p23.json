@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-10a-2008-p23",
+  "title": "2008 AMC 10A Problem 23",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.subsets",
+      "label": "Subsets",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2008,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 29.6,
+    "source": 1770,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Two subsets of the set \\(S = \\{a, b, c, d, e\\}\\) are to be chosen so that their union is \\(S\\) and their intersection contains exactly two elements. In how many ways can this be done, assuming that the order in which the subsets are chosen does not matter?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(40\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(60\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(160\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(320\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "40"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2008-p23.live",
+      "kind": "proof-sketch",
+      "text": "Choose the two common elements in \\(\\binom{5}{2} = 10\\) ways.\n\nEach of the remaining \\(3\\) elements must lie in exactly one subset, giving \\(2^3 = 8\\) assignments, for \\(80\\) ordered pairs.\n\nSince the order of the two subsets does not matter, divide by \\(2\\) to get \\(\\dfrac{80}{2} = 40.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "First choose the two elements that belong to both subsets",
+        "Each of the remaining elements goes to exactly one subset; then correct for the unordered pair"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

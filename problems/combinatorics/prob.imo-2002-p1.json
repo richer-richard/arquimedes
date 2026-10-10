@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2002-p1",
+  "title": "2002 IMO Problem 1",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2002,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 79.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n\\) be a positive integer.\nLet \\(T\\) be the set of points \\((x,y)\\) in the plane\nwhere \\(x\\) and \\(y\\) are non-negative integers with \\(x+y<n\\).\nEach point of \\(T\\) is coloured red or blue, subject to the following condition:\nif a point \\((x,y)\\) is red,\nthen so are all points \\((x',y')\\) of \\(T\\) with \\(x'\\leq x\\) and \\(y'\\leq y\\).\nLet \\(A\\) be the number of ways to choose \\(n\\) blue points with distinct \\(x\\)-coordinates,\nand let \\(B\\) be the number of ways to choose \\(n\\) blue points with distinct \\(y\\)-coordinates.\nProve that \\(A=B\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2002-p1.evanchen",
+      "kind": "proof-sketch",
+      "text": "Let \\(a_x\\) denote the number of blue points\nwith a given \\(x\\)-coordinate.\nDefine \\(b_y\\) to be the number of blue points\nwith a given \\(y\\)-coordinate.\n\nWe actually claim that\n\nClaim.\nThe multisets \\(\\mathcal A \\coloneq \\{ a_x \\mid x \\}\\)\nand \\(\\mathcal B \\coloneq \\{ b_y \\mid y \\}\\) are equal.\n\nProof.\nBy induction on the number of red points.\nIf there are no red points at all,\nthen \\(\\mathcal A = \\mathcal B = \\{1, \\dots, n\\}\\).\n\n[Diagram omitted from this imported TeX transcription.]\n\nThe proof consists of two main steps.\nFirst, suppose we color a single point \\(P = (x,y)\\)\nfrom blue to red (while preserving the condition).\nBefore the coloring, we have \\(a_x = b_y = n-(x+y)\\);\nafterwards \\(a_x = b_y = n-(x+y)-1\\)\nand no other numbers change, as desired.\n\nWe also must show that this operation\n(repeatedly adding a single point \\(P\\)) reaches all\npossible shapes of red points.\nThis is well-known as the red points form a Young tableaux;\nfor example, one way is to add all the points with \\(x=0\\)\nfirst one by one, then all the points with \\(x=1\\), and so on.\nSo the induction implies the result.\n\nFinally, \\[ A = \\prod_{x=0}^{n-1} a_x = \\prod_{y=0}^{n-1} b_y = B. \\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

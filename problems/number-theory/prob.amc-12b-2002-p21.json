@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12b-2002-p21",
+  "title": "2002 AMC 12B Problem 21",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.least-common-multiple",
+      "label": "Least common multiple",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.multiple",
+      "label": "Multiple",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2002,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 27.2,
+    "source": 1650,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "For all positive integers \\(n\\) less than \\(2002,\\) let \\[a_n=\\begin{cases} 11, & \\text{if } n \\text{ is divisible by } 13 \\text{ and } 14;\\\\ 13, & \\text{if } n \\text{ is divisible by } 14 \\text{ and } 11;\\\\ 14, & \\text{if } n \\text{ is divisible by } 11 \\text{ and } 13;\\\\ 0, & \\text{otherwise}. \\end{cases}\\] Calculate \\(\\displaystyle\\sum_{n=1}^{2001} a_n.\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(448\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(486\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1560\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2001\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2002\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "448"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2002-p21.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(2002=11\\cdot13\\cdot14\\) with \\(11,\\) \\(13,\\) \\(14\\) pairwise coprime, \\(a_n=11\\) when \\(n\\) is divisible by \\(182,\\) \\(a_n=13\\) when \\(n\\) is divisible by \\(154,\\) and \\(a_n=14\\) when \\(n\\) is divisible by \\(143\\) (and no \\(n\\lt2002\\) is divisible by all three).\n\nFor \\(n\\le2001\\) there are \\(10\\) multiples of \\(182,\\) \\(12\\) of \\(154,\\) and \\(13\\) of \\(143.\\) So the sum is \\[ \\begin{gathered} 11\\cdot10+13\\cdot12+14\\cdot13 \\\\ {}=110+156+182 \\\\ {}=448. \\end{gathered} \\]\n\nThus, the correct answer is A.",
+      "hints": [
+        "Because \\(11,\\) \\(13,\\) \\(14\\) are pairwise coprime, “divisible by two of them” means divisible by their product",
+        "Count multiples of \\(182,\\) \\(154,\\) \\(143\\) below \\(2002\\); no number under \\(2002\\) is divisible by all three"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

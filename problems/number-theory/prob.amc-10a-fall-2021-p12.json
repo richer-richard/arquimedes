@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-fall-2021-p12",
+  "title": "2021 Fall AMC 10A Problem 12",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2021,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 12.3,
+    "source": 1070,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "The base-nine representation of the number \\(N\\) is \\(27{,}006{,}000{,}052_9.\\) What is the remainder when \\(N\\) is divided by \\(5?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "3"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-fall-2021-p12.live",
+      "kind": "proof-sketch",
+      "text": "Note that \\[ 9 \\equiv -1 \\pmod{5}. \\] Then if expand \\(N\\) using the definition of bases, we get \\[ N = 2 \\cdot 9^{10} + 7 \\cdot 9^9 + 6 \\cdot 9^6 +\\]\\[ 5 \\cdot 9 + 2 \\] \\[ \\equiv 2 (-1)^{10} + 7 (-1)^9 + 6 (-1)^6 +\\]\\[ 5 (-1) + 2 \\pmod{5} \\] \\[ \\equiv 2 - 7 + 6 - 5 + 2 \\pmod{5} \\] \\[ \\equiv 3 \\pmod{5}. \\]\n\nThus, D is the correct answer.",
+      "hints": [
+        "Work modulo \\(5,\\) where \\(9\\equiv -1\\)",
+        "Only the nonzero base-nine digits contribute"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

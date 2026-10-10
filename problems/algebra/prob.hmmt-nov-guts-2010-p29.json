@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-guts-2010-p29",
+  "title": "2010 HMMT November Guts Problem 29",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.games-and-strategy",
+      "label": "Games and strategy",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2010,
+    "number": 29
+  },
+  "difficulty": {
+    "course": 58.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In the game of Galactic Dominion, players compete to amass cards, each of which is worth a certain number of points. Say you are playing a version of this game with only two kinds of cards, planet cards and hegemon cards. Each planet card is worth 2010 points, and each hegemon card is worth four points per planet card held. You start with no planet cards and no hegemon cards, and, on each turn, starting at turn one, you take either a planet card or a hegemon card, whichever is worth more points given the hand you currently hold. Define a sequence \\(\\left\\{a_{n}\\right\\}\\) for all positive integers \\(n\\) by setting \\(a_{n}\\) to be 0 if on turn \\(n\\) you take a planet card and 1 if you take a hegemon card. What is the smallest value of \\(N\\) such that the sequence \\(a_{N}, a_{N+1}, \\ldots\\) is necessarily periodic (meaning that there is a positive integer \\(k\\) such that \\(a_{n+k}=a_{n}\\) for all \\(\\left.n \\geq N\\right)\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2010-p29.hmmt",
+      "kind": "proof-sketch",
+      "text": "503 If you have \\(P\\) planets and \\(H\\) hegemons, buying a planet gives you \\(2010+4 H\\) points while buying a hegemon gives you \\(4 P\\) points. Thus you buy a hegemon whenever \\(P-H \\geq 502.5\\), and you buy a planet whenever \\(P-H \\leq 502.5\\). Therefore \\(a_{i}=1\\) for \\(1 \\leq i \\leq 503\\). Starting at \\(i=504\\) (at which point you have bought 503 planets) you must alternate buying planets and hegemons. The sequence \\(\\left\\{a_{i}\\right\\}_{i \\geq 503}\\) is periodic with period 2 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

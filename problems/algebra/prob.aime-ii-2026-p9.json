@@ -1,0 +1,72 @@
+{
+  "id": "prob.aime-ii-2026-p9",
+  "title": "2026 AIME2 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2026,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 59.8,
+    "source": 2920,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "Let \\(S\\) denote the value of the infinite sum \\[\\frac{1}{9} + \\frac{1}{99} + \\frac{1}{999} + \\frac{1}{9999} + \\cdots\\] Find the remainder when the greatest integer less than or equal to \\(10^{100} S\\) is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "669",
+    "value": "669"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2026-p9.live",
+      "kind": "proof-sketch",
+      "text": "Each term is \\(\\frac{1}{10^k - 1} = \\sum_{j \\ge 1} 10^{-kj},\\) so summing over \\(k\\) and collecting the exponent \\(n = kj,\\) \\[S = \\sum_{n \\ge 1} \\frac{d(n)}{10^n},\\] where \\(d(n)\\) is the number of divisors of \\(n.\\) Hence \\(10^{100} S = \\sum_{n = 1}^{100} d(n)\\,10^{100 - n}\\) \\(+ T\\) with \\(T = \\sum_{m \\ge 1} d(100 + m)\\,10^{-m}.\\)\n\nFrom \\(d(101) = 2,\\) \\(d(102) = 8,\\) \\(d(103) = 2,\\) \\(d(104) = 8,\\) the tail starts \\(0.2\\) \\(+ 0.08\\) \\(+ 0.002\\) \\(+ 0.0008 = 0.2828,\\) and since \\(d(N) \\lt 2\\sqrt{N},\\) the remaining terms contribute less than \\(\\sum_{m \\ge 5} \\frac{2\\sqrt{100 + m}}{10^m} \\lt 0.001.\\) So \\(0 \\lt T \\lt 1\\) and \\[\\left\\lfloor 10^{100} S \\right\\rfloor = \\sum_{n = 1}^{100} d(n)\\,10^{100 - n}.\\]\n\nModulo \\(1000,\\) every term with \\(n \\le 97\\) is a multiple of \\(1000,\\) leaving \\(d(98) \\cdot 100 + d(99) \\cdot 10\\) \\(+ d(100).\\) Since \\(d(98) = 6,\\) \\(d(99) = 6,\\) and \\(d(100) = 9,\\) the remainder is \\(600 + 60 + 9 = 669.\\)",
+      "hints": [
+        "Expand each \\(\\frac{1}{10^k - 1}\\) as a geometric series in \\(10^{-k}\\) and collect equal powers of \\(10:\\) the coefficient of \\(10^{-n}\\) counts the divisors of \\(n.\\)",
+        "After multiplying by \\(10^{100},\\) only \\(n = 98, 99, 100\\) affect the last three digits, and the leftover tail is between \\(0\\) and \\(1.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

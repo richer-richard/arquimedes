@@ -1,0 +1,85 @@
+{
+  "id": "prob.ahsme-1951-p42",
+  "title": "1951 AHSME Problem 42",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.radical",
+      "label": "Radical",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1951,
+    "number": 42
+  },
+  "difficulty": {
+    "course": 24.1,
+    "source": 1530,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "If \\(x\\) equals \\[ \\sqrt{1+\\sqrt{1+\\sqrt{1+\\sqrt{1+\\cdots}}}}, \\] then:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(x=1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(0\\lt x\\lt1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(1\\lt x\\lt2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(x\\) is infinite"
+    },
+    {
+      "label": "E",
+      "text": "\\(x\\gt2\\) but finite"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1951-p42.live",
+      "kind": "proof-sketch",
+      "text": "The repeating tail gives \\(x=\\sqrt{1+x},\\) so \\[ x^2-x-1=0. \\] Since \\(x\\ge0,\\) \\(x=\\frac{1+\\sqrt5}{2},\\) which lies strictly between \\(1\\) and \\(2.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "The expression under the first radical contains another copy of \\(x\\)",
+        "Solve \\(x=\\sqrt{1+x}\\) and keep the nonnegative root"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

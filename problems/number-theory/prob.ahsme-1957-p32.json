@@ -1,0 +1,85 @@
+{
+  "id": "prob.ahsme-1957-p32",
+  "title": "1957 AHSME Problem 32",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.fermats-little-theorem",
+      "label": "Fermat’s Little Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1957,
+    "number": 32
+  },
+  "difficulty": {
+    "course": 30.8,
+    "source": 1790,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The largest of the following integers which divides each of the numbers of the sequence \\(1^5-1,\\) \\(2^5-2,\\) \\(3^5-3,\\) \\(\\ldots\\) \\(n^5-n,\\) \\(\\ldots\\) is:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(60\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(120\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(30\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "30"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1957-p32.live",
+      "kind": "proof-sketch",
+      "text": "Factor \\[ \\begin{aligned} n^5-n &=n(n-1)(n+1)\\\\ &\\quad\\cdot(n^2+1). \\end{aligned} \\] Among three consecutive integers, one is divisible by \\(3\\) and at least one is even, so the expression is divisible by \\(6.\\) Also \\(n^5\\equiv n\\pmod5\\) for every integer \\(n,\\) so it is divisible by \\(5.\\) Hence every term is divisible by \\(30.\\) Taking \\(n=2\\) gives \\(2^5-2=30,\\) so no larger listed integer can divide every term.\n\nThus, the correct answer is E.",
+      "hints": [
+        "Show \\(n^5-n\\) is always divisible by \\(2,\\) \\(3,\\) and \\(5\\)",
+        "Use consecutive factors for \\(2\\) and \\(3,\\) and residues modulo \\(5\\) for the remaining factor"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

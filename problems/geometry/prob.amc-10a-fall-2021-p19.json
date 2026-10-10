@@ -1,0 +1,82 @@
+{
+  "id": "prob.amc-10a-fall-2021-p19",
+  "title": "2021 Fall AMC 10A Problem 19",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-decomposition",
+      "label": "Area decomposition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-area",
+      "label": "Circle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2021,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 38.5,
+    "source": 2090,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A disk of radius \\(1\\) rolls all the way around the inside of a square of side length \\(s > 4\\) and sweeps out a region of area \\(A.\\) A second disk of radius \\(1\\) rolls all the way around the outside of the same square and sweeps out a region of area \\(2A.\\) The value of \\(s\\) can be written as \\(a+\\dfrac{b\\pi}{c},\\) where \\(a,\\) \\(b,\\) and \\(c\\) are positive integers and \\(b\\) and \\(c\\) are relatively prime. What is \\(a+b+c?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(14\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "10"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-fall-2021-p19.live",
+      "kind": "proof-sketch",
+      "text": "The side length of the inner square traced out by the inner circle is \\(s - 4.\\)\n\nThere are also the small pieces remaining in the corner. These form a total area of \\[ (1 + 1)^2 - \\pi 1^2 = 4 - \\pi. \\]\n\nTherefore, \\[ A = s^2 - (s - 4)^2 - (4 - \\pi) \\]\\[= 8s - 20 + \\pi. \\]\n\nThe outer disk traces out an area that is comprised of \\(4\\) rectangles and \\(4\\) quarter-circles. The rectangles have area \\( s \\cdot 2 = 2s \\) and the quarter-circles form a circle with radius \\(2\\) and area \\(4 \\pi.\\)\n\nThis gives us \\[ 2A = 8s + 4 \\pi. \\]\n\nEquating the two equations we get \\[ 8s + 4 \\pi = 2(8s - 20 + \\pi). \\] Solving yields \\[ 8s = 40 + 2 \\pi \\]\\[ s = 5 + \\dfrac{\\pi}{4}. \\]\n\nThus, A is the correct answer.",
+      "hints": [
+        "Find the swept area inside as a boundary band",
+        "Outside, the swept area is \\(4\\) rectangles plus \\(4\\) quarter-circles"
+      ],
+      "images": [
+        "8f0f65c95bb2201041777c0451bd26bcb6fe935aaefa5adaa6b5d0b7716dea5f"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "8f0f65c95bb2201041777c0451bd26bcb6fe935aaefa5adaa6b5d0b7716dea5f"
+    ]
+  }
+}

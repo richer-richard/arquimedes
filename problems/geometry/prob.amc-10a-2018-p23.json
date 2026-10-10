@@ -1,0 +1,84 @@
+{
+  "id": "prob.amc-10a-2018-p23",
+  "title": "2018 AMC 10A Problem 23",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-decomposition",
+      "label": "Area decomposition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.right-triangle",
+      "label": "Right triangle",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2018,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 33.8,
+    "source": 2150,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Farmer Pythagoras has a field in the shape of a right triangle. The right triangle’s legs have lengths \\(3\\) and \\(4\\) units. In the corner where those sides meet at a right angle, he leaves a small unplanted square \\(S\\) so that from the air it looks like the right angle symbol. The rest of the field is planted. The shortest distance from \\(S\\) to the hypotenuse is \\(2\\) units. What fraction of the field is planted?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{25}{27}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{26}{27}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{73}{75}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{145}{147}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{74}{75}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "145/147"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2018-p23.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(x\\) be the side length of \\(S.\\) Then we can split the field up into the following shapes.\n\nWe can express the area of the field in two ways: \\[ \\dfrac{3 \\cdot 4}{2} = x^2 + \\dfrac{x(3 - x)}{2}\\]\\[ + \\dfrac{x(4 - x)}{2} + \\dfrac{2 \\cdot 5}{2}. \\]\n\nSimplifying yields \\[ 6 = \\dfrac{7x}{2} + 5 \\]\\[ x = \\dfrac{2}{7}. \\]\n\nThe desired fraction is \\[ \\dfrac{6 - x^2}{6} = \\dfrac{6 - \\frac{4}{49}}{6} = \\dfrac{145}{147}. \\]\n\nThus, D is the correct answer.",
+      "hints": [
+        "Let \\(x\\) be the side length of the unplanted square",
+        "Decompose the triangle into the square, two right triangles, and a triangle of height \\(2\\)"
+      ],
+      "images": [
+        "76ecea5c582d5853e7d1c466e10ece9c4dea2e45709bb962fea52eafd6e6cde1"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [
+      "3355064ce1ab07cfe5b3eada4e2426480e6d46aff9fdf9ae41f0510792db3881"
+    ],
+    "solutions": [
+      "76ecea5c582d5853e7d1c466e10ece9c4dea2e45709bb962fea52eafd6e6cde1"
+    ]
+  }
+}

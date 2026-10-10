@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-ii-2002-p8",
+  "title": "2002 AIME II Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2002,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 50.5,
+    "source": 2560,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "Find the least positive integer \\(k\\) for which the equation \\(\\left\\lfloor \\frac{2002}{n} \\right\\rfloor = k\\) has no integer solutions for \\(n.\\) (The notation \\(\\lfloor x \\rfloor\\) means the greatest integer less than or equal to \\(x.\\))",
+  "answerChoices": [],
+  "answer": {
+    "letter": "49",
+    "value": "49"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2002-p8.live",
+      "kind": "proof-sketch",
+      "text": "The value \\(k\\) is attained exactly when some integer \\(n\\) satisfies \\(k \\le \\frac{2002}{n} \\lt k + 1,\\) that is, when the interval \\(\\left(\\frac{2002}{k+1}, \\frac{2002}{k}\\right]\\) contains an integer. Its length is \\(\\frac{2002}{k(k+1)},\\) which is at least \\(1\\) whenever \\(k(k+1) \\le 2002\\) — so every \\(k \\le 44\\) is attained.\n\nFor larger \\(k,\\) check directly: \\(n = 44,\\) \\(43,\\) \\(42,\\) \\(41,\\) \\(40\\) give \\(\\left\\lfloor \\frac{2002}{n} \\right\\rfloor = 45,\\) \\(46,\\) \\(47,\\) \\(48,\\) \\(50.\\) Since \\(\\frac{2002}{41} \\approx 48.8\\) and \\(\\frac{2002}{40} \\gt 50,\\) the value \\(49\\) is never attained, so the least such \\(k\\) is \\(49.\\)",
+      "hints": [
+        "\\(\\left\\lfloor \\frac{2002}{n} \\right\\rfloor = k\\) has a solution exactly when some integer \\(n\\) lies in \\(\\left(\\frac{2002}{k+1}, \\frac{2002}{k}\\right]\\)",
+        "That interval has length \\(\\frac{2002}{k(k+1)},\\) so it always contains an integer when \\(k(k+1) \\le 2002.\\) Then compute \\(\\lfloor \\frac{2002}{n} \\rfloor\\) for \\(n = 44,\\) \\(43,\\) \\(42,\\) \\(41,\\) \\(40.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

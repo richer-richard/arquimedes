@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-10b-2005-p23",
+  "title": "2005 AMC 10B Problem 23",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.midpoint",
+      "label": "Midpoint",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2005,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 27.6,
+    "source": 1630,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In trapezoid \\(ABCD\\) we have \\(\\overline{AB}\\) parallel to \\(\\overline{DC},\\) \\(E\\) as the midpoint of \\(\\overline{BC},\\) and \\(F\\) as the midpoint of \\(\\overline{DA}.\\) The area of \\(ABEF\\) is twice the area of \\(FECD.\\) What is \\(\\dfrac{AB}{DC}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(8\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2005-p23.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(AB = a\\) and \\(DC = c.\\) The midsegment \\(\\overline{FE}\\) has length \\(\\dfrac{a + c}{2},\\) and \\(ABEF\\) and \\(FECD\\) have the same height.\n\nTheir areas are proportional to the averages of their parallel sides, so \\[ \\dfrac{a + \\frac{a+c}{2}}{\\frac{a+c}{2} + c} = \\dfrac{3a + c}{a + 3c} = 2. \\]\n\nThen \\(3a + c = 2a + 6c,\\) so \\(a = 5c\\) and \\(\\dfrac{AB}{DC} = 5.\\)\n\nThus, C is the correct answer.",
+      "hints": [
+        "The midsegment \\(\\overline{FE}\\) has length \\(\\dfrac{AB+DC}{2}\\)",
+        "The two smaller trapezoids share a height, so their areas compare like the averages of their parallel sides"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

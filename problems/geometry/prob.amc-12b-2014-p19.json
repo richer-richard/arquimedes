@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2014-p19",
+  "title": "2014 AMC 12B Problem 19",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cone",
+      "label": "Cone",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.sphere",
+      "label": "Sphere",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.volume",
+      "label": "Volume",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2014,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 41.8,
+    "source": 2220,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A sphere is inscribed in a truncated right circular cone as shown. The volume of the truncated cone is twice that of the sphere. What is the ratio of the radius of the bottom base of the truncated cone to the radius of the top base of the truncated cone?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{3}{2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1+\\sqrt{5}}{2}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\sqrt{3}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{3+\\sqrt{5}}{2}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2014-p19.live",
+      "kind": "proof-sketch",
+      "text": "Let the top radius be \\(1,\\) the bottom radius \\(r,\\) and the sphere radius \\(a.\\) The sphere touches both bases, so the frustum height is \\(2a.\\) In an axial cross-section put the sphere center at \\((0,a)\\); the right slanted side through \\((r,0)\\) and \\((1,2a)\\) has equation \\(2ax+(r-1)y-2ar=0.\\) Its distance from \\((0,a)\\) is \\(a,\\) so \\((r+1)^2=4a^2+(r-1)^2,\\) giving \\(r=a^2.\\)\n\nThe frustum volume is \\(\\tfrac13 \\pi (r^2 + r + 1)(2a).\\) Setting it equal to twice the sphere volume \\(\\tfrac43 \\pi a^3\\) and using \\(r = a^2\\) yields \\[ a^4 - 3a^2 + 1 = 0, \\] that is \\(r^2 - 3r + 1 = 0.\\)\n\nThe positive root is \\(r = \\dfrac{3+\\sqrt5}{2}.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "Take an axial cross-section, normalize the top radius to \\(1,\\) and call the bottom and sphere radii \\(r\\) and \\(a\\)",
+        "Use the distance from the sphere center to a slanted side to relate \\(r\\) and \\(a,\\) then compare the frustum and sphere volumes"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "10e6a98b1c22c9a72426a9e42f2da65c7388899e1da45469fe10180adff4e0d1"
+    ],
+    "solutions": []
+  }
+}

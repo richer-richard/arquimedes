@@ -1,0 +1,59 @@
+{
+  "id": "prob.aime-ii-2014-p13",
+  "title": "2014 AIME II Problem 13",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.permutations",
+      "label": "Permutations",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2014,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 64.0,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Ten adults enter a room, remove their shoes, and toss their shoes into a pile. Later, a child randomly pairs each left shoe with a right shoe without regard to which shoes belong together. The probability that for every positive integer \\(k \\lt 5,\\) no collection of \\(k\\) pairs made by the child contains the shoes from exactly \\(k\\) of the adults is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "28",
+    "value": "28"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2014-p13.live",
+      "kind": "proof-sketch",
+      "text": "The child’s pairing matches left shoe \\(j\\) with right shoe \\(\\pi(j)\\) for a uniformly random permutation \\(\\pi\\) of \\(\\{1, \\ldots, 10\\}.\\) A collection of \\(k\\) pairs uses \\(k\\) left and \\(k\\) right shoes, so it involves exactly \\(k\\) adults precisely when those adults’ indices are closed under \\(\\pi\\) — that is, when the collection is a union of cycles of \\(\\pi.\\) The condition therefore says \\(\\pi\\) has no cycle of length less than \\(5.\\)\n\nThe cycle lengths must partition \\(10\\) into parts of size at least \\(5:\\) either one \\(10\\)-cycle or two \\(5\\)-cycles. There are \\(9!\\) ten-cycles, and \\(\\frac{1}{2}\\binom{10}{5}(4!)^2 = \\frac{9!}{5}\\) permutations that are products of two \\(5\\)-cycles.\n\nThe probability is \\[\\frac{9! + \\frac{1}{5} \\cdot 9!}{10!} = \\frac{1 + \\frac{1}{5}}{10} = \\frac{3}{25},\\] so \\(m + n = 3 + 25 = 28.\\)",
+      "hints": [
+        "Pairing left shoe \\(j\\) with right shoe \\(\\pi(j)\\) defines a random permutation; a collection of \\(k\\) pairs using exactly \\(k\\) adults’ shoes is a union of cycles",
+        "The condition says every cycle of \\(\\pi\\) has length at least \\(5:\\) count \\(10\\)-cycles and products of two \\(5\\)-cycles"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "prob.hmmt-feb-geometry-2022-p9",
+  "title": "2022 HMMT February Geometry Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.isogonal-isotomic-conjugates-barycentric-coordinates",
+      "label": "Isogonal/isotomic conjugates, barycentric coordinates",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.optimization-in-geometry",
+      "label": "Optimization in geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-centers",
+      "label": "Triangle centers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-centers-centroid-incenter-circumcenter-orthocenter-euler-line-nine-point-circle",
+      "label": "Triangle centers: centroid, incenter, circumcenter, orthocenter, Euler line, nine-point circle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2022,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 92.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A_{1} B_{1} C_{1}, A_{2} B_{2} C_{2}\\), and \\(A_{3} B_{3} C_{3}\\) be three triangles in the plane. For \\(1 \\leq i \\leq 3\\), let \\(D_{i}, E_{i}\\), and \\(F_{i}\\) be the midpoints of \\(B_{i} C_{i}, A_{i} C_{i}\\), and \\(A_{i} B_{i}\\), respectively. Furthermore, for \\(1 \\leq i \\leq 3\\) let \\(G_{i}\\) be the centroid of \\(A_{i} B_{i} C_{i}\\).\nSuppose that the areas of the triangles \\(A_{1} A_{2} A_{3}, B_{1} B_{2} B_{3}, C_{1} C_{2} C_{3}, D_{1} D_{2} D_{3}, E_{1} E_{2} E_{3}\\), and \\(F_{1} F_{2} F_{3}\\) are \\(2,3,4,20,21\\), and 2020, respectively. Compute the largest possible area of \\(G_{1} G_{2} G_{3}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "917",
+    "value": "917"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2022-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(P_{i}(x, y, z)\\) be the point with barycentric coordinates \\((x, y, z)\\) in triangle \\(A_{i} B_{i} C_{i}\\). Note that since this is linear in \\(x, y\\), and \\(z\\), the signed area of triangle \\(P_{1}(x, y, z) P_{2}(x, y, z) P_{3}(x, y, z)\\) is a homogenous quadratic polynomial in \\(x, y\\), and \\(z\\); call it \\(f(x, y, z)\\).\nWe now claim that\n\n\\[f\\left(\\frac{1}{3}, \\frac{1}{3}, \\frac{1}{3}\\right)=\\frac{4 f\\left(\\frac{1}{2}, \\frac{1}{2}, 0\\right)+4 f\\left(\\frac{1}{2}, 0, \\frac{1}{2}\\right)+4 f\\left(0, \\frac{1}{2}, \\frac{1}{2}\\right)-f(1,0,0)-f(0,1,0)-f(0,0,1)}{9}\\]\n\nThis is easy to verify for \\(f \\in\\left\\{x^{2}, y^{2}, z^{2}, x y, x z, y z\\right\\}\\), after which the statement follows for general \\(f\\) by linearity. Then, assuming that we can arbitrarily choose the signs of the areas, the area is maximized at\n\n\\[\\frac{4 \\cdot 2061+9}{9}=229 \\cdot 4+1=917\\]\n\nNow it remains to show that this best-case scenario is actually possible. The first step is to first show that these values from an actual \\(f\\), i.e. that one can fit a homogenous quadratic polynomial through\nevery six possible values for \\(f\\) at the six given points. One way to see this is to note that by choosing the coefficients for \\(x^{2}, y^{2}\\), and \\(z^{2}\\), the values at the vertices of the triangle can be matched, while adding any of the \\(x y, x z\\), and \\(y z\\) terms influences only one of the midpoints, so they can be matched as well.\n\nNow we show that this particular \\(f\\) can be realized by a choice of triangles. To do this, note that by continuity there must exist \\(x_{0}, y_{0}\\), and \\(z_{0}\\) with \\(f\\left(x_{0}, y_{0}, z_{0}\\right)=0\\), since \\(f(1,0,0)\\) and \\(f\\left(\\frac{1}{2}, \\frac{1}{2}, 0\\right)\\) are different signs, and introduce the new coordinates \\(u=x-x_{0}\\) and \\(v=y-y_{0}\\); then \\(f\\) can be written as \\(a u^{2}+b u v+c v^{2}+d u+e v\\). Now, one can let \\(P_{1}(u, v)=(0,0), P_{2}(u, v)=(u, v)\\), and \\(P_{3}(u, v)=(-c v-e, a u+b v+d)\\). This can be shown to reproduce the desired \\(f\\).\nFinally, to address the condition that the original triangles must be nondegenerate, we can perturb each of the \\(P_{i}\\) by a constant, which doesn't affect \\(f\\) as areas are translation-invariant. This concludes the proof.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

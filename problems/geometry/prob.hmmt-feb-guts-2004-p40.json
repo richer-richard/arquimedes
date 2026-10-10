@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-guts-2004-p40",
+  "title": "2004 HMMT February Guts Problem 40",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2004,
+    "number": 40
+  },
+  "difficulty": {
+    "course": 75.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "You would like to provide airline service to the 10 cities in the nation of Schizophrenia, by instituting a certain number of two-way routes between cities. Unfortunately, the government is about to divide Schizophrenia into two warring countries of five cities\neach, and you don't know which cities will be in each new country. All airplane service between the two new countries will be discontinued. However, you want to make sure that you set up your routes so that, for any two cities in the same new country, it will be possible to get from one city to the other (without leaving the country).\nWhat is the minimum number of routes you must set up to be assured of doing this, no matter how the government divides up the country?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2004-p40.hmmt",
+      "kind": "proof-sketch",
+      "text": "30\nEach city \\(C\\) must be directly connected to at least 6 other cities, since otherwise the government could put \\(C\\) in one country and all its connecting cities in the other country, and there would be no way out of \\(C\\). This means that we have 6 routes for each of 10 cities, counted twice (since each route has two endpoints) \\(\\Rightarrow 6 \\cdot 10 / 2=30\\) routes. On the other hand, this is enough: picture the cities arranged around a circle, and each city connected to its 3 closest neighbors in either direction. Then if \\(C\\) and \\(D\\) are in the same country but mutually inaccessible, this means that on each arc of the circle between \\(C\\) and \\(D\\), there must be (at least) three consecutive cities in the other country. Then this second country would have 6 cities, which is impossible. So our arrangement achieves the goal with 30 routes.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

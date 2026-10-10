@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-calculus-2010-p5",
+  "title": "2010 HMMT February Calculus Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2010,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 76.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let the functions \\(f(\\alpha, x)\\) and \\(g(\\alpha)\\) be defined as\n\n\\[f(\\alpha, x)=\\frac{\\left(\\frac{x}{2}\\right)^{\\alpha}}{x-1} \\quad g(\\alpha)=\\left.\\frac{d^{4} f}{d x^{4}}\\right|_{x=2}\\]\n\nThen \\(g(\\alpha)\\) is a polynomial in \\(\\alpha\\). Find the leading coefficient of \\(g(\\alpha)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-calculus-2010-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{1}{16}\\) Write the first equation as \\((x-1) f=\\left(\\frac{x}{2}\\right)^{\\alpha}\\). For now, treat \\(\\alpha\\) as a constant. From this equation, repeatedly applying derivative with respect to \\(x\\) gives\n\n\\[\\begin{aligned}\n(x-1) f^{\\prime}+f & =\\left(\\frac{\\alpha}{2}\\right)\\left(\\frac{x}{2}\\right)^{\\alpha-1} \\\\\n(x-1) f^{\\prime \\prime}+2 f^{\\prime} & =\\left(\\frac{\\alpha}{2}\\right)\\left(\\frac{\\alpha-1}{2}\\right)\\left(\\frac{x}{2}\\right)^{\\alpha-2} \\\\\n(x-1) f^{(3)}+3 f^{\\prime \\prime} & =\\left(\\frac{\\alpha}{2}\\right)\\left(\\frac{\\alpha-1}{2}\\right)\\left(\\frac{\\alpha-2}{2}\\right)\\left(\\frac{x}{2}\\right)^{\\alpha-3} \\\\\n(x-1) f^{(4)}+4 f^{(3)} & =\\left(\\frac{\\alpha}{2}\\right)\\left(\\frac{\\alpha-1}{2}\\right)\\left(\\frac{\\alpha-2}{2}\\right)\\left(\\frac{\\alpha-3}{2}\\right)\\left(\\frac{x}{2}\\right)^{\\alpha-4}\n\\end{aligned}\\]\n\nSubstituting \\(x=2\\) to all equations gives \\(g(\\alpha)=f^{(4)}(\\alpha, 2)=\\left(\\frac{\\alpha}{2}\\right)\\left(\\frac{\\alpha-1}{2}\\right)\\left(\\frac{\\alpha-2}{2}\\right)\\left(\\frac{\\alpha-3}{2}\\right)-4 f^{(3)}(\\alpha, 2)\\). Because \\(f^{(3)}(\\alpha, 2)\\) is a cubic polynomial in \\(\\alpha\\), the leading coefficient of \\(g(\\alpha)\\) is \\(\\frac{1}{16}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

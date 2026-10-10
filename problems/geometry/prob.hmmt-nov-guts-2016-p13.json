@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-nov-guts-2016-p13",
+  "title": "2016 HMMT November Guts Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.solid-geometry",
+      "label": "Solid geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2016,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 50.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many functions \\(f:\\{0,1\\}^{3} \\rightarrow\\{0,1\\}\\) satisfy the property that, for all ordered triples \\(\\left(a_{1}, a_{2}, a_{3}\\right)\\) and \\(\\left(b_{1}, b_{2}, b_{3}\\right)\\) such that \\(a_{i} \\geq b_{i}\\) for all \\(i, f\\left(a_{1}, a_{2}, a_{3}\\right) \\geq f\\left(b_{1}, b_{2}, b_{3}\\right)\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2016-p13.hmmt",
+      "kind": "proof-sketch",
+      "text": "## Answer: 20\n\nConsider the unit cube with vertices \\(\\{0,1\\}^{3}\\). Let \\(O=(0,0,0), A=(1,0,0), B=(0,1,0), C=(0,0,1)\\), \\(D=(0,1,1), E=(1,0,1), F=(1,1,0)\\), and \\(P=(1,1,1)\\). We want to find a function \\(f\\) on these vertices such that \\(f(1, y, z) \\geq f(0, y, z)\\) (and symmetric representations). For instance, if \\(f(A)=1\\), then \\(f(E)=f(F)=f(P)=1\\) as well, and if \\(f(D)=1\\), then \\(f(P)=1\\) as well.\nWe group the vertices into four levels: \\(L_{0}=\\{O\\}, L_{1}=\\{A, B, C\\}, L_{2}=\\{D, E, F\\}\\), and \\(L_{3}=\\{P\\}\\). We do casework on the lowest level of a 1 in a function.\n\n- If the 1 is in \\(L_{0}\\), then \\(f\\) maps everything to 1 , for a total of 1 way.\n- If the 1 is in \\(L_{1}\\), then \\(f(O)=0\\). If there are 31 's in \\(L_{1}\\), then everything but \\(O\\) must be mapped to 1 , for 1 way. If there are 21 's in \\(L_{1}\\), then \\(f\\left(L_{2}\\right)=f\\left(L_{3}\\right)=1\\), and there are 3 ways to choose the 21 's in \\(L_{1}\\), for a total of 3 ways. If there is one 1 , then WLOG \\(f(A)=1\\). Then \\(f(E)=f(F)=f(P)=1\\), and \\(f(D)\\) equals either 0 or 1 . There are \\(3 \\cdot 2=6\\) ways to do this. In total, there are \\(1+3+6=10\\) ways for the lowest 1 to be in \\(L_{1}\\).\n- If the lowest 1 is in \\(L_{2}\\), then \\(f(O)=f\\left(L_{1}\\right)=0\\). If there are 31 's in \\(L_{2}\\), there is one way to make \\(f\\). If there are 21 's, then we can pick the 21 's in 3 ways. Finally, if there is one 1 , then we pick this 1 in 3 ways. There are \\(1+3+3=7\\) ways.\n- The lowest 1 is in \\(L_{3}\\). There is 1 way.\n- There are no 1 's. Then \\(f\\) sends everything to 0 . There is 1 way.\n\nIn total, there are \\(1+10+7+1+1=20\\) total \\(f^{\\prime}\\) 's.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

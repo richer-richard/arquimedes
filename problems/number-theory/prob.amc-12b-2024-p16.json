@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2024-p16",
+  "title": "2024 AMC 12B Problem 16",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.legendres-formula",
+      "label": "Legendre’s Formula",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2024,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 32.6,
+    "source": 1860,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "A group of \\(16\\) people will be partitioned into \\(4\\) indistinguishable \\(4\\)-person committees. Each committee will have one chairperson and one secretary. The number of different ways to make these assignments can be written as \\(3^r M,\\) where \\(r\\) and \\(M\\) are positive integers and \\(M\\) is not divisible by \\(3.\\) What is \\(r?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(9\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2024-p16.live",
+      "kind": "proof-sketch",
+      "text": "The number of ways to split \\(16\\) people into \\(4\\) indistinguishable groups of \\(4\\) is \\(\\dfrac{16!}{(4!)^4\\, 4!}.\\) Each committee then chooses a chairperson and a secretary in \\(4 \\cdot 3 = 12\\) ways, contributing \\(12^4.\\) So the total is \\(\\dfrac{16!}{(4!)^4\\,4!}\\cdot 12^4.\\)\n\nCounting factors of \\(3:\\) \\(16!\\) contributes \\(\\lfloor \\frac{16}{3}\\rfloor + \\lfloor \\frac{16}{9}\\rfloor = 6.\\) The denominator \\((4!)^4\\,4!\\) contributes \\(4 + 1 = 5.\\) And \\(12^4 = (2^2\\cdot 3)^4\\) contributes \\(4.\\) Thus \\(r = 6 - 5 + 4 = 5.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "The number of assignments is \\(\\dfrac{16!}{(4!)^4\\, 4!} \\cdot 12^4,\\) where each committee contributes \\(4 \\cdot 3 = 12\\) chair-and-secretary choices",
+        "Track only powers of \\(3:\\) \\(16!\\) gives \\(3^6,\\) the denominator \\((4!)^4\\,4!\\) gives \\(3^5,\\) and \\(12^4\\) gives \\(3^4\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

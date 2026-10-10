@@ -1,0 +1,57 @@
+{
+  "id": "prob.aime-ii-2020-p3",
+  "title": "2020 AIME II Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.rational-equation",
+      "label": "Rational equation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2020,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 34.9,
+    "source": 1950,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The value of \\(x\\) that satisfies \\(\\log_{2^x} 3^{20} = \\log_{2^{x+3}} 3^{2020}\\) can be written as \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "103",
+    "value": "103"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2020-p3.live",
+      "kind": "proof-sketch",
+      "text": "By the change-of-base formula, \\[\\log_{2^x} 3^{20} = \\frac{20 \\log 3}{x \\log 2}\\] and \\[\\log_{2^{x+3}} 3^{2020} = \\frac{2020 \\log 3}{(x + 3) \\log 2}.\\] Cancelling the common factor \\(\\frac{\\log 3}{\\log 2}\\) leaves \\(\\frac{20}{x} = \\frac{2020}{x + 3}.\\)\n\nCross-multiplying gives \\(20x + 60 = 2020x,\\) so \\(2000x = 60\\) and \\(x = \\frac{3}{100}.\\) Thus \\(m + n = 3 + 100 = 103.\\)",
+      "hints": [
+        "Change of base: \\(\\log_{2^x} 3^{20} = \\frac{20 \\log 3}{x \\log 2},\\) and similarly for the right side",
+        "The equation reduces to \\(\\frac{20}{x} = \\frac{2020}{x + 3},\\) which is linear in \\(x\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

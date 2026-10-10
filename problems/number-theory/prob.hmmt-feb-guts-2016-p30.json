@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-guts-2016-p30",
+  "title": "2016 HMMT February Guts Problem 30",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.diophantine-equations-techniques",
+      "label": "Diophantine Equations techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular Arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2016,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 92.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Determine the number of triples \\(0 \\leq k, m, n \\leq 100\\) of integers such that\n\n\\[2^{m} n-2^{n} m=2^{k}\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2016-p30.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 22\nFirst consider when \\(n \\geq m\\), so let \\(n=m+d\\) where \\(d \\geq 0\\). Then we have \\(2^{m}\\left(m+d-2^{d} m\\right)=\\) \\(2^{m}\\left(m\\left(1-2^{d}\\right)+d\\right)\\), which is non-positive unless \\(m=0\\). So our first set of solutions is \\(m=0, n=2^{j}\\).\n\nNow, we can assume that \\(m>n\\), so let \\(m=n+d\\) where \\(d>0\\). Rewrite \\(2^{m} n-2^{n} m=2^{n+d} n-\\) \\(2^{n}(n+d)=2^{n}\\left(\\left(2^{d}-1\\right) n-d\\right)\\). In order for this to be a power of \\(2,\\left(2^{d}-1\\right) n-d\\) must be a power of 2. This implies that for some \\(j, 2^{j} \\equiv-d\\left(\\bmod 2^{d}-1\\right)\\). But notice that the powers of \\(2\\left(\\bmod 2^{d}-1\\right)\\) are \\(1,2,4, \\ldots, 2^{d-1}\\left(2^{d} \\equiv 1\\right.\\) so the cycle repeats \\()\\).\nIn order for the residues to match, we need \\(2^{j}+d=c\\left(2^{d}-1\\right)\\), where \\(0 \\leq j \\leq d-1\\) and \\(c \\geq 1\\). In order for this to be true, we must have \\(2^{d-1}+d \\geq 2^{d}-1 \\Longleftrightarrow d+1 \\geq 2^{d-1}\\). This inequality is only true for \\(d=1,2,3\\). We plug each of these into the original expression \\(\\left(2^{d}-1\\right) n-d\\).\nFor \\(d=1\\) : \\(n-1\\) is a power of 2 . This yields the set of solutions \\(\\left(2^{j}+2,2^{j}+1\\right)\\) for \\(j \\geq 0\\).\nFor \\(d=2: 3 n-2\\) is a power of 2 . Note that powers of 2 are \\(-2(\\bmod 3)\\) if and only if it is an even power, so \\(n=\\frac{2^{2 j}+2}{3}\\). This yields the solution set \\(\\left(\\frac{2^{2 j}+8}{3}, \\frac{2^{2 j}+2}{3}\\right), j \\geq 0\\).\nFor \\(d=3: 7 n-3\\) is a power of 2 . Powers of 2 have a period of 3 when taken \\((\\bmod 7)\\), so inspection tells us \\(7 n-3=2^{3 j+2}\\), yielding the solution set \\(\\left(\\frac{2^{3 j+2}+24}{7}, \\frac{2^{3 j+2}+3}{7}\\right), j \\geq 0\\).\nTherefore, all the solutions are of the form\n\n\\[\\begin{gathered}\n(m, n)=\\left(0,2^{j}\\right),\\left(2^{j}+2,2^{j}+1\\right) \\\\\n\\left(\\frac{2^{2 j}+8}{3}, \\frac{2^{2 j}+2}{3}\\right),\\left(\\frac{2^{3 j+2}+24}{7}, \\frac{2^{3 j+2}+3}{7}\\right)\n\\end{gathered}\\]\n\nfor \\(j \\geq 0\\).\nRestricting this family to \\(m, n \\leq 100\\) gives \\(7+7+5+3=22\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

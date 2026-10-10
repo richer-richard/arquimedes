@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2024-p5",
+  "title": "2024 AMC 10A Problem 5",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.factorial",
+      "label": "Factorial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2024,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 13.9,
+    "source": 1130,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "What is the least value of \\(n\\) such that \\(n!\\) is a multiple of \\(2024?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(22\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(23\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(253\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "23"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2024-p5.live",
+      "kind": "proof-sketch",
+      "text": "Factor \\(2024 = 2^3 \\cdot 11 \\cdot 23.\\) The prime \\(23\\) is the bottleneck: for \\(23\\) to divide \\(n!,\\) we need \\(n \\ge 23.\\) At \\(n = 23,\\) the product \\(23!\\) already has \\(23,\\) \\(11,\\) and plenty of factors of \\(2,\\) so \\(23!\\) is divisible by \\(2024.\\) The least value is \\(23.\\) Thus, D is the correct answer.",
+      "hints": [
+        "Factor \\(2024 = 2^3 \\cdot 11 \\cdot 23\\)",
+        "The largest prime factor is \\(23,\\) so it must appear as a factor in \\(n!\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

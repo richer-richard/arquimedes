@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2012-p12",
+  "title": "2012 AMC 10B Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "geo.estimation",
+      "label": "Estimation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.special-right-triangle",
+      "label": "Special right triangle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2012,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 14.1,
+    "source": 1140,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Point \\(B\\) is due east of point \\(A.\\) Point \\(C\\) is due north of point \\(B.\\) The distance between points \\(A\\) and \\(C\\) is \\(10\\sqrt 2\\) meters, and \\(\\angle BAC = 45^\\circ.\\) Point \\(D\\) is \\(20\\) meters due north of point \\(C.\\) The distance \\(AD\\) is between which two integers?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 30\\) and \\( 31 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 31\\) and \\( 32 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 32\\) and \\( 33 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 33\\) and \\( 34 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 34\\) and \\( 35 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2012-p12.live",
+      "kind": "proof-sketch",
+      "text": "We know \\(AB\\) and \\(BC\\) are perpendicular, so \\[AB^2 + BC^2 = (10\\sqrt 2)^2 = 200.\\] Also, as \\(\\angle BAC = 45^\\circ,\\) we know that \\(\\triangle ABC\\) is an isosceles right triangle, so \\(AB = BC ,\\) making \\(2AB^2 = 200.\\) Thus, \\(AB = BC = 10.\\)\n\nAs such, we know that \\[BD= BC+CD = 30.\\] Thus, by the Pythagorean Theorem, we have that \\[\\begin{aligned}AD^2 &= AB^2+BD^2 \\\\&= 10^2+30^2\\\\&=1000\\end{aligned}\\] Thus, since \\[31^2 \\lt AD^2 \\lt 32^2,\\] we have \\[31 \\lt AD\\lt 32\\]\n\nThus, the correct answer is B .",
+      "hints": [
+        "Triangle \\(ABC\\) is \\(45\\)-\\(45\\)-\\(90\\)",
+        "Find \\(AB\\) and \\(BD\\), then use the Pythagorean Theorem"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

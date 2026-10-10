@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2025-p3",
+  "title": "2025 AMC 10A Problem 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.isosceles-triangle",
+      "label": "Isosceles triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-inequality",
+      "label": "Triangle inequality",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2025,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 13.9,
+    "source": 1130,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many isosceles triangles are there with positive area whose side lengths are all positive integers and whose longest side has length \\(2025?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2025\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2026\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3012\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3037\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4050\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "3037"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2025-p3.live",
+      "kind": "proof-sketch",
+      "text": "Split into two cases. Say two sides both equal \\(2025.\\) Then the third side can be any integer from \\(1\\) to \\(2025,\\) which is \\(2025\\) triangles. Now suppose \\(2025\\) is the unique longest side. The two equal legs \\(s\\) must satisfy \\(2s \\gt 2025\\) by the triangle inequality, and \\(s \\le 2024.\\) So \\(s\\) runs from \\(1013\\) to \\(2024,\\) giving \\(1012\\) triangles. Adding up, \\(2025 + 1012 = 3037.\\) Thus, D is the correct answer.",
+      "hints": [
+        "Split into the case where two sides equal \\(2025\\) and the case where \\(2025\\) is the unique longest side",
+        "In the second case the two equal sides \\(s\\) satisfy \\(2s \\gt 2025\\) and \\(s \\lt 2025\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2023-p24",
+  "title": "2023 AMC 10B Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.perimeter",
+      "label": "Perimeter",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.vector",
+      "label": "Vector",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2023,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 48.2,
+    "source": 2470,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "What is the perimeter of the boundary of the region consisting of all points which can be expressed as \\((2u - 3w,\\ v + 4w)\\) with \\(0 \\le u \\le 1,\\) \\(0 \\le v \\le 1,\\) and \\(0 \\le w \\le 1?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(10\\sqrt{3}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(16\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "16"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2023-p24.live",
+      "kind": "proof-sketch",
+      "text": "Fix \\(w.\\) As \\(u, v\\) sweep \\([0, 1]^2,\\) the point \\((2u - 3w,\\ v + 4w)\\) fills a \\(2 \\times 1\\) axis-aligned rectangle with lower-left corner \\((-3w, 4w).\\) As \\(w\\) runs from \\(0\\) to \\(1,\\) this rectangle slides along the vector \\((-3,4),\\) whose length is \\(5.\\) The swept region is a centrally symmetric hexagon. Its opposite pairs of sides have lengths \\(2, 1,\\) and \\(5,\\) inherited from the two sides of the rectangle and the sliding segment. Therefore its perimeter is \\(2(2+1+5)=16.\\) Therefore, the answer is E.",
+      "hints": [
+        "Fixing \\(w,\\) the pair \\((u, v)\\) sweeps a \\(2 \\times 1\\) rectangle; varying \\(w\\) slides it along \\((-3, 4)\\)",
+        "The boundary is a hexagon with opposite side lengths \\(2, 1,\\) and \\(\\sqrt{(-3)^2+4^2}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

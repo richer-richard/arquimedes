@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-1991-p4",
+  "title": "1991 AIME Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.counting-intersections",
+      "label": "Counting intersections",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1991,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 49.2,
+    "source": 2510,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "How many real numbers \\(x\\) satisfy the equation \\[\\frac15\\log_2x=\\sin(5\\pi x)?\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "159",
+    "value": "159"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1991-p4.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(h(x)=\\sin(5\\pi x)-\\frac15\\log_2x.\\) Any root lies in \\([2^{-5},2^5]=[\\frac{1}{32},32].\\)\n\nFor \\(x<1,\\) a root can occur only on a negative half-wave of the sine. There are two such half-waves, \\((\\frac{1}{5},\\frac{2}{5})\\) and \\((\\frac{3}{5},\\frac{4}{5}).\\) On each, \\(h\\) is positive at both endpoints and negative at the midpoint, so there are two roots. Uniqueness on the descending half follows from monotonicity; on the ascending half, \\[\\begin{aligned}h''&=-25\\pi^2\\sin(5\\pi x)\\\\&\\quad+\\frac1{5x^2\\ln2}>0,\\end{aligned}\\] so \\(h'\\) increases from a negative value at the midpoint and vanishes once. The function \\(h\\) therefore first decreases and then increases from a negative midpoint value to a positive endpoint value, giving exactly one root on this half. Thus there are \\(4\\) roots below \\(1.\\)\n\nAlso \\(x=1\\) is a root. For \\(1<x<32,\\) roots can occur only on positive half-waves \\((\\frac{2m}{5},\\frac{2m+1}{5})\\) with \\(m=3,\\) \\(4,\\) \\(\\ldots,\\) \\(79.\\) There are \\(77\\) of these. The value of \\(h\\) is negative at each endpoint and positive at the midpoint. The right half is strictly decreasing. On the left half, \\[\\begin{aligned}h'''&=-125\\pi^3\\cos(5\\pi x)\\\\&\\quad-\\frac2{5x^3\\ln2}<0,\\end{aligned}\\] so \\(h'\\) is strictly concave. It is positive at the left endpoint and negative at the midpoint, so it changes sign exactly once. Consequently, \\(h\\) rises to one maximum and then falls to a still-positive midpoint, giving exactly one crossing on the left half. Hence every such half-wave contributes exactly two roots. Therefore the total number is \\[4+1+2(77)=159.\\]",
+      "hints": [
+        "The bound \\(\\lvert\\sin(5\\pi x)\\rvert\\leq1\\) restricts \\(x\\) to a finite interval",
+        "Separate the positive and negative half-waves of the sine function and count two crossings on each eligible full half-wave"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

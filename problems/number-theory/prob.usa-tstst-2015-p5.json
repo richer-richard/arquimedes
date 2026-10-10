@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tstst-2015-p5",
+  "title": "USA TSTST 2015 Problem 5",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TSTST",
+    "year": 2015,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 84.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\varphi(n)\\) denote the number of positive integers\nless than \\(n\\) that are relatively prime to \\(n\\).\nProve that there exists a positive integer \\(m\\) for which the equation\n\\(\\varphi(n) = m\\) has at least \\(2015\\) solutions in \\(n\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tstst-2015-p5.evanchen",
+      "kind": "proof-sketch",
+      "text": "Here are two explicit solutions.\n\nFirst solution with ad-hoc subsets, by Evan Chen..\nI consider the following eleven prime numbers:\n\\[ S = \\left\\{ 11, 13, 17, 19, 29, 31, 37, 41, 43, 61, 71 \\right\\}. \\]\nThis has the property that for any \\(p \\in S\\),\nall prime factors of \\(p-1\\) are one digit.\n\nLet \\(N = (210)^{\\text{billion}}\\),\nand consider \\(M = \\varphi\\left( N \\right)\\).\nFor any subset \\(T \\subset S\\), we have\n\\[ M = \\varphi\\left(\n \\frac{N}{\\prod_{p\\in T} (p-1)} \\prod_{p \\in T} p \\right). \\]\nSince \\(2^{\\left\\lvert S \\right\\rvert} > 2015\\) we're done.\n\nRemark.\nThis solution is motivated by the deep fact that\n\\(\\varphi(11 \\cdot 1000) = \\varphi(10 \\cdot 1000)\\),\nfor example.\n\nSecond solution with smallest primes, by Yang Liu..\nLet \\(2 = p_1 < p_2 < \\dots < p_{2015}\\)\nbe the smallest \\(2015\\) primes.\nThen the \\(2015\\) numbers\n\\[\\begin{aligned}\n n_1 &= (p_1-1) p_2 \\dots p_{2015} \\\\\n n_2 &= p_1 (p_2-1) \\dots p_{2015} \\\\\n &\\vdots \\\\\n n_{2015} &= p_1 p_2 \\dots \\left( p_{2015}-1 \\right)\n\\end{aligned}\\]\nall have the same phi value, namely\n\\[ \\varphi(p_1 p_2 \\dots p_{2015}) = \\prod_{i=1}^{2015} (p_i-1). \\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

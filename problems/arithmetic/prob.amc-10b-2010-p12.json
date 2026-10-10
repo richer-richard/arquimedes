@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-2010-p12",
+  "title": "2010 AMC 10B Problem 12",
+  "category": "arithmetic",
+  "subjects": [
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "arith.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "arith.percentage",
+      "label": "Percentage",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2010,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 21.3,
+    "source": 1420,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "At the beginning of the school year, \\(50\\%\\) of all students in Mr. Wells’ math class answered “Yes” to the question “Do you love math”, and \\(50\\%\\) answered “No.” At the end of the school year, \\(70\\%\\) answered “Yes” and \\(30\\%\\) answered “No.” Altogether, \\(x\\%\\) of the students gave a different answer at the beginning and end of the school year. What is the difference between the maximum and the minimum possible values of \\(x?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(40\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(60\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(80\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "60"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2010-p12.live",
+      "kind": "proof-sketch",
+      "text": "To minimize \\(x,\\) we want to have as many kids as possible maintain their answer.\n\nWe then need at least \\(70 - 50 = 20\\) percent of the students to change their answer.\n\nTo maximize \\(x,\\) we can have everybody that answered no change their answer, but some who answered yes must stay yes.\n\nWe need \\(70 - 50 = 20\\) percent of the people who said yes to stay yes, which means only \\(50 - 20 = 30\\) percent can switch.\n\nThis makes the maximum percent of students that can switch \\(50 + 30 = 80\\) percent. The difference is then \\(80 - 20 = 60.\\)\n\nThus, D is the correct answer.",
+      "hints": [
+        "Think of \\(100\\) students",
+        "Minimize or maximize the number who switch answers"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

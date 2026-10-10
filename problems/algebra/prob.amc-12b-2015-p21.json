@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2015-p21",
+  "title": "2015 AMC 12B Problem 21",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2015,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 34.6,
+    "source": 2170,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Cozy the Cat and Dash the Dog are going up a staircase with a certain number of steps. However, instead of walking up the steps one at a time, both Cozy and Dash jump. Cozy goes two steps up with each jump (though if necessary, he will just jump the last step). Dash goes five steps up with each jump (though if necessary, he will just jump the last steps if there are fewer than \\(5\\) steps left). Suppose that Dash takes \\(19\\) fewer jumps than Cozy to reach the top of the staircase. Let \\(s\\) denote the sum of all possible numbers of steps this staircase can have. What is the sum of the digits of \\(s?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(15\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "13"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2015-p21.live",
+      "kind": "proof-sketch",
+      "text": "A staircase of \\(t\\) steps takes Cozy \\(\\left\\lceil \\tfrac{t}{2} \\right\\rceil\\) jumps and Dash \\(\\left\\lceil \\tfrac{t}{5} \\right\\rceil\\) jumps, and we need the difference to equal \\(19.\\)\n\nSuppose Dash makes \\(d+1\\) jumps. Then \\(t\\) is one of \\(5d+1,\\) \\(5d+2,\\) \\(5d+3,\\) \\(5d+4,\\) \\(5d+5.\\) Cozy makes \\(d+20\\) jumps, so \\(t\\) is either \\(2d+39\\) or \\(2d+40.\\) Equating these two lists gives an integer \\(d\\) only in the three cases \\[ \\begin{gathered} 5d+3=2d+39,\\\\ 5d+1=2d+40,\\\\ 5d+4=2d+40. \\end{gathered} \\] These yield respectively \\(t=63,66,64.\\) Thus the valid values are \\(t=63,\\) \\(64,\\) and \\(66,\\) so \\(s = 63 + 64 + 66 = 193.\\) Its digit sum is \\(1 + 9 + 3 = 13.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "For \\(t\\) steps, Cozy makes \\(\\left\\lceil \\tfrac{t}{2} \\right\\rceil\\) jumps and Dash makes \\(\\left\\lceil \\tfrac{t}{5} \\right\\rceil\\) jumps",
+        "Solve \\(\\left\\lceil \\tfrac{t}{2} \\right\\rceil - \\left\\lceil \\tfrac{t}{5} \\right\\rceil = 19\\) and collect every valid \\(t\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

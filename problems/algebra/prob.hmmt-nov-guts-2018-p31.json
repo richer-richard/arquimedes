@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-guts-2018-p31",
+  "title": "2018 HMMT November Guts Problem 31",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.algebraic-properties-of-binomial-coefficients",
+      "label": "Algebraic properties of binomial coefficients",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sums-and-products",
+      "label": "Sums and products",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2018,
+    "number": 31
+  },
+  "difficulty": {
+    "course": 60.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "David and Evan each repeatedly flip a fair coin. David will stop when he flips a tail, and Evan will stop once he flips 2 consecutive tails. Find the probability that David flips more total heads than Evan.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{1}{5}",
+    "value": "\\frac{1}{5}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2018-p31.hmmt",
+      "kind": "proof-sketch",
+      "text": "We can find the values of the functions \\(D(h)\\) and \\(E(h)\\), the probabilities that David and Evan, respectively, flip exactly \\(h\\) heads. It is easy to see that \\(D(h)=2^{-h-1}\\). In order to find \\(E(h)\\), we note that each sequence must end with the flips HTT (unless Evan flips only 2 heads). We disregard these flips for now. Then there are \\(h\\) prior places we can include an extra tails in the sequence, one between each pair of heads. There is a \\(2^{-h+1}\\) probability of this happening with no extra tails, \\(h 2^{-h}\\) probability with 1 extra tail, \\(\\binom{h}{2} 2^{-h-1}\\) probability with 2 extra tails, and so on. This sum is\n\n\\[2^{-h+1} \\sum_{n=0}^{h} 2^{-n}\\binom{h}{n}=2\\left(\\frac{3}{4}\\right)^{h}\\]\n\nWe divide by 8 to account for the probability of getting HTT to finish our sequence to get that\n\n\\[E(h)=\\frac{3^{h}}{4^{h+1}} .\\]\n\nOur answer is\n\n\\[\\sum_{n=0}^{\\infty}\\left(E(n) \\sum_{m=n+1}^{\\infty} D(m)\\right)=\\sum_{n=0}^{\\infty} \\frac{3^{n}}{8^{n+1}}=\\frac{1}{5}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

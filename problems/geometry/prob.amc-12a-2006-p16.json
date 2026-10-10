@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12a-2006-p16",
+  "title": "2006 AMC 12A Problem 16",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangent-line",
+      "label": "Tangent line",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2006,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 30.0,
+    "source": 1760,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Circles with centers \\(A\\) and \\(B\\) have radii \\(3\\) and \\(8,\\) respectively. A common internal tangent intersects the circles at \\(C\\) and \\(D,\\) respectively. Lines \\(AB\\) and \\(CD\\) intersect at \\(E,\\) and \\(AE = 5.\\) What is \\(CD?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{44}{3}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\sqrt{221}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\sqrt{255}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{55}{3}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "44/3"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2006-p16.live",
+      "kind": "proof-sketch",
+      "text": "The radii satisfy \\(AC \\perp CD\\) and \\(BD \\perp CD.\\) By the Pythagorean theorem, \\(CE = \\sqrt{5^2 - 3^2} = 4.\\)\n\nSince \\(\\triangle ACE \\sim \\triangle BDE,\\) we get \\(\\tfrac{DE}{CE} = \\tfrac{BD}{AC} = \\tfrac{8}{3},\\) so \\(DE = 4 \\cdot \\tfrac{8}{3} = \\tfrac{32}{3}.\\) Then \\[ \\begin{gathered} CD = CE + DE \\\\ = 4 + \\frac{32}{3} \\\\ = \\frac{44}{3}. \\end{gathered} \\]\n\nThus, the correct answer is B.",
+      "hints": [
+        "Radii \\(AC\\) and \\(BD\\) are perpendicular to the tangent, so \\(\\triangle ACE \\sim \\triangle BDE\\)",
+        "\\(CE = \\sqrt{AE^2 - AC^2} = 4,\\) and \\(\\tfrac{DE}{CE} = \\tfrac{BD}{AC}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "09e7cae843ca6e2d14044754eca9259801c3dc9c6dfbea062165a146b61b7294"
+    ],
+    "solutions": []
+  }
+}

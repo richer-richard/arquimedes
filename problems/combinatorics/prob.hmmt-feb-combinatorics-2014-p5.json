@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2014-p5",
+  "title": "2014 HMMT February Combinatorics Problem 5",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2014,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 73.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Eli, Joy, Paul, and Sam want to form a company; the company will have 16 shares to split among the 4 people. The following constraints are imposed:\n\n- Every person must get a positive integer number of shares, and all 16 shares must be given out.\n- No one person can have more shares than the other three people combined.\n\nAssuming that shares are indistinguishable, but people are distinguishable, in how many ways can the shares be given out?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2014-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "315 We are finding the number of integer solutions to \\(a+b+c+d=16\\) with \\(1 \\leq\\) \\(a, b, c, d \\leq 8\\). We count the number of solutions to \\(a+b+c+d=16\\) over positive integers, and subtract the number of solutions in which at least one variable is larger than 8 . If at least one variable is larger than 8 , exactly one of the variables is larger than 8 . We have 4 choices for this variable. The number of solutions to \\(a+b+c+d=16\\) over positive integers, where \\(a>8\\), is just the number of solutions to \\(a^{\\prime}+b+c+d=8\\) over positive integers, since we can substitute \\(a^{\\prime}=a-8\\). Thus, by the stars and bars formula (the number of positive integer solutions to \\(x_{1}+\\cdots+x_{m}=n\\) is \\(\\binom{n-1}{m-1}\\) ), the answer is \\(\\binom{16-1}{4-1}-\\binom{4}{1}\\binom{(16-8)-1}{4-1}=35 \\cdot 13-4 \\cdot 35=315\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

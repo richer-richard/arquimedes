@@ -1,0 +1,75 @@
+{
+  "id": "prob.hmmt-feb-team-2021-p4",
+  "title": "2021 HMMT February Team Problem 4",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.algebraic-properties-of-binomial-coefficients",
+      "label": "Algebraic properties of binomial coefficients",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.generating-functions",
+      "label": "Generating functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.induction-smoothing",
+      "label": "Induction / smoothing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2021,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 81.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(k\\) and \\(n\\) be positive integers and let\n\n\\[S=\\left\\{\\left(a_{1}, \\ldots, a_{k}\\right) \\in \\mathbb{Z}^{k} \\mid 0 \\leq a_{k} \\leq \\cdots \\leq a_{1} \\leq n, a_{1}+\\cdots+a_{k}=k\\right\\}\\]\n\nDetermine, with proof, the value of\n\n\\[\\sum_{\\left(a_{1}, \\ldots, a_{k}\\right) \\in S}\\binom{n}{a_{1}}\\binom{a_{1}}{a_{2}} \\cdots\\binom{a_{k-1}}{a_{k}}\\]\n\nin terms of \\(k\\) and \\(n\\), where the sum is over all \\(k\\)-tuples \\(\\left(a_{1}, \\ldots, a_{k}\\right)\\) in \\(S\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\binom{k+n-1}{k}=\\binom{k+n-1}{n-1}",
+    "value": "\\binom{k+n-1}{k}=\\binom{k+n-1}{n-1}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2021-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let\n\n\\[S\\left(n, k, k^{\\prime}\\right)=\\left\\{\\left(a_{1}, \\ldots, a_{k}\\right) \\mid 0 \\leq a_{k} \\leq \\cdots \\leq a_{1} \\leq n, a_{1}+\\cdots+a_{k}=k^{\\prime}\\right\\}\\]\n\nand note that \\(S(n, k, k)\\) is the set \\(S\\) in the problem.\nDefine\n\n\\[f\\left(n, k, k^{\\prime}\\right)=\\sum_{\\left(a_{1}, \\ldots, a_{k}\\right) \\in S\\left(n, k, k^{\\prime}\\right)}\\binom{n}{a_{1}}\\binom{a_{1}}{a_{2}} \\cdots\\binom{a_{k-1}}{a_{k}}\\]\n\nNow, consider \\(\\left(a_{1}, \\ldots, a_{k}\\right) \\in S\\left(n, k, k^{\\prime}\\right)\\). We have\n\n\\[i a_{i} \\leq a_{1}+\\cdots+a_{k}=k^{\\prime}\\]\n\nSo \\(a_{i} \\leq \\frac{k^{\\prime}}{i}\\). In particular, if \\(k>k^{\\prime}\\), then we have \\(a_{i}=0\\) for each \\(k^{\\prime}<i \\leq k\\). This means that \\(f\\left(n, k, k^{\\prime}\\right)=f\\left(n, k^{\\prime}, k^{\\prime}\\right)\\) if \\(k>k^{\\prime}\\).\n\nNow, let \\(f(n, k)=f(n, k, k)\\) be the answer. Splitting the sum based on the possible values of \\(a_{1}\\) gives\n\n\\[f(n, k)=\\sum_{a_{1}}\\binom{n}{a_{1}} f\\left(a_{1}, k-1, k-a_{1}\\right)\\]\n\nFor \\(k>0\\), we must have \\(a_{1} \\geq 1\\), which means\n\n\\[f\\left(a_{1}, k-1, k-a_{1}\\right)=f\\left(a_{1}, k-a_{1}, k-a_{1}\\right)=f\\left(a_{1}, k-a_{1}\\right)\\]\n\nSo, we obtain the recurrence\n\n\\[f(n, k)=\\sum_{a_{1}}\\binom{n}{a_{1}} f\\left(a_{1}, k-a_{1}\\right)\\]\n\nNow we claim \\(f(n, k)=\\binom{k+n-1}{k}\\). We proceed by induction, with our base case being \\(k=1\\). The claim is easy to verify for \\(k=1\\).\nIn the inductive step, we obtain\n\n\\[f(n, k)=\\sum_{a_{1}}\\binom{n}{a_{1}}\\binom{k-1}{k-a_{1}}=\\binom{k+n-1}{k}\\]\n\nwhere we applied Vandermonde's identity in the last equality.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

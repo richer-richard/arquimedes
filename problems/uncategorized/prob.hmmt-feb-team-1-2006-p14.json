@@ -1,0 +1,37 @@
+{
+  "id": "prob.hmmt-feb-team-1-2006-p14",
+  "title": "2006 HMMT February Team Round 1 Problem 14",
+  "category": "uncategorized",
+  "subjects": [],
+  "concepts": [],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2006,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 83.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A number \\(n\\) is called bummed out if there is exactly one ordered pair of positive integers \\((x, y)\\) such that\n\n\\[\\left\\lfloor x^{2} / y\\right\\rfloor+\\left\\lfloor y^{2} / x\\right\\rfloor=n .\\]\n\nFind all bummed out numbers.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1-2006-p14.hmmt",
+      "kind": "proof-sketch",
+      "text": "Suppose \\(n\\) is bummed out. If \\((a, b)\\) is one solution for \\((x, y)\\) to the given equation \\(\\left\\lfloor x^{2} / y\\right\\rfloor+\\left\\lfloor y^{2} / x\\right\\rfloor=n\\), then \\((b, a)\\) is another, so the unique solution \\((a, b)\\) better have the property that \\(a=b\\) and \\(n=2 a \\geq 2\\). In particular, \\(n\\) is an even positive integer.\nNow, if \\(n=2 a \\geq 12\\), then setting \\(x=a-1 \\geq 5, y=a+1 \\geq 7\\), we have\n\n\\[\\left\\lfloor\\frac{x^{2}}{y}\\right\\rfloor+\\left\\lfloor\\frac{y^{2}}{x}\\right\\rfloor=\\left\\lfloor a-3+\\frac{4}{a+1}\\right\\rfloor+\\left\\lfloor a+3+\\frac{4}{a-1}\\right\\rfloor=2 a=n\\]\n\nso \\(n\\) cannot be bummed out.\nMoreover, \\(\\left\\lfloor 1^{2} / 2\\right\\rfloor+\\left\\lfloor 2^{2} / 1\\right\\rfloor=4\\), so 4 is not bummed out. The only possibilities left are \\(2,6,8\\), and 10 .\nTo check these, note that\n\n\\[n=\\left\\lfloor\\frac{x^{2}}{y}\\right\\rfloor+\\left\\lfloor\\frac{y^{2}}{x}\\right\\rfloor>-2+\\frac{x^{2}}{2 y}+\\frac{x^{2}}{2 y}+\\frac{y^{2}}{x} \\geq-2+\\frac{3 x}{\\sqrt[3]{4}}\\]\n\nso\n\n\\[x<\\frac{\\sqrt[3]{4}}{3}(n+2)<.53(n+2)\\]\n\nand similarly for \\(y\\). So we only have to check \\(x, y \\leq\\lfloor .53(10+2)\\rfloor=6\\) :\n\n| \\(x \\backslash y\\) | 1 | 2 | 3 | 4 | 5 | 6 |\n| :---: | :---: | :---: | :---: | :---: | :---: | :---: |\n| 1 | 2 | 4 | 9 | 16 | 25 | 36 |\n| 2 | 4 | 4 | 5 | 9 | 12 | 18 |\n| 3 | 9 | 5 | 6 | 7 | 9 | 13 |\n| 4 | 16 | 9 | 7 | 8 | 9 | 11 |\n| 5 | 25 | 12 | 9 | 9 | 10 | 11 |\n| 6 | 36 | 18 | 13 | 11 | 11 | 12 |",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

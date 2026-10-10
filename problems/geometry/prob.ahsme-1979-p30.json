@@ -1,0 +1,96 @@
+{
+  "id": "prob.ahsme-1979-p30",
+  "title": "1979 AHSME Problem 30",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.congruence-geometry",
+      "label": "Congruence (geometry)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1979,
+    "number": 30
+  },
+  "difficulty": {
+    "course": 41.3,
+    "source": 2200,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "In \\(\\triangle ABC,\\) \\(E\\) is the midpoint of side \\(BC\\) and \\(D\\) is on side \\(AC.\\) If the length of \\(AC\\) is \\(1\\) and \\(\\angle BAC=60^\\circ,\\) \\(\\angle ABC=100^\\circ,\\) \\(\\angle ACB=20^\\circ,\\) and \\(\\angle DEC=80^\\circ,\\) then the area of \\(\\triangle ABC\\) plus twice the area of \\(\\triangle CDE\\) equals",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\frac14\\cos10^\\circ\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\frac{\\sqrt3}{8}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\frac14\\cos40^\\circ\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\frac14\\cos50^\\circ\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\frac18\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1979-p30.live",
+      "kind": "proof-sketch",
+      "text": "Extend \\(AB\\) through \\(B\\) to \\(F\\) with \\(AF=AC=1.\\) Then \\(\\triangle ACF\\) is equilateral. Choose \\(G\\) on \\(BF\\) so that \\(\\angle BCG=20^\\circ.\\) The angle conditions give \\(\\triangle FGC\\cong\\triangle ABC,\\) while \\(\\triangle BCG\\sim\\triangle DCE.\\) Since \\(E\\) is the midpoint of \\(BC,\\) the similarity scale is \\(2,\\) so \\[ [BCG]=4[CDE]. \\] Decomposing the equilateral triangle gives \\[ \\frac{\\sqrt3}{4} =2[ABC]+4[CDE]. \\] Dividing by \\(2\\) yields \\([ABC]+2[CDE]=\\frac{\\sqrt3}{8}.\\)\n\nTherefore, the correct answer is B.",
+      "hints": [
+        "Extend \\(AB\\) to \\(F\\) so that \\(AF=AC\\), creating an equilateral triangle",
+        "Choose \\(G\\) on \\(BF\\) with \\(\\angle BCG=20^\\circ\\); compare \\(\\triangle BCG\\) with \\(\\triangle DCE\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "1e6c1f998efe038fd375e4317d25c20868cd17b91e36a6273bf8729a2f34696a"
+    ],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2015-p28",
+  "title": "2015 HMMT February Guts Problem 28",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2015,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 80.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(w, x, y\\), and \\(z\\) be positive real numbers such that\n\n\\[\\begin{aligned}\n0 & \\neq \\cos w \\cos x \\cos y \\cos z \\\\\n2 \\pi & =w+x+y+z \\\\\n3 \\tan w & =k(1+\\sec w) \\\\\n4 \\tan x & =k(1+\\sec x) \\\\\n5 \\tan y & =k(1+\\sec y) \\\\\n6 \\tan z & =k(1+\\sec z)\n\\end{aligned}\\]\n\n(Here \\(\\sec t\\) denotes \\(\\frac{1}{\\cos t}\\) when \\(\\cos t \\neq 0\\).) Find \\(k\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2015-p28.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\sqrt{\\sqrt{19}}\\) From the identity \\(\\tan \\frac{u}{2}=\\frac{\\sin u}{1+\\cos u}\\), the conditions work out to \\(3 \\tan \\frac{w}{2}=4 \\tan \\frac{x}{2}=\\) \\(5 \\tan \\frac{y}{2}=6 \\tan \\frac{z}{2}=k\\). Let \\(a=\\tan \\frac{w}{2}, b=\\tan \\frac{x}{2}, c=\\tan \\frac{y}{2}\\), and \\(d=\\tan \\frac{z}{2}\\). Using the identity \\(\\tan (M+N)=\\frac{\\tan M+\\tan N}{1-\\tan M \\tan N}\\), we obtain\n\n\\[\\begin{aligned}\n\\tan \\left(\\frac{w+x}{2}+\\frac{y+z}{2}\\right) & =\\frac{\\tan \\left(\\frac{w+x}{2}\\right)+\\tan \\left(\\frac{y+z}{2}\\right)}{1-\\tan \\left(\\frac{w+x}{2}\\right) \\tan \\left(\\frac{y+z}{2}\\right)} \\\\\n& =\\frac{\\frac{a+b}{1-a b}+\\frac{c+d}{1-c d}}{1-\\left(\\frac{a+b}{1-a b}\\right)\\left(\\frac{c+d}{1-c d}\\right)} \\\\\n& =\\frac{a+b+c+d-a b c-a b d-b c d-a c d}{1+a b c d-a b-a c-a d-b c-b d-c d}\n\\end{aligned}\\]\n\nBecause \\(x+y+z+w=\\pi\\), we get that \\(\\tan \\left(\\frac{x+y+z+w}{2}\\right)=0\\) and thus \\(a+b+c+d=a b c+a b d+b c d+a c d\\). Substituting \\(a, b, c, d\\) corresponding to the variable \\(k\\), we obtain that \\(k^{3}-19 k=0\\). Therefore, \\(k\\) can be only \\(0, \\sqrt{19},-\\sqrt{19}\\). However, \\(k=0\\) is impossible as \\(w, x, y, z\\) will all be 0 . Also, \\(k=-\\sqrt{19}\\) is impossible as \\(w, x, y, z\\) will exceed \\(\\pi\\). Therefore, \\(k=\\sqrt{19}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

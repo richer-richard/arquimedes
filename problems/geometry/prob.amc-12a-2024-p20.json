@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-12a-2024-p20",
+  "title": "2024 AMC 12A Problem 20",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.geometric-probability",
+      "label": "Geometric probability",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2024,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 38.7,
+    "source": 2100,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Points \\(P\\) and \\(Q\\) are chosen uniformly and independently at random on sides \\(\\overline{AB}\\) and \\(\\overline{AC},\\) respectively, of equilateral triangle \\(\\triangle ABC.\\) Which of the following intervals contains the probability that the area of \\(\\triangle APQ\\) is less than half the area of \\(\\triangle ABC?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\left[\\tfrac38,\\tfrac12\\right]\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\left(\\tfrac12,\\tfrac23\\right]\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\left(\\tfrac23,\\tfrac34\\right]\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\left(\\tfrac34,\\tfrac78\\right]\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\left(\\tfrac78,1\\right]\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2024-p20.live",
+      "kind": "proof-sketch",
+      "text": "With \\(x=\\tfrac{AP}{AB}\\) and \\(y=\\tfrac{AQ}{AC}\\) uniform on \\([0,1],\\) the area ratio \\(\\tfrac{[APQ]}{[ABC]}=xy.\\) The complementary event \\(xy\\ge\\tfrac12\\) requires \\(x\\ge\\tfrac12\\) and \\(y\\in[\\tfrac{1}{2x},1],\\) with probability \\[ \\begin{aligned} &\\int_{\\frac{1}{2}}^{1}\\left(1-\\frac{1}{2x}\\right)dx \\\\ &=\\frac12-\\frac{\\ln2}{2}\\approx0.153. \\end{aligned} \\] Therefore \\(P(xy\\lt\\tfrac12)\\approx1-0.153=0.847,\\) which lies in \\(\\left(\\tfrac34,\\tfrac78\\right].\\) Thus, the correct answer is D.",
+      "hints": [
+        "Let \\(x=\\dfrac{AP}{AB}\\) and \\(y=\\dfrac{AQ}{AC}\\) be uniform on \\([0,1];\\) the area ratio is \\(xy\\)",
+        "Compute \\(P(xy\\ge\\tfrac12)=\\displaystyle\\int_{\\frac{1}{2}}^{1}\\left(1-\\tfrac{1}{2x}\\right)dx\\) and subtract from \\(1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12a-2020-p25",
+  "title": "2020 AMC 12A Problem 25",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2020,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 40.9,
+    "source": 2520,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "The number \\(a = \\dfrac{p}{q},\\) where \\(p\\) and \\(q\\) are relatively prime positive integers, has the property that the sum of all real numbers \\(x\\) satisfying \\[\\lfloor x \\rfloor \\cdot \\{x\\} = a \\cdot x^2\\] is \\(420,\\) where \\(\\lfloor x \\rfloor\\) denotes the greatest integer less than or equal to \\(x\\) and \\(\\{x\\} = x - \\lfloor x \\rfloor\\) denotes the fractional part of \\(x.\\) What is \\(p + q?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(245\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(593\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(929\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(1331\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(1332\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "929"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2020-p25.live",
+      "kind": "proof-sketch",
+      "text": "There are no negative solutions, while \\(x=0\\) is always a solution. For \\(n\\ge1\\) and \\(x\\in[n,n+1),\\) put \\(y=\\frac{x}{n}.\\) The equation becomes \\(ay^2-y+1=0.\\) Its roots must be real, so \\(0\\lt a\\le\\tfrac14.\\)\n\nIf the two roots are \\(\\alpha\\le\\beta,\\) their sum and product are both \\(\\frac{1}{a},\\) so \\((\\alpha-1)(\\beta-1)=1.\\) Write \\[ \\alpha=1+\\dfrac1u,\\qquad \\beta=1+u \\] with \\(u\\ge1.\\) Then \\(a=\\dfrac{u}{(u+1)^2}.\\) The root \\(x=n\\alpha\\) lies in \\([n,n+1)\\) exactly when \\(n\\lt u,\\) while \\(n\\beta\\) never lies there for a positive integer \\(n.\\)\n\nThe required positive total ensures \\(u\\gt1.\\) Let \\(N\\) be the largest positive integer less than \\(u,\\) so \\(N\\lt u\\le N+1.\\) The sum of all solutions is therefore \\[ \\dfrac{u+1}{u}\\cdot\\dfrac{N(N+1)}2=420. \\] Because \\(\\dfrac{u+1}{u}\\) decreases with \\(u,\\) these inequalities imply \\[ \\dfrac{N(N+2)}2\\le420\\lt\\dfrac{(N+1)^2}{2}, \\] which forces \\(N=28.\\)\n\nSubstitution gives \\(406\\cdot\\dfrac{u+1}{u}=420,\\) so \\(u=29.\\) Hence \\(a=\\dfrac{29}{30^2}=\\dfrac{29}{900}.\\) Indeed the positive solutions are \\(x=\\dfrac{30n}{29}\\) for \\(1\\le n\\le28,\\) and their sum is \\(420.\\) Therefore \\(p+q=29+900=929.\\)\n\nThus, C is the correct answer.",
+      "hints": [
+        "On \\(x \\in [n, n+1)\\) write \\(\\lfloor x \\rfloor = n\\) and \\(\\{x\\} = x - n,\\) turning the equation into a quadratic \\(a x^2 - n x + n^2 = 0\\)",
+        "Parameterize the two roots after dividing by \\(n\\) as \\(1+\\dfrac1u\\) and \\(1+u;\\) determine which positive integers \\(n\\) put a root in \\([n,n+1)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

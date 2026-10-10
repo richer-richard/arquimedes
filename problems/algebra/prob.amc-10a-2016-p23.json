@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-10a-2016-p23",
+  "title": "2016 AMC 10A 23",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.custom-operation",
+      "label": "Custom operation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.functional-equation",
+      "label": "Functional equation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2016,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 29.7,
+    "source": 1820,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A binary operation \\(\\diamondsuit\\) has the properties that \\[a\\,\\diamondsuit\\, (b\\,\\diamondsuit \\,c) = (a\\,\\diamondsuit \\,b)\\cdot c\\] and that \\(a\\,\\diamondsuit \\,a=1\\) for all nonzero real numbers \\(a,\\) \\(b,\\) and \\(c.\\) (Here the dot \\(\\cdot\\) represents the usual multiplication operation.) The solution to the equation \\[2016 \\,\\diamondsuit\\, (6\\,\\diamondsuit\\, x)=100\\] can be written as \\(\\frac{p}{q},\\) where \\(p\\) and \\(q\\) are relatively prime positive integers. What is \\(p+q?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(109\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(201\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(301\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3049\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(33{,}601\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "109"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2016-p23.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(a\\diamondsuit a=1\\), substituting \\(b=c\\) in \\[a\\diamondsuit(b\\diamondsuit c)=(a\\diamondsuit b)c\\] gives \\(a\\diamondsuit1=(a\\diamondsuit b)b\\). Also, using \\(a\\diamondsuit(a\\diamondsuit a)=(a\\diamondsuit a)a\\) gives \\(a\\diamondsuit1=a\\). Therefore \\(a\\diamondsuit b=\\frac ab\\).\n\nThe equation becomes \\[ \\begin{aligned} 2016\\diamondsuit(6\\diamondsuit x) &= 2016\\diamondsuit\\frac6x \\\\ &= \\frac{2016}{\\frac{6}{x}} \\\\ &= 336x \\\\ &= 100. \\end{aligned} \\] Thus \\(x=\\frac{25}{84}\\), so \\(p+q=25+84=109\\).\n\nThus, the correct answer is A.",
+      "hints": [
+        "First prove \\(a\\diamondsuit b=\\frac{a}{b}\\)",
+        "Then compute \\(2016\\diamondsuit(6\\diamondsuit x)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

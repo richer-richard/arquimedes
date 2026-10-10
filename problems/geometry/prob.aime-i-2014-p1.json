@@ -1,0 +1,59 @@
+{
+  "id": "prob.aime-i-2014-p1",
+  "title": "2014 AIME I Problem 1",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.perimeter",
+      "label": "Perimeter",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2014,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 43.8,
+    "source": 1890,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "The \\(8\\) eyelets for the lace of a sneaker all lie on a rectangle, four equally spaced on each of the longer sides. The rectangle has a width of \\(50\\) mm and a length of \\(80\\) mm. There is one eyelet at each vertex of the rectangle. The lace itself must pass between the vertex eyelets along a width side of the rectangle and then crisscross between successive eyelets until it reaches the two eyelets at the other width side of the rectangle as shown. After passing through these final eyelets, each of the ends of the lace must extend at least \\(200\\) mm farther to allow a knot to be tied. Find the minimum length of the lace in millimeters.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "790",
+    "value": "790"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2014-p1.live",
+      "kind": "proof-sketch",
+      "text": "The four eyelets on each \\(80\\) mm side are equally spaced with one at each vertex, so consecutive eyelets on a side are \\(\\frac{80}{3}\\) mm apart. The lace consists of one segment across the \\(50\\) mm width, six crisscross pieces (after the width crossing, each of the two strands makes three crossings to reach the top), and two free ends of at least \\(200\\) mm each. The lace is shortest when every piece is a straight segment.\n\nEach crisscross piece spans the full width and rises one gap, so its length is \\[ \\begin{aligned} &\\sqrt{50^2 + \\left(\\tfrac{80}{3}\\right)^2} \\\\ &= \\sqrt{\\tfrac{28900}{9}} = \\frac{170}{3}. \\end{aligned} \\]\n\nThe minimum length is \\(50 + 6 \\cdot \\frac{170}{3}\\) \\(+ 2 \\cdot 200\\) \\(= 50 + 340 + 400\\) \\(= 790.\\)",
+      "hints": [
+        "The eyelets divide each \\(80\\) mm side into three equal gaps, and the shortest lace uses straight segments only",
+        "Six crisscross segments each measure \\(\\sqrt{50^2 + (\\frac{80}{3})^2};\\) add one width and two \\(200\\) mm ends"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "582139dbeae009a52f724488fadcd89605d01084c373b0ba53e6bfd5859c833b"
+    ],
+    "solutions": []
+  }
+}

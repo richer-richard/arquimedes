@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2006-p9",
+  "title": "2006 AMC 12B Problem 9",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2006,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 23.0,
+    "source": 1390,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many even three-digit integers have the property that their digits, read left to right, are in strictly increasing order?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(34\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(51\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(72\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(150\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "34"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2006-p9.live",
+      "kind": "proof-sketch",
+      "text": "Let the digits be \\(a \\lt b \\lt c\\) with \\(c\\) even. Since \\(a \\geq 1,\\) no digit is zero, and \\(c \\neq 2\\) (there is no room for two smaller nonzero digits).\n\nOnce the units digit \\(c\\) is fixed, any two distinct digits below it can be arranged in increasing order in exactly one way. So the count for each \\(c\\) is \\(\\binom{c-1}{2}.\\)\n\nFor \\(c = 4, 6, 8\\) this gives \\[ \\begin{aligned} &\\binom{3}{2} + \\binom{5}{2} \\\\ &\\quad {}+ \\binom{7}{2} = 3 + 10 + 21 \\\\ &\\quad = 34. \\end{aligned} \\]\n\nThus, the correct answer is B.",
+      "hints": [
+        "The units digit is even; the two smaller digits must both be less than it",
+        "For each even units digit \\(c,\\) count the ways to choose two increasing digits below \\(c\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-guts-2018-p34",
+  "title": "2018 HMMT November Guts Problem 34",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2018,
+    "number": 34
+  },
+  "difficulty": {
+    "course": 56.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A positive integer is called primer if it has a prime number of distinct prime factors. A positive integer is called primest if it has a primer number of distinct primer factors. A positive integer is called prime-minister if it has a primest number of distinct primest factors. Let \\(N\\) be the smallest prime-minister number. Estimate \\(N\\).\nAn estimate of \\(E>0\\) earns \\(\\left\\lfloor 20 \\min \\left(\\frac{N}{E}, \\frac{E}{N}\\right)\\right\\rfloor\\) points.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2018-p34.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\quad 2^{4} \\cdot 3^{3} \\cdot 5^{3} \\cdot 7=378000\\)\nOne heuristic for estimating the answer is that numbers of the form \\(p^{q} r^{s}\\) for primes \\(p, q, r, s\\) with \\(p \\neq r, q \\neq s\\) are primest. Thus, primest numbers are not very rare, so we can expect the answer to be relatively small with only a few distinct prime factors.\n\n```\nfrom operator import *\nprimes = []\nprimers = []\nprimests = []\nfor i in range(2,3000):\n    prime_factors = 0\n    primer_factors = 0\n    temp = i\n    for x in primes:\n        if x > temp:\n            break\n        if temp % x == 0:\n            prime_factors += 1\n            while temp % x == 0:\n                temp = temp // x\n    if (prime_factors == 0):\n        primes.append(i)\n        continue\n    elif (prime_factors in primes):\n        primers.append(i)\n    for x in primers:\n        if i % x == 0:\n            primer_factors += 1\n    if (primer_factors in primers):\n        primests.append(i)\ndef product(L):\n    ans = 1\n    for i in L:\n        ans*= i\n    return ans\ndef sum_prime_product(L, curr = ()):\n    if (L == ()):\n        #print(curr)\n        if len(curr) in primes:\n```\n\n```\n            return product(curr)\n        return 0\n    return sum_prime_product(L[1:], curr + (L[0],)) + sum_prime_product(L[1:], curr)\ndef count_primests(L, curr = ()):\n    if (L == ()):\n        if (sum_prime_product(curr) in primers):\n            return 1\n        return 0\n    ans = 0\n    for i in range(0,L[0]+1):\n        ans += count_primests(L[1:], curr+(i,))\n    return ans\ndef compute(L):\n    ans = 1\n    for i in range(len(L)):\n        ans *= (primes[i]**L[i])\n    return ans\ndef find_best(M, best = 2**20 * 3**5, curr = ()):\n    num = compute(curr)\n    if (num > best):\n        return False\n    if (count_primests(curr) in primests):\n        print(num, curr)\n        return num\n    for i in range(1,M):\n        result = find_best(M, best, curr + (i,))\n        if (result == False):\n            break\n        elif (result < best):\n            best = result\n    return best\nprint(\"Answer:\", find_best(30))\n```",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

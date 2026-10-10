@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12b-2017-p25",
+  "title": "2017 AMC 12B Problem 25",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.chinese-remainder-theorem",
+      "label": "Chinese Remainder Theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.double-counting",
+      "label": "Double counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2017,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 41.6,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "A set of \\(n\\) people participate in an online video basketball tournament. Each person may be a member of any number of \\(5\\)-player teams, but no two teams may have exactly the same \\(5\\) members. The site statistics show a curious fact: The average, over all subsets of size \\(9\\) of the set of \\(n\\) participants, of the number of complete teams whose members are among those \\(9\\) people is equal to the reciprocal of the average, over all subsets of size \\(8\\) of the set of \\(n\\) participants, of the number of complete teams whose members are among those \\(8\\) people. How many values \\(n,\\) \\(9 \\le n \\le 2017,\\) can be the number of participants?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(477\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(482\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(487\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(557\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(562\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "557"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2017-p25.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(T\\) be the number of teams. Summing over size-\\(9\\) subsets counts each team \\(\\binom{n-5}{4}\\) times and over size-\\(8\\) subsets \\(\\binom{n-5}{3}\\) times. The averages are \\(\\dfrac{\\binom{n-5}{4}T}{\\binom n9}\\) and \\(\\dfrac{\\binom{n-5}{3}T}{\\binom n8};\\) setting the first equal to the reciprocal of the second and simplifying gives \\[ \\begin{aligned} &T \\\\ &\\quad {}= \\scriptsize \\frac{n(n-1)(n-2)(n-3)(n-4)}{2^5 \\cdot 3^2 \\cdot 5 \\cdot 7}. \\end{aligned} \\] We need this to be a positive integer with \\(n \\ge 9.\\) Let \\(N =\\) \\(n(n-1)(n-2)(n-3)(n-4);\\) as a product of five consecutive integers, \\(N\\) is always divisible by \\(5.\\) The condition that \\(N\\) is divisible by \\(7\\) holds for \\(5\\) residues modulo \\(7;\\) divisibility by \\(9\\) holds for \\(7\\) residues modulo \\(9;\\) and divisibility by \\(32\\) holds for \\(8\\) residues modulo \\(16.\\) The Chinese Remainder Theorem therefore gives \\(5\\cdot7\\cdot8=280\\) solutions modulo \\(\\operatorname{lcm}(7,9,16)=1008.\\) So there are \\(560\\) values in \\(1 \\le n \\le 2016;\\) removing \\(n = 1, 2, 3, 4\\) (which are below \\(9\\)) and adding \\(n = 2017\\) (since \\(2017 \\equiv 1 \\pmod{1008}\\)) gives \\(560 - 4 + 1 = 557\\) valid values.\n\nThus, the correct answer is D.",
+      "hints": [
+        "Let \\(T\\) be the number of teams. Each team is counted \\(\\binom{n-5}{4}\\) times in the size-\\(9\\) sum and \\(\\binom{n-5}{3}\\) times in the size-\\(8\\) sum",
+        "The condition becomes \\(T =\\) \\(\\dfrac{n(n-1)(n-2)(n-3)(n-4)}{2^5 \\cdot 3^2 \\cdot 5 \\cdot 7};\\) count \\(n\\) making this an integer"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

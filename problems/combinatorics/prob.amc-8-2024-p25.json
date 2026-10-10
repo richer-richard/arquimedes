@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-8-2024-p25",
+  "title": "2024 AMC 8 Problem 25",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.generating-functions",
+      "label": "Generating functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2024,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 34.9,
+    "source": 1950,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A small airplane has \\(4\\) rows of seats with \\(3\\) seats in each row. Eight passengers have boarded the plane and are distributed randomly among the seats. A married couple is next to board. What is the probability there will be \\(2\\) adjacent seats in the same row for the couple?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{8}{15}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{32}{55}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{20}{33}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{34}{55}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{8}{11}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "20/33"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2024-p25.live",
+      "kind": "proof-sketch",
+      "text": "After the first \\(8\\) passengers sit, there are \\(4\\) empty seats among the \\(12\\) seats, so there are \\(\\binom{12}{4}=495\\) equally likely sets of empty seats.\n\nCount the complement, where no row has two adjacent empty seats. In a row of three seats, the possible empty-seat patterns with no adjacent empty seats have sizes \\(0,\\) \\(1,\\) and \\(2,\\) with \\(1,\\) \\(3,\\) and \\(1\\) choices respectively. So we need the coefficient of \\(x^4\\) in \\[ (1+3x+x^2)^4. \\] This coefficient is \\[ \\begin{gathered} 3^4+4\\cdot3\\cdot3^2+\\binom42 \\\\ =81+108+6 \\\\ =195. \\end{gathered} \\]\n\nTherefore the probability that at least one row has adjacent empty seats is \\[ \\frac{495-195}{495}=\\frac{20}{33}. \\]\n\nThus, C is the correct answer.",
+      "hints": [
+        "Count the four empty seats after the first eight passengers board",
+        "Use the complement: no row has two adjacent empty seats"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "2dc429f421a07fc834f4a68c695820e065cadb69fa93f87fa718bcb57d139cd2"
+    ],
+    "solutions": []
+  }
+}

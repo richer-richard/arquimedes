@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1957-p38",
+  "title": "1957 AHSME Problem 38",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.perfect-power",
+      "label": "Perfect power",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.systematic-listing",
+      "label": "Systematic listing",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1957,
+    "number": 38
+  },
+  "difficulty": {
+    "course": 26.7,
+    "source": 1630,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "From a two-digit number \\(N\\) we subtract the number with the digits reversed and find that the result is a positive perfect cube. Then:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(N\\) cannot end in \\(5\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(N\\) can end in any digit other than \\(5\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(N\\) does not exist"
+    },
+    {
+      "label": "D",
+      "text": "there are exactly \\(7\\) values for \\(N\\)"
+    },
+    {
+      "label": "E",
+      "text": "there are exactly \\(10\\) values for \\(N\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1957-p38.live",
+      "kind": "proof-sketch",
+      "text": "Writing \\(N=10a+b,\\) the positive difference is \\[ \\begin{aligned} &(10a+b)-(10b+a)\\\\ &\\quad=9(a-b). \\end{aligned} \\] It is at most \\(81.\\) Among \\(1,\\) \\(8,\\) \\(27,\\) and \\(64,\\) only \\(27\\) is divisible by \\(9,\\) so \\(a-b=3.\\) The digit pairs are \\[ \\begin{gathered} (3,0),(4,1),(5,2),(6,3),\\\\ (7,4),(8,5),(9,6), \\end{gathered} \\] giving exactly seven values of \\(N.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "If the digits are \\(a>b,\\) the difference from the reversal is \\(9(a-b)\\)",
+        "The difference is at most \\(81,\\) so test the positive cubes no larger than \\(81\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

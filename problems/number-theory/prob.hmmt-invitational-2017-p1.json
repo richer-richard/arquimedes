@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-invitational-2017-p1",
+  "title": "2017 HMMT Invitational Problem 1",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.games-and-strategy",
+      "label": "Games and strategy",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2017,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Kevin and Yang are playing a game. Yang has \\(2017+\\binom{2017}{2}\\) cards with their front sides face down on the table. The cards are constructed as follows:\n\n- For each \\(1 \\leq n \\leq 2017\\), there is a blue card with \\(n\\) written on the back, and a fraction \\(\\frac{a_{n}}{b_{n}}\\) written on the front, where \\(\\operatorname{gcd}\\left(a_{n}, b_{n}\\right)=1\\) and \\(a_{n}, b_{n}>0\\).\n- For each \\(1 \\leq i<j \\leq 2017\\), there is a red card with \\((i, j)\\) written on the back, and a fraction \\(\\frac{a_{i}+a_{j}}{b_{i}+b_{j}}\\) written on the front.\n\nIt is given no two cards have equal fractions. In a turn Kevin can pick any two cards and Yang tells Kevin which card has the larger fraction on the front. Show that, in fewer than 10000 turns, Kevin can determine which red card has the largest fraction out of all of the red cards.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2017-p1.hmmt",
+      "kind": "proof-sketch",
+      "text": "We will provide an algorithm to determine which red card has the highest value in \\(2016+2015\\) turns.\nWe start with a lemma: If the blue card with the largest fraction is labeled \\(k\\) and the red card with the largest fraction is labeled \\((i, j)\\), then \\(i=k\\) or \\(j=k\\).\nTo prove this lemma, we assume for contradiction that \\(i \\neq k\\) and \\(j \\neq k\\). Assume without loss of generality that \\(\\frac{a_{i}}{b_{i}}>\\frac{a_{j}}{b_{j}}\\). Then \\(\\frac{a_{i}+a_{k}}{b_{i}+b_{k}}-\\frac{a_{i}+a_{j}}{b_{i}+b_{j}}=\\frac{\\left(a_{i}+a_{k}\\right)\\left(b_{i}+b_{j}\\right)-\\left(a_{i}+a_{j}\\right)\\left(b_{i}+b_{k}\\right)}{\\left(b_{i}+b_{k}\\right)\\left(b_{i}+b_{j}\\right)}=\\frac{a_{k} b_{i}+a_{i} b_{j}+a_{k} b_{j}-a_{i} b_{k}-a_{j} b_{i}-a_{j} b_{k}}{\\left(b_{i}+b_{k}\\right)\\left(b_{i}+b_{j}\\right)}\\). However, we know since \\(\\frac{a_{k}}{b_{k}}>\\frac{a_{i}}{b_{i}}>\\frac{a_{j}}{b_{j}}\\), we have that \\(a_{k} b_{i}-a_{i} b_{k}>0, a_{k} b_{j}-a_{j} b_{k}>0, a_{i} b_{j}-a_{j} b_{i}>0\\), so \\(\\frac{a_{i}+a_{k}}{b_{i}+b_{k}}-\\frac{a_{i}+a_{j}}{b_{i}+b_{j}}>0\\).\nNow, we can first find the blue card with the maximum fraction in 2016 turns. Afterwards, we know \\(k\\), so we only need to consider pairs \\((i, j)\\) with \\(i=k\\) or \\(j=k\\). There are only 2016 of these pairs, so we can find the maximum of these in 2015 turns. By the lemma, the maximum of the cards with \\(i=k\\) or \\(j=k\\) is the same as the global maximum of all the red cards.\nTherefore we have provided and algorithm to determine the \\((i, j)\\) with the maximum fraction in \\(2016+\\) 2015 turns.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

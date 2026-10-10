@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2021-p10",
+  "title": "2021 HMMT February Combinatorics Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.recurrence-relations",
+      "label": "Recurrence relations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sums-and-products",
+      "label": "Sums and products",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2021,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 92.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Jude repeatedly flips a coin. If he has already flipped \\(n\\) heads, the coin lands heads with probability \\(\\frac{1}{n+2}\\) and tails with probability \\(\\frac{n+1}{n+2}\\). If Jude continues flipping forever, let \\(p\\) be the probability that he flips 3 heads in a row at some point. Compute \\(\\lfloor 180 p\\rfloor\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "47",
+    "value": "47"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2021-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(p_{n}\\) be the probability that the \\(n\\)th head is flipped after a tail and Jude has yet to flip 3 heads consecutively to this point. For example, \\(p_{2}=\\frac{2}{3}\\), as it is impossible for 3 heads to be flipped consecutively and the second head comes after a tail exactly when the first flip after the first head is a\n\n[^0]tail, which happens with probability \\(\\frac{2}{3}\\). Similarly, \\(p_{3}=\\frac{3}{4}\\). We now establish a recursion between values of \\(p_{n}\\) :\n\\[p_{n}=\\frac{n}{n+1} p_{n-1}+\\frac{1}{n+1} p_{n-2} .\\]\n\nThe first term comes from when the previous head had tails both before and after, and the second term comes from when the previous 2 heads were consecutive. Of course there cannot be other terms, as this would imply that 3 heads were flipped consecutively. This enables us to easily compute the next few terms: \\(\\frac{11}{15}, \\frac{53}{72}, \\frac{103}{140}\\), and so on. Notably, the differences between consecutive terms (starting from \\(p_{3}-p_{2}\\) ) are \\(\\frac{2}{24},-\\frac{2}{120}, \\frac{2}{720},-\\frac{2}{5040}\\), and so on. This leads us to guess that \\(p_{n}=2 \\sum_{i=0}^{n+1} \\frac{(-1)^{i}}{i!}\\), which indeed satisfies the given recurrence relation. Then\n\n\\[\\lim _{n \\rightarrow \\infty} p_{n}=2 \\sum_{i=0}^{\\infty} \\frac{(-1)^{i}}{i!}=\\frac{2}{e}\\]\n\nBut since the probability that the \\(n\\)th head comes after a tail approaches 1 as \\(n\\) increases, this limit is the same as the limit of the probability that the first \\(n\\) heads do not include 3 that came consecutively. Then this limit is just the probability that we never flip 3 consecutive heads. Then the desired probability is just \\(p=1-\\frac{2}{e}\\). We are asked to compute \\(\\lfloor 180 p\\rfloor\\). This is the floor of \\(180-\\frac{360}{e}\\). To compute \\(360 / e\\), note that we can just truncate the infinite sum\n\n\\[\\frac{360}{e}=\\sum_{n=0}^{\\infty} \\frac{360(-1)^{n}}{n!}\\]\n\nas it converges rather quickly. The first several terms are \\(360-360+180-60+15-3+\\frac{1}{2}\\), and the rest are insignificant. This sums to about 132.5, giving an answer of \\(\\lfloor 180-132.5\\rfloor=47\\).\n\n[^0]:    \\({ }^{1}\\) See https://en.wikipedia.org/wiki/Catalan_number\\%23Second_proof for useful pictures",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

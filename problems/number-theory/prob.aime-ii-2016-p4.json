@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-ii-2016-p4",
+  "title": "2016 AIME II Problem 4",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.double-counting",
+      "label": "Double counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2016,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 51.7,
+    "source": 2450,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "An \\(a \\times b \\times c\\) rectangular box is built from \\(a \\cdot b \\cdot c\\) unit cubes. Each unit cube is colored red, green, or yellow. Each of the \\(a\\) layers of size \\(1 \\times b \\times c\\) parallel to the \\((b \\times c)\\)-faces of the box contains exactly \\(9\\) red cubes, exactly \\(12\\) green cubes, and some yellow cubes. Each of the \\(b\\) layers of size \\(a \\times 1 \\times c\\) parallel to the \\((a \\times c)\\)-faces of the box contains exactly \\(20\\) green cubes, exactly \\(25\\) yellow cubes, and some red cubes. Find the smallest possible volume of the box.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "180",
+    "value": "180"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2016-p4.live",
+      "kind": "proof-sketch",
+      "text": "Each \\(1 \\times b \\times c\\) layer has exactly \\(9\\) red and \\(12\\) green cubes, hence exactly \\(bc - 21\\) yellow; each \\(a \\times 1 \\times c\\) layer has exactly \\(20\\) green and \\(25\\) yellow, hence exactly \\(ac - 45\\) red. Counting green cubes in the whole box both ways gives \\(12a = 20b,\\) so \\(3a = 5b.\\) Counting yellow both ways gives \\(a(bc - 21) = 25b = 15a,\\) so \\(bc = 36.\\) Counting red both ways gives \\(b(ac - 45) = 9a,\\) and \\(\\frac{9a}{b} = 15,\\) so \\(ac = 60.\\)\n\nThus \\(a = \\frac{60}{c}\\) and \\(b = \\frac{36}{c}\\) are positive integers, so \\(c\\) divides \\(\\gcd(60, 36) = 12,\\) and the volume is \\(abc = \\frac{60 \\cdot 36}{c} = \\frac{2160}{c},\\) smallest when \\(c = 12:\\) volume \\(180\\) with \\((a, b, c) = (5, 3, 12).\\)\n\nThis is achievable: color every \\(1 \\times 3 \\times 12\\) layer with three identical rows RRRGGGGYYYYY. Then each \\(1 \\times 3 \\times 12\\) layer has \\(9\\) red, \\(12\\) green, and \\(15\\) yellow cubes, and each \\(5 \\times 1 \\times 12\\) layer has \\(15\\) red, \\(20\\) green, and \\(25\\) yellow cubes. So the smallest possible volume is \\(180.\\)",
+      "hints": [
+        "Count each color over the whole box using both layer directions; for instance green gives \\(12a = 20b\\)",
+        "The counts force \\(bc = 36\\) and \\(ac = 60,\\) so the volume is \\(\\frac{2160}{c}\\) with \\(c\\) dividing both \\(36\\) and \\(60\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

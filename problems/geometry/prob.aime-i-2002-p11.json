@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2002-p11",
+  "title": "2002 AIME I Problem 11",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cube-geometry",
+      "label": "Cube geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.reflection-geometry",
+      "label": "Reflection (geometry)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2002,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 57.7,
+    "source": 2840,
+    "mohs": null
+  },
+  "estimatedMinutes": 12,
+  "statement": "Let \\(ABCD\\) and \\(BCFG\\) be two faces of a cube with \\(AB = 12.\\) A beam of light emanates from vertex \\(A\\) and reflects off face \\(BCFG\\) at point \\(P,\\) which is \\(7\\) units from \\(\\overline{BG}\\) and \\(5\\) units from \\(\\overline{BC}.\\) The beam continues to be reflected off the faces of the cube. The length of the light path from the time it leaves point \\(A\\) until it next reaches a vertex of the cube is given by \\(m\\sqrt{n},\\) where \\(m\\) and \\(n\\) are integers and \\(n\\) is not divisible by the square of any prime. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "230",
+    "value": "230"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2002-p11.live",
+      "kind": "proof-sketch",
+      "text": "Place \\(A = (0, 0, 0)\\) with the cube \\([0, 12]^3\\) and \\(P = (12, 7, 5)\\) on the face \\(x = 12.\\) Reflecting the cube across the relevant face at each bounce straightens the reflected path into the straight ray from \\(A\\) through \\(P:\\) each crossing of a plane \\(x = 12k,\\) \\(y = 12k,\\) or \\(z = 12k\\) corresponds to a bounce, and the beam reaches a vertex of the cube exactly when all three coordinates are simultaneously multiples of \\(12.\\)\n\nThe ray consists of the points \\((12t, 7t, 5t).\\) Since \\(7\\) and \\(5\\) are relatively prime to \\(12,\\) the coordinates \\(7t\\) and \\(5t\\) are first divisible by \\(12\\) when \\(t = 12,\\) at the point \\((144, 84, 60).\\) The path length equals the straight-line distance \\[ \\begin{aligned} &\\sqrt{144^2 + 84^2 + 60^2} \\\\ &= 12\\sqrt{12^2 + 7^2 + 5^2} \\\\ &= 12\\sqrt{218}. \\end{aligned} \\]\n\nSince \\(218 = 2 \\cdot 109\\) is squarefree, \\(m + n = 12 + 218 = 230.\\)",
+      "hints": [
+        "Reflect the cube across a face at each bounce; the reflections straighten the light path into the single ray from \\(A\\) through \\(P\\)",
+        "The ray’s points are \\((12t, 7t, 5t);\\) all three coordinates are first divisible by \\(12\\) when \\(t = 12\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

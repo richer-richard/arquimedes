@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-12b-2020-p24",
+  "title": "2020 AMC 12B Problem 24",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factor",
+      "label": "Factor",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.recursive-counting",
+      "label": "Recursive counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2020,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 41.8,
+    "source": 2220,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(D(n)\\) denote the number of ways of writing the positive integer \\(n\\) as a product \\[n = f_1 \\cdot f_2 \\cdots f_k,\\] where \\(k \\ge 1,\\) the \\(f_i\\) are integers strictly greater than \\(1,\\) and the order in which the factors are listed matters (that is, two representations that differ only in the order of the factors are counted as distinct). For example, the number \\(6\\) can be written as \\(6,\\) \\(2 \\cdot 3,\\) and \\(3 \\cdot 2,\\) so \\(D(6) = 3.\\) What is \\(D(96)?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(112\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(128\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(144\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(172\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(184\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "112"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2020-p24.live",
+      "kind": "proof-sketch",
+      "text": "The first factor \\(f_1\\) can be any divisor \\(d \\gt 1,\\) after which the rest is an ordered factorization of \\(\\frac{n}{d}.\\) So \\(D(n) = \\sum_{d \\mid n,\\, d \\gt 1} D(\\frac{n}{d}),\\) with \\(D(1) = 1.\\)\n\nComputing over the divisors of \\(96 = 2^5\\cdot 3:\\) \\(D(2) = D(3) = 1,\\) \\(D(4) = 2,\\) \\(D(6) = 3,\\) \\(D(8) = 4,\\) \\(D(12) = 8,\\) \\(D(16) = 8,\\) \\(D(24) = 20,\\) \\(D(32) = 16,\\) \\(D(48) = 48.\\)\n\nFinally \\[ \\begin{gathered} D(96) = D(48) + D(32) \\\\ {}+ D(24) + D(16) + D(12) \\\\ {}+ D(8) + D(6) + D(4) \\\\ {}+ D(3) + D(2) + D(1) \\\\ = 48 + 16 + 20 + 8 \\\\ {}+ 8 + 4 + 3 + 2 \\\\ {}+ 1 + 1 + 1 = 112. \\end{gathered} \\]\n\nThus, the correct answer is A.",
+      "hints": [
+        "Use the recursion \\(D(n) = \\sum_{d \\mid n,\\, d \\gt 1} D(\\frac{n}{d}),\\) with \\(D(1) = 1\\)",
+        "Since \\(96 = 2^5 \\cdot 3,\\) build up \\(D\\) on the divisors \\(2,\\) \\(3,\\) \\(4,\\) \\(6,\\) \\(8,\\) \\(12,\\) \\(16,\\) \\(24,\\) \\(32,\\) \\(48,\\) \\(96\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

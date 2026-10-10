@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-10a-2015-p19",
+  "title": "2015 AMC 10A Problem 19",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-decomposition",
+      "label": "Area decomposition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.special-right-triangle",
+      "label": "Special right triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2015,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 29.3,
+    "source": 1880,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The isosceles right triangle \\(ABC\\) has right angle at \\(C\\) and area \\(12.5.\\) The rays trisecting \\(\\angle ACB\\) intersect \\(AB\\) at \\(D\\) and \\(E.\\) What is the area of \\(\\triangle CDE?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{5\\sqrt{2}}{3}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{50\\sqrt{3}-75}{4}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{15\\sqrt{3}}{8}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{50-25\\sqrt{3}}{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{25}{6}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2015-p19.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(\\triangle ABC\\) is isosceles right with area \\(12.5\\), its legs have length \\(5\\). The trisectors make \\(\\angle ACD=30^\\circ\\) and \\(\\angle BCE=30^\\circ\\), so \\(\\triangle ACD\\) and \\(\\triangle BCE\\) have equal area.\n\nDrop a perpendicular from \\(D\\) to \\(AC,\\) with foot \\(F.\\) Since \\(D\\) lies on \\(AB\\) and \\(\\angle A=45^\\circ,\\) \\(\\triangle AFD\\) is isosceles right. Let \\(AF=DF=h.\\) Then \\(CF=5-h,\\) and the \\(30^\\circ\\) angle gives \\[\\frac{CF}{DF}=\\sqrt{3}.\\] Thus \\(5-h=h\\sqrt{3}\\), so \\(h=\\frac{5}{1+\\sqrt{3}}=\\frac{5\\sqrt{3}-5}{2}\\).\n\nTherefore \\[ \\begin{aligned} &[ACD]=\\frac12\\cdot 5\\cdot h \\\\ &=\\frac{25\\sqrt{3}-25}{4}. \\end{aligned} \\] Subtracting the two congruent corner triangles from \\(\\triangle ABC\\), \\[ \\begin{aligned} &[CDE]=\\frac{25}{2} \\\\ &\\quad {}-2\\cdot\\frac{25\\sqrt{3}-25}{4} \\\\ &=\\frac{50-25\\sqrt{3}}{2}. \\end{aligned} \\]\n\nThus, D is the correct answer.",
+      "hints": [
+        "Use the \\(30^\\circ\\) trisector and subtract two congruent corner triangles",
+        "If \\(AC=BC=5\\), find the height of \\(\\triangle ACD\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

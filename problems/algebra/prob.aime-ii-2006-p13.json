@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2006-p13",
+  "title": "2006 AIME II Problem 13",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.difference-of-squares",
+      "label": "Difference of squares",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.parity",
+      "label": "Parity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2006,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 65.9,
+    "source": 3160,
+    "mohs": null
+  },
+  "estimatedMinutes": 20,
+  "statement": "How many integers \\(N\\) less than \\(1000\\) can be written as the sum of \\(j\\) consecutive positive odd integers for exactly \\(5\\) values of \\(j \\ge 1?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "15",
+    "value": "15"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2006-p13.live",
+      "kind": "proof-sketch",
+      "text": "The sum of the \\((k+1)\\)th through \\(m\\)th positive odd integers is \\(m^2 - k^2 = (m - k)(m + k).\\) Writing \\(a = m - k\\) and \\(b = m + k,\\) the representations of \\(N\\) correspond exactly to the factorizations \\(N = ab\\) with \\(a \\le b\\) and \\(a, b\\) of the same parity (then \\(m = \\frac{a + b}{2},\\) \\(k = \\frac{b - a}{2}\\)). So we need \\(N\\) to have exactly \\(5\\) such factorizations.\n\nIf \\(N\\) is odd, every divisor pair works, so \\(N\\) needs \\(9\\) or \\(10\\) divisors, i.e. \\(N = p^8,\\) \\(p^9,\\) \\(p^2q^2,\\) or \\(pq^4\\) with \\(p, q\\) distinct odd primes. Below \\(1000,\\) \\(p^8\\) and \\(p^9\\) are impossible, \\(p^2 q^2\\) gives \\(225\\) and \\(441,\\) and \\(pq^4\\) gives \\(3^4 \\cdot 5,\\) \\(3^4 \\cdot 7,\\) \\(3^4 \\cdot 11:\\) five odd values.\n\nIf \\(N\\) is even, both factors must be even, so \\(N = 4M\\) and the factorizations correspond to divisor pairs of \\(M,\\) with no parity restriction; we need \\(M \\lt 250\\) with \\(9\\) or \\(10\\) divisors. With \\(9\\) divisors: \\(36,\\) \\(100,\\) \\(196,\\) \\(225.\\) With \\(10\\) divisors (\\(pq^4\\)): \\(3 \\cdot 2^4,\\) \\(5 \\cdot 2^4,\\) \\(7 \\cdot 2^4,\\) \\(11 \\cdot 2^4,\\) \\(13 \\cdot 2^4,\\) \\(2 \\cdot 3^4.\\) That is \\(4 + 6 = 10\\) even values, for a total of \\(5 + 10 = 15.\\)",
+      "hints": [
+        "A sum of consecutive odd numbers is a difference of squares: it equals \\(m^2 - k^2 = (m - k)(m + k).\\)",
+        "So count factorizations \\(N = ab\\) with \\(a \\le b\\) of equal parity: exactly five occur when \\(N\\) (odd case) or \\(\\frac{N}{4}\\) (even case) has \\(9\\) or \\(10\\) divisors."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

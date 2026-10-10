@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2015-p18",
+  "title": "2015 AMC 12B Problem 18",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.function",
+      "label": "Function",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2015,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 35.4,
+    "source": 1970,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "For every composite positive integer \\(n,\\) define \\(r(n)\\) to be the sum of the factors in the prime factorization of \\(n.\\) For example, \\(r(50) = 12\\) because the prime factorization of \\(50\\) is \\(2 \\cdot 5^2,\\) and \\(2 + 5 + 5 = 12.\\) What is the range of the function \\(r,\\) \\(\\{r(n) : n \\text{ is a composite positive integer}\\}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "the set of positive integers"
+    },
+    {
+      "label": "B",
+      "text": "the set of composite positive integers"
+    },
+    {
+      "label": "C",
+      "text": "the set of even positive integers"
+    },
+    {
+      "label": "D",
+      "text": "the set of integers greater than \\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "the set of integers greater than \\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2015-p18.live",
+      "kind": "proof-sketch",
+      "text": "A composite number has at least two prime factors (with multiplicity), and the smallest prime is \\(2,\\) so the least possible value is \\(2 + 2 = 4.\\)\n\nEvery integer greater than \\(3\\) is attained: \\(r(2^k) = 2k\\) covers the even values \\(\\ge 4,\\) and \\(r(2^k\\cdot 3) = 2k + 3\\) covers the odd values \\(\\ge 5.\\) So the range is the integers greater than \\(3.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "The smallest value comes from the smallest composite, \\(4 = 2 \\cdot 2\\)",
+        "Show every integer greater than \\(3\\) is attained, e.g. \\(r(2^k) = 2k\\) and \\(r(2^k\\cdot 3) = 2k + 3\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-nov-guts-2010-p24",
+  "title": "2010 HMMT November Guts Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2010,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 54.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(P(x)\\) be a polynomial of degree at most 3 such that \\(P(x)=\\frac{1}{1+x+x^{2}}\\) for \\(x=1,2,3,4\\). What is \\(P(5)\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2010-p24.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{-3}{91}\\) The forward difference of a polynomial \\(P\\) is \\(\\Delta P(x)=P(x+1)-P(x)\\), which is a new polynomial with degree reduced by one. Therefore, if we apply this operation three times we'll get a constant function, and we can work back up to get a value of \\(P(5)\\). Practically, we create the following table of differences:\n\n\\[\\begin{array}{ccccccc}\n\\frac{1}{3} & & \\frac{1}{7} & & \\frac{1}{13} & & \\frac{1}{21} \\\\\n& \\frac{-4}{21} & & \\frac{-6}{91} & & \\frac{-8}{273} & \\\\\n& \\frac{34}{273} & & \\frac{10}{273} & & \\\\\n& & \\frac{-24}{273} & & &\n\\end{array}\\]\n\nThen extend it to be the following table:\n\nSo our answer is \\(\\frac{-9}{273}=\\frac{-3}{91}\\)\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

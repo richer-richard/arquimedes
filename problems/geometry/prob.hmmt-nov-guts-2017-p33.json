@@ -1,0 +1,75 @@
+{
+  "id": "prob.hmmt-nov-guts-2017-p33",
+  "title": "2017 HMMT November Guts Problem 33",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.3d-shapes",
+      "label": "3D Shapes",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-centers",
+      "label": "Triangle centers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-centers-centroid-incenter-circumcenter-orthocenter-euler-line-nine-point-circle",
+      "label": "Triangle centers: centroid, incenter, circumcenter, orthocenter, Euler line, nine-point circle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-trigonometry",
+      "label": "Triangle trigonometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.volume",
+      "label": "Volume",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2017,
+    "number": 33
+  },
+  "difficulty": {
+    "course": 60.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Tetrahedron \\(A B C D\\) with volume 1 is inscribed in circumsphere \\(\\omega\\) such that \\(A B=A C=A D=2\\) and \\(B C \\cdot C D \\cdot D B=16\\). Find the radius of \\(\\omega\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2017-p33.hmmt",
+      "kind": "proof-sketch",
+      "text": "## Answer: \\(\\frac{5}{3}\\)\n\nLet \\(X\\) be the foot of the perpendicular from \\(A\\) to \\(\\Delta B C D\\). Since \\(A B=A C=A D\\), it follows that \\(X\\) is the circumcenter of \\(\\triangle B C D\\). Denote \\(X B=X C=X D=r\\). By the Pythagorean Theorem on \\(\\triangle A B X\\), we have \\(A X=\\sqrt{4-r^{2}}\\). Now, from the extended law of sines on \\(\\triangle B C D\\), we have the well-known identity\n\n\\[\\frac{B C \\cdot C D \\cdot D B}{4 r}=[B C D]\\]\n\nwhere \\([B C D]\\) denotes the area of \\(\\triangle B C D\\). However, we have\n\n\\[V=\\frac{1}{3} A X \\cdot[B C D]\\]\n\nwhere \\(V\\) is the volume of \\(A B C D\\), which yields the expression\n\n\\[[B C D]=\\frac{3}{\\sqrt{4-r^{2}}}\\]\n\nNow, given that \\(B C \\cdot C D \\cdot D B=16\\), we have\n\n\\[\\frac{4}{r}=\\frac{3}{\\sqrt{4-r^{2}}}\\]\n\nSolving, we get \\(r=\\frac{8}{5}\\). Now, let \\(O\\) be the center of \\(\\omega\\). Since \\(O B=O C=O D\\), it follows that the foot of the perpendicular from \\(O\\) to \\(\\triangle B C D\\) must also be the circumcenter of \\(\\triangle B C D\\), which is \\(X\\). Thus, \\(A, X, O\\) are collinear. Let \\(R\\) be the radius of \\(\\omega\\). Then we have\n\n\\[\\begin{aligned}\nR & =O A \\\\\n& =O X+X A \\\\\n& =\\sqrt{R^{2}-r^{2}}+\\sqrt{4-r^{2}} \\\\\n& =\\sqrt{R^{2}-\\frac{64}{25}}+\\frac{6}{5} .\n\\end{aligned}\\]\n\nSolving, we get \\(R=\\frac{5}{3}\\). (Note: solving for \\(R\\) from \\(O A=O X-X A\\) gives a negative value for \\(R\\).)",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

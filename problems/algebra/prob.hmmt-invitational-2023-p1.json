@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-invitational-2023-p1",
+  "title": "2023 HMMT Invitational Problem 1",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2023,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\mathbb{Q}^{+}\\)denote the set of positive rational numbers. Find, with proof, all functions \\(f: \\mathbb{Q}^{+} \\rightarrow \\mathbb{Q}^{+}\\) such that, for all positive rational numbers \\(x\\) and \\(y\\), we have\n\n\\[f(x)=f(x+y)+f\\left(x+x^{2} f(y)\\right)\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "f(x)=\\frac{1}{x}",
+    "value": "f(x)=\\frac{1}{x}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2023-p1.hmmt",
+      "kind": "proof-sketch",
+      "text": "It is straightforward to check that \\(f(x)=\\frac{1}{x}\\) works. We then focus on proving that there are no other solutions. Let \\(P(x, y)\\) denote the given functional equation. First note that for all \\(x, y \\in \\mathbb{Q}^{+}\\), \\(f(x)>f(x+y)\\), so \\(f\\) is strictly decreasing and hence injective. Now, for all \\(x, y \\in \\mathbb{Q}^{+}\\),\n\n\\[\\begin{aligned}\nP(x, y) & \\Longrightarrow f(x)=f(x+y)+f\\left(x+x^{2} f(y)\\right) \\\\\nP\\left(x, x^{2} f(y)\\right) & \\Longrightarrow f(x)=f\\left(x+x^{2} f(y)\\right)+f\\left(x+x^{2} f\\left(x^{2} f(y)\\right)\\right)\n\\end{aligned}\\]\n\nEquating these two equations gives\n\n\\[\\begin{aligned}\nf\\left(x+x^{2} f\\left(x^{2} f(y)\\right)\\right) & =f(x+y) \\\\\nx+x^{2} f\\left(x^{2} f(y)\\right) & =x+y \\\\\nf\\left(x^{2} f(y)\\right) & =\\frac{y}{x^{2}}\n\\end{aligned}\\]\n\nfor all \\(x, y \\in \\mathbb{Q}^{+}\\). In particular, plugging in \\(x=1\\) gives \\(f(f(y))=y\\), and replacing \\(y\\) with \\(f(y)\\) gives \\(f\\left(x^{2} y\\right)=\\frac{f(y)}{x^{2}}\\) for all \\(x, y \\in \\mathbb{Q}^{+}\\). There are two ways to finish.\nFinish 1: The above implies that \\(f\\left(x^{2}\\right)=\\frac{f(1)}{x^{2}}\\) for all \\(x \\in \\mathbb{Q}^{+}\\). Since \\(\\left\\{x^{2}: x \\in \\mathbb{Q}^{+}\\right\\}\\)is dense in \\(\\mathbb{Q}^{+}\\)and \\(f\\) is decreasing we find that \\(f(x)=c / x\\) for some constant \\(c\\). Plugging back in now gives \\(c=1\\).\nFinish 2: For all \\(x \\in \\mathbb{Q}^{+}\\),\n\n\\[\\begin{aligned}\nP\\left(x, \\frac{9 x}{16}\\right) \\Longrightarrow f(x) & =f\\left(\\frac{25 x}{16}\\right)+f\\left(x+x^{2} f\\left(\\frac{9 x}{16}\\right)\\right) . \\\\\n& =\\frac{16 f(x)}{25}+f\\left(x+\\frac{16 x^{2} f(x)}{9}\\right)\n\\end{aligned}\\]\n\nHence, we have\n\n\\[\\begin{aligned}\nf\\left(\\frac{25 x}{9}\\right)=\\frac{9 f(x)}{25} & =f\\left(x+\\frac{16 x^{2} f(x)}{9}\\right) \\\\\n\\frac{25 x}{9} & =x+\\frac{16 x^{2} f(x)}{9} \\Longrightarrow f(x)=\\frac{1}{x}\n\\end{aligned}\\]\n\nas desired.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2009-p16",
+  "title": "2009 AMC 12A Problem 16",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangent-circles",
+      "label": "Tangent circles",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2009,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 33.1,
+    "source": 1910,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A circle with center \\(C\\) is tangent to the positive \\(x\\)- and \\(y\\)-axes and externally tangent to the circle centered at \\((3, 0)\\) with radius \\(1.\\) What is the sum of all possible radii of the circle with center \\(C?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(9\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "8"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2009-p16.live",
+      "kind": "proof-sketch",
+      "text": "A circle tangent to both positive axes with radius \\(r\\) has center \\((r, r).\\) External tangency to the circle at \\((3, 0)\\) of radius \\(1\\) means the distance between centers is \\(r + 1\\): \\[(r - 3)^2 + r^2 = (r + 1)^2.\\]\n\nExpanding gives \\(r^2 - 8r + 8 = 0.\\) Both roots \\(r = 4 \\pm 2\\sqrt{2}\\) are positive, and by Vieta’s formulas their sum is \\(8.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "A circle tangent to both positive axes with radius \\(r\\) has center \\((r, r)\\)",
+        "External tangency gives distance \\(r + 1\\) between \\((r, r)\\) and \\((3, 0);\\) form a quadratic in \\(r\\) and use Vieta"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

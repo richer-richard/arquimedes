@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2012-p12",
+  "title": "2012 AIME I Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-bisector-theorem",
+      "label": "Angle bisector theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2012,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 59.0,
+    "source": 2840,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "Let \\(\\triangle ABC\\) be a right triangle with right angle at \\(C.\\) Let \\(D\\) and \\(E\\) be points on \\(\\overline{AB}\\) with \\(D\\) between \\(A\\) and \\(E\\) such that \\(\\overline{CD}\\) and \\(\\overline{CE}\\) trisect \\(\\angle C.\\) If \\(\\frac{DE}{BE} = \\frac{8}{15},\\) then \\(\\tan B\\) can be written as \\(\\frac{m\\sqrt{p}}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers, and \\(p\\) is a positive integer not divisible by the square of any prime. Find \\(m + n + p.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "18",
+    "value": "18"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2012-p12.live",
+      "kind": "proof-sketch",
+      "text": "The trisectors make \\(\\angle ACD = \\angle DCE = \\angle ECB\\) \\(= 30^\\circ.\\) In triangle \\(DCB,\\) ray \\(CE\\) bisects angle \\(DCB,\\) which measures \\(60^\\circ,\\) so the angle bisector theorem gives \\(\\frac{CD}{CB} = \\frac{DE}{EB} = \\frac{8}{15}.\\) Scale the triangle so that \\(CD = 8\\) and \\(CB = 15.\\)\n\nBy the Law of Cosines in triangle \\(DCB,\\) \\[ \\begin{aligned} BD^2 &= 8^2 + 15^2 \\\\ &\\quad {}- 2 \\cdot 8 \\cdot 15 \\cos 60^\\circ \\\\ &= 169, \\end{aligned} \\] so \\(BD = 13.\\) Applying the Law of Cosines again in the same triangle, \\(8^2 = 13^2 + 15^2 - 2 \\cdot 13 \\cdot 15 \\cos B,\\) which gives \\(\\cos B = \\frac{11}{13}.\\)\n\nThen \\(\\sin B = \\sqrt{1 - \\frac{121}{169}} = \\frac{4\\sqrt{3}}{13},\\) so \\(\\tan B = \\frac{4\\sqrt{3}}{11}\\) and \\(m + n + p = 4 + 11 + 3 = 18.\\)",
+      "hints": [
+        "In triangle \\(DCB,\\) ray \\(CE\\) bisects angle \\(DCB,\\) which measures \\(60^\\circ,\\) so \\(\\frac{CD}{CB} = \\frac{DE}{EB} = \\frac{8}{15}\\)",
+        "Take \\(CD = 8\\) and \\(CB = 15;\\) the Law of Cosines gives \\(BD,\\) and a second application gives \\(\\cos B\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

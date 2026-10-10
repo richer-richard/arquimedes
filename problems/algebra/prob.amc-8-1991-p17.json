@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-8-1991-p17",
+  "title": "1991 AMC 8 Problem 17",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1991,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 14.1,
+    "source": 1140,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "An auditorium with \\(20\\) rows of seats has \\(10\\) seats in the first row. Each successive row has one more seat than the previous row. If students taking an exam are permitted to sit in any row, but not next to another student in that row, then the maximum number of students that can be seated for an exam is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(150\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(180\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(200\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(400\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(460\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "200"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1991-p17.live",
+      "kind": "proof-sketch",
+      "text": "Row \\(k\\) has \\(9+k\\) seats, so it holds \\(\\left\\lceil \\frac{9+k}{2} \\right\\rceil\\) students. For rows \\(1\\) through \\(20\\) (seats \\(10\\) through \\(29\\)) the maxima are \\(5,\\) \\(6,\\) \\(6,\\) \\(7,\\) \\(7,\\) \\(8,\\) \\(8,\\) \\(\\ldots,\\) \\(14,\\) \\(14,\\) \\(15.\\)\n\nThese sum to \\(200.\\)\n\nThus, the correct answer is C .",
+      "hints": [
+        "In a row of \\(n\\) seats, the most students with no two adjacent is \\(\\left\\lceil \\frac{n}{2} \\right\\rceil\\)",
+        "Row \\(k\\) has \\(9+k\\) seats; add \\(\\left\\lceil \\frac{9+k}{2} \\right\\rceil\\) over the \\(20\\) rows"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

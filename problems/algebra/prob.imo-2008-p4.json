@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2008-p4",
+  "title": "2008 IMO Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2008,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 84.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find all functions \\(f\\) from the positive reals to the positive reals such that\n\\[ \\frac{f(w)^2 + f(x)^2}{f(y^2)+f(z^2)} = \\frac{w^2+x^2}{y^2+z^2} \\]\nfor all positive real numbers \\(w\\), \\(x\\), \\(y\\), \\(z\\) satisfying \\(wx=yz\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2008-p4.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answers are \\(f(x) \\equiv x\\) and \\(f(x) \\equiv 1/x\\).\nThese work, so we show they are the only ones.\n\nFirst, setting \\((t,t,t,t)\\) gives \\(f(t^2) = f(t)^2\\).\nIn particular, \\(f(1) = 1\\).\nNext, setting \\((t, 1, \\sqrt t, \\sqrt t)\\) gives\n\\[ \\frac{f(t)^2 + 1}{2f(t)} = \\frac{t^2 + 1}{2t} \\]\nwhich as a quadratic implies \\(f(t) \\in \\{t, 1/t\\}\\).\n\nNow assume \\(f(a) = a\\) and \\(f(b) = 1/b\\).\nSetting \\((\\sqrt a, \\sqrt b, 1, \\sqrt{ab})\\) gives\n\\[ \\frac{a + 1/b}{f(ab) + 1} = \\frac{a+b}{ab+1}. \\]\nOne can check the two cases on \\(f(ab)\\) each imply\n\\(a=1\\) and \\(b=1\\) respectively.\nHence the only answers are those claimed.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

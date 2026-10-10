@@ -1,0 +1,59 @@
+{
+  "id": "prob.aime-ii-2001-p9",
+  "title": "2001 AIME II Problem 9",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.complementary-probability",
+      "label": "Complementary probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2001,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 54.4,
+    "source": 2710,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "Each unit square of a \\(3\\)-by-\\(3\\) unit-square grid is to be colored either blue or red. For each square, either color is equally likely to be used. The probability of obtaining a grid that does not have a \\(2\\)-by-\\(2\\) red square is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "929",
+    "value": "929"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2001-p9.live",
+      "kind": "proof-sketch",
+      "text": "Compute the probability that the grid does contain an all-red \\(2\\)-by-\\(2\\) block by inclusion-exclusion over the four possible positions. One block forces \\(4\\) cells; two blocks sharing an edge force \\(6\\) cells (\\(4\\) such pairs), while the two diagonal pairs force \\(7;\\) any three blocks force \\(8\\) cells, and all four force all \\(9.\\)\n\nEach configuration of forced red cells has probability \\(\\left(\\frac{1}{2}\\right)^{\\text{cells}},\\) so the probability of at least one red block is \\[ \\begin{aligned} &4 \\cdot \\frac{1}{16} - \\left(4 \\cdot \\frac{1}{64} + 2 \\cdot \\frac{1}{128}\\right) \\\\ &\\quad {}+ 4 \\cdot \\frac{1}{256} - \\frac{1}{512} \\\\ &= \\frac{128 - 40 + 8 - 1}{512} = \\frac{95}{512}. \\end{aligned} \\]\n\nThe desired probability is \\(1 - \\frac{95}{512} = \\frac{417}{512},\\) and \\(417 = 3 \\cdot 139\\) is coprime to \\(512,\\) so \\(m + n = 417 + 512 = 929.\\)",
+      "hints": [
+        "Count the complement by inclusion-exclusion on the four possible positions of a \\(2\\)-by-\\(2\\) red square",
+        "Two overlapping \\(2\\)-by-\\(2\\) blocks cover \\(6\\) or \\(7\\) cells, any three cover \\(8,\\) and all four cover \\(9;\\) each forced cell contributes a factor \\(\\frac{1}{2}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

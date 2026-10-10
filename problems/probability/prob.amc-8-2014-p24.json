@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-2014-p24",
+  "title": "2014 AMC 8 Problem 24",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.median-data",
+      "label": "Median (data)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2014,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 18.2,
+    "source": 1560,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "One day the Beverage Barn sold \\(252\\) cans of soda to \\(100\\) customers, and every customer bought at least one can of soda. What is the maximum possible median number of cans of soda bought per customer on that day?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 2.5 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 3.0 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 3.5 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 4.0 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 4.5 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "3.5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2014-p24.live",
+      "kind": "proof-sketch",
+      "text": "Order the \\(100\\) purchases from least to greatest. The median is the average of the \\(50\\)th and \\(51\\)st entries. To maximize it, make the first \\(49\\) entries as small as possible, so set them all equal to \\(1\\).\n\nIf the \\(50\\)th entry were at least \\(4\\), then the total would be at least \\(49+51\\cdot4=253\\), too many cans. So the \\(50\\)th entry is at most \\(3\\).\n\nThis maximum is attainable: use \\(49\\) entries equal to \\(1\\), the \\(50\\)th entry equal to \\(3\\), and the final \\(50\\) entries equal to \\(4\\). The total is \\(49+3+50\\cdot4=252\\), and the median is \\(\\frac{3+4}{2}=3.5\\).\n\nThus, C is the correct answer.",
+      "hints": [
+        "The median is the average of the \\(50\\)th and \\(51\\)st ordered purchases.",
+        "Make the first \\(49\\) purchases as small as possible."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

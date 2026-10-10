@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-theme-2021-p2",
+  "title": "2021 HMMT November Theme Problem 2",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2021,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 42.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n\\) be the answer to this problem. An urn contains white and black balls. There are \\(n\\) white balls and at least two balls of each color in the urn. Two balls are randomly drawn from the urn without replacement. Find the probability, in percent, that the first ball drawn is white and the second is black.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "19",
+    "value": "19"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2021-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let the number of black balls in the urn be \\(k \\geq 2\\). Then the probability of drawing a white ball first is \\(\\frac{n}{n+k}\\), and the probability of drawing a black ball second is \\(\\frac{k}{n+k-1}\\). This gives us the equation\n\n\\[\\frac{n k}{(n+k)(n+k-1)}=\\frac{n}{100}\\]\n\nfrom which we get\n\n\\[(n+k)(n+k-1)=100 k\\]\n\nLet \\(m=n+k\\). Since \\(100 \\mid m(m-1)\\), we must have that either 100 divides one of \\(m, m-1\\) or 25 divides one of \\(m, m-1\\) and 4 divides the other. Since \\(m, m-1>k\\), if either of \\(m\\) or \\(m-1\\) is greater than or equal to 100 , the product \\(m(m-1)>100 k\\). Therefore, the only possible values for \\(m\\) are 25 and 76 .\nIf \\(m=25\\), we have\n\n\\[m(m-1)=600 \\Longrightarrow k=6 \\Longrightarrow n=19\\]\n\nIf \\(m=76\\), we have\n\n\\[m(m-1)=5700 \\Longrightarrow k=57 \\Longrightarrow n=19\\]\n\nSo \\(n=19\\) is the unique solution.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

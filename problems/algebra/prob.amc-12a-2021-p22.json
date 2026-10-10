@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2021-p22",
+  "title": "2021 AMC 12A Problem 22",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2021,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 47.7,
+    "source": 2450,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Suppose that the roots of the polynomial \\(P(x) = x^3 + ax^2 + bx + c\\) are \\(\\cos\\tfrac{2\\pi}{7},\\) \\(\\cos\\tfrac{4\\pi}{7},\\) and \\(\\cos\\tfrac{6\\pi}{7},\\) where angles are in radians. What is \\(abc?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(-\\dfrac{3}{49}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(-\\dfrac{1}{28}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{\\sqrt[3]{7}}{64}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{1}{32}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{1}{28}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "1/32"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2021-p22.live",
+      "kind": "proof-sketch",
+      "text": "Let the three roots be \\(r_1,r_2,r_3.\\) The seventh roots of unity give \\(r_1+r_2+r_3=-\\tfrac12.\\) Doubling the three angles merely permutes their cosines, so \\(\\sum r_i^2=\\tfrac32+\\tfrac12\\sum r_i=\\tfrac54.\\) Hence \\(r_1r_2+r_1r_3+r_2r_3\\) equals \\(\\tfrac12((\\sum r_i)^2-\\sum r_i^2)=-\\tfrac12.\\)\n\nThe product-to-sum identity gives \\(4r_1r_2r_3=1+r_1+r_2+r_3=\\tfrac12,\\) so \\(r_1r_2r_3=\\tfrac18.\\) Therefore their monic polynomial is \\[ x^3 + \\tfrac12 x^2 - \\tfrac12 x - \\tfrac18 = 0. \\]\n\nMatching coefficients, \\(a = \\tfrac12,\\) \\(b = -\\tfrac12,\\) \\(c = -\\tfrac18.\\) Therefore \\(abc = \\tfrac12\\cdot\\left(-\\tfrac12\\right)\\cdot\\left(-\\tfrac18\\right) = \\tfrac{1}{32}.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "The three cosines are the roots of \\(8x^3 + 4x^2 - 4x - 1 = 0\\)",
+        "Divide by \\(8\\) to match \\(x^3 + ax^2 + bx + c,\\) reading off \\(a, b, c\\) directly"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

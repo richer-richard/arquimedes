@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-guts-2003-p29",
+  "title": "2003 HMMT Feb Guts Problem 29",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility-rules-23457911",
+      "label": "Divisibility Rules 23457911",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.palindrom",
+      "label": "palindrom",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2003,
+    "number": 29
+  },
+  "difficulty": {
+    "course": 85.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A palindrome is a positive integer that reads the same backwards as forwards, such as 82328. What is the smallest 5 -digit palindrome that is a multiple of 99 ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2003-p29.hmmt",
+      "kind": "proof-sketch",
+      "text": "54945\n\nWrite the number as \\(X Y Z Y X\\). This is the same as \\(10000 X+1000 Y+100 Z+10 Y+X=\\) \\(99(101 X+10 Y+Z)+20 Y+2 X+Z\\). We thus want \\(20 Y+2 X+Z\\) to be a multiple of 99 , with \\(X\\) as small as possible. This expression cannot be larger than \\(20 \\cdot 9+2 \\cdot 9+9=207\\), and it is greater than 0 (since \\(X \\neq 0\\) ), so for this to be a multiple of 99 , it must equal 99 or 198. Consider these two cases.\nTo get 198, we must have \\(Y=9\\), which then leaves \\(2 X+Z=18\\). The smallest possible \\(X\\) is 5 , and then \\(Z\\) becomes 8 and we have the number 59895 .\nTo get 99 , we must have \\(Y=4\\). Then, \\(2 X+Z=19\\), and, as above, we find the minimal \\(X\\) is 5 and then \\(Z=9\\). This gives us the number 54945 . This is smaller than the other number, so it is the smallest number satisfying the conditions of the problem.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

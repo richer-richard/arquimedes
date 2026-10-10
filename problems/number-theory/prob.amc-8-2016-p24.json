@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-2016-p24",
+  "title": "2016 AMC 8 Problem 24",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2016,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 17.4,
+    "source": 1580,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The digits \\(1,\\) \\(2,\\) \\(3,\\) \\(4,\\) and \\(5\\) are each used once to write a five-digit number \\(PQRST.\\) The three-digit number \\(PQR\\) is divisible by \\(4,\\) the three-digit number \\(QRS\\) is divisible by \\(5,\\) and the three-digit number \\(RST\\) is divisible by \\(3.\\) What is \\(P?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 1 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 2 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 3 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 4 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 5 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "1"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2016-p24.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(QRS\\) is divisible by \\(5,\\) we know that \\(S = 5.\\)\n\nSince \\(PQR\\) is divisible by \\(4,\\) \\(QR\\) equals either \\(12,\\) \\(24,\\) or \\(32.\\)\n\nIf \\(QR=12,\\) then \\(R=2,\\) so \\(RST=25T\\) cannot be divisible by \\(3\\) using the remaining digits. If \\(QR=32,\\) then \\(R=2\\) again, giving the same obstacle. Thus \\(QR=24,\\) and then \\(RST=45T.\\) Among the remaining digits, only \\(T=3\\) makes \\(453\\) divisible by \\(3\\).\n\nTherefore, \\(PQRST = 12453.\\)\n\nThus, A is the correct answer.",
+      "hints": [
+        "The divisibility by \\(5\\) condition determines \\(S\\).",
+        "Once \\(S\\) is known, list the possible two-digit endings \\(QR\\) that make \\(PQR\\) divisible by \\(4\\)."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

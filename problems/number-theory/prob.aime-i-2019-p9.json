@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2019-p9",
+  "title": "2019 AIME1 9",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2019,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 53.8,
+    "source": 2740,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "Let \\(\\tau(n)\\) denote the number of positive integer divisors of \\(n.\\) Find the sum of the six least positive integers \\(n\\) that are solutions to \\(\\tau(n) + \\tau(n + 1) = 7.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "540",
+    "value": "540"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2019-p9.live",
+      "kind": "proof-sketch",
+      "text": "The case \\(n = 1\\) gives \\(\\tau(1) + \\tau(2) = 3,\\) so any solution has \\(n \\ge 2\\) and both divisor counts are at least \\(2.\\) Thus \\(7 = 2 + 5 = 3 + 4,\\) so one of \\(\\tau(n), \\tau(n+1)\\) equals \\(3\\) or \\(5.\\) Now \\(\\tau = 3\\) means a prime square \\(p^2,\\) while \\(\\tau = 5\\) means a prime fourth power \\(p^4.\\) So one of \\(n, n+1\\) lies in \\(\\{4, 9, 25, 49, 121,\\) \\(169, 289, 361, \\ldots\\}\\) \\(\\cup \\{16, 81, 625, \\ldots\\},\\) and its neighbor must have \\(\\tau = 4\\) (for a square) or be prime (for a fourth power).\n\nChecking neighbors in increasing order: \\(n = 8\\) works \\((\\tau(8) = 4,\\) \\(\\tau(9) = 3);\\) \\(n = 9\\) works \\((\\tau(10) = 4);\\) \\(n = 16\\) works \\((\\tau(16) = 5,\\) \\(17\\) prime\\();\\) \\(n = 25\\) works \\((\\tau(26) = 4).\\) Then \\(49,\\) \\(81,\\) \\(169,\\) and \\(289\\) all fail: \\(\\tau(48) = 10,\\) \\(\\tau(50) = 6,\\) \\(\\tau(80) = 10,\\) \\(82\\) is not prime, \\(\\tau(168) = 16,\\) \\(\\tau(170) = 8,\\) \\(\\tau(288) = 18,\\) \\(\\tau(290) = 8.\\) Next, \\(n = 121\\) works \\((\\tau(122) = 4)\\) and \\(n = 361\\) works \\((\\tau(362) = 4).\\)\n\nThe six least solutions are \\(8,\\) \\(9,\\) \\(16,\\) \\(25,\\) \\(121,\\) \\(361,\\) with sum \\(540.\\)",
+      "hints": [
+        "First rule out \\(n = 1;\\) then the split must be \\(\\{2, 5\\}\\) or \\(\\{3, 4\\},\\) and values \\(3\\) and \\(5\\) force a prime square \\(p^2\\) or fourth power \\(p^4\\)",
+        "So one of \\(n, n+1\\) is among \\(4,\\) \\(9,\\) \\(25,\\) \\(49,\\) \\(121,\\) \\(169,\\) \\(289,\\) \\(361,\\) \\(\\ldots\\) or \\(16,\\) \\(81,\\) \\(625,\\) \\(\\ldots;\\) test each neighbor for \\(\\tau = 4\\) or primality"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

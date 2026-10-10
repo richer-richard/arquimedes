@@ -1,0 +1,90 @@
+{
+  "id": "prob.amc-8-2016-p23",
+  "title": "2016 AMC 8 Problem 23",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.inscribed-angle",
+      "label": "Inscribed angle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2016,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 16.5,
+    "source": 1510,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Two congruent circles centered at points \\(A\\) and \\(B\\) each pass through the other circle’s center. The line containing both \\(A\\) and \\(B\\) is extended to intersect the circles at points \\(C\\) and \\(D.\\)\n\nThe circles intersect at two points, one of which is \\(E.\\) What is the degree measure of \\(\\angle CED?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 90 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 105 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 120 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 135 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 150 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "120"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2016-p23.live",
+      "kind": "proof-sketch",
+      "text": "We know that \\(AE = EB = AB\\) since they are all radii of congruent circles, so they form an equilateral triangle, which means that \\(\\angle AEB = 60^{\\circ}.\\)\n\nThe segments \\(\\overline{DB}\\) and \\(\\overline{AC}\\) are diameters, so \\(\\angle DEB=\\angle AEC=90^\\circ.\\) Therefore, \\[\\begin{aligned} \\angle CED &= \\angle DEB+\\angle AEC\\\\ &\\qquad-\\angle AEB\\\\ &=90^\\circ+90^\\circ-60^\\circ\\\\ &=120^\\circ. \\end{aligned}\\]\n\nThus, C is the correct answer.",
+      "hints": [
+        "The centers and one intersection point form an equilateral triangle.",
+        "Use the fact that angles subtending diameters are right angles."
+      ],
+      "images": [
+        "c80b9083c874c1c2cefd693ee184375363d6cf9d59dd5f853b09af4ce101b1c2"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "c80b9083c874c1c2cefd693ee184375363d6cf9d59dd5f853b09af4ce101b1c2"
+    ]
+  }
+}

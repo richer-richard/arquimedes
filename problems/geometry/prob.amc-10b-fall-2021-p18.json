@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-fall-2021-p18",
+  "title": "2021 Fall AMC 10B Problem 18",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-decomposition",
+      "label": "Area decomposition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.transformation",
+      "label": "Transformation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2021,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 38.5,
+    "source": 2090,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Three identical square sheets of paper each with side length \\(6\\) are stacked on top of each other. The middle sheet is rotated clockwise \\(30^\\circ\\) about its center and the top sheet is rotated clockwise \\(60^\\circ\\) about its center, resulting in the \\(24\\)-sided polygon shown in the figure below.\n\nThe area of this polygon can be expressed in the form \\(a-b\\sqrt{c},\\) where \\(a,\\) \\(b,\\) and \\(c\\) are positive integers, and \\(c\\) is not divisible by the square of any prime. What is \\(a+b+c?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 75 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 93 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 96 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 129 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 147 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "147"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-fall-2021-p18.live",
+      "kind": "proof-sketch",
+      "text": "The boundary can be split into \\(24\\) congruent triangles. Each has angles \\(15^\\circ,\\) \\(45^\\circ,\\) and \\(120^\\circ.\\)\n\nFor one such triangle, draw the altitude from the center-side direction. The altitude is \\(3,\\) half the side length of a square. The adjacent right triangle has a \\(30^\\circ\\) angle, so the part cut off from a length \\(3\\) base is \\(3\\tan30^\\circ=\\sqrt3.\\)\n\nThus each small triangle has base \\(3-\\sqrt3\\) and height \\(3,\\) giving area \\(\\frac{3(3-\\sqrt3)}{2}=\\frac{9-3\\sqrt3}{2}.\\)\n\nThe total area is \\[24\\cdot\\frac{9-3\\sqrt3}{2}=108-36\\sqrt3.\\] Hence \\(a+b+c=108+36+3=147.\\)\n\nThus, the answer is E .",
+      "hints": [
+        "Split the polygon into \\(24\\) congruent triangles",
+        "Each small triangle has angles \\(15^\\circ,45^\\circ,120^\\circ\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "ff36778afeb482385002bd2be38bb03b10fffface510a15d6ff3cd5340a20391"
+    ],
+    "solutions": []
+  }
+}

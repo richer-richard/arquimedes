@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2015-p9",
+  "title": "2015 AIME I Problem 9",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2015,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 63.9,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Let \\(S\\) be the set of all ordered triples of integers \\((a_1, a_2, a_3)\\) with \\(1 \\le a_1,\\) \\(a_2,\\) \\(a_3 \\le 10.\\) Each ordered triple in \\(S\\) generates a sequence according to the rule \\(a_n = a_{n-1} \\cdot |a_{n-2} - a_{n-3}|\\) for \\(n \\ge 4.\\) Find the number of such sequences for which \\(a_n = 0\\) for some \\(n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "494",
+    "value": "494"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2015-p9.live",
+      "kind": "proof-sketch",
+      "text": "If \\(a_{k-1} = a_k\\) then \\(a_{k+2} = a_{k+1}|a_k - a_{k-1}| = 0,\\) and if \\(|a_k - a_{k-1}| = 1\\) then \\(a_{k+2} = a_{k+1},\\) so \\(a_{k+4} = 0.\\) Hence every triple of one of the forms \\((j,j,k),\\) \\((j,k,k),\\) \\((j,j\\pm1,k),\\) \\((j,k,k\\pm1)\\) produces a \\(0.\\) These forms contain \\(100 + 100 + 4 \\cdot 90 = 560\\) triples, but triples fitting two forms are counted twice: the \\(10\\) of the form \\((j,j,j),\\) the \\(9\\) in each of the six families \\((j,j,j\\pm1),\\) \\((j,j\\pm1,j),\\) \\((j,j\\pm1,j\\pm1)\\) (matching signs), and the \\(8\\) in each of \\((j,j+1,j+2)\\) and \\((j,j-1,j-2).\\) That leaves \\(560 - 10 - 54 - 16 = 480\\) triples.\n\nA few other triples also work: if \\((a_1, a_2, a_3) = (j, j\\pm2, 1),\\) then \\(a_4 = 2\\) and \\(|a_4 - a_3| = 1,\\) so \\(a_8 = 0.\\) These \\(16\\) triples include \\((3,1,1)\\) and \\((4,2,1),\\) which were already counted, so they add \\(14\\) new ones, for \\(480 + 14 = 494.\\)\n\nNo other triple reaches \\(0:\\) if both consecutive differences are at least \\(2\\) and \\(a_3 \\ge 2,\\) then \\(a_4 = a_3|a_2 - a_1| \\ge 2a_3 \\gt a_3\\) and \\(|a_4 - a_3| \\ge a_3 \\ge 2,\\) so inductively the terms grow forever and no factor ever vanishes. If instead \\(a_3 = 1\\) with \\(|a_2 - a_1| \\ge 3,\\) then \\(a_4 \\ge 3\\) and \\(|a_4 - a_3| \\ge 2,\\) and the same growth takes over. The count is \\(494.\\)",
+      "hints": [
+        "If two consecutive terms are ever equal, the sequence hits \\(0\\) two steps later; if they differ by \\(1,\\) it hits \\(0\\) within four steps",
+        "Count triples whose consecutive entries are equal or differ by \\(1,\\) correcting for overlaps, then check what happens when a difference of \\(2\\) meets a \\(1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2008-p18",
+  "title": "2008 AMC 12B Problem 18",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.herons-formula",
+      "label": "Heron’s Formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.pyramid",
+      "label": "Pyramid",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.volume",
+      "label": "Volume",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2008,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 32.2,
+    "source": 1910,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A pyramid has a square base \\(ABCD\\) and vertex \\(E.\\) The area of square \\(ABCD\\) is \\(196,\\) and the areas of \\(\\triangle ABE\\) and \\(\\triangle CDE\\) are \\(105\\) and \\(91,\\) respectively. What is the volume of the pyramid?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(392\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(196\\sqrt{6}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(392\\sqrt{2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(392\\sqrt{3}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(784\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "784"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2008-p18.live",
+      "kind": "proof-sketch",
+      "text": "The square has side \\(\\sqrt{196} = 14.\\) Let \\(F\\) and \\(G\\) be the feet of the perpendiculars from \\(E\\) to \\(AB\\) and \\(CD.\\) Then \\(FG = 14,\\) \\(EF = \\tfrac{2 \\cdot 105}{14} = 15,\\) and \\(EG = \\tfrac{2 \\cdot 91}{14} = 13.\\)\n\nTriangle \\(EFG\\) lies in a plane perpendicular to the base, so its altitude to \\(FG\\) is the pyramid’s height. By Heron’s formula with \\(s = 21,\\) its area is \\(\\sqrt{21 \\cdot 6 \\cdot 8 \\cdot 7} = 84,\\) so the altitude to \\(FG\\) is \\(\\tfrac{2 \\cdot 84}{14} = 12.\\)\n\nThe volume is \\(\\tfrac13 \\cdot 196 \\cdot 12 = 784.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "The base has side \\(14;\\) the given triangle areas give slant distances \\(EF = \\tfrac{2 \\cdot 105}{14}\\) and \\(EG = \\tfrac{2 \\cdot 91}{14}\\) to sides \\(AB\\) and \\(CD\\)",
+        "Triangle \\(EFG\\) has sides \\(15, 13, 14\\) and stands perpendicular to the base; its altitude to \\(FG = 14\\) is the pyramid’s height"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

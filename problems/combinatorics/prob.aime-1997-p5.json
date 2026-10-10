@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1997-p5",
+  "title": "1997 AIME Problem 5",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.decimal",
+      "label": "Decimal",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "comb.fraction",
+      "label": "Fraction",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1997,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 47.7,
+    "source": 2450,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "The number \\(r\\) can be expressed as a four-place decimal \\(0.abcd,\\) where \\(a,\\) \\(b,\\) \\(c,\\) and \\(d\\) represent digits, any of which could be zero. It is desired to approximate \\(r\\) by a fraction whose numerator is \\(1\\) or \\(2\\) and whose denominator is an integer. The closest such fraction to \\(r\\) is \\(\\frac{2}{7}.\\) What is the number of possible values for \\(r?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "417",
+    "value": "417"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1997-p5.live",
+      "kind": "proof-sketch",
+      "text": "Among fractions with numerator \\(1\\) or \\(2,\\) the closest neighbors of \\(\\frac{2}{7} \\approx 0.2857\\) are \\(\\frac{1}{4} = 0.25\\) below (note \\(\\frac{2}{8} = \\frac{1}{4}\\)) and \\(\\frac{1}{3} \\approx 0.3333\\) above (note \\(\\frac{2}{6} = \\frac{1}{3}\\)); no other candidate lies between them. So \\(\\frac{2}{7}\\) is the unique closest fraction to \\(r\\) exactly when \\(r\\) is closer to \\(\\frac{2}{7}\\) than to both \\(\\frac{1}{4}\\) and \\(\\frac{1}{3},\\) i.e. when \\(r\\) lies strictly between the midpoints \\[ \\begin{aligned} \\frac{1}{2}\\left(\\frac{1}{4} + \\frac{2}{7}\\right) &= \\frac{15}{56} \\\\ &= 0.26785\\ldots \\end{aligned} \\] and \\[ \\begin{aligned} \\frac{1}{2}\\left(\\frac{2}{7} + \\frac{1}{3}\\right) &= \\frac{13}{42} \\\\ &= 0.30952\\ldots. \\end{aligned} \\]\n\nThe four-place decimals in that interval are \\(0.2679, 0.2680, \\ldots, 0.3095,\\) and there are \\(3095 - 2679 + 1 = 417\\) of them.",
+      "hints": [
+        "Find the fractions with numerator \\(1\\) or \\(2\\) closest to \\(\\frac{2}{7}\\) on each side",
+        "\\(r\\) must be closer to \\(\\frac{2}{7}\\) than to \\(\\frac{1}{4}\\) or \\(\\frac{1}{3};\\) count four-place decimals between \\(\\frac{15}{56}\\) and \\(\\frac{13}{42}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

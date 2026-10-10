@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-team-2013-p1",
+  "title": "2013 HMMT November Team Problem 1",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2013,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 48.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Tim the Beaver can make three different types of geometrical figures: squares, regular hexagons, and regular octagons. Tim makes a random sequence \\(F_{0}, F_{1}, F_{2}, F_{3}, \\ldots\\) of figures as follows:\n\n- \\(F_{0}\\) is a square.\n- For every positive integer \\(i, F_{i}\\) is randomly chosen to be one of the 2 figures distinct from \\(F_{i-1}\\) (each chosen with equal probability \\(\\frac{1}{2}\\) ).\n- Tim takes 4 seconds to make squares, 6 to make hexagons, and 8 to make octagons. He makes one figure after another, with no breaks in between.\n\nSuppose that exactly 17 seconds after he starts making \\(F_{0}\\), Tim is making a figure with \\(n\\) sides. What is the expected value of \\(n\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2013-p1.hmmt",
+      "kind": "proof-sketch",
+      "text": "7 We write \\(F_{i}=n\\) as shorthand for \"the \\(i\\) th figure is an \\(n\\)-sided polygon.\"\nIf \\(F_{1}=8\\), the \\(F_{2}=6\\) or \\(F_{2}=4\\). If \\(F_{2}=6\\), Tim is making a 6 -gon at time 13 (probability contribution \\(1 / 4)\\). If \\(F_{2}=4, F_{3}=6\\) or \\(F_{3}=8\\) will take the time 13 mark ( \\(1 / 8\\) contribution each).\nIf \\(F_{1}=6, F_{2}=8\\) or \\(F_{2}=4\\). If \\(F_{2}=8\\), it takes the 13 mark \\(\\left(1 / 4\\right.\\) contribution). If \\(F_{2}=4, F_{3}=6\\) or \\(F_{3}=8\\) will take the 13 mark ( \\(1 / 8\\) contribution each).\nThus, the expected value of the number of sides at time 13 is \\(0(4)+\\left(\\frac{1}{4}+\\frac{1}{8}+\\frac{1}{8}\\right)(6)+\\left(\\frac{1}{8}+\\frac{1}{4}+\\frac{1}{8}\\right)(8)=7\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

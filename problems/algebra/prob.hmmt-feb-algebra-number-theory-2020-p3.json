@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2020-p3",
+  "title": "2020 HMMT February Algebra and Number Theory Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.logarithmic-functions",
+      "label": "Logarithmic functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.quadratic-functions",
+      "label": "Quadratic functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2020,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a=256\\). Find the unique real number \\(x>a^{2}\\) such that\n\n\\[\\log _{a} \\log _{a} \\log _{a} x=\\log _{a^{2}} \\log _{a^{2}} \\log _{a^{2}} x\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "2^{32}",
+    "value": "2^{32}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2020-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(y=\\log _{a} x\\) so \\(\\log _{a} \\log _{a} y=\\log _{a^{2}} \\log _{a^{2}} \\frac{1}{2} y\\). Setting \\(z=\\log _{a} y\\), we find \\(\\log _{a} z=\\) \\(\\log _{a^{2}}\\left(\\frac{1}{2} z-\\frac{1}{16}\\right)\\), or \\(z^{2}-\\frac{1}{2} z+\\frac{1}{16}=0\\). Thus, we have \\(z=\\frac{1}{4}\\), so we can backsolve to get \\(y=4\\) and \\(x=2^{32}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

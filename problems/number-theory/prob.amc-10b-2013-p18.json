@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2013-p18",
+  "title": "2013 AMC 10B Problem 18",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.triangular-number",
+      "label": "Triangular number",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2013,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 21.7,
+    "source": 1420,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The number \\(2013\\) has the property that its units digit is the sum of its other digits, that is \\(2+0+1=3.\\) How many integers less than \\(2013\\) but greater than \\(1000\\) have this property?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 33 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 34 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 45 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 46 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 58 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "46"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2013-p18.live",
+      "kind": "proof-sketch",
+      "text": "Once the first three digits are given, their sum determines the units digit, provided that the sum is at most \\(9.\\)\n\nWe separate the possibilities according to the thousands digit.\n\nIf the thousands digit is \\(1,\\) then the sum of the hundreds and tens digits must be at most \\(8.\\) For each possible sum \\(s,\\) there are \\(s+1\\) choices, because the hundreds digit can range from \\(0\\) to \\(s.\\)\n\nThus, this case gives the ninth triangular number: \\[\\dfrac{9\\cdot 10}2 =45.\\]\n\nIf the thousands digit is \\(2,\\) the only qualifying number below \\(2013\\) is \\(2002,\\) giving \\(46\\) cases in total.\n\nThus, the correct answer is D.",
+      "hints": [
+        "Count numbers from \\(1001\\) to \\(1999\\) by their units digit",
+        "Handle the small range from \\(2000\\) to \\(2012\\) separately"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

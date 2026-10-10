@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2016-p25",
+  "title": "2016 AMC 12B Problem 25",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.multiplicative-order",
+      "label": "Multiplicative order",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2016,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 41.3,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "The sequence \\((a_n)\\) is defined recursively by \\(a_0=1,\\) \\(a_1=\\sqrt[19]{2},\\) and \\(a_n=a_{n-1}a_{n-2}^2\\) for \\(n\\ge2.\\) What is the smallest positive integer \\(k\\) such that the product \\(a_1a_2\\cdots a_k\\) is an integer?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(19\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(21\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "17"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2016-p25.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(a_n=2^{\\frac{b_n}{19}}.\\) The recursion becomes \\(b_0=0,\\) \\(b_1=1,\\) \\(b_n=b_{n-1}+2b_{n-2},\\) solved by \\(b_n=\\tfrac13\\bigl(2^n-(-1)^n\\bigr).\\) The product \\(a_1\\cdots a_k\\) is an integer exactly when \\(b_1+\\cdots+b_k\\) is divisible by \\(19.\\) Summing the formula for \\(b_n\\) gives \\(b_1+\\cdots+b_k=\\dfrac{2^{k+1}-1}{3}\\) when \\(k\\) is odd, and \\(b_1+\\cdots+b_k=\\dfrac{2^{k+1}-2}{3}\\) when \\(k\\) is even.\n\nThe order of \\(2\\) modulo \\(19\\) is \\(18\\) because \\(2^9\\equiv-1\\pmod{19}\\) and \\(2^6\\not\\equiv1\\pmod{19}.\\) For odd \\(k,\\) divisibility therefore requires \\(k+1\\) to be divisible by \\(18,\\) first occurring at \\(k=17.\\) For even \\(k,\\) it requires \\(k\\) to be divisible by \\(18,\\) first occurring at \\(k=18.\\) Hence the smallest positive \\(k\\) is \\(17.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "Write \\(a_n=2^{\\frac{b_n}{19}}.\\) Then \\(b_0=0,\\) \\(b_1=1,\\) and \\(b_n=b_{n-1}+2b_{n-2}\\)",
+        "The product is an integer exactly when \\(b_1+b_2+\\cdots+b_k\\) is divisible by \\(19;\\) solve \\(b_n=\\tfrac13(2^n-(-1)^n)\\) and use the order of \\(2\\) modulo \\(19\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

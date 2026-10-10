@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2010-p21",
+  "title": "2010 AMC 10B Problem 21",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "nt.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.palindrome",
+      "label": "Palindrome",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2010,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 26.3,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A palindrome between \\(1000\\) and \\(10{,}000\\) is chosen at random. What is the probability that it is divisible by \\(7?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{10}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1}{9}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{7}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{1}{6}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{1}{5}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "1/5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2010-p21.live",
+      "kind": "proof-sketch",
+      "text": "Note that we can express any \\(4\\) digit number as \\(abcd.\\) This can be expressed in long form as \\[ 10^3a + 10^2b + 10c + d. \\] Since in a palindrome, we have that \\(a = d\\) and \\(b = c.\\) We can simplify this to get \\[ 1001a + 110b. \\] Note that \\(1001\\) is divisible by \\(7.\\) This means that \\(110b\\) must also be divisible by \\(7.\\)\n\nThe only way for this to happen is if \\(b\\) is \\(0\\) or \\(7\\) since \\(110\\) is not divisible by \\(7.\\)\n\nThere are \\(9\\) options for \\(a\\) and \\(2\\) options for \\(b,\\) for a total of \\(9 \\cdot 2 = 18\\) palindromes.\n\nThe total number of palindromes is \\(9 \\cdot 10\\) since there are \\(9\\) options for the thousands digit and \\(10\\) options for the hundreds digit.\n\nThe desired probability is then \\[ \\dfrac{18}{9 \\cdot 10} = \\dfrac{1}{5}. \\]\n\nThus, E is the correct answer.",
+      "hints": [
+        "Write a four-digit palindrome as \\(abba\\)",
+        "The value is \\(1001a+110b\\), and \\(1001\\) is divisible by \\(7\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

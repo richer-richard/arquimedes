@@ -1,0 +1,77 @@
+{
+  "id": "prob.hmmt-feb-guts-2016-p22",
+  "title": "2016 HMMT February Guts Problem 22",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2016,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 75.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "On the Cartesian plane \\(\\mathbb{R}^{2}\\), a circle is said to be nice if its center is at the origin \\((0,0)\\) and it passes through at least one lattice point (i.e. a point with integer coordinates). Define the points \\(A=(20,15)\\) and \\(B=(20,16)\\). How many nice circles intersect the open segment \\(A B\\) ?\nFor reference, the numbers \\(601,607,613,617,619,631,641,643,647,653,659,661,673,677,683\\), 691 are the only prime numbers between 600 and 700 .",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2016-p22.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 10\nThe square of the radius of a nice circle is the sum of the square of two integers.\nThe nice circle of radius \\(r\\) intersects (the open segment) \\(\\overline{A B}\\) if and only if a point on \\(\\overline{A B}\\) is a distance \\(r\\) from the origin. \\(\\overline{A B}\\) consists of the points \\((20, t)\\) where \\(t\\) ranges over \\((15,16)\\). The distance from the origin is \\(\\sqrt{20^{2}+t^{2}}=\\sqrt{400+t^{2}}\\). As \\(t\\) ranges over \\((15,16), \\sqrt{400+t^{2}}\\) ranges over \\((\\sqrt{625}, \\sqrt{656})\\), so the nice circle of radius \\(r\\) intersects \\(\\overline{A B}\\) if and only if \\(625<r^{2}<656\\).\nThe possible values of \\(r^{2}\\) are those in this range that are the sum of two perfect squares, and each such value corresponds to a unique nice circle. By Fermat's Christmas theorem, an integer is the sum of two squares if an only if in its prime factorization, each prime that is \\(3 \\bmod 4\\) appears with an even exponent (possibly 0 .) In addition, since squares are 0,1 , or \\(4 \\bmod 8\\), we can quickly eliminate integers that are 3,6 , or \\(7 \\bmod 8\\).\nNow I will list all the integers that aren't 3,6 , or \\(7 \\bmod 8\\) in the range and either supply the bad prime factor or write \"nice\" with the prime factorization.\n626: nice \\((2 \\cdot 313)\\)\n628: nice \\(\\left(2^{2} \\cdot 157\\right)\\)\n629: nice \\((17 \\cdot 37)\\)\n632: 79\n633: 3\n634: nice \\((2 \\cdot 317)\\)\n636: 3\n637: nice \\(\\left(7^{2} \\cdot 13\\right)\\)\n640: nice \\(\\left(2^{7} \\cdot 5\\right)\\)\n641: nice (641)\n642: 3\n644: 7\n645: 3\n648: nice \\(\\left(2^{3} \\cdot 3^{4}\\right)\\)\n649: 11\n650: nice \\(\\left(2 \\cdot 5^{2} \\cdot 13\\right)\\)\n652: 163\n653: nice (653). There are 10 nice circles that intersect \\(\\overline{A B}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2017-p1",
+  "title": "2017 IMO Problem 1",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2017,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 79.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For each integer \\(a_0 > 1\\), define the sequence \\(a_0\\), \\(a_1\\), \\(a_2\\),\n\\dots, by\n\\[\n a_{n+1} =\n \\begin{cases}\n \\sqrt{a_n} & \\text{if \\(\\sqrt{a_n}\\) is an integer,} \\\\\n a_n + 3 & \\text{otherwise}\n \\end{cases}\n\\]\nfor each \\(n \\ge 0\\).\nDetermine all values of \\(a_0\\) for which there is a number \\(A\\)\nsuch that \\(a_n = A\\) for infinitely many values of \\(n\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2017-p1.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is \\(a_0 \\equiv 0 \\pmod 3\\) only.\n\nFirst solution..\nWe first compute the minimal term of any sequence, periodic or not.\n\nLemma.\n Let \\(c\\) be the smallest term in \\(a_n\\).\n Then either \\(c \\equiv 2 \\pmod 3\\) or \\(c = 3\\).\n\nProof.\n Clearly \\(c \\neq 1, 4\\).\n Assume \\(c \\not\\equiv 2 \\pmod 3\\).\n As \\(c\\) is not itself a square,\n the next perfect square after \\(c\\) in the sequence\n is one of \\(\\left( \\left\\lfloor \\sqrt c \\right\\rfloor + 1\\right)^2\\),\n \\(\\left( \\left\\lfloor \\sqrt c \\right\\rfloor + 2\\right)^2\\),\n or \\(\\left( \\left\\lfloor \\sqrt c \\right\\rfloor + 3\\right)^2\\).\n So by minimality we require\n \\[ c \\le \\left\\lfloor \\sqrt c \\right\\rfloor + 3 \\le \\sqrt c + 3 \\]\n which requires \\(c \\le 5\\).\n Since \\(c \\neq 1,2,4,5\\) we conclude \\(c = 3\\).\n\nNow we split the problem into two cases:\n\n• If \\(a_0 \\equiv 0 \\pmod 3\\), then all terms of the sequence are \\(0 \\pmod 3\\).\nThe smallest term of the sequence is thus \\(3\\) by the lemma\nand we have \\[ 3 \\to 6 \\to 9 \\to 3 \\]\nso \\(A = 3\\) works fine.\n\n• If \\(a_0 \\not\\equiv 0 \\pmod 3\\),\nthen no term of the sequence is \\(0 \\pmod 3\\),\nand so in particular \\(3\\) does not appear in the sequence.\nSo the smallest term of the sequence is \\(2 \\pmod 3\\) by lemma.\nBut since no squares are \\(2 \\pmod 3\\),\nthe sequence \\(a_k\\) grows without bound forever after,\nso no such \\(A\\) can exist.\n\nHence the answer is \\(a_0 \\equiv 0 \\pmod 3\\) only.\n\nSecond solution..\nWe clean up the argument by proving the following lemma.\n\nLemma.\n If \\(a_n\\) is constant modulo \\(3\\) and not \\(2 \\pmod 3\\),\n then \\(a_n\\) must eventually cycle in the form\n \\((m, m+3, m+6, \\dots, m^2)\\),\n with no squares inside the cycle except \\(m^2\\).\n\nProof.\n Observe that \\(a_n\\) must eventually hit a square, say \\(a_k = c^2\\);\n the next term is \\(a_{k+1} = c\\).\n Then it is forever impossible to exceed \\(c^2\\) again,\n by what is essentially discrete intermediate value theorem.\n Indeed, suppose \\(a_\\ell > c^2\\) and take \\(\\ell > k\\) minimal\n (in particular \\(a_{\\ell} \\neq \\sqrt{a_{\\ell-1}}\\)).\n\n Thus \\(a_{\\ell-1} \\in \\{c^2-2, c^2-1, c^2\\}\\)\n and thus for modulo \\(3\\) reasons we have \\(a_{\\ell-1} = c^2\\).\n But that should imply \\(a_\\ell = c < c^2\\), contradiction.\n\n We therefore conclude \\(\\sup \\{a_n, a_{n+1}, \\dots \\}\\) is a\n decreasing integer sequence in \\(n\\).\n It must eventually stabilize, say at \\(m^2\\).\n Now we can't hit a square between \\(m\\) and \\(m^2\\),\n and so we are done.\n\nNow, we contend that all \\(a_0 \\equiv 0 \\pmod 3\\) work.\nIndeed, for such \\(a_0\\) we have \\(a_n \\equiv 0 \\pmod 3\\) for all \\(n\\),\nso the lemma implies that the problem statement is valid.\n\nNext, we observe that if \\(a_i \\equiv 2 \\pmod 3\\),\nthen the sequence grows without bound afterwards\nsince no squares are \\(2 \\pmod 3\\).\nIn particular, if \\(a_0 \\equiv 2 \\pmod 3\\) the answer is no.\n\nFinally, we claim that if \\(a_0 \\equiv 1 \\pmod 3\\),\nthen eventually some term is \\(2 \\pmod 3\\).\nAssume for contradiction this is not so;\nthen \\(a_n \\equiv 1 \\pmod 3\\) must hold forever,\nand the lemma applies to give us a cycle of the form\n\\((m, m+3, \\dots, m^2)\\) where \\(m \\equiv 1 \\pmod 3\\).\nIn particular \\(m \\ge 4\\) and\n\\[ m \\le (m-2)^2 < m^2 \\]\nbut \\((m-2)^2 \\equiv 1 \\pmod 3\\) which is a contradiction.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

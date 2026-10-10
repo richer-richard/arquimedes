@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12b-2025-p24",
+  "title": "2025 AMC 12B Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.counting-intersections",
+      "label": "Counting intersections",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2025,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 49.5,
+    "source": 2520,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "How many real numbers satisfy the equation \\(\\sin(20\\pi x) = \\log_{20}(x)?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(199\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(200\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(398\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(399\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(400\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "399"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2025-p24.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(|\\sin(20\\pi x)|\\le1,\\) every solution lies in \\(\\left[\\tfrac1{20},20\\right].\\) For \\(x\\lt1\\) the logarithm is negative, so only the \\(10\\) negative sine lobes in \\(\\left[\\tfrac1{20},1\\right]\\) can contribute. Each has one crossing on each side of its minimum; on the last lobe, the second crossing is the endpoint \\(x=1.\\) Hence this part contributes \\(20\\) solutions.\n\nFor \\(x\\gt1,\\) only positive lobes contribute. There are \\(190\\) of them: one in each interval from \\(1+\\tfrac{k}{10}\\) to \\(1+\\tfrac{k}{10}+\\tfrac1{20}\\) for \\(0\\le k\\le189.\\) Every one after the first has one crossing on each side of its maximum. The first has only one new crossing because its left endpoint is the already-counted solution \\(x=1.\\) Thus \\(x\\gt1\\) contributes \\(1+2\\cdot189=379\\) more solutions.\n\nFor completeness, the claimed uniqueness on each half-lobe follows by differentiating the difference of the two sides. On a falling positive half-lobe it is strictly decreasing. On a rising positive half-lobe its derivative increases and then decreases once, so the difference crosses from negative to positive only once. Applying the same argument to \\(-\\sin(20\\pi x)+\\log_{20}x\\) handles a negative lobe. The total is \\(20+379=399.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "A solution needs \\(-1 \\le \\log_{20} x \\le 1,\\) so \\(x\\) lies in \\(\\left[\\tfrac{1}{20}, 20\\right]\\)",
+        "On each monotonic half-wave of \\(\\sin(20\\pi x)\\) the slowly rising log crosses once; count the branches carefully at both ends"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

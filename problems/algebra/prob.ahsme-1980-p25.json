@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1980-p25",
+  "title": "1980 AHSME Problem 25",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.pattern-recognition",
+      "label": "Pattern recognition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sum-of-first-n-odd-numbers",
+      "label": "Sum of first n odd numbers",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1980,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 41.3,
+    "source": 2200,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "In the nondecreasing sequence of odd integers \\[ \\begin{aligned} (a_1,a_2,a_3,\\ldots) ={}&(1,3,3,3,\\\\ &5,5,5,5,5,\\ldots) \\end{aligned} \\] each positive odd integer \\(k\\) appears \\(k\\) times. It is a fact that there are integers \\(b,\\) \\(c,\\) and \\(d\\) such that, for all positive integers \\(n,\\) \\[ a_n=b\\left\\lfloor\\sqrt{n+c}\\right\\rfloor+d, \\] where \\(\\lfloor x\\rfloor\\) denotes the largest integer not exceeding \\(x.\\) The sum \\(b+c+d\\) equals",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "2"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1980-p25.live",
+      "kind": "proof-sketch",
+      "text": "The final occurrence of \\(2m-1\\) is in position \\[ 1+3+\\cdots+(2m-1)=m^2. \\] Therefore \\[ \\begin{aligned} a_n&=2\\left\\lceil\\sqrt n\\right\\rceil-1\\\\ &=2\\left\\lfloor\\sqrt{n-1}\\right\\rfloor+1. \\end{aligned} \\] Thus \\(b=2,\\) \\(c=-1,\\) and \\(d=1,\\) so \\(b+c+d=2.\\)\n\nTherefore, the correct answer is C.",
+      "hints": [
+        "The first \\(m\\) positive odd integers have sum \\(m^2\\)",
+        "Express the least \\(m\\) with \\(m^2\\ge n\\) using a floor of \\(\\sqrt{n-1}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

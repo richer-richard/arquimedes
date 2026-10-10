@@ -1,0 +1,91 @@
+{
+  "id": "prob.amc-8-2018-p22",
+  "title": "2018 AMC 8 Problem 22",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.similarity",
+      "label": "Similarity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.square-geometry",
+      "label": "Square (geometry)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2018,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 19.4,
+    "source": 1770,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Point \\(E\\) is the midpoint of side \\(\\overline{CD}\\) in square \\(ABCD,\\) and \\(\\overline{BE}\\) meets diagonal \\(\\overline{AC}\\) at \\(F.\\) The area of quadrilateral \\(AFED\\) is \\(45.\\) What is the area of \\(ABCD?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 100 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 108 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 120 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 135 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 144 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "108"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2018-p22.live",
+      "kind": "proof-sketch",
+      "text": "Let the square have side length \\(s,\\) and let \\(H\\) be the foot of the perpendicular from \\(F\\) to \\(\\overline{BC}.\\) The right triangles \\(CAB\\) and \\(CFH\\) are similar, so \\(CH=FH.\\) Also, triangles \\(BFH\\) and \\(BEC\\) are similar, giving \\[ \\frac{FH}{EC}=\\frac{BH}{BC}. \\] Since \\(EC=\\frac{s}{2},\\) \\(BC=s,\\) and \\(BH=s-CH=s-FH,\\) this becomes \\(\\frac{2FH}{s}=1-\\frac{FH}{s},\\) so \\(FH=CH=\\frac{s}{3}.\\)\n\nThus triangle \\(EFC\\) has base \\(EC=\\frac{s}{2}\\) and height \\(CH=\\frac{s}{3},\\) so its area is \\(\\frac{s^2}{12}.\\) Therefore \\[\\begin{aligned} [AFED]&=[\\triangle ACD]-[\\triangle EFC]\\\\ &=\\dfrac{s^2}{2}-\\dfrac{s^2}{12}\\\\ &=\\dfrac{5s^2}{12}. \\end{aligned}\\] Since this area is \\(45\\), we get \\(s^2=108\\), the area of the square.",
+      "hints": [
+        "Let the square have side length \\(s\\).",
+        "Find the small triangle cut from \\(\\triangle ACD\\), then subtract it from half the square."
+      ],
+      "images": [
+        "21ac1c20a2f0800dc3d2f78210dec432b8645ce32a344ffcbaf2c12a20e234ba"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [
+      "bcbef9956967ab4d4823b8ee60f020a7842ca3545ab9ae41fd42a8c18cc55f3e"
+    ],
+    "solutions": [
+      "21ac1c20a2f0800dc3d2f78210dec432b8645ce32a344ffcbaf2c12a20e234ba"
+    ]
+  }
+}

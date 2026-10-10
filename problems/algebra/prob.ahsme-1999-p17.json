@@ -1,0 +1,78 @@
+{
+  "id": "prob.ahsme-1999-p17",
+  "title": "1999 AHSME Problem 17",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1999,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 28.0,
+    "source": 1680,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(P(x)\\) be a polynomial such that when \\(P(x)\\) is divided by \\(x - 19,\\) the remainder is \\(99,\\) and when \\(P(x)\\) is divided by \\(x - 99,\\) the remainder is \\(19.\\) What is the remainder when \\(P(x)\\) is divided by \\((x - 19)(x - 99)?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(-x + 80\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(x + 80\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(-x + 118\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(x + 118\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(0\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1999-p17.live",
+      "kind": "proof-sketch",
+      "text": "By the Remainder Theorem, \\(P(19) = 99\\) and \\(P(99) = 19.\\) Write \\[ \\begin{aligned} &P(x) = (x - 19)(x - 99)Q(x) \\\\ &\\quad {}+ ax + b. \\end{aligned} \\] Then \\[ 19a + b = 99, \\qquad 99a + b = 19. \\]\n\nSubtracting gives \\(80a = -80,\\) so \\(a = -1\\) and \\(b = 118.\\) The remainder is \\(-x + 118.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Dividing by a quadratic leaves a remainder of the form \\(ax + b\\)",
+        "Use \\(P(19) = 99\\) and \\(P(99) = 19\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

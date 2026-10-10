@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2008-p3",
+  "title": "2008 USAMO Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2008,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 107.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n\\) be a positive integer. Denote by \\(S_n\\) the set of points \\((x, y)\\) with integer coordinates such that\n\n\\[\n\\left|x\\right| + \\left|y + \\frac {1}{2}\\right| < n\n\\]\n\nA path is a sequence of distinct points \\((x_1 , y_1 ), (x_2 , y_2 ), \\ldots , (x_\\ell, y_\\ell)\\) in \\(S_n\\) such that, for \\(i = 2, \\ldots , \\ell\\), the distance between \\((x_i , y_i )\\) and \\((x_{i - 1} , y_{i - 1} )\\) is \\(1\\) (in other words, the points \\((x_i , y_i )\\) and \\((x_{i - 1} , y_{i - 1} )\\) are neighbors in the lattice of points with integer coordinates). Prove that the points in \\(S_n\\) cannot be partitioned into fewer than \\(n\\) paths (a partition of \\(S_n\\) into \\(m\\) paths is a set \\(\\mathcal{P}\\) of \\(m\\) nonempty paths such that each point in \\(S_n\\) appears in exactly one of the \\(m\\) paths in \\(\\mathcal{P}\\)).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2008-p3.imported",
+      "kind": "proof-sketch",
+      "text": "Color all the points in $S_{n}$ red or black such that each row of points starts and ends with a red point, and alternates between red and black for each point in the row. This creates a checkerboard pattern, except that the middle two rows are identical.\n <div style=\"font-size:85%\">Examples for $n=4$</div>\nSuppose there is a partition of $m < n$ paths that works. For each of the $m$ paths, we break a path into two separate paths wherever there are consecutive red points. This only happens only with the $n$ red pairs in the middle two rows. We now have $m + l,\\, l \\le n$ paths whose colors are strictly alternating. In a path with alternating colors, there can be at most one more red dot than the number of black dots (which occurs when both endpoints are red). Thus there can be no more than $m + l$ red dots than black dots in $S_n$.\nThere are $2n$ more red points than black points, so\n\\[2n \\le m + l \\le m + n\\]\nwhich implies that $n \\le m$, contradiction.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

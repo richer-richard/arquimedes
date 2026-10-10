@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2017-p4",
+  "title": "2017 IMO Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2017,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 88.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(R\\) and \\(S\\) be different points on a circle \\(\\Omega\\)\nsuch that \\(\\overline{RS}\\) is not a diameter.\nLet \\(\\ell\\) be the tangent line to \\(\\Omega\\) at \\(R\\).\nPoint \\(T\\) is such that \\(S\\) is the midpoint of \\(\\overline{RT}\\).\nPoint \\(J\\) is chosen on minor arc \\(RS\\) of \\(\\Omega\\) so that\nthe circumcircle \\(\\Gamma\\) of triangle \\(JST\\) intersects \\(\\ell\\) at two distinct points.\nLet \\(A\\) be the common point of \\(\\Gamma\\) and \\(\\ell\\) closer to \\(R\\).\nLine \\(AJ\\) meets \\(\\Omega\\) again at \\(K\\).\nProve that line \\(KT\\) is tangent to \\(\\Gamma\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2017-p4.evanchen",
+      "kind": "proof-sketch",
+      "text": "First solution (elementary)..\nFirst, note\n\\[ \\measuredangle RKA = \\measuredangle RKJ = \\measuredangle RSJ = \\measuredangle TSJ = \\measuredangle TAJ = \\measuredangle TAK \\]\nso \\(\\overline{RK} \\parallel \\overline{AT}\\).\nNow,\n\n• \\(\\overline{RA}\\) is tangent at \\(R\\) iff \\(\\triangle KRS \\sim \\triangle RTA\\) (oppositely),\n because both equate to \\(-\\measuredangle RKS = \\measuredangle SKR = \\measuredangle SRA = \\measuredangle TRA\\).\n\n• Similarly, \\(\\overline{TK}\\) is tangent at \\(T\\)\n iff \\(\\triangle ATS \\sim \\triangle TRK\\).\n\n• The two similarities are equivalent because \\(RS = ST\\)\n the SAS gives \\(KR \\cdot TA = RS \\cdot RT = TS \\cdot TR\\).\n\n[Diagram omitted from this imported TeX transcription.]\n\nRemark.\n The problem is actually symmetric with respect to two circles;\n \\(\\overline{RA}\\) is tangent at \\(R\\) if and only if \\(\\overline{TK}\\) at \\(T\\).\n\nSecond solution (inversion)..\nConsider an inversion at \\(R\\) fixing the circumcircle \\(\\Gamma\\) of \\(TSJA\\).\nThen:\n\n• \\(T\\) and \\(S\\) swap,\n\n• \\(A\\) and \\(B\\) swap, where \\(B\\) is the second intersection\n of \\(\\ell\\) with \\(\\Gamma\\).\n\n• Circle \\(\\Omega\\) inverts to the line through \\(T\\)\n parallel to \\(\\overline{RAB}\\), call it \\(\\ell\\).\n\n• \\(J^\\ast\\) is the second intersection of \\(\\ell\\) with \\(\\Gamma\\).\n\n• \\(K^\\ast\\) is the intersection of \\(\\ell\\) with the circumcircle\n of \\(RBJ^\\ast\\); this implies \\(RK^\\ast J^\\ast B\\) is an isosceles trapezoid.\n In particular, one reads \\(\\overline{RK^\\ast} \\parallel \\overline{AT}\\) from this,\n hence \\(RK^\\ast TA\\) is a parallelogram.\n\nThus we wish to show the circumcircle of \\(RSK^\\ast\\) is tangent to \\(\\Gamma\\).\nBut that follows from the final parallelogram observed:\n\\(S\\) is the center of the parallelogram since it is the midpoint of the diagonal.\n\nRemark.\n This also implies \\(RKTB\\) is cyclic, from \\(\\overline{K^\\ast SA}\\) collinear.\n Moreover, quadrilateral \\(KK^\\ast TS\\) is cyclic (by power of a point);\n this leads to the second official solution to the problem.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

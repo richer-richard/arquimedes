@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2002-p1",
+  "title": "2002 AMC 12B Problem 1",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.place-value",
+      "label": "Place value",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2002,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 9.3,
+    "source": 950,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "The arithmetic mean of the nine numbers in the set \\(\\{9,\\) \\(99,\\) \\(999,\\) \\(9999,\\) \\(\\ldots,\\) \\(999999999\\}\\) is a \\(9\\)-digit number \\(M,\\) all of whose digits are distinct. The number \\(M\\) does not contain the digit",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(8\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "0"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2002-p1.live",
+      "kind": "proof-sketch",
+      "text": "Each of the nine numbers is \\(10^k-1,\\) so their sum is \\(9+99+\\cdots+999{,}999{,}999.\\) Dividing by \\(9,\\) \\[ \\begin{aligned} M &= 1+11+111+\\cdots \\\\ &\\quad {}+111{,}111{,}111 \\\\ &= 123{,}456{,}789. \\end{aligned} \\] Its digits are \\(1\\) through \\(9,\\) so the missing digit is \\(0.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "The mean is \\(\\dfrac{1}{9}(9+99+\\cdots+999{,}999{,}999)\\)",
+        "Dividing each term by \\(9\\) turns the sum into \\(1+11+111+\\cdots\\); add these and see which digit never appears"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

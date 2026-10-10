@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2019-p5",
+  "title": "2019 AMC 10B Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.slope",
+      "label": "Slope",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.transformation",
+      "label": "Transformation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2019,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 11.0,
+    "source": 1020,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Triangle \\(ABC\\) lies in the first quadrant. Points \\(A,\\) \\(B,\\) and \\(C\\) are reflected across the line \\(y=x\\) to points \\(A',\\) \\(B',\\) and \\(C',\\) respectively. Assume that none of the vertices of the triangle lie on the line \\(y=x.\\) Which of the following statements is not always true?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "Triangle \\(A'B'C'\\) lies in the first quadrant."
+    },
+    {
+      "label": "B",
+      "text": "Triangles \\(ABC\\) and \\(A'B'C'\\) have the same area."
+    },
+    {
+      "label": "C",
+      "text": "The slope of line \\(AA'\\) is \\(-1.\\)"
+    },
+    {
+      "label": "D",
+      "text": "The slopes of lines \\(AA'\\) and \\(CC'\\) are the same."
+    },
+    {
+      "label": "E",
+      "text": "Lines \\(AB\\) and \\(A'B'\\) are perpendicular to\neach other."
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2019-p5.live",
+      "kind": "proof-sketch",
+      "text": "Reflection across \\(y=x\\) sends \\((x,y)\\) to \\((y,x)\\). It therefore preserves the first quadrant and preserves area, so A and B are always true.\n\nThe direction from \\((x,y)\\) to its image \\((y,x)\\) is \\((y-x,x-y)\\), whose slope is \\(-1\\) because \\(x\\ne y\\). Thus C and D are always true as well.\n\nFor E, take \\(A=(2,1)\\), \\(B=(3,2)\\), and \\(C=(4,1)\\). These points satisfy all the conditions, but \\(AB\\) and \\(A'B'\\) both have slope \\(1\\), so the two lines are parallel rather than perpendicular.\n\nThus, the answer is E .",
+      "hints": [
+        "Reflections preserve area and the first quadrant across \\(y=x\\)",
+        "Test the claim about \\(AB\\) with a simple segment of slope \\(1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

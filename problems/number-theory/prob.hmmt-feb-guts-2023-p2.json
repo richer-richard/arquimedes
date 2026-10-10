@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2023-p2",
+  "title": "2023 HMMT February Guts Problem 2",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2023,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 63.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n\\) be a positive integer, and let \\(s\\) be the sum of the digits of the base-four representation of \\(2^{n}-1\\). If \\(s=2023\\) (in base ten), compute \\(n\\) (in base ten).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "1349",
+    "value": "1349"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2023-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "Every power of 2 is either represented in base 4 as \\(100 \\ldots 00_{4}\\) or \\(200 . .00_{4}\\) with some number of zeros. That means every positive integer in the form \\(2^{n}-1\\) is either represented in base 4 as \\(333 \\ldots 33_{4}\\) or \\(133 \\ldots 33\\) for some number threes. Note that \\(2023=2022+1=674 \\cdot 3+1\\), meaning \\(2^{n}-1\\) must be \\(133 \\ldots 333_{4}\\) with 674 threes. Converting this to base 2 results in\n\n\\[133 \\ldots 33_{4}=200 \\ldots 00_{4}-1=2 \\cdot 4^{674}-1=2^{1349}-1\\]\n\nfor an answer of 1349.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

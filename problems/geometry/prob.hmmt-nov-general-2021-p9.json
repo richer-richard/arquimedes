@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-nov-general-2021-p9",
+  "title": "2021 HMMT November General Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2021,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 56.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "\\(A B C D E\\) is a cyclic convex pentagon, and \\(A C=B D=C E . A C\\) and \\(B D\\) intersect at \\(X\\), and \\(B D\\) and \\(C E\\) intersect at \\(Y\\). If \\(A X=6, X Y=4\\), and \\(Y E=7\\), then the area of pentagon \\(A B C D E\\) can be written as \\(\\frac{a \\sqrt{b}}{c}\\), where \\(a, b, c\\) are integers, \\(c\\) is positive, \\(b\\) is square-free, and \\(\\operatorname{gcd}(a, c)=1\\). Find \\(100 a+10 b+c\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "2852",
+    "value": "2852"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2021-p9.hmmt",
+      "kind": "proof-sketch",
+      "text": "Since \\(A C=B D, A B C D\\) is an isosceles trapezoid. Similarly, \\(B C D E\\) is also an isosceles trapezoid. Using this, we can now calculate that \\(C Y=D Y=D X-X Y=A X-X Y=2\\), and similarly \\(B X=C X=3\\). By applying Heron's formula we find that the area of triangle \\(C X Y\\) is \\(\\frac{3}{4} \\sqrt{15}\\).\nNow, note that\n\n\\[[A B C]=\\frac{A C}{C X}[B X C]=3[B X C]=3 \\frac{X Y}{B X}[C X Y]=\\frac{9}{4}[C X Y]\\]\n\nSimilarly, \\([C D E]=\\frac{9}{4}[C X Y]\\). Also,\n\n\\[[A C E]=\\frac{C A \\cdot C E}{C X \\cdot C Y}[C X Y]=\\frac{81}{6}[C X Y]=\\frac{27}{2}[C X Y]\\]\n\nThus, \\([A B C D E]=(9 / 4+9 / 4+27 / 2)[C X Y]=18[C X Y]=\\frac{27}{2} \\sqrt{15}\\).\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "prob.aime-i-2007-p7",
+  "title": "2007 AIME I Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.power-of-2",
+      "label": "Power of 2",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2007,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 46.7,
+    "source": 2410,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "Let \\[\\begin{aligned} N &= \\sum_{k=1}^{1000} k \\\\ &\\quad {}\\cdot \\left(\\lceil \\log_{\\sqrt{2}} k \\rceil - \\lfloor \\log_{\\sqrt{2}} k \\rfloor\\right). \\end{aligned}\\] Find the remainder when \\(N\\) is divided by \\(1000.\\) (Here \\(\\lfloor x \\rfloor\\) denotes the greatest integer that is less than or equal to \\(x,\\) and \\(\\lceil x \\rceil\\) denotes the least integer that is greater than or equal to \\(x.\\))",
+  "answerChoices": [],
+  "answer": {
+    "letter": "477",
+    "value": "477"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2007-p7.live",
+      "kind": "proof-sketch",
+      "text": "The difference \\(\\lceil x \\rceil - \\lfloor x \\rfloor\\) equals \\(1\\) when \\(x\\) is not an integer and \\(0\\) when it is. Now \\(\\log_{\\sqrt{2}} k\\) is an integer exactly when \\(k = (\\sqrt{2})^j\\) for some integer \\(j,\\) and for \\(k\\) to be an integer, \\(j\\) must be even — that is, \\(k\\) must be a power of \\(2.\\) The powers at most \\(1000\\) are \\(2^0, 2^1, \\ldots, 2^9 = 512.\\)\n\nTherefore \\[\\begin{aligned} N &= \\sum_{k=1}^{1000} k - \\sum_{j=0}^{9} 2^j \\\\ &= \\frac{1000 \\cdot 1001}{2} - 1023 \\\\ &= 500500 - 1023 = 499477, \\end{aligned}\\] and the remainder upon division by \\(1000\\) is \\(477.\\)",
+      "hints": [
+        "\\(\\lceil x \\rceil - \\lfloor x \\rfloor\\) equals \\(1\\) unless \\(x\\) is an integer, when it equals \\(0\\)",
+        "For integers \\(k,\\) \\(\\log_{\\sqrt{2}} k\\) is an integer exactly when \\(k\\) is a power of \\(2,\\) so subtract the powers of \\(2\\) from \\(1 + 2 + \\cdots + 1000\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

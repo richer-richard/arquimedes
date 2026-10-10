@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2012-p7",
+  "title": "2012 AIME II Problem 7",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "arithmetic",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.systematic-listing",
+      "label": "Systematic listing",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2012,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 58.5,
+    "source": 2790,
+    "mohs": null
+  },
+  "estimatedMinutes": 12,
+  "statement": "Let \\(S\\) be the increasing sequence of positive integers whose binary representation has exactly \\(8\\) ones. Let \\(N\\) be the \\(1000\\)th number in \\(S.\\) Find the remainder when \\(N\\) is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "32",
+    "value": "32"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2012-p7.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(\\binom{12}{8} = 495\\) members of \\(S\\) below \\(2^{12}\\) and \\(\\binom{13}{8} = 1287\\) below \\(2^{13},\\) so \\(N\\) has \\(13\\) binary digits, and exactly \\(1287 - 1000 = 287\\) members below \\(2^{13}\\) exceed it. The \\(\\binom{11}{6} = 462\\) members whose binary representations begin \\(11\\) are the largest ones, so \\(N\\) begins with \\(11\\) and is the \\(462 - 287 = 175\\)th smallest of them.\n\nAmong these, \\(\\binom{9}{6} = 84\\) begin \\(1100,\\) the next \\(\\binom{8}{5} = 56\\) begin \\(11010,\\) and the next \\(\\binom{7}{4} = 35\\) begin \\(110110.\\) Since \\(84 + 56 + 35 = 175,\\) the number \\(N\\) is the largest member beginning \\(110110,\\) namely \\(1101101111000\\) in binary.\n\nIts value is \\(2^{12} + 2^{11} + 2^9 + 2^8\\) \\(+ 2^6 + 2^5 + 2^4 + 2^3 = 7032,\\) so the remainder upon division by \\(1000\\) is \\(32.\\)",
+      "hints": [
+        "There are \\(\\binom{12}{8} = 495\\) members of \\(S\\) below \\(2^{12},\\) so \\(N\\) has \\(13\\) binary digits",
+        "Fix the leading binary digits one at a time, counting members with each prefix, until the position pins down every remaining bit"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

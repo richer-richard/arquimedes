@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2013-p8",
+  "title": "2013 AIME I Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.function",
+      "label": "Function",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2013,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 55.3,
+    "source": 2560,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "The domain of the function \\(f(x) = \\arcsin(\\log_m(nx))\\) is a closed interval of length \\(\\frac{1}{2013},\\) where \\(m\\) and \\(n\\) are positive integers and \\(m \\gt 1.\\) Find the remainder when the smallest possible sum \\(m + n\\) is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "371",
+    "value": "371"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2013-p8.live",
+      "kind": "proof-sketch",
+      "text": "The function is defined when \\(-1 \\le \\log_m(nx) \\le 1,\\) that is \\(\\frac{1}{m} \\le nx \\le m,\\) so the domain is \\(\\left[\\frac{1}{mn}, \\frac{m}{n}\\right],\\) with length \\[\\frac{m}{n} - \\frac{1}{mn} = \\frac{m^2 - 1}{mn} = \\frac{1}{2013}.\\] Hence \\(n = \\frac{2013(m^2 - 1)}{m}.\\) Since \\(m\\) is relatively prime to \\(m^2 - 1,\\) \\(m\\) must divide \\(2013 = 3 \\cdot 11 \\cdot 61.\\)\n\nBecause \\(n \\approx 2013m,\\) the sum \\(m + n\\) grows with \\(m,\\) so take the smallest factor \\(m = 3:\\) then \\(n = \\frac{2013 \\cdot 8}{3} = 5368\\) and \\(m + n = 5371.\\)\n\nThe remainder upon division by \\(1000\\) is \\(371.\\)",
+      "hints": [
+        "The domain requires \\(-1 \\le \\log_m(nx) \\le 1,\\) so \\(x\\) runs over \\(\\left[\\frac{1}{mn}, \\frac{m}{n}\\right],\\) which has length \\(\\frac{m^2 - 1}{mn}\\)",
+        "Then \\(mn = 2013(m^2 - 1).\\) Since \\(\\gcd(m, m^2 - 1) = 1,\\) \\(m\\) must divide \\(2013,\\) and the smallest \\(m \\gt 1\\) minimizes the sum."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

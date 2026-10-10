@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12b-2009-p25",
+  "title": "2009 AMC 12B Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.bijection",
+      "label": "Bijection",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.counting-shapes-in-figures",
+      "label": "Counting shapes in figures",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.lattice-point",
+      "label": "Lattice point",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2009,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 41.3,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The set \\(G\\) is defined by the points \\((x, y)\\) with integer coordinates, \\(3 \\le |x| \\le 7,\\) and \\(3 \\le |y| \\le 7.\\) How many squares of side at least \\(6\\) have their four vertices in \\(G?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(125\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(150\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(175\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(200\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(225\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "225"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2009-p25.live",
+      "kind": "proof-sketch",
+      "text": "\\(G\\) consists of four \\(5 \\times 5\\) blocks \\(G_1, \\ldots, G_4,\\) one in each quadrant. Any square of side \\(\\ge 6\\) uses exactly one vertex in each block, since two points in one block are less than \\(6\\) apart while points in different blocks are at least \\(6\\) apart.\n\nSliding each block inward by \\((\\pm 5, \\pm 5)\\) superimposes them on one \\(5 \\times 5\\) grid \\(G'\\) (points with \\(|x|, |y| \\le 2\\)). Each such square maps to either a single point of \\(G'\\) or a square in \\(G'.\\) So the count equals the number of points of \\(G'\\) plus \\(4\\) times the number of squares with vertices in \\(G'.\\)\n\nThe grid has \\(4^2+3^2+2^2+1^2=30\\) axis-parallel squares. For a tilted square, let one side move \\(a\\) units horizontally and \\(b\\) units vertically, where \\(a,b\\gt0\\) and \\(a+b\\le4.\\) For each ordered pair \\((a,b),\\) there are \\((5-a-b)^2\\) placements. The totals for \\(a+b=2,3,4\\) are \\(9,8,3,\\) respectively, giving \\(20\\) tilted squares and \\(50\\) squares altogether. Therefore the required count is \\(25+4\\cdot50=225.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "\\(G\\) splits into four \\(5 \\times 5\\) blocks, one per quadrant; a side-\\(\\ge 6\\) square takes exactly one vertex from each block",
+        "Slide the four blocks together onto a single \\(5 \\times 5\\) grid \\(G';\\) each valid square maps to a point of \\(G'\\) or a square in \\(G'\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "4acf4551b5168475e3710c8fefb0d826976e91ef1afd5bc12974ab97924fbbae"
+    ],
+    "solutions": []
+  }
+}

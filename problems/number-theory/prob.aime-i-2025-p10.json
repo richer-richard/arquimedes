@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-i-2025-p10",
+  "title": "2025 AIME I Problem 10",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2025,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 61.6,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "The \\(27\\) cells of a \\(3 \\times 9\\) grid are filled in using the numbers \\(1\\) through \\(9\\) so that each row contains \\(9\\) different numbers, and each of the three \\(3 \\times 3\\) blocks heavily outlined in the example below contains \\(9\\) different numbers, as in the first three rows of a Sudoku puzzle.\n\nThe number of different ways to fill such a grid can be written as \\(p^a \\cdot q^b \\cdot r^c \\cdot s^d,\\) where \\(p,\\) \\(q,\\) \\(r,\\) and \\(s\\) are distinct prime numbers and \\(a,\\) \\(b,\\) \\(c,\\) \\(d\\) are positive integers. Find \\(p \\cdot a + q \\cdot b + r \\cdot c + s \\cdot d.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "81",
+    "value": "81"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2025-p10.live",
+      "kind": "proof-sketch",
+      "text": "Fill the left block arbitrarily: \\(9!\\) ways. Let \\(R_1,\\) \\(R_2,\\) and \\(R_3\\) be the sets of three digits in its rows. In the middle block, row \\(i\\) must avoid \\(R_i\\) (those digits already appear in row \\(i\\)), and the block’s three rows must partition \\(\\{1, \\ldots, 9\\}.\\) Say its top row takes \\(j\\) digits from \\(R_2\\) and \\(3 - j\\) from \\(R_3.\\) Balancing the three rows then forces the middle row to take \\(3 - j\\) digits from \\(R_1\\) together with all \\(j\\) remaining digits of \\(R_3,\\) and the bottom row is determined. The number of content choices is \\[ \\begin{gathered} \\sum_{j=0}^{3} \\binom{3}{j}\\binom{3}{3-j}^2 \\\\ = 1 + 27 + 27 + 1 \\\\ = 56. \\end{gathered} \\]\n\nThe right block’s row contents are then forced (row \\(i\\) takes whatever is missing from row \\(i\\)), and each of the six rows of the middle and right blocks can be ordered internally in \\(3!\\) ways. The total is \\[ \\begin{gathered} 9! \\cdot 56 \\cdot 6^6 \\\\ = (2^7 \\cdot 3^4 \\cdot 5 \\cdot 7)(2^3 \\cdot 7)(2^6 \\cdot 3^6) \\\\ = 2^{16} \\cdot 3^{10} \\cdot 5^1 \\cdot 7^2. \\end{gathered} \\]\n\nTherefore \\(p \\cdot a + q \\cdot b + r \\cdot c + s \\cdot d\\) \\(= 2 \\cdot 16 + 3 \\cdot 10 + 5 \\cdot 1\\) \\(+ 7 \\cdot 2 = 81.\\)",
+      "hints": [
+        "Fill the left block in \\(9!\\) ways, then decide which digits from each of its rows go into each row of the middle block",
+        "The middle block’s row contents can be chosen in \\(56\\) ways, the right block is then determined, and every row of both blocks can be ordered in \\(3!\\) ways"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "9cc6cfc83e0809d3089ba21d0f5198e5cbdece6aa81e7d549766798641f1aa0b"
+    ],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2014-p6",
+  "title": "2014 IMO Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2014,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 106.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A set of lines in the plane is in general position\nif no two are parallel and no three pass through the same point.\nA set of lines in general position cuts the plane into regions,\nsome of which have finite area; we call these its finite regions.\nProve that for all sufficiently large \\(n\\),\nin any set of \\(n\\) lines in general position\nit is possible to colour at least \\(\\sqrt{n}\\) lines blue\nin such a way that none of its finite regions\nhas a completely blue boundary.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2014-p6.evanchen",
+      "kind": "proof-sketch",
+      "text": "Suppose we have colored \\(k\\) of the lines blue, and that\nit is not possible to color any additional lines.\nThat means any of the \\(n-k\\) non-blue lines\nis the side of some finite region with\nan otherwise entirely blue perimeter.\nFor each such line \\(\\ell\\), select one such region,\nand take the next counterclockwise vertex;\nthis is the intersection of two blue lines \\(v\\).\nWe'll say \\(\\ell\\) is the eyelid of \\(v\\).\n\n[Diagram omitted from this imported TeX transcription.]\n\nYou can prove without too much difficulty that every intersection of two blue lines\nhas at most two eyelids.\nSince there are \\(\\binom k2\\) such intersections, we see that\n\\[ n-k \\le 2 \\binom k2 = k^2 - k\\]\nso \\(n \\le k^2\\), as required.\n\nRemark.\nIn fact, \\(k = \\sqrt n\\) is ``sharp for greedy algorithms'',\nas illustrated below for \\(k=3\\):\n\n[Diagram omitted from this imported TeX transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-invitational-2020-p4",
+  "title": "2020 HMMT Invitational Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomials",
+      "label": "Polynomials",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2020,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(C_{k}=\\frac{1}{k+1}\\binom{2 k}{k}\\) denote the \\(k^{\\text {th }}\\) Catalan number and \\(p\\) be an odd prime. Prove that exactly half of the numbers in the set\n\n\\[\\left\\{\\sum_{k=1}^{p-1} C_{k} n^{k} \\mid n \\in\\{1,2, \\ldots, p-1\\}\\right\\}\\]\n\nare divisible by \\(p\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2020-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "Solution 1: We work in \\(\\mathbb{F}_{p}[X]\\).\nWe claim that\n\n\\[(1-4 X)^{\\frac{p+1}{2}}-1+2 X^{p}+2 X \\sum_{k=0}^{p-1} C_{k} X^{k}=0\\]\n\nThe solution follows from this claim, as\n\n\\[\\sum_{k=1}^{p-1} C_{k} n^{k} \\equiv 0 \\quad(\\bmod p) \\Longleftrightarrow(1-4 n)^{\\frac{p+1}{2}}-1+2 n^{p}+2 n \\equiv 0 \\quad(\\bmod p)\\]\n\nSince \\(n^{p} \\equiv n(\\bmod p)\\), this is equivalent to \\(n \\equiv \\frac{1}{4}(\\bmod p)\\) or \\(1-4 n\\) being a non-zero quadratic residue in \\(\\mathbb{F}_{p}\\). But we must omit the solution of \\(n=0\\), so we get \\(1+\\left(\\frac{p-1}{2}-1\\right)=\\frac{p-1}{2}\\) values of \\(n\\) that work. Now we prove the claim. Observe the following facts:\n\n- \\(C_{p-1}=\\frac{1}{2 p-1}\\binom{2 p-1}{p}=-1\\) by Lucas' theorem.\n- For \\(\\frac{p-1}{2}<k<p-1\\),\n\n\\[\\nu_{p}\\left(C_{k}\\right)=\\nu_{p}((2 k)!)-\\nu_{p}((k+1)!)-\\nu_{p}(k!)=1\\]\n\nsince \\(k+1<p \\leq 2 k\\), so \\(C_{k}=0\\).\nWe show that the coefficient of \\(X^{k}\\) in the LHS is 0 for \\(k=0, \\ldots, p\\). This is obvious for \\(k>\\frac{p+1}{2}\\) and \\(k=0\\) by the above facts, as the coefficient is \\(2+2 C_{p-1}\\) for \\(k=p, 2 C_{k}\\) for \\(\\frac{p+1}{2}<k<p\\), and 0 for \\(k=0\\).\nNow for \\(1 \\leq k \\leq \\frac{p+1}{2}\\), the coefficient is \\(\\binom{\\frac{p+1}{2}}{k}(-4)^{k}+2 C_{k-1}=0\\). Write\n\n\\[\\begin{aligned}\n\\binom{\\frac{p+1}{2}}{k} & =\\frac{\\frac{p+1}{2} \\cdot \\frac{p-1}{2} \\cdot \\frac{p-3}{2} \\cdots \\frac{p-2 k+3}{2}}{k!} \\\\\n& =\\frac{\\frac{1}{2} \\cdot\\left(-\\frac{1}{2}\\right) \\cdot\\left(-\\frac{3}{2}\\right) \\cdots\\left(-\\frac{2 k-3}{2}\\right)}{k!} \\\\\n& =\\frac{(-1)^{k-1}}{2^{k}} \\cdot \\frac{1 \\cdot 3 \\cdots(2 k-3)}{k!} \\\\\n& =\\frac{(-1)^{k-1}}{2^{k}} \\cdot \\frac{(2 k-2)!}{2^{k-1}(k-1)!k!} \\\\\n& =-\\frac{2 C_{k-1}}{(-4)^{k}}\n\\end{aligned}\\]\n\nso the coefficient is 0 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

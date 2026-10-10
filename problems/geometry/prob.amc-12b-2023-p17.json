@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2023-p17",
+  "title": "2023 AMC 12B Problem 17",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2023,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 26.7,
+    "source": 1630,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Triangle \\(ABC\\) has side lengths in arithmetic progression, and the smallest side has length \\(6.\\) If the triangle has an angle of \\(120^\\circ,\\) what is the area of \\(ABC?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(12\\sqrt{3}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(8\\sqrt{6}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(14\\sqrt{2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(20\\sqrt{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(15\\sqrt{3}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2023-p17.live",
+      "kind": "proof-sketch",
+      "text": "Let the sides be \\(6,\\ 6+d,\\ 6+2d.\\) The \\(120^\\circ\\) angle faces the longest side, so \\((6+2d)^2=6^2+(6+d)^2\\) \\(-2\\cdot 6\\cdot(6+d)\\cos 120^\\circ.\\) Using \\(\\cos 120^\\circ=-\\tfrac12\\) gives \\(3d^2+6d-72=0,\\) so \\(d=4\\) and the sides are \\(6,10,14.\\) The area is \\(\\tfrac12\\cdot 6\\cdot 10\\cdot\\sin 120^\\circ\\) \\(=30\\cdot\\tfrac{\\sqrt3}{2}\\) \\(=15\\sqrt3.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "Let the sides be \\(6,\\ 6+d,\\ 6+2d;\\) the \\(120^\\circ\\) angle is opposite the longest side",
+        "Apply the law of cosines with \\(\\cos 120^\\circ=-\\tfrac12\\) to find \\(d,\\) then area \\(=\\tfrac12ab\\sin 120^\\circ\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

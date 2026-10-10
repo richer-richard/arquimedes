@@ -1,0 +1,70 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2004-p7",
+  "title": "2004 HMMT February Combinatorics Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.solid-geometry",
+      "label": "Solid geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2004,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 84.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "We have a polyhedron such that an ant can walk from one vertex to another, traveling only along edges, and traversing every edge exactly once. What is the smallest possible total number of vertices, edges, and faces of this polyhedron?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2004-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "20\n\nThis is obtainable by construction. Consider two tetrahedrons glued along a face; this gives us 5 vertices, 9 edges, and 6 faces, for a total of 20 , and one readily checks that the required Eulerian path exists. Now, to see that we cannot do better, first notice that the number \\(v\\) of vertices is at least 5 , since otherwise we must have a tetrahedron, which does not have an Eulerian path. Each vertex is incident to at least 3 edges, and\nin fact, since there is an Eulerian path, all except possibly two vertices are incident to an even number of edges. So the number of edges is at least \\((3+3+4+4+4) / 2\\) (since each edge meets two vertices) \\(=9\\). Finally, if \\(f=4\\) then each face must be a triangle, because there are only 3 other faces for it to share edges with, and we are again in the case of a tetrahedron, which is impossible; therefore \\(f \\geq 5\\). So \\(f+v+e \\geq 5+5+9=19\\). But since \\(f+v-e=2-2 g\\) (where \\(g\\) is the number of holes in the polyhedron), \\(f+v+e\\) must be even. This strengthens our bound to 20 as needed.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

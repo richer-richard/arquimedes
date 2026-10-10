@@ -1,0 +1,37 @@
+{
+  "id": "prob.hmmt-nov-guts-2018-p25",
+  "title": "2018 HMMT November Guts Problem 25",
+  "category": "uncategorized",
+  "subjects": [],
+  "concepts": [],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2018,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 56.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a_{0}, a_{1}, \\ldots\\) and \\(b_{0}, b_{1}, \\ldots\\) be geometric sequences with common ratios \\(r_{a}\\) and \\(r_{b}\\), respectively, such that\n\n\\[\\sum_{i=0}^{\\infty} a_{i}=\\sum_{i=0}^{\\infty} b_{i}=1 \\quad \\text { and } \\quad\\left(\\sum_{i=0}^{\\infty} a_{i}^{2}\\right)\\left(\\sum_{i=0}^{\\infty} b_{i}^{2}\\right)=\\sum_{i=0}^{\\infty} a_{i} b_{i} .\\]\n\nFind the smallest real number \\(c\\) such that \\(a_{0}<c\\) must be true.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2018-p25.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\frac{4}{3}\\)\n\nLet \\(a_{0}=a\\) and \\(b_{0}=b\\). From \\(\\sum_{i=0}^{\\infty} a_{i}=\\frac{a_{0}}{1-r_{a}}=1\\) we have \\(a_{0}=1-r_{a}\\) and similarly \\(b_{0}=1-r_{b}\\). This means \\(\\sum_{i=0}^{\\infty} a_{i}^{2}=\\frac{a_{0}^{2}}{1-r_{a}^{2}}=\\frac{a^{2}}{\\left(1-r_{a}\\right)\\left(1+r_{a}\\right)}=\\frac{a^{2}}{a(2-a)}=\\frac{a}{2-a}\\), so \\(\\sum_{i=0}^{\\infty} a_{i}^{2} \\sum_{i=0}^{\\infty} b_{i}^{2}=\\sum_{i=0}^{\\infty} a_{i} b_{i}\\) yields\n\n\\[\\frac{a}{2-a} \\cdot \\frac{b}{2-b}=\\frac{a b}{1-(1-a)(1-b)} .\\]\n\nSince the numerators are equal, the denominators must be equal, which when expanded gives \\(2 a b-\\) \\(3 a-3 b+4=0\\), which is equivalent to \\((2 a-3)(2 b-3)=1\\). But note that \\(0<a, b<2\\) since we need the sequences to converge ( or \\(\\left|r_{a}\\right|,\\left|r_{b}\\right|<1\\) ), so then \\(-3<2 b-3<1\\), and thus \\(2 a-3>1\\) (impossible) or \\(2 a-3<-\\frac{1}{3}\\). Hence \\(a<\\frac{4}{3}\\), with equality when \\(b\\) approaches 0 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

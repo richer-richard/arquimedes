@@ -1,0 +1,96 @@
+{
+  "id": "prob.amc-10a-2017-p25",
+  "title": "2017 AMC 10A Problem 25",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.permutations",
+      "label": "Permutations",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2017,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 36.0,
+    "source": 2380,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "How many integers between \\(100\\) and \\(999,\\) inclusive, have the property that some permutation of its digits is a multiple of \\(11\\) between \\(100\\) and \\(999?\\) For example, both \\(121\\) and \\(211\\) have this property.",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(226\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(243\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(270\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(469\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(486\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "226"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2017-p25.live",
+      "kind": "proof-sketch",
+      "text": "We can analyze all the multiples of \\(11\\) and see how many permutations each of them contribute. We can do this by casing on the number of unique digits in the number.\n\nCase \\(1:\\) all the digits are the same\n\nThis cannot happen. We can see this by the divisibility rule for \\(11,\\) which says that the sum of the first and last digit minus the middle digit must be divisible by \\(11.\\)\n\nIf all the digits are the same, then the above expression evaluates to that digit, which cannot be divisible by \\(11.\\)\n\nCase \\(2:\\) two of the digits are the same\n\nWe can split this up into the numbers that have the digit \\(0\\) and those that don’t.\n\nThere are \\(8\\) multiples of \\(11\\) that do not have the digit \\(0:\\) \\[ 121, 242, 363, 484, 616, 737, 858, \\] and \\(979.\\)\n\nEach of these numbers contributes \\(3\\) permutations, so this scenario has \\(8 \\cdot 3 = 24\\) numbers.\n\nThere are \\(9\\) multiples of \\(11\\) that have the digit \\(0:\\)\\[ 110, 220, 330, 440, 550, 660, 770, \\] \\(880,\\) and \\(990.\\)\n\nFor these numbers, \\(0\\) cannot be the hundreds digit, so each of them only contributes \\(2\\) permutations, for a total of \\(9 \\cdot 2 = 18.\\)\n\nCase \\(3:\\) all the digits are different\n\nThere are a total of \\(81\\) multiples of \\(11\\) between \\(100\\) and \\(999.\\) The number of these with all different digits is \\[ 81 - 8 - 9 = 64. \\] As in case \\(2,\\) we have to specially account for the numbers with \\(0\\) as a digit. There are \\(8:\\) \\[ 209, 308, 407, 506, 605, 704, 803, \\] and \\(902.\\)\n\nEach of these gives us \\(2 \\cdot 2 = 4\\) permutations, but we overcount by a factor of \\(2\\) since flipping the first and last digits creates another number already in the set.\n\nTherefore, these numbers provide a total of \\[ 8 \\cdot 4 \\div 2 = 16 \\] unique permutations.\n\nThere are now \\(64 - 8 = 56\\) multiples of \\(11\\) that we need to account for.\n\nWe know that each of these provides \\(3! = 6\\) permutations. As above, however, note that flipping the first and last digit of any number in this set produces another number in this set.\n\nWe can see this by using the divisibility rule for \\(11.\\) If \\(ABC\\) is divisible by \\(11,\\) then we have that \\(A + C - B\\) is divisible by \\(11.\\)\n\nThis means that \\(C + A - B\\) is divisible by \\(11,\\) which means that \\(CBA\\) is also divisible by \\(11.\\)\n\nTherefore, these numbers contribute \\[ 56 \\cdot 6 \\div 2 = 168 \\] more permutations.\n\nOver all the cases, we have a total of \\[ 24 + 18 + 16 + 168 = 226 \\] numbers.\n\nThus, A is the correct answer.",
+      "hints": [
+        "Use the divisibility rule for \\(11\\)",
+        "Group three-digit multiples of \\(11\\) by repeated digits and whether a digit is \\(0\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

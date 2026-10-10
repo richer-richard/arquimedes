@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2013-p13",
+  "title": "2013 AMC 12B Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2013,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 28.6,
+    "source": 1700,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The internal angles of quadrilateral \\(ABCD\\) form an arithmetic progression. Triangles \\(ABD\\) and \\(DCB\\) are similar with \\(\\angle DBA = \\angle DCB\\) and \\(\\angle ADB = \\angle CBD.\\) Moreover, the angles in each of these two triangles also form an arithmetic progression. In degrees, what is the largest possible sum of the two largest angles of \\(ABCD?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(210\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(220\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(230\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(240\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(250\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "240"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2013-p13.live",
+      "kind": "proof-sketch",
+      "text": "The angles of a triangle form an arithmetic progression exactly when the middle one is \\(60^\\circ.\\) With \\(\\angle DBA = x\\) and \\(\\angle ADB = y,\\) the four angles of \\(ABCD\\) are \\(x, y, 180 - y, 180-x,\\) which must itself be an arithmetic progression. In increasing order they are either \\(x,y,180-y,180-x\\) or \\(x,180-y,y,180-x,\\) giving \\(3y=x+180\\) or \\(3y=360-x.\\) One of the triangle angles \\(x,y,180-x-y\\) is \\(60^\\circ.\\) Substitution leaves the angle sets \\((60,80,100,120)\\) and \\((45,75,105,135).\\) The two largest angles sum to at most \\(105 + 135 = 240.\\) Thus, the correct answer is D.",
+      "hints": [
+        "A triangle’s angles form an arithmetic progression exactly when its middle angle is \\(60^\\circ\\)",
+        "Let \\(\\angle DBA = x\\) and \\(\\angle ADB = y;\\) the four angles of \\(ABCD\\) become \\(x, y, 180-y, 180-x,\\) which must be an arithmetic progression with one triangle angle equal to \\(60^\\circ\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

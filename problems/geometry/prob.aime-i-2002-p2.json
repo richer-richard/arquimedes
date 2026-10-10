@@ -1,0 +1,69 @@
+{
+  "id": "prob.aime-i-2002-p2",
+  "title": "2002 AIME I Problem 2",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.rationalizing-denominator",
+      "label": "Rationalizing denominator",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangent-circles",
+      "label": "Tangent circles",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2002,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 36.7,
+    "source": 2020,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "The diagram shows twenty congruent circles arranged in three rows and enclosed in a rectangle. The circles are tangent to one another and to the sides of the rectangle as shown in the diagram. The ratio of the longer dimension of the rectangle to the shorter dimension can be written as \\(\\frac{1}{2}\\left(\\sqrt{p} - q\\right),\\) where \\(p\\) and \\(q\\) are positive integers. Find \\(p + q.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "154",
+    "value": "154"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2002-p2.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(r\\) be the common radius. The longer side holds a row of seven circles, so it equals \\(14r.\\) The centers of three mutually tangent circles in adjacent rows form an equilateral triangle with side \\(2r,\\) whose height is \\(r\\sqrt{3},\\) so the two gaps between rows of centers contribute \\(2r\\sqrt{3},\\) and the shorter side is \\(r + 2r\\sqrt{3} + r = 2r + 2r\\sqrt{3}.\\)\n\nThe ratio is \\[ \\begin{aligned} \\frac{14r}{2r\\left(1 + \\sqrt{3}\\right)} &= \\frac{7}{1 + \\sqrt{3}} \\\\ &= \\frac{7\\left(\\sqrt{3} - 1\\right)}{2} \\\\ &= \\frac{1}{2}\\left(\\sqrt{147} - 7\\right), \\end{aligned} \\] so \\(p = 147,\\) \\(q = 7,\\) and \\(p + q = 154.\\)",
+      "hints": [
+        "With circle radius \\(r,\\) the longer side is \\(14r.\\) For the shorter side, connect the centers of three mutually tangent circles.",
+        "Adjacent rows of centers are \\(r\\sqrt{3}\\) apart, so the shorter side is \\(2r + 2r\\sqrt{3};\\) rationalize \\(\\frac{7}{1 + \\sqrt{3}}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "2f6f8126bf5ea5b0f488218913f4bb0999f52ceca71338c0d1bb2b65facfab12"
+    ],
+    "solutions": []
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": "prob.hmmt-feb-guts-2019-p31",
+  "title": "2019 HMMT February Guts Problem 31",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2019,
+    "number": 31
+  },
+  "difficulty": {
+    "course": 92.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A B C\\) be a triangle with \\(A B=6, A C=7, B C=8\\). Let \\(I\\) be the incenter of \\(A B C\\). Points \\(Z\\) and \\(Y\\) lie on the interior of segments \\(A B\\) and \\(A C\\) respectively such that \\(Y Z\\) is tangent to the incircle. Given point \\(P\\) such that\n\n\\[\\angle Z P C=\\angle Y P B=90^{\\circ}\\]\n\nfind the length of \\(I P\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\square",
+    "value": "\\square"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2019-p31.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(H\\) be the orthocenter of \\(A B C\\).\nLemma. \\(H I^{2}=2 r^{2}-4 R^{2} \\cos (A) \\cos (B) \\cos (C)\\), where \\(r\\) is the inradius and \\(R\\) is the circumradius.\nProof. This follows from barycentric coordinates or the general result that for a point \\(X\\) in the plane,\n\n\\[a X A^{2}+b X B^{2}+c X C^{2}=(a+b+c) X I^{2}+a A I^{2}+b B I^{2}+c C I^{2}\\]\n\nwhich itself is a fact about vectors that follows from barycentric coordinates. This can also be computed directly using trigonometry.\nLet \\(E=B H \\cap A C, F=C H \\cap A B\\), then note that \\(B, P, E, Y\\) are concyclic on the circle of diameter \\(B Y\\), and \\(C, P, F, Z\\) are concyclic on the circle of diameter \\(C Z\\). Let \\(Q\\) be the second intersection of these circles. Since \\(B C Y Z\\) is a tangential quadrilateral, the midpoints of \\(B Y\\) and \\(C Z\\) are collinear with \\(I\\) (this is known as Newton's theorem), which implies that \\(I P=I Q\\) by symmetry. Note that as \\(B H \\cdot H E=C H \\cdot H F, H\\) lies on the radical axis of the two circles, which is \\(P Q\\). Thus, if \\(I P=I Q=x\\), \\(B H \\cdot H E\\) is the power of \\(H\\) with respect to the circle centered at \\(I\\) with radius \\(x\\), which implies \\(B H \\cdot H E=x^{2}-H I^{2}\\).\nAs with the first solution, we claim that \\(x=r \\sqrt{2}\\), which by the lemma is equivalent to \\(B H \\cdot H E=\\) \\(4 R^{2} \\cos (A) \\cos (B) \\cos (C)\\). Then note that\n\n\\[B H \\cdot H E=B H \\cdot C H \\cos (A)=(2 R \\cos (B))(2 R \\cos (C)) \\cos (A),\\]\n\nso our claim holds and we finish as with the first solution.\n\nNote. Under the assumption that the problem is well-posed (the answer does not depend on the choice of \\(Y, Z\\), or \\(P\\) ), then here is an alternative method to obtain \\(I P=r \\sqrt{2}\\) by making convenient choices. Let \\(U\\) be the point where \\(Y Z\\) is tangent to the incircle, and choose \\(U\\) so that \\(I U \\| B C\\) (and therefore \\(Y Z \\perp B C)\\). Note that \\(Y Z \\cap B C\\) is a valid choice for \\(P\\), so assume that \\(P\\) is the foot from \\(U\\) to \\(B C\\). If \\(D\\) is the point where \\(B C\\) is tangent to the incircle, then \\(I U P D\\) is a square so \\(I P=r \\sqrt{2}\\). (This disregards the condition that \\(Y\\) and \\(Z\\) are in the interior of segments \\(A C\\) and \\(A B\\), but there is no reason to expect that this condition is important.)",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

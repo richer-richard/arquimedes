@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2025-p7",
+  "title": "2025 HMMT February Algebra and Number Theory Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.simple-equations",
+      "label": "Simple Equations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-trigonometry",
+      "label": "Triangle trigonometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2025,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "There exists a unique triple \\((a,b,c)\\) of positive real numbers that satisfies the equations\n\n\\[2(a^{2} + 1) = 3(b^{2} + 1) = 4(c^{2} + 1)\\quad \\mathrm{and}\\quad ab + bc + ca = 1.\\]\n\nCompute \\(a + b + c\\) .",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{9\\sqrt{23}}{23} = \\frac{9}{\\sqrt{23}}",
+    "value": "\\frac{9\\sqrt{23}}{23} = \\frac{9}{\\sqrt{23}}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2025-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "The crux of this problem is to apply the trigonometric substitutions \\(a = \\cot \\alpha\\) , \\(b = \\cot \\beta\\) , and \\(c = \\cot \\gamma\\) , with \\(0 < \\alpha , \\beta , \\gamma < \\pi / 2\\) . Then, the given equations translate to\n\n\\[\\frac{2}{\\sin^{2}\\alpha} = \\frac{3}{\\sin^{2}\\beta} = \\frac{4}{\\sin^{2}\\gamma}\\quad \\mathrm{and}\\quad \\cot \\alpha \\cot \\beta +\\cot \\beta \\cot \\gamma +\\cot \\gamma \\cot \\alpha = 1.\\]\n\nFrom the second equation, we get\n\n\\[\\cot \\gamma = \\frac{1 - \\cot\\alpha\\cot\\beta}{\\cot\\alpha + \\cot\\beta} = -\\cot (\\alpha +\\beta).\\]\n\nSince \\(\\alpha\\) , \\(\\beta\\) , and \\(\\gamma\\) all between 0 and \\(\\pi / 2\\) , we discover that\n\n\\[\\alpha +\\beta +\\gamma = \\pi .\\]\n\nLet \\(\\triangle ABC\\) be the (acute) triangle with side lengths \\(BC = \\sqrt{2}\\) , \\(CA = \\sqrt{3}\\) , and \\(AB = \\sqrt{4}\\) . By Law of Sines, setting \\(\\alpha = \\angle A\\) , \\(\\beta = \\angle B\\) , and \\(\\gamma = \\angle C\\) will satisfy both equations. Thus, Law of Cosines gives\n\n\\[\\cos \\alpha = \\frac{3 + 4 - 2}{2\\cdot\\sqrt{3}\\cdot\\sqrt{4}} = \\frac{5}{\\sqrt{48}}\\Rightarrow a = \\cot \\alpha = \\frac{5}{\\sqrt{23}}\\]\n\nSimilar calculations give \\(b = \\frac{3}{\\sqrt{23}}\\) and \\(c = \\frac{1}{\\sqrt{23}}\\) , so the answer is \\(a + b + c = \\left[\\frac{9}{\\sqrt{23}}\\right]\\) .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

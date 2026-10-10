@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-2005-p17",
+  "title": "2005 AMC 10B Problem 17",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.exponent",
+      "label": "Exponent",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.telescoping",
+      "label": "Telescoping",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2005,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 22.9,
+    "source": 1480,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Suppose that \\(4^a = 5,\\) \\(5^b = 6,\\) \\(6^c = 7,\\) and \\(7^d = 8.\\) What is \\(a \\cdot b \\cdot c \\cdot d?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac32\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac52\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(3\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "3/2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2005-p17.live",
+      "kind": "proof-sketch",
+      "text": "Chaining the equations, \\[ \\begin{aligned} 4^{abcd} &= \\left(\\left(\\left(4^a\\right)^b\\right)^c\\right)^d \\\\ &= \\left(\\left(5^b\\right)^c\\right)^d \\\\ &= \\left(6^c\\right)^d = 7^d = 8. \\end{aligned} \\]\n\nSince \\(8 = 4^{\\frac{3}{2}},\\) we conclude \\(a \\cdot b \\cdot c \\cdot d = \\dfrac32.\\)\n\nThus, B is the correct answer.",
+      "hints": [
+        "Raise successive equations to powers so the exponents multiply",
+        "\\(4^{abcd}\\) telescopes down to \\(8;\\) write \\(8\\) as a power of \\(4\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

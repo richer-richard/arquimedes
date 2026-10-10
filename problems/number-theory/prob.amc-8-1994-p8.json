@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-1994-p8",
+  "title": "1994 AMC 8 Problem 8",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.multiset-permutations",
+      "label": "Multiset permutations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1994,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 8.5,
+    "source": 920,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "For how many three-digit whole numbers does the sum of the digits equal \\(25?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(10\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1994-p8.live",
+      "kind": "proof-sketch",
+      "text": "Since the digits sum to \\(25\\) and the maximum is \\(27\\), at least one digit is \\(9\\). The possible digit sets are \\(\\{9, 9, 7\\}\\) and \\(\\{9, 8, 8\\}.\\)\n\nEach set has \\(3\\) distinct arrangements (\\(997,\\) \\(979,\\) \\(799\\) and \\(988,\\) \\(898,\\) \\(889\\)), giving \\(6\\) numbers in all.\n\nThus, the correct answer is C .",
+      "hints": [
+        "The largest possible digit sum is \\(9 + 9 + 9 = 27\\), so the digits must be close to all \\(9\\)s",
+        "Find the digit combinations that sum to \\(25\\), then count how many arrangements each has"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

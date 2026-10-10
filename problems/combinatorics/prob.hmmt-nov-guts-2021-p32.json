@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-guts-2021-p32",
+  "title": "2021 HMMT November Guts Problem 32",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.games-and-greedy-algorithms",
+      "label": "Games and greedy algorithms",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.invariants-and-monovariants",
+      "label": "Invariants and monovariants",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2021,
+    "number": 32
+  },
+  "difficulty": {
+    "course": 59.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "There are \\(N\\) lockers, labeled from 1 to \\(N\\), placed in clockwise order around a circular hallway. Initially, all lockers are open. Ansoon starts at the first locker and always moves clockwise. When she is at locker \\(n\\) and there are more than \\(n\\) open lockers, she keeps locker \\(n\\) open and closes the next \\(n\\) open lockers, then repeats the process with the next open locker. If she is at locker \\(n\\) and there are at most \\(n\\) lockers still open, she keeps locker \\(n\\) open and closes all other lockers. She continues this process until only one locker is left open. What is the smallest integer \\(N>2021\\) such that the last open locker is locker 1?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "2046",
+    "value": "2046"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2021-p32.hmmt",
+      "kind": "proof-sketch",
+      "text": "Note that in the first run-through, we will leave all lockers \\(2^{n}-1\\) open. This is because after having locker \\(2^{n}-1\\) open, we will close the next \\(2^{n}-1\\) lockers and then start at locker \\(2^{n}-1+2^{n}-1+1=2^{n+1}-1\\). Now we want 1 to be the last locker that is open. We know that if \\(N<2046\\), then closing 1023 lockers after 1023 will lead us to close locker 1 . However, if \\(N=2046\\), then locker 1 will stay open, 3 will close, 7 will stay open, closing the next 10 and then 1 stays open and we close locker 7 , therefore \\(N=2046\\) does work.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

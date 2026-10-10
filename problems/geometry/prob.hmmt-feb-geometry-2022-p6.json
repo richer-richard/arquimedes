@@ -1,0 +1,68 @@
+{
+  "id": "prob.hmmt-feb-geometry-2022-p6",
+  "title": "2022 HMMT February Geometry Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2022,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 81.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A B C D\\) be a rectangle inscribed in circle \\(\\Gamma\\), and let \\(P\\) be a point on minor arc \\(A B\\) of \\(\\Gamma\\). Suppose that \\(P A \\cdot P B=2, P C \\cdot P D=18\\), and \\(P B \\cdot P C=9\\). The area of rectangle \\(A B C D\\) can be expressed as \\(\\frac{a \\sqrt{b}}{c}\\), where \\(a\\) and \\(c\\) are relatively prime positive integers and \\(b\\) is a squarefree positive integer. Compute \\(100 a+10 b+c\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "21055",
+    "value": "21055"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2022-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "We have\n\n\\[P D \\cdot P A=\\frac{(P A \\cdot P B)(P D \\cdot P C)}{(P B \\cdot P C)}=\\frac{2 \\cdot 18}{9}=4\\]\n\nLet \\(\\alpha=\\angle D P C=180^{\\circ}-\\angle A P B\\) and \\(\\beta=\\angle A P D=\\angle B P C\\). Note that \\(\\alpha+\\beta=90^{\\circ}\\). We have, letting \\(x=A B=C D\\) and \\(y=A D=B C\\),\n\n\\[2[P A D]+2[P B C]=y(d(P, A D)+d(P, B C))=y \\cdot x=[A B C D]\\]\n\nHere \\(d(X, \\ell)\\) is used to denote the distance from \\(X\\) to line \\(\\ell\\). By the trig area formula, the left-hand side is\n\n\\[P A \\cdot P D \\cdot \\sin \\beta+P B \\cdot P C \\cdot \\sin \\beta=13 \\sin \\beta\\]\n\nSimilarly, we have \\([A B C D]=16 \\sin \\alpha\\). Thus, letting \\(K=[A B C D]\\),\n\n\\[1=\\sin ^{2} \\alpha+\\sin ^{2} \\beta=\\frac{K^{2}}{13^{2}}+\\frac{K^{2}}{16^{2}}=\\frac{425}{13^{2} \\cdot 16^{2}} K^{2}\\]\n\ngiving \\(K=\\frac{208}{\\sqrt{425}}=\\frac{208 \\sqrt{17}}{85}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

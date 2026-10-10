@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-team-2020-p4",
+  "title": "2020 HMMT November Team Problem 4",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2020,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 52.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Marisa has two identical cubical dice labeled with the numbers \\(\\{1,2,3,4,5,6\\}\\). However, the two dice are not fair, meaning that they can land on each face with different probability. Marisa rolls the two dice and calculates their sum. Given that the sum is 2 with probability 0.04 , and 12 with probability 0.01 , the maximum possible probability of the sum being 7 is \\(p\\). Compute \\(\\lfloor 100 p\\rfloor\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "28",
+    "value": "28"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2020-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(p_{i}\\) be the probability that the dice lands on the number \\(i\\). The problem gives that \\(p_{1}^{2}=0.04, p_{6}^{2}=0.01\\), so we have\n\n\\[p_{1}=0.2, \\quad p_{6}=0.1, \\quad p_{2}+p_{3}+p_{4}+p_{5}=0.7\\]\n\nWe are asked to maximize\n\n\\[2\\left(p_{1} p_{6}+p_{2} p_{5}+p_{3} p_{4}\\right)=2\\left(0.02+p_{2} p_{5}+p_{3} p_{4}\\right)\\]\n\nLet \\(x=p_{2}+p_{5}\\) and \\(y=p_{3}+p_{4}\\). Then by AM-GM, \\(p_{2} p_{5} \\leq \\frac{x^{2}}{4}, p_{3} p_{4} \\leq \\frac{y^{2}}{4}\\). Also,\n\n\\[\\frac{x^{2}+y^{2}}{4} \\leq \\frac{x^{2}+2 x y+y^{2}}{4}=\\frac{(x+y)^{2}}{4}=\\frac{0.7^{2}}{4}=0.1225\\]\n\nHence,\n\n\\[2\\left(p_{1} p_{6}+p_{2} p_{5}+p_{3} p_{4}\\right) \\leq 2(0.02+0.1225)=0.285\\]\n\nwhere equality holds if \\(p_{2}=p_{5}=0.35, p_{3}=p_{4}=0\\).\nThus, we conclude that \\(p=0.285\\) and \\(\\lfloor 100 p\\rfloor=28\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

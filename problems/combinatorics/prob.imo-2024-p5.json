@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2024-p5",
+  "title": "2024 IMO Problem 5",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2024,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 106.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Turbo the snail is in the top row of a grid with \\(2024\\) rows and \\(2023\\) columns\nand wants to get to the bottom row.\nHowever, there are \\(2022\\) hidden monsters, one in every row except the first and last,\nwith no two monsters in the same column.\n\nTurbo makes a series of attempts to go from the first row to the last row.\nOn each attempt, he chooses to start on any cell in the first row,\nthen repeatedly moves to an orthogonal neighbor.\n(He is allowed to return to a previously visited cell.)\nIf Turbo reaches a cell with a monster,\nhis attempt ends and he is transported back to the first row to start a new attempt.\nThe monsters do not move between attempts, and Turbo remembers whether or not each cell\nhe has visited contains a monster.\nIf he reaches any cell in the last row, his attempt ends and Turbo wins.\n\nFind the smallest integer \\(n\\) such that Turbo has a strategy which guarantees\nbeing able to reach the bottom row in at most \\(n\\) attempts,\nregardless of how the monsters are placed.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2024-p5.evanchen",
+      "kind": "proof-sketch",
+      "text": "Surprisingly the answer is \\(n = 3\\) for any grid size \\(s \\times (s-1)\\) when \\(s \\ge 4\\).\nWe prove this in that generality.\n\nProof that at least three attempts are needed..\nWhen Turbo first moves into the second row, Turbo could encounter a monster \\(M_1\\) right away.\nThen on the next attempt, Turbo must enter the third row in different column as \\(M_1\\),\nand again could encounter a monster \\(M_2\\) right after doing so.\nThis means no strategy can guarantee fewer than three attempts.\n\nStrategy with three attempts..\nOn the first attempt, we have Turbo walk through the entire second row\nuntil he finds the monster \\(M_1\\) in it.\nThen we get two possible cases.\n\nCase where \\(M_1\\) is not on the edge..\nIn the first case, if that monster \\(M_1\\) is not on the edge of the row,\nthen Turbo can trace two paths below it as shown below.\nAt least one of these paths works, hence three attempts is sufficient.\n\n[Diagram omitted from this imported TeX transcription.]\n\nCase where \\(M_1\\) is on the edge..\nWLOG, \\(M_1\\) is in the leftmost cell.\nThen Turbo follows the green staircase pattern shown in the left figure below.\nIf the staircase is free of monsters, then Turbo wins on the second attempt.\nOtherwise, if a monster \\(M_2\\) is encountered on the staircase,\nTurbo has found a safe path to the left of \\(M_2\\);\nthen Turbo can use this to reach the column \\(M_1\\) is in, and escape from there.\nThis is shown in purple in the center and right figure\n(there are two slightly different cases depending on whether \\(M_2\\)\nwas encountered going east or south).\n\n[Diagram omitted from this imported TeX transcription.]\n\nThus the problem is solved in three attempts, as promised.\n\nExtended remark: all working strategies look similar to this..\nAs far as we know, all working strategies are variations of the above.\nIn fact, we will try to give a description of the space of possible strategies,\nalthough this needs a bit of notation.\n\nDefinition.\nFor simplicity, we only use \\(s\\) even in the figures below.\nWe define the happy triangle as the following cells:\n\n• All \\(s-1\\) cells in the first row (which has no monsters).\n\n• The center \\(s-3\\) cells in the second row.\n\n• The center \\(s-5\\) cells in the third row.\n\n• \\dots\n\n• The center cell in the \\(\\frac s2\\)th row.\n\nFor \\(s=12\\), the happy triangle is the region shaded in the thick border below.\n\n[Diagram omitted from this imported TeX transcription.]\n\nDefinition.\n Given a cell, define a shoulder to be the cell directly northwest or northeast of it.\n Hence there are two shoulders of cells outside the first and last column,\n and one shoulder otherwise.\n\nThen solutions roughly must distinguish between these two cases:\n\n• Inside happy triangle:\n If the first monster \\(M_1\\) is found in the happy triangle,\n and there is a safe path found by Turbo to the two shoulders\n (marked \\(\\bigstar\\) in the figure),\n then one can finish in two more moves by considering the two paths from \\(\\bigstar\\)\n that cut under the monster \\(M_1\\); one of them must work.\n This slightly generalizes the easier case in the solution above\n (which focuses only on the case where \\(M_1\\) is in the first row).\n\n[Diagram omitted from this imported TeX transcription.]\n\n• Outside happy triangle:\n Now suppose the first monster \\(M_1\\) is outside the happy triangle.\n Of the two shoulders, take the one closer to the center\n (if in the center column, either one works; if only one shoulder, use it).\n If there is a safe path to that shoulder,\n then one can take a staircase pattern towards the center, as shown in the figure.\n In that case, the choice of shoulder and position guarantees the staircase\n reaches the bottom row, so that if no monster is along this path, the algorithm ends.\n Otherwise, if one encounters a second monster along the staircase,\n then one can use the third trial to cut under the monster \\(M_1\\).\n\n[Diagram omitted from this imported TeX transcription.]\n\n \\qquad\n\n[Diagram omitted from this imported TeX transcription.]\n\nWe now prove the following proposition:\nin any valid strategy for Turbo,\nin the case where Turbo first encounters a monster upon leaving the happy triangle,\nthe second path must outline the same staircase shape.\n\nThe monsters pre-commit to choosing their pattern to be\neither a NW-SE diagonal or NE-SW diagonal, with a single one-column gap;\nsee figure below for an example.\nNote that this forces any valid path for Turbo to pass through the particular gap.\n\n[Diagram omitted from this imported TeX transcription.]\n\nWe may assume without loss of generality that Turbo first encounters a monster \\(M_1\\)\nwhen Turbo first leaves the happy triangle, and that this forces an NW-SE configuration.\n\n[Diagram omitted from this imported TeX transcription.]\n\nThen the following is true:\n\nProposition.\n The strategy of Turbo on the second path must\n visit every cell in ``slightly raised diagonal'' marked with\n \\(\\clubsuit\\) in the figure above\n in order from top to bottom, until it encounters a second Monster \\(M_2\\)\n (or reaches the bottom row and wins anyway).\n It's both okay and irrelevant if Turbo visits other cells above this diagonal,\n but the marked cells must be visited from top to bottom in that order.\n\nProof.\n If Turbo tries to sidestep by visiting the cell southeast of \\(M_1\\)\n (marked {X} in the Figure),\n then Turbo clearly cannot finish after this (for \\(s\\) large enough).\n Meanwhile, suppose Turbo tries to ``skip'' one of the \\(\\clubsuit\\),\n say in column \\(C\\), then the gap could equally well be in the column to the left of \\(C\\).\n This proves the proposition.\n\nRemark.\n [Memories of safe cells are important, not just monster cells]\n Here is one additional observation that one can deduce from this.\n We say a set \\(\\mathcal S\\) of revealed monsters is called obviously winnable if,\n based on only the positions of the monsters\n (and not the moves or algorithm that were used to obtain them),\n one can identify a guaranteed winning path for Turbo using only \\(\\mathcal S\\).\n For example, two monsters in adjacent columns which are not diagonally\n adjacent is obviously winnable.\n\n Then no strategy can guarantee obtaining an obviously winnable set in \\(2\\) moves\n (or even \\(k\\) moves for any constant \\(k\\), if \\(s\\) is large enough in terms of \\(k\\)).\n So any valid strategy must also use the memory of identified safe cells\n that do not follow just from the revealed monster positions.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

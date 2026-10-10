@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-ii-2002-p11",
+  "title": "2002 AIME II Problem 11",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2002,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 55.7,
+    "source": 2760,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "Two distinct, real, infinite geometric series each have a sum of \\(1\\) and have the same second term. The third term of one of the series is \\(\\frac{1}{8},\\) and the second term of both series can be written in the form \\(\\frac{\\sqrt{m} - n}{p},\\) where \\(m,\\) \\(n,\\) and \\(p\\) are positive integers and \\(m\\) is not divisible by the square of any prime. Find \\(100m + 10n + p.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "518",
+    "value": "518"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2002-p11.live",
+      "kind": "proof-sketch",
+      "text": "A geometric series with ratio \\(r\\) and sum \\(1\\) has first term \\(1 - r,\\) so its second term is \\(r(1 - r).\\) If the two ratios are \\(r\\) and \\(s,\\) then \\(r(1 - r) = s(1 - s)\\) gives \\(r - s = r^2 - s^2,\\) and since the series are distinct, \\(r \\ne s,\\) forcing \\(s = 1 - r.\\)\n\nSay the series with ratio \\(r\\) has third term \\(r^2(1 - r) = \\frac{1}{8},\\) i.e. \\(8r^3 - 8r^2 + 1 = 0.\\) Substituting \\(t = 2r\\) gives \\(t^3 - 2t^2 + 1\\) \\(= (t - 1)(t^2 - t - 1)\\) \\(= 0.\\) The root \\(t = 1\\) makes \\(r = s = \\frac{1}{2}\\) (the series would coincide), and \\(r = \\frac{1 - \\sqrt{5}}{4}\\) forces \\(s = 1 - r \\gt 1,\\) which diverges. So \\(r = \\frac{1 + \\sqrt{5}}{4}.\\)\n\nThe common second term is \\[ \\begin{aligned} r(1 - r) &= \\frac{1 + \\sqrt{5}}{4} \\cdot \\frac{3 - \\sqrt{5}}{4} \\\\ &= \\frac{2\\sqrt{5} - 2}{16} \\\\ &= \\frac{\\sqrt{5} - 1}{8}, \\end{aligned} \\] so \\(m = 5,\\) \\(n = 1,\\) \\(p = 8,\\) and \\(100m + 10n + p = 518.\\)",
+      "hints": [
+        "A geometric series with ratio \\(r\\) and sum \\(1\\) has first term \\(1 - r,\\) so its second term is \\(r(1 - r)\\)",
+        "Equal second terms force the ratios to satisfy \\(s = 1 - r;\\) then \\(r^2(1 - r) = \\frac{1}{8}\\) becomes a cubic that factors after substituting \\(t = 2r\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

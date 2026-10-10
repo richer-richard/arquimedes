@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12-2001-p24",
+  "title": "2001 AMC 12 Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.isosceles-triangle",
+      "label": "Isosceles triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.special-right-triangle",
+      "label": "Special right triangle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12",
+    "year": 2001,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 39.0,
+    "source": 2110,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "In triangle \\(ABC,\\) \\(\\angle ABC = 45^\\circ.\\) Point \\(D\\) is on \\(\\overline{BC}\\) so that \\(2 \\cdot BD = CD\\) and \\(\\angle DAB = 15^\\circ.\\) Find \\(\\angle ACB.\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(54^\\circ\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(60^\\circ\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(72^\\circ\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(75^\\circ\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(90^\\circ\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "75"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12-2001-p24.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(E\\) be the foot of the perpendicular from \\(C\\) to line \\(AD.\\) The exterior angle of \\(\\triangle ADB\\) gives \\(\\angle ADC = 15^\\circ + 45^\\circ = 60^\\circ,\\) so \\(\\triangle CDE\\) is a \\(30\\)-\\(60\\)-\\(90\\) triangle with \\(DE = \\tfrac{1}{2}CD = BD.\\)\n\nThen \\(\\triangle BDE\\) is isosceles with \\(\\angle EBD = \\angle BED = 30^\\circ,\\) and since \\(\\angle ECB = 30^\\circ\\) too, \\(\\triangle BEC\\) is isosceles with \\(BE = EC.\\)\n\nAlso \\(\\angle ABE\\) \\(= 45^\\circ - 30^\\circ\\) \\(= 15^\\circ\\) \\(= \\angle EAB,\\) so \\(\\triangle ABE\\) is isosceles with \\(AE = BE.\\) Hence \\(AE = BE = EC,\\) making right triangle \\(AEC\\) isosceles with \\(\\angle ECA = 45^\\circ.\\)\n\nTherefore \\(\\angle ACB\\) \\(= \\angle ECA + \\angle ECD\\) \\(= 45^\\circ + 30^\\circ\\) \\(= 75^\\circ.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "The exterior angle gives \\(\\angle ADC\\) \\(= \\angle DAB + \\angle ABD\\) \\(= 15^\\circ + 45^\\circ\\) \\(= 60^\\circ\\)",
+        "Drop a perpendicular from \\(C\\) to line \\(AD\\) at \\(E;\\) then \\(\\triangle CDE\\) is \\(30\\)-\\(60\\)-\\(90\\) with \\(DE = \\tfrac{1}{2}CD = BD\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "c95c413337018b9edad1345484262a60bd3efcc20d6a54ff3dee85fbc41610c8"
+    ],
+    "solutions": []
+  }
+}

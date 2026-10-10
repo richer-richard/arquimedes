@@ -1,0 +1,71 @@
+{
+  "id": "prob.hmmt-feb-guts-2006-p20",
+  "title": "2006 HMMT February Guts Problem 20",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.systems-of-equations",
+      "label": "Systems of equations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2006,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 76.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the number of real solutions \\((x, y, z, w)\\) to the system of equations:\n\n\\[\\begin{array}{rlrl}\nx & =z+w+z w x & z & =x+y+x y z \\\\\ny & =w+x+w x y & w & =y+z+y z w\n\\end{array}\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2006-p20.hmmt",
+      "kind": "proof-sketch",
+      "text": "The first equation rewrites as \\(x=\\frac{w+z}{1-w z}\\), which is a fairly strong reason to consider trigonometric substitution. Let \\(x=\\tan (a), y=\\tan (b), z=\\tan (c)\\), and \\(w=\\tan (d)\\), where \\(-90^{\\circ}<a, b, c, d<90^{\\circ}\\). Under modulo \\(180^{\\circ}\\), we find \\(a \\equiv c+d ; b \\equiv\\) \\(d+a ; c \\equiv a+b ; d \\equiv b+c\\). Adding all of these together yields \\(a+b+c+d \\equiv 0\\). Then \\(a \\equiv c+d \\equiv-a-b\\) so \\(b \\equiv-2 a\\). Similarly, \\(c \\equiv-2 b ; d \\equiv-2 c ; d \\equiv-2 a\\). Hence, \\(c \\equiv-2 b \\equiv 4 a, d \\equiv-2 c \\equiv-8 a\\), and \\(a \\equiv-2 d \\equiv 16 a\\), so the only possible solutions are \\((a, b, c, d) \\equiv(t,-2 t, 4 t,-8 t)\\) where \\(15 t \\equiv 0\\). Checking, these, we see that actually \\(5 t \\equiv 0\\), which yields 5 solutions. Our division by \\(1-y z\\) is valid since \\(1-y z=0\\) iff \\(y z=1\\), but \\(x=y+z+x y z\\) so \\(y=-z\\), which implies that \\(y z \\leq 0<1\\), which is impossible. (The solutions we have computed are in fact ( \\(0,0,0,0\\) ) and the cyclic permutations of \\(\\left(\\tan \\left(36^{\\circ}\\right), \\tan \\left(-72^{\\circ}\\right), \\tan \\left(-36^{\\circ}\\right), \\tan \\left(72^{\\circ}\\right)\\right)\\).)",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

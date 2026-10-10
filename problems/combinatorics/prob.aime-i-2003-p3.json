@@ -1,0 +1,57 @@
+{
+  "id": "prob.aime-i-2003-p3",
+  "title": "2003 AIME I Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting-pairs",
+      "label": "Counting pairs",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.double-counting",
+      "label": "Double counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2003,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 32.1,
+    "source": 1840,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let the set \\(\\mathcal{S} = \\{8, 5, 1, 13, 34, 3, 21, 2\\}.\\) Susan makes a list as follows: for each two-element subset of \\(\\mathcal{S},\\) she writes on her list the greater of the set’s two elements. Find the sum of the numbers on the list.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "484",
+    "value": "484"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2003-p3.live",
+      "kind": "proof-sketch",
+      "text": "An element \\(x\\) is the greater element of a two-element subset exactly once for each smaller element of the set, so \\(x\\) contributes to the sum once per element below it. Sorting the set as \\(1, 2, 3, 5, 8, 13, 21, 34,\\) the sum of the list is \\[ \\begin{aligned} &0(1) + 1(2) + 2(3) + 3(5) \\\\ &\\quad {}+ 4(8) + 5(13) + 6(21) \\\\ &\\quad {}+ 7(34) \\\\ &= 2 + 6 + 15 + 32 \\\\ &\\quad {}+ 65 + 126 + 238 = 484. \\end{aligned} \\]",
+      "hints": [
+        "Each element is written on the list once for every smaller element in the set",
+        "Sort the set as \\(1, 2, 3, 5, 8, 13, 21, 34\\) and multiply each element by the count of smaller elements"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

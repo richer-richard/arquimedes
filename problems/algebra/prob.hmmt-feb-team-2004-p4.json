@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-team-2004-p4",
+  "title": "2004 HMMT February Team Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2004,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 81.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Show that the sum of all the numbers in row \\(n\\) is at most \\((n+2) 2^{n-1}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2004-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "The previous problem gives an upper bound on the number located \\(r\\) columns to the left of the initial 1 ; adding over all \\(r=1,2, \\ldots, n\\) gives\n\n\\[\\sum_{s=0}^{n-1}(s+1)\\binom{n-1}{s}\\]\n\nsince the term \\(\\binom{n-1}{s}\\) occurs for the \\(s+1\\) values \\(r=1,2, \\ldots, s+1\\). But this sum equals \\((n+1) 2^{n-2}\\). For example, add the sum to itself and reverse the terms of the second sum to get\n\n\\[\\begin{aligned}\n& \\sum_{s=0}^{n-1}(s+1)\\binom{n-1}{s}+\\sum_{s=0}^{n-1}([n-1-s]+1)\\binom{n-1}{n-1-s} \\\\\n= & \\sum_{s=0}^{n-1}(n+1)\\binom{n-1}{s}=(n+1) \\sum_{s=0}^{n-1}\\binom{n-1}{s}=(n+1) 2^{n-1},\n\\end{aligned}\\]\n\nand our original sum is half of this.\nSo the sum of the terms in row \\(n\\) to the left of the central column is at most \\((n+1) 2^{n-2}\\). Similarly, the sum of the terms to the right of the central column is at most \\((n+1) 2^{n-2}\\). Adding these together, plus the upper bound of \\(2^{n-1}\\) for the central number (Problem 1 ), gives our upper bound of \\((n+2) 2^{n-1}\\) for the sum of all the numbers in the row.\n\nA pair of successive numbers in the same row is called a switch pair if one number in the pair is even and the other is odd.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

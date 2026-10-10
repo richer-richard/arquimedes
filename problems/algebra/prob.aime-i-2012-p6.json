@@ -1,0 +1,57 @@
+{
+  "id": "prob.aime-i-2012-p6",
+  "title": "2012 AIME I Problem 6",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2012,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 51.6,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "The complex numbers \\(z\\) and \\(w\\) satisfy \\(z^{13} = w,\\) \\(w^{11} = z,\\) and the imaginary part of \\(z\\) is \\(\\sin\\left(\\frac{m\\pi}{n}\\right)\\) for relatively prime positive integers \\(m\\) and \\(n\\) with \\(m \\lt n.\\) Find \\(n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "71",
+    "value": "71"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2012-p6.live",
+      "kind": "proof-sketch",
+      "text": "Because \\(0 \\lt m \\lt n,\\) the specified imaginary part is positive, so \\(z \\ne 0.\\) Substituting, \\(z = w^{11} = (z^{13})^{11} = z^{143},\\) and hence \\(z^{142} = 1.\\) Conversely, any \\(142\\)nd root of unity \\(z\\) works with \\(w = z^{13},\\) since then \\(w^{11} = z^{143} = z.\\)\n\nHence \\(z = \\cos\\frac{2k\\pi}{142} + i\\sin\\frac{2k\\pi}{142}\\) for some integer \\(k,\\) and the imaginary part of \\(z\\) is \\(\\sin\\frac{k\\pi}{71}.\\) The sine specified in the problem is positive, so we may take \\(1 \\le k \\le 70.\\) Since \\(71\\) is prime, \\(\\frac{k}{71}\\) is already in lowest terms, matching the required form \\(\\sin\\left(\\frac{m\\pi}{n}\\right)\\) with \\(m \\lt n.\\) Thus \\(n = 71.\\)",
+      "hints": [
+        "Substituting one equation into the other gives \\(z^{143} = z,\\) so \\(z\\) is a \\(142\\)nd root of unity",
+        "Write \\(z = \\cos\\frac{2k\\pi}{142} + i\\sin\\frac{2k\\pi}{142}\\) and reduce the fraction in the angle to lowest terms"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

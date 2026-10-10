@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-guts-2016-p36",
+  "title": "2016 HMMT November Guts Problem 36",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2016,
+    "number": 36
+  },
+  "difficulty": {
+    "course": 58.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find the number of positive integers less than 1000000 which are less than or equal to the sum of their proper divisors. If your answer is \\(X\\) and the actual value is \\(Y\\), your score will be \\(\\max \\left(0,20-80\\left|1-\\frac{X}{Y}\\right|\\right)\\) rounded to the nearest integer.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2016-p36.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 247548\n```\nN = 1000000\ns = [0] * N\nans = 0\nfor i in range(1, N):\nif i <= s[i]:\nans += 1\nfor j in range(i + i, N, i):\ns[j] += i\nprint(ans)\n```",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

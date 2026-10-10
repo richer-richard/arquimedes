@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-theme-2012-p5",
+  "title": "2012 HMMT November Theme Problem 5",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2012,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 50.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Given any positive integer, we can write the integer in base 12 and add together the digits of its base 12 representation. We perform this operation on the number \\(7^{6^{5^{3^{2^{1}}}}}\\) repeatedly until a single base 12 digit remains. Find this digit.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2012-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "4 For a positive integer \\(n\\), let \\(s(n)\\) be the sum of digits when \\(n\\) is expressed in base 12 . We claim that \\(s(n) \\equiv n(\\bmod 11)\\) for all positive integers \\(n\\). Indeed, if \\(n=d_{k} 12^{k}+d_{k-1} 12^{k-1}+\\cdots+d_{0}\\) with each \\(d_{i}\\) an integer between 0 and 11 , inclusive, because \\(12 \\equiv 1(\\bmod 11)\\), reducing modulo 11 gives exactly \\(s(n)\\). Thus, our answer is congruent to \\(N=7^{6^{5^{4^{3^{1}}}}}\\) modulo 11 , and furthermore must be a one-digit integer in base 12; these two conditions uniquely determine the answer.\nBy Fermat's Little Theorem, \\(7^{10} \\equiv 1(\\bmod 11)\\), and also observe that \\(6^{5^{4^{3^{2^{1}}}}} \\equiv 6(\\bmod 10)\\) because \\(6 \\cong 0(\\bmod 2)\\) and \\(6 \\cong 1(\\bmod 5)\\). Thus, \\(N \\equiv 7^{6} \\equiv 343^{2} \\equiv 2^{2} \\equiv 4(\\bmod 11)\\), which is our answer. (Additionally, we note that this process of writing the number in base twelve and summing the digits must eventually terminate because the value decreases after each step.)",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

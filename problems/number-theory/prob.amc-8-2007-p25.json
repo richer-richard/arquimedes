@@ -1,0 +1,81 @@
+{
+  "id": "prob.amc-8-2007-p25",
+  "title": "2007 AMC 8 Problem 25",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "nt.geometric-probability",
+      "label": "Geometric probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.parity",
+      "label": "Parity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2007,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 20.0,
+    "source": 1680,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "On the dart board shown in the figure below, the outer circle has radius \\(6\\) and the inner circle has radius \\(3.\\) Three radii divide each circle into three congruent regions, with point values shown. The probability that a dart will hit a given region is proportional to the area of the region. When two darts hit this board, the score is the sum of the point values of the regions hit. What is the probability that the score is odd?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{17}{36}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{35}{72}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{37}{72}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{19}{36}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "35/72"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2007-p25.live",
+      "kind": "proof-sketch",
+      "text": "The area of the outer circle is \\(6^2\\pi = 36\\pi,\\) and the area of the inner circle is \\(3^2\\pi = 9\\pi.\\) Therefore, the area of the outer ring is \\(36\\pi - 9\\pi = 27\\pi.\\)\n\nThis means that the probability of hitting an outer segment is \\(\\dfrac{9\\pi}{36\\pi} = \\dfrac{1}{4}.\\) Similarly, the probability of hitting an inner segment is \\(\\dfrac{3\\pi}{36\\pi} = \\dfrac{1}{12}.\\)\n\nSumming over all possibilities, the probability of hitting a \\(1\\) is \\[ \\dfrac{1}{12} + 2 \\cdot \\dfrac{1}{4} = \\dfrac{7}{12}. \\] Similarly, the probability of hitting a \\(2\\) is \\[ 2 \\cdot \\dfrac{1}{12} + \\dfrac{1}{4} = \\dfrac{5}{12}. \\]\n\nThe only way to get an odd score is to hit one \\(1\\) and one \\(2.\\)\n\nThe probability of hitting these numbers in either order is \\[ 2 \\cdot \\dfrac{5}{12} \\cdot \\dfrac{7}{12} = \\dfrac{35}{72}. \\]\n\nThus, B is the correct answer.",
+      "hints": [
+        "An odd score comes from one dart landing on a \\(1\\)-region and the other on a \\(2\\)-region.",
+        "Compute the total area-weighted probability of landing on \\(1,\\) then of landing on \\(2.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "c0abf3a278893a598f09945105809e001f1abc6bd4af4f086b1ca267e5887430"
+    ],
+    "solutions": []
+  }
+}

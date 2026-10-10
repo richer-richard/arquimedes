@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-invitational-2022-p3",
+  "title": "2022 HMMT Invitational Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2022,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For a nonnegative integer \\(n\\), let \\(s(n)\\) be the sum of digits of the binary representation of \\(n\\). Prove that\n\n\\[\\sum_{n=0}^{2^{2022}-1} \\frac{(-1)^{s(n)}}{2022+n}>0\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2022-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "Solution 1: Define\n\n\\[f_{k}(x)=\\sum_{n=0}^{2^{k}-1} \\frac{(-1)^{s(n)}}{x+n}\\]\n\nWe want to show that \\(f_{2022}(2022)>0\\). We will in fact show something stronger.\nI claim that for all \\(x>0\\), for all \\(k \\geq 0\\), we have \\(f_{k}^{(i)}(x)>0\\) for even \\(i\\) and \\(f_{k}^{(i)}(x)<0\\) for odd \\(i\\), where \\(f^{(i)}\\) denotes the \\(i\\) th derivative of \\(f\\). We will prove this claim with induction on \\(k\\). The base case of \\(k=0\\) is easy to see because \\(f_{0}(x)=\\frac{1}{x}\\), so \\(f_{0}^{(2 j)}(x)=\\frac{(2 j)!}{x^{2 j+1}}>0\\) and \\(f_{0}^{(2 j-1)}(x)=-\\frac{(2 j-1)!}{x^{2 j}}<0\\) for all \\(x>0\\). Now, assume the claim is true for \\(k=N\\). Then, note that\n\n\\[\\begin{gathered}\nf_{N+1}(x)=\\sum_{n=0}^{2^{N+1}-1} \\frac{(-1)^{s(n)}}{x+n}=\\sum_{n=0}^{2^{N}-1} \\frac{(-1)^{s(n)}}{x+n}+\\sum_{n=0}^{2^{N}-1} \\frac{(-1)^{s\\left(n+2^{N}\\right)}}{x+n+2^{N}}= \\\\\n\\sum_{n=0}^{2^{N}-1} \\frac{(-1)^{s(n)}}{x+n}-\\sum_{n=0}^{2^{N}-1} \\frac{(-1)^{s(n)}}{x+n+2^{N}}=f_{N}(x)-f_{N}\\left(x+2^{N}\\right)\n\\end{gathered}\\]\n\nThus,\n\n\\[f_{N+1}^{(2 j)}(x)=f_{N}^{(2 j)}(x)-f_{N}^{(2 j)}\\left(x+2^{N}\\right)>0\\]\n\nsince \\(\\left(f_{N}^{(2 j)}(x)\\right)^{\\prime}=f_{N}^{(2 j+1)}(x)<0\\). Similarly, we can show that \\(f_{N+1}^{2 j+1}(x)<0\\), which completes the induction, so we are done.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "prob.ahsme-1980-p13",
+  "title": "1980 AHSME Problem 13",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.complex-number",
+      "label": "Complex number",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1980,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 31.8,
+    "source": 1830,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A bug (of negligible size) starts at the origin on the coordinate plane. First it moves \\(1\\) unit right to \\((1,0).\\) Then it makes a \\(90^\\circ\\) turn counterclockwise and travels \\(\\frac12\\) a unit to \\((1,\\frac12).\\) If it continues in this fashion, each time making a \\(90^\\circ\\) turn counterclockwise and traveling half as far as in the previous move, to which of the following points will it come closest?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\((\\frac23,\\frac23)\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\((\\frac45,\\frac25)\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\((\\frac23,\\frac45)\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\((\\frac23,\\frac13)\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\((\\frac25,\\frac45)\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1980-p13.live",
+      "kind": "proof-sketch",
+      "text": "As complex numbers, the successive displacement vectors are \\[ 1,\\ \\frac i2,\\ \\left(\\frac i2\\right)^2,\\ldots. \\] Their sum is \\[ \\frac1{1-\\frac{i}{2}} =\\frac{1+\\frac{i}{2}}{1+\\frac{1}{4}} =\\frac45+\\frac25i. \\] Thus the bug approaches \\((\\frac{4}{5},\\frac{2}{5}).\\)\n\nTherefore, the correct answer is B.",
+      "hints": [
+        "Represent a \\(90^\\circ\\) counterclockwise turn by multiplication by \\(i\\)",
+        "The displacement vectors form an infinite geometric series with ratio \\(\\frac{i}{2}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

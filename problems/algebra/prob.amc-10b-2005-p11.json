@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2005-p11",
+  "title": "2005 AMC 10B Problem 11",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.pattern-recognition",
+      "label": "Pattern recognition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2005,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 22.7,
+    "source": 1370,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The first term of a sequence is \\(2005.\\) Each succeeding term is the sum of the cubes of the digits of the previous term. What is the \\(2005\\)th term of the sequence?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(29\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(55\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(85\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(133\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(250\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "250"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2005-p11.live",
+      "kind": "proof-sketch",
+      "text": "The sequence begins \\(2005, 133, 55, 250, 133, \\ldots,\\) so after the first term it repeats the cycle \\(133, 55, 250\\) of length \\(3.\\)\n\nTerms \\(2,\\) \\(3,\\) and \\(4\\) are the first, second, and third entries of this cycle. Because \\(2005 - 2 = 2003\\) leaves remainder \\(2\\) upon division by \\(3,\\) the \\(2005\\)th term matches the third entry, \\(250.\\)\n\nThus, E is the correct answer.",
+      "hints": [
+        "Compute the first several terms until the values start repeating",
+        "Once you find the repeating cycle, reduce the number of steps after the first term modulo its length"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

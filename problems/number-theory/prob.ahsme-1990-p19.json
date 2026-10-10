@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1990-p19",
+  "title": "1990 AHSME Problem 19",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.counting-integers-in-a-range",
+      "label": "Counting integers in a range",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1990,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 33.6,
+    "source": 1900,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "For how many integers \\(N\\) between \\(1\\) and \\(1990\\) is the improper fraction \\[ \\frac{N^2+7}{N+4} \\] not in lowest terms?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(86\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(90\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(104\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(105\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "86"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1990-p19.live",
+      "kind": "proof-sketch",
+      "text": "Modulo \\(N+4,\\) we have \\(N\\equiv-4,\\) so \\[ N^2+7\\equiv16+7=23. \\] Thus the fraction is reducible exactly when \\(N+4\\) is divisible by \\(23,\\) or \\(N\\equiv19\\pmod{23}.\\) The values are \\(19,42,\\ldots,1974,\\) a total of \\(86.\\)\n\nThus the correct answer is B.",
+      "hints": [
+        "Reduce \\(N^2+7\\) modulo \\(N+4\\)",
+        "The only possible common prime factor is a divisor of \\(23\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

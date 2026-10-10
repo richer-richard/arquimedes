@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12a-2017-p16",
+  "title": "2017 AMC 12A 16",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.tangent-circles",
+      "label": "Tangent circles",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2017,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 32.9,
+    "source": 1840,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "In the figure below, semicircles with centers at \\(A\\) and \\(B\\) and with radii \\(2\\) and \\(1,\\) respectively, are drawn in the interior of, and sharing bases with, a semicircle with diameter \\(\\overline{JK}.\\) The two smaller semicircles are externally tangent to each other and internally tangent to the largest semicircle. A circle centered at \\(P\\) is drawn externally tangent to the two smaller semicircles and internally tangent to the largest semicircle. What is the radius of the circle centered at \\(P?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{3}{4}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{6}{7}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{2}\\sqrt3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{5}{8}\\sqrt2\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{11}{12}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "6/7"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2017-p16.live",
+      "kind": "proof-sketch",
+      "text": "The large semicircle has radius \\(3\\) and center \\(C,\\) the midpoint of \\(\\overline{JK}.\\) Placing \\(J\\) at the origin, \\(A=2,\\) \\(B=5,\\) \\(C=3,\\) \\(K=6\\) along the base. Let \\(r\\) be the radius of the circle at \\(P.\\)\n\nBy tangency, \\(PA=2+r,\\) \\(PB=1+r,\\) and \\(PC=3-r.\\) Dropping a perpendicular from \\(P\\) to the base at horizontal position \\(3+x\\) with height \\(h,\\) the Pythagorean theorem gives \\[ \\begin{aligned} h^2 &=(2+r)^2-(1+x)^2 \\\\ &=(3-r)^2-x^2 \\\\ &=(1+r)^2-(2-x)^2. \\end{aligned} \\]\n\nEquating the first expression with the middle one gives \\(5r-x=3,\\) while equating the last expression with the middle one gives \\(2r+x=3.\\) Adding yields \\(7r=6,\\) so \\(r=\\dfrac{6}{7}.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Let \\(C\\) be the center of the large semicircle; then \\(PA=2+r,\\) \\(PB=1+r,\\) \\(PC=3-r\\)",
+        "Drop a perpendicular from \\(P\\) to \\(\\overline{JK}\\) and set the three expressions for its squared height equal"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "579d660d3bd021f7ccf0e17cbbed7505331f2571b81f81d767e8872c1cf83833"
+    ],
+    "solutions": []
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2004-p14",
+  "title": "2004 AIME II Problem 14",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2004,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": 3270,
+    "mohs": null
+  },
+  "estimatedMinutes": 22,
+  "statement": "Consider a string of \\(n\\) \\(7\\)’s, \\(7777\\ldots77,\\) into which \\(+\\) signs are inserted to produce an arithmetic expression. For example, \\(7 + 77 + 777 + 7 + 7 = 875\\) could be obtained from eight \\(7\\)’s in this way. For how many values of \\(n\\) is it possible to insert \\(+\\) signs so that the resulting expression has value \\(7000?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "108",
+    "value": "108"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2004-p14.live",
+      "kind": "proof-sketch",
+      "text": "Dividing by \\(7\\) turns the summands into \\(1,\\) \\(11,\\) or \\(111\\) (no summand with four or more digits fits, since \\(1111 \\gt 1000\\)) and the target into \\(1000.\\) If \\(x,\\) \\(y,\\) \\(z\\) count the summands of each size, then \\(x + 11y + 111z = 1000\\) and \\(n = x + 2y + 3z.\\) Subtracting gives \\[n = 1000 - 9(y + 12z),\\] so the possible \\(n\\) correspond exactly to the attainable values of \\(v = y + 12z.\\)\n\nThe constraints are \\(z \\le 9\\) and \\(0 \\le y \\le \\frac{1000 - 111z}{11}\\) (then \\(x \\ge 0\\) follows). For \\(z = 0, 1, \\ldots, 9\\) the value \\(v = y + 12z\\) ranges over the intervals \\([0, 90],\\) \\([12, 92],\\) \\([24, 94],\\) \\([36, 96],\\) \\([48, 98],\\) \\([60, 100],\\) \\([72, 102],\\) \\([84, 104],\\) \\([96, 106],\\) and \\(\\{108\\}\\) (when \\(z = 9,\\) only \\(y = 0\\) fits). Their union is every integer from \\(0\\) to \\(106\\) together with \\(108;\\) only \\(107\\) is unattainable.\n\nSo \\(v\\) takes \\(107 + 1 = 108\\) values, and \\(n = 1000 - 9v\\) takes \\(108\\) values.",
+      "hints": [
+        "Divide everything by \\(7:\\) you need \\(x\\) copies of \\(1,\\) \\(y\\) of \\(11,\\) and \\(z\\) of \\(111\\) with \\(x + 11y + 111z = 1000\\) and \\(n = x + 2y + 3z\\)",
+        "Subtracting shows \\(n = 1000 - 9(y + 12z);\\) determine exactly which values \\(y + 12z\\) can reach when \\(11y + 111z \\le 1000\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2014-p12",
+  "title": "2014 AMC 12A Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.chord",
+      "label": "Chord",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2014,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 29.3,
+    "source": 1630,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Two circles intersect at points \\(A\\) and \\(B.\\) The minor arcs \\(AB\\) measure \\(30^\\circ\\) on one circle and \\(60^\\circ\\) on the other circle. What is the ratio of the area of the larger circle to the area of the smaller circle?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1+\\sqrt3\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(2+\\sqrt3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2014-p12.live",
+      "kind": "proof-sketch",
+      "text": "Let the circles have radii \\(R\\) (with the \\(30^\\circ\\) arc) and \\(r\\) (with the \\(60^\\circ\\) arc). The common chord has length \\(2R\\sin15^\\circ=2r\\sin30^\\circ,\\) so \\(\\dfrac{R}{r}=\\dfrac{\\sin30^\\circ}{\\sin15^\\circ}.\\)\n\nThe smaller central angle gives the larger radius, so \\(R\\gt r.\\) The area ratio is \\[ \\begin{gathered} \\left(\\dfrac{R}{r}\\right)^2\\\\ =\\dfrac{1}{4\\sin^2 15^\\circ}\\\\ =\\dfrac{1}{2(1-\\cos30^\\circ)}\\\\ =\\dfrac{1}{2-\\sqrt3}=2+\\sqrt3. \\end{gathered} \\]\n\nThus, the correct answer is D.",
+      "hints": [
+        "The common chord \\(AB\\) equals \\(2R\\sin15^\\circ\\) in one circle and \\(2r\\sin30^\\circ\\) in the other",
+        "The area ratio is \\(\\left(\\dfrac{R}{r}\\right)^2=\\dfrac{1}{4\\sin^2 15^\\circ}\\), and \\(4\\sin^2 15^\\circ=2-\\sqrt3\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

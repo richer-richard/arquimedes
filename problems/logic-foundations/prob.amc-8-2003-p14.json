@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-2003-p14",
+  "title": "2003 AMC 8 Problem 14",
+  "category": "logic-foundations",
+  "subjects": [
+    "logic-foundations",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "logic.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "logic.cryptarithm",
+      "label": "Cryptarithm",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2003,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 14.4,
+    "source": 1380,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In this addition problem, each letter stands for a different digit. \\[\\begin{array}{cccc}&T & W & O\\\\ +&T & W & O\\\\ \\hline F& O & U & R\\end{array}\\] If \\(T = 7\\) and the letter \\(O\\) represents an even number, what is the only possible value for \\(W?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "3"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2003-p14.live",
+      "kind": "proof-sketch",
+      "text": "Since both \\(T\\)’s are \\(7,\\) we get that \\(O\\) is either \\(4\\) or \\(5.\\) Since \\(O\\) is even, we get that \\(O = 4.\\)\n\nThen, we get that \\(R = 4 + 4 = 8.\\) We also know that \\(W + W\\) doesn’t carry over, since otherwise \\(O\\) would be \\(5.\\)\n\nTherefore, \\(W\\) is less than \\(5\\) and cannot be \\(4\\) or \\(1.\\) If \\(W = 0,\\) then \\(U = 0,\\) which gives two letters the same digit. If \\(W = 2,\\) then \\(U = 4,\\) which is also not allowed.\n\nThis makes \\(W = 3.\\)\n\nThus, D is the correct answer.",
+      "hints": [
+        "Use the hundreds column after \\(T = 7.\\)",
+        "The ones column and the fact that \\(O\\) is even force \\(O.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

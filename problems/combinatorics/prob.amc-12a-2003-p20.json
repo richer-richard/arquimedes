@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2003-p20",
+  "title": "2003 AMC 12A Problem 20",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiset-permutations",
+      "label": "Multiset permutations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2003,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 34.4,
+    "source": 1910,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many \\(15\\)-letter arrangements of \\(5\\) A’s, \\(5\\) B’s, and \\(5\\) C’s have no A’s in the first \\(5\\) letters, no B’s in the next \\(5\\) letters, and no C’s in the last \\(5\\) letters?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\displaystyle\\sum_{k=0}^{5}\\binom{5}{k}^3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(3^5 \\cdot 2^5\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2^{15}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{15!}{(5!)^3}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(3^{15}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2003-p20.live",
+      "kind": "proof-sketch",
+      "text": "Suppose the first block holds \\(k\\) B’s and \\(5-k\\) C’s. The remaining \\(k\\) C’s must go in the second block (since the third has no C’s), forcing \\(5-k\\) A’s there.\n\nThen the third block contains the remaining \\(k\\) A’s and \\(5-k\\) B’s.\n\nFor each \\(k,\\) the \\(k\\) B’s in the first block, \\(k\\) C’s in the second, and \\(k\\) A’s in the third can be placed in \\(\\binom{5}{k}^3\\) ways, so the total is \\(\\displaystyle\\sum_{k=0}^{5}\\binom{5}{k}^3.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "In the first block (no A’s), suppose there are \\(k\\) B’s and \\(5-k\\) C’s",
+        "Fixing \\(k\\) determines the letter counts in all three blocks, each chosen with \\(\\binom{5}{k}\\) placements"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

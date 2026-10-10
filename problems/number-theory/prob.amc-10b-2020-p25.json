@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10b-2020-p25",
+  "title": "2020 AMC 10B Problem 25",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2020,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 33.5,
+    "source": 2150,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(D(n)\\) denote the number of ways of writing the positive integer \\(n\\) as a product \\[n = f_1\\cdot f_2\\cdots f_k,\\] where \\(k\\ge1,\\) the \\(f_i\\) are integers strictly greater than \\(1,\\) and the order in which the factors are listed matters (that is, two representations that differ only in the order of the factors are counted as distinct). For example, the number \\(6\\) can be written as \\(6,\\) \\(2\\cdot 3,\\) and \\(3\\cdot2,\\) so \\(D(6) = 3.\\) What is \\(D(96)?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(112\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(128\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(144\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(172\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(184\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "112"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2020-p25.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(96=2^5\\cdot3.\\) Suppose an ordered factorization has \\(k\\) factors. Exactly one factor contains the single prime factor \\(3\\); choose its position in \\(k\\) ways.\n\nThe other \\(k-1\\) factors must each contain at least one factor of \\(2,\\) while the factor containing \\(3\\) may contain any number of factors of \\(2.\\) Distributing the five factors of \\(2\\) under these conditions can be done in \\[\\binom{5}{k-1}\\] ways. Therefore the number of ordered factorizations with \\(k\\) factors is \\(k\\binom{5}{k-1},\\) where \\(1\\le k\\le6.\\)\n\nThus \\[D(96)=\\sum_{k=1}^6 k\\binom{5}{k-1}.\\] Letting \\(j=k-1,\\) this becomes \\[ \\begin{aligned} &\\sum_{j=0}^5 (j+1)\\binom5j \\\\ &\\quad =\\sum_{j=0}^5 j\\binom5j+\\sum_{j=0}^5\\binom5j \\\\ &\\quad =5\\cdot2^4+2^5 \\\\ &\\quad =80+32=112. \\end{aligned} \\]\n\nThus, A is the correct answer.",
+      "hints": [
+        "Write \\(96=2^5\\cdot 3\\)",
+        "For a product with \\(k\\) factors, choose which factor contains the single \\(3\\) and distribute the five factors of \\(2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12b-2020-p21",
+  "title": "2020 AMC 12B Problem 21",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.floor-and-ceiling-functions",
+      "label": "Floor and ceiling functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequality",
+      "label": "Inequality",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.substitution",
+      "label": "Substitution",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2020,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 31.0,
+    "source": 1800,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "How many positive integers \\(n\\) satisfy\n\n\\[\\frac{n + 1000}{70} = \\lfloor \\sqrt{n} \\rfloor?\\]\n\n(Recall that \\(\\lfloor x \\rfloor\\) is the greatest integer not exceeding \\(x.\\))",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(30\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(32\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2020-p21.live",
+      "kind": "proof-sketch",
+      "text": "The right side is an integer, so let \\(k = \\lfloor \\sqrt{n} \\rfloor.\\) Then \\(n = 70k - 1000,\\) and \\(k = \\lfloor \\sqrt{n} \\rfloor\\) requires \\(k^2 \\le n \\lt (k + 1)^2.\\)\n\nThe lower bound \\(k^2 \\le 70k - 1000\\) gives \\(k^2 - 70k + 1000 \\le 0,\\) i.e. \\(20 \\le k \\le 50.\\) The upper bound \\(70k - 1000 \\lt (k + 1)^2\\) gives \\(k^2 - 68k + 1001 \\gt 0,\\) i.e. \\(k \\le 21\\) or \\(k \\ge 47.\\)\n\nIntersecting, \\(k \\in \\{20, 21, 47, 48, 49, 50\\},\\) giving \\(6\\) values of \\(n.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Let \\(k = \\lfloor \\sqrt{n} \\rfloor,\\) so \\(n = 70k - 1000\\) must satisfy \\(k^2 \\le n \\lt (k + 1)^2\\)",
+        "This gives \\(k^2 - 70k + 1000 \\le 0\\) and \\(k^2 - 68k + 1001 \\gt 0;\\) count integer \\(k\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

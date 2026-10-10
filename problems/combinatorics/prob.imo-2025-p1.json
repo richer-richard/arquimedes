@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2025-p1",
+  "title": "2025 IMO Problem 1",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2025,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 79.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A line in the plane is called sunny\nif it is not parallel to any of the \\(x\\)-axis, the \\(y\\)-axis, or the line \\(x+y=0\\).\n\nLet \\(n \\ge 3\\) be a given integer.\nDetermine all nonnegative integers \\(k\\) such that there exist \\(n\\) distinct lines\nin the plane satisfying both of the following:\n\n• for all positive integers \\(a\\) and \\(b\\) with \\(a+b\\le n+1\\),\n the point \\((a,b)\\) lies on at least one of the lines; and\n\n• exactly \\(k\\) of the \\(n\\) lines are sunny.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2025-p1.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is \\(0\\), \\(1\\), or \\(3\\) sunny lines.\n\nIn what follows, we draw the grid as equilateral instead of a right triangle;\nthis has no effect on the problem statement but is more symmetric.\n\nWe say a long line is one of the three lines at the edge of the grid,\ni.e.\\ one of the (non-sunny) lines passing through \\(n\\) points.\nThe main claim is the following.\n\nClaim.\n If \\(n \\ge 4\\), any set of \\(n\\) lines must have at least one long line.\n\nProof.\n Consider the \\(3(n-1)\\) points on the outer edge of the grid.\n If there was no long line, each of the \\(n\\) lines passes through at most two such points.\n So we obtain \\(2n \\ge 3(n-1)\\), which forces \\(n \\le 3\\).\n\nHence, by induction we may repeatedly delete a long line without changing the number\nof sunny lines until \\(n = 3\\) (and vice-versa: given a construction for smaller \\(n\\)\nwe can increase \\(n\\) by one and add a long line).\n\nWe now classify all the ways to cover\nthe \\(1+2+3=6\\) points in an \\(n=3\\) grid with \\(3\\) lines.\n\n[Diagram omitted from this imported TeX transcription.]\n\n• If there is a long line (say, the red one in the figure),\n the remaining \\(1+2=3\\) points (circled in blue) are covered with two lines.\n One of the lines passes through \\(2\\) points and must not be sunny;\n the other line may or may not be sunny.\n Hence in this case the possible counts of sunny lines are \\(0\\) or \\(1\\).\n\n• If there is no long line, each of the three lines passes through at most \\(2\\) points.\n But there are \\(6\\) total lines, so in fact each line must pass through\n exactly two points.\n The only way to do this is depicted in the figure in the right.\n In this case there are \\(3\\) sunny lines.\n\nThis proves that \\(0\\), \\(1\\), \\(3\\) are the only possible answers.\n\nRemark.\n The concept of a sunny line is not that important to the problem.\n The proof above essentially classifies all the ways to cover\n the \\(1+2+\\dots+n\\) points with exactly \\(n\\) lines.\n Namely, one should repeatedly take a long line and decrease \\(n\\) until \\(n=3\\),\n and then pick one of the finitely many cases for \\(n=3\\).\n The count of sunny lines just happens to be whatever is possible for \\(n=3\\),\n since long lines are not sunny.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

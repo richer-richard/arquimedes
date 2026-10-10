@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-8-2022-p24",
+  "title": "2022 AMC 8 Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.net-3d-geometry",
+      "label": "Net (3D geometry)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.volume",
+      "label": "Volume",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2022,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 16.7,
+    "source": 1510,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The figure below shows a polygon \\(ABCDEFGH,\\) consisting of rectangles and right triangles. When cut out and folded on the dotted lines, the polygon forms a triangular prism. Suppose that:\n\n\\[ AH = EF = 8 \\]\n\nand\n\n\\[ GH = 14. \\]\n\nWhat is the volume of the prism?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(112\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(128\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(192\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(240\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(288\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "192"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2022-p24.live",
+      "kind": "proof-sketch",
+      "text": "When the net is folded, the matching side lengths give \\(GF=EF=8\\). Since \\(GFCB\\) is a rectangle, \\(BC=8\\). The fold identifies \\(AB\\) with \\(BC\\), so \\(AB=8\\). In rectangle \\(HJBA\\), this gives \\(HJ=8\\), and the opposite side \\(BJ\\) equals \\(AH=8\\).\n\nSince \\(GH=14\\), we have \\(GJ=14-8=6\\). Thus one triangular base of the prism is right triangle \\(BJG\\), with area \\[ \\frac{6\\cdot8}{2}=24. \\] The prism length is \\(GF=8\\), so the volume is \\(24\\cdot8=192\\).\n\nThus, the correct answer is C.",
+      "hints": [
+        "Find the right-triangle base of the prism",
+        "The folded net gives a base with legs \\(6\\) and \\(8\\), and prism length \\(8\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "34d7910bfaf8fb3881be04caa9cccbf386a2b24605615f01830c63d2ac607592"
+    ],
+    "solutions": []
+  }
+}

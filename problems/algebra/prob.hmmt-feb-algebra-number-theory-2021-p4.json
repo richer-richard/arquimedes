@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2021-p4",
+  "title": "2021 HMMT February Algebra and Number Theory Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomial-operations",
+      "label": "Polynomial operations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.symmetric-functions",
+      "label": "Symmetric functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2021,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Suppose that \\(P(x, y, z)\\) is a homogeneous degree 4 polynomial in three variables such that \\(P(a, b, c)=\\) \\(P(b, c, a)\\) and \\(P(a, a, b)=0\\) for all real \\(a, b\\), and \\(c\\). If \\(P(1,2,3)=1\\), compute \\(P(2,4,8)\\).\nNote: \\(P(x, y, z)\\) is a homogeneous degree 4 polynomial if it satisfies \\(P(k a, k b, k c)=k^{4} P(a, b, c)\\) for all real \\(k, a, b, c\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "56",
+    "value": "56"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2021-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "Since \\(P(a, a, b)=0,(x-y)\\) is a factor of \\(P\\), which means \\((y-z)\\) and \\((z-x)\\) are also factors by the symmetry of the polynomial. So,\n\n\\[\\frac{P(x, y, z)}{(x-y)(y-z)(z-x)}\\]\n\nis a symmetric homogeneous degree 1 polynomial, so it must be \\(k(x+y+z)\\) for some real \\(k\\). So, the answer is\n\n\\[\\frac{P(2,4,8)}{P(1,2,3)}=\\frac{(2+4+8)(2-4)(4-8)(8-2)}{(1+2+3)(1-2)(2-3)(3-1)}=56\\]\n\n5 . Let \\(n\\) be the product of the first 10 primes, and let\n\n\\[S=\\sum_{x y \\mid n} \\varphi(x) \\cdot y\\]\n\nwhere \\(\\varphi(x)\\) denotes the number of positive integers less than or equal to \\(x\\) that are relatively prime to \\(x\\), and the sum is taken over ordered pairs \\((x, y)\\) of positive integers for which \\(x y\\) divides \\(n\\). Compute \\(\\frac{S}{n}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-10a-2024-p25",
+  "title": "2024 AMC 10A Problem 25",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.bijection",
+      "label": "Bijection",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.systematic-listing",
+      "label": "Systematic listing",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2024,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 51.6,
+    "source": 2600,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "The figure below shows a dotted grid \\(8\\) cells wide and \\(3\\) cells tall consisting of \\(1'' \\times 1''\\) squares. Carl places \\(1\\)-inch toothpicks along some of the sides of the squares to create a closed loop that does not intersect itself. The numbers in the cells indicate the number of sides of that square that are to be covered by toothpicks, and any number of toothpicks are allowed if no number is written. In how many ways can Carl place the toothpicks?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(130\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(144\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(146\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(162\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(196\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "146"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2024-p25.live",
+      "kind": "proof-sketch",
+      "text": "Each middle-row cell must touch exactly one toothpick. First consider loops that pass from one side of the middle strip to the other. The loop can span all \\(8\\) columns, the first \\(7,\\) the last \\(7,\\) or the middle \\(6;\\) a narrower span would leave an outer middle cell untouched. Once the two ends are fixed, each interior middle cell independently has its one toothpick on its top or bottom side, and the rest of the non-self-intersecting loop is forced. The four cases therefore contribute \\(2^6,2^5,2^5,\\) and \\(2^4\\) loops. There are also exactly two loops that do not cross the middle strip: the horizontal rectangle running entirely along the top or entirely along the bottom. Hence the total is \\(2^6+2^5+2^5+2^4+2\\) \\(=64+32+32+16+2\\) \\(=146.\\) Thus, C is the correct answer.",
+      "hints": [
+        "Each middle-row cell must touch exactly one toothpick; after the two turnaround columns are fixed, each interior cell’s toothpick is independently above or below it",
+        "A loop crossing the middle uses all \\(8,\\) the first \\(7,\\) the last \\(7,\\) or the middle \\(6\\) columns; its interior columns independently bend above or below"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "a5bd1c8180db6e519abfa8c525977ba7177d27dac5c590f1d4b7daae26a8fb48"
+    ],
+    "solutions": []
+  }
+}

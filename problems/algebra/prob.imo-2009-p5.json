@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2009-p5",
+  "title": "2009 IMO Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2009,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 88.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find all functions \\(f \\colon \\mathbb{Z}_{>0} \\to \\mathbb{Z}_{>0}\\)\nsuch that for positive integers \\(a\\) and \\(b\\), the numbers\n\\[ a, \\qquad f(b), \\qquad f(b+f(a)-1) \\]\nare the sides of a non-degenerate triangle.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2009-p5.evanchen",
+      "kind": "proof-sketch",
+      "text": "The only function is the identity function (which works).\nWe prove it is the only one.\n\nLet \\(P(a,b)\\) denote the given statement.\n\nClaim.\n We have \\(f(1) = 1\\), and \\(f(f(n)) = n\\).\n (In particular \\(f\\) is a bijection.)\n\nProof.\n Note that \\[ P(1,b) \\implies f(b) = f(b+f(1)-1). \\]\n Otherwise, the function \\(f\\) is periodic modulo \\(N = f(1)-1 \\ge 1\\).\n This is impossible since we can fix \\(b\\) and let \\(a\\) be arbitrarily\n large in some residue class modulo \\(N\\).\n\n Hence \\(f(1)=1\\), so taking \\(P(n,1)\\) gives \\(f(f(n)) = n\\).\n\nClaim.\n Let \\(\\delta = f(2)-1 > 0\\).\n Then for every \\(n\\),\n \\[ f(n+1) = f(n) + \\delta\n \\quad\\text{ or }\\quad f(n-1) = f(n) + \\delta \\]\n\nProof.\n Use\n \\[ P(2, f(n)) \\implies n-2 < f( f(n) + \\delta ) < n+2. \\]\n Let \\(y = f(f(n)+\\delta)\\), hence \\(n-2 < y < n+2\\)\n and \\(f(y) = f(n)+\\delta\\).\n But, remark that if \\(y = n\\), we get \\(\\delta = 0\\), contradiction.\n So \\(y \\in \\{n+1, n-1\\}\\) and that is all.\n\nApplying the previous claim inductively then directly implies:\n\nClaim.\n The function \\(f\\) is an arithmetic progression\n with common difference \\(+\\delta\\).\n\nProof.\n Suppose \\(f(1)=1\\), \\dots, \\(f(n) = 1 + (n-1)\\delta\\) for some \\(n \\ge 2\\).\n Then \\(f(n) + \\delta \\neq f(n-1)\\).\n So the previous claim forces \\(f(n+1) = f(n)+\\delta\\) too.\n\nCombined with \\(f(f(n)) = n\\), we recover that \\(f\\) is the identity.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

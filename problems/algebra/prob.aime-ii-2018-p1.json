@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2018-p1",
+  "title": "2018 AIME II Problem 1",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.distance-rate-and-time",
+      "label": "Distance rate and time",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.linear-equation",
+      "label": "Linear equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.relative-speed",
+      "label": "Relative speed",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2018,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 41.7,
+    "source": 1950,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Points \\(A,\\) \\(B,\\) and \\(C\\) lie in that order along a straight path where the distance from \\(A\\) to \\(C\\) is \\(1800\\) meters. Ina runs twice as fast as Eve, and Paul runs twice as fast as Ina. The three runners start running at the same time with Ina starting at \\(A\\) and running toward \\(C,\\) Paul starting at \\(B\\) and running toward \\(C,\\) and Eve starting at \\(C\\) and running toward \\(A.\\) When Paul meets Eve, he turns around and runs toward \\(A.\\) Paul and Ina both arrive at \\(B\\) at the same time. Find the number of meters from \\(A\\) to \\(B.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "800",
+    "value": "800"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2018-p1.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(x = AB,\\) so \\(BC = 1800 - x,\\) and let Eve’s speed be \\(v,\\) so Ina runs at \\(2v\\) and Paul at \\(4v.\\) Paul and Eve start at \\(B\\) and \\(C\\) running toward each other, so together they cover the \\(1800 - x\\) meters between them, with Paul covering \\(\\frac{4}{5}\\) of it. Paul then retraces that distance back to \\(B,\\) so when he reaches \\(B\\) he has run \\(\\frac{8}{5}(1800 - x)\\) meters in total.\n\nIna reaches \\(B\\) at the same moment, having run \\(x\\) meters. Since Paul runs twice as fast as Ina, he has run \\(2x\\) meters in that time. Therefore \\[\\frac{8}{5}(1800 - x) = 2x,\\] which gives \\(8 \\cdot 1800 = 18x,\\) so \\(x = 800.\\)",
+      "hints": [
+        "Let \\(AB = x.\\) Paul and Eve together cover the gap from \\(B\\) to \\(C,\\) so Paul runs \\(\\frac{4}{5}\\) of it before turning around",
+        "When Paul is back at \\(B\\) he has run \\(\\frac{8}{5}(1800 - x),\\) and in that same time Ina, at half his speed, has run \\(x\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

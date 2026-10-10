@@ -1,0 +1,87 @@
+{
+  "id": "prob.ahsme-1999-p20",
+  "title": "1999 AHSME Problem 20",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.invariant",
+      "label": "Invariant",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.mean",
+      "label": "Mean",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1999,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 29.5,
+    "source": 1740,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The sequence \\(a_1,\\) \\(a_2,\\) \\(a_3,\\) \\(\\ldots\\) satisfies \\(a_1 = 19,\\) \\(a_9 = 99,\\) and, for all \\(n \\ge 3,\\) \\(a_n\\) is the arithmetic mean of the first \\(n - 1\\) terms. Find \\(a_2.\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(29\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(59\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(79\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(99\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(179\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "179"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1999-p20.live",
+      "kind": "proof-sketch",
+      "text": "For \\(n \\ge 3,\\) \\((n - 1)a_n = a_1 + \\cdots + a_{n-1}.\\) Then \\[ a_{n+1} = \\dfrac{(n-1)a_n + a_n}{n} = a_n, \\] so the sequence is constant from \\(a_3\\) onward. Hence \\(a_3 = a_9 = 99.\\)\n\nSince \\(a_3 = \\dfrac{a_1 + a_2}{2} = \\dfrac{19 + a_2}{2} = 99,\\) we get \\(a_2 = 179.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "Show that \\(a_n\\) is constant for all \\(n \\ge 3\\)",
+        "Then \\(a_3 = a_9 = 99\\) and \\(a_3 = \\dfrac{a_1 + a_2}{2}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

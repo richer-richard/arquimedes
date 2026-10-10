@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-10a-2022-p7",
+  "title": "2022 AMC 10A Problem 7",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.least-common-multiple",
+      "label": "Least common multiple",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2022,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 14.1,
+    "source": 1140,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "The least common multiple of a positive integer \\(n\\) and \\(18\\) is \\(180,\\) and the greatest common divisor of \\(n\\) and \\(45\\) is \\(15.\\) What is the sum of the digits of \\(n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(12\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2022-p7.live",
+      "kind": "proof-sketch",
+      "text": "Prime factorize \\(18=2\\cdot3^2,\\) \\(45=3^2\\cdot5,\\) and \\(180=2^2\\cdot3^2\\cdot5.\\)\n\nThe lcm condition forces the exponent of \\(2\\) in \\(n\\) to be \\(2,\\) the exponent of \\(5\\) to be \\(1,\\) the exponent of \\(3\\) to be at most \\(2,\\) and every other prime exponent to be \\(0.\\) The gcd condition \\(\\gcd(n,45)=15=3\\cdot5\\) further forces the exponent of \\(3\\) in \\(n\\) to be exactly \\(1.\\)\n\nTherefore \\(n=2^2\\cdot3\\cdot5=60,\\) and the sum of its digits is \\(6.\\)\n\nThus, B is the correct answer.",
+      "hints": [
+        "Compare prime exponents in the lcm and gcd conditions",
+        "The gcd condition controls the exponent of \\(3\\) differently from the lcm condition"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

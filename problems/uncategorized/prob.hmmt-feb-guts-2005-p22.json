@@ -1,0 +1,37 @@
+{
+  "id": "prob.hmmt-feb-guts-2005-p22",
+  "title": "2005 HMMT February Guts Problem 22",
+  "category": "uncategorized",
+  "subjects": [],
+  "concepts": [],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2005,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 79.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find\n\n\\[\\{\\ln (1+e)\\}+\\left\\{\\ln \\left(1+e^{2}\\right)\\right\\}+\\left\\{\\ln \\left(1+e^{4}\\right)\\right\\}+\\left\\{\\ln \\left(1+e^{8}\\right)\\right\\}+\\cdots,\\]\n\nwhere \\(\\{x\\}=x-\\lfloor x\\rfloor\\) denotes the fractional part of \\(x\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2005-p22.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(1-\\ln (e-1)\\)\nSince \\(\\ln \\left(1+e^{2^{k}}\\right)\\) is just larger than \\(2^{k}\\), its fractional part is \\(\\ln \\left(1+e^{2^{k}}\\right)-\\ln e^{2^{k}}=\\) \\(\\ln \\left(1+e^{-2^{k}}\\right)\\). But now notice that\n\n\\[\\prod_{k=0}^{n}\\left(1+x^{2^{k}}\\right)=1+x+x^{2}+\\cdots+x^{2^{n+1}-1}\\]\n\n(This is easily proven by induction or by noting that every nonnegative integer less than \\(2^{n+1}\\) has a unique ( \\(n+1\\) )-bit binary expansion.) If \\(|x|<1\\), this product converges to \\(\\frac{1}{1-x}\\) as \\(n\\) goes to infinity. Therefore,\n\n\\[\\sum_{k=0}^{\\infty} \\ln \\left(1+e^{-2^{k}}\\right)=\\ln \\prod_{k=0}^{\\infty}\\left(1+\\left(e^{-1}\\right)^{2^{k}}\\right)=\\ln \\frac{1}{1-e^{-1}}=\\ln \\frac{e}{e-1}=1-\\ln (e-1)\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

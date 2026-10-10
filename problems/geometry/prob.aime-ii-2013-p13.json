@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2013-p13",
+  "title": "2013 AIME2 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.law-of-cosines",
+      "label": "Law of cosines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.median-geometry",
+      "label": "Median (geometry)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2013,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 59.5,
+    "source": 3060,
+    "mohs": null
+  },
+  "estimatedMinutes": 13,
+  "statement": "In \\(\\triangle ABC,\\) \\(AC = BC,\\) and point \\(D\\) is on \\(\\overline{BC}\\) so that \\(CD = 3 \\cdot BD.\\) Let \\(E\\) be the midpoint of \\(\\overline{AD}.\\) Given that \\(CE = \\sqrt{7}\\) and \\(BE = 3,\\) the area of \\(\\triangle ABC\\) can be expressed in the form \\(m\\sqrt{n},\\) where \\(m\\) and \\(n\\) are positive integers and \\(n\\) is not divisible by the square of any prime. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "10",
+    "value": "10"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2013-p13.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(AB = 2x\\) and \\(AC = BC = y,\\) so \\(BD = \\frac{y}{4},\\) \\(CD = \\frac{3y}{4},\\) and \\(\\cos B = \\frac{x}{y}\\) (drop the altitude from \\(C\\) to the midpoint of \\(\\overline{AB}\\)). The law of cosines in triangle \\(ABD\\) gives \\[ \\begin{aligned} AD^2 &= 4x^2 + \\frac{y^2}{16} \\\\ &\\quad {}- 2 \\cdot 2x \\cdot \\frac{y}{4} \\cdot \\frac{x}{y} \\\\ &= 3x^2 + \\frac{y^2}{16}. \\end{aligned} \\]\n\nBoth \\(CE\\) and \\(BE\\) are medians to \\(\\overline{AD},\\) in triangles \\(ACD\\) and \\(ABD\\) respectively. The median formula \\(4m^2 = 2b^2 + 2c^2 - a^2\\) gives \\[ \\begin{aligned} 28 &= 2y^2 + \\frac{18y^2}{16} - AD^2 \\\\ &= \\frac{49y^2}{16} - 3x^2, \\end{aligned} \\] \\[ \\begin{aligned} 36 &= 8x^2 + \\frac{2y^2}{16} - AD^2 \\\\ &= 5x^2 + \\frac{y^2}{16}. \\end{aligned} \\] From the second equation \\(\\frac{y^2}{16} = 36 - 5x^2;\\) substituting into the first gives \\(49(36 - 5x^2) - 3x^2 = 28,\\) so \\(248x^2 = 1736,\\) \\(x^2 = 7,\\) and then \\(y^2 = 16.\\)\n\nThe altitude from \\(C\\) has length \\(\\sqrt{y^2 - x^2} = 3,\\) so the area is \\(\\frac{1}{2} \\cdot 2x \\cdot 3 = 3\\sqrt{7},\\) and \\(m + n = 3 + 7 = 10.\\)",
+      "hints": [
+        "Set \\(AB = 2x\\) and \\(AC = BC = y;\\) then \\(\\cos B = \\frac{x}{y},\\) and the law of cosines in triangle \\(ABD\\) gives \\(AD^2\\) in terms of \\(x\\) and \\(y\\)",
+        "\\(CE\\) and \\(BE\\) are medians of triangles \\(ACD\\) and \\(ABD\\) to side \\(AD;\\) the median formula \\(4m_a^2 = 2b^2 + 2c^2 - a^2\\) gives two equations in \\(x^2\\) and \\(y^2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

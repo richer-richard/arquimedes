@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2017-p2",
+  "title": "2017 USAMO Problem 2",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2017,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 111.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(m_1, m_2, \\ldots, m_n\\) be a collection of \\(n\\) positive integers, not necessarily distinct. For any sequence of integers \\(A = (a_1, \\ldots, a_n)\\) and any permutation \\(w = w_1, \\ldots, w_n\\) of \\(m_1, \\ldots, m_n\\), define an \\(A\\)-inversion of \\(w\\) to be a pair of entries \\(w_i, w_j\\) with \\(i < j\\) for which one of the following conditions holds:\n\n\\[\na_i \\ge w_i > w_j,\n\\]\n\n\\[\nw_j > a_i \\ge w_i,\n\\]\n\nor\n\n\\[\nw_i > w_j > a_i.\n\\]\n\nShow that, for any two sequences of integers \\(A = (a_1, \\ldots, a_n)\\) and \\(B = (b_1, \\ldots, b_n)\\), and for any positive integer \\(k\\), the number of permutations of \\(m_1, \\ldots, m_n\\) having exactly \\(k\\) \\(A\\)-inversions is equal to the number of permutations of \\(m_1, \\ldots, m_n\\) having exactly \\(k\\) \\(B\\)-inversions.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2017-p2.imported",
+      "kind": "proof-sketch",
+      "text": "§1.2 USAMO 2017/2, proposed by Maria Monks\n\n  Problem statement\n\n  Let m1 , m2 , . . . , mn be a collection of n positive integers, not necessarily distinct.\n  For any sequence of integers A = (a1 , . . . , an ) and any permutation w = w1 , . . . , wn\n  of m1 , . . . , mn , define an A-inversion of w to be a pair of entries wi , wj with i < j\n  for which one of the following conditions holds:\n\n      • ai ≥ wi > wj ,\n\n      • wj > ai ≥ wi , or\n\n      • wi > w j > a i .\n\n  Show that, for any two sequences of integers A = (a1 , . . . , an ) and B = (b1 , . . . , bn ),\n  and for any positive integer k, the number of permutations of m1 , . . . , mn having\n  exactly k A-inversions is equal to the number of permutations of m1 , . . . , mn having\n  exactly k B-inversions.\n\nThe following solution was posted by Michael Ren, and I think it is the most natural one\n(since it captures all the combinatorial ideas using a q-generating function that is easier\nto think about, and thus makes the problem essentially a long computation).\n   Denote by M our multiset of n positive integers. Define an inversion of a permutation\nto be pair i < j with wi < wj (which is a (0, . . . , 0)-inversion in the problem statement);\nthis is the usual definition (see https://en.wikipedia.org/wiki/Inversion_(discrete_\nmathematics)). So we want to show the number of A-inversions is equal to the number\nof usual inversions. In what follows we count permutations on M with multiplicity: so\nM = {1, 1, 2} still has 3! = 6 permutations.\n   We are going to do what is essentially recursion, but using generating functions in\na variable q to do our book-keeping. (Motivation: there’s no good closed form for the\nnumber of inversions, but there’s a great generating function known — which is even\nbetter for us, since we’re only trying to show two numbers are equal!) First, we prove\ntwo claims.\n\n  Claim — For any positive integer n, the generating function for the number of\n  permutations of (1, 2, . . . , n) with exactly k inversions is\n\n                  n!q := 1 · (1 + q) · (1 + q + q 2 ) · . . . (1 + q + · · · + q n−1 ).\n\nHere we mean that the coefficient of q s above gives the number of permutations with\nexactly s inversions.\n\nProof. This is an induction on n, with n = 1 being trivial. Suppose we choose the first\nelement to be i, with 1 ≤ i ≤ n. Then there will always be exactly i − 1 inversions\nusing the first element, so this contributes q i · (n − 1)!q . Summing 1 ≤ i ≤ n gives the\nresult.\n\n  Unfortunately, the main difficulty of the problem is that there are repeated elements,\nwhich makes our notation much more horrific.\n\n                                                   4\n\nUSAMO 2017 Solution Notes                                                    web.evanchen.cc, updated 4 May 2026\n\n   Let us define the following. We take our given multiset M of n positive integers, we\nsuppose the distinct numbers are θ1 < θ2 < · · · < θm . We let ei be the number of times\nθi appears. Therefore the multiplicities ei should have sums\n\n                                            e1 + · · · + em = n\n\nand m denotes the number of distinct elements. Finally, we let\n\n                                               q number inversions of σ\n                                          X\n                   F (e1 , . . . , em ) =\n                                                permutations σ\n\nbe the associated generating function for the number of inversions. For example, the first\nclaim we proved says that F (1, . . . , 1) = n!q .\n\n  Claim — We have the explicit formula\n                                                                    m\n                                                                    Y ei !\n                                     F (e1 , . . . , em ) = n!q ·                 .\n                                                                          ei !q\n                                                                    i=1\n\nProof. First suppose we perturb all the elements slightly, so that they are no longer equal.\nThen the generating function would just be n!q .\n  Then, we undo the perturbations for each group, one at a time, and claim that we get\nthe above ei !q factor each time. Indeed, put the permutations into classes of e1 ! each\nwhere permutations in the same classes differ only in the order of the perturbed θ1 ’s\n(with the other n − e1 elements being fixed). Then there is a factor of e1 !q from each class,\nowing to the slightly perturbed inversions we added within each class. So we remove that\nfactor and add e1 ! · q 0 instead. This accounts for the first term of the product.\n  Repeating this now with each term of the product implies the claim.\n\n   Thus we have the formula for the number of inversions in general. We wish to show\nthis also equals the generating function the number of A-inversions, for any fixed choice\nof A. This will be an induction by n, with the base case being immediate.\n   For the inductive step, fix A, and assume the first element satisfies θk ≤ a1 < θk+1 (so\n0 ≤ k ≤ m; we for convenience set θ0 = −∞ and θm = +∞). We count the permutations\nbased on what the first element θi of the permutation is. Then:\n   • Consider permutations starting with θi ∈ {θ1 , . . . , θk }. Then the number of inver-\n     sions which will use this first term is (e1 + · · · + ei−1 ) + (ek+1 + · · · + em ). Also, there\n     are ei ways to pick which θi gets used as the first term. So we get a contribution of\n\n                       q e1 +···+ei−1 +(ek+1 +···+em ) · ei · F (e1 , . . . , ei − 1, . . . , em )\n\n      in this case (with inductive hypothesis to get the last F -term).\n\n   • Now suppose θi ∈ {θk+1 , . . . , θm }. Then the number of inversions which will use\n     this first term is ek+1 + · · · + ei−1 . Thus by a similar argument the contribution is\n\n                               q ek+1 +···+ei−1 · ei · F (e1 , . . . , ei − 1, . . . , em ).\n\nTherefore, to complete the problem it suffices to prove\n                 k\n                 X\n                       q (e1 +···+ei−1 )+(ek+1 +···+em ) · ei · F (e1 , . . . , ei − 1, . . . , em )\n                 i=1\n\n                                                        5\n\nUSAMO 2017 Solution Notes                                                  web.evanchen.cc, updated 4 May 2026\n\n                   m\n                   X\n               +           q ek+1 +···+ei−1 · ei · F (e1 , . . . , ei − 1, . . . , em )\n                   i=k+1\n               = F (e1 , . . . , em ).\n\nNow, we see that\n\n               ei · F (e1 , . . . , ei − 1, . . . , em )     1 + · · · + q ei −1   1 − q ei\n                                                         =                       =\n                        F (e1 , . . . , em )               1 + q + · · · + q n−1   1 − qn\n\nso it’s equivalent to show\n                                   k\n                                   X                                     m\n                                                                         X\n       1 − q n = q ek+1 +···+em           q e1 +···+ei−1 (1 − q ei ) +           q ek+1 +···+ei−1 (1 − q ei )\n                                    i=1                                  i=k+1\n\nwhich is clear, since the left summand telescopes to q ek+1 +···+em − q n and the right\nsummand telescopes to 1 − q ek+1 +···+em .\n\n  Remark. Technically, we could have skipped straight to the induction, without proving the\n  first two claims. However I think the solution reads more naturally this way.\n\n                                                         6\n\nUSAMO 2017 Solution Notes                                     web.evanchen.cc, updated 4 May 2026",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

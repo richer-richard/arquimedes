@@ -1,0 +1,89 @@
+{
+  "id": "prob.usa-tstst-2020-p6",
+  "title": "USA TSTST 2020 Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.concurrency-and-collinearity",
+      "label": "Concurrency and Collinearity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cyclic-quadrilaterals",
+      "label": "Cyclic quadrilaterals",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.rotation",
+      "label": "Rotation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-centers",
+      "label": "Triangle centers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vectors",
+      "label": "Vectors",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TSTST",
+    "year": 2020,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 97.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A\\), \\(B\\), \\(C\\), \\(D\\) be four points\nsuch that no three are collinear\nand \\(D\\) is not the orthocenter of triangle \\(ABC\\).\nLet \\(P\\), \\(Q\\), \\(R\\) be the orthocenters of\n\\(\\triangle BCD\\), \\(\\triangle CAD\\), \\(\\triangle ABD\\), respectively.\nSuppose that lines \\(AP\\), \\(BQ\\), \\(CR\\) are pairwise distinct\nand are concurrent.\nShow that the four points \\(A\\), \\(B\\), \\(C\\), \\(D\\) lie on a circle.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tstst-2020-p6.evanchen",
+      "kind": "proof-sketch",
+      "text": "Let \\(T\\) be the concurrency point,\nand let \\(H\\) be the orthocenter of \\(\\triangle ABC\\).\n\n[Diagram omitted from this imported TeX transcription.]\n\nClaim (Key claim).\n \\(T\\) is the midpoint of \\(\\overline{AP}\\), \\(\\overline{BQ}\\), \\(\\overline{CR}\\), \\(\\overline{DH}\\),\n and \\(D\\) is the orthocenter of \\(\\triangle PQR\\).\n\nProof.\n Note that \\(\\overline{AQ} \\parallel \\overline{BP}\\),\n as both are perpendicular to \\(\\overline{CD}\\).\n Since lines \\(AP\\) and \\(BQ\\) are distinct,\n lines \\(AQ\\) and \\(BP\\) are distinct.\n\n By symmetric reasoning, we get that \\(AQCPBR\\)\n is a hexagon with opposite sides parallel\n and concurrent diagonals as \\(\\overline{AP}\\), \\(\\overline{BQ}\\), \\(\\overline{CR}\\) meet at \\(T\\).\n This implies that the hexagon is centrally symmetric about \\(T\\);\n indeed \\[ \\frac{AT}{TP} = \\frac{TQ}{BT} = \\frac{CT}{TR} = \\frac{TP}{AT} \\]\n so all the ratios are equal to \\(+1\\).\n\n Next, \\(\\overline{PD} \\perp \\overline{BC} \\parallel \\overline{QR}\\),\n so by symmetry we get \\(D\\) is the orthocenter of \\(\\triangle PQR\\).\n This means that \\(T\\) is the midpoint of \\(\\overline{DH}\\) as well.\n\nCorollary.\n The configuration is now symmetric:\n we have four points \\(A\\), \\(B\\), \\(C\\), \\(D\\),\n and their reflections in \\(T\\) are\n four orthocenters \\(P\\), \\(Q\\), \\(R\\), \\(H\\).\n\nLet \\(S\\) be the centroid of \\(\\{A, B, C, D\\}\\),\nand let \\(O\\) be the reflection of \\(T\\) in \\(S\\).\nWe are ready to conclude:\n\nClaim.\n \\(A\\), \\(B\\), \\(C\\), \\(D\\) are equidistant from \\(O\\).\n\nProof.\n Let \\(A'\\), \\(O'\\), \\(S'\\), \\(T'\\), \\(D'\\)\n be the projections of \\(A\\), \\(O\\), \\(S\\), \\(T\\), \\(D\\)\n onto line \\(BC\\).\n\n Then \\(T'\\) is the midpoint of \\(\\overline{A'D'}\\),\n so \\(S' = \\tfrac14(A'+D'+B+C)\\)\n gives that \\(O'\\) is the midpoint of \\(\\overline{BC}\\).\n\n Thus \\(OB = OC\\) and we're done.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

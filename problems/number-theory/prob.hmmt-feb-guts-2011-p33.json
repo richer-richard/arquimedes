@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2011-p33",
+  "title": "2011 HMMT February Guts Problem 33",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 33
+  },
+  "difficulty": {
+    "course": 83.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find the number of sequences consisting of \\(100 R\\) 's and \\(2011 S\\) 's that satisfy the property that among the first \\(k\\) letters, the number of \\(S\\) 's is strictly more than 20 times the number of \\(R\\) 's for all \\(1 \\leq k \\leq 2111\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2011-p33.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{11}{2111}\\binom{2111}{100}\\)\nGiven positive integers \\(r\\) and \\(s\\) such that \\(s \\geq 20 r\\), let \\(N(s, r)\\) denote the number of sequences of \\(s\\) copies of \\(S\\) and \\(r\\) copies of \\(R\\) such that for all \\(1 \\leq k \\leq r+s-1\\), among the first \\(k\\) letters, the number of \\(S\\) 's is strictly more than 20 times the number of \\(R\\) 's. We claim that\n\n\\[N(s, r)=\\frac{s-20 r}{s+r}\\binom{s+r}{s}\\]\n\nWe induct on \\(s+r\\). For the base case, note that \\(N(20 r, r)=0\\) for all \\(r\\) and \\(N(s, 0)=1\\) for all \\(s\\).\nAssume the formula holds up to \\(r+s-1\\). We now construct a path in the Cartesian plane as follows: Let \\(R\\) represent moving one unit to the left and \\(S\\) represent moving one unit up. This induces a bijection between sequences of \\(S\\) 's and \\(R \\mathrm{~s}\\) and lattice paths from the origin to the point \\((r, s)\\) that are above the line \\(y=20 x\\). In order to reach the point \\((r, s)\\), we must go through either \\((r-1, s)\\) or \\((r, s-1)\\). Therefore, we have \\(N(r, s)=N(s, r-1)+N(s-1, r)=\\frac{s-20(r-1)}{s+r-1}\\binom{s+r-1}{s}+\\frac{s-1-20 r}{s+r-1}\\binom{s+r-1}{s}=\\) \\(\\frac{s-20 r}{s+r}\\binom{s+r}{s}\\).\nRemark This is a special case of the ballot problem, first studied in 1887 by Joseph Bertrand, generalizing the Catalan numbers. A good expository article on this problem is \"Four Proofs of the Ballot Problem\" by Marc Renault available on his website at http://webspace.ship.edu/msrenault/ballotproblem/.\n\nIn 2009, Yufei Zhao studied a variant problem called bidirectional ballot sequences, which he used to construct More-Sums-Then-Differences sets in additive combinatorics. His paper is available on his website at\nhttp://web.mit.edu/yufeiz/www/mstd_construction.pdf.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

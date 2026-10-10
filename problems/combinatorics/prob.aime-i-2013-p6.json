@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2013-p6",
+  "title": "2013 AIME I Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2013,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 51.8,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "Melinda has three empty boxes and \\(12\\) textbooks, three of which are mathematics textbooks. One box will hold any three of her textbooks, one will hold any four of her textbooks, and one will hold any five of her textbooks. If Melinda packs her textbooks into these boxes in random order, the probability that all three mathematics textbooks end up in the same box can be written as \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "47",
+    "value": "47"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2013-p6.live",
+      "kind": "proof-sketch",
+      "text": "Focus on one box at a time. The box of \\(k\\) books receives a uniformly random \\(k\\)-subset of the \\(12\\) books, so the probability that it contains all three math books is \\(\\frac{\\binom{9}{k-3}}{\\binom{12}{k}}.\\) For \\(k = 3,\\) \\(4,\\) and \\(5\\) this gives \\(\\frac{1}{220},\\) \\(\\frac{9}{495} = \\frac{1}{55},\\) and \\(\\frac{36}{792} = \\frac{1}{22}.\\)\n\nThe events are disjoint, so the total probability is \\[ \\begin{aligned} \\frac{1}{220} + \\frac{1}{55} + \\frac{1}{22} &= \\frac{1 + 4 + 10}{220} \\\\ &= \\frac{15}{220} = \\frac{3}{44}, \\end{aligned} \\] and \\(m + n = 3 + 44 = 47.\\)",
+      "hints": [
+        "Compute separately the probability that all three math books land in the \\(3\\)-box, the \\(4\\)-box, and the \\(5\\)-box",
+        "For the box holding \\(k\\) books, that probability is \\(\\frac{\\binom{9}{k-3}}{\\binom{12}{k}};\\) add the three fractions"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

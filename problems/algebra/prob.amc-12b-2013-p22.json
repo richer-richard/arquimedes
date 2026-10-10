@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2013-p22",
+  "title": "2013 AMC 12B Problem 22",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2013,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 39.4,
+    "source": 2400,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Let \\(m \\gt 1\\) and \\(n \\gt 1\\) be integers. Suppose that the product of the solutions for \\(x\\) of the equation\n\n\\[ \\begin{aligned} &8(\\log_n x)(\\log_m x) - 7\\log_n x \\\\ &\\quad {}- 6\\log_m x - 2013 = 0 \\end{aligned} \\]\n\nis the smallest possible integer. What is \\(m + n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(48\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(272\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "12"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2013-p22.live",
+      "kind": "proof-sketch",
+      "text": "Writing \\(\\log_n x = \\tfrac{\\log x}{\\log n}\\) and \\(\\log_m x = \\tfrac{\\log x}{\\log m},\\) the equation becomes a quadratic in \\(\\log x\\) whose roots sum to \\(\\log(x_1 x_2)\\) \\(= \\tfrac18(7\\log m + 6\\log n).\\) Hence \\(N^8=m^7n^6,\\) where \\(N=x_1x_2.\\) For each prime dividing \\(mn,\\) let its exponents in \\(m,n\\) be \\(a,b.\\) Then \\(7a+6b\\equiv0\\pmod8.\\) An odd \\(a\\) is impossible. If \\(a=0,\\) then \\(b\\) is a multiple of \\(4\\) and this prime contributes at least \\(p^3,\\) but some other prime must divide \\(m.\\) If \\(a\\equiv0\\pmod8\\) is positive, its contribution to \\(N\\) is at least \\(p^7;\\) if \\(a\\equiv2\\pmod8,\\) then \\(b\\equiv3\\pmod4\\) and the least contribution is \\(p^4.\\) Every other positive even \\(a\\) gives more. Thus the minimum uses only \\(p=2\\) with \\((a,b)=(2,3),\\) giving \\(N=16,\\) \\(m=4,\\) and \\(n=8.\\) So \\(m+n=12.\\) Thus, the correct answer is A.",
+      "hints": [
+        "Use \\(\\log_n x = \\dfrac{\\log x}{\\log n}\\) to turn the equation into a quadratic in \\(\\log x\\)",
+        "The product of the roots satisfies \\(\\log(x_1 x_2)\\) \\(= \\tfrac18(7\\log m + 6\\log n),\\) so \\((x_1 x_2)^8 = m^7 n^6;\\) minimize this integer"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-ii-2010-p3",
+  "title": "2010 AIME II Problem 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.counting-pairs",
+      "label": "Counting pairs",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2010,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 42.1,
+    "source": 2230,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Let \\(K\\) be the product of all factors \\((b - a)\\) (not necessarily distinct) where \\(a\\) and \\(b\\) are integers satisfying \\(1 \\le a \\lt b \\le 20.\\) Find the greatest positive integer \\(n\\) such that \\(2^n\\) divides \\(K.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "150",
+    "value": "150"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2010-p3.live",
+      "kind": "proof-sketch",
+      "text": "For each value \\(v = b - a,\\) the pairs \\((a, b) = (1, v+1),\\) \\((2, v+2),\\) \\(\\ldots,\\) \\((20-v, 20)\\) show that \\(v\\) occurs exactly \\(20 - v\\) times, so \\(K = \\prod_{v=1}^{19} v^{20-v}.\\) The exponent of \\(2\\) in \\(K\\) is therefore \\(\\sum_v (20 - v)\\,e(v),\\) where \\(e(v)\\) is the exponent of \\(2\\) in \\(v.\\)\n\nOnly even \\(v\\) contribute: \\(v = 2, 6, 10, 14, 18\\) give \\(e = 1;\\) \\(v = 4, 12\\) give \\(e = 2;\\) \\(v = 8\\) gives \\(e = 3;\\) and \\(v = 16\\) gives \\(e = 4.\\) The total is \\[ \\begin{aligned} &18 + 16 \\cdot 2 + 14 + 12 \\cdot 3 \\\\ &\\quad {}+ 10 + 8 \\cdot 2 + 6 + 4 \\cdot 4 + 2 \\\\ &= 150, \\end{aligned} \\] so \\(n = 150.\\)",
+      "hints": [
+        "The difference \\(v = b - a\\) takes each value \\(1, 2, \\ldots, 19,\\) occurring exactly \\(20 - v\\) times",
+        "Add \\((20 - v)\\) times the exponent of \\(2\\) in \\(v,\\) over even \\(v = 2, 4, \\ldots, 18\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

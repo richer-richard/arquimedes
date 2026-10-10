@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-general-2019-p8",
+  "title": "2019 HMMT November General Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.integers",
+      "label": "Integers",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.linear-and-quadratic-inequalities",
+      "label": "Linear and quadratic inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2019,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 49.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the number of ordered pairs of integers \\((x, y)\\) such that \\(x^{2}+y^{2}<2019\\) and\n\n\\[x^{2}+\\min (x, y)=y^{2}+\\max (x, y)\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2019-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 127\nWe have\n\n\\[x^{2}-y^{2}=\\max (x, y)-\\min (x, y)=|x-y|\\]\n\nNow if \\(x \\neq y\\), we can divide by \\(x-y\\) to obtain \\(x+y= \\pm 1\\). Thus \\(x=y\\) or \\(x+y= \\pm 1\\).\nIf \\(x=y\\), we see that \\(2019>x^{2}+y^{2}=2 x^{2}\\), so we see that \\(-31 \\leq x \\leq 31\\). There are 63 ordered pairs in this case.\nIn the second case, note that \\(|x| \\geq|y|\\) since \\(x^{2}-y^{2}=|x-y| \\geq 0\\). Since \\(x+y= \\pm 1\\), we cannot have \\(x y>0\\), so either \\(x \\geq 0, y \\leq 0\\), or \\(x \\leq 0, y \\geq 0\\). In the first case, \\(x+y=1\\); in the second case, \\(x+y=-1\\). Thus, the solutions for \\((x, y)\\) are of the form \\((k, 1-k)\\) or \\((-k, k-1)\\) for some \\(k>0\\). In either case, we must have \\(k^{2}+(k-1)^{2}<2019\\), which holds true for any \\(1 \\leq k \\leq 32\\) but fails for \\(k=33\\). There are a total of \\(32 \\cdot 2=64\\) solutions in this case.\nIn summary, there are a total of \\(63+64=127\\) integer solutions to the equation \\(x^{2}+\\min (x, y)=\\) \\(y^{2}+\\max (x, y)\\) with \\(x^{2}+y^{2}<2019\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

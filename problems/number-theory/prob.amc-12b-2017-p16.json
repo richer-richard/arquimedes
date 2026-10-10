@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12b-2017-p16",
+  "title": "2017 AMC 12B 16",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.legendres-formula",
+      "label": "Legendre’s Formula",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2017,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 29.3,
+    "source": 1730,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The number \\(21!\\) \\(= 51{,}090{,}942{,}171{,}709{,}440{,}000\\) has over \\(60{,}000\\) positive integer divisors. One of them is chosen at random. What is the probability that it is odd?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{21}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1}{19}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{18}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{1}{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{11}{21}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1/19"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2017-p16.live",
+      "kind": "proof-sketch",
+      "text": "The exponent of \\(2\\) in \\(21!\\) is \\(\\lfloor \\frac{21}{2} \\rfloor\\) \\(+ \\lfloor \\frac{21}{4} \\rfloor\\) \\(+ \\lfloor \\frac{21}{8} \\rfloor\\) \\(+ \\lfloor \\frac{21}{16} \\rfloor\\) \\(= 10 + 5 + 2 + 1\\) \\(= 18.\\) Every divisor has the form \\(2^i b\\) with \\(0 \\le i \\le 18\\) and \\(b\\) odd; it is odd exactly when \\(i = 0.\\) So the fraction of odd divisors is \\(\\dfrac{1}{18 + 1} = \\dfrac{1}{19}.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Find the exponent of \\(2\\) in \\(21!\\) using \\(\\lfloor \\frac{21}{2} \\rfloor + \\lfloor \\frac{21}{4} \\rfloor + \\cdots\\)",
+        "A divisor is odd iff it uses \\(2^0.\\) With exponent \\(e,\\) the odd divisors are a fraction \\(\\dfrac{1}{e+1}\\) of all divisors"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

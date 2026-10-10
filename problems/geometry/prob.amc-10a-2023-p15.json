@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-10a-2023-p15",
+  "title": "2023 AMC 10A Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-area",
+      "label": "Circle area",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2023,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 24.9,
+    "source": 1560,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "An even number of circles are nested, starting with a radius of \\(1\\) and increasing by \\(1\\) each time, all sharing a common point. The region between every other circle is shaded, starting with the region inside the circle of radius \\(2\\) but outside the circle of radius \\(1.\\) An example showing \\(8\\) circles is displayed below. What is the least number of circles needed to make the total shaded area at least \\(2023\\pi?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(46\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(48\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(56\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(60\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(64\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "64"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2023-p15.live",
+      "kind": "proof-sketch",
+      "text": "A circle of radius \\(r\\) has area \\(\\pi r^2.\\) So the shaded ring between radius \\(2k\\) and \\(2k-1\\) has area \\(\\pi\\big((2k)^2 - (2k-1)^2\\big)\\) \\(= (4k-1)\\pi.\\) With \\(2n\\) circles the shaded total is \\(\\pi\\sum_{k=1}^{n}(4k-1) = \\pi(2n^2 + n).\\) We want \\(2n^2 + n \\ge 2023.\\) At \\(n = 31\\) it’s \\(1953,\\) at \\(n = 32\\) it’s \\(2080.\\) So \\(n = 32,\\) which means \\(2n = 64\\) circles. Thus, E is the correct answer.",
+      "hints": [
+        "The shaded region between the circles of radius \\(2k\\) and \\(2k-1\\) has area \\(\\pi\\big((2k)^2 - (2k-1)^2\\big)\\) \\(= (4k-1)\\pi\\)",
+        "With \\(2n\\) circles the shaded area is \\(\\pi\\sum_{k=1}^{n}(4k-1) = \\pi(2n^2 + n);\\) solve \\(2n^2 + n \\ge 2023\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "bfe2b4dea8f4148e1e5224cb2a31985fe8b588fa4c9758cfe9a5db2dcc5715f2"
+    ],
+    "solutions": []
+  }
+}

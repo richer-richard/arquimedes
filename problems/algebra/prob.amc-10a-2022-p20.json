@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10a-2022-p20",
+  "title": "2022 AMC 10A Problem 20",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2022,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 42.1,
+    "source": 2230,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A four-term sequence is formed by adding each term of a four-term arithmetic sequence of positive integers to the corresponding term of a four-term geometric sequence of positive integers. The first three terms of the resulting four-term sequence are \\(57,\\) \\(60,\\) and \\(91.\\) What is the fourth term of this sequence?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(190\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(194\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(198\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(202\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(206\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "206"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2022-p20.live",
+      "kind": "proof-sketch",
+      "text": "Let the arithmetic sequence be \\[ a, a + d, a + 2d, a + 3d \\] and the geometric sequence be \\[ b, br, br^2, br^3. \\]\n\nThen \\[ a + b = 57 \\tag*{(1)}, \\] \\[ a + d + br = 60 \\tag*{(2)}, \\] and \\[ a + 2d + br^2 = 91 \\tag*{(3)}. \\]\n\nSubtracting \\((1)\\) from \\((2)\\) and \\((2)\\) from \\((3),\\) we get \\[ d + b(r - 1) = 3 \\] and \\[ d + br(r - 1) = 31. \\]\n\nSubtracting these, we get \\[ b(r - 1)^2 = 28. \\]\n\nLet \\(t=b(r-1)=br-b,\\) which is an integer. Then \\(t^2=28b,\\) so \\(t=14u\\) and \\(b=7u^2\\) for some nonzero integer \\(u.\\) Because \\(a=57-b>0,\\) we must have \\(u\\in\\{-2,-1,1,2\\}.\\)\n\nNow \\(r=1+\\frac{t}{b}=1+\\frac{2}{u}.\\) The cases \\(u=-1\\) and \\(u=-2\\) give \\(r=-1\\) and \\(r=0,\\) respectively, so they cannot produce a positive geometric sequence. If \\(u=2,\\) then \\(b=28, r=2, a=29,\\) and \\(d=3-t=-25,\\) making the third arithmetic term negative.\n\nTherefore \\(u=1,\\) so \\(b = 7, r = 3, a = 50,\\) and \\(d = -11.\\) The arithmetic sequence is \\[ 50,39,28,17, \\] and the geometric sequence is \\[ 7,21,63,189. \\]\n\nThe desired answer is \\(17 + 189 = 206.\\)\n\nThus, E is the correct answer.",
+      "hints": [
+        "Subtract consecutive resulting terms",
+        "Use the integer factorization of \\(b(r-1)^2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-2015-p11",
+  "title": "2015 AMC 8 Problem 11",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2015,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 13.1,
+    "source": 1100,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "In the small country of Mathland, all automobile license plates have four symbols. The first must be a vowel (A, E, I, O, or U), the second and third must be two different letters among the \\(21\\) non-vowels, and the fourth must be a digit (0 through \\(9\\)). If the symbols are chosen at random subject to these conditions, what is the probability that the plate will read “AMC8”?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( \\dfrac{1}{22{,}050} \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( \\dfrac{1}{21{,}000} \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( \\dfrac{1}{10{,}500} \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( \\dfrac{1}{2{,}100} \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( \\dfrac{1}{1{,}050} \\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1/21000"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2015-p11.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(5\\) choices for the first symbol, \\(21\\) choices for the second, \\(20\\) choices for the third because it must be a different non-vowel, and \\(10\\) choices for the final digit.\n\nThus there are \\(5\\cdot21\\cdot20\\cdot10=21{,}000\\) possible plates. Exactly one of these is AMC8, so the probability is \\(\\dfrac{1}{21{,}000}.\\)\n\nThus, B is the correct answer.",
+      "hints": [
+        "Count all license plates allowed by the rules.",
+        "Only one of those plates is exactly AMC8."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

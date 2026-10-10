@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-feb-guts-2006-p15",
+  "title": "2006 HMMT February Guts Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2006,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 73.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(Y\\) be as in problem 14. Find the maximum \\(Z\\) such that three circles of radius \\(\\sqrt{Z}\\) can simultaneously fit inside an equilateral triangle of area \\(Y\\) without overlapping each other.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2006-p15.hmmt",
+      "kind": "proof-sketch",
+      "text": "We first find that, in problem 15 , each of the circles of radius \\(\\sqrt{Z}\\) is the incircle of a \\(30^{\\circ}-60^{\\circ}-90^{\\circ}\\) triangle formed by cutting the equilateral one in half. The equilateral triangle itself has sidelength \\(\\frac{2 \\sqrt{Y}}{\\sqrt[4]{3}}\\), so the said inradius is\n\n\\[\\sqrt{Z}=\\frac{1+\\sqrt{3}-2}{2} \\cdot \\frac{1}{2} \\cdot \\frac{2 \\sqrt{Y}}{\\sqrt[4]{3}}\\]\n\nso that\n\n\\[Z=\\frac{(-1+\\sqrt{3})^{2}}{4 \\sqrt{3}} Y=\\frac{4-2 \\sqrt{3}}{4 \\sqrt{3}} Y=\\frac{2 \\sqrt{3}-3}{6} Y\\]\n\nNow we guess that \\(X=2\\) and see that, miraculously, everything works: in the problem 14 , say a crimson flower is placed first. Then there are 2 possibilities for \\(C_{-} C_{-{ }_{-}}, 4\\) for \\(C_{--} C_{--}, 2\\) for \\(C_{-{ }_{-}} C_{-}\\), and 2 for \\(C_{\\__{-}} C\\), giving a total of 10 . Of course, the first flower can be of any of the three hues, so \\(Y=3 \\cdot 10=30\\). We compute \\(Z\\) and check \\(X\\) in a straightforward manner.\nIf \\(X>2\\), then \\(Y>30\\), and \\(Z>10 \\sqrt{3}-15\\), with the result that \\(X \\leq 2\\), a contradiction. Assuming \\(X<2\\) results in a similar contradiction.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

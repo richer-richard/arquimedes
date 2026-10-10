@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-i-2015-p6",
+  "title": "2015 AIME I Problem 6",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.arc",
+      "label": "Arc",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.inscribed-angle",
+      "label": "Inscribed angle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2015,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 57.1,
+    "source": 2720,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Points \\(A,\\) \\(B,\\) \\(C,\\) \\(D,\\) and \\(E\\) are equally spaced on a minor arc of a circle. Points \\(E,\\) \\(F,\\) \\(G,\\) \\(H,\\) \\(I,\\) and \\(A\\) are equally spaced on a minor arc of a second circle with center \\(C\\) as shown in the figure below. The angle \\(\\angle ABD\\) exceeds \\(\\angle AHG\\) by \\(12^\\circ.\\) Find the degree measure of \\(\\angle BAG.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "58",
+    "value": "58"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2015-p6.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(\\alpha = \\angle ECF\\) \\(= \\angle FCG\\) \\(= \\angle GCH\\) \\(= \\angle HCI\\) \\(= \\angle ICA,\\) the common central angle of the second circle, so \\(\\angle ACE = 5\\alpha.\\) Since \\(C\\) also lies on the first circle, \\(\\angle ACE\\) is an inscribed angle there, so the arc \\(AE\\) not containing \\(C\\) measures \\(10\\alpha,\\) and each of the four equal arcs \\(AB,\\) \\(BC,\\) \\(CD,\\) \\(DE\\) measures \\(\\frac{360^\\circ - 10\\alpha}{4} = 90^\\circ - \\frac{5\\alpha}{2}.\\)\n\nAngle \\(ABD\\) subtends the arc \\(AD\\) not containing \\(B,\\) which is \\(360^\\circ - 3\\left(90^\\circ - \\frac{5\\alpha}{2}\\right),\\) so \\(\\angle ABD = 45^\\circ + \\frac{15\\alpha}{4}.\\) Angle \\(AHG\\) subtends the second circle’s arc \\(AG\\) not containing \\(H,\\) which is \\(360^\\circ - 3\\alpha,\\) so \\(\\angle AHG = 180^\\circ - \\frac{3\\alpha}{2}.\\) The given condition reads \\[ \\begin{aligned} &\\left(45^\\circ + \\frac{15\\alpha}{4}\\right) - \\left(180^\\circ - \\frac{3\\alpha}{2}\\right) \\\\ &= \\frac{21\\alpha}{4} - 135^\\circ = 12^\\circ, \\end{aligned} \\] so \\(\\alpha = 28^\\circ.\\)\n\nFinally, \\(\\angle BAE\\) subtends the first circle’s arc \\(BCDE = 3\\left(90^\\circ - \\frac{5\\alpha}{2}\\right) = 60^\\circ,\\) giving \\(\\angle BAE = 30^\\circ,\\) and \\(\\angle EAG\\) subtends the second circle’s arc \\(EFG = 2\\alpha,\\) giving \\(\\angle EAG = 28^\\circ.\\) Hence \\(\\angle BAG = \\angle BAE + \\angle EAG\\) \\(= 30^\\circ + 28^\\circ = 58^\\circ.\\)",
+      "hints": [
+        "Let \\(\\alpha\\) be the common central angle at \\(C\\) in the second circle; then \\(\\angle ACE = 5\\alpha\\) is simultaneously an inscribed angle of the first circle",
+        "Express every arc of both circles in terms of \\(\\alpha;\\) the condition \\(\\angle ABD - \\angle AHG = 12^\\circ\\) pins down \\(\\alpha\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "ad62b4fb2cee71581c0989aae7a8a66e43cc357eb11fa26871a5578371b7915b"
+    ],
+    "solutions": []
+  }
+}

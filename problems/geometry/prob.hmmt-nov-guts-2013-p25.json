@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-nov-guts-2013-p25",
+  "title": "2013 HMMT November Guts Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cartesian-coordinates",
+      "label": "Cartesian coordinates",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.linear-and-quadratic-inequalities",
+      "label": "Linear and quadratic inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.optimization-in-geometry",
+      "label": "Optimization in geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2013,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 51.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a, b\\) be positive reals with \\(a>b>\\frac{1}{2} a\\). Place two squares of side lengths \\(a, b\\) next to each other, such that the larger square has lower left corner at \\((0,0)\\) and the smaller square has lower left corner at \\((a, 0)\\). Draw the line passing through \\((0, a)\\) and \\((a+b, 0)\\). The region in the two squares lying above the line has area 2013. If \\((a, b)\\) is the unique pair maximizing \\(a+b\\), compute \\(\\frac{a}{b}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2013-p25.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\quad \\frac{5}{3}\\) Let \\(t=\\frac{a}{b} \\in(1,2)\\); we will rewrite the sum \\(a+b\\) as a function of \\(t\\). The area condition easily translates to \\(\\frac{a^{2}-a b+2 b^{2}}{2}=2013\\), or \\(b^{2}\\left(t^{2}-t+2\\right)=4026 \\Longleftrightarrow b=\\sqrt{\\frac{4026}{t^{2}-t+2}}\\). Thus \\(a+b\\) is a function \\(f(t)=(1+t) \\sqrt{\\frac{4026}{t^{2}-t+2}}\\) of \\(t\\), and our answer is simply the value of \\(t\\) maximizing \\(f\\), or equivalently \\(g(t)=\\frac{f^{2}}{4026}=\\frac{(1+t)^{2}}{t^{2}-t+2}\\), over the interval \\((1,2)\\). (In general, such maximizers/maximums need not exist, but we shall prove there's a unique maximum here.)\nWe claim that \\(\\lambda=\\frac{16}{7}\\) is the maximum of \\(\\frac{(1+t)^{2}}{t^{2}-t+2}\\). Indeed,\n\n\\[\\begin{aligned}\n\\lambda-g(t) & =\\frac{(\\lambda-1) t^{2}-(\\lambda+2) t+(2 \\lambda-1)}{t^{2}-t+2} \\\\\n& =\\frac{1}{7} \\frac{9 t^{2}-30 t+25}{t^{2}-t+2}=\\frac{1}{7} \\frac{(3 t-5)^{2}}{\\left(t-\\frac{1}{2}\\right)^{2}+\\frac{7}{4}} \\geq 0\n\\end{aligned}\\]\n\nfor all reals \\(t\\) (not just \\(t \\in(1,2)\\) ), with equality at \\(t=\\frac{5}{3} \\in(1,2)\\).\nComment. To motivate the choice of \\(\\lambda\\), suppose \\(\\lambda\\) were the maximum of \\(f\\), attained at \\(t_{0} \\in(1,2)\\); then \\(h(t)=\\lambda\\left(t^{2}-t+2\\right)-(t+1)^{2}\\) is quadratic and nonnegative on \\((1,2)\\), but zero at \\(t=t_{0}\\). If \\(g\\) is a nontrivial quadratic (nonzero leading coefficient), then \\(t_{0}\\) must be a double root, so \\(g\\) has determinant 0 . Of course, \\(g\\) could also be constant or linear over \\((1,2)\\), but we can easily rule out both of these possibilities.\nAlternatively, we can simply take a derivative of \\(f\\) to find critical points.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10a-2025-p8",
+  "title": "2025 AMC 10A Problem 8",
+  "category": "logic-foundations",
+  "subjects": [
+    "logic-foundations",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "logic.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "logic.logical-deduction",
+      "label": "Logical deduction",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2025,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 19.5,
+    "source": 1350,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Agnes writes the following four statements on a blank piece of paper.\n\n• At least one of these statements is true.\n\n• At least two of these statements are true.\n\n• At least two of these statements are false.\n\n• At least one of these statements is false.\n\nEach statement is either true or false. How many false statements did Agnes write on the paper?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2025-p8.live",
+      "kind": "proof-sketch",
+      "text": "Number them: \\((1)\\) at least one true, \\((2)\\) at least two true, \\((3)\\) at least two false, \\((4)\\) at least one false. Suppose \\((3)\\) is true. Then at least two statements are false. But then \\((1),\\) \\((2),\\) and \\((4)\\) all read as true, which leaves at most one false statement. That’s a contradiction, so \\((3)\\) must be false. Now \\((1),\\) \\((2),\\) and \\((4)\\) are all true, and each matches reality with just one false statement. So exactly \\(1\\) statement is false. Therefore, the answer is B.",
+      "hints": [
+        "Test the assumption that the third statement (“at least two are false”) is true and look for a contradiction",
+        "Then check whether exactly one false statement is fully consistent"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-algebra-2014-p2",
+  "title": "2014 HMMT February Algebra Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomial-operations",
+      "label": "Polynomial operations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2014,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 72.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find the integer closest to\n\n\\[\\frac{1}{\\sqrt[4]{5^{4}+1}-\\sqrt[4]{5^{4}-1}}\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-2014-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "250 Let \\(x=\\left(5^{4}+1\\right)^{1 / 4}\\) and \\(y=\\left(5^{4}-1\\right)^{1 / 4}\\). Note that \\(x\\) and \\(y\\) are both approximately 5. We have\n\n\\[\\begin{aligned}\n\\frac{1}{x-y} & =\\frac{(x+y)\\left(x^{2}+y^{2}\\right)}{(x-y)(x+y)\\left(x^{2}+y^{2}\\right)}=\\frac{(x+y)\\left(x^{2}+y^{2}\\right)}{x^{4}-y^{4}} \\\\\n& =\\frac{(x+y)\\left(x^{2}+y^{2}\\right)}{2} \\approx \\frac{(5+5)\\left(5^{2}+5^{2}\\right)}{2}=250\n\\end{aligned}\\]\n\nNote: To justify the \\(\\approx\\), note that \\(1=x^{4}-5^{4}\\) implies\n\n\\[0<x-5=\\frac{1}{(x+5)\\left(x^{2}+5^{2}\\right)}<\\frac{1}{(5+5)\\left(5^{2}+5^{2}\\right)}=\\frac{1}{500}\\]\n\nand similarly \\(1=5^{4}-y^{4}\\) implies\n\n\\[0<5-y=\\frac{1}{(5+y)\\left(5^{2}+y^{2}\\right)}<\\frac{1}{(4+4)\\left(4^{2}+4^{2}\\right)}=\\frac{1}{256}\\]\n\nSimilarly,\n\n\\[0<x^{2}-5^{2}=\\frac{1}{x^{2}+5^{2}}<\\frac{1}{2 \\cdot 5^{2}}=\\frac{1}{50}\\]\n\nand\n\n\\[0<5^{2}-y^{2}=\\frac{1}{5^{2}+y^{2}}<\\frac{1}{5^{2}+4.5^{2}}<\\frac{1}{45}\\]\n\nNow\n\n\\[|x+y-10|=|(x-5)-(5-y)|<\\max (|x-5|,|5-y|)<\\frac{1}{256}\\]\n\nand similarly \\(\\left|x^{2}+y^{2}-2 \\cdot 5^{2}\\right|<\\frac{1}{45}\\). It's easy to check that \\((10-1 / 256)(50-1 / 45)>499.5\\) and \\((10+1 / 256)(50+1 / 45)<500.5\\), so we're done.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

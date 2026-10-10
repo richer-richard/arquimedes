@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2014-p25",
+  "title": "2014 AMC 10B Problem 25",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.random-walk",
+      "label": "Random walk",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.recursive-probability",
+      "label": "Recursive probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2014,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 35.4,
+    "source": 2440,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "In a small pond there are eleven lily pads in a row labeled \\(0\\) through \\(10.\\) A frog is sitting on pad \\(1.\\) When the frog is on pad \\(N,\\) where \\(0 < N < 10,\\) it will jump to pad \\(N-1\\) with probability \\(\\frac{N}{10}\\) and to pad \\(N+1\\) with probability \\(1-\\frac{N}{10}.\\) Each jump is independent of the previous jumps.\n\nIf the frog reaches pad \\(0\\) it will be eaten by a patiently waiting snake. If the frog reaches pad \\(10\\) it will exit the pond, never to return. What is the probability that the frog will escape without being eaten by the snake?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( \\dfrac{32}{79} \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( \\dfrac{161}{384} \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( \\dfrac{63}{146} \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( \\dfrac{7}{16} \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( \\dfrac{1}{2} \\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "63/146"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2014-p25.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(p_i\\) be the probability that the frog eventually escapes starting from pad \\(i\\). Then \\(p_0=0\\), \\(p_{10}=1\\), and by symmetry \\(p_5=\\frac12\\).\n\nFor \\(1\\le i\\le 4\\), \\(p_i=\\frac{i}{10}p_{i-1}+\\frac{10-i}{10}p_{i+1}\\).\n\nWorking downward from \\(p_5=\\frac12\\), we get \\(p_4=\\frac25p_3+\\frac3{10}\\), then \\(p_3=\\frac3{10}p_2+\\frac7{10}p_4=\\frac5{12}p_2+\\frac7{24}\\).\n\nNext \\(p_2=\\frac15p_1+\\frac45p_3=\\frac3{10}p_1+\\frac7{20}\\). Finally \\(p_1=\\frac9{10}p_2\\).\n\nSubstituting the expression for \\(p_2\\) gives \\(p_1=\\frac9{10}\\left(\\frac3{10}p_1+\\frac7{20}\\right)\\), so \\(p_1=\\frac{63}{146}\\).\n\nThus, the correct answer is C .",
+      "hints": [
+        "Let \\(p_i\\) be the escape probability starting on pad \\(i\\)",
+        "Use symmetry at pad \\(5\\) and solve backward to \\(p_1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

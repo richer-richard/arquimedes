@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-10b-2009-p14",
+  "title": "2009 AMC 10B Problem 14",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequality",
+      "label": "Inequality",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2009,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 25.8,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "On Monday, Millie puts a quart of seeds, \\(25\\%\\) of which are millet, into a bird feeder. On each successive day she adds another quart of the same mix of seeds without removing any seeds that are left. Each day the birds eat only \\(25\\%\\) of the millet in the feeder, but they eat all of the other seeds. On which day, just after Millie has placed the seeds, will the birds find that more than half the seeds in the feeder are millet?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "Tuesday"
+    },
+    {
+      "label": "B",
+      "text": "Wednesday"
+    },
+    {
+      "label": "C",
+      "text": "Thursday"
+    },
+    {
+      "label": "D",
+      "text": "Friday"
+    },
+    {
+      "label": "E",
+      "text": "Saturday"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2009-p14.live",
+      "kind": "proof-sketch",
+      "text": "Each quart adds \\(\\dfrac14\\) quart of millet, and the birds leave \\(\\dfrac34\\) of the standing millet. On day \\(n\\) the millet present is \\[ \\begin{gathered} \\dfrac14\\left(1+\\dfrac34+\\cdots+\\Big(\\dfrac34\\Big)^{n-1}\\right) \\\\ = 1-\\Big(\\dfrac34\\Big)^{n}. \\end{gathered} \\]\n\nThe other seeds always total \\(\\dfrac34\\) quart. Millet exceeds half when \\(1-\\Big(\\dfrac34\\Big)^n\\gt\\dfrac34,\\) i.e. \\(\\Big(\\dfrac34\\Big)^n\\lt\\dfrac14.\\)\n\nSince \\(\\Big(\\dfrac34\\Big)^4=\\dfrac{81}{256}\\gt\\dfrac14\\) but \\(\\Big(\\dfrac34\\Big)^5=\\dfrac{243}{1024}\\lt\\dfrac14,\\) this first happens on day \\(5,\\) which is Friday.\n\nThus, the correct answer is D.",
+      "hints": [
+        "Each day the standing millet is multiplied by \\(\\dfrac34,\\) then \\(\\dfrac14\\) quart is added",
+        "Other seeds always total \\(\\dfrac34\\) quart; find when millet first exceeds that"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

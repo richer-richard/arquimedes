@@ -1,0 +1,94 @@
+{
+  "id": "prob.amc-10a-2024-p14",
+  "title": "2024 AMC 10A Problem 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.kite",
+      "label": "Kite",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.sector",
+      "label": "Sector",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.special-right-triangle",
+      "label": "Special right triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangent-line",
+      "label": "Tangent line",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2024,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 27.5,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "One side of an equilateral triangle of height \\(24\\) lies on line \\(\\ell.\\) A circle of radius \\(12\\) is tangent to \\(\\ell\\) and is externally tangent to the triangle. The area of the region exterior to the triangle and the circle and bounded by the triangle, the circle, and line \\(\\ell\\) can be written as \\(a\\sqrt{b} - c\\pi,\\) where \\(a,\\) \\(b,\\) and \\(c\\) are positive integers and \\(b\\) is not divisible by the square of any prime. What is \\(a + b + c?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(72\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(73\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(74\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(75\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(76\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "75"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2024-p14.live",
+      "kind": "proof-sketch",
+      "text": "The equilateral triangle has side \\(16\\sqrt3.\\) Put \\(\\ell\\) on the \\(x\\)-axis with base vertex \\(V = (16\\sqrt3, 0)\\); the slanted side lies on \\(\\sqrt3\\,x + y = 48.\\) The circle sits on \\(\\ell,\\) has radius \\(12,\\) and touches that side externally, so its center is \\(O = (20\\sqrt3, 12).\\) Let \\(T = (20\\sqrt3, 0)\\) be its tangency point on \\(\\ell,\\) and let \\(P\\) be the tangency point on the slanted side. The two tangent lengths from \\(V\\) satisfy \\(VT = VP = 4\\sqrt3,\\) so kite \\(VTOP\\) has area \\(4\\sqrt3 \\cdot 12 = 48\\sqrt3.\\) The angle at \\(V\\) is \\(120^\\circ,\\) so the removed sector has angle \\(60^\\circ\\) and area \\(\\tfrac16 \\pi (12)^2 = 24\\pi.\\) The region has area \\(48\\sqrt3 - 24\\pi,\\) giving \\(a + b + c = 48 + 3 + 24 = 75.\\) Therefore, the answer is D.",
+      "hints": [
+        "Height \\(24\\) gives side \\(16\\sqrt3;\\) put \\(\\ell\\) on the \\(x\\)-axis, so the circle’s center is at height \\(12\\)",
+        "From the triangle’s base vertex the region is bounded by two tangents to the circle and the arc between them; use the tangent length and a \\(60^\\circ\\) sector"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

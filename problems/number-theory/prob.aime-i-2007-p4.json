@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-i-2007-p4",
+  "title": "2007 AIME I Problem 4",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.least-common-multiple",
+      "label": "Least common multiple",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.relative-speed",
+      "label": "Relative speed",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2007,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 42.1,
+    "source": 2230,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Three planets revolve about a star in coplanar circular orbits with the star at the center. All planets revolve in the same direction, each at a constant speed, and the periods of their orbits are \\(60,\\) \\(84,\\) and \\(140\\) years. The positions of the star and all three planets are currently collinear. They will next be collinear after \\(n\\) years. Find \\(n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "105",
+    "value": "105"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2007-p4.live",
+      "kind": "proof-sketch",
+      "text": "All four bodies lie on one line exactly when every pair of planets is collinear with the star, i.e. when each pair’s angular positions differ by a multiple of \\(180^\\circ\\) — half a revolution. In \\(n\\) years the planets complete \\(\\frac{n}{60},\\) \\(\\frac{n}{84},\\) and \\(\\frac{n}{140}\\) revolutions, so the pairwise differences are \\[\\begin{aligned} &\\frac{n}{60} - \\frac{n}{84} = \\frac{n}{210}, \\\\ &\\frac{n}{84} - \\frac{n}{140} = \\frac{n}{210}, \\\\ &\\frac{n}{60} - \\frac{n}{140} = \\frac{n}{105}. \\end{aligned}\\]\n\nWe need \\(\\frac{n}{210}\\) and \\(\\frac{n}{105}\\) to be multiples of \\(\\frac{1}{2}.\\) The first requires \\(n\\) to be a multiple of \\(105,\\) and any such \\(n\\) makes \\(\\frac{n}{105}\\) an integer. The smallest positive choice is \\(n = 105.\\)",
+      "hints": [
+        "All four bodies are collinear exactly when each pair of planets has revolution counts differing by a multiple of \\(\\frac{1}{2}\\)",
+        "Two of the pairwise gaps grow at \\(\\frac{1}{210}\\) revolution per year and the third twice as fast; make every gap a multiple of \\(\\frac{1}{2}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

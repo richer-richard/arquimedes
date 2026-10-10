@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2002-p14",
+  "title": "2002 AIME I Problem 14",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.extremal-argument",
+      "label": "Extremal argument",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.mean",
+      "label": "Mean",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2002,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 59.8,
+    "source": 2920,
+    "mohs": null
+  },
+  "estimatedMinutes": 17,
+  "statement": "A set \\(\\mathcal{S}\\) of distinct positive integers has the following property: for every integer \\(x\\) in \\(\\mathcal{S},\\) the arithmetic mean of the set of values obtained by deleting \\(x\\) from \\(\\mathcal{S}\\) is an integer. Given that \\(1\\) belongs to \\(\\mathcal{S}\\) and that \\(2002\\) is the largest element of \\(\\mathcal{S},\\) what is the greatest number of elements that \\(\\mathcal{S}\\) can have?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "30",
+    "value": "30"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2002-p14.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(\\mathcal{S}\\) have \\(n\\) elements with sum \\(S.\\) The condition says \\(\\frac{S - x}{n - 1}\\) is an integer for every \\(x \\in \\mathcal{S},\\) which means every element is congruent to \\(S\\) modulo \\(n - 1.\\) In particular all elements are congruent to each other, and since \\(1 \\in \\mathcal{S},\\) every element is \\(1\\) more than a multiple of \\(n - 1.\\)\n\nThen \\(2002 \\equiv 1 \\pmod{n - 1},\\) so \\(n - 1\\) divides \\(2001 = 3 \\cdot 23 \\cdot 29.\\) Moreover the \\(n\\) distinct elements run from \\(1\\) up to \\(2002\\) in steps that are multiples of \\(n - 1,\\) so \\(2002 \\ge 1 + (n - 1)^2,\\) forcing \\(n - 1 \\le 44.\\) The largest divisor of \\(2001\\) that is at most \\(44\\) is \\(29,\\) so \\(n \\le 30.\\)\n\nThirty is attainable: take the \\(29\\) numbers \\(1, 30, 59, \\ldots, 813\\) together with \\(2002.\\) All are \\(\\equiv 1 \\pmod{29},\\) and the sum of all \\(30\\) is \\(\\equiv 30 \\equiv 1 \\pmod{29},\\) so every deleted mean is an integer. The answer is \\(30.\\)",
+      "hints": [
+        "If \\(S\\) is the sum and \\(n\\) the size, every \\(\\frac{S - x}{n - 1}\\) is an integer, so all elements are congruent mod \\(n - 1\\)",
+        "With \\(1\\) and \\(2002\\) in the set, \\(n - 1\\) divides \\(2001,\\) and \\(n\\) distinct such elements force \\((n - 1)^2 + 1 \\le 2002\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

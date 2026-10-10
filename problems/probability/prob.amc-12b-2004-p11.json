@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2004-p11",
+  "title": "2004 AMC 12B Problem 11",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.mean",
+      "label": "Mean",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2004,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 23.2,
+    "source": 1440,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "All the students in an algebra class took a \\(100\\)-point test. Five students scored \\(100,\\) each student scored at least \\(60,\\) and the mean score was \\(76.\\) What is the smallest possible number of students in the class?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(11\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(13\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(14\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "13"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2004-p11.live",
+      "kind": "proof-sketch",
+      "text": "Each score of \\(100\\) is \\(24\\) above the mean, so the five contribute \\(120\\) points above \\(76.\\) These must be balanced by points below the mean, and each remaining student is at most \\(76 - 60 = 16\\) below. So at least \\(\\dfrac{120}{16} = 7.5,\\) hence \\(8\\) more students are needed, for a total of \\(13.\\) Five \\(100\\)s and eight \\(61\\)s achieve this.\n\nThus, the correct answer is D.",
+      "hints": [
+        "Measure each score as its deviation from the mean \\(76\\)",
+        "The five \\(100\\)s are \\(120\\) points above the mean; each other student is at most \\(16\\) below it"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

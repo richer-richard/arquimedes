@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-guts-2010-p32",
+  "title": "2010 HMMT November Guts Problem 32",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2010,
+    "number": 32
+  },
+  "difficulty": {
+    "course": 58.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(T\\) be the set of numbers of the form \\(2^{a} 3^{b}\\) where \\(a\\) and \\(b\\) are integers satisfying \\(0 \\leq a, b \\leq 5\\). How many subsets \\(S\\) of \\(T\\) have the property that if \\(n\\) is in \\(S\\) then all positive integer divisors of \\(n\\) are in \\(S\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2010-p32.hmmt",
+      "kind": "proof-sketch",
+      "text": "924 Consider the correspondence \\((a, b) \\leftrightarrow 2^{a} 3^{b}\\) for non-negative integers \\(a\\) and \\(b\\). So we can view \\(T\\) as the square of lattice points \\((a, b)\\) where \\(0 \\leq a, b \\leq 5\\), and subsets of \\(T\\) as subsets of this square.\n\nNotice then that the integer corresponding to \\(\\left(a_{1}, b_{1}\\right)\\) is a divisor of the integer corresponding to \\(\\left(a_{2}, b_{2}\\right)\\) if and only if \\(0 \\leq a_{1} \\leq a_{1}\\) and \\(0 \\leq b_{1} \\leq b_{2}\\). This means that subsets \\(S \\subset T\\) with the desired property,\ncorrespond to subsets of the square where if a point is in the set, then so are all points to the left and south of it.\nConsider any such subset \\(S\\). For each \\(0 \\leq x \\leq 5\\), let \\(S_{x}\\) be the maximum \\(y\\) value of any point \\((x, y) \\in S\\), or -1 if there is no such point. We claim the values \\(S_{x}\\) uniquely characterize \\(S\\). This is because each \\(S_{x}\\) characterizes the points of the form \\((x, y)\\) in \\(S\\). In particular, \\((x, z)\\) will be in \\(S\\) if and only if \\(z \\leq S_{x}\\). If \\((x, z) \\in S\\) with \\(z>S_{x}\\), then \\(S_{x}\\) is not the maximum value, and if \\((x, z) \\notin S\\) with \\(z \\leq S_{x}\\), then \\(S\\) fails to satisfy the desired property.\nWe now claim that \\(S_{x} \\geq S_{y}\\) for \\(x<y\\), so the sequence \\(S_{0}, \\ldots, S_{1}\\) is decreasing. This is because if \\(\\left(y, S_{y}\\right)\\) is in the set \\(S\\), then so must be \\(\\left(x, S_{y}\\right)\\). Conversely, it is easy to see that if \\(S_{0}, \\ldots, S_{1}\\) is decreasing, then \\(S\\) is a set satisfying the desired property.\n\nWe now claim that decreasing sequences \\(S_{0}, \\ldots, S_{5}\\) are in bijective correspondence with walks going only right and down from \\((-1,5)\\) to \\((5,-1)\\). The sequence \\(S_{0}, \\ldots, S_{5}\\) simply corresponds to the walk \\((-1,5) \\rightarrow\\left(-1, S_{0}\\right) \\rightarrow\\left(0, S_{0}\\right) \\rightarrow\\left(0, S_{1}\\right) \\rightarrow\\left(1, S_{1}\\right) \\rightarrow \\cdots \\rightarrow\\left(4, S_{5}\\right) \\rightarrow\\left(5, S_{5}\\right) \\rightarrow(5,-1)\\). Geometrically, we are tracing out the outline of the set \\(S\\).\nThe number of such walks is simply \\(\\binom{12}{6}\\), since we can view it as choosing the 6 of 12 steps at which to move right. Thus the number of subsets \\(S\\) of \\(T\\) with the desired property is \\(\\binom{12}{6}=924\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

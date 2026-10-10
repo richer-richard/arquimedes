@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2015-p8",
+  "title": "2015 AIME II Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequality",
+      "label": "Inequality",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.simons-favorite-factoring-trick",
+      "label": "Simon’s Favorite Factoring Trick",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.small-cases",
+      "label": "Small cases",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2015,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 55.1,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 9,
+  "statement": "Let \\(a\\) and \\(b\\) be positive integers satisfying \\(\\frac{ab + 1}{a + b} \\lt \\frac{3}{2}.\\) The maximum possible value of \\(\\frac{a^3 b^3 + 1}{a^3 + b^3}\\) is \\(\\frac{p}{q},\\) where \\(p\\) and \\(q\\) are relatively prime positive integers. Find \\(p + q.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "36",
+    "value": "36"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2015-p8.live",
+      "kind": "proof-sketch",
+      "text": "If \\(a = 1\\) or \\(b = 1,\\) then \\(\\frac{a^3b^3 + 1}{a^3 + b^3} = 1.\\) So assume \\(a, b \\ge 2.\\) Clearing denominators, the hypothesis says \\(2ab + 2 \\lt 3a + 3b,\\) and multiplying by \\(2\\) and rearranging gives \\[ \\begin{aligned} &(2a - 3)(2b - 3) \\\\ &= 4ab - 6a - 6b + 9 \\lt 5. \\end{aligned} \\]\n\nFor \\(a, b \\ge 2\\) both factors are positive odd integers, so up to symmetry the only options are \\((a, b) = (2, 2)\\) and \\((2, 3)\\) (both of which do satisfy the original inequality, while \\((3, 3)\\) gives the product \\(9\\)).\n\nThe values are \\(\\frac{65}{16}\\) for \\((2, 2)\\) and \\(\\frac{8 \\cdot 27 + 1}{8 + 27} = \\frac{217}{35} = \\frac{31}{5}\\) for \\((2, 3).\\) The larger is \\(\\frac{31}{5},\\) so \\(p + q = 31 + 5 = 36.\\)",
+      "hints": [
+        "If \\(a = 1\\) or \\(b = 1\\) the second expression equals \\(1.\\) Otherwise clear denominators and rearrange the inequality into a product of two factors.",
+        "For \\(a, b \\ge 2\\) the condition becomes \\((2a - 3)(2b - 3) \\lt 5,\\) leaving only \\((2, 2)\\) and \\((2, 3)\\) up to symmetry"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

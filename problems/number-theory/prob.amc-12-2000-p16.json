@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12-2000-p16",
+  "title": "2000 AMC 12 Problem 16",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.systematic-listing",
+      "label": "Systematic listing",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12",
+    "year": 2000,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 30.3,
+    "source": 1770,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A checkerboard of \\(13\\) rows and \\(17\\) columns has a number written in each square, beginning in the upper left corner, so that the first row is numbered \\(1,\\) \\(2,\\) \\(\\ldots,\\) \\(17,\\) the second row \\(18,\\) \\(19,\\) \\(\\ldots,\\) \\(34,\\) and so on down the board. If the board is renumbered so that the left column, top to bottom, is \\(1,\\) \\(2,\\) \\(\\ldots,\\) \\(13,\\) the second column \\(14,\\) \\(15,\\) \\(\\ldots,\\) \\(26\\) and so on across the board, some squares have the same numbers in both numbering systems. Find the sum of the numbers in these squares (under either system).",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(222\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(333\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(444\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(555\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(666\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "555"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12-2000-p16.live",
+      "kind": "proof-sketch",
+      "text": "The square \\((m, n)\\) is numbered \\(17(m - 1) + n\\) originally and \\(13(n - 1) + m\\) after renumbering. Setting these equal gives \\[ 4m - 3n = 1. \\]\n\nThe solutions with \\(1 \\le m \\le 13\\) and \\(1 \\le n \\le 17\\) are \\((1, 1),\\) \\((4, 5),\\) \\((7, 9),\\) \\((10, 13),\\) and \\((13, 17).\\)\n\nThese squares hold the numbers \\(1, 56, 111, 166,\\) and \\(221,\\) whose sum is \\(555.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "The square in row \\(m,\\) column \\(n\\) is numbered \\(17(m - 1) + n\\) originally and \\(13(n - 1) + m\\) after",
+        "Setting the two expressions equal gives \\(4m - 3n = 1\\); find all valid \\((m, n)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

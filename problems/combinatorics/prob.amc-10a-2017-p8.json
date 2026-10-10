@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-10a-2017-p8",
+  "title": "2017 AMC 10A Problem 8",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.counting-pairs",
+      "label": "Counting pairs",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2017,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 17.2,
+    "source": 1020,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "At a gathering of \\(30\\) people, there are \\(20\\) people who all know each other and \\(10\\) people who know no one. People who know each other hug, and people who do not know each other shake hands. How many handshakes occur?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(240\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(245\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(290\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(480\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(490\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "245"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2017-p8.live",
+      "kind": "proof-sketch",
+      "text": "Each of the \\(10\\) people shake hands with each of the \\(20\\) people. This results in \\(10 \\cdot 20 = 200\\) handshakes.\n\nThere are also \\(\\binom{10}{2} = 45\\) handshakes within the \\(10\\) people (every pair of people shake hands).\n\nTherefore, the total number of handshakes is \\(200 + 45 = 245.\\)\n\nThus, B is the correct answer.",
+      "hints": [
+        "Count handshakes involving the ten people who know no one",
+        "Avoid double-counting by thinking in pairs"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

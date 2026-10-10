@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2023-p10",
+  "title": "2023 HMMT February Combinatorics Problem 10",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.algebraic-properties-of-binomial-coefficients",
+      "label": "Algebraic properties of binomial coefficients",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2023,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 90.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(x_{0}=x_{101}=0\\). The numbers \\(x_{1}, x_{2}, \\ldots, x_{100}\\) are chosen at random from the interval \\([0,1]\\) uniformly and independently. Compute the probability that \\(2 x_{i} \\geq x_{i-1}+x_{i+1}\\) for all \\(i=1,2, \\ldots\\), 100.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{1}{100 \\cdot 100!^{2}}\\binom{200}{99}",
+    "value": "\\frac{1}{100 \\cdot 100!^{2}}\\binom{200}{99}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2023-p10.hmmt",
+      "kind": "proof-sketch",
+      "text": "We solve for general \\(n\\) where \\(n=100\\) in the problem. Notice that the points \\(\\left(i, A_{i}\\right)\\) must form a convex hull, so there is some unique maximal element \\(A_{i}\\). Consider the \\(i-1\\) points \\(A_{1}, \\ldots, A_{i-1}\\) left of \\(i\\), and the \\(i\\) slopes formed between these points of segments \\(\\overline{A_{0} A_{1}}, \\ldots, \\overline{A_{i-1} A_{i}}\\). Notice that we must choose the \\(i-1\\) points to be decreasing. Ignoring cases where they have some shared \\(y\\)-coordinates since this happens with probability 0 , we have a \\(\\frac{1}{(i-1)!}\\) chance of picking them in ascending order. Now, we order the differences\n\n\\[\\left\\{A_{1}-A_{0}, A_{2}-A_{1}, \\ldots, A_{i}-A_{i-1}\\right\\}\\]\n\nin descending order, obtaining some new list\n\n\\[\\left\\{d_{1}, d_{2}, \\ldots, d_{i}\\right\\}\\]\n\nand redefining \\(A_{k}=\\sum_{j=1}^{k} d_{j}\\). Notice that this procedure almost surely maps \\((i-1)!i\\) ! possible sequences of points \\(A_{1}, A_{2}, \\ldots, A_{i-1}\\) to a valid convex hull, so the chance that the points left of \\(A_{i}\\) are valid is \\(\\frac{1}{(i-1)!i!}\\). Similarly, the chance that the points on the right work is given by \\(\\frac{1}{(n+1-i)!(n-i)!}\\). So, for a maximum value at \\(A_{i}\\) the chance that we get a valid convex hull is \\(\\frac{1}{(i-1)!!!(n+1-i)!(n-i)!}\\).\nTo finish, note that each point is equally likely to be the peak. Our answer is\n\n\\[\\begin{aligned}\n& \\frac{1}{n} \\sum_{i=1}^{n} \\frac{1}{(i-1)!i!(n+1-i)!(n-i)!} \\\\\n& =\\frac{1}{n \\cdot n!^{2}} \\sum_{i=1}^{n} \\frac{n!^{2}}{(i-1)!i!(n+1-i)!(n-i)!} \\\\\n& =\\frac{1}{n \\cdot n!^{2}} \\sum_{i=1}^{n}\\binom{n}{i-1}\\binom{n}{n-i}= \\\\\n& =\\frac{1}{n \\cdot n!^{2}}\\binom{2 n}{n-1}\n\\end{aligned}\\]\n\nPlugging in \\(n=100\\) gives the desired answer.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

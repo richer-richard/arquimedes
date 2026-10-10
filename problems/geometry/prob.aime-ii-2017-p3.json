@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2017-p3",
+  "title": "2017 AIME2 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.geometric-probability",
+      "label": "Geometric probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.perpendicular-bisector",
+      "label": "Perpendicular bisector",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2017,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 48.9,
+    "source": 2230,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "A triangle has vertices \\(A(0, 0),\\) \\(B(12, 0),\\) and \\(C(8, 10).\\) The probability that a randomly chosen point inside the triangle is closer to vertex \\(B\\) than to either vertex \\(A\\) or vertex \\(C\\) can be written as \\(\\frac{p}{q},\\) where \\(p\\) and \\(q\\) are relatively prime positive integers. Find \\(p + q.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "409",
+    "value": "409"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2017-p3.live",
+      "kind": "proof-sketch",
+      "text": "The points closer to \\(B\\) than to \\(A\\) lie to the right of the perpendicular bisector of \\(\\overline{AB},\\) the line \\(x = 6.\\) The points closer to \\(B\\) than to \\(C\\) lie below the perpendicular bisector of \\(\\overline{BC},\\) which passes through the midpoint \\((10, 5)\\) with slope \\(\\frac{2}{5}\\) (the negative reciprocal of the slope \\(-\\frac{5}{2}\\) of \\(BC\\)): the line \\(y = \\frac{2}{5}x + 1.\\)\n\nInside the triangle, the favorable region is the quadrilateral with vertices \\((6, 0),\\) \\(B(12, 0),\\) the midpoint \\((10, 5)\\) of \\(\\overline{BC},\\) and \\(\\left(6, \\frac{17}{5}\\right),\\) where the two bisectors meet. Splitting it along the segment from \\((6, 0)\\) to \\((10, 5),\\) its area is \\[ \\begin{aligned} &\\frac{1}{2} \\cdot \\frac{17}{5} \\cdot 4 + \\frac{1}{2} \\cdot 6 \\cdot 5 \\\\ &= \\frac{34}{5} + 15 \\\\ &= \\frac{109}{5}. \\end{aligned} \\]\n\nThe triangle has area \\(\\frac{1}{2} \\cdot 12 \\cdot 10 = 60,\\) so the probability is \\(\\frac{\\frac{109}{5}}{60} = \\frac{109}{300},\\) and \\(p + q = 109 + 300 = 409.\\)",
+      "hints": [
+        "The points closer to \\(B\\) than to \\(A\\) lie on one side of the perpendicular bisector of \\(\\overline{AB};\\) likewise for \\(C\\)",
+        "The bisectors are \\(x = 6\\) and \\(y = \\frac{2}{5}x + 1;\\) find the area of the quadrilateral they cut off near \\(B\\) and divide by \\(60\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

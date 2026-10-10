@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2010-p24",
+  "title": "2010 AMC 12A Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.symmetry",
+      "label": "Symmetry",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2010,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 40.3,
+    "source": 2460,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Let \\[ \\begin{gathered} f(x)=\\log_{10}\\big(\\sin(\\pi x) \\\\ {}\\cdot\\sin(2\\pi x)\\cdot\\sin(3\\pi x) \\\\ {}\\cdot\\sin(4\\pi x)\\cdot\\sin(5\\pi x) \\\\ {}\\cdot\\sin(6\\pi x)\\cdot\\sin(7\\pi x) \\\\ {}\\cdot\\sin(8\\pi x)\\big). \\end{gathered} \\] The intersection of the domain of \\(f(x)\\) with the interval \\([0,1]\\) is a union of \\(n\\) disjoint open intervals. What is \\(n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(22\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(36\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "12"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2010-p24.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(g(x)=\\prod_{k=1}^8\\sin(k\\pi x);\\) the domain of \\(f\\) is where \\(g(x)\\gt0.\\) Since \\(\\sin(k\\pi(1-x))\\) \\(=(-1)^{k+1}\\sin(k\\pi x)\\) and \\(\\sum_{k=1}^8(k+1)\\) is even, \\(g(1-x)=g(x),\\) so it suffices to study \\(\\big(0,\\tfrac12\\big)\\) and double.\n\nIn \\(\\big(0,\\tfrac12\\big)\\) the zeros of \\(g\\) are the fractions \\(\\tfrac{k}{n}\\) with \\(2\\le n\\le8,\\) \\(1\\le k\\lt\\tfrac n2,\\) and \\(\\gcd(k,n)=1.\\) For \\(n=2,\\ldots,8\\) there are \\(0,1,1,2,1,3,2\\) of them, totaling \\(10.\\)\n\nThese \\(10\\) zeros split \\(\\big(0,\\tfrac12\\big)\\) into \\(11\\) subintervals on which \\(g\\) has constant sign. Near \\(0\\) every factor is positive, so \\(g\\gt0\\) there, and the sign flips at each zero except \\(\\tfrac14=\\tfrac28\\) and \\(\\tfrac13=\\tfrac26,\\) where an even number of factors vanish.\n\nTracking the signs, exactly \\(6\\) of the \\(11\\) subintervals have \\(g\\gt0.\\) By symmetry there are \\(6\\) more in \\(\\big(\\tfrac12,1\\big),\\) so \\(n=12.\\)\n\nThus, B is the correct answer.",
+      "hints": [
+        "The domain is where \\(g(x)=\\prod_{k=1}^8\\sin(k\\pi x)\\gt0;\\) \\(g\\) is symmetric about \\(x=\\tfrac12\\)",
+        "Count the zeros \\(\\tfrac{k}{n}\\) in \\(\\big(0,\\tfrac12\\big)\\) and note the sign fails to flip at \\(\\tfrac14\\) and \\(\\tfrac13\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

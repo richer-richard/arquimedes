@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2003-p1",
+  "title": "2003 IMO Problem 1",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2003,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 84.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A\\) be a \\(101\\)-element subset of \\(S=\\{1,2,\\dots,10^6\\}\\).\nProve that there exist numbers \\(t_1\\), \\(t_2, \\dots, t_{100}\\) in \\(S\\) such that the sets\n\\[ A_j=\\{x+t_j\\mid x\\in A\\},\\qquad j=1,2,\\dots,100 \\]\nare pairwise disjoint.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2003-p1.evanchen",
+      "kind": "proof-sketch",
+      "text": "A greedy algorithm works: suppose we have picked\n\\[ T = \\left\\{ t_1, \\dots, t_n \\right\\} \\]\nas large as possible, meaning it's impossible to add any more elements to \\(T\\).\nThat means, for each \\(t \\in \\left\\{ 1, \\dots, 10^6 \\right\\}\\) either \\(t \\in T\\) already\nor there exists two distinct elements \\(a, b \\in A\\) and \\(t_i \\in T\\) such that\n\\[ t = t_i + b - a \\qquad (\\star). \\]\n\nThere are at most\n\\(|T| \\cdot |A| \\cdot \\left( |A|-1 \\right) = n \\cdot 101 \\cdot 100\\)\npossible values for the right-hand side of \\((\\star)\\).\nSo we therefore must have\n\\[ 101 \\cdot 100 \\cdot n + n \\ge 10^6 \\]\nwhich implies \\(n > 99\\), as desired.\n\nRemark.\n It is possible to improve the bound significantly with a small optimization;\n rather than adding any \\(t\\), we require that \\(t_1 < \\dots < t_n\\)\n and that at each step we add the least \\(t \\in S\\) which is permitted.\n In that case, one finds we only need to consider \\(b > a\\) in \\((\\star)\\),\n and so this will save us a factor of \\(2+o(1)\\)\n as the main term \\(101 \\cdot 100\\) becomes \\(\\binom{101}{2}\\) instead.\n This proves it's possible to choose \\(198\\) elements.\n\n See, e.g., for such a write-up.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

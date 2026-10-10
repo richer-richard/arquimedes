@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2012-p13",
+  "title": "2012 AMC 12B Problem 13",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.dice-probability",
+      "label": "Dice (probability)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2012,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 27.3,
+    "source": 1590,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Two parabolas have equations \\(y = x^2 + ax + b\\) and \\(y = x^2 + cx + d,\\) where \\(a,\\) \\(b,\\) \\(c,\\) and \\(d\\) are integers (not necessarily different), each chosen independently by rolling a fair six-sided die. What is the probability that the parabolas have at least one point in common?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{25}{36}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{5}{6}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{31}{36}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(1\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "31/36"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2012-p13.live",
+      "kind": "proof-sketch",
+      "text": "The parabolas meet where \\(x^2+ax+b=x^2+cx+d,\\) i.e. \\(ax+b=cx+d.\\) This has no solution exactly when the lines are parallel and distinct: \\(a=c\\) and \\(b\\neq d.\\)\n\nThe probability that \\(a=c\\) is \\(\\tfrac16,\\) and the probability that \\(b\\neq d\\) is \\(\\tfrac56,\\) so the probability of no common point is \\(\\tfrac16\\cdot\\tfrac56=\\tfrac5{36}.\\)\n\nThe probability of at least one common point is \\(1-\\tfrac5{36}=\\tfrac{31}{36}.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Setting the two right sides equal, the \\(x^2\\) terms cancel, leaving \\(ax+b=cx+d\\)",
+        "There is no common point exactly when \\(a=c\\) and \\(b\\neq d;\\) find that probability and subtract from \\(1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

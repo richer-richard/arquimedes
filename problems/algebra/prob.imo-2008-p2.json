@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2008-p2",
+  "title": "2008 IMO Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2008,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 93.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(x\\), \\(y\\), \\(z\\) be real numbers with \\(xyz = 1\\), all different from \\(1\\).\nProve that\n\\[ \\frac{x^2}{(x-1)^2} + \\frac{y^2}{(y-1)^2} + \\frac{z^2}{(z-1)^2} \\ge 1 \\]\nand show that equality holds for infinitely many choices\nof rational numbers \\(x\\), \\(y\\), \\(z\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2008-p2.evanchen",
+      "kind": "proof-sketch",
+      "text": "Let \\(x=a/b\\), \\(y=b/c\\), \\(z=c/a\\), so we want to show\n\\[ \\left(\\frac{a}{a-b}\\right)^2+\\left(\\frac{b}{b-c}\\right)^2\n +\\left(\\frac{c}{c-a}\\right)^2\\ge 1.\\]\nA boring computation shows this is equivalent to\n\\[ \\frac{(a^2b+b^2c+c^2a-3abc)^2}{(a-b)^2(b-c)^2(c-a)^2} \\ge 0 \\]\nwhich proves the inequality\n(and it is unsurprising we are in such a situation,\ngiven that there is an infinite curve of rationals).\n\nFor equality, it suffices to show there are infinitely many integer solutions to\n\\[ a^2b+b^2c+c^2a=3abc \\iff \\frac ac + \\frac ba + \\frac cb = 3 \\]\nor equivalently that there are infinitely many rational solutions to\n\\[ u + v + \\frac{1}{uv} = 3. \\]\nFor any \\(0 \\neq u \\in \\mathbb{Q}\\) the real solution for \\(u\\) is\n\\[ v = \\frac{-u + (u-1)\\sqrt{1-4/u} + 3}{2} \\]\nand there are certainly infinitely many rational numbers \\(u\\)\nfor which \\(1-4/u\\) is a rational square\n(say, \\(u = \\frac{-4}{q^2-1}\\) for \\(q \\neq \\pm 1\\) a rational number).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

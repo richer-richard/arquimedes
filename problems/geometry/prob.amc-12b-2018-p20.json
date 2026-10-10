@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12b-2018-p20",
+  "title": "2018 AMC 12B Problem 20",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.regular-polygon",
+      "label": "Regular polygon",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2018,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 43.1,
+    "source": 2270,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(ABCDEF\\) be a regular hexagon with side length \\(1.\\) Denote by \\(X,\\) \\(Y,\\) and \\(Z\\) the midpoints of sides \\(AB,\\) \\(CD,\\) and \\(EF,\\) respectively. What is the area of the convex hexagon whose interior is the intersection of the interiors of \\(\\triangle ACE\\) and \\(\\triangle XYZ?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{3}{8}\\sqrt{3}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{7}{16}\\sqrt{3}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{15}{32}\\sqrt{3}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{1}{2}\\sqrt{3}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{9}{16}\\sqrt{3}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2018-p20.live",
+      "kind": "proof-sketch",
+      "text": "Place the regular hexagon on the unit circle with \\(A=(1,0),\\) \\(C=(-\\tfrac12,\\tfrac{\\sqrt3}{2}),\\) and \\(E=(-\\tfrac12,-\\tfrac{\\sqrt3}{2}).\\) The three specified midpoints are \\(X=(\\tfrac34,\\tfrac{\\sqrt3}{4}),\\) \\(Y=(-\\tfrac34,\\tfrac{\\sqrt3}{4}),\\) and \\(Z=(0,-\\tfrac{\\sqrt3}{2}).\\)\n\nIntersecting the side lines of \\(\\triangle ACE\\) and \\(\\triangle XYZ\\) gives the six vertices of their common interior, in cyclic order: \\[ \\begin{gathered} (-\\tfrac12,0),\\quad (-\\tfrac18,-\\tfrac{3\\sqrt3}{8}),\\\\ (\\tfrac14,-\\tfrac{\\sqrt3}{4}),\\quad (\\tfrac58,\\tfrac{\\sqrt3}{8}),\\\\ (\\tfrac14,\\tfrac{\\sqrt3}{4}),\\quad (-\\tfrac12,\\tfrac{\\sqrt3}{4}). \\end{gathered} \\] The shoelace formula applied to these vertices gives area \\(\\dfrac{15\\sqrt3}{32}.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Put the regular hexagon on the unit circle and write coordinates for \\(A,C,E\\) and the three midpoints",
+        "Intersect the side lines of the two equilateral triangles to find the six vertices, then use shoelace"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

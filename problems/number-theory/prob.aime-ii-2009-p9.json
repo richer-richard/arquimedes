@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2009-p9",
+  "title": "2009 AIME II Problem 9",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.bijection",
+      "label": "Bijection",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2009,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 57.7,
+    "source": 2840,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "Let \\(m\\) be the number of solutions in positive integers to the equation \\(4x + 3y + 2z = 2009,\\) and let \\(n\\) be the number of solutions in positive integers to the equation \\(4x + 3y + 2z = 2000.\\) Find the remainder when \\(m - n\\) is divided by \\(1000.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "0",
+    "value": "0"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2009-p9.live",
+      "kind": "proof-sketch",
+      "text": "If \\((x, y, z)\\) is a positive solution of \\(4x + 3y + 2z = 2009,\\) then \\((x - 1, y - 1, z - 1)\\) is a nonnegative solution of \\(4x + 3y + 2z = 2000,\\) and conversely, since \\(4 + 3 + 2 = 9.\\) So \\(m\\) equals the number of nonnegative solutions of \\(4x + 3y + 2z = 2000,\\) and \\(m - n\\) counts the nonnegative solutions of that equation in which at least one variable is \\(0.\\)\n\nIf \\(x = 0:\\) \\(3y + 2z = 2000\\) forces \\(y\\) even, \\(0 \\le y \\le 666,\\) giving \\(334\\) solutions. If \\(y = 0:\\) \\(2x + z = 1000\\) with \\(0 \\le x \\le 500\\) gives \\(501.\\) If \\(z = 0:\\) \\(4x + 3y = 2000\\) forces \\(y \\equiv 0 \\pmod 4,\\) \\(0 \\le y \\le 664,\\) giving \\(167.\\) The solutions \\((0, 0, 1000)\\) and \\((500, 0, 0)\\) are each counted twice, so \\[ \\begin{aligned} m - n &= 334 + 501 + 167 - 2 \\\\ &= 1000. \\end{aligned} \\]\n\nThe remainder upon division by \\(1000\\) is \\(0.\\)",
+      "hints": [
+        "Subtracting \\(1\\) from each variable matches positive solutions of the \\(2009\\) equation with nonnegative solutions of the \\(2000\\) equation, since \\(4 + 3 + 2 = 9\\)",
+        "So \\(m - n\\) counts nonnegative solutions of \\(4x + 3y + 2z = 2000\\) in which some variable is \\(0.\\) Count the three cases and correct for double counting."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

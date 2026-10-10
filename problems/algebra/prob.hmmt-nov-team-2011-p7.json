@@ -1,0 +1,78 @@
+{
+  "id": "prob.hmmt-nov-team-2011-p7",
+  "title": "2011 HMMT November Team Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.coloring",
+      "label": "Coloring",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.pigeonhole-principle",
+      "label": "Pigeonhole principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2011,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 61.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Julia is learning how to write the letter C. She has 6 differently-colored crayons, and wants to write Cc Cc Cc Cc Cc . In how many ways can she write the ten Cs , in such a way that each upper case C is a different color, each lower case C is a different color, and in each pair the upper case C and lower case C are different colors?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-team-2011-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "222480 Suppose Julia writes Cc a sixth time, coloring the upper-case C with the unique color different from that of the first five upper-case Cs, and doing the same with the lower-case C (note: we allow the sixth upper-case C and lower-case c to be the same color). Note that because the colors on the last Cc are forced, and any forced coloring of them is admissible, our problem is equivalent to coloring these six pairs.\nThere are 6! ways for Julia to color the upper-case Cs. We have two cases for coloring the lower-case Cs:\n\n- Case 1: the last pair of Cs use two different colors. In this case, all six lower-case Cs have a different color to their associated upper-case C, and in addition the six lower-case Cs all use each color exactly once. In other words, we have a derangement* of the six colors, based on the colors of the upper-case Cs. We calculate \\(D_{6}=265\\) ways to color the lower-case Cs here.\n- Case 2: the last pair of Cs have both Cs the same color. Then, the color of the last lower-case C is forced, and with the other five Cs we, in a similar way to before, have a derangement of the remaining five colors based on the colors of the first five lower-case Cs, so we have \\(D_{5}=44\\) ways to finish the coloring.\n\nOur answer is thus \\(720(265+44)=222480\\).\n*A derangement is a permutation \\(\\pi\\) of the set \\(\\{1,2, \\ldots, n\\}\\) such that \\(\\pi(k) \\neq k\\) for all \\(k\\), i.e. there are no fixed points of the permutation. To calculate \\(D_{n}\\), the number of derangements of an \\(n\\)-element set, we can use an inclusion-exclusion argument. There are \\(n\\) ! ways to permute the elements of the set. Now, we subtract the number of permutations with at least one fixed point, which is \\(\\binom{n}{1}(n-1)!=\\frac{n!}{1!}\\), since we choose a fixed point, then permute the other \\(n-1\\) elements. Correcting for overcounting, we add back the number of permutations with at least two fixed points, which is \\(\\binom{n}{2}(n-2)!=\\frac{n!}{2!}\\). Continuing in this fashion by use of the principle of inclusion-exclusion, we get\n\n\\[D_{n}=n!\\left(\\frac{1}{0!}-\\frac{1}{1!}+\\frac{1}{2!}+\\cdots+\\frac{(-1)^{n}}{n!}\\right)\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

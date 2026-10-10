@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-10-2000-p25",
+  "title": "2000 AMC 10 Problem 25",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.date-and-time",
+      "label": "Date and time",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10",
+    "year": 2000,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 32.6,
+    "source": 1860,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "In year \\(N,\\) the \\(300\\)th day of the year is a Tuesday. In year \\(N + 1,\\) the \\(200\\)th day is also a Tuesday. On what day of the week did the \\(100\\)th day of year \\(N - 1\\) occur?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "Thursday"
+    },
+    {
+      "label": "B",
+      "text": "Friday"
+    },
+    {
+      "label": "C",
+      "text": "Saturday"
+    },
+    {
+      "label": "D",
+      "text": "Sunday"
+    },
+    {
+      "label": "E",
+      "text": "Monday"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10-2000-p25.live",
+      "kind": "proof-sketch",
+      "text": "From day \\(300\\) of year \\(N\\) to day \\(200\\) of year \\(N + 1\\) is \\((L - 300) + 200\\) days, where \\(L\\) is the length of year \\(N.\\) If \\(N\\) were not a leap year, this is \\(265 \\equiv 6 \\pmod 7,\\) giving a Monday, not a Tuesday. So year \\(N\\) is a leap year, and the count is \\(266 = 7 \\cdot 38,\\) consistent with Tuesday.\n\nThen years \\(N - 1\\) and \\(N + 1\\) are not leap years.\n\nThe \\(100\\)th day of year \\(N - 1\\) precedes the Tuesday (day \\(300\\) of year \\(N\\)) by \\((365 - 100) + 300 = 565\\) days. Since \\(565 = 7 \\cdot 80 + 5,\\) that day is \\(5\\) days earlier in the week than Tuesday, which is a Thursday.\n\nThus, the correct answer is A.",
+      "hints": [
+        "Two dates fall on the same weekday exactly when the number of days between them is a multiple of \\(7\\)",
+        "Count the days from day \\(300\\) of year \\(N\\) to day \\(200\\) of year \\(N+1\\) to decide whether \\(N\\) is a leap year"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

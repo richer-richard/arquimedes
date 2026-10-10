@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2023-p15",
+  "title": "2023 AIME II Problem 15",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.multiplicative-order",
+      "label": "Multiplicative order",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2023,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 71.3,
+    "source": 3370,
+    "mohs": null
+  },
+  "estimatedMinutes": 23,
+  "statement": "For each positive integer \\(n\\) let \\(a_n\\) be the least positive integer multiple of \\(23\\) such that \\(a_n \\equiv 1 \\pmod{2^n}.\\) Find the number of positive integers \\(n\\) less than or equal to \\(1000\\) that satisfy \\(a_n = a_{n+1}.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "363",
+    "value": "363"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2023-p15.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(a_n = 23 b_n,\\) where \\(b_n\\) is the unique integer in \\([1, 2^n]\\) with \\(23 b_n \\equiv 1 \\pmod{2^n},\\) i.e. the inverse of \\(23\\) mod \\(2^n.\\) Reducing mod \\(2^n\\) shows \\(b_{n+1} \\in \\{b_n,\\ b_n + 2^n\\},\\) so \\(a_n = a_{n+1}\\) exactly when \\(b_{n+1} = b_n,\\) which happens exactly when the binary digit of weight \\(2^n\\) in \\(b_{n+1}\\) is \\(0.\\)\n\nSince \\(23 \\cdot 89 = 2047 = 2^{11} - 1,\\) setting \\(T_k = 1 + 2^{11} + 2^{22}\\) \\({}+ \\cdots + 2^{11(k-1)}\\) gives \\(23 \\cdot 89\\,T_k = 2^{11k} - 1,\\) so \\[ \\begin{gathered} 23\\left(2^{11k} - 89\\,T_k\\right) \\\\ \\equiv 1 \\pmod{2^{11k}}, \\end{gathered} \\] and every \\(b_n\\) with \\(n \\le 11k\\) is the reduction of \\(2^{11k} - 89\\,T_k\\) mod \\(2^n.\\) In binary, \\(89 = 1011001_2\\) occupies positions \\(0, 3, 4, 6\\) of each \\(11\\)-bit block of \\(89\\,T_k.\\) Since \\(89\\,T_k\\) is odd, \\(2^{11k} - 89\\,T_k\\) \\(= \\bigl(2^{11k} - 1 - 89\\,T_k\\bigr) + 1\\) keeps digit \\(0\\) equal to \\(1\\) and complements every digit in positions \\(1\\) through \\(11k - 1.\\)\n\nSo for \\(n \\ge 1,\\) the digit of weight \\(2^n\\) is \\(0\\) exactly when \\(n \\equiv 0, 3, 4, 6 \\pmod{11}.\\) Among \\(1 \\le n \\le 1000 = 90 \\cdot 11 + 10,\\) the residue \\(0\\) occurs \\(90\\) times and the residues \\(3,\\) \\(4,\\) \\(6\\) occur \\(91\\) times each, for a total of \\(90 + 3 \\cdot 91 = 363.\\)",
+      "hints": [
+        "\\(a_n = 23 b_n\\) where \\(b_n\\) is the inverse of \\(23\\) mod \\(2^n;\\) then \\(a_n = a_{n+1}\\) exactly when the binary digit of weight \\(2^n\\) in \\(b_{n+1}\\) is \\(0\\)",
+        "Since \\(23 \\cdot 89 = 2^{11} - 1,\\) those binary digits repeat with period \\(11;\\) find which four residues of \\(n\\) mod \\(11\\) give a zero digit"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

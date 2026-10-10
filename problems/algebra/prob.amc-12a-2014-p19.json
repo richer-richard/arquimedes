@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2014-p19",
+  "title": "2014 AMC 12A Problem 19",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2014,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 36.1,
+    "source": 1990,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "There are exactly \\(N\\) distinct rational numbers \\(k\\) such that \\(|k|\\lt200\\) and \\[5x^2+kx+12=0\\] has at least one integer solution for \\(x.\\) What is \\(N?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(48\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(78\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "78"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2014-p19.live",
+      "kind": "proof-sketch",
+      "text": "If an integer \\(x\\) is a root, then \\(k=-\\left(5x+\\dfrac{12}{x}\\right),\\) so \\(x\\ne0.\\) For \\(x\\ge2,\\) \\(|k|=5|x|+\\dfrac{12}{|x|}\\) increases, and \\(|x|=39\\) gives \\(|k|\\approx195.3\\lt200,\\) while \\(|x|=40\\) gives \\(|k|\\gt200.\\)\n\nThus \\(x\\) ranges over \\(\\pm1,\\pm2,\\dots,\\pm39,\\) which is \\(78\\) values. If two integers \\(a\\ne b\\) gave the same \\(k,\\) then \\(5a+\\tfrac{12}{a}=5b+\\tfrac{12}{b}\\) forces \\(5ab=12,\\) which has no integer solutions, so all \\(78\\) values of \\(k\\) are distinct.\n\nThus, the correct answer is E.",
+      "hints": [
+        "If \\(x\\) is an integer root, solve for \\(k=-\\dfrac{5x^2+12}{x}\\) \\(=-\\left(5x+\\dfrac{12}{x}\\right)\\)",
+        "Require \\(|k|=5|x|+\\dfrac{12}{|x|}\\lt200\\), and check the resulting values of \\(k\\) are all distinct"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

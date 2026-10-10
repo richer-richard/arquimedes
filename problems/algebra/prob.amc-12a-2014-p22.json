@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2014-p22",
+  "title": "2014 AMC 12A Problem 22",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.exponent",
+      "label": "Exponent",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2014,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 43.1,
+    "source": 2270,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The number \\(5^{867}\\) is between \\(2^{2013}\\) and \\(2^{2014}.\\) How many pairs of integers \\((m,n)\\) are there such that \\(1\\le m\\le2012\\) and \\[5^n\\lt2^m\\lt2^{m+2}\\lt5^{n+1}?\\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(278\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(279\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(280\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(281\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(282\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "279"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2014-p22.live",
+      "kind": "proof-sketch",
+      "text": "Because \\(2^2\\lt5\\lt2^3,\\) each interval \\((5^n,5^{n+1})\\) contains either two or three powers of \\(2.\\) The chain \\(5^n\\lt2^m\\lt2^{m+2}\\lt5^{n+1}\\) holds exactly when the interval contains three consecutive powers of \\(2,\\) and then there is a unique such \\(m.\\)\n\nLet \\(d\\) and \\(t\\) be the numbers of intervals \\((5^n,5^{n+1})\\) for \\(0\\le n\\le866\\) containing two and three powers of \\(2,\\) respectively. Since \\(2^{2013}\\lt5^{867}\\lt2^{2014}\\) there are \\(2013\\) powers of \\(2\\) in total, giving \\(d+t=867\\) and \\(2d+3t=2013.\\)\n\nSolving, \\(t=2013-2\\cdot867=279.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Between consecutive powers \\(5^n\\) and \\(5^{n+1}\\) there are either two or three powers of \\(2\\)",
+        "The inequality asks for three such powers; if \\(d,t\\) count the two-power and three-power gaps, then \\(d+t=867\\) and \\(2d+3t=2013\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

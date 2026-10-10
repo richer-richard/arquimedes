@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-i-2018-p3",
+  "title": "2018 AIME I Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2018,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 51.5,
+    "source": 2400,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "Kathy has \\(5\\) red cards and \\(5\\) green cards. She shuffles the \\(10\\) cards and lays out \\(5\\) of the cards in a row in a random order. She will be happy if and only if all the red cards laid out are adjacent and all the green cards laid out are adjacent. For example, card orders RRGGG, GGGGR, or RRRRR will make Kathy happy, but RRRGR will not. The probability that Kathy will be happy is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "157",
+    "value": "157"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2018-p3.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(10 \\cdot 9 \\cdot 8 \\cdot 7 \\cdot 6 = 30240\\) equally likely ordered layouts of \\(5\\) of the \\(10\\) distinct cards. Kathy is happy exactly when the color pattern consists of one block of reds and one block of greens: the patterns are RRRRR, GGGGG, and the eight mixed patterns \\(\\text{R}^r\\text{G}^{5-r}\\) and \\(\\text{G}^{5-r}\\text{R}^r\\) for \\(r = 1, 2, 3, 4.\\)\n\nA pattern using \\(r\\) red and \\(5 - r\\) green positions can be filled in \\(\\frac{5!}{(5-r)!} \\cdot \\frac{5!}{r!}\\) ways (ordered choices of which red cards and which green cards appear). For \\(r = 5, 4, 3, 2, 1, 0\\) these counts are \\(120,\\) \\(600,\\) \\(1200,\\) \\(1200,\\) \\(600,\\) \\(120.\\) The happy layouts number \\[ \\begin{aligned} &120 + 120 \\\\ &{}+ 2\\,(600 + 1200 + 1200 + 600) \\\\ &{}= 7440. \\end{aligned} \\]\n\nThe probability is \\(\\frac{7440}{30240} = \\frac{31}{126},\\) so \\(m + n = 31 + 126 = 157.\\)",
+      "hints": [
+        "Only the color pattern matters: Kathy is happy exactly when the laid-out reds form one block and the laid-out greens form one block",
+        "A pattern with \\(r\\) reds occurs in \\(\\frac{5!}{(5-r)!} \\cdot \\frac{5!}{r!}\\) of the \\(10 \\cdot 9 \\cdot 8 \\cdot 7 \\cdot 6\\) equally likely ordered layouts"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

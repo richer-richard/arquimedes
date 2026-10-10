@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2009-p19",
+  "title": "2009 AMC 10B Problem 19",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.basic-counting",
+      "label": "Basic counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.clock",
+      "label": "Clock",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2009,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 23.9,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A particular \\(12\\)-hour digital clock displays the hour and minute of a day. Unfortunately, whenever it is supposed to display a \\(1,\\) it mistakenly displays a \\(9.\\) For example, when it is \\(1{:}16\\) PM the clock incorrectly shows \\(9{:}96\\) PM. What fraction of the day will the clock show the correct time?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac12\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac58\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac34\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac56\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{9}{10}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "1/2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2009-p19.live",
+      "kind": "proof-sketch",
+      "text": "Among the hours \\(1\\) through \\(12,\\) exactly \\(1,\\) \\(10,\\) \\(11,\\) \\(12\\) contain a \\(1,\\) so the hour is correct \\(\\dfrac{8}{12}=\\dfrac23\\) of the time.\n\nA minute is displayed wrong when its tens digit is \\(1\\) (minutes \\(10\\)–\\(19\\)) or its units digit is \\(1\\) (\\(01,11,\\dots,51\\)), which is \\(15\\) of the \\(60\\) minutes. So the minute is correct \\(\\dfrac{45}{60}=\\dfrac34\\) of the time.\n\nThe clock is correct \\(\\dfrac23\\cdot\\dfrac34=\\dfrac12\\) of the day.\n\nThus, the correct answer is A.",
+      "hints": [
+        "The hour is wrong only for \\(1,\\) \\(10,\\) \\(11,\\) \\(12\\)",
+        "A minute is wrong when either of its digits is a \\(1;\\) count those out of \\(60\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

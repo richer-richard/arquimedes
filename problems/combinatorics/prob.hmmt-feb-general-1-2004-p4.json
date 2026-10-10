@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-general-1-2004-p4",
+  "title": "2004 HMMT February General Round 1 Problem 4",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2004,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many ways can you mark 8 squares of an \\(8 \\times 8\\) chessboard so that no two marked squares are in the same row or column, and none of the four corner squares is marked? (Rotations and reflections are considered different.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-general-1-2004-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "21600\n\nIn the top row, you can mark any of the 6 squares that is not a corner. In the bottom row, you can then mark any of the 5 squares that is not a corner and not in the same column as the square just marked. Then, in the second row, you have\n\n6 choices for a square not in the same column as either of the two squares already marked; then there are 5 choices remaining for the third row, and so on down to 1 for the seventh row, in which you make the last mark. Thus, altogether, there are \\(6 \\cdot 5 \\cdot(6 \\cdot 5 \\cdots 1)=30 \\cdot 6!=30 \\cdot 720=21600\\) possible sets of squares.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

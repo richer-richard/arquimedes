@@ -1,0 +1,78 @@
+{
+  "id": "prob.hmmt-feb-team-1-2011-p5",
+  "title": "2011 HMMT February Team Round 1 Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.games-and-strategy",
+      "label": "Games and strategy",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.probability",
+      "label": "Probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 83.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(a\\) and \\(b\\) be positive real numbers. Define two sequences of real numbers \\(\\left\\{a_{n}\\right\\}\\) and \\(\\left\\{b_{n}\\right\\}\\) for all positive integers \\(n\\) by \\((a+b i)^{n}=a_{n}+b_{n} i\\). Prove that\n\n\\[\\frac{\\left|a_{n+1}\\right|+\\left|b_{n+1}\\right|}{\\left|a_{n}\\right|+\\left|b_{n}\\right|} \\geq \\frac{a^{2}+b^{2}}{a+b}\\]\n\nfor all positive integers \\(n\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1-2011-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(z=a+b i\\). It is easy to see that what we are asked to show is equivalent to\n\n\\[\\frac{\\left|z^{n+1}+\\bar{z}^{n+1}\\right|+\\left|z^{n+1}-\\bar{z}^{n+1}\\right|}{\\left|z^{n}+\\bar{z}^{n}\\right|+\\left|z^{n}-\\bar{z}^{n}\\right|} \\geq \\frac{2 z \\bar{z}}{|z+\\bar{z}|+|z-\\bar{z}|}\\]\n\nCross-multiplying, we see that it suffices to show\n\n\\[\\begin{gathered}\n\\left|z^{n+2}+z^{n+1} \\bar{z}+z \\bar{z}^{n+1}+\\bar{z}^{n+2}\\right|+\\left|z^{n+2}-z^{n+1} \\bar{z}+z \\bar{z}^{n+1}-\\bar{z}^{n+2}\\right| \\\\\n+\\left|z^{n+2}+z^{n+1} \\bar{z}-z \\bar{z}^{n+1}-\\bar{z}^{n+2}\\right|+\\left|z^{n+2}-z^{n+1} \\bar{z}-z \\bar{z}^{n+1}+\\bar{z}^{n+2}\\right| \\\\\n\\geq 2\\left|z^{n+1} \\bar{z}+z \\bar{z}^{n+1}\\right|+2\\left|z^{n+1} \\bar{z}-z \\bar{z}^{n+1}\\right|\n\\end{gathered}\\]\n\nHowever, by the triangle inequality,\n\n\\[\\left|z^{n+2}+z^{n+1} \\bar{z}+z \\bar{z}^{n+1}+\\bar{z}^{n+2}\\right|+\\left|z^{n+2}-z^{n+1} \\bar{z}-z \\bar{z}^{n+1}+\\bar{z}^{n+2}\\right| \\geq 2\\left|z^{n+1} \\bar{z}+z \\bar{z}^{n+1}\\right|\\]\n\nand\n\n\\[\\left|z^{n+2}-z^{n+1} \\bar{z}+z \\bar{z}^{n+1}-\\bar{z}^{n+2}\\right|+\\left|z^{n+2}+z^{n+1} \\bar{z}-z \\bar{z}^{n+1}-\\bar{z}^{n+2}\\right| \\geq 2\\left|z^{n+1} \\bar{z}-z \\bar{z}^{n+1}\\right|\\]\n\nThis completes the proof.\nRemark: more computationally intensive trigonometric solutions are also possible by reducing the problem to maximizing and minimizing the values of the sine and cosine functions.\n\n## Coin Flipping [75]\n\nIn a one-player game, the player begins with \\(4 m\\) fair coins. On each of \\(m\\) turns, the player takes 4 unused coins, flips 3 of them randomly to heads or tails, and then selects whether the 4 th one is heads or tails (these four coins are then considered used). After \\(m\\) turns, when the sides of all \\(4 m\\) coins have been determined, if half the coins are heads and half are tails, the player wins; otherwise, the player loses.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

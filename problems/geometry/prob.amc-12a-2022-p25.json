@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2022-p25",
+  "title": "2022 AMC 12A Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.incircle-incenter-and-inradius",
+      "label": "Incircle, incenter, and inradius",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-triple",
+      "label": "Pythagorean Triple",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2022,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 52.8,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "A circle with integer radius \\(r\\) is centered at \\((r,r).\\) Distinct line segments of length \\(c_i\\) connect points \\((0,a_i)\\) to \\((b_i,0)\\) for \\(1\\le i\\le14\\) and are tangent to the circle, where \\(a_i,\\) \\(b_i,\\) and \\(c_i\\) are all positive integers and \\(c_1\\le c_2\\le\\cdots\\le c_{14}.\\) What is the ratio \\(\\dfrac{c_{14}}{c_1}\\) for the least possible value of \\(r?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{21}{5}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{85}{13}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{39}{5}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(17\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "17"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2022-p25.live",
+      "kind": "proof-sketch",
+      "text": "The circle centered \\((r,r)\\) with radius \\(r\\) is tangent to both axes. A segment from \\((0,a)\\) to \\((b,0)\\) with \\(a^2+b^2=c^2\\) is tangent to it when \\(r\\) equals either the inradius \\(\\tfrac{a+b-c}{2}\\) or the semiperimeter \\(\\tfrac{a+b+c}{2}\\) of the right triangle with legs \\(a,b.\\)\n\nIn the inradius case, put \\(x=a-2r\\) and \\(y=b-2r.\\) Then \\(xy=2r^2,\\) and every positive divisor \\(x\\) determines one oriented segment, with \\(a=x+2r,\\) \\(b=\\frac{2r^2}{x}+2r,\\) and \\(c=x+\\frac{2r^2}{x}+2r.\\) Thus there are exactly \\(d(2r^2)\\) such segments.\n\nFor \\(r=1,2,3,4,5,\\) these counts are \\(2,4,6,6,6,\\) and no semiperimeter case is possible because the smallest integer right triangle has semiperimeter \\(6.\\) At \\(r=6,\\) \\(d(72)=12,\\) and the \\(3\\)-\\(4\\)-\\(5\\) triangle contributes two more oriented segments. Hence \\(6\\) is the least possible radius and gives exactly \\(14\\) segments.\n\nThe two semiperimeter segments have \\(c=5.\\) In the inradius family, \\(c=x+\\frac{72}{x}+12\\) is largest at \\(x=1\\) or \\(72,\\) giving \\(c=85.\\) Therefore \\(c_1=5,\\) \\(c_{14}=85,\\) and \\(\\frac{c_{14}}{c_1}=17.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "A segment from \\((0,a)\\) to \\((b,0)\\) tangent to this circle makes \\(r\\) the inradius or the semiperimeter of the right triangle with legs \\(a,b\\)",
+        "For the inradius case, \\((a-2r)(b-2r)=2r^2,\\) so positive divisors of \\(2r^2\\) count the oriented segments"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

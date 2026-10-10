@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-general-1-2003-p6",
+  "title": "2003 HMMT February General Round 1 Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2003,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "In how many ways can 3 bottles of ketchup and 7 bottles of mustard be arranged in a row so that no bottle of ketchup is immediately between two bottles of mustard? (The bottles of ketchup are mutually indistinguishable, as are the bottles of mustard.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-general-1-2003-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "22\nConsider the blocks of consecutive bottles of ketchup in such an arrangement. A block of just one bottle must occur at the beginning or the end of the row, or else it would be between two bottles of mustard. However, a block of two or three bottles can occur anywhere. We cannot have three blocks of one bottle each, since there are only two possible locations for such blocks. Thus, we either have a block of one bottle and a block of two, or one block of all three bottles. In the first case, if the single bottle occurs at the beginning of the row, then anywhere from 1 to 7 bottles of mustard may intervene before the block of 2 ketchup bottles, giving 7 possible arrangements. We likewise have 7 arrangements if the single bottle occurs at the end of the row. Finally, if there is just one block of three bottles, anywhere from 0 to 7 mustard bottles may precede it, giving 8 possible arrangements. So, altogether, we have \\(7+7+8=22\\) configurations.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

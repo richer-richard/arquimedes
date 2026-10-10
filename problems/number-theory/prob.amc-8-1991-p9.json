@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-8-1991-p9",
+  "title": "1991 AMC 8 Problem 9",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.multiple",
+      "label": "Multiple",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1991,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 7.7,
+    "source": 890,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "How many whole numbers from \\(1\\) through \\(46\\) are divisible by either \\(3\\) or \\(5\\) or both?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(25\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(27\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "21"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1991-p9.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(15\\) multiples of \\(3\\) and \\(9\\) multiples of \\(5\\) up to \\(46.\\) The \\(3\\) multiples of \\(15\\) (namely \\(15,\\) \\(30,\\) \\(45\\)) were counted twice.\n\nBy inclusion-exclusion, the count is \\(15 + 9 - 3 = 21.\\)\n\nThus, the correct answer is B .",
+      "hints": [
+        "Count the multiples of \\(3\\) and the multiples of \\(5\\) separately",
+        "Numbers divisible by both \\(3\\) and \\(5\\) are multiples of \\(15\\) and get counted twice, so subtract them once"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

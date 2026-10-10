@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2015-p18",
+  "title": "2015 AMC 12A 18",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.simons-favorite-factoring-trick",
+      "label": "Simon’s Favorite Factoring Trick",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2015,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 33.2,
+    "source": 1990,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "The zeros of the function \\(f(x) = x^2 - ax + 2a\\) are integers. What is the sum of the possible values of \\(a?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(18\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "16"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2015-p18.live",
+      "kind": "proof-sketch",
+      "text": "Let the integer zeros be \\(p\\) and \\(q.\\) By Vieta’s formulas \\(p + q = a\\) and \\(pq = 2a,\\) so \\(pq = 2(p+q).\\) Rearranging gives \\[(p-2)(q-2) = 4.\\]\n\nThe integer factor pairs of \\(4\\) are \\((1,4),\\) \\((2,2),\\) \\((4,1),\\) \\((-1,-4),\\) \\((-2,-2),\\) \\((-4,-1),\\) which yield \\((p,q)\\) pairs summing to \\(a = 9, 8, -1,\\) and \\(0.\\)\n\nThe distinct possible values of \\(a\\) are \\(9, 8, 0, -1,\\) whose sum is \\(16.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "If the integer roots are \\(p,q\\) then \\(p+q = a\\) and \\(pq = 2a\\)",
+        "Eliminate \\(a\\) to get \\(pq = 2(p+q),\\) i.e. \\((p-2)(q-2) = 4\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

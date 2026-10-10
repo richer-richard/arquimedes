@@ -1,0 +1,74 @@
+{
+  "id": "prob.aime-i-2021-p15",
+  "title": "2021 AIME I Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle",
+      "label": "Circle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.parabola",
+      "label": "Parabola",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2021,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 68.2,
+    "source": 3370,
+    "mohs": null
+  },
+  "estimatedMinutes": 25,
+  "statement": "Let \\(S\\) be the set of positive integers \\(k\\) such that the two parabolas \\[y = x^2 - k\\] and \\[x = 2(y - 20)^2 - k\\] intersect in four distinct points, and these four points lie on a circle with radius at most \\(21.\\) Find the sum of the least element of \\(S\\) and the greatest element of \\(S.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "285",
+    "value": "285"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2021-p15.live",
+      "kind": "proof-sketch",
+      "text": "Adding the equation \\(x^2 - y - k = 0\\) to \\(\\frac{1}{2}\\) times \\(2(y - 20)^2 - x - k = 0\\) gives a conic through all intersection points with equal \\(x^2\\) and \\(y^2\\) coefficients: \\[ \\begin{aligned} &x^2 + y^2 - \\tfrac{1}{2}x - 41y \\\\ &\\quad {}+ 400 - \\tfrac{3k}{2} = 0, \\end{aligned} \\] a circle centered at \\(\\left(\\frac{1}{4}, \\frac{41}{2}\\right)\\) with squared radius \\(\\frac{1}{16} + \\frac{1681}{4} - 400 + \\frac{3k}{2}\\) \\(= \\frac{325}{16} + \\frac{3k}{2}.\\) So whenever four distinct intersection points exist, they are concyclic, and the radius is at most \\(21\\) exactly when \\(\\frac{325}{16} + \\frac{3k}{2} \\le 441,\\) i.e. \\(k \\le 280\\) for integers.\n\nSubstituting \\(y = x^2 - k\\) into the second parabola gives the quartic \\(f(x) = 2(x^2 - c)^2 - x - k = 0\\) where \\(c = k + 20.\\) For \\(1 \\le k \\le 4:\\) if \\(x \\le -k\\) then \\(f(x) = 2(x^2 - c)^2\\) \\(+ (-x - k) \\gt 0,\\) and if \\(-k \\lt x \\le 0\\) then \\(x^2 \\lt 16\\) while \\(c \\ge 21,\\) so \\(f(x) \\gt 2 \\cdot 25 - k \\gt 0;\\) thus there are no intersections with \\(x \\le 0,\\) and since \\(f'(x) = 8x^3 - 8cx - 1\\) has exactly one positive root, \\(f\\) has at most (and, by \\(f(0) \\gt 0,\\) \\(f(\\sqrt{c}) \\lt 0,\\) exactly) two positive roots. So \\(k \\le 4\\) fails.\n\nFor \\(k \\ge 5,\\) we have \\(k^2 \\ge k + 20,\\) so \\(f\\left(-\\sqrt{c}\\right) = \\sqrt{c} - k \\le 0.\\) On \\((-\\infty, -\\sqrt{c}],\\) we have \\(f'(x) = 8x(x^2-c)-1 \\lt 0,\\) so there is exactly one root there (at \\(-\\sqrt{c}\\) when \\(k=5\\)). If \\(k=5,\\) the negative derivative at that endpoint makes \\(f\\) negative immediately to its right; if \\(k \\gt 5,\\) it is already negative at the endpoint. Since \\(f(0) = 2c^2-k \\gt 0,\\) there is a second root in \\((-\\sqrt{c},0).\\) Finally, \\(f\\left(\\sqrt{c}\\right) = -\\sqrt{c}-k \\lt 0\\) and \\(f(+\\infty)=+\\infty,\\) so there is one root in each of \\((0,\\sqrt{c})\\) and \\((\\sqrt{c},\\infty).\\) These four roots are distinct, and a quartic has no others.\n\nHence \\(S = \\{5, 6, \\ldots, 280\\},\\) and the answer is \\(5 + 280 = 285.\\)",
+      "hints": [
+        "Any conic through all four intersection points is a combination of the two given equations; choose the weights that make the \\(x^2\\) and \\(y^2\\) coefficients equal",
+        "The resulting circle’s squared radius grows linearly in \\(k,\\) which caps \\(k\\) above; for small \\(k,\\) check that the quartic in \\(x\\) has only two real roots"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

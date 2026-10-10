@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-guts-2024-p14",
+  "title": "2024 HMMT February Guts Problem 14",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.invariants-and-monovariants",
+      "label": "Invariants and monovariants",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular Arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.multiplicative-order",
+      "label": "Multiplicative order",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2024,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 71.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute the smallest positive integer such that, no matter how you rearrange its digits (in base ten), the resulting number is a multiple of 63 .",
+  "answerChoices": [],
+  "answer": {
+    "letter": "111888",
+    "value": "111888"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2024-p14.hmmt",
+      "kind": "proof-sketch",
+      "text": "First, the number must be a multiple of 9 and 7. The first is easy to check and holds for all permutations. Note that when two adjacent digits \\(a\\) and \\(b\\) are swapped, the number changes by \\(9(a-b) \\cdot 10^{k}\\) (we disregard sign), so \\(9(a-b)\\) must also be a multiple of 63 for all digits \\(a\\) and \\(b\\). In particular, this is sufficient, since a permutation can be represented as a series of transpositions.\nThis means that \\(a-b\\) must be a multiple of 7 for all digits \\(a\\) and \\(b\\), so either all digits are equal or they are in \\(\\{0,7\\},\\{1,8\\}\\), or \\(\\{2,9\\}\\). We find the minimum for each case separately.\nWe first provide the following useful fact: the first repunit (numbers \\(1,11,111, \\ldots\\) ) that is a multiple of 7 is 111111 . This is because \\(10 \\bmod 7=3\\), and 3 is a generator modulo 7 (of course, you can just compute the powers of 3 by hand, and it will not take much longer).\nIf a number \\(k \\cdot 1 \\ldots 1\\) is a multiple of 63 , then either \\(k\\) or \\(1 \\ldots 1\\) is a multiple of 7 ; if it is \\(k\\), then it's clear that we need 777777777 to make the sum a multiple of 9 . If \\(1 \\ldots 1\\) is a multiple of 7 , then it is at least 111111 , then to make a multiple of 9 , we need 333333 .\nIf the only digits are 7 and 0 , then we need at least nine sevens to make the digit sum a multiple of nine, which has more digits than 333333 .\nIf the only digits are 8 and 1 , then we can note that since 8 and 1 are both \\(1(\\bmod 7)\\), these numbers are equivalent to the repunits modulo 7 , so such numbers have at least six digits. The best such six-digit number with digits summing to a multiple of 9 is 111888 , which is our new candidate.\nIf the only digits are 9 and 2 , then by analogous logic such numbers have at least six digits. But the smallest such number is 999 999, which is not better.\nSo our best answer is 111888 . It works.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

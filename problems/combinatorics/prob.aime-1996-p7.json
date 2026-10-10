@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-1996-p7",
+  "title": "1996 AIME 7",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.burnsides-lemma",
+      "label": "Burnside’s Lemma",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1996,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 43.1,
+    "source": 2270,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Two of the squares of a \\(7\\times7\\) checkerboard are painted yellow, and the rest are painted green. Two color schemes are equivalent if one can be obtained from the other by applying a rotation in the plane of the board. How many inequivalent color schemes are possible?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "300",
+    "value": "300"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1996-p7.live",
+      "kind": "proof-sketch",
+      "text": "Under the identity rotation, all \\(\\binom{49}{2}=1176\\) pairs are fixed. A quarter-turn or three-quarter-turn has only orbits of sizes \\(1\\) and \\(4,\\) so it fixes no two-square set. A half-turn fixes exactly the \\(24\\) pairs of squares opposite one another across the center. Burnside’s Lemma therefore gives \\[\\frac{1176+0+24+0}{4}=300\\] inequivalent colorings.",
+      "hints": [
+        "Average the numbers of two-square colorings fixed by the four rotations",
+        "Only a half-turn can fix a nontrivial pair of squares"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

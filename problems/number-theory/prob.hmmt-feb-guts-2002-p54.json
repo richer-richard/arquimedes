@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2002-p54",
+  "title": "2002 HMMT February Guts Problem 54",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2002,
+    "number": 54
+  },
+  "difficulty": {
+    "course": 75.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many pairs of integers \\((a, b)\\), with \\(1 \\leq a \\leq b \\leq 60\\), have the property that \\(b\\) is divisible by \\(a\\) and \\(b+1\\) is divisible by \\(a+1\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2002-p54.hmmt",
+      "kind": "proof-sketch",
+      "text": "The divisibility condition is equivalent to \\(b-a\\) being divisible by both \\(a\\) and \\(a+1\\), or, equivalently (since these are relatively prime), by \\(a(a+1)\\). Any \\(b\\) satisfying the condition is automatically \\(\\geq a\\), so it suffices to count the number of values \\(b-a \\in\\) \\(\\{1-a, 2-a, \\ldots, 60-a\\}\\) that are divisible by \\(a(a+1)\\) and sum over all \\(a\\). The number of such values will be precisely \\(60 /[a(a+1)]\\) whenever this quantity is an integer, which fortunately happens for every \\(a \\leq 5\\); we count:\n\\(a=1\\) gives 30 values of \\(b\\);\n\\(a=2\\) gives 10 values of \\(b\\);\n\\(a=3\\) gives 5 values of \\(b\\);\n\\(a=4\\) gives 3 values of \\(b\\);\n\\(a=5\\) gives 2 values of \\(b\\);\n\\(a=6\\) gives 2 values ( \\(b=6\\) or 48);\nany \\(a \\geq 7\\) gives only one value, namely \\(b=a\\), since \\(b>a\\) implies \\(b \\geq a+a(a+1)>60\\).\nAdding these up, we get a total of 106 pairs.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

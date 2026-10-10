@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-algebra-number-theory-2021-p8",
+  "title": "2021 HMMT February Algebra and Number Theory Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.diophantine-equations-techniques",
+      "label": "Diophantine Equations techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.greatest-common-divisors-gcd",
+      "label": "Greatest common divisors (gcd)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.least-common-multiples-lcm",
+      "label": "Least common multiples (lcm)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2021,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For positive integers \\(a\\) and \\(b\\), let \\(M(a, b)=\\frac{\\operatorname{lcm}(a, b)}{\\operatorname{gcd}(a, b)}\\), and for each positive integer \\(n \\geq 2\\), define\n\n\\[x_{n}=M(1, M(2, M(3, \\ldots, M(n-2, M(n-1, n)) \\ldots)))\\]\n\nCompute the number of positive integers \\(n\\) such that \\(2 \\leq n \\leq 2021\\) and \\(5 x_{n}^{2}+5 x_{n+1}^{2}=26 x_{n} x_{n+1}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "20",
+    "value": "20"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-number-theory-2021-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "The desired condition is that \\(x_{n}=5 x_{n+1}\\) or \\(x_{n+1}=5 x_{n}\\).\nNote that for any prime \\(p\\), we have \\(\\nu_{p}(M(a, b))=\\left|\\nu_{p}(a)-\\nu_{p}(b)\\right|\\). Furthermore, \\(\\nu_{p}(M(a, b)) \\equiv \\nu_{p}(a)+\\) \\(\\nu_{p}(b) \\bmod 2\\). So, we have that\n\n\\[\\nu_{p}\\left(x_{n}\\right) \\equiv \\nu_{p}(1)+\\nu_{p}(2)+\\cdots+\\nu_{p}(n) \\bmod 2\\]\n\nSubtracting gives that \\(\\nu_{p}\\left(x_{n+1}\\right)-\\nu_{p}\\left(x_{n}\\right) \\equiv \\nu_{p}(n+1) \\bmod 2\\). In particular, for \\(p \\neq 5, \\nu_{p}(n+1)\\) must be even, and \\(\\nu_{5}(n+1)\\) must be odd. So \\(n+1\\) must be a 5 times a perfect square. There are \\(\\left\\lfloor\\sqrt{\\frac{2021}{5}}\\right\\rfloor=20\\) such values of \\(n\\) in the interval [2,2021].\nNow we show that it is sufficient for \\(n+1\\) to be 5 times a perfect square. The main claim is that if \\(B>0\\) and a sequence \\(a_{1}, a_{2}, \\ldots, a_{B}\\) of nonnegative real numbers satisfies \\(a_{n} \\leq B+\\sum_{i<n} a_{i}\\) for all \\(1 \\leq n \\leq N\\), then\n\n\\[\\left|a_{1}-\\left|a_{2}-\\left|\\cdots-\\left|a_{N-1}-a_{N}\\right|\\right| \\cdots\\right|\\right| \\leq B\\]\n\nThis can be proved by a straightforward induction on \\(N\\). We then apply this claim, with \\(B=1\\), to the sequence \\(a_{i}=\\nu_{p}(i)\\); it is easy to verify that this sequence satisfies the condition. This gives\n\n\\[\\nu_{p}\\left(x_{n}\\right)=\\left|\\nu_{p}(1)-\\left|\\nu_{p}(2)-\\left|\\cdots-\\left|\\nu_{p}(n-1)-\\nu_{p}(n)\\right|\\right| \\cdots\\right|\\right| \\leq 1\\]\n\nso \\(\\nu_{p}\\left(x_{n}\\right)\\) must be equal to \\(\\left(\\nu_{p}(1)+\\cdots+\\nu_{p}(n)\\right) \\bmod 2\\). Now suppose \\(n+1=5 k^{2}\\) for some \\(k\\); then \\(\\nu_{p}(n+1) \\equiv 0 \\bmod 2\\) for \\(p \\neq 5\\) and \\(\\nu_{5}(n+1) \\equiv 1 \\bmod 2\\). Therefore \\(\\nu_{p}\\left(x_{n+1}\\right)=\\nu_{p}\\left(x_{n}\\right)\\) for \\(p \\neq 5\\), and \\(\\nu_{5}\\left(x_{n+1}\\right)=\\left(\\nu_{5}\\left(x_{n}\\right)+1\\right) \\bmod 2\\), and this implies \\(x_{n+1} / x_{n} \\in\\{1 / 5,5\\}\\) as we wanted.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

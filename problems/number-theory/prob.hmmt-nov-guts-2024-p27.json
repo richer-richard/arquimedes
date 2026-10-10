@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-guts-2024-p27",
+  "title": "2024 HMMT November Guts Problem 27",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.greatest-common-divisors-gcd",
+      "label": "Greatest common divisors (gcd)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2024,
+    "number": 27
+  },
+  "difficulty": {
+    "course": 56.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For any positive integer \\(n\\), let \\(f(n)\\) be the number of ordered triples \\((a, b, c)\\) of positive integers such that\n\n- max \\((a, b, c)\\) divides \\(n\\) and\n- \\(\\operatorname{gcd}(a, b, c)=1\\).\n\nCompute \\(f(1)+f(2)+\\cdots+f(100)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "1000000",
+    "value": "1000000"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2024-p27.hmmt",
+      "kind": "proof-sketch",
+      "text": "We will show that \\(\\sum_{m=1}^{n} f(m)=n^{3}\\). Indeed, consider the map\n\n\\[\\begin{aligned}\ng:\\{1, \\ldots, n\\}^{3} & \\rightarrow\\{1, \\ldots, n\\}^{4} \\\\\ng(a, b, c) & =\\left(\\frac{a}{\\operatorname{gcd}(a, b, c)}, \\frac{b}{\\operatorname{gcd}(a, b, c)}, \\frac{c}{\\operatorname{gcd}(a, b, c)}, \\max (a, b, c)\\right) .\n\\end{aligned}\\]\n\nWe claim that \\(g\\) is a bijection between \\(\\{1, \\ldots, n\\}^{3}\\) and tuples \\((a, b, c, m)\\) that satisfy \\(m \\leq n, \\max (a, b, c) \\mid m\\), and \\(\\operatorname{gcd}(a, b, c)=1\\). Note that \\(g(a, b, c)\\) always satisfies these properties because \\(\\operatorname{gcd}\\left(\\frac{a}{\\operatorname{gcd}(a, b, c)}, \\frac{b}{\\operatorname{gcd}(a, b, c)}, \\frac{c}{\\operatorname{gcd}(a, b, c)}\\right)=\\) \\(\\frac{\\operatorname{gcd}(a, b, c)}{\\operatorname{gcd}(a, b, c)}=1\\) and\n\n\\[\\max \\left(\\frac{a}{\\operatorname{gcd}(a, b, c)}, \\frac{b}{\\operatorname{gcd}(a, b, c)}, \\frac{c}{\\operatorname{gcd}(a, b, c)}\\right)=\\frac{\\max (a, b, c)}{\\operatorname{gcd}(a, b, c)}\\]\n\ndivides \\(\\max (a, b, c)\\). It remains to show \\(g\\) is both injective and surjective.\nInjectivity. Suppose that \\(g\\left(a_{1}, b_{1}, c_{1}\\right)=g\\left(a_{2}, b_{2}, c_{2}\\right)\\). Then,\n\n\\[\\frac{a_{1}}{a_{2}}=\\frac{b_{1}}{b_{2}}=\\frac{c_{1}}{c_{2}}=\\frac{\\operatorname{gcd}\\left(a_{1}, b_{1}, c_{1}\\right)}{\\operatorname{gcd}\\left(a_{2}, b_{2}, c_{2}\\right)}\\]\n\nWithout loss of generality, assume \\(a_{1} \\geq b_{1} \\geq c_{1}\\), which implies \\(a_{2} \\geq b_{2} \\geq c_{2}\\). Then,\n\n\\[a_{1}=\\max \\left(a_{1}, b_{1}, c_{1}\\right)=\\max \\left(a_{2}, b_{2}, c_{2}\\right)=a_{2}\\]\n\nso \\(b_{1}=b_{2}\\) and \\(c_{1}=c_{2}\\) as well. Thus, \\(g\\) is injective.\nSurjectivity. Now suppose we have a tuple \\((a, b, c, m) \\in\\{1, \\ldots, n\\}^{4}\\) satisfying max \\((a, b, c) \\mid m\\) and \\(\\operatorname{gcd}(a, b, c)=1\\). Let \\(d=\\frac{m}{\\max (a, b, c)}\\). Then, \\(\\operatorname{gcd}(d a, d b, d c)=d\\) and \\(\\max (d a, d b, d c)=d \\cdot \\max (a, b, c)=\\) \\(m \\leq n\\), so\n\n\\[g(d a, d b, d c)=\\left(\\frac{d a}{d}, \\frac{d b}{d}, \\frac{d c}{d}, \\max (d a, d b, d c)\\right)=(a, b, c, m)\\]\n\nHence, \\(g\\) is surjective.\nWe conclude \\(g\\) is a bijection between \\(\\{1, \\ldots, n\\}^{3}\\) and tuples \\((a, b, c, m)\\) satisfying max \\((a, b, c) \\mid m\\) and \\(\\operatorname{gcd}(a, b, c)=1\\). We have \\(f(m)\\) such tuples for each \\(m\\) by definition, so\n\n\\[\\sum_{m=1}^{n} f(m)=\\left|\\{1, \\ldots, n\\}^{3}\\right|=n^{3}\\]\n\nThus, \\(f(1)+\\cdots+f(100)=100^{3}=1000000\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

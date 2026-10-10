@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-10a-2005-p21",
+  "title": "2005 AMC 10A Problem 21",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.factor",
+      "label": "Factor",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.triangular-number",
+      "label": "Triangular number",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2005,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 29.2,
+    "source": 1790,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "For how many positive integers \\(n\\) does \\(1 + 2 + \\cdots + n\\) evenly divide \\(6n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(11\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2005-p21.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(1 + 2 + \\cdots + n = \\dfrac{n(n+1)}{2},\\) the quotient is \\(\\dfrac{6n}{\\frac{n(n+1)}{2}} = \\dfrac{12}{n+1},\\) which is an integer exactly when \\(n + 1\\) divides \\(12.\\) The divisors of \\(12\\) that are at least \\(2\\) are \\(2,\\) \\(3,\\) \\(4,\\) \\(6,\\) \\(12,\\) giving \\(n = 1,\\) \\(2,\\) \\(3,\\) \\(5,\\) \\(11\\) — five values.\n\nThus, the correct answer is B.",
+      "hints": [
+        "Use \\(1 + 2 + \\cdots + n = \\dfrac{n(n+1)}{2}\\)",
+        "Then \\(\\dfrac{6n}{\\frac{n(n+1)}{2}} = \\dfrac{12}{n+1};\\) count the \\(n\\) for which \\(n + 1\\) divides \\(12\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

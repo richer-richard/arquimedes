@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12b-2003-p25",
+  "title": "2003 AMC 12B Problem 25",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.arc",
+      "label": "Arc",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.chord",
+      "label": "Chord",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.geometric-probability",
+      "label": "Geometric probability",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2003,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 37.6,
+    "source": 2270,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Three points are chosen randomly and independently on a circle. What is the probability that all three pairwise distances between the points are less than the radius of the circle?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{36}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1}{24}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{18}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{1}{12}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{1}{9}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "1/12"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2003-p25.live",
+      "kind": "proof-sketch",
+      "text": "A chord has length less than the radius exactly when the arc it subtends is less than \\(60^\\circ,\\) since a chord of a \\(60^\\circ\\) arc equals the radius.\n\nAll three pairwise chords are shorter than the radius precisely when the three points all lie within some arc of \\(60^\\circ.\\)\n\nFor any successful configuration, exactly one of the three points is the counterclockwise endpoint of such a containing arc (apart from probability-zero boundary cases). Choose that endpoint in \\(3\\) ways; each of the other two points independently has probability \\(\\dfrac{1}{6}\\) of lying in the next \\(60^\\circ.\\) Hence the probability is \\[ 3\\left(\\frac{1}{6}\\right)^2 = \\frac{1}{12}. \\]\n\nThus, the correct answer is D.",
+      "hints": [
+        "A chord is shorter than the radius exactly when its arc measures less than \\(60^\\circ\\)",
+        "All three pairwise chords are short precisely when the three points lie within some \\(60^\\circ\\) arc"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

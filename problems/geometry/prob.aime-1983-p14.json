@@ -1,0 +1,76 @@
+{
+  "id": "prob.aime-1983-p14",
+  "title": "1983 AIME Problem 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.chord",
+      "label": "Chord",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.circle",
+      "label": "Circle",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vector",
+      "label": "Vector",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1983,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 54.6,
+    "source": 2720,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "In the adjoining figure, two circles of radii \\(6\\) and \\(8\\) are drawn with their centers \\(12\\) units apart. At \\(P,\\) one of the points of intersection, a line is drawn in such a way that the chords \\(QP\\) and \\(PR\\) have equal length. Find the square of the length of \\(QP.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "130",
+    "value": "130"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1983-p14.live",
+      "kind": "proof-sketch",
+      "text": "Put the center of the radius-\\(8\\) circle at \\(O_1=(-6,0)\\) and the other center at \\(O_2=(6,0).\\) Subtracting the two circle equations gives \\[ P=\\left(\\frac76,\\frac{\\sqrt{455}}6\\right), \\] where the positive \\(y\\)-coordinate selects the pictured intersection.\n\nLet the common chord length be \\(\\ell,\\) and let \\(u\\) be the unit vector from \\(Q\\) toward \\(R.\\) Then \\(Q=P-\\ell u\\) and \\(R=P+\\ell u.\\) Comparing \\(Q\\) with \\(P\\) in the first circle and \\(R\\) with \\(P\\) in the second gives \\[ \\begin{aligned} u\\mathbin{\\cdot}(P-O_1)&=\\frac{\\ell}{2},\\\\ u\\mathbin{\\cdot}(P-O_2)&=-\\frac{\\ell}{2}. \\end{aligned} \\] Adding shows that \\(u\\perp P,\\) so \\[ u=\\frac{(\\sqrt{455},-7)}{\\sqrt{504}}. \\] Subtracting the two dot-product equations gives \\[ \\ell=u\\mathbin{\\cdot}(O_2-O_1) =\\frac{12\\sqrt{455}}{\\sqrt{504}}. \\] Therefore \\(\\ell^2=\\frac{144\\cdot455}{504}=130.\\)",
+      "hints": [
+        "Put the centers at \\((-6,0)\\) and \\((6,0)\\) and find the coordinates of \\(P\\)",
+        "If \\(Q=P-\\ell u\\) and \\(R=P+\\ell u,\\) subtract the two equal-radius equations"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "f68217acefd4e9d5baa69f7075ab373188eb57aea6d81590344cf80077e9072c"
+    ],
+    "solutions": []
+  }
+}

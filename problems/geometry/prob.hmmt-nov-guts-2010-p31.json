@@ -1,0 +1,76 @@
+{
+  "id": "prob.hmmt-nov-guts-2010-p31",
+  "title": "2010 HMMT November Guts Problem 31",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2010,
+    "number": 31
+  },
+  "difficulty": {
+    "course": 66.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "What is the perimeter of the triangle formed by the points of tangency of the incircle of a 5-7-8 triangle with its sides?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2010-p31.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{9 \\sqrt{21}}{7}+3\\) Let \\(\\triangle A B C\\) be a triangle with sides \\(a=7, b=5\\), and \\(c=8\\). Let the incircle of \\(\\triangle A B C\\) be tangent to sides \\(B C, C A\\), and \\(A B\\) at points \\(D, E\\), and \\(F\\). By the law of cosines (using the form \\(\\left.\\cos (A)=\\frac{b^{2}+c^{2}-a^{2}}{2 b c}\\right)\\), we have\n\n\\[\\begin{aligned}\n& \\cos (A)=\\frac{8^{2}+5^{2}-7^{2}}{2(5)(8)}=\\frac{1}{2} \\\\\n& \\cos (B)=\\frac{8^{2}+7^{2}-5^{2}}{2(7)(8)}=\\frac{11}{14} \\\\\n& \\cos (C)=\\frac{5^{2}+7^{2}-8^{2}}{2(7)(5)}=\\frac{1}{7}\n\\end{aligned}\\]\n\nNow we observe that \\(A E F, B D F\\), and \\(C D E\\) are all isosceles. Let us call the lengths of the legs of these triangles \\(s, t\\), and \\(u\\), respectively. Then we know that \\(s+t=8, t+u=7\\), and \\(u+s=5\\), so \\(s=3, t=5\\), and \\(u=2\\).\nOur final observation is that an isosceles angle with legs of length \\(l\\) and whose non-equal angle is \\(\\theta\\) has a base of length \\(l \\sqrt{2(1-\\cos (\\theta))}\\). This can be proven using the law of cosines or the Pythagorean theorem.\n\nUsing this, we can calculate that\n\n\\[\\begin{aligned}\nD E & =2 \\sqrt{2(1-\\cos (C))} \\\\\n& =2 \\sqrt{\\frac{12}{7}} \\\\\nE F & =3 \\sqrt{2(1-\\cos (A))} \\\\\n& =3 \\\\\nF D & =5 \\sqrt{2(1-\\cos (B))} \\\\\n& =5 \\sqrt{\\frac{3}{7}}\n\\end{aligned}\\]\n\nand then\n\n\\[\\begin{aligned}\nD E+E F+F D & =2 \\sqrt{\\frac{12}{7}}+3+5 \\sqrt{\\frac{3}{7}} \\\\\n& =3+9 \\sqrt{\\frac{3}{7}} \\\\\n& =3+9 \\frac{\\sqrt{21}}{7}\n\\end{aligned}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

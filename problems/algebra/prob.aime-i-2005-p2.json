@@ -1,0 +1,58 @@
+{
+  "id": "prob.aime-i-2005-p2",
+  "title": "2005 AIME1 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2005,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 32.1,
+    "source": 1840,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "For each positive integer \\(k,\\) let \\(S_k\\) denote the increasing arithmetic sequence of integers whose first term is \\(1\\) and whose common difference is \\(k.\\) For example, \\(S_3\\) is the sequence \\(1,\\) \\(4,\\) \\(7,\\) \\(\\ldots.\\) For how many values of \\(k\\) does \\(S_k\\) contain the term \\(2005?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "12",
+    "value": "12"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2005-p2.live",
+      "kind": "proof-sketch",
+      "text": "The \\(n\\)th term of \\(S_k\\) is \\(1 + (n-1)k,\\) so \\(2005\\) is a term exactly when \\((n-1)k = 2004\\) for some positive integer \\(n,\\) that is, exactly when \\(k\\) divides \\(2004.\\) Every divisor works, since \\(n - 1 = \\frac{2004}{k}\\) is then a positive integer.\n\nSince \\(2004 = 2^2 \\cdot 3 \\cdot 167,\\) the number of divisors is \\((2+1)(1+1)(1+1) = 12.\\)",
+      "hints": [
+        "The term \\(2005\\) appears in \\(S_k\\) exactly when \\(1 + (n-1)k = 2005\\) for some positive integer \\(n\\)",
+        "So \\(k\\) must be a divisor of \\(2004 = 2^2 \\cdot 3 \\cdot 167;\\) count the divisors from the prime factorization"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

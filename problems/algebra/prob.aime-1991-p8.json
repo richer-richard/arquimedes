@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-1991-p8",
+  "title": "1991 AIME Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1991,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 32.6,
+    "source": 1860,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "For how many real numbers \\(a\\) does the quadratic equation \\(x^2+ax+6a=0\\) have only integer roots for \\(x?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "10",
+    "value": "10"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1991-p8.live",
+      "kind": "proof-sketch",
+      "text": "Let the integer roots be \\(r\\) and \\(s.\\) Vieta’s formulas give \\(r+s=-a\\) and \\(rs=6a,\\) so \\(rs=-6(r+s).\\) Therefore \\[(r+6)(s+6)=36.\\] Conversely, every ordered integer factorization \\(uv=36\\) gives integer roots \\(r=u-6,\\) \\(s=v-6,\\) and \\(a=12-u-v.\\) Unordered positive factor pairs of \\(36\\) have sums \\(37,\\) \\(20,\\) \\(15,\\) \\(13,\\) \\(12,\\) and the corresponding negative factor pairs have their negatives as sums. These ten sums are distinct, so they give \\(10\\) distinct values of \\(a.\\)",
+      "hints": [
+        "Let the two integer roots be \\(r\\) and \\(s\\), and eliminate \\(a\\) using Vieta’s formulas",
+        "Complete a product after obtaining \\(rs=-6(r+s)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

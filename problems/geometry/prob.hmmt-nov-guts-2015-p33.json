@@ -1,0 +1,75 @@
+{
+  "id": "prob.hmmt-nov-guts-2015-p33",
+  "title": "2015 HMMT November Guts Problem 33",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.constructions-and-loci",
+      "label": "Constructions and loci",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.distance-chasing",
+      "label": "Distance chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.homothety",
+      "label": "Homothety",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.rotation",
+      "label": "Rotation",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2015,
+    "number": 33
+  },
+  "difficulty": {
+    "course": 56.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many ways are there to place four points in the plane such that the set of pairwise distances between the points consists of exactly 2 elements? (Two configurations are the same if one can be obtained from the other via rotation and scaling.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2015-p33.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 6\nLet \\(A, B, C, D\\) be the four points. There are 6 pairwise distances, so at least three of them must be equal.\nCase 1: There is no equilateral triangle. Then WLOG we have \\(A B=B C=C D=1\\).\n\n- Subcase 1.1: \\(A D=1\\) as well. Then \\(A C=B D \\neq 1\\), so \\(A B C D\\) is a square.\n- Subcase 1.2: \\(A D \\neq 1\\). Then \\(A C=B D=A D\\), so \\(A, B, C, D\\) are four points of a regular pentagon.\n\nCase 2: There is an equilateral triangle, say \\(A B C\\), of side length 1.\n\n- Subcase 2.1: There are no more pairs of distance 1. Then \\(D\\) must be the center of the triangle.\n- Subcase 2.2: There is one more pair of distance 1 , say \\(A D\\). Then \\(D\\) can be either of the two intersections of the unit circle centered at \\(A\\) with the perpendicular bisector of \\(B C\\). This gives us 2 kites.\n- Subcase 2.3: Both \\(A D=B D=1\\). Then \\(A B C D\\) is a rhombus with a \\(60^{\\circ}\\) angle.\n\nThis gives us 6 configurations total.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

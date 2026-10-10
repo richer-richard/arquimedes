@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2016-p11",
+  "title": "2016 AIME II Problem 11",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2016,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 61.8,
+    "source": 2990,
+    "mohs": null
+  },
+  "estimatedMinutes": 12,
+  "statement": "For positive integers \\(N\\) and \\(k,\\) define \\(N\\) to be \\(k\\)-nice if there exists a positive integer \\(a\\) such that \\(a^k\\) has exactly \\(N\\) positive divisors. Find the number of positive integers less than \\(1000\\) that are neither \\(7\\)-nice nor \\(8\\)-nice.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "749",
+    "value": "749"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2016-p11.live",
+      "kind": "proof-sketch",
+      "text": "If \\(a = p_1^{m_1} \\cdots p_t^{m_t},\\) then \\(a^k\\) has \\((km_1 + 1)(km_2 + 1)\\) \\(\\cdots (km_t + 1)\\) positive divisors, and each factor is \\(\\equiv 1 \\pmod{k},\\) so the product is too. Conversely, if \\(N = km + 1,\\) then \\(a = p^m\\) gives \\(a^k = p^{km}\\) with exactly \\(N\\) divisors. So \\(N\\) is \\(k\\)-nice exactly when \\(N \\equiv 1 \\pmod{k}.\\)\n\nAmong \\(1, 2, \\ldots, 999\\) there are \\(143\\) integers \\(\\equiv 1 \\pmod{7}\\) (namely \\(1, 8, \\ldots, 995\\)) and \\(125\\) integers \\(\\equiv 1 \\pmod{8}\\) (namely \\(1, 9, \\ldots, 993\\)). Since \\(\\operatorname{lcm}(7, 8) = 56,\\) there are \\(18\\) integers \\(\\equiv 1 \\pmod{56}\\) (namely \\(1, 57, \\ldots, 953\\)). By inclusion-exclusion, \\(143 + 125 - 18 = 250\\) of them are \\(7\\)-nice or \\(8\\)-nice.\n\nHence \\(999 - 250 = 749\\) positive integers less than \\(1000\\) are neither.",
+      "hints": [
+        "If \\(a = p_1^{m_1} \\cdots p_t^{m_t},\\) then \\(a^k\\) has \\((km_1 + 1) \\cdots (km_t + 1)\\) divisors, which is \\(1\\) more than a multiple of \\(k\\)",
+        "Every \\(N \\equiv 1 \\pmod{k}\\) works too (take \\(a = p^m\\)). Count residues \\(1\\) mod \\(7\\) and mod \\(8\\) below \\(1000\\) by inclusion-exclusion."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

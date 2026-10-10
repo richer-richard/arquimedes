@@ -1,0 +1,56 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2022-p7",
+  "title": "2022 HMMT February Combinatorics Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.diophantine-equations",
+      "label": "Diophantine equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2022,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 88.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(S=\\left\\{(x, y) \\in \\mathbb{Z}^{2} \\mid 0 \\leq x \\leq 11,0 \\leq y \\leq 9\\right\\}\\). Compute the number of sequences \\(\\left(s_{0}, s_{1}, \\ldots, s_{n}\\right)\\) of elements in \\(S\\) (for any positive integer \\(n \\geq 2\\) ) that satisfy the following conditions:\n\n- \\(s_{0}=(0,0)\\) and \\(s_{1}=(1,0)\\),\n- \\(s_{0}, s_{1}, \\ldots, s_{n}\\) are distinct,\n- for all integers \\(2 \\leq i \\leq n, s_{i}\\) is obtained by rotating \\(s_{i-2}\\) about \\(s_{i-1}\\) by either \\(90^{\\circ}\\) or \\(180^{\\circ}\\) in the clockwise direction.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "646634",
+    "value": "646634"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2022-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(a_{n}\\) be the number of such possibilities where there \\(n 90^{\\circ}\\) turns. Note that \\(a_{0}=10\\) and \\(a_{1}=11 \\cdot 9\\).\nNow suppose \\(n=2 k\\) with \\(k \\geq 1\\). The path traced out by the \\(s_{i}\\) is uniquely determined by a choice of \\(k+1\\) nonnegative \\(x\\)-coordinates and \\(k\\) positive \\(y\\)-coordinates indicating where to turn and when to stop. If \\(n=2 k+1\\), the path is uniquely determined by a choice of \\(k+1\\) nonnegative \\(x\\)-coordinates and \\(k+1\\) positive \\(y\\)-coordinates.\nAs a result, our final answer is\n\n\\[10+11 \\cdot 9+\\binom{12}{2}\\binom{9}{1}+\\binom{12}{2}\\binom{9}{2}+\\cdots=-12+\\binom{12}{0}\\binom{9}{0}+\\binom{12}{1}\\binom{9}{0}+\\binom{12}{1}\\binom{9}{1}+\\cdots\\]\n\nOne can check that\n\n\\[\\sum_{k=0}^{9}\\binom{12}{k}\\binom{9}{k}=\\sum_{k=0}^{9}\\binom{12}{k}\\binom{9}{9-k}=\\binom{21}{9}\\]\n\nby Vandermonde's identity. Similarly,\n\n\\[\\sum_{k=0}^{9}\\binom{12}{k+1}\\binom{9}{k}=\\sum_{k=0}^{9}\\binom{12}{k+1}\\binom{9}{9-k}=\\binom{21}{10}\\]\n\nThus our final answer is\n\n\\[\\begin{aligned}\n\\binom{22}{10}-12 & =-12+\\frac{22 \\cdot 21 \\cdot 2 \\cdot 19 \\cdot 2 \\cdot 17 \\cdot 2 \\cdot 15 \\cdot 2 \\cdot 13}{6!} \\\\\n& =-12+7 \\cdot 11 \\cdot 13 \\cdot \\frac{2^{5} \\cdot 3^{2} \\cdot 5 \\cdot 19 \\cdot 17}{2^{4} \\cdot 3^{2} \\cdot 5} \\\\\n& =-12+1001 \\cdot 2 \\cdot 17 \\cdot 19 \\\\\n& =646646-12=646634 .\n\\end{aligned}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-i-2010-p11",
+  "title": "2010 AIME I Problem 11",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cone",
+      "label": "Cone",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.volume",
+      "label": "Volume",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2010,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 59.8,
+    "source": 2920,
+    "mohs": null
+  },
+  "estimatedMinutes": 13,
+  "statement": "Let \\(\\mathcal{R}\\) be the region consisting of the set of points in the coordinate plane that satisfy both \\(|8 - x| + y \\le 10\\) and \\(3y - x \\ge 15.\\) When \\(\\mathcal{R}\\) is revolved around the line whose equation is \\(3y - x = 15,\\) the volume of the resulting solid is \\(\\frac{m\\pi}{n\\sqrt{p}},\\) where \\(m,\\) \\(n,\\) and \\(p\\) are positive integers, \\(m\\) and \\(n\\) are relatively prime, and \\(p\\) is not divisible by the square of any prime. Find \\(m + n + p.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "365",
+    "value": "365"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2010-p11.live",
+      "kind": "proof-sketch",
+      "text": "The condition \\(|8 - x| + y \\le 10\\) means \\(y \\le x + 2\\) for \\(x \\le 8\\) and \\(y \\le 18 - x\\) for \\(x \\ge 8.\\) Intersecting with the half-plane \\(3y - x \\ge 15\\) leaves the triangle with vertices \\(A = \\left(\\frac{9}{2}, \\frac{13}{2}\\right)\\) and \\(B = \\left(\\frac{39}{4}, \\frac{33}{4}\\right)\\) on the line \\(3y - x = 15,\\) and apex \\(C = (8, 10).\\)\n\nSide \\(AB\\) lies on the axis of revolution, and the foot \\(D\\) of the perpendicular from \\(C\\) to the line, namely \\((8.7, 7.9),\\) lies between \\(A\\) and \\(B.\\) So the solid is two cones sharing a base of radius \\(CD\\) with heights summing to \\(AB,\\) and its volume is \\(\\frac{1}{3}\\pi \\cdot CD^2 \\cdot AB.\\) Here \\[ \\begin{aligned} CD &= \\frac{|3 \\cdot 10 - 8 - 15|}{\\sqrt{10}} = \\frac{7}{\\sqrt{10}}, \\\\ AB &= \\sqrt{\\left(\\tfrac{21}{4}\\right)^2 + \\left(\\tfrac{7}{4}\\right)^2} \\\\ &= \\frac{7\\sqrt{10}}{4}. \\end{aligned} \\]\n\nThe volume is \\(\\frac{1}{3}\\pi \\cdot \\frac{49}{10} \\cdot \\frac{7\\sqrt{10}}{4} = \\frac{343\\pi}{12\\sqrt{10}},\\) so \\(m + n + p = 343 + 12 + 10\\) \\(= 365.\\)",
+      "hints": [
+        "The region is a triangle with one side on the axis of revolution \\(3y - x = 15;\\) find its three vertices",
+        "Revolving gives two cones sharing a base: total volume \\(\\frac{1}{3}\\pi\\,d^2 \\cdot AB,\\) where \\(d\\) is the distance from the off-axis vertex to the line"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

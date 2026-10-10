@@ -1,0 +1,37 @@
+{
+  "id": "prob.hmmt-feb-team-2014-p4",
+  "title": "2014 HMMT February Team Problem 4",
+  "category": "uncategorized",
+  "subjects": [],
+  "concepts": [],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2014,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 82.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Compute\n\n\\[\\sum_{k=0}^{100}\\left\\lfloor\\frac{2^{100}}{2^{50}+2^{k}}\\right\\rfloor\\]\n\n(Here, if \\(x\\) is a real number, then \\(\\lfloor x\\rfloor\\) denotes the largest integer less than or equal to \\(x\\).)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2014-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(101 \\cdot 2^{49}-50\\) Let \\(a_{k}=\\frac{2^{100}}{2^{50}+2^{k}}\\). Notice that, for \\(k=0,1, \\ldots, 49\\),\n\n\\[a_{k}+a_{100-k}=\\frac{2^{100}}{2^{50}+2^{k}}+\\frac{2^{100}}{2^{50}+2^{100-k}}=\\frac{2^{100}}{2^{50}+2^{k}}+\\frac{2^{50+k}}{2^{k}+2^{50}}=2^{50}\\]\n\nIt is clear that for \\(k=0,1, \\ldots, 49, a_{k}, a_{100-k} \\notin \\mathbb{Z}\\), so \\(\\left\\lfloor a_{k}\\right\\rfloor+\\left\\lfloor a_{100-k}\\right\\rfloor=2^{50}-1\\) (since the sum of floors is an integer less than \\(a_{k}+a_{100-k}\\) but greater than \\(\\left.a_{k}-1+a_{100-k}-1\\right)\\). Thus,\n\n\\[\\sum_{k=0}^{100}\\left\\lfloor a_{k}\\right\\rfloor=50 \\cdot\\left(2^{50}-1\\right)+2^{49}=101 \\cdot 2^{49}-50\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

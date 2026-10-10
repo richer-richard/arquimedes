@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2023-p14",
+  "title": "2023 AMC 12B Problem 14",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factor",
+      "label": "Factor",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.systematic-listing",
+      "label": "Systematic listing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2023,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 26.7,
+    "source": 1630,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "For how many ordered pairs \\((a,b)\\) of integers does the polynomial \\(x^3+ax^2+bx+6\\) have \\(3\\) distinct integer roots?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2023-p14.live",
+      "kind": "proof-sketch",
+      "text": "By Vieta, the three distinct integer roots multiply to \\(-6.\\) The sets of three distinct integers with product \\(-6\\) are \\(\\{1,2,-3\\},\\) \\(\\{1,-2,3\\},\\) \\(\\{-1,2,3\\},\\) \\(\\{-1,-2,-3\\},\\) and \\(\\{1,-1,6\\}.\\) Each set determines \\(a=-(p+q+r)\\) and \\(b=pq+qr+rp,\\) and all five give different pairs, so there are \\(5\\) ordered pairs \\((a,b).\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "If the roots are integers \\(p,q,r,\\) then \\(pqr=-6\\)",
+        "List the sets of three distinct integers with product \\(-6;\\) each set gives one pair \\((a,b)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

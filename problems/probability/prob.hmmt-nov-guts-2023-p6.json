@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-guts-2023-p6",
+  "title": "2023 HMMT November Guts Problem 6",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2023,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 43.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "There are five people in a room. They each simultaneously pick two of the other people in the room independently and uniformly at random and point at them. Compute the probability that there exists a group of three people such that each of them is pointing at the other two in the group.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{5}{108}",
+    "value": "\\frac{5}{108}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2023-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "The desired probability is the number of ways to pick the two isolated people times the probability that the remaining three point at each other. So,\n\n\\[P=\\binom{5}{2} \\cdot\\left(\\frac{\\binom{2}{2}}{\\binom{4}{2}}\\right)^{3}=10 \\cdot\\left(\\frac{1}{6}\\right)^{3}=\\frac{5}{108}\\]\n\nis the desired probability.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

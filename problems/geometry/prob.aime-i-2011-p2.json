@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2011-p2",
+  "title": "2011 AIME I Problem 2",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vector",
+      "label": "Vector",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2011,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 46.2,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "In rectangle \\(ABCD,\\) \\(AB = 12\\) and \\(BC = 10.\\) Points \\(E\\) and \\(F\\) lie inside rectangle \\(ABCD\\) so that \\(BE = 9,\\) \\(DF = 8,\\) \\(\\overline{BE} \\parallel \\overline{DF},\\) \\(\\overline{EF} \\parallel \\overline{AB},\\) and line \\(BE\\) intersects segment \\(\\overline{AD}.\\) The length \\(EF\\) can be expressed in the form \\(m\\sqrt{n} - p,\\) where \\(m,\\) \\(n,\\) and \\(p\\) are positive integers and \\(n\\) is not divisible by the square of any prime. Find \\(m + n + p.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "36",
+    "value": "36"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2011-p2.live",
+      "kind": "proof-sketch",
+      "text": "Place \\(D = (0, 0),\\) \\(C = (12, 0),\\) \\(B = (12, 10),\\) \\(A = (0, 10).\\) Since \\(\\overline{BE} \\parallel \\overline{DF},\\) there is a unit vector \\((u, v)\\) with \\(u, v \\gt 0\\) such that \\(E = B - 9(u, v)\\) and \\(F = D + 8(u, v):\\) line \\(BE\\) heads down and to the left so that it can cross \\(\\overline{AD},\\) while \\(\\overline{DF}\\) points up and to the right into the rectangle.\n\nBecause \\(\\overline{EF} \\parallel \\overline{AB}\\) is horizontal, \\(E\\) and \\(F\\) have equal heights: \\(10 - 9v = 8v,\\) so \\(v = \\frac{10}{17}\\) and \\(u = \\sqrt{1 - v^2} = \\frac{3\\sqrt{21}}{17}.\\)\n\nThen \\(E\\) and \\(F\\) have \\(x\\)-coordinates \\(12 - 9u\\) and \\(8u,\\) so \\(EF = |12 - 17u|\\) \\(= |12 - 3\\sqrt{21}|\\) \\(= 3\\sqrt{21} - 12,\\) since \\(3\\sqrt{21} \\gt 12.\\) Thus \\(m + n + p = 3 + 21 + 12 = 36.\\)",
+      "hints": [
+        "Since \\(\\overline{BE} \\parallel \\overline{DF},\\) write \\(E = B - 9(u, v)\\) and \\(F = D + 8(u, v)\\) for one unit vector \\((u, v)\\)",
+        "\\(\\overline{EF} \\parallel \\overline{AB}\\) forces \\(E\\) and \\(F\\) to the same height, giving \\(v = \\frac{10}{17};\\) then \\(EF\\) is a difference of \\(x\\)-coordinates"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

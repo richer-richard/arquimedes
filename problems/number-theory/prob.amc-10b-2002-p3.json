@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2002-p3",
+  "title": "2002 AMC 10B Problem 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "probability",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.mean",
+      "label": "Mean",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.place-value",
+      "label": "Place value",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2002,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 9.5,
+    "source": 960,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "The arithmetic mean of the nine numbers in the set \\(\\{9, 99, 999, 9999, \\ldots, 999999999\\}\\) is a \\(9\\)-digit number \\(M,\\) all of whose digits are distinct. Which digit does the number \\(M\\) not contain?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(8\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "0"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2002-p3.live",
+      "kind": "proof-sketch",
+      "text": "The mean is \\[ \\begin{aligned} &\\dfrac{1}{9} \\\\ &\\quad {}\\cdot \\small \\left(9 + 99 + 999 + \\cdots + 999999999\\right) \\\\ &= 1 + 11 + 111 + \\cdots \\\\ &\\quad {}+ 111111111. \\end{aligned} \\]\n\nAdding these nine repunits column by column gives \\(M = 123456789.\\)\n\nThe only digit missing from \\(M\\) is \\(0.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "Each term is \\(9\\) times a repunit, so divide the sum by \\(9\\) first",
+        "\\(\\dfrac19(9 + 99 + \\cdots)\\) \\(= 1 + 11 + 111 + \\cdots\\) \\(+ 111111111\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

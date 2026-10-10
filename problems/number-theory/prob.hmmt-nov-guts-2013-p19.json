@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-nov-guts-2013-p19",
+  "title": "2013 HMMT November Guts Problem 19",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular Arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.quadratic-residues",
+      "label": "Quadratic residues",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2013,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 47.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(p, q, r, s\\) be distinct primes such that \\(p q-r s\\) is divisible by 30 . Find the minimum possible value of \\(p+q+r+s\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2013-p19.hmmt",
+      "kind": "proof-sketch",
+      "text": "54 The key is to realize none of the primes can be 2,3 , or 5 , or else we would have to use one of them twice. Hence \\(p, q, r, s\\) must lie among \\(7,11,13,17,19,23,29, \\ldots\\). These options give remainders of \\(1(\\bmod 2)\\) (obviously), \\(1,-1,1,-1,1,-1,-1, \\ldots\\) modulo 3 , and \\(2,1,3,2,4,3,4, \\ldots\\) modulo 5 . We automatically have \\(2 \\mid p q-r s\\), and we have \\(3 \\mid p q-r s\\) if and only if \\(p q r s \\equiv(p q)^{2} \\equiv 1\\) \\((\\bmod 3)\\), i.e. there are an even number of \\(-1(\\bmod 3)\\) 's among \\(p, q, r, s\\).\nIf \\(\\{p, q, r, s\\}=\\{7,11,13,17\\}\\), then we cannot have \\(5 \\mid p q-r s\\), or else \\(12 \\equiv p q r s \\equiv(p q)^{2}(\\bmod 5)\\) is a quadratic residue. Our next smallest choice (in terms of \\(p+q+r+s\\) ) is \\(\\{7,11,17,19\\}\\), which works: \\(7 \\cdot 17-11 \\cdot 19 \\equiv 2^{2}-4 \\equiv 0(\\bmod 5)\\). This gives an answer of \\(7+17+11+19=54\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "id": "prob.amc-10b-2010-p19",
+  "title": "2010 AMC 10B Problem 19",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.chord",
+      "label": "Chord",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.pythagorean-theorem",
+      "label": "Pythagorean Theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2010,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 28.6,
+    "source": 1860,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A circle with center \\(O\\) has area \\(156\\pi.\\) Triangle \\(ABC\\) is equilateral, \\(\\overline{BC}\\) is a chord on the circle, \\(OA = 4\\sqrt{3},\\) and point \\(O\\) is outside \\(\\triangle ABC.\\) What is the side length of \\(\\triangle ABC?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\sqrt{3}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4\\sqrt{3}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(18\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2010-p19.live",
+      "kind": "proof-sketch",
+      "text": "Consider the following diagram:\n\nUsing the formula for the area of a circle, we have that \\(BO = \\sqrt{156}\\) since it is a radius.\n\nExtend \\(\\overline{AO}\\) to intersect \\(\\overline{BC}\\) at \\(X.\\) Let \\(s\\) be the side length of \\(\\triangle ABC.\\)\n\nThen we have that \\[ BX = \\dfrac{s}{2} \\] and \\[ AX = \\dfrac{s\\sqrt3}{2}. \\]\n\nWe have that \\(\\triangle OXB\\) is right, which means that we can apply the Pythagorean Theorem. This gives us \\[ (\\sqrt{156})^2 = \\left(\\dfrac{s}{2}\\right)^2\\]\\[ + \\left(\\dfrac{s\\sqrt3}{2} + 4\\sqrt3\\right)^2. \\]\n\nSimplifying, we get \\[ 156 = s^2 + 12s + 48 \\] \\[ s^2 + 12s - 108 = 0 \\] \\[ (s - 6)(s + 18) = 0. \\]\n\nSince \\(s\\) is positive, we must have that \\(s = 6.\\)\n\nThus, B is the correct answer.",
+      "hints": [
+        "Let \\(s\\) be the side length and drop the altitude from \\(A\\)",
+        "Use the circle radius \\(\\sqrt{156}\\) and the equilateral triangle altitude"
+      ],
+      "images": [
+        "0088f51f04fa319ccd6d1be2bc12a7e9d7de3cd7e7b1df2079da2e8fbfb31b97"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "0088f51f04fa319ccd6d1be2bc12a7e9d7de3cd7e7b1df2079da2e8fbfb31b97"
+    ]
+  }
+}

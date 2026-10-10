@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12a-2021-p19",
+  "title": "2021 AMC 12A Problem 19",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2021,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 34.4,
+    "source": 2300,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "How many solutions does the equation \\[ \\sin\\left(\\frac{\\pi}{2}\\cos x\\right) = \\cos\\left(\\frac{\\pi}{2}\\sin x\\right) \\] have in the closed interval \\([0, \\pi]?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2021-p19.live",
+      "kind": "proof-sketch",
+      "text": "Write the right side as \\(\\cos\\left(\\tfrac{\\pi}{2}\\sin x\\right) = \\sin\\left(\\tfrac{\\pi}{2} - \\tfrac{\\pi}{2}\\sin x\\right).\\) Equal sines require either \\[ \\begin{aligned} &\\frac{\\pi}{2}\\cos x \\\\ &= \\frac{\\pi}{2}(1 - \\sin x) + 2\\pi k \\end{aligned} \\] or \\[ \\begin{aligned} &\\frac{\\pi}{2}\\cos x \\\\ &= \\pi - \\frac{\\pi}{2}(1 - \\sin x) + 2\\pi k. \\end{aligned} \\]\n\nThe first reduces to \\(\\cos x + \\sin x = 1 + 4k;\\) since \\(\\cos x + \\sin x \\in [-\\sqrt2, \\sqrt2],\\) only \\(k = 0\\) works, giving \\(\\cos x + \\sin x = 1,\\) with solutions \\(x = 0\\) and \\(x = \\tfrac{\\pi}{2}\\) in \\([0, \\pi].\\) The second reduces to \\(\\cos x - \\sin x = 1,\\) whose only solution in \\([0, \\pi]\\) is \\(x = 0.\\)\n\nThe distinct solutions are \\(x = 0\\) and \\(x = \\tfrac{\\pi}{2},\\) for a total of \\(2.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "Rewrite the right side using \\(\\cos\\theta = \\sin\\!\\left(\\tfrac{\\pi}{2} - \\theta\\right)\\)",
+        "Equal sines give \\(\\cos x + \\sin x = 1\\) or \\(\\cos x - \\sin x = 1;\\) each has range \\([-\\sqrt2, \\sqrt2]\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

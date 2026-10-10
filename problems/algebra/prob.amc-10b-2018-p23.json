@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2018-p23",
+  "title": "2018 AMC10B 23",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.least-common-multiple",
+      "label": "Least common multiple",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.simons-favorite-factoring-trick",
+      "label": "Simon’s Favorite Factoring Trick",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2018,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 32.9,
+    "source": 2120,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "How many ordered pairs \\((a, b)\\) of positive integers satisfy the equation\n\n\\[ \\begin{aligned} a \\cdot b + 63 &= 20 \\cdot \\operatorname{lcm}(a, b) \\\\ &\\quad {}+ 12 \\cdot \\gcd(a, b), \\end{aligned} \\]\n\nwhere \\(\\gcd(a, b)\\) denotes the greatest common divisor of \\(a\\) and \\(b,\\) and \\(\\operatorname{lcm}(a, b)\\) denotes their least common multiple?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(0\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(8\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2018-p23.live",
+      "kind": "proof-sketch",
+      "text": "Recall \\(ab=\\gcd(a,b)\\operatorname{lcm}(a,b).\\) Let \\(x=\\operatorname{lcm}(a,b)\\) and \\(y=\\gcd(a,b).\\) The equation becomes \\[(x-12)(y-20)=177=3\\cdot59.\\]\n\nThe positive factor pairs give \\((x,y)=(13,197),\\) \\((189,21),\\) \\((15,79),\\) and \\((71,23).\\) The negative factor pairs make either \\(x\\) or \\(y\\) negative, so they are impossible. Also \\(y\\) must divide \\(x,\\) and only \\((x,y)=(189,21)\\) passes.\n\nWrite \\(a=21u\\) and \\(b=21v.\\) Then \\(\\gcd(u,v)=1\\) and \\(uv=\\frac{189}{21}=9,\\) so \\((u,v)=(1,9)\\) or \\((9,1).\\) Hence the two ordered pairs are \\((21,189)\\) and \\((189,21),\\) and B is the correct answer.",
+      "hints": [
+        "Use \\(ab = \\gcd(a,b) \\cdot \\operatorname{lcm}(a,b);\\) let \\(x = \\operatorname{lcm}(a,b)\\) and \\(y = \\gcd(a,b)\\)",
+        "The equation becomes \\((x - 12)(y - 20) = 177 = 3 \\cdot 59;\\) also \\(y\\) must divide \\(x\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

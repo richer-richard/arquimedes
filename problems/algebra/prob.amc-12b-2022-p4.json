@@ -1,0 +1,88 @@
+{
+  "id": "prob.amc-12b-2022-p4",
+  "title": "2022 AMC 12B Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factor",
+      "label": "Factor",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.systematic-listing",
+      "label": "Systematic listing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2022,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 15.7,
+    "source": 1200,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "For how many values of the constant \\(k\\) will the polynomial \\(x^2 + kx + 36\\) have two distinct integer roots?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(14\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(16\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "8"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2022-p4.live",
+      "kind": "proof-sketch",
+      "text": "If the roots are integers \\(p\\) and \\(q,\\) then \\(pq = 36\\) and \\(k = -(p+q).\\) Distinct roots must have the same sign, so we list factor pairs of \\(36\\) with \\(p \\ne q.\\)\n\nThe positive pairs are \\((1,36), (2,18), (3,12), (4,9),\\) and the negative pairs are \\((-1,-36),\\) \\((-2,-18),\\) \\((-3,-12),\\) \\((-4,-9).\\) The pair \\((6,6)\\) is excluded since the roots must be distinct.\n\nEach of these \\(8\\) pairs gives a different value of \\(k.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "If the roots are \\(p\\) and \\(q,\\) then \\(pq = 36\\) and \\(k = -(p+q)\\)",
+        "Count the ordered-independent factor pairs of \\(36\\) with two distinct integers, including negatives"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

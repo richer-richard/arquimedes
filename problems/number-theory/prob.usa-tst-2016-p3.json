@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tst-2016-p3",
+  "title": "USA TST 2016 Problem 3",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TST",
+    "year": 2016,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 102.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(p\\) be a prime number. Let \\(\\mathbb{F}_p\\) denote the integers modulo \\(p\\),\nand let \\(\\mathbb{F}_p[x]\\) be the set of polynomials with coefficients in \\(\\mathbb{F}_p\\).\nDefine \\(\\Psi \\colon \\mathbb{F}_p[x] \\to \\mathbb{F}_p[x]\\) by\n\\[ \\Psi\\left( \\sum_{i=0}^n a_i x^i \\right) = \\sum_{i=0}^n a_i x^{p^i}. \\]\nProve that for nonzero polynomials \\(F,G \\in \\mathbb{F}_p[x]\\),\n\\[ \\Psi(\\gcd(F,G)) = \\gcd(\\Psi(F), \\Psi(G)). \\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tst-2016-p3.evanchen",
+      "kind": "proof-sketch",
+      "text": "Observe that \\(\\Psi\\) is also a linear map of \\(\\mathbb{F}_p\\) vector spaces,\nand that \\(\\Psi(xP) = \\Psi(P)^p\\) for any \\(P \\in \\mathbb{F}_p[x]\\).\n(In particular, \\(\\Psi(1) = x\\), not \\(1\\), take caution!)\n\nFirst solution (Ankan Bhattacharya)..\nWe start with:\n\nClaim.\n If \\(P \\mid Q\\) then \\(\\Psi(P) \\mid \\Psi(Q)\\).\n\nProof.\n Set \\(Q = PR\\), where \\(R = \\sum_{i=0}^k r_i x^i\\).\n Then\n \\[ \\Psi(Q) = \\Psi\\left( P\\sum_{i=0}^k r_i x^i \\right)\n = \\sum_{i=0}^k \\Psi\\left( P \\cdot r_i x^i \\right)\n = \\sum_{i=0}^k r_i \\Psi(P)^{p^i} \\]\n which is divisible by \\(\\Psi(P)\\).\n\nThis already implies\n\\[ \\Psi(\\gcd(F,G)) \\mid \\gcd(\\Psi(F), \\Psi(G)). \\]\nFor the converse, by Bezout there exists \\(A,B \\in \\mathbb{F}_p[x]\\)\nsuch that \\(AF + BG = \\gcd(F,G)\\), so taking \\(\\Psi\\) of both sides gives\n\\[ \\Psi(AF) + \\Psi(BG) = \\Psi\\left( \\gcd(F,G) \\right). \\]\nThe left-hand side is divisible by \\(\\gcd(\\Psi(F), \\Psi(G))\\)\nsince the first term is divisible by \\(\\Psi(F)\\)\nand the second term is divisible by \\(\\Psi(G)\\).\nSo \\(\\gcd(\\Psi(F), \\Psi(G)) \\mid \\Psi(\\gcd(F,G))\\)\nand noting both sides are monic we are done.\n\nSecond solution..\nHere is an alternative (longer but more conceptual) way to finish without Bezout lemma.\nLet \\(\\beth \\subseteq \\mathbb{F}_p[x]\\) denote the set of polynomials in the image of \\(\\Psi\\),\nthus \\(\\Psi \\colon \\mathbb{F}_p[x] \\to \\beth\\) is a bijection on the level of sets.\n\nClaim.\n If \\(A,B \\in \\beth\\) then \\(\\gcd(A,B) \\in \\beth\\).\n\nProof.\n It suffices to show that if \\(A\\) and \\(B\\) are monic,\n and \\(\\deg A > \\deg B\\),\n then the remainder when \\(A\\) is divided by \\(B\\) is in \\(\\beth\\).\n Suppose \\(\\deg A = p^k\\) and \\(B = x^{p^{k-1}} - c_2x^{p^{k-2}} - \\dots - c_k\\).\n Then\n \\[\\begin{aligned}\n x^{p^k} &\\equiv \\left( c_2x^{p^{k-2}} + c_3x^{p^{k-3}}\n + \\dots + c_k \\right)^p \\pmod B \\\\\n &\\equiv c_2x^{p^{k-1}} + c_3x^{p^{k-2}} \\dots + c_k \\pmod B\n \\end{aligned}\\]\n since exponentiation by \\(p\\) commutes with addition in \\(\\mathbb{F}_p\\).\n This is enough to imply the conclusion.\n The proof if \\(\\deg B\\) is smaller less than \\(p^{k-1}\\) is similar.\n\nThus, if we view \\(\\mathbb{F}_p[x]\\) and \\(\\beth\\) as partially ordered sets\nunder polynomial division, then \\(\\gcd\\) is the\n``greatest lower bound'' or ``meet'' in both partially ordered sets.\nWe will now prove that \\(\\Psi\\) is an isomorphism of the posets.\nWe have already seen that \\(P \\mid Q \\implies \\Psi(P) \\mid \\Psi(Q)\\)\nfrom the first solution. For the converse:\n\nClaim.\n If \\(\\Psi(P) \\mid \\Psi(Q)\\) then \\(P \\mid Q\\).\n\nProof.\n Suppose \\(\\Psi(P) \\mid \\Psi(Q)\\), but \\(Q=PA+B\\) where \\(\\deg B < \\deg P\\).\n Thus \\(\\Psi(P) \\mid \\Psi(PA) + \\Psi(B)\\), hence \\(\\Psi(P) \\mid \\Psi(B)\\),\n but \\(\\deg \\Psi(P) > \\deg \\Psi(B)\\) hence \\(\\Psi(B) = 0 \\implies B = 0\\).\n\nThis completes the proof.\n\nRemark.\n In fact \\(\\Psi \\colon \\mathbb{F}_p[x] \\to \\beth\\) is a ring isomorphism\n if we equip \\(\\beth\\) with function composition as the ring multiplication.\n Indeed in the proof of the first claim\n (that \\(P \\mid Q \\implies \\Psi(P) \\mid \\Psi(Q)\\)) we saw that\n \\[ \\Psi(RP) = \\sum_{i=0}^k r_i \\Psi(P)^{p^i} = \\Psi(R) \\circ \\Psi(P). \\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

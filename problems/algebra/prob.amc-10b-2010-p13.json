@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-10b-2010-p13",
+  "title": "2010 AMC 10B Problem 13",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.absolute-value",
+      "label": "Absolute value",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2010,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 25.5,
+    "source": 1660,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "What is the sum of all the solutions of the equation below? \\[x = |2x-|60-2x||\\]",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(32\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(60\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(92\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(120\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(124\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "92"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2010-p13.live",
+      "kind": "proof-sketch",
+      "text": "We first take care of the outer absolute value. We have either \\[ x = 2x - |60 - 2x| \\] or \\[ x = -2x + |60 - 2x|. \\]\n\nThese simplify to \\[ x = |60 - 2x| \\] and \\[ 3x = |60 - 2x|. \\]\n\nWe have \\(2\\) cases for each equation. For the first one, we have \\[x = 60 - 2x\\] and \\[x = 2x - 60.\\]\n\nSolving both gives us \\[ 3x = 60 \\]\\[ x = 20 \\] and \\[ -x = -60 \\]\\[ x = 60. \\]\n\nFor the other equation, we have \\[3x = 60 - 2x\\] and \\[3x = 2x - 60.\\]\n\nAgain solving both, we have \\[ 5x = 60 \\]\\[ x = 12 \\] and \\(x = -60.\\) Note that \\(x\\) cannot be negative since the right side of the original equation is nonnegative.\n\nAdding up all the solutions gives us \\[ 20 + 60 + 12 = 92. \\]\n\nThus, C is the correct answer.",
+      "hints": [
+        "Split cases based on the sign of \\(60-2x\\)",
+        "After resolving the inner absolute value, solve the resulting absolute-value equations"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-10a-2022-p9",
+  "title": "2022 AMC 10A Problem 9",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2022,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 16.2,
+    "source": 1220,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A rectangle is partitioned into \\(5\\) regions as shown. Each region is to be painted a solid color—red, orange, yellow, blue, or green—so that regions that touch are painted different colors, and colors can be used more than once. How many different colorings are possible?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(120\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(270\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(360\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(540\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(720\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "540"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2022-p9.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(5\\) choices for the color of the bottom left rectangle. This forces there to be \\(4\\) choices for the top left rectangle. The middle bottom rectangle touches both of the previous ones, so there are \\(3\\) color options for this rectangle.\n\nThe rectangle in the top right is also limited to \\(3\\) colors since it touches the two previous rectangles. Finally, the rectangle in the bottom right also has \\(3\\) color options.\n\nMultiplying these together, we get \\(5\\cdot4\\cdot3\\cdot3\\cdot3=540\\) total colorings.\n\nThus, D is the correct answer.",
+      "hints": [
+        "Color the regions in an order where each new region has known neighbors",
+        "After the first two colors, each remaining region has three choices"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "d7a139cbe8c59e11e03e4ccefffc403efc36ab5bff41461446908c19f47b7e4f"
+    ],
+    "solutions": []
+  }
+}

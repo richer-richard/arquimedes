@@ -1,0 +1,72 @@
+{
+  "id": "prob.aime-i-2014-p15",
+  "title": "2014 AIME I Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle",
+      "label": "Circle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cyclic-quadrilateral",
+      "label": "Cyclic quadrilateral",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.inscribed-angle",
+      "label": "Inscribed angle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2014,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 69.9,
+    "source": 3500,
+    "mohs": null
+  },
+  "estimatedMinutes": 30,
+  "statement": "In \\(\\triangle ABC,\\) \\(AB = 3,\\) \\(BC = 4,\\) and \\(CA = 5.\\) Circle \\(\\omega\\) intersects \\(\\overline{AB}\\) at \\(E\\) and \\(B,\\) \\(\\overline{BC}\\) at \\(B\\) and \\(D,\\) and \\(\\overline{AC}\\) at \\(F\\) and \\(G.\\) Given that \\(EF = DF\\) and \\(\\frac{DG}{EG} = \\frac{3}{4},\\) length \\(DE = \\frac{a\\sqrt{b}}{c},\\) where \\(a\\) and \\(c\\) are relatively prime positive integers, and \\(b\\) is a positive integer not divisible by the square of any prime. Find \\(a + b + c.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "41",
+    "value": "41"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2014-p15.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(3^2 + 4^2 = 5^2,\\) angle \\(B\\) is right, and as \\(\\angle EBD = 90^\\circ\\) is inscribed in \\(\\omega,\\) the chord \\(ED\\) is a diameter. Hence \\(\\angle EFD = \\angle EGD = 90^\\circ.\\) From \\(EF = DF,\\) triangle \\(EFD\\) is an isosceles right triangle, so \\(EF = DF = \\frac{DE}{\\sqrt{2}}\\) and \\(\\angle FED = 45^\\circ;\\) from \\(DG : EG = 3 : 4\\) and \\(DG^2 + EG^2 = DE^2\\) we get \\(DG = \\frac{3}{5}DE\\) and \\(EG = \\frac{4}{5}DE.\\) On \\(\\omega\\) the order is \\(E,\\) \\(F,\\) \\(G,\\) \\(D\\) (both \\(F\\) and \\(G\\) lie on the arc opposite \\(B,\\) and \\(\\angle FED = 45^\\circ\\) exceeds \\(\\angle GED = \\arcsin\\frac{3}{5},\\) so \\(F\\) is farther from \\(D\\)).\n\nLine \\(AC\\) is the line \\(FG,\\) so the distances from \\(E\\) and \\(D\\) to it follow from the angles of cyclic quadrilateral \\(EFGD.\\) At \\(F:\\) \\(\\angle EFG = 180^\\circ - \\angle GDE\\) and \\(\\sin\\angle GDE = \\frac{EG}{DE} = \\frac{4}{5},\\) so the distance from \\(E\\) is \\(EF \\sin\\angle EFG = \\frac{DE}{\\sqrt{2}} \\cdot \\frac{4}{5}\\) \\(= \\frac{2\\sqrt{2}}{5}DE.\\) At \\(G:\\) \\(\\angle FGD = 180^\\circ - \\angle FED = 135^\\circ,\\) so the distance from \\(D\\) is \\(DG \\sin\\angle FGD = \\frac{3}{5}DE \\cdot \\frac{\\sqrt{2}}{2}\\) \\(= \\frac{3\\sqrt{2}}{10}DE.\\)\n\nNow place \\(B = (0,0),\\) \\(C = (4,0),\\) \\(A = (0,3),\\) so \\(E = (0, e),\\) \\(D = (d, 0),\\) line \\(AC:\\) \\(3x + 4y = 12,\\) and \\(DE^2 = d^2 + e^2.\\) Setting \\(k = \\frac{\\sqrt{2}}{2}DE,\\) the two distance formulas read \\(\\frac{12 - 4e}{5} = \\frac{2\\sqrt{2}}{5}DE\\) and \\(\\frac{12 - 3d}{5} = \\frac{3\\sqrt{2}}{10}DE,\\) which give \\(e = 3 - k\\) and \\(d = 4 - k.\\) Then \\(DE^2 = 2k^2\\) becomes \\(2k^2 = (3-k)^2 + (4-k)^2\\) \\(= 2k^2 - 14k + 25,\\) so \\(k = \\frac{25}{14}\\) and \\(DE = \\sqrt{2}\\,k = \\frac{25\\sqrt{2}}{14}.\\) Therefore \\(a + b + c = 25 + 2 + 14 = 41.\\)",
+      "hints": [
+        "\\(\\angle B = 90^\\circ\\) is inscribed in \\(\\omega,\\) so \\(DE\\) is a diameter and \\(\\angle EFD = \\angle EGD = 90^\\circ\\)",
+        "Express the distances from \\(E\\) and \\(D\\) to line \\(AC\\) as multiples of \\(DE\\) using the angles of cyclic quadrilateral \\(EFGD,\\) then compare with coordinates"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

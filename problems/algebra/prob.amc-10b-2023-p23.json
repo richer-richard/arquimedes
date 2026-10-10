@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2023-p23",
+  "title": "2023 AMC 10B Problem 23",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.arithmetic-sequence",
+      "label": "Arithmetic sequence",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2023,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 45.9,
+    "source": 2380,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "An arithmetic sequence of positive integers has \\(n \\ge 3\\) terms, initial term \\(a,\\) and common difference \\(d \\gt 1.\\) Carl wrote down all the terms in this sequence correctly except for one term, which was off by \\(1.\\) The sum of the terms he wrote down was \\(222.\\) What is \\(a + d + n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(22\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(28\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(26\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "20"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2023-p23.live",
+      "kind": "proof-sketch",
+      "text": "The true sum is \\(S = na + \\frac{n(n-1)}{2}d.\\) Since one term is off by \\(1,\\) the written total satisfies \\(222 = S \\pm 1,\\) so \\(S = 221\\) or \\(223.\\) Also \\(2S = n\\bigl(2a + (n-1)d\\bigr),\\) so \\(n\\) divides \\(2S.\\) Since \\(a \\ge 1\\) and \\(d \\ge 2,\\) we have \\(2S \\ge 2n^2,\\) hence \\(n^2 \\le S.\\) For \\(S = 223,\\) no divisor of \\(446\\) lies between \\(3\\) and \\(\\sqrt{223}.\\) For \\(S = 221 = 13 \\cdot 17,\\) the only divisor of \\(442\\) in this range is \\(n = 13.\\) Thus \\(2a + 12d = 34,\\) or \\(a + 6d = 17.\\) Since \\(a\\) and \\(d\\) are positive integers with \\(d \\gt 1,\\) we get \\(a = 5,\\) \\(d = 2.\\) Then \\(a + d + n = 5 + 2 + 13 = 20.\\) Thus, B is the correct answer.",
+      "hints": [
+        "The written sum differs from the true sum \\(S\\) by \\(1,\\) so \\(S = 221\\) or \\(223\\)",
+        "Since \\(2S = n\\bigl(2a + (n-1)d\\bigr),\\) factor \\(S\\) and use \\(n \\ge 3,\\) \\(d \\gt 1,\\) \\(a \\ge 1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

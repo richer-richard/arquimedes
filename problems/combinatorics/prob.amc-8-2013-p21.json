@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-8-2013-p21",
+  "title": "2013 AMC 8 Problem 21",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.lattice-paths",
+      "label": "Lattice paths",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2013,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 19.3,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Samantha lives \\(2\\) blocks west and \\(1\\) block south of the southwest corner of City Park.\n\nHer school is \\(2\\) blocks east and \\(2\\) blocks north of the northeast corner of City Park. On school days she bikes on streets to the southwest corner of City Park, then takes a diagonal path through the park to the northeast corner, and then bikes on streets to school.\n\nIf her route is as short as possible, how many different routes can she take?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(18\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "18"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2013-p21.live",
+      "kind": "proof-sketch",
+      "text": "To reach the southwest corner of the park as quickly as possible, Samantha must go \\(2\\) blocks east and \\(1\\) block north, which can be arranged in \\(3\\) ways. After the diagonal path through the park, she must go \\(2\\) blocks east and \\(2\\) blocks north to reach school, which can be arranged in \\(\\binom{4}{2}=6\\) ways.\n\nThe choices before and after the park are independent, so the total number of shortest routes is \\(3\\cdot6=18\\).\n\nThus, E is the correct answer.",
+      "hints": [
+        "Count shortest street routes before and after the park separately.",
+        "There are \\(3\\) ways before the park and \\(6\\) ways after it."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

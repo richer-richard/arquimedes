@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-invitational-2016-p1",
+  "title": "2016 HMMT Invitational Problem 1",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.counting-two-ways",
+      "label": "Counting two ways",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2016,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Theseus starts at the point \\((0,0)\\) in the plane. If Theseus is standing at the point \\((x, y)\\) in the plane, he can step one unit to the north to point \\((x, y+1)\\), one unit to the west to point \\((x-1, y)\\), one unit to the south to point \\((x, y-1)\\), or one unit to the east to point \\((x+1, y)\\). After a sequence of more than two such moves, starting with a step one unit to the south (to point \\((0,-1)\\) ), Theseus finds himself back at the point \\((0,0)\\). He never visited any point other than \\((0,0)\\) more than once, and never visited the point \\((0,0)\\) except at the start and end of this sequence of moves.\n\nLet \\(X\\) be the number of times that Theseus took a step one unit to the north, and then a step one unit to the west immediately afterward. Let \\(Y\\) be the number of times that Theseus took a step one unit to the west, and then a step one unit to the north immediately afterward. Prove that \\(|X-Y|=1\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2016-p1.hmmt",
+      "kind": "proof-sketch",
+      "text": "The path Theseus traces out is a closed, non-self-intersecting path in the plane. Since each move is along a line segment, the path forms the boundary of a polygon in the plane. WLOG this polygon is traversed counterclockwise (i.e. with the interior of the polygon always on Theseus's left); the argument in the clockwise case is analogous, with a sign flip.\nLet \\(i=0\\) correspond to the direction east, \\(i=1\\) correspond to north, and so forth. For \\(0 \\leq i \\leq 3\\) and \\(j=i \\pm 1\\) let \\(X_{i j}\\) be the number of times Theseus switches from going in direction \\(i\\) to going in direction \\(j\\) (where indices are taken \\(\\bmod 4\\) ). So, \\(X=X_{1,2}, Y=X_{2,1}\\). We have the following relations among the \\(X_{i j}\\) :\nThe sum \\(n=\\sum X_{i, j}\\) is the number of vertices of the polygon. The sum of the interior angles of the polygon is thus \\(\\pi(n-2)\\). Each counterclockwise turn contributes \\(\\frac{\\pi}{2}\\), and each clockwise turn contributes \\(\\frac{3 \\pi}{2}\\) to this sum. The number of the former is counted by \\(\\sum X_{i, i+1}\\), and the latter by \\(\\sum X_{i+1, i}\\). So, \\(\\pi(n-2)=\\frac{\\pi}{2} \\sum X_{i, i+1}+\\frac{3 \\pi}{2} \\sum X_{i+1, i}=\\pi n+\\frac{\\pi}{2} \\sum\\left(X_{i+1, i}-X_{i, i+1}\\right)\\), which gives \\(\\sum\\left(X_{i, i+1}-X_{i+1, i}\\right)=4\\).\nFinally, observe by starting from the middle of any edge that since we start and end in the same direction, the number of times we turn into direction \\(i\\) must equal the number of times we turn out of it. So \\(X_{i, i+1}+X_{i, i-1}=X_{i+1, i}+X_{i-1, i}\\), which rearranges to give \\(X_{i, i+1}-X_{i+1, i}=X_{i-1, i}-X_{i-1, i}\\). So \\(4=\\sum\\left(X_{i, i+1}-X_{i+1, i}\\right)=4\\left(X_{1,2}-X_{2,1}\\right)=4(X-Y)\\).\nSo \\(X-Y=1\\) as desired.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

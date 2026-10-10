@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1980-p28",
+  "title": "1980 AHSME Problem 28",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.modular-exponentiation",
+      "label": "Modular exponentiation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1980,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 38.7,
+    "source": 2100,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "The polynomial \\(x^{2n}+1+(x+1)^{2n}\\) is not divisible by \\(x^2+x+1\\) if \\(n\\) equals",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(64\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(65\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1980-p28.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(\\omega^2+\\omega+1=0.\\) Since \\(1+\\omega=-\\omega^2,\\) the polynomial evaluated at \\(\\omega\\) is \\[ \\omega^{2n}+1+\\omega^{4n}. \\] This is \\(0\\) unless \\(\\omega^{2n}=1,\\) in which case it is \\(3.\\) The latter occurs exactly when \\(n\\) is divisible by \\(3.\\) Among the choices only \\(21\\) is divisible by \\(3,\\) so that is the value for which divisibility fails.\n\nTherefore, the correct answer is C.",
+      "hints": [
+        "Evaluate the polynomial at a nonreal cube root of unity \\(\\omega\\)",
+        "Use \\(1+\\omega=-\\omega^2\\) and consider \\(n\\) modulo \\(3\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

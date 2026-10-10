@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2012-p24",
+  "title": "2012 AMC 12B Problem 24",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2012,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 40.0,
+    "source": 2520,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Define the function \\(f_1\\) on the positive integers by setting \\(f_1(1) = 1\\) and if \\(n = p_1^{e_1} p_2^{e_2} \\cdots p_k^{e_k}\\) is the prime factorization of \\(n \\gt 1,\\) then \\[ \\begin{aligned} &f_1(n) = (p_1 + 1)^{e_1 - 1}(p_2 + 1)^{e_2 - 1} \\\\ &\\quad \\cdots (p_k + 1)^{e_k - 1}. \\end{aligned} \\] For every \\(m \\ge 2,\\) let \\(f_m(n) = f_1(f_{m-1}(n)).\\) For how many \\(N\\) in the range \\(1 \\le N \\le 400\\) is the sequence \\((f_1(N), f_2(N), f_3(N), \\ldots)\\) unbounded? Note: a sequence of positive numbers is unbounded if for every integer \\(B,\\) there is a member of the sequence greater than \\(B.\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(19\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "18"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2012-p24.live",
+      "kind": "proof-sketch",
+      "text": "If \\(N_2\\) is a multiple of \\(N_1\\) then \\(f_1(N_2)\\) is a multiple of \\(f_1(N_1),\\) so if \\(S_{N_1}\\) is unbounded so is \\(S_{N_2}.\\) Call \\(N\\) essential if it is unbounded but no proper divisor is. An essential \\(N\\) must have all exponents at least \\(2,\\) and \\((p_1\\cdots p_k)^2\\le400\\) forces at most two primes.\n\nFor \\(n=2^a3^b,\\) two iterations send the exponent pair to \\((2a-4,2b-3).\\) Thus the orbit is unbounded exactly when \\(a\\ge5\\) or \\(b\\ge4,\\) producing the essential values \\(2^5=32\\) and \\(3^4=81.\\) For a single other prime, the bound leaves only \\(5^2,5^3,7^2,7^3,11^2,13^2,17^2,19^2;\\) direct application of \\(f_1\\) leaves only \\(7^3=343\\) essential. With two primes, \\(p_1p_2\\le20\\) leaves the pairs \\((2,5),(2,7),(3,5)\\) besides \\((2,3).\\) Applying \\(f_1\\) to their possible squareful products leaves only \\(2^4\\cdot5^2=400.\\)\n\nTheir multiples up to \\(400\\) number \\(\\lfloor\\frac{400}{32}\\rfloor=12,\\) \\(\\lfloor\\frac{400}{81}\\rfloor=4,\\) \\(\\lfloor\\frac{400}{343}\\rfloor=1,\\) and \\(\\lfloor\\frac{400}{400}\\rfloor=1,\\) with no overlaps, for a total of \\(12+4+1+1=18.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "If \\(N_2\\) is a multiple of \\(N_1\\) then \\(f_1(N_2)\\) is a multiple of \\(f_1(N_1),\\) so unboundedness is inherited by multiples; find the minimal “essential” \\(N\\)",
+        "An essential \\(N\\) has every exponent at least \\(2\\) and at most two prime factors; analyze powers of \\(2,3\\) first, then the few remaining prime powers and prime pairs below \\(400\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

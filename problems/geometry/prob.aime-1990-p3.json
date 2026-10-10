@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1990-p3",
+  "title": "1990 AIME Problem 3",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.regular-polygon",
+      "label": "Regular polygon",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1990,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 37.2,
+    "source": 2040,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Let \\(P_1\\) be a regular \\(r\\)-gon and \\(P_2\\) be a regular \\(s\\)-gon \\((r\\geq s\\geq3)\\) such that each interior angle of \\(P_1\\) is \\(\\frac{59}{58}\\) as large as each interior angle of \\(P_2.\\) What is the largest possible value of \\(s?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "117",
+    "value": "117"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1990-p3.live",
+      "kind": "proof-sketch",
+      "text": "The angle condition gives \\[\\frac{\\frac{r-2}{r}}{\\frac{s-2}{s}}=\\frac{59}{58},\\] which simplifies to \\(r(118-s)=116s.\\) Put \\(t=118-s.\\) Then \\[r=\\frac{13688}{t}-116.\\] In particular, \\(t\\) is a positive divisor of \\(13688,\\) and maximizing \\(s=118-t\\) means taking the least possible \\(t.\\) The choice \\(t=1\\) gives \\(s=117\\) and the positive integer \\(r=13572,\\) which also satisfies \\(r\\geq s.\\) Hence the largest possible \\(s\\) is \\(117.\\)",
+      "hints": [
+        "Use \\(\\frac{180(n-2)}{n}\\) for the interior angle of a regular \\(n\\)-gon",
+        "After simplifying, set \\(t=118-s\\) and use the positivity of \\(t\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

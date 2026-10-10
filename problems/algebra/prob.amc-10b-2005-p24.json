@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2005-p24",
+  "title": "2005 AMC 10B Problem 24",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.difference-of-squares",
+      "label": "Difference of squares",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2005,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 29.1,
+    "source": 1880,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(x\\) and \\(y\\) be two-digit integers such that \\(y\\) is obtained by reversing the digits of \\(x.\\) The integers \\(x\\) and \\(y\\) satisfy \\(x^2 - y^2 = m^2\\) for some positive integer \\(m.\\) What is \\(x + y + m?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(88\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(112\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(116\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(144\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(154\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "154"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2005-p24.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(x = 10a + b\\) and \\(y = 10b + a\\) with \\(a \\gt b.\\) Then \\[ \\begin{aligned} m^2 &= x^2 - y^2 \\\\ &= 99(a^2 - b^2) \\\\ &= 99(a+b)(a-b). \\end{aligned} \\]\n\nSince \\(99 = 9 \\cdot 11,\\) for \\(m^2\\) to be a perfect square we need \\((a+b)(a-b)\\) to be divisible by \\(11.\\) As \\(a + b \\le 17,\\) this forces \\(a + b = 11,\\) and then \\(a - b\\) must itself be a perfect square.\n\nWith \\(a - b \\le 8,\\) the only workable case is \\(a - b = 1,\\) giving \\((a, b) = (6, 5).\\) Then \\(x = 65,\\) \\(y = 56,\\) and \\(m^2 = 99 \\cdot 11 = 33^2,\\) so \\(m = 33.\\)\n\nTherefore \\(x + y + m\\) \\(= 65 + 56 + 33\\) \\(= 154.\\)\n\nThus, E is the correct answer.",
+      "hints": [
+        "Write \\(x=10a+b\\) and \\(y=10b+a,\\) then factor \\(x^2-y^2\\)",
+        "\\(x^2-y^2=99(a+b)(a-b)\\) must be a perfect square, which forces \\(a+b=11\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

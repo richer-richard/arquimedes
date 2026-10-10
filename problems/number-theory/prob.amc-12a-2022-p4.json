@@ -1,0 +1,85 @@
+{
+  "id": "prob.amc-12a-2022-p4",
+  "title": "2022 AMC 12A Problem 4",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.least-common-multiple",
+      "label": "Least common multiple",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2022,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 15.7,
+    "source": 1200,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "The least common multiple of a positive integer \\(n\\) and \\(18\\) is \\(180,\\) and the greatest common divisor of \\(n\\) and \\(45\\) is \\(15.\\) What is the sum of the digits of \\(n?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(12\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2022-p4.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(180=2^2\\cdot3^2\\cdot5\\) and \\(18=2\\cdot3^2,\\) the condition \\(\\operatorname{lcm}(n,18)=180\\) forces \\(n\\) to contribute \\(2^2\\) and \\(5,\\) with its power of \\(3\\) at most \\(2.\\)\n\nFrom \\(\\gcd(n,45)=\\gcd(n,3^2\\cdot5)\\) \\(=15=3\\cdot5,\\) the power of \\(3\\) in \\(n\\) is exactly \\(1\\) and the power of \\(5\\) is at least \\(1.\\)\n\nTherefore \\(n=2^2\\cdot3\\cdot5=60,\\) whose digits sum to \\(6.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Factor \\(180=2^2\\cdot3^2\\cdot5\\) and see which powers \\(n\\) must supply beyond \\(18=2\\cdot3^2\\)",
+        "\\(\\gcd(n,45)=15\\) forces exactly one factor of \\(3\\) and at least one factor of \\(5\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

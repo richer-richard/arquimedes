@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-guts-2019-p12",
+  "title": "2019 HMMT February Guts Problem 12",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cartesian-coordinates",
+      "label": "Cartesian coordinates",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inclusion-exclusion",
+      "label": "Inclusion-exclusion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2019,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 71.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Bob is coloring lattice points in the coordinate plane. Find the number of ways Bob can color five points in \\(\\{(x, y) \\mid 1 \\leq x, y \\leq 5\\}\\) blue such that the distance between any two blue points is not an integer.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2019-p12.hmmt",
+      "kind": "proof-sketch",
+      "text": "## Answer: 80\n\nWe can see that no two blue points can have the same \\(x\\) or \\(y\\) coordinate. The blue points then must make a permutation of \\(1,2,3,4,5\\) that avoid the pattern of \\(3-4-5\\) triangles. It is not hard to use complementary counting to get the answer from here.\nThere are 8 possible pairs of points that are a distance of 5 apart while not being in the same row or column (i.e. a pair that is in the \\(3-4-5\\) position). If such a pair of points is included in the choice of five points, then there are \\(3!=6\\) possibilities for the remaining three points, yielding \\(8 \\times 6=48\\) configurations that have violations. However, we now need to consider overcounting.\nThe only way to have more than one violation in one configuration is to have a corner point and then two points adjacent to the opposite corner, e.g. \\((1,1),(4,5),(5,4)\\). In each such case, there are exactly \\(2!=2\\) possibilities for the other two points, and there are exactly two violations so there are a total of \\(2 \\times 4=8\\) configurations that are double-counted.\nTherefore, there are \\(48-8=40\\) permutations that violate the no-integer-condition, leaving \\(120-40=\\) 80 good configurations.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

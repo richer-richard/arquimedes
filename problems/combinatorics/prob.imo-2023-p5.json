@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2023-p5",
+  "title": "2023 IMO Problem 5",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2023,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 106.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n\\) be a positive integer.\nA Japanese triangle consists of \\(1 + 2 + \\dots + n\\) circles arranged in an\nequilateral triangular shape such that for each \\(1 \\le i \\le n\\),\nthe \\(i\\)\\text{th} row contains exactly \\(i\\) circles, exactly one of which is colored red.\nA ninja path in a Japanese triangle is a sequence of \\(n\\) circles\nobtained by starting in the top row, then repeatedly going from a circle to\none of the two circles immediately below it and finishing in the bottom row.\nHere is an example of a Japanese triangle with \\(n = 6\\),\nalong with a ninja path in that triangle containing two red circles.\n\n[Diagram omitted from this imported TeX transcription.]\n\nIn terms of \\(n\\), find the greatest \\(k\\) such that in each Japanese triangle\nthere is a ninja path containing at least \\(k\\) red circles.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2023-p5.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is\n\\[ k = \\left\\lfloor \\log_2(n) \\right\\rfloor + 1. \\]\n\nConstruction..\nIt suffices to find a Japanese triangle for \\(n = 2^e-1\\)\nwith the property that at most \\(e\\) red circles in any ninja path.\nThe construction shown below for \\(e=4\\) obviously generalizes,\nand works because in each of the sets \\(\\{1\\}\\), \\(\\{2,3\\}\\), \\(\\{4,5,6,7\\}\\),\n\\dots, \\(\\{2^{e-1},\\dots,2^e-1\\}\\), at most one red circle can be taken.\n(These sets are colored in different shades of red for visual clarity).\n\n[Diagram omitted from this imported TeX transcription.]\n\nBound..\nConversely, we show that in any Japanese triangle,\none can find a ninja path containing at least\n\\[ k = \\left\\lfloor \\log_2(n) \\right\\rfloor + 1. \\]\nThe following short solution was posted at ,\napparently first found by the team leader for Iran.\n\nWe construct a rooted binary tree \\(T_1\\) on the set of all circles as follows.\nFor each row, other than the bottom row:\n\n• Connect the red circle to both circles under it;\n\n• White circles to the left of the red circle in its row are connected to the left;\n\n• White circles to the right of the red circle in its row are connected to the right.\n\nThe circles in the bottom row are all leaves of this tree.\nFor example, the \\(n=6\\) construction in the beginning gives the tree\nshown on the left half of the figure below:\n\n[Diagram omitted from this imported TeX transcription.]\n\nNow focus on only the red circles, as shown in the right half of the figure.\nWe build a new rooted tree \\(T_2\\) where each red circle is joined to the\nred circle below it if there was a path of (zero or more)\nwhite circles in \\(T_1\\) between them.\nThen each red circle has at most \\(2\\) direct descendants in \\(T_2\\).\nHence the depth of the new tree \\(T_2\\) exceeds \\(\\log_2(n)\\), which produces the desired path.\n\nAnother recursive proof of bound, communicated by Helio Ng..\nWe give another proof that \\(\\lfloor \\log_2 n\\rfloor + 1\\) is always achievable.\nDefine \\(f(i, j)\\) to be the maximum number of red circles contained in\nthe portion of a ninja path from \\((1, 1)\\) to \\((i, j)\\),\nincluding the endpoints \\((1, 1)\\) and \\((i, j)\\).\n(If \\((i,j)\\) is not a valid circle in the triangle, define \\(f(i, j)=0\\) for convenience.)\nAn example is shown below with the values of \\(f(i,j)\\) drawn in the circles.\n\n[Diagram omitted from this imported TeX transcription.]\n\nWe have that\n\\[ f(i, j) = \\max \\left\\{f(i-1,j-1), f(i,j-1) \\right\\} +\n \\begin{cases}\n 1 & \\text{if \\((i,j)\\) is red} \\\\\n 0 & \\text{otherwise}\n \\end{cases} \\]\nsince every ninja path passing through \\((i, j)\\) also passes through\neither \\((i-1,j-1)\\) or \\((i,j-1)\\). Now consider the quantity\n\\(S_j = f(0, j) + \\dots + f(j, j)\\). We obtain the following recurrence:\n\nClaim.\n\\(S_{j+1} \\geq S_j + \\left\\lceil \\frac{S_j}{j} \\right\\rceil + 1\\).\n\nProof.\nConsider a maximal element \\(f(m, j)\\) of \\(\\{f(0, j), \\dots, f(j, j) \\}\\).\nWe perform the following manipulations:\n\\[\\begin{aligned}\n S_{j+1}\n &= \\sum_{i=0}^{j+1} \\max \\left\\{f(i-1,j), f(i,j) \\right\\} + \\sum_{i=0}^{j+1}\n \\begin{cases}\n 1 & \\text{if \\((i,j+1)\\) is red} \\\\\n 0 & \\text{otherwise}\n \\end{cases} \\\\\n &= \\sum_{i=0}^{m} \\max \\left\\{f(i-1,j), f(i,j) \\right\\} +\n \\sum_{i=m+1}^{j} \\max \\left\\{f(i-1,j), f(i,j) \\right\\} + 1 \\\\\n &\\geq \\sum_{i=0}^{m} f(i,j) + \\sum_{i=m+1}^{j} f(i-1,j) + 1 \\\\\n &= S_j + f(m, j) + 1 \\\\\n &\\geq S_j + \\left\\lceil \\frac{S_j}{j} \\right\\rceil + 1\n\\end{aligned}\\]\nwhere the last inequality is due to Pigeonhole.\n\nThis is actually enough to solve the problem.\nWrite \\(n = 2^c + r\\), where \\(0 \\leq r \\leq 2^c - 1\\).\n\nClaim.\n\\(S_n \\geq cn + 2r + 1\\). In particular, \\(\\left\\lceil \\frac{S_n}{n} \\right\\rceil \\geq c + 1\\).\n\nProof.\nFirst note that \\(S_n \\geq cn + 2r + 1\\) implies\n\\(\\left\\lceil \\frac{S_n}{n} \\right\\rceil \\geq c + 1\\) because\n\\[ \\left\\lceil \\frac{S_n}{n} \\right\\rceil \\geq \\left\\lceil \\frac{cn + 2r + 1}{n} \\right\\rceil\n= c + \\left\\lceil \\frac{2r + 1}{n} \\right\\rceil = c + 1.\n\\]\nWe proceed by induction on \\(n\\).\nThe base case \\(n = 1\\) is clearly true as \\(S_1 = 1\\).\nAssuming that the claim holds for some \\(n=j\\), we have\n\\[\\begin{aligned}\n S_{j+1} &\\geq S_j + \\left\\lceil \\frac{S_j}{j} \\right\\rceil + 1 \\\\\n &\\geq cj + 2r + 1 + c + 1 + 1 \\\\\n &= c(j+1) + 2(r+1) + 1\n\\end{aligned}\\]\nso the claim is proved for \\(n=j+1\\) if \\(j+1\\) is not a power of \\(2\\).\nIf \\(j+1 = 2^{c+1}\\), then by writing\n\\(c(j+1) + 2(r+1) + 1 = c(j+1) + (j+1) + 1 = (c+2)(j+1) + 1\\), the claim is also proved.\n\nNow \\(\\left\\lceil \\frac{S_n}{n} \\right\\rceil \\geq c + 1\\) implies the existence of\nsome ninja path containing at least \\(c+1\\) red circles, and we are done.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

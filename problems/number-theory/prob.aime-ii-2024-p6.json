@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2024-p6",
+  "title": "2024 AIME II Problem 6",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.power-of-2",
+      "label": "Power of 2",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.subsets",
+      "label": "Subsets",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2024,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 46.2,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Alice chooses a set \\(A\\) of positive integers. Then Bob lists all finite nonempty sets \\(B\\) of positive integers with the property that the maximum element of \\(B\\) belongs to \\(A.\\) Bob’s list has \\(2024\\) sets. Find the sum of the elements of \\(A.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "55",
+    "value": "55"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2024-p6.live",
+      "kind": "proof-sketch",
+      "text": "For a fixed \\(a \\in A,\\) the sets \\(B\\) with maximum element \\(a\\) consist of \\(a\\) together with an arbitrary subset of \\(\\{1, \\ldots, a - 1\\},\\) so there are \\(2^{a-1}\\) of them, and every set on Bob’s list is counted exactly once by its maximum. Hence \\[\\sum_{a \\in A} 2^{a-1} = 2024.\\]\n\nSince \\(2024 = 2^{10} + 2^9 + 2^8 + 2^7\\) \\(+ 2^6 + 2^5 + 2^3\\) and binary representations are unique, \\(A = \\{11, 10, 9, 8, 7, 6, 4\\}.\\) The sum of the elements of \\(A\\) is \\(11 + 10 + 9 + 8 + 7 + 6\\) \\(+ 4 = 55.\\)",
+      "hints": [
+        "Group Bob’s sets by their maximum: if the maximum is \\(a,\\) the rest of the set is any subset of \\(\\{1, \\ldots, a - 1\\}\\)",
+        "So the list has \\(\\sum_{a \\in A} 2^{a-1}\\) sets; binary representations are unique, so write \\(2024\\) in base \\(2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-i-2006-p5",
+  "title": "2006 AIME I Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.algebraic-manipulation",
+      "label": "Algebraic manipulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.radical",
+      "label": "Radical",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2006,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 43.1,
+    "source": 2270,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "The number \\[\\small \\sqrt{104\\sqrt{6} + 468\\sqrt{10} + 144\\sqrt{15} + 2006}\\] can be written as \\(a\\sqrt{2} + b\\sqrt{3} + c\\sqrt{5},\\) where \\(a,\\) \\(b,\\) and \\(c\\) are positive integers. Find \\(a \\cdot b \\cdot c.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "936",
+    "value": "936"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2006-p5.live",
+      "kind": "proof-sketch",
+      "text": "Squaring \\(a\\sqrt{2} + b\\sqrt{3} + c\\sqrt{5}\\) gives \\[ \\begin{aligned} &2a^2 + 3b^2 + 5c^2 \\\\ &\\quad {}+ 2ab\\sqrt{6} + 2ac\\sqrt{10} \\\\ &\\quad {}+ 2bc\\sqrt{15}. \\end{aligned} \\] Matching coefficients yields \\(2ab = 104,\\) \\(2ac = 468,\\) \\(2bc = 144,\\) that is \\(ab = 52,\\) \\(ac = 234,\\) \\(bc = 72,\\) along with \\(2a^2 + 3b^2 + 5c^2 = 2006.\\)\n\nThen \\[ \\begin{aligned} (abc)^2 &= (ab)(ac)(bc) \\\\ &= 52 \\cdot 234 \\cdot 72 \\\\ &= 876096 = 936^2, \\end{aligned} \\] so \\(abc = 936.\\) As a check, \\(a = \\frac{abc}{bc} = 13,\\) \\(b = \\frac{abc}{ac} = 4,\\) \\(c = \\frac{abc}{ab} = 18,\\) and \\[ \\begin{aligned} &2 \\cdot 169 + 3 \\cdot 16 + 5 \\cdot 324 \\\\ &= 338 + 48 + 1620 \\\\ &= 2006, \\end{aligned} \\] as required.\n\nTherefore \\(a \\cdot b \\cdot c = 936.\\)",
+      "hints": [
+        "Square \\(a\\sqrt{2} + b\\sqrt{3} + c\\sqrt{5}\\) and match the coefficients of \\(\\sqrt{6},\\) \\(\\sqrt{10},\\) and \\(\\sqrt{15}\\)",
+        "\\((abc)^2 = (ab)(ac)(bc),\\) so you never need \\(a,\\) \\(b,\\) \\(c\\) individually"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

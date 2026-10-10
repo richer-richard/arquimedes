@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-1997-p7",
+  "title": "1997 AIME Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.distance-formula",
+      "label": "Distance formula",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1997,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 46.4,
+    "source": 2400,
+    "mohs": null
+  },
+  "estimatedMinutes": 7,
+  "statement": "A car travels due east at \\(\\frac{2}{3}\\) mile per minute on a long, straight road. At the same time, a circular storm, whose radius is \\(51\\) miles, moves southeast at \\(\\frac{1}{2}\\sqrt{2}\\) mile per minute. At time \\(t = 0,\\) the center of the storm is \\(110\\) miles due north of the car. At time \\(t = t_1\\) minutes, the car enters the storm circle, and at time \\(t = t_2\\) minutes, the car leaves the storm circle. Find \\(\\frac{1}{2}(t_1 + t_2).\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "198",
+    "value": "198"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1997-p7.live",
+      "kind": "proof-sketch",
+      "text": "Put the car at the origin at \\(t = 0,\\) with east as the positive \\(x\\)-direction and north as the positive \\(y\\)-direction. At time \\(t\\) the car is at \\(\\left(\\frac{2t}{3}, 0\\right),\\) and the storm center, moving southeast at speed \\(\\frac{\\sqrt{2}}{2}\\) (components \\(\\frac{1}{2}\\) east and \\(\\frac{1}{2}\\) south), is at \\(\\left(\\frac{t}{2}, 110 - \\frac{t}{2}\\right).\\)\n\nThe car is on the storm boundary when the squared distance is \\(51^2:\\) \\[ \\begin{aligned} &\\left(\\frac{2t}{3} - \\frac{t}{2}\\right)^2 \\\\ &\\quad {}+ \\left(110 - \\frac{t}{2}\\right)^2 = 51^2, \\end{aligned} \\] that is \\(\\frac{t^2}{36} + \\frac{t^2}{4}\\) \\(- 110t + 12100 - 2601 = 0,\\) or \\(\\frac{5}{18}t^2 - 110t + 9499 = 0.\\)\n\nThe roots are \\(t_1\\) and \\(t_2,\\) so by Vieta’s formulas \\(t_1 + t_2 = \\frac{110 \\cdot 18}{5} = 396,\\) and \\(\\frac{1}{2}(t_1 + t_2) = 198.\\)",
+      "hints": [
+        "Set up coordinates: the car is at \\(\\left(\\frac{2t}{3}, 0\\right)\\) and the storm center at \\(\\left(\\frac{t}{2}, 110 - \\frac{t}{2}\\right)\\)",
+        "Entering and leaving happen when the squared distance equals \\(51^2;\\) that is a quadratic in \\(t,\\) so use Vieta’s formulas for \\(t_1 + t_2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

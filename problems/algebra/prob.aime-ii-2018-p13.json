@@ -1,0 +1,74 @@
+{
+  "id": "prob.aime-ii-2018-p13",
+  "title": "2018 AIME II Problem 13",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.dice-probability",
+      "label": "Dice (probability)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.parity",
+      "label": "Parity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.recursive-probability",
+      "label": "Recursive probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2018,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 64.6,
+    "source": 3270,
+    "mohs": null
+  },
+  "estimatedMinutes": 18,
+  "statement": "Misha rolls a standard, fair six-sided die until she rolls \\(1\\)-\\(2\\)-\\(3\\) in that order on three consecutive rolls. The probability that she will roll the die an odd number of times is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "647",
+    "value": "647"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2018-p13.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(a\\) be the probability that the total number of rolls is odd; let \\(b\\) be that probability given that the first roll is a \\(1,\\) and \\(c\\) given that the first two rolls are \\(1\\)-\\(2\\) (in each case counting all rolls). Condition on the next roll, noting that whenever the count restarts, the rolls already used flip the required parity. Starting fresh: a \\(1\\) leads to state \\(b;\\) anything else uses one roll, after which an even continuation is needed. After a \\(1:\\) another \\(1\\) means the first roll is wasted, needing an even continuation of the \\(b\\)-type; a \\(2\\) leads to \\(c;\\) anything else wastes both rolls. After \\(1\\)-\\(2:\\) a \\(3\\) finishes in \\(3\\) rolls (odd); a \\(1\\) restarts at the \\(b\\)-state with two wasted rolls; anything else wastes all three. Thus \\[ \\begin{aligned} a &= \\frac{1}{6}b + \\frac{5}{6}(1 - a), \\\\ b &= \\frac{1}{6}(1 - b) + \\frac{1}{6}c + \\frac{4}{6}a, \\\\ c &= \\frac{1}{6}b + \\frac{1}{6} + \\frac{4}{6}(1 - a). \\end{aligned} \\]\n\nThe first equation gives \\(b = 11a - 5;\\) substituting the third into the second yields \\(41b = 11 + 20a,\\) so \\(41(11a - 5) = 11 + 20a,\\) giving \\(431a = 216\\) and \\(a = \\frac{216}{431}.\\) Since \\(431\\) is prime, \\(m + n = 216 + 431 = 647.\\)",
+      "hints": [
+        "Let \\(a,\\) \\(b,\\) \\(c\\) be the probabilities of finishing in an odd total number of rolls starting fresh, starting after a \\(1,\\) and starting after \\(1\\)-\\(2;\\) condition on the next roll",
+        "A stray roll flips parity, so terms like \\(1 - a\\) and \\(1 - b\\) appear; for example \\(a = \\frac{1}{6}b + \\frac{5}{6}(1 - a)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

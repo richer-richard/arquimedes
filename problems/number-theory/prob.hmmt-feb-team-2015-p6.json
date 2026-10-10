@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-team-2015-p6",
+  "title": "2015 HMMT February Team Problem 6",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.games-and-greedy-algorithms",
+      "label": "Games and greedy algorithms",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular Arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2015,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 81.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "\\(\\$\\) indy has \\(\\$ 100\\) in pennies (worth \\(\\$ 0.01\\) each), nickels (worth \\(\\$ 0.05\\) each), dimes (worth \\(\\$ 0.10\\) each), and quarters (worth \\(\\$ 0.25\\) each). Prove that she can split her coins into two piles, each with total value exactly \\(\\$ 50\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-2015-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "N/A Solution 1. First, observe that if there are pennies in the mix, there must be a multiple of 5 pennies \\((\\) since \\(5,10,25 \\equiv 0(\\bmod 5)\\) ), so we can treat each group of 5 pennies as nickels and reduce the problem to the case of no pennies, treated below.\nIndeed, suppose there are no pennies and that we are solving the problem with only quarters, dimes, and nickels. So we have \\(25 q+10 d+5 n=10000\\) (or equivalently, \\(5 q+2 d+n=2000\\) ), where \\(q\\) is the number of quarters, \\(d\\) is the number of dimes, and \\(n\\) is the number of nickels. Notice that if \\(q \\geq 200\\), \\(d \\geq 500\\), or \\(n \\geq 1000\\), then we can just take a subset of 200 quarters, 500 dimes, or 1000 nickels, respectively, and make that our first pile and the remaining coins our second pile.\nThus, we can assume that \\(q \\leq 199, d \\leq 499, n \\leq 999\\). Now if there are only quarters and dimes, we have \\(5 q+2 d<1000+1000=2000\\), so there must be nickels in the mix. By similar reasoning, there must be dimes and quarters in the mix.\nSo to make our first pile, we throw all the quarters in that pile. The total money in the pile is at most \\(\\$ 49.75\\), so now,\n\n- if possible, we keep adding in dimes until we get an amount equal to or greater than \\(\\$ 50\\). If it is \\(\\$ 50\\), then we are done. Otherwise, it must be \\(\\$ 50.05\\) since the total money value before the last dime is either \\(\\$ 49.90\\) or \\(\\$ 49.95\\). In that case, we take out the last dime and replace it with a nickel, giving us \\(\\$ 50\\).\n- if not possible (i.e. we run out of dimes before reaching \\(\\$ 50\\) ), then all the quarters and dimes have been used up, so we only have nickels left. Of course, our money value now has a hundredth's place of 5 or 0 and is less than \\(\\$ 50\\), so we simply keep adding nickels until we are done.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

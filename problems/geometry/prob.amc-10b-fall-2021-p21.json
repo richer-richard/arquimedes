@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-fall-2021-p21",
+  "title": "2021 Fall AMC 10B Problem 21",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.counting-intersections",
+      "label": "Counting intersections",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.counting-pairs",
+      "label": "Counting pairs",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.regular-polygon",
+      "label": "Regular polygon",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2021,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 32.6,
+    "source": 2110,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Regular polygons with \\(5,\\) \\(6,\\) \\(7,\\) and \\(8\\) sides are inscribed in the same circle. No two of the polygons share a vertex, and no three of their sides intersect at a common point. At how many points inside the circle do two of their sides intersect?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 52 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 56 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 60 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\( 64 \\)"
+    },
+    {
+      "label": "E",
+      "text": "\\( 68 \\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "68"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-fall-2021-p21.live",
+      "kind": "proof-sketch",
+      "text": "For a regular \\(k\\)-gon and a regular \\(n\\)-gon inscribed in the same circle with \\(k\\lt n\\) and no shared vertices, their boundaries intersect in \\(2k\\) points. Each side of the smaller polygon is crossed twice by the boundary of the larger polygon.\n\nTherefore, sum over all pairs of polygons. The \\(5\\)-gon contributes \\(2\\cdot5\\) intersections with each of the \\(6\\)-, \\(7\\)-, and \\(8\\)-gons. The \\(6\\)-gon contributes \\(2\\cdot6\\) intersections with each of the \\(7\\)- and \\(8\\)-gons. The \\(7\\)-gon contributes \\(2\\cdot7\\) with the \\(8\\)-gon.\n\nThe total is \\[3(10)+2(12)+14=68.\\]\n\nThus, the answer is E .",
+      "hints": [
+        "Count intersections separately for each pair of polygons",
+        "A \\(k\\)-gon and larger regular polygon intersect in \\(2k\\) boundary points"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

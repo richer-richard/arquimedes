@@ -1,0 +1,83 @@
+{
+  "id": "prob.hmmt-invitational-2015-p3",
+  "title": "2015 HMMT Invitational Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recurrences",
+      "label": "Recurrences",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2015,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(M\\) be a \\(2014 \\times 2014\\) invertible matrix, and let \\(\\mathcal{F}(M)\\) denote the set of matrices whose rows are a permutation of the rows of \\(M\\). Find the number of matrices \\(F \\in \\mathcal{F}(M)\\) such that \\(\\operatorname{det}(M+F) \\neq 0\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2015-p3.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(2013!!^{2}\\)\n\nProof. Number the rows of \\(M\\) as \\(r_{1}, r_{2}, \\ldots, r_{2014}\\), and remark that by invertibility, these rows are linearly independent. We can write \\(\\operatorname{det}(M+F)\\) as the sum of the determinants of the \\(2^{2014}\\) matrices which can be obtained by replacing some set of the rows of \\(M\\) with the corresponding rows of \\(F\\) (this follows from distributivity and expansion by minors) - we'll call these the insertion matrices of \\(M\\). Of course, the rows of \\(F\\) are themselves some permutation of the rows of \\(F\\).\nNow, all insertion matrices in which some row appears at least twice have determinant 0 (by linear dependence of rows), so the determinant of \\(M+F\\) is the sum of the determinants of the insertion matrices whose rows are a permutation of the \\(r_{i}\\). Let the \\(i\\)-th row of \\(F\\) be \\(r_{\\sigma(i)}\\) and partition \\(\\sigma\\) into disjoint cycles; we claim \\(\\operatorname{det}(M+F)=0\\) iff \\(\\sigma\\) contains an even cycle.\nIndeed, if we replace row \\(r_{i}\\) in \\(M\\), in order for the rows of \\(M+F\\) to remain a permutation of the \\(r_{i}\\) we must replace row \\(r_{\\sigma(i)}\\) as well, and so on. In other words, we either replace none of the rows in any particular cycle, or we replace all of them. Yet if any cycle is even, the determinants of any insertion matrix in which that cycle is replaced and the same insertion matrix, except not replacing that cycle, are the same in magnitude and opposite in sign (this follows from the fact that a row transposition flips the sign of the determinant, and we must perform an odd number of these). Thus \\(\\operatorname{det}(M+F)\\) vanishes if \\(\\sigma\\) contains any even cycles. On the other hand, if \\(\\sigma\\) consists of only odd cycles, every non-zero insertion matrix has determinant \\(\\operatorname{det}(M) \\neq 0\\) by analogous reasoning (this time, the even number of row transpositions preserves sign). It remains only to count the number of elements of \\(S_{2014}\\) which can be decomposed into exclusively odd cycles.\nWe begin by writing a recursion for the general problem. Let \\(x_{n}\\) denote the number of permutations on \\([n]\\) which can be decomposed into exclusively odd cycles. By casework on the cycle containing 1 , we find the recursion\n\n\\[x_{n}=\\sum_{i}\\binom{n-1}{2 i-2}(2 i-2)!x_{n-2 i+1}\\]\n\nwhere \\(x_{0}=x_{1}=x_{2}=1\\).\nThe intended solution from this point was combinatorial in nature, similar to the one from the fourth comment under Evan Chen's \"Recursion\" blog post (from June 2012). The following much nicer finish is due to Lawrence Sun:\nSet \\(y_{n}=x_{n} / n\\) ! and rewrite the recursion as\n\n\\[n y_{n}=y_{n-1}+y_{n-3}+\\ldots\\]\n\nShifting, we find in addition that\n\n\\[(n-2) y_{n-2}=y_{n-3}+\\ldots\\]\n\nSubtracting,\n\n\\[n y_{n}=y_{n-1}+(n-2) y_{n-2}\\]\n\nfor all \\(n\\). It now follows from a straightforward induction that \\(y_{2 k}=[(2 k-1)!!]^{2} /(2 k)!\\) and \\(y_{2 k+1}=\\) \\([(2 k+1)!!(2 k-1)!!] /(2 k+1)!\\). In particular,\n\n\\[x_{2014}=2014!y_{2014}=(2013!!)^{2}\\]\n\nas desired.\n\nHMIC\nTesting window: April 1-5\n\nHere is an alternative approach: define the power series \\(F(z)\\) in the variable \\(z\\) by\n\n\\[F(z)=\\sum_{n=0}^{\\infty} x_{n} \\frac{z^{n}}{n!}\\]\n\nThe recurrence relation is equivalent to the differential equation\n\n\\[F^{\\prime}(z)=\\left(\\sum_{n=0}^{\\infty} z^{2 n}\\right) F(z)=\\frac{1}{1-z^{2}} F(z)\\]\n\nSolving this equation using the initial condition \\(F(0)=1\\) gives\n\n\\[F(z)=\\sqrt{\\frac{1+z}{1-z}}=(1+z)\\left(1-z^{2}\\right)^{-1 / 2}\\]\n\nBy the binomial theorem, we have\n\n\\[F(z)=(1+z) \\sum_{n=0}^{\\infty}\\binom{-1 / 2}{n}(-1)^{n} z^{2 n}\\]\n\nso\n\n\\[x_{2014}=2014!\\binom{-1 / 2}{1007}(-1)^{1007}=(2013!!)^{2}\\]\n\nas desired.\nRemark 0.6. This problem was proposed by Dhroova Aiylam.\nRemark 0.7. We can write the matrices \\(F \\in \\mathcal{F}(M)\\) as \\(F=P M\\), where \\(P\\) ranges over all \\(2014 \\times 2014\\) permutation matrices. Then, we have \\(F+M=\\left(P+1_{2014 \\times 2014}\\right) M\\), which is invertible if and only if \\(P+1_{2014 \\times 2014}\\) is. Using this, we can give an alternative proof that the answer to the question is equal to the number of permutations of \\(\\{1, \\ldots, 2014\\}\\) with cycles of odd length.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-guts-2023-p23",
+  "title": "2023 HMMT February Guts Problem 23",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "nt.expected-values",
+      "label": "Expected values",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.number-of-divisors",
+      "label": "Τ (number of divisors)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2023,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 79.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A subset \\(S\\) of the set \\(\\{1,2, \\ldots, 10\\}\\) is chosen randomly, with all possible subsets being equally likely. Compute the expected number of positive integers which divide the product of the elements of \\(S\\). (By convention, the product of the elements of the empty set is 1.)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "375 / 8",
+    "value": "375 / 8"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2023-p23.hmmt",
+      "kind": "proof-sketch",
+      "text": "For primes \\(p=2,3,5,7\\), let the random variable \\(X_{p}\\) denote the number of factors of \\(p\\) in the product of the elements of \\(S\\), plus 1 . Then we wish to find \\(\\mathbb{E}\\left(X_{2} X_{3} X_{5} X_{7}\\right)\\).\nIf there were only prime powers between 1 and 10, then all \\(X_{p}\\) would be independent. However, 6 and 10 are non-prime powers, so we will do casework on whether these elements are included:\n\n- Case 1: none included. Note that \\(\\mathbb{E}\\left(X_{2} \\mid 6,10 \\notin S\\right)=1+\\frac{1}{2}(1+2+3)=4\\), since each of \\(\\{2,4,8\\}\\) has a \\(1 / 2\\) chance of being included in \\(S\\). Similarly, \\(\\mathbb{E}\\left(X_{3} \\mid 6,10 \\notin S\\right)=\\frac{5}{2}\\) and \\(\\mathbb{E}\\left(X_{5} \\mid 6,10 \\notin S\\right)=\\mathbb{E}\\left(X_{7} \\mid 6,10 \\notin S\\right)=\\frac{3}{2}\\). The values of \\(X_{2}, X_{3}, X_{5}\\), and \\(X_{7}\\) are independent given that \\(6,10 \\notin S\\), so \\(\\mathbb{E}\\left(X_{2} X_{3} X_{5} X_{7} \\mid 6,10 \\notin S\\right)=4 \\cdot \\frac{5}{2} \\cdot \\frac{3}{2} \\cdot \\frac{3}{2}=\\frac{45}{2}\\).\n- Case 2: 6 included. Now, we have \\(\\mathbb{E}\\left(X_{2} \\mid 6 \\in S, 10 \\notin S\\right)=5\\) and \\(\\mathbb{E}\\left(X_{3} \\mid 6 \\in S, 10 \\notin S\\right)=\\frac{7}{2}\\), since we know \\(6 \\in S\\). We still have \\(\\mathbb{E}\\left(X_{5} \\mid 6 \\in S, 10 \\notin S\\right)=\\mathbb{E}\\left(X_{7} \\mid 6 \\in S, 10 \\notin S\\right)=\\frac{3}{2}\\). The values of \\(X_{2}, X_{3}, X_{5}\\), and \\(X_{7}\\) are independent given that \\(6 \\in S\\) but \\(10 \\notin S\\), so \\(\\mathbb{E}\\left(X_{2} X_{3} X_{5} X_{7}\\right)\\) \\(6 \\in S, 10 \\notin S)=5 \\cdot \\frac{7}{2} \\cdot \\frac{3}{2} \\cdot \\frac{3}{2}=\\frac{315}{8}\\).\n- Case 3: 10 included. We have \\(\\mathbb{E}\\left(X_{2} \\mid 10 \\in S, 6 \\notin S\\right)=5\\) and \\(\\mathbb{E}\\left(X_{5} \\mid 10 \\in S, 6 \\notin S\\right)=\\frac{5}{2}\\), since we know \\(10 \\in S\\). We also have \\(\\mathbb{E}\\left(X_{3} \\mid 10 \\in S, 6 \\notin S\\right)=\\frac{5}{2}\\) and \\(\\mathbb{E}\\left(X_{7} \\mid 10 \\in S, 6 \\notin S\\right)=\\frac{3}{2}\\), hence \\(\\mathbb{E}\\left(X_{2} X_{3} X_{5} X_{7} \\mid 10 \\in S, 6 \\notin S\\right)=5 \\cdot \\frac{5}{2} \\cdot \\frac{5}{2} \\cdot \\frac{3}{2}=\\frac{375}{8}\\).\n- Case 4: 6 and 10 included. We have \\(\\mathbb{E}\\left(X_{2} \\mid 6,10 \\in S\\right)=6, \\mathbb{E}\\left(X_{3} \\mid 6,10 \\in S\\right)=\\frac{7}{2}\\), and \\(\\mathbb{E}\\left(X_{5} \\mid 6,10 \\in S\\right)=\\frac{5}{2}\\). We still have \\(\\mathbb{E}\\left(X_{7} \\mid 6,10 \\in S\\right)=\\frac{3}{2}\\), hence \\(\\mathbb{E}\\left(X_{2} X_{3} X_{5} X_{7} \\mid 6,10 \\in S\\right)=\\) \\(6 \\cdot \\frac{7}{2} \\cdot \\frac{5}{2} \\cdot \\frac{3}{2}=\\frac{315}{4}\\).\n\nThe average of these quantities is \\(\\frac{1}{4}\\left(\\frac{45}{2}+\\frac{315}{8}+\\frac{375}{8}+\\frac{315}{4}\\right)=\\frac{375}{8}\\), as desired.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

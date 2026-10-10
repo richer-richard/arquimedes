@@ -1,0 +1,80 @@
+{
+  "id": "prob.amc-8-1992-p25",
+  "title": "1992 AMC 8 Problem 25",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.fraction",
+      "label": "Fraction",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.telescoping",
+      "label": "Telescoping",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1992,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 15.7,
+    "source": 1200,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "One half of the water is poured out of a full container. Then one third of the remainder is poured out. Continue the process: one fourth of the remainder for the third pouring, one fifth of the remainder for the fourth pouring, and so on. After how many pourings does exactly one tenth of the original water remain?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(10\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "9"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1992-p25.live",
+      "kind": "proof-sketch",
+      "text": "After the \\(n\\)th pouring, the fraction remaining is \\(\\dfrac12 \\times \\dfrac23 \\times \\dfrac34 \\times \\cdots \\times \\dfrac{n}{n+1},\\) which telescopes to \\(\\dfrac{1}{n+1}.\\)\n\nSetting \\(\\dfrac{1}{n+1} = \\dfrac{1}{10}\\) gives \\(n = 9.\\)\n\nThus, the correct answer is D .",
+      "hints": [
+        "After the first pouring \\(\\dfrac12\\) remains; after the second \\(\\dfrac12 \\times \\dfrac23\\) remains",
+        "The remaining fraction telescopes: after \\(n\\) pourings it is \\(\\dfrac{1}{n+1}\\); set this equal to \\(\\dfrac{1}{10}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

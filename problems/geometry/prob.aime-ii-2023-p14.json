@@ -1,0 +1,74 @@
+{
+  "id": "prob.aime-ii-2023-p14",
+  "title": "2023 AIME II Problem 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cube-geometry",
+      "label": "Cube geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.volume",
+      "label": "Volume",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2023,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": 3270,
+    "mohs": null
+  },
+  "estimatedMinutes": 23,
+  "statement": "A cube-shaped container has vertices \\(A,\\) \\(B,\\) \\(C,\\) and \\(D,\\) where \\(\\overline{AB}\\) and \\(\\overline{CD}\\) are parallel edges of the cube, and \\(\\overline{AC}\\) and \\(\\overline{BD}\\) are diagonals of faces of the cube, as shown. Vertex \\(A\\) of the cube is set on a horizontal plane \\(\\mathcal{P}\\) so that the plane of the rectangle \\(ABDC\\) is perpendicular to \\(\\mathcal{P},\\) vertex \\(B\\) is \\(2\\) meters above \\(\\mathcal{P},\\) vertex \\(C\\) is \\(8\\) meters above \\(\\mathcal{P},\\) and vertex \\(D\\) is \\(10\\) meters above \\(\\mathcal{P}.\\) The cube contains water whose surface is parallel to \\(\\mathcal{P}\\) at a height of \\(7\\) meters above \\(\\mathcal{P}.\\) The volume of water is \\(\\frac{m}{n}\\) cubic meters, where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "751",
+    "value": "751"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2023-p14.live",
+      "kind": "proof-sketch",
+      "text": "Give the cube coordinates so that \\(A\\) is the origin, the edges lie along the axes, and the edge length is \\(s:\\) then \\(B = (s, 0, 0),\\) \\(C = (0, s, s),\\) \\(D = (s, s, s)\\) satisfy the description (\\(\\overline{AB} \\parallel \\overline{CD}\\) are edges and \\(\\overline{AC},\\) \\(\\overline{BD}\\) are face diagonals). Height above \\(\\mathcal{P}\\) is a linear function \\(h(x, y, z) = u_1 x + u_2 y + u_3 z\\) for some unit vector \\(u.\\) The plane of rectangle \\(ABDC\\) has normal direction \\((0, 1, -1),\\) and perpendicularity to \\(\\mathcal{P}\\) means the vertical direction \\(u\\) lies in that plane, so \\(u_2 = u_3.\\) The heights of \\(B\\) and \\(C\\) give \\(s u_1 = 2\\) and \\(s(u_2 + u_3) = 8,\\) so \\(su_2 = su_3 = 4,\\) and \\(|u| = 1\\) forces \\(s^2 = 2^2 + 4^2 + 4^2 = 36.\\) Thus \\(s = 6\\) and \\(u = \\frac{1}{3}(1, 2, 2)\\) (and indeed \\(h(D) = 10\\)).\n\nThe water is the region of \\([0, 6]^3\\) where \\(h \\le 7,\\) i.e. \\(x + 2y + 2z \\le 21.\\) For fixed \\(x = a,\\) the slice is \\(\\{(y, z) \\in [0,6]^2 : y + z \\le \\tfrac{21 - a}{2}\\},\\) and since \\(\\frac{21 - a}{2}\\) lies between \\(6\\) and \\(12,\\) its area is \\(36 - \\frac{1}{2}\\left(12 - \\frac{21 - a}{2}\\right)^2\\) \\(= 36 - \\frac{(3 + a)^2}{8}.\\)\n\nIntegrating, \\[ \\begin{gathered} V = \\int_0^6 \\left(36 - \\frac{(3 + a)^2}{8}\\right) da \\\\ = 216 - \\frac{9^3 - 3^3}{24} \\\\ = 216 - \\frac{702}{24} \\\\ = \\frac{747}{4}, \\end{gathered} \\] so \\(m + n = 747 + 4 = 751.\\)",
+      "hints": [
+        "Give the cube coordinates \\([0, s]^3;\\) the heights of \\(B\\) and \\(C\\) together with the perpendicularity condition force \\(s = 6\\) and vertical direction \\(\\frac{1}{3}(1, 2, 2)\\)",
+        "The water is the part of \\([0, 6]^3\\) with \\(x + 2y + 2z \\le 21;\\) integrate the cross-sectional area over one coordinate"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "7150746121ffd6f79ba2fe9b53bb68edb0aacc5b4a2de1442e35e4871505dd57"
+    ],
+    "solutions": []
+  }
+}

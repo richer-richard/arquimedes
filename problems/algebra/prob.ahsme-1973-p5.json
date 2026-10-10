@@ -1,0 +1,87 @@
+{
+  "id": "prob.ahsme-1973-p5",
+  "title": "1973 AHSME Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "logic-foundations",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counterexample",
+      "label": "Counterexample",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.custom-operation",
+      "label": "Custom operation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.distributive-property",
+      "label": "Distributive property",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1973,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 29.8,
+    "source": 1750,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Of the following five statements, \\(\\mathrm{I}\\) to \\(\\mathrm{V},\\) about the binary operation of averaging (arithmetic mean),\n\n\\(\\mathrm{I}.\\) Averaging is associative\n\n\\(\\mathrm{II}.\\) Averaging is commutative\n\n\\(\\mathrm{III}.\\) Averaging distributes over addition\n\n\\(\\mathrm{IV}.\\) Addition distributes over averaging\n\n\\(\\mathrm{V}.\\) Averaging has an identity element\n\nthose which are always true are",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "All"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\mathrm{I}\\) and \\(\\mathrm{II}\\) only"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\mathrm{II}\\) and \\(\\mathrm{III}\\) only"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\mathrm{II}\\) and \\(\\mathrm{IV}\\) only"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\mathrm{II}\\) and \\(\\mathrm{V}\\) only"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1973-p5.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(a*b=\\frac{a+b}{2}.\\) Commutativity is immediate. Also \\[ \\begin{aligned} a+(b*c) &=\\frac{2a+b+c}{2}\\\\ &=(a+b)*(a+c). \\end{aligned} \\] so addition distributes over averaging.\n\nAssociativity fails because \\[ \\begin{aligned} (a*b)*c&=\\frac{a+b+2c}{4},\\\\ a*(b*c)&=\\frac{2a+b+c}{4}. \\end{aligned} \\] Averaging does not distribute over addition since generally \\[ a*(b+c)\\ne(a*b)+(a*c). \\] Finally, an identity \\(e\\) would require \\(\\frac{e+a}{2}=a\\) for every \\(a,\\) or \\(e=a,\\) which is impossible for a fixed \\(e.\\) Thus only \\(\\mathrm{II}\\) and \\(\\mathrm{IV}\\) always hold.\n\nTherefore, the correct answer is D.",
+      "hints": [
+        "Write the averaging operation as \\(a*b=\\frac{a+b}{2}\\)",
+        "Expand each proposed identity; one counterexample is enough to reject a property"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

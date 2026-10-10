@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2002-p5",
+  "title": "2002 IMO Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2002,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 88.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find all functions \\(f \\colon \\mathbb{R} \\to \\mathbb{R}\\) such that\n\\[ \\left(f(x)+f(z)\\right)\\left(f(y)+f(t)\\right)\n = f(xy-zt)+f(xt+yz) \\]\nfor all real numbers \\(x\\), \\(y\\), \\(z\\), \\(t\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2002-p5.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is \\(f(x) \\equiv 0\\), \\(f(x) \\equiv 1/2\\)\nand \\(f(x) \\equiv x^2\\) which are easily seen to work.\nLet's prove they are the only ones;\nwe show two solutions.\n\nFirst solution (multiplicativity)..\nLet \\(P(x,y,z,t)\\) denote the given statement.\n\n• By comparing \\(P(x,1,0,0)\\) and \\(P(0,0,1,x)\\)\n we get \\(\\boxed{f \\text{ even}}\\).\n\n• By \\(P(0,y,0,t)\\) we get for nonconstant \\(f\\)\n that \\(f(0) = 0\\).\n If \\(f\\) is constant we get the solutions earlier,\n so in the sequel assume \\(\\boxed{f(0) = 0}\\).\n\n• By \\(P(x,y,0,0)\\) we get \\(\\boxed{f(xy) = f(x) f(y)}\\).\n Note in particular that for any real number \\(x\\) we now have\n \\[ f(x) = f(|x|) = f\\left( \\sqrt{|x|} \\right)^2 \\ge 0 \\]\n that is, \\(f \\ge 0\\).\n\nFrom \\(P(x,y,y,x)\\) we now have\n\\[ f(x^2 + y^2) = \\left( f(x) + f(y) \\right)^2\n = f(x^2) + 2f(x)f(y) + f(y^2) \\ge f(x^2) \\]\nso \\(f\\) is weakly increasing.\nCombined with \\(f\\) multiplicative and nonconstant,\nthis implies \\(f(x) = |x|^r\\) for some real number \\(r\\).\n\nFinally, \\(P(1,1,1,1)\\) gives \\(f(2) = 4f(1)\\),\nso \\(f(x) \\equiv x^2\\).\n\nSecond solution (ELMO)..\nLet \\(P(x,y,z,t)\\) denote the statement.\nAssume \\(f\\) is nonconstant,\nas before we derive that \\(f\\) is even, \\(f(0) = 0\\),\nand \\(f(x) \\ge 0\\) for all \\(x\\).\n\nNow comparing \\(P(x,y,z,t)\\) and \\(P(z,y,x,t)\\) we obtain\n\\[ f(xy-zt) + f(xt+yz) =\n \\left( f(x)+f(z) \\right)\n \\left( f(y)+f(t) \\right)\n = f(xy+zt) + f(xt-yz) \\]\nwhich in particular implies that\n\\[ f(a-d) + f(b+c) = f(a+d) + f(b-c)\n\\qquad \\text{ if } ad=bc \\text{ and } a,b,c,d > 0. \\]\nThus the restriction of \\(f\\) to \\((0,\\infty)\\) satisfies\nELMO 2011, problem 4\nwhich implies that \\(f(x) = kx^2+\\ell\\) for constants \\(k\\) and \\(\\ell\\).\nFrom here we recover the original.\n\n(Minor note: technically ELMO 2011/4 is \\(f \\colon (0,\\infty) \\to (0,\\infty)\\)\nbut we only have \\(f \\ge 0\\),\nhowever the proof for the ELMO problem\nworks as long as \\(f\\) is bounded below;\nwe could also just apply the ELMO problem to \\(f+0.01\\) instead.)",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

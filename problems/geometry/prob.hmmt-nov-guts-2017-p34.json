@@ -1,0 +1,87 @@
+{
+  "id": "prob.hmmt-nov-guts-2017-p34",
+  "title": "2017 HMMT November Guts Problem 34",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "number-theory",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.logarithms-and-exponentials",
+      "label": "Logarithms and exponentials",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.probability",
+      "label": "Probability",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2017,
+    "number": 34
+  },
+  "difficulty": {
+    "course": 59.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The skeletal structure of circumcircumcircumcoronene, a hydrocarbon with the chemical formula \\(\\mathrm{C}_{150} \\mathrm{H}_{30}\\), is shown below.\n\nEach line segment between two atoms is at least a single bond. However, since each carbon (C) requires exactly four bonds connected to it and each hydrogen \\((\\mathrm{H})\\) requires exactly one bond, some of the line segments are actually double bonds. How many arrangements of single/double bonds are there such that the above requirements are satisfied? If the correct answer is \\(C\\) and your answer is \\(A\\), you get \\(\\max \\left(\\left[30\\left(1-\\left|\\log _{\\log _{2} C} \\frac{A}{C}\\right|\\right)\\right], 0\\right)\\) points.\n\n[Diagram omitted from this imported transcription; consult the HMMT archive while reviewing the problem.]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2017-p34.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 267227532\nThe problem is equivalent to the one in OEIS A008793, a.k.a. \"number of ways to tile hexagon of edge n with diamonds of side 1.\" Notice that there is a bjiection between such a tiling and the number of ways to stack some unit cubes alongside a corner of an \\(n \\times n \\times n\\) box (see the Art of Problem Solving logo as an example, also known as 3 -dimensional Young diagrams), where this problem \\(n=5\\). It is known that there are \\(\\binom{2 n}{n}=252\\) ways to stack one layer (since each way correspond a way to walk from a corner of a 5 by 5 grid to the opposite one), so \\(\\frac{252^{5}}{5!} \\approx 8 \\times 10^{9}\\) gives a somewhat loose upper bound (generate five layers and sort them by size, and hope that it will be a valid stack in general). This result can be improved by dividing out a reasonable constant factor after considering the probability that sorting by size indeed gives a valid stack (for example, it would be fair to guess that there is about a \\(\\frac{1}{4!}\\) chance that the first row of each layer will be in the right order, given that each row has a small role in determining the final size of the layer; dividing 24 from the previous result gives a very close guess). In general, a guess anywhere between \\(10^{8}\\) and \\(10^{9}\\) is a fair guess.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

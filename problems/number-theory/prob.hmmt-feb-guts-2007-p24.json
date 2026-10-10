@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2007-p24",
+  "title": "2007 HMMT February Guts Problem 24",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2007,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 77.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(x, y, n\\) be positive integers with \\(n>1\\). How many ordered triples \\((x, y, n)\\) of solutions are there to the equation \\(x^{n}-y^{n}=2^{100}\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2007-p24.hmmt",
+      "kind": "proof-sketch",
+      "text": "49. Break all possible values of \\(n\\) into the four cases: \\(n=2, n=4, n>4\\) and \\(n\\) odd. By Fermat's theorem, no solutions exist for the \\(n=4\\) case because we may write \\(y^{4}+\\left(2^{25}\\right)^{4}=x^{4}\\).\nWe show that for \\(n\\) odd, no solutions exist to the more general equation \\(x^{n}-y^{n}=2^{k}\\) where \\(k\\) is a positive integer. Assume otherwise for contradiction's sake, and suppose on the grounds of well ordering that \\(k\\) is the least exponent for which a solution exists. Clearly \\(x\\) and \\(y\\) must both be even or both odd. If both are odd, we have \\((x-y)\\left(x^{n-1}+\\ldots+y^{n-1}\\right)\\). The right factor of this expression contains an odd number of odd terms whose sum is an odd number greater than 1 , impossible. Similarly if \\(x\\) and \\(y\\) are even, write \\(x=2 u\\) and \\(y=2 v\\). The equation becomes \\(u^{n}-v^{n}=2^{k-n}\\). If \\(k-n\\) is greater than 0 , then our choice \\(k\\) could not have been minimal. Otherwise, \\(k-n=0\\), so that two consecutive positive integers are perfect \\(n\\)th powers, which is also absurd.\nFor the case that \\(n\\) is even and greater than 4, consider the same generalization and hypotheses. Writing \\(n=2 m\\), we find \\(\\left(x^{m}-y^{m}\\right)\\left(x^{m}+y^{m}\\right)=2^{k}\\). Then \\(x^{m}-y^{m}=2^{a}<2^{k}\\). By our previous work, we see that \\(m\\) cannot be an odd integer greater than 1 . But then \\(m\\) must also be even, contrary to the minimality of \\(k\\).\nFinally, for \\(n=2\\) we get \\(x^{2}-y^{2}=2^{100}\\). Factoring the left hand side gives \\(x-y=2^{a}\\) and \\(x+y=2^{b}\\), where implicit is \\(a<b\\). Solving, we get \\(x=2^{b-1}+2^{a-1}\\) and \\(y=2^{b-1}-2^{a-1}\\), for a total of 49 solutions. Namely, those corresponding to \\((a, b)=(1,99),(2,98), \\cdots,(49,51)\\).\n\\(10^{\\text {th }}\\) HARVARD-MIT MATHEMATICS TOURNAMENT, 24 FEBRUARY 2007 - GUTS ROUND",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

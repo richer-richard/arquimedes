@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-feb-guts-2019-p7",
+  "title": "2019 HMMT February Guts Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.systems-of-equations",
+      "label": "Systems of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2019,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 67.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For any real number \\(\\alpha\\), define\n\n\\[\\operatorname{sign}(\\alpha)= \\begin{cases}+1 & \\text { if } \\alpha>0 \\\\ 0 & \\text { if } \\alpha=0 \\\\ -1 & \\text { if } \\alpha<0\\end{cases}\\]\n\nHow many triples \\((x, y, z) \\in \\mathbb{R}^{3}\\) satisfy the following system of equations\n\n\\[\\begin{aligned}\n& x=2018-2019 \\cdot \\operatorname{sign}(y+z) \\\\\n& y=2018-2019 \\cdot \\operatorname{sign}(z+x) \\\\\n& z=2018-2019 \\cdot \\operatorname{sign}(x+y) ?\n\\end{aligned}\\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2019-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 3\nSince \\(\\operatorname{sign}(x+y)\\) can take one of 3 values, \\(z\\) can be one of 3 values: 4037, 2018, or -1 . The same is true of \\(x\\) and \\(y\\). However, this shows that \\(x+y\\) cannot be 0 , so \\(z\\) can only be 4037 or -1 . The same is true of \\(x\\) and \\(y\\). Now note that, if any two of \\(x, y, z\\) are -1 , then the third one must be 4037 . Furthermore, if any one of \\(x, y, z\\) is 4037 , then the other two must be -1 . Thus, the only possibility is to have exactly two of \\(x, y, z\\) be -1 and the third one be 4037 . This means that the only remaining triples are \\((-1,-1,4037)\\) and its permutations. These all work, so there are exactly 3 ordered triples.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

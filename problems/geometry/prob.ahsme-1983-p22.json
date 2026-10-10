@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1983-p22",
+  "title": "1983 AHSME Problem 22",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle-area",
+      "label": "Circle area",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequality",
+      "label": "Inequality",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1983,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 42.1,
+    "source": 2230,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Consider the two functions \\[ \\begin{aligned} f(x)&=x^2+2bx+1,\\\\ g(x)&=2a(x+b), \\end{aligned} \\] where the variable \\(x\\) and the constants \\(a\\) and \\(b\\) are real numbers. Each such pair of constants \\(a\\) and \\(b\\) may be considered as a point \\((a,b)\\) in an \\(ab\\)-plane. Let \\(S\\) be the set of such points \\((a,b)\\) for which the graphs of \\(y=f(x)\\) and \\(y=g(x)\\) do not intersect (in the \\(xy\\)-plane). The area of \\(S\\) is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\pi\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(4\\pi\\)"
+    },
+    {
+      "label": "E",
+      "text": "infinite"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1983-p22.live",
+      "kind": "proof-sketch",
+      "text": "Intersections correspond to roots of \\[ x^2+2(b-a)x+(1-2ab)=0. \\] There are no real roots exactly when its discriminant is negative: \\[ \\begin{aligned} &4(b-a)^2-4(1-2ab)\\\\ &=4(a^2+b^2-1)\\\\ &\\lt0. \\end{aligned} \\] Thus \\(S\\) is the interior of the unit circle in the \\(ab\\)-plane, with area \\(\\pi.\\)\n\nTherefore, the correct answer is B.",
+      "hints": [
+        "Set \\(f(x)=g(x)\\) and require the resulting quadratic to have no real roots",
+        "Simplify the negative-discriminant condition in terms of \\(a\\) and \\(b\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

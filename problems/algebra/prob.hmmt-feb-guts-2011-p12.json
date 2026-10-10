@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2011-p12",
+  "title": "2011 HMMT February Guts Problem 12",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 76.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A sequence of integers \\(\\left\\{a_{i}\\right\\}\\) is defined as follows: \\(a_{i}=i\\) for all \\(1 \\leq i \\leq 5\\), and \\(a_{i}=a_{1} a_{2} \\cdots a_{i-1}-1\\) for all \\(i>5\\). Evaluate \\(a_{1} a_{2} \\cdots a_{2011}-\\sum_{i=1}^{2011} a_{i}^{2}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2011-p12.hmmt",
+      "kind": "proof-sketch",
+      "text": "-1941\nFor all \\(i \\geq 6\\), we have \\(a_{i}=a_{1} a_{2} \\cdots a_{i-1}-1\\). So\n\n\\[\\begin{aligned}\na_{i+1} & =a_{1} a_{2} \\cdots a_{i}-1 \\\\\n& =\\left(a_{1} a_{2} \\cdots a_{i-1}\\right) a_{i}-1 \\\\\n& =\\left(a_{i}+1\\right) a_{i}-1 \\\\\n& =a_{i}^{2}+a_{i}-1 .\n\\end{aligned}\\]\n\nTherefore, for all \\(i \\geq 6\\), we have \\(a_{i}^{2}=a_{i+1}-a_{i}+1\\), and we obtain that\n\n\\[\\begin{aligned}\n& a_{1} a_{2} \\cdots a_{2011}-\\sum_{i=1}^{2011} a_{i}^{2} \\\\\n= & a_{2012}+1-\\sum_{i=1}^{5} a_{i}^{2}-\\sum_{i=6}^{2011} a_{i}^{2} \\\\\n= & a_{2012}+1-\\sum_{i=1}^{5} i^{2}-\\sum_{i=6}^{2011}\\left(a_{i+1}-a_{i}+1\\right) \\\\\n= & a_{2012}+1-55-\\left(a_{2012}-a_{6}+2006\\right) \\\\\n= & a_{6}-2060 \\\\\n= & -1941\n\\end{aligned}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

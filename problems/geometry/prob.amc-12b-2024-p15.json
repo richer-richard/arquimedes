@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2024-p15",
+  "title": "2024 AMC 12B Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.shoelace-formula",
+      "label": "Shoelace formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2024,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 31.0,
+    "source": 1800,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A triangle in the coordinate plane has vertices \\(A(\\log_2 1, \\log_2 2),\\) \\(B(\\log_2 3, \\log_2 4),\\) and \\(C(\\log_2 7, \\log_2 8).\\) What is the area of \\(\\triangle ABC?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\log_2 \\dfrac{\\sqrt3}{7}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\log_2 \\dfrac{3}{\\sqrt7}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\log_2 \\dfrac{7}{\\sqrt3}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\log_2 \\dfrac{11}{\\sqrt7}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\log_2 \\dfrac{11}{\\sqrt3}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2024-p15.live",
+      "kind": "proof-sketch",
+      "text": "The vertices are \\(A = (0, 1),\\) \\(B = (\\log_2 3, 2),\\) \\(C = (\\log_2 7, 3).\\) By the shoelace formula, \\[ \\begin{gathered} [\\triangle ABC]\\\\ {}=\\tfrac12\\,\\bigl|2\\log_2 3-\\log_2 7\\bigr|. \\end{gathered} \\]\n\nThis equals \\(\\tfrac12\\log_2 \\dfrac{9}{7} = \\log_2 \\sqrt{\\tfrac{9}{7}} = \\log_2 \\dfrac{3}{\\sqrt7}.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "The vertices are \\((0, 1),\\) \\((\\log_2 3, 2),\\) and \\((\\log_2 7, 3)\\)",
+        "Apply the shoelace formula and simplify with \\(2\\log_2 3 - \\log_2 7 = \\log_2 \\dfrac{9}{7},\\) then halve the logarithm"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

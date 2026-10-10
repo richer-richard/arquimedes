@@ -1,0 +1,47 @@
+{
+  "id": "prob.usamo-2013-p3",
+  "title": "2013 USAMO Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USAMO",
+    "year": 2013,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 120.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n\\) be a positive integer. There are \\(\\tfrac{n(n+1)}{2}\\) marks, each with a black side and a white side, arranged into an equilateral triangle, with the biggest row containing \\(n\\) marks. Initially, each mark has the black side up. An operation is to choose a line parallel to the sides of the triangle, and flipping all the marks on that line. A configuration is called admissible if it can be obtained from the initial configuration by performing a finite number of operations. For each admissible configuration \\(C\\), let \\(f(C)\\) denote the smallest number of operations required to obtain \\(C\\) from the initial configuration. Find the maximum value of \\(f(C)\\), where \\(C\\) varies over all admissible configurations.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usamo-2013-p3.imported",
+      "kind": "proof-sketch",
+      "text": "Solution by inconsistent\n\nThis problem is headache-inducing... but also fun. Ouch.\n\nLet \\(n = 4k + b\\) where \\(b \\in {1, 2, 3, 4}\\). Then I claim the answer is \\(6k+1, 6k+2, 6k+3, 6k+6\\) in these four cases. First, note that the base cases \\(n = 1, 2, 3\\) are trivial by checking to be \\(1, 2, 3\\). Now note the case \\(n = 4\\) needs at least \\(6\\) to construct a black triangle with a single white mark at its center by checking. Call this size \\(4\\) triangle the evil triangle.\n\nTo show the lower bound, notice we can take the top \\(n\\) rows of a \\(n+4\\) equilateral triangle to be the limiting case for \\(n\\) and put two evil triangles on the bottom left and bottom right, respectively: these force \\(4\\) new rows to be occupied since each evil subcase requires at least two rows in every direction, which is a claim easy verified.\n\nTo show the upper bound, we reparameterize the triangles in terms of their rows. Notably, we can start counting rows from each corner, and give each mark a barycentric coordinate \\((a, b, c)\\) where \\(a, b, c\\) are integers denoting the \\(i\\)th row in a given direction the point lies in, and this satisfies \\(a+b+c = 2n+1\\) by Viviani's theorem.\n\nNow, consider the configuration \\(C\\) that minimizes \\(f(C)\\). We place the rows in boxes: odd rows of each direction, and even rows of each direction, to make six boxes total. Call the numbers of odd rows \\(a, b, c\\) and the even rows \\(d, e, f\\) such that \\((a, b, c)\\) and \\((d, e, f)\\) correspond to the same directions respectively in that order. Notice no row is operated on twice since row operations are commutative. Assume for sake of contradiction our claim is wrong, then we can construct a solution for the case one higher than our claim.\n\nWe now perform casework: for \\(b = 4\\), it follows one of the quantities \\(a+b+d+e, b+c+e+f, c+a+f+d\\) is greater than \\(n\\). In this case, invert the rows chosen in those four boxes (i.e. remove the ones chosen and choose the ones unchosen). This fixes the configuration and decreases \\(f(C)\\), giving contradiction.\n\nNow, consider the case \\(b = 1\\). Like the above paragraph, we know \\(a+d, b+e, c+f\\) are equal to \\(2k, 2k+1, 2k+1\\) in some order since if any pair sums to more than \\(4k+1\\) then we reach a contradiction. But then \\(2k+1 + 2k + 1 > 4k + 2\\), giving contradiction.\n\nNow, for the two remaining cases, we show a lemma: the xor of all the odd rows in two directions and all the even row in a third direction, or the sum of all the even rows in all directions are both \\(0\\). This result follows immediately from our earlier result via Vivani's theorem (it cannot be that all three claims are true, and it cannot be the case that two of the claims are false and one is true by parity).\n\nThus in the \\(b = 2\\) case it follows that \\(\\min(a+b+f, b+c+d, c+a+e, d+e+f) \\geq \\frac{12k+6}{4}\\) so one of the triples is at least \\(3k + 2\\). However inverting the three involved boxes, that total to \\(6k+3\\) rows and don't affect the configuration when all three are inverted, decreases the \\(f(C)\\), giving contradiction.\n\nFinally, in the \\(b = 3\\) it follows that \\((a+b+f)+(b+c+d) + (c+a+e) + (d+e+f) =12k+8\\). In particular, the odd/odd/even triples consist of \\(\\frac{n+1}{2} + \\frac{n+1}{2} + \\frac{n-1}{2} = 6k+5\\) rows each, while the even/even/even triple consists of \\(3 \\cdot \\frac{n-1}{2} = 6k+3\\) rows. For each of the triples to avoid decreases \\(f(C)\\) after being inverted, it needs to satisfy either \\(\\leq 3k + 2\\) or \\(\\leq 3k+1\\) depending on the two cases, so it follows that \\(LHS \\leq 12k + 7\\), giving contradiction.\n\nThus we have reached contradiction in all cases of counterexamples, proving our desired claim.\n\nThese problems are copyrighted © by the Mathematical Association of America, as part of the American Mathematics Competitions.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

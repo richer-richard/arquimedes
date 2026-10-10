@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12b-2009-p16",
+  "title": "2009 AMC 12B Problem 16",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-bisector-theorem",
+      "label": "Angle bisector theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.parallel-lines",
+      "label": "Parallel lines",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trapezoid",
+      "label": "Trapezoid",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2009,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 30.9,
+    "source": 1800,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Trapezoid \\(ABCD\\) has \\(AD \\parallel BC,\\) \\(BD = 1,\\) \\(\\angle DBA = 23^\\circ,\\) and \\(\\angle BDC = 46^\\circ.\\) The ratio \\(BC : AD\\) is \\(9 : 5.\\) What is \\(CD?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{7}{9}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{4}{5}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{13}{15}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{8}{9}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{14}{15}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "4/5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2009-p16.live",
+      "kind": "proof-sketch",
+      "text": "Draw the line through \\(D\\) parallel to \\(AB,\\) meeting \\(BC\\) at \\(E,\\) so \\(ABED\\) is a parallelogram with \\(BE = AD.\\) Then \\(\\angle BDE = \\angle DBA = 23^\\circ,\\) and since \\(\\angle BDC = 46^\\circ,\\) segment \\(DE\\) bisects \\(\\angle BDC.\\)\n\nBy the angle bisector theorem in \\(\\triangle BDC,\\) \\(\\dfrac{EC}{BE} = \\dfrac{DC}{DB},\\) so \\[ \\begin{aligned} CD &= DB \\cdot \\dfrac{BC - AD}{AD} \\\\ &= 1 \\cdot \\left(\\dfrac{9}{5} - 1\\right) \\\\ &= \\dfrac{4}{5}. \\end{aligned} \\]\n\nThus, the correct answer is B.",
+      "hints": [
+        "Draw the line through \\(D\\) parallel to \\(AB,\\) meeting \\(BC\\) at \\(E\\); then \\(BE = AD\\)",
+        "Show \\(DE\\) bisects \\(\\angle BDC,\\) then apply the angle bisector theorem in \\(\\triangle BDC\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

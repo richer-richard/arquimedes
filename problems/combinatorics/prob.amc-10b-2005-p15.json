@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2005-p15",
+  "title": "2005 AMC 10B Problem 15",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2005,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 20.7,
+    "source": 1370,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "An envelope contains eight bills: \\(2\\) ones, \\(2\\) fives, \\(2\\) tens, and \\(2\\) twenties. Two bills are drawn at random without replacement. What is the probability that their sum is \\(\\$20\\) or more?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac14\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac25\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac37\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac12\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac23\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "1/2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2005-p15.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(\\binom82 = 28\\) equally likely pairs.\n\nA sum of at least \\(\\$20\\) comes from both twenties (\\(1\\) way), a twenty paired with any of the six smaller bills (\\(2 \\cdot 6 = 12\\) ways), or both tens (\\(1\\) way).\n\nThe probability is \\[ \\dfrac{1 + 12 + 1}{28} = \\dfrac{14}{28} = \\dfrac12. \\]\n\nThus, D is the correct answer.",
+      "hints": [
+        "There are \\(\\binom82\\) equally likely pairs of bills",
+        "A sum of \\(\\$20\\) or more needs both tens, both twenties, or a twenty with any other bill"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

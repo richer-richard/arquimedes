@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-fall-2021-p20",
+  "title": "2021 Fall AMC 12A Problem 20",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.factor-counting",
+      "label": "Factor counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2021,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 35.6,
+    "source": 2110,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "For each positive integer \\(n,\\) let \\(f_1(n)\\) be twice the number of positive integer divisors of \\(n,\\) and for \\(j \\ge 2,\\) let \\(f_j(n) = f_1(f_{j-1}(n)).\\) For how many values of \\(n \\le 50\\) is \\(f_{50}(n) = 12?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(11\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "10"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-fall-2021-p20.live",
+      "kind": "proof-sketch",
+      "text": "Both \\(8\\) and \\(12\\) are fixed. For \\(n\\le50,\\) the first value \\(f_1(n)=2d(n)\\) is at most \\(20.\\) Checking the even values through \\(20\\) shows that an orbit reaches \\(12\\) exactly when its first value is \\(12,18,\\) or \\(20.\\) Thus we need \\(d(n)=6,9,\\) or \\(10.\\)\n\nThe numbers at most \\(50\\) with \\(6\\) divisors are \\(12,18,20,28,32,44,45,50;\\) the only one with \\(9\\) divisors is \\(36,\\) and the only one with \\(10\\) divisors is \\(48.\\) These \\(10\\) values all reach the fixed point \\(12.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "\\(f_1(12) = 2\\cdot 6 = 12,\\) so \\(12\\) is a fixed point; \\(f_1(8) = 2\\cdot 4 = 8\\) is another",
+        "After enough steps every \\(n\\) lands on \\(8\\) or \\(12;\\) count those whose orbit reaches \\(12\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

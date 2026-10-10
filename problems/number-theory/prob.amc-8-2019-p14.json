@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-2019-p14",
+  "title": "2019 AMC 8 Problem 14",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.date-and-time",
+      "label": "Date and time",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2019,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 13.6,
+    "source": 1310,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Isabella has \\(6\\) coupons that can be redeemed for free ice cream cones at Pete’s Sweet Treats. In order to make the coupons last, she decides that she will redeem one every \\(10\\) days until she has used them all. She knows that Pete’s is closed on Sundays, but as she circles the \\(6\\) dates on her calendar, she realizes that no circled date falls on a Sunday. On what day of the week does Isabella redeem her first coupon?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "Monday"
+    },
+    {
+      "label": "B",
+      "text": "Tuesday"
+    },
+    {
+      "label": "C",
+      "text": "Wednesday"
+    },
+    {
+      "label": "D",
+      "text": "Thursday"
+    },
+    {
+      "label": "E",
+      "text": "Friday"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2019-p14.live",
+      "kind": "proof-sketch",
+      "text": "Let us go through the answer choices.\n\nEach redemption is \\(10\\) days later, which advances the weekday by \\(3\\) days.\n\nStarting on day \\(x,\\) the six redemption days are \\(x, x+3, x+6, x+2, x+5,\\) and \\(x+1\\) modulo \\(7.\\)\n\nThe only missed weekday is \\(x+4,\\) so Sunday must be four days after the first redemption day. Four days before Sunday is Wednesday.\n\nThus, the correct answer is C.",
+      "hints": [
+        "Every \\(10\\) days advances the weekday by \\(3\\)",
+        "The six days hit every weekday except one"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

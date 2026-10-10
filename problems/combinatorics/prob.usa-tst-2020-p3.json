@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tst-2020-p3",
+  "title": "USA TST 2020 Problem 3",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.olympiad-combinatorics",
+      "label": "Olympiad combinatorics",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TST",
+    "year": 2020,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 115.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\alpha \\ge 1\\) be a real number.\nHephaestus and Poseidon play a turn-based game\non an infinite grid of unit squares.\nBefore the game starts, Poseidon chooses a finite\nnumber of cells to be flooded.\nHephaestus is building a levee,\nwhich is a subset of unit edges of the grid, called walls,\nforming a connected, non-self-intersecting path or loop.\n\nThe game then begins with Hephaestus moving first.\nOn each of Hephaestus's turns, he adds one or more walls\nto the levee, as long as the total length of the levee\nis at most \\(\\alpha n\\) after his \\(n\\)th turn.\nOn each of Poseidon's turns,\nevery cell which is adjacent to an already flooded cell\nand with no wall between them becomes flooded as well.\n\nHephaestus wins if the levee forms a closed loop\nsuch that all flooded cells are\ncontained in the interior of the loop ---\nhence stopping the flood and saving the world.\nFor which \\(\\alpha\\) can Hephaestus guarantee victory\nin a finite number of turns\nno matter how Poseidon chooses the initial cells to flood?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tst-2020-p3.evanchen",
+      "kind": "proof-sketch",
+      "text": "We show that if \\(\\alpha > 2\\)\nthen Hephaestus wins,\nbut when \\(\\alpha = 2\\) (and hence \\(\\alpha \\le 2\\))\nHephaestus cannot contain even a single-cell flood initially.\n\nStrategy for \\(\\alpha > 2\\):\nImpose \\(\\mathbb{Z}^2\\) coordinates on the cells.\nAdding more flooded cells does not make our task easier,\nso let us assume that initially\nthe cells \\((x,y)\\) with \\(|x|+|y| \\le d\\) are flooded\nfor some \\(d \\ge 2\\);\nthus on Hephaestus's \\(k\\)th turn,\nthe water is contained in \\(|x|+|y| \\le d+k-1\\).\nOur goal is to contain the flood with a large rectangle.\n\nWe pick large integers \\(N_1\\) and \\(N_2\\) such that\n\\[\\begin{aligned}\n \\alpha N_1 &> 2N_1 + (2d + 3) \\\\\n \\alpha (N_1+N_2) &> 2N_2 + (6N_1 + 8d + 4).\n\\end{aligned}\\]\nMark the points \\(X_i\\), \\(Y_i\\) as shown\nin the figure for \\(1 \\le i \\le 6\\).\nThe red figures indicate the distance\nbetween the marked points on the rectangle.\n\n[Diagram omitted from this imported TeX transcription.]\n\nWe follow the following plan.\n\n• Turn \\(1\\): place wall \\(X_1 Y_1\\).\n This cuts off the flood to the north.\n\n• Turns \\(2\\) through \\(N_1+1\\): extend\n the levee to segment \\(X_2 Y_2\\).\n This prevents further flooding to the north.\n\n• Turn \\(N_1+2\\):\n add in broken lines \\(X_4 X_3 X_2\\) and \\(Y_4 Y_3 Y_2\\) all at once.\n This cuts off the flood west and east.\n\n• Turns \\(N_1+2\\) to \\(N_1+N_2+1\\):\n extend the levee along segments \\(X_4 X_5\\) and \\(Y_4 Y_5\\).\n This prevents further flooding west and east.\n\n• Turn \\(N_1 + N_2 + 2\\):\n add in the broken line \\(X_5 X_6 Y_6 Y_5\\) all at once and win.\n\nProof for \\(\\alpha = 2\\):\nSuppose Hephaestus contains the flood\non his \\((n+1)\\)st turn.\nWe prove that \\(\\alpha > 2\\) by showing\nthat in fact at least \\(2n+4\\) walls have been constructed.\n\nLet \\(c_0\\), \\(c_1\\), \\dots, \\(c_n\\) be a path of cells such that\n\\(c_0\\) is the initial cell flooded,\nand in general \\(c_i\\) is flooded on\nPoseidon's \\(i\\)th turn from \\(c_{i-1}\\).\nThe levee now forms a closed loop enclosing all \\(c_i\\).\n\nClaim.\n If \\(c_i\\) and \\(c_j\\) are adjacent\n then \\(|i-j|=1\\).\n\nProof.\n Assume \\(c_i\\) and \\(c_j\\) are adjacent but \\(|i-j|>1\\).\n Then the two cells must be separated by a wall.\n But the levee forms a closed loop,\n and now \\(c_i\\) and \\(c_j\\) are on opposite sides.\n\nThus the \\(c_i\\) actually form a path.\nWe color green any edge of the unit grid (wall or not)\nwhich is an edge of exactly one \\(c_i\\)\n(i.e.\\ the boundary of the polyomino).\nIt is easy to see there are exactly \\(2n+4\\) green edges.\n\nNow, from the center of each cell \\(c_i\\),\nshine a laser towards each green edge of \\(c_i\\)\n(hence a total of \\(2n+4\\) lasers are emitted).\nAn example below is shown for \\(n = 6\\),\nwith the levee marked in brown.\n\n[Diagram omitted from this imported TeX transcription.]\n\nClaim.\n No wall is hit by more than one laser.\n\nProof.\n Assume for contradiction that a wall \\(w\\) is hit\n by lasers from \\(c_i\\) and \\(c_j\\).\n WLOG that laser is vertical, so\n \\(c_i\\) and \\(c_j\\) are in the same column\n (e.g.\\ \\((i,j) = (0,5)\\) in figure).\n\n We consider two cases on the position of \\(w\\).\n\n• If \\(w\\) is between \\(c_i\\) and \\(c_j\\),\n then we have found a segment intersecting\n the levee exactly once.\n But the endpoints of the segment lie inside the levee.\n This contradicts the assumption that the levee is a closed loop.\n\n• Suppose \\(w\\) lies above both \\(c_i\\) and \\(c_j\\)\n and assume WLOG \\(i < j\\).\n Then we have found that there is no levee at all\n between \\(c_i\\) and \\(c_j\\).\n\n Let \\(\\rho \\ge 1\\) be the distance between\n the centers of \\(c_i\\) and \\(c_j\\).\n Then \\(c_j\\) is flooded in a straight line from \\(c_i\\)\n within \\(\\rho\\) turns, and this is the unique\n shortest possible path.\n So this situation can only occur if \\(j = i+\\rho\\)\n and \\(c_i\\), \\dots, \\(c_j\\) form a column.\n But then no vertical lasers from \\(c_i\\) and \\(c_j\\)\n may point in the same direction, contradiction.\n\n Since neither case is possible, the proof ends here.\n\nThis implies the levee has at least \\(2n+4\\) walls\n(the number of lasers) on Hephaestus's \\((n+1)\\)st turn.\nSo \\(\\alpha \\ge \\frac{2n+4}{n+1} > 2\\).\n\nRemark.\n [Author comments]\n The author provides the following remarks.\n\n• Even though the flood can be stopped when \\(\\alpha = 2 + \\varepsilon\\), it takes a very long time to do that. Starting from a single flooded cell, the strategy I have outlined requires \\(\\Theta(1 / \\varepsilon^2)\\) days. Starting from several flooded cells contained within an area of diameter \\(D\\), it takes \\(\\Theta( D / \\varepsilon^2)\\) days. I do not know any strategies that require fewer days than that.\n\n• There is a gaping chasm between \\(\\alpha \\le 2\\) and \\(\\alpha > 2\\). Since \\(\\alpha \\le 2\\) does not suffice even when only one cell is flooded in the beginning, there are in fact no initial configurations at all for which it is sufficient. On the other hand, \\(\\alpha > 2\\) works for all initial configurations.\n\n• The second half of the solution essentially estimates the perimeter of a polyomino in terms of its diameter (where diameter is measured entirely within the polyomino).\n\n It appears that this has not been done before, or at least I was unable to find any reference for it.\n I did find tons of references where the perimeter of a polyomino is estimated in terms of its area,\n but nothing concerning the diameter.\n\n My argument is a formalisation of the intuition that if \\(P\\) is any shortest\n path within some weirdly-shaped polyomino,\n then the boundary of that polyomino must hug \\(P\\) rather closely so that \\(P\\) cannot be shortened.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

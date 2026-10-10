@@ -1,0 +1,71 @@
+{
+  "id": "prob.amc-10b-2021-p17",
+  "title": "2021 AMC 10B Problem 17",
+  "category": "logic-foundations",
+  "subjects": [
+    "logic-foundations"
+  ],
+  "concepts": [
+    {
+      "id": "logic.logical-deduction",
+      "label": "Logical deduction",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2021,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 23.4,
+    "source": 1420,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Ravon, Oscar, Aditi, Tyrone, and Kim play a card game. Each person is given \\(2\\) cards out of a set of \\(10\\) cards numbered \\(1,\\) \\(2,\\) \\(3,\\) \\(\\dots,\\) \\(10.\\) The score of a player is the sum of the numbers of their cards. The scores of the players are as follows: Ravon--\\(11,\\) Oscar--\\(4,\\) Aditi--\\(7,\\) Tyrone--\\(16,\\) Kim--\\(17.\\) Which of the following statements is true?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "Ravon was given card \\(3.\\)"
+    },
+    {
+      "label": "B",
+      "text": "Aditi was given card \\(3.\\)"
+    },
+    {
+      "label": "C",
+      "text": "Ravon was given card \\(4.\\)"
+    },
+    {
+      "label": "D",
+      "text": "Aditi was given card \\(4.\\)"
+    },
+    {
+      "label": "E",
+      "text": "Tyrone was given card \\(7.\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2021-p17.live",
+      "kind": "proof-sketch",
+      "text": "Oscar’s score of \\(4\\) forces his cards to be \\(1\\) and \\(3.\\) From the remaining cards, the only pair with sum \\(7\\) is \\(2\\) and \\(5,\\) so those are Aditi’s cards.\n\nThe unused cards are now \\(4,6,7,8,9,10.\\) Tyrone’s score of \\(16\\) can come only from \\(6+10\\) or \\(7+9.\\) If Tyrone had \\(7\\) and \\(9,\\) then the remaining cards \\(4,6,8,10\\) could not be paired to give Ravon’s score \\(11.\\) Thus Tyrone has \\(6\\) and \\(10.\\)\n\nThe remaining cards are \\(4,7,8,9.\\) Ravon must have \\(4\\) and \\(7\\) to score \\(11,\\) leaving \\(8\\) and \\(9\\) for Kim’s score of \\(17.\\) Therefore, Ravon was given card \\(4.\\)\n\nThus, the answer is C .",
+      "hints": [
+        "Oscar’s cards are forced by his score",
+        "After Oscar and Aditi are determined, use the remaining possible sums"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

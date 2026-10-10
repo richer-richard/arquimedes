@@ -1,0 +1,66 @@
+{
+  "id": "prob.aime-ii-2013-p6",
+  "title": "2013 AIME2 16",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequality",
+      "label": "Inequality",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.perfect-square",
+      "label": "Perfect square",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2013,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 51.7,
+    "source": 2430,
+    "mohs": null
+  },
+  "estimatedMinutes": 6,
+  "statement": "Find the least positive integer \\(N\\) such that the set of \\(1000\\) consecutive integers beginning with \\(1000 \\cdot N\\) contains no square of an integer.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "282",
+    "value": "282"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2013-p6.live",
+      "kind": "proof-sketch",
+      "text": "The block \\(\\{1000N, \\ldots, 1000N + 999\\}\\) misses all squares exactly when some consecutive squares \\(x^2\\) and \\((x+1)^2\\) jump over it, which requires \\((x+1)^2 - x^2 = 2x + 1 \\gt 1000,\\) so \\(x \\ge 500.\\) In particular every block below \\(500^2 = 250000\\) contains a square, so we search from there.\n\nWrite \\(x = 500 + a\\) with \\(a \\ge 0.\\) Then \\(x^2 = 1000(250 + a) + a^2,\\) so as long as \\(a^2 \\lt 1000\\) (that is, \\(a \\le 31\\)), the square \\(x^2\\) lies in block \\(250 + a;\\) these cover blocks \\(250\\) through \\(281.\\) Block \\(251 + a\\) is skipped exactly when \\[ \\begin{aligned} (x+1)^2 &= 1000(250 + a) + a^2 \\\\ &\\quad {}+ 2a + 1001 \\\\ &\\ge 1000(252 + a), \\end{aligned} \\] that is, \\(a^2 + 2a \\ge 999.\\) For \\(a \\le 30\\) this fails (so \\((x+1)^2\\) lands in block \\(251 + a\\)), and it first holds at \\(a = 31,\\) since \\(961 + 62 = 1023.\\)\n\nIndeed \\(531^2 = 281961\\) and \\(532^2 = 283024\\) straddle the block starting at \\(282000.\\) The least such \\(N\\) is \\(251 + 31 = 282.\\)",
+      "hints": [
+        "Consecutive squares differ by \\(2x + 1,\\) so a block of \\(1000\\) integers can be skipped only once \\(x \\ge 500\\)",
+        "Write \\(x = 500 + a,\\) so \\(x^2 = 250000 + 1000a + a^2.\\) Find the least \\(a\\) with \\(a^2 + 2a + 1001 \\ge 2000.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

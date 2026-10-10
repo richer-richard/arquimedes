@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2004-p13",
+  "title": "2004 AMC 12A Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.lattice-point",
+      "label": "Lattice point",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2004,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 26.6,
+    "source": 1540,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Let \\(S\\) be the set of points \\((a, b)\\) in the coordinate plane, where each of \\(a\\) and \\(b\\) may be \\(-1,\\) \\(0,\\) or \\(1.\\) How many distinct lines pass through at least two members of \\(S?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(20\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(24\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(27\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(36\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "20"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2004-p13.live",
+      "kind": "proof-sketch",
+      "text": "There are \\(\\binom{9}{2} = 36\\) pairs of points, and each pair determines a line.\n\nHowever, there are three horizontal, three vertical, and two diagonal lines that each pass through three collinear points of \\(S.\\) Each such line is counted \\(3\\) times, an overcount of \\(2\\) per line.\n\nWith \\(8\\) such lines, the number of distinct lines is \\(36 - 2 \\cdot 8 = 20.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Start from the \\(\\binom{9}{2}\\) pairs of points, each of which determines a line",
+        "Some lines pass through three collinear points and get counted \\(\\binom{3}{2} = 3\\) times"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

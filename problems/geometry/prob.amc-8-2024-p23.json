@@ -1,0 +1,81 @@
+{
+  "id": "prob.amc-8-2024-p23",
+  "title": "2024 AMC 8 Problem 23",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.lattice-point",
+      "label": "Lattice point",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2024,
+    "number": 23
+  },
+  "difficulty": {
+    "course": 31.3,
+    "source": 1810,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Rodrigo has a very large piece of graph paper. First he draws a line segment connecting point \\((0, 4)\\) to point \\((2, 0)\\) and colors the \\(4\\) cells whose interiors intersect the segment, as shown below. Next, Rodrigo draws a line segment connecting point \\((2000, 3000)\\) to point \\((5000, 8000).\\) Again he colors the cells whose interiors intersect the segment. How many cells will he color this time?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(6000\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6500\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(7000\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(7500\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(8000\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "7000"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2024-p23.live",
+      "kind": "proof-sketch",
+      "text": "For a segment whose endpoint differences are \\(a\\) horizontally and \\(b\\) vertically, the segment crosses \\(a\\) vertical grid lines and \\(b\\) horizontal grid lines, but crossings at lattice points are counted twice. Therefore the number of cells whose interiors are intersected is \\[ a+b-\\gcd(a,b). \\]\n\nHere the endpoint differences are \\(3000\\) and \\(5000\\), and \\(\\gcd(3000,5000)=1000\\). Thus the number of cells colored is \\[ 3000+5000-1000=7000. \\]\n\nThus, C is the correct answer.",
+      "hints": [
+        "For a segment with integer endpoint differences \\(a\\) and \\(b\\), count grid cells crossed",
+        "Use \\(a+b-\\gcd(a,b)\\) for cells whose interiors are intersected"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "867a6f1e796746d00b7ee3a709064ccd763975545845b82b35aebe1ac12aa42b"
+    ],
+    "solutions": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2018-p18",
+  "title": "2018 AMC 12A Problem 18",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-bisector-theorem",
+      "label": "Angle bisector theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.midpoint",
+      "label": "Midpoint",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2018,
+    "number": 18
+  },
+  "difficulty": {
+    "course": 35.9,
+    "source": 1990,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Triangle \\(ABC\\) with \\(AB = 50\\) and \\(AC = 10\\) has area \\(120.\\) Let \\(D\\) be the midpoint of \\(\\overline{AB},\\) and let \\(E\\) be the midpoint of \\(\\overline{AC}.\\) The angle bisector of \\(\\angle BAC\\) intersects \\(\\overline{DE}\\) and \\(\\overline{BC}\\) at \\(F\\) and \\(G,\\) respectively. What is the area of quadrilateral \\(FDBG?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(60\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(65\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(70\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(75\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(80\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "75"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2018-p18.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(D\\) and \\(E\\) are midpoints, \\(\\triangle ADE\\) has \\(\\tfrac14\\) the area of \\(\\triangle ABC,\\) namely \\(30,\\) so trapezoid \\(EDBC\\) has area \\(120 - 30 = 90.\\)\n\nBy the Angle Bisector Theorem, \\(G\\) divides \\(BC\\) with \\(BG = \\tfrac{AB}{AB + AC} \\cdot BC = \\tfrac56 BC,\\) and likewise \\(F\\) divides \\(DE\\) so that \\(DF = \\tfrac56 DE.\\) Because \\(FDBG\\) and \\(EDBC\\) share the same height, the area of \\(FDBG\\) is \\(\\tfrac56\\) of the area of \\(EDBC:\\) \\(\\tfrac56 \\cdot 90 = 75.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Since \\(D, E\\) are midpoints, \\([ADE] = \\tfrac14 [ABC],\\) so trapezoid \\(EDBC\\) is the remaining \\(\\tfrac34\\)",
+        "By the Angle Bisector Theorem the bisector cuts \\(DE\\) and \\(BC\\) in ratio \\(AB : AC = 5 : 1,\\) making \\(FDBG\\) equal to \\(\\tfrac56\\) of \\(EDBC\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

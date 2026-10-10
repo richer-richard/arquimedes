@@ -1,0 +1,61 @@
+{
+  "id": "prob.hmmt-feb-guts-2016-p11",
+  "title": "2016 HMMT February Guts Problem 11",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.chinese-remainder-theorem",
+      "label": "Chinese remainder theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.greatest-common-divisors-gcd",
+      "label": "Greatest common divisors (gcd)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular Arithmetic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2016,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 69.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Define \\(\\phi^{!}(n)\\) as the product of all positive integers less than or equal to \\(n\\) and relatively prime to \\(n\\). Compute the remainder when\n\n\\[\\sum_{\\substack{2 \\leq n \\leq 50 \\\\ \\operatorname{gcd}(n, 50)=1}} \\phi^{!}(n)\\]\n\nis divided by 50 .",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2016-p11.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 12\nFirst, \\(\\phi^{!}(n)\\) is even for all odd \\(n\\), so it vanishes modulo 2 .\nTo compute the remainder modulo 25 , we first evaluate \\(\\phi^{!}(3)+\\phi^{!}(7)+\\phi^{!}(9) \\equiv 2+5 \\cdot 4+5 \\cdot 3 \\equiv 12\\) \\((\\bmod 25)\\). Now, for \\(n \\geq 11\\) the contribution modulo 25 vanishes as long as \\(5 \\nmid n\\).\nWe conclude the answer is 12 .",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

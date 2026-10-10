@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2009-p10",
+  "title": "2009 AMC 12B Problem 10",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "combinatorics",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "nt.complementary-counting",
+      "label": "Complementary counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.fraction",
+      "label": "Fraction",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2009,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 22.8,
+    "source": 1480,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A particular \\(12\\)-hour digital clock displays the hour and minute of a day. Unfortunately, whenever it is supposed to display a \\(1,\\) it mistakenly displays a \\(9.\\) For example, when it is \\(1{:}16\\) pm the clock incorrectly shows \\(9{:}96\\) pm. What fraction of the day will the clock show the correct time?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{2}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{5}{8}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{3}{4}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{5}{6}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{9}{10}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "1/2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2009-p10.live",
+      "kind": "proof-sketch",
+      "text": "The hours containing a \\(1\\) are \\(1, 10, 11, 12,\\) so \\(8\\) of the \\(12\\) hours display correctly, a fraction \\(\\dfrac{2}{3}.\\)\n\nA minute is wrong if either digit is \\(1\\): the tens digit gives \\(10\\text{-}19\\) (\\(10\\) minutes), and the ones digit adds \\(01, 21, 31, 41, 51\\) (\\(5\\) more), \\(15\\) in all. So \\(\\dfrac{45}{60} = \\dfrac{3}{4}\\) of minutes are correct.\n\nThe fraction of the day is \\(\\dfrac{2}{3} \\cdot \\dfrac{3}{4} = \\dfrac{1}{2}.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "The hour is shown correctly unless it contains a \\(1,\\) namely hours \\(1, 10, 11, 12\\)",
+        "A minute is correct only when neither of its digits is a \\(1\\); count the bad minutes out of \\(60\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

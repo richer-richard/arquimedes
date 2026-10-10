@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2025-p4",
+  "title": "2025 IMO Problem 4",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.olympiad-number-theory",
+      "label": "Olympiad number theory",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2025,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 88.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "An infinite sequence \\(a_1\\), \\(a_2\\), \\dots\\ consists of positive integers\nhas each of which has at least three proper divisors.\nSuppose that for each \\(n\\geq 1\\),\n\\(a_{n+1}\\) is the sum of the three largest proper divisors of \\(a_n\\).\nDetermine all possible values of \\(a_1\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2025-p4.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is \\(a_1 = 12^e \\cdot 6 \\cdot \\ell\\)\nfor any \\(e, \\ell \\ge 0\\) with \\(\\gcd(\\ell, 10) = 1\\).\n\nLet \\(\\mathbf{S}\\) denote the set of positive integers with at least three divisors.\nFor \\(x \\in \\mathbf{S}\\), let \\(\\psi(x)\\) denote the sum of the three largest ones,\nso that \\(\\psi(a_n) = a_{n+1}\\).\n\nProof that all such \\(a_1\\) work..\nLet \\(x = 12^e \\cdot 6 \\cdot \\ell \\in \\mathbf{S}\\) with \\(\\gcd(\\ell, 10) = 1\\).\nAs \\(\\frac12+\\frac13+\\frac14 = \\frac{13}{12}\\), we get\n\\[ \\psi(x) = \\begin{cases}\n x & e = 0 \\\\\n \\frac{13}{12} x & e > 0\n \\end{cases} \\]\nso by induction on the value of \\(e\\) we see that \\(\\psi(x) \\in \\mathbf{S}\\)\n(the base \\(e=0\\) coming from \\(\\psi\\) fixing \\(x\\)).\n\nProof that all \\(a_1\\) are of this form..\nIn what follows \\(x\\) is always an element of \\(\\mathbf{S}\\),\nnot necessarily an element of the sequence.\n\nClaim.\n Let \\(x \\in \\mathbf{S}\\). If \\(2 \\mid \\psi(x)\\) then \\(2 \\mid x\\).\n\nProof.\n If \\(x\\) is odd then every divisor of \\(x\\) is odd,\n so \\(\\psi(x)\\) is the sum of three odd numbers.\n\nClaim.\n Let \\(x \\in \\mathbf{S}\\). If \\(6 \\mid \\psi(x)\\) then \\(6 \\mid x\\).\n\nProof.\n We consider only \\(x\\) even because of the previous claim.\n We prove the contrapositive that \\(3 \\nmid x \\implies 6 \\nmid \\psi(x)\\) (for even \\(x\\)).\n\n• If \\(4 \\mid x\\), then letting \\(d\\) be the third largest proper divisor of \\(x\\),\n \\[ \\psi(x) = \\frac x2 + \\frac x4 + d = \\frac 34 x + d \\equiv d \\not\\equiv 0 \\pmod 3. \\]\n\n• Otherwise, let \\(p \\mid x\\) be the smallest prime dividing \\(x\\), with \\(p > 3\\).\n If the third-smallest nontrivial divisor of \\(x\\) is \\(2p\\), then\n \\[ \\psi(x) = \\frac x2 + \\frac xp + \\frac{x}{2p} = \\frac{3}{2p} x + \\frac x2\n \\equiv \\frac x2 \\not\\equiv 0 \\pmod 3. \\]\n If the third-smallest nontrivial divisor of \\(x\\) is instead an odd prime \\(q\\), then\n \\[ \\psi(x) = \\frac x2 + \\frac xp + \\frac{x}{q} \\equiv 1+0+0 \\equiv 1 \\pmod 2. \\qedhere \\]\n\nTo tie these two claims into the problem, we assert:\n\nClaim.\n Every \\(a_i\\) must be divisible by \\(6\\).\n\nProof.\n The idea is to combine the previous two claims\n (which have no dependence on the sequence) with a size argument.\n\n• For odd \\(x \\in \\mathbf{S}\\) note that \\(\\psi(x) < \\left( \\frac13+\\frac15+\\frac17 \\right) x < x\\)\n and \\(\\psi(x)\\) is still odd.\n So if any \\(a_i\\) is odd the sequence is strictly decreasing and that's impossible.\n Hence, we may assume \\(a_1\\), \\(a_2\\), \\dots\\ are all even.\n\n• If \\(x \\in \\mathbf{S}\\) is even but \\(3 \\nmid x\\) then \\(\\psi(x) < \\left( \\frac{1}{2}+\\frac14+\\frac15 \\right) x < x\\)\n and \\(\\psi(x)\\) is still not a multiple of \\(3\\).\n So if any \\(a_i\\) is not divisible by \\(3\\) the sequence is again strictly decreasing.\n \\qedhere\n\nOn the other hand, if \\(x\\) is a multiple of \\(6\\), we have the following formula for \\(\\psi(x)\\):\n\\[ \\psi(x) = \\begin{cases}\n \\frac{13}{12}x & 4 \\mid x \\\\\n \\frac{31}{30}x & 4 \\nmid x \\text{ but } 5 \\mid x \\\\\n x & 4 \\nmid x \\text{ and } 5 \\nmid x.\n \\end{cases} \\]\nLooking back on our sequence of \\(a_i\\) (which are all multiples of \\(6\\)),\nthe center case cannot happen with our \\(a_i\\), because \\(\\frac{31}{30}x\\)\nis odd when \\(x \\equiv 2 \\pmod 4\\).\nHence in actuality\n\\[ a_{n+1} = \\frac{13}{12} a_n \\quad\\text{or}\\quad a_{n+1} = a_n \\]\nfor every \\(n\\).\n\nLet \\(T\\) be the smallest index such that \\(a_T = a_{T+1} = a_{T+2} = \\dotsb\\)\n(it must exist because we cannot multiply by \\(\\frac{13}{12}\\) forever).\nThen we can exactly describe the sequence by\n\\[ a_n = a_1 \\cdot \\left( \\frac{13}{12} \\right)^{\\min(n,T)-1}. \\]\nHence \\(a_1 = \\left( \\frac{12}{13} \\right)^{T-1} a_T\\),\nand since \\(a_T\\) is a multiple of \\(6\\) not divisible by \\(4\\) or \\(5\\),\nit follows \\(a_1\\) has the required form.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

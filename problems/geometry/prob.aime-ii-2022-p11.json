@@ -1,0 +1,72 @@
+{
+  "id": "prob.aime-ii-2022-p11",
+  "title": "2022 AIME II Problem 11",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-bisector",
+      "label": "Angle bisector",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.shoelace-formula",
+      "label": "Shoelace formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.transformation",
+      "label": "Transformation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2022,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 65.9,
+    "source": 3160,
+    "mohs": null
+  },
+  "estimatedMinutes": 17,
+  "statement": "Let \\(ABCD\\) be a convex quadrilateral with \\(AB = 2,\\) \\(AD = 7,\\) and \\(CD = 3\\) such that the bisectors of acute angles \\(\\angle DAB\\) and \\(\\angle ADC\\) intersect at the midpoint of \\(\\overline{BC}.\\) Find the square of the area of \\(ABCD.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "180",
+    "value": "180"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2022-p11.live",
+      "kind": "proof-sketch",
+      "text": "Place \\(A = (0, 0)\\) and \\(D = (7, 0)\\) with \\(B, C\\) above the axis, and let \\(M\\) be the midpoint of \\(\\overline{BC}.\\) Reflecting \\(B\\) over the bisector line \\(AM\\) carries ray \\(AB\\) to ray \\(AD,\\) so \\(B\\) maps to \\(B' = (2, 0),\\) and reflecting \\(C\\) over the bisector \\(DM\\) gives \\(C' = (4, 0).\\) Since \\(M\\) lies on both mirror lines, \\(MB' = MB = MC = MC',\\) so \\(M\\) is equidistant from \\(B'\\) and \\(C'\\) and hence \\(M = (3, h)\\) for some \\(h \\gt 0.\\)\n\nWrite \\(\\angle DAB = 2\\alpha\\) and \\(\\angle ADC = 2\\delta,\\) so \\(\\tan\\alpha = \\frac{h}{3}\\) and \\(\\tan\\delta = \\frac{h}{4}.\\) Then \\(B = (2\\cos 2\\alpha,\\, 2\\sin 2\\alpha)\\) and \\(C = (7 - 3\\cos 2\\delta,\\, 3\\sin 2\\delta),\\) and the midpoint condition on the \\(x\\)-coordinates reads \\(2\\cos 2\\alpha - 3\\cos 2\\delta = -1.\\) Substituting \\(\\cos 2\\alpha = \\frac{9 - h^2}{9 + h^2}\\) and \\(\\cos 2\\delta = \\frac{16 - h^2}{16 + h^2}\\) and clearing denominators gives \\(2h^4 = 10h^2,\\) so \\(h^2 = 5.\\) (The \\(y\\)-coordinate condition is then satisfied automatically: \\(2\\sin 2\\alpha\\) \\({}+ 3\\sin 2\\delta\\) \\(= \\frac{6\\sqrt{5}}{7} + \\frac{8\\sqrt{5}}{7}\\) \\(= 2h.\\))\n\nNow \\(\\cos 2\\alpha = \\frac{2}{7},\\) \\(\\sin 2\\alpha = \\frac{3\\sqrt{5}}{7},\\) \\(\\cos 2\\delta = \\frac{11}{21},\\) \\(\\sin 2\\delta = \\frac{8\\sqrt{5}}{21},\\) so \\(B = \\left(\\frac{4}{7}, \\frac{6\\sqrt{5}}{7}\\right)\\) and \\(C = \\left(\\frac{38}{7}, \\frac{8\\sqrt{5}}{7}\\right).\\) The shoelace formula on \\(A, B, C, D\\) gives area \\(6\\sqrt{5},\\) whose square is \\(180.\\)",
+      "hints": [
+        "Reflect \\(B\\) over the bisector from \\(A\\) and \\(C\\) over the bisector from \\(D:\\) both reflections land on \\(\\overline{AD}\\)",
+        "Since \\(MB = MC,\\) the midpoint \\(M\\) is equidistant from the two reflections, which lie on \\(\\overline{AD}\\) at distances \\(2\\) from \\(A\\) and \\(3\\) from \\(D\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

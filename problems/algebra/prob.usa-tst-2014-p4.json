@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tst-2014-p4",
+  "title": "USA TST 2014 Problem 4",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TST",
+    "year": 2014,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 79.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n\\) be a positive even integer,\nand let \\(c_1\\), \\(c_2\\), \\dots, \\(c_{n-1}\\) be real numbers satisfying\n\\[ \\sum_{i=1}^{n-1} \\left\\lvert c_i-1 \\right\\rvert < 1. \\]\nProve that\n\\[ 2x^n - c_{n-1}x^{n-1} + c_{n-2}x^{n-2} - \\dots - c_1x^1 + 2 \\]\nhas no real roots.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tst-2014-p4.evanchen",
+      "kind": "proof-sketch",
+      "text": "We will prove the polynomial is positive for all \\(x \\in \\mathbb{R}\\).\nAs \\(c_i > 0\\), the result is vacuous for \\(x \\le 0\\),\nso we restrict attention to \\(x > 0\\).\n\nThen letting \\(c_i = 1 - d_i\\) for each \\(i\\),\nthe inequality we want to prove becomes\n\\[ x^n + 1 + \\frac{x^{n+1}+1}{x+1} > \\sum_1^{n-1} d_i x^i\n \\qquad\\text{given } \\sum |d_i| < 1. \\]\nBut obviously \\(x^n+1 > x^i\\) for any \\(1 \\le i \\le n-1\\) and \\(x > 0\\).\nSo in fact \\(x^n+1 > \\sum_1^{n-1} |d_i| x^i\\) holds for \\(x > 0\\),\nas needed.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

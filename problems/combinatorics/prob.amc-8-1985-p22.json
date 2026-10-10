@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-8-1985-p22",
+  "title": "1985 AMC 8 Problem 22",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.basic-probability",
+      "label": "Basic probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1985,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 10.5,
+    "source": 1000,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Assume every \\(7\\)-digit whole number is a possible telephone number except those that begin with \\(0\\) or \\(1.\\) What fraction of telephone numbers begin with \\(9\\) and end with \\(0?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{63}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{1}{80}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{81}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{1}{90}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{1}{100}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1/80"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1985-p22.live",
+      "kind": "proof-sketch",
+      "text": "The first digit is one of \\(8\\) allowed digits (\\(2\\) through \\(9\\)), so \\(\\dfrac18\\) of the numbers begin with \\(9.\\) The last digit is any of \\(10\\) digits, so \\(\\dfrac{1}{10}\\) end in \\(0.\\)\n\nThese conditions are independent, so the fraction is \\(\\dfrac18 \\cdot \\dfrac{1}{10} = \\dfrac{1}{80}.\\)\n\nThus, the correct answer is B .",
+      "hints": [
+        "The first digit can be any of \\(2\\) through \\(9,\\) which is \\(8\\) choices",
+        "Multiply the fraction of telephone numbers that begin with \\(9\\) by the fraction that end in \\(0\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

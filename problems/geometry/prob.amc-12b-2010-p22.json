@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2010-p22",
+  "title": "2010 AMC 12B Problem 22",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.cyclic-quadrilateral",
+      "label": "Cyclic quadrilateral",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.ptolemys-theorem",
+      "label": "Ptolemy’s Theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2010,
+    "number": 22
+  },
+  "difficulty": {
+    "course": 38.6,
+    "source": 2420,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Let \\(ABCD\\) be a cyclic quadrilateral. The side lengths of \\(ABCD\\) are distinct integers less than \\(15\\) such that \\(BC\\cdot CD=AB\\cdot DA.\\) What is the largest possible value of \\(BD?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\sqrt{\\dfrac{325}{2}}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\sqrt{185}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\sqrt{\\dfrac{389}{2}}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\sqrt{\\dfrac{425}{2}}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\sqrt{\\dfrac{533}{2}}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2010-p22.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(a=AB,\\) \\(b=BC,\\) \\(c=CD,\\) \\(d=DA\\) and \\(k=bc=ad.\\) Writing each triangle’s area in terms of the circumradius and using \\([ABC]+[CDA]=\\) \\([BCD]+[ABD]\\) gives \\((ab+cd)\\cdot AC=2k\\cdot BD.\\)\n\nPtolemy’s theorem gives \\(AC\\cdot BD=ac+bd.\\) Eliminating \\(AC,\\) \\[ \\begin{aligned} BD^2 &=\\frac{(ac+bd)(ab+cd)}{2k} \\\\ &=\\frac12\\left(a^2+b^2+c^2+d^2\\right). \\end{aligned} \\]\n\nThe sides are distinct integers below \\(15\\) with \\(bc=ad,\\) so neither \\(11\\) nor \\(13\\) can appear (each is prime and would need a matching factor on the other side).\n\nIf the largest side is at most \\(12,\\) the four squares sum to at most \\(12^2+10^2+9^2+8^2=389,\\) because \\(11\\) is unavailable.\n\nNow suppose the largest side is \\(14,\\) and write the others as \\(s_1\\gt s_2\\gt s_3.\\) The product condition must pair \\(14\\) with \\(s_3,\\) so \\(14s_3=s_1s_2.\\) Hence one of \\(s_1,s_2\\) equals \\(7.\\) If \\(s_1=7,\\) the sum of squares is less than \\(14^2+7^2+6^2+5^2=306.\\) If \\(s_2=7,\\) then \\(s_1=2s_3,\\) so the largest possibility is \\((s_1,s_2,s_3)=(12,7,6).\\) Thus \\[ \\begin{aligned} 2BD^2 &=14^2+12^2+7^2+6^2 \\\\ &=425, \\end{aligned} \\] so \\(BD\\le\\sqrt{\\dfrac{425}{2}}.\\) Equality is attained by the cyclic quadrilateral with side order \\((a,b,c,d)=(14,12,7,6),\\) for which \\(bc=ad=84.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Let \\(a=AB,\\) \\(b=BC,\\) \\(c=CD,\\) \\(d=DA\\) with \\(bc=ad=k;\\) comparing areas gives \\((ab+cd)\\cdot AC=2k\\cdot BD\\)",
+        "With Ptolemy’s \\(AC\\cdot BD=ac+bd,\\) eliminate \\(AC\\) to get \\(BD^2=\\tfrac12(a^2+b^2+c^2+d^2)\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

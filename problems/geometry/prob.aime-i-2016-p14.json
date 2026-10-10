@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2016-p14",
+  "title": "2016 AIME I Problem 14",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "geo.distance-formula",
+      "label": "Distance formula",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.greatest-common-divisor",
+      "label": "Greatest common divisor",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.lattice-point",
+      "label": "Lattice point",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2016,
+    "number": 14
+  },
+  "difficulty": {
+    "course": 64.6,
+    "source": 3370,
+    "mohs": null
+  },
+  "estimatedMinutes": 20,
+  "statement": "Centered at each lattice point in the coordinate plane are a circle radius \\(\\frac{1}{10}\\) and a square with sides of length \\(\\frac{1}{5}\\) whose sides are parallel to the coordinate axes. The line segment from \\((0, 0)\\) to \\((1001, 429)\\) intersects \\(m\\) of the squares and \\(n\\) of the circles. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "574",
+    "value": "574"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2016-p14.live",
+      "kind": "proof-sketch",
+      "text": "Since \\(\\gcd(1001, 429) = 143,\\) the segment passes through the lattice points \\((7k, 3k)\\) for \\(k = 0, \\ldots, 143\\) and consists of \\(143\\) translated copies of the segment from \\((0, 0)\\) to \\((7, 3).\\) The line is \\(y = \\frac{3}{7}x.\\) It meets the square centered at \\((m, n)\\) exactly when its height passes within \\(\\frac{1}{10}\\) of \\(n\\) for some \\(x\\) within \\(\\frac{1}{10}\\) of \\(m,\\) that is when \\(\\left|\\frac{3m}{7} - n\\right| \\le \\frac{1}{10} + \\frac{3}{7} \\cdot \\frac{1}{10} = \\frac{1}{7},\\) or equivalently \\(|3m - 7n| \\le 1.\\)\n\nFor \\(0 \\le m \\le 7\\) the solutions are \\((0, 0)\\) and \\((7, 3)\\) with \\(3m - 7n = 0,\\) and \\((2, 1)\\) and \\((5, 2)\\) with \\(3m - 7n = \\mp 1.\\) In the first two the line passes through the center, so it meets the circle as well. In the other two, equality means the line passes exactly through a corner of the square (for \\((2, 1),\\) the corner \\((2.1, 0.9)\\)), while its distance to the center is \\(\\frac{1}{\\sqrt{3^2 + 7^2}} = \\frac{1}{\\sqrt{58}} \\gt \\frac{1}{10},\\) so it misses the circle. Thus each copy of the segment meets \\(4\\) squares and \\(2\\) circles.\n\nThe \\(142\\) interior lattice points \\((7k, 3k)\\) are each shared by two consecutive copies, so \\(m = 4 \\cdot 143 - 142 = 430\\) and \\(n = 2 \\cdot 143 - 142 = 144,\\) giving \\(m + n = 574.\\)",
+      "hints": [
+        "Since \\(\\gcd(1001, 429) = 143,\\) the segment is \\(143\\) copies of the segment from \\((0, 0)\\) to \\((7, 3)\\)",
+        "The line meets the square at \\((m, n)\\) exactly when \\(|3m - 7n| \\le 1;\\) when \\(|3m - 7n| = 1\\) it only grazes a corner of the square and misses the circle"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

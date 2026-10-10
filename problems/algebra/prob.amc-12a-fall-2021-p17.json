@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-fall-2021-p17",
+  "title": "2021 Fall AMC 12A Problem 17",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequality",
+      "label": "Inequality",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2021,
+    "number": 17
+  },
+  "difficulty": {
+    "course": 33.9,
+    "source": 1910,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "For how many ordered pairs \\((b, c)\\) of positive integers does neither \\(x^2 + bx + c = 0\\) nor \\(x^2 + cx + b = 0\\) have two distinct real solutions?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(8\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(16\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-fall-2021-p17.live",
+      "kind": "proof-sketch",
+      "text": "Neither quadratic has two distinct real roots exactly when both discriminants are nonpositive: \\(b^2 \\le 4c\\) and \\(c^2 \\le 4b.\\)\n\nCombining \\(c\\ge \\frac{b^2}{4}\\) with \\(c\\le2\\sqrt b\\) gives \\(b^{\\frac{3}{2}}\\le8,\\) so \\(b\\le4.\\) Checking: \\(b = 1\\) gives \\(c \\in \\{1,2\\};\\) \\(b = 2\\) gives \\(c \\in \\{1,2\\};\\) \\(b = 3\\) gives \\(c = 3;\\) and \\(b = 4\\) gives \\(c = 4.\\)\n\nThat is \\((1,1),\\) \\((1,2),\\) \\((2,1),\\) \\((2,2),\\) \\((3,3),\\) \\((4,4)\\) — \\(6\\) ordered pairs.\n\nThus, the correct answer is B.",
+      "hints": [
+        "“No two distinct real solutions” means each discriminant is \\(\\le 0:\\) \\(b^2 \\le 4c\\) and \\(c^2 \\le 4b\\)",
+        "Multiplying gives \\(b^2c^2 \\le 16bc,\\) so \\(bc \\le 16;\\) test small positive integers"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10a-2023-p24",
+  "title": "2023 AMC 10A Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area",
+      "label": "Area",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.area-decomposition",
+      "label": "Area decomposition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.regular-polygon",
+      "label": "Regular polygon",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2023,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 49.5,
+    "source": 2520,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Six regular hexagonal blocks of side length \\(1\\) unit are arranged inside a regular hexagonal frame. Each block lies along an inside edge of the frame and is aligned with two other blocks, as shown in the figure below. The distance from any corner of the frame to the nearest vertex of a block is \\(\\frac{3}{7}\\) unit. What is the area of the region inside the frame not occupied by the blocks?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{13\\sqrt{3}}{3}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{216\\sqrt{3}}{49}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{9\\sqrt{3}}{2}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{14\\sqrt{3}}{3}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac{243\\sqrt{3}}{49}\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2023-p24.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(d=\\tfrac37.\\) Extend the slanted edges of the blocks that meet a fixed side of the frame. Because all the relevant angles are \\(60^\\circ,\\) the extensions form an equilateral triangle of side \\(1\\) at one end and an equilateral triangle of side \\(1-d\\) at the other. Thus that frame side is partitioned into lengths \\(d,1,1,\\) and \\(1-d,\\) so its length is \\(d+1+1+(1-d)=3.\\) A regular hexagon of side \\(t\\) has area \\(\\tfrac{3\\sqrt3}{2}t^2.\\) Therefore the uncovered area is the area of the side-\\(3\\) frame minus the areas of the six unit blocks: \\(\\tfrac{3\\sqrt3}{2}\\cdot 3^2\\) \\(- 6\\cdot\\tfrac{3\\sqrt3}{2}\\) \\(= \\tfrac{27\\sqrt3}{2} - 9\\sqrt3\\) \\(= \\tfrac{9\\sqrt3}{2}.\\) Therefore, the answer is C.",
+      "hints": [
+        "The uncovered region is the frame’s area minus the six unit hexagons; a regular hexagon of side \\(t\\) has area \\(\\tfrac{3\\sqrt3}{2}t^2\\)",
+        "Extend the block edges to the frame: one frame side splits into lengths \\(\\tfrac37, 1, 1,\\) and \\(1-\\tfrac37;\\) then subtract the six block areas"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "58f1be77757b26cc2dae622fe808e37ec2665d724371d1600979e952977f8d28"
+    ],
+    "solutions": []
+  }
+}

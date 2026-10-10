@@ -1,0 +1,73 @@
+{
+  "id": "prob.aime-1983-p15",
+  "title": "1983 AIME Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.chord",
+      "label": "Chord",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.power-of-a-point",
+      "label": "Power of a point",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.tangent-line",
+      "label": "Tangent line",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1983,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": 3270,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "The adjoining figure shows two intersecting chords in a circle, with \\(B\\) on minor arc \\(AD.\\) Suppose that the radius of the circle is \\(5,\\) that \\(BC=6,\\) and that \\(AD\\) is bisected by \\(BC.\\) Suppose further that \\(AD\\) is the only chord starting at \\(A\\) which is bisected by \\(BC.\\) It follows that the sine of the minor arc \\(AB\\) is a rational number. If this fraction is expressed as a fraction \\(\\frac{m}{n}\\) in lowest terms, what is the product \\(mn?\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "175",
+    "value": "175"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1983-p15.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(H\\) be the midpoint of \\(AD.\\) Put \\(H=(0,0),\\) \\(A=(-a,0),\\) \\(D=(a,0),\\) and let the circle’s center be \\(O=(0,k).\\) Then \\(a^2+k^2=25.\\) The midpoints of all chords starting at \\(A\\) form the circle with center \\(\\frac{A+O}{2}\\) and radius \\(\\frac{5}{2}.\\) Because \\(AD\\) is the only such chord bisected by the line \\(BC,\\) that line is tangent to the midpoint circle at \\(H.\\)\n\nHence a unit direction vector for \\(BC\\) may be taken as \\(u=\\frac{(k,a)}{5},\\) perpendicular to \\(A+O=(-a,k).\\) Write \\(B=-pu\\) and \\(C=qu,\\) where \\(p,q>0.\\) Then \\(p+q=6,\\) and intersecting chords give \\(pq=a^2.\\) Substituting the line into the original circle also gives \\[ q-p=2u\\mathbin{\\cdot}O=\\frac{2ak}{5}. \\] Therefore \\[ \\begin{aligned} 36-4a^2&=(q-p)^2\\\\ &=\\frac{4a^2(25-a^2)}{25}, \\end{aligned} \\] so \\(a^4-50a^2+225=0.\\) Its roots are \\(a^2=5\\) and \\(45,\\) but \\(a^2=pq\\leq\\frac{(p+q)^2}{4}=9.\\) Thus \\(a^2=5,\\) and \\(\\{p,q\\}=\\{1,5\\}.\\)\n\nChoose \\(a=\\sqrt5,\\) \\(k=2\\sqrt5,\\) and \\(p=1\\) for the endpoint \\(B\\) on minor arc \\(AD.\\) Then \\[ \\begin{aligned} \\overrightarrow{OA} &=(-\\sqrt5,-2\\sqrt5),\\\\ \\overrightarrow{OB} &=\\left(-\\frac2{\\sqrt5}, -\\frac{11}{\\sqrt5}\\right). \\end{aligned} \\] The sine of the central angle subtending minor arc \\(AB\\) is the absolute determinant of these radius vectors divided by \\(5^2,\\) namely \\[ \\sin\\widehat{AB}=\\frac{|11-4|}{25}=\\frac7{25}. \\] Hence \\(mn=7\\cdot25=175.\\)",
+      "hints": [
+        "The midpoints of all chords from \\(A\\) lie on the circle with diameter joining \\(A\\) to the center",
+        "Uniqueness makes \\(BC\\) tangent to that midpoint circle at the midpoint of \\(AD\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "e520069f9c3002b56e28761d6dca00043ba012dd536034b61e98de69496c0f5f"
+    ],
+    "solutions": []
+  }
+}

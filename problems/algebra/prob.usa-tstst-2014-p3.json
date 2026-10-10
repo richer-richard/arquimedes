@@ -1,0 +1,47 @@
+{
+  "id": "prob.usa-tstst-2014-p3",
+  "title": "USA TSTST 2014 Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "USA TSTST",
+    "year": 2014,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 97.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find all polynomials \\(P(x)\\) with real coefficients that satisfy\n\\[ P(x \\sqrt 2) = P(x + \\sqrt{1-x^2}) \\]\nfor all real numbers \\(x\\) with \\(\\lvert x \\rvert \\le 1\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.usa-tstst-2014-p3.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is any polynomial of the form\n\\(P(x) = f(U(x/\\sqrt2))\\), where \\(f \\in \\mathbb{R}[x]\\)\nand \\(U\\) is the unique polynomial satisfying \\(U(\\cos\\theta) = \\cos(8\\theta)\\).\n\nLet \\(Q(x) = P(x \\sqrt 2)\\); then the condition reads\n\\[\n Q(\\cos\\theta) = Q\\left( \\frac{1}{\\sqrt2}(\\cos\\theta+\\sin\\theta) \\right)\n = Q(\\cos(\\theta-45^\\circ)) \\qquad \\forall \\; 0 \\le \\theta \\le 180^\\circ.\n\\]\nWe call a polynomial good if it satisfies this functional equation.\nIt's easy to see \\(U\\) itself is good, and hence so is any polynomial of the form\n\\(g(U(x))\\) for \\(g \\in \\mathbb{R}[x]\\).\nOur goal is to show that every good \\(Q\\) is of this form.\n\nThe proof is by induction on \\(\\deg Q\\), where the case \\(\\deg Q = 0\\) is vacuous.\nNote that\n\\[\\begin{aligned}\n Q(\\cos136^\\circ) &= Q(\\cos91^\\circ)\n = Q(\\cos46^\\circ) = Q(\\cos1^\\circ) = Q(\\cos-44^\\circ) \\\\\n &= Q(\\cos44^\\circ) = Q(\\cos89^\\circ) = Q(\\cos134^\\circ) = Q(\\cos179^\\circ).\n\\end{aligned}\\]\nHence \\(Q\\) is equal at eight distinct values\n(not nine since \\(\\cos -44^\\circ = \\cos44^\\circ\\) is repeated).\nSo it follows that the quotient\n\\[ \\widetilde Q(x) \\coloneq \\frac{Q(x) - Q(\\cos1^\\circ)}{U(x) - U(\\cos1^\\circ)} \\]\nis also a good polynomial, because the polynomial\n\\(U(x) - U(\\cos1^\\circ)\\) is the degree-eight polynomial with those distinct values as roots.\n\nIn particular, \\(\\deg Q \\ge 8\\) unless \\(Q\\) is constant, and in fact\n\\[ Q(x) = \\left[ U(x) - U(\\cos 1^\\circ) \\right] \\widetilde Q(x) + Q(\\cos(1^\\circ)) \\]\nso if one applies the induction hypothesis to \\(\\widetilde Q(x)\\)\n(which has degree \\(\\deg Q - 8\\)), the proof is completed.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

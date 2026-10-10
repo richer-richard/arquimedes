@@ -1,0 +1,95 @@
+{
+  "id": "prob.ahsme-1962-p37",
+  "title": "1962 AHSME Problem 37",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area",
+      "label": "Area",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.completing-the-square",
+      "label": "Completing the square",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.shoelace-formula",
+      "label": "Shoelace formula",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1962,
+    "number": 37
+  },
+  "difficulty": {
+    "course": 29.3,
+    "source": 1730,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "\\(ABCD\\) is a square with side of unit length. Points \\(E\\) and \\(F\\) are taken respectively on sides \\(AB\\) and \\(AD\\) so that \\(AE=AF\\) and the quadrilateral \\(CDFE\\) has maximum area. In square units this maximum area is:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac12\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac9{16}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{19}{32}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac58\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac23\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "5/8"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1962-p37.live",
+      "kind": "proof-sketch",
+      "text": "Set \\(A=(0,0),\\) \\(B=(1,0),\\) \\(C=(1,1),\\) and \\(D=(0,1).\\) Then \\(E=(t,0)\\) and \\(F=(0,t).\\) The shoelace formula gives \\[ \\begin{aligned} [CDFE]&=\\frac{1+t-t^2}{2}\\\\ &=\\frac58-\\frac12 \\left(t-\\frac12\\right)^2. \\end{aligned} \\] Its maximum is \\(\\frac{5}{8}.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Let \\(AE=AF=t\\) and use coordinates or the shoelace formula",
+        "The area becomes \\(\\frac12(1+t-t^2)\\); complete the square"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

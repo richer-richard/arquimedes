@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-2014-p24",
+  "title": "2014 AMC 12A Problem 24",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.absolute-value",
+      "label": "Absolute value",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.counting-intersections",
+      "label": "Counting intersections",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2014,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 40.3,
+    "source": 2520,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(f_0(x)=x+|x-100|\\) \\(-|x+100|,\\) and for \\(n\\ge1,\\) let \\(f_n(x)=|f_{n-1}(x)|-1.\\) For how many values of \\(x\\) is \\(f_{100}(x)=0?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(299\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(300\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(301\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(302\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(303\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "301"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2014-p24.live",
+      "kind": "proof-sketch",
+      "text": "If \\(f_{n-1}(x)=\\pm k,\\) then \\(f_n(x)=k-1.\\) So if \\(f_0(x)=\\pm k\\) for a nonnegative integer \\(k,\\) then \\(f_k(x)=0,\\) after which the sequence alternates \\(0,-1,0,\\ldots\\) Thus \\(f_{100}(x)=0\\) exactly when \\(f_0(x)=2k\\) for some integer \\(-50\\le k\\le50.\\)\n\nNow \\(f_0(x)=x+|x-100|\\) \\(-|x+100|\\) equals \\(x+200\\) for \\(x\\lt-100,\\) \\(-x\\) for \\(-100\\le x\\lt100,\\) and \\(x-200\\) for \\(x\\ge100.\\) Its graph is piecewise linear with turning points \\((-100,100)\\) and \\((100,-100).\\)\n\nA line \\(y=2k\\) meets this graph three times for \\(-49\\le k\\le49\\) and twice for \\(k=\\pm50.\\) The total is \\(99\\cdot3+2\\cdot2=301.\\)\n\nThus, the correct answer is C.",
+      "hints": [
+        "If \\(f_0(x)=\\pm k\\) for a nonnegative integer \\(k,\\) then \\(f_k(x)=0\\) and afterward the values cycle \\(0,-1,0,-1,\\ldots\\)",
+        "So \\(f_{100}(x)=0\\) needs \\(f_0(x)=2k\\) with \\(-50\\le k\\le50\\); graph \\(f_0\\) and count intersections with each line \\(y=2k\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

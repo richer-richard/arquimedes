@@ -1,0 +1,69 @@
+{
+  "id": "prob.aime-1997-p15",
+  "title": "1997 AIME Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.equilateral-triangle",
+      "label": "Equilateral triangle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1997,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 65.9,
+    "source": 3160,
+    "mohs": null
+  },
+  "estimatedMinutes": 25,
+  "statement": "The sides of rectangle \\(ABCD\\) have lengths \\(10\\) and \\(11.\\) An equilateral triangle is drawn so that no point of the triangle lies outside \\(ABCD.\\) The maximum possible area of such a triangle can be written in the form \\(p\\sqrt{q} - r,\\) where \\(p,\\) \\(q,\\) and \\(r\\) are positive integers, and \\(q\\) is not divisible by the square of any prime number. Find \\(p + q + r.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "554",
+    "value": "554"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1997-p15.live",
+      "kind": "proof-sketch",
+      "text": "By reflecting or rotating the configuration, take one side of the equilateral triangle to make an angle \\(0\\le\\theta\\le30^\\circ\\) with the length-\\(11\\) side of the rectangle. A triangle of side \\(s\\) in this orientation has horizontal and vertical spans \\(s\\cos\\theta\\) and \\(s\\sin(\\theta+60^\\circ),\\) respectively. Hence \\[ s\\le\\min\\left(\\frac{11}{\\cos\\theta}, \\frac{10}{\\sin(\\theta+60^\\circ)}\\right). \\] The first bound increases with \\(\\theta\\) and the second decreases, so their minimum is largest when they are equal. This bound is attainable by putting one vertex at a corner and the other two on the far sides, giving \\[ \\begin{aligned} s\\cos\\theta &= 11, \\\\ s\\sin(\\theta + 60^\\circ) &= 10. \\end{aligned} \\]\n\nDividing, \\(11\\sin(\\theta + 60^\\circ) = 10\\cos\\theta,\\) and expanding the left side gives \\(\\frac{11}{2}\\sin\\theta + \\frac{11\\sqrt{3}}{2}\\cos\\theta = 10\\cos\\theta,\\) so \\(\\tan\\theta = \\frac{20 - 11\\sqrt{3}}{11}\\) (about \\(4.9^\\circ,\\) a legal tilt). Then \\[ \\begin{aligned} s^2 &= \\frac{121}{\\cos^2\\theta} \\\\ &= 121\\left(1 + \\tan^2\\theta\\right) \\\\ &= 121 + \\left(20 - 11\\sqrt{3}\\right)^2 \\\\ &= 884 - 440\\sqrt{3}. \\end{aligned} \\]\n\nThe area is \\(\\frac{\\sqrt{3}}{4}s^2 = \\frac{\\sqrt{3}}{4}\\left(884 - 440\\sqrt{3}\\right)\\) \\(= 221\\sqrt{3} - 330 \\approx 52.8,\\) which indeed beats the untilted triangle of side \\(10.\\) Thus \\(p + q + r\\) \\(= 221 + 3 + 330 = 554.\\)",
+      "hints": [
+        "The largest triangle is tilted, with one vertex at a corner of the rectangle and the other two on the far sides",
+        "With side \\(s\\) tilted \\(\\theta\\) above the length-\\(11\\) side, \\(s\\cos\\theta = 11\\) and \\(s\\sin(\\theta + 60^\\circ) = 10;\\) solve for \\(\\tan\\theta\\)"
+      ],
+      "images": [
+        "42a5c9d8d9c2dd6c722d69186185459cc6109a6e29b3b02da17bc5d98cc28986"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "42a5c9d8d9c2dd6c722d69186185459cc6109a6e29b3b02da17bc5d98cc28986"
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "prob.hmmt-nov-guts-2010-p5",
+  "title": "2010 HMMT November Guts Problem 5",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.solid-geometry",
+      "label": "Solid geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2010,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 46.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "An icosahedron is a regular polyhedron with twenty faces, all of which are equilateral triangles. If an icosahedron is rotated by \\(\\theta\\) degrees around an axis that passes through two opposite vertices so that it occupies exactly the same region of space as before, what is the smallest possible positive value of \\(\\theta\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2010-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(72^{\\circ}\\) Because this polyhedron is regular, all vertices must look the same. Let's consider just one vertex. Each triangle has a vertex angle of \\(60^{\\circ}\\), so we must have fewer than 6 triangles; if we had 6 , there would be \\(360^{\\circ}\\) at each vertex and you wouldn't be able to \"fold\" the polyhedron up (that is, it would be a flat plane). It's easy to see that we need at least 3 triangles at each vertex, and this gives a triangular pyramid with only 4 faces. Having 4 triangles meeting at each vertex gives an octahedron (two square pyramids with the squares glued together) with 8 faces. Therefore, an icosahedron has 5 triangles meeting at each vertex, so rotating by \\(\\frac{360^{\\circ}}{5}=72^{\\circ}\\) gives another identical icosahedron.\n\nAlternate solution: Euler's formula tells us that \\(V-E+F=2\\), where an icosahedron has \\(V\\) vertices, \\(E\\) edges, and \\(F\\) faces. We're told that \\(F=20\\). Each triangle has 3 edges, and every edge is common to 2 triangles, so \\(E=\\frac{3(20)}{2}=30\\). Additionally, each triangle has 3 vertices, so if every vertex is common to \\(n\\) triangles, then \\(V=\\frac{3(20)}{n}=\\frac{60}{n}\\). Plugging this into the formula, we have \\(\\frac{60}{n}-30+20=2\\), so \\(\\frac{60}{n}=12\\) and \\(n=5\\). Again this shows that the rotation is \\(\\frac{360^{\\circ}}{5}=72^{\\circ}\\)",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-guts-2015-p11",
+  "title": "2015 HMMT November Guts Problem 11",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.diophantine-equations-techniques",
+      "label": "Diophantine Equations techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.pythagorean-triples",
+      "label": "Pythagorean triples",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2015,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 45.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find all integers \\(n\\), not necessarily positive, for which there exist positive integers \\(a, b, c\\) satisfying \\(a^{n}+b^{n}=c^{n}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2015-p11.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(\\pm 1, \\pm 2\\)\nBy Fermat's Last Theorem, we know \\(n<3\\). Suppose \\(n \\leq-3\\). Then \\(a^{n}+b^{n}=c^{n} \\Longrightarrow(b c)^{-n}+\\) \\((a c)^{-n}=(a b)^{-n}\\), but since \\(-n \\geq 3\\), this is also impossible by Fermat's Last Theorem. As a result, \\(|n|<3\\).\nFurthermore, \\(n \\neq 0\\), as \\(a^{0}+b^{0}=c^{0} \\Longrightarrow 1+1=1\\), which is false. We now just need to find constructions for \\(n=-2,-1,1,2\\). When \\(n=1,(a, b, c)=(1,2,3)\\) suffices, and when \\(n=2,(a, b, c)=\\) \\((3,4,5)\\) works nicely. When \\(n=-1,(a, b, c)=(6,3,2)\\) works, and when \\(n=-2,(a, b, c)=(20,15,12)\\) is one example. Therefore, the working values are \\(n= \\pm 1, \\pm 2\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "prob.hmmt-invitational-2015-p1",
+  "title": "2015 HMMT Invitational Problem 1",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.prime-numbers",
+      "label": "Prime numbers",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.number-of-divisors",
+      "label": "Τ (number of divisors)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.euler-s-totient",
+      "label": "Φ (Euler's totient)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT Invitational",
+    "year": 2015,
+    "number": 1
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(S\\) be the set of positive integers \\(n\\) such that the inequality\n\n\\[\\phi(n) \\cdot \\tau(n) \\geq \\sqrt{\\frac{n^{3}}{3}}\\]\n\nholds, where \\(\\phi(n)\\) is the number of positive integers \\(k \\leq n\\) that are relatively prime to \\(n\\), and \\(\\tau(n)\\) is the number of positive divisors of \\(n\\). Prove that \\(S\\) is finite.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-invitational-2015-p1.hmmt",
+      "kind": "proof-sketch",
+      "text": "N/A\nProof. Let \\(S\\) be the set of all positive integers \\(n\\) such that\n\n\\[\\phi(n) \\cdot \\tau(n) \\geq \\sqrt{\\frac{n^{3}}{3}}\\]\n\nDefine a function \\(\\Phi\\) on all positive integers \\(n\\) by\n\n\\[\\Phi(n)=\\frac{\\phi(n)^{2} \\cdot \\tau(n)^{2}}{n^{3}}\\]\n\nAn important observation is that \\(\\Phi\\) has the property that for every relatively prime positive integers \\(m, n\\), we have \\(\\Phi(m n)=\\Phi(m) \\Phi(n)\\).\nDefine another function \\(\\psi\\) on all ordered-pairs ( \\(a, p\\) ) of positive integer \\(a\\) and prime number \\(p\\) as follows:\n\n\\[\\psi(a, p):=\\frac{(a+1)^{2}(1-1 / p)^{2}}{p^{a}}\\]\n\nIf we express \\(n\\) in its canonical form as \\(n=\\prod_{i=1}^{k} p_{i}^{a_{i}}\\), then we have\n\n\\[\\Phi(n)=\\prod_{i=1}^{k} \\psi\\left(a_{i}, p_{i}\\right)\\]\n\nTherefore, \\(S\\) is actually the set of all \\(n=\\prod_{i=1}^{k} p_{i}^{a_{i}}\\) such that\n\n\\[\\prod_{i=1}^{k} \\psi\\left(a_{i}, p_{i}\\right) \\geq \\frac{1}{3}\\]\n\nIt is straightforward to establish the following: for every prime \\(p\\) and positive integer \\(a\\),\n\n- if \\(p \\geq 11\\), then \\(\\psi(a, p)<\\frac{1}{3}\\);\n- if \\(p=5\\) and \\(a \\geq 2\\), then \\(\\psi(a, p)<\\frac{1}{3}\\);\n- if \\(p=3\\) and \\(a \\geq 3\\), then \\(\\psi(a, p)<\\frac{1}{3}\\);\n- if \\(p=2\\) and \\(a \\geq 5\\), then \\(\\psi(a, p)<\\frac{1}{3}\\);\n- \\(\\psi(a, p)\\) is always less than \\(\\frac{1}{\\sqrt{3}}\\) unless \\((a, p)=(1,3)\\) where \\(\\psi(1,3)=\\frac{16}{27}\\).\n\nThe data above shows that in the case \\(n=p^{a}\\), in which there is only one prime dividing \\(n\\), there are at most 8 possible \\(n\\) in \\(S: 2^{1}, 2^{2}, 2^{3}, 2^{4}, 3^{1}, 3^{2}, 5^{1}, 7^{1}\\). If \\(n\\) is divisible by at least two distinct primes,\nthen one of them must be \\(3^{1}\\) and \\(3^{1}\\) fully divides \\(n\\) (that is, \\(3^{2} \\nmid n\\) ). In the latter case \\(n=3 \\cdot n_{0}\\). Write \\(n_{0}=\\prod_{j=1}^{l} q_{j}^{b_{j}}\\). In order for \\(\\Phi(n) \\geq \\frac{1}{3}\\), we require\n\n\\[\\prod_{j=1}^{l} \\psi\\left(b_{j}, q_{j}\\right) \\geq \\frac{9}{16}\\]\n\nThis is only possible when \\((b, q)=(2,2)\\), where \\(n=12\\). Also, note that when \\(n=1, \\Phi(1)=1\\), so \\(1 \\in S\\). Hence, there are at most 10 (a finite number of) possible values of \\(n\\) in \\(S\\).\n\nRemark 0.1. This problem was proposed by Pakawut Jiradilok.\nRemark 0.2 . By explicit calculations, there are in fact exactly ten elements in \\(S: 1,2,3,4,5,7,8,9,12,16\\).\nRemark 0.3. To only get a finite bound, one does not need to be nearly as careful as we are in the above proof.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

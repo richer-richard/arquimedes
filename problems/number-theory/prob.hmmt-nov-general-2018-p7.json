@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-general-2018-p7",
+  "title": "2018 HMMT November General Problem 7",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.factorization-techniques",
+      "label": "Factorization techniques",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.sum-of-divisors",
+      "label": "Σ (sum of divisors)",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2018,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 47.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Anders is solving a math problem, and he encounters the expression \\(\\sqrt{15!}\\). He attempts to simplify this radical by expressing it as \\(a \\sqrt{b}\\) where \\(a\\) and \\(b\\) are positive integers. The sum of all possible distinct values of \\(a b\\) can be expressed in the form \\(q \\cdot 15\\) ! for some rational number \\(q\\). Find \\(q\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2018-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: 4\nNote that \\(15!=2^{11} \\cdot 3^{6} \\cdot 5^{3} \\cdot 7^{2} \\cdot 11^{1} \\cdot 13^{1}\\). The possible \\(a\\) are thus precisely the factors of \\(2^{5} \\cdot 3^{3} \\cdot 5^{1} \\cdot 7^{1}=\\) 30240. Since \\(\\frac{a b}{15!}=\\frac{a b}{a^{2} b}=\\frac{1}{a}\\), we have\n\n\\[\\begin{aligned}\nq & =\\frac{1}{15!} \\sum_{\\substack{a, b: \\\\\na \\sqrt{b}=\\sqrt{15!}}} a b \\\\\n& =\\sum_{a \\mid 30420} \\frac{a b}{15!} \\\\\n& =\\sum_{a \\mid 30420} \\frac{1}{a} \\\\\n& =\\left(1+\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\frac{1}{16}+\\frac{1}{32}\\right)\\left(1+\\frac{1}{3}+\\frac{1}{9}+\\frac{1}{27}\\right)\\left(1+\\frac{1}{5}\\right)\\left(1+\\frac{1}{7}\\right) \\\\\n& =\\left(\\frac{63}{32}\\right)\\left(\\frac{40}{27}\\right)\\left(\\frac{6}{5}\\right)\\left(\\frac{8}{7}\\right) \\\\\n& =4 .\n\\end{aligned}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

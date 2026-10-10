@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-guts-2024-p21",
+  "title": "2024 HMMT November Guts Problem 21",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2024,
+    "number": 21
+  },
+  "difficulty": {
+    "course": 49.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Two points are chosen independently and uniformly at random from the interior of the Xpentomino shown below. Compute the probability that the line segment between these two points lies entirely within the X-pentomino.\n\n[Diagram omitted from this imported transcription; consult the HMMT archive while reviewing the problem.]",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\frac{21}{25}=0.84",
+    "value": "\\frac{21}{25}=0.84"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2024-p21.hmmt",
+      "kind": "proof-sketch",
+      "text": "Here are the cases in which the line segment is guaranteed to lie entirely within the Xpentomino:\n\n- At least one point lies in center square.\n- The two points lie in the same square.\n- The two points are in opposite edge squares (north and south, or east and west).\n\nThus, the only case left to consider is the one where one point is in the north square and the other point is in the west square (and the other 3 analogous cases).\nBy symmetry, the segment will lie outside the X-pentomino half of the time in this case, as illustrated by the red and blue segments in the following diagram.\n\nThe probability that two points are in non-opposite edge squares is \\(\\frac{4}{5} \\cdot \\frac{2}{5}=\\frac{8}{25}\\).\nHalf the time, the segment will like outside the X-pentomino. So, the line segment will lie outside the X-pentomino with probability \\(\\frac{1}{2} \\cdot \\frac{8}{25}=\\frac{4}{25}\\). Thus, the probability that the line segment lies within the X-pentomino is \\(1-\\frac{4}{25}=\\frac{21}{25}\\).\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

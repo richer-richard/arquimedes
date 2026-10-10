@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-10a-2024-p2",
+  "title": "2024 AMC 10A Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.linear-equation",
+      "label": "Linear equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.system-of-equations",
+      "label": "System of equations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10A",
+    "year": 2024,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 10.3,
+    "source": 990,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A model used to estimate the time it will take to hike to the top of the mountain on a trail is of the form \\(T = aL + bG,\\) where \\(a\\) and \\(b\\) are constants, \\(T\\) is the time in minutes, \\(L\\) is the length of the trail in miles, and \\(G\\) is the altitude gain in feet. The model estimates that it will take \\(69\\) minutes to hike to the top if a trail is \\(1.5\\) miles long and ascends \\(800\\) feet, as well as if a trail is \\(1.2\\) miles long and ascends \\(1100\\) feet. How many minutes does the model estimate it will take to hike to the top if the trail is \\(4.2\\) miles long and ascends \\(4000\\) feet?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(240\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(246\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(252\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(258\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(264\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "246"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10a-2024-p2.live",
+      "kind": "proof-sketch",
+      "text": "Subtract the two equations \\(1.5a + 800b = 69\\) and \\(1.2a + 1100b = 69\\) to kill the \\(69.\\) That leaves \\(0.3a - 300b = 0,\\) so \\(a = 1000b.\\) Now substitute: \\(1500b + 800b = 2300b = 69,\\) so \\(b = 0.03\\) and \\(a = 30.\\) Then \\(T = 30(4.2) + 0.03(4000)\\) \\(= 126 + 120\\) \\(= 246.\\) Therefore, the answer is B.",
+      "hints": [
+        "Write the two given trips as \\(1.5a + 800b = 69\\) and \\(1.2a + 1100b = 69\\)",
+        "Subtract the equations to eliminate the constant \\(69\\) and find \\(a\\) and \\(b\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

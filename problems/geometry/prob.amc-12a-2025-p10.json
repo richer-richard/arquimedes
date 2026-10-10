@@ -1,0 +1,81 @@
+{
+  "id": "prob.amc-12a-2025-p10",
+  "title": "2025 AMC 12A Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.arc",
+      "label": "Arc",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.quadratic",
+      "label": "Quadratic",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2025,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 24.1,
+    "source": 1530,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "In the figure shown below, major arc \\(AD\\) and minor arc \\(BC\\) have the same center, \\(O.\\) Also, \\(A\\) lies between \\(O\\) and \\(B,\\) and \\(D\\) lies between \\(O\\) and \\(C.\\) Major arc \\(AD,\\) minor arc \\(BC,\\) and each of the two segments \\(AB\\) and \\(CD\\) have length \\(2\\pi.\\)\n\nWhat is the distance from \\(O\\) to \\(A?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(1\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(1 - \\pi + \\sqrt{1 + \\pi^2}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{1}{2}\\pi\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{1}{2}\\sqrt{1 + \\pi^2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(2\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2025-p10.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(R_1 = OA = OD\\) and \\(R_2 = OB = OC,\\) and let \\(\\alpha = \\angle AOD = \\angle BOC\\) (the rays coincide). The minor arc \\(BC\\) has length \\(R_2\\alpha = 2\\pi,\\) and the major arc \\(AD\\) is the reflex arc, so \\(R_1(2\\pi - \\alpha) = 2\\pi.\\)\n\nEach segment \\(AB = CD = R_2 - R_1 = 2\\pi.\\)\n\nFrom the first two equations, \\(R_2 = \\dfrac{2\\pi}{\\alpha}\\) and \\(R_1 = \\dfrac{2\\pi}{2\\pi - \\alpha}.\\) Substituting into \\(R_2 - R_1 = 2\\pi\\) and dividing by \\(2\\pi\\) gives \\[\\frac{1}{\\alpha} - \\frac{1}{2\\pi - \\alpha} = 1,\\] which simplifies to \\(\\alpha^2 - 2(1+\\pi)\\alpha + 2\\pi = 0.\\)\n\nThe larger root is greater than \\(2\\pi,\\) so it cannot be an angle of this minor arc. Thus \\(\\alpha = (1+\\pi) - \\sqrt{1+\\pi^2}.\\) Then \\[ \\begin{aligned} R_1 &= \\frac{2\\pi}{2\\pi - \\alpha} \\\\ &= \\frac{2\\pi}{\\pi - 1 + \\sqrt{1+\\pi^2}} \\\\ &= 1 - \\pi + \\sqrt{1+\\pi^2}, \\end{aligned} \\] after rationalizing (the denominator times \\(\\sqrt{1+\\pi^2} - (\\pi-1)\\) equals \\(2\\pi\\)).\n\nThus, the correct answer is B.",
+      "hints": [
+        "Let \\(OA = R_1,\\) \\(OB = R_2,\\) and \\(\\angle AOD = \\alpha\\); the arcs give \\(R_2\\alpha = 2\\pi\\) and \\(R_1(2\\pi - \\alpha) = 2\\pi\\)",
+        "The segments give \\(R_2 - R_1 = 2\\pi\\); eliminating the radii yields \\(\\alpha^2 - 2(1+\\pi)\\alpha + 2\\pi = 0\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "3b2356c9d4c2c4b7fea7315357ab7cfb765c52545f9b0e5cb50790aedae43f27"
+    ],
+    "solutions": []
+  }
+}

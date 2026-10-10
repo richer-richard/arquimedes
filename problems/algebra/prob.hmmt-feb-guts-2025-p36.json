@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-feb-guts-2025-p36",
+  "title": "2025 HMMT February Guts Problem 36",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.combinatorial-optimization",
+      "label": "Combinatorial optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.integers",
+      "label": "Integers",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2025,
+    "number": 36
+  },
+  "difficulty": {
+    "course": 83.8,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Ethan initially writes some numbers on a blackboard, each of which is either a 3 or a 5. He then repeatedly picks two numbers and replaces them with their sum, difference, product, or quotient (if the divisor is nonzero). Let \\(f(n)\\) denote the minimum number of numbers Ethan must initially write for him to be able to eventually write the number \\(n\\) . For example, \\(f(2025) \\leq 6\\) because Ethan could start with 3, 3, 3, 3, 5, and 5 on the board, then repeatedly multiply two numbers at a time to eventually get 2025.\n\nSubmit a comma- separated ordered 8- tuple of integers corresponding to the values of \\(f(164)\\) , \\(f(187)\\) , \\(f(191)\\) , \\(f(224)\\) , \\(f(255)\\) , \\(f(286)\\) , \\(f(374)\\) , and \\(f(479)\\) , in that order, or an X for any value you wish to leave blank. For instance, if you think \\(f(164) = 9\\) and \\(f(224) = 8\\) , you should submit \"9, X, X, 8, X,\n\nX, X, X\". You will earn \\(\\left|0.6^{W} \\cdot \\frac{(C + 1)^{2}}{4}\\right|\\) points, where \\(C\\) is the number of correct answers you submit and \\(W\\) is the number of incorrect (non- blank) answers.",
+  "answerChoices": [],
+  "answer": {
+    "letter": "6, 6, 6, 5, 5, 6, 6, 7",
+    "value": "6, 6, 6, 5, 5, 6, 6, 7"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2025-p36.hmmt",
+      "kind": "proof-sketch",
+      "text": "The following expressions represent optimal ways for Ethan to make each of the 8 given numbers.\n\n\\[164 = 3(5(5 + 5) + 3) + 5\\] \\[187 = 3(3 + 5)(3 + 5) - 5\\] \\[191 = 5\\cdot 5(3 + 5) - 3\\cdot 3\\] \\[224 = (3 + 5)(5\\cdot 5 + 3)\\] \\[255 = 5\\cdot 5(5 + 5) + 5\\] \\[286 = (3 + 5 + 5)(5\\cdot 5 - 3)\\] \\[374 = 3\\cdot 5\\cdot 5\\cdot 5 - 3 / 3 = 3\\cdot 5\\cdot 5\\cdot 5 - 5 / 5\\] \\[479 = (5\\cdot 5 - 3)(5\\cdot 5 - 3) - 5 = (3 - 5\\cdot 5)(3 - 5\\cdot 5) - 5\\]\n\nIt can be checked by code that these are optimal.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

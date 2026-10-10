@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2025-p5",
+  "title": "2025 IMO Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2025,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 88.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Alice and Bazza are playing the inekoalaty game,\na two‑player game whose rules depend on a positive real number \\(\\lambda\\) which is known to both players.\nOn the \\(n\\)th turn of the game (starting with \\(n=1\\)) the following happens:\n\n• If \\(n\\) is odd, Alice chooses a nonnegative real number \\(x_n\\) such that\n \\[ x_1 + x_2 + \\cdots + x_n \\le \\lambda n. \\]\n\n• If \\(n\\) is even, Bazza chooses a nonnegative real number \\(x_n\\) such that\n \\[ x_1^2 + x_2^2 + \\cdots + x_n^2 \\le n. \\]\n\nIf a player cannot choose a suitable \\(x_n\\), the game ends and the other player wins.\nIf the game goes on forever, neither player wins.\nAll chosen numbers are known to both players.\n\nDetermine all values of \\(\\lambda\\) for which Alice has a winning strategy\nand all those for which Bazza has a winning strategy.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2025-p5.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is that Alice has a winning strategy for \\(\\lambda > 1/\\sqrt2\\),\nand Bazza has a winning strategy for \\(\\lambda < 1/\\sqrt2\\).\n(Neither player can guarantee winning for \\(\\lambda = 1/\\sqrt2\\).)\n\nWe divide the proof into two parts.\n\nAlice's strategy when \\(\\lambda \\ge 1/\\sqrt2\\)..\nConsider the strategy where Alice always plays \\(x_{2i+1} = 0\\) for \\(i=0, \\dots, k-1\\).\n\nIn this situation, when \\(n = 2k+1\\) we have\n\\[\\begin{aligned}\n \\sum_1^{2k} x_i &= 0 + x_2 + 0 + x_4 + \\dots + 0 + x_{2k} \\\\\n &\\le k \\cdot \\sqrt{\\frac{x_2^2 + \\dots + x_{2k}^2}{k}}\n = \\sqrt{2} \\cdot k < \\lambda \\cdot (2k+1)\n\\end{aligned}\\]\nand so the choices for \\(x_{2k+1}\\) are\n\\[ x_{2k+1} \\in [0, \\lambda \\cdot (2k+1) - \\sqrt{2} k] \\]\nwhich is nonempty.\nHence Alice can't ever lose with this strategy.\n\nBut suppose further \\(\\lambda > \\frac{1}{\\sqrt 2}\\); we show Alice can win.\nChoose \\(k\\) large enough that\n\\[ \\sqrt{2} \\cdot k < \\lambda \\cdot (2k+1) - \\sqrt{2k+2}. \\]\nThen on the \\((2k+1)\\)st turn, Alice can (after playing \\(0\\) on all earlier turns)\nplay a number greater than \\(\\sqrt{2k+2}\\) and cause Bazza to lose.\n\nBazza strategy when \\(\\lambda \\le 1/\\sqrt2\\)..\nConsider the strategy where Bazza always plays \\(x_{2i+2} = \\sqrt{2 - x_{2i+1}^2}\\)\nfor all \\(i = 0, \\dots, k-1\\) (i.e.\\ that is, the largest possible value Bazza can play).\n\nTo analyze Bazza's choices on each of his turns, we first need to estimate \\(x_{2k+1}\\).\nWe do this by writing\n\\[\\begin{aligned}\n \\lambda \\cdot (2k+1) &\\ge x_1 + x_2 + \\dots + x_{2k+1} \\\\\n &= \\left(x_1 + \\sqrt{2-x_1^2}\\right) + \\left(x_3 + \\sqrt{2-x_3^2}\\right) \\\\\n &\\qquad+ \\dots + \\left(x_{2k-1} + \\sqrt{2-x_{2k}^2}\\right) + x_{2k+1} \\\\\n &\\ge {\\underbrace{\\sqrt{2} + \\dots + \\sqrt{2}}_{k \\text{ times}}} + x_{2k+1}\n = \\sqrt 2 \\cdot k + x_{2k+1}\n\\end{aligned}\\]\nwhere we have used the fact that \\(t + \\sqrt{2-t^2} \\ge 2\\) for all \\(t \\ge 0\\).\nThis means that\n\\[ x_{2k+1} \\le \\lambda \\cdot (2k+1) - \\sqrt 2 k < \\sqrt 2. \\]\nAnd \\(x_1^2 + x_2^2 + \\dots + x_{2k}^2 + x_{2k+1}^2 = (2 + \\dots + 2) + x_{2k+1}^2\\),\nBazza can indeed choose \\(x_{2k+2} = \\sqrt{2-x_{2k+1}^2}\\) and always has a move.\n\nBut suppose further \\(\\lambda < 1/\\sqrt2\\).\nThen the above calculation also shows that Alice couldn't\nhave made a valid choice for large enough \\(k\\),\nsince \\(\\lambda \\cdot (2k+1) - \\sqrt 2 k < 0\\) for large \\(k\\).\n\nRemark.\n In the strategies above,\n we saw that Alice prefers to always play \\(0\\)\n and Bazza prefers to always play as large as possible.\n One could consider what happens in the opposite case:\n\n• If Alice tries to always play the largest number possible,\n her strategy still wins for \\(\\lambda > 1\\).\n\n• If Bazza tries to always play \\(0\\),\n Alice can win no matter the value for \\(\\lambda > 0\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

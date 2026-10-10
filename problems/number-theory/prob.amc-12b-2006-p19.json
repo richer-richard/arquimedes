@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2006-p19",
+  "title": "2006 AMC 12B Problem 19",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "nt.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "nt.divisibility",
+      "label": "Divisibility",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2006,
+    "number": 19
+  },
+  "difficulty": {
+    "course": 34.1,
+    "source": 1920,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Mr. Jones has eight children of different ages. On a family trip his oldest child, who is \\(9,\\) spots a license plate with a \\(4\\)-digit number in which each of two digits appears two times. “Look, daddy!” she exclaims. “That number is evenly divisible by the age of each of us kids!” “That’s right,” replies Mr. Jones, “and the last two digits just happen to be my age.” Which of the following is not the age of one of Mr. Jones’s children?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(8\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "5"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2006-p19.live",
+      "kind": "proof-sketch",
+      "text": "The number has the form \\(aabb,\\) \\(abab,\\) or \\(baab.\\) Divisibility by \\(9\\) means \\(2(a + b)\\) is a multiple of \\(9,\\) so \\(a + b = 9.\\)\n\nThe eight distinct ages are eight of the nine integers from \\(1\\) through \\(9,\\) so at least one of ages \\(4\\) and \\(8\\) occurs. Therefore the number is divisible by \\(4.\\) The possibilities become \\(1188, 2772, 3636,\\) \\(5544, 6336, 7272, 9900.\\)\n\nSince the last two digits are Mr. Jones’s age, \\(9900\\) is impossible, and none of the others is a multiple of \\(5.\\) So the children’s ages cannot include \\(5.\\) Indeed \\(5544\\) is divisible by \\(1, 2, 3, 4, 6, 7, 8, 9.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "The oldest child is \\(9,\\) so the number is divisible by \\(9,\\) forcing the two digits to sum to \\(9\\)",
+        "A number ending in a two-digit age cannot end in \\(0,\\) so think about which small ages it must avoid"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

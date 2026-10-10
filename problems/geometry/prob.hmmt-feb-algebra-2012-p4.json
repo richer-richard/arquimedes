@@ -1,0 +1,48 @@
+{
+  "id": "prob.hmmt-feb-algebra-2012-p4",
+  "title": "2012 HMMT February Algebra Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2012,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 80.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "During the weekends, Eli delivers milk in the complex plane. On Saturday, he begins at \\(z\\) and delivers milk to houses located at \\(z^{3}, z^{5}, z^{7}, \\ldots, z^{2013}\\), in that order; on Sunday, he begins at 1 and delivers milk to houses located at \\(z^{2}, z^{4}, z^{6}, \\ldots, z^{2012}\\), in that order. Eli always walks directly (in a straight line) between two houses. If the distance he must travel from his starting point to the last house is \\(\\sqrt{2012}\\) on both days, find the real part of \\(z^{2}\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-2012-p4.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{1005}{1006}\\) Note that the distance between two points in the complex plane, \\(m\\) and \\(n\\), is \\(|m-n|\\). We have that\n\n\\[\\sum_{k=1}^{1006}\\left|z^{2 k+1}-z^{2 k-1}\\right|=\\sum_{k=1}^{1006}\\left|z^{2 k}-z^{2 k-2}\\right|=\\sqrt{2012}\\]\n\nHowever, noting that\n\n\\[|z| \\cdot \\sum_{k=1}^{1006}\\left|z^{2 k}-z^{2 k-2}\\right|=\\sum_{k=1}^{1006}\\left|z^{2 k+1}-z^{2 k-1}\\right|\\]\n\nwe must have \\(|z|=1\\). Then, since Eli travels a distance of \\(\\sqrt{2012}\\) on each day, we have\n\n\\[\\begin{aligned}\n\\sum_{k=1}^{1006}\\left|z^{2 k}-z^{2 k-2}\\right|= & \\left|z^{2}-1\\right| \\cdot \\sum_{k=1}^{1006}\\left|z^{2 k-2}\\right|=\\left|z^{2}-1\\right| \\cdot \\sum_{k=1}^{1006}|z|^{2 k-2} \\\\\n& =1006\\left|z^{2}-1\\right|=\\sqrt{2012}\n\\end{aligned}\\]\n\nso \\(\\left|z^{2}-1\\right|=\\frac{\\sqrt{2012}}{1006}\\). Since \\(|z|=1\\), we can write \\(z=\\cos (\\theta)+i \\sin (\\theta)\\) and then \\(z^{2}=\\cos (2 \\theta)+i \\sin (2 \\theta)\\). Hence,\n\n\\[\\left|z^{2}-1\\right|=\\sqrt{(\\cos (2 \\theta)-1)^{2}+\\sin ^{2}(2 \\theta)}=\\sqrt{2-2 \\cos (2 \\theta)}=\\frac{\\sqrt{2012}}{1006}\\]\n\nso \\(2-2 \\cos (2 \\theta)=\\frac{2}{1006}\\). The real part of \\(z^{2}, \\cos (2 \\theta)\\), is thus \\(\\frac{1005}{1006}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "prob.aime-ii-2005-p3",
+  "title": "2005 AIME II Problem 3",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.difference-of-squares",
+      "label": "Difference of squares",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.geometric-sequence",
+      "label": "Geometric sequence",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2005,
+    "number": 3
+  },
+  "difficulty": {
+    "course": 38.0,
+    "source": 2070,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "An infinite geometric series has sum \\(2005.\\) A new series, obtained by squaring each term of the original series, has sum \\(10\\) times the sum of the original series. The common ratio of the original series is \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "802",
+    "value": "802"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2005-p3.live",
+      "kind": "proof-sketch",
+      "text": "Let the original series have first term \\(a\\) and ratio \\(r,\\) so \\(\\frac{a}{1-r} = 2005.\\) The squared series is geometric with first term \\(a^2\\) and ratio \\(r^2,\\) so \\[ \\begin{aligned} \\frac{a^2}{1-r^2} &= \\frac{a}{1-r} \\cdot \\frac{a}{1+r} \\\\ &= 2005 \\cdot \\frac{a}{1+r} \\\\ &= 10 \\cdot 2005, \\end{aligned} \\] which gives \\(\\frac{a}{1+r} = 10.\\)\n\nDividing the two equations, \\(\\frac{1+r}{1-r} = \\frac{2005}{10},\\) so \\(2(1+r) = 401(1-r),\\) giving \\(403r = 399\\) and \\(r = \\frac{399}{403}.\\) Since \\(399 = 3 \\cdot 7 \\cdot 19\\) and \\(403 = 13 \\cdot 31,\\) the fraction is in lowest terms, and \\(m + n = 399 + 403 = 802.\\)",
+      "hints": [
+        "The squared series is also geometric, with first term \\(a^2\\) and ratio \\(r^2\\)",
+        "Factor \\(\\frac{a^2}{1-r^2} = \\frac{a}{1-r} \\cdot \\frac{a}{1+r}\\) to get \\(\\frac{a}{1+r} = 10,\\) then compare with \\(\\frac{a}{1-r} = 2005\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

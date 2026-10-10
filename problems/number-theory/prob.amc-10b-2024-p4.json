@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-10b-2024-p4",
+  "title": "2024 AMC 10B Problem 4",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "nt.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.triangular-number",
+      "label": "Triangular number",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2024,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 13.9,
+    "source": 1130,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "Balls numbered \\(1,\\) \\(2,\\) \\(3,\\) \\(\\ldots\\) are deposited in \\(5\\) bins, labeled \\(A,\\) \\(B,\\) \\(C,\\) \\(D,\\) and \\(E,\\) using the following procedure. Ball \\(1\\) is deposited in bin \\(A,\\) and balls \\(2\\) and \\(3\\) are deposited in bin \\(B.\\) The next \\(3\\) balls are deposited in bin \\(C,\\) the next \\(4\\) in bin \\(D,\\) and so on, cycling back to bin \\(A\\) after balls are deposited in bin \\(E.\\) (For example, balls numbered \\(22,\\) \\(23,\\) \\(\\ldots,\\) \\(28\\) are deposited in bin \\(B\\) at step \\(7\\) of this process.) In which bin is ball \\(2024\\) deposited?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(A\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(B\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(C\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(D\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(E\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2024-p4.live",
+      "kind": "proof-sketch",
+      "text": "Group \\(g\\) holds \\(g\\) balls, so the first \\(g\\) groups swallow \\(\\tfrac{g(g+1)}{2}\\) of them. Now \\(\\tfrac{63 \\cdot 64}{2} = 2016\\) and \\(\\tfrac{64 \\cdot 65}{2} = 2080,\\) which puts ball \\(2024\\) in group \\(64\\) (balls \\(2017\\) through \\(2080\\)). The bins cycle \\(A, B, C, D, E,\\) so group \\(g\\) lands in bin number \\((g - 1) \\bmod 5.\\) For \\(g = 64\\) that’s \\(63 \\bmod 5 = 3,\\) bin \\(D.\\) Therefore, the answer is D.",
+      "hints": [
+        "Group \\(g\\) has \\(g\\) balls, so groups \\(1\\) through \\(g\\) use \\(\\tfrac{g(g+1)}{2}\\) balls",
+        "Find the group containing ball \\(2024,\\) then read its bin from \\(g \\bmod 5,\\) with group \\(1\\) corresponding to \\(A\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

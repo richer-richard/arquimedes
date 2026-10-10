@@ -1,0 +1,93 @@
+{
+  "id": "prob.hmmt-feb-guts-2023-p25",
+  "title": "2023 HMMT February Guts Problem 25",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.pigeonhole-principle",
+      "label": "Pigeonhole principle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.probability",
+      "label": "Probability",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2023,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 84.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The spikiness of a sequence \\(a_{1}, a_{2}, \\ldots, a_{n}\\) of at least two real numbers is the sum \\(\\sum_{i=1}^{n-1}\\left|a_{i+1}-a_{i}\\right|\\). Suppose \\(x_{1}, x_{2}, \\ldots, x_{9}\\) are chosen uniformly and randomly from the interval \\([0,1]\\). Let \\(M\\) be the largest possible value of the spikiness of a permutation of \\(x_{1}, x_{2}, \\ldots, x_{9}\\). Compute the expected value of \\(M\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "\\quad \\frac{79}{20}",
+    "value": "\\quad \\frac{79}{20}"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2023-p25.hmmt",
+      "kind": "proof-sketch",
+      "text": "Our job is to arrange the nine numbers in a way that maximizes the spikiness. Let an element be a peak if it is higher than its neighbor(s) and a valley if it is lower than its neighbor(s). It is not hard to show that an optimal arrangement has every element either a peak or a valley (if you have some number that is neither, just move it to the end to increase spikiness). Since 9 is odd, there are two possibilities: the end points are either both peaks or both valleys.\nSort the numbers from least to greatest: \\(x_{1}, \\ldots, x_{9}\\). If we arrange them in such a way that it starts and ends with peaks, the factor of \\(x_{i}\\) added to the final result will be \\([-2,-2,-2,-2,1,1,2,2,2]\\), respectively. If we choose the other way (starting and ending with valleys), we get \\([-2,-2,-2,-1,-1,2,2,2,2]\\). Notice that both cases have a base value of \\([-2,-2,-2,-1,0,1,2,2,2]\\), but then we add on \\(\\max \\left(x_{6}-\\right.\\) \\(\\left.x_{5}, x_{5}-x_{4}\\right)\\). Since the expected value of \\(x_{i}\\) is \\(\\frac{i}{10}\\), our answer is \\(-\\frac{2}{10}(1+2+3)-\\frac{4}{10}+\\frac{6}{10}+\\frac{2}{10}(7+8+\\) \\(9)+\\mathbb{E}\\left(\\max \\left(x_{6}-x_{5}, x_{5}-x_{4}\\right)\\right)\\). This last term actually has value \\(\\frac{3}{4} \\mathbb{E}\\left(x_{6}-x_{4}\\right)=\\frac{3}{4} \\cdot \\frac{2}{10}\\). This is because if we fix all values except \\(x_{5}\\), then \\(x_{5}\\) is uniformly distributed in \\(\\left[x_{4}, x_{6}\\right]\\). Geometric probability tells us that the distance from \\(x_{5}\\) to its farthest neighbor is \\(\\frac{3}{4}\\) to total distance betwen its two neighbors \\(\\left(x_{6}-x_{4}\\right)\\). We add this all up to get \\(\\frac{79}{20}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

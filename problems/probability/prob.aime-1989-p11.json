@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-1989-p11",
+  "title": "1989 AIME Problem 11",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.mean",
+      "label": "Mean",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "prob.mode",
+      "label": "Mode",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "prob.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1989,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 68.7,
+    "source": 3270,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "A sample of \\(121\\) integers is given, each between \\(1\\) and \\(1000\\) inclusive, with repetitions allowed. The sample has a unique mode (most frequent value). Let \\(D\\) be the difference between the mode and the arithmetic mean of the sample. What is the largest possible value of \\(\\lfloor D\\rfloor?\\) (For real \\(x,\\) \\(\\lfloor x\\rfloor\\) is the greatest integer less than or equal to \\(x.\\))",
+  "answerChoices": [],
+  "answer": {
+    "letter": "947",
+    "value": "947"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1989-p11.live",
+      "kind": "proof-sketch",
+      "text": "By reflecting every value \\(x\\) to \\(1001-x,\\) it suffices to maximize the mean minus the mode. For a fixed modal frequency \\(f,\\) the extremal sample has \\(f\\) copies of \\(1,\\) then fills the largest available integers with at most \\(f-1\\) copies each.\n\nPut \\(121-f=q(f-1)+r,\\) where \\(0\\leq r<f-1.\\) The nonmodal entries are \\(f-1\\) copies of each of \\(1000,\\) \\(999,\\) \\(\\ldots,\\) \\(1001-q,\\) followed by \\(r\\) copies of \\(1000-q.\\) For \\(f=2,\\) \\(f=3,\\) \\(f=4,\\) \\(f=5,\\) and \\(f=6,\\) this formula gives floors \\(924,\\) \\(945,\\) \\(947,\\) \\(944,\\) and \\(939,\\) respectively. If \\(f\\geq7,\\) there are at most \\(114\\) nonmodal terms, so even the weaker bound \\(D\\leq\\frac{114(999)}{121}<942\\) suffices. Thus the maximum occurs at \\(f=4.\\)\n\nThe extremal sample contains four \\(1\\)’s and three copies of every integer from \\(962\\) through \\(1000.\\) Put \\(T=962+963+\\cdots+1000.\\) Since \\(T=38259,\\) \\[\\begin{aligned}D&=\\frac{3T+4}{121}-1\\\\&=\\frac{114660}{121}\\\\&=947+\\frac{73}{121}.\\end{aligned}\\] Therefore the largest possible floor is \\(947.\\)",
+      "hints": [
+        "By symmetry, place the mode at the low endpoint and push every other entry as high as the frequency restriction allows",
+        "If the mode occurs \\(f\\) times, every other value may occur at most \\(f-1\\) times; optimize separately over \\(f\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

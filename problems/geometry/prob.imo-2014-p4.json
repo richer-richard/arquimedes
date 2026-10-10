@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2014-p4",
+  "title": "2014 IMO Problem 4",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.olympiad-geometry",
+      "label": "Olympiad geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2014,
+    "number": 4
+  },
+  "difficulty": {
+    "course": 79.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(P\\) and \\(Q\\) be on segment \\(BC\\) of an acute triangle \\(ABC\\)\nsuch that \\(\\angle PAB=\\angle BCA\\) and \\(\\angle CAQ=\\angle ABC\\).\nLet \\(M\\) and \\(N\\) be points on \\(\\overline{AP}\\) and \\(\\overline{AQ}\\),\nrespectively, such that \\(P\\) is the midpoint of \\(\\overline{AM}\\)\nand \\(Q\\) is the midpoint of \\(\\overline{AN}\\).\nProve that \\(\\overline{BM}\\) and \\(\\overline{CN}\\) meet on the\ncircumcircle of \\(\\triangle ABC\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2014-p4.evanchen",
+      "kind": "proof-sketch",
+      "text": "We give three solutions.\n\nFirst solution by harmonic bundles..\nLet \\(\\overline{BM}\\) intersect the circumcircle again at \\(X\\).\n\n[Diagram omitted from this imported TeX transcription.]\n\nThe angle conditions imply that the tangent to \\((ABC)\\) at \\(B\\)\nis parallel to \\(\\overline{AP}\\).\nLet \\(\\infty\\) be the point at infinity along line \\(AP\\).\nThen \\[ -1 = (AM;P\\infty) \\overset{B}{=} (AX;CB). \\]\nSimilarly, if \\(\\overline{CN}\\) meets the circumcircle at \\(Y\\)\nthen \\((AY;BC) = -1\\) as well.\nHence \\(X=Y\\), which implies the problem.\n\nSecond solution by similar triangles..\nOnce one observes \\(\\triangle CAQ \\sim \\triangle CBA\\),\none can construct \\(D\\) the reflection of \\(B\\) across \\(A\\),\nso that \\(\\triangle CAN \\sim \\triangle CBD\\).\nSimilarly, letting \\(E\\) be the reflection of \\(C\\) across \\(A\\),\nwe get \\(\\triangle BAP \\sim \\triangle BCA\n\\implies \\triangle BAM \\sim \\triangle BCE\\).\nNow to show \\(\\angle ABM + \\angle ACN = 180^\\circ\\)\nit suffices to show \\(\\angle EBC + \\angle BCD = 180^\\circ\\),\nwhich follows since \\(BCDE\\) is a parallelogram.\n\nThird solution by barycentric coordinates..\nSince \\(PB = c^2/a\\) we have\n\\[ P = (0 : a^2-c^2 : c^2) \\]\nso the reflection \\(\\vec M = 2\\vec P - \\vec A\\) has coordinates\n\\[ M = (-a^2 : 2(a^2-c^2) : 2c^2). \\]\n\nSimilarly \\(N = (-a^2 : 2b^2 : 2(b^2-a^2))\\). Thus\n\\[ \\overline{BM} \\cap \\overline{CN} = (-a^2 : 2b^2 : 2c^2) \\]\nwhich clearly lies on the circumcircle,\nand is in fact the point identified in the first solution.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

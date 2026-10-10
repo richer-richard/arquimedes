@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2021-p15",
+  "title": "2021 AMC 12A Problem 15",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.binomial-theorem",
+      "label": "Binomial theorem",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2021,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 37.7,
+    "source": 2060,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "A choir director must select a group of singers from among his \\(6\\) tenors and \\(8\\) basses. The only requirements are that the difference between the number of tenors and basses must be a multiple of \\(4,\\) and the group must have at least one singer. Let \\(N\\) be the number of groups that can be selected. What is the remainder when \\(N\\) is divided by \\(100?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(47\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(48\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(83\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(95\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(96\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "95"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2021-p15.live",
+      "kind": "proof-sketch",
+      "text": "Choosing \\(t\\) tenors and \\(b\\) basses is weighted by \\(\\binom{6}{t}\\binom{8}{b}.\\) To keep only \\(t - b \\equiv 0 \\pmod 4,\\) apply a roots of unity filter with \\(\\omega = i:\\) \\[ \\begin{aligned} &N + 1 \\\\ &= \\frac14\\sum_{j=0}^{3}(1 + i^{j})^6\\,(1 + i^{-j})^8. \\end{aligned} \\]\n\nThe \\(j = 0\\) term is \\(2^6\\cdot 2^8 = 16384.\\) The \\(j = 2\\) term has factor \\((1 + i^2)^6 = 0.\\) The \\(j = 1\\) and \\(j = 3\\) terms are \\(-128i\\) and \\(128i,\\) which cancel. So the sum is \\(16384,\\) and \\(\\dfrac{16384}{4} = 4096.\\)\n\nThis count includes the empty group, so \\(N = 4096 - 1 = 4095,\\) and \\(N \\equiv 95 \\pmod{100}.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Count pairs \\((t, b)\\) with \\(t - b \\equiv 0 \\pmod 4\\) using a roots of unity filter with \\(\\omega = i\\)",
+        "The count is \\(\\dfrac14\\sum_{j=0}^{3}(1 + i^j)^6(1 + i^{-j})^8;\\) then subtract \\(1\\) for the empty group"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

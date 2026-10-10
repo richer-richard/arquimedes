@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2012-p8",
+  "title": "2012 HMMT February Combinatorics Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.coloring",
+      "label": "Coloring",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.functions",
+      "label": "Functions",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2012,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 82.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many ways can one color the squares of a \\(6 \\times 6\\) grid red and blue such that the number of red squares in each row and column is exactly 2 ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2012-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "67950 Assume the grid is \\(n \\times n\\). Let \\(f(n)\\) denote the number of ways to color exactly two squares in each row and column red. So \\(f(1)=0\\) and \\(f(2)=1\\). We note that coloring two squares red in each row and column partitions the set \\(1,2, \\ldots, n\\) into cycles such that \\(i\\) is in the same cycle as, and adjacent to, \\(j\\) iff column \\(i\\) and column \\(j\\) have a red square in the same row. Each \\(i\\) is adjacent to two other, (or the same one twice in a 2 -cycle).\nNow consider the cycle containing 1, and let it have size \\(k\\). There are \\(\\binom{n}{2}\\) ways to color two squares red in the first column. Now we let the column that is red in the same row as the top ball in the first column, be the next number in the cycle. There are \\(n-1\\) ways to pick this column, and \\(n-2\\) ways to pick the second red square in this column (unless \\(k=2\\) ). Then there are \\((n-2)(n-3)\\) ways to pick the red squares in the third column. and \\((n-j)(n-j+1)\\) ways to pick the \\(j\\) th ones for \\(j \\leq k-1\\). Then when we pick the \\(k\\) th column, the last one in the cycle, it has to be red in the same row as the second red square in column 1 , so there are just \\(n-k+1\\) choices. Therefore if the cycle has length \\(k\\) there are\n\\(\\frac{n(n-1)}{2} \\times(n-1)(n-2) \\times \\ldots \\times(n-k+1)(n-k+2) \\times(n-k+1)\\) ways, which equals: \\(\\frac{n!(n-1)!}{2(n-k)!(n-k)!}\\).\nSumming over the size of the cycle containing the first column, we get\n\n\\[\\begin{gathered}\nf(n)=\\sum_{k=2}^{n} \\frac{1}{2} f(n-k) \\frac{(n)!(n-1)!}{(n-k)!(n-k)!} \\\\\n\\frac{2 n f(n)}{n!n!}=\\sum_{k=2}^{n} \\frac{f(n-k)}{(n-k)!(n-k)!} \\\\\n\\frac{2 n f(n)}{n!n!}-\\frac{2(n-1) f(n-1)}{(n-1)!(n-1)!}=\\frac{f(n-2)}{(n-2)!(n-2)!}\n\\end{gathered}\\]\n\nWe thus obtain the recursion:\n\n\\[f(n)=n(n-1) f(n-1)+\\frac{n(n-1)^{2}}{2} f(n-2)\\]\n\nThen we get:\n\n\\[\\begin{aligned}\n& f(1)=0 \\\\\n& f(2)=1 \\\\\n& f(3)=6 \\\\\n& f(4)=12 \\times 6+18=90 \\\\\n& f(5)=20 \\times 90+40 \\times 6=2040 \\\\\n& f(6)=30 \\times 2040+75 \\times 90=67950\n\\end{aligned}\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

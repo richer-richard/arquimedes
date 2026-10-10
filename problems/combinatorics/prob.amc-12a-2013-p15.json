@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2013-p15",
+  "title": "2013 AMC 12A Problem 15",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2013,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 31.8,
+    "source": 1880,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Rabbits Peter and Pauline have three offspring—Flopsie, Mopsie, and Cottontail. These five rabbits are to be distributed to four different pet stores so that no store gets both a parent and a child. It is not required that every store gets a rabbit. In how many different ways can this be done?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(96\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(108\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(156\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(204\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(372\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "204"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2013-p15.live",
+      "kind": "proof-sketch",
+      "text": "If the two parents share a store, there are \\(4\\) choices for it, and each child must go to one of the other three stores: \\(4\\cdot 3^3 = 108\\) ways.\n\nIf the parents go to different stores, there are \\(4\\cdot 3 = 12\\) choices, and each child must go to one of the two remaining stores: \\(12\\cdot 2^3 = 96\\) ways.\n\nThe total is \\(108 + 96 = 204.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Split into cases by whether the two parents go to the same store",
+        "Same store: \\(4\\) parent choices and \\(3^3\\) child assignments; different stores: \\(4\\cdot 3\\) and \\(2^3\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

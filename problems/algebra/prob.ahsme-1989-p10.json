@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1989-p10",
+  "title": "1989 AHSME Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.pattern-recognition",
+      "label": "Pattern recognition",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.rational-equation",
+      "label": "Rational equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion",
+      "label": "Recursion",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1989,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 30.3,
+    "source": 1770,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Consider the sequence defined recursively by \\(u_1=a\\) (any positive number), and \\(u_{n+1}=-\\frac{1}{u_n+1},\\) \\(n=1,\\) \\(2,\\) \\(3,\\) \\(\\ldots.\\) For which of the following values of \\(n\\) must \\(u_n=a?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(14\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(18\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "16"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1989-p10.live",
+      "kind": "proof-sketch",
+      "text": "Direct substitution gives \\[ \\begin{aligned} u_2&=-\\frac1{a+1},\\\\ u_3&=-\\frac{a+1}{a},\\\\ u_4&=a. \\end{aligned} \\] The sequence therefore repeats every \\(3\\) terms, so \\(u_n=a\\) whenever \\(n\\equiv1\\pmod3.\\) Among the choices, only \\(16\\) has that form.\n\nThus the correct answer is C.",
+      "hints": [
+        "Compute \\(u_2,u_3,\\) and \\(u_4\\) symbolically",
+        "Look for the period of the transformation \\(x\\mapsto-\\frac{1}{x+1}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

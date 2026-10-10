@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-guts-2004-p37",
+  "title": "2004 HMMT February Guts Problem 37",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2004,
+    "number": 37
+  },
+  "difficulty": {
+    "course": 75.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Simplify \\(\\prod_{k=1}^{2004} \\sin (2 \\pi k / 4009)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2004-p37.hmmt",
+      "kind": "proof-sketch",
+      "text": "## \\(\\frac{\\sqrt{4009}}{2^{2004}}\\)\n\nLet \\(\\zeta=e^{2 \\pi i / 4009}\\) so that \\(\\sin (2 \\pi k / 4009)=\\frac{\\zeta^{k}-\\zeta^{-k}}{2 i}\\) and \\(x^{4009}-1=\\prod_{k=0}^{4008}\\left(x-\\zeta^{k}\\right)\\). Hence \\(1+x+\\cdots+x^{4008}=\\prod_{k=1}^{4008}\\left(x-\\zeta^{k}\\right)\\). Comparing constant coefficients gives \\(\\prod_{k=1}^{4008} \\zeta^{k}=1\\), setting \\(x=1\\) gives \\(\\prod_{k=1}^{40 \\overline{0} \\overline{8}}\\left(1-\\zeta^{k}\\right)=4009\\), and setting \\(x=-1\\) gives \\(\\prod_{k=1}^{4008}\\left(1+\\zeta^{k}\\right)=1\\). Now, note that \\(\\sin (2 \\pi(4009-k) / 4009)=-\\sin (2 \\pi k / 4009)\\), so\n\n\\[\\begin{aligned}\n\\left(\\prod_{k=1}^{2004} \\sin (2 \\pi k / 4009)\\right)^{2} & =(-1)^{2004} \\prod_{k=1}^{4008} \\sin (2 \\pi k / 4009) \\\\\n& =\\prod_{k=1}^{4008} \\frac{\\zeta^{k}-\\zeta^{-k}}{2 i} \\\\\n& =\\frac{1}{(2 i)^{4008}} \\prod_{k=1}^{4008} \\frac{\\zeta^{2 k}-1}{\\zeta^{k}} \\\\\n& =\\frac{1}{2^{4008}} \\prod_{k=1}^{4008}\\left(\\zeta^{2 k}-1\\right) \\\\\n& =\\frac{1}{2^{4008}} \\prod_{k=1}^{4008}\\left(\\zeta^{k}-1\\right)\\left(\\zeta^{k}+1\\right) \\\\\n& =\\frac{4009 \\cdot 1}{2^{4008}} .\n\\end{aligned}\\]\n\nHowever, \\(\\sin (x)\\) is nonnegative on the interval \\([0, \\pi]\\), so our product is positive. Hence it is \\(\\frac{\\sqrt{4009}}{2^{2004}}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

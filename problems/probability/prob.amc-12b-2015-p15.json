@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12b-2015-p15",
+  "title": "2015 AMC 12B Problem 15",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.independent-events",
+      "label": "Independent events",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2015,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 28.5,
+    "source": 1820,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "At Rachelle’s school an A counts \\(4\\) points, a B \\(3\\) points, a C \\(2\\) points, and a D \\(1\\) point. Her GPA on the four classes she is taking is computed as the total sum of points divided by \\(4.\\) She is certain that she will get As in both Mathematics and Science, and at least a C in each of English and History. She thinks she has a \\(\\dfrac16\\) chance of getting an A in English, and a \\(\\dfrac14\\) chance of getting a B. In History, she has a \\(\\dfrac14\\) chance of getting an A, and a \\(\\dfrac13\\) chance of getting a B, independently of what she gets in English. What is the probability that Rachelle will get a GPA of at least \\(3.5?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{11}{72}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac16\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac{3}{16}\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{11}{24}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac12\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "11/24"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2015-p15.live",
+      "kind": "proof-sketch",
+      "text": "Math and Science give \\(8\\) points, so Rachelle needs at least \\(6\\) more from English and History. The chance of a C is \\(1 - \\dfrac16 - \\dfrac14 = \\dfrac{7}{12}\\) in English and \\(1 - \\dfrac14 - \\dfrac13 = \\dfrac{5}{12}\\) in History.\n\nWorking over a denominator of \\(144:\\) \\(8\\) points has probability \\(\\dfrac16\\cdot\\dfrac14 = \\dfrac{6}{144};\\) \\(7\\) points has \\(\\dfrac16\\cdot\\dfrac13 + \\dfrac14\\cdot\\dfrac14 = \\dfrac{17}{144};\\) and \\(6\\) points has \\(\\dfrac16\\cdot\\dfrac{5}{12} + \\dfrac14\\cdot\\dfrac13\\) \\(+ \\dfrac{7}{12}\\cdot\\dfrac14 = \\dfrac{43}{144}.\\)\n\nThe total is \\(\\dfrac{6 + 17 + 43}{144} = \\dfrac{66}{144} = \\dfrac{11}{24}.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "A \\(3.5\\) GPA needs \\(14\\) total points, so English and History must give at least \\(6\\) points",
+        "Find each class’s chance of a C, then add the probabilities of totals \\(6,\\) \\(7,\\) and \\(8\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

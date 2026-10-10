@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2011-p9",
+  "title": "2011 AIME I Problem 9",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "geo.factoring",
+      "label": "Factoring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometric-identity",
+      "label": "Trigonometric identity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2011,
+    "number": 9
+  },
+  "difficulty": {
+    "course": 52.8,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 8,
+  "statement": "Suppose \\(x\\) is in the interval \\(\\left[0, \\frac{\\pi}{2}\\right]\\) and \\(\\log_{24 \\sin x}(24 \\cos x) = \\frac{3}{2}.\\) Find \\(24 \\cot^2 x.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "192",
+    "value": "192"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2011-p9.live",
+      "kind": "proof-sketch",
+      "text": "In exponential form the equation says \\((24 \\sin x)^{\\frac{3}{2}} = 24 \\cos x.\\) Squaring gives \\(24^3 \\sin^3 x = 24^2 \\cos^2 x,\\) so \\(\\cos^2 x = 24 \\sin^3 x.\\)\n\nWriting \\(s = \\sin x\\) and using \\(\\cos^2 x = 1 - s^2,\\) we get \\(24s^3 + s^2 - 1 = 0,\\) which factors as \\((3s - 1)(8s^2 + 3s + 1) = 0.\\) The quadratic factor has negative discriminant, so \\(\\sin x = \\frac{1}{3}.\\)\n\nThen \\[ \\begin{aligned} 24 \\cot^2 x &= 24 \\cdot \\frac{1 - \\sin^2 x}{\\sin^2 x} \\\\ &= 24 \\cdot \\frac{\\frac{8}{9}}{\\frac{1}{9}} \\\\ &= 24 \\cdot 8 = 192. \\end{aligned} \\]",
+      "hints": [
+        "Rewrite the equation in exponential form and square both sides to get \\(\\cos^2 x = 24 \\sin^3 x\\)",
+        "Replace \\(\\cos^2 x\\) by \\(1 - \\sin^2 x\\) and look for a rational root of the resulting cubic in \\(\\sin x\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

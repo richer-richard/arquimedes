@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-feb-guts-2004-p45",
+  "title": "2004 HMMT February Guts Problem 45",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2004,
+    "number": 45
+  },
+  "difficulty": {
+    "course": 75.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A binary string of length \\(n\\) is a sequence of \\(n\\) digits, each of which is 0 or 1 . The distance between two binary strings of the same length is the number of positions in which they disagree; for example, the distance between the strings 01101011 and 00101110 is 3 since they differ in the second, sixth, and eighth positions.\nFind as many binary strings of length 8 as you can, such that the distance between any two of them is at least 3 . You get one point per string.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2004-p45.hmmt",
+      "kind": "proof-sketch",
+      "text": "The maximum possible number of such strings is 20 . An example of a set\nattaining this bound is\n\n| 00000000 | 00110101 |\n| :--- | :--- |\n| 11001010 | 10011110 |\n| 11100001 | 01101011 |\n| 11010100 | 01100110 |\n| 10111001 | 10010011 |\n| 01111100 | 11001101 |\n| 00111010 | 10101100 |\n| 01010111 | 11110010 |\n| 00001111 | 01011001 |\n| 10100111 | 11111111 |\n\nThis example is taken from page 57 of F. J. MacWilliams and N. J. A. Sloane, The Theory of Error Correcting Codes (New York: Elsevier Publishing, 1977). The proof that 20 is the best possible is elementary but too long to reproduce here; see pages 537-541 of MacWilliams and Sloane for details.\n\nIn general, a set of \\(M\\) strings of length \\(n\\) such that any two have a distance of at least \\(d\\) is called an \\((n, M, d)\\)-code. These objects are of basic importance in coding theory, which studies how to transmit information through a channel with a known error rate. For example, since the code given above has minimum distance 3, I can transmit to you a message consisting of strings in this code, and even if there is a possible error rate of one digit in each string, you will still be able to determine the intended message uniquely.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

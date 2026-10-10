@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-feb-guts-2006-p28",
+  "title": "2006 HMMT February Guts Problem 28",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.solid-geometry",
+      "label": "Solid geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2006,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 81.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A pebble is shaped as the intersection of a cube of side length 1 with the solid sphere tangent to all of the cube's edges. What is the surface area of this pebble?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2006-p28.hmmt",
+      "kind": "proof-sketch",
+      "text": "Imagine drawing the sphere and the cube. Take a cross section, with a plane parallel to two of the cube's faces, passing through the sphere's center. In this cross section, the sphere looks like a circle, and the cube looks like a square (of side length 1) inscribed in that circle. We can now calculate that the sphere has diameter\n\\(d:=\\sqrt{2}\\) and surface area \\(S:=\\pi d^{2}=2 \\pi\\), and that the sphere protrudes a distance of \\(x:=\\frac{\\sqrt{2}-1}{2}\\) out from any given face of the cube.\nIt is known that the surface area chopped off from a sphere by any plane is proportional to the perpendicular distance thus chopped off. Thus, each face of the cube chops of a fraction \\(\\frac{x}{d}\\) of the sphere's surface. The surface area of the pebble contributed by the sphere is thus \\(S \\cdot\\left(1-6 \\cdot \\frac{x}{d}\\right)\\), whereas the cube contributes 6 circles of radius \\(\\frac{1}{2}\\), with total area \\(6 \\cdot \\pi\\left(\\frac{1}{2}\\right)^{2}=\\frac{3}{2} \\pi\\). The pebble's surface area is therefore\n\n\\[S \\cdot\\left(1-6 \\cdot \\frac{x}{d}\\right)+\\frac{3}{2} \\pi=2 \\pi \\cdot\\left(1-6 \\cdot \\frac{\\sqrt{2}-1}{2 \\sqrt{2}}\\right)+\\frac{3}{2} \\pi=\\frac{6 \\sqrt{2}-5}{2} \\pi .\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

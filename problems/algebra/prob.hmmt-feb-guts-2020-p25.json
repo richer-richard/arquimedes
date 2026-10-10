@@ -1,0 +1,63 @@
+{
+  "id": "prob.hmmt-feb-guts-2020-p25",
+  "title": "2020 HMMT February Guts Problem 25",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.number-theory",
+      "label": "Number Theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recurrence-relations",
+      "label": "Recurrence relations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.recursion-bijection",
+      "label": "Recursion, bijection",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2020,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 92.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(S\\) be the set of \\(3^{4}\\) points in four-dimensional space where each coordinate is in \\(\\{-1,0,1\\}\\). Let \\(N\\) be the number of sequences of points \\(P_{1}, P_{2}, \\ldots, P_{2020}\\) in \\(S\\) such that \\(P_{i} P_{i+1}=2\\) for all \\(1 \\leq i \\leq 2020\\) and \\(P_{1}=(0,0,0,0)\\). (Here \\(P_{2021}=P_{1}\\).) Find the largest integer \\(n\\) such that \\(2^{n}\\) divides \\(N\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "4041",
+    "value": "4041"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2020-p25.hmmt",
+      "kind": "proof-sketch",
+      "text": "From \\((0,0,0,0)\\) we have to go to \\(( \\pm 1, \\pm 1, \\pm 1, \\pm 1)\\), and from \\((1,1,1,1)\\) (or any of the other similar points), we have to go to \\((0,0,0,0)\\) or \\((-1,1,1,1)\\) and its cyclic shifts. If \\(a_{i}\\) is the number of ways to go from \\((1,1,1,1)\\) to point of the form \\(( \\pm 1, \\pm 1, \\pm 1, \\pm 1)\\) in \\(i\\) steps, then we need to find \\(\\nu_{2}\\left(16 a_{2018}\\right)\\). To find a recurrence relation for \\(a_{i}\\), note that to get to some point in \\(( \\pm 1, \\pm 1, \\pm 1, \\pm 1)\\), we must either come from a previous point of the form \\(( \\pm 1, \\pm 1, \\pm 1, \\pm 1)\\) or the point \\((0,0,0,0)\\). In order to go to one point of the form \\(( \\pm 1, \\pm 1, \\pm 1, \\pm 1)\\) through \\((0,0,0,0)\\) from the point \\(( \\pm 1, \\pm 1, \\pm 1, \\pm 1)\\), we have one way of going to the origin and 16 ways to pick which point we go to after the origin.\n\nAdditionally, if the previous point we visit is another point of the form \\(( \\pm 1, \\pm 1, \\pm 1, \\pm 1)\\) then we have 4 possible directions to go in. Therefore the recurrence relation for \\(a_{i}\\) is \\(a_{i}=4 a_{i-1}+16 a_{i-2}\\). Solving the linear recurrence yields\n\n\\[a_{i}=\\frac{1}{\\sqrt{5}}(2+2 \\sqrt{5})^{i}-\\frac{1}{\\sqrt{5}}(2-2 \\sqrt{5})^{i}=4^{i} F_{i+1},\\]\n\nso it suffices to find \\(\\nu_{2}\\left(F_{2019}\\right)\\). We have \\(F_{n} \\equiv 0,1,1,2,3,1(\\bmod 4)\\) for \\(n \\equiv 0,1,2,3,4,5(\\bmod 6)\\), so \\(\\nu_{2}\\left(F_{2019}\\right)=1\\), and the answer is \\(4+2 \\cdot 2018+1=4041\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

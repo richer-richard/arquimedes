@@ -1,0 +1,61 @@
+{
+  "id": "prob.ahsme-1987-p29",
+  "title": "1987 AHSME Problem 29",
+  "category": "uncategorized",
+  "subjects": [],
+  "concepts": [],
+  "source": {
+    "collection": "AHSME",
+    "year": 1987,
+    "number": 29
+  },
+  "difficulty": {
+    "course": 47.5,
+    "source": 2440,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "Consider the sequence of numbers defined recursively by \\(t_1=1\\) and for \\(n\\gt1\\) by \\(t_n=1+t_{\\frac{n}{2}}\\) when \\(n\\) is even and by \\(t_n=\\frac{1}{t_{n-1}}\\) when \\(n\\) is odd. Given that \\(t_n=\\frac{19}{87},\\) the sum of the digits of \\(n\\) is",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(19\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(21\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(23\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "15"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1987-p29.live",
+      "kind": "proof-sketch",
+      "text": "Let \\(N(r)\\) be the index at which the value \\(r\\) occurs. Reversing the recursion gives \\(N(r)=2N(r-1)\\) for \\(r\\gt1,\\) and \\(N(r)=N(\\frac{1}{r})+1\\) for \\(0\\lt r\\lt1.\\)\n\nStarting with \\(N(1)=1,\\) repeated use gives \\(N(2)=2,\\) \\(N(\\frac{1}{2})=3,\\) \\(N(\\frac{3}{2})=6,\\) and \\(N(\\frac{2}{3})=7.\\) Continuing gives \\(N(\\frac{5}{3})=14,\\) \\(N(\\frac{8}{3})=28,\\) \\(N(\\frac{3}{8})=29,\\) and \\(N(\\frac{11}{8})=58.\\)\n\nNext, \\(N(\\frac{8}{11})=59,\\) \\(N(\\frac{19}{11})=118,\\) \\(N(\\frac{11}{19})=119,\\) \\(N(\\frac{30}{19})=238,\\) \\(N(\\frac{49}{19})=476,\\) and \\(N(\\frac{68}{19})=952.\\) Finally, \\(N(\\frac{87}{19})=1904\\) and \\(N(\\frac{19}{87})=1905.\\) Thus \\(n=1905,\\) whose digit sum is \\(1+9+0+5=15.\\)\n\nTherefore the correct answer is A.",
+      "hints": [
+        "Values greater than \\(1\\) come from even indices; values between \\(0\\) and \\(1\\) come from odd indices",
+        "Reverse the recursion by subtracting \\(1\\) from values above \\(1\\) and taking reciprocals of values below \\(1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

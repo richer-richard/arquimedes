@@ -1,0 +1,55 @@
+{
+  "id": "prob.hmmt-nov-guts-2021-p2",
+  "title": "2021 HMMT November Guts Problem 2",
+  "category": "number-theory",
+  "subjects": [
+    "number-theory",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "nt.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "nt.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2021,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 43.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "There are 8 lily pads in a pond numbered \\(1,2, \\ldots, 8\\). A frog starts on lily pad 1. During the \\(i\\)-th second, the frog jumps from lily pad \\(i\\) to \\(i+1\\), falling into the water with probability \\(\\frac{1}{i+1}\\). The probability that the frog lands safely on lily pad 8 without having fallen into the water at any point can be written as \\(\\frac{m}{n}\\), where \\(m, n\\) are positive integers and \\(\\operatorname{gcd}(m, n)=1\\). Find \\(100 m+n\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "108",
+    "value": "108"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2021-p2.hmmt",
+      "kind": "proof-sketch",
+      "text": "The probability the frog lands safely on lily pad \\(i+1\\) given that the frog safely landed on lily pad \\(i\\) is \\(\\frac{i}{i+1}\\). The probability the frog make it to lily pad 8 safely is simply the product of the probabilities of the frog making it to each of the lily pads 2 through 8 given it had safely landed on the lily pad before it. Thus, the probability is\n\n\\[\\frac{1}{2} \\cdot \\frac{2}{3} \\cdots \\frac{7}{8}=\\frac{1}{8} .\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

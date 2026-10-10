@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-8-2018-p16",
+  "title": "2018 AMC 8 Problem 16",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.permutations",
+      "label": "Permutations",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2018,
+    "number": 16
+  },
+  "difficulty": {
+    "course": 12.3,
+    "source": 1100,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Professor Chang has nine different language books lined up on a bookshelf: two Arabic, three German, and four Spanish. How many ways are there to arrange the nine books on the shelf keeping the Arabic books together and keeping the Spanish books together?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\( 1440 \\)"
+    },
+    {
+      "label": "B",
+      "text": "\\( 2880 \\)"
+    },
+    {
+      "label": "C",
+      "text": "\\( 5760 \\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(182{,}440\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(362{,}880\\)"
+    }
+  ],
+  "answer": {
+    "letter": "c",
+    "value": "5760"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2018-p16.live",
+      "kind": "proof-sketch",
+      "text": "Since we are keeping the Arabic books together and the Spanish books together, we can look at each group as a single block.\n\nAs such, there are \\(5\\) objects on the bookshelf: three German books, one collection of Arabic books, and one collection of Spanish books. There are \\(5!\\) ways to order the \\(5\\) objects. As we already have the books together, there are \\(2!\\) ways of ordering the Arabic books and \\(4!\\) ways of ordering the Spanish books. Therefore, the total ways to order the books is \\[\\begin{align*}5! \\cdot 4! \\cdot 2! &= 120 \\cdot 24 \\cdot 2 \\\\&= 5760 \\end{align*}\\]\n\nThus, the correct answer is C.",
+      "hints": [
+        "Treat the two Arabic books as one block and the four Spanish books as one block.",
+        "Arrange the five objects, then arrange the books within the Arabic and Spanish blocks."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

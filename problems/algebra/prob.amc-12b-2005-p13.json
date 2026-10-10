@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-12b-2005-p13",
+  "title": "2005 AMC 12B Problem 13",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.logarithm",
+      "label": "Logarithm",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.telescoping",
+      "label": "Telescoping",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2005,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 27.1,
+    "source": 1570,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Suppose that \\(4^{x_1} = 5,\\) \\(5^{x_2} = 6,\\) \\(6^{x_3} = 7,\\) \\(\\ldots,\\) \\(127^{x_{124}} = 128.\\) What is \\(x_1 x_2 \\cdots x_{124}?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(2\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac{5}{2}\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(3\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac{7}{2}\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(4\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "7/2"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2005-p13.live",
+      "kind": "proof-sketch",
+      "text": "From \\(4^{x_1} = 5\\) we get \\(x_1 = \\log_4 5,\\) and in general \\(x_k = \\log_{k+3}(k+4).\\)\n\nThe product telescopes: \\[ \\begin{aligned} &x_1 x_2 \\cdots x_{124} \\\\ &= \\log_4 5 \\cdot \\log_5 6 \\cdots \\log_{127} 128 \\\\ &= \\log_4 128. \\end{aligned} \\]\n\nSince \\(128 = 2^7\\) and \\(4 = 2^2,\\) this equals \\(\\dfrac{7\\log 2}{2\\log 2} = \\dfrac72.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Each equation gives \\(x_k = \\log_{k+3}(k+4)\\)",
+        "The product telescopes to \\(\\log_4 128\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

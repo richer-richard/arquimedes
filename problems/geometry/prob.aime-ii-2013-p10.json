@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-ii-2013-p10",
+  "title": "2013 AIME II Problem 10",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle",
+      "label": "Circle",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-area",
+      "label": "Triangle area",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2013,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 58.8,
+    "source": 2840,
+    "mohs": null
+  },
+  "estimatedMinutes": 10,
+  "statement": "Given a circle of radius \\(\\sqrt{13},\\) let \\(A\\) be a point at a distance \\(4 + \\sqrt{13}\\) from the center \\(O\\) of the circle. Let \\(B\\) be the point on the circle nearest to point \\(A.\\) A line passing through the point \\(A\\) intersects the circle at points \\(K\\) and \\(L.\\) The maximum possible area for \\(\\triangle BKL\\) can be written in the form \\(\\frac{a - b\\sqrt{c}}{d},\\) where \\(a,\\) \\(b,\\) \\(c,\\) and \\(d\\) are positive integers, \\(a\\) and \\(d\\) are relatively prime, and \\(c\\) is not divisible by the square of any prime. Find \\(a + b + c + d.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "146",
+    "value": "146"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2013-p10.live",
+      "kind": "proof-sketch",
+      "text": "The nearest point \\(B\\) lies on segment \\(OA\\) with \\(OB = \\sqrt{13}\\) and \\(AB = 4.\\) Triangles \\(OKL\\) and \\(BKL\\) share the base \\(KL,\\) and their heights are the distances from \\(O\\) and \\(B\\) to the line through \\(A.\\) For any point \\(P\\) on line \\(OA,\\) that distance is \\(PA\\sin\\varphi,\\) where \\(\\varphi\\) is the angle between the two lines, so \\[\\frac{[BKL]}{[OKL]} = \\frac{AB}{AO} = \\frac{4}{4 + \\sqrt{13}}.\\]\n\nSince \\(OK = OL = \\sqrt{13},\\) we have \\([OKL] = \\frac{13}{2}\\sin(\\angle KOL) \\le \\frac{13}{2},\\) with equality when \\(\\angle KOL = 90^\\circ.\\) Such a chord lies at distance \\(\\sqrt{\\frac{13}{2}}\\) from \\(O,\\) which is less than \\(OA,\\) so a line through \\(A\\) can achieve it.\n\nThe maximum area is \\[ \\begin{aligned} [BKL] &= \\frac{13}{2} \\cdot \\frac{4}{4 + \\sqrt{13}} \\\\ &= \\frac{26}{4 + \\sqrt{13}} = \\frac{26(4 - \\sqrt{13})}{3} \\\\ &= \\frac{104 - 26\\sqrt{13}}{3}, \\end{aligned} \\] so \\(a + b + c + d\\) \\(= 104 + 26 + 13 + 3\\) \\(= 146.\\)",
+      "hints": [
+        "\\(B\\) lies on segment \\(OA\\) with \\(AB = 4.\\) For any line through \\(A,\\) the distances from \\(O\\) and from \\(B\\) to that line are in the ratio \\(OA : AB\\)",
+        "So \\([BKL] = \\frac{4}{4 + \\sqrt{13}}[OKL],\\) and \\([OKL] = \\frac{13}{2}\\sin(\\angle KOL)\\) is largest when \\(\\angle KOL = 90^\\circ\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

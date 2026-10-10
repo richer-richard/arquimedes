@@ -1,0 +1,54 @@
+{
+  "id": "prob.hmmt-nov-guts-2010-p11",
+  "title": "2010 HMMT November Guts Problem 11",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2010,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 49.9,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "How many nondecreasing sequences \\(a_{1}, a_{2}, \\ldots, a_{10}\\) are composed entirely of at most three distinct numbers from the set \\(\\{1,2, \\ldots, 9\\}\\) (so \\(1,1,1,2,2,2,3,3,3,3\\) and \\(2,2,2,2,5,5,5,5,5,5\\) are both allowed)?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2010-p11.hmmt",
+      "kind": "proof-sketch",
+      "text": "3357 From any sequence \\(a_{1}, a_{2}, \\ldots, a_{10}\\), construct a sequence \\(b_{1}, b_{2}, \\ldots, b_{9}\\), where \\(b_{i}\\) counts the number of times \\(i\\) occurs in the sequence. There is a correspondence from all possible sequences \\(b_{1}, b_{2}, \\ldots, b_{9}\\) with at most 3 nonzero terms which add to 10 , since any sequence of \\(a_{1}, a_{2}, \\ldots, a_{10}\\) will be converted to this form, and from any sequence \\(b_{1}, b_{2}, \\ldots, b_{9}\\), we can construct a unique sequence of \\(a\\)-s by listing \\(i b_{i}\\) times (for \\(1 \\leq i \\leq 9\\) ) in nondecreasing order.\nOur goal now is to count the number of possible sequences \\(b_{1}, b_{2}, \\ldots, b_{9}\\) meeting our conditions. We casework on the number of nonzero terms in the sequence:\nCase 1: The sequence has exactly one nonzero term.\nThen exactly one of \\(b_{1}, b_{2}, \\ldots, b_{9}\\) is equal to 10 , and all the rest are equal to 0 . This gives us 9 possible sequences in this case.\nCase 2: The sequence has exactly two nonzero terms.\nThere are \\(\\binom{9}{2}=36\\) ways to choose the two terms \\(b_{i}, b_{j}(i<j)\\) which are nonzero. From here, we have 9 choices for the value of \\(b_{i}\\), namely 1 through 9 (since both \\(b_{i}\\) and \\(b_{j}\\) must be nonzero), and \\(b_{j}\\) will be fixed, so this case gives us \\(36 \\cdot 9=324\\) possible sequences.\nCase 3: The sequence has exactly three nonzero terms.\nThere are \\(\\binom{9}{3}=84\\) ways to choose the three terms \\(b_{i}, b_{j}, b_{k}(i<j<k)\\) which are nonzero. Letting\n\\(c_{i}=b_{i}-1, c_{j}=b_{j}-1, c_{k}=b_{k}-1\\), we have that \\(c_{i}, c_{j}, c_{k}\\) are nonnegative integers which sum to 7 . There are \\(\\binom{9}{2}=36\\) solutions to this equation (consider placing two dividers in the nine spaces between the ten elements), giving \\(84 \\cdot 36=3024\\) possbilities in this case.\nWe then have \\(9+324+3024=3357\\) possible sequences.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

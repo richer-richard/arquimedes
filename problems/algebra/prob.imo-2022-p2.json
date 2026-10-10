@@ -1,0 +1,47 @@
+{
+  "id": "prob.imo-2022-p2",
+  "title": "2022 IMO Problem 2",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.olympiad-algebra",
+      "label": "Olympiad algebra",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "IMO",
+    "year": 2022,
+    "number": 2
+  },
+  "difficulty": {
+    "course": 88.5,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Find all functions \\(f \\colon \\mathbb{R}^+ \\to \\mathbb{R}^+\\) such that for each \\(x \\in \\mathbb{R}^+\\),\nthere is exactly one \\(y \\in \\mathbb{R}^+\\) satisfying \\[ xf(y)+yf(x) \\leq 2. \\]",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.imo-2022-p2.evanchen",
+      "kind": "proof-sketch",
+      "text": "The answer is \\(f(x) \\equiv 1/x\\) which obviously works (here \\(y=x\\)).\n\nFor the converse, assume we have \\(f\\) such that\neach \\(x \\in \\mathbb{R}^+\\) has a friend \\(y\\) with \\(xf(y)+yf(x)\\le2\\).\nBy symmetry \\(y\\) is also the friend of \\(x\\).\n\nClaim.\n In fact every number is its own friend.\n\nProof.\n Assume for contradiction \\(a \\neq b\\) are friends.\n Then we know that \\(af(a) + af(a) > 2 \\implies f(a) > \\frac 1a\\).\n Analogously, \\(f(b) > \\frac 1b\\).\n However, we then get\n \\[ 2 \\ge a f(b) + b f(a) > \\frac ab + \\frac ba \\overset{\\text{AMGM}}{\\ge} 2 \\]\n which is impossible.\n\nThe problem condition now simplifies to saying\n\\[ f(x) \\le \\frac1x \\text{ for all \\(x\\)}, \\qquad\n xf(y) + yf(x) > 2 \\text{ for all \\(x \\neq y\\)}. \\]\nIn particular, for any \\(x>0\\) and \\(\\varepsilon > 0\\) we have\n\\[\\begin{aligned}\n 2 &< xf(x+\\varepsilon) + (x+\\varepsilon)f(x) \\le \\frac{x}{x+\\varepsilon} + (x+\\varepsilon) f(x) \\\\\n \\implies f(x) &> \\frac{x+2\\varepsilon}{(x+\\varepsilon)^2}\n = \\frac{1}{x + \\frac{\\varepsilon^2}{x+2\\varepsilon}}.\n\\end{aligned}\\]\nSince this holds for all \\(\\varepsilon > 0\\) this forces \\(f(x) \\ge \\frac1x\\) as well.\nWe're done.\n\nRemark.\n Alternatively, instead of using \\(x+\\varepsilon\\),\n it also works to consider \\(y = \\frac{1}{f(x)}\\).\n For such a \\(y\\), we would have\n \\[ xf\\left( \\frac{1}{f(x)} \\right) + \\frac{1}{f(x)} \\cdot f(x)\n = xf\\left( \\frac{1}{f(x)} \\right) + 1\n \\leq x \\cdot f(x) + 1 \\leq 1 + 1 = 2 \\]\n which gives a similar contradiction.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

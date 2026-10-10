@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-algebra-2012-p7",
+  "title": "2012 HMMT February Algebra Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.logarithms-and-exponentials",
+      "label": "Logarithms and exponentials",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2012,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 83.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(\\otimes\\) be a binary operation that takes two positive real numbers and returns a positive real number. Suppose further that \\(\\otimes\\) is continuous, commutative \\((a \\otimes b=b \\otimes a)\\), distributive across multiplication \\((a \\otimes(b c)=(a \\otimes b)(a \\otimes c))\\), and that \\(2 \\otimes 2=4\\). Solve the equation \\(x \\otimes y=x\\) for \\(y\\) in terms of \\(x\\) for \\(x>1\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-algebra-2012-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(y=\\sqrt{2}\\) We note that \\(\\left(a \\otimes b^{k}\\right)=(a \\otimes b)^{k}\\) for all positive integers \\(k\\). Then for all rational numbers \\(\\frac{p}{q}\\) we have \\(a \\otimes b^{\\frac{p}{q}}=\\left(a \\otimes b^{\\frac{1}{q}}\\right)^{p}=(a \\otimes b)^{\\frac{p}{q}}\\). So by continuity, for all real numbers \\(a, b\\), it follows that \\(2^{a} \\otimes 2^{b}=(2 \\otimes 2)^{a b}=4^{a b}\\). Therefore given positive reals \\(x, y\\), we have \\(x \\otimes y=2^{\\log _{2}(x)} \\otimes 2^{\\log _{2}(y)}=\\) \\(4^{\\log _{2}(x) \\log _{2}(y)}\\).\nIf \\(x=4^{\\log _{2}(x) \\log _{2}(y)}=2^{2 \\log _{2}(x) \\log _{2}(y)}\\) then \\(\\log _{2}(x)=2 \\log _{2}(x) \\log _{2}(y)\\) and \\(1=2 \\log _{2}(y)=\\log _{2}\\left(y^{2}\\right)\\). Thus \\(y=\\sqrt{2}\\) regardless of \\(x\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

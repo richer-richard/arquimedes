@@ -1,0 +1,72 @@
+{
+  "id": "prob.aime-ii-2020-p15",
+  "title": "2020 AIME II Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cyclic-quadrilateral",
+      "label": "Cyclic quadrilateral",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.law-of-sines",
+      "label": "Law of sines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.tangent-line",
+      "label": "Tangent line",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2020,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 71.3,
+    "source": 3370,
+    "mohs": null
+  },
+  "estimatedMinutes": 30,
+  "statement": "Let \\(\\triangle ABC\\) be an acute scalene triangle with circumcircle \\(\\omega.\\) The tangents to \\(\\omega\\) at \\(B\\) and \\(C\\) intersect at \\(T.\\) Let \\(X\\) and \\(Y\\) be the projections of \\(T\\) onto lines \\(AB\\) and \\(AC,\\) respectively. Suppose \\(BT = CT = 16,\\) \\(BC = 22,\\) and \\(TX^2 + TY^2 + XY^2 = 1143.\\) Find \\(XY^2.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "717",
+    "value": "717"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2020-p15.live",
+      "kind": "proof-sketch",
+      "text": "By the tangent-chord angle, \\(\\angle TBC = A,\\) so \\(\\angle ABT = B + A = 180^\\circ - C\\) and \\(TX = TB \\sin\\angle ABT = 16 \\sin C;\\) similarly \\(TY = 16 \\sin B.\\) Also \\(\\angle AXT = \\angle AYT = 90^\\circ,\\) so \\(A,\\) \\(X,\\) \\(T,\\) and \\(Y\\) lie on a circle with diameter \\(AT,\\) whence \\(XY = AT \\sin A.\\) Using the law of sines, \\(\\sin A = \\frac{11}{R},\\) \\(\\sin B = \\frac{AC}{2R},\\) and \\(\\sin C = \\frac{AB}{2R},\\) so the given condition becomes \\[ \\begin{aligned} &\\frac{64\\left(AB^2 + AC^2\\right) + 121\\,AT^2}{R^2} \\\\ &= 1143. \\end{aligned} \\]\n\nPlace \\(B = (-11, 0)\\) and \\(C = (11, 0).\\) Since \\(TB = 16\\) and \\(T\\) lies on the perpendicular bisector of \\(BC,\\) we get \\(T = (0, -\\sqrt{135}).\\) The circumcenter is \\(O = (0, k)\\) with \\(OB \\perp BT,\\) which gives \\(121 - k\\sqrt{135} = 0,\\) so \\(k = \\frac{121}{\\sqrt{135}}\\) and \\(R^2 = 121 + k^2 = \\frac{30976}{135}.\\) For \\(A = (x, y)\\) on \\(\\omega,\\) expanding \\(x^2 + (y - k)^2 = R^2\\) gives \\(x^2 + y^2 = \\frac{242}{\\sqrt{135}}\\,y + 121.\\) Therefore \\[ \\begin{aligned} AB^2 + AC^2 &= 2(x^2 + y^2) + 242 \\\\ &= \\frac{484}{\\sqrt{135}}\\,y + 484, \\end{aligned} \\] \\[ \\begin{aligned} AT^2 &= x^2 + y^2 \\\\ &\\quad {}+ 2\\sqrt{135}\\,y + 135 \\\\ &= \\frac{512}{\\sqrt{135}}\\,y + 256. \\end{aligned} \\]\n\nSubstituting, \\(64(AB^2 + AC^2) + 121\\,AT^2\\) \\(= \\frac{92928}{\\sqrt{135}}\\,y + 61952\\) \\(= 1143 \\cdot \\frac{30976}{135}\\) yields \\(y = \\frac{291}{\\sqrt{135}}.\\) Then \\(AT^2 = \\frac{512 \\cdot 291}{135} + 256 = \\frac{183552}{135},\\) and \\[ \\begin{aligned} XY^2 &= AT^2 \\sin^2 A \\\\ &= \\frac{121\\,AT^2}{R^2} \\\\ &= \\frac{121 \\cdot 183552}{30976} \\\\ &= \\frac{183552}{256} = 717. \\end{aligned} \\]",
+      "hints": [
+        "The tangent-chord angle gives \\(\\angle ABT = 180^\\circ - C,\\) so \\(TX = 16 \\sin C;\\) and \\(AXTY\\) is cyclic with diameter \\(AT,\\) so \\(XY = AT \\sin A\\)",
+        "Place \\(B\\) and \\(C\\) at \\((\\mp 11, 0),\\) so \\(T = (0, -\\sqrt{135}).\\) Then \\(TX^2 + TY^2\\) and \\(XY^2\\) are both linear in the \\(y\\)-coordinate of \\(A.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

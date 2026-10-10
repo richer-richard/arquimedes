@@ -1,0 +1,87 @@
+{
+  "id": "prob.ahsme-1989-p27",
+  "title": "1989 AHSME Problem 27",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counting-pairs",
+      "label": "Counting pairs",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.diophantine-equation",
+      "label": "Diophantine Equation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1989,
+    "number": 27
+  },
+  "difficulty": {
+    "course": 44.9,
+    "source": 2340,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "Let \\(n\\) be a positive integer. If the equation \\(2x+2y+z=n\\) has \\(28\\) solutions in positive integers \\(x,\\) \\(y\\) and \\(z,\\) then \\(n\\) must be either",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(14\\) or \\(15\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(15\\) or \\(16\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(16\\) or \\(17\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(17\\) or \\(18\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(18\\) or \\(19\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1989-p27.live",
+      "kind": "proof-sketch",
+      "text": "For \\(s=x+y\\ge2,\\) there are \\(s-1\\) positive ordered pairs \\((x,y),\\) and \\(z=n-2s\\) is positive when \\(s\\le\\lfloor\\frac{n-1}{2}\\rfloor.\\) Writing \\(m=\\lfloor\\frac{n-1}{2}\\rfloor,\\) the number of solutions is \\[ \\sum_{s=2}^{m}(s-1)=\\frac{m(m-1)}2. \\] Setting this equal to \\(28\\) gives \\(m=8.\\) Hence \\(\\lfloor\\frac{n-1}{2}\\rfloor=8,\\) so \\(n=17\\) or \\(18.\\)\n\nThus the correct answer is D.",
+      "hints": [
+        "Group solutions according to \\(s=x+y\\)",
+        "For fixed \\(s,\\) count the positive ordered pairs \\((x,y)\\) and require \\(n-2s\\ge1\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

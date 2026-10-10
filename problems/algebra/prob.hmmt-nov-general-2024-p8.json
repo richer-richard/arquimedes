@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-nov-general-2024-p8",
+  "title": "2024 HMMT November General Problem 8",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.sums-and-products",
+      "label": "Sums and products",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2024,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 51.2,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let\n\n\\[f(x)=||\\cdots||| | x|-1|-2|-3|-\\cdots|-10|\\]\n\nCompute \\(f(1)+f(2)+\\cdots+f(54)+f(55)\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "285",
+    "value": "285"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-general-2024-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(T_{k}\\) denote the \\(k\\)-th triangular number \\(1+2+\\cdots+k\\).\nFor any integer \\(i\\), the function \\(g_{i}(x)=|x-i|\\) is a piecewise linear function with slopes \\(\\pm 1\\). As \\(f(x)=g_{10}\\left(\\cdots\\left(g_{1}\\left(g_{0}(x)\\right)\\right) \\cdots\\right)\\), it is also piecewise linear with slopes \\(\\pm 1\\). As \\(g_{i}(x)\\) has a cusp only where it evaluates to 0 , the cusps of \\(f\\) occur precisely where \\(g_{k}\\left(\\cdots\\left(g_{1}\\left(g_{0}(x)\\right)\\right) \\cdots\\right)=0\\) for some integer \\(0 \\leq k \\leq 10\\). Then, \\(g_{k-1}\\left(\\cdots\\left(g_{0}(x)\\right) \\cdots\\right)= \\pm k\\), and since it is positive, it equals \\(k\\). Similarly, \\(g_{k-2}\\left(\\cdots\\left(g_{0}(x)\\right) \\cdots\\right)=(k-1) \\pm k\\), so it must be \\(k+(k-1)\\). Continuing this argument, we see that \\(|x|=k+(k-1)+\\cdots+1=T_{k}\\), so the cusps occur precisely when \\(|x|\\) is a triangular between 0 and 55 , inclusive. As \\(f(0)=5\\) and \\(f(1)=6\\), the graph of \\(f(x)\\) on \\(0 \\leq x \\leq 55\\) looks as follows:\n\nNow observe that for \\(1 \\leq k \\leq 9\\), the \\((k+1)\\) values \\(g\\left(T_{k}\\right), g\\left(T_{k}+1\\right), \\ldots, g\\left(T_{k+1}-1\\right)\\) are \\(5-\\frac{k}{2}\\) through \\(5+\\frac{k}{2}\\) if \\(k\\) is even, and \\(5.5+\\frac{k}{2}\\) through \\(5.5-\\frac{k}{2}\\) if \\(k\\) is odd. Thus they average to 5 if \\(k\\) is even and 5.5 if \\(k\\) is odd. As \\(f(55)=0\\), the desired sum is\n\n\\[5 \\cdot(3+5+7+9)+5.5 \\cdot(2+4+6+8+10)=285\\]\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

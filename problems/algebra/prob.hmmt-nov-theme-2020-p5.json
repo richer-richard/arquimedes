@@ -1,0 +1,62 @@
+{
+  "id": "prob.hmmt-nov-theme-2020-p5",
+  "title": "2020 HMMT November Theme Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.base-representations",
+      "label": "Base representations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.divisibility-and-factorization",
+      "label": "Divisibility and factorization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2020,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 49.0,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The classrooms at MIT are each identified with a positive integer (with no leading zeroes). One day, as President Reif walks down the Infinite Corridor, he notices that a digit zero on a room sign has fallen off. Let \\(N\\) be the original number of the room, and let \\(M\\) be the room number as shown on the sign.\n\nThe smallest interval containing all possible values of \\(\\frac{M}{N}\\) can be expressed as \\(\\left[\\frac{a}{b}, \\frac{c}{d}\\right)\\) where \\(a, b, c, d\\) are positive integers with \\(\\operatorname{gcd}(a, b)=\\operatorname{gcd}(c, d)=1\\). Compute \\(1000 a+100 b+10 c+d\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": "2031",
+    "value": "2031"
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2020-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "Let \\(A\\) represent the portion of \\(N\\) to the right of the deleted zero, and \\(B\\) represent the rest of \\(N\\). For example, if the unique zero in \\(N=12034\\) is removed, then \\(A=34\\) and \\(B=12000\\). Then, \\(\\frac{M}{N}=\\frac{A+B / 10}{A+B}=1-\\frac{9}{10} \\frac{B}{N}\\).\nThe maximum value for \\(B / N\\) is 1 , which is achieved when \\(A=0\\). Also, if the 0 removed is in the \\(10^{k}\\) 's place ( \\(k=2\\) in the example above), we find that \\(A<10^{k}\\) and \\(B \\geq 10^{k+1}\\), meaning that \\(A / B<1 / 10\\) and thus \\(B / N>10 / 11\\). Also, \\(B / N\\) can get arbitrarily close to \\(10 / 11\\) via a number like \\(1099 \\ldots 9\\).\nTherefore the fraction \\(\\frac{M}{N}\\) achieves a minimum at \\(\\frac{1}{10}\\) and always stays below \\(\\frac{2}{11}\\), though it can get arbitrarily close. The desired interval is then \\(\\left[\\frac{1}{10}, \\frac{2}{11}\\right)\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

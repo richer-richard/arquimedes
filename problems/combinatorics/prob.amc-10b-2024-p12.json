@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-10b-2024-p12",
+  "title": "2024 AMC 10B Problem 12",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.extremal-argument",
+      "label": "Extremal argument",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.subsets",
+      "label": "Subsets",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2024,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 23.4,
+    "source": 1500,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "A group of \\(100\\) students from different countries meet at a mathematics competition. Each student speaks the same number of languages, and, for every pair of students \\(A\\) and \\(B,\\) student \\(A\\) speaks some language that student \\(B\\) does not speak, and student \\(B\\) speaks some language that student \\(A\\) does not speak. What is the least possible total number of languages spoken by all the students?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(9\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(51\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(100\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "9"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2024-p12.live",
+      "kind": "proof-sketch",
+      "text": "Give each student the set of languages they speak. The condition says no one’s set sits inside another’s. Everyone speaks the same number \\(k\\) of languages, and two distinct \\(k\\)-element sets can never contain each other, so all we need is \\(100\\) different \\(k\\)-subsets of the \\(n\\) languages, i.e. \\(\\binom{n}{k} \\ge 100.\\) With \\(n = 8\\) the best we can manage is \\(\\binom{8}{4} = 70,\\) short of \\(100.\\) But \\(\\binom{9}{4} = 126 \\ge 100.\\) So \\(9\\) languages are both enough and necessary. Therefore, the answer is A.",
+      "hints": [
+        "Give each student the set of languages they speak; the condition means no set contains another",
+        "Equal-size distinct sets never contain one another, so you need \\(\\binom{n}{k} \\ge 100\\) for some \\(k\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

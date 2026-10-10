@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-10b-2024-p5",
+  "title": "2024 AMC 10B Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.bounding-to-limit-cases",
+      "label": "Bounding to limit cases",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.summation",
+      "label": "Summation",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 10B",
+    "year": 2024,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 16.9,
+    "source": 1250,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "In the following expression, Melanie changed some of the plus signs to minus signs:\n\n\\[1 + 3 + 5 + 7 + \\cdots + 97 + 99\\]\n\nWhen the new expression was evaluated, it was negative. What is the least number of plus signs that Melanie could have changed to minus signs?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(14\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(15\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(17\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(18\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "15"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-10b-2024-p5.live",
+      "kind": "proof-sketch",
+      "text": "The full sum is \\(1 + 3 + \\cdots + 99 = 50^2 = 2500.\\) Flipping a term \\(t\\) drops the total by \\(2t,\\) so to go negative the flipped terms have to add up to more than \\(1250.\\) The greedy move is to flip the biggest odd numbers: flipping the top \\(k\\) gives \\(99 + 97 + \\cdots = k(100 - k).\\) We want \\(k(100 - k) \\gt 1250.\\) At \\(k = 14\\) it’s only \\(1204,\\) but at \\(k = 15\\) it jumps to \\(1275.\\) So \\(15\\) flips do it. Thus, B is the correct answer.",
+      "hints": [
+        "The full sum is \\(1 + 3 + \\cdots + 99 = 50^2 = 2500;\\) flipping a term \\(t\\) lowers the sum by \\(2t\\)",
+        "To go below \\(0\\) with the fewest flips, flip the largest terms; their doubled total must exceed \\(2500\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

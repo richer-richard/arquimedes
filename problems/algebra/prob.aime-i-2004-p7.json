@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-i-2004-p7",
+  "title": "2004 AIME I Problem 7",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.algebraic-manipulation",
+      "label": "Algebraic manipulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.sum-of-first-n-squares",
+      "label": "Sum of first n squares",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2004,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 46.2,
+    "source": 2390,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Let \\(C\\) be the coefficient of \\(x^2\\) in the expansion of the product \\[ \\begin{aligned} &(1 - x)(1 + 2x)(1 - 3x) \\cdots \\\\ &\\quad {}\\cdot (1 + 14x)(1 - 15x). \\end{aligned} \\] Find \\(|C|.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "588",
+    "value": "588"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2004-p7.live",
+      "kind": "proof-sketch",
+      "text": "Write the product as \\(\\prod_{k=1}^{15} (1 + a_k x)\\) with \\(a_k = (-1)^k k.\\) An \\(x^2\\) term arises by choosing the \\(x\\)-term from two factors, so \\(C = \\sum_{i \\lt j} a_i a_j,\\) and \\[C = \\frac{\\left(\\sum a_k\\right)^2 - \\sum a_k^2}{2}.\\]\n\nThe alternating sum is \\[ \\begin{aligned} &(-1 + 2) + (-3 + 4) \\\\ &\\quad {}+ \\cdots + (-13 + 14) - 15 \\\\ &= 7 - 15 \\\\ &= -8, \\end{aligned} \\] and \\[ \\begin{aligned} \\sum a_k^2 &= 1^2 + 2^2 + \\cdots + 15^2 \\\\ &= \\frac{15 \\cdot 16 \\cdot 31}{6} \\\\ &= 1240. \\end{aligned} \\]\n\nThus \\(C = \\frac{64 - 1240}{2} = -588,\\) so \\(|C| = 588.\\)",
+      "hints": [
+        "The \\(x^2\\) coefficient is the sum of the products of pairs from \\(-1, 2, -3, \\ldots, 14, -15\\)",
+        "Use \\(2\\sum_{i \\lt j} a_i a_j = \\left(\\sum a_i\\right)^2 - \\sum a_i^2,\\) and the alternating sum is \\(-8\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

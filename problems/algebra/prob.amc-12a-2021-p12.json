@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2021-p12",
+  "title": "2021 AMC 12A 12",
+  "category": "algebra",
+  "subjects": [
+    "algebra"
+  ],
+  "concepts": [
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.vietas-formulas",
+      "label": "Vieta’s Formulas",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2021,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 28.5,
+    "source": 1710,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "All the roots of the polynomial \\(z^6 - 10z^5 + Az^4\\) \\(+ Bz^3 + Cz^2 + Dz + 16\\) are positive integers, possibly repeated. What is the value of \\(B?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(-88\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(-80\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(-64\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(-41\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(-40\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "-88"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2021-p12.live",
+      "kind": "proof-sketch",
+      "text": "By Vieta’s formulas the six roots sum to \\(10\\) (the negative of the \\(z^5\\) coefficient) and multiply to \\(16.\\) Thus every root is a power \\(2^{e_i},\\) with \\(\\sum e_i=4.\\) Since \\(2^{e_i}\\ge 1+e_i,\\) the roots have sum at least \\(6+4=10.\\) Equality holds only when every \\(e_i\\) is \\(0\\) or \\(1,\\) so the roots must be \\(2,2,2,2,1,1.\\)\n\nSo the polynomial is \\((z - 1)^2 (z - 2)^4.\\) Expanding, \\[ \\begin{aligned} &(z^2 - 2z + 1) \\\\ &\\quad {}\\cdot (z^4 - 8z^3 + 24z^2 - 32z + 16) \\\\ &= z^6 - 10z^5 + 41z^4 \\\\ &\\quad {}- 88z^3 + 104z^2 \\\\ &\\quad {}- 64z + 16. \\end{aligned} \\] The coefficient of \\(z^3\\) is \\(B = -88.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "The six positive integer roots sum to \\(10\\) and multiply to \\(16;\\) find the multiset",
+        "The roots are \\(2, 2, 2, 2, 1, 1;\\) \\(B\\) equals \\(-1\\) times the sum of products of the roots taken three at a time"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

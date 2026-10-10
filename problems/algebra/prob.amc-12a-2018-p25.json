@@ -1,0 +1,79 @@
+{
+  "id": "prob.amc-12a-2018-p25",
+  "title": "2018 AMC 12A Problem 25",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.algebraic-manipulation",
+      "label": "Algebraic manipulation",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.digits",
+      "label": "Digits",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2018,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 52.8,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "For a positive integer \\(n\\) and nonzero digits \\(a,\\) \\(b,\\) and \\(c,\\) let \\(A_n\\) be the \\(n\\)-digit integer each of whose digits is equal to \\(a;\\) let \\(B_n\\) be the \\(n\\)-digit integer each of whose digits is equal to \\(b;\\) and let \\(C_n\\) be the \\(2n\\)-digit (not \\(n\\)-digit) integer each of whose digits is equal to \\(c.\\) What is the greatest possible value of \\(a + b + c\\) for which there are at least two values of \\(n\\) such that \\(C_n - B_n = A_n^2?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(12\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(14\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(16\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(18\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(20\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "18"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2018-p25.live",
+      "kind": "proof-sketch",
+      "text": "Using \\(A_n = a \\cdot \\tfrac{10^n - 1}{9},\\) \\(B_n = b \\cdot \\tfrac{10^n - 1}{9},\\) and \\(C_n = c \\cdot \\tfrac{10^{2n} - 1}{9},\\) the equation \\(C_n - B_n = A_n^2\\) becomes, after dividing by \\(10^n - 1\\) and clearing fractions, \\[ (9c - a^2) \\cdot 10^n = 9b - 9c - a^2. \\] For this to hold at two different \\(n,\\) the coefficient of \\(10^n\\) must be zero, so \\(9c = a^2\\) and hence \\(9b - 9c - a^2 = 0.\\)\n\nThen \\(c = \\tfrac{a^2}{9}\\) and \\(b = 2c.\\) So \\(a \\in \\{3, 6, 9\\}\\) with \\(c \\in \\{1, 4, 9\\}\\) and \\(b \\in \\{2, 8, 18\\};\\) the case \\(b = 18\\) is not a digit. The valid triples are \\((a, b, c) = (3, 2, 1)\\) and \\((6, 8, 4),\\) and indeed \\(4444 - 88 = 4356 = 66^2.\\) The greater digit sum is \\(6 + 8 + 4 = 18.\\)\n\nThus, the correct answer is D.",
+      "hints": [
+        "Write \\(A_n = a \\cdot \\tfrac{10^n - 1}{9},\\) and likewise \\(B_n\\) and \\(C_n = c \\cdot \\tfrac{10^{2n} - 1}{9},\\) then substitute into \\(C_n - B_n = A_n^2\\)",
+        "Requiring it for two values of \\(n\\) forces the coefficient of \\(10^n\\) to vanish: \\(9c = a^2\\) and \\(9b - 9c = a^2\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "prob.hmmt-feb-team-1-2011-p11",
+  "title": "2011 HMMT February Team Round 1 Problem 11",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2011,
+    "number": 11
+  },
+  "difficulty": {
+    "course": 83.7,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(A B C\\) be a non-isosceles, non-right triangle, let \\(\\omega\\) be its circumcircle, and let \\(O\\) be its circumcenter. Let \\(M\\) be the midpoint of segment \\(B C\\). Let the circumcircle of triangle \\(A O M\\) intersect \\(\\omega\\) again at \\(D\\). If \\(H\\) is the orthocenter of triangle \\(A B C\\), prove that \\(\\angle D A H=\\angle M A O\\).",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-team-1-2011-p11.hmmt",
+      "kind": "proof-sketch",
+      "text": "First solution.\n\nLet \\(X\\) be the intersection of the line tangent to \\(\\omega\\) at \\(B\\) with the line tangent to \\(\\omega\\) at \\(C\\). Note that \\(\\triangle O M C \\sim \\triangle O C X\\) since \\(\\angle O M C=\\angle O C X=\\frac{\\pi}{2}\\). Hence \\(\\frac{O M}{O C}=\\frac{O C}{O X}\\), or, equivalently, \\(\\frac{O M}{O A}=\\frac{O A}{O X}\\). By SAS similarity, it follows that \\(\\triangle O A M \\sim \\triangle O X A\\). Therefore, \\(\\angle O A M=\\angle O X A\\).\nWe claim now that \\(\\angle O A D=\\angle O A X\\). By the similarity \\(\\triangle O A M \\sim O X A\\), we have that \\(\\angle O A X=\\) \\(\\angle O M A\\). Since \\(A O M D\\) is a cyclic quadrilateral, we have that \\(\\angle O M A=\\angle O D A\\). Since \\(O A=O D\\), we have that \\(\\angle O D A=\\angle O A D\\). Combining these equations tells us that \\(\\angle O A X=\\angle O A D\\), so \\(A, D\\), and \\(X\\) are collinear.\nFinally, since both \\(A H\\) and \\(O X\\) are perpendicular to \\(B C\\), it follows that \\(A H \\| O X\\), so \\(\\angle D A H=\\) \\(\\angle D X O=\\angle A X O=\\angle M A O\\), as desired.\nSecond solution.\nLet \\(Y\\) be the intersection of \\(B C\\) with the line tangent to \\(\\omega\\) at \\(A\\). Then the circumcircle of triangle \\(A O M\\) has diameter \\(O Y\\), so \\(A D\\) is perpendicular to \\(O Y\\) because the radical axis of two circles is perpendicular to the line between their centers. Since \\(Y\\) is on the polar of \\(A\\), it follows that \\(A\\) is on the polar of \\(Y\\), so \\(A D \\perp O X\\) implies that \\(A D\\) is the polar of \\(Y\\), i.e. \\(A D\\) is the symmedian from \\(A\\) in triangle \\(A B C\\). Hence \\(A D\\) and \\(A M\\) are isogonal. Since \\(A H\\) and \\(A O\\) are also isogonal, the desired conclusion follows immediately.\nRemark: with sufficient perserverance, angle-chasing solutions involving only the points given in the diagram may also be devised.\n\n[One or more solution diagrams were omitted from this imported transcription.]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

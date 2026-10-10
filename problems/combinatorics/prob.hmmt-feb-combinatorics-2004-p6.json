@@ -1,0 +1,47 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2004-p6",
+  "title": "2004 HMMT February Combinatorics Problem 6",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2004,
+    "number": 6
+  },
+  "difficulty": {
+    "course": 79.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "A committee of 5 is to be chosen from a group of 9 people. How many ways can it be chosen, if Bill and Karl must serve together or not at all, and Alice and Jane refuse to serve with each other?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2004-p6.hmmt",
+      "kind": "proof-sketch",
+      "text": "41\n\nIf Bill and Karl are on the committee, there are \\(\\binom{7}{3}=35\\) ways for the other group members to be chosen. However, if Alice and Jane are on the committee with Bill and Karl, there are \\(\\binom{5}{1}=5\\) ways for the last member to be chosen, yielding 5 unacceptable committees. If Bill and Karl are not on the committee, there are \\(\\binom{7}{5}=21\\) ways for the 5 members to be chosen, but again if Alice and Jane were to be on the committee, there would be \\(\\binom{5}{3}=10\\) ways to choose the other three members, yielding 10 more unacceptable committees. So, we obtain \\((35-5)+(21-10)=41\\) ways the committee can be chosen.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

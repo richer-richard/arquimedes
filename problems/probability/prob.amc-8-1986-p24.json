@@ -1,0 +1,78 @@
+{
+  "id": "prob.amc-8-1986-p24",
+  "title": "1986 AMC 8 Problem 24",
+  "category": "probability",
+  "subjects": [
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "prob.conditional-probability",
+      "label": "Conditional probability",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.sampling-without-replacement",
+      "label": "Sampling without replacement",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 1986,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 13.6,
+    "source": 1120,
+    "mohs": null
+  },
+  "estimatedMinutes": 1,
+  "statement": "The \\(600\\) students at King Middle School are divided into three groups of equal size for lunch. Each group has lunch at a different time. A computer randomly assigns each student to one of the three lunch groups. The probability that three friends, Al, Bob, and Carol, will be assigned to the same lunch group is approximately",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(\\dfrac{1}{27}\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(\\dfrac19\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(\\dfrac18\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(\\dfrac16\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(\\dfrac13\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "1/9"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-1986-p24.live",
+      "kind": "proof-sketch",
+      "text": "Whatever group Al is in, Bob joins that same group with probability \\(\\dfrac{199}{599}.\\) If Bob does, Carol joins them with probability \\(\\dfrac{198}{598}.\\)\n\nThus all three share a group with probability \\(\\dfrac{199}{599} \\cdot \\dfrac{198}{598} \\approx 0.110,\\) closest to \\(\\dfrac19.\\)\n\nThus, the correct answer is B .",
+      "hints": [
+        "Fix Al’s group; then find the chance that Bob lands in that same group",
+        "After Al’s group is fixed, Bob’s chance is \\(\\frac{199}{599}\\) and then Carol’s is \\(\\frac{198}{598}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

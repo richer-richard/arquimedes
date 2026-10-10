@@ -1,0 +1,86 @@
+{
+  "id": "prob.ahsme-1972-p28",
+  "title": "1972 AHSME Problem 28",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.basic-counting",
+      "label": "Basic counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.circle",
+      "label": "Circle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.distance-formula",
+      "label": "Distance formula",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AHSME",
+    "year": 1972,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 38.2,
+    "source": 2080,
+    "mohs": null
+  },
+  "estimatedMinutes": 3,
+  "statement": "A circular disc with diameter \\(D\\) is placed on an \\(8\\times8\\) checkerboard with width \\(D\\) so that the centers coincide. The number of checkerboard squares which are completely covered by the disc is:",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(48\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(44\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(40\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(36\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(32\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "32"
+  },
+  "solutions": [
+    {
+      "id": "sol.ahsme-1972-p28.live",
+      "kind": "proof-sketch",
+      "text": "The \\(28\\) border squares are not fully covered. Consider the remaining \\(6\\times6\\) interior grid and measure distances in square side lengths, so the disc has radius \\(4.\\) The four outer corners of this interior grid are at distance \\[ \\sqrt{3^2+3^2}=3\\sqrt2\\gt4 \\] from the center, so those four corner squares are not fully covered. Every other interior square lies within the disc: its farthest possible corner is at distance at most \\[ \\sqrt{3^2+2^2}=\\sqrt{13}\\lt4. \\] Hence \\(36-4=32\\) squares are completely covered.\n\nTherefore, the correct answer is E.",
+      "hints": [
+        "No square touching the outside border can be completely covered",
+        "Among the \\(6\\times6\\) interior squares, test the four corner squares separately"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

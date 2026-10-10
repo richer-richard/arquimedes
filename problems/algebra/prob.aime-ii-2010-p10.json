@@ -1,0 +1,67 @@
+{
+  "id": "prob.aime-ii-2010-p10",
+  "title": "2010 AIME II Problem 10",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "alg.casework",
+      "label": "Casework",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.prime-factorization",
+      "label": "Prime factorization",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2010,
+    "number": 10
+  },
+  "difficulty": {
+    "course": 59.0,
+    "source": 2890,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Find the number of second-degree polynomials \\(f(x)\\) with integer coefficients and integer zeros for which \\(f(0) = 2010.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "163",
+    "value": "163"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2010-p10.live",
+      "kind": "proof-sketch",
+      "text": "Write \\(f(x) = a(x - r)(x - s)\\) with integer roots \\(r\\) and \\(s;\\) such a polynomial is determined by \\(a\\) and the unordered pair \\(\\{r, s\\}.\\) The condition \\(f(0) = 2010\\) says \\(a \\cdot rs = 2010 = 2 \\cdot 3 \\cdot 5 \\cdot 67.\\) Since \\(2010\\) is squarefree, each of the four primes goes entirely to one of \\(|a|,\\) \\(|r|,\\) \\(|s|.\\)\n\nFirst suppose \\(|r| \\ne |s|.\\) Choosing which \\(k \\ge 1\\) of the four primes divide the roots (\\(\\binom{4}{k}\\) ways) and splitting those primes between the two roots (\\(2^{k-1}\\) unordered ways) gives \\(\\sum_{k=1}^{4} \\binom{4}{k} 2^{k-1} = 4 + 12 + 16 + 8\\) \\(= 40\\) choices of magnitudes. For each, the four sign patterns \\((+,+),\\) \\((+,-),\\) \\((-,+),\\) \\((-,-)\\) of \\((r, s)\\) are distinct and each forces the sign of \\(a,\\) giving \\(4 \\cdot 40 = 160\\) polynomials.\n\nIf \\(|r| = |s|,\\) squarefreeness forces \\(|r| = |s| = 1,\\) so \\(|a| = 2010:\\) the options are roots \\(1, 1\\) or \\(-1, -1\\) with \\(a = 2010,\\) or roots \\(1, -1\\) with \\(a = -2010,\\) adding \\(3\\) more. In total \\(160 + 3 = 163.\\)",
+      "hints": [
+        "Write \\(f(x) = a(x - r)(x - s),\\) so \\(a \\cdot rs = 2010 = 2 \\cdot 3 \\cdot 5 \\cdot 67;\\) count choices of \\(a\\) and the unordered root pair",
+        "When \\(|r| \\ne |s|,\\) split the four primes among \\(|a|,\\) \\(|r|,\\) \\(|s|\\) and check that all four sign patterns of \\((r, s)\\) work. Treat \\(|r| = |s| = 1\\) separately."
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12a-2012-p20",
+  "title": "2012 AMC 12A Problem 20",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory",
+    "arithmetic"
+  ],
+  "concepts": [
+    {
+      "id": "alg.number-base",
+      "label": "Number base",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.power-of-2",
+      "label": "Power of 2",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2012,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 37.2,
+    "source": 2220,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Consider the polynomial \\[ \\begin{aligned} P(x) &= \\prod_{k=0}^{10}\\left(x^{2^k} + 2^k\\right) \\\\ &= (x+1)(x^2+2)(x^4+4) \\\\ &\\quad \\cdots (x^{1024}+1024). \\end{aligned} \\]\n\nThe coefficient of \\(x^{2012}\\) is equal to \\(2^a.\\) What is \\(a?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(5\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(7\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(10\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(24\\)"
+    }
+  ],
+  "answer": {
+    "letter": "b",
+    "value": "6"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-2012-p20.live",
+      "kind": "proof-sketch",
+      "text": "Expanding the product, a term of degree \\(2012\\) comes from choosing \\(x^{2^k}\\) from some factors so that the exponents sum to \\(2012.\\) Since powers of two are distinct, this corresponds to the binary representation \\(2012 = 11111011100_2.\\)\n\nThat representation is unique, so exactly one term gives \\(x^{2012},\\) and its coefficient is the product of the constants \\(2^k\\) from the remaining factors: those with \\(k \\in \\{0, 1, 5\\}.\\)\n\nThe coefficient is \\(2^0 \\cdot 2^1 \\cdot 2^5 = 2^6,\\) so \\(a = 6.\\)\n\nThus, the correct answer is B.",
+      "hints": [
+        "Each factor contributes either its \\(x^{2^k}\\) term or its constant \\(2^k\\); the chosen exponents must sum to \\(2012\\)",
+        "There is only one way to write \\(2012\\) as a sum of distinct powers of two, so exactly one term produces \\(x^{2012}\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

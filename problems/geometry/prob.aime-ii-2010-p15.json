@@ -1,0 +1,77 @@
+{
+  "id": "prob.aime-ii-2010-p15",
+  "title": "2010 AIME II Problem 15",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-bisector-theorem",
+      "label": "Angle bisector theorem",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "geo.area-ratio",
+      "label": "Area ratio",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.cyclic-quadrilateral",
+      "label": "Cyclic quadrilateral",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.law-of-sines",
+      "label": "Law of sines",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME II",
+    "year": 2010,
+    "number": 15
+  },
+  "difficulty": {
+    "course": 79.8,
+    "source": 3700,
+    "mohs": null
+  },
+  "estimatedMinutes": 35,
+  "statement": "In triangle \\(ABC,\\) \\(AC = 13,\\) \\(BC = 14,\\) and \\(AB = 15.\\) Points \\(M\\) and \\(D\\) lie on \\(\\overline{AC}\\) with \\(AM = MC\\) and \\(\\angle ABD = \\angle DBC.\\) Points \\(N\\) and \\(E\\) lie on \\(\\overline{AB}\\) with \\(AN = NB\\) and \\(\\angle ACE = \\angle ECB.\\) Let \\(P\\) be the other point of intersection of the circumcircles of \\(\\triangle AMN\\) and \\(\\triangle ADE.\\) Ray \\(AP\\) meets \\(\\overline{BC}\\) at \\(Q.\\) The ratio \\(\\frac{BQ}{CQ}\\) can be written in the form \\(\\frac{m}{n},\\) where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m - n.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "218",
+    "value": "218"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-ii-2010-p15.live",
+      "kind": "proof-sketch",
+      "text": "By the angle bisector theorem, \\(AE = \\frac{13}{27} \\cdot 15\\) and \\(CD = \\frac{14}{29} \\cdot 13,\\) so \\(E\\) lies on \\(\\overline{AN}\\) and \\(D\\) lies on \\(\\overline{MC},\\) with \\[ \\begin{aligned} NE &= AN - AE = \\frac{15}{2} - \\frac{65}{9} \\\\ &= \\frac{5}{18}, \\\\ MD &= CM - CD = \\frac{13}{2} - \\frac{182}{29} \\\\ &= \\frac{13}{58}. \\end{aligned} \\]\n\nSince \\(AMPN\\) is cyclic, \\(\\angle ENP = \\angle ANP\\) \\(= 180^\\circ - \\angle AMP\\) \\(= \\angle DMP,\\) and since \\(AEPD\\) is cyclic, \\(\\angle NEP = 180^\\circ - \\angle AEP\\) \\(= \\angle ADP\\) \\(= \\angle MDP.\\) Hence triangles \\(ENP\\) and \\(DMP\\) are similar, so \\(\\frac{NP}{MP} = \\frac{NE}{MD}.\\) By the law of sines in triangles \\(ANP\\) and \\(AMP,\\) whose angles \\(\\angle ANP\\) and \\(\\angle AMP\\) are supplementary, \\[ \\begin{aligned} \\frac{\\sin\\angle BAQ}{\\sin\\angle CAQ} &= \\frac{\\sin\\angle NAP}{\\sin\\angle MAP} \\\\ &= \\frac{NP}{MP} = \\frac{\\frac{5}{18}}{\\frac{13}{58}} \\\\ &= \\frac{145}{117}. \\end{aligned} \\]\n\nComparing the areas of triangles \\(ABQ\\) and \\(ACQ,\\) which share the cevian \\(\\overline{AQ},\\) \\[ \\begin{aligned} \\frac{BQ}{CQ} &= \\frac{[ABQ]}{[ACQ]} \\\\ &= \\frac{AB \\sin\\angle BAQ}{AC \\sin\\angle CAQ} \\\\ &= \\frac{15}{13} \\cdot \\frac{145}{117} = \\frac{725}{507}, \\end{aligned} \\] which is in lowest terms since \\(507 = 3 \\cdot 13^2\\) and \\(725 = 5^2 \\cdot 29.\\) Thus \\(m - n = 725 - 507 = 218.\\)",
+      "hints": [
+        "Use the angle bisector theorem to compute the short segments \\(NE\\) and \\(MD\\) between the midpoints and the bisector feet",
+        "The cyclic quadrilaterals \\(AMPN\\) and \\(AEPD\\) make triangles \\(ENP\\) and \\(DMP\\) similar, and the law of sines turns \\(\\frac{NP}{MP}\\) into \\(\\frac{\\sin\\angle BAQ}{\\sin\\angle CAQ}\\)"
+      ],
+      "images": [
+        "f84e036c2152415788991bfe175f66c211f0381783f090962956cca9a5b4c008"
+      ]
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": [
+      "f84e036c2152415788991bfe175f66c211f0381783f090962956cca9a5b4c008"
+    ]
+  }
+}

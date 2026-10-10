@@ -1,0 +1,64 @@
+{
+  "id": "prob.hmmt-nov-guts-2016-p28",
+  "title": "2016 HMMT November Guts Problem 28",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.circle-geometry",
+      "label": "Circle geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.probability",
+      "label": "Probability",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2016,
+    "number": 28
+  },
+  "difficulty": {
+    "course": 54.4,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "The numbers \\(1-10\\) are written in a circle randomly. Find the expected number of numbers which are at least 2 larger than an adjacent number.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-guts-2016-p28.hmmt",
+      "kind": "proof-sketch",
+      "text": "## Answer: \\(\\frac{17}{3}\\)\n\nFor \\(1 \\leq i \\leq 10\\), let \\(X_{i}\\) be the random variable that is 1 if the \\(i\\) in the circle is at least 2 larger than one of its neighbors, and 0 otherwise. The random variable representing number of numbers that are at least 2 larger than one of their neighbors is then just \\(X_{1}+X_{2}+\\cdots+X_{10}\\). The expected value \\(\\mathbb{E}\\left[X_{1}+X_{2}+\\cdots+X_{10}\\right]\\) is equal to \\(\\mathbb{E}\\left[X_{1}\\right]+\\mathbb{E}\\left[X_{2}\\right]+\\cdots+\\mathbb{E}\\left[X_{10}\\right]\\) by the linearity of expectation, so it suffices to compute \\(\\mathbb{E}\\left[X_{i}\\right]\\) for all \\(1 \\leq i \\leq 10\\).\n\nBy the definition of expected value, \\(\\mathbb{E}\\left[X_{i}\\right]=1 \\cdot P\\) (the \\(i\\) is at least 2 larger than one of its neighbors \\()+0\\). \\(P(\\) it is not at least 2 larger than either of its neighbors \\()=P(\\) the \\(i\\) is at least 2 larger than one of its neighbors \\()=\\) \\(1-P\\) (the \\(i\\) is at most 1 larger than both of its neighbors). For the last probability, \\(i\\) 's neighbors must be drawn from the set \\(\\{\\max (1, i-1), \\max (1, i-1)+1, \\ldots, 10\\}\\), excluding \\(i\\) itself. This set has \\(10-\\max (1, i-1)\\) elements, so there are a total of \\(\\binom{10-\\max (1, i-1)}{2}\\) sets of two neighbors for \\(i\\) that satisfy the condition, out of a total of \\(\\binom{9}{2}\\) possible sets of two neighbors from all of the numbers that are not \\(i\\). The last probability is then \\(\\frac{\\binom{10-\\max (1, i-1)}{2}}{\\binom{9}{2}}\\), so \\(\\mathbb{E}\\left[X_{i}\\right]=1-\\frac{\\binom{10-\\max (1, i-1)}{2}}{\\binom{9}{2}}\\).\nThe final sum we wish to calculate then becomes \\(\\left(1-\\frac{\\binom{9}{2}}{\\binom{9}{2}}\\right)+\\left(1-\\frac{\\binom{9}{2}}{\\binom{9}{2}}\\right)+\\left(1-\\frac{\\binom{8}{2}}{\\binom{9}{2}}\\right)+\\left(1-\\frac{\\binom{7}{2}}{\\binom{9}{2}}\\right)+\\cdots+\\left(1-\\frac{\\binom{1}{2}}{\\binom{9}{2}}\\right)=\\) \\(0+0+\\left(1-\\frac{28}{36}\\right)+\\left(1-\\frac{21}{36}\\right)+\\cdots+(1-0)=\\frac{17}{3}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

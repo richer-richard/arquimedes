@@ -1,0 +1,86 @@
+{
+  "id": "prob.amc-12a-fall-2021-p25",
+  "title": "2021 Fall AMC 12A Problem 25",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "number-theory"
+  ],
+  "concepts": [
+    {
+      "id": "alg.modular-arithmetic",
+      "label": "Modular arithmetic",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.polynomial",
+      "label": "Polynomial",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "alg.roots-of-unity",
+      "label": "Roots of unity",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12A",
+    "year": 2021,
+    "number": 25
+  },
+  "difficulty": {
+    "course": 42.8,
+    "source": 2650,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Let \\(m \\ge 5\\) be an odd integer, and let \\(D(m)\\) denote the number of quadruples \\((a_1, a_2, a_3, a_4)\\) of distinct integers with \\(1 \\le a_i \\le m\\) for all \\(i\\) such that \\(m\\) divides \\(a_1 + a_2 + a_3 + a_4.\\) There is a polynomial \\[ q(x) = c_3x^3 + c_2x^2 + c_1x + c_0 \\] such that \\(D(m) = q(m)\\) for all odd integers \\(m \\ge 5.\\) What is \\(c_1?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(-6\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(-1\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(4\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(6\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(11\\)"
+    }
+  ],
+  "answer": {
+    "letter": "e",
+    "value": "11"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12a-fall-2021-p25.live",
+      "kind": "proof-sketch",
+      "text": "Regard \\(1,2,\\ldots,m\\) as all residues modulo \\(m.\\) Without the distinctness condition, the first three entries are arbitrary and the fourth is determined, giving \\(m^3\\) ordered quadruples.\n\nInclusion-exclusion over equal-coordinate partitions gives the remaining terms. There are \\(6\\) choices of one equal pair, each leaving \\(m^2\\) solutions, for \\(-6m^2.\\) The \\(3\\) two-pair partitions contribute \\(+3m.\\) The \\(4\\) triple-and-single partitions have inclusion-exclusion coefficient \\(2\\) and contribute \\(+8m.\\) Finally, the all-equal partition has coefficient \\(-6\\) and one solution. (Here odd \\(m\\) makes \\(2\\) and \\(4\\) invertible modulo \\(m.\\)) Therefore \\[ \\begin{aligned} D(m)&=m^3-6m^2 \\\\ &\\quad {}+11m-6 \\\\ &=(m-1)(m-2) \\\\ &\\quad {}\\cdot(m-3). \\end{aligned} \\] Hence \\(c_1=11.\\)\n\nThus, the correct answer is E.",
+      "hints": [
+        "First count all ordered residue quadruples summing to \\(0\\pmod m,\\) then use inclusion-exclusion on equal coordinates",
+        "Group collision patterns as one pair, two pairs, a triple, or all four equal; odd \\(m\\) makes multiplication by \\(2\\) and \\(4\\) invertible"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

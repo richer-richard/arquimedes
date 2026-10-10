@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-i-2020-p13",
+  "title": "2020 AIME I Problem 13",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-bisector",
+      "label": "Angle bisector",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inscribed-angle",
+      "label": "Inscribed angle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2020,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 63.9,
+    "source": 3160,
+    "mohs": null
+  },
+  "estimatedMinutes": 18,
+  "statement": "Point \\(D\\) lies on side \\(\\overline{BC}\\) of \\(\\triangle ABC\\) so that \\(\\overline{AD}\\) bisects \\(\\angle BAC.\\) The perpendicular bisector of \\(\\overline{AD}\\) intersects the bisectors of \\(\\angle ABC\\) and \\(\\angle ACB\\) in points \\(E\\) and \\(F,\\) respectively. Given that \\(AB = 4,\\) \\(BC = 5,\\) and \\(CA = 6,\\) the area of \\(\\triangle AEF\\) can be written as \\(\\frac{m\\sqrt{n}}{p},\\) where \\(m\\) and \\(p\\) are relatively prime positive integers, and \\(n\\) is a positive integer not divisible by the square of any prime. Find \\(m + n + p.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "36",
+    "value": "36"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2020-p13.live",
+      "kind": "proof-sketch",
+      "text": "In triangle \\(ABD,\\) the internal bisector of the angle at \\(B\\) meets the circumcircle of \\(ABD\\) again at the midpoint of arc \\(AD\\) not containing \\(B,\\) and that arc midpoint lies on the perpendicular bisector of \\(\\overline{AD}\\) — so \\(E\\) is exactly that arc midpoint. The inscribed angles \\(\\angle EAD\\) and \\(\\angle EBD\\) subtend the same arc \\(ED,\\) so \\(\\angle EAD = \\frac{B}{2}.\\) Similarly \\(\\angle FAD = \\frac{C}{2},\\) and \\(E, F\\) lie on opposite sides of line \\(AD.\\)\n\nLet \\(M\\) be the midpoint of \\(\\overline{AD}.\\) In right triangles \\(AME\\) and \\(AMF,\\) \\(ME = AM\\tan\\frac{B}{2}\\) and \\(MF = AM\\tan\\frac{C}{2},\\) so \\(EF = AM\\left(\\tan\\frac{B}{2} + \\tan\\frac{C}{2}\\right),\\) while the distance from \\(A\\) to line \\(EF\\) is \\(AM.\\) Hence \\([AEF]\\) \\(= \\frac{1}{2}AM^2\\left(\\tan\\frac{B}{2} + \\tan\\frac{C}{2}\\right).\\)\n\nHere \\(BD = 2\\) and \\(DC = 3,\\) so \\(AD^2 = AB \\cdot AC - BD \\cdot DC\\) \\(= 24 - 6\\) \\(= 18\\) and \\(AM^2 = \\frac{9}{2}.\\) The law of cosines gives \\(\\cos B = \\frac{1}{8}\\) and \\(\\cos C = \\frac{3}{4},\\) so \\(\\tan\\frac{B}{2} = \\sqrt{\\frac{1 - \\frac{1}{8}}{1 + \\frac{1}{8}}} = \\frac{\\sqrt{7}}{3}\\) and \\(\\tan\\frac{C}{2} = \\frac{1}{\\sqrt{7}},\\) with sum \\(\\frac{10\\sqrt{7}}{21}.\\) The area is \\(\\frac{1}{2} \\cdot \\frac{9}{2} \\cdot \\frac{10\\sqrt{7}}{21} = \\frac{15\\sqrt{7}}{14},\\) so \\(m + n + p = 15 + 7 + 14 = 36.\\)",
+      "hints": [
+        "In triangle \\(ABD,\\) the bisector from \\(B\\) meets the perpendicular bisector of \\(AD\\) at the arc midpoint of \\(AD,\\) so \\(\\angle EAD = \\frac{B}{2};\\) similarly \\(\\angle FAD = \\frac{C}{2}.\\)",
+        "With \\(M\\) the midpoint of \\(\\overline{AD},\\) the area is \\(\\frac{1}{2}AM^2\\left(\\tan\\frac{B}{2} + \\tan\\frac{C}{2}\\right),\\) and \\(AD^2 = AB \\cdot AC - BD \\cdot DC.\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

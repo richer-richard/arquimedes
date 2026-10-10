@@ -1,0 +1,70 @@
+{
+  "id": "prob.hmmt-feb-combinatorics-2010-p7",
+  "title": "2010 HMMT February Combinatorics Problem 7",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area-and-volume",
+      "label": "Area and volume",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2010,
+    "number": 7
+  },
+  "difficulty": {
+    "course": 92.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For each integer \\(x\\) with \\(1 \\leq x \\leq 10\\), a point is randomly placed at either \\((x, 1)\\) or \\((x,-1)\\) with equal probability. What is the expected area of the convex hull of these points? Note: the convex hull of a finite set is the smallest convex polygon containing it.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-combinatorics-2010-p7.hmmt",
+      "kind": "proof-sketch",
+      "text": "\\(\\frac{1793}{\\frac{1728}{128}}\\) Let \\(n=10\\). Given a random variable \\(X\\), let \\(\\mathbb{E}(X)\\) denote its expected value. If all points are collinear, then the convex hull has area zero. This happens with probability \\(\\frac{2}{2^{n}}\\) (either all points are at \\(y=1\\) or all points are at \\(y=-1\\) ). Otherwise, the points form a trapezoid with height 2 (the trapezoid is possibly degenerate, but this won't matter for our calculation). Let \\(x_{1, l}\\) be the \\(x\\)-coordinate of the left-most point at \\(y=1\\) and \\(x_{1, r}\\) be the \\(x\\)-coordinate of the right-most point at \\(y=1\\). Define \\(x_{-1, l}\\) and \\(x_{-1, r}\\) similarly for \\(y=-1\\). Then the area of the trapezoid is\n\n\\[2 \\cdot \\frac{\\left(x_{1, r}-x_{1, l}\\right)+\\left(x_{-1, r}-x_{-1, l}\\right)}{2}=x_{1, r}+x_{-1, r}-x_{1, l}-x_{-1, l} .\\]\n\nThe expected area of the convex hull (assuming the points are not all collinear) is then, by linearity of expectation,\n\n\\[\\mathbb{E}\\left(x_{1, r}+x_{-1, r}-x_{1, l}-x_{-1, l}\\right)=\\mathbb{E}\\left(x_{1, r}\\right)+\\mathbb{E}\\left(x_{-1, r}\\right)-\\mathbb{E}\\left(x_{1, l}\\right)-\\mathbb{E}\\left(x_{-1, l}\\right) .\\]\n\nWe need only compute the expected values given in the above equation. Note that \\(x_{1, r}\\) is equal to \\(k\\) with probability \\(\\frac{2^{k-1}}{2^{n}-2}\\), except that it is equal to \\(n\\) with probability \\(\\frac{2^{n-1}-1}{2^{n}-2}\\) (the denominator is \\(2^{n}-2\\) instead of \\(2^{n}\\) because we need to exclude the case where all points are collinear). Therefore, the expected value of \\(x_{1, r}\\) is equal to\n\n\\[\\begin{aligned}\n& \\frac{1}{2^{n}-2}\\left(\\left(\\sum_{k=1}^{n} k \\cdot 2^{k-1}\\right)-n \\cdot 1\\right) \\\\\n& \\quad=\\frac{1}{2^{n}-2}\\left(\\left(1+2+\\cdots+2^{n-1}\\right)+\\left(2+4+\\cdots+2^{n-1}\\right)+\\cdots+2^{n-1}-n\\right) \\\\\n& =\\frac{1}{2^{n}-2}\\left(\\left(2^{n}-1\\right)+\\left(2^{n}-2\\right)+\\cdots+\\left(2^{n}-2^{n-1}\\right)-n\\right) \\\\\n& =\\frac{1}{2^{n}-2}\\left(n \\cdot 2^{n}-\\left(2^{n}-1\\right)-n\\right) \\\\\n& \\quad=(n-1) \\frac{2^{n}-1}{2^{n}-2}\n\\end{aligned}\\]\n\nSimilarly, the expected value of \\(x_{-1, r}\\) is also \\((n-1) \\frac{2^{n}-1}{2^{n}-2}\\). By symmetry, the expected value of both \\(x_{1, l}\\) and \\(x_{-1, l}\\) is \\(n+1-(n-1) \\frac{\\frac{2}{n}^{n}-1}{2^{n}-2}\\). This says that if the points are not all collinear then the expected area is \\(2 \\cdot\\left((n-1) \\frac{2^{n}-1}{2^{n-1}-1}-(n+1)\\right)\\). So, the expected area is\n\n\\[\\begin{aligned}\n\\frac{2}{2^{n}} \\cdot 0+(1- & \\left.\\frac{2}{2^{n}}\\right) \\cdot 2 \\cdot\\left((n-1) \\frac{2^{n}-1}{2^{n-1}-1}-(n+1)\\right) \\\\\n& =2 \\cdot \\frac{2^{n-1}-1}{2^{n-1}} \\cdot\\left((n-1) \\frac{2^{n}-1}{2^{n-1}-1}-(n+1)\\right) \\\\\n& =2 \\cdot \\frac{(n-1)\\left(2^{n}-1\\right)-(n+1)\\left(2^{n-1}-1\\right)}{2^{n-1}} \\\\\n& =2 \\cdot \\frac{((2 n-2)-(n+1)) 2^{n-1}+2}{2^{n-1}} \\\\\n& =2 n-6+\\frac{1}{2^{n-3}}\n\\end{aligned}\\]\n\nPlugging in \\(n=10\\), we get \\(14+\\frac{1}{128}=\\frac{1793}{128}\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

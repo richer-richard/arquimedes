@@ -1,0 +1,92 @@
+{
+  "id": "prob.hmmt-feb-geometry-2016-p8",
+  "title": "2016 HMMT February Geometry Problem 8",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "geo.angle-chasing",
+      "label": "Angle chasing",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.calculus",
+      "label": "Calculus",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.graph-theory",
+      "label": "Graph theory",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.polygons",
+      "label": "Polygons",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.probability",
+      "label": "Probability",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.triangle-geometry",
+      "label": "Triangle geometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2016,
+    "number": 8
+  },
+  "difficulty": {
+    "course": 94.1,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For \\(i=0,1, \\ldots, 5\\) let \\(l_{i}\\) be the ray on the Cartesian plane starting at the origin, an angle \\(\\theta=i \\frac{\\pi}{3}\\) counterclockwise from the positive \\(x\\)-axis. For each \\(i\\), point \\(P_{i}\\) is chosen uniformly at random from the intersection of \\(l_{i}\\) with the unit disk. Consider the convex hull of the points \\(P_{i}\\), which will (with probability 1) be a convex polygon with \\(n\\) vertices for some \\(n\\). What is the expected value of \\(n\\) ?",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-geometry-2016-p8.hmmt",
+      "kind": "proof-sketch",
+      "text": "Answer: \\(2+4 \\ln (2)\\)\nA vertex \\(P_{i}\\) is part of the convex hull if and only if it is not contained in the triangle formed by the origin and the two adjacent vertices. Let the probability that a given vertex is contained in the aforementioned triangle be \\(p\\). By linearity of expectation, our answer is simply \\(6(1-p)\\). Say \\(\\left|P_{0}\\right|=a,\\left|P_{2}\\right|=b\\). Stewart's Theorem and the Law of Cosines give that \\(p\\) is equal to the probability that \\(\\left|P_{1}\\right|<\\sqrt{a b-a b \\frac{a^{2}+b^{2}+a b}{(a+b)^{2}}}=\\frac{a b}{a+b}\\); alternatively this is easy to derive using coordinate methods. The corresponding double integral evaluates to \\(p=\\frac{2}{3}(1-\\ln (2))\\), thus telling us our answer.",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

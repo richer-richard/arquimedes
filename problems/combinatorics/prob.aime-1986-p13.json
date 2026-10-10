@@ -1,0 +1,64 @@
+{
+  "id": "prob.aime-1986-p13",
+  "title": "1986 AIME Problem 13",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "comb.arrangements-with-restrictions",
+      "label": "Arrangements with restrictions",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.multiplication-principle",
+      "label": "Multiplication principle",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.stars-and-bars",
+      "label": "Stars and bars",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME",
+    "year": 1986,
+    "number": 13
+  },
+  "difficulty": {
+    "course": 45.1,
+    "source": 2350,
+    "mohs": null
+  },
+  "estimatedMinutes": 4,
+  "statement": "In a sequence of coin tosses, one can keep a record of instances in which a tail is immediately followed by a head, a head is immediately followed by a head, and so on. We denote these by \\(\\mathrm{TH},\\) \\(\\mathrm{HH},\\) and so on. For example, in the sequence \\(\\mathrm{HHTTHHHHTHHTTTT}\\) of \\(15\\) coin tosses, there are two \\(\\mathrm{HH},\\) three \\(\\mathrm{HT},\\) four \\(\\mathrm{TH},\\) and five \\(\\mathrm{TT}\\) subsequences. How many different sequences of \\(15\\) coin tosses contain exactly two \\(\\mathrm{HH},\\) three \\(\\mathrm{HT},\\) four \\(\\mathrm{TH},\\) and five \\(\\mathrm{TT}\\) subsequences?",
+  "answerChoices": [],
+  "answer": {
+    "letter": "560",
+    "value": "560"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-1986-p13.live",
+      "kind": "proof-sketch",
+      "text": "Since there are four \\(\\mathrm{TH}\\) transitions and three \\(\\mathrm{HT}\\) transitions, every valid sequence starts with \\(\\mathrm{T}\\) and ends with \\(\\mathrm{H}.\\) It therefore has four \\(\\mathrm{T}\\)-runs and four \\(\\mathrm{H}\\)-runs, alternating.\n\nIf the \\(\\mathrm{H}\\)-runs have total length \\(h,\\) then the number of \\(\\mathrm{HH}\\) transitions is \\(h-4.\\) Thus \\(h=6,\\) and the positive lengths of the four \\(\\mathrm{H}\\)-runs can be chosen in \\(\\binom{6-1}{4-1}=\\binom53=10\\) ways. Similarly, five \\(\\mathrm{TT}\\) transitions mean that the four \\(\\mathrm{T}\\)-runs have total length \\(9,\\) giving \\(\\binom{9-1}{4-1}=\\binom83=56\\) choices. The alternating order is fixed, so the number of sequences is \\(10\\cdot56=560.\\)",
+      "hints": [
+        "Compare the numbers of \\(\\mathrm{HT}\\) and \\(\\mathrm{TH}\\) transitions to determine the first and last tosses",
+        "Translate the \\(\\mathrm{HH}\\) and \\(\\mathrm{TT}\\) counts into totals distributed among alternating runs"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

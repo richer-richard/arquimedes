@@ -1,0 +1,70 @@
+{
+  "id": "prob.hmmt-feb-guts-2012-p20",
+  "title": "2012 HMMT February Guts Problem 20",
+  "category": "geometry",
+  "subjects": [
+    "geometry",
+    "algebra",
+    "combinatorics"
+  ],
+  "concepts": [
+    {
+      "id": "geo.coloring",
+      "label": "Coloring",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.coordinate-geometry",
+      "label": "Coordinate geometry",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "geo.inequalities",
+      "label": "Inequalities",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT February",
+    "year": 2012,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 74.6,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "Let \\(n\\) be the maximum number of bishops that can be placed on the squares of a \\(6 \\times 6\\) chessboard such that no two bishops are attacking each other. Let \\(k\\) be the number of ways to put bishops on an \\(6 \\times 6\\) chessboard such that no two bishops are attacking each other. Find \\(n+k\\). (Two bishops are considered to be attacking each other if they lie on the same diagonal. Equivalently, if we label the squares with coordinates \\((x, y)\\), with \\(1 \\leq x, y \\leq 6\\), then the bishops on \\((a, b)\\) and \\((c, d)\\) are attacking each other if and only if \\(|a-c|=|b-d|\\).)",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-feb-guts-2012-p20.hmmt",
+      "kind": "proof-sketch",
+      "text": "74 Color the square with coordinates \\((i, j)\\) black if \\(i+j\\) is odd and white otherwise, for all \\(1 \\leq i, j \\leq 6\\). Looking at the black squares only, we note that there are six distinct diagonals which run upward and to the right, but that two of them consist only of a corner square; we cannot simultaneously place bishops on both of these corner squares. Consequently, we can place at most five bishops on black squares. (This can be achieved by placing bishops on \\((1,2),(1,4),(6,1),(6,3),(6,5)\\).) If there are five bishops on black squares, there must be exactly one bishop on one of the two black corner squares, \\((6,1)\\) and \\((1,6)\\) : suppose without loss of generality that we place a bishop on \\((1,6)\\). Then, exactly one of \\((3,6)\\) and \\((1,4)\\) must also contain a bishop, and there are 2 ways to place two bishops on the four remaining black squares that are not yet under attack. Thus, we have a total of \\(2 \\cdot 2 \\cdot 2\\) possible placements on black squares.\nSimilarly, there are at most 5 bishops which can be placed on white squares and \\(2^{3}\\) ways to place them, so that \\(n=10\\) and \\(k=2^{6}\\). Finally, \\(n+k=10+2^{6}=74\\).",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

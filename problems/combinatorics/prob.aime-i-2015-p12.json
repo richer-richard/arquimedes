@@ -1,0 +1,65 @@
+{
+  "id": "prob.aime-i-2015-p12",
+  "title": "2015 AIME I Problem 12",
+  "category": "combinatorics",
+  "subjects": [
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "comb.bijection",
+      "label": "Bijection",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.combinations",
+      "label": "Combinations",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "comb.expected-value",
+      "label": "Expected value",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AIME I",
+    "year": 2015,
+    "number": 12
+  },
+  "difficulty": {
+    "course": 63.6,
+    "source": 3270,
+    "mohs": null
+  },
+  "estimatedMinutes": 15,
+  "statement": "Consider all \\(1000\\)-element subsets of the set \\(\\{1, 2, 3, \\ldots, 2015\\}.\\) From each such subset choose the least element. The arithmetic mean of all of these least elements is \\(\\frac{p}{q},\\) where \\(p\\) and \\(q\\) are relatively prime positive integers. Find \\(p + q.\\)",
+  "answerChoices": [],
+  "answer": {
+    "letter": "431",
+    "value": "431"
+  },
+  "solutions": [
+    {
+      "id": "sol.aime-i-2015-p12.live",
+      "kind": "proof-sketch",
+      "text": "A \\(1000\\)-element subset has least element \\(j\\) exactly when it contains \\(j\\) together with \\(999\\) larger elements, so \\(\\binom{2015-j}{999}\\) of the subsets have least element \\(j.\\) The mean is therefore \\(\\frac{\\sum_{j} j\\binom{2015-j}{999}}{\\binom{2015}{1000}}.\\)\n\nThe numerator counts something concrete: to build a \\(1001\\)-element subset of \\(\\{0, 1, \\ldots, 2015\\}\\) whose second-smallest element is \\(j,\\) choose its smallest element from \\(\\{0, \\ldots, j-1\\}\\) (\\(j\\) ways) and its top \\(999\\) elements from \\(\\{j+1, \\ldots, 2015\\}.\\) Summing over \\(j\\) produces every \\(1001\\)-element subset exactly once, so \\(\\sum_j j\\binom{2015-j}{999} = \\binom{2016}{1001}.\\)\n\nHence the mean is \\(\\frac{\\binom{2016}{1001}}{\\binom{2015}{1000}} = \\frac{2016}{1001} = \\frac{288}{143},\\) which is in lowest terms, and \\(p + q = 288 + 143 = 431.\\)",
+      "hints": [
+        "Exactly \\(\\binom{2015-j}{999}\\) of the subsets have least element \\(j\\)",
+        "Interpret \\(\\sum j\\binom{2015-j}{999}\\) as counting \\(1001\\)-element subsets of a \\(2016\\)-element set by their second-smallest element"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

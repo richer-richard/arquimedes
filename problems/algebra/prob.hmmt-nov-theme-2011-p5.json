@@ -1,0 +1,71 @@
+{
+  "id": "prob.hmmt-nov-theme-2011-p5",
+  "title": "2011 HMMT November Theme Problem 5",
+  "category": "algebra",
+  "subjects": [
+    "algebra",
+    "combinatorics",
+    "probability"
+  ],
+  "concepts": [
+    {
+      "id": "alg.counting",
+      "label": "Counting",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.games-and-strategy",
+      "label": "Games and strategy",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "alg.probability",
+      "label": "Probability",
+      "roles": [
+        "hidden",
+        "key"
+      ]
+    },
+    {
+      "id": "alg.sequences-and-series",
+      "label": "Sequences and series",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "HMMT November",
+    "year": 2011,
+    "number": 5
+  },
+  "difficulty": {
+    "course": 54.3,
+    "source": null,
+    "mohs": null
+  },
+  "estimatedMinutes": null,
+  "statement": "For any finite sequence of positive integers \\(\\pi\\), let \\(S(\\pi)\\) be the number of strictly increasing subsequences in \\(\\pi\\) with length 2 or more. For example, in the sequence \\(\\pi=\\{3,1,2,4\\}\\), there are five increasing sub-sequences: \\(\\{3,4\\},\\{1,2\\},\\{1,4\\},\\{2,4\\}\\), and \\(\\{1,2,4\\}\\), so \\(S(\\pi)=5\\). In an eight-player game of Fish, Joy is dealt six cards of distinct values, which she puts in a random order \\(\\pi\\) from left to right in her hand. Determine\n\n\\[\\sum_{\\pi} S(\\pi)\\]\n\nwhere the sum is taken over all possible orders \\(\\pi\\) of the card values.",
+  "answerChoices": [],
+  "answer": {
+    "letter": null,
+    "value": null
+  },
+  "solutions": [
+    {
+      "id": "sol.hmmt-nov-theme-2011-p5.hmmt",
+      "kind": "proof-sketch",
+      "text": "8287 For each subset of Joy's set of cards, we compute the number of orders of cards in which the cards in the subset are arranged in increasing order. When we sum over all subsets of Joy's cards, we will obtain the desired sum.\nConsider any subset of \\(k\\) cards. The probability that they are arranged in increasing order is precisely \\(1 / k\\) ! (since we can form a \\(k!\\)-to- 1 correspondence between all possible orders and orders in which the cards in our subset are in increasing order), and there are \\(6!=720\\) total arrangements so exactly \\(720 / k\\) ! of them give an increasing subsequence in the specified cards. Now for any for \\(k=2,3,4,5,6\\), we have \\(\\binom{6}{k}\\) subsets of \\(k\\) cards, so we sum to get\n\n\\[\\sum_{\\pi} S(\\pi)=\\sum_{k=2}^{6}\\binom{6}{k} \\cdot \\frac{6!}{k!}=8287\\]",
+      "hints": [],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}

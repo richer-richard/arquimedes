@@ -1,0 +1,87 @@
+{
+  "id": "prob.amc-12b-2021-p24",
+  "title": "2021 AMC 12B Problem 24",
+  "category": "geometry",
+  "subjects": [
+    "geometry"
+  ],
+  "concepts": [
+    {
+      "id": "geo.area",
+      "label": "Area",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.parallelogram",
+      "label": "Parallelogram",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "geo.trigonometry",
+      "label": "Trigonometry",
+      "roles": [
+        "derived"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 12B",
+    "year": 2021,
+    "number": 24
+  },
+  "difficulty": {
+    "course": 48.5,
+    "source": 2480,
+    "mohs": null
+  },
+  "estimatedMinutes": 5,
+  "statement": "Let \\(ABCD\\) be a parallelogram with area \\(15.\\) Points \\(P\\) and \\(Q\\) are the projections of \\(A\\) and \\(C,\\) respectively, onto the line \\(BD;\\) and points \\(R\\) and \\(S\\) are the projections of \\(B\\) and \\(D,\\) respectively, onto the line \\(AC.\\) See the figure, which also shows the relative locations of these points.\n\nSuppose \\(PQ=6\\) and \\(RS=8,\\) and let \\(d\\) denote the length of \\(\\overline{BD},\\) the longer diagonal of \\(ABCD.\\) Then \\(d^2\\) can be written in the form \\(m+n\\sqrt p,\\) where \\(m,\\) \\(n,\\) and \\(p\\) are positive integers and \\(p\\) is not divisible by the square of any prime. What is \\(m+n+p?\\)",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(81\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(89\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(97\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(105\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(113\\)"
+    }
+  ],
+  "answer": {
+    "letter": "a",
+    "value": "81"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-12b-2021-p24.live",
+      "kind": "proof-sketch",
+      "text": "Let the diagonals meet at \\(O\\) at angle \\(\\theta.\\) The feet of the perpendiculars from \\(A\\) and \\(C\\) to \\(BD\\) are symmetric about \\(O,\\) so \\(PQ=AC\\cos\\theta=6;\\) likewise \\(RS=BD\\cos\\theta=8.\\)\n\nThe parallelogram’s area is \\(\\tfrac12\\cdot AC\\cdot BD\\sin\\theta=15,\\) so \\(AC\\cdot BD\\sin\\theta=30.\\) Then \\(\\dfrac{48\\sin\\theta}{\\cos^2\\theta}=30,\\) giving \\(\\dfrac{\\sin\\theta}{\\cos^2\\theta}=\\dfrac58.\\)\n\nWriting \\(s=\\sin\\theta,\\) \\(8s=5(1-s^2)\\) gives \\(s=\\dfrac{-4+\\sqrt{41}}{5},\\) so \\(\\cos^2\\theta=1-s^2=\\dfrac{8(\\sqrt{41}-4)}{25}.\\)\n\nThen \\(d^2=BD^2\\) \\(=\\dfrac{64}{\\cos^2\\theta}\\) \\(=8(\\sqrt{41}+4)\\) \\(=32+8\\sqrt{41},\\) so \\(m+n+p=32+8+41=81.\\)\n\nThus, the correct answer is A.",
+      "hints": [
+        "Let \\(\\theta\\) be the angle between the diagonals; then \\(PQ=AC\\cos\\theta\\) and \\(RS=BD\\cos\\theta\\)",
+        "The area is \\(\\tfrac12\\cdot AC\\cdot BD\\sin\\theta=15,\\) which combines with \\(AC\\cos\\theta=6,\\) \\(BD\\cos\\theta=8\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [
+      "cac6f9d089a670f4c2e30565f0d3c8efb387c680d1a56bdd73563cf0568bde49"
+    ],
+    "solutions": []
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "id": "prob.amc-8-2023-p20",
+  "title": "2023 AMC 8 Problem 20",
+  "category": "probability",
+  "subjects": [
+    "probability",
+    "problem-solving-techniques"
+  ],
+  "concepts": [
+    {
+      "id": "prob.median-data",
+      "label": "Median (data)",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.mode",
+      "label": "Mode",
+      "roles": [
+        "given"
+      ]
+    },
+    {
+      "id": "prob.optimization",
+      "label": "Optimization",
+      "roles": [
+        "derived"
+      ]
+    },
+    {
+      "id": "prob.range",
+      "label": "Range",
+      "roles": [
+        "given"
+      ]
+    }
+  ],
+  "source": {
+    "collection": "AMC 8",
+    "year": 2023,
+    "number": 20
+  },
+  "difficulty": {
+    "course": 25.9,
+    "source": 1600,
+    "mohs": null
+  },
+  "estimatedMinutes": 2,
+  "statement": "Two integers are inserted into the list \\(3,\\) \\(3,\\) \\(8,\\) \\(11,\\) \\(28\\) to double its range. The mode and median remain unchanged. What is the maximum possible sum of the two additional numbers?",
+  "answerChoices": [
+    {
+      "label": "A",
+      "text": "\\(56\\)"
+    },
+    {
+      "label": "B",
+      "text": "\\(57\\)"
+    },
+    {
+      "label": "C",
+      "text": "\\(58\\)"
+    },
+    {
+      "label": "D",
+      "text": "\\(60\\)"
+    },
+    {
+      "label": "E",
+      "text": "\\(61\\)"
+    }
+  ],
+  "answer": {
+    "letter": "d",
+    "value": "60"
+  },
+  "solutions": [
+    {
+      "id": "sol.amc-8-2023-p20.live",
+      "kind": "proof-sketch",
+      "text": "The original range is \\(28-3=25,\\) so the new range must be \\(50.\\) To keep the median \\(8,\\) one added number \\(x\\) must be less than \\(8\\) and the other, \\(y,\\) must be greater than \\(8.\\)\n\nIf \\(x\\ge3,\\) the minimum remains \\(3,\\) so the new maximum must be \\(53.\\) The value \\(x=3\\) would change the mode, so \\(x\\le7.\\) Hence \\(x+y\\le7+53=60.\\)\n\nIf \\(x<3\\) and \\(y>28,\\) then \\(y-x=50,\\) so \\(x+y=2x+50\\le54.\\) If \\(y\\le28,\\) the maximum remains \\(28,\\) forcing \\(x=-22\\) and giving an even smaller sum. Therefore no case exceeds \\(60.\\)\n\nThe values \\(x=7\\) and \\(y=53\\) preserve the mode and median and give range \\(50,\\) so the maximum sum is \\(60.\\)\n\nThus, D is the correct answer.",
+      "hints": [
+        "The original range is \\(25\\), so the new range must be \\(50\\)",
+        "To keep the median \\(8\\), add one number below \\(8\\) and one above \\(8\\)"
+      ],
+      "images": []
+    }
+  ],
+  "images": {
+    "statement": [],
+    "solutions": []
+  }
+}
