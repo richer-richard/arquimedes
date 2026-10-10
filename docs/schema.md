@@ -2,7 +2,7 @@
 
 Complete reference for every artifact in this repository.
 
-## 1. Problem JSON files — `problems/<category>/<id>.json`
+## 1. Problem JSON files: `problems/<category>/<id>.json`
 
 One file per problem, grouped by primary subject. Example:
 `problems/geometry/prob.ahsme-1952-p24.json`.
@@ -13,20 +13,20 @@ One file per problem, grouped by primary subject. Example:
 | `title` | string | Human-readable title ("1952 AHSME Problem 24"). |
 | `category` | string | Primary subject folder name. One of: `algebra`, `arithmetic`, `combinatorics`, `geometry`, `logic-foundations`, `number-theory`, `probability`, `problem-solving-techniques`, `uncategorized`. |
 | `subjects` | string[] | All subjects assigned to the problem (superset of `category`). |
-| `concepts` | object[] | Fine-grained concept tags: `{id, label, roles[]}`. 873 distinct concept ids exist; `roles` is `given` and/or `derived`. Example id: `geo.angle-chasing`. |
+| `concepts` | object[] | Fine-grained concept tags: `{id, label, roles[]}`. 873 distinct concept ids exist. `roles` is `given` and/or `derived`. Example id: `geo.angle-chasing`. |
 | `source.collection` | string | Competition: `AHSME`, `AMC 8`, `AMC 10A/B`, `AMC 12A/B`, `AIME I/II`, `USAMO`, `IMO`, `HMMT February`, `HMMT November`, `HMMT Invitational`, `USA TST`, `USA TSTST`, … |
-| `source.year` | int \\| null | 1950–2026. |
-| `source.number` | int \\| string \\| null | Problem number within its contest. |
-| `difficulty.course` | float \\| null | Course-calibrated difficulty score (roughly 0–100). |
-| `difficulty.source` | float \\| null | Source rating (AoPS-style scale, e.g. 840–3000+). |
-| `difficulty.mohs` | float \\| null | Mohs-scale hardness where present. |
-| `estimatedMinutes` | number \\| null | Estimated solve time. |
+| `source.year` | int \| null | 1950–2026. |
+| `source.number` | int \| string \| null | Problem number within its contest. |
+| `difficulty.course` | float \| null | Course-calibrated difficulty score (roughly 0–100). |
+| `difficulty.source` | float \| null | Source rating (AoPS-style scale, e.g. 840–3000+). |
+| `difficulty.mohs` | float \| null | Mohs-scale hardness where present. |
+| `estimatedMinutes` | number \| null | Estimated solve time. |
 | `statement` | string | Problem statement. Raw LaTeX, see §3. |
 | `answerChoices` | object[] | `[{label: "A", text: "..."}]`. Empty for non-multiple-choice problems. Labels are uppercase letters. |
-| `answer.letter` | string \\| null | Lowercase choice letter (`"b"`). For answer-only contests (AIME) this holds the numeric value string instead. |
-| `answer.value` | string \\| null | Exact answer value as a string (`"117/2"`, `"60"`). |
+| `answer.letter` | string \| null | Lowercase choice letter (`"b"`). For answer-only contests (AIME) this holds the numeric value string instead. |
+| `answer.value` | string \| null | Exact answer value as a string (`"117/2"`, `"60"`). |
 | `solutions` | object[] | 0 or 1 solutions per problem (see below). |
-| `images.statement` | string[] | SHA-256 hashes of statement diagrams → `images/<hash>.svg`. |
+| `images.statement` | string[] | SHA-256 hashes of statement diagrams, stored at `images/<hash>.svg`. |
 | `images.solutions` | string[] | Same, for solution diagrams. |
 
 ### Solution objects
@@ -41,9 +41,9 @@ One file per problem, grouped by primary subject. Example:
 
 14 problems have a statement but no solution record.
 Proof contests (USAMO, IMO, most HMMT February) legitimately have
-`answer.letter/value = null` — the solution text *is* the deliverable.
+`answer.letter/value = null`. The solution text *is* the deliverable.
 
-## 2. SQLite — `data/problems.sqlite`
+## 2. SQLite: `data/problems.sqlite`
 
 ```
 problems(id, title, category, subjects, concepts,
@@ -59,7 +59,7 @@ problem_images(problem_id, image_hash, role)     PK (problem_id, image_hash, rol
 ```
 
 - JSON-typed columns (`subjects`, `concepts`, `hints`, `images`, `metadata`)
-  are stored as JSON text — parse with `json.loads`.
+  are stored as JSON text. Parse with `json.loads`.
 - `metadata` preserves remaining catalog fields (`tags`, `reviewState`,
   `importOrigin`, …) when non-empty.
 - Indexes: `problems(category)`, `problems(source_collection, source_year)`.
@@ -72,24 +72,25 @@ with these delimiters:
 - inline: `\(...\)`
 - display: `\[...\]`
 
-Nothing has been normalized or re-rendered; strings are the exact LaTeX
-source. In JSON files backslashes are escaped (`\\(`);
-after `json.load` you hold the literal LaTeX string.
+Nothing has been normalized or re-rendered. Strings are the exact LaTeX
+source. In JSON files backslashes are escaped (`\\(`), so after `json.load`
+you hold the literal LaTeX string.
 
 To render (web): KaTeX auto-render with
 `delimiters: [{left: "\\(", right: "\\)", display: false}, {left: "\\[", right: "\\]", display: true}]`.
 
 To render (matplotlib/markdown): strip or convert the delimiters first.
 
-## 4. Images — `images/<sha256>.svg`
+## 4. Images: `images/<sha256>.svg`
 
 - Plain SVG 1.1, self-contained. No external references: every glyph path the
   diagram uses is inlined into the file's own `<defs>` (ids `d0…dN`).
-- Filenames are content hashes — immutable and deduplicated. A problem
-  references an image by hash; the same image may back several problems.
+- Filenames are content hashes, so they are immutable and deduplicated. A
+  problem references an image by hash, and the same image may back several
+  problems.
 - Sizes: median ~8 KB, max ~219 KB. Git LFS deliberately not used.
 
-## 5. Index — `data/index.json`
+## 5. Index: `data/index.json`
 
 ```jsonc
 {

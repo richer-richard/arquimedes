@@ -1,6 +1,6 @@
-# Arquimedes — Math Problem Database
+# Arquimedes: Math Problem Database
 
-A structured problem–answer database of competition mathematics.
+A structured problem-answer database of competition mathematics.
 All content has been verified beforehand.
 
 - **10,645 problems** with full statements and written solutions
@@ -14,9 +14,9 @@ All content has been verified beforehand.
 
 ## Documentation
 
-- [`docs/schema.md`](docs/schema.md) — full data dictionary: problem JSON
-  fields, SQLite schema, LaTeX convention, image format
-- [`docs/usage.md`](docs/usage.md) — Python/SQL query examples, KaTeX rendering
+- [`docs/schema.md`](docs/schema.md): full data dictionary covering the problem
+  JSON fields, the SQLite schema, the LaTeX convention, and the image format
+- [`docs/usage.md`](docs/usage.md): Python/SQL query examples, KaTeX rendering
 
 ## Layout
 
@@ -81,30 +81,30 @@ All math is stored as **raw LaTeX** with these delimiters:
 - display math: `\[...\]`
 
 To render, feed the text to KaTeX/MathJax with those delimiters enabled
-(see [`docs/usage.md`](docs/usage.md)). The JSON is UTF-8; LaTeX backslashes
+(see [`docs/usage.md`](docs/usage.md)). The JSON is UTF-8. LaTeX backslashes
 are JSON-escaped (`\\(`), so `json.load` gives you the exact LaTeX source
 string. No rendering, conversion, or normalization has been applied.
 
 ## Images
 
 - Referenced from problem JSON via `images.statement` / `images.solutions`
-  (arrays of SHA-256 hashes) → file at `images/<hash>.svg`.
-- SVGs are **standalone and self-contained** — all glyph definitions are
-  inlined in each file's `<defs>`; no external references.
-- Plain SVG files, largest is tens of KB — no Git LFS needed.
+  (arrays of SHA-256 hashes), stored at `images/<hash>.svg`.
+- SVGs are **standalone and self-contained**. All glyph definitions are
+  inlined in each file's `<defs>`, with no external references.
+- Plain SVG files, the largest only tens of KB, so no Git LFS is needed.
 
 ## SQLite
 
 `data/problems.sqlite` tables:
 
-- `problems` — one row per problem (id, title, category, subjects/concepts JSON,
+- `problems`: one row per problem (id, title, category, subjects/concepts JSON,
   source collection/year/number, difficulty scores, statement, answer
   letter/value, has_choices, images JSON, extra metadata JSON)
 - `answer_choices(problem_id, label, text)`
 - `solutions(id, problem_id, kind, text, hints JSON)`
 - `images(hash, path)` and `problem_images(problem_id, image_hash, role)`
 
-Example: all AIME problems with answers —
+For example, to get all AIME problems with answers:
 
 ```sql
 SELECT id, statement, answer_value FROM problems
@@ -113,8 +113,8 @@ WHERE source_collection LIKE 'AIME%' AND answer_value IS NOT NULL;
 
 ## Notes on data quality
 
-- Statements and solutions are clean content only — no UI boilerplate,
+- Statements and solutions are clean content only, with no UI boilerplate,
   banners, or review notices.
 - 19 empty placeholder entries (no statement content) are excluded.
-- Proof problems (USAMO/IMO/HMMT etc.) legitimately have no `answer` — the
+- Proof problems (USAMO/IMO/HMMT etc.) legitimately have no `answer`. The
   solution text is the deliverable.
