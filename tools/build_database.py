@@ -1,335 +1,250 @@
 #!/usr/bin/env python3
-"""Build the Arquimedes problem database from the raw records in raw/.
+"""Build the Arquimedes SQLite database and summary index from merged shards.
 
 Inputs:
-  raw/meta/catalog.json             problem catalog entries (metadata)
-  raw/chunks/c*.json                problem content records (statement/solutions)
-  raw/meta/manifest.json            media asset manifest (hash -> [url, [shared-def indexes]])
-  raw/media/assets/<hash>.svg       media skeleton SVGs
-  raw/media/shared-definitions.json shared SVG <path> definitions
+  problems/<slug>/shard-*.jsonl.gz    final per-dataset problem records (v2 schema)
+  images/                             diagram files (images/<sha256>.svg, olympiadbench <hash>.jpg)
 
 Outputs:
-  problems/<category>/<id>.json     one cleaned JSON file per problem
-  images/<hash>.svg                 standalone SVGs (shared defs inlined)
-  data/problems.sqlite              queryable SQLite database
-  data/index.json                   category -> problem summary index
+  data/problems.sqlite                queryable SQLite database
+  data/index.json                   summary index (datasets, categories, competitions, solution kinds)
+
+Solutions with kind "model-reasoning" are excluded from the sqlite solutions
+table (they remain in the JSONL shards) to keep the database small.
 """
-import json
-import glob
-import os
-import re
-import sqlite3
 import collections
+import json
+import os
+import sqlite3
+import sys
+import time
+from pathlib import Path
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RAW = os.path.join(ROOT, "raw")
-PROBLEMS_DIR = os.path.join(ROOT, "problems")
-IMAGES_DIR = os.path.join(ROOT, "images")
-DATA_DIR = os.path.join(ROOT, "data")
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
 
-BOILERPLATE_PATTERNS = [
-    re.compile(r"Imported content\s*·\s*review pending[^\n]*", re.IGNORECASE),
-    re.compile(r"This record has not yet been independently checked[^\n]*", re.IGNORECASE),
-    re.compile(r"Check your AIME answer\.?", re.IGNORECASE),
-    re.compile(r"Check your answer\.?", re.IGNORECASE),
-]
+from tools.lib.shards import read_shards  # noqa: E402
+
+PROBLEMS_DIR = ROOT / "problems"
+IMAGES_DIR = ROOT / "images"
+DATA_DIR = ROOT / "data"
+
+BATCH = 20000
+
+# top-level record keys mapped to dedicated columns/tables; anything else
+# lands in the metadata JSON column
+KNOWN_KEYS = {
+    "id", "title", "category", "subjects", "concepts", "source", "difficulty",
+    "estimatedMinutes", "statement", "answerChoices", "answer", "solutions", "images",
+}
+
+DDL = """
+CREATE TABLE problems (
+    id TEXT PRIMARY KEY,
+    title TEXT,
+    category TEXT,
+    dataset TEXT,
+    subjects TEXT,          -- JSON array
+    concepts TEXT,          -- JSON array
+    source_collection TEXT,
+    source_year INTEGER,
+    source_number TEXT,
+    difficulty_course REAL,
+    difficulty_source REAL,
+    difficulty_mohs REAL,
+    estimated_minutes REAL,
+    statement TEXT NOT NULL,
+    answer_letter TEXT,
+    answer_value TEXT,
+    has_choices INTEGER,
+    images TEXT,            -- JSON {statement: [...hash], solutions: [...hash]}
+    metadata TEXT           -- JSON: extra record keys + sourceUrl/sourceTags/difficultyNote
+);
+CREATE TABLE answer_choices (
+    problem_id TEXT REFERENCES problems(id),
+    label TEXT,
+    text TEXT,
+    PRIMARY KEY (problem_id, label)
+);
+CREATE TABLE solutions (
+    id TEXT PRIMARY KEY,
+    problem_id TEXT REFERENCES problems(id),
+    kind TEXT,
+    text TEXT,
+    hints TEXT              -- JSON array
+);
+CREATE TABLE images (
+    hash TEXT PRIMARY KEY,
+    path TEXT NOT NULL
+);
+CREATE TABLE problem_images (
+    problem_id TEXT REFERENCES problems(id),
+    image_hash TEXT REFERENCES images(hash),
+    role TEXT,              -- 'statement' | 'solution'
+    PRIMARY KEY (problem_id, image_hash, role)
+);
+"""
+
+INDEXES = """
+CREATE INDEX idx_problems_category ON problems(category);
+CREATE INDEX idx_problems_dataset ON problems(dataset);
+CREATE INDEX idx_problems_source ON problems(source_collection, source_year);
+"""
 
 
-def clean_text(text):
-    if not isinstance(text, str):
-        return text
-    out = text
-    for pat in BOILERPLATE_PATTERNS:
-        out = pat.sub("", out)
-    out = re.sub(r"[ \t]+\n", "\n", out)
-    out = re.sub(r"\n{3,}", "\n\n", out)
-    return out.strip()
+def scan_images():
+    """Return {image_key: relative_path} for files in images/.
+
+    SVGs are keyed by bare hash (core convention: records reference the hash,
+    file is images/<hash>.svg). Other extensions (olympiadbench .jpg) are
+    keyed by full filename, matching how records reference them.
+    """
+    table = {}
+    if not IMAGES_DIR.is_dir():
+        return table
+    for path in sorted(IMAGES_DIR.iterdir()):
+        if not path.is_file() or path.name.startswith("."):
+            continue
+        key = path.stem if path.suffix == ".svg" else path.name
+        table[key] = f"images/{path.name}"
+    return table
 
 
-def load_inputs():
-    with open(os.path.join(RAW, "meta", "catalog.json")) as f:
-        catalog = json.load(f)
-    with open(os.path.join(RAW, "meta", "manifest.json")) as f:
-        manifest = json.load(f)
-    with open(os.path.join(RAW, "media", "shared-definitions.json")) as f:
-        shared_defs = json.load(f)
-    records = {}
-    for path in sorted(glob.glob(os.path.join(RAW, "chunks", "c*.json"))):
-        with open(path) as f:
-            records.update(json.load(f))
-    return catalog, manifest, shared_defs, records
-
-
-def build_standalone_svg(hash_, skeleton, references, shared_defs):
-    """Replicate the app's decodeSvg(): inject shared defs as d0..dN local ids."""
-    if references:
-        parts = []
-        for local_index, def_index in enumerate(references):
-            definition = shared_defs[def_index]
-            parts.append(definition.replace("<path", f"<path id='d{local_index}'", 1))
-        if "<defs/>" in skeleton:
-            skeleton = skeleton.replace("<defs/>", f"<defs>{''.join(parts)}</defs>", 1)
-        elif "<defs>" not in skeleton:
-            # no slot; insert right after the opening <svg ...> tag
-            skeleton = re.sub(r"(<svg[^>]*>)", r"\1<defs>" + "".join(parts) + "</defs>", skeleton, count=1)
-    return skeleton
+def record_metadata(rec):
+    meta = {k: rec[k] for k in rec if k not in KNOWN_KEYS}
+    src = rec.get("source") or {}
+    diff = rec.get("difficulty") or {}
+    if src.get("url"):
+        meta["sourceUrl"] = src["url"]
+    if src.get("tags"):
+        meta["sourceTags"] = src["tags"]
+    if diff.get("note") is not None:
+        meta["difficultyNote"] = diff["note"]
+    return meta
 
 
 def main():
-    catalog, manifest, shared_defs, records = load_inputs()
-    cat_by_id = {e["id"]: e for e in catalog}
-    media_refs = {h: (u[0], u[1]) for h, u in manifest["media"]}
-
-    os.makedirs(PROBLEMS_DIR, exist_ok=True)
-    os.makedirs(IMAGES_DIR, exist_ok=True)
-    os.makedirs(DATA_DIR, exist_ok=True)
-
-    stats = collections.Counter()
-    used_images = {}  # hash -> skeleton svg text
-    index = collections.defaultdict(list)
-
-    db_path = os.path.join(DATA_DIR, "problems.sqlite")
-    if os.path.exists(db_path):
+    t0 = time.time()
+    DATA_DIR.mkdir(exist_ok=True)
+    db_path = DATA_DIR / "problems.sqlite"
+    if db_path.exists():
         os.remove(db_path)
     db = sqlite3.connect(db_path)
-    db.executescript(
-        """
-        CREATE TABLE problems (
-            id TEXT PRIMARY KEY,
-            title TEXT,
-            category TEXT,
-            subjects TEXT,          -- JSON array
-            concepts TEXT,          -- JSON array of {id,label,roles}
-            source_collection TEXT,
-            source_year INTEGER,
-            source_number TEXT,
-            difficulty_course REAL,
-            difficulty_source REAL,
-            difficulty_mohs REAL,
-            estimated_minutes REAL,
-            statement TEXT NOT NULL,
-            answer_letter TEXT,
-            answer_value TEXT,
-            has_choices INTEGER,
-            images TEXT,            -- JSON {statement: [...hash], solutions: [...hash]}
-            metadata TEXT           -- JSON of remaining catalog fields
-        );
-        CREATE TABLE answer_choices (
-            problem_id TEXT REFERENCES problems(id),
-            label TEXT,
-            text TEXT,
-            PRIMARY KEY (problem_id, label)
-        );
-        CREATE TABLE solutions (
-            id TEXT PRIMARY KEY,
-            problem_id TEXT REFERENCES problems(id),
-            kind TEXT,
-            text TEXT,
-            hints TEXT              -- JSON array
-        );
-        CREATE TABLE images (
-            hash TEXT PRIMARY KEY,
-            path TEXT NOT NULL
-        );
-        CREATE TABLE problem_images (
-            problem_id TEXT REFERENCES problems(id),
-            image_hash TEXT REFERENCES images(hash),
-            role TEXT,              -- 'statement' | 'solution'
-            PRIMARY KEY (problem_id, image_hash, role)
-        );
-        CREATE INDEX idx_problems_category ON problems(category);
-        CREATE INDEX idx_problems_source ON problems(source_collection, source_year);
-        """
-    )
+    db.execute("PRAGMA journal_mode=OFF")
+    db.execute("PRAGMA synchronous=OFF")
+    db.executescript(DDL)
 
-    for pid, rec in sorted(records.items()):
-        prob = rec.get("problem") or {}
-        statement = clean_text(prob.get("statement") or "")
-        if not statement:
-            stats["skipped_empty_statement"] += 1
-            continue
+    image_table = scan_images()
+    db.executemany("INSERT OR IGNORE INTO images VALUES (?,?)",
+                   [(h, p) for h, p in image_table.items()])
 
-        cat_entry = cat_by_id.get(pid) or {}
-        classification = cat_entry.get("classification") or {}
-        category = classification.get("primarySubject") or "uncategorized"
-        subjects = classification.get("subjects") or ([category] if category != "uncategorized" else [])
-        elements = classification.get("elements") or []
-        concepts = [
-            {"id": e.get("id"), "label": e.get("label"), "roles": e.get("roles") or []}
-            for e in elements
-            if isinstance(e, dict)
-        ]
+    stats = collections.Counter()
+    datasets = collections.defaultdict(collections.Counter)  # slug -> category -> n
+    categories = collections.Counter()
+    competitions = collections.Counter()
+    solution_kinds = collections.Counter()
 
-        source = cat_entry.get("source") or {}
-        course_diff = (cat_entry.get("courseDifficulty") or {}).get("score")
-        source_diff = (cat_entry.get("sourceDifficulty") or {}).get("rating")
-        mohs = (cat_entry.get("mohsDifficulty") or {})
-        mohs_val = mohs.get("rating") if isinstance(mohs, dict) else None
+    prob_rows, choice_rows, sol_rows, pimg_rows = [], [], [], []
 
-        choices = [
-            {"label": c.get("label"), "text": clean_text(c.get("text") or "")}
-            for c in (prob.get("answerChoices") or [])
-        ]
+    def flush():
+        if prob_rows:
+            db.executemany("INSERT INTO problems VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", prob_rows)
+            prob_rows.clear()
+        if choice_rows:
+            db.executemany("INSERT INTO answer_choices VALUES (?,?,?)", choice_rows)
+            choice_rows.clear()
+        if sol_rows:
+            db.executemany("INSERT INTO solutions VALUES (?,?,?,?,?)", sol_rows)
+            sol_rows.clear()
+        if pimg_rows:
+            db.executemany("INSERT OR IGNORE INTO problem_images VALUES (?,?,?)", pimg_rows)
+            pimg_rows.clear()
 
-        sol_objs = []
-        answer_letter = None
-        answer_value = None
-        solution_images = []
-        for sid, s in sorted((rec.get("solutions") or {}).items()):
-            text = clean_text(s.get("solutionText") or "")
-            hints = [clean_text(h) for h in (s.get("hints") or [])]
-            sol_imgs = [h for h in (s.get("solutionDiagramIds") or []) if h in media_refs]
-            solution_images.extend(sol_imgs)
-            if not text and not sol_imgs:
-                continue
-            if answer_letter is None and s.get("answer"):
-                answer_letter = str(s["answer"]).strip().lower() or None
-            if answer_value is None and s.get("answerValue"):
-                answer_value = str(s["answerValue"]).strip() or None
-            sol_objs.append(
-                {
-                    "id": sid,
-                    "kind": s.get("solutionKind"),
-                    "text": text,
-                    "hints": hints,
-                    "images": sol_imgs,
-                }
-            )
-        # fall back to catalog-level answer if solutions carry none
-        if answer_letter is None and cat_entry.get("answer"):
-            answer_letter = str(cat_entry["answer"]).strip().lower() or None
+    dataset_dirs = sorted(d for d in PROBLEMS_DIR.iterdir() if d.is_dir())
+    for d in dataset_dirs:
+        slug = d.name
+        for rec in read_shards(d):
+            src = rec.get("source") or {}
+            diff = rec.get("difficulty") or {}
+            answer = rec.get("answer") or {}
+            images = rec.get("images") or {}
+            choices = rec.get("answerChoices") or []
+            pid = rec["id"]
 
-        stmt_images = [h for h in (prob.get("statementDiagramIds") or []) if h in media_refs]
-        for h in stmt_images + solution_images:
-            used_images.setdefault(h, None)
-
-        slim = {
-            "id": pid,
-            "title": cat_entry.get("title") or pid,
-            "category": category,
-            "subjects": subjects,
-            "concepts": concepts,
-            "source": {
-                "collection": source.get("collection"),
-                "year": source.get("year"),
-                "number": source.get("number"),
-            },
-            "difficulty": {
-                "course": course_diff,
-                "source": source_diff,
-                "mohs": mohs_val,
-            },
-            "estimatedMinutes": cat_entry.get("estimatedMinutes"),
-            "statement": statement,
-            "answerChoices": choices,
-            "answer": {"letter": answer_letter, "value": answer_value},
-            "solutions": sol_objs,
-            "images": {
-                "statement": stmt_images,
-                "solutions": sorted(set(solution_images)),
-            },
-        }
-
-        cat_dir = os.path.join(PROBLEMS_DIR, category)
-        os.makedirs(cat_dir, exist_ok=True)
-        with open(os.path.join(cat_dir, f"{pid}.json"), "w") as f:
-            json.dump(slim, f, indent=2, ensure_ascii=False)
-
-        index[category].append(
-            {
-                "id": pid,
-                "title": slim["title"],
-                "source": slim["source"],
-                "answer": answer_value or answer_letter,
-                "hasChoices": bool(choices),
-                "images": len(stmt_images) + len(set(solution_images)),
-                "difficulty": slim["difficulty"],
-            }
-        )
-
-        extra_meta = {
-            k: cat_entry.get(k)
-            for k in ("tags", "reviewState", "importOrigin", "liveMatchStatus", "references", "dataIssues")
-            if cat_entry.get(k) not in (None, "", [], {})
-        }
-        db.execute(
-            "INSERT INTO problems VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
-            (
+            prob_rows.append((
                 pid,
-                slim["title"],
-                category,
-                json.dumps(subjects, ensure_ascii=False),
-                json.dumps(concepts, ensure_ascii=False),
-                source.get("collection"),
-                source.get("year") if isinstance(source.get("year"), int) else None,
-                str(source.get("number")) if source.get("number") is not None else None,
-                course_diff,
-                source_diff,
-                mohs_val,
-                cat_entry.get("estimatedMinutes"),
-                statement,
-                answer_letter,
-                answer_value,
+                rec.get("title"),
+                rec.get("category"),
+                src.get("dataset") or slug,
+                json.dumps(rec.get("subjects") or [], ensure_ascii=False),
+                json.dumps(rec.get("concepts") or [], ensure_ascii=False),
+                src.get("collection"),
+                src.get("year") if isinstance(src.get("year"), int) else None,
+                str(src["number"]) if src.get("number") is not None else None,
+                diff.get("course"),
+                diff.get("source"),
+                diff.get("mohs"),
+                rec.get("estimatedMinutes"),
+                rec.get("statement"),
+                answer.get("letter"),
+                answer.get("value"),
                 int(bool(choices)),
-                json.dumps(slim["images"]),
-                json.dumps(extra_meta, ensure_ascii=False),
-            ),
-        )
-        for c in choices:
-            db.execute("INSERT INTO answer_choices VALUES (?,?,?)", (pid, c["label"], c["text"]))
-        for s in sol_objs:
-            db.execute(
-                "INSERT INTO solutions VALUES (?,?,?,?,?)",
-                (s["id"], pid, s["kind"], s["text"], json.dumps(s["hints"], ensure_ascii=False)),
-            )
-        stats[f"category.{category}"] += 1
-        stats["total"] += 1
+                json.dumps(images, ensure_ascii=False),
+                json.dumps(record_metadata(rec), ensure_ascii=False),
+            ))
+            for c in choices:
+                choice_rows.append((pid, c.get("label"), c.get("text")))
 
-    # write standalone SVGs for every referenced image
-    for h in sorted(used_images):
-        skel_path = os.path.join(RAW, "media", "assets", f"{h}.svg")
-        if not os.path.exists(skel_path):
-            stats["missing_image_skeleton"] += 1
-            continue
-        with open(skel_path) as f:
-            skeleton = f.read()
-        _, references = media_refs[h]
-        svg = build_standalone_svg(h, skeleton, references, shared_defs)
-        rel = f"images/{h}.svg"
-        with open(os.path.join(ROOT, rel), "w") as f:
-            f.write(svg)
-        db.execute("INSERT INTO images VALUES (?,?)", (h, rel))
-        stats["images_written"] += 1
+            for sol in rec.get("solutions") or []:
+                kind = sol.get("kind")
+                solution_kinds[kind] += 1
+                if kind == "model-reasoning":
+                    stats["solutions_excluded_model_reasoning"] += 1
+                    continue
+                sol_rows.append((
+                    sol.get("id"), pid, kind, sol.get("text"),
+                    json.dumps(sol.get("hints") or [], ensure_ascii=False),
+                ))
+                stats["solutions_kept"] += 1
 
-    # link table
-    for pid, rec in records.items():
-        prob = rec.get("problem") or {}
-        for h in prob.get("statementDiagramIds") or []:
-            if h in media_refs:
-                db.execute("INSERT OR IGNORE INTO problem_images VALUES (?,?,?)", (pid, h, "statement"))
-        for s in (rec.get("solutions") or {}).values():
-            for h in s.get("solutionDiagramIds") or []:
-                if h in media_refs:
-                    db.execute("INSERT OR IGNORE INTO problem_images VALUES (?,?,?)", (pid, h, "solution"))
+            for role, key in (("statement", "statement"), ("solution", "solutions")):
+                for h in images.get(key) or []:
+                    if h in image_table:
+                        pimg_rows.append((pid, h, role))
+                    else:
+                        stats["dangling_image_refs"] += 1
 
+            stats["problems"] += 1
+            datasets[slug][rec.get("category")] += 1
+            categories[rec.get("category")] += 1
+            if src.get("collection"):
+                competitions[src["collection"]] += 1
+
+            if len(prob_rows) >= BATCH:
+                flush()
+        flush()
+        print(f"[{slug}] inserted ({time.time() - t0:.1f}s)", flush=True)
+
+    db.executescript(INDEXES)
     db.commit()
 
-    for cat, items in index.items():
-        items.sort(key=lambda e: (e["source"].get("collection") or "", e["source"].get("year") or 0, e["id"]))
-    with open(os.path.join(DATA_DIR, "index.json"), "w") as f:
-        json.dump(
-            {
-                "totalProblems": stats["total"],
-                "categories": {cat: len(items) for cat, items in sorted(index.items())},
-                "problems": {cat: items for cat, items in sorted(index.items())},
-            },
-            f,
-            indent=1,
-            ensure_ascii=False,
-        )
+    index = {
+        "totalProblems": stats["problems"],
+        "datasets": {
+            slug: {"count": sum(cats.values()), "categories": dict(sorted(cats.items()))}
+            for slug, cats in sorted(datasets.items())
+        },
+        "categories": dict(sorted(categories.items())),
+        "competitions": dict(sorted(competitions.items(), key=lambda kv: (-kv[1], kv[0]))),
+        "solutionKinds": dict(sorted(solution_kinds.items())),
+    }
+    with open(DATA_DIR / "index.json", "w", encoding="utf-8") as fh:
+        json.dump(index, fh, indent=1, ensure_ascii=False)
 
     db.close()
+    stats["images"] = len(image_table)
     print(json.dumps(dict(stats), indent=2, sort_keys=True))
+    print(f"build time: {time.time() - t0:.1f}s")
 
 
 if __name__ == "__main__":

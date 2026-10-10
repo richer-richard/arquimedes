@@ -1,120 +1,106 @@
 # Arquimedes: Math Problem Database
 
-A structured problem-answer database of competition mathematics.
-All content has been verified beforehand.
+A structured database of competition and benchmark mathematics: **961,202
+problems** across 7 datasets, each with a full statement, answer metadata, and
+solutions in a uniform JSON schema (v2).
 
-- **10,645 problems** with full statements and written solutions
-- **10,631 solutions** (14 problems have statements but no written solution yet)
-- **27,175 answer choices** across 6,492 multiple-choice problems
-- **7,266 problems** with a verified answer (letter for MC, value for AIME-style)
-- **1,064 geometry/diagram images** as standalone SVGs
-- **18 source competitions, 1950–2026**: AHSME (1,810), HMMT February (2,606),
-  HMMT November (1,072), AMC 8/10/12 (3,600), AIME I/II (810+255),
-  USAMO (153), IMO (156), USA TST/TSTST (93), …
+- **961,202 problems** with full statements
+- **797,314 written solutions**: proof-sketch (797,274), strategy (22), answer-only (18)
+- **277,002 model-reasoning traces** (deepmath dataset, JSONL shards only)
+- **1,219 diagram images** (SVG and JPG), content-addressed by hash
+- **Competition coverage**: AHSME, AMC 8/10/12, AIME, USAMO, IMO, USA
+  TST/TSTST, HMMT, CEMC contests, OlympiadBench, and MATH
 
-## Documentation
+## Datasets
 
-- [`docs/schema.md`](docs/schema.md): full data dictionary covering the problem
-  JSON fields, the SQLite schema, the LaTeX convention, and the image format
-- [`docs/usage.md`](docs/usage.md): Python/SQL query examples, KaTeX rendering
+| dataset | contents | problems | notable fields |
+|---|---|---|---|
+| `core` | curated competition problems (AMC program, IMO, HMMT, and more) | 10,645 | concept tags, numeric difficulty ratings, hints, estimated solve time |
+| `cemc` | CEMC multiple-choice contests (Gauss, Pascal, Cayley, Fermat) | 792 | five answer choices per problem, reference URLs |
+| `olympiadbench` | OlympiadBench olympiad problems | 1,389 | diagram images (JPG) |
+| `omnimath` | Omni-MATH olympiad problems | 2,662 | difficulty rating from 1 to 9.5 |
+| `math` | MATH benchmark problems | 12,401 | difficulty levels 1 to 5 |
+| `deepmath` | DeepMath problems with reasoning traces | 92,334 | three model-reasoning traces per problem, difficulty rating 1 to 10 |
+| `numina` | NuminaMath problems, the largest dataset | 840,979 | origin tags per problem |
+
+Per-dataset category breakdowns and field notes: [`docs/datasets.md`](docs/datasets.md).
+
+## Competition coverage
+
+The `source.collection` field labels records that come from a named
+competition or benchmark. Counts per label:
+
+- AMC program (`core`): AHSME 1,810, AMC 8 1,025, AMC 10A 625, AMC 10B 625,
+  AMC 10 50, AMC 12A 625, AMC 12B 625, AMC 12 50, AIME I 405, AIME II 405,
+  AIME 255, USAMO 153, USA TST 45, USA TSTST 48
+- IMO (`core`): 156
+- HMMT (`core`): February 2,606, November 1,072, Invitational 65
+- CEMC (`cemc`): Gauss (Grade 7) 174, Gauss (Grade 8) 166, Pascal (Grade 9)
+  134, Cayley (Grade 10) 150, Fermat (Grade 11) 168
+- OlympiadBench (`olympiadbench`): 1,389
+- MATH (`math`): 12,401
+
+Records in `omnimath`, `deepmath`, and `numina` carry origin labels in
+`source.tags` instead of collection and year fields.
 
 ## Layout
 
 ```
-problems/<category>/<problem-id>.json   one JSON file per problem
-images/<sha256>.svg                     standalone diagram SVGs
-data/problems.sqlite                    queryable SQLite database
-data/index.json                         category → problem summary index
-tools/build_database.py                 rebuilds problems/, images/, data/ from raw/
-raw/                                    raw content archives (git-ignored)
+problems/<dataset>/shard-*.jsonl.gz   gzipped JSON Lines, one problem record per line
+images/<hash>.svg, images/<hash>.jpg  1,219 content-addressed diagram files
+data/index.json                       summary index (counts by dataset, category, competition)
+data/problems.sqlite                  queryable SQLite database (not committed, build it locally)
+tools/                                per-dataset converters, merge script, database builder
+docs/                                 schema, usage, and dataset documentation
 ```
 
-### Categories
+## Quickstart
 
-| category | problems |
-|---|---|
-| geometry | 3,685 |
-| algebra | 3,304 |
-| number-theory | 1,212 |
-| combinatorics | 936 |
-| uncategorized | 522 |
-| arithmetic | 483 |
-| probability | 382 |
-| logic-foundations | 66 |
-| problem-solving-techniques | 55 |
+Read a problem from a shard with the Python standard library:
 
-Category = the problem's primary subject. Multi-subject problems keep the full
-list in `subjects`. The 522 "uncategorized" problems have no primary subject
-(their concept tags are still in `concepts`).
+```python
+import gzip, json
 
-## Problem JSON schema
+with gzip.open("problems/core/shard-00000.jsonl.gz", "rt", encoding="utf-8") as fh:
+    prob = json.loads(fh.readline())
 
-```jsonc
-{
-  "id": "prob.ahsme-1952-p24",
-  "title": "1952 AHSME Problem 24",
-  "category": "geometry",
-  "subjects": ["geometry"],
-  "concepts": [{"id": "geo.area", "label": "Area", "roles": ["given"]}],
-  "source": {"collection": "AHSME", "year": 1952, "number": 24},
-  "difficulty": {"course": 30.0, "source": 1760, "mohs": null},
-  "estimatedMinutes": 2,
-  "statement": "In the figure, ... \\(AC=12.\\) ...",
-  "answerChoices": [{"label": "A", "text": "\\(75\\)"}],   // [] for non-MC
-  "answer": {"letter": "b", "value": "117/2"},            // nulls for proof problems
-  "solutions": [{
-    "id": "sol.ahsme-1952-p24.live",
-    "kind": "proof-sketch",
-    "text": "Since \\(AB=20,\\) ...",
-    "hints": ["..."],
-    "images": ["<sha256>"]
-  }],
-  "images": {"statement": ["<sha256>"], "solutions": ["<sha256>"]}
-}
+print(prob["title"])
+print(prob["statement"])               # raw LaTeX with \( \) delimiters
+print(prob["answer"])
+print(prob["solutions"][0]["text"][:200])
 ```
 
-## Math typesetting
+Build the SQLite database (takes under a minute, writes about 1.5 GB):
 
-All math is stored as **raw LaTeX** with these delimiters:
+```bash
+.venv/bin/python tools/build_database.py
+```
 
-- inline math: `\(...\)`
-- display math: `\[...\]`
-
-To render, feed the text to KaTeX/MathJax with those delimiters enabled
-(see [`docs/usage.md`](docs/usage.md)). The JSON is UTF-8. LaTeX backslashes
-are JSON-escaped (`\\(`), so `json.load` gives you the exact LaTeX source
-string. No rendering, conversion, or normalization has been applied.
-
-## Images
-
-- Referenced from problem JSON via `images.statement` / `images.solutions`
-  (arrays of SHA-256 hashes), stored at `images/<hash>.svg`.
-- SVGs are **standalone and self-contained**. All glyph definitions are
-  inlined in each file's `<defs>`, with no external references.
-- Plain SVG files, the largest only tens of KB, so no Git LFS is needed.
-
-## SQLite
-
-`data/problems.sqlite` tables:
-
-- `problems`: one row per problem (id, title, category, subjects/concepts JSON,
-  source collection/year/number, difficulty scores, statement, answer
-  letter/value, has_choices, images JSON, extra metadata JSON)
-- `answer_choices(problem_id, label, text)`
-- `solutions(id, problem_id, kind, text, hints JSON)`
-- `images(hash, path)` and `problem_images(problem_id, image_hash, role)`
-
-For example, to get all AIME problems with answers:
+Query it:
 
 ```sql
-SELECT id, statement, answer_value FROM problems
-WHERE source_collection LIKE 'AIME%' AND answer_value IS NOT NULL;
+SELECT dataset, COUNT(*) AS n
+FROM problems
+GROUP BY dataset
+ORDER BY n DESC;
 ```
 
-## Notes on data quality
+## Tools
 
-- Statements and solutions are clean content only, with no UI boilerplate,
-  banners, or review notices.
-- 19 empty placeholder entries (no statement content) are excluded.
-- Proof problems (USAMO/IMO/HMMT etc.) legitimately have no `answer`. The
-  solution text is the deliverable.
+- `tools/import_<slug>.py`: converts one dataset into validated staging
+  shards (one converter per dataset).
+- `tools/merge_datasets.py`: merges staging into the final `problems/`
+  shards, deduplicating identical statements across datasets.
+- `tools/build_database.py`: builds `data/problems.sqlite` and
+  `data/index.json` from the shards.
+- `tools/lib/`: shared helpers (v2 schema validation, shard I/O, category
+  classification, LaTeX normalization, content-addressed image storage).
+
+## Documentation
+
+- [`docs/schema.md`](docs/schema.md): full v2 record reference, shard format,
+  SQLite schema, LaTeX convention, image store, index format
+- [`docs/usage.md`](docs/usage.md): reading and streaming shards, SQL query
+  examples, reasoning traces, rebuilding from scratch
+- [`docs/datasets.md`](docs/datasets.md): per-dataset contents, field notes,
+  category distributions, deduplication rules

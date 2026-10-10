@@ -1,123 +1,172 @@
 # Data Schema
 
-Complete reference for every artifact in this repository.
+Complete reference for every artifact in this repository: the problem shards,
+the SQLite database, the LaTeX convention, the image store, and the summary
+index.
 
-## 1. Problem JSON files: `problems/<category>/<id>.json`
+## 1. Shard files: `problems/<dataset>/shard-*.jsonl.gz`
 
-One file per problem, grouped by primary subject. Example:
-`problems/geometry/prob.ahsme-1952-p24.json`.
+Problems are stored per dataset in gzipped JSON Lines shards:
+
+- one directory per dataset: `problems/core/`, `problems/cemc/`,
+  `problems/olympiadbench/`, `problems/omnimath/`, `problems/math/`,
+  `problems/deepmath/`, `problems/numina/`
+- shards are named `shard-00000.jsonl.gz`, `shard-00001.jsonl.gz`, and so on
+- each shard is gzip-compressed JSON Lines: one v2 problem record per line,
+  UTF-8, at most 10,000 records per shard
+- read with the standard library (`gzip` + `json`) or with
+  `tools/lib/shards.py` (`read_shards`)
+
+| dataset | records | contents |
+|---|---|---|
+| `core` | 10,645 | curated competition problems with written solutions |
+| `cemc` | 792 | CEMC multiple-choice contests |
+| `olympiadbench` | 1,389 | OlympiadBench olympiad problems |
+| `omnimath` | 2,662 | Omni-MATH olympiad problems |
+| `math` | 12,401 | MATH benchmark problems |
+| `deepmath` | 92,334 | DeepMath problems with reasoning traces |
+| `numina` | 840,979 | NuminaMath problems |
+
+Total: 961,202 problems. Details per dataset: [`datasets.md`](datasets.md).
+
+## 2. Problem record (v2)
+
+One JSON object per line. v2 adds four fields to the v1 record:
+`source.dataset`, `source.url`, `source.tags`, and `difficulty.note`. All
+other fields are unchanged.
 
 | field | type | notes |
 |---|---|---|
-| `id` | string | Stable id, e.g. `prob.ahsme-1952-p24`. Pattern: `prob.<collection>-<year>-p<n>`. |
-| `title` | string | Human-readable title ("1952 AHSME Problem 24"). |
-| `category` | string | Primary subject folder name. One of: `algebra`, `arithmetic`, `combinatorics`, `geometry`, `logic-foundations`, `number-theory`, `probability`, `problem-solving-techniques`, `uncategorized`. |
+| `id` | string | `prob.<dataset>-<nnnnnn>` with six digits, e.g. `prob.numina-000369`. Exception: `core` keeps legacy ids of the form `prob.<collection>-<year>-p<n>`, e.g. `prob.ahsme-1950-p10`. |
+| `title` | string | Human-readable title ("1950 AHSME Problem 10"). Empty in `math`, `deepmath`, `numina`, `olympiadbench`, and `omnimath`. |
+| `category` | string | Primary subject. One of: `algebra`, `arithmetic`, `combinatorics`, `geometry`, `logic-foundations`, `number-theory`, `probability`, `problem-solving-techniques`, `uncategorized`. |
 | `subjects` | string[] | All subjects assigned to the problem (superset of `category`). |
-| `concepts` | object[] | Fine-grained concept tags: `{id, label, roles[]}`. 873 distinct concept ids exist. `roles` is `given` and/or `derived`. Example id: `geo.angle-chasing`. |
-| `source.collection` | string | Competition: `AHSME`, `AMC 8`, `AMC 10A/B`, `AMC 12A/B`, `AIME I/II`, `USAMO`, `IMO`, `HMMT February`, `HMMT November`, `HMMT Invitational`, `USA TST`, `USA TSTST`, … |
-| `source.year` | int \| null | 1950–2026. |
+| `concepts` | object[] | Fine-grained concept tags `{id, label, roles[]}`, where `roles` contains `given` and/or `derived`. Populated in `core` only. |
+| `source.dataset` | string | **New in v2.** Dataset slug (`core`, `cemc`, `olympiadbench`, `omnimath`, `math`, `deepmath`, `numina`). |
+| `source.collection` | string \| null | Competition or benchmark label: `AHSME`, `AMC 8`, `AMC 10A/B`, `AMC 12A/B`, `AIME I/II`, `USAMO`, `IMO`, `HMMT February`, `HMMT November`, `HMMT Invitational`, `USA TST`, `USA TSTST`, the CEMC contest names, `OlympiadBench`, `MATH`. |
+| `source.year` | int \| null | Contest year where applicable. |
 | `source.number` | int \| string \| null | Problem number within its contest. |
-| `difficulty.course` | float \| null | Course-calibrated difficulty score (roughly 0–100). |
-| `difficulty.source` | float \| null | Source rating (AoPS-style scale, e.g. 840–3000+). |
-| `difficulty.mohs` | float \| null | Mohs-scale hardness where present. |
-| `estimatedMinutes` | number \| null | Estimated solve time. |
-| `statement` | string | Problem statement. Raw LaTeX, see §3. |
-| `answerChoices` | object[] | `[{label: "A", text: "..."}]`. Empty for non-multiple-choice problems. Labels are uppercase letters. |
-| `answer.letter` | string \| null | Lowercase choice letter (`"b"`). For answer-only contests (AIME) this holds the numeric value string instead. |
+| `source.url` | string \| null | **New in v2.** Reference URL. Present on `cemc` records. |
+| `source.tags` | string[] | **New in v2.** Origin labels: subject paths, contest tags, or origin buckets depending on the dataset. Empty in `core`. |
+| `difficulty.course` | float \| null | Course-calibrated difficulty, roughly 0–100. `core` only. |
+| `difficulty.source` | float \| null | Source difficulty rating. `core` only. |
+| `difficulty.mohs` | float \| null | Mohs-scale hardness. Currently null in all records. |
+| `difficulty.note` | string \| null | **New in v2.** Dataset difficulty label: `MATH Level 1` to `MATH Level 5`, `deepmath 1` to `deepmath 10`, `omnimath 1` to `omnimath 9.5`, or `Competition` (olympiadbench). |
+| `estimatedMinutes` | number \| null | Estimated solve time. `core` only. |
+| `statement` | string | Problem statement. Raw LaTeX, see §4. Never empty. |
+| `answerChoices` | object[] | `[{label, text}]` with uppercase letter labels. Empty for non-multiple-choice problems. |
+| `answer.letter` | string \| null | Lowercase choice letter (`"b"`). In `core` it may instead hold a value string for AIME-style problems (`"60"`). |
 | `answer.value` | string \| null | Exact answer value as a string (`"117/2"`, `"60"`). |
-| `solutions` | object[] | 0 or 1 solutions per problem (see below). |
-| `images.statement` | string[] | SHA-256 hashes of statement diagrams, stored at `images/<hash>.svg`. |
-| `images.solutions` | string[] | Same, for solution diagrams. |
+| `solutions` | object[] | Zero or more solutions (see below). |
+| `images.statement` | string[] | Image references for statement diagrams, see §5. |
+| `images.solutions` | string[] | Image references for solution diagrams. |
 
 ### Solution objects
 
 | field | type | notes |
 |---|---|---|
-| `id` | string | e.g. `sol.ahsme-1952-p24.live`. |
-| `kind` | string | `proof-sketch` (10,591), `strategy` (22), or `answer-only` (18). |
-| `text` | string | Full written solution, raw LaTeX. |
-| `hints` | string[] | Progressive hints (present on 6,500 problems). |
-| `images` | string[] | Diagram hashes used by this solution. |
+| `id` | string | e.g. `sol.ahsme-1950-p10.live`, `sol.deepmath-000000.r1-1`. |
+| `kind` | string | `proof-sketch` (797,274), `strategy` (22), `answer-only` (18), or `model-reasoning` (277,002). |
+| `text` | string | Solution text, raw LaTeX. |
+| `hints` | string[] | Progressive hints. Common in `core`. |
+| `images` | string[] | Diagram references used by this solution. |
 
-14 problems have a statement but no solution record.
-Proof contests (USAMO, IMO, most HMMT February) legitimately have
-`answer.letter/value = null`. The solution text *is* the deliverable.
+Notes on solutions:
 
-## 2. SQLite: `data/problems.sqlite`
+- `model-reasoning` records are long-form, exploratory step-by-step
+  reasoning traces. All of them belong to `deepmath` (three per problem).
+  They exist only in the JSONL shards and are excluded from the SQLite build.
+- Proof problems (USAMO, IMO, most HMMT February) legitimately have
+  `answer.letter` and `answer.value` set to null. The solution text is the
+  deliverable.
+- A small number of `core` problems and part of `numina` have a statement
+  but no written solution.
 
+## 3. SQLite: `data/problems.sqlite`
+
+The SQLite database is a derived artifact and is not committed to git. Build
+it with:
+
+```bash
+.venv/bin/python tools/build_database.py
 ```
-problems(id, title, category, subjects, concepts,
+
+The build takes under a minute and produces about 1.5 GB. Tables:
+
+```sql
+problems(id, title, category, dataset, subjects, concepts,
          source_collection, source_year, source_number,
          difficulty_course, difficulty_source, difficulty_mohs,
          estimated_minutes, statement, answer_letter, answer_value,
-         has_choices, images, metadata)
+         has_choices, images, metadata)          PK (id)
 answer_choices(problem_id, label, text)          PK (problem_id, label)
 solutions(id, problem_id, kind, text, hints)     PK (id)
 images(hash, path)                               PK (hash)
 problem_images(problem_id, image_hash, role)     PK (problem_id, image_hash, role)
-                                                  role ∈ {statement, solution}
+                                                  role in {statement, solution}
 ```
 
+- `problems.dataset` holds the dataset slug. Indexes exist on `category`,
+  `dataset`, and `(source_collection, source_year)`.
 - JSON-typed columns (`subjects`, `concepts`, `hints`, `images`, `metadata`)
   are stored as JSON text. Parse with `json.loads`.
-- `metadata` preserves remaining catalog fields (`tags`, `reviewState`,
-  `importOrigin`, …) when non-empty.
-- Indexes: `problems(category)`, `problems(source_collection, source_year)`.
+- `metadata` preserves record fields without a dedicated column, plus
+  `sourceUrl`, `sourceTags`, and `difficultyNote` when present.
+- `solutions` excludes `kind = "model-reasoning"`. The 277,002 reasoning
+  traces stay available in the JSONL shards.
+- `solutions` therefore holds the 797,314 written solutions: proof-sketch
+  (797,274), strategy (22), and answer-only (18).
 
-## 3. LaTeX typesetting convention
+## 4. LaTeX typesetting convention
 
-Statements, choices, solutions, and hints contain **unmodified LaTeX source**
-with these delimiters:
+Statements, choices, solutions, and hints contain **raw LaTeX source** with
+these delimiters:
 
-- inline: `\(...\)`
-- display: `\[...\]`
+- inline math: `\(...\)`
+- display math: `\[...\]`
 
-Nothing has been normalized or re-rendered. Strings are the exact LaTeX
-source. In JSON files backslashes are escaped (`\\(`), so after `json.load`
-you hold the literal LaTeX string.
+In JSON, backslashes are escaped (`\\(`), so after `json.loads` you hold the
+exact LaTeX source string.
 
-To render (web): KaTeX auto-render with
-`delimiters: [{left: "\\(", right: "\\)", display: false}, {left: "\\[", right: "\\]", display: true}]`.
+- Some imported records were normalized from `$...$` delimiters to this
+  convention.
+- Some statements contain inline `[asy]...[/asy]` diagram code blocks,
+  notably in the `math` and `omnimath` datasets.
 
-To render (matplotlib/markdown): strip or convert the delimiters first.
+To render on the web, use KaTeX or MathJax configured for these delimiters
+(see [`usage.md`](usage.md)).
 
-## 4. Images: `images/<sha256>.svg`
+## 5. Images: `images/<hash>`
 
-- Plain SVG 1.1, self-contained. No external references: every glyph path the
-  diagram uses is inlined into the file's own `<defs>` (ids `d0…dN`).
-- Filenames are content hashes, so they are immutable and deduplicated. A
-  problem references an image by hash, and the same image may back several
-  problems.
-- Sizes: median ~8 KB, max ~219 KB. Git LFS deliberately not used.
+- 1,219 content-addressed files: SVG diagrams, plus JPG diagrams for
+  `olympiadbench`.
+- A record references an SVG by its bare hash `h` (file `images/<h>.svg`)
+  and a JPG by its full filename (file `images/<h>.jpg`, reference includes
+  the extension).
+- Filenames are content hashes, so images are immutable and deduplicated.
+  The same image may back several problems.
+- SVGs are standalone and self-contained: every glyph definition is inlined
+  in the file's own `<defs>`, with no external references.
 
-## 5. Index: `data/index.json`
+## 6. Summary index: `data/index.json`
+
+`data/index.json` is a counts-only summary index, regenerated by
+`tools/build_database.py`. It has no per-problem listings.
 
 ```jsonc
 {
-  "totalProblems": 10645,
-  "categories": {"algebra": 3304, ...},
-  "problems": {
-    "<category>": [
-      {"id", "title", "source": {...}, "answer", "hasChoices",
-       "images": <count>, "difficulty": {...}}
-    ]  // sorted by collection, year, id
-  }
+  "totalProblems": 961202,
+  "datasets": {
+    "<slug>": {"count": 10645, "categories": {"<category>": 3304}}
+  },
+  "categories": {"<category>": 222346},
+  "competitions": {"<collection>": 1810},
+  "solutionKinds": {"<kind>": 797274}
 }
 ```
 
-## 6. Coverage summary
-
-| what | count |
-|---|---|
-| problems with statements | 10,645 |
-| problems with written solutions | 10,631 |
-| multiple-choice problems | 6,492 |
-| answer letters present | 7,266 |
-| answer values present | 5,650 |
-| problems with hints | 6,500 |
-| problems referencing ≥1 image | 1,065 |
-| distinct images | 1,064 |
-| source collections | 18 (1950–2026) |
-
-Excluded: 19 catalog entries that are empty placeholders (no statement
-content).
+- `datasets`: per-dataset record count and category breakdown.
+- `categories`: global category totals.
+- `competitions`: count per `source.collection` label.
+- `solutionKinds`: count per solution kind across all shards, including
+  `model-reasoning`.
