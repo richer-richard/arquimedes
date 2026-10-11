@@ -2,13 +2,14 @@
 """Import SynthLabsAI/Big-Math-RL-Verified into staging shards.
 
 Re-runnable: downloads the single parquet into raw/bigmath/ if missing (the
-dataset is gated, so the HF session cookie is read from staging/.hf_cookie at
-runtime), then converts to staging/bigmath/. The dataset has no human
-solutions, so records carry an empty solutions list.
-Usage: .venv/bin/python tools/import_bigmath.py
+dataset is gated, so a Hugging Face access token is read from the HF_TOKEN
+environment variable at runtime), then converts to staging/bigmath/. The
+dataset has no human solutions, so records carry an empty solutions list.
+Usage: HF_TOKEN=... .venv/bin/python tools/import_bigmath.py
 """
 
 import json
+import os
 import re
 import shutil
 import sys
@@ -30,7 +31,6 @@ RAW_DIR = ROOT / "raw" / SLUG
 STAGING_DIR = ROOT / "staging" / SLUG
 HF_PAGE = "https://huggingface.co/datasets/SynthLabsAI/Big-Math-RL-Verified"
 URLS = [f"{HF_PAGE}/resolve/main/data/train-00000-of-00001.parquet"]
-COOKIE_FILE = ROOT / "staging" / ".hf_cookie"
 
 CJK_RE = re.compile(r"[一-鿿]")
 
@@ -47,8 +47,10 @@ def download():
                 print(f"re-downloading corrupt {dest.name}", flush=True)
                 dest.unlink()
         print(f"downloading {url}", flush=True)
-        cookie = COOKIE_FILE.read_text(encoding="utf-8").strip()
-        req = urllib.request.Request(url, headers={"Cookie": cookie})
+        token = os.environ.get("HF_TOKEN", "").strip()
+        if not token:
+            sys.exit("HF_TOKEN is not set; the dataset is gated and requires a Hugging Face access token")
+        req = urllib.request.Request(url, headers={"Authorization": f"Bearer {token}"})
         with urllib.request.urlopen(req) as resp, open(dest, "wb") as fh:
             shutil.copyfileobj(resp, fh)
 
