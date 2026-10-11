@@ -110,3 +110,9 @@ ORDER BY n DESC;
   examples, reasoning traces, rebuilding from scratch
 - [`docs/datasets.md`](docs/datasets.md): per-dataset contents, field notes,
   category distributions, deduplication rules
+
+## License
+
+Problem data, images, and derived files are available under CC BY 4.0. The
+tools under `tools/` are available under the MIT License. See
+[LICENSE](LICENSE).

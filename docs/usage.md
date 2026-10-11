@@ -148,9 +148,9 @@ print(traces[0]["text"][:400])
 
 ## Rendering math
 
-Statements, choices, solutions, and hints are raw LaTeX with `\(...\)`
-inline and `\[...\]` display delimiters. Some imported records were
-normalized from `$...$` delimiters, and some statements contain inline
+Statements, choices, solutions, and hints are raw LaTeX. Inline math appears
+as `\(...\)` or `$...$`, display math as `\[...\]` or `$$...$$`. The pairs are
+equivalent and all four forms are valid. Some statements contain inline
 `[asy]...[/asy]` diagram code.
 
 Web (KaTeX auto-render):
@@ -163,6 +163,8 @@ Web (KaTeX auto-render):
     delimiters: [
       {left: "\\(", right: "\\)", display: false},
       {left: "\\[", right: "\\]", display: true},
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
     ],
   });
 </script>

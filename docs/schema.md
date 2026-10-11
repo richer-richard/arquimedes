@@ -122,21 +122,25 @@ problem_images(problem_id, image_hash, role)     PK (problem_id, image_hash, rol
 
 ## 4. LaTeX typesetting convention
 
-Statements, choices, solutions, and hints contain **raw LaTeX source** with
-these delimiters:
+Statements, choices, solutions, and hints contain **raw LaTeX source**. Math
+is delimited in one of these four forms:
 
-- inline math: `\(...\)`
-- display math: `\[...\]`
+- inline math: `\(...\)` or `$...$`
+- display math: `\[...\]` or `$$...$$`
+
+The pairs are equivalent: `\(...\)` and `$...$` both mean inline math, and
+`\[...\]` and `$$...$$` both mean display math. Most records use `\(...\)` and
+`\[...\]` because the import pipeline normalizes dollar delimiters to that
+form, but a small number of records keep the dollar forms. All four are valid
+and consumers should accept all of them.
 
 In JSON, backslashes are escaped (`\\(`), so after `json.loads` you hold the
-exact LaTeX source string.
+exact LaTeX source string. A literal currency dollar sign is escaped as `\$`.
 
-- Some imported records were normalized from `$...$` delimiters to this
-  convention.
 - Some statements contain inline `[asy]...[/asy]` diagram code blocks,
   notably in the `math` and `omnimath` datasets.
 
-To render on the web, use KaTeX or MathJax configured for these delimiters
+To render on the web, use KaTeX or MathJax configured for all four delimiters
 (see [`usage.md`](usage.md)).
 
 ## 5. Images: `images/<hash>`
