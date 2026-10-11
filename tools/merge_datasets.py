@@ -18,6 +18,8 @@ solution ids are regenerated as sol.<id suffix>.<old trailing token>.
 
 Re-runnable: existing problems/<slug>/ shard dirs are rewritten from staging;
 if the legacy category tree is already gone, core shards are reused as-is.
+A dataset whose staging dir is absent keeps its existing problems/<slug>/
+shards, which are re-registered in the seen set so dedupe stays exact.
 """
 
 import hashlib
@@ -178,6 +180,20 @@ def main():
 
     for slug, staging_dir, shard_size in DATASETS:
         t = time.time()
+        if not staging_dir.is_dir():
+            out_dir = PROBLEMS / slug
+            n_in = 0
+            if out_dir.is_dir():
+                for rec in read_shards(out_dir):
+                    seen.add(_digest(rec["statement"]))
+                    n_in += 1
+                note = "staging absent, reused existing shards"
+            else:
+                note = "staging absent, no existing shards"
+            report.append({"dataset": slug, "input": n_in, "dupes_dropped": 0,
+                           "final": n_in, "note": note})
+            print(f"[{slug}] reused ({time.time() - t:.1f}s)", flush=True)
+            continue
         report.append(merge_dataset(slug, staging_dir, shard_size, seen))
         print(f"[{slug}] done ({time.time() - t:.1f}s)", flush=True)
 

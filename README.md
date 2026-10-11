@@ -95,7 +95,8 @@ ORDER BY n DESC;
 - `tools/import_<slug>.py`: converts one dataset into validated staging
   shards (one converter per dataset).
 - `tools/merge_datasets.py`: merges staging into the final `problems/`
-  shards, deduplicating identical statements across datasets.
+  shards, deduplicating identical statements across datasets. Datasets
+  without staging input keep their existing shards.
 - `tools/build_database.py`: builds `data/problems.sqlite` and
   `data/index.json` from the shards.
 - `tools/lib/`: shared helpers (v2 schema validation, shard I/O, category

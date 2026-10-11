@@ -186,5 +186,7 @@ The pipeline has three stages, each re-runnable:
 ```
 
 The merge step deduplicates identical statements globally and reuses the
-existing `core` shards when present. The build step deletes and recreates
-`data/problems.sqlite` on every run.
+existing `core` shards when present. A dataset whose staging directory is
+absent keeps its existing `problems/` shards, so re-running the merge never
+requires every staging input to be present. The build step deletes and
+recreates `data/problems.sqlite` on every run.
