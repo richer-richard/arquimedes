@@ -2,6 +2,7 @@
 
 import glob as globlib
 import gzip
+import io
 import json
 import re
 from pathlib import Path
@@ -12,7 +13,11 @@ _WS_RE = re.compile(r"\s+")
 
 
 def write_shards(records, out_dir, max_records=10000):
-    """Write records to shard-NNNNN.jsonl.gz files; returns list of paths."""
+    """Write records to shard-NNNNN.jsonl.gz files; returns list of paths.
+
+    Gzip headers use mtime=0 so identical content produces identical bytes
+    (keeps git blobs stable across rebuilds).
+    """
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     paths = []
@@ -24,7 +29,9 @@ def write_shards(records, out_dir, max_records=10000):
                 if fh is not None:
                     fh.close()
                 path = out_dir / f"shard-{len(paths):05d}.jsonl.gz"
-                fh = gzip.open(path, "wt", encoding="utf-8")
+                # GzipFile given a filename owns and closes the file itself
+                gz = gzip.GzipFile(filename=str(path), mode="wb", mtime=0)
+                fh = io.TextIOWrapper(gz, encoding="utf-8")
                 paths.append(path)
                 count = 0
             fh.write(json.dumps(rec, ensure_ascii=False, separators=(",", ":")))

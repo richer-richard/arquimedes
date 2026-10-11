@@ -1,31 +1,33 @@
 # Datasets
 
-The database holds **961,202 problems** in 7 datasets. Each dataset lives in
+The database holds **1,038,963 problems** in 9 datasets. Each dataset lives in
 `problems/<slug>/` as gzipped JSONL shards and uses the shared v2 record
 schema described in [`schema.md`](schema.md).
 
 | dataset | problems | contents |
 |---|---|---|
-| `numina` | 840,979 | NuminaMath problems |
+| `numina` | 840,924 | NuminaMath problems |
 | `deepmath` | 92,334 | DeepMath problems with reasoning traces |
+| `bigmath` | 77,527 | Big-Math-RL-Verified problems with verified answers |
 | `math` | 12,401 | MATH benchmark problems |
 | `core` | 10,645 | curated competition problems |
-| `omnimath` | 2,662 | Omni-MATH olympiad problems |
+| `omnimath` | 2,640 | Omni-MATH olympiad problems |
 | `olympiadbench` | 1,389 | OlympiadBench olympiad problems |
 | `cemc` | 792 | CEMC multiple-choice contests |
+| `aops` | 311 | competition problems with community-written solutions |
 
 Global category totals (all datasets combined):
 
 | category | problems |
 |---|---|
-| uncategorized | 350,159 |
-| algebra | 222,346 |
-| geometry | 195,249 |
-| number-theory | 93,358 |
-| arithmetic | 38,706 |
-| probability | 32,231 |
-| combinatorics | 22,968 |
-| logic-foundations | 5,834 |
+| uncategorized | 376,384 |
+| algebra | 242,585 |
+| geometry | 212,970 |
+| number-theory | 99,890 |
+| arithmetic | 40,112 |
+| probability | 35,650 |
+| combinatorics | 25,036 |
+| logic-foundations | 5,985 |
 | problem-solving-techniques | 351 |
 
 `uncategorized` means no primary subject was assigned to the record.
@@ -62,6 +64,29 @@ Field notes:
 | probability | 382 |
 | logic-foundations | 66 |
 | problem-solving-techniques | 55 |
+
+## aops (311)
+
+Competition problems from the AoPS Wiki with community-written solutions.
+
+Field notes:
+
+- `source.collection` names the competition: IMO Shortlist (102), USAJMO
+  (91), Canadian MO (83), APMO (28), and Putnam (7). `source.year` and
+  `source.number` carry the contest year and problem code.
+- Most records have one or more `proof-sketch` solutions, and a few carry an
+  exact answer in `answer.value`.
+- Every record has a human-readable title and a `source.url`.
+- No numeric difficulty fields.
+
+| category | problems |
+|---|---|
+| geometry | 100 |
+| number-theory | 84 |
+| algebra | 58 |
+| combinatorics | 34 |
+| uncategorized | 33 |
+| probability | 2 |
 
 ## cemc (792)
 
@@ -106,7 +131,7 @@ Field notes:
 | combinatorics | 336 |
 | number-theory | 222 |
 
-## omnimath (2,662)
+## omnimath (2,640)
 
 Omni-MATH olympiad-level problems.
 
@@ -121,10 +146,10 @@ Field notes:
 
 | category | problems |
 |---|---|
-| algebra | 1,387 |
-| number-theory | 405 |
-| combinatorics | 387 |
-| geometry | 374 |
+| algebra | 1,382 |
+| number-theory | 400 |
+| combinatorics | 381 |
+| geometry | 368 |
 | uncategorized | 84 |
 | probability | 15 |
 | arithmetic | 10 |
@@ -179,7 +204,7 @@ Field notes:
 | logic-foundations | 88 |
 | problem-solving-techniques | 77 |
 
-## numina (840,979)
+## numina (840,924)
 
 NuminaMath problems, by far the largest dataset.
 
@@ -195,15 +220,42 @@ Field notes:
 
 | category | problems |
 |---|---|
-| uncategorized | 311,323 |
-| algebra | 182,377 |
-| geometry | 179,219 |
-| number-theory | 81,962 |
+| uncategorized | 311,319 |
+| algebra | 182,369 |
+| geometry | 179,192 |
+| number-theory | 81,949 |
 | arithmetic | 36,007 |
-| probability | 26,265 |
-| combinatorics | 17,927 |
+| probability | 26,264 |
+| combinatorics | 17,925 |
 | logic-foundations | 5,680 |
 | problem-solving-techniques | 219 |
+
+## bigmath (77,527)
+
+Big-Math-RL-Verified problems (SynthLabsAI on Hugging Face) with verified
+final answers and no written solutions.
+
+Field notes:
+
+- Nearly every record carries a verified final answer in `answer.value`.
+  There are no written solutions.
+- `difficulty.note` holds `llama8b_solve_rate <rate>`, the solve rate of a
+  Llama 8B model on the problem. Lower rates are harder.
+- `source.tags` carries the origin dataset and domain path strings, for
+  example `aops_forum` and
+  `Mathematics -> Applied Mathematics -> Statistics -> Mathematical Statistics`.
+- No titles and no collection or year fields.
+
+| category | problems |
+|---|---|
+| uncategorized | 26,196 |
+| algebra | 20,194 |
+| geometry | 17,654 |
+| number-theory | 6,466 |
+| probability | 3,418 |
+| combinatorics | 2,042 |
+| arithmetic | 1,406 |
+| logic-foundations | 151 |
 
 ## Deduplication across datasets
 
@@ -214,12 +266,14 @@ commands, so purely cosmetic differences do not create duplicates.
 Priority order:
 
 1. `core`
-2. `cemc`
-3. `olympiadbench`
-4. `omnimath`
-5. `math`
-6. `deepmath`
-7. `numina`
+2. `aops`
+3. `cemc`
+4. `olympiadbench`
+5. `omnimath`
+6. `math`
+7. `deepmath`
+8. `numina`
+9. `bigmath`
 
 `openr1` is not present as a separate dataset because its problems are fully
 contained in `numina`. Under the priority rule above, every `openr1` record

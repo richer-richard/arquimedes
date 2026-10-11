@@ -34,7 +34,7 @@ for prob in read_shards("problems/cemc"):
 
 ## Streaming large datasets
 
-The large datasets (`numina` has 840,979 records) do not fit comfortably in
+The large datasets (`numina` has 840,924 records) do not fit comfortably in
 memory as parsed objects. Stream shard files one line at a time and keep
 only what you need:
 

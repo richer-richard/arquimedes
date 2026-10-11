@@ -12,8 +12,8 @@ Outputs:
   images/                             olympiadbench images copied in (dedup by name)
 
 Dedupe is global on shards.norm_key(statement), in priority order:
-core first (core wins), then cemc, olympiadbench, omnimath, math, deepmath,
-numina, openr1. Non-core records get dense new ids make_id(slug, n) and their
+core first (core wins), then aops, cemc, olympiadbench, omnimath, math,
+deepmath, numina, bigmath, openr1. Non-core records get dense new ids make_id(slug, n) and their
 solution ids are regenerated as sol.<id suffix>.<old trailing token>.
 
 Re-runnable: existing problems/<slug>/ shard dirs are rewritten from staging;
@@ -40,12 +40,14 @@ STAGING = ROOT / "staging"
 CORE_SHARD_SIZE = 10000
 # priority order: (slug, staging dir, shard size) — shard sizes preserve staging limits
 DATASETS = [
+    ("aops", STAGING / "aops", 10000),
     ("cemc", STAGING / "official" / "cemc-mc", 10000),
     ("olympiadbench", STAGING / "olympiadbench", 10000),
     ("omnimath", STAGING / "omnimath", 10000),
     ("math", STAGING / "math", 10000),
     ("deepmath", STAGING / "deepmath", 500),
     ("numina", STAGING / "numina", 10000),
+    ("bigmath", STAGING / "bigmath", 10000),
     ("openr1", STAGING / "openr1", 250),
 ]
 

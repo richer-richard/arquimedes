@@ -8,9 +8,10 @@ index.
 
 Problems are stored per dataset in gzipped JSON Lines shards:
 
-- one directory per dataset: `problems/core/`, `problems/cemc/`,
-  `problems/olympiadbench/`, `problems/omnimath/`, `problems/math/`,
-  `problems/deepmath/`, `problems/numina/`
+- one directory per dataset: `problems/core/`, `problems/aops/`,
+  `problems/cemc/`, `problems/olympiadbench/`, `problems/omnimath/`,
+  `problems/math/`, `problems/deepmath/`, `problems/numina/`,
+  `problems/bigmath/`
 - shards are named `shard-00000.jsonl.gz`, `shard-00001.jsonl.gz`, and so on
 - each shard is gzip-compressed JSON Lines: one v2 problem record per line,
   UTF-8, at most 10,000 records per shard
@@ -20,14 +21,16 @@ Problems are stored per dataset in gzipped JSON Lines shards:
 | dataset | records | contents |
 |---|---|---|
 | `core` | 10,645 | curated competition problems with written solutions |
+| `aops` | 311 | competition problems with community-written solutions |
 | `cemc` | 792 | CEMC multiple-choice contests |
 | `olympiadbench` | 1,389 | OlympiadBench olympiad problems |
-| `omnimath` | 2,662 | Omni-MATH olympiad problems |
+| `omnimath` | 2,640 | Omni-MATH olympiad problems |
 | `math` | 12,401 | MATH benchmark problems |
 | `deepmath` | 92,334 | DeepMath problems with reasoning traces |
-| `numina` | 840,979 | NuminaMath problems |
+| `numina` | 840,924 | NuminaMath problems |
+| `bigmath` | 77,527 | Big-Math-RL-Verified problems with verified answers |
 
-Total: 961,202 problems. Details per dataset: [`datasets.md`](datasets.md).
+Total: 1,038,963 problems. Details per dataset: [`datasets.md`](datasets.md).
 
 ## 2. Problem record (v2)
 
@@ -38,20 +41,20 @@ other fields are unchanged.
 | field | type | notes |
 |---|---|---|
 | `id` | string | `prob.<dataset>-<nnnnnn>` with six digits, e.g. `prob.numina-000369`. Exception: `core` keeps legacy ids of the form `prob.<collection>-<year>-p<n>`, e.g. `prob.ahsme-1950-p10`. |
-| `title` | string | Human-readable title ("1950 AHSME Problem 10"). Empty in `math`, `deepmath`, `numina`, `olympiadbench`, and `omnimath`. |
+| `title` | string | Human-readable title ("1950 AHSME Problem 10"). Empty in `math`, `deepmath`, `numina`, `olympiadbench`, `omnimath`, and `bigmath`. |
 | `category` | string | Primary subject. One of: `algebra`, `arithmetic`, `combinatorics`, `geometry`, `logic-foundations`, `number-theory`, `probability`, `problem-solving-techniques`, `uncategorized`. |
 | `subjects` | string[] | All subjects assigned to the problem (superset of `category`). |
 | `concepts` | object[] | Fine-grained concept tags `{id, label, roles[]}`, where `roles` contains `given` and/or `derived`. Populated in `core` only. |
-| `source.dataset` | string | **New in v2.** Dataset slug (`core`, `cemc`, `olympiadbench`, `omnimath`, `math`, `deepmath`, `numina`). |
-| `source.collection` | string \| null | Competition or benchmark label: `AHSME`, `AMC 8`, `AMC 10A/B`, `AMC 12A/B`, `AIME I/II`, `USAMO`, `IMO`, `HMMT February`, `HMMT November`, `HMMT Invitational`, `USA TST`, `USA TSTST`, the CEMC contest names, `OlympiadBench`, `MATH`. |
+| `source.dataset` | string | **New in v2.** Dataset slug (`core`, `aops`, `cemc`, `olympiadbench`, `omnimath`, `math`, `deepmath`, `numina`, `bigmath`). |
+| `source.collection` | string \| null | Competition or benchmark label: `AHSME`, `AMC 8`, `AMC 10A/B`, `AMC 12A/B`, `AIME I/II`, `USAMO`, `IMO`, `HMMT February`, `HMMT November`, `HMMT Invitational`, `USA TST`, `USA TSTST`, the CEMC contest names, `OlympiadBench`, `MATH`, `IMO Shortlist`, `USAJMO`, `Canadian MO`, `APMO`, `Putnam`. |
 | `source.year` | int \| null | Contest year where applicable. |
 | `source.number` | int \| string \| null | Problem number within its contest. |
-| `source.url` | string \| null | **New in v2.** Reference URL. Present on `cemc` records. |
-| `source.tags` | string[] | **New in v2.** Origin labels: subject paths, contest tags, or origin buckets depending on the dataset. Empty in `core`. |
+| `source.url` | string \| null | **New in v2.** Reference URL. Present on `cemc`, `aops`, and `bigmath` records. |
+| `source.tags` | string[] | **New in v2.** Origin labels: subject paths, contest tags, or origin buckets depending on the dataset. Empty in `core` and `aops`. |
 | `difficulty.course` | float \| null | Course-calibrated difficulty, roughly 0–100. `core` only. |
 | `difficulty.source` | float \| null | Source difficulty rating. `core` only. |
 | `difficulty.mohs` | float \| null | Mohs-scale hardness. Currently null in all records. |
-| `difficulty.note` | string \| null | **New in v2.** Dataset difficulty label: `MATH Level 1` to `MATH Level 5`, `deepmath 1` to `deepmath 10`, `omnimath 1` to `omnimath 9.5`, or `Competition` (olympiadbench). |
+| `difficulty.note` | string \| null | **New in v2.** Dataset difficulty label: `MATH Level 1` to `MATH Level 5`, `deepmath 1` to `deepmath 10`, `omnimath 1` to `omnimath 9.5`, `Competition` (olympiadbench), or `llama8b_solve_rate <rate>` (bigmath). |
 | `estimatedMinutes` | number \| null | Estimated solve time. `core` only. |
 | `statement` | string | Problem statement. Raw LaTeX, see §4. Never empty. |
 | `answerChoices` | object[] | `[{label, text}]` with uppercase letter labels. Empty for non-multiple-choice problems. |
@@ -66,7 +69,7 @@ other fields are unchanged.
 | field | type | notes |
 |---|---|---|
 | `id` | string | e.g. `sol.ahsme-1950-p10.live`, `sol.deepmath-000000.r1-1`. |
-| `kind` | string | `proof-sketch` (797,274), `strategy` (22), `answer-only` (18), or `model-reasoning` (277,002). |
+| `kind` | string | `proof-sketch` (797,632), `strategy` (22), `answer-only` (18), or `model-reasoning` (277,002). |
 | `text` | string | Solution text, raw LaTeX. |
 | `hints` | string[] | Progressive hints. Common in `core`. |
 | `images` | string[] | Diagram references used by this solution. |
@@ -114,8 +117,8 @@ problem_images(problem_id, image_hash, role)     PK (problem_id, image_hash, rol
   `sourceUrl`, `sourceTags`, and `difficultyNote` when present.
 - `solutions` excludes `kind = "model-reasoning"`. The 277,002 reasoning
   traces stay available in the JSONL shards.
-- `solutions` therefore holds the 797,314 written solutions: proof-sketch
-  (797,274), strategy (22), and answer-only (18).
+- `solutions` therefore holds the 797,672 written solutions: proof-sketch
+  (797,632), strategy (22), and answer-only (18).
 
 ## 4. LaTeX typesetting convention
 
@@ -155,13 +158,13 @@ To render on the web, use KaTeX or MathJax configured for these delimiters
 
 ```jsonc
 {
-  "totalProblems": 961202,
+  "totalProblems": 1038963,
   "datasets": {
     "<slug>": {"count": 10645, "categories": {"<category>": 3304}}
   },
-  "categories": {"<category>": 222346},
+  "categories": {"<category>": 242585},
   "competitions": {"<collection>": 1810},
-  "solutionKinds": {"<kind>": 797274}
+  "solutionKinds": {"<kind>": 797632}
 }
 ```
 

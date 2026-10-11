@@ -1,27 +1,30 @@
 # Arquimedes: Math Problem Database
 
-A structured database of competition and benchmark mathematics: **961,202
-problems** across 7 datasets, each with a full statement, answer metadata, and
+A structured database of competition and benchmark mathematics: **1,038,963
+problems** across 9 datasets, each with a full statement, answer metadata, and
 solutions in a uniform JSON schema (v2).
 
-- **961,202 problems** with full statements
-- **797,314 written solutions**: proof-sketch (797,274), strategy (22), answer-only (18)
+- **1,038,963 problems** with full statements
+- **797,672 written solutions**: proof-sketch (797,632), strategy (22), answer-only (18)
 - **277,002 model-reasoning traces** (deepmath dataset, JSONL shards only)
 - **1,219 diagram images** (SVG and JPG), content-addressed by hash
-- **Competition coverage**: AHSME, AMC 8/10/12, AIME, USAMO, IMO, USA
-  TST/TSTST, HMMT, CEMC contests, OlympiadBench, and MATH
+- **Competition coverage**: AHSME, AMC 8/10/12, AIME, USAMO, IMO, IMO
+  Shortlist, USAJMO, Canadian MO, APMO, Putnam, USA TST/TSTST, HMMT, CEMC
+  contests, OlympiadBench, and MATH
 
 ## Datasets
 
 | dataset | contents | problems | notable fields |
 |---|---|---|---|
 | `core` | curated competition problems (AMC program, IMO, HMMT, and more) | 10,645 | concept tags, numeric difficulty ratings, hints, estimated solve time |
+| `aops` | competition problems with community-written solutions | 311 | collection, year, and problem code per record |
 | `cemc` | CEMC multiple-choice contests (Gauss, Pascal, Cayley, Fermat) | 792 | five answer choices per problem, reference URLs |
 | `olympiadbench` | OlympiadBench olympiad problems | 1,389 | diagram images (JPG) |
-| `omnimath` | Omni-MATH olympiad problems | 2,662 | difficulty rating from 1 to 9.5 |
+| `omnimath` | Omni-MATH olympiad problems | 2,640 | difficulty rating from 1 to 9.5 |
 | `math` | MATH benchmark problems | 12,401 | difficulty levels 1 to 5 |
 | `deepmath` | DeepMath problems with reasoning traces | 92,334 | three model-reasoning traces per problem, difficulty rating 1 to 10 |
-| `numina` | NuminaMath problems, the largest dataset | 840,979 | origin tags per problem |
+| `numina` | NuminaMath problems, the largest dataset | 840,924 | origin tags per problem |
+| `bigmath` | Big-Math-RL-Verified problems with verified answers | 77,527 | model solve-rate difficulty note, origin tags per problem |
 
 Per-dataset category breakdowns and field notes: [`docs/datasets.md`](docs/datasets.md).
 
@@ -37,11 +40,13 @@ competition or benchmark. Counts per label:
 - HMMT (`core`): February 2,606, November 1,072, Invitational 65
 - CEMC (`cemc`): Gauss (Grade 7) 174, Gauss (Grade 8) 166, Pascal (Grade 9)
   134, Cayley (Grade 10) 150, Fermat (Grade 11) 168
+- AoPS (`aops`): IMO Shortlist 102, USAJMO 91, Canadian MO 83, APMO 28,
+  Putnam 7
 - OlympiadBench (`olympiadbench`): 1,389
 - MATH (`math`): 12,401
 
-Records in `omnimath`, `deepmath`, and `numina` carry origin labels in
-`source.tags` instead of collection and year fields.
+Records in `omnimath`, `deepmath`, `numina`, and `bigmath` carry origin
+labels in `source.tags` instead of collection and year fields.
 
 ## Layout
 
