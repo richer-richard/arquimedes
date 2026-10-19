@@ -61,7 +61,7 @@ Memory use stays flat regardless of dataset size.
 .venv/bin/python tools/build_database.py
 ```
 
-The build takes under a minute and writes about 1.5 GB. It also regenerates
+The build takes under a minute and writes about 1.7 GB. It also regenerates
 the summary index `data/index.json`. Solutions of kind `model-reasoning`
 are excluded from the database and stay available in the JSONL shards.
 
@@ -129,6 +129,71 @@ FROM problems
 WHERE dataset = 'math'
 LIMIT 10;
 ```
+
+Filter by unified Mohs difficulty (uses `idx_problems_cat_mohs`):
+
+```sql
+SELECT id, title, difficulty_mohs, category
+FROM problems
+WHERE category = 'number-theory'
+  AND difficulty_mohs BETWEEN 6.5 AND 8.5
+ORDER BY difficulty_mohs DESC
+LIMIT 20;
+```
+
+Full-text search with FTS5 (`problems_fts`):
+
+```sql
+SELECT p.id, p.title, p.difficulty_mohs
+FROM problems_fts f
+JOIN problems p ON p.rowid = f.rowid
+WHERE problems_fts MATCH '"Cauchy-Schwarz" OR "AM-GM"'
+LIMIT 10;
+```
+
+## CLI: `arquimedes`
+
+After installing project dependencies (`uv sync`), use the `arquimedes` command
+for quick inspection of the SQLite database (build it first if needed):
+
+```bash
+uv run arquimedes stats
+uv run arquimedes search "pigeonhole"
+uv run arquimedes sample --category geometry --min-mohs 7 --limit 5
+uv run arquimedes show prob.imo-2023-p1
+```
+
+- `stats` — dataset and category counts from `data/index.json` / SQLite.
+- `search` — full-text search over problem statements and titles.
+- `sample` — random sample with optional category and Mohs filters.
+- `show` — print one problem record (statement, answer, metadata).
+
+## MCP server: `arquimedes-mcp`
+
+The Model Context Protocol server exposes search, stats, and problem lookup
+to MCP clients (Cursor, Claude Desktop, etc.):
+
+```bash
+uv run arquimedes-mcp
+```
+
+Configure your client to launch that command; it reads `data/problems.sqlite`
+and the same query paths as the CLI.
+
+## Train/eval splits: `tools/export_splits.py`
+
+Export decontaminated JSONL train and eval splits for fine-tuning or
+benchmarking without benchmark leakage:
+
+```bash
+.venv/bin/python tools/export_splits.py
+```
+
+Optional flags: `--out-dir splits` (default), `--stats-only` (print counts
+without writing files). The script defines a canonical **eval** set (MATH test,
+OlympiadBench, Omni-MATH, AoPS, and recent `core` / `cemc` contests) and a
+**train** set of remaining answerable problems that do not match eval under
+normalized statement keys or 5-gram shingle overlap.
 
 ## Working with model-reasoning traces
 

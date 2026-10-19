@@ -53,7 +53,7 @@ other fields are unchanged.
 | `source.tags` | string[] | **New in v2.** Origin labels: subject paths, contest tags, or origin buckets depending on the dataset. Empty in `core` and `aops`. |
 | `difficulty.course` | float \| null | Course-calibrated difficulty, roughly 0–100. `core` only. |
 | `difficulty.source` | float \| null | Source difficulty rating. `core` only. |
-| `difficulty.mohs` | float \| null | Mohs-scale hardness. Currently null in all records. |
+| `difficulty.mohs` | float \| null | Unified difficulty rating from `1.0` (easiest) to `10.0` (hardest IMO/Putnam olympiad), calibrated across all 9 datasets. |
 | `difficulty.note` | string \| null | **New in v2.** Dataset difficulty label: `MATH Level 1` to `MATH Level 5`, `deepmath 1` to `deepmath 10`, `omnimath 1` to `omnimath 9.5`, `Competition` (olympiadbench), or `llama8b_solve_rate <rate>` (bigmath). |
 | `estimatedMinutes` | number \| null | Estimated solve time. `core` only. |
 | `statement` | string | Problem statement. Raw LaTeX, see §4. Never empty. |
@@ -94,7 +94,7 @@ it with:
 .venv/bin/python tools/build_database.py
 ```
 
-The build takes under a minute and produces about 1.5 GB. Tables:
+The build takes under a minute and produces about 1.7 GB. Tables:
 
 ```sql
 problems(id, title, category, dataset, subjects, concepts,
@@ -110,7 +110,13 @@ problem_images(problem_id, image_hash, role)     PK (problem_id, image_hash, rol
 ```
 
 - `problems.dataset` holds the dataset slug. Indexes exist on `category`,
-  `dataset`, and `(source_collection, source_year)`.
+  `dataset`, `(source_collection, source_year)`, `difficulty_mohs`
+  (`idx_problems_mohs`), and `(category, difficulty_mohs)`
+  (`idx_problems_cat_mohs`).
+- Full-text search uses the FTS5 virtual table `problems_fts(id, title,
+  statement, source_collection)`, backed by `problems` via `content_rowid`.
+  Queries use the `MATCH` operator for sub-millisecond search over titles,
+  statements, and collection names.
 - JSON-typed columns (`subjects`, `concepts`, `hints`, `images`, `metadata`)
   are stored as JSON text. Parse with `json.loads`.
 - `metadata` preserves record fields without a dedicated column, plus
@@ -166,7 +172,7 @@ To render on the web, use KaTeX or MathJax configured for all four delimiters
   "datasets": {
     "<slug>": {"count": 10645, "categories": {"<category>": 3304}}
   },
-  "categories": {"<category>": 242585},
+  "categories": {"<category>": 386699},
   "competitions": {"<collection>": 1810},
   "solutionKinds": {"<kind>": 797632}
 }

@@ -20,17 +20,26 @@ Global category totals (all datasets combined):
 
 | category | problems |
 |---|---|
-| uncategorized | 376,384 |
-| algebra | 242,585 |
-| geometry | 212,970 |
-| number-theory | 99,890 |
-| arithmetic | 40,112 |
-| probability | 35,650 |
-| combinatorics | 25,036 |
-| logic-foundations | 5,985 |
-| problem-solving-techniques | 351 |
+| algebra | 386,699 |
+| geometry | 243,231 |
+| arithmetic | 183,930 |
+| number-theory | 129,482 |
+| probability | 38,809 |
+| combinatorics | 35,493 |
+| logic-foundations | 19,935 |
+| problem-solving-techniques | 1,225 |
+| uncategorized | 159 |
 
 `uncategorized` means no primary subject was assigned to the record.
+
+Normalization notes (all 9 datasets):
+
+- `difficulty.mohs` is populated on every record on a unified `1.0` (easiest) to
+  `10.0` (hardest IMO/Putnam olympiad) scale, calibrated across datasets.
+- `answer.value` is normalized: outer `\(...\)` delimiters are stripped. In
+  `core`, multiple-choice problems store the choice text and non-MC problems
+  store the exact answer in `answer.value` (alongside `answer.letter` where
+  applicable).
 
 ## core (10,645)
 
@@ -42,12 +51,14 @@ Field notes:
 
 - The richest records in the database. Every problem has a human-readable
   title, numeric difficulty ratings (`difficulty.course` on a roughly
-  0–100 scale, `difficulty.source`), and an estimated solve time. Nearly
-  all carry concept tags, which no other dataset has.
+  0–100 scale, `difficulty.source`, and unified `difficulty.mohs`), and an
+  estimated solve time. Nearly all carry concept tags, which no other dataset
+  has.
 - Ids keep the legacy pattern `prob.<collection>-<year>-p<n>` instead of
   `prob.core-NNNNNN`.
-- `answer.letter` holds the choice letter for multiple-choice problems and a
-  value string for AIME-style problems.
+- `answer.letter` holds the choice letter for multiple-choice problems;
+  `answer.value` holds the normalized choice text or exact answer (including
+  AIME-style numeric answers).
 - Many solutions carry progressive hints.
 - The database's 22 `strategy` and 18 `answer-only` solutions all live in
   this dataset. Everything else is `proof-sketch`.
@@ -55,15 +66,15 @@ Field notes:
 
 | category | problems |
 |---|---|
-| geometry | 3,685 |
-| algebra | 3,304 |
-| number-theory | 1,212 |
-| combinatorics | 936 |
-| uncategorized | 522 |
-| arithmetic | 483 |
-| probability | 382 |
-| logic-foundations | 66 |
+| geometry | 3,790 |
+| algebra | 3,483 |
+| number-theory | 1,311 |
+| combinatorics | 961 |
+| arithmetic | 568 |
+| probability | 387 |
+| logic-foundations | 76 |
 | problem-solving-techniques | 55 |
+| uncategorized | 14 |
 
 ## aops (311)
 
@@ -77,16 +88,18 @@ Field notes:
 - Most records have one or more `proof-sketch` solutions, and a few carry an
   exact answer in `answer.value`.
 - Every record has a human-readable title and a `source.url`.
-- No numeric difficulty fields.
+- `difficulty.mohs` carries the unified cross-dataset rating.
 
 | category | problems |
 |---|---|
-| geometry | 100 |
-| number-theory | 84 |
-| algebra | 58 |
-| combinatorics | 34 |
-| uncategorized | 33 |
+| geometry | 102 |
+| number-theory | 93 |
+| algebra | 76 |
+| combinatorics | 35 |
 | probability | 2 |
+| arithmetic | 1 |
+| problem-solving-techniques | 1 |
+| uncategorized | 1 |
 
 ## cemc (792)
 
@@ -100,17 +113,17 @@ Field notes:
   written solution.
 - Nearly all problems have both `answer.letter` and `answer.value`.
 - `source.url` is set on every record, and `source.tags` labels the contest.
-- No numeric difficulty fields.
+- `difficulty.mohs` carries the unified cross-dataset rating.
 
 | category | problems |
 |---|---|
-| uncategorized | 431 |
-| number-theory | 149 |
-| geometry | 63 |
-| probability | 52 |
-| algebra | 46 |
-| arithmetic | 33 |
-| combinatorics | 18 |
+| arithmetic | 300 |
+| number-theory | 207 |
+| algebra | 109 |
+| geometry | 76 |
+| probability | 54 |
+| combinatorics | 24 |
+| uncategorized | 22 |
 
 ## olympiadbench (1,389)
 
@@ -118,7 +131,8 @@ OlympiadBench olympiad problems (`source.collection` = `OlympiadBench`).
 
 Field notes:
 
-- `difficulty.note` is `Competition` on every record.
+- `difficulty.note` is `Competition` on every record; `difficulty.mohs`
+  carries the unified cross-dataset rating.
 - Answers are exact values in `answer.value` on many records. There are no
   choice letters.
 - Diagram images are JPG files referenced by full filename.
@@ -137,7 +151,8 @@ Omni-MATH olympiad-level problems.
 
 Field notes:
 
-- `difficulty.note` carries a rating from `omnimath 1` to `omnimath 9.5`.
+- `difficulty.note` carries a rating from `omnimath 1` to `omnimath 9.5`;
+  `difficulty.mohs` maps that onto the unified `1.0`–`10.0` scale.
 - Answers are exact values in `answer.value`.
 - `source.tags` names the origin contest, for example
   `china_team_selection_test`.
@@ -147,12 +162,12 @@ Field notes:
 | category | problems |
 |---|---|
 | algebra | 1,382 |
-| number-theory | 400 |
-| combinatorics | 381 |
-| geometry | 368 |
-| uncategorized | 84 |
+| number-theory | 404 |
+| combinatorics | 382 |
+| geometry | 371 |
+| arithmetic | 79 |
 | probability | 15 |
-| arithmetic | 10 |
+| uncategorized | 7 |
 
 ## math (12,401)
 
@@ -161,7 +176,7 @@ MATH benchmark problems (`source.collection` = `MATH`).
 Field notes:
 
 - `difficulty.note` is `MATH Level 1` (easiest) through `MATH Level 5`
-  (hardest).
+  (hardest); `difficulty.mohs` maps that onto the unified scale.
 - Every problem has exactly one written solution, and nearly all have an
   exact answer in `answer.value`.
 - `source.tags` carries the MATH subject and split labels.
@@ -186,7 +201,7 @@ Field notes:
   step-by-step reasoning.
 - All problems have an exact answer in `answer.value`.
 - `difficulty.note` carries a rating from `deepmath 1` to `deepmath 10` in
-  half steps.
+  half steps; `difficulty.mohs` maps that onto the unified scale.
 - `source.tags` holds a subject path such as
   `Mathematics -> Geometry -> Plane Geometry -> Angles`.
 - The traces live only in the JSONL shards and are excluded from the SQLite
@@ -194,15 +209,15 @@ Field notes:
 
 | category | problems |
 |---|---|
-| uncategorized | 37,799 |
-| algebra | 28,480 |
-| geometry | 10,120 |
-| number-theory | 8,010 |
-| probability | 5,517 |
-| combinatorics | 2,138 |
-| arithmetic | 105 |
-| logic-foundations | 88 |
-| problem-solving-techniques | 77 |
+| algebra | 58,480 |
+| geometry | 12,327 |
+| number-theory | 9,059 |
+| probability | 6,224 |
+| combinatorics | 4,505 |
+| logic-foundations | 1,364 |
+| arithmetic | 280 |
+| problem-solving-techniques | 93 |
+| uncategorized | 2 |
 
 ## numina (840,924)
 
@@ -216,19 +231,19 @@ Field notes:
 - `source.tags` records the origin bucket of each problem (for example
   `olympiads`, `cn_k12`, `orca_math`, `synthetic`). A problem can carry
   several tags.
-- No titles and no numeric difficulty fields.
+- No titles; `difficulty.mohs` carries the unified cross-dataset rating.
 
 | category | problems |
 |---|---|
-| uncategorized | 311,319 |
-| algebra | 182,369 |
-| geometry | 179,192 |
-| number-theory | 81,949 |
-| arithmetic | 36,007 |
-| probability | 26,264 |
-| combinatorics | 17,925 |
-| logic-foundations | 5,680 |
-| problem-solving-techniques | 219 |
+| algebra | 287,286 |
+| geometry | 204,206 |
+| arithmetic | 170,552 |
+| number-theory | 109,109 |
+| probability | 27,733 |
+| combinatorics | 23,543 |
+| logic-foundations | 17,413 |
+| problem-solving-techniques | 1,076 |
+| uncategorized | 6 |
 
 ## bigmath (77,527)
 
@@ -244,18 +259,19 @@ Field notes:
 - `source.tags` carries the origin dataset and domain path strings, for
   example `aops_forum` and
   `Mathematics -> Applied Mathematics -> Statistics -> Mathematical Statistics`.
-- No titles and no collection or year fields.
+- No titles and no collection or year fields; `difficulty.mohs` is derived from
+  `difficulty.note` (`llama8b_solve_rate`).
 
 | category | problems |
 |---|---|
-| uncategorized | 26,196 |
-| algebra | 20,194 |
-| geometry | 17,654 |
-| number-theory | 6,466 |
-| probability | 3,418 |
-| combinatorics | 2,042 |
-| arithmetic | 1,406 |
-| logic-foundations | 151 |
+| algebra | 29,131 |
+| geometry | 20,571 |
+| arithmetic | 10,082 |
+| number-theory | 7,679 |
+| combinatorics | 4,481 |
+| probability | 4,394 |
+| logic-foundations | 1,082 |
+| uncategorized | 107 |
 
 ## Deduplication across datasets
 
