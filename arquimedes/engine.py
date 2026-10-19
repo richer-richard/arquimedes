@@ -38,6 +38,7 @@ class ArquimedesEngine:
         self.problems_dir = self.root / "problems"
         self._conn: sqlite3.Connection | None = None
         self._fallback_stats: dict[str, Any] | None = None
+        self._db_mode: str | None = None
 
     @property
     def has_sqlite(self) -> bool:
@@ -52,6 +53,36 @@ class ArquimedesEngine:
             self._conn.execute("PRAGMA temp_store = MEMORY")
             self._conn.execute("PRAGMA mmap_size = 268435456")
         return self._conn
+
+    @property
+    def db_mode(self) -> str:
+        """'lean' when the solutions table was left empty at build time, else 'full'."""
+        if self._db_mode is None:
+            try:
+                row = self._get_conn().execute("SELECT value FROM build_info WHERE key = 'mode'").fetchone()
+                self._db_mode = row[0] if row else "full"
+            except sqlite3.OperationalError:
+                self._db_mode = "full"
+        return self._db_mode
+
+    def _shard_record_for(self, row: sqlite3.Row) -> dict[str, Any] | None:
+        """Load the full JSONL record behind a SQLite row."""
+        if "shard_index" in row.keys() and row["shard_index"] is not None:
+            path = self.problems_dir / row["dataset"] / f"shard-{row['shard_index']:05d}.jsonl.gz"
+            if path.is_file():
+                with gzip.open(path, "rt", encoding="utf-8") as fh:
+                    line_no = 0
+                    for line in fh:
+                        line = line.strip()
+                        if not line:
+                            continue
+                        if line_no == row["shard_line"]:
+                            rec = json.loads(line)
+                            if rec.get("id") == row["id"]:
+                                return rec
+                            break
+                        line_no += 1
+        return self._find_in_shards(row["id"], dataset=row["dataset"])
 
     def get_stats(self) -> dict[str, Any]:
         index: dict[str, Any] = {}
@@ -142,8 +173,21 @@ class ArquimedesEngine:
                         (problem_id,),
                     ).fetchall()
                 ]
+                shard_rec = None
+                if (include_solutions and self.db_mode == "lean") or (include_traces and row["dataset"] == "deepmath"):
+                    shard_rec = self._shard_record_for(row)
                 solutions = []
-                if include_solutions:
+                if include_solutions and self.db_mode == "lean":
+                    for s in (shard_rec or {}).get("solutions") or []:
+                        if s.get("kind") == "model-reasoning":
+                            continue
+                        solutions.append({
+                            "id": s.get("id"),
+                            "kind": s.get("kind"),
+                            "text": s.get("text"),
+                            "hints": s.get("hints") or [],
+                        })
+                elif include_solutions:
                     for s in conn.execute(
                         "SELECT id, kind, text, hints FROM solutions WHERE problem_id = ?",
                         (problem_id,),
@@ -184,10 +228,8 @@ class ArquimedesEngine:
                     "solutions": solutions,
                     "images": images,
                 }
-                if include_traces and row["dataset"] == "deepmath":
-                    shard_rec = self._find_in_shards(problem_id, dataset="deepmath")
-                    if shard_rec:
-                        result["solutions"] = shard_rec.get("solutions") or solutions
+                if include_traces and row["dataset"] == "deepmath" and shard_rec:
+                    result["solutions"] = shard_rec.get("solutions") or solutions
                 return result
 
         return self._find_in_shards(problem_id)

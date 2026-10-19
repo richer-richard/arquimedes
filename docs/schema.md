@@ -94,20 +94,30 @@ it with:
 .venv/bin/python tools/build_database.py
 ```
 
-The build takes under a minute and produces about 1.7 GB. Tables:
+The build takes under a minute and produces about 1.7 GB. With `--lean` it
+leaves the `solutions` table empty and produces about 0.8 GB; readers then load
+solutions from the JSONL shards. Tables:
 
 ```sql
 problems(id, title, category, dataset, subjects, concepts,
          source_collection, source_year, source_number,
          difficulty_course, difficulty_source, difficulty_mohs,
          estimated_minutes, statement, answer_letter, answer_value,
-         has_choices, images, metadata)          PK (id)
+         has_choices, images, metadata,
+         shard_index, shard_line)                PK (id)
 answer_choices(problem_id, label, text)          PK (problem_id, label)
 solutions(id, problem_id, kind, text, hints)     PK (id)
 images(hash, path)                               PK (hash)
 problem_images(problem_id, image_hash, role)     PK (problem_id, image_hash, role)
                                                   role in {statement, solution}
+build_info(key, value)                           PK (key)
+                                                  keys: mode ('full' | 'lean'), built_at
 ```
+
+- `shard_index` and `shard_line` locate the source record:
+  `problems/<dataset>/shard-<shard_index as 5 digits>.jsonl.gz`, record number
+  `shard_line` (0-based, blank lines skipped). The CLI and MCP server use this
+  to read solutions in a lean build and reasoning traces in either build.
 
 - `problems.dataset` holds the dataset slug. Indexes exist on `category`,
   `dataset`, `(source_collection, source_year)`, `difficulty_mohs`

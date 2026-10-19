@@ -11,19 +11,23 @@ Outputs:
 
 Solutions with kind "model-reasoning" are excluded from the sqlite solutions
 table (they remain in the JSONL shards) to keep the database small.
+
+With --lean the solutions table is left empty (about 1.1 GB smaller). Every
+problem row records its shard and line, so readers load solutions from the
+JSONL shards instead.
+
+Usage: .venv/bin/python tools/build_database.py [--lean] [--out-dir data]
 """
+import argparse
 import collections
+import gzip
 import json
 import os
 import sqlite3
-import sys
 import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT))
-
-from tools.lib.shards import read_shards  # noqa: E402
 
 PROBLEMS_DIR = ROOT / "problems"
 IMAGES_DIR = ROOT / "images"
@@ -58,7 +62,13 @@ CREATE TABLE problems (
     answer_value TEXT,
     has_choices INTEGER,
     images TEXT,            -- JSON {statement: [...hash], solutions: [...hash]}
-    metadata TEXT           -- JSON: extra record keys + sourceUrl/sourceTags/difficultyNote
+    metadata TEXT,          -- JSON: extra record keys + sourceUrl/sourceTags/difficultyNote
+    shard_index INTEGER,    -- N in problems/<dataset dir>/shard-NNNNN.jsonl.gz
+    shard_line INTEGER      -- 0-based record position within that shard
+);
+CREATE TABLE build_info (
+    key TEXT PRIMARY KEY,
+    value TEXT
 );
 CREATE TABLE answer_choices (
     problem_id TEXT REFERENCES problems(id),
@@ -135,16 +145,40 @@ def record_metadata(rec):
     return meta
 
 
+def iter_shard_records(dataset_dir):
+    """Yield (shard_index, line, record) using the same line counting as the engine."""
+    for path in sorted(dataset_dir.glob("shard-*.jsonl.gz")):
+        shard_index = int(path.name.split(".")[0].split("-")[1])
+        with gzip.open(path, "rt", encoding="utf-8") as fh:
+            line_no = 0
+            for line in fh:
+                line = line.strip()
+                if not line:
+                    continue
+                yield shard_index, line_no, json.loads(line)
+                line_no += 1
+
+
 def main():
+    parser = argparse.ArgumentParser(description="Build data/problems.sqlite and data/index.json.")
+    parser.add_argument("--lean", action="store_true",
+                        help="leave the solutions table empty; solutions are read from the shards")
+    parser.add_argument("--out-dir", type=Path, default=DATA_DIR,
+                        help="directory for problems.sqlite and index.json (default: data/)")
+    args = parser.parse_args()
+
     t0 = time.time()
-    DATA_DIR.mkdir(exist_ok=True)
-    db_path = DATA_DIR / "problems.sqlite"
+    out_dir = args.out_dir
+    out_dir.mkdir(parents=True, exist_ok=True)
+    db_path = out_dir / "problems.sqlite"
     if db_path.exists():
         os.remove(db_path)
     db = sqlite3.connect(db_path)
     db.execute("PRAGMA journal_mode=OFF")
     db.execute("PRAGMA synchronous=OFF")
     db.executescript(DDL)
+    db.executemany("INSERT INTO build_info VALUES (?,?)",
+                   [("mode", "lean" if args.lean else "full"), ("built_at", time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()))])
 
     image_table = scan_images()
     db.executemany("INSERT OR IGNORE INTO images VALUES (?,?)",
@@ -160,7 +194,7 @@ def main():
 
     def flush():
         if prob_rows:
-            db.executemany("INSERT INTO problems VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", prob_rows)
+            db.executemany("INSERT INTO problems VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", prob_rows)
             prob_rows.clear()
         if choice_rows:
             db.executemany("INSERT INTO answer_choices VALUES (?,?,?)", choice_rows)
@@ -175,7 +209,7 @@ def main():
     dataset_dirs = sorted(d for d in PROBLEMS_DIR.iterdir() if d.is_dir())
     for d in dataset_dirs:
         slug = d.name
-        for rec in read_shards(d):
+        for shard_index, shard_line, rec in iter_shard_records(d):
             src = rec.get("source") or {}
             diff = rec.get("difficulty") or {}
             answer = rec.get("answer") or {}
@@ -203,6 +237,8 @@ def main():
                 int(bool(choices)),
                 json.dumps(images, ensure_ascii=False),
                 json.dumps(record_metadata(rec), ensure_ascii=False),
+                shard_index,
+                shard_line,
             ))
             for c in choices:
                 choice_rows.append((pid, c.get("label"), c.get("text")))
@@ -212,6 +248,9 @@ def main():
                 solution_kinds[kind] += 1
                 if kind == "model-reasoning":
                     stats["solutions_excluded_model_reasoning"] += 1
+                    continue
+                if args.lean:
+                    stats["solutions_left_in_shards"] += 1
                     continue
                 sol_rows.append((
                     sol.get("id"), pid, kind, sol.get("text"),
@@ -250,7 +289,7 @@ def main():
         "competitions": dict(sorted(competitions.items(), key=lambda kv: (-kv[1], kv[0]))),
         "solutionKinds": dict(sorted(solution_kinds.items())),
     }
-    with open(DATA_DIR / "index.json", "w", encoding="utf-8") as fh:
+    with open(out_dir / "index.json", "w", encoding="utf-8") as fh:
         json.dump(index, fh, indent=1, ensure_ascii=False)
 
     db.close()

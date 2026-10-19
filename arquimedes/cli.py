@@ -161,9 +161,12 @@ def cmd_show(engine: ArquimedesEngine, args: argparse.Namespace) -> int:
     return 0
 
 
-def cmd_build(engine: ArquimedesEngine, _args: argparse.Namespace) -> int:
+def cmd_build(engine: ArquimedesEngine, args: argparse.Namespace) -> int:
     script = engine.root / "tools" / "build_database.py"
-    return subprocess.call([sys.executable, str(script)])
+    cmd = [sys.executable, str(script)]
+    if args.lean:
+        cmd.append("--lean")
+    return subprocess.call(cmd)
 
 
 def cmd_splits(engine: ArquimedesEngine, args: argparse.Namespace) -> int:
@@ -218,6 +221,8 @@ def build_parser() -> argparse.ArgumentParser:
     p_show.set_defaults(func=cmd_show)
 
     p_build = sub.add_parser("build", help="Build data/problems.sqlite (with FTS5) and data/index.json from shards")
+    p_build.add_argument("--lean", action="store_true",
+                         help="Skip the solutions table (~0.8 GB instead of ~1.7 GB); solutions are read from the shards")
     p_build.set_defaults(func=cmd_build)
 
     p_splits = sub.add_parser("splits", help="Export decontaminated train/eval splits")

@@ -70,6 +70,8 @@ Records in `omnimath`, `deepmath`, `numina`, and `bigmath` carry origin and doma
 ```bash
 # Build the local 1.7 GB SQLite + FTS5 database (~50 seconds)
 uv run arquimedes build
+# or a 0.8 GB index that reads solutions from the shards
+uv run arquimedes build --lean
 
 # Show corpus summary
 uv run arquimedes stats

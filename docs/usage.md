@@ -65,6 +65,12 @@ The build takes under a minute and writes about 1.7 GB. It also regenerates
 the summary index `data/index.json`. Solutions of kind `model-reasoning`
 are excluded from the database and stay available in the JSONL shards.
 
+To save disk space, add `--lean` (or run `uv run arquimedes build --lean`).
+The lean build is about 0.8 GB and leaves the `solutions` table empty. Search,
+sampling, and filters cover all problems, and the CLI and MCP server read each
+problem's solutions from its shard. SQL queries against the `solutions` table
+need the full build.
+
 ## Querying SQLite
 
 Problems per dataset:
