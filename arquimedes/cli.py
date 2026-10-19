@@ -82,7 +82,10 @@ def cmd_stats(engine: ArquimedesEngine, args: argparse.Namespace) -> int:
     total = stats.get("totalProblems", 0)
     sqlite_ok = "ready" if stats.get("sqliteReady") else "not built (run `arquimedes build`)"
     print(f"\033[1mArquimedes Math Problem Database\033[0m — \033[1;36m{total:,}\033[0m problems")
-    print(f"SQLite + FTS5 engine: {sqlite_ok}\n")
+    print(f"SQLite + FTS5 engine: {sqlite_ok}")
+    if stats.get("note"):
+        print(stats["note"])
+    print()
 
     print("\033[1mDatasets:\033[0m")
     for slug, info in sorted((stats.get("datasets") or {}).items(), key=lambda kv: -kv[1]["count"]):

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import collections
 import gzip
 import json
 import os
@@ -36,6 +37,7 @@ class ArquimedesEngine:
         self.index_path = self.root / "data" / "index.json"
         self.problems_dir = self.root / "problems"
         self._conn: sqlite3.Connection | None = None
+        self._fallback_stats: dict[str, Any] | None = None
 
     @property
     def has_sqlite(self) -> bool:
@@ -52,12 +54,60 @@ class ArquimedesEngine:
         return self._conn
 
     def get_stats(self) -> dict[str, Any]:
-        stats: dict[str, Any] = {}
+        index: dict[str, Any] = {}
         if self.index_path.is_file():
-            stats = json.loads(self.index_path.read_text(encoding="utf-8"))
+            index = json.loads(self.index_path.read_text(encoding="utf-8"))
+        if self.has_sqlite:
+            stats = index
+        else:
+            # data/index.json describes the full corpus; without SQLite only the
+            # records _iter_shard_fallback reaches can be searched or sampled.
+            stats = self._shard_fallback_stats()
+            stats["note"] = (
+                "data/problems.sqlite is not present, so search and sample only scan the "
+                "JSONL shards counted here. Run `arquimedes build` to index the full corpus."
+            )
+            if index.get("totalProblems"):
+                stats["fullCorpusProblems"] = index["totalProblems"]
         stats["sqliteReady"] = self.has_sqlite
         stats["repoRoot"] = str(self.root)
         return stats
+
+    def fallback_datasets(self) -> list[str]:
+        """Dataset slugs that have at least one JSONL shard on disk."""
+        if not self.problems_dir.is_dir():
+            return []
+        return sorted(
+            d.name for d in self.problems_dir.iterdir()
+            if d.is_dir() and any(d.glob("shard-*.jsonl.gz"))
+        )
+
+    def _shard_fallback_stats(self) -> dict[str, Any]:
+        if self._fallback_stats is None:
+            datasets: dict[str, collections.Counter] = collections.defaultdict(collections.Counter)
+            categories: collections.Counter = collections.Counter()
+            competitions: collections.Counter = collections.Counter()
+            kinds: collections.Counter = collections.Counter()
+            for rec in self._iter_shard_fallback():
+                src = rec.get("source") or {}
+                cat = rec.get("category") or "uncategorized"
+                datasets[src.get("dataset") or "unknown"][cat] += 1
+                categories[cat] += 1
+                if src.get("collection"):
+                    competitions[src["collection"]] += 1
+                for sol in rec.get("solutions") or []:
+                    kinds[sol.get("kind") or "unknown"] += 1
+            self._fallback_stats = {
+                "totalProblems": sum(categories.values()),
+                "datasets": {
+                    slug: {"count": sum(cats.values()), "categories": dict(sorted(cats.items()))}
+                    for slug, cats in sorted(datasets.items())
+                },
+                "categories": dict(sorted(categories.items())),
+                "competitions": dict(sorted(competitions.items(), key=lambda kv: (-kv[1], kv[0]))),
+                "solutionKinds": dict(sorted(kinds.items())),
+            }
+        return dict(self._fallback_stats)
 
     def _row_to_summary(self, row: sqlite3.Row) -> dict[str, Any]:
         meta = json.loads(row["metadata"]) if row["metadata"] else {}

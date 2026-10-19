@@ -7,6 +7,7 @@ passes Glama automated Docker introspection checks out-of-the-box.
 
 from __future__ import annotations
 
+import copy
 import json
 import sys
 from typing import Any
@@ -23,8 +24,8 @@ TOOLS = [
     {
         "name": "arquimedes_stats",
         "description": (
-            "Get summary statistics for the Arquimedes math problem database "
-            "(1,038,963 problems across 9 datasets, categories, competitions, and solution kinds)."
+            "Get summary statistics for the Arquimedes math problem database: {corpus}, "
+            "with counts by category, competition, and solution kind."
         ),
         "inputSchema": {
             "type": "object",
@@ -42,7 +43,7 @@ TOOLS = [
     {
         "name": "arquimedes_search",
         "description": (
-            "Full-text search across 1,038,963 competition and olympiad math problems "
+            "Full-text search across {problems} "
             "by keyword, theorem name, or LaTeX expression, with optional filters for "
             "category, dataset, competition, and unified Mohs difficulty (1.0 to 10.0)."
         ),
@@ -266,6 +267,33 @@ PROMPTS = [
 ]
 
 
+def _tools_for(engine: ArquimedesEngine) -> list[dict[str, Any]]:
+    """Fill the description templates with what this server can actually search."""
+    tools = copy.deepcopy(TOOLS)
+    available: list[str] | None = None
+    if engine.has_sqlite:
+        stats = engine.get_stats()
+        total = f"{stats.get('totalProblems', 0):,}"
+        corpus = f"{total} problems across {len(stats.get('datasets') or {})} datasets"
+        problems = f"{total} competition and olympiad math problems"
+    else:
+        available = engine.fallback_datasets()
+        corpus = (
+            "the problems this server can search (it is running without its SQLite index, "
+            "so that is only part of the full corpus)"
+        )
+        problems = (
+            "the competition and olympiad math problems this server can scan (it is running "
+            "without its SQLite index; call arquimedes_stats for exact coverage)"
+        )
+    for tool in tools:
+        tool["description"] = tool["description"].replace("{corpus}", corpus).replace("{problems}", problems)
+        dataset = tool["inputSchema"]["properties"].get("dataset")
+        if dataset is not None and available:
+            dataset["enum"] = [d for d in dataset["enum"] if d in available]
+    return tools
+
+
 def _handle_tool_call(engine: ArquimedesEngine, name: str, args: dict[str, Any]) -> dict[str, Any]:
     if name == "arquimedes_stats":
         data = engine.get_stats()
@@ -358,7 +386,7 @@ def handle_rpc_message(engine: ArquimedesEngine, msg: dict[str, Any]) -> dict[st
         return {"jsonrpc": "2.0", "id": msg_id, "result": {}}
 
     if method == "tools/list":
-        return {"jsonrpc": "2.0", "id": msg_id, "result": {"tools": TOOLS}}
+        return {"jsonrpc": "2.0", "id": msg_id, "result": {"tools": _tools_for(engine)}}
 
     if method == "tools/call":
         t_name = params.get("name", "")
