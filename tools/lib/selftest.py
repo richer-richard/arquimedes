@@ -110,7 +110,23 @@ def test_hygiene():
     }
     normalize_record_hygiene(rec)
     assert rec["title"] == "APMO 1989 Problem 1", rec["title"]
-    assert rec["source"]["number"] == "1", rec["source"]["number"]
+    assert rec["source"]["number"] == 1, rec["source"]["number"]
+    for title, number in (("2019 HMMT February Guts Problem H_{4}", "H_{4}"),
+                          ("2019 HMMT February Guts Problem H {4}", "H_{4}")):
+        rec = {"title": title, "category": "algebra", "statement": "Find x.",
+               "source": {"dataset": "core", "number": number}}
+        normalize_record_hygiene(rec)
+        assert rec["title"] == "2019 HMMT February Guts Problem H4", rec["title"]
+        assert rec["source"]["number"] == "H4", rec["source"]["number"]
+    rec = {"category": "algebra", "statement": "Find x.", "source": {"dataset": "core"},
+           "answer": {"letter": "60", "value": None}, "answerChoices": []}
+    normalize_record_hygiene(rec)
+    assert rec["answer"] == {"letter": None, "value": "60"}, rec["answer"]
+    rec = {"category": "algebra", "statement": "Find x.", "source": {"dataset": "omnimath"},
+           "answer": {"letter": None, "value": "The problem provided does not contain a solution. Therefore, no final answer can be extracted."},
+           "solutions": [{"id": "s", "kind": "proof-sketch", "text": "This problem needs a solution. If you have a solution for it, please help us out by adding it .", "hints": [], "images": []}]}
+    normalize_record_hygiene(rec)
+    assert rec["answer"]["value"] is None and rec["solutions"] == [], rec
     for note in ("MATH Level ?", "deepmath -1"):
         rec = {"category": "algebra", "statement": "Find x.", "source": {"dataset": "math"},
                "difficulty": {"note": note}}

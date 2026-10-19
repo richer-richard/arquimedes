@@ -38,8 +38,8 @@ Normalization notes (all 9 datasets):
   `10.0` (hardest IMO/Putnam olympiad) scale, calibrated across datasets.
 - `answer.value` is normalized: outer `\(...\)` delimiters are stripped. In
   `core`, multiple-choice problems store the choice text and non-MC problems
-  store the exact answer in `answer.value` (alongside `answer.letter` where
-  applicable).
+  store the exact answer in `answer.value`. `answer.letter` is only ever the
+  lowercase choice letter of a multiple-choice problem.
 
 ## core (10,645)
 
@@ -56,9 +56,9 @@ Field notes:
   has.
 - Ids keep the legacy pattern `prob.<collection>-<year>-p<n>` instead of
   `prob.core-NNNNNN`.
-- `answer.letter` holds the choice letter for multiple-choice problems;
-  `answer.value` holds the normalized choice text or exact answer (including
-  AIME-style numeric answers).
+- `answer.letter` holds the choice letter for multiple-choice problems and is
+  null for free-response problems; `answer.value` holds the normalized choice
+  text or exact answer (including AIME-style numeric answers).
 - Many solutions carry progressive hints.
 - The database's 22 `strategy` and 18 `answer-only` solutions all live in
   this dataset. Everything else is `proof-sketch`.
@@ -83,8 +83,9 @@ Competition problems from the AoPS Wiki with community-written solutions.
 Field notes:
 
 - `source.collection` names the competition: IMO Shortlist (102), USAJMO
-  (91), Canadian MO (83), APMO (28), and Putnam (7). `source.year` and
-  `source.number` carry the contest year and problem code.
+  (91), Canadian MO (83), APMO (28), and Putnam (7). `source.year` carries
+  the contest year and `source.number` the problem number (an int such as
+  `3`) or code (a string such as `"A1"`).
 - Most records have one or more `proof-sketch` solutions, and a few carry an
   exact answer in `answer.value`.
 - Every record has a human-readable title and a `source.url`.
@@ -157,7 +158,8 @@ Field notes:
 - `source.tags` names the origin contest, for example
   `china_team_selection_test`.
 - Some statements contain inline `[asy]...[/asy]` diagram code.
-- Every problem has exactly one written solution.
+- Every problem but two has exactly one written solution. Those two had only
+  a "this problem needs a solution" placeholder, which was removed.
 
 | category | problems |
 |---|---|
@@ -226,8 +228,9 @@ NuminaMath problems, by far the largest dataset.
 Field notes:
 
 - Most problems have exactly one written `proof-sketch` solution, and most
-  carry an exact answer in `answer.value`. A minority of problems use
-  `answer.letter`.
+  carry an exact answer in `answer.value`. About 59,000 multiple-choice
+  problems also carry `answer.letter`; their choices are written inline in the
+  statement, so `answerChoices` is empty.
 - `source.tags` records the origin bucket of each problem (for example
   `olympiads`, `cn_k12`, `orca_math`, `synthetic`). A problem can carry
   several tags.

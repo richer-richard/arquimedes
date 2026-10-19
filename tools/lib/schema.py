@@ -92,8 +92,9 @@ def validate_record(rec: dict) -> None:
     if not (year is None or (isinstance(year, int) and not isinstance(year, bool))):
         _err("source.year: must be an int or null")
     number = source.get("number")
-    if not (number is None or _is_str(number) or (isinstance(number, int) and not isinstance(number, bool))):
-        _err("source.number: must be int, string, or null")
+    if not (number is None or (_is_str(number) and number and not number.isdigit())
+            or (isinstance(number, int) and not isinstance(number, bool))):
+        _err(f"source.number: must be an int, a non-numeric string, or null, got {number!r}")
     if not (source.get("url") is None or _is_str(source.get("url"))):
         _err("source.url: must be a string or null")
     _check_str_list(source.get("tags"), "source.tags")
@@ -132,17 +133,8 @@ def validate_record(rec: dict) -> None:
     if not isinstance(answer, dict):
         _err("answer: must be an object")
     letter = answer.get("letter")
-    if not (
-        letter is None
-        or (
-            _is_str(letter)
-            and letter
-            # single letters are MC labels and must be lowercase; longer
-            # strings are v1 answer-only payloads (AIME numerics, LaTeX)
-            and (len(letter) > 1 or not letter.isalpha() or letter.islower())
-        )
-    ):
-        _err(f"answer.letter: must be a lowercase letter, a value string, or null, got {letter!r}")
+    if not (letter is None or (_is_str(letter) and len(letter) == 1 and "a" <= letter <= "z")):
+        _err(f"answer.letter: must be a lowercase choice letter or null, got {letter!r}")
     if not (answer.get("value") is None or _is_str(answer.get("value"))):
         _err("answer.value: must be a string or null")
 

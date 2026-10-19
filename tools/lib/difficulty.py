@@ -131,9 +131,14 @@ def compute_mohs(rec: dict) -> float:
 
 
 _SINGLE_LETTER_RE = re.compile(r"^[a-e]$", re.I)
+_CHOICE_LETTER_RE = re.compile(r"^[a-z]$")
 _HTML_ENTITY_RE = re.compile(r"&(?:lt|gt|amp|quot|nbsp|#\d+);")
 _UNDERSCORE_PROB_RE = re.compile(r"\bProblem_(\w+)")
 _UNDERSCORE_NUM_RE = re.compile(r"^Problem_(\w+)$")
+_SUBSCRIPT_RE = re.compile(r"_\{(\w+)\}")
+_MANGLED_SUBSCRIPT_RE = re.compile(r"\b([A-Z]) \{(\d+)\}")
+_PLACEHOLDER_SOLUTION_RE = re.compile(r"^This problem needs a solution\b")
+_PLACEHOLDER_ANSWER_RE = re.compile(r"^The problem provided does not contain a solution\b")
 
 
 def strip_outer_math_delims(val: str | None) -> str | None:
@@ -158,6 +163,14 @@ def normalize_record_hygiene(rec: dict) -> dict:
     diff = rec.setdefault("difficulty", {"course": None, "source": None, "mohs": None, "note": None})
     ans = rec.setdefault("answer", {"letter": None, "value": None})
     tags = src.get("tags") or []
+
+    # 0. Drop scraped "this problem needs a solution" placeholders and the answer
+    #    extracted from them; they are not solutions
+    if rec.get("solutions"):
+        rec["solutions"] = [s for s in rec["solutions"]
+                            if not _PLACEHOLDER_SOLUTION_RE.match((s.get("text") or "").strip())]
+    if isinstance(ans.get("value"), str) and _PLACEHOLDER_ANSWER_RE.match(ans["value"]):
+        ans["value"] = None
     sols = rec.get("solutions") or []
 
     # 1. Unescape stray HTML entities in statement
@@ -166,16 +179,20 @@ def normalize_record_hygiene(rec: dict) -> dict:
         stmt = html.unescape(stmt).replace("\u00a0", " ")
         rec["statement"] = stmt
 
-    # 2. Fix title underscores (e.g. 'APMO 1989 Problem_1' -> 'APMO 1989 Problem 1')
-    #    and the matching source.number ('Problem_1' -> '1')
+    # 2. Fix title underscores (e.g. 'APMO 1989 Problem_1' -> 'APMO 1989 Problem 1',
+    #    'Problem H_{4}' -> 'Problem H4') and normalize source.number: an int when
+    #    purely numeric, otherwise a plain string ('Problem_1' -> 1, 'H_{4}' -> 'H4')
     title = rec.get("title") or ""
-    if "_" in title:
-        rec["title"] = _UNDERSCORE_PROB_RE.sub(r"Problem \1", title).replace("_", " ")
+    fixed = _MANGLED_SUBSCRIPT_RE.sub(r"\1\2", _SUBSCRIPT_RE.sub(r"\1", title))
+    if "_" in fixed:
+        fixed = _UNDERSCORE_PROB_RE.sub(r"Problem \1", fixed).replace("_", " ")
+    if fixed != title:
+        rec["title"] = fixed
     num = src.get("number")
     if isinstance(num, str):
         m = _UNDERSCORE_NUM_RE.match(num)
-        if m:
-            src["number"] = m.group(1)
+        num = _SUBSCRIPT_RE.sub(r"\1", m.group(1) if m else num).strip()
+        src["number"] = int(num) if num.isdigit() else (num or None)
 
     # 3. Reclassify uncategorized records using upgraded classify_record
     cat = rec.get("category") or "uncategorized"
@@ -201,10 +218,13 @@ def normalize_record_hygiene(rec: dict) -> dict:
     val = ans.get("value")
     choices = rec.get("answerChoices") or []
 
-    # If core non-MC problem stores its answer in answer.letter with answer.value=None, copy to value
-    if letter and not _SINGLE_LETTER_RE.match(str(letter)) and val is None:
-        val = str(letter).strip()
-        ans["value"] = val
+    # answer.letter only holds a multiple-choice label. Older core records put the
+    # answer value there (AIME numerics, LaTeX, lowercased text); keep it in value.
+    if letter and not _CHOICE_LETTER_RE.match(str(letter)):
+        if val is None:
+            val = str(letter).strip()
+            ans["value"] = val
+        ans["letter"] = letter = None
 
     # If MC problem has letter and answerChoices but value is None, populate from matching choice
     if choices and letter and _SINGLE_LETTER_RE.match(str(letter)) and val is None:
