@@ -3,12 +3,17 @@
 
 Selects a rich, stratified sample of ~500 problems across all competitions,
 categories, and difficulty tiers (including diagram problems and multi-hint
-proofs), copies their SVG/JPG diagrams into `site/images/`, and writes
-`site/data/explorer.json`.
+proofs), copies their SVG/JPG diagrams into `site/images/`, deletes diagrams
+there that no selected problem uses, and writes `site/data/explorer.json`.
+
+Solutions are read from the JSONL shards, so a lean database (empty
+solutions table) produces the same catalog as a full one.
 """
 
 from __future__ import annotations
 
+import collections
+import gzip
 import json
 import random
 import shutil
@@ -18,10 +23,41 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DB_PATH = ROOT / "data" / "problems.sqlite"
 INDEX_PATH = ROOT / "data" / "index.json"
+PROBLEMS_DIR = ROOT / "problems"
 IMAGES_DIR = ROOT / "images"
 SITE_DIR = ROOT / "site"
 SITE_DATA_DIR = SITE_DIR / "data"
 SITE_IMAGES_DIR = SITE_DIR / "images"
+
+
+def first_solutions(rows: list[sqlite3.Row]) -> dict[str, tuple[str, list[str]]]:
+    """Map problem id -> (text, hints) of its first written solution, read from the shards."""
+    wanted: dict[tuple[str, int], dict[int, str]] = collections.defaultdict(dict)
+    for r in rows:
+        wanted[(r["dataset"], r["shard_index"])][r["shard_line"]] = r["id"]
+
+    sol_map: dict[str, tuple[str, list[str]]] = {}
+    for (dataset, shard_index), lines in sorted(wanted.items()):
+        path = PROBLEMS_DIR / dataset / f"shard-{shard_index:05d}.jsonl.gz"
+        last = max(lines)
+        with gzip.open(path, "rt", encoding="utf-8") as fh:
+            line_no = 0
+            for line in fh:
+                line = line.strip()
+                if not line:
+                    continue
+                if line_no in lines:
+                    rec = json.loads(line)
+                    if rec["id"] != lines[line_no]:
+                        raise SystemExit(f"{path} line {line_no} is {rec['id']}, expected {lines[line_no]}; rebuild the database")
+                    for sol in rec.get("solutions") or []:
+                        if sol.get("kind") != "model-reasoning":
+                            sol_map[rec["id"]] = (sol.get("text"), sol.get("hints") or [])
+                            break
+                if line_no == last:
+                    break
+                line_no += 1
+    return sol_map
 
 
 def main() -> None:
@@ -112,19 +148,9 @@ def main() -> None:
 
     problems_out = []
     copied_images = 0
+    used_images: set[str] = set()
 
-    # Build in-memory solutions lookup for the ~550 selected problem IDs in a single pass
-    wanted_pids = {r["id"] for r in rows_picked}
-    sol_map: dict[str, tuple[str, list[str]]] = {}
-    for srow in conn.execute("SELECT problem_id, text, hints FROM solutions"):
-        pid = srow["problem_id"]
-        if pid in wanted_pids and pid not in sol_map:
-            sol_map[pid] = (
-                srow["text"],
-                json.loads(srow["hints"]) if srow["hints"] else [],
-            )
-            if len(sol_map) == len(wanted_pids):
-                break
+    sol_map = first_solutions(rows_picked)
 
     for r in rows_picked:
         pid = r["id"]
@@ -138,6 +164,7 @@ def main() -> None:
                 if not dst_img.exists():
                     shutil.copy2(src_img, dst_img)
                     copied_images += 1
+                used_images.add(fname)
                 stmt_imgs.append(f"images/{fname}")
 
         choices = [
@@ -195,6 +222,11 @@ def main() -> None:
     out_file.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"Wrote {len(problems_out)} curated problems to {out_file} ({out_file.stat().st_size / 1024:.1f} KB)")
     print(f"Copied {copied_images} diagram files to {SITE_IMAGES_DIR}")
+
+    stale = [p for p in SITE_IMAGES_DIR.iterdir() if p.is_file() and p.name not in used_images]
+    for p in stale:
+        p.unlink()
+    print(f"Removed {len(stale)} unused diagram files from {SITE_IMAGES_DIR}")
 
 
 if __name__ == "__main__":
