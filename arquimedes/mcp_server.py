@@ -397,6 +397,9 @@ def handle_rpc_message(engine: ArquimedesEngine, msg: dict[str, Any]) -> dict[st
     if method == "resources/list":
         return {"jsonrpc": "2.0", "id": msg_id, "result": {"resources": RESOURCES}}
 
+    if method == "resources/templates/list":
+        return {"jsonrpc": "2.0", "id": msg_id, "result": {"resourceTemplates": []}}
+
     if method == "resources/read":
         uri = params.get("uri", "")
         if uri == "arquimedes://index":
