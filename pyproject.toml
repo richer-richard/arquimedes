@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arquimedes"
+version = "0.2.0"
+description = "CLI and MCP server for the Arquimedes 1.04M competition & benchmark math problem database"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "Richard Huang", email = "richard.01172000@gmail.com"}
+]
+keywords = ["mathematics", "olympiad", "dataset", "mcp", "mcp-server", "cli", "sqlite", "latex"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/richer-richard/arquimedes"
+Repository = "https://github.com/richer-richard/arquimedes"
+
+[project.scripts]
+arquimedes = "arquimedes.cli:main"
+arquimedes-mcp = "arquimedes.mcp_server:main"
+
+[tool.setuptools.packages.find]
+include = ["arquimedes*", "tools*"]
