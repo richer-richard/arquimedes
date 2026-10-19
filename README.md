@@ -10,7 +10,7 @@ calibrated Mohs difficulty (`1.0` to `10.0`), answer metadata, and solutions in 
 uniform JSON schema (v2).
 
 - **1,038,963 problems** with full statements and **99.98% domain categorization**
-- **797,672 written solutions**: proof-sketch (797,632), strategy (22), answer-only (18)
+- **797,673 written solutions**: proof-sketch (797,633), strategy (22), answer-only (18)
 - **277,002 model-reasoning traces** (`deepmath` dataset, JSONL shards)
 - **1,219 diagram images** (SVG and JPG), content-addressed by hash
 - **Unified Mohs difficulty (`1.0–10.0`)** populated across all 1,038,963 records

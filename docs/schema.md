@@ -54,7 +54,7 @@ other fields are unchanged.
 | `difficulty.course` | float \| null | Course-calibrated difficulty, roughly 0–100. `core` only. |
 | `difficulty.source` | float \| null | Source difficulty rating. `core` only. |
 | `difficulty.mohs` | float \| null | Unified difficulty rating from `1.0` (easiest) to `10.0` (hardest IMO/Putnam olympiad), calibrated across all 9 datasets. |
-| `difficulty.note` | string \| null | **New in v2.** Dataset difficulty label: `MATH Level 1` to `MATH Level 5`, `deepmath 1` to `deepmath 10`, `omnimath 1` to `omnimath 9.5`, `Competition` (olympiadbench), or `llama8b_solve_rate <rate>` (bigmath). |
+| `difficulty.note` | string \| null | **New in v2.** Dataset difficulty label: `MATH Level 1` to `MATH Level 5`, `deepmath 1` to `deepmath 10`, `omnimath 1` to `omnimath 9.5`, `Competition` (olympiadbench), or `llama8b_solve_rate <rate>` (bigmath). Null when the source gave no usable level, including 2 `math` records labeled `Level ?` and 4 `deepmath` records rated `-1`. |
 | `estimatedMinutes` | number \| null | Estimated solve time. `core` only. |
 | `statement` | string | Problem statement. Raw LaTeX, see §4. Never empty. |
 | `answerChoices` | object[] | `[{label, text}]` with uppercase letter labels. Empty for non-multiple-choice problems. |
@@ -69,7 +69,7 @@ other fields are unchanged.
 | field | type | notes |
 |---|---|---|
 | `id` | string | e.g. `sol.ahsme-1950-p10.live`, `sol.deepmath-000000.r1-1`. |
-| `kind` | string | `proof-sketch` (797,632), `strategy` (22), `answer-only` (18), or `model-reasoning` (277,002). |
+| `kind` | string | `proof-sketch` (797,633), `strategy` (22), `answer-only` (18), or `model-reasoning` (277,002). |
 | `text` | string | Solution text, raw LaTeX. |
 | `hints` | string[] | Progressive hints. Common in `core`. |
 | `images` | string[] | Diagram references used by this solution. |
@@ -133,8 +133,8 @@ build_info(key, value)                           PK (key)
   `sourceUrl`, `sourceTags`, and `difficultyNote` when present.
 - `solutions` excludes `kind = "model-reasoning"`. The 277,002 reasoning
   traces stay available in the JSONL shards.
-- `solutions` therefore holds the 797,672 written solutions: proof-sketch
-  (797,632), strategy (22), and answer-only (18).
+- `solutions` therefore holds the 797,673 written solutions: proof-sketch
+  (797,633), strategy (22), and answer-only (18).
 
 ## 4. LaTeX typesetting convention
 

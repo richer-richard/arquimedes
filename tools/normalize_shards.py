@@ -5,7 +5,8 @@ Applies:
   - Upgraded domain tag + statement + solution category classification
   - Unified Mohs difficulty scale (difficulty.mohs in [1.0, 10.0])
   - Subjects array normalization (no 'uncategorized' string in subjects)
-  - Title underscore cleanup (e.g. 'Problem_1' -> 'Problem 1')
+  - Title underscore cleanup (e.g. 'Problem_1' -> 'Problem 1'), and source.number 'Problem_1' -> '1'
+  - Unknown-level difficulty notes ('MATH Level ?', 'deepmath -1') set to null
   - Answer value cleanup (strip outer inline math delimiters, copy non-MC core letter to value, populate MC value)
   - HTML entity unescaping in statements
   - Full v2 schema validation on every record

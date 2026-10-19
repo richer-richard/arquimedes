@@ -99,6 +99,26 @@ def test_schema():
         raise AssertionError("bad category accepted")
 
 
+def test_hygiene():
+    rec = {
+        "title": "APMO 1989 Problem_1",
+        "category": "algebra",
+        "source": {"dataset": "aops", "collection": "APMO", "number": "Problem_1", "tags": []},
+        "difficulty": {"course": None, "source": None, "mohs": None, "note": None},
+        "statement": "Find x.",
+        "answer": {"letter": None, "value": None},
+    }
+    normalize_record_hygiene(rec)
+    assert rec["title"] == "APMO 1989 Problem 1", rec["title"]
+    assert rec["source"]["number"] == "1", rec["source"]["number"]
+    for note in ("MATH Level ?", "deepmath -1"):
+        rec = {"category": "algebra", "statement": "Find x.", "source": {"dataset": "math"},
+               "difficulty": {"note": note}}
+        normalize_record_hygiene(rec)
+        assert rec["difficulty"]["note"] is None, rec["difficulty"]
+        assert 1.0 <= rec["difficulty"]["mohs"] <= 10.0
+
+
 def test_shards_and_images():
     with tempfile.TemporaryDirectory() as tmp:
         recs = [{"id": f"prob.t-{i:06d}", "statement": f"s{i}"} for i in range(25)]
@@ -123,6 +143,7 @@ check("latex", test_latex)
 check("classify", test_classify)
 check("norm_key", test_norm_key)
 check("schema", test_schema)
+check("hygiene", test_hygiene)
 check("shards_and_images", test_shards_and_images)
 
 print("ALL PASS" if not failures else f"{len(failures)} FAILURES: {failures}")

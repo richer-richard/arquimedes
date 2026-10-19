@@ -133,6 +133,7 @@ def compute_mohs(rec: dict) -> float:
 _SINGLE_LETTER_RE = re.compile(r"^[a-e]$", re.I)
 _HTML_ENTITY_RE = re.compile(r"&(?:lt|gt|amp|quot|nbsp|#\d+);")
 _UNDERSCORE_PROB_RE = re.compile(r"\bProblem_(\w+)")
+_UNDERSCORE_NUM_RE = re.compile(r"^Problem_(\w+)$")
 
 
 def strip_outer_math_delims(val: str | None) -> str | None:
@@ -166,9 +167,15 @@ def normalize_record_hygiene(rec: dict) -> dict:
         rec["statement"] = stmt
 
     # 2. Fix title underscores (e.g. 'APMO 1989 Problem_1' -> 'APMO 1989 Problem 1')
+    #    and the matching source.number ('Problem_1' -> '1')
     title = rec.get("title") or ""
     if "_" in title:
         rec["title"] = _UNDERSCORE_PROB_RE.sub(r"Problem \1", title).replace("_", " ")
+    num = src.get("number")
+    if isinstance(num, str):
+        m = _UNDERSCORE_NUM_RE.match(num)
+        if m:
+            src["number"] = m.group(1)
 
     # 3. Reclassify uncategorized records using upgraded classify_record
     cat = rec.get("category") or "uncategorized"
@@ -182,12 +189,9 @@ def normalize_record_hygiene(rec: dict) -> dict:
         subs.insert(0, cat)
     rec["subjects"] = subs
 
-    # 5. Fix anomalous difficulty.note values ('MATH Level ?', 'deepmath -1', null bigmath)
-    note = diff.get("note")
-    if note == "MATH Level ?":
-        diff["note"] = "MATH Level 3"
-    elif note == "deepmath -1":
-        diff["note"] = "deepmath 5"
+    # 5. Unknown-level placeholders from the source datasets mean "no label", not a level
+    if diff.get("note") in ("MATH Level ?", "deepmath -1"):
+        diff["note"] = None
 
     # 6. Populate unified difficulty.mohs (1.0 - 10.0)
     diff["mohs"] = compute_mohs(rec)
