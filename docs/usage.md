@@ -184,7 +184,24 @@ uv run arquimedes-mcp
 ```
 
 Configure your client to launch that command; it reads `data/problems.sqlite`
-and the same query paths as the CLI.
+and the same query paths as the CLI. It speaks JSON-RPC over stdio and offers
+four read-only tools:
+
+| tool | arguments | returns |
+|---|---|---|
+| `arquimedes_get_stats` | none | problem counts by dataset, category, and competition; solution counts by kind |
+| `arquimedes_search_problems` | `query` (required), `category`, `dataset`, `competition`, `min_mohs`, `max_mohs`, `limit` (1–50, default 10) | summaries of problems whose statement or title contains all query words |
+| `arquimedes_sample_problems` | `category`, `dataset`, `competition`, `year`, `min_mohs`, `max_mohs`, `has_choices`, `has_diagram`, `limit` (1–50, default 5), `seed` | a uniform random draw among matching problems; the same seed repeats it |
+| `arquimedes_get_problem` | `problem_id` (required), `include_solutions` (default true), `include_traces` (default false) | the full record, with solutions as `{id, kind, text, hints}` |
+
+Summaries carry `id`, `title`, `dataset`, `category`, `competition`, `year`,
+`number`, `mohs`, `difficultyNote`, `answerLetter`, `answerValue`,
+`hasChoices`, and `statement`. Bad arguments and unknown ids come back as tool
+results with `isError: true`. The tool names before 1.0 (`arquimedes_stats`,
+`arquimedes_search`, `arquimedes_sample`) are still accepted in `tools/call`.
+
+The server also offers the resource `arquimedes://index` (the summary index)
+and the prompt `math-practice-set` (arguments `category` and `difficulty`).
 
 ## Train/eval splits: `tools/export_splits.py`
 

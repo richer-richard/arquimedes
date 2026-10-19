@@ -20,12 +20,24 @@ SERVER_INFO = {
     "version": __version__,
 }
 
+# Newest first; an unknown client version is answered with the newest.
+SUPPORTED_PROTOCOL_VERSIONS = ("2025-11-25", "2025-06-18", "2025-03-26", "2024-11-05")
+
+# Names used before 1.0. Still accepted by tools/call, but not listed.
+TOOL_ALIASES = {
+    "arquimedes_stats": "arquimedes_get_stats",
+    "arquimedes_search": "arquimedes_search_problems",
+    "arquimedes_sample": "arquimedes_sample_problems",
+}
+
 TOOLS = [
     {
-        "name": "arquimedes_stats",
+        "name": "arquimedes_get_stats",
         "description": (
-            "Get summary statistics for the Arquimedes math problem database: {corpus}, "
-            "with counts by category, competition, and solution kind."
+            "Summarize what the Arquimedes math problem database holds: {corpus}, with problem "
+            "counts by dataset, category, and competition, and written-solution counts by kind. "
+            "Call it first to learn which category, dataset, and competition values exist before "
+            "filtering arquimedes_search_problems or arquimedes_sample_problems. Takes no arguments."
         ),
         "inputSchema": {
             "type": "object",
@@ -41,11 +53,15 @@ TOOLS = [
         },
     },
     {
-        "name": "arquimedes_search",
+        "name": "arquimedes_search_problems",
         "description": (
-            "Full-text search across {problems} "
-            "by keyword, theorem name, or LaTeX expression, with optional filters for "
-            "category, dataset, competition, and unified Mohs difficulty (1.0 to 10.0)."
+            "Find problems by keyword in {problems}. Full-text search returns problems whose "
+            "statement or title contains all the query words: a topic, a theorem name such as "
+            "'Cauchy-Schwarz', or a LaTeX fragment. Optional filters narrow by category, dataset, "
+            "competition, and Mohs difficulty (1.0 to 10.0). Results are summaries (id, title, "
+            "competition, year, difficulty, answer, statement) without solutions; pass an id to "
+            "arquimedes_get_problem for solutions and hints. To get random problems instead of "
+            "keyword matches, use arquimedes_sample_problems."
         ),
         "inputSchema": {
             "type": "object",
@@ -120,11 +136,14 @@ TOOLS = [
         },
     },
     {
-        "name": "arquimedes_sample",
+        "name": "arquimedes_sample_problems",
         "description": (
-            "Sample random math problems matching topic, difficulty (Mohs 1-10), "
-            "competition, contest year, multiple-choice, or diagram filters. Ideal for "
-            "generating practice sets, mock olympiad tests, or evaluation benchmarks."
+            "Draw random problems from {problems}, uniformly among those matching optional filters: "
+            "category, dataset, competition, contest year, Mohs difficulty range (1.0 to 10.0), "
+            "multiple-choice only, or with a diagram. Use it to build practice sets, mock contests, "
+            "or evaluation samples; pass the same seed to repeat a draw. Results are summaries "
+            "without solutions; pass an id to arquimedes_get_problem for solutions. To find "
+            "problems about a specific topic or keyword, use arquimedes_search_problems."
         ),
         "inputSchema": {
             "type": "object",
@@ -211,26 +230,28 @@ TOOLS = [
     {
         "name": "arquimedes_get_problem",
         "description": (
-            "Fetch a single math problem by its ID (e.g. 'prob.ahsme-1950-p10' or 'prob.aops-000000'), "
-            "returning the full LaTeX statement, answer choices, verified answer, progressive hints, "
-            "written proof solutions, and diagram references."
+            "Fetch one problem by its id, as returned by arquimedes_search_problems or "
+            "arquimedes_sample_problems (e.g. 'prob.ahsme-1950-p10', 'prob.numina-000369'). Returns "
+            "the full record: LaTeX statement, answer choices, answer, written solutions with "
+            "progressive hints, difficulty, source, and diagram references. Ids cannot be guessed; "
+            "an unknown id returns an error, so discover ids with search or sample first."
         ),
         "inputSchema": {
             "type": "object",
             "properties": {
                 "problem_id": {
                     "type": "string",
-                    "description": "Unique problem identifier (e.g. 'prob.ahsme-1950-p10', 'prob.aops-000000').",
+                    "description": "Problem id from a search or sample result (e.g. 'prob.ahsme-1950-p10', 'prob.aops-000000').",
                 },
                 "include_solutions": {
                     "type": "boolean",
                     "default": True,
-                    "description": "Include written solutions and hints (default true).",
+                    "description": "Include written solutions and their hints (default true). Set false to quiz without spoilers.",
                 },
                 "include_traces": {
                     "type": "boolean",
                     "default": False,
-                    "description": "Include long-CoT R1 reasoning traces for deepmath records.",
+                    "description": "Also include the three long model-reasoning traces stored with deepmath problems (default false; each trace is typically over 10,000 characters).",
                 },
             },
             "required": ["problem_id"],
@@ -284,7 +305,7 @@ def _tools_for(engine: ArquimedesEngine) -> list[dict[str, Any]]:
         )
         problems = (
             "the competition and olympiad math problems this server can scan (it is running "
-            "without its SQLite index; call arquimedes_stats for exact coverage)"
+            "without its SQLite index; call arquimedes_get_stats for exact coverage)"
         )
     for tool in tools:
         tool["description"] = tool["description"].replace("{corpus}", corpus).replace("{problems}", problems)
@@ -295,11 +316,15 @@ def _tools_for(engine: ArquimedesEngine) -> list[dict[str, Any]]:
 
 
 def _handle_tool_call(engine: ArquimedesEngine, name: str, args: dict[str, Any]) -> dict[str, Any]:
-    if name == "arquimedes_stats":
+    name = TOOL_ALIASES.get(name, name)
+    if not isinstance(args, dict):
+        return {"isError": True, "content": [{"type": "text", "text": "Tool arguments must be a JSON object."}]}
+
+    if name == "arquimedes_get_stats":
         data = engine.get_stats()
         return {"content": [{"type": "text", "text": json.dumps(data, indent=2)}]}
 
-    if name == "arquimedes_search":
+    if name == "arquimedes_search_problems":
         query = args.get("query")
         if not query or not isinstance(query, str):
             return {
@@ -317,7 +342,7 @@ def _handle_tool_call(engine: ArquimedesEngine, name: str, args: dict[str, Any])
         )
         return {"content": [{"type": "text", "text": json.dumps(results, indent=2, ensure_ascii=False)}]}
 
-    if name == "arquimedes_sample":
+    if name == "arquimedes_sample_problems":
         results = engine.sample(
             category=args.get("category"),
             dataset=args.get("dataset"),
@@ -347,7 +372,7 @@ def _handle_tool_call(engine: ArquimedesEngine, name: str, args: dict[str, Any])
         if prob is None:
             return {
                 "isError": True,
-                "content": [{"type": "text", "text": f"Problem '{pid}' not found. Use arquimedes_search or arquimedes_sample to discover valid IDs."}],
+                "content": [{"type": "text", "text": f"Problem '{pid}' not found. Use arquimedes_search_problems or arquimedes_sample_problems to discover valid ids."}],
             }
         return {"content": [{"type": "text", "text": json.dumps(prob, indent=2, ensure_ascii=False)}]}
 
@@ -357,7 +382,36 @@ def _handle_tool_call(engine: ArquimedesEngine, name: str, args: dict[str, Any])
     }
 
 
-def handle_rpc_message(engine: ArquimedesEngine, msg: dict[str, Any]) -> dict[str, Any] | None:
+def _result(msg_id: Any, result: dict[str, Any]) -> dict[str, Any]:
+    return {"jsonrpc": "2.0", "id": msg_id, "result": result}
+
+
+def _error(msg_id: Any, code: int, message: str) -> dict[str, Any]:
+    return {"jsonrpc": "2.0", "id": msg_id, "error": {"code": code, "message": message}}
+
+
+def _practice_set_prompt(args: dict[str, Any]) -> dict[str, Any] | None:
+    """Messages for the math-practice-set prompt, or None if the difficulty is not a number."""
+    cat = args.get("category") or "geometry"
+    try:
+        diff = min(10.0, max(1.0, float(args.get("difficulty", 5.0))))
+    except (TypeError, ValueError):
+        return None
+    text = (
+        f"Use `arquimedes_sample_problems` to draw 5 `{cat}` problems near Mohs difficulty {diff:.1f} "
+        f"(min_mohs={max(1.0, diff - 0.8):.1f}, max_mohs={min(10.0, diff + 0.8):.1f}) and present them "
+        "as a clean practice worksheet. When asked for answers, fetch each problem with "
+        "`arquimedes_get_problem` and give its hints first, then the solution."
+    )
+    return {
+        "description": f"Practice set for {cat} around Mohs {diff:.1f}",
+        "messages": [{"role": "user", "content": {"type": "text", "text": text}}],
+    }
+
+
+def handle_rpc_message(engine: ArquimedesEngine, msg: Any) -> dict[str, Any] | None:
+    if not isinstance(msg, dict):
+        return _error(None, -32600, "Invalid request: expected a JSON-RPC object")
     method = msg.get("method")
     msg_id = msg.get("id")
     params = msg.get("params") or {}
@@ -365,103 +419,70 @@ def handle_rpc_message(engine: ArquimedesEngine, msg: dict[str, Any]) -> dict[st
     # Notifications have no id and expect no response
     if msg_id is None:
         return None
+    if not isinstance(method, str):
+        return _error(msg_id, -32600, "Invalid request: missing method")
+    if not isinstance(params, dict):
+        return _error(msg_id, -32602, "Invalid params: expected an object")
 
     if method == "initialize":
-        client_proto = params.get("protocolVersion") or "2024-11-05"
-        return {
-            "jsonrpc": "2.0",
-            "id": msg_id,
-            "result": {
-                "protocolVersion": client_proto,
-                "capabilities": {
-                    "tools": {"listChanged": False},
-                    "resources": {"subscribe": False, "listChanged": False},
-                    "prompts": {"listChanged": False},
-                },
-                "serverInfo": SERVER_INFO,
+        client_proto = params.get("protocolVersion")
+        proto = client_proto if client_proto in SUPPORTED_PROTOCOL_VERSIONS else SUPPORTED_PROTOCOL_VERSIONS[0]
+        return _result(msg_id, {
+            "protocolVersion": proto,
+            "capabilities": {
+                "tools": {"listChanged": False},
+                "resources": {"subscribe": False, "listChanged": False},
+                "prompts": {"listChanged": False},
             },
-        }
+            "serverInfo": SERVER_INFO,
+        })
 
     if method == "ping":
-        return {"jsonrpc": "2.0", "id": msg_id, "result": {}}
+        return _result(msg_id, {})
 
     if method == "tools/list":
-        return {"jsonrpc": "2.0", "id": msg_id, "result": {"tools": _tools_for(engine)}}
+        return _result(msg_id, {"tools": _tools_for(engine)})
 
     if method == "tools/call":
         t_name = params.get("name", "")
-        t_args = params.get("arguments") or {}
-        res = _handle_tool_call(engine, t_name, t_args)
-        return {"jsonrpc": "2.0", "id": msg_id, "result": res}
+        t_args = params.get("arguments")
+        try:
+            res = _handle_tool_call(engine, t_name, {} if t_args is None else t_args)
+        except Exception as exc:  # report bad arguments to the caller instead of exiting
+            res = {"isError": True, "content": [{"type": "text", "text": f"{t_name} failed: {exc}"}]}
+        return _result(msg_id, res)
 
     if method == "resources/list":
-        return {"jsonrpc": "2.0", "id": msg_id, "result": {"resources": RESOURCES}}
+        return _result(msg_id, {"resources": RESOURCES})
 
     if method == "resources/templates/list":
-        return {"jsonrpc": "2.0", "id": msg_id, "result": {"resourceTemplates": []}}
+        return _result(msg_id, {"resourceTemplates": []})
 
     if method == "resources/read":
         uri = params.get("uri", "")
         if uri == "arquimedes://index":
-            return {
-                "jsonrpc": "2.0",
-                "id": msg_id,
-                "result": {
-                    "contents": [
-                        {
-                            "uri": uri,
-                            "mimeType": "application/json",
-                            "text": json.dumps(engine.get_stats(), indent=2),
-                        }
-                    ]
-                },
-            }
-        return {
-            "jsonrpc": "2.0",
-            "id": msg_id,
-            "error": {"code": -32602, "message": f"Unknown resource URI: {uri}"},
-        }
+            return _result(msg_id, {
+                "contents": [{
+                    "uri": uri,
+                    "mimeType": "application/json",
+                    "text": json.dumps(engine.get_stats(), indent=2),
+                }],
+            })
+        return _error(msg_id, -32602, f"Unknown resource URI: {uri}")
 
     if method == "prompts/list":
-        return {"jsonrpc": "2.0", "id": msg_id, "result": {"prompts": PROMPTS}}
+        return _result(msg_id, {"prompts": PROMPTS})
 
     if method == "prompts/get":
         name = params.get("name")
-        args = params.get("arguments") or {}
         if name == "math-practice-set":
-            cat = args.get("category", "geometry")
-            diff = args.get("difficulty", "5.0")
-            return {
-                "jsonrpc": "2.0",
-                "id": msg_id,
-                "result": {
-                    "description": f"Practice set for {cat} around Mohs {diff}",
-                    "messages": [
-                        {
-                            "role": "user",
-                            "content": {
-                                "type": "text",
-                                "text": (
-                                    f"Use `arquimedes_sample` to pull 5 `{cat}` problems near Mohs difficulty {diff} "
-                                    f"(e.g. min_mohs={max(1.0, float(diff)-0.8):.1f}, max_mohs={min(10.0, float(diff)+0.8):.1f}) "
-                                    "and present them as a clean practice worksheet before revealing the solutions."
-                                ),
-                            },
-                        }
-                    ],
-                },
-            }
-        return {
-            "jsonrpc": "2.0",
-            "id": msg_id,
-            "error": {"code": -32602, "message": f"Unknown prompt: {name}"},
-        }
+            prompt = _practice_set_prompt(params.get("arguments") or {})
+            if prompt is None:
+                return _error(msg_id, -32602, "difficulty must be a number from 1.0 to 10.0")
+            return _result(msg_id, prompt)
+        return _error(msg_id, -32602, f"Unknown prompt: {name}")
 
-    return {
-        "jsonrpc": "2.0",
-        "id": msg_id,
-        "error": {"code": -32601, "message": f"Method not found: {method}"},
-    }
+    return _error(msg_id, -32601, f"Method not found: {method}")
 
 
 def main() -> int:
@@ -473,8 +494,13 @@ def main() -> int:
         try:
             msg = json.loads(line)
         except json.JSONDecodeError:
-            continue
-        resp = handle_rpc_message(engine, msg)
+            resp = _error(None, -32700, "Parse error: invalid JSON")
+        else:
+            try:
+                resp = handle_rpc_message(engine, msg)
+            except Exception as exc:
+                msg_id = msg.get("id") if isinstance(msg, dict) else None
+                resp = _error(msg_id, -32603, f"Internal error: {exc}") if msg_id is not None else None
         if resp is not None:
             sys.stdout.write(json.dumps(resp, ensure_ascii=False) + "\n")
             sys.stdout.flush()

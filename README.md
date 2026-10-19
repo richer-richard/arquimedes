@@ -10,7 +10,7 @@ calibrated Mohs difficulty (`1.0` to `10.0`), answer metadata, and solutions in 
 uniform JSON schema (v2).
 
 - **1,038,963 problems** with full statements and **99.98% domain categorization**
-- **797,673 written solutions**: proof-sketch (797,633), strategy (22), answer-only (18)
+- **797,671 written solutions**: proof-sketch (797,631), strategy (22), answer-only (18)
 - **277,002 model-reasoning traces** (`deepmath` dataset, JSONL shards)
 - **1,219 diagram images** (SVG and JPG), content-addressed by hash
 - **Unified Mohs difficulty (`1.0–10.0`)** populated across all 1,038,963 records
@@ -101,11 +101,30 @@ Add to your `mcp.json` or `claude_desktop_config.json`:
 }
 ```
 
-Exposed MCP tools:
-- `arquimedes_stats`: dataset, category, competition, and solution counts
-- `arquimedes_search`: full-text search with category, dataset, competition, and `min_mohs`/`max_mohs` filters
-- `arquimedes_sample`: stratified random problem sampler for worksheets and evaluations
-- `arquimedes_get_problem`: fetch full LaTeX statement, choices, verified answer, hints, solutions, and R1 traces by ID
+Exposed MCP tools (all read-only; arguments in [`docs/usage.md`](docs/usage.md#mcp-server-arquimedes-mcp)):
+- `arquimedes_get_stats`: dataset, category, competition, and solution counts
+- `arquimedes_search_problems`: full-text search with category, dataset, competition, and `min_mohs`/`max_mohs` filters
+- `arquimedes_sample_problems`: uniform random draw among problems matching the filters, repeatable with a seed
+- `arquimedes_get_problem`: full LaTeX statement, choices, answer, hints, solutions, and optional deepmath reasoning traces by id
+
+## Stability (1.x)
+
+From 1.0.0 on, these interfaces only change in backward-compatible ways until
+a 2.0.0 release:
+
+- the v2 problem record schema in [`docs/schema.md`](docs/schema.md): fields
+  are not removed or renamed, and their types do not change
+- the MCP tool names, their arguments, and the shape of their results
+- the `arquimedes` CLI commands and flags, and their `--json` output
+- the SQLite tables and columns built by `arquimedes build`
+- the `ArquimedesEngine` methods `get_stats`, `search`, `sample`, and
+  `get_problem`
+
+New fields, tools, flags, and data fixes can arrive in minor and patch
+releases. Corrections to individual records (a wrong answer, a mislabeled
+category) are data fixes, not breaking changes. Counts and `difficulty.mohs`
+values can change as records are corrected; `mohs` is a calibration, not a
+measured difficulty. Changes are listed in [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Decontaminated Train / Eval Splits
 

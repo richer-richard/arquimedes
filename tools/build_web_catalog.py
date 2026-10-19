@@ -113,6 +113,7 @@ def main() -> None:
             SELECT p.* FROM problems p
             WHERE p.source_collection = ?
               AND length(p.statement) BETWEEN 40 AND 1400
+            ORDER BY p.source_year, p.rowid
             LIMIT 250
             """,
             (comp,),
@@ -126,6 +127,7 @@ def main() -> None:
         JOIN problems p ON p.id = pi.problem_id
         WHERE pi.role = 'statement'
           AND p.dataset = 'core'
+        ORDER BY pi.rowid
         LIMIT 250
         """,
         (),
@@ -140,6 +142,7 @@ def main() -> None:
             WHERE p.dataset = ?
               AND length(p.statement) BETWEEN 45 AND 850
               AND p.statement NOT LIKE '%[asy]%'
+            ORDER BY p.rowid
             LIMIT 350
             """,
             (ds,),

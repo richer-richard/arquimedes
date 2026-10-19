@@ -48,7 +48,7 @@ other fields are unchanged.
 | `source.dataset` | string | **New in v2.** Dataset slug (`core`, `aops`, `cemc`, `olympiadbench`, `omnimath`, `math`, `deepmath`, `numina`, `bigmath`). |
 | `source.collection` | string \| null | Competition or benchmark label: `AHSME`, `AMC 8`, `AMC 10A/B`, `AMC 12A/B`, `AIME I/II`, `USAMO`, `IMO`, `HMMT February`, `HMMT November`, `HMMT Invitational`, `USA TST`, `USA TSTST`, the CEMC contest names, `OlympiadBench`, `MATH`, `IMO Shortlist`, `USAJMO`, `Canadian MO`, `APMO`, `Putnam`. |
 | `source.year` | int \| null | Contest year where applicable. |
-| `source.number` | int \| string \| null | Problem number within its contest. |
+| `source.number` | int \| string \| null | Problem number within its contest: an int when it is purely numeric (`3`), otherwise a string code (`"A1"`, `"H4"`). |
 | `source.url` | string \| null | **New in v2.** Reference URL. Present on `cemc`, `aops`, and `bigmath` records. |
 | `source.tags` | string[] | **New in v2.** Origin labels: subject paths, contest tags, or origin buckets depending on the dataset. Empty in `core` and `aops`. |
 | `difficulty.course` | float \| null | Course-calibrated difficulty, roughly 0–100. `core` only. |
@@ -58,7 +58,7 @@ other fields are unchanged.
 | `estimatedMinutes` | number \| null | Estimated solve time. `core` only. |
 | `statement` | string | Problem statement. Raw LaTeX, see §4. Never empty. |
 | `answerChoices` | object[] | `[{label, text}]` with uppercase letter labels. Empty for non-multiple-choice problems. |
-| `answer.letter` | string \| null | Lowercase choice letter (`"b"`). In `core` it may instead hold a value string for AIME-style problems (`"60"`). |
+| `answer.letter` | string \| null | Lowercase choice letter (`"b"`) of a multiple-choice problem; null otherwise. The choices are in `answerChoices`, or written inline in the statement for about 59,000 `numina` problems and one `omnimath` problem. |
 | `answer.value` | string \| null | Exact answer value as a string (`"117/2"`, `"60"`). |
 | `solutions` | object[] | Zero or more solutions (see below). |
 | `images.statement` | string[] | Image references for statement diagrams, see §5. |
@@ -69,7 +69,7 @@ other fields are unchanged.
 | field | type | notes |
 |---|---|---|
 | `id` | string | e.g. `sol.ahsme-1950-p10.live`, `sol.deepmath-000000.r1-1`. |
-| `kind` | string | `proof-sketch` (797,633), `strategy` (22), `answer-only` (18), or `model-reasoning` (277,002). |
+| `kind` | string | `proof-sketch` (797,631), `strategy` (22), `answer-only` (18), or `model-reasoning` (277,002). |
 | `text` | string | Solution text, raw LaTeX. |
 | `hints` | string[] | Progressive hints. Common in `core`. |
 | `images` | string[] | Diagram references used by this solution. |
@@ -120,9 +120,13 @@ build_info(key, value)                           PK (key)
   to read solutions in a lean build and reasoning traces in either build.
 
 - `problems.dataset` holds the dataset slug. Indexes exist on `category`,
-  `dataset`, `(source_collection, source_year)`, `difficulty_mohs`
+  `(dataset, category)` (`idx_problems_dataset_cat`),
+  `(source_collection, source_year)`, `difficulty_mohs`
   (`idx_problems_mohs`), and `(category, difficulty_mohs)`
-  (`idx_problems_cat_mohs`).
+  (`idx_problems_cat_mohs`). The build runs `ANALYZE` so the query planner
+  can choose between them.
+- `problems.source_number` is TEXT. Records store a purely numeric problem
+  number as an int; `ArquimedesEngine` converts it back.
 - Full-text search uses the FTS5 virtual table `problems_fts(id, title,
   statement, source_collection)`, backed by `problems` via `content_rowid`.
   Queries use the `MATCH` operator for sub-millisecond search over titles,
@@ -133,8 +137,8 @@ build_info(key, value)                           PK (key)
   `sourceUrl`, `sourceTags`, and `difficultyNote` when present.
 - `solutions` excludes `kind = "model-reasoning"`. The 277,002 reasoning
   traces stay available in the JSONL shards.
-- `solutions` therefore holds the 797,673 written solutions: proof-sketch
-  (797,633), strategy (22), and answer-only (18).
+- `solutions` therefore holds the 797,671 written solutions: proof-sketch
+  (797,631), strategy (22), and answer-only (18).
 
 ## 4. LaTeX typesetting convention
 

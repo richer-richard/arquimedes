@@ -140,6 +140,55 @@ class ArquimedesEngine:
             }
         return dict(self._fallback_stats)
 
+    @staticmethod
+    def _number(value: str | None) -> int | str | None:
+        """source_number is stored as TEXT; records keep purely numeric numbers as ints."""
+        return int(value) if value is not None and value.isdigit() else value
+
+    @staticmethod
+    def _record_view(rec: dict[str, Any], include_solutions: bool, include_traces: bool) -> dict[str, Any]:
+        """The get_problem result shape, identical with a full, lean, or missing database."""
+        src = rec.get("source") or {}
+        diff = rec.get("difficulty") or {}
+        ans = rec.get("answer") or {}
+        solutions = []
+        for s in rec.get("solutions") or []:
+            wanted = include_traces if s.get("kind") == "model-reasoning" else include_solutions
+            if wanted:
+                solutions.append({
+                    "id": s.get("id"),
+                    "kind": s.get("kind"),
+                    "text": s.get("text"),
+                    "hints": s.get("hints") or [],
+                })
+        return {
+            "id": rec.get("id"),
+            "title": rec.get("title") or "",
+            "category": rec.get("category"),
+            "subjects": rec.get("subjects") or [],
+            "concepts": rec.get("concepts") or [],
+            "source": {
+                "dataset": src.get("dataset"),
+                "collection": src.get("collection"),
+                "year": src.get("year"),
+                "number": src.get("number"),
+                "url": src.get("url"),
+                "tags": src.get("tags") or [],
+            },
+            "difficulty": {
+                "course": diff.get("course"),
+                "source": diff.get("source"),
+                "mohs": diff.get("mohs"),
+                "note": diff.get("note"),
+            },
+            "estimatedMinutes": rec.get("estimatedMinutes"),
+            "statement": rec.get("statement"),
+            "answerChoices": [{"label": c.get("label"), "text": c.get("text")} for c in rec.get("answerChoices") or []],
+            "answer": {"letter": ans.get("letter"), "value": ans.get("value")},
+            "solutions": solutions,
+            "images": rec.get("images") or {"statement": [], "solutions": []},
+        }
+
     def _row_to_summary(self, row: sqlite3.Row) -> dict[str, Any]:
         meta = json.loads(row["metadata"]) if row["metadata"] else {}
         stmt = row["statement"] or ""
@@ -150,7 +199,7 @@ class ArquimedesEngine:
             "category": row["category"],
             "competition": row["source_collection"],
             "year": row["source_year"],
-            "number": row["source_number"],
+            "number": self._number(row["source_number"]),
             "mohs": row["difficulty_mohs"],
             "difficultyNote": meta.get("difficultyNote"),
             "answerLetter": row["answer_letter"],
@@ -160,79 +209,63 @@ class ArquimedesEngine:
         }
 
     def get_problem(self, problem_id: str, include_solutions: bool = True, include_traces: bool = False) -> dict[str, Any] | None:
-        if self.has_sqlite:
-            conn = self._get_conn()
-            row = conn.execute("SELECT * FROM problems WHERE id = ?", (problem_id,)).fetchone()
-            if row is not None:
-                meta = json.loads(row["metadata"]) if row["metadata"] else {}
-                images = json.loads(row["images"]) if row["images"] else {"statement": [], "solutions": []}
-                choices = [
-                    {"label": c["label"], "text": c["text"]}
-                    for c in conn.execute(
-                        "SELECT label, text FROM answer_choices WHERE problem_id = ? ORDER BY label",
-                        (problem_id,),
-                    ).fetchall()
-                ]
-                shard_rec = None
-                if (include_solutions and self.db_mode == "lean") or (include_traces and row["dataset"] == "deepmath"):
-                    shard_rec = self._shard_record_for(row)
-                solutions = []
-                if include_solutions and self.db_mode == "lean":
-                    for s in (shard_rec or {}).get("solutions") or []:
-                        if s.get("kind") == "model-reasoning":
-                            continue
-                        solutions.append({
-                            "id": s.get("id"),
-                            "kind": s.get("kind"),
-                            "text": s.get("text"),
-                            "hints": s.get("hints") or [],
-                        })
-                elif include_solutions:
-                    for s in conn.execute(
-                        "SELECT id, kind, text, hints FROM solutions WHERE problem_id = ?",
-                        (problem_id,),
-                    ).fetchall():
-                        solutions.append({
-                            "id": s["id"],
-                            "kind": s["kind"],
-                            "text": s["text"],
-                            "hints": json.loads(s["hints"]) if s["hints"] else [],
-                        })
-                result = {
-                    "id": row["id"],
-                    "title": row["title"] or "",
-                    "category": row["category"],
-                    "subjects": json.loads(row["subjects"]) if row["subjects"] else [],
-                    "concepts": json.loads(row["concepts"]) if row["concepts"] else [],
-                    "source": {
-                        "dataset": row["dataset"],
-                        "collection": row["source_collection"],
-                        "year": row["source_year"],
-                        "number": row["source_number"],
-                        "url": meta.get("sourceUrl"),
-                        "tags": meta.get("sourceTags") or [],
-                    },
-                    "difficulty": {
-                        "course": row["difficulty_course"],
-                        "source": row["difficulty_source"],
-                        "mohs": row["difficulty_mohs"],
-                        "note": meta.get("difficultyNote"),
-                    },
-                    "estimatedMinutes": row["estimated_minutes"],
-                    "statement": row["statement"],
-                    "answerChoices": choices,
-                    "answer": {
-                        "letter": row["answer_letter"],
-                        "value": row["answer_value"],
-                    },
-                    "solutions": solutions,
-                    "images": images,
-                }
-                if include_traces and row["dataset"] == "deepmath" and shard_rec:
-                    result["solutions"] = shard_rec.get("solutions") or solutions
-                return result
+        """Full problem record; include_solutions adds written solutions, include_traces adds
+        deepmath model-reasoning traces. Returns None for unknown ids."""
+        if not self.has_sqlite:
+            rec = self._find_in_shards(problem_id)
+            return self._record_view(rec, include_solutions, include_traces) if rec else None
 
-        return self._find_in_shards(problem_id)
+        conn = self._get_conn()
+        row = conn.execute("SELECT * FROM problems WHERE id = ?", (problem_id,)).fetchone()
+        if row is None:
+            return None
+        meta = json.loads(row["metadata"]) if row["metadata"] else {}
+        solutions: list[dict[str, Any]] = []
+        if (include_solutions and self.db_mode == "lean") or (include_traces and row["dataset"] == "deepmath"):
+            solutions = (self._shard_record_for(row) or {}).get("solutions") or []
+        elif include_solutions:
+            solutions = [
+                {"id": s["id"], "kind": s["kind"], "text": s["text"],
+                 "hints": json.loads(s["hints"]) if s["hints"] else []}
+                for s in conn.execute(
+                    "SELECT id, kind, text, hints FROM solutions WHERE problem_id = ? ORDER BY rowid",
+                    (problem_id,),
+                )
+            ]
+        rec = {
+            "id": row["id"],
+            "title": row["title"],
+            "category": row["category"],
+            "subjects": json.loads(row["subjects"]) if row["subjects"] else [],
+            "concepts": json.loads(row["concepts"]) if row["concepts"] else [],
+            "source": {
+                "dataset": row["dataset"],
+                "collection": row["source_collection"],
+                "year": row["source_year"],
+                "number": self._number(row["source_number"]),
+                "url": meta.get("sourceUrl"),
+                "tags": meta.get("sourceTags") or [],
+            },
+            "difficulty": {
+                "course": row["difficulty_course"],
+                "source": row["difficulty_source"],
+                "mohs": row["difficulty_mohs"],
+                "note": meta.get("difficultyNote"),
+            },
+            "estimatedMinutes": row["estimated_minutes"],
+            "statement": row["statement"],
+            "answerChoices": [
+                {"label": c["label"], "text": c["text"]}
+                for c in conn.execute(
+                    "SELECT label, text FROM answer_choices WHERE problem_id = ? ORDER BY label",
+                    (problem_id,),
+                )
+            ],
+            "answer": {"letter": row["answer_letter"], "value": row["answer_value"]},
+            "solutions": solutions,
+            "images": json.loads(row["images"]) if row["images"] else None,
+        }
+        return self._record_view(rec, include_solutions, include_traces)
 
     def _find_in_shards(self, problem_id: str, dataset: str | None = None) -> dict[str, Any] | None:
         if not dataset and problem_id.startswith("prob."):
@@ -373,27 +406,27 @@ class ArquimedesEngine:
                 where.append("p.has_choices = ?")
                 params.append(1 if has_choices else 0)
             if has_diagram:
-                where.append("EXISTS (SELECT 1 FROM problem_images pi WHERE pi.problem_id = p.id)")
+                where.append("p.id IN (SELECT problem_id FROM problem_images WHERE role = 'statement')")
 
-            where_sql = ("WHERE " + " AND ".join(where)) if where else ""
-            # Fast bounded candidate pool sample so we don't ORDER BY RANDOM() over 1M rows
-            pool_size = max(limit * 25, 250)
-            if not where:
-                max_rowid = conn.execute("SELECT MAX(rowid) FROM problems").fetchone()[0] or 1
-                rng = random.Random(seed)
-                start_id = rng.randint(1, max(1, max_rowid - pool_size))
-                sql = "SELECT * FROM problems p WHERE p.rowid >= ? LIMIT ?"
-                rows = conn.execute(sql, [start_id, pool_size]).fetchall()
-            else:
-                sql = f"SELECT * FROM problems p {where_sql} LIMIT ?"
-                rows = conn.execute(sql, [*params, pool_size]).fetchall()
+            # Uniform over every matching row: pick rowids, then load only those rows
             rng = random.Random(seed)
-            if len(rows) > limit:
-                rows = rng.sample(list(rows), limit)
-            return [self._row_to_summary(r) for r in rows]
+            if where:
+                where_sql = "WHERE " + " AND ".join(where)
+                rowids: Any = [r[0] for r in conn.execute(f"SELECT p.rowid FROM problems p {where_sql}", params)]
+            else:
+                rowids = range(1, (conn.execute("SELECT MAX(rowid) FROM problems").fetchone()[0] or 0) + 1)
+            picked = rng.sample(rowids, min(limit, len(rowids)))
+            if not picked:
+                return []
+            marks = ",".join("?" * len(picked))
+            rows = {r["rowid"]: r for r in conn.execute(
+                f"SELECT rowid, * FROM problems WHERE rowid IN ({marks})", picked)}
+            return [self._row_to_summary(rows[i]) for i in picked if i in rows]
 
-        # Shard fallback
-        pool = []
+        # Shard fallback: reservoir sample over every matching record
+        rng = random.Random(seed)
+        pool: list[dict[str, Any]] = []
+        seen = 0
         for rec in self._iter_shard_fallback(dataset=dataset):
             if category and rec.get("category") != category:
                 continue
@@ -411,12 +444,13 @@ class ArquimedesEngine:
                 continue
             if has_diagram and not ((rec.get("images") or {}).get("statement")):
                 continue
-            pool.append(self._rec_to_summary(rec))
-            if len(pool) >= max(limit * 10, 100):
-                break
-        rng = random.Random(seed)
-        if len(pool) > limit:
-            pool = rng.sample(pool, limit)
+            seen += 1
+            if len(pool) < limit:
+                pool.append(self._rec_to_summary(rec))
+            else:
+                j = rng.randrange(seen)
+                if j < limit:
+                    pool[j] = self._rec_to_summary(rec)
         return pool
 
     def _iter_shard_fallback(self, dataset: str | None = None):

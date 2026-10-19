@@ -16,7 +16,7 @@ With --lean the solutions table is left empty (about 1.1 GB smaller). Every
 problem row records its shard and line, so readers load solutions from the
 JSONL shards instead.
 
-Usage: .venv/bin/python tools/build_database.py [--lean] [--out-dir data]
+Usage: .venv/bin/python tools/build_database.py [--lean] [--root .] [--out-dir data]
 """
 import argparse
 import collections
@@ -29,9 +29,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-PROBLEMS_DIR = ROOT / "problems"
 IMAGES_DIR = ROOT / "images"
-DATA_DIR = ROOT / "data"
 
 BATCH = 20000
 
@@ -97,7 +95,7 @@ CREATE TABLE problem_images (
 
 INDEXES = """
 CREATE INDEX idx_problems_category ON problems(category);
-CREATE INDEX idx_problems_dataset ON problems(dataset);
+CREATE INDEX idx_problems_dataset_cat ON problems(dataset, category);
 CREATE INDEX idx_problems_source ON problems(source_collection, source_year);
 CREATE INDEX idx_problems_mohs ON problems(difficulty_mohs);
 CREATE INDEX idx_problems_cat_mohs ON problems(category, difficulty_mohs);
@@ -111,10 +109,11 @@ CREATE VIRTUAL TABLE problems_fts USING fts5(
     content_rowid='rowid'
 );
 INSERT INTO problems_fts(problems_fts) VALUES('rebuild');
+ANALYZE;
 """
 
 
-def scan_images():
+def scan_images(images_dir=IMAGES_DIR):
     """Return {image_key: relative_path} for files in images/.
 
     SVGs are keyed by bare hash (core convention: records reference the hash,
@@ -122,9 +121,9 @@ def scan_images():
     keyed by full filename, matching how records reference them.
     """
     table = {}
-    if not IMAGES_DIR.is_dir():
+    if not images_dir.is_dir():
         return table
-    for path in sorted(IMAGES_DIR.iterdir()):
+    for path in sorted(images_dir.iterdir()):
         if not path.is_file() or path.name.startswith("."):
             continue
         key = path.stem if path.suffix == ".svg" else path.name
@@ -163,12 +162,15 @@ def main():
     parser = argparse.ArgumentParser(description="Build data/problems.sqlite and data/index.json.")
     parser.add_argument("--lean", action="store_true",
                         help="leave the solutions table empty; solutions are read from the shards")
-    parser.add_argument("--out-dir", type=Path, default=DATA_DIR,
-                        help="directory for problems.sqlite and index.json (default: data/)")
+    parser.add_argument("--root", type=Path, default=ROOT,
+                        help="directory holding problems/ and images/ (default: this checkout)")
+    parser.add_argument("--out-dir", type=Path, default=None,
+                        help="directory for problems.sqlite and index.json (default: <root>/data)")
     args = parser.parse_args()
 
     t0 = time.time()
-    out_dir = args.out_dir
+    problems_dir = args.root / "problems"
+    out_dir = args.out_dir or args.root / "data"
     out_dir.mkdir(parents=True, exist_ok=True)
     db_path = out_dir / "problems.sqlite"
     if db_path.exists():
@@ -180,7 +182,7 @@ def main():
     db.executemany("INSERT INTO build_info VALUES (?,?)",
                    [("mode", "lean" if args.lean else "full"), ("built_at", time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()))])
 
-    image_table = scan_images()
+    image_table = scan_images(args.root / "images")
     db.executemany("INSERT OR IGNORE INTO images VALUES (?,?)",
                    [(h, p) for h, p in image_table.items()])
 
@@ -206,7 +208,7 @@ def main():
             db.executemany("INSERT OR IGNORE INTO problem_images VALUES (?,?,?)", pimg_rows)
             pimg_rows.clear()
 
-    dataset_dirs = sorted(d for d in PROBLEMS_DIR.iterdir() if d.is_dir())
+    dataset_dirs = sorted(d for d in problems_dir.iterdir() if d.is_dir())
     for d in dataset_dirs:
         slug = d.name
         for shard_index, shard_line, rec in iter_shard_records(d):
