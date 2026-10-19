@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arquimedes — 1,038,963 Math Problems</title>
+  <meta name="description" content="An open archive of 1,038,963 math problems from school contests to international olympiads, with answers, hints, solutions, and diagrams.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+  <style>
+    :root {
+      --bg: #FAF9F5;
+      --surface: #FFFFFF;
+      --surface-subtle: #F3F1EC;
+      --ink: #141413;
+      --ink-secondary: #5C5B56;
+      --ink-muted: #8C8A82;
+      --border: #E5E2DC;
+      --accent: #1E40AF;
+      --accent-soft: #EFF4FF;
+      --serif: 'Instrument Serif', 'Palatino', Georgia, serif;
+      --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 56px 24px 96px;
+    }
+
+    /* Header */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 32px;
+      margin-bottom: 28px;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: 54px;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      color: var(--ink);
+    }
+
+    .header-links {
+      display: flex;
+      gap: 18px;
+      font-size: 13.5px;
+    }
+
+    .header-links a {
+      color: var(--ink-secondary);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    .header-links a:hover {
+      color: var(--ink);
+      border-bottom-color: var(--ink);
+    }
+
+    .lead {
+      font-size: 17px;
+      color: var(--ink-secondary);
+      max-width: 66ch;
+      margin-bottom: 22px;
+    }
+
+    .stats-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--ink-secondary);
+    }
+
+    .stat-item strong {
+      font-family: var(--mono);
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-right: 4px;
+    }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .search-bar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .search-input {
+      flex: 1;
+      min-width: 220px;
+      padding: 10px 14px;
+      font-family: var(--sans);
+      font-size: 14.5px;
+      color: var(--ink);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      outline: none;
+    }
+
+    .search-input:focus {
+      border-color: var(--ink);
+    }
+
+    select.filter-select {
+      padding: 10px 12px;
+      font-family: var(--sans);
+      font-size: 13.5px;
+      color: var(--ink);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    select.filter-select:focus {
+      border-color: var(--ink);
+    }
+
+    .btn-random {
+      padding: 10px 16px;
+      font-family: var(--sans);
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--surface);
+      background: var(--ink);
+      border: 1px solid var(--ink);
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .btn-random:hover {
+      opacity: 0.88;
+    }
+
+    .topic-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .topic-pill {
+      padding: 5px 11px;
+      font-family: var(--sans);
+      font-size: 13px;
+      color: var(--ink-secondary);
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    .topic-pill:hover {
+      color: var(--ink);
+      border-color: var(--ink-muted);
+    }
+
+    .topic-pill.active {
+      color: var(--accent);
+      background: var(--accent-soft);
+      border-color: #BFDBFE;
+      font-weight: 500;
+    }
+
+    .results-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: var(--ink-muted);
+      margin-bottom: 14px;
+    }
+
+    /* Problem List */
+    .problem-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .problem-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px 26px;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--surface-subtle);
+    }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 15.5px;
+      color: var(--ink);
+    }
+
+    .card-badges {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12.5px;
+      color: var(--ink-secondary);
+    }
+
+    .badge-topic {
+      text-transform: capitalize;
+    }
+
+    .badge-mohs {
+      font-family: var(--mono);
+      font-size: 12px;
+      padding: 2px 7px;
+      background: var(--surface-subtle);
+      border-radius: 4px;
+      color: var(--ink);
+    }
+
+    .statement {
+      font-size: 16px;
+      line-height: 1.72;
+      color: var(--ink);
+      margin-bottom: 16px;
+      overflow-x: auto;
+    }
+
+    .statement p + p {
+      margin-top: 10px;
+    }
+
+    .diagram-box {
+      margin: 16px 0;
+      padding: 16px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    .diagram-box img {
+      max-width: 100%;
+      max-height: 260px;
+      height: auto;
+    }
+
+    .choices-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 8px 14px;
+      margin: 14px 0 18px;
+      padding: 12px 14px;
+      background: var(--bg);
+      border-radius: 6px;
+      font-size: 14.5px;
+    }
+
+    .choice-item {
+      display: flex;
+      gap: 6px;
+      align-items: baseline;
+    }
+
+    .choice-label {
+      font-family: var(--mono);
+      font-size: 12.5px;
+      color: var(--ink-secondary);
+      font-weight: 500;
+    }
+
+    .card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      padding-top: 8px;
+    }
+
+    .action-btn {
+      padding: 5px 11px;
+      font-family: var(--sans);
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--ink-secondary);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .action-btn:hover {
+      color: var(--ink);
+      border-color: var(--ink-muted);
+    }
+
+    .problem-id {
+      margin-left: auto;
+      font-family: var(--mono);
+      font-size: 11.5px;
+      color: var(--ink-muted);
+    }
+
+    .reveal-box {
+      margin-top: 14px;
+      padding: 14px 16px;
+      background: var(--bg);
+      border-left: 3px solid var(--ink);
+      border-radius: 0 6px 6px 0;
+      font-size: 14.5px;
+      line-height: 1.65;
+      overflow-x: auto;
+    }
+
+    .reveal-box[hidden] {
+      display: none;
+    }
+
+    .reveal-label {
+      font-family: var(--mono);
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--ink-secondary);
+      margin-bottom: 6px;
+    }
+
+    .load-more-wrap {
+      margin-top: 28px;
+      text-align: center;
+    }
+
+    .btn-more {
+      padding: 10px 22px;
+      font-family: var(--sans);
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--ink);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .btn-more:hover {
+      border-color: var(--ink);
+    }
+
+    /* Minimal Quickstart Footer */
+    footer {
+      margin-top: 64px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      color: var(--ink-secondary);
+      font-size: 13.5px;
+    }
+
+    .cli-box {
+      margin: 14px 0 20px;
+      padding: 14px 16px;
+      background: #141413;
+      color: #F4F1EA;
+      font-family: var(--mono);
+      font-size: 12.5px;
+      line-height: 1.7;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    .cli-comment {
+      color: #8C8A82;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 32px 16px 64px;
+      }
+      h1 {
+        font-size: 42px;
+      }
+      .problem-card {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <h1>Arquimedes</h1>
+        <nav class="header-links" aria-label="Project links">
+          <a href="https://github.com/richer-richard/arquimedes">GitHub Repository</a>
+          <a href="https://github.com/richer-richard/arquimedes/blob/main/docs/datasets.md">Datasets</a>
+          <a href="https://github.com/richer-richard/arquimedes/blob/main/docs/usage.md">CLI &amp; MCP</a>
+        </nav>
+      </div>
+      <p class="lead">
+        An open, deduplicated archive of over one million mathematical problems—from school contests to the International Mathematical Olympiad—complete with answers, hints, proofs, and diagrams.
+      </p>
+      <div class="stats-row">
+        <span class="stat-item"><strong id="stat-problems">1,038,963</strong> problems</span>
+        <span class="stat-item"><strong id="stat-solutions">797,672</strong> written proofs</span>
+        <span class="stat-item"><strong id="stat-traces">277,002</strong> reasoning chains</span>
+        <span class="stat-item"><strong id="stat-diagrams">1,219</strong> geometric diagrams</span>
+        <span class="stat-item"><strong>CC BY 4.0</strong> license</span>
+      </div>
+    </header>
+
+    <section class="controls" aria-label="Filter problems">
+      <div class="search-bar">
+        <input
+          type="search"
+          id="search-input"
+          class="search-input"
+          placeholder="Search problems, theorems, or keywords (e.g. triangle, prime, polynomial)..."
+          aria-label="Search problems"
+        >
+        <select id="difficulty-select" class="filter-select" aria-label="Difficulty">
+          <option value="all">Any difficulty (1–10)</option>
+          <option value="easy">Introductory (1.0 – 3.5)</option>
+          <option value="medium">Intermediate / AIME (3.5 – 6.0)</option>
+          <option value="hard">Advanced / National Olympiad (6.0 – 8.0)</option>
+          <option value="olympiad">International Olympiad / Putnam (8.0 – 10.0)</option>
+        </select>
+        <select id="competition-select" class="filter-select" aria-label="Contest or source">
+          <option value="all">All contests &amp; sources</option>
+        </select>
+        <button type="button" id="btn-random" class="btn-random">Random problem</button>
+      </div>
+
+      <div class="topic-bar" id="topic-bar" role="group" aria-label="Filter by topic">
+        <button type="button" class="topic-pill active" data-topic="all">All topics</button>
+        <button type="button" class="topic-pill" data-topic="geometry">Geometry</button>
+        <button type="button" class="topic-pill" data-topic="algebra">Algebra</button>
+        <button type="button" class="topic-pill" data-topic="number-theory">Number Theory</button>
+        <button type="button" class="topic-pill" data-topic="combinatorics">Combinatorics</button>
+        <button type="button" class="topic-pill" data-topic="probability">Probability</button>
+        <button type="button" class="topic-pill" data-topic="arithmetic">Arithmetic</button>
+        <button type="button" class="topic-pill" data-topic="logic-foundations">Logic</button>
+        <button type="button" class="topic-pill" data-topic="diagrams">With diagram</button>
+      </div>
+    </section>
+
+    <div class="results-meta">
+      <span id="results-count">Loading curated problem catalog…</span>
+      <span>Difficulty scale: 1 (easiest) to 10 (IMO / Putnam)</span>
+    </div>
+
+    <main id="problem-list" class="problem-list"></main>
+
+    <div class="load-more-wrap" id="load-more-wrap" hidden>
+      <button type="button" id="btn-more" class="btn-more">Show more problems</button>
+    </div>
+
+    <footer>
+      <p>
+        This web view previews a stratified catalog of 627 problems across every contest and topic. To query or stream all <strong>1,038,963</strong> problems locally with full-text search, use the CLI or MCP server:
+      </p>
+      <pre class="cli-box"><span class="cli-comment"># Clone &amp; build the local SQLite + FTS5 database</span>
+git clone https://github.com/richer-richard/arquimedes.git &amp;&amp; cd arquimedes
+uv run arquimedes build
+
+<span class="cli-comment"># Search 1.04M problems in ~20ms or sample by difficulty (1–10)</span>
+uv run arquimedes search "Cauchy-Schwarz" --min-mohs 7.0
+uv run arquimedes sample --competition IMO --category geometry
+
+<span class="cli-comment"># Export decontaminated train (972k) and eval (10.5k) splits</span>
+uv run arquimedes splits</pre>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      let allProblems = [];
+      let filtered = [];
+      let shownCount = 15;
+      let activeTopic = "all";
+
+      const listEl = document.getElementById("problem-list");
+      const countEl = document.getElementById("results-count");
+      const searchEl = document.getElementById("search-input");
+      const diffEl = document.getElementById("difficulty-select");
+      const compEl = document.getElementById("competition-select");
+      const randomBtn = document.getElementById("btn-random");
+      const moreWrap = document.getElementById("load-more-wrap");
+      const moreBtn = document.getElementById("btn-more");
+      const topicBar = document.getElementById("topic-bar");
+
+      function renderMath(el) {
+        if (window.renderMathInElement) {
+          window.renderMathInElement(el, {
+            delimiters: [
+              { left: "\\[", right: "\\]", display: true },
+              { left: "$$", right: "$$", display: true },
+              { left: "\\(", right: "\\)", display: false },
+              { left: "$", right: "$", display: false }
+            ],
+            throwOnError: false
+          });
+        }
+      }
+
+      function escapeHtml(str) {
+        return String(str || "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+      }
+
+      function formatParagraphs(text) {
+        return escapeHtml(text)
+          .split(/\n{2,}/)
+          .map(p => `<p>${p.trim()}</p>`)
+          .join("");
+      }
+
+      function buildCard(p) {
+        const article = document.createElement("article");
+        article.className = "problem-card";
+
+        const topicLabel = (p.category || "").replace(/-/g, " ");
+        let diagramHtml = "";
+        if (p.diagrams && p.diagrams.length > 0) {
+          diagramHtml = `<div class="diagram-box">${p.diagrams
+            .map(src => `<img src="${escapeHtml(src)}" alt="Problem diagram" loading="lazy">`)
+            .join("")}</div>`;
+        }
+
+        let choicesHtml = "";
+        if (p.choices && p.choices.length > 0) {
+          choicesHtml = `<div class="choices-grid">${p.choices
+            .map(
+              c =>
+                `<div class="choice-item"><span class="choice-label">(${escapeHtml(
+                  c.label
+                )})</span><span>${escapeHtml(c.text)}</span></div>`
+            )
+            .join("")}</div>`;
+        }
+
+        const hasAnswer = Boolean(p.answerValue || p.answerLetter);
+        const hasHints = Boolean(p.hints && p.hints.length > 0);
+        const hasSolution = Boolean(p.solution);
+
+        let answerDisplay = "";
+        if (p.answerLetter && p.answerValue && p.answerLetter.toLowerCase() !== String(p.answerValue).toLowerCase()) {
+          answerDisplay = `(${p.answerLetter.toUpperCase()}) \\(${p.answerValue}\\)`;
+        } else if (p.answerValue) {
+          answerDisplay = p.answerValue.includes("\\(") || p.answerValue.includes("$")
+            ? p.answerValue
+            : `\\(${p.answerValue}\\)`;
+        } else if (p.answerLetter) {
+          answerDisplay = `(${p.answerLetter.toUpperCase()})`;
+        }
+
+        article.innerHTML = `
+          <div class="card-header">
+            <div class="card-title">${escapeHtml(p.title)}</div>
+            <div class="card-badges">
+              <span class="badge-topic">${escapeHtml(topicLabel)}</span>
+              <span class="badge-mohs" title="Unified difficulty scale from 1.0 to 10.0">Difficulty ${p.mohs.toFixed(1)}</span>
+            </div>
+          </div>
+          <div class="statement">${formatParagraphs(p.statement)}</div>
+          ${diagramHtml}
+          ${choicesHtml}
+          <div class="card-actions">
+            ${hasAnswer ? `<button type="button" class="action-btn" data-toggle="ans">Show answer</button>` : ""}
+            ${hasHints ? `<button type="button" class="action-btn" data-toggle="hint">Show hint (${p.hints.length})</button>` : ""}
+            ${hasSolution ? `<button type="button" class="action-btn" data-toggle="sol">Show solution</button>` : ""}
+            <span class="problem-id">${escapeHtml(p.id)}</span>
+          </div>
+          ${
+            hasAnswer
+              ? `<div class="reveal-box" data-box="ans" hidden>
+                  <div class="reveal-label">Answer</div>
+                  <div>${escapeHtml(answerDisplay)}</div>
+                </div>`
+              : ""
+          }
+          ${
+            hasHints
+              ? `<div class="reveal-box" data-box="hint" hidden>
+                  <div class="reveal-label">Hints</div>
+                  <ol style="padding-left:18px">${p.hints.map(h => `<li>${escapeHtml(h)}</li>`).join("")}</ol>
+                </div>`
+              : ""
+          }
+          ${
+            hasSolution
+              ? `<div class="reveal-box" data-box="sol" hidden>
+                  <div class="reveal-label">Solution</div>
+                  <div>${formatParagraphs(p.solution)}</div>
+                </div>`
+              : ""
+          }
+        `;
+
+        article.querySelectorAll("[data-toggle]").forEach(btn => {
+          btn.addEventListener("click", () => {
+            const key = btn.getAttribute("data-toggle");
+            const box = article.querySelector(`[data-box="${key}"]`);
+            if (!box) return;
+            const isHidden = box.hasAttribute("hidden");
+            if (isHidden) {
+              box.removeAttribute("hidden");
+              renderMath(box);
+              btn.textContent = btn.textContent.replace(/^Show/, "Hide");
+            } else {
+              box.setAttribute("hidden", "");
+              btn.textContent = btn.textContent.replace(/^Hide/, "Show");
+            }
+          });
+        });
+
+        renderMath(article);
+        return article;
+      }
+
+      function renderList() {
+        listEl.innerHTML = "";
+        const slice = filtered.slice(0, shownCount);
+        slice.forEach(p => listEl.appendChild(buildCard(p)));
+        countEl.textContent = `Showing ${slice.length} of ${filtered.length} matching problems in browser catalog (1,038,963 in full archive)`;
+        if (shownCount < filtered.length) {
+          moreWrap.removeAttribute("hidden");
+        } else {
+          moreWrap.setAttribute("hidden", "");
+        }
+      }
+
+      function applyFilters() {
+        const q = (searchEl.value || "").trim().toLowerCase();
+        const diff = diffEl.value;
+        const comp = compEl.value;
+
+        filtered = allProblems.filter(p => {
+          if (activeTopic === "diagrams") {
+            if (!p.diagrams || p.diagrams.length === 0) return false;
+          } else if (activeTopic !== "all" && p.category !== activeTopic) {
+            return false;
+          }
+          if (comp !== "all" && p.competition !== comp) {
+            return false;
+          }
+          if (diff === "easy" && p.mohs > 3.5) return false;
+          if (diff === "medium" && (p.mohs < 3.5 || p.mohs > 6.0)) return false;
+          if (diff === "hard" && (p.mohs < 6.0 || p.mohs > 8.0)) return false;
+          if (diff === "olympiad" && p.mohs < 8.0) return false;
+
+          if (q) {
+            const hay = `${p.title} ${p.statement} ${p.competition} ${p.category} ${p.id}`.toLowerCase();
+            if (!hay.includes(q)) return false;
+          }
+          return true;
+        });
+
+        shownCount = 15;
+        renderList();
+      }
+
+      topicBar.addEventListener("click", e => {
+        const btn = e.target.closest("[data-topic]");
+        if (!btn) return;
+        topicBar.querySelectorAll(".topic-pill").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        activeTopic = btn.getAttribute("data-topic");
+        applyFilters();
+      });
+
+      searchEl.addEventListener("input", applyFilters);
+      diffEl.addEventListener("change", applyFilters);
+      compEl.addEventListener("change", applyFilters);
+
+      randomBtn.addEventListener("click", () => {
+        if (allProblems.length === 0) return;
+        const pool = filtered.length > 1 ? filtered : allProblems;
+        const pick = pool[Math.floor(Math.random() * pool.length)];
+        listEl.innerHTML = "";
+        listEl.appendChild(buildCard(pick));
+        countEl.textContent = `Randomly selected 1 problem from ${pool.length} matching problems`;
+        moreWrap.setAttribute("hidden", "");
+      });
+
+      moreBtn.addEventListener("click", () => {
+        shownCount += 15;
+        renderList();
+      });
+
+      fetch("data/explorer.json")
+        .then(r => r.json())
+        .then(data => {
+          allProblems = data.problems || [];
+          const comps = Array.from(new Set(allProblems.map(p => p.competition))).sort();
+          comps.forEach(c => {
+            const opt = document.createElement("option");
+            opt.value = c;
+            opt.textContent = c;
+            compEl.appendChild(opt);
+          });
+          applyFilters();
+          window.addEventListener("load", () => renderMath(listEl));
+        })
+        .catch(() => {
+          countEl.textContent = "Could not load problem catalog.";
+        });
+    })();
+  </script>
+</body>
+</html>
