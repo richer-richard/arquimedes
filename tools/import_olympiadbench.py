@@ -18,7 +18,8 @@ import pyarrow.parquet as pq
 
 from tools.lib.schema import make_id, validate_record
 from tools.lib.latex import normalize_latex, strip_boilerplate
-from tools.lib.classify import classify_category, map_known_subject
+from tools.lib.classify import classify_record, map_known_subject
+from tools.lib.difficulty import normalize_record_hygiene
 from tools.lib.shards import write_shards, norm_key
 from tools.lib.images import save_image
 
@@ -144,10 +145,10 @@ def convert():
                               "text": sol_text, "hints": [], "images": []})
 
         subfield = row.get("subfield")
-        category = map_known_subject(subfield) or classify_category(statement)
-        difficulty = row.get("difficulty")
         tags = [t for t in (row["config"], row.get("subject"), row.get("answer_type")) if t]
-        rec = {
+        category = map_known_subject(subfield) or classify_record(statement, tags=tags, solutions=solutions)
+        difficulty = row.get("difficulty")
+        rec = normalize_record_hygiene({
             "id": make_id(SLUG, n),
             "title": "",
             "category": category,
@@ -163,7 +164,7 @@ def convert():
             "answer": {"letter": None, "value": answer_value},
             "solutions": solutions,
             "images": {"statement": stmt_images, "solutions": []},
-        }
+        })
         try:
             validate_record(rec)
         except ValueError as exc:

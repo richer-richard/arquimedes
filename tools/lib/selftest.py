@@ -8,7 +8,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
 from tools.lib.schema import make_id, validate_record
 from tools.lib.latex import normalize_latex, strip_boilerplate
-from tools.lib.classify import classify_category, map_known_subject
+from tools.lib.classify import classify_category, classify_record, map_known_subject
+from tools.lib.difficulty import normalize_record_hygiene
 from tools.lib.shards import write_shards, read_shards, norm_key
 from tools.lib.images import save_image
 
@@ -53,8 +54,14 @@ def test_classify():
     assert map_known_subject("Counting & Probability") == "combinatorics"
     assert map_known_subject("Prealgebra") == "arithmetic"
     assert map_known_subject("Calculus") == "algebra"
+    assert map_known_subject("Mathematics -> Geometry -> Plane Geometry -> Angles") == "geometry"
+    assert map_known_subject("Mathematics -> Applied Mathematics -> Statistics -> Probability -> Other") == "probability"
+    assert map_known_subject("Mathematics -> Applied Mathematics -> Math Word Problems") == "arithmetic"
     assert map_known_subject("olympiads") is None
     assert map_known_subject("nonsense") is None
+    assert classify_category(r"Compute \(\log_2 8 + \sin \theta\).") == "algebra"
+    assert classify_category(r"In \(\triangle ABC\), \(\angle A = 90^\circ\).") == "geometry"
+    assert classify_record("Find x.", tags=["orca_math"]) == "arithmetic"
 
 
 def test_norm_key():

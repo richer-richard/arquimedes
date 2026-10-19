@@ -15,7 +15,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from tools.lib.schema import make_id, validate_record
 from tools.lib.latex import normalize_latex, strip_boilerplate
-from tools.lib.classify import classify_category, map_known_subject
+from tools.lib.classify import classify_record, map_known_subject
+from tools.lib.difficulty import normalize_record_hygiene
 from tools.lib.shards import write_shards, norm_key
 
 SLUG = "omnimath"
@@ -95,8 +96,8 @@ def convert():
         src = row.get("source")
         tags = [str(src)] if src else []
 
-        category = category_from_domain(row.get("domain"), statement)
-        rec = {
+        category = map_known_subject(row.get("domain")) or classify_record(statement, tags=tags, solutions=solutions)
+        rec = normalize_record_hygiene({
             "id": make_id(SLUG, n),
             "title": "",
             "category": category,
@@ -111,7 +112,7 @@ def convert():
             "answer": answer,
             "solutions": solutions,
             "images": {"statement": [], "solutions": []},
-        }
+        })
         try:
             validate_record(rec)
         except ValueError as exc:

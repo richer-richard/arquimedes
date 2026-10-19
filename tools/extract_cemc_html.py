@@ -27,7 +27,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib.schema import validate_record  # noqa: E402
 from lib.shards import write_shards  # noqa: E402
-from lib.classify import classify_category  # noqa: E402
+from lib.classify import classify_record  # noqa: E402
+from lib.difficulty import normalize_record_hygiene  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 CEMC_DIR = ROOT / "raw" / "official" / "cemc"
@@ -351,13 +352,20 @@ def build_records():
                     sol_text, letter = solutions[i - 1]
                 else:
                     stats["no_solution_match"] += 1
-                category = classify_category(re.sub(r"\\[a-zA-Z]+", " ", stmt))
-                rec = {
+                sol_objs = ([{
+                    "id": f"sol.{DATASET}-{len(records) + 1:06d}.official",
+                    "kind": "proof-sketch",
+                    "text": sol_text,
+                    "hints": [],
+                    "images": [],
+                }] if sol_text else [])
+                category = classify_record(stmt, solutions=sol_objs)
+                rec = normalize_record_hygiene({
                     "id": f"prob.{DATASET}-{len(records) + 1:06d}",
                     "title": f"{year} {cname} ({grade}) Problem {i}",
                     "category": category,
                     "subjects": [category] if category != "uncategorized"
-                                else ["uncategorized"],
+                                else [],
                     "concepts": [],
                     "source": {
                         "dataset": DATASET,
@@ -380,15 +388,9 @@ def build_records():
                         "value": (choices[LETTERS.index(letter)]
                                   if letter else None),
                     },
-                    "solutions": ([{
-                        "id": f"sol.{DATASET}-{len(records) + 1:06d}.official",
-                        "kind": "proof-sketch",
-                        "text": sol_text,
-                        "hints": [],
-                        "images": [],
-                    }] if sol_text else []),
+                    "solutions": sol_objs,
                     "images": {"statement": [], "solutions": []},
-                }
+                })
                 try:
                     validate_record(rec)
                 except ValueError as e:

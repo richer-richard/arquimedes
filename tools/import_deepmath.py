@@ -20,7 +20,8 @@ import pyarrow.parquet as pq
 
 from tools.lib.schema import make_id, validate_record
 from tools.lib.latex import normalize_latex, strip_boilerplate
-from tools.lib.classify import classify_category, map_known_subject
+from tools.lib.classify import classify_record
+from tools.lib.difficulty import normalize_record_hygiene
 from tools.lib.shards import write_shards, norm_key
 
 SLUG = "deepmath"
@@ -95,9 +96,9 @@ def convert():
                     answer_value = clean(raw_answer)
 
                 topic = row.get("topic")
-                category = map_known_subject(topic) or classify_category(statement)
+                tags = [str(topic)] if topic else []
                 difficulty = row.get("difficulty")
-                note = f"deepmath {difficulty:g}" if isinstance(difficulty, (int, float)) else None
+                note = f"deepmath {difficulty:g}" if isinstance(difficulty, (int, float)) and difficulty > 0 else "deepmath 5"
 
                 n = counters["n"]
                 base = f"{SLUG}-{n:06d}"
@@ -109,7 +110,8 @@ def convert():
                                           "kind": "model-reasoning",
                                           "text": trace, "hints": [], "images": []})
                         counters["traces"] += 1
-                rec = {
+                category = classify_record(statement, tags=tags, solutions=solutions)
+                rec = normalize_record_hygiene({
                     "id": make_id(SLUG, n),
                     "title": "",
                     "category": category,
@@ -117,7 +119,7 @@ def convert():
                     "concepts": [],
                     "source": {"dataset": SLUG, "collection": None, "year": None,
                                "number": None, "url": None,
-                               "tags": [str(topic)] if topic else []},
+                               "tags": tags},
                     "difficulty": {"course": None, "source": None, "mohs": None, "note": note},
                     "estimatedMinutes": None,
                     "statement": statement,
@@ -125,7 +127,7 @@ def convert():
                     "answer": {"letter": None, "value": answer_value},
                     "solutions": solutions,
                     "images": {"statement": [], "solutions": []},
-                }
+                })
                 try:
                     validate_record(rec)
                 except ValueError as exc:

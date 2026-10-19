@@ -22,7 +22,8 @@ import pyarrow.parquet as pq
 
 from tools.lib.schema import make_id, validate_record
 from tools.lib.latex import normalize_latex, strip_boilerplate
-from tools.lib.classify import classify_category
+from tools.lib.classify import classify_record
+from tools.lib.difficulty import normalize_record_hygiene
 from tools.lib.shards import write_shards, norm_key
 
 SLUG = "bigmath"
@@ -94,9 +95,9 @@ def convert_rows(rows, stats, seen, records, notes, counters):
         tags = [str(src)] if src else []
         tags.extend(str(d) for d in (row.get("domain") or []))
 
-        category = classify_category(statement)
+        category = classify_record(statement, tags=tags)
         n = len(records)
-        rec = {
+        rec = normalize_record_hygiene({
             "id": make_id(SLUG, n),
             "title": "",
             "category": category,
@@ -111,7 +112,7 @@ def convert_rows(rows, stats, seen, records, notes, counters):
             "answer": {"letter": None, "value": answer_value},
             "solutions": [],
             "images": {"statement": [], "solutions": []},
-        }
+        })
         try:
             validate_record(rec)
         except ValueError as exc:

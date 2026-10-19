@@ -89,6 +89,18 @@ INDEXES = """
 CREATE INDEX idx_problems_category ON problems(category);
 CREATE INDEX idx_problems_dataset ON problems(dataset);
 CREATE INDEX idx_problems_source ON problems(source_collection, source_year);
+CREATE INDEX idx_problems_mohs ON problems(difficulty_mohs);
+CREATE INDEX idx_problems_cat_mohs ON problems(category, difficulty_mohs);
+CREATE INDEX idx_solutions_problem_id ON solutions(problem_id);
+CREATE VIRTUAL TABLE problems_fts USING fts5(
+    id UNINDEXED,
+    title,
+    statement,
+    source_collection,
+    content='problems',
+    content_rowid='rowid'
+);
+INSERT INTO problems_fts(problems_fts) VALUES('rebuild');
 """
 
 

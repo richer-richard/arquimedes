@@ -17,7 +17,8 @@ import pyarrow.parquet as pq
 
 from tools.lib.schema import make_id, validate_record
 from tools.lib.latex import normalize_latex, strip_boilerplate
-from tools.lib.classify import classify_category, map_known_subject
+from tools.lib.classify import classify_record, map_known_subject
+from tools.lib.difficulty import normalize_record_hygiene
 from tools.lib.shards import write_shards, norm_key
 
 SLUG = "math"
@@ -98,9 +99,10 @@ def convert():
                               "text": sol_text, "hints": [], "images": []})
 
         subject = row.get("type") or ""
-        category = map_known_subject(subject) or classify_category(statement)
+        tags = [t for t in (subject, row["split"]) if t]
+        category = map_known_subject(subject) or classify_record(statement, tags=tags, solutions=solutions)
         level = row.get("level")
-        rec = {
+        rec = normalize_record_hygiene({
             "id": make_id(SLUG, n),
             "title": "",
             "category": category,
@@ -108,7 +110,7 @@ def convert():
             "concepts": [],
             "source": {"dataset": SLUG, "collection": "MATH", "year": None,
                        "number": None, "url": None,
-                       "tags": [t for t in (subject, row["split"]) if t]},
+                       "tags": tags},
             "difficulty": {"course": None, "source": None, "mohs": None,
                            "note": f"MATH {level}" if level else None},
             "estimatedMinutes": None,
@@ -117,7 +119,7 @@ def convert():
             "answer": answer,
             "solutions": solutions,
             "images": {"statement": [], "solutions": []},
-        }
+        })
         try:
             validate_record(rec)
         except ValueError as exc:

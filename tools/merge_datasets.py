@@ -33,6 +33,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from tools.lib.schema import CATEGORY_LIST, make_id  # noqa: E402
+from tools.lib.difficulty import normalize_record_hygiene  # noqa: E402
 from tools.lib.shards import norm_key, read_shards, write_shards  # noqa: E402
 
 PROBLEMS = ROOT / "problems"
@@ -144,7 +145,7 @@ def merge_dataset(slug, staging_dir, shard_size, seen):
             used = set()
             for j, sol in enumerate(rec.get("solutions") or []):
                 sol["id"] = _new_solution_id(sol.get("id"), old_suffix, new_suffix, j, used, stats)
-            yield rec
+            yield normalize_record_hygiene(rec)
 
     write_shards(gen(), out_dir, max_records=shard_size)
     if stats["final"] == 0:
