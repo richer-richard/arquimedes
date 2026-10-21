@@ -11,21 +11,27 @@ import sqlite3
 from pathlib import Path
 from typing import Any
 
+from arquimedes.paths import looks_like_root, user_data_dir
+
 
 def find_repo_root() -> Path:
+    """Checkout, current directory, then the per-user corpus from ``arquimedes fetch``."""
     env_root = os.environ.get("ARQUIMEDES_ROOT")
     if env_root:
         p = Path(env_root).expanduser().resolve()
-        if (p / "data" / "index.json").exists() or (p / "problems").is_dir():
+        if looks_like_root(p):
             return p
-    # Check relative to this package file
     pkg_root = Path(__file__).resolve().parent.parent
-    if (pkg_root / "data" / "index.json").exists() or (pkg_root / "problems").is_dir():
+    if looks_like_root(pkg_root):
         return pkg_root
     cwd = Path.cwd().resolve()
-    if (cwd / "data" / "index.json").exists() or (cwd / "problems").is_dir():
+    if looks_like_root(cwd):
         return cwd
-    return pkg_root
+    data = user_data_dir()
+    if looks_like_root(data):
+        return data
+    # An installed copy has no shards next to the package. Fetch writes here.
+    return data
 
 
 class ArquimedesEngine:
@@ -94,10 +100,16 @@ class ArquimedesEngine:
             # data/index.json describes the full corpus; without SQLite only the
             # records _iter_shard_fallback reaches can be searched or sampled.
             stats = self._shard_fallback_stats()
-            stats["note"] = (
-                "data/problems.sqlite is not present, so search and sample only scan the "
-                "JSONL shards counted here. Run `arquimedes build` to index the full corpus."
-            )
+            if self.fallback_datasets():
+                stats["note"] = (
+                    "data/problems.sqlite is not present, so search and sample only scan the "
+                    "JSONL shards counted here. Run `arquimedes build` to index the full corpus."
+                )
+            else:
+                stats["note"] = (
+                    "No corpus is installed at this root. "
+                    "Run `arquimedes fetch` or `uvx arquimedes-mcp fetch` to download it."
+                )
             if index.get("totalProblems"):
                 stats["fullCorpusProblems"] = index["totalProblems"]
         stats["sqliteReady"] = self.has_sqlite

@@ -485,8 +485,19 @@ def handle_rpc_message(engine: ArquimedesEngine, msg: Any) -> dict[str, Any] | N
     return _error(msg_id, -32601, f"Method not found: {method}")
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
+    args = sys.argv[1:] if argv is None else list(argv)
+    if args[:1] == ["fetch"]:
+        from arquimedes.fetch import main as fetch_main
+        return fetch_main(args[1:])
+
     engine = ArquimedesEngine()
+    if not engine.has_sqlite and not engine.fallback_datasets():
+        print(
+            f"Arquimedes has no corpus at {engine.root}. "
+            "Download it with: uvx arquimedes-mcp fetch",
+            file=sys.stderr,
+        )
     for line in sys.stdin:
         line = line.strip()
         if not line:

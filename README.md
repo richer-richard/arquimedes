@@ -4,7 +4,13 @@
 
 # Arquimedes: Math Problem Database
 
+<!-- mcp-name: io.github.richer-richard/arquimedes -->
+
 [![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/richer-richard/arquimedes)
+[![Glama score](https://glama.ai/mcp/servers/richer-richard/arquimedes/badges/score.svg)](https://glama.ai/mcp/servers/richer-richard/arquimedes)
+[![CI](https://github.com/richer-richard/arquimedes/actions/workflows/ci.yml/badge.svg)](https://github.com/richer-richard/arquimedes/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/richer-richard/arquimedes)](https://github.com/richer-richard/arquimedes/releases)
+[![Code license: MIT](https://img.shields.io/badge/code-MIT-blue)](LICENSE)
 
 A structured, deduplicated database of competition and benchmark mathematics:
 **1,038,963 problems** across 9 datasets, each with a normalized LaTeX statement,
@@ -69,6 +75,34 @@ Records in `omnimath`, `deepmath`, `numina`, and `bigmath` carry origin and doma
 
 `arquimedes` ships a zero-dependency Python package with both a fast CLI (`arquimedes`) and a Model Context Protocol server (`arquimedes-mcp`) backed by SQLite + `FTS5` (with automatic JSONL shard fallback when SQLite is absent).
 
+### Install from PyPI
+
+The package name is `arquimedes-mcp`. It does not contain the problems. Download them once from the Hugging Face dataset (about 1.3 GB of shards, then a lean index of about 0.8 GB):
+
+```bash
+uvx arquimedes-mcp fetch
+```
+
+That copy lives in the user data directory (`~/Library/Application Support/arquimedes` on macOS), so the next `uvx` run finds it.
+
+```json
+{
+  "mcpServers": {
+    "arquimedes": {
+      "command": "uvx",
+      "args": ["arquimedes-mcp"]
+    }
+  }
+}
+```
+
+```bash
+uvx --from arquimedes-mcp arquimedes stats
+uvx --from arquimedes-mcp arquimedes search "Cauchy-Schwarz" --min-mohs 7.0 -n 5
+```
+
+### From a checkout
+
 ```bash
 # Build the local 1.7 GB SQLite + FTS5 database (~50 seconds)
 uv run arquimedes build
@@ -88,9 +122,9 @@ uv run arquimedes sample --competition IMO --category geometry -n 3
 uv run arquimedes show prob.ahsme-1950-p10
 ```
 
-### MCP Server Configuration (Claude Desktop / Cursor / Glama)
+### MCP server from a checkout
 
-Add to your `mcp.json` or `claude_desktop_config.json`:
+Add to your `mcp.json` or `claude_desktop_config.json` when the shards are already in a checkout:
 
 ```json
 {

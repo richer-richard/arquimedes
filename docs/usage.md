@@ -174,6 +174,21 @@ uv run arquimedes show prob.imo-2023-p1
 - `sample` — random sample with optional category and Mohs filters.
 - `show` — print one problem record (statement, answer, metadata).
 
+## Install without a checkout
+
+The PyPI package `arquimedes-mcp` contains the program and not the problems.
+`arquimedes fetch` downloads the Hugging Face corpus into the user data
+directory and builds the lean index:
+
+```bash
+uvx arquimedes-mcp fetch
+uvx arquimedes-mcp
+```
+
+`uvx --from arquimedes-mcp arquimedes` runs the CLI against that same copy.
+Pass `--root` to store it somewhere else. The download is about 1.3 GB and
+the lean index about 0.8 GB.
+
 ## MCP server: `arquimedes-mcp`
 
 The Model Context Protocol server exposes search, stats, and problem lookup

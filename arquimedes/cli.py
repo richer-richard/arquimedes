@@ -7,6 +7,7 @@ import json
 import subprocess
 import sys
 import time
+from pathlib import Path
 from typing import Any
 
 from arquimedes.engine import ArquimedesEngine
@@ -161,20 +162,41 @@ def cmd_show(engine: ArquimedesEngine, args: argparse.Namespace) -> int:
     return 0
 
 
+def _tool_script(name: str) -> Path:
+    path = Path(__file__).resolve().parent.parent / "tools" / name
+    if not path.is_file():
+        raise SystemExit(f"Cannot find {path}")
+    return path
+
+
 def cmd_build(engine: ArquimedesEngine, args: argparse.Namespace) -> int:
-    script = engine.root / "tools" / "build_database.py"
-    cmd = [sys.executable, str(script)]
+    cmd = [sys.executable, str(_tool_script("build_database.py")), "--root", str(engine.root)]
     if args.lean:
         cmd.append("--lean")
     return subprocess.call(cmd)
 
 
 def cmd_splits(engine: ArquimedesEngine, args: argparse.Namespace) -> int:
-    script = engine.root / "tools" / "export_splits.py"
-    cmd = [sys.executable, str(script), "--out-dir", str(args.out_dir)]
+    cmd = [
+        sys.executable,
+        str(_tool_script("export_splits.py")),
+        "--root",
+        str(engine.root),
+        "--out-dir",
+        str(args.out_dir),
+    ]
     if args.stats_only:
         cmd.append("--stats-only")
     return subprocess.call(cmd)
+
+
+def cmd_fetch(engine: ArquimedesEngine, args: argparse.Namespace) -> int:
+    del engine
+    from arquimedes.fetch import fetch
+    from arquimedes.paths import user_data_dir
+
+    root = args.root if args.root is not None else user_data_dir()
+    return fetch(root, force=args.force)
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -229,6 +251,14 @@ def build_parser() -> argparse.ArgumentParser:
     p_splits.add_argument("--out-dir", default="splits", help="Output directory (default: splits)")
     p_splits.add_argument("--stats-only", action="store_true", help="Compute stats without writing files")
     p_splits.set_defaults(func=cmd_splits)
+
+    p_fetch = sub.add_parser(
+        "fetch",
+        help="Download the corpus from Hugging Face and build a lean index",
+    )
+    p_fetch.add_argument("--root", type=Path, help="storage directory (default: the user data directory)")
+    p_fetch.add_argument("--force", action="store_true", help="download and build again")
+    p_fetch.set_defaults(func=cmd_fetch)
 
     return parser
 

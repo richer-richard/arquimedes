@@ -3,7 +3,16 @@
 Versions follow [semantic versioning](https://semver.org). The interfaces
 covered from 1.0.0 on are listed under "Stability (1.x)" in the README.
 
-## Unreleased
+## 1.1.0 (2026-10-21)
+
+### Added
+
+- `arquimedes fetch` downloads the corpus from the Hugging Face dataset into
+  the user data directory and builds a lean SQLite index. `uvx arquimedes-mcp`
+  serves that copy, and `uvx arquimedes-mcp fetch` is the same download. The
+  PyPI package is `arquimedes-mcp`. It does not contain the problems.
+- `server.json` is the official MCP Registry manifest for
+  `io.github.richer-richard/arquimedes`.
 
 ### License
 

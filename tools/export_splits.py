@@ -37,7 +37,6 @@ sys.path.insert(0, str(ROOT))
 
 from tools.lib.shards import norm_key, read_shards  # noqa: E402
 
-PROBLEMS_DIR = ROOT / "problems"
 DEFAULT_OUT = ROOT / "splits"
 
 _WORD_RE = re.compile(r"[a-z0-9]{2,}")
@@ -89,11 +88,16 @@ def is_eval_record(rec: dict) -> tuple[bool, str | None]:
 
 def main():
     parser = argparse.ArgumentParser(description="Export decontaminated train/eval splits.")
+    parser.add_argument("--root", type=Path, default=ROOT,
+                        help="directory holding problems/ (default: this checkout)")
     parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUT,
                         help="Output directory for train.jsonl.gz, eval.jsonl.gz, and REPORT.json")
     parser.add_argument("--stats-only", action="store_true",
                         help="Compute decontamination statistics without writing output split files")
     args = parser.parse_args()
+    problems_dir = args.root / "problems"
+    if not problems_dir.is_dir():
+        raise SystemExit(f"No problems directory at {problems_dir}")
 
     t0 = time.time()
     eval_exact = set()
@@ -117,7 +121,7 @@ def main():
         # Pass 1: Collect evaluation benchmark problems and index their exact keys + token shingles
         print("Pass 1: Indexing canonical evaluation splits...", flush=True)
         for ds in ("core", "cemc", "aops", "olympiadbench", "omnimath", "math"):
-            dpath = PROBLEMS_DIR / ds
+            dpath = problems_dir / ds
             if not dpath.is_dir():
                 continue
             for rec in read_shards(dpath):
@@ -141,7 +145,7 @@ def main():
 
         # Pass 2: Stream candidate training problems and decontaminate against eval index
         print("Pass 2: Filtering and decontaminating training split...", flush=True)
-        for dpath in sorted(d for d in PROBLEMS_DIR.iterdir() if d.is_dir()):
+        for dpath in sorted(d for d in problems_dir.iterdir() if d.is_dir()):
             ds = dpath.name
             for rec in read_shards(dpath):
                 is_eval, _ = is_eval_record(rec)
