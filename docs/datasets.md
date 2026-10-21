@@ -246,10 +246,14 @@ and `aops` (311). `cemc` (792) is CC BY-NC 4.0. The other 1,027,215 records
 pass through Apache 2.0 or MIT from a dataset that already published them,
 with the underlying holder named on the row.
 
+The published copy is
+[richard01172000/arquimedes](https://huggingface.co/datasets/richard01172000/arquimedes).
+The Hugging Face account is `richard01172000`.
+
 ```bash
 uv run python tools/export_hf.py --check
 uv run python tools/export_hf.py --out /tmp/arquimedes-hf
-hf upload richer-richard/arquimedes /tmp/arquimedes-hf . --repo-type dataset
+hf upload richard01172000/arquimedes /tmp/arquimedes-hf . --repo-type dataset
 rm -rf /tmp/arquimedes-hf
 ```
 

@@ -15,7 +15,8 @@ covered from 1.0.0 on are listed under "Stability (1.x)" in the README.
   `arquimedes/` and `tools/`.
 - `data/rights.json` and `tools/export_hf.py` stamp each record with its
   holder's notice for a Hugging Face copy. No records are removed.
-  `distribution` is null where no open license was found.
+  `distribution` is null where no open license was found. The copy is
+  published at `richard01172000/arquimedes`.
 
 ## 1.0.0 (2026-10-19)
 

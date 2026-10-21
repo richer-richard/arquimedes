@@ -7,7 +7,7 @@ the corpus is mixed.
 
     uv run python tools/export_hf.py --check
     uv run python tools/export_hf.py --out /tmp/arquimedes-hf
-    hf upload richer-richard/arquimedes /tmp/arquimedes-hf . --repo-type dataset
+    hf upload richard01172000/arquimedes /tmp/arquimedes-hf . --repo-type dataset
 
 ``--check`` only counts parts. It writes nothing.
 """
@@ -153,7 +153,7 @@ def main(argv=None):
     parser.add_argument("--check", action="store_true", help="count parts, write nothing")
     parser.add_argument("--out", help="directory to write; must not already exist")
     parser.add_argument("--upload", action="store_true", help="hf upload --out after writing it")
-    parser.add_argument("--repo", default="richer-richard/arquimedes")
+    parser.add_argument("--repo", default="richard01172000/arquimedes")
     args = parser.parse_args(argv)
     catalog = load_catalog()
     if args.check:
