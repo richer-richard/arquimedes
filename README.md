@@ -4,6 +4,8 @@
 
 # Arquimedes: Math Problem Database
 
+[![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/richer-richard/arquimedes)
+
 A structured, deduplicated database of competition and benchmark mathematics:
 **1,038,963 problems** across 9 datasets, each with a normalized LaTeX statement,
 calibrated Mohs difficulty (`1.0` to `10.0`), answer metadata, and solutions in a
@@ -181,8 +183,8 @@ docs/                                 schema, usage, and dataset documentation
 
 - [`docs/schema.md`](docs/schema.md): full v2 record reference, shard format, SQLite + FTS5 schema, LaTeX convention, image store
 - [`docs/usage.md`](docs/usage.md): CLI, MCP server, SQL & FTS5 queries, reasoning traces, decontaminated splits
-- [`docs/datasets.md`](docs/datasets.md): per-dataset contents, field notes, category distributions, deduplication rules
+- [`docs/datasets.md`](docs/datasets.md): per-dataset contents, field notes, category distributions, deduplication rules, and upstream licenses
 
 ## License
 
-Problem data, images, and derived files are available under CC BY 4.0. The code and tools under `arquimedes/` and `tools/` are available under the MIT License. See [LICENSE](LICENSE).
+Code in `arquimedes/`, `tools/`, and `site/` is MIT. The Mohs calibration, the category labels assigned by this project, and `data/index.json` are CC BY 4.0. Problem statements, solutions, answers, and diagrams are not relicensed; the upstream terms are in [`docs/datasets.md`](docs/datasets.md#licenses-and-attribution). See [LICENSE](LICENSE).

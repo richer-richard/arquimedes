@@ -3,6 +3,17 @@
 Versions follow [semantic versioning](https://semver.org). The interfaces
 covered from 1.0.0 on are listed under "Stability (1.x)" in the README.
 
+## Unreleased
+
+### License
+
+- Problem statements, solutions, answers, and diagrams are no longer described
+  as CC BY 4.0. That claim was this repository's, and the upstream terms are
+  narrower. They are documented per dataset in `docs/datasets.md`. CC BY 4.0
+  remains only for the Mohs calibration, the category labels assigned here,
+  and `data/index.json`. `site/` is included in the MIT grant, with
+  `arquimedes/` and `tools/`.
+
 ## 1.0.0 (2026-10-19)
 
 First stable release.
