@@ -231,6 +231,32 @@ upstream collection. After deduplication, the source label stored on the
 `aops_forum`, `amc_aime`, `olympiads`, and `omnimath` are contest and forum
 text. The Apache 2.0 tag does not replace those terms.
 
+### Publishing
+
+Nothing is dropped. [`data/rights.json`](../data/rights.json) names the holder,
+the distribution license, and the notice for every slice.
+[`tools/export_hf.py`](../tools/export_hf.py) copies the shards and writes
+that notice onto each record as `rights`. The git shards stay unchanged, so
+the MCP result shape stays the same. The Hugging Face copy is `license: other`,
+because the corpus is mixed. The stamp does not create a new grant.
+`distribution` is null when no open license was found.
+
+That null set is the material this project collected itself: `core` (10,645)
+and `aops` (311). `cemc` (792) is CC BY-NC 4.0. The other 1,027,215 records
+pass through Apache 2.0 or MIT from a dataset that already published them,
+with the underlying holder named on the row.
+
+```bash
+uv run python tools/export_hf.py --check
+uv run python tools/export_hf.py --out /tmp/arquimedes-hf
+hf upload richer-richard/arquimedes /tmp/arquimedes-hf . --repo-type dataset
+rm -rf /tmp/arquimedes-hf
+```
+
+`--check` writes nothing. Build the tree in `/tmp` and delete it after the
+upload. Drop rows whose `rights.use` is `notice-only` or `noncommercial` only
+if a downstream user wants those 11,748 records left out.
+
 ## core (10,645)
 
 Curated competition problems from the AMC program (AHSME, AMC 8, AMC 10,

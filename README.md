@@ -187,4 +187,4 @@ docs/                                 schema, usage, and dataset documentation
 
 ## License
 
-Code in `arquimedes/`, `tools/`, and `site/` is MIT. The Mohs calibration, the category labels assigned by this project, and `data/index.json` are CC BY 4.0. Problem statements, solutions, answers, and diagrams are not relicensed; the upstream terms are in [`docs/datasets.md`](docs/datasets.md#licenses-and-attribution). See [LICENSE](LICENSE).
+Code in `arquimedes/`, `tools/`, and `site/` is MIT. The Mohs calibration, the category labels assigned by this project, and `data/index.json` are CC BY 4.0. Problem statements, solutions, answers, and diagrams are not relicensed; the upstream terms are in [`docs/datasets.md`](docs/datasets.md#licenses-and-attribution). A Hugging Face copy can keep every record and stamp the holder's notice on it (`data/rights.json`). See [LICENSE](LICENSE).
